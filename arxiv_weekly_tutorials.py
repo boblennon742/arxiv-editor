@@ -65,7 +65,7 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
     
     print("正在请求 AI 教程总编辑挑选 1 篇...")
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     
     prompt_papers = "\n".join([f"--- ID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n" for p in papers])
     

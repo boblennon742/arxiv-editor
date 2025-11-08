@@ -1,7 +1,7 @@
 import os
 import json
 import arxiv
-import google.generativeai as genai
+import google.generative_ai as genai
 from datetime import date, timedelta, datetime
 
 # --- 1. 配置 ---
@@ -51,9 +51,18 @@ def fetch_papers_for_domain(categories, extra_query, target_date):
     
     papers_list = []
     try:
-        for result in search.results():
+        # ------------------- 关键修改区域 -------------------
+        # 1. 实例化一个新的 Client (修复 DeprecationWarning)
+        client = arxiv.Client()
+        
+        # 2. 使用 client.results(search) 替代 search.results()
+        for result in client.results(search):
+        # ----------------------------------------------------
             paper_date = result.published.date()
+            
+            # 由于 arXiv 搜索结果不保证严格按日期排序，我们使用 Python 过滤
             if paper_date < target_date:
+                # 因为是按Descending顺序排序，一旦日期小于目标日期，就可以停止了
                 break
             if paper_date == target_date:
                 papers_list.append({

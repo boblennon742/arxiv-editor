@@ -29,10 +29,20 @@ def fetch_weekly_tutorials(target_date):
     
     papers_list = []
     try:
-        for result in search.results():
+        # ------------------- 关键修改区域 -------------------
+        # 实例化新的 Client
+        client = arxiv.Client()
+        
+        # 使用 client.results(search) 替代 search.results()
+        for result in client.results(search):
+        # ----------------------------------------------------
             paper_date = result.published.date()
+            
+            # 由于是降序排列，一旦超过时间范围即可停止
             if paper_date < one_week_ago:
                 break
+            
+            # 过滤掉未来的日期（尽管不常见）和精确到目标日期的论文
             if paper_date >= one_week_ago and paper_date <= target_date:
                 papers_list.append({
                     'id': result.entry_id,

@@ -1,14 +1,14 @@
 import os
 import json
 import arxiv
-from google import genai                     # 正确导入
+import argparse # 优化：导入 argparse
+from google import genai
 from datetime import date, timedelta
 
 # --- 1. 配置 ---
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
-# V8 更新：排除了 q-fin，因为金融每天都看
 ARXIV_CATEGORIES = ['stat.ML', 'cs.LG', 'math.OC', 'cs.NE', 'cs.AI', 'math.NA']
 TUTORIAL_KEYWORDS = ['tutorial', 'survey', '"lecture notes"', 'review', '"book chapter"']
 
@@ -23,7 +23,7 @@ def fetch_weekly_tutorials(target_date):
    
     search = arxiv.Search(
         query=full_query,
-        max_results=30,
+        max_results=50, # 保持 50
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -50,7 +50,7 @@ def fetch_weekly_tutorials(target_date):
         print(f"抓取教程失败: {e}")
         return []
 
-# --- 3. AI 教程总编辑 (V9 版) ---
+# --- 3. AI 教程总编辑 (V11 - 优选 2 篇) ---
 def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not papers:
         print("没有论文可供 AI 分析。")
@@ -59,37 +59,51 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
         print("未找到 GEMINI_API_KEY。")
         return None
 
-    print("正在请求 AI 教程总编辑挑选 1 篇...")
-
-    # 新 SDK：创建客户端（自动读取环境变量 GEMINI_API_KEY）
-    client = genai.Client()  # 可选：genai.Client(api_key=GEMINI_API_KEY)
-
+    print("正在请求 AI 教程总编辑挑选 2 篇...")
+    client = genai.Client()
     prompt_papers = "\n".join([
         f"--- ID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
         for p in papers
     ])
 
+    # ----------------------------------------------------
+    # (V11) 关键修改：要求 2 篇，并返回列表
+    # ----------------------------------------------------
     system_prompt = f"""
-    你是我（统计学硕士）的“AI 总编辑”。
-    我的个人兴趣是：{user_preference_prompt}
-    下面是本周发布的 {len(papers)} 篇教程(Tutorials)或综述(Surveys)。
-    你的任务是“精中选精”：
-    1. 从列表中挑选 **1 篇（最多 1 篇）** 最值得我阅读的教程。
-    2. 如果**没有一篇**足够好，请**必须**返回 `null`。
-    3. 如果你找到了 1 篇，请以严格的 JSON 格式返回。
+    你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
+    我今天的任务是分析 "本周教程与综述" 领域。
+
+    我的个人偏好/任务是：
+    "{user_preference_prompt}"
+    
+    下面是为该领域抓取的 {len(papers)} 篇教程或综述。
+    你的任务是“优中选优”：
+    1. 严格根据我的个人偏好/任务，从这些论文中挑选出 **2 篇（最多 2 篇）** 最值得我阅读的教程/综述。
+    2. 如果只有 1 篇符合，则只返回 1 篇。
+    3. 如果**没有一篇**论文足够好或符合我的需求，请**必须**返回 `null`。
+    4. 如果你找到了，请以严格的 JSON **列表** 格式返回，即使只有 1 篇，也要放在列表里。
     JSON 格式如下：
-    {{
-      "id": "被选中论文的 ID",
-      "reason_zh": "（中文）详细说明为什么这篇教程是‘精中选精’，它如何深入浅出？",
-      "reason_en": "(English) A detailed justification of why this tutorial is the 'best of the best' and 'insightful'."
-    }}
+    [
+      {{
+        "id": "被选中论文1的 ID",
+        "reason_zh": "（中文）详细说明为什么这篇教程**完全符合**我的偏好/任务。",
+        "reason_en": "(English) A detailed justification of why this tutorial **perfectly fits** my preference/task."
+      }},
+      {{
+        "id": "被选中论文2的 ID",
+        "reason_zh": "（中文）详细说明为什么这篇教程**完全符合**我的偏好/任务。",
+        "reason_en": "(English) A detailed justification of why this tutorial **perfectly fits** my preference/task."
+      }}
+    ]
     如果返回 `null`，就只返回 `null` 这个词。
     """
+    # ----------------------------------------------------
+    # (修改结束)
+    # ----------------------------------------------------
 
     full_prompt = f"{system_prompt}\n\n--- 教程列表开始 ---\n{prompt_papers}\n--- 教程列表结束 ---"
 
     try:
-        # 新 SDK 调用方式
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=full_prompt
@@ -100,10 +114,9 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
             print("AI 教程编辑认为本周没有值得推荐的。")
             return None
 
-        ai_pick = json.loads(cleaned)
-        print("AI 教程编辑已选出本周最佳。")
-        return ai_pick
-
+        ai_picks_list = json.loads(cleaned) # <--- 现在是一个列表
+        print(f"AI 教程编辑已选出 {len(ai_picks_list)} 篇本周最佳。")
+        return ai_picks_list
     except Exception as e:
         print(f"AI 教程编辑分析失败: {e}")
         return None
@@ -113,9 +126,10 @@ def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
+            # data_to_save 现在是一个列表 [ ... ] 或 None
             json.dump(data_to_save, f, ensure_ascii=False, indent=4)
             if data_to_save:
-                print(f"成功将“本周教程精选”写入 {file_path}")
+                print(f"成功将 {len(data_to_save)} 篇“本周教程精选”写入 {file_path}")
             else:
                 print(f"标记 {file_path} 为“无教程精选”。")
     except Exception as e:
@@ -123,24 +137,43 @@ def write_to_json(data_to_save, file_path):
 
 # --- 5. 主函数 ---
 if __name__ == "__main__":
-    target_date = date.today()
+    parser = argparse.ArgumentParser(description="AI-driven arXiv weekly tutorial script.")
+    parser.add_argument(
+        '--date', 
+        type=lambda s: date.fromisoformat(s), 
+        default=date.today(),
+        help='(用于调试) 目标日期 (YYYY-MM-DD)。脚本将抓取此日期所在周。默认为今天。'
+    )
+    args = parser.parse_args()
+    target_date = args.date
+    
+    print(f"--- 教程脚本开始运行，目标周 (基于日期): {target_date.isoformat()} ---")
+
     my_tutorial_preference = """
     我喜欢深入浅出、可落地的前沿技术（如强化学习、优化方法），也喜欢扎实的数学基础（如矩阵代数）。
     我**不**喜欢过于抽象、无法应用的“空中楼阁”式纯理论。
     """
    
     papers = fetch_weekly_tutorials(target_date)
-    pick_json = get_ai_tutorial_pick(papers, my_tutorial_preference)
+    # (V11) 关键修改：pick_json 现在是一个列表
+    pick_json_list = get_ai_tutorial_pick(papers, my_tutorial_preference)
    
-    final_data_to_save = None
-    if pick_json:
-        full_paper = next((p for p in papers if p['id'] == pick_json['id']), None)
-        if full_paper:
-            final_data_to_save = {**full_paper, **pick_json}
+    final_data_to_save = [] # <-- 必须是一个列表
+    if pick_json_list: # 如果列表不是 None 或空
+        for pick_item in pick_json_list: # 循环 AI 选出的每一篇
+            full_paper = next((p for p in papers if p['id'] == pick_item['id']), None)
+            if full_paper:
+                final_data_to_save.append({**full_paper, **pick_item})
+    
+    # 如果 final_data_to_save 是空列表 []，write_to_json 会正确处理
+    if not final_data_to_save:
+         final_data_to_save = None # 保持与 V9 一致，写入 null
            
     week_number = target_date.isocalendar()[1]
     year = target_date.isocalendar()[0]
     output_filename = f"{year}-W{week_number:02d}.json"
     output_path = os.path.join(ARCHIVE_DIR, "tutorials", output_filename)
    
-    write_to_json(final_data_to_save, output_path)
+    write_to_json(final_data_to_save, output_path) # 写入列表或 None
+    
+    print(f"\n--- 教程脚本处理完毕: {output_filename} ---")

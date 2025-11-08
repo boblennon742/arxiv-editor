@@ -1,7 +1,7 @@
 import os
 import json
 import arxiv
-import google.genai as genai
+from google import genai
 from datetime import date, timedelta
 
 # --- 1. 配置 ---
@@ -64,7 +64,6 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not GEMINI_API_KEY: return None
     
     print("正在请求 AI 教程总编辑挑选 1 篇...")
-    genai.configure(api_key=GEMINI_API_KEY)
     model = genai.GenerativeModel('gemini-2.5-flash')
     
     prompt_papers = "\n".join([f"--- ID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n" for p in papers])

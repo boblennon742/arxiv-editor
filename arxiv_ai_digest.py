@@ -239,3 +239,31 @@ def write_to_json(data_to_save, file_path):
 # --------------------------------------------------------------------------
 # 主函数
 if __name__ == "__main__":
+    # (V12) 关键修改：移除 argparse，恢复硬编码日期
+    target_date = date.today() - timedelta(days=1)
+    
+    print(f"--- 脚本开始运行，目标日期: {target_date.isoformat()} ---")
+
+    for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
+        print(f"\n--- 处理领域: {config['name_en']} ---")
+        
+        # (V12) 关键修复：传入 domain_name 以修复 print 错误
+        papers = fetch_papers_for_domain(
+            domain_name=config["name_en"],
+            categories=config["categories"], 
+            extra_query=config["search_query"], 
+            target_date=target_date
+        )
+        
+        pick_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
+
+        final_data = None
+        if pick_json:
+            full_paper = next((p for p in papers if p['id'] == pick_json['id']), None)
+            if full_paper:
+                final_data = {**full_paper, **pick_json}
+
+        output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")
+        write_to_json(final_data, output_path)
+
+    print(f"\n--- 所有领域处理完毕: {target_date.isoformat()} ---")

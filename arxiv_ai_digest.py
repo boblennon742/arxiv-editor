@@ -1,7 +1,7 @@
 import os
 import json
 import arxiv
-import google.generativeai as genai
+import google.genai as genai
 from datetime import date, timedelta, datetime
 
 # --- 1. 配置 ---
@@ -90,7 +90,7 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         
     print(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 1 篇...")
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
 
     prompt_papers = []
     for i, paper in enumerate(papers):

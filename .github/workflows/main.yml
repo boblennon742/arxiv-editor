@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-archive-daily:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     
     permissions:
       contents: write # 允许它写内容
@@ -25,9 +25,9 @@ jobs:
           
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools wheel
           echo "Pip upgraded to: $(pip --version)"
-          # 分开安装，先装有问题的
+          # 再次尝试分开安装
           python -m pip install --no-cache-dir google-generative-ai
           python -m pip install --no-cache-dir arxiv
           

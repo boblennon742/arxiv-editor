@@ -1,7 +1,7 @@
 import os
 import json
 import arxiv
-import google.generativeai as genai
+import google.genai as genai
 from datetime import date, timedelta
 
 # --- 1. 配置 ---

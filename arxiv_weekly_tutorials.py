@@ -1,7 +1,7 @@
 import os
 import json
 import arxiv
-import argparse # 优化：导入 argparse
+# import argparse # <-- 已移除
 from google import genai
 from datetime import date, timedelta
 
@@ -23,7 +23,7 @@ def fetch_weekly_tutorials(target_date):
    
     search = arxiv.Search(
         query=full_query,
-        max_results=50, # 保持 50
+        max_results=50,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -50,7 +50,7 @@ def fetch_weekly_tutorials(target_date):
         print(f"抓取教程失败: {e}")
         return []
 
-# --- 3. AI 教程总编辑 (V11 - 优选 2 篇) ---
+# --- 3. AI 教程总编辑 (优选 2 篇) ---
 def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not papers:
         print("没有论文可供 AI 分析。")
@@ -66,9 +66,6 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
         for p in papers
     ])
 
-    # ----------------------------------------------------
-    # (V11) 关键修改：要求 2 篇，并返回列表
-    # ----------------------------------------------------
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "本周教程与综述" 领域。
@@ -97,9 +94,6 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
     ]
     如果返回 `null`，就只返回 `null` 这个词。
     """
-    # ----------------------------------------------------
-    # (修改结束)
-    # ----------------------------------------------------
 
     full_prompt = f"{system_prompt}\n\n--- 教程列表开始 ---\n{prompt_papers}\n--- 教程列表结束 ---"
 
@@ -114,7 +108,7 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
             print("AI 教程编辑认为本周没有值得推荐的。")
             return None
 
-        ai_picks_list = json.loads(cleaned) # <--- 现在是一个列表
+        ai_picks_list = json.loads(cleaned)
         print(f"AI 教程编辑已选出 {len(ai_picks_list)} 篇本周最佳。")
         return ai_picks_list
     except Exception as e:
@@ -126,7 +120,6 @@ def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
-            # data_to_save 现在是一个列表 [ ... ] 或 None
             json.dump(data_to_save, f, ensure_ascii=False, indent=4)
             if data_to_save:
                 print(f"成功将 {len(data_to_save)} 篇“本周教程精选”写入 {file_path}")
@@ -137,15 +130,8 @@ def write_to_json(data_to_save, file_path):
 
 # --- 5. 主函数 ---
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="AI-driven arXiv weekly tutorial script.")
-    parser.add_argument(
-        '--date', 
-        type=lambda s: date.fromisoformat(s), 
-        default=date.today(),
-        help='(用于调试) 目标日期 (YYYY-MM-DD)。脚本将抓取此日期所在周。默认为今天。'
-    )
-    args = parser.parse_args()
-    target_date = args.date
+    # (V12) 关键修改：移除 argparse，恢复硬编码日期
+    target_date = date.today()
     
     print(f"--- 教程脚本开始运行，目标周 (基于日期): {target_date.isoformat()} ---")
 
@@ -155,25 +141,23 @@ if __name__ == "__main__":
     """
    
     papers = fetch_weekly_tutorials(target_date)
-    # (V11) 关键修改：pick_json 现在是一个列表
     pick_json_list = get_ai_tutorial_pick(papers, my_tutorial_preference)
    
-    final_data_to_save = [] # <-- 必须是一个列表
-    if pick_json_list: # 如果列表不是 None 或空
-        for pick_item in pick_json_list: # 循环 AI 选出的每一篇
+    final_data_to_save = []
+    if pick_json_list:
+        for pick_item in pick_json_list:
             full_paper = next((p for p in papers if p['id'] == pick_item['id']), None)
             if full_paper:
                 final_data_to_save.append({**full_paper, **pick_item})
     
-    # 如果 final_data_to_save 是空列表 []，write_to_json 会正确处理
     if not final_data_to_save:
-         final_data_to_save = None # 保持与 V9 一致，写入 null
+         final_data_to_save = None
            
     week_number = target_date.isocalendar()[1]
     year = target_date.isocalendar()[0]
     output_filename = f"{year}-W{week_number:02d}.json"
     output_path = os.path.join(ARCHIVE_DIR, "tutorials", output_filename)
    
-    write_to_json(final_data_to_save, output_path) # 写入列表或 None
+    write_to_json(final_data_to_save, output_path)
     
     print(f"\n--- 教程脚本处理完毕: {output_filename} ---")

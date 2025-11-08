@@ -1,49 +1,47 @@
 name: ArXiv Weekly Tutorial Archiver
-
 on:
   schedule:
     # V9 更新： 每周六 07:00 UTC (即 09:00 芬兰时间) 运行
     - cron: '0 7 * * 6'
   workflow_dispatch:
     # 允许你手动点击 "Run workflow" 来触发
-
 jobs:
   build-and-archive-weekly:
-    runs-on: ubuntu-20.04
-    
+    runs-on: ubuntu-latest  # 更新为最新版本，避免弃用问题
+   
     permissions:
-      contents: write # 允许它写内容
-      
+      contents: write  # 允许它写内容
+     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        
+        uses: actions/checkout@v5  # 更新到 v5
+       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # 更新到 v5
         with:
           python-version: '3.11'
-          
+         
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
           echo "Pip upgraded to: $(pip --version)"
-          # 再次尝试分开安装
-          python -m pip install --no-cache-dir google-generative-ai
+          # 分开安装，修正包名
+          python -m pip install --no-cache-dir google-generativeai
           python -m pip install --no-cache-dir arxiv
-          
+         
       - name: Run Weekly Tutorial Editor Script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python arxiv_weekly_tutorials.py
-          
+         
       - name: Commit and push new tutorial file
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'github-actions@github.com'
           git pull
-          git add archive/tutorials/ # 只添加教程文件夹
-          
+          git add archive/tutorials/  # 只添加教程文件夹
+         
           if git diff --staged --quiet; then
             echo "No new tutorial data to commit."
           else

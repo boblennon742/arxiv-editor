@@ -65,7 +65,7 @@ lang = st.radio(
 
 if lang == "简体中文":
     st.title("🤖 私人 AI 总编辑")
-    st.caption("由 AI 每日为我精选的博士研究必读论文")
+    st.caption("由 AI 每日为我精选的论文")
 else:
     st.title("🤖 Personal AI Editor")
     st.caption("Daily 'Must-Read' papers for my PhD research, curated by AI.")

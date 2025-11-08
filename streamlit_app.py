@@ -8,7 +8,7 @@ ARCHIVE_DIR = "archive"
 
 st.set_page_config(page_title="私人 AI 总编辑", layout="wide")
 
-# (V11) 关键修改：使用 10 核配置
+# (V11) 10 核配置
 YOUR_DOMAINS_OF_INTEREST = {
     "stat_ml_foundations": {
         "name_zh": "统计/ML基础理论",
@@ -85,25 +85,21 @@ with tab_daily:
     
     st.divider()
     
-    # 动态生成列以显示所有领域
-    num_columns = 3 # 每行显示 3 个
+    num_columns = 3 
     domain_keys = list(YOUR_DOMAINS_OF_INTEREST.keys())
     cols = st.columns(num_columns)
     
-    # 循环遍历所有领域，并将它们分配到列中
     for i, domain_key in enumerate(domain_keys):
-        with cols[i % num_columns]: # 使用取余 (%) 动态分配
-            
+        with cols[i % num_columns]:
             domain_config = YOUR_DOMAINS_OF_INTEREST[domain_key]
             domain_name = domain_config["name_zh"] if lang == "简体中文" else domain_config["name_en"]
             st.subheader(domain_name, divider="rainbow")
             
             file_path = os.path.join(ARCHIVE_DIR, domain_key, f"{selected_date.isoformat()}.json")
             
-            # 渲染逻辑 (用于单个 pick)
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
-                    pick = json.load(f) # 每日精选仍然是单个对象
+                    pick = json.load(f) 
                 
                 if pick:
                     st.markdown(f"**[{pick['title']}]({pick['url']})**")
@@ -127,7 +123,7 @@ with tab_daily:
             except FileNotFoundError:
                 st.write("尚无数据。" if lang == "简体中文" else "No data yet.")
 
-# --- (V11) 每周教程标签页 (循环渲染 2 篇) ---
+# --- (V12 修复) 每周教程标签页 (循环渲染 2 篇) ---
 with tab_weekly:
     today = date.today()
     year = today.isocalendar()[0]
@@ -151,34 +147,53 @@ with tab_weekly:
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            picks_list = json.load(f) # <--- 关键修改：读取列表
-        
-        if picks_list: # <--- 关键修改：检查列表是否非空
+            picks_data = json.load(f) # <--- 1. 先加载原始数据
+
+        # ----------------------------------------------------
+        # (V12) 关键修复：检查数据类型，确保 picks_list 始终是列表
+        # ----------------------------------------------------
+        picks_list = None # 默认为 None
+        if isinstance(picks_data, list):
+            picks_list = picks_data # 已经是 V11 的列表格式
+        elif isinstance(picks_data, dict):
+            picks_list = [picks_data] # 是 V9/V10 的单个对象，将其包装成列表
+        # ----------------------------------------------------
+        # (修复结束)
+        # ----------------------------------------------------
+
+        if picks_list: # <--- 检查列表是否非空
             
-            # (V11) 循环渲染列表中的每一篇教程
+            # 循环渲染列表中的每一篇教程
             for i, pick in enumerate(picks_list):
                 
-                st.markdown(f"**{i+1}. [{pick['title']}]({pick['url']})**")
-                authors_label = "作者" if lang == "简体中文" else "Authors"
-                st.caption(f"**{authors_label}:** {pick['authors']}")
-                
-                if lang == "简体中文":
-                    reason, reason_label = pick.get('reason_zh', 'N/A'), "AI 编辑推荐理由"
+                # (V12) 修复：确保 pick 是字典后再访问
+                if isinstance(pick, dict):
+                    st.markdown(f"**{i+1}. [{pick.get('title', 'No Title')}]({pick.get('url', '#')})**") # <--- 这就是之前的 line 161
+                    
+                    authors_label = "作者" if lang == "简体中文" else "Authors"
+                    st.caption(f"**{authors_label}:** {pick.get('authors', 'N/A')}")
+                    
+                    if lang == "简体中文":
+                        reason, reason_label = pick.get('reason_zh', 'N/A'), "AI 编辑推荐理由"
+                    else:
+                        reason, reason_label = pick.get('reason_en', 'N/A'), "AI Editor's Justification"
+                    st.info(f"**🏆 {reason_label}:** {reason}")
+                    
+                    expander_label = "查看摘要" if lang == "简体中文" else "View Abstract"
+                    with st.expander(expander_label):
+                        st.write(pick.get('summary', 'No summary available.'))
+                    pdf_label = "下载 PDF ➔" if lang == "简体中文" else "Download PDF ➔"
+                    st.link_button(pdf_label, pick.get('pdf_url', '#'))
+                    
+                    if i < len(picks_list) - 1: 
+                        st.divider()
                 else:
-                    reason, reason_label = pick.get('reason_en', 'N/A'), "AI Editor's Justification"
-                st.info(f"**🏆 {reason_label}:** {reason}")
-                
-                expander_label = "查看摘要" if lang == "简体中文" else "View Abstract"
-                with st.expander(expander_label):
-                    st.write(pick['summary'])
-                pdf_label = "下载 PDF ➔" if lang == "简体中文" else "Download PDF ➔"
-                st.link_button(pdf_label, pick['pdf_url'])
-                
-                if i < len(picks_list) - 1: # 如果不是最后一篇，添加分隔线
-                    st.divider()
+                    st.error("数据格式错误：pick 不是一个字典。")
 
         else:
             no_pick_text = "本周 AI 编辑未发现值得一读的教程。" if lang == "简体中文" else "The AI Editor found no 'must-read' tutorials this week."
             st.write(no_pick_text)
     except FileNotFoundError:
         st.write("尚无本周数据。" if lang == "简体中文" else "No data yet for this week.")
+    except json.JSONDecodeError:
+        st.error("无法解析 JSON 文件，文件可能已损坏。")

@@ -1,7 +1,7 @@
 import os
 import json
 import arxiv
-import argparse # 优化：导入 argparse
+# import argparse # <-- 已移除
 from google import genai
 from datetime import date, timedelta
 
@@ -10,7 +10,7 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
 # --------------------------------------------------------------------------
-# 你的“私人定制”十核 AI 编辑 (V11 - 最终版)
+# 你的“私人定制”十核 AI 编辑 (V12 - 最终版)
 # --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
     # 核心 1: 统计机器学习基础
@@ -127,14 +127,16 @@ YOUR_DOMAINS_OF_INTEREST = {
 
 # --------------------------------------------------------------------------
 # 抓取函数
-def fetch_papers_for_domain(categories, extra_query, target_date):
-    print(f"--- 正在为领域 {extra_query[:50]}... (日期 {target_date}) 抓取论文 ---")
+# (V12) 关键修复：修改 fetch_papers_for_domain 函数签名，传入 domain_name
+def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
+    # (V12) 关键修复：使用更安全的 domain_name 打印
+    print(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
     category_query = " OR ".join([f"cat:{cat}" for cat in categories])
     full_query = f"({category_query}) AND ({extra_query})"
 
     search = arxiv.Search(
         query=full_query,
-        max_results=75, # 10核方案使用 75
+        max_results=75,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -155,4 +157,85 @@ def fetch_papers_for_domain(categories, extra_query, target_date):
                     'url': result.entry_id,
                     'pdf_url': result.pdf_url
                 })
-        print(f"为 {extra_query
+        # (V12) 关键修复：使用更安全的 domain_name 打印（这就是之前报错的第158行）
+        print(f"为 {domain_name} 抓取到 {len(papers_list)} 篇论文。")
+        return papers_list
+    except Exception as e:
+        print(f"抓取 arXiv 失败: {e}")
+        return []
+
+# --------------------------------------------------------------------------
+# AI 分析函数
+def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
+    if not papers:
+        print("没有论文可供 AI 分析。")
+        return None
+    if not GEMINI_API_KEY:
+        print("未找到 GEMINI_API_KEY。")
+        return None
+
+    print(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 1 篇...")
+    client = genai.Client()
+
+    prompt_papers = "\n".join(
+        [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
+         for i, p in enumerate(papers)]
+    )
+
+    system_prompt = f"""
+    你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
+    我今天的任务是分析 "{domain_name}" 领域。
+
+    我的个人偏好/任务是：
+    "{user_preference_prompt}"
+    下面是为该领域抓取的 {len(papers)} 篇论文。
+    你的任务是“精中选精”：
+    1. 严格根据我的个人偏好/任务，从这些论文中挑选出 **1 篇（最多 1 篇）** 最值得我阅读的论文。
+    2. 如果**没有一篇**论文足够好或符合我的需求，请**必须**返回 `null`。
+    3. 如果你找到了 1 篇，请以严格的 JSON 格式返回，不要有任何其他文字。
+    JSON 格式如下：
+    {{
+      "id": "被选中论文的 ID",
+      "reason_zh": "（中文）详细说明为什么这篇论文**完全符合**我的偏好/任务。",
+      "reason_en": "(English) A detailed justification of why this paper **perfectly fits** my preference/task."
+    }}
+    如果返回 `null`，就只返回 `null` 这个词。
+    """
+
+    full_prompt = f"{system_prompt}\n\n--- 论文列表开始 ---\n{prompt_papers}\n--- 论文列表结束 ---"
+
+    try:
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=full_prompt
+        )
+        cleaned = response.text.strip().lstrip("```json").rstrip("```")
+
+        if cleaned.lower() == 'null':
+            print("AI 编辑认为今天没有值得推荐的。")
+            return None
+
+        ai_pick = json.loads(cleaned)
+        print("AI 编辑已选出今日最佳。")
+        return ai_pick
+    except Exception as e:
+        print(f"AI 总编辑分析失败: {e}")
+        return None
+
+# --------------------------------------------------------------------------
+# 写入 JSON
+def write_to_json(data_to_save, file_path):
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    try:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(data_to_save, f, ensure_ascii=False, indent=4)
+            if data_to_save:
+                print(f"成功将“精选”写入 {file_path}")
+            else:
+                print(f"标记 {file_path} 为“无精选”。")
+    except Exception as e:
+        print(f"写入 JSON 文件失败: {e}")
+
+# --------------------------------------------------------------------------
+# 主函数
+if __name__ == "__main__":

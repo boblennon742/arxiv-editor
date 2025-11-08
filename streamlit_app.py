@@ -8,7 +8,7 @@ ARCHIVE_DIR = "archive"
 
 st.set_page_config(page_title="私人 AI 总编辑", layout="wide")
 
-# (V11) 10 核配置
+# (V12) 10 核配置
 YOUR_DOMAINS_OF_INTEREST = {
     "stat_ml_foundations": {
         "name_zh": "统计/ML基础理论",
@@ -65,7 +65,7 @@ lang = st.radio(
 
 if lang == "简体中文":
     st.title("🤖 私人 AI 总编辑")
-    st.caption("由 AI 每日为我精选的论文")
+    st.caption("由 AI 每日为我精选的博士研究必读论文")
 else:
     st.title("🤖 Personal AI Editor")
     st.caption("Daily 'Must-Read' papers for my PhD research, curated by AI.")
@@ -76,7 +76,7 @@ tab_daily, tab_weekly = st.tabs([
     "🏆 " + ("每周教程 (优选 2)" if lang == "简体中文" else "Weekly Tutorials (Top 2)")
 ])
 
-# --- (V11) 每日精选标签页 (10 核动态布局) ---
+# --- 每日精选标签页 ---
 with tab_daily:
     if lang == "简体中文":
         selected_date = st.date_input("选择一个日期", date.today() - timedelta(days=1))
@@ -122,8 +122,10 @@ with tab_daily:
                     st.write(no_pick_text)
             except FileNotFoundError:
                 st.write("尚无数据。" if lang == "简体中文" else "No data yet.")
+            except json.JSONDecodeError:
+                st.error("JSON 文件损坏或格式错误。")
 
-# --- (V12 修复) 每周教程标签页 (循环渲染 2 篇) ---
+# --- (V12 修复) 每周教程标签页 ---
 with tab_weekly:
     today = date.today()
     year = today.isocalendar()[0]
@@ -147,28 +149,19 @@ with tab_weekly:
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            picks_data = json.load(f) # <--- 1. 先加载原始数据
+            picks_data = json.load(f)
 
-        # ----------------------------------------------------
         # (V12) 关键修复：检查数据类型，确保 picks_list 始终是列表
-        # ----------------------------------------------------
-        picks_list = None # 默认为 None
+        picks_list = None
         if isinstance(picks_data, list):
-            picks_list = picks_data # 已经是 V11 的列表格式
+            picks_list = picks_data
         elif isinstance(picks_data, dict):
-            picks_list = [picks_data] # 是 V9/V10 的单个对象，将其包装成列表
-        # ----------------------------------------------------
-        # (修复结束)
-        # ----------------------------------------------------
+            picks_list = [picks_data] # 将旧的单个对象包装成列表
 
-        if picks_list: # <--- 检查列表是否非空
-            
-            # 循环渲染列表中的每一篇教程
+        if picks_list:
             for i, pick in enumerate(picks_list):
-                
-                # (V12) 修复：确保 pick 是字典后再访问
                 if isinstance(pick, dict):
-                    st.markdown(f"**{i+1}. [{pick.get('title', 'No Title')}]({pick.get('url', '#')})**") # <--- 这就是之前的 line 161
+                    st.markdown(f"**{i+1}. [{pick.get('title', 'No Title')}]({pick.get('url', '#')})**")
                     
                     authors_label = "作者" if lang == "简体中文" else "Authors"
                     st.caption(f"**{authors_label}:** {pick.get('authors', 'N/A')}")
@@ -189,7 +182,6 @@ with tab_weekly:
                         st.divider()
                 else:
                     st.error("数据格式错误：pick 不是一个字典。")
-
         else:
             no_pick_text = "本周 AI 编辑未发现值得一读的教程。" if lang == "简体中文" else "The AI Editor found no 'must-read' tutorials this week."
             st.write(no_pick_text)

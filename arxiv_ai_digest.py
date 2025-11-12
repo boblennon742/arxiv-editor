@@ -68,7 +68,7 @@ YOUR_DOMAINS_OF_INTEREST = {
 }
 
 # --------------------------------------------------------------------------
-# (V17.2) 抓取函数 (已修复时间匹配错误)
+# (V17.3) 抓取函数 (最终修复：移除 break)
 # --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
@@ -87,13 +87,13 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         client = arxiv.Client()
         for result in client.results(search):
             
-            # (V17.2) 关键修复：使用 .updated.date() 匹配 SubmittedDate
-            # 因为 .published.date() 是 v1 的日期，而 .updated.date() 是 v2, v3 的日期
+            # (V17.2) 修复：使用 .updated.date() 匹配 SubmittedDate
             paper_date = result.updated.date() 
 
-            if paper_date < target_date:
-                break
-            
+            # (V17.3) 关键修复：移除 'break' 逻辑
+            # 因为复杂的 search_query 破坏了 ArXiv 的 'sortBy' 排序
+            # 我们必须遍历所有 100 篇论文，找到匹配的日期
+
             if paper_date == target_date:
                 papers_list.append({
                     'id': result.entry_id,
@@ -103,6 +103,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
                     'url': result.entry_id,
                     'pdf_url': result.pdf_url
                 })
+        
         logger.info(f"为 {domain_name} 抓取到 {len(papers_list)} 篇论文。")
         return papers_list
     except Exception as e:
@@ -214,8 +215,8 @@ def write_to_json(data_to_save, file_path):
 # 主函数 (V17 - 支持列表)
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
-    # (V17.2) 恢复为抓取“昨天”，这是自动化脚本的正确逻辑
-    target_date = date.today()
+    # 恢复为抓取“昨天”，这是自动化脚本的正确逻辑
+    target_date = date.today() - timedelta(days=1)
     
     logger.info(f"--- 脚本开始运行 (V17 评分版)，目标日期: {target_date.isoformat()} ---")
 

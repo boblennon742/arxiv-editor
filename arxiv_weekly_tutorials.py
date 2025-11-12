@@ -1,11 +1,11 @@
+#!/usr/bin/env python3
 import os
 import json
 import arxiv
 import logging 
-import re # <-- JSON 鲁棒性修复所需
+import re
 from google import genai
 from datetime import date, timedelta
-# (此脚本不需要导入 domains_config.py，因为它不依赖每日核心)
 
 # --- 1. 配置 Logging ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -18,38 +18,41 @@ ARCHIVE_DIR = "archive"
 ARXIV_CATEGORIES = ['stat.ML', 'cs.LG', 'math.OC', 'cs.NE', 'cs.AI', 'math.NA']
 TUTORIAL_KEYWORDS = ['tutorial', 'survey', '"lecture notes"', 'review', '"book chapter"']
 
-# --- 3. 抓取函数 ---
+# --- 3. 抓取函数（已修复：submittedDate 过滤一周）---
 def fetch_weekly_tutorials(target_date):
     logger.info(f"--- 正在为 {target_date} 所在周抓取教程 (非金融) ---")
-    one_week_ago = target_date - timedelta(days=7)
-   
+    
+    # 计算一周前（包含今天，共 7 天）
+    one_week_ago = target_date - timedelta(days=6)
+    
+    # 关键：API 端精确日期过滤
+    start_str = one_week_ago.strftime("%Y%m%d")
+    end_str = target_date.strftime("%Y%m%d")
+    date_filter = f"submittedDate:[{start_str}0000 TO {end_str}2359]"
+    
     category_query = " OR ".join([f"cat:{cat}" for cat in ARXIV_CATEGORIES])
-    keyword_query = " OR ".join([f'(ti:{kw} OR abs:{kw})' for kw in TUTORIAL_KEYWORDS])
-    full_query = f"({category_query}) AND ({keyword_query})"
-   
+    keyword_query = " OR ".join([f'(ti:"{kw}" OR abs:"{kw}")' for kw in TUTORIAL_KEYWORDS])
+    full_query = f"({category_query}) AND ({keyword_query}) AND {date_filter}"
+    
     search = arxiv.Search(
         query=full_query,
-        max_results=75, # (V17) 保持 75，与每日脚本一致
+        max_results=75,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
-   
+    
     papers_list = []
     try:
         client = arxiv.Client()
         for result in client.results(search):
-            paper_date = result.published.date()
-            if paper_date < one_week_ago:
-                break
-            if one_week_ago <= paper_date <= target_date:
-                papers_list.append({
-                    'id': result.entry_id,
-                    'title': result.title,
-                    'summary': result.summary.replace("\n", " "),
-                    'authors': ", ".join([a.name for a in result.authors]),
-                    'url': result.entry_id,
-                    'pdf_url': result.pdf_url
-                })
+            papers_list.append({
+                'id': result.entry_id,
+                'title': result.title,
+                'summary': result.summary.replace("\n", " "),
+                'authors': ", ".join([a.name for a in result.authors]),
+                'url': result.entry_id,
+                'pdf_url': result.pdf_url
+            })
         logger.info(f"本周共抓取到 {len(papers_list)} 篇教程/综述。")
         return papers_list
     except Exception as e:

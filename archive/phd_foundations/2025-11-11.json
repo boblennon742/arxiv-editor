@@ -1,1 +1,77 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.08567v1",
+        "title": "The Path Not Taken: RLVR Provably Learns Off the Principals",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) reliably improves the reasoning performance of large language models, yet it appears to modify only a small fraction of parameters. We revisit this paradox and show that sparsity is a surface artifact of a model-conditioned optimization bias: for a fixed pretrained model, updates consistently localize to preferred parameter regions, highly consistent across runs and largely invariant to datasets and RL recipes. We mechanistically explain these dynamics with a Three-Gate Theory: Gate I (KL Anchor) imposes a KL-constrained update; Gate II (Model Geometry) steers the step off principal directions into low-curvature, spectrum-preserving subspaces; and Gate III (Precision) hides micro-updates in non-preferred regions, making the off-principal bias appear as sparsity. We then validate this theory and, for the first time, provide a parameter-level characterization of RLVR's learning dynamics: RLVR learns off principal directions in weight space, achieving gains via minimal spectral drift, reduced principal-subspace rotation, and off-principal update alignment. In contrast, SFT targets principal weights, distorts the spectrum, and even lags RLVR.   Together, these results provide the first parameter-space account of RLVR's training dynamics, revealing clear regularities in how parameters evolve. Crucially, we show that RL operates in a distinct optimization regime from SFT, so directly adapting SFT-era parameter-efficient fine-tuning (PEFT) methods can be flawed, as evidenced by our case studies on advanced sparse fine-tuning and LoRA variants. We hope this work charts a path toward a white-box understanding of RLVR and the design of geometry-aware, RLVR-native learning algorithms, rather than repurposed SFT-era heuristics.",
+        "authors": "Hanqing Zhu, Zhenyu Zhang, Hanxian Huang, DiJia Su, Zechun Liu, Jiawei Zhao, Igor Fedorov, Hamed Pirsiavash, Zhizhou Sha, Jinwon Lee, David Z. Pan, Zhangyang Wang, Yuandong Tian, Kai Sheng Tai",
+        "url": "http://arxiv.org/abs/2511.08567v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入探讨了RLVR（Reinforcement Learning with Verifiable Rewards）的内在学习机制，提出了一个\"三门理论\"并首次对其参数级别的学习动态进行了表征。其核心贡献在于\"Provably Learns Off the Principals\"，直接强调了严格的理论保证和数学推导，揭示了RL与SFT在优化机制上的本质区别。这完全符合我作为数理统计博士生对**强大理论基础**和**清晰数学推导**的偏好，为理解复杂RL系统的行为提供了白盒视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08417v1",
+        "title": "NeuCLIP: Efficient Large-Scale CLIP Training with Neural Normalizer Optimization",
+        "summary": "Accurately estimating the normalization term (also known as the partition function) in the contrastive loss is a central challenge for training Contrastive Language-Image Pre-training (CLIP) models. Conventional methods rely on large batches for approximation, demanding substantial computational resources. To mitigate this issue, prior works introduced per-sample normalizer estimators, which are updated at each epoch in a blockwise coordinate manner to keep track of updated encoders. However, this scheme incurs optimization error that scales with the ratio of dataset size to batch size, limiting effectiveness for large datasets or small batches. To overcome this limitation, we propose NeuCLIP, a novel and elegant optimization framework based on two key ideas: (i) $\\textbf{reformulating}$ the contrastive loss for each sample $\\textbf{via convex analysis}$ into a minimization problem with an auxiliary variable representing its log-normalizer; and (ii) $\\textbf{transforming}$ the resulting minimization over $n$ auxiliary variables (where $n$ is the dataset size) via $\\textbf{variational analysis}$ into the minimization over a compact neural network that predicts the log-normalizers. We design an alternating optimization algorithm that jointly trains the CLIP model and the auxiliary network. By employing a tailored architecture and acceleration techniques for the auxiliary network, NeuCLIP achieves more accurate normalizer estimation, leading to improved performance compared with previous methods. Extensive experiments on large-scale CLIP training, spanning datasets from millions to billions of samples, demonstrate that NeuCLIP outperforms previous methods.",
+        "authors": "Xiyuan Wei, Chih-Jen Lin, Tianbao Yang",
+        "url": "http://arxiv.org/abs/2511.08417v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的优化框架NeuCLIP，通过**凸分析和变分分析**对对比学习中归一化项估计进行数学上的重新表述和转换，并设计了交替优化算法。这种将机器学习问题转化为严格数学优化框架（如凸分析和变分分析）的方法，提供了坚实的理论基础和严谨的数学推导，完全契合我对**严谨数学逻辑和清晰数学推导**的追求，同时解决了大规模CLIP训练中的实际计算难题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08362v1",
+        "title": "An Information-Minimal Geometry for Qubit-Efficient Optimization",
+        "summary": "Qubit-efficient optimization seeks to represent an $N$-variable combinatorial problem within a Hilbert space smaller than $2^N$, using only as much quantum structure as the objective itself requires. Quadratic unconstrained binary optimization (QUBO) problems, for example, depend only on pairwise information -- expectations and correlations between binary variables -- yet standard quantum circuits explore exponentially large state spaces. We recast qubit-efficient optimization as a geometry problem: the minimal representation should match the $O(N^2)$ structure of quadratic objectives. The key insight is that the local-consistency problem -- ensuring that pairwise marginals correspond to a realizable global distribution -- coincides exactly with the Sherali-Adams level-2 polytope $\\mathrm{SA}(2)$, the tightest convex relaxation expressible at the two-body level. Previous qubit-efficient approaches enforced this consistency only implicitly. Here we make it explicit: (a) anchoring learning to the $\\mathrm{SA}(2)$ geometry, (b) projecting via a differentiable iterative-proportional-fitting (IPF) step, and (c) decoding through a maximum-entropy Gibbs sampler. This yields a logarithmic-width pipeline ($2\\lceil\\log_2 N\\rceil + 2$ qubits) that is classically simulable yet achieves strong empirical performance. On Gset Max-Cut instances (N=800--2000), depth-2--3 circuits reach near-optimal ratios ($r^* \\approx 0.99$), surpassing direct $\\mathrm{SA}(2)$ baselines. The framework resolves the local-consistency gap by giving it a concrete convex geometry and a minimal differentiable projection, establishing a clean polyhedral baseline. Extending beyond $\\mathrm{SA}(2)$ naturally leads to spectrahedral geometries, where curvature encodes global coherence and genuine quantum structure becomes necessary.",
+        "authors": "Gordon Ma, Dimitris G. Angelakis",
+        "url": "http://arxiv.org/abs/2511.08362v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过将量子高效优化问题重塑为几何问题，并与Sherali-Adams level-2多面体（SA(2)）建立精确联系，展现了极高的**数学抽象和理论严谨性**。其利用**凸几何和可微分投影**解决局部一致性问题，提供了深刻的数学洞察和清晰的推导路径，建立了重要的多面体基线，与我对将严谨数学逻辑应用于现代AI系统（特别是量子计算领域）的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08539v1",
+        "title": "Neumann-series corrections for regression adjustment in randomized experiments",
+        "summary": "We study average treatment effect (ATE) estimation under complete randomization with many covariates in a design-based, finite-population framework. In randomized experiments, regression adjustment can improve precision of estimators using covariates, without requiring a correctly specified outcome model. However, existing design-based analyses establish asymptotic normality only up to $p = o(n^{1/2})$, extendable to $p = o(n^{2/3})$ with a single de-biasing. We introduce a novel theoretical perspective on the asymptotic properties of regression adjustment through a Neumann-series decomposition, yielding a systematic higher-degree corrections and a refined analysis of regression adjustment. Specifically, for ordinary least squares regression adjustment, the Neumann expansion sharpens analysis of the remainder term, relative to the residual difference-in-means. Under mild leverage regularity, we show that the degree-$d$ Neumann-corrected estimator is asymptotically normal whenever $p^{ d+3}(\\log p)^{ d+1}=o(n^{ d+2})$, strictly enlarging the admissible growth of $p$. The analysis is purely randomization-based and does not impose any parametric outcome models or super-population assumptions.",
+        "authors": "Dogyoon Song",
+        "url": "http://arxiv.org/abs/2511.08539v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为随机化实验中的回归调整提供了**新颖的理论视角**，通过诺依曼级数分解实现了系统化的高阶校正，并在设计基框架下建立了**严格的渐近正态性**。其纯粹基于随机化的理论分析，不依赖额外的参数模型或超总体假设，充分体现了**严谨的数学逻辑和统计保证**，对因果推断领域具有深远的理论意义，是我非常感兴趣的领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.07892v1",
+        "title": "A Generalized Spectral Framework to Expain Neural Scaling and Compression Dynamics",
+        "summary": "Empirical scaling laws describe how test loss and other performance metrics depend on model size, dataset size, and compute. While such laws are consistent within specific regimes, apparently distinct scaling behaviors have been reported for related settings such as model compression. Motivated by recent progress in spectral analyses of neural representations, this paper develops a \\emph{generalized spectral framework} that unifies learning dynamics and compression phenomena under a common functional ansatz. We generalize the spectral evolution function from the linear kernel form $g(λt)=λt$ to an asymptotically polynomial function $g(λ,t;β)$, characterized by an effective spectral--temporal elasticity $ρ(β)$. This framework recovers existing lazy and feature-learning theories as special cases and yields an invariant relation between learning and compression",
+        "authors": "Yizhou Zhang",
+        "url": "http://arxiv.org/abs/2511.07892v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文构建了一个**广义谱框架**，成功统一了神经网络的缩放定律和压缩动态，并揭示了学习与压缩之间的**不变关系**。这种从基础理论层面理解和解释现代AI系统行为的研究，其**理论深度和数学严谨性**极高，通过严谨的函数扩展和理论推导，为神经网络的普适行为提供了新的数学解释，与我对将数学逻辑应用于AI系统的兴趣非常吻合。"
+    }
+]

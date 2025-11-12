@@ -1,10 +1,10 @@
 import os
 import json
 import arxiv
-import re
-import logging
+import re # <-- 新增：用于鲁棒 JSON 解析
+import logging # <-- 新增：替换 print
 from google import genai
-from datetime import date, datetime, timezone, timedelta 
+from datetime import date, timedelta
 
 # --- 1. 配置 Logging ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -24,7 +24,9 @@ YOUR_DOMAINS_OF_INTEREST = {
     "phd_foundations": {
         "name_zh": "AI 理论与统计基础",
         "name_en": "AI Theory & Statistical Foundations",
+        # 合并 5 个理论核心的分类
         "categories": ['stat.ML', 'cs.LG', 'stat.ME', 'math.ST', 'cs.AI', 'cs.CY', 'math.OC', 'stat.TH', 'cs.CV'],
+        # 合并 5 个理论核心的关键词
         "search_query": (
             '("statistical learning theory" OR "nonparametric regression" OR "model selection" OR "high-dimensional inference" OR "uncertainty quantification") OR '
             '("causal inference" OR "fairness" OR "explainable AI" OR "interpretability" OR "treatment effect") OR '
@@ -32,6 +34,7 @@ YOUR_DOMAINS_OF_INTEREST = {
             '("high-dimensional statistics" OR "nonparametric estimation" OR "minimax rate" OR "statistical guarantees") OR '
             '("representation learning" OR "metric learning" OR "contrastive learning" OR "self-supervised learning" OR "information bottleneck")'
         ),
+        # AI 提示词：包含“理论驱动实践”的哲学
         "ai_preference_prompt": """
         我是一名数理统计博士生，专注于将严谨的数学逻辑应用于现代 AI 系统。
         我寻求的论文必须具备**强大的理论基础**（如统计保证、优化收敛性、因果逻辑）和**清晰的数学推导**。
@@ -44,13 +47,16 @@ YOUR_DOMAINS_OF_INTEREST = {
     "phd_methods": {
         "name_zh": "前沿 AI 模型与应用",
         "name_en": "Frontier AI Models & Applications",
+        # 合并 4 个方法核心的分类
         "categories": ['cs.LG', 'cs.AI', 'cs.SY', 'cs.CL', 'stat.AP', 'cs.CV', 'eess.IV', 'cs.AR'],
+        # 合并 4 个方法核心的关键词
         "search_query": (
             '("Offline Reinforcement Learning" OR "Safe RL" OR "exploration" OR "Multi-Agent" OR "Model-Based RL") OR '
             '("Large Language Model" OR "prompt engineering" OR "RAG system" OR "in-context learning" OR "LLM for data analysis") OR '
             '("Vision Transformer" OR "Diffusion Model" OR "Graph Neural Network" OR "multimodal learning") OR '
             '("efficient AI" OR "model compression" OR "knowledge distillation" OR "on-device inference" OR "low-resource ML")'
         ),
+        # AI 提示词：包含“理论驱动实践”的哲学
         "ai_preference_prompt": """
         我是一名数理统计博士生，专注于 AI 的前沿算法和架构。
         我寻求的论文必须**逻辑清晰**，并能**解决实际应用瓶颈**（如数据效率、模型压缩、LLM 应用）。
@@ -74,36 +80,27 @@ YOUR_DOMAINS_OF_INTEREST = {
 }
 
 # --------------------------------------------------------------------------
-# 抓取函数（已修复时区逻辑错误）
-# --------------------------------------------------------------------------
+# 抓取函数
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
     category_query = " OR ".join([f"cat:{cat}" for cat in categories])
     full_query = f"({category_query}) AND ({extra_query})"
+
     search = arxiv.Search(
         query=full_query,
-        max_results=100,
+        max_results=100, # V17 使用 100
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
+
     papers_list = []
-
-    # --- V17.1 最终修复：使用简单的日期匹配 ---
-    # 我们只关心日期部分是否相等
-    target_date_part = target_date.date() # 获取目标日期（去除时间）
-    # --------------------------------------------
-
     try:
         client = arxiv.Client()
         for result in client.results(search):
-            published_date_part = result.published.date() # 获取论文发布日期（去除时间）
-
-            # 核心逻辑：论文的日期早于目标日期，则停止
-            if published_date_part < target_date_part:
+            paper_date = result.published.date()
+            if paper_date < target_date:
                 break
-            
-            # 核心逻辑：论文日期与目标日期精确匹配，则添加
-            if published_date_part == target_date_part:
+            if paper_date == target_date:
                 papers_list.append({
                     'id': result.entry_id,
                     'title': result.title,
@@ -112,7 +109,6 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
                     'url': result.entry_id,
                     'pdf_url': result.pdf_url
                 })
-
         logger.info(f"为 {domain_name} 抓取到 {len(papers_list)} 篇论文。")
         return papers_list
     except Exception as e:
@@ -120,7 +116,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V17) AI 分析函数 (评分引擎 - 保持不变)
+# (V17) AI 分析函数 (评分引擎)
 # --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
@@ -129,15 +125,19 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not GEMINI_API_KEY:
         logger.error("未找到 GEMINI_API_KEY。")
         return None
+
     logger.info(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 5 篇并评分...")
     client = genai.Client()
+
     prompt_papers = "\n".join(
         [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
          for i, p in enumerate(papers)]
     )
+
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "{domain_name}" 领域。
+
     我的个人偏好/任务是：
     "{user_preference_prompt}"
     
@@ -168,7 +168,9 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     ]
     如果返回 `null`，就只返回 `null` 这个词。
     """
+
     full_prompt = f"{system_prompt}\n\n--- 论文列表开始 ---\n{prompt_papers}\n--- 论文列表结束 ---"
+
     try:
         response = client.models.generate_content(
             model='gemini-2.5-flash',
@@ -177,7 +179,8 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         
         # (V17) 鲁棒性 JSON 清理 (查找列表)
         cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
-        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
+        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL) 
+
         if not match:
              if cleaned.lower() == 'null':
                  logger.info("AI 编辑认为今天没有值得推荐的。")
@@ -186,11 +189,12 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
              logger.error(f"AI 输出的文本中找不到 JSON 列表结构。输出：{response.text[:200]}...")
              raise json.JSONDecodeError("JSON 列表结构缺失", response.text, 0)
         
-        json_string = match.group(1)
+        json_string = match.group(1) 
         
-        ai_picks_list = json.loads(json_string)
+        ai_picks_list = json.loads(json_string) 
         logger.info(f"AI 编辑已选出 {len(ai_picks_list)} 篇今日最佳。")
         return ai_picks_list
+
     except json.JSONDecodeError as e:
         logger.error(f"AI 总编辑分析失败: 无法解析 JSON: {e}")
         return None
@@ -217,22 +221,22 @@ def write_to_json(data_to_save, file_path):
 # 主函数 (V17 - 支持列表)
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
-    # (V17.1) 临时修改：目标日期改为今天
-    target_date = date.today()
+    target_date = date.today() - timedelta(days=1)
     
     logger.info(f"--- 脚本开始运行 (V17 评分版)，目标日期: {target_date.isoformat()} ---")
+
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
         logger.info(f"\n--- 处理领域: {config['name_en']} ---")
         
-        # V17.1: target_date 现在是 datetime.date 类型
         papers = fetch_papers_for_domain(
             domain_name=config["name_en"],
-            categories=config["categories"],
-            extra_query=config["search_query"],
+            categories=config["categories"], 
+            extra_query=config["search_query"], 
             target_date=target_date
         )
         
         picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
+
         final_data_list = []
         if picks_list_json:
             for pick_item in picks_list_json:

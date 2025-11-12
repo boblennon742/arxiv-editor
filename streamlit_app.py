@@ -37,16 +37,16 @@ lang = st.radio(
 )
 
 if lang == "简体中文":
-    st.title("🤖 私人 AI 总编辑 (V17 评分版)")
-    st.caption("由 AI 每日为我评分精选的博士研究必读论文")
+    st.title("🤖 私人 AI 总编辑")
+    st.caption("由 AI 每日为我评分精选的研究论文")
 else:
-    st.title("🤖 Personal AI Editor (V17 Scoring)")
-    st.caption("Daily 'Must-Read' PhD papers, scored and curated by AI.")
+    st.title("🤖 Personal AI Editor")
+    st.caption("Daily 'Must-Read' papers, scored and curated by AI.")
 
 # --- 3. 标签页设计 ---
 tab_daily, tab_weekly = st.tabs([
-    "📅 " + ("每日精选 (3核评分)" if lang == "简体中文" else "Daily Picks (3-Core Scoring)"), 
-    "🏆 " + ("每周教程 (优选 2)" if lang == "简体中文" else "Weekly Tutorials (Top 2)")
+    "📅 " + ("每日精选" if lang == "简体中文" else "Daily Picks"), 
+    "🏆 " + ("每周教程" if lang == "简体中文" else "Weekly Tutorials")
 ])
 
 # --------------------------------------------------------------------------

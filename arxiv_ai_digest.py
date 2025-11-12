@@ -15,15 +15,15 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
 # --------------------------------------------------------------------------
-# (V17) 关键修改：从 10 核重组为 3 个超级核心
+# (V17.1) 关键修改：重组为 3 个超级核心，并使用新名称
 # --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
     # ------------------------------------------------------
-    # 超级核心 1: 基础理论
+    # 核心 1: AI 理论与统计基础
     # ------------------------------------------------------
     "phd_foundations": {
-        "name_zh": "博士研究（基础理论）",
-        "name_en": "PhD Research (Foundations)",
+        "name_zh": "AI 理论与统计基础",
+        "name_en": "AI Theory & Statistical Foundations",
         # 合并 5 个理论核心的分类
         "categories": ['stat.ML', 'cs.LG', 'stat.ME', 'math.ST', 'cs.AI', 'cs.CY', 'math.OC', 'stat.TH', 'cs.CV'],
         # 合并 5 个理论核心的关键词
@@ -42,11 +42,11 @@ YOUR_DOMAINS_OF_INTEREST = {
     },
     
     # ------------------------------------------------------
-    # 超级核心 2: 高级 AI 方法
+    # 核心 2: 前沿 AI 模型与应用
     # ------------------------------------------------------
     "phd_methods": {
-        "name_zh": "博士研究（高级方法）",
-        "name_en": "PhD Research (Advanced Methods)",
+        "name_zh": "前沿 AI 模型与应用",
+        "name_en": "Frontier AI Models & Applications",
         # 合并 4 个方法核心的分类
         "categories": ['cs.LG', 'cs.AI', 'cs.SY', 'cs.CL', 'stat.AP', 'cs.CV', 'eess.IV', 'cs.AR'],
         # 合并 4 个方法核心的关键词
@@ -65,7 +65,7 @@ YOUR_DOMAINS_OF_INTEREST = {
     },
 
     # ------------------------------------------------------
-    # 核心 3: 量化金融 (保持不变，但会改为推送 5 篇)
+    # 核心 3: 量化金融 (Crypto)
     # ------------------------------------------------------
     "quant_crypto": {
         "name_zh": "量化金融 (Crypto)",
@@ -88,7 +88,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
 
     search = arxiv.Search(
         query=full_query,
-        max_results=100, # 保持 100
+        max_results=100, # V17 使用 100
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -116,7 +116,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V17) AI 分析函数 (重写为“评分引擎”)
+# (V17) AI 分析函数 (评分引擎)
 # --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
@@ -134,7 +134,6 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
          for i, p in enumerate(papers)]
     )
 
-    # (V17) 关键修改：全新的 AI 提示词
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "{domain_name}" 领域。
@@ -204,7 +203,7 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         return None
 
 # --------------------------------------------------------------------------
-# (V17) 写入 JSON (重写以支持列表或 None)
+# 写入 JSON (V17 - 支持列表)
 # --------------------------------------------------------------------------
 def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
@@ -219,7 +218,7 @@ def write_to_json(data_to_save, file_path):
         logger.error(f"写入 JSON 文件失败: {e}")
 
 # --------------------------------------------------------------------------
-# (V17) 主函数 (重写以支持列表)
+# 主函数 (V17 - 支持列表)
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
     target_date = date.today() - timedelta(days=1)
@@ -236,10 +235,9 @@ if __name__ == "__main__":
             target_date=target_date
         )
         
-        # (V17) pick_json 现在是一个列表
         picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
 
-        final_data_list = [] # <-- 初始化为空列表
+        final_data_list = []
         if picks_list_json:
             for pick_item in picks_list_json:
                 full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
@@ -247,9 +245,9 @@ if __name__ == "__main__":
                     final_data_list.append({**full_paper, **pick_item})
         
         if not final_data_list:
-             final_data_list = None # 如果列表为空，则写入 null
+             final_data_list = None 
 
         output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")
-        write_to_json(final_data_list, output_path) # 写入列表或 None
+        write_to_json(final_data_list, output_path)
 
     logger.info(f"\n--- 所有领域处理完毕: {target_date.isoformat()} ---")

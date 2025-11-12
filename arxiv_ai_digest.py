@@ -214,7 +214,7 @@ def write_to_json(data_to_save, file_path):
 # 主函数 (V17 - 支持列表)
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
-    target_date = date.today() - timedelta(days=1
+    target_date = date.today() - timedelta(days=1)
    
     logger.info(f"--- 脚本开始运行 (V17 评分版)，目标日期: {target_date.isoformat()} ---")
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():

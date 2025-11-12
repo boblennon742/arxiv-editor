@@ -1,8 +1,8 @@
 import os
 import json
 import arxiv
-import re # <-- 新增：用于鲁棒 JSON 解析
-import logging # <-- 新增：替换 print
+import re 
+import logging 
 from google import genai
 from datetime import date, timedelta
 
@@ -15,18 +15,14 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
 # --------------------------------------------------------------------------
-# (V17.1) 关键修改：重组为 3 个超级核心，并使用新名称
+# (V17.1) 3 个超级核心
 # --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
-    # ------------------------------------------------------
     # 核心 1: AI 理论与统计基础
-    # ------------------------------------------------------
     "phd_foundations": {
         "name_zh": "AI 理论与统计基础",
         "name_en": "AI Theory & Statistical Foundations",
-        # 合并 5 个理论核心的分类
         "categories": ['stat.ML', 'cs.LG', 'stat.ME', 'math.ST', 'cs.AI', 'cs.CY', 'math.OC', 'stat.TH', 'cs.CV'],
-        # 合并 5 个理论核心的关键词
         "search_query": (
             '("statistical learning theory" OR "nonparametric regression" OR "model selection" OR "high-dimensional inference" OR "uncertainty quantification") OR '
             '("causal inference" OR "fairness" OR "explainable AI" OR "interpretability" OR "treatment effect") OR '
@@ -34,29 +30,23 @@ YOUR_DOMAINS_OF_INTEREST = {
             '("high-dimensional statistics" OR "nonparametric estimation" OR "minimax rate" OR "statistical guarantees") OR '
             '("representation learning" OR "metric learning" OR "contrastive learning" OR "self-supervised learning" OR "information bottleneck")'
         ),
-        # AI 提示词：包含“理论驱动实践”的哲学
         "ai_preference_prompt": """
         我是一名数理统计博士生，专注于将严谨的数学逻辑应用于现代 AI 系统。
         我寻求的论文必须具备**强大的理论基础**（如统计保证、优化收敛性、因果逻辑）和**清晰的数学推导**。
         """
     },
     
-    # ------------------------------------------------------
     # 核心 2: 前沿 AI 模型与应用
-    # ------------------------------------------------------
     "phd_methods": {
         "name_zh": "前沿 AI 模型与应用",
         "name_en": "Frontier AI Models & Applications",
-        # 合并 4 个方法核心的分类
         "categories": ['cs.LG', 'cs.AI', 'cs.SY', 'cs.CL', 'stat.AP', 'cs.CV', 'eess.IV', 'cs.AR'],
-        # 合并 4 个方法核心的关键词
         "search_query": (
             '("Offline Reinforcement Learning" OR "Safe RL" OR "exploration" OR "Multi-Agent" OR "Model-Based RL") OR '
             '("Large Language Model" OR "prompt engineering" OR "RAG system" OR "in-context learning" OR "LLM for data analysis") OR '
             '("Vision Transformer" OR "Diffusion Model" OR "Graph Neural Network" OR "multimodal learning") OR '
             '("efficient AI" OR "model compression" OR "knowledge distillation" OR "on-device inference" OR "low-resource ML")'
         ),
-        # AI 提示词：包含“理论驱动实践”的哲学
         "ai_preference_prompt": """
         我是一名数理统计博士生，专注于 AI 的前沿算法和架构。
         我寻求的论文必须**逻辑清晰**，并能**解决实际应用瓶颈**（如数据效率、模型压缩、LLM 应用）。
@@ -64,9 +54,7 @@ YOUR_DOMAINS_OF_INTEREST = {
         """
     },
 
-    # ------------------------------------------------------
     # 核心 3: 量化金融 (Crypto)
-    # ------------------------------------------------------
     "quant_crypto": {
         "name_zh": "量化金融 (Crypto)",
         "name_en": "Quantitative Finance (Crypto)",
@@ -80,7 +68,8 @@ YOUR_DOMAINS_OF_INTEREST = {
 }
 
 # --------------------------------------------------------------------------
-# 抓取函数
+# (V17.2) 抓取函数 (已修复时间匹配错误)
+# --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
     category_query = " OR ".join([f"cat:{cat}" for cat in categories])
@@ -88,8 +77,8 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
 
     search = arxiv.Search(
         query=full_query,
-        max_results=100, # V17 使用 100
-        sort_by=arxiv.SortCriterion.SubmittedDate,
+        max_results=100,
+        sort_by=arxiv.SortCriterion.SubmittedDate, # 按提交日期排序
         sort_order=arxiv.SortOrder.Descending
     )
 
@@ -97,9 +86,14 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     try:
         client = arxiv.Client()
         for result in client.results(search):
-            paper_date = result.published.date()
+            
+            # (V17.2) 关键修复：使用 .updated.date() 匹配 SubmittedDate
+            # 因为 .published.date() 是 v1 的日期，而 .updated.date() 是 v2, v3 的日期
+            paper_date = result.updated.date() 
+
             if paper_date < target_date:
                 break
+            
             if paper_date == target_date:
                 papers_list.append({
                     'id': result.entry_id,
@@ -177,7 +171,6 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
             contents=full_prompt
         )
         
-        # (V17) 鲁棒性 JSON 清理 (查找列表)
         cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
         match = re.search(r'(\[.*?\])', cleaned, re.DOTALL) 
 
@@ -221,6 +214,7 @@ def write_to_json(data_to_save, file_path):
 # 主函数 (V17 - 支持列表)
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
+    # (V17.2) 恢复为抓取“昨天”，这是自动化脚本的正确逻辑
     target_date = date.today() - timedelta(days=1)
     
     logger.info(f"--- 脚本开始运行 (V17 评分版)，目标日期: {target_date.isoformat()} ---")

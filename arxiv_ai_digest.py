@@ -136,7 +136,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
 
     search = arxiv.Search(
         query=full_query,
-        max_results=75,
+        max_results=100,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )

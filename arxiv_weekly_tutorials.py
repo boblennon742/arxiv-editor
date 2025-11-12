@@ -23,7 +23,7 @@ def fetch_weekly_tutorials(target_date):
    
     search = arxiv.Search(
         query=full_query,
-        max_results=50,
+        max_results=75,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )

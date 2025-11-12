@@ -1,1 +1,77 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.08360v1",
+        "title": "Extreme Model Compression with Structured Sparsity at Low Precision",
+        "summary": "Deep neural networks (DNNs) are used in many applications, but their large size and high computational cost make them hard to run on devices with limited resources. Two widely used techniques to address this challenge are weight quantization, which lowers the precision of all weights, and structured sparsity, which removes unimportant weights while retaining the important ones at full precision. Although both are effective individually, they are typically studied in isolation due to their compounded negative impact on model accuracy when combined. In this work, we introduce SLOPE Structured Sparsity at Low Precision), a unified framework, to effectively combine structured sparsity and low-bit quantization in a principled way. We show that naively combining sparsity and quantization severely harms performance due to the compounded impact of both techniques. To address this, we propose a training-time regularization strategy that minimizes the discrepancy between full-precision weights and their sparse, quantized counterparts by promoting angular alignment rather than direct matching. On ResNet-18, SLOPE achieves $\\sim20\\times$ model size reduction while retaining $\\sim$99% of the original accuracy. It consistently outperforms state-of-the-art quantization and structured sparsity methods across classification, detection, and segmentation tasks on models such as ResNet-18, ViT-Small, and Mask R-CNN.",
+        "authors": "Dan Liu, Nikita Dvornik, Xue Liu",
+        "url": "http://arxiv.org/abs/2511.08360v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 SLOPE (Structured Sparsity at Low Precision) 框架，以一种“有原则的方式”结合结构化稀疏性与低精度量化，这在模型压缩领域是一个关键挑战。其核心贡献是创新的训练时正则化策略，通过促进角度对齐而非直接匹配来最小化全精度权重与稀疏量化权重之间的差异。这不仅是一个高效解决“模型压缩”瓶颈的实际方案（实现约20倍模型大小缩减），更具有深厚的理论创新性和严谨性，完美符合您对前沿算法和架构以及理论创新性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08066v1",
+        "title": "Information Capacity: Evaluating the Efficiency of Large Language Models via Text Compression",
+        "summary": "Recent years have witnessed the rapid advancements of large language models (LLMs) and their expanding applications, leading to soaring demands for computational resources. The widespread adoption of test-time scaling further aggravates the tension between model capability and resource consumption, highlighting the importance of inference efficiency. However, a unified metric that accurately reflects an LLM's efficiency across different model sizes and architectures remains absent. Motivated by the correlation between compression and intelligence, we introduce information capacity, a measure of model efficiency based on text compression performance relative to computational complexity. Larger models can predict the next token more accurately, achieving greater compression gains but at higher computational costs. Empirical evaluations on mainstream open-source models show that models of varying sizes within a series exhibit consistent information capacity. This metric enables a fair efficiency comparison across model series and accurate performance prediction within a model series. A distinctive feature of information capacity is that it incorporates tokenizer efficiency, which affects both input and output token counts but is often neglected in LLM evaluations. We assess the information capacity of 49 models on 5 heterogeneous datasets and observe consistent results on the influences of tokenizer efficiency, pretraining data, and the mixture-of-experts architecture.",
+        "authors": "Cheng Yuan, Jiawei Shao, Chi Zhang, Xuelong Li",
+        "url": "http://arxiv.org/abs/2511.08066v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“信息容量”（information capacity）这一新颖的统一指标来评估大型语言模型（LLMs）的效率，其理论基础是文本压缩性能与计算复杂度的关联。它将压缩与智能之间的关联性进行了原理性测量，并考虑了分词器效率，为 LLM 的设计和评估提供了统一且理论严谨的框架。这直接解决了 LLM 快速发展带来的计算资源需求飙升的“推理效率”瓶颈，其理论创新和对 LLM 架构的深远指导意义，高度符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08392v1",
+        "title": "PCRLLM: Proof-Carrying Reasoning with Large Language Models under Stepwise Logical Constraints",
+        "summary": "Large Language Models (LLMs) often exhibit limited logical coherence, mapping premises to conclusions without adherence to explicit inference rules. We propose Proof-Carrying Reasoning with LLMs (PCRLLM), a framework that constrains reasoning to single-step inferences while preserving natural language formulations. Each output explicitly specifies premises, rules, and conclusions, thereby enabling verification against a target logic. This mechanism mitigates trustworthiness concerns by supporting chain-level validation even in black-box settings. Moreover, PCRLLM facilitates systematic multi-LLM collaboration, allowing intermediate steps to be compared and integrated under formal rules. Finally, we introduce a benchmark schema for generating large-scale step-level reasoning data, combining natural language expressiveness with formal rigor.",
+        "authors": "Tangrui Li, Pei Wang, Hongzheng Wang Christian Hahm, Matteo Spatola, Justin Shi",
+        "url": "http://arxiv.org/abs/2511.08392v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了 PCRLLM (Proof-Carrying Reasoning with LLMs) 框架，旨在解决 LLMs 逻辑一致性不足的核心问题。它通过将 LLM 的推理约束到单步推断，并明确指定前提、规则和结论，从而能够针对目标逻辑进行验证。这种机制不仅增强了 LLM 的可信赖性，还为多 LLM 协作提供了形式化的规则，使其方法具有高度的理论创新性和严谨性。它直接解决了 LLM 在“逻辑推理”和“可靠性”方面的关键应用瓶颈，对 LLM 应用领域具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08009v1",
+        "title": "From Noise to Latent: Generating Gaussian Latents for INR-Based Image Compression",
+        "summary": "Recent implicit neural representation (INR)-based image compression methods have shown competitive performance by overfitting image-specific latent codes. However, they remain inferior to end-to-end (E2E) compression approaches due to the absence of expressive latent representations. On the other hand, E2E methods rely on transmitting latent codes and requiring complex entropy models, leading to increased decoding complexity. Inspired by the normalization strategy in E2E codecs where latents are transformed into Gaussian noise to demonstrate the removal of spatial redundancy, we explore the inverse direction: generating latents directly from Gaussian noise. In this paper, we propose a novel image compression paradigm that reconstructs image-specific latents from a multi-scale Gaussian noise tensor, deterministically generated using a shared random seed. A Gaussian Parameter Prediction (GPP) module estimates the distribution parameters, enabling one-shot latent generation via reparameterization trick. The predicted latent is then passed through a synthesis network to reconstruct the image. Our method eliminates the need to transmit latent codes while preserving latent-based benefits, achieving competitive rate-distortion performance on Kodak and CLIC dataset. To the best of our knowledge, this is the first work to explore Gaussian latent generation for learned image compression.",
+        "authors": "Chaoyi Lin, Yaojun Wu, Yue Li, Junru Li, Kai Zhang, Li Zhang",
+        "url": "http://arxiv.org/abs/2511.08009v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本论文提出了一种新颖的图像压缩范式，即从多尺度高斯噪声生成图像特有的潜在编码，而非直接传输编码。通过引入高斯参数预测 (GPP) 模块和重参数化技巧，实现了单次潜在生成。这项工作是首次探索高斯潜在生成用于学习图像压缩，展现了深厚的理论基础和架构创新。它通过消除潜在编码的传输需求，显著优化了图像“模型压缩”这一实际应用瓶颈，同时保持了竞争力，完全符合您对理论创新和解决实际瓶颈的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08425v1",
+        "title": "HardFlow: Hard-Constrained Sampling for Flow-Matching Models via Trajectory Optimization",
+        "summary": "Diffusion and flow-matching have emerged as powerful methodologies for generative modeling, with remarkable success in capturing complex data distributions and enabling flexible guidance at inference time. Many downstream applications, however, demand enforcing hard constraints on generated samples (for example, robot trajectories must avoid obstacles), a requirement that goes beyond simple guidance. Prevailing projection-based approaches constrain the entire sampling path to the constraint manifold, which is overly restrictive and degrades sample quality. In this paper, we introduce a novel framework that reformulates hard-constrained sampling as a trajectory optimization problem. Our key insight is to leverage numerical optimal control to steer the sampling trajectory so that constraints are satisfied precisely at the terminal time. By exploiting the underlying structure of flow-matching models and adopting techniques from model predictive control, we transform this otherwise complex constrained optimization problem into a tractable surrogate that can be solved efficiently and effectively. Furthermore, this trajectory optimization perspective offers significant flexibility beyond mere constraint satisfaction, allowing for the inclusion of integral costs to minimize distribution shift and terminal objectives to further enhance sample quality, all within a unified framework. We provide a control-theoretic analysis of our method, establishing bounds on the approximation error between our tractable surrogate and the ideal formulation. Extensive experiments across diverse domains, including robotics (planning), partial differential equations (boundary control), and vision (text-guided image editing), demonstrate that our algorithm, which we name $\\textit{HardFlow}$, substantially outperforms existing methods in both constraint satisfaction and sample quality.",
+        "authors": "Zeyang Li, Kaveh Alim, Navid Azizan",
+        "url": "http://arxiv.org/abs/2511.08425v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的框架 HardFlow，将生成模型中的硬约束采样重新定义为轨迹优化问题。它巧妙地利用数值最优控制和模型预测控制技术，在采样结束时精确满足约束，并通过控制理论分析建立了近似误差的界限。其在理论和算法上的创新性极高，解决了生成模型在实际应用中（如机器人规划）面临的“硬约束控制”这一核心瓶颈，展现了卓越的理论严谨性，是您“前沿算法和架构”研究领域的理想选择。"
+    }
+]

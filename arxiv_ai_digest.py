@@ -1,31 +1,30 @@
-#!/usr/bin/env python3
 import os
 import json
 import arxiv
 import re
 import logging
 from google import genai
-from datetime import date, datetime, timezone, timedelta
+from datetime import date, datetime, timezone, timedelta 
 
-# --- 1. Logging ---
+# --- 1. 配置 Logging ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# --- 2. 配置 ---
+# --- 2. 核心配置 ---
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
-else:
-    logger.warning("GEMINI_API_KEY 未设置，AI 筛选将失效")
-
 ARCHIVE_DIR = "archive"
 
-# --- 3. 三大领域 ---
+# --------------------------------------------------------------------------
+# (V17.1) 关键修改：重组为 3 个超级核心，并使用新名称
+# --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
+    # ------------------------------------------------------
+    # 核心 1: AI 理论与统计基础
+    # ------------------------------------------------------
     "phd_foundations": {
         "name_zh": "AI 理论与统计基础",
         "name_en": "AI Theory & Statistical Foundations",
-        "categories": ['stat', 'cs.LG', 'stat.ME', 'math.ST', 'cs.AI', 'cs.CY', 'math.OC', 'stat.TH', 'cs.CV'],
+        "categories": ['stat.ML', 'cs.LG', 'stat.ME', 'math.ST', 'cs.AI', 'cs.CY', 'math.OC', 'stat.TH', 'cs.CV'],
         "search_query": (
             '("statistical learning theory" OR "nonparametric regression" OR "model selection" OR "high-dimensional inference" OR "uncertainty quantification") OR '
             '("causal inference" OR "fairness" OR "explainable AI" OR "interpretability" OR "treatment effect") OR '
@@ -38,6 +37,10 @@ YOUR_DOMAINS_OF_INTEREST = {
         我寻求的论文必须具备**强大的理论基础**（如统计保证、优化收敛性、因果逻辑）和**清晰的数学推导**。
         """
     },
+    
+    # ------------------------------------------------------
+    # 核心 2: 前沿 AI 模型与应用
+    # ------------------------------------------------------
     "phd_methods": {
         "name_zh": "前沿 AI 模型与应用",
         "name_en": "Frontier AI Models & Applications",
@@ -54,6 +57,10 @@ YOUR_DOMAINS_OF_INTEREST = {
         我**不**喜欢纯粹的工程堆砌，方法必须具有**理论创新性**。
         """
     },
+
+    # ------------------------------------------------------
+    # 核心 3: 量化金融 (Crypto)
+    # ------------------------------------------------------
     "quant_crypto": {
         "name_zh": "量化金融 (Crypto)",
         "name_en": "Quantitative Finance (Crypto)",
@@ -66,16 +73,13 @@ YOUR_DOMAINS_OF_INTEREST = {
     }
 }
 
-# --- 4. 抓取函数（已修复：日期过滤 + UTC 双保险）---
+# --------------------------------------------------------------------------
+# 抓取函数（已修复时区逻辑错误）
+# --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
-    
-    # 关键修复：在 query 中加入日期范围
-    date_str = target_date.strftime("%Y%m%d")
-    date_filter = f"submittedDate:[{date_str}0000 TO {date_str}2359]"
     category_query = " OR ".join([f"cat:{cat}" for cat in categories])
-    full_query = f"({category_query}) AND ({extra_query}) AND {date_filter}"
-    
+    full_query = f"({category_query}) AND ({extra_query})"
     search = arxiv.Search(
         query=full_query,
         max_results=100,
@@ -84,33 +88,40 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     )
     papers_list = []
 
-    # 双保险：Python 端再比对 UTC 时间
-    start_utc = datetime(target_date.year, target_date.month, target_date.day, tzinfo=timezone.utc)
-    end_utc = start_utc + timedelta(days=1) - timedelta(seconds=1)
+    # --- V17.1 最终修复：使用简单的日期匹配 ---
+    # 我们只关心日期部分是否相等
+    target_date_part = target_date.date() # 获取目标日期（去除时间）
+    # --------------------------------------------
 
     try:
         client = arxiv.Client()
         for result in client.results(search):
-            pub_dt = result.published
-            if pub_dt > end_utc:
-                continue
-            if pub_dt < start_utc:
+            published_date_part = result.published.date() # 获取论文发布日期（去除时间）
+
+            # 核心逻辑：论文的日期早于目标日期，则停止
+            if published_date_part < target_date_part:
                 break
-            papers_list.append({
-                'id': result.entry_id,
-                'title': result.title,
-                'summary': result.summary.replace("\n", " "),
-                'authors': ", ".join([a.name for a in result.authors]),
-                'url': result.entry_id,
-                'pdf_url': result.pdf_url
-            })
+            
+            # 核心逻辑：论文日期与目标日期精确匹配，则添加
+            if published_date_part == target_date_part:
+                papers_list.append({
+                    'id': result.entry_id,
+                    'title': result.title,
+                    'summary': result.summary.replace("\n", " "),
+                    'authors': ", ".join([a.name for a in result.authors]),
+                    'url': result.entry_id,
+                    'pdf_url': result.pdf_url
+                })
+
         logger.info(f"为 {domain_name} 抓取到 {len(papers_list)} 篇论文。")
         return papers_list
     except Exception as e:
         logger.error(f"抓取 arXiv 失败: {e}")
         return []
 
-# --- 5. AI 分析函数 ---
+# --------------------------------------------------------------------------
+# (V17) AI 分析函数 (评分引擎 - 保持不变)
+# --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
         logger.info("没有论文可供 AI 分析。")
@@ -118,7 +129,6 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not GEMINI_API_KEY:
         logger.error("未找到 GEMINI_API_KEY。")
         return None
-
     logger.info(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 5 篇并评分...")
     client = genai.Client()
     prompt_papers = "\n".join(
@@ -130,18 +140,18 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     我今天的任务是分析 "{domain_name}" 领域。
     我的个人偏好/任务是：
     "{user_preference_prompt}"
-   
+    
     下面是为该领域抓取的 {len(papers)} 篇论文。
     你的任务是“批量评分和筛选”：
-    1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
+    1.  **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
         - Novelty (创新性): 提出新方法或新视角 (1-5分)
         - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
         - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
         - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
-    2. **排序：** 根据我的个人偏好，结合上述 4 个维度的分数，计算一个**总分**。
-    3. **筛选：** 挑选出**总分最高的 5 篇（最多 5 篇）**论文。
-    4. **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
-   
+    2.  **排序：** 根据我的个人偏好，结合上述 4 个维度的分数，计算一个**总分**。
+    3.  **筛选：** 挑选出**总分最高的 5 篇（最多 5 篇）**论文。
+    4.  **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
+    
     JSON 格式如下：
     [
       {{
@@ -161,20 +171,23 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     full_prompt = f"{system_prompt}\n\n--- 论文列表开始 ---\n{prompt_papers}\n--- 论文列表结束 ---"
     try:
         response = client.models.generate_content(
-            model='gemini-1.5-flash',
+            model='gemini-2.5-flash',
             contents=full_prompt
         )
-       
+        
+        # (V17) 鲁棒性 JSON 清理 (查找列表)
         cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
         match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
         if not match:
              if cleaned.lower() == 'null':
                  logger.info("AI 编辑认为今天没有值得推荐的。")
                  return None
+             
              logger.error(f"AI 输出的文本中找不到 JSON 列表结构。输出：{response.text[:200]}...")
              raise json.JSONDecodeError("JSON 列表结构缺失", response.text, 0)
-       
+        
         json_string = match.group(1)
+        
         ai_picks_list = json.loads(json_string)
         logger.info(f"AI 编辑已选出 {len(ai_picks_list)} 篇今日最佳。")
         return ai_picks_list
@@ -185,7 +198,9 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         logger.error(f"AI 总编辑分析失败: {e}")
         return None
 
-# --- 6. 写入 JSON ---
+# --------------------------------------------------------------------------
+# 写入 JSON (V17 - 支持列表)
+# --------------------------------------------------------------------------
 def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
@@ -198,22 +213,25 @@ def write_to_json(data_to_save, file_path):
     except Exception as e:
         logger.error(f"写入 JSON 文件失败: {e}")
 
-# --- 7. 主函数 ---
+# --------------------------------------------------------------------------
+# 主函数 (V17 - 支持列表)
+# --------------------------------------------------------------------------
 if __name__ == "__main__":
-    # 自动抓「昨天」的论文
-    target_date = date.today() - timedelta(days=1)
-   
-    logger.info(f"--- 脚本开始运行 (V18 修复版)，目标日期: {target_date.isoformat()} ---")
+    # (V17.1) 临时修改：目标日期改为今天
+    target_date = date.today()
+    
+    logger.info(f"--- 脚本开始运行 (V17 评分版)，目标日期: {target_date.isoformat()} ---")
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
         logger.info(f"\n--- 处理领域: {config['name_en']} ---")
-       
+        
+        # V17.1: target_date 现在是 datetime.date 类型
         papers = fetch_papers_for_domain(
             domain_name=config["name_en"],
             categories=config["categories"],
             extra_query=config["search_query"],
             target_date=target_date
         )
-       
+        
         picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
         final_data_list = []
         if picks_list_json:
@@ -221,9 +239,11 @@ if __name__ == "__main__":
                 full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
                 if full_paper:
                     final_data_list.append({**full_paper, **pick_item})
-       
+        
         if not final_data_list:
-             final_data_list = None
+             final_data_list = None 
+
         output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")
         write_to_json(final_data_list, output_path)
+
     logger.info(f"\n--- 所有领域处理完毕: {target_date.isoformat()} ---")

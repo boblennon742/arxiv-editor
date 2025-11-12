@@ -2,53 +2,26 @@ import streamlit as st
 import json
 import os
 from datetime import date, timedelta
+# import pandas as pd # (目前不需要，但未来分析可能需要)
 
-# --- 1. 配置 ---
+# --- 1. 配置 (V17.1 - 3核评分版 + 新命名) ---
 ARCHIVE_DIR = "archive"
 
 st.set_page_config(page_title="私人 AI 总编辑", layout="wide")
 
-# (V12) 10 核配置
+# (V17.1) 关键修改：更新为 3 核配置和新名称
 YOUR_DOMAINS_OF_INTEREST = {
-    "stat_ml_foundations": {
-        "name_zh": "统计/ML基础理论",
-        "name_en": "Statistical ML Foundations"
+    "phd_foundations": {
+        "name_zh": "AI 理论与统计基础",
+        "name_en": "AI Theory & Statistical Foundations"
     },
-    "causal_theory": {
-        "name_zh": "因果推断/可解释性",
-        "name_en": "Causal Inference & XAI"
-    },
-    "deep_model_theory": {
-        "name_zh": "深度模型理论与优化",
-        "name_en": "Deep Model Theory & Optimization"
-    },
-    "advanced_rl": {
-        "name_zh": "高级强化学习",
-        "name_en": "Advanced Reinforcement Learning"
-    },
-    "llm_ds": {
-        "name_zh": "大模型与数据科学",
-        "name_en": "LLM & Data Science"
-    },
-    "dl_architecture": {
-        "name_zh": "前沿架构与应用",
-        "name_en": "DL Architectures & Applications"
+    "phd_methods": {
+        "name_zh": "前沿 AI 模型与应用",
+        "name_en": "Frontier AI Models & Applications"
     },
     "quant_crypto": {
         "name_zh": "量化金融 (Crypto)",
         "name_en": "Quantitative Finance (Crypto)"
-    },
-    "high_dim_stats": {
-        "name_zh": "高维统计与泛化",
-        "name_en": "High-Dimensional Stats & Guarantees"
-    },
-    "representation_learning": {
-        "name_zh": "表示学习与度量",
-        "name_en": "Representation & Metric Learning"
-    },
-    "efficient_ai": {
-        "name_zh": "高效/边缘计算 AI",
-        "name_en": "Efficient & Edge AI"
     }
 }
 TUTORIAL_DOMAIN = {
@@ -64,19 +37,21 @@ lang = st.radio(
 )
 
 if lang == "简体中文":
-    st.title("🤖 私人 AI 总编辑")
-    st.caption("由 AI 每日为我精选的博士研究必读论文")
+    st.title("🤖 私人 AI 总编辑 (V17 评分版)")
+    st.caption("由 AI 每日为我评分精选的博士研究必读论文")
 else:
-    st.title("🤖 Personal AI Editor")
-    st.caption("Daily 'Must-Read' papers for my PhD research, curated by AI.")
+    st.title("🤖 Personal AI Editor (V17 Scoring)")
+    st.caption("Daily 'Must-Read' PhD papers, scored and curated by AI.")
 
 # --- 3. 标签页设计 ---
 tab_daily, tab_weekly = st.tabs([
-    "📅 " + ("每日精选 (10核)" if lang == "简体中文" else "Daily Picks (10-Core)"), 
+    "📅 " + ("每日精选 (3核评分)" if lang == "简体中文" else "Daily Picks (3-Core Scoring)"), 
     "🏆 " + ("每周教程 (优选 2)" if lang == "简体中文" else "Weekly Tutorials (Top 2)")
 ])
 
-# --- 每日精选标签页 ---
+# --------------------------------------------------------------------------
+# (V17.1) 关键修改：重写每日精选标签页
+# --------------------------------------------------------------------------
 with tab_daily:
     if lang == "简体中文":
         selected_date = st.date_input("选择一个日期", date.today() - timedelta(days=1))
@@ -85,12 +60,13 @@ with tab_daily:
     
     st.divider()
     
-    num_columns = 3 
+    num_columns = 3 # 完美匹配 3 个超级核心
     domain_keys = list(YOUR_DOMAINS_OF_INTEREST.keys())
     cols = st.columns(num_columns)
     
+    # (V17.1) 修改：直接遍历 3 个核心并分配到 3 列
     for i, domain_key in enumerate(domain_keys):
-        with cols[i % num_columns]:
+        with cols[i]:
             domain_config = YOUR_DOMAINS_OF_INTEREST[domain_key]
             domain_name = domain_config["name_zh"] if lang == "简体中文" else domain_config["name_en"]
             st.subheader(domain_name, divider="rainbow")
@@ -99,33 +75,61 @@ with tab_daily:
             
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
-                    pick = json.load(f) 
+                    # (V17) 关键修改：读取论文列表
+                    picks_list = json.load(f) 
                 
-                if pick:
-                    st.markdown(f"**[{pick['title']}]({pick['url']})**")
-                    authors_label = "作者" if lang == "简体中文" else "Authors"
-                    st.caption(f"**{authors_label}:** {pick['authors']}")
+                if picks_list and isinstance(picks_list, list):
                     
-                    if lang == "简体中文":
-                        reason, reason_label = pick.get('reason_zh', 'N/A'), "AI 编辑推荐理由"
-                    else:
-                        reason, reason_label = pick.get('reason_en', 'N/A'), "AI Editor's Justification"
-                    st.info(f"**🤖 {reason_label}:** {reason}")
-                    
-                    expander_label = "查看摘要" if lang == "简体中文" else "View Abstract"
-                    with st.expander(expander_label):
-                        st.write(pick['summary'])
-                    pdf_label = "下载 PDF ➔" if lang == "简体中文" else "Download PDF ➔"
-                    st.link_button(pdf_label, pick['pdf_url'])
+                    # (V17) 关键修改：循环渲染列表中的每一篇论文
+                    for j, pick in enumerate(picks_list):
+                        if not isinstance(pick, dict): continue 
+                        
+                        st.markdown(f"**{j+1}. [{pick.get('title', 'No Title')}]({pick.get('url', '#')})**")
+                        authors_label = "作者" if lang == "简体中文" else "Authors"
+                        st.caption(f"**{authors_label}:** {pick.get('authors', 'N/A')}")
+                        
+                        # (V17) 新增：显示 AI 评分表
+                        scores = pick.get('scores')
+                        if scores and isinstance(scores, dict):
+                            score_expander_label = "AI 评分卡 (1-5分)" if lang == "简体中文" else "AI Scorecard (1-5)"
+                            with st.expander(score_expander_label, expanded=False):
+                                score_cols = st.columns(4)
+                                score_cols[0].metric(label="创新性 (Novelty)", value=scores.get('Novelty', 'N/A'))
+                                score_cols[1].metric(label="严谨性 (Rigor)", value=scores.get('Rigor', 'N/A'))
+                                score_cols[2].metric(label="影响力 (Impact)", value=scores.get('Impact', 'N/A'))
+                                score_cols[3].metric(label="清晰度 (Clarity)", value=scores.get('Clarity', 'N/A'))
+
+                        # AI 推荐理由
+                        if lang == "简体中文":
+                            reason, reason_label = pick.get('reason_zh', 'N/A'), "AI 编辑推荐理由"
+                        else:
+                            reason, reason_label = pick.get('reason_en', 'N/A'), "AI Editor's Justification"
+                        st.info(f"**🤖 {reason_label}:** {reason}")
+                        
+                        # 摘要
+                        expander_label = "查看摘要" if lang == "简体中文" else "View Abstract"
+                        with st.expander(expander_label):
+                            st.write(pick.get('summary', 'N/A'))
+                        
+                        pdf_label = "下载 PDF ➔" if lang == "简体中文" else "Download PDF ➔"
+                        st.link_button(pdf_label, pick.get('pdf_url', '#'))
+                        
+                        if j < len(picks_list) - 1:
+                            st.divider()
+
                 else:
                     no_pick_text = "今日 AI 编辑未发现值得一读的论文。" if lang == "简体中文" else "The AI Editor found no 'must-reads' today."
                     st.write(no_pick_text)
+                    
             except FileNotFoundError:
                 st.write("尚无数据。" if lang == "简体中文" else "No data yet.")
             except json.JSONDecodeError:
                 st.error("JSON 文件损坏或格式错误。")
 
-# --- (V12 修复) 每周教程标签页 ---
+# --------------------------------------------------------------------------
+# (V17) 每周教程标签页 (保持 V12/V16 的逻辑不变)
+# (它已经支持列表渲染，所以无需修改)
+# --------------------------------------------------------------------------
 with tab_weekly:
     today = date.today()
     year = today.isocalendar()[0]
@@ -151,7 +155,7 @@ with tab_weekly:
         with open(file_path, 'r', encoding='utf-8') as f:
             picks_data = json.load(f)
 
-        # (V12) 关键修复：检查数据类型，确保 picks_list 始终是列表
+        # (V12 修复) 检查数据类型，确保 picks_list 始终是列表
         picks_list = None
         if isinstance(picks_data, list):
             picks_list = picks_data
@@ -166,11 +170,20 @@ with tab_weekly:
                     authors_label = "作者" if lang == "简体中文" else "Authors"
                     st.caption(f"**{authors_label}:** {pick.get('authors', 'N/A')}")
                     
+                    # (V16/V17 兼容) 教程理由
                     if lang == "简体中文":
+                        core_value = pick.get('core_value_zh', None) 
                         reason, reason_label = pick.get('reason_zh', 'N/A'), "AI 编辑推荐理由"
                     else:
+                        core_value = pick.get('core_value_en', None)
                         reason, reason_label = pick.get('reason_en', 'N/A'), "AI Editor's Justification"
-                    st.info(f"**🏆 {reason_label}:** {reason}")
+                    
+                    if core_value: 
+                        st.success(f"**💡核心价值（AI一句话总结）：** {core_value}")
+
+                    expander_title = reason_label + (" (点击展开)" if core_value else "") 
+                    with st.expander(expander_title):
+                        st.info(f"**🏆{reason_label}:** {reason}")
                     
                     expander_label = "查看摘要" if lang == "简体中文" else "View Abstract"
                     with st.expander(expander_label):

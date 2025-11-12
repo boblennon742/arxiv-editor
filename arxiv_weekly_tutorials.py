@@ -3,7 +3,7 @@ import os
 import json
 import arxiv
 import logging 
-import re
+import re # <-- Regex 模块
 from google import genai
 from datetime import date, timedelta
 
@@ -18,7 +18,7 @@ ARCHIVE_DIR = "archive"
 ARXIV_CATEGORIES = ['stat.ML', 'cs.LG', 'math.OC', 'cs.NE', 'cs.AI', 'math.NA']
 TUTORIAL_KEYWORDS = ['tutorial', 'survey', '"lecture notes"', 'review', '"book chapter"']
 
-# --- 3. 抓取函数（已修复：submittedDate 过滤一周）---
+# --- 3. 抓取函数 (V17.3 - API 侧日期过滤) ---
 def fetch_weekly_tutorials(target_date):
     logger.info(f"--- 正在为 {target_date} 所在周抓取教程 (非金融) ---")
     
@@ -31,7 +31,8 @@ def fetch_weekly_tutorials(target_date):
     date_filter = f"submittedDate:[{start_str}0000 TO {end_str}2359]"
     
     category_query = " OR ".join([f"cat:{cat}" for cat in ARXIV_CATEGORIES])
-    keyword_query = " OR ".join([f'(ti:"{kw}" OR abs:"{kw}")' for kw in TUTORIAL_KEYWORDS])
+    # 修复：确保带空格的关键词 (lecture notes) 被正确引用
+    keyword_query = " OR ".join([f'(ti:{kw} OR abs:{kw})' for kw in TUTORIAL_KEYWORDS])
     full_query = f"({category_query}) AND ({keyword_query}) AND {date_filter}"
     
     search = arxiv.Search(
@@ -60,7 +61,7 @@ def fetch_weekly_tutorials(target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V17.1) AI 教程总编辑 (重构为“评分引擎”)
+# (V17.4) AI 教程总编辑 (修复 Regex)
 # --------------------------------------------------------------------------
 def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not papers:
@@ -77,7 +78,7 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
         for i, p in enumerate(papers)
     ])
 
-    # (V17.1) 关键修改：使用与每日脚本一致的评分提示词
+    # (V17.1) 评分提示词
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "本周教程与综述" 领域。
@@ -121,9 +122,11 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
             contents=full_prompt
         )
         
-        # (V17.1) 鲁棒性 JSON 清理 (查找列表)
+        # (V17.4) 关键修复：使用贪婪 Regex
         cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
-        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL) 
+        
+        # 匹配第一个 '[' 和 最后一个 ']'
+        match = re.search(r'(\[.*\])', cleaned, re.DOTALL) 
 
         if not match:
              if cleaned.lower() == 'null':

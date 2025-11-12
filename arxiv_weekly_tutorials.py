@@ -1,20 +1,26 @@
 import os
 import json
 import arxiv
-# import argparse # <-- 已移除
+import logging 
+import re # <-- JSON 鲁棒性修复所需
 from google import genai
 from datetime import date, timedelta
+# (此脚本不需要导入 domains_config.py，因为它不依赖每日核心)
 
-# --- 1. 配置 ---
+# --- 1. 配置 Logging ---
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+# --- 2. 核心配置 ---
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
 ARXIV_CATEGORIES = ['stat.ML', 'cs.LG', 'math.OC', 'cs.NE', 'cs.AI', 'math.NA']
 TUTORIAL_KEYWORDS = ['tutorial', 'survey', '"lecture notes"', 'review', '"book chapter"']
 
-# --- 2. 抓取函数 ---
+# --- 3. 抓取函数 ---
 def fetch_weekly_tutorials(target_date):
-    print(f"--- 正在为 {target_date} 所在周抓取教程 (非金融) ---")
+    logger.info(f"--- 正在为 {target_date} 所在周抓取教程 (非金融) ---")
     one_week_ago = target_date - timedelta(days=7)
    
     category_query = " OR ".join([f"cat:{cat}" for cat in ARXIV_CATEGORIES])
@@ -23,7 +29,7 @@ def fetch_weekly_tutorials(target_date):
    
     search = arxiv.Search(
         query=full_query,
-        max_results=75,
+        max_results=75, # (V17) 保持 75，与每日脚本一致
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -44,28 +50,31 @@ def fetch_weekly_tutorials(target_date):
                     'url': result.entry_id,
                     'pdf_url': result.pdf_url
                 })
-        print(f"本周共抓取到 {len(papers_list)} 篇教程/综述。")
+        logger.info(f"本周共抓取到 {len(papers_list)} 篇教程/综述。")
         return papers_list
     except Exception as e:
-        print(f"抓取教程失败: {e}")
+        logger.error(f"抓取教程失败: {e}")
         return []
 
-# --- 3. AI 教程总编辑 (优选 2 篇) ---
+# --------------------------------------------------------------------------
+# (V17.1) AI 教程总编辑 (重构为“评分引擎”)
+# --------------------------------------------------------------------------
 def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not papers:
-        print("没有论文可供 AI 分析。")
+        logger.info("没有论文可供 AI 分析。")
         return None
     if not GEMINI_API_KEY:
-        print("未找到 GEMINI_API_KEY。")
+        logger.error("未找到 GEMINI_API_KEY。")
         return None
 
-    print("正在请求 AI 教程总编辑挑选 2 篇...")
+    logger.info("正在请求 AI 教程总编辑挑选 Top 2 篇并评分...")
     client = genai.Client()
     prompt_papers = "\n".join([
-        f"--- ID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
-        for p in papers
+        f"--- 教程 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
+        for i, p in enumerate(papers)
     ])
 
+    # (V17.1) 关键修改：使用与每日脚本一致的评分提示词
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "本周教程与综述" 领域。
@@ -74,27 +83,33 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
     "{user_preference_prompt}"
     
     下面是为该领域抓取的 {len(papers)} 篇教程或综述。
-    你的任务是“优中选优”：
-    1. 严格根据我的个人偏好/任务，从这些论文中挑选出 **2 篇（最多 2 篇）** 最值得我阅读的教程/综述。
-    2. 如果只有 1 篇符合，则只返回 1 篇。
-    3. 如果**没有一篇**论文足够好或符合我的需求，请**必须**返回 `null`。
-    4. 如果你找到了，请以严格的 JSON **列表** 格式返回，即使只有 1 篇，也要放在列表里。
+    你的任务是“批量评分和筛选”：
+    1.  **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
+        - Novelty (创新性): 提出新方法或新视角 (1-5分)
+        - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
+        - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
+        - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
+    2.  **排序：** 根据我的个人偏好（特别是 Clarity 和 Rigor），结合上述 4 个维度的分数，计算一个**总分**。
+    3.  **筛选：** 挑选出**总分最高的 2 篇（最多 2 篇）**教程。
+    4.  **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
+    
     JSON 格式如下：
     [
       {{
         "id": "被选中论文1的 ID",
-        "reason_zh": "（中文）详细说明为什么这篇教程**完全符合**我的偏好/任务。",
-        "reason_en": "(English) A detailed justification of why this tutorial **perfectly fits** my preference/task."
+        "scores": {{
+          "Novelty": 5,
+          "Rigor": 4,
+          "Impact": 5,
+          "Clarity": 4
+        }},
+        "reason_zh": "（中文）详细说明为什么这篇教程**总分最高**并**完全符合**我的偏好/任务。"
       }},
-      {{
-        "id": "被选中论文2的 ID",
-        "reason_zh": "（中文）详细说明为什么这篇教程**完全符合**我的偏好/任务。",
-        "reason_en": "(English) A detailed justification of why this tutorial **perfectly fits** my preference/task."
-      }}
+      ... (最多 2 篇)
     ]
     如果返回 `null`，就只返回 `null` 这个词。
     """
-
+    
     full_prompt = f"{system_prompt}\n\n--- 教程列表开始 ---\n{prompt_papers}\n--- 教程列表结束 ---"
 
     try:
@@ -102,39 +117,52 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
             model='gemini-2.5-flash',
             contents=full_prompt
         )
-        cleaned = response.text.strip().lstrip("```json").rstrip("```")
+        
+        # (V17.1) 鲁棒性 JSON 清理 (查找列表)
+        cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
+        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL) 
 
-        if cleaned.lower() == 'null':
-            print("AI 教程编辑认为本周没有值得推荐的。")
-            return None
-
-        ai_picks_list = json.loads(cleaned)
-        print(f"AI 教程编辑已选出 {len(ai_picks_list)} 篇本周最佳。")
+        if not match:
+             if cleaned.lower() == 'null':
+                 logger.info("AI 教程编辑认为本周没有值得推荐的。")
+                 return None
+             
+             logger.error(f"AI 输出的文本中找不到 JSON 列表结构。输出：{response.text[:200]}...")
+             raise json.JSONDecodeError("JSON 列表结构缺失", response.text, 0)
+        
+        json_string = match.group(1) 
+        
+        ai_picks_list = json.loads(json_string) 
+        logger.info(f"AI 教程编辑已选出 {len(ai_picks_list)} 篇本周最佳。")
         return ai_picks_list
+
+    except json.JSONDecodeError as e:
+        logger.error(f"AI 总编辑分析失败: 无法解析 JSON: {e}")
+        return None
     except Exception as e:
-        print(f"AI 教程编辑分析失败: {e}")
+        logger.error(f"AI 总编辑分析失败: {e}")
         return None
 
-# --- 4. 写入 JSON ---
+# --- 5. 写入 JSON ---
 def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data_to_save, f, ensure_ascii=False, indent=4)
             if data_to_save:
-                print(f"成功将 {len(data_to_save)} 篇“本周教程精选”写入 {file_path}")
+                logger.info(f"成功将 {len(data_to_save)} 篇“本周教程精选”写入 {file_path}")
             else:
-                print(f"标记 {file_path} 为“无教程精选”。")
+                logger.info(f"标记 {file_path} 为“无教程精选”。")
     except Exception as e:
-        print(f"写入教程 JSON 失败: {e}")
+        logger.error(f"写入教程 JSON 失败: {e}")
 
-# --- 5. 主函数 ---
+# --- 6. 主函数 ---
 if __name__ == "__main__":
-    # (V12) 关键修改：移除 argparse，恢复硬编码日期
     target_date = date.today()
     
-    print(f"--- 教程脚本开始运行，目标周 (基于日期): {target_date.isoformat()} ---")
+    logger.info(f"--- 教程脚本开始运行 (V17 评分版)，目标周 (基于日期): {target_date.isoformat()} ---")
 
+    # (V17.1) 保留您最终确定的、包含“文笔与结构”要求的偏好文本
     my_tutorial_preference = """
     我是一名数理统计博士生，专注于将严谨的数学逻辑应用于现代 AI 系统，以提升其鲁棒性和效果。
     
@@ -148,7 +176,6 @@ if __name__ == "__main__":
     **【关键排除项】**
     我**不**喜欢：过于抽象、缺乏应用场景验证的纯概率论、纯随机分析、假设检验或“空中楼阁”式的理论。我追求逻辑性强、可落地的知识。
     """
-    
    
     papers = fetch_weekly_tutorials(target_date)
     pick_json_list = get_ai_tutorial_pick(papers, my_tutorial_preference)
@@ -170,4 +197,4 @@ if __name__ == "__main__":
    
     write_to_json(final_data_to_save, output_path)
     
-    print(f"\n--- 教程脚本处理完毕: {output_filename} ---")
+    logger.info(f"\n--- 教程脚本处理完毕: {output_filename} ---")

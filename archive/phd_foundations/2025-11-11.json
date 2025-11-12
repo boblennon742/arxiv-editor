@@ -12,7 +12,22 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文深入探讨了RLVR（Reinforcement Learning with Verifiable Rewards）的内在学习机制，提出了一个\"三门理论\"并首次对其参数级别的学习动态进行了表征。其核心贡献在于\"Provably Learns Off the Principals\"，直接强调了严格的理论保证和数学推导，揭示了RL与SFT在优化机制上的本质区别。这完全符合我作为数理统计博士生对**强大理论基础**和**清晰数学推导**的偏好，为理解复杂RL系统的行为提供了白盒视角。"
+        "reason_zh": "这篇论文通过“Three-Gate Theory”对RLVR的学习动力学进行了机制性解释，并提供了“参数级特性化”，明确指出“可证明地学习”。它深入分析了优化在参数空间中的数学模型，这与您对将严谨数学逻辑应用于现代AI系统、以及对优化收敛性等理论基础的偏好完全契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.07892v1",
+        "title": "A Generalized Spectral Framework to Expain Neural Scaling and Compression Dynamics",
+        "summary": "Empirical scaling laws describe how test loss and other performance metrics depend on model size, dataset size, and compute. While such laws are consistent within specific regimes, apparently distinct scaling behaviors have been reported for related settings such as model compression. Motivated by recent progress in spectral analyses of neural representations, this paper develops a \\emph{generalized spectral framework} that unifies learning dynamics and compression phenomena under a common functional ansatz. We generalize the spectral evolution function from the linear kernel form $g(λt)=λt$ to an asymptotically polynomial function $g(λ,t;β)$, characterized by an effective spectral--temporal elasticity $ρ(β)$. This framework recovers existing lazy and feature-learning theories as special cases and yields an invariant relation between learning and compression",
+        "authors": "Yizhou Zhang",
+        "url": "http://arxiv.org/abs/2511.07892v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个“广义谱框架”，统一了神经网络的尺度定律、学习动力学和压缩现象，并将其作为现有惰性学习和特征学习理论的特例进行推导。这种对深度学习核心机制的统一理论分析和深层数学基础，是您所追求的强大理论基础和清晰数学推导的典范。"
     },
     {
         "id": "http://arxiv.org/abs/2511.08417v1",
@@ -27,7 +42,22 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一种新颖的优化框架NeuCLIP，通过**凸分析和变分分析**对对比学习中归一化项估计进行数学上的重新表述和转换，并设计了交替优化算法。这种将机器学习问题转化为严格数学优化框架（如凸分析和变分分析）的方法，提供了坚实的理论基础和严谨的数学推导，完全契合我对**严谨数学逻辑和清晰数学推导**的追求，同时解决了大规模CLIP训练中的实际计算难题。"
+        "reason_zh": "这篇论文介绍了一个新颖的优化框架，通过“凸分析”重新 формулиate 对比损失，并通过“变分分析”将优化问题转换为神经网络的最小化问题。这种利用高级数学工具（凸分析、变分分析）来解决大规模AI模型训练中的核心优化挑战，展现了极高的理论严谨性和数学推导的深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08539v1",
+        "title": "Neumann-series corrections for regression adjustment in randomized experiments",
+        "summary": "We study average treatment effect (ATE) estimation under complete randomization with many covariates in a design-based, finite-population framework. In randomized experiments, regression adjustment can improve precision of estimators using covariates, without requiring a correctly specified outcome model. However, existing design-based analyses establish asymptotic normality only up to $p = o(n^{1/2})$, extendable to $p = o(n^{2/3})$ with a single de-biasing. We introduce a novel theoretical perspective on the asymptotic properties of regression adjustment through a Neumann-series decomposition, yielding a systematic higher-degree corrections and a refined analysis of regression adjustment. Specifically, for ordinary least squares regression adjustment, the Neumann expansion sharpens analysis of the remainder term, relative to the residual difference-in-means. Under mild leverage regularity, we show that the degree-$d$ Neumann-corrected estimator is asymptotically normal whenever $p^{ d+3}(\\log p)^{ d+1}=o(n^{ d+2})$, strictly enlarging the admissible growth of $p$. The analysis is purely randomization-based and does not impose any parametric outcome models or super-population assumptions.",
+        "authors": "Dogyoon Song",
+        "url": "http://arxiv.org/abs/2511.08539v1",
+        "pdf_url": null,
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为随机实验中的回归调整提供了“基于诺伊曼级数分解的全新理论视角”，并产生了“系统性的高阶校正”和“精炼分析”。它在放宽条件下建立了渐近正态性，展示了异常严谨的数学推导和统计保证，对于您在因果逻辑和统计保证方面的研究至关重要。"
     },
     {
         "id": "http://arxiv.org/abs/2511.08362v1",
@@ -42,36 +72,6 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文通过将量子高效优化问题重塑为几何问题，并与Sherali-Adams level-2多面体（SA(2)）建立精确联系，展现了极高的**数学抽象和理论严谨性**。其利用**凸几何和可微分投影**解决局部一致性问题，提供了深刻的数学洞察和清晰的推导路径，建立了重要的多面体基线，与我对将严谨数学逻辑应用于现代AI系统（特别是量子计算领域）的兴趣高度契合。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.08539v1",
-        "title": "Neumann-series corrections for regression adjustment in randomized experiments",
-        "summary": "We study average treatment effect (ATE) estimation under complete randomization with many covariates in a design-based, finite-population framework. In randomized experiments, regression adjustment can improve precision of estimators using covariates, without requiring a correctly specified outcome model. However, existing design-based analyses establish asymptotic normality only up to $p = o(n^{1/2})$, extendable to $p = o(n^{2/3})$ with a single de-biasing. We introduce a novel theoretical perspective on the asymptotic properties of regression adjustment through a Neumann-series decomposition, yielding a systematic higher-degree corrections and a refined analysis of regression adjustment. Specifically, for ordinary least squares regression adjustment, the Neumann expansion sharpens analysis of the remainder term, relative to the residual difference-in-means. Under mild leverage regularity, we show that the degree-$d$ Neumann-corrected estimator is asymptotically normal whenever $p^{ d+3}(\\log p)^{ d+1}=o(n^{ d+2})$, strictly enlarging the admissible growth of $p$. The analysis is purely randomization-based and does not impose any parametric outcome models or super-population assumptions.",
-        "authors": "Dogyoon Song",
-        "url": "http://arxiv.org/abs/2511.08539v1",
-        "pdf_url": null,
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 3,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文为随机化实验中的回归调整提供了**新颖的理论视角**，通过诺依曼级数分解实现了系统化的高阶校正，并在设计基框架下建立了**严格的渐近正态性**。其纯粹基于随机化的理论分析，不依赖额外的参数模型或超总体假设，充分体现了**严谨的数学逻辑和统计保证**，对因果推断领域具有深远的理论意义，是我非常感兴趣的领域。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.07892v1",
-        "title": "A Generalized Spectral Framework to Expain Neural Scaling and Compression Dynamics",
-        "summary": "Empirical scaling laws describe how test loss and other performance metrics depend on model size, dataset size, and compute. While such laws are consistent within specific regimes, apparently distinct scaling behaviors have been reported for related settings such as model compression. Motivated by recent progress in spectral analyses of neural representations, this paper develops a \\emph{generalized spectral framework} that unifies learning dynamics and compression phenomena under a common functional ansatz. We generalize the spectral evolution function from the linear kernel form $g(λt)=λt$ to an asymptotically polynomial function $g(λ,t;β)$, characterized by an effective spectral--temporal elasticity $ρ(β)$. This framework recovers existing lazy and feature-learning theories as special cases and yields an invariant relation between learning and compression",
-        "authors": "Yizhou Zhang",
-        "url": "http://arxiv.org/abs/2511.07892v1",
-        "pdf_url": null,
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 3,
-            "Clarity": 4
-        },
-        "reason_zh": "该论文构建了一个**广义谱框架**，成功统一了神经网络的缩放定律和压缩动态，并揭示了学习与压缩之间的**不变关系**。这种从基础理论层面理解和解释现代AI系统行为的研究，其**理论深度和数学严谨性**极高，通过严谨的函数扩展和理论推导，为神经网络的普适行为提供了新的数学解释，与我对将数学逻辑应用于AI系统的兴趣非常吻合。"
+        "reason_zh": "该论文将量子高效优化重新定义为“几何问题”，指出局部一致性问题与“Sherali-Adams level-2 多面体SA(2)”一致，并将学习锚定于此“凸几何”，涉及“可微分迭代比例拟合”和“最大熵吉布斯采样器”。这篇论文充满了高级数学概念和量子优化中的严谨推导，是理论深度和数学逻辑的完美结合。"
     }
 ]

@@ -1,1 +1,77 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.09540v1",
+        "title": "vMFCoOp: Towards Equilibrium on a Unified Hyperspherical Manifold for Prompting Biomedical VLMs",
+        "summary": "Recent advances in context optimization (CoOp) guided by large language model (LLM)-distilled medical semantic priors offer a scalable alternative to manual prompt engineering and full fine-tuning for adapting biomedical CLIP-based vision-language models (VLMs). However, prompt learning in this context is challenged by semantic misalignment between LLMs and CLIP variants due to divergent training corpora and model architectures; it further lacks scalability across continuously evolving families of foundation models. More critically, pairwise multimodal alignment via conventional Euclidean-space optimization lacks the capacity to model unified representations or apply localized geometric constraints, which tends to amplify modality gaps in complex biomedical imaging and destabilize few-shot adaptation. In this work, we propose vMFCoOp, a framework that inversely estimates von Mises-Fisher (vMF) distributions on a shared Hyperspherical Manifold, aligning semantic biases between arbitrary LLMs and CLIP backbones via Unified Semantic Anchors to achieve robust biomedical prompting and superior few-shot classification. Grounded in three complementary constraints, vMFCoOp demonstrates consistent improvements across 14 medical datasets, 12 medical imaging modalities, and 13 anatomical regions, outperforming state-of-the-art methods in accuracy, generalization, and clinical applicability. This work will be continuously expanded to encompass more downstream applications, and the corresponding resources are intended to be shared through https://github.com/VinyehShaw/UniEqui.",
+        "authors": "Minye Shao, Sihan Guo, Xinrun Li, Xingyu Miao, Haoran Duan, Yang Long",
+        "url": "http://arxiv.org/abs/2511.09540v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09540v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出 vMFCoOp 框架，通过在统一超球面流形上逆估计 von Mises-Fisher (vMF) 分布，实现了生物医学 VLM 提示中 LLM 与 CLIP 变体之间语义偏差的对齐。这种将统计几何（vMF 分布、超球面流形）应用于跨模态对齐的方法具有极高的理论创新性和严谨性，完美符合您对“前沿算法和架构”以及“理论创新性”的偏好。同时，它解决了生物医学领域 VLM 提示的语义错位和可扩展性瓶颈，并在多个数据集上取得了领先性能，展现了强大的实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09101v1",
+        "title": "Ultra-Light Test-Time Adaptation for Vision--Language Models",
+        "summary": "Vision-Language Models (VLMs) such as CLIP achieve strong zero-shot recognition by comparing image embeddings to text-derived class prototypes. However, under domain shift, they suffer from feature drift, class-prior mismatch, and severe miscalibration. Existing test-time adaptation (TTA) methods often require backpropagation through large backbones, covariance estimation, or heavy memory/state, which is problematic for streaming and edge scenarios. We propose Ultra-Light Test-Time Adaptation (UL-TTA), a fully training-free and backprop-free framework that freezes the backbone and adapts only logit-level parameters: class prototypes, class priors, and temperature. UL-TTA performs an online EM-style procedure with (i) selective sample filtering to use only confident predictions, (ii) closed-form Bayesian updates for prototypes and priors anchored by text and Dirichlet priors, (iii) decoupled temperatures for prediction vs. calibration, and (iv) lightweight guards (norm clipping, prior KL constraints, smoothed temperature) to prevent drift in long streams. Across large-scale cross-domain and OOD benchmarks (PACS, Office-Home, DomainNet, Terra Incognita, ImageNet-R/A/V2/Sketch; ~726K test samples) and strong TTA baselines including Tent, T3A, CoTTA, SAR, Tip-Adapter, and FreeTTA, UL-TTA consistently improves top-1 accuracy (e.g., +4.7 points over zero-shot CLIP on average) while reducing ECE by 20-30%, with less than 8% latency overhead. Long-stream experiments up to 200K samples show no collapse. Our results demonstrate that logit-level Bayesian adaptation is sufficient to obtain state-of-the-art accuracy-calibration trade-offs for VLMs under domain shift, without updating any backbone parameters.",
+        "authors": "Byunghyun Kim",
+        "url": "http://arxiv.org/abs/2511.09101v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09101v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 Ultra-Light Test-Time Adaptation (UL-TTA) 框架，以无训练、无反向传播的方式，通过贝叶斯更新和 EM-style 过程对 VLM 进行测试时自适应，在理论上实现了对 logit 层参数的精确调控。这种方法在算法和架构上均极具前瞻性，通过严谨的统计学方法解决了 VLM 在领域漂移下的效率与鲁棒性瓶颈，特别适用于资源受限的实际场景，与您“前沿算法和架构”、“理论创新性”及“解决实际应用瓶颈”的需求高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09109v1",
+        "title": "Thinking Forward and Backward: Multi-Objective Reinforcement Learning for Retrieval-Augmented Reasoning",
+        "summary": "Retrieval-augmented generation (RAG) has proven to be effective in mitigating hallucinations in large language models, yet its effectiveness remains limited in complex, multi-step reasoning scenarios.Recent efforts have incorporated search-based interactions into RAG, enabling iterative reasoning with real-time retrieval. Most approaches rely on outcome-based supervision, offering no explicit guidance for intermediate steps. This often leads to reward hacking and degraded response quality. We propose Bi-RAR, a novel retrieval-augmented reasoning framework that evaluates each intermediate step jointly in both forward and backward directions. To assess the information completeness of each step, we introduce a bidirectional information distance grounded in Kolmogorov complexity, approximated via language model generation probabilities. This quantification measures both how far the current reasoning is from the answer and how well it addresses the question. To optimize reasoning under these bidirectional signals, we adopt a multi-objective reinforcement learning framework with a cascading reward structure that emphasizes early trajectory alignment. Empirical results on seven question answering benchmarks demonstrate that Bi-RAR surpasses previous methods and enables efficient interaction and reasoning with the search engine during training and inference.",
+        "authors": "Wenda Wei, Yu-An Liu, Ruqing Zhang, Jiafeng Guo, Lixin Su, Shuaiqiang Wang, Dawei Yin, Maarten de Rijke, Xueqi Cheng",
+        "url": "http://arxiv.org/abs/2511.09109v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09109v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文通过引入基于 Kolmogorov 复杂度的双向信息距离和级联奖励的多目标强化学习框架 Bi-RAR，解决了 LLM 在复杂检索增强推理中的关键瓶颈。这种将信息论深度融入多目标强化学习的设计，展现了卓越的理论创新性和严谨的数理统计基础，完全符合您对“前沿算法和架构”和“理论创新性”的追求。同时，它显著提升了 LLM 在多步推理中的效率和准确性，具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09232v1",
+        "title": "POTSA: A Cross-Lingual Speech Alignment Framework for Low Resource Speech-to-Text Translation",
+        "summary": "Speech Large Language Models (SpeechLLMs) have achieved breakthroughs in multilingual speech-to-text translation (S2TT). However, existing approaches often overlook semantic commonalities across source languages, leading to biased translation performance. In this work, we propose \\textbf{POTSA} (Parallel Optimal Transport for Speech Alignment), a new framework based on cross-lingual parallel speech pairs and Optimal Transport (OT), designed to bridge high- and low-resource translation gaps. First, we introduce a Bias Compensation module to coarsely align initial speech representations across languages. Second, we impose token-level OT constraints on a Q-Former using parallel speech pairs to establish fine-grained consistency of representations. Then, we apply a layer scheduling strategy to focus OT constraints on the most semantically beneficial layers. Experiments on the FLEURS dataset show that our method achieves SOTA performance, with +0.93 BLEU on average over five common languages and +5.05 BLEU on zero-shot languages, using only 10 hours of parallel speech per source language.",
+        "authors": "Xuanchen Li, Chenrui Cui, Tianrui Wang, Meng Ge, Zikang Huang, Jin Li, Yizhou Peng, Longbiao Wang, Jianwu Dang, Nyima Tashi",
+        "url": "http://arxiv.org/abs/2511.09232v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09232v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "POTSA 框架通过开创性地将 Optimal Transport 应用于跨语言并行语音对齐，解决了低资源语音到文本翻译中的语义偏差和性能瓶颈。其基于 OT 理论的严谨数学推导和算法设计，以及对 Q-Former 层调度的创新应用，使其在“理论创新性”和“严谨性”上表现卓越。它显著提升了低资源 S2TT 的性能，展现了强大的实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09146v1",
+        "title": "DoPE: Denoising Rotary Position Embedding",
+        "summary": "Rotary Position Embedding (RoPE) in Transformer models has inherent limits that weaken length extrapolation. We reinterpret the attention map with positional encoding as a noisy feature map, and propose Denoising Positional Encoding (DoPE), a training-free method based on truncated matrix entropy to detect outlier frequency bands in the feature map. Leveraging the noise characteristics of the feature map, we further reparameterize it with a parameter-free Gaussian distribution to achieve robust extrapolation. Our method theoretically reveals the underlying cause of the attention sink phenomenon and its connection to truncated matrix entropy. Experiments on needle-in-a-haystack and many-shot in-context learning tasks demonstrate that DoPE significantly improves retrieval accuracy and reasoning stability across extended contexts (up to 64K tokens). The results show that the denoising strategy for positional embeddings effectively mitigates attention sinks and restores balanced attention patterns, providing a simple yet powerful solution for improving length generalization. Our project page is Project: https://The-physical-picture-of-LLMs.github.io",
+        "authors": "Jing Xiong, Liyang Fan, Hui Shen, Zunhai Su, Min Yang, Lingpeng Kong, Ngai Wong",
+        "url": "http://arxiv.org/abs/2511.09146v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09146v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DoPE 通过深入的理论分析，揭示了旋转位置嵌入（RoPE）中 Attention Sink 现象的根源，并创新性地提出了基于截断矩阵熵的去噪方法和无参数高斯分布重参数化。这种对 LLM 核心组件的深刻理论洞察和算法改进，完美符合您对“前沿算法和架构”及“理论创新性”的期望。它显著提升了 LLM 的长文本泛化能力，解决了重要的应用瓶颈。"
+    }
+]

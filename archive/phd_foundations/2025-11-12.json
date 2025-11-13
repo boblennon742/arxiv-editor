@@ -1,1 +1,77 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.09404v1",
+        "title": "Spatio-Temporal Graph Unlearning",
+        "summary": "Spatio-temporal graphs are widely used in modeling complex dynamic processes such as traffic forecasting, molecular dynamics, and healthcare monitoring. Recently, stringent privacy regulations such as GDPR and CCPA have introduced significant new challenges for existing spatio-temporal graph models, requiring complete unlearning of unauthorized data. Since each node in a spatio-temporal graph diffuses information globally across both spatial and temporal dimensions, existing unlearning methods primarily designed for static graphs and localized data removal cannot efficiently erase a single node without incurring costs nearly equivalent to full model retraining. Therefore, an effective approach for complete spatio-temporal graph unlearning is a pressing need. To address this, we propose CallosumNet, a divide-and-conquer spatio-temporal graph unlearning framework inspired by the corpus callosum structure that facilitates communication between the brain's two hemispheres. CallosumNet incorporates two novel techniques: (1) Enhanced Subgraph Construction (ESC), which adaptively constructs multiple localized subgraphs based on several factors, including biologically-inspired virtual ganglions; and (2) Global Ganglion Bridging (GGB), which reconstructs global spatio-temporal dependencies from these localized subgraphs, effectively restoring the full graph representation. Empirical results on four diverse real-world datasets show that CallosumNet achieves complete unlearning with only 1%-2% relative MAE loss compared to the gold model, significantly outperforming state-of-the-art baselines. Ablation studies verify the effectiveness of both proposed techniques.",
+        "authors": "Qiming Guo, Wenbo Sun, Wenlu Wang",
+        "url": "http://arxiv.org/abs/2511.09404v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09404v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从理论上深刻探讨了系统能否从数据中被发现的核心问题，提出并证明了混沌现象对于系统可发现性的关键作用。它不仅挑战了传统观念，还通过对经典 Lorenz 系统和存在第一积分系统的分析，提供了严谨的数学证明和深远的理论见解，揭示了数据驱动发现方法的根本局限性。其突破性的理论基础、严谨的数学推导和对 AI 基础假设的重新评估，使其与您的偏好高度吻合，具有最高的理论价值和研究潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08887v1",
+        "title": "FAST-CAD: A Fairness-Aware Framework for Non-Contact Stroke Diagnosis",
+        "summary": "Stroke is an acute cerebrovascular disease, and timely diagnosis significantly improves patient survival. However, existing automated diagnosis methods suffer from fairness issues across demographic groups, potentially exacerbating healthcare disparities. In this work we propose FAST-CAD, a theoretically grounded framework that combines domain-adversarial training (DAT) with group distributionally robust optimization (Group-DRO) for fair and accurate non-contact stroke diagnosis. Our approach is built on domain adaptation and minimax fairness theory and provides convergence guarantees and fairness bounds. We curate a multimodal dataset covering 12 demographic subgroups defined by age, gender, and posture. FAST-CAD employs self-supervised encoders with adversarial domain discrimination to learn demographic-invariant representations, while Group-DRO optimizes worst-group risk to ensure robust performance across all subgroups. Extensive experiments show that our method achieves superior diagnostic performance while maintaining fairness across demographic groups, and our theoretical analysis supports the effectiveness of the unified DAT + Group-DRO framework. This work provides both practical advances and theoretical insights for fair medical AI systems.",
+        "authors": "Tianming Sha, Zechuan Chen, Zhan Cheng, Haotian Zhai, Xuwei Ding, Junnan Li, Haixiang Tang, Zaoting Sun, Yanchuan Tang, Yongzhe Yi, Yanjie Huang, Anhao Li, Yuan Gao, Keze Wang",
+        "url": "http://arxiv.org/abs/2511.08887v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.08887v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个理论上基于域适应和 minimax 公平性理论的公平性框架 FAST-CAD，用于非接触式中风诊断。它不仅给出了明确的**收敛性保证**和**公平性界限**，还通过结合对抗训练和群组分布鲁棒优化，学习到与人口统计学无关的表示。其将严谨的数学理论应用于解决医疗 AI 中的关键公平性问题，并提供了清晰的理论保证，完美符合您对强大的理论基础和清晰数学推导的要求，且具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08986v1",
+        "title": "Data reuse enables cost-efficient randomized trials of medical AI models",
+        "summary": "Randomized controlled trials (RCTs) are indispensable for establishing the clinical value of medical artificial-intelligence (AI) tools, yet their high cost and long timelines hinder timely validation as new models emerge rapidly. Here, we propose BRIDGE, a data-reuse RCT design for AI-based risk models. AI risk models support a broad range of interventions, including screening, treatment selection, and clinical alerts. BRIDGE trials recycle participant-level data from completed trials of AI models when legacy and updated models make concordant predictions, thereby reducing the enrollment requirement for subsequent trials. We provide a practical checklist for investigators to assess whether reusing data from previous trials allows for valid causal inference and preserves type I error. Using real-world datasets across breast cancer, cardiovascular disease, and sepsis, we demonstrate concordance between successive AI models, with up to 64.8% overlap in top 5% high-risk cohorts. We then simulate a series of breast cancer screening studies, where our design reduced required enrollment by 46.6%--saving over US$2.8 million--while maintaining 80% power. By transforming trials into adaptive, modular studies, our proposed design makes Level I evidence generation feasible for every model iteration, thereby accelerating cost-effective translation of AI into routine care.",
+        "authors": "Michael Nercessian, Wenxin Zhang, Alexander Schubert, Daphne Yang, Maggie Chung, Ahmed Alaa, Adam Yala",
+        "url": "http://arxiv.org/abs/2511.08986v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.08986v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 BRIDGE，一种创新的数据重用随机对照试验（RCT）设计，旨在降低医疗 AI 模型验证的成本和时间。它提供的**实践者清单**用以评估数据重用是否能实现**有效的因果推断**并**保持 I 型错误**，这直接触及了统计学中的核心概念。其通过统计学方法保障了因果推断的有效性和误差控制，完美契合您对严谨数学逻辑和强大理论基础的要求，对于医疗 AI 的实际落地具有里程碑式的意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09043v1",
+        "title": "MedHE: Communication-Efficient Privacy-Preserving Federated Learning with Adaptive Gradient Sparsification for Healthcare",
+        "summary": "Healthcare federated learning requires strong privacy guarantees while maintaining computational efficiency across resource-constrained medical institutions. This paper presents MedHE, a novel framework combining adaptive gradient sparsification with CKKS homomorphic encryption to enable privacy-preserving collaborative learning on sensitive medical data. Our approach introduces a dynamic threshold mechanism with error compensation for top-k gradient selection, achieving 97.5 percent communication reduction while preserving model utility. We provide formal security analysis under Ring Learning with Errors assumptions and demonstrate differential privacy guarantees with epsilon less than or equal to 1.0. Statistical testing across 5 independent trials shows MedHE achieves 89.5 percent plus or minus 0.8 percent accuracy, maintaining comparable performance to standard federated learning (p=0.32) while reducing communication from 1277 MB to 32 MB per training round. Comprehensive evaluation demonstrates practical feasibility for real-world medical deployments with HIPAA compliance and scalability to 100 plus institutions.",
+        "authors": "Farjana Yesmin",
+        "url": "http://arxiv.org/abs/2511.09043v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09043v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MedHE 框架为医疗领域的联邦学习提供了通信高效且隐私保护的解决方案。该研究的亮点在于提供了基于 **Ring Learning with Errors 假设的正式安全分析**以及**明确的差分隐私保证（epsilon <= 1.0）**。这种结合同态加密和自适应梯度稀疏化的方法，在理论上提供了坚实的隐私和安全保障，并在实践中显著降低了通信开销。其强大的统计学保证和严谨的理论推导，使其成为您关注领域内的杰出工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09299v1",
+        "title": "Efficiently Transforming Neural Networks into Decision Trees: A Path to Ground Truth Explanations with RENTT",
+        "summary": "Although neural networks are a powerful tool, their widespread use is hindered by the opacity of their decisions and their black-box nature, which result in a lack of trustworthiness. To alleviate this problem, methods in the field of explainable Artificial Intelligence try to unveil how such automated decisions are made. But explainable AI methods are often plagued by missing faithfulness/correctness, meaning that they sometimes provide explanations that do not align with the neural network's decision and logic. Recently, transformations to decision trees have been proposed to overcome such problems. Unfortunately, they typically lack exactness, scalability, or interpretability as the size of the neural network grows. Thus, we generalize these previous results, especially by considering convolutional neural networks, recurrent neural networks, non-ReLU activation functions, and bias terms. Our findings are accompanied by rigorous proofs and we present a novel algorithm RENTT (Runtime Efficient Network to Tree Transformation) designed to compute an exact equivalent decision tree representation of neural networks in a manner that is both runtime and memory efficient. The resulting decision trees are multivariate and thus, possibly too complex to understand. To alleviate this problem, we also provide a method to calculate the ground truth feature importance for neural networks via the equivalent decision trees - for entire models (global), specific input regions (regional), or single decisions (local). All theoretical results are supported by detailed numerical experiments that emphasize two key aspects: the computational efficiency and scalability of our algorithm, and that only RENTT succeeds in uncovering ground truth explanations compared to conventional approximation methods like LIME and SHAP. All code is available at https://github.com/HelenaM23/RENTT .",
+        "authors": "Helena Monke, Benjamin Fresz, Marco Bernreuther, Yilin Chen, Marco F. Huber",
+        "url": "http://arxiv.org/abs/2511.09299v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09299v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过提出 RENTT 算法，解决了将神经网络转换为决策树以实现可解释性的核心挑战。它不仅概括了先前的研究，更重要的是，提供了**严谨的证明**来确保转换的精确性，并支持计算全局、区域和局部**真值特征重要性**。这种将黑盒模型转换为可解释白盒模型的数学严谨性方法，直接回应了您对将数学逻辑应用于现代 AI 系统的偏好，尤其在可解释 AI 理论方面具有重要的贡献。"
+    }
+]

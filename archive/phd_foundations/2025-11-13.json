@@ -1,0 +1,77 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.10383v1",
+        "title": "Operator Models for Continuous-Time Offline Reinforcement Learning",
+        "summary": "Continuous-time stochastic processes underlie many natural and engineered systems. In healthcare, autonomous driving, and industrial control, direct interaction with the environment is often unsafe or impractical, motivating offline reinforcement learning from historical data. However, there is limited statistical understanding of the approximation errors inherent in learning policies from offline datasets. We address this by linking reinforcement learning to the Hamilton-Jacobi-Bellman equation and proposing an operator-theoretic algorithm based on a simple dynamic programming recursion. Specifically, we represent our world model in terms of the infinitesimal generator of controlled diffusion processes learned in a reproducing kernel Hilbert space. By integrating statistical learning methods and operator theory, we establish global convergence of the value function and derive finite-sample guarantees with bounds tied to system properties such as smoothness and stability. Our theoretical and numerical results indicate that operator-based approaches may hold promise in solving offline reinforcement learning using continuous-time optimal control.",
+        "authors": "Nicolas Hoischen, Petar Bevanda, Max Beier, Stefan Sosnowski, Boris Houska, Sandra Hirche",
+        "url": "http://arxiv.org/abs/2511.10383v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10383v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文完美契合您的偏好，因为它将强化学习与哈密顿-雅可比-贝尔曼方程联系起来，提出了一种基于算子理论的算法。它专注于离线强化学习的“统计理解”，明确提供了价值函数的全局收敛性和具有平滑性及稳定性边界的有限样本保证。这直接体现了您对“强大的理论基础”（统计保证、优化收敛性）和“清晰的数学推导”的要求，并且应用于连续时间最优控制这一现代AI系统。其理论严谨性极高，并具有重要的实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09845v1",
+        "title": "Bridging Constraints and Stochasticity: A Fully First-Order Method for Stochastic Bilevel Optimization with Linear Constraints",
+        "summary": "This work provides the first finite-time convergence guarantees for linearly constrained stochastic bilevel optimization using only first-order methods, requiring solely gradient information without any Hessian computations or second-order derivatives. We address the unprecedented challenge of simultaneously handling linear constraints, stochastic noise, and finite-time analysis in bilevel optimization, a combination that has remained theoretically intractable until now. While existing approaches either require second-order information, handle only unconstrained stochastic problems, or provide merely asymptotic convergence results, our method achieves finite-time guarantees using gradient-based techniques alone. We develop a novel framework that constructs hypergradient approximations via smoothed penalty functions, using approximate primal and dual solutions to overcome the fundamental challenges posed by the interaction between linear constraints and stochastic noise. Our theoretical analysis provides explicit finite-time bounds on the bias and variance of the hypergradient estimator, demonstrating how approximation errors interact with stochastic perturbations. We prove that our first-order algorithm converges to $(δ, ε)$-Goldstein stationary points using $Θ(δ^{-1}ε^{-5})$ stochastic gradient evaluations, establishing the first finite-time complexity result for this challenging problem class and representing a significant theoretical breakthrough in constrained stochastic bilevel optimization.",
+        "authors": "Cac Phan",
+        "url": "http://arxiv.org/abs/2511.09845v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09845v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了带有线性约束的随机双层优化这一难题，首次提供了仅使用一阶方法的有限时间收敛保证。它明确避免了Hessian计算和二阶导数，构建了通过平滑罚函数逼近超梯度的框架。抽象中明确提到了“显式有限时间界限”和“收敛到 $(δ, ε)$-Goldstein 驻点”，并给出了具体的复杂度 $Θ(δ^{-1}ε^{-5})$。这展现了极强的“优化收敛性”和“清晰的数学推导”，在理论上取得了显著突破，完全符合您的研究重点。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09897v1",
+        "title": "Theory and computation for structured variational inference",
+        "summary": "Structured variational inference constitutes a core methodology in modern statistical applications. Unlike mean-field variational inference, the approximate posterior is assumed to have interdependent structure. We consider the natural setting of star-structured variational inference, where a root variable impacts all the other ones. We prove the first results for existence, uniqueness, and self-consistency of the variational approximation. In turn, we derive quantitative approximation error bounds for the variational approximation to the posterior, extending prior work from the mean-field setting to the star-structured setting. We also develop a gradient-based algorithm with provable guarantees for computing the variational approximation using ideas from optimal transport theory. We explore the implications of our results for Gaussian measures and hierarchical Bayesian models, including generalized linear models with location family priors and spike-and-slab priors with one-dimensional debiasing. As a by-product of our analysis, we develop new stability results for star-separable transport maps which might be of independent interest.",
+        "authors": "Shunan Sheng, Bohan Wu, Bennett Zhu, Sinho Chewi, Aram-Alexandre Pooladian",
+        "url": "http://arxiv.org/abs/2511.09897v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09897v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文关注结构化变分推断这一核心统计方法，针对星形结构变分推断证明了其存在性、唯一性和自洽性的首次结果。它还为变分近似推导了定量的近似误差界，并提出了一个具有可证明保证的基于梯度的算法。这些内容充分展示了“强大的理论基础”（统计保证、优化收敛性）和“清晰的数学推导”，对现代统计应用，尤其是分层贝叶斯模型具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.10130v1",
+        "title": "RI-Loss: A Learnable Residual-Informed Loss for Time Series Forecasting",
+        "summary": "Time series forecasting relies on predicting future values from historical data, yet most state-of-the-art approaches-including transformer and multilayer perceptron-based models-optimize using Mean Squared Error (MSE), which has two fundamental weaknesses: its point-wise error computation fails to capture temporal relationships, and it does not account for inherent noise in the data. To overcome these limitations, we introduce the Residual-Informed Loss (RI-Loss), a novel objective function based on the Hilbert-Schmidt Independence Criterion (HSIC). RI-Loss explicitly models noise structure by enforcing dependence between the residual sequence and a random time series, enabling more robust, noise-aware representations. Theoretically, we derive the first non-asymptotic HSIC bound with explicit double-sample complexity terms, achieving optimal convergence rates through Bernstein-type concentration inequalities and Rademacher complexity analysis. This provides rigorous guarantees for RI-Loss optimization while precisely quantifying kernel space interactions. Empirically, experiments across eight real-world benchmarks and five leading forecasting models demonstrate improvements in predictive performance, validating the effectiveness of our approach. Code will be made publicly available to ensure reproducibility.",
+        "authors": "Jieting Wang, Xiaolei Shang, Feijiang Li, Furong Peng",
+        "url": "http://arxiv.org/abs/2511.10130v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10130v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一种新颖的、基于Hilbert-Schmidt独立准则（HSIC）的残差信息损失函数（RI-Loss），用于时间序列预测。其理论贡献在于推导了第一个具有显式双样本复杂度项的非渐近HSIC界限，并通过Bernstein型集中不等式和Rademacher复杂度分析实现了最优收敛速度。这篇论文在“统计保证”和“清晰的数学推导”方面表现出色，并能有效提升时间序列预测这一现代AI任务的性能和鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.10291v1",
+        "title": "Causal Model-Based Reinforcement Learning for Sample-Efficient IoT Channel Access",
+        "summary": "Despite the advantages of multi-agent reinforcement learning (MARL) for wireless use case such as medium access control (MAC), their real-world deployment in Internet of Things (IoT) is hindered by their sample inefficiency. To alleviate this challenge, one can leverage model-based reinforcement learning (MBRL) solutions, however, conventional MBRL approaches rely on black-box models that are not interpretable and cannot reason. In contrast, in this paper, a novel causal model-based MARL framework is developed by leveraging tools from causal learn- ing. In particular, the proposed model can explicitly represent causal dependencies between network variables using structural causal models (SCMs) and attention-based inference networks. Interpretable causal models are then developed to capture how MAC control messages influence observations, how transmission actions determine outcomes, and how channel observations affect rewards. Data augmentation techniques are then used to generate synthetic rollouts using the learned causal model for policy optimization via proximal policy optimization (PPO). Analytical results demonstrate exponential sample complexity gains of causal MBRL over black-box approaches. Extensive simulations demonstrate that, on average, the proposed approach can reduce environment interactions by 58%, and yield faster convergence compared to model-free baselines. The proposed approach inherently is also shown to provide interpretable scheduling decisions via attention-based causal attribution, revealing which network conditions drive the policy. The resulting combination of sample efficiency and interpretability establishes causal MBRL as a practical approach for resource-constrained wireless systems.",
+        "authors": "Aswin Arun, Christo Kurisummoottil Thomas, Rimalpudi Sarvendranath, Walid Saad",
+        "url": "http://arxiv.org/abs/2511.10291v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10291v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个新颖的因果模型基多智能体强化学习框架，利用因果学习工具和结构因果模型（SCMs）显式地表示网络变量间的因果依赖关系。论文提供了“分析结果”，证明了其因果MBRL相对于黑盒方法的“指数级样本复杂度增益”，并且能够提供可解释的调度决策。这完美地符合了您对“因果逻辑”和“统计保证”的偏好，并将其应用于提高IoT信道访问效率这一现代AI系统。"
+    }
+]

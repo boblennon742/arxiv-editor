@@ -1,0 +1,77 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.10333v1",
+        "title": "EDGC: Entropy-driven Dynamic Gradient Compression for Efficient LLM Training",
+        "summary": "Training large language models (LLMs) poses significant challenges regarding computational resources and memory capacity. Although distributed training techniques help mitigate these issues, they still suffer from considerable communication overhead. Existing approaches primarily rely on static gradient compression to enhance communication efficiency; however, these methods neglect the dynamic nature of evolving gradients during training, leading to performance degradation. Accelerating LLM training via compression without sacrificing performance remains a challenge. In this paper, we propose an entropy-driven dynamic gradient compression framework called EDGC. The core concept is to adjust the compression rate during LLM training based on the evolving trends of gradient entropy, taking into account both compression efficiency and error. EDGC consists of three key components.First, it employs a down-sampling method to efficiently estimate gradient entropy, reducing computation overhead. Second, it establishes a theoretical model linking compression rate with gradient entropy, enabling more informed compression decisions. Lastly, a window-based adjustment mechanism dynamically adapts the compression rate across pipeline stages, improving communication efficiency and maintaining model performance. We implemented EDGC on a 32-NVIDIA-V100 cluster and a 64-NVIDIA-H100 cluster to train GPT2-2.5B and GPT2-12.1B, respectively. The results show that EDGC significantly reduces communication latency and training time by up to 46.45% and 16.13% while preserving LLM accuracy.",
+        "authors": "Qingao Yi, Jiaang Duan, Hanwen Hu, Qin Hua, Haiyan Zhao, Shiyou Qian, Dingyu Yang, Jian Cao, Jinghua Tang, Yinghao Yu, Chenzhi Liao, Kangjin Wang, Liping Zhang",
+        "url": "http://arxiv.org/abs/2511.10333v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10333v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了熵驱动的动态梯度压缩框架EDGC，用于提高大型语言模型（LLM）训练效率。它具有高度创新性，通过理论建模将压缩率与梯度熵关联，实现了通信延迟和训练时间的显著降低（高达46.45%和16.13%），同时保持LLM精度。这完美契合了您对“理论创新性”和“解决实际应用瓶颈”（LLM数据效率、模型压缩）的偏好。其严谨的数学理论基础（熵估计、理论模型）也与您的“数理统计”背景高度吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.09965v1",
+        "title": "Equivariant Sampling for Improving Diffusion Model-based Image Restoration",
+        "summary": "Recent advances in generative models, especially diffusion models, have significantly improved image restoration (IR) performance. However, existing problem-agnostic diffusion model-based image restoration (DMIR) methods face challenges in fully leveraging diffusion priors, resulting in suboptimal performance. In this paper, we address the limitations of current problem-agnostic DMIR methods by analyzing their sampling process and providing effective solutions. We introduce EquS, a DMIR method that imposes equivariant information through dual sampling trajectories. To further boost EquS, we propose the Timestep-Aware Schedule (TAS) and introduce EquS$^+$. TAS prioritizes deterministic steps to enhance certainty and sampling efficiency. Extensive experiments on benchmarks demonstrate that our method is compatible with previous problem-agnostic DMIR methods and significantly boosts their performance without increasing computational costs. Our code is available at https://github.com/FouierL/EquS.",
+        "authors": "Chenxu Wu, Qingpeng Kong, Peiang Zhao, Wendi Yang, Wenxin Ma, Fenghe Tang, Zihang Jiang, S. Kevin Zhou",
+        "url": "http://arxiv.org/abs/2511.09965v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.09965v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了ParoQuant，一种针对推理LLM的权重-only后训练量化方法。它创新性地结合了硬件高效且可优化的Givens旋转与通道级缩放，有效抑制了权重和激活中的离群值，显著减少了量化误差和精度下降。该方法平均提升了2.4%的推理任务精度，且仅增加了不到10%的开销。其在Givens旋转中的数学严谨性、对推理LLM效率和内存足迹的直接解决，以及“模型压缩”的实际影响力，完全符合您的研究偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.10038v1",
+        "title": "Efficient Thought Space Exploration through Strategic Intervention",
+        "summary": "While large language models (LLMs) demonstrate emerging reasoning capabilities, current inference-time expansion methods incur prohibitive computational costs by exhaustive sampling. Through analyzing decoding trajectories, we observe that most next-token predictions align well with the golden output, except for a few critical tokens that lead to deviations. Inspired by this phenomenon, we propose a novel Hint-Practice Reasoning (HPR) framework that operationalizes this insight through two synergistic components: 1) a hinter (powerful LLM) that provides probabilistic guidance at critical decision points, and 2) a practitioner (efficient smaller model) that executes major reasoning steps. The framework's core innovation lies in Distributional Inconsistency Reduction (DIR), a theoretically-grounded metric that dynamically identifies intervention points by quantifying the divergence between practitioner's reasoning trajectory and hinter's expected distribution in a tree-structured probabilistic space. Through iterative tree updates guided by DIR, HPR reweights promising reasoning paths while deprioritizing low-probability branches. Experiments across arithmetic and commonsense reasoning benchmarks demonstrate HPR's state-of-the-art efficiency-accuracy tradeoffs: it achieves comparable performance to self-consistency and MCTS baselines while decoding only 1/5 tokens, and outperforms existing methods by at most 5.1% absolute accuracy while maintaining similar or lower FLOPs.",
+        "authors": "Ziheng Li, Hengyi Cai, Xiaochi Wei, Yuchen Li, Shuaiqiang Wang, Zhi-Hong Deng, Dawei Yin",
+        "url": "http://arxiv.org/abs/2511.10038v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10038v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了HPR框架，通过Hinter/Practitioner模型和“分布式不一致性削减（DIR）”机制，实现了LLM推理过程中高效的思考空间探索。其创新性在于DIR是一种基于理论的度量，量化了策略之间的信息差异，从而实现动态、战略性的干预。这解决了传统方法穷举采样带来的巨大计算成本瓶颈，在实现SOTA效率-准确性权衡的同时大幅减少了解码token数。这篇论文在理论创新（信息论、概率空间）、解决LLM应用（推理效率）和严谨性方面都表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.10208v1",
+        "title": "Fractional neural attention for efficient multiscale sequence processing",
+        "summary": "Attention mechanisms underpin the computational power of Transformer models, which have achieved remarkable success across diverse domains. Yet understanding and extending the principles underlying self-attention remains a key challenge for advancing artificial intelligence. Drawing inspiration from the multiscale dynamics of biological attention and from dynamical systems theory, we introduce Fractional Neural Attention (FNA), a principled, neuroscience-inspired framework for multiscale information processing. FNA models token interactions through Lévy diffusion governed by the fractional Laplacian, intrinsically realizing simultaneous short- and long-range dependencies across multiple scales. This mechanism yields greater expressivity and faster information mixing, advancing the foundational capacity of Transformers. Theoretically, we show that FNA's dynamics are governed by the fractional diffusion equation, and that the resulting attention networks exhibit larger spectral gaps and shorter path lengths -- mechanistic signatures of enhanced computational efficiency. Empirically, FNA achieves competitive text-classification performance even with a single layer and a single head; it also improves performance in image processing and neural machine translation. Finally, the diffusion map algorithm from geometric harmonics enables dimensionality reduction of FNA weights while preserving the intrinsic structure of embeddings and hidden states. Together, these results establish FNA as a principled mechanism connecting self-attention, stochastic dynamics, and geometry, providing an interpretable, biologically grounded foundation for powerful, neuroscience-inspired AI.",
+        "authors": "Cheng Kevin Qu, Andrew Ly, Pulin Gong",
+        "url": "http://arxiv.org/abs/2511.10208v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10208v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了“分数神经注意力（FNA）”机制，它借鉴了生物注意力机制的多尺度动力学和分数拉普拉斯算子、Lévy扩散等数学概念来建模token交互。这种方法在理论上具有极高的创新性和严谨性，提供了比传统自注意力更强的表达能力和更快的SOTA信息混合效率，并且其“谱隙更大、路径长度更短”的理论性质对Transformer模型底层机制带来了深刻洞察。对于专注于“AI前沿算法和架构”的数理统计博士生来说，这种对Transformer核心机制的理论性创新极具吸引力。虽然其直接解决的“应用瓶颈”不如前三篇具体，但其对Transformer基础架构的突破性改进具有长远的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.10008v1",
+        "title": "Phantom Menace: Exploring and Enhancing the Robustness of VLA Models against Physical Sensor Attacks",
+        "summary": "Vision-Language-Action (VLA) models revolutionize robotic systems by enabling end-to-end perception-to-action pipelines that integrate multiple sensory modalities, such as visual signals processed by cameras and auditory signals captured by microphones. This multi-modality integration allows VLA models to interpret complex, real-world environments using diverse sensor data streams. Given the fact that VLA-based systems heavily rely on the sensory input, the security of VLA models against physical-world sensor attacks remains critically underexplored.   To address this gap, we present the first systematic study of physical sensor attacks against VLAs, quantifying the influence of sensor attacks and investigating the defenses for VLA models. We introduce a novel ``Real-Sim-Real'' framework that automatically simulates physics-based sensor attack vectors, including six attacks targeting cameras and two targeting microphones, and validates them on real robotic systems. Through large-scale evaluations across various VLA architectures and tasks under varying attack parameters, we demonstrate significant vulnerabilities, with susceptibility patterns that reveal critical dependencies on task types and model designs. We further develop an adversarial-training-based defense that enhances VLA robustness against out-of-distribution physical perturbations caused by sensor attacks while preserving model performance. Our findings expose an urgent need for standardized robustness benchmarks and mitigation strategies to secure VLA deployments in safety-critical environments.",
+        "authors": "Xuancun Lu, Jiaxiang Chen, Shilin Xiao, Zizhi Jin, Zhangrui Chen, Hanwen Yu, Bohan Qian, Ruochen Zhou, Xiaoyu Ji, Wenyuan Xu",
+        "url": "http://arxiv.org/abs/2511.10008v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10008v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Entropy-Trend Constraint (ETC)，一种训练无关的方法，通过建模token级不确定性（熵序列的一阶和二阶差分）的动态来确定动态RAG中的最佳检索时机。这个方法具有高度的理论创新性，将信息论中的熵和统计趋势分析引入到RAG的效率优化中。它解决了RAG中检索时机不佳导致的延迟干预和错误传播问题，有效降低了检索频率，提升了RAG系统的效率和可靠性，非常符合您对“数据效率”和“LLM应用”的偏好，同时又具有扎实的数理统计基础。"
+    }
+]

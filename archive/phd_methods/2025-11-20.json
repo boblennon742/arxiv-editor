@@ -1,0 +1,77 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.16652v1",
+        "title": "Evolution Strategies at the Hyperscale",
+        "summary": "We introduce Evolution Guided General Optimization via Low-rank Learning (EGGROLL), an evolution strategies (ES) algorithm designed to scale backprop-free optimization to large population sizes for modern large neural network architectures with billions of parameters. ES is a set of powerful blackbox optimisation methods that can handle non-differentiable or noisy objectives with excellent scaling potential through parallelisation. Na{ï}ve ES becomes prohibitively expensive at scale due to the computational and memory costs associated with generating matrix perturbations $E\\in\\mathbb{R}^{m\\times n}$ and the batched matrix multiplications needed to compute per-member forward passes. EGGROLL overcomes these bottlenecks by generating random matrices $A\\in \\mathbb{R}^{m\\times r},\\ B\\in \\mathbb{R}^{n\\times r}$ with $r\\ll \\min(m,n)$ to form a low-rank matrix perturbation $A B^\\top$ that are used in place of the full-rank perturbation $E$. As the overall update is an average across a population of $N$ workers, this still results in a high-rank update but with significant memory and computation savings, reducing the auxiliary storage from $mn$ to $r(m+n)$ per layer and the cost of a forward pass from $\\mathcal{O}(mn)$ to $\\mathcal{O}(r(m+n))$ when compared to full-rank ES. A theoretical analysis reveals our low-rank update converges to the full-rank update at a fast $\\mathcal{O}\\left(\\frac{1}{r}\\right)$ rate. Our experiments show that (1) EGGROLL does not compromise the performance of ES in tabula-rasa RL settings, despite being faster, (2) it is competitive with GRPO as a technique for improving LLM reasoning, and (3) EGGROLL enables stable pre-training of nonlinear recurrent language models that operate purely in integer datatypes.",
+        "authors": "Bidipta Sarkar, Mattie Fellows, Juan Agustin Duque, Alistair Letcher, Antonio León Villares, Anya Sims, Dylan Cope, Jarek Liesen, Lukas Seier, Theo Wolf, Uljad Berdica, Alexander David Goldie, Aaron Courville, Karin Sevegnani, Shimon Whiteson, Jakob Nicolaus Foerster",
+        "url": "http://arxiv.org/abs/2511.16652v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16652v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种名为 EGGROLL 的进化策略（ES）算法，旨在将无反向传播优化扩展到具有数十亿参数的大型神经网络架构中。其核心创新在于通过低秩矩阵扰动实现 ES 的超大规模化，显著降低了计算和内存成本。论文明确指出其低秩更新在理论上以 O(1/r) 的快速收敛速度逼近全秩更新，这展现了极高的理论严谨性。它解决了LLM训练中巨大的计算和内存瓶颈，实现了显著的实际影响力，且与GRPO等先进方法在LLM推理方面具有竞争力，甚至能稳定预训练纯整数数据类型的非线性循环语言模型。这种结合了前沿算法创新、深厚理论基础和强大实际瓶颈解决能力的论文，完全符合您对数理统计博士生在AI前沿算法和架构领域的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16275v1",
+        "title": "SeSE: A Structural Information-Guided Uncertainty Quantification Framework for Hallucination Detection in LLMs",
+        "summary": "Reliable uncertainty quantification (UQ) is essential for deploying large language models (LLMs) in safety-critical scenarios, as it enables them to abstain from responding when uncertain, thereby avoiding hallucinating falsehoods. However, state-of-the-art UQ methods primarily rely on semantic probability distributions or pairwise distances, overlooking latent semantic structural information that could enable more precise uncertainty estimates. This paper presents Semantic Structural Entropy (SeSE), a principled UQ framework that quantifies the inherent semantic uncertainty of LLMs from a structural information perspective for hallucination detection. Specifically, to effectively model semantic spaces, we first develop an adaptively sparsified directed semantic graph construction algorithm that captures directional semantic dependencies while automatically pruning unnecessary connections that introduce negative interference. We then exploit latent semantic structural information through hierarchical abstraction: SeSE is defined as the structural entropy of the optimal semantic encoding tree, formalizing intrinsic uncertainty within semantic spaces after optimal compression. A higher SeSE value corresponds to greater uncertainty, indicating that LLMs are highly likely to generate hallucinations. In addition, to enhance fine-grained UQ in long-form generation -- where existing methods often rely on heuristic sample-and-count techniques -- we extend SeSE to quantify the uncertainty of individual claims by modeling their random semantic interactions, providing theoretically explicable hallucination detection. Extensive experiments across 29 model-dataset combinations show that SeSE significantly outperforms advanced UQ baselines, including strong supervised methods and the recently proposed KLE.",
+        "authors": "Xingtao Zhao, Hao Peng, Dingli Su, Xianghua Zeng, Chunyang Liu, Jinzhi Liao, Philip S. Yu",
+        "url": "http://arxiv.org/abs/2511.16275v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16275v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SeSE 提出了一种结构信息引导的LLM幻觉检测不确定性量化（UQ）框架。其创新之处在于从语义结构信息角度量化LLM固有的语义不确定性，构建自适应稀疏化有向语义图，并通过最优语义编码树的结构熵来形式化内在不确定性。这种方法具有强大的理论创新性，将信息论和图论融入LLM解释性研究，并通过“理论可解释的幻觉检测”概念强调了严谨性。它解决了LLM幻觉这一关键实际应用瓶颈，对LLM在安全关键场景的部署至关重要，且在多个基准测试中显著超越了现有先进UQ方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16664v1",
+        "title": "Nemotron Elastic: Towards Efficient Many-in-One Reasoning LLMs",
+        "summary": "Training a family of large language models targeting multiple scales and deployment objectives is prohibitively expensive, requiring separate training runs for each different size. Recent work on model compression through pruning and knowledge distillation has reduced this cost; however, this process still incurs hundreds of billions of tokens worth of training cost per compressed model. In this paper, we present Nemotron Elastic, a framework for building reasoning-oriented LLMs, including hybrid Mamba-Attention architectures, that embed multiple nested submodels within a single parent model, each optimized for different deployment configurations and budgets. Each of these submodels shares weights with the parent model and can be extracted zero-shot during deployment without additional training or fine-tuning. We enable this functionality through an end-to-end trained router, tightly coupled to a two-stage training curriculum designed specifically for reasoning models. We additionally introduce group-aware SSM elastification that preserves Mamba's structural constraints, heterogeneous MLP elastification, normalized MSE-based layer importance for improved depth selection, and knowledge distillation enabling simultaneous multi-budget optimization. We apply Nemotron Elastic to the Nemotron Nano V2 12B model, simultaneously producing a 9B and a 6B model using only 110B training tokens; this results in over 360x cost reduction compared to training model families from scratch, and around 7x compared to SoTA compression techniques. Each of the nested models performs on par or better than the SoTA in accuracy. Moreover, unlike other compression methods, the nested capability of our approach allows having a many-in-one reasoning model that has constant deployment memory against the number of models in the family.",
+        "authors": "Ali Taghibakhshi, Sharath Turuvekere Sreenivas, Saurav Muralidharan, Ruisi Cai, Marcin Chochowski, Ameya Sunil Mahabaleshwarkar, Yoshi Suhara, Oluwatobi Olabiyi, Daniel Korzekwa, Mostofa Patwary, Mohammad Shoeybi, Jan Kautz, Bryan Catanzaro, Ashwath Aithal, Nima Tajbakhsh, Pavlo Molchanov",
+        "url": "http://arxiv.org/abs/2511.16664v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16664v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Nemotron Elastic 提出了一种用于构建多合一推理LLM的框架，通过在单个父模型中嵌入多个嵌套子模型来解决LLM训练和部署成本高昂的问题。其方法论包括端到端训练的路由器、两阶段训练课程、以及群组感知 SSM 弹性化和异构 MLP 弹性化，这些都代表了前沿算法和架构上的理论创新。它实现了360倍的训练成本降低，并在准确性上与SOTA模型持平甚至更好，这直接解决了LLM模型压缩和部署的实际应用瓶颈，同时提供了在不同预算下灵活部署的“多合一”模型，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16426v1",
+        "title": "FreqFlow: Long-term forecasting using lightweight flow matching",
+        "summary": "Multivariate time-series (MTS) forecasting is fundamental to applications ranging from urban mobility and resource management to climate modeling. While recent generative models based on denoising diffusion have advanced state-of-the-art performance in capturing complex data distributions, they suffer from significant computational overhead due to iterative stochastic sampling procedures that limit real-time deployment. Moreover, these models can be brittle when handling high-dimensional, non-stationary, and multi-scale periodic patterns characteristic of real-world sensor networks. We introduce FreqFlow, a novel framework that leverages conditional flow matching in the frequency domain for deterministic MTS forecasting. Unlike conventional approaches that operate in the time domain, FreqFlow transforms the forecasting problem into the spectral domain, where it learns to model amplitude and phase shifts through a single complex-valued linear layer. This frequency-domain formulation enables the model to efficiently capture temporal dynamics via complex multiplication, corresponding to scaling and temporal translations. The resulting architecture is exceptionally lightweight with only 89k parameters - an order of magnitude smaller than competing diffusion-based models-while enabling single-pass deterministic sampling through ordinary differential equation (ODE) integration. Our approach decomposes MTS signals into trend, seasonal, and residual components, with the flow matching mechanism specifically designed for residual learning to enhance long-term forecasting accuracy. Extensive experiments on real-world traffic speed, volume, and flow datasets demonstrate that FreqFlow achieves state-of-the-art forecasting performance, on average 7\\% RMSE improvements, while being significantly faster and more parameter-efficient than existing methods",
+        "authors": "Seyed Mohamad Moghadas, Bruno Cornelis, Adrian Munteanu",
+        "url": "http://arxiv.org/abs/2511.16426v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16426v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FreqFlow 提出了一种新颖的框架，利用频率域中的条件流匹配进行长期多元时间序列（MTS）预测。其将预测问题转化为频谱域，通过单一复值线性层学习振幅和相位偏移，并利用ODE积分进行单次确定性采样。这种将流匹配与频率域分析相结合的数学方法具有很强的理论创新性。它显著解决了MTS预测中的计算开销大、对高维非平稳多尺度模式处理能力不足的实际应用瓶颈，模型参数减少一个数量级，RMSE平均提高7%，且速度更快，参数效率更高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16229v1",
+        "title": "Q-MLLM: Vector Quantization for Robust Multimodal Large Language Model Security",
+        "summary": "Multimodal Large Language Models (MLLMs) have demonstrated impressive capabilities in cross-modal understanding, but remain vulnerable to adversarial attacks through visual inputs despite robust textual safety mechanisms. These vulnerabilities arise from two core weaknesses: the continuous nature of visual representations, which allows for gradient-based attacks, and the inadequate transfer of text-based safety mechanisms to visual content. We introduce Q-MLLM, a novel architecture that integrates two-level vector quantization to create a discrete bottleneck against adversarial attacks while preserving multimodal reasoning capabilities. By discretizing visual representations at both pixel-patch and semantic levels, Q-MLLM blocks attack pathways and bridges the cross-modal safety alignment gap. Our two-stage training methodology ensures robust learning while maintaining model utility. Experiments demonstrate that Q-MLLM achieves significantly better defense success rate against both jailbreak attacks and toxic image attacks than existing approaches. Notably, Q-MLLM achieves perfect defense success rate (100\\%) against jailbreak attacks except in one arguable case, while maintaining competitive performance on multiple utility benchmarks with minimal inference overhead. This work establishes vector quantization as an effective defense mechanism for secure multimodal AI systems without requiring expensive safety-specific fine-tuning or detection overhead. Code is available at https://github.com/Amadeuszhao/QMLLM.",
+        "authors": "Wei Zhao, Zhe Li, Yige Li, Jun Sun",
+        "url": "http://arxiv.org/abs/2511.16229v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16229v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Q-MLLM 提出了一种新颖的架构，通过整合两级向量量化为多模态大语言模型（MLLMs）构建一个离散瓶颈，以对抗视觉输入带来的对抗性攻击。其创新性在于利用离散量化理论来阻断基于梯度的攻击路径，并弥合跨模态安全对齐的鸿沟。这种方法不仅具有理论创新性，更在MLLM安全性方面取得了突破，在一些越狱攻击场景下实现了近乎完美的防御成功率。它有效解决了MLLMs在实际应用中面临的关键安全和鲁棒性瓶颈，且具有极低的推理开销，非常符合您对前沿算法和实际应用瓶颈解决的需求。"
+    }
+]

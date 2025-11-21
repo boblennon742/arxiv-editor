@@ -1,0 +1,77 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.16587v1",
+        "title": "Almost Sure Convergence Analysis of Differentially Private Stochastic Gradient Methods",
+        "summary": "Differentially private stochastic gradient descent (DP-SGD) has become the standard algorithm for training machine learning models with rigorous privacy guarantees. Despite its widespread use, the theoretical understanding of its long-run behavior remains limited: existing analyses typically establish convergence in expectation or with high probability, but do not address the almost sure convergence of single trajectories. In this work, we prove that DP-SGD converges almost surely under standard smoothness assumptions, both in nonconvex and strongly convex settings, provided the step sizes satisfy some standard decaying conditions. Our analysis extends to momentum variants such as the stochastic heavy ball (DP-SHB) and Nesterov's accelerated gradient (DP-NAG), where we show that careful energy constructions yield similar guarantees. These results provide stronger theoretical foundations for differentially private optimization and suggest that, despite privacy-induced distortions, the algorithm remains pathwise stable in both convex and nonconvex regimes.",
+        "authors": "Amartya Mukherjee, Jun Liu",
+        "url": "http://arxiv.org/abs/2511.16587v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16587v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了差分隐私随机梯度下降（DP-SGD）算法的“几乎必然收敛性”，这是优化收敛性领域一个极其严谨的理论挑战。它不仅证明了DP-SGD在非凸和强凸设置下的几乎必然收敛性，还将其扩展到动量变体，并通过能量函数构造提供了更强的理论基础。这完美契合了您对“强大的理论基础”（尤其是优化收敛性）和“清晰的数学推导”（涉及几乎必然收敛的证明）的要求，是数理统计博士生探索现代AI系统严谨数学逻辑的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.15983v1",
+        "title": "Descend or Rewind? Stochastic Gradient Descent Unlearning",
+        "summary": "Machine unlearning algorithms aim to remove the impact of selected training data from a model without the computational expenses of retraining from scratch. Two such algorithms are ``Descent-to-Delete\" (D2D) and ``Rewind-to-Delete\" (R2D), full-batch gradient descent algorithms that are easy to implement and satisfy provable unlearning guarantees. In particular, the stochastic version of D2D is widely implemented as the ``finetuning\" unlearning baseline, despite lacking theoretical backing on nonconvex functions. In this work, we prove $(ε, δ)$ certified unlearning guarantees for stochastic R2D and D2D for strongly convex, convex, and nonconvex loss functions, by analyzing unlearning through the lens of disturbed or biased gradient systems, which may be contracting, semi-contracting, or expansive respectively. Our argument relies on optimally coupling the random behavior of the unlearning and retraining trajectories, resulting in a probabilistic sensitivity bound that can be combined with a novel relaxed Gaussian mechanism to achieve $(ε, δ)$ unlearning. We determine that D2D can yield tighter guarantees for strongly convex functions compared to R2D by relying on contraction to a unique global minimum. However, unlike D2D, R2D can achieve unlearning in the convex and nonconvex setting because it draws the unlearned model closer to the retrained model by reversing the accumulated disturbances.",
+        "authors": "Siqiao Mu, Diego Klabjan",
+        "url": "http://arxiv.org/abs/2511.15983v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.15983v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为随机梯度下降的“遗忘”（unlearning）算法提供了严格的(ε, δ)认证遗忘保证。它通过将遗忘过程视为扰动或偏置梯度系统，分析了学习轨迹的随机行为，并推导出了概率敏感性界限，结合松弛高斯机制实现了理论上的遗忘。这直接满足了您对“统计保证”和“优化收敛性”的偏好，其严谨的数学分析和对核心隐私/伦理问题的理论解答使其成为高价值的理论研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16006v1",
+        "title": "Synergizing Deconfounding and Temporal Generalization For Time-series Counterfactual Outcome Estimation",
+        "summary": "Estimating counterfactual outcomes from time-series observations is crucial for effective decision-making, e.g. when to administer a life-saving treatment, yet remains significantly challenging because (i) the counterfactual trajectory is never observed and (ii) confounders evolve with time and distort estimation at every step. To address these challenges, we propose a novel framework that synergistically integrates two complementary approaches: Sub-treatment Group Alignment (SGA) and Random Temporal Masking (RTM). Instead of the coarse practice of aligning marginal distributions of the treatments in latent space, SGA uses iterative treatment-agnostic clustering to identify fine-grained sub-treatment groups. Aligning these fine-grained groups achieves improved distributional matching, thus leading to more effective deconfounding. We theoretically demonstrate that SGA optimizes a tighter upper bound on counterfactual risk and empirically verify its deconfounding efficacy. RTM promotes temporal generalization by randomly replacing input covariates with Gaussian noises during training. This encourages the model to rely less on potentially noisy or spuriously correlated covariates at the current step and more on stable historical patterns, thereby improving its ability to generalize across time and better preserve underlying causal relationships. Our experiments demonstrate that while applying SGA and RTM individually improves counterfactual outcome estimation, their synergistic combination consistently achieves state-of-the-art performance. This success comes from their distinct yet complementary roles: RTM enhances temporal generalization and robustness across time steps, while SGA improves deconfounding at each specific time point.",
+        "authors": "Yiling Liu, Juncheng Dong, Chen Fu, Wei Shi, Ziyang Jiang, Zhigang Hua, David Carlson",
+        "url": "http://arxiv.org/abs/2511.16006v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16006v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种协同去混淆和时间泛化框架，用于时间序列反事实结果估计，这是一个涉及“因果逻辑”和“统计保证”的复杂问题。它理论性地证明了其提出的Sub-treatment Group Alignment (SGA) 方法可以优化反事实风险的更紧上界，并明确指出其对维持潜在因果关系的重要性。这篇论文在因果推断领域提供了强大的理论基础和数学推导，直接契合了您对因果逻辑的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16191v1",
+        "title": "CausalMamba: Interpretable State Space Modeling for Temporal Rumor Causality",
+        "summary": "Rumor detection on social media remains a challenging task due to the complex propagation dynamics and the limited interpretability of existing models. While recent neural architectures capture content and structural features, they often fail to reveal the underlying causal mechanisms of misinformation spread. We propose CausalMamba, a novel framework that integrates Mamba-based sequence modeling, graph convolutional networks (GCNs), and differentiable causal discovery via NOTEARS. CausalMamba learns joint representations of temporal tweet sequences and reply structures, while uncovering latent causal graphs to identify influential nodes within each propagation chain. Experiments on the Twitter15 dataset show that our model achieves competitive classification performance compared to strong baselines, and uniquely enables counterfactual intervention analysis. Qualitative results demonstrate that removing top-ranked causal nodes significantly alters graph connectivity, offering interpretable insights into rumor dynamics. Our framework provides a unified approach for rumor classification and influence analysis, paving the way for more explainable and actionable misinformation detection systems.",
+        "authors": "Xiaotong Zhan, Xi Cheng",
+        "url": "http://arxiv.org/abs/2511.16191v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16191v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CausalMamba 将 Mamba 模型、图卷积网络与可微因果发现方法 NOTEARS 深度结合，旨在揭示时间性谣言传播的潜在因果机制。论文着重于通过“因果逻辑”构建可解释的AI系统，特别是通过发现“潜在因果图”和支持“反事实干预分析”来提供“解释性洞察”。这种将深度学习与严谨因果发现理论相结合的方法，非常符合您对因果逻辑和强大的理论基础的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.16111v1",
+        "title": "Angular Graph Fractional Fourier Transform: Theory and Application",
+        "summary": "Graph spectral representations are fundamental in graph signal processing, offering a rigorous framework for analyzing and processing graph-structured data. The graph fractional Fourier transform (GFRFT) extends the classical graph Fourier transform (GFT) with a fractional-order parameter, enabling flexible spectral analysis while preserving mathematical consistency. The angular graph Fourier transform (AGFT) introduces angular control via GFT eigenvector rotation; however, existing constructions fail to degenerate to the GFT at zero angle, which is a critical flaw that undermines theoretical consistency and interpretability. To resolve these complementary limitations - GFRFT's lack of angular regulation and AGFT's defective degeneracy - this study proposes an angular GFRFT (AGFRFT), a unified framework that integrates fractional-order and angular spectral analyses with theoretical rigor. A degeneracy-friendly rotation matrix family ensures exact GFT degeneration at zero angle, with two AGFRFT variants (I-AGFRFT and II-AGFRFT) defined accordingly. Rigorous theoretical analyses confirm their unitarity, invertibility, and smooth parameter dependence. Both support learnable joint parameterization of the angle and fractional order, enabling adaptive spectral processing for diverse graph signals. Extensive experiments on real-world data denoising, image denoising, and point cloud denoising demonstrate that AGFRFT outperforms GFRFT and AGFT in terms of spectral concentration, reconstruction quality, and controllable spectral manipulation, establishing a robust and flexible tool for integrated angular fractional spectral analysis in graph signal processing.",
+        "authors": "Feiyue Zhao, Yangfan He, Zhichao Zhang",
+        "url": "http://arxiv.org/abs/2511.16111v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.16111v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“角图分数傅里叶变换”（AGFRFT），一个统一的理论框架，将分数阶和角谱分析整合到图信号处理中。论文通过“严格的理论分析”证实了其酉性、可逆性和平滑参数依赖性，解决了现有方法在理论一致性上的缺陷。这种纯粹的数学理论构建和严谨的推导，直接满足了您对“强大的理论基础”和“清晰的数学推导”的强烈偏好，为处理图结构数据提供了深厚的数学工具。"
+    }
+]

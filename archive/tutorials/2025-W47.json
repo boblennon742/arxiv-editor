@@ -1,0 +1,32 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.12869v1",
+        "title": "On the Fundamental Limits of LLMs at Scale",
+        "summary": "Large Language Models (LLMs) have benefited enormously from scaling, yet these gains are bounded by five fundamental limitations: (1) hallucination, (2) context compression, (3) reasoning degradation, (4) retrieval fragility, and (5) multimodal misalignment. While existing surveys describe these phenomena empirically, they lack a rigorous theoretical synthesis connecting them to the foundational limits of computation, information, and learning. This work closes that gap by presenting a unified, proof-informed framework that formalizes the innate theoretical ceilings of LLM scaling. First, computability and uncomputability imply an irreducible residue of error: for any computably enumerable model family, diagonalization guarantees inputs on which some model must fail, and undecidable queries (e.g., halting-style tasks) induce infinite failure sets for all computable predictors. Second, information-theoretic and statistical constraints bound attainable accuracy even on decidable tasks, finite description length enforces compression error, and long-tail factual knowledge requires prohibitive sample complexity. Third, geometric and computational effects compress long contexts far below their nominal size due to positional under-training, encoding attenuation, and softmax crowding. We further show how likelihood-based training favors pattern completion over inference, how retrieval under token limits suffers from semantic drift and coupling noise, and how multimodal scaling inherits shallow cross-modal alignment. Across sections, we pair theorems and empirical evidence to outline where scaling helps, where it saturates, and where it cannot progress, providing both theoretical foundations and practical mitigation paths like bounded-oracle retrieval, positional curricula, and sparse or hierarchical attention.",
+        "authors": "Muhammad Ahmed Mohsin, Muhammad Umer, Ahsan Bilal, Zeeshan Memon, Muhammad Ibtsaam Qadir, Sagnik Bhattacharya, Hassan Rizwan, Abhiram R. Gorle, Maahe Zehra Kazmi, Ayesha Mohsin, Muhammad Usman Rafique, Zihao He, Pulkit Mehta, Muhammad Ali Jamshed, John M. Cioffi",
+        "url": "http://arxiv.org/abs/2511.12869v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.12869v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇综述深入探讨了大型语言模型（LLMs）的五大根本性限制，并提供了统一的、经过证明的框架，将这些限制与计算、信息和学习的理论基础联系起来。作为一名数理统计博士生，我专注于将严谨的数学逻辑应用于现代 AI 系统以提升其鲁棒性和效果，这篇论文完美契合了我的兴趣。它直接针对LLM的“理论瓶颈”，通过可计算性、信息论和统计约束等“数学基础”来分析LLM的幻觉、上下文压缩、推理退化等问题。文章不仅理论严谨（Rigor 5分），引用了定理和经验证据，而且逻辑脉络清晰（Clarity 5分），能够深入浅出地解释复杂的概念，并提出了可落地的缓解路径。这避免了纯粹抽象的理论，而是将数学原理直接应用于现代AI系统的前沿问题，是提升AI鲁棒性和效果的基石。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13984v2",
+        "title": "Node-Level Uncertainty Estimation in LLM-Generated SQL",
+        "summary": "We present a practical framework for detecting errors in LLM-generated SQL by estimating uncertainty at the level of individual nodes in the query's abstract syntax tree (AST). Our approach proceeds in two stages. First, we introduce a semantically aware labeling algorithm that, given a generated SQL and a gold reference, assigns node-level correctness without over-penalizing structural containers or alias variation. Second, we represent each node with a rich set of schema-aware and lexical features - capturing identifier validity, alias resolution, type compatibility, ambiguity in scope, and typo signals - and train a supervised classifier to predict per-node error probabilities. We interpret these probabilities as calibrated uncertainty, enabling fine-grained diagnostics that pinpoint exactly where a query is likely to be wrong. Across multiple databases and datasets, our method substantially outperforms token log-probabilities: average AUC improves by +27.44% while maintaining robustness under cross-database evaluation. Beyond serving as an accuracy signal, node-level uncertainty supports targeted repair, human-in-the-loop review, and downstream selective execution. Together, these results establish node-centric, semantically grounded uncertainty estimation as a strong and interpretable alternative to aggregate sequence level confidence measures.",
+        "authors": "Hilaf Hasson, Ruocheng Guo",
+        "url": "http://arxiv.org/abs/2511.13984v2",
+        "pdf_url": "https://arxiv.org/pdf/2511.13984v2",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一种实用的框架，通过在LLM生成的SQL查询的抽象语法树（AST）节点层面估计不确定性来检测错误。它通过语义感知的标注算法和丰富的Schema感知特征，训练分类器预测节点层面的错误概率，实现了校准的不确定性估计。这与我将“严谨的数学逻辑应用于现代 AI 系统，以提升其鲁棒性和效果”的兴趣高度吻合。它直接解决了LLM输出的“模型泛化界限”和“鲁棒性”问题，提供了一种新颖的“统计基础与保证”方法——细粒度的不确定性量化。其创新性（Novelty 5分）在于超越了传统的token级置信度，实现了节点级的、语义感知的误差检测，极具实践影响力（Impact 5分），能够支持目标修复和人机协作。文章的思路清晰、方法具体，深入浅出地解释了复杂的概念（Clarity 5分），且避免了纯粹抽象的理论，提供了高度逻辑性强、可落地的知识。"
+    }
+]

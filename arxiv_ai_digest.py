@@ -1,11 +1,11 @@
 import os
 import json
-import json5  # 确保已安装 pip install json5
+import json5 
 import arxiv
 import re
 import logging
 from google import genai
-from google.genai import types # 引入 types 以支持 JSON 模式设置
+from google.genai import types 
 from datetime import date, timedelta
 
 # --- 1. 配置 Logging ---
@@ -227,8 +227,8 @@ def write_to_json(data_to_save, file_path):
 # 主函数
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
-    #target_date = date.today() - timedelta(days=1)
-    target_date = date(2025, 11, 17)
+    target_date = date.today() - timedelta(days=1)
+    
     
     logger.info(f"--- 脚本开始运行 (V18 稳定增强版)，目标日期: {target_date.isoformat()} ---")
     logger.info(f"--- 配置: 抓取上限 {FETCH_LIMIT} 篇，推荐上限 {TOP_N_PICKS} 篇 ---")

@@ -1,10 +1,11 @@
 import os
 import json
-import json5  # <--- 1. 新增导入
+import json5  # 确保已安装 pip install json5
 import arxiv
 import re
 import logging
 from google import genai
+from google.genai import types # 引入 types 以支持 JSON 模式设置
 from datetime import date, timedelta
 
 # --- 1. 配置 Logging ---
@@ -15,11 +16,14 @@ logger = logging.getLogger(__name__)
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
+# 配置抓取和推荐数量
+FETCH_LIMIT = 200  # <--- 修改点：抓取数量改为 200
+TOP_N_PICKS = 10   # <--- 修改点：推荐数量改为 10
+
 # --------------------------------------------------------------------------
 # (V17.1) 3 个超级核心
 # --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
-    # 核心 1: AI 理论与统计基础
     "phd_foundations": {
         "name_zh": "AI 理论与统计基础",
         "name_en": "AI Theory & Statistical Foundations",
@@ -36,8 +40,6 @@ YOUR_DOMAINS_OF_INTEREST = {
         我寻求的论文必须具备**强大的理论基础**（如统计保证、优化收敛性、因果逻辑）和**清晰的数学推导**。
         """
     },
-    
-    # 核心 2: 前沿 AI 模型与应用
     "phd_methods": {
         "name_zh": "前沿 AI 模型与应用",
         "name_en": "Frontier AI Models & Applications",
@@ -54,7 +56,6 @@ YOUR_DOMAINS_OF_INTEREST = {
         我**不**喜欢纯粹的工程堆砌，方法必须具有**理论创新性**。
         """
     },
-    # 核心 3: 量化金融 (Crypto)
     "quant_crypto": {
         "name_zh": "量化金融 (Crypto)",
         "name_en": "Quantitative Finance (Crypto)",
@@ -80,7 +81,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     
     search = arxiv.Search(
         query=full_query,
-        max_results=200,
+        max_results=FETCH_LIMIT, # <--- 修改点：使用配置的 200
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -103,7 +104,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V17) AI 分析函数 (评分引擎) —— <修改点：使用 json5>
+# (V18) AI 分析函数 - 强制 JSON 模式 + 10篇 + json5 解析
 # --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
@@ -112,12 +113,18 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not GEMINI_API_KEY:
         logger.error("未找到 GEMINI_API_KEY。")
         return None
-    logger.info(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 5 篇并评分...")
-    client = genai.Client()
+    
+    logger.info(f"正在请求 AI 总编辑为 {domain_name} 领域从 {len(papers)} 篇中挑选 {TOP_N_PICKS} 篇...")
+    
+    client = genai.Client(api_key=GEMINI_API_KEY)
+    
+    # 构建 Prompt
     prompt_papers = "\n".join(
         [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
          for i, p in enumerate(papers)]
     )
+    
+    # <--- 修改点：Prompt 中明确 10 篇，并且要求空列表返回
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "{domain_name}" 领域。
@@ -132,71 +139,82 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
         - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
     2. **排序：** 根据我的个人偏好，结合上述 4 个维度的分数，计算一个**总分**。
-    3. **筛选：** 挑选出**总分最高的 10 篇（最多 10 篇）**论文。
-    4. **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
+    3. **筛选：** 挑选出**总分最高的 {TOP_N_PICKS} 篇（最多 {TOP_N_PICKS} 篇）**论文。
+    4. **返回：** - 如果找到了值得推荐的论文，请返回一个 JSON 对象列表。
+       - 如果没有任何一篇论文值得推荐，请返回一个空列表 `[]`。
+       - **绝对不要**返回 `null` 或其他文本，必须是 JSON 列表。
     
-    JSON 格式如下：
+    JSON 列表格式示例：
     [
       {{
-        "id": "被选中论文1的 ID",
-        "scores": {{
-          "Novelty": 5,
-          "Rigor": 4,
-          "Impact": 5,
-          "Clarity": 4
-        }},
-        "reason_zh": "（中文）详细说明为什么这篇论文**总分最高**并**完全符合**我的偏好/任务。"
-      }},
-      ... (最多 5 篇)
+        "id": "论文ID",
+        "scores": {{ "Novelty": 5, "Rigor": 4, "Impact": 5, "Clarity": 4 }},
+        "reason_zh": "中文推荐理由"
+      }}
     ]
-    如果返回 `null`，就只返回 `null` 这个词。
     """
+    
     full_prompt = f"{system_prompt}\n\n--- 论文列表开始 ---\n{prompt_papers}\n--- 论文列表结束 ---"
+    
     try:
+        # <--- 修改点：启用 response_mime_type 为 application/json，强制 AI 输出 JSON
         response = client.models.generate_content(
             model='gemini-2.5-flash',
-            contents=full_prompt
+            contents=full_prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json" 
+            )
         )
         
-        # 1. 清理 Markdown 标记
-        cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
+        cleaned = response.text.strip()
         
-        # 2. 尝试用正则提取 [] 列表部分 (容错机制)
-        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
-        if not match:
-             if 'null' in cleaned.lower():
-                 logger.info("AI 编辑认为今天没有值得推荐的。")
-                 return None
-             # 如果正则没匹配到，有些时候 json5 可以直接解析整个文本（如果只是缺少[]但格式是对的）
-             # 但为了安全，如果没匹配到且不是 null，我们尝试直接解析 cleaned
-             json_string = cleaned
-        else:
-             json_string = match.group(1)
+        # 调试日志：查看 AI 到底返回了什么
+        # logger.info(f"AI Raw Response prefix: {cleaned[:100]}")
+
+        # 解析逻辑
+        ai_picks_list = []
         
-        # 3. 使用 json5.loads 替代 json.loads
-        # json5 可以处理尾随逗号、单引号键名、无引号键名等常见 AI 格式错误
-        ai_picks_list = json5.loads(json_string) # <--- 2. 修改处
-        
+        # 1. 优先尝试直接解析（因为我们启用了 application/json 模式）
+        try:
+            ai_picks_list = json5.loads(cleaned)
+        except Exception:
+            # 2. 如果直接解析失败，尝试提取 []
+            match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
+            if match:
+                try:
+                    ai_picks_list = json5.loads(match.group(1))
+                except Exception as e:
+                    logger.error(f"提取后的 JSON 解析依然失败: {e}")
+                    return None
+            else:
+                # 3. 检查是否是空列表的变体或 null
+                if "[]" in cleaned:
+                    return []
+                if "null" in cleaned.lower():
+                    logger.info("AI 返回了 null，表示无推荐。")
+                    return None
+                
+                logger.error(f"无法从 AI 输出中提取 JSON 列表。原始内容前100字符: {cleaned[:100]}")
+                return None
+
+        if not isinstance(ai_picks_list, list):
+            logger.error(f"AI 返回的不是列表，而是: {type(ai_picks_list)}")
+            return None
+
         logger.info(f"AI 编辑已选出 {len(ai_picks_list)} 篇今日最佳。")
         return ai_picks_list
-        
-    except ValueError as e: # json5 解析失败通常抛出 ValueError
-        logger.error(f"AI 总编辑分析失败: 无法解析 JSON (json5): {e}")
-        # 调试用：打印出解析失败的字符串
-        # logger.error(f"待解析字符串: {json_string}") 
-        return None
+
     except Exception as e:
         logger.error(f"AI 总编辑分析失败: {e}")
         return None
 
 # --------------------------------------------------------------------------
-# 写入 JSON (保持标准 json dump，因为输出文件需要标准格式兼容其他程序)
+# 写入 JSON
 # --------------------------------------------------------------------------
 def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
-            # 这里依然使用标准 json 库，确保生成的文件是严格的 JSON 标准
             json.dump(data_to_save, f, ensure_ascii=False, indent=4)
             if data_to_save:
                 logger.info(f"成功将 {len(data_to_save)} 篇“精选”写入 {file_path}")
@@ -211,7 +229,9 @@ def write_to_json(data_to_save, file_path):
 if __name__ == "__main__":
     target_date = date.today() - timedelta(days=1)
     
-    logger.info(f"--- 脚本开始运行 (V17.5 json5增强版)，目标日期: {target_date.isoformat()} ---")
+    logger.info(f"--- 脚本开始运行 (V18 稳定增强版)，目标日期: {target_date.isoformat()} ---")
+    logger.info(f"--- 配置: 抓取上限 {FETCH_LIMIT} 篇，推荐上限 {TOP_N_PICKS} 篇 ---")
+
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
         logger.info(f"\n--- 处理领域: {config['name_en']} ---")
         
@@ -223,15 +243,21 @@ if __name__ == "__main__":
         )
         
         picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
+        
         final_data_list = []
         if picks_list_json:
+            # 确保 picks_list_json 是列表
             for pick_item in picks_list_json:
+                if not isinstance(pick_item, dict): continue
+                # 匹配原始论文信息
                 full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
                 if full_paper:
                     final_data_list.append({**full_paper, **pick_item})
         
         if not final_data_list:
              final_data_list = None
+             
         output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")
         write_to_json(final_data_list, output_path)
+        
     logger.info(f"\n--- 所有领域处理完毕: {target_date.isoformat()} ---")

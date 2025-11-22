@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 import os
 import json
+import json5  # <--- 1. 引入 json5
 import arxiv
 import logging 
-import re # <-- Regex 模块
+import re 
 from google import genai
+from google.genai import types # <--- 2. 引入 types 用于 JSON Mode
 from datetime import date, timedelta
 
 # --- 1. 配置 Logging ---
@@ -14,6 +16,10 @@ logger = logging.getLogger(__name__)
 # --- 2. 核心配置 ---
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
+
+# <--- 3. 配置抓取参数
+FETCH_LIMIT = 200  # 抓取上限增加到 200
+TOP_N_PICKS = 10   # 推荐数量增加到 10
 
 ARXIV_CATEGORIES = ['stat.ML', 'cs.LG', 'math.OC', 'cs.NE', 'cs.AI', 'math.NA']
 TUTORIAL_KEYWORDS = ['tutorial', 'survey', '"lecture notes"', 'review', '"book chapter"']
@@ -37,7 +43,7 @@ def fetch_weekly_tutorials(target_date):
     
     search = arxiv.Search(
         query=full_query,
-        max_results=75,
+        max_results=FETCH_LIMIT, # <--- 使用配置的 200
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -61,7 +67,7 @@ def fetch_weekly_tutorials(target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V17.4) AI 教程总编辑 (修复 Regex)
+# (V18) AI 教程总编辑 (JSON Mode + json5)
 # --------------------------------------------------------------------------
 def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not papers:
@@ -71,14 +77,16 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
         logger.error("未找到 GEMINI_API_KEY。")
         return None
 
-    logger.info("正在请求 AI 教程总编辑挑选 Top 2 篇并评分...")
-    client = genai.Client()
+    logger.info(f"正在请求 AI 教程总编辑从 {len(papers)} 篇中挑选 Top {TOP_N_PICKS} 并评分...")
+    
+    client = genai.Client(api_key=GEMINI_API_KEY)
+    
     prompt_papers = "\n".join([
         f"--- 教程 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
         for i, p in enumerate(papers)
     ])
 
-    # (V17.1) 评分提示词
+    # (V18) 评分提示词 - 适配 JSON Mode
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
     我今天的任务是分析 "本周教程与综述" 领域。
@@ -94,57 +102,57 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
         - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
         - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
     2.  **排序：** 根据我的个人偏好（特别是 Clarity 和 Rigor），结合上述 4 个维度的分数，计算一个**总分**。
-    3.  **筛选：** 挑选出**总分最高的 2 篇（最多 2 篇）**教程。
-    4.  **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
+    3.  **筛选：** 挑选出**总分最高的 {TOP_N_PICKS} 篇（最多 {TOP_N_PICKS} 篇）**教程。
+    4.  **返回：** - 如果找到了值得推荐的论文，请返回一个 JSON 对象列表。
+       - 如果没有任何一篇论文值得推荐，请返回一个空列表 `[]`。
+       - **绝对不要**返回 `null` 或其他文本，必须是 JSON 列表。
     
-    JSON 格式如下：
+    JSON 列表格式示例：
     [
       {{
-        "id": "被选中论文1的 ID",
-        "scores": {{
-          "Novelty": 5,
-          "Rigor": 4,
-          "Impact": 5,
-          "Clarity": 4
-        }},
-        "reason_zh": "（中文）详细说明为什么这篇教程**总分最高**并**完全符合**我的偏好/任务。"
-      }},
-      ... (最多 2 篇)
+        "id": "论文ID",
+        "scores": {{ "Novelty": 5, "Rigor": 4, "Impact": 5, "Clarity": 4 }},
+        "reason_zh": "中文推荐理由"
+      }}
     ]
-    如果返回 `null`，就只返回 `null` 这个词。
     """
     
     full_prompt = f"{system_prompt}\n\n--- 教程列表开始 ---\n{prompt_papers}\n--- 教程列表结束 ---"
 
     try:
+        # <--- 启用 JSON Mode
         response = client.models.generate_content(
             model='gemini-2.5-flash',
-            contents=full_prompt
+            contents=full_prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json"
+            )
         )
         
-        # (V17.4) 关键修复：使用贪婪 Regex
-        cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
+        cleaned = response.text.strip()
         
-        # 匹配第一个 '[' 和 最后一个 ']'
-        match = re.search(r'(\[.*\])', cleaned, re.DOTALL) 
+        # 解析逻辑：优先直接解析 -> 正则提取 -> 空判断
+        ai_picks_list = []
+        try:
+            ai_picks_list = json5.loads(cleaned) # <--- 使用 json5
+        except Exception:
+            match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
+            if match:
+                try:
+                    ai_picks_list = json5.loads(match.group(1))
+                except Exception:
+                    return None
+            else:
+                if "[]" in cleaned: return []
+                return None
 
-        if not match:
-             if cleaned.lower() == 'null':
-                 logger.info("AI 教程编辑认为本周没有值得推荐的。")
-                 return None
-             
-             logger.error(f"AI 输出的文本中找不到 JSON 列表结构。输出：{response.text[:200]}...")
-             raise json.JSONDecodeError("JSON 列表结构缺失", response.text, 0)
-        
-        json_string = match.group(1) 
-        
-        ai_picks_list = json.loads(json_string) 
+        if not isinstance(ai_picks_list, list):
+             logger.error(f"AI 返回非列表格式: {type(ai_picks_list)}")
+             return None
+
         logger.info(f"AI 教程编辑已选出 {len(ai_picks_list)} 篇本周最佳。")
         return ai_picks_list
 
-    except json.JSONDecodeError as e:
-        logger.error(f"AI 总编辑分析失败: 无法解析 JSON: {e}")
-        return None
     except Exception as e:
         logger.error(f"AI 总编辑分析失败: {e}")
         return None
@@ -164,9 +172,10 @@ def write_to_json(data_to_save, file_path):
 
 # --- 6. 主函数 ---
 if __name__ == "__main__":
-    target_date = date.today()
+    #target_date = date.today()
+    target_date = date(2025, 11, 17)
     
-    logger.info(f"--- 教程脚本开始运行 (V17 评分版)，目标周 (基于日期): {target_date.isoformat()} ---")
+    logger.info(f"--- 教程脚本开始运行 (V18 JSON5增强版)，目标周 (基于日期): {target_date.isoformat()} ---")
 
     # (V17.1) 保留您最终确定的、包含“文笔与结构”要求的偏好文本
     my_tutorial_preference = """
@@ -182,25 +191,26 @@ if __name__ == "__main__":
     **【关键排除项】**
     我**不**喜欢：过于抽象、缺乏应用场景验证的纯概率论、纯随机分析、假设检验或“空中楼阁”式的理论。我追求逻辑性强、可落地的知识。
     """
-   
+    
     papers = fetch_weekly_tutorials(target_date)
     pick_json_list = get_ai_tutorial_pick(papers, my_tutorial_preference)
-   
+    
     final_data_to_save = []
     if pick_json_list:
         for pick_item in pick_json_list:
-            full_paper = next((p for p in papers if p['id'] == pick_item['id']), None)
+            if not isinstance(pick_item, dict): continue
+            full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
             if full_paper:
                 final_data_to_save.append({**full_paper, **pick_item})
     
     if not final_data_to_save:
          final_data_to_save = None
-           
+            
     week_number = target_date.isocalendar()[1]
     year = target_date.isocalendar()[0]
     output_filename = f"{year}-W{week_number:02d}.json"
     output_path = os.path.join(ARCHIVE_DIR, "tutorials", output_filename)
-   
+    
     write_to_json(final_data_to_save, output_path)
     
     logger.info(f"\n--- 教程脚本处理完毕: {output_filename} ---")

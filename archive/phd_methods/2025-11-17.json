@@ -1,20 +1,5 @@
 [
     {
-        "id": "http://arxiv.org/abs/2511.13421v1",
-        "title": "Larger Datasets Can Be Repeated More: A Theoretical Analysis of Multi-Epoch Scaling in Linear Regression",
-        "summary": "While data scaling laws of large language models (LLMs) have been widely examined in the one-pass regime with massive corpora, their form under limited data and repeated epochs remains largely unexplored. This paper presents a theoretical analysis of how a common workaround, training for multiple epochs on the same dataset, reshapes the data scaling laws in linear regression. Concretely, we ask: to match the performance of training on a dataset of size $N$ for $K$ epochs, how much larger must a dataset be if the model is trained for only one pass? We quantify this using the \\textit{effective reuse rate} of the data, $E(K, N)$, which we define as the multiplicative factor by which the dataset must grow under one-pass training to achieve the same test loss as $K$-epoch training. Our analysis precisely characterizes the scaling behavior of $E(K, N)$ for SGD in linear regression under either strong convexity or Zipf-distributed data: (1) When $K$ is small, we prove that $E(K, N) \\approx K$, indicating that every new epoch yields a linear gain; (2) As $K$ increases, $E(K, N)$ plateaus at a problem-dependent value that grows with $N$ ($Θ(\\log N)$ for the strongly-convex case), implying that larger datasets can be repeated more times before the marginal benefit vanishes. These theoretical findings point out a neglected factor in a recent empirical study (Muennighoff et al. (2023)), which claimed that training LLMs for up to $4$ epochs results in negligible loss differences compared to using fresh data at each step, \\textit{i.e.}, $E(K, N) \\approx K$ for $K \\le 4$ in our notation. Supported by further empirical validation with LLMs, our results reveal that the maximum $K$ value for which $E(K, N) \\approx K$ in fact depends on the data size and distribution, and underscore the need to explicitly model both factors in future studies of scaling laws with data reuse.",
-        "authors": "Tingkai Yan, Haodong Wen, Binghui Li, Kairong Luo, Wenguang Chen, Kaifeng Lyu",
-        "url": "http://arxiv.org/abs/2511.13421v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.13421v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文以数理统计博士生的高度严谨性，对多epoch训练下的LLM数据扩展定律进行了开创性的理论分析。它引入了“有效重用率”这一新概念，并提供了严格的数学证明，揭示了数据集大小和分布如何影响数据复用的效益。这直接解决了LLM训练中一个核心的实际应用瓶颈——数据效率与计算成本，为理解和优化未来大型模型的训练策略提供了深远的理论指导。其方法具有显著的理论创新性和严谨性，完美契合您对前沿算法和架构的关注。"
-    },
-    {
         "id": "http://arxiv.org/abs/2511.13411v1",
         "title": "An Operational Kardashev-Style Scale for Autonomous AI - Towards AGI and Superintelligence",
         "summary": "We propose a Kardashev-inspired yet operational Autonomous AI (AAI) Scale that measures the progression from fixed robotic process automation (AAI-0) to full artificial general intelligence (AAI-4) and beyond. Unlike narrative ladders, our scale is multi-axis and testable. We define ten capability axes (Autonomy, Generality, Planning, Memory/Persistence, Tool Economy, Self-Revision, Sociality/Coordination, Embodiment, World-Model Fidelity, Economic Throughput) aggregated by a composite AAI-Index (a weighted geometric mean). We introduce a measurable Self-Improvement Coefficient $κ$ (capability growth per unit of agent-initiated resources) and two closure properties (maintenance and expansion) that convert ``self-improving AI'' into falsifiable criteria. We specify OWA-Bench, an open-world agency benchmark suite that evaluates long-horizon, tool-using, persistent agents. We define level gates for AAI-0\\ldots AAI-4 using thresholds on the axes, $κ$, and closure proofs. Synthetic experiments illustrate how present-day systems map onto the scale and how the delegability frontier (quality vs.\\ autonomy) advances with self-improvement. We also prove a theorem that AAI-3 agent becomes AAI-5 over time with sufficient conditions, formalizing \"baby AGI\" becomes Superintelligence intuition.",
@@ -27,7 +12,7 @@
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "该研究提出了一个新颖且可操作的Kardashev式自主AI（AAI）分级量表，旨在衡量AI从固定RPA到通用人工智能（AGI）乃至超级智能的演进。它通过多轴能力定义、可测量的“自我改进系数”和闭包属性，为理解和量化AI的进步提供了严格的理论框架，甚至证明了AAI-3代理在特定条件下可演变为AAI-5。这篇论文不仅具有极高的理论创新性，而且对定义AI的未来发展路径和衡量其能力边界具有里程碑式的实践影响力，深刻符合您对前沿算法和架构的哲学思考。"
+        "reason_zh": "这篇论文提出了一个基于卡尔达肖夫标度的可操作性自治AI (AAI) 量表，用于衡量从固定RPA到通用人工智能(AGI)的进展。它定义了十个能力轴、可测量的自我改进系数和封闭性属性，并将“自我改进AI”转化为可证伪的标准。该工作为AGI的衡量和指导提供了高度创新且严谨的理论框架，具有深远的实践影响力。"
     },
     {
         "id": "http://arxiv.org/abs/2511.13391v1",
@@ -42,7 +27,7 @@
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文将一个自17世纪以来就存在的数学难题——“亲吻数问题”——创造性地建模为一个双人矩阵填充博弈，并利用博弈论强化学习系统（PackingStar）来解决。它不仅复现了现有结果，还在25到31维空间中超越了所有人类已知记录，甚至在13维空间中首次突破了1971年以来的理性结构限制。这种将前沿算法（博弈论强化学习）应用于基础数学问题，并取得重大理论突破的能力，展现了极高的理论创新性和严谨的数理统计方法，完全符合您作为数理统计博士生对前沿算法和理论创新的追求。"
+        "reason_zh": "该论文将“亲吻数问题”建模为一个两人矩阵完成博弈，并训练博弈论强化学习系统PackingStar来探索高维空间。PackingStar在25到31维度的亲吻数上超越了所有人类已知记录，并在13维度实现了自1971年以来的首次突破。这项工作在数学问题上展现了AI探索高维空间的能力，具有极高的理论创新性和实践影响力。"
     },
     {
         "id": "http://arxiv.org/abs/2511.13193v1",
@@ -57,7 +42,37 @@
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "该研究引入了DALA（动态拍卖式语言代理）框架，将多代理LLM系统中的通信带宽视为稀缺资源，并通过集中的拍卖机制进行管理。这种经济学驱动的创新方法，使代理能够基于消息的价值密度学习出价，从而实现高效、有策略的通信，显著降低了高达数倍的Token成本（数据效率），同时在多个基准测试中取得了最先进的性能。其理论严谨性体现在将博弈论和经济学原理应用于多代理LLM通信，有效解决了LLM应用中的关键瓶颈（数据效率和通信效率），兼具理论深度和实际影响力。"
+        "reason_zh": "这篇论文提出了Dynamic Auction-based Language Agent (DALA) 框架，将多智能体系统中的通信带宽视为稀缺资源进行拍卖。DALA通过经济学原理鼓励智能体生成简洁、信息丰富的消息，有效过滤低价值通信。它在保持高性能的同时显著提升了效率，解决了LLM智能体通信中的关键瓶颈，理论创新性和实际效果都非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13186v1",
+        "title": "DiffFP: Learning Behaviors from Scratch via Diffusion-based Fictitious Play",
+        "summary": "Self-play reinforcement learning has demonstrated significant success in learning complex strategic and interactive behaviors in competitive multi-agent games. However, achieving such behaviors in continuous decision spaces remains challenging. Ensuring adaptability and generalization in self-play settings is critical for achieving competitive performance in dynamic multi-agent environments. These challenges often cause methods to converge slowly or fail to converge at all to a Nash equilibrium, making agents vulnerable to strategic exploitation by unseen opponents. To address these challenges, we propose DiffFP, a fictitious play (FP) framework that estimates the best response to unseen opponents while learning a robust and multimodal behavioral policy. Specifically, we approximate the best response using a diffusion policy that leverages generative modeling to learn adaptive and diverse strategies. Through empirical evaluation, we demonstrate that the proposed FP framework converges towards $ε$-Nash equilibria in continuous- space zero-sum games. We validate our method on complex multi-agent environments, including racing and multi-particle zero-sum games. Simulation results show that the learned policies are robust against diverse opponents and outperform baseline reinforcement learning policies. Our approach achieves up to 3$\\times$ faster convergence and 30$\\times$ higher success rates on average against RL-based baselines, demonstrating its robustness to opponent strategies and stability across training iterations",
+        "authors": "Akash Karthikeyan, Yash Vardhan Pant",
+        "url": "http://arxiv.org/abs/2511.13186v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13186v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了DiffFP，一个基于扩散模型的虚拟博弈框架，用于在连续决策空间中从头开始学习多智能体博弈行为。它通过扩散策略近似最优响应，学习鲁棒且多模态的行为策略，并理论上证明了其收敛到ε-纳什均衡。这项工作解决了多智能体强化学习中的一个基本瓶颈，具有极高的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13106v1",
+        "title": "Low-Level Dataset Distillation for Medical Image Enhancement",
+        "summary": "Medical image enhancement is clinically valuable, but existing methods require large-scale datasets to learn complex pixel-level mappings. However, the substantial training and storage costs associated with these datasets hinder their practical deployment. While dataset distillation (DD) can alleviate these burdens, existing methods mainly target high-level tasks, where multiple samples share the same label. This many-to-one mapping allows distilled data to capture shared semantics and achieve information compression. In contrast, low-level tasks involve a many-to-many mapping that requires pixel-level fidelity, making low-level DD an underdetermined problem, as a small distilled dataset cannot fully constrain the dense pixel-level mappings. To address this, we propose the first low-level DD method for medical image enhancement. We first leverage anatomical similarities across patients to construct the shared anatomical prior based on a representative patient, which serves as the initialization for the distilled data of different patients. This prior is then personalized for each patient using a Structure-Preserving Personalized Generation (SPG) module, which integrates patient-specific anatomical information into the distilled dataset while preserving pixel-level fidelity. For different low-level tasks, the distilled data is used to construct task-specific high- and low-quality training pairs. Patient-specific knowledge is injected into the distilled data by aligning the gradients computed from networks trained on the distilled pairs with those from the corresponding patient's raw data. Notably, downstream users cannot access raw patient data. Instead, only a distilled dataset containing abstract training information is shared, which excludes patient-specific details and thus preserves privacy.",
+        "authors": "Fengzhi Xu, Ziyuan Yang, Mengyu Sun, Joey Tianyi Zhou, Yi Zhang",
+        "url": "http://arxiv.org/abs/2511.13106v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13106v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次提出了针对医学图像增强的低级别数据集蒸馏方法。它利用患者解剖学相似性构建共享解剖学先验，并通过一个结构保持的个性化生成模块进行个性化。该方法在保证像素级保真度的同时，显著降低了训练和存储成本，并保护了患者隐私，解决了医学图像处理中的数据效率和隐私关键瓶颈，具有高度的创新性和严谨性。"
     },
     {
         "id": "http://arxiv.org/abs/2511.13007v1",
@@ -72,6 +87,66 @@
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "该论文提出了GEM（生成式熵引导偏好建模）方法，用于LLM的少样本对齐，这在专业知识（如医学、法律）领域数据稀缺的背景下尤为重要。它创新性地通过LLM直接内化闭环优化架构，利用熵理论进行认知过滤，并采用自评估群组优势算法（SEGA）将熵分数转化为隐式奖励。这种方法具有极高的理论创新性和严谨性，从决策制定中的熵理论出发，解决了LLM对齐中的数据效率和可靠性瓶颈，显著提升了少样本场景下的对齐效果，完美符合您对算法、架构和实际应用瓶颈的关注。"
+        "reason_zh": "该论文提出了GEM（Generative Entropy-Guided Preference Modeling），一种用于LLM少样本对齐的生成式熵引导偏好建模方法。它通过基于熵理论的认知过滤模块和自评估群组优势算法SEGA，使LLM在低资源和特定领域场景中实现高效的少样本对齐。该方法解决了LLM对齐中对大量标注的依赖问题，具有极高的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13937v1",
+        "title": "Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion",
+        "summary": "Graph Neural Networks (GNNs) have achieved remarkable success across diverse applications, yet they remain limited by oversmoothing and poor performance on heterophilic graphs. To address these challenges, we introduce a novel framework that equips graphs with a complex-weighted structure, assigning each edge a complex number to drive a diffusion process that extends random walks into the complex domain. We prove that this diffusion is highly expressive: with appropriately chosen complex weights, any node-classification task can be solved in the steady state of a complex random walk. Building on this insight, we propose the Complex-Weighted Convolutional Network (CWCN), which learns suitable complex-weighted structures directly from data while enriching diffusion with learnable matrices and nonlinear activations. CWCN is simple to implement, requires no additional hyperparameters beyond those of standard GNNs, and achieves competitive performance on benchmark datasets. Our results demonstrate that complex-weighted diffusion provides a principled and general mechanism for enhancing GNN expressiveness, opening new avenues for models that are both theoretically grounded and practically effective.",
+        "authors": "Cristina López Amado, Tassilo Schwarz, Yu Tian, Renaud Lambiotte",
+        "url": "http://arxiv.org/abs/2511.13937v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13937v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了一种新颖的框架，为图配备了复数加权结构，并通过复数扩散过程扩展了随机游走。作者证明了这种扩散具有高度表达性，并在其基础上提出了Complex-Weighted Convolutional Network (CWCN)。该方法通过新颖的数学概念增强GNN的表达能力，解决了过平滑和在异配图上性能不佳的问题，具有强大的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.14807v1",
+        "title": "Fully Differentiable dMRI Streamline Propagation in PyTorch",
+        "summary": "Diffusion MRI (dMRI) provides a distinctive means to probe the microstructural architecture of living tissue, facilitating applications such as brain connectivity analysis, modeling across multiple conditions, and the estimation of macrostructural features. Tractography, which emerged in the final years of the 20th century and accelerated in the early 21st century, is a technique for visualizing white matter pathways in the brain using dMRI. Most diffusion tractography methods rely on procedural streamline propagators or global energy minimization methods. Although recent advancements in deep learning have enabled tasks that were previously challenging, existing tractography approaches are often non-differentiable, limiting their integration in end-to-end learning frameworks. While progress has been made in representing streamlines in differentiable frameworks, no existing method offers fully differentiable propagation. In this work, we propose a fully differentiable solution that retains numerical fidelity with a leading streamline algorithm. The key is that our PyTorch-engineered streamline propagator has no components that block gradient flow, making it fully differentiable. We show that our method matches standard propagators while remaining differentiable. By translating streamline propagation into a differentiable PyTorch framework, we enable deeper integration of tractography into deep learning workflows, laying the foundation for a new category of macrostructural reasoning that is not only computationally robust but also scientifically rigorous.",
+        "authors": "Jongyeon Yoon, Elyssa M. McMaster, Michael E. Kim, Gaurav Rudravaram, Kurt G. Schilling, Bennett A. Landman, Daniel Moyer",
+        "url": "http://arxiv.org/abs/2511.14807v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.14807v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了首个完全可微分的dMRI流线传播解决方案，保持了数值保真度且没有阻碍梯度流的组件，为深度学习工作流中的宏观结构推理奠定了基础。这项工作解决了传统神经示踪方法不可微分的局限性，实现了端到端学习框架的集成，具有很高的理论和算法创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13371v1",
+        "title": "Cognitive Maps in Language Models: A Mechanistic Analysis of Spatial Planning",
+        "summary": "How do large language models solve spatial navigation tasks? We investigate this by training GPT-2 models on three spatial learning paradigms in grid environments: passive exploration (Foraging Model- predicting steps in random walks), goal-directed planning (generating optimal shortest paths) on structured Hamiltonian paths (SP-Hamiltonian), and a hybrid model fine-tuned with exploratory data (SP-Random Walk). Using behavioural, representational and mechanistic analyses, we uncover two fundamentally different learned algorithms. The Foraging model develops a robust, map-like representation of space, akin to a 'cognitive map'. Causal interventions reveal that it learns to consolidate spatial information into a self-sufficient coordinate system, evidenced by a sharp phase transition where its reliance on historical direction tokens vanishes by the middle layers of the network. The model also adopts an adaptive, hierarchical reasoning system, switching between a low-level heuristic for short contexts and map-based inference for longer ones. In contrast, the goal-directed models learn a path-dependent algorithm, remaining reliant on explicit directional inputs throughout all layers. The hybrid model, despite demonstrating improved generalisation over its parent, retains the same path-dependent strategy. These findings suggest that the nature of spatial intelligence in transformers may lie on a spectrum, ranging from generalisable world models shaped by exploratory data to heuristics optimised for goal-directed tasks. We provide a mechanistic account of this generalisation-optimisation trade-off and highlight how the choice of training regime influences the strategies that emerge.",
+        "authors": "Caroline Baumgartner, Eleanor Spens, Neil Burgess, Petru Manescu",
+        "url": "http://arxiv.org/abs/2511.13371v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13371v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对语言模型中的空间规划进行了机制分析，发现了两种根本不同的学习算法（地图式与路径依赖式），并揭示了前馈模型中“认知地图”的出现。这项研究提供了对Transformer中空间智能的深层理解，具有高度的理论创新性，并对如何影响模型的学习策略提供了深刻见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13244v1",
+        "title": "Seek and You Shall Fold",
+        "summary": "Accurate protein structures are essential for understanding biological function, yet incorporating experimental data into protein generative models remains a major challenge. Most predictors of experimental observables are non-differentiable, making them incompatible with gradient-based conditional sampling. This is especially limiting in nuclear magnetic resonance, where rich data such as chemical shifts are hard to directly integrate into generative modeling. We introduce a framework for non-differentiable guidance of protein generative models, coupling a continuous diffusion-based generator with any black-box objective via a tailored genetic algorithm. We demonstrate its effectiveness across three modalities: pairwise distance constraints, nuclear Overhauser effect restraints, and for the first time chemical shifts. These results establish chemical shift guided structure generation as feasible, expose key weaknesses in current predictors, and showcase a general strategy for incorporating diverse experimental signals. Our work points toward automated, data-conditioned protein modeling beyond the limits of differentiability.",
+        "authors": "Nadav Bojan Sellam, Meital Bojan, Paul Schanda, Alex Bronstein",
+        "url": "http://arxiv.org/abs/2511.13244v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13244v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种非可微分指导蛋白质生成模型的新框架，通过定制的遗传算法将连续扩散生成器与任何黑盒目标耦合。这项工作首次实现了化学位移引导的结构生成，并为结合多种实验信号的自动化、数据条件蛋白质建模开辟了新途径，具有高度的创新性和严谨性。"
     }
 ]

@@ -1,33 +1,18 @@
 [
     {
-        "id": "http://arxiv.org/abs/2511.13608v1",
-        "title": "A Gentle Introduction to Conformal Time Series Forecasting",
-        "summary": "Conformal prediction is a powerful post-hoc framework for uncertainty quantification that provides distribution-free coverage guarantees. However, these guarantees crucially rely on the assumption of exchangeability. This assumption is fundamentally violated in time series data, where temporal dependence and distributional shifts are pervasive. As a result, classical split-conformal methods may yield prediction intervals that fail to maintain nominal validity. This review unifies recent advances in conformal forecasting methods specifically designed to address nonexchangeable data. We first present a theoretical foundation, deriving finite-sample guarantees for split-conformal prediction under mild weak-dependence conditions. We then survey and classify state-of-the-art approaches that mitigate serial dependence by reweighting calibration data, dynamically updating residual distributions, or adaptively tuning target coverage levels in real time. Finally, we present a comprehensive simulation study that compares these techniques in terms of empirical coverage, interval width, and computational cost, highlighting practical trade-offs and open research directions.",
-        "authors": "M. Stocker, W. Małgorzewicz, M. Fontana, S. Ben Taieb",
-        "url": "http://arxiv.org/abs/2511.13608v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.13608v1",
-        "scores": {
-            "Novelty": 4,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 5
-        },
-        "reason_zh": "这篇论文为共形时间序列预测提供了一个坚实的理论基础，特别强调了在时间序列数据中非可交换性假设被违反时的有限样本保证。作为一名数理统计博士生，我非常看重其在不损失普遍性的前提下，为时间序列数据提供了分布无关的覆盖保证和清晰的数学推导。论文提出的理论框架和对弱依赖条件的探讨，完美契合了对统计保证的追求，且其“深入浅出”的风格保证了清晰度。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.12869v1",
-        "title": "On the Fundamental Limits of LLMs at Scale",
-        "summary": "Large Language Models (LLMs) have benefited enormously from scaling, yet these gains are bounded by five fundamental limitations: (1) hallucination, (2) context compression, (3) reasoning degradation, (4) retrieval fragility, and (5) multimodal misalignment. While existing surveys describe these phenomena empirically, they lack a rigorous theoretical synthesis connecting them to the foundational limits of computation, information, and learning. This work closes that gap by presenting a unified, proof-informed framework that formalizes the innate theoretical ceilings of LLM scaling. First, computability and uncomputability imply an irreducible residue of error: for any computably enumerable model family, diagonalization guarantees inputs on which some model must fail, and undecidable queries (e.g., halting-style tasks) induce infinite failure sets for all computable predictors. Second, information-theoretic and statistical constraints bound attainable accuracy even on decidable tasks, finite description length enforces compression error, and long-tail factual knowledge requires prohibitive sample complexity. Third, geometric and computational effects compress long contexts far below their nominal size due to positional under-training, encoding attenuation, and softmax crowding. We further show how likelihood-based training favors pattern completion over inference, how retrieval under token limits suffers from semantic drift and coupling noise, and how multimodal scaling inherits shallow cross-modal alignment. Across sections, we pair theorems and empirical evidence to outline where scaling helps, where it saturates, and where it cannot progress, providing both theoretical foundations and practical mitigation paths like bounded-oracle retrieval, positional curricula, and sparse or hierarchical attention.",
-        "authors": "Muhammad Ahmed Mohsin, Muhammad Umer, Ahsan Bilal, Zeeshan Memon, Muhammad Ibtsaam Qadir, Sagnik Bhattacharya, Hassan Rizwan, Abhiram R. Gorle, Maahe Zehra Kazmi, Ayesha Mohsin, Muhammad Usman Rafique, Zihao He, Pulkit Mehta, Muhammad Ali Jamshed, John M. Cioffi",
-        "url": "http://arxiv.org/abs/2511.12869v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.12869v1",
+        "id": "http://arxiv.org/abs/2511.13934v1",
+        "title": "Empirical Likelihood for Random Forests and Ensembles",
+        "summary": "We develop an empirical likelihood (EL) framework for random forests and related ensemble methods, providing a likelihood-based approach to quantify their statistical uncertainty. Exploiting the incomplete $U$-statistic structure inherent in ensemble predictions, we construct an EL statistic that is asymptotically chi-squared when subsampling induced by incompleteness is not overly sparse. Under sparser subsampling regimes, the EL statistic tends to over-cover due to loss of pivotality; we therefore propose a modified EL that restores pivotality through a simple adjustment. Our method retains key properties of EL while remaining computationally efficient. Theory for honest random forests and simulations demonstrate that modified EL achieves accurate coverage and practical reliability relative to existing inference methods.",
+        "authors": "Harold D. Chiang, Yukitoshi Matsushita, Taisuke Otsu",
+        "url": "http://arxiv.org/abs/2511.13934v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13934v1",
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文对大型语言模型 (LLMs) 的根本局限性进行了系统的、基于证明的理论综合分析。它从可计算性、信息论和统计学等角度，正式阐述了LLMs在幻觉、上下文压缩、推理退化等方面的固有理论上限。这种对现代AI系统底层理论界限的严谨数学逻辑分析，以及对定理和经验证据的结合，对于理解和指导未来AI研究具有深远意义，完全符合我对强大理论基础和清晰数学推导的要求。"
+        "reason_zh": "这篇论文为随机森林和集成方法开发了一个经验似然（Empirical Likelihood, EL）框架，旨在量化它们的统计不确定性。它利用不完整的 U 统计量结构构建 EL 统计量，并证明其渐近卡方分布。在稀疏子采样制度下，论文提出了一种改进的 EL 方法以恢复枢轴性（pivotality）。摘要中明确提及“理论严谨性”（Rigor），包含“渐近卡方”、“恢复枢轴性”以及“针对诚实随机森林的理论”等表述，这与您对“强大的理论基础”和“清晰的数学推导”的偏好高度契合。新颖性在于首次将 EL 框架应用于随机森林，并针对稀疏子采样进行了改进。影响力体现在为随机森林提供可靠的不确定性量化方法，具有实际应用价值。"
     },
     {
         "id": "http://arxiv.org/abs/2511.13895v2",
@@ -42,21 +27,126 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一种用于稳健贝叶斯因果推断的新型贝叶斯框架，通过广义贝叶斯推断量化并调整模型误设，同时保留可解释的后验推断。其基于决策理论基础选择学习率，并证明了在估计因果效应方面的校准、尖锐性和鲁棒性。这种对因果逻辑的深入探讨、统计保证的提供，以及其严谨的贝叶斯方法论，对于我专注于将严谨数学逻辑应用于现代AI系统的研究方向非常重要。"
+        "reason_zh": "这篇论文提出了一个用于鲁棒贝叶斯因果推断的贝叶斯框架，针对纵向观测数据。它通过广义贝叶斯推断量化并调整模型误设定，同时保留可解释的后验推断。论文基于一个评估因果估计量的点估计和区间准确性的适当评分规则来选择学习率，从而为调整学习率提供了连贯的决策理论基础。摘要中“贝叶斯框架”、“量化模型误设定”、“决策理论基础”和“可解释后验推断”等关键词，明确展示了其在因果逻辑和统计保证方面的强大理论基础及严谨的数学处理。新颖性在于其鲁棒贝叶斯框架和决策理论驱动的学习率选择方法。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.13015v2",
-        "title": "Geometry Meets Light: Leveraging Geometric Priors for Universal Photometric Stereo under Limited Multi-Illumination Cues",
-        "summary": "Universal Photometric Stereo is a promising approach for recovering surface normals without strict lighting assumptions. However, it struggles when multi-illumination cues are unreliable, such as under biased lighting or in shadows or self-occluded regions of complex in-the-wild scenes. We propose GeoUniPS, a universal photometric stereo network that integrates synthetic supervision with high-level geometric priors from large-scale 3D reconstruction models pretrained on massive in-the-wild data. Our key insight is that these 3D reconstruction models serve as visual-geometry foundation models, inherently encoding rich geometric knowledge of real scenes. To leverage this, we design a Light-Geometry Dual-Branch Encoder that extracts both multi-illumination cues and geometric priors from the frozen 3D reconstruction model. We also address the limitations of the conventional orthographic projection assumption by introducing the PS-Perp dataset with realistic perspective projection to enable learning of spatially varying view directions. Extensive experiments demonstrate that GeoUniPS delivers state-of-the-arts performance across multiple datasets, both quantitatively and qualitatively, especially in the complex in-the-wild scenes.",
-        "authors": "King-Man Tam, Satoshi Ikehata, Yuta Asano, Zhaoyi An, Rei Kawakami",
-        "url": "http://arxiv.org/abs/2511.13015v2",
-        "pdf_url": "https://arxiv.org/pdf/2511.13015v2",
+        "id": "http://arxiv.org/abs/2511.13847v1",
+        "title": "Convex relaxation approaches for high dimensional optimal transport",
+        "summary": "Optimal transport (OT) is a powerful tool in mathematics and data science but faces severe computational and statistical challenges in high dimensions. We propose convex relaxation approaches based on marginal and cluster moment relaxations that exploit locality and correlative sparsity in the distributions. These methods approximate high-dimensional couplings using low-order marginals and sparse moment statistics, yielding semidefinite programs that provide lower bounds on the OT cost with greatly reduced complexity. For Gaussian distributions with sparse correlations, we prove reductions in both computational and sample complexity, and experiments show the approach also works well for non-Gaussian cases. In addition, we demonstrate how to extract transport maps from our relaxations, offering a simpler and interpretable alternative to neural networks in generative modeling. Our results suggest that convex relaxations can provide a promising path for dimension reduction in high-dimensional OT.",
+        "authors": "Yuehaw Khoo, Tianyun Tang",
+        "url": "http://arxiv.org/abs/2511.13847v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13847v1",
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文对网络因果推断中的R-学习器进行了系统的、机制性的剖析，并首次严格证明了“表征瓶颈”的存在，具有高度统计显著性 (p < 0.001)。它提供了R-学习器在图结构数据上性能驱动因素的机制性解释，并将GNN的过压问题与“恼人瓶颈”相关联。这种对因果推理方法核心缺陷的理论洞察和严格验证，特别是结合图神经网络的分析，完美符合我对因果逻辑、统计保证和严谨数学推导的偏好。"
+        "reason_zh": "这篇论文提出了针对高维最优传输（Optimal Transport, OT）的凸松弛方法，通过边际和簇矩松弛来利用分布中的局部性和相关稀疏性。这些方法利用低阶边际和稀疏矩统计量来近似高维耦合，从而产生半定规划，为 OT 成本提供了复杂性大大降低的下界。对于具有稀疏相关性的高斯分布，论文证明了在计算复杂度和样本复杂性上的降低。摘要中明确提及“凸松弛方法”、“半定规划提供下界”、“证明计算和样本复杂性降低”等，这强烈表明了其在优化收敛性、数学推导和理论严谨性方面的卓越表现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13602v1",
+        "title": "Nonparametric Estimation of Joint Entropy through Partitioned Sample-Spacing Method",
+        "summary": "We propose a nonparametric estimator of multivariate joint entropy based on partitioned sample spacings (PSS). The method extends univariate spacing ideas to multivariate settings by partitioning the sample space into localized cells and aggregating within-cell statistics, with strong consistency guarantees under mild conditions. In benchmarks across diverse distributions, PSS consistently outperforms k-nearest neighbor estimators and achieves accuracy competitive with recent normalizing flow-based methods, while requiring no training or auxiliary density modeling. The estimator scales favorably in moderately high dimensions (d = 10 to 40) and shows particular robustness to correlated or skewed distributions. These properties position PSS as a practical alternative to normalizing flow-based approaches, with broad potential in information-theoretic machine learning applications.",
+        "authors": "Jungwoo Ho, Sangun Park, Soyeong Oh",
+        "url": "http://arxiv.org/abs/2511.13602v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13602v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于分区样本间距（PSS）的多元联合熵非参数估计器。该方法将单变量间距思想推广到多元设置，并通过分区样本空间并聚合单元内统计量，在温和条件下提供强一致性保证。摘要中明确指出“强一致性保证”，这正是您所强调的统计保证和理论严谨性。其“非参数”、“分区样本间距”以及“强一致性保证”的提出，体现了新颖性和严谨的数学/统计推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13584v1",
+        "title": "HBNET-GIANT: A communication-efficient accelerated Newton-type fully distributed optimization algorithm",
+        "summary": "This article presents a second-order fully distributed optimization algorithm, HBNET-GIANT, driven by heavy-ball momentum, for $L$-smooth and $μ$-strongly convex objective functions. A rigorous convergence analysis is performed, and we demonstrate global linear convergence under certain sufficient conditions. Through extensive numerical experiments, we show that HBNET-GIANT with heavy-ball momentum achieves acceleration, and the corresponding rate of convergence is strictly faster than its non-accelerated version, NETWORK-GIANT. Moreover, we compare HBNET-GIANT with several state-of-the-art algorithms, both momentum-based and without momentum, and report significant performance improvement in convergence to the optimum. We believe that this work lays the groundwork for a broader class of second-order Newton-type algorithms with momentum and motivates further investigation into open problems, including an analytical proof of local acceleration in the fully distributed setting for convex optimization problems.",
+        "authors": "Souvik Das, Luca Schenato, Subhrakanti Dey",
+        "url": "http://arxiv.org/abs/2511.13584v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13584v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文介绍了一种二阶完全分布式优化算法 HBNET-GIANT，该算法由重球动量驱动，用于 L 平滑和 μ 强凸目标函数。论文进行了严格的收敛性分析，并证明了在某些充分条件下算法的全局线性收敛性。摘要中“严格的收敛性分析”、“全局线性收敛”等表述，与您对优化收敛性和严谨数学逻辑的偏好完全一致，是理论严谨性非常强的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13559v1",
+        "title": "Asymptotic analysis of rare events in high dimensions",
+        "summary": "Understanding rare events is critical across domains ranging from signal processing to reliability and structural safety, extreme-weather forecasting, and insurance. The analysis of rare events is a computationally challenging problem, particularly in high dimensions $d$. In this work, we develop the first asymptotic high-dimensional theory of rare events. First, we exploit asymptotic integral methods recently developed by the first author to provide an asymptotic expansion of rare event probabilities. The expansion employs the geometry of the rare event boundary and the local behavior of the log probability density. Generically, the expansion is valid if $d^2\\llλ$, where $λ$ characterizes the extremity of the event. We prove this condition is necessary by constructing an example in which the first-order remainder is bounded above and below by $d^2/λ$. We also provide a nonasymptotic remainder bound which specifies the precise dependence of the remainder on $d$, $λ$, the density, and the boundary, and which shows that in certain cases, the condition $d^2\\ll λ$ can be relaxed. As an application of the theory, we derive asymptotic approximations to rare probabilities under the standard Gaussian density in high dimensions. In the second part of our work, we provide an asymptotic approximation to densities conditional on rare events. This gives rise to simple procedure for approximately sampling conditionally on the rare event using independent Gaussian and exponential random variables.",
+        "authors": "Anya Katsevich, Alexander Katsevich",
+        "url": "http://arxiv.org/abs/2511.13559v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13559v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文致力于高维稀有事件的渐近分析，发展了第一个渐近高维稀有事件理论。它利用渐近积分方法提供了稀有事件概率的渐近展开，并证明了展开的有效性条件是必要的，同时还提供了非渐近余项界。摘要中“第一个渐近高维理论”、“渐近展开”、“证明必要条件”、“非渐近余项界”等表述，展现了极高的理论严谨性和深刻的数学推导，完美符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13540v2",
+        "title": "Fairness-Aware Graph Representation Learning with Limited Demographic Information",
+        "summary": "Ensuring fairness in Graph Neural Networks is fundamental to promoting trustworthy and socially responsible machine learning systems. In response, numerous fair graph learning methods have been proposed in recent years. However, most of them assume full access to demographic information, a requirement rarely met in practice due to privacy, legal, or regulatory restrictions. To this end, this paper introduces a novel fair graph learning framework that mitigates bias in graph learning under limited demographic information. Specifically, we propose a mechanism guided by partial demographic data to generate proxies for demographic information and design a strategy that enforces consistent node embeddings across demographic groups. In addition, we develop an adaptive confidence strategy that dynamically adjusts each node's contribution to fairness and utility based on prediction confidence. We further provide theoretical analysis demonstrating that our framework, FairGLite, achieves provable upper bounds on group fairness metrics, offering formal guarantees for bias mitigation. Through extensive experiments on multiple datasets and fair graph learning frameworks, we demonstrate the framework's effectiveness in both mitigating bias and maintaining model utility.",
+        "authors": "Zichong Wang, Zhipeng Yin, Liping Yang, Jun Zhuang, Rui Yu, Qingzhao Kong, Wenbin Zhang",
+        "url": "http://arxiv.org/abs/2511.13540v2",
+        "pdf_url": "https://arxiv.org/pdf/2511.13540v2",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个在有限人口统计信息下缓解图学习偏差的新型公平图学习框架 FairGLite。它通过部分人口统计数据生成代理信息，并设计策略强制跨人口统计组的一致节点嵌入。更重要的是，论文提供了理论分析，证明了该框架在群组公平性指标上实现了可证明的上限，为偏差缓解提供了形式保证。摘要中“提供理论分析”、“可证明的上限”、“形式保证”等，是您所看重的统计保证和严谨数学逻辑的直接体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13533v1",
+        "title": "Minimax Multi-Target Conformal Prediction with Applications to Imaging Inverse Problems",
+        "summary": "In ill-posed imaging inverse problems, uncertainty quantification remains a fundamental challenge, especially in safety-critical applications. Recently, conformal prediction has been used to quantify the uncertainty that the inverse problem contributes to downstream tasks like image classification, image quality assessment, fat mass quantification, etc. While existing works handle only a scalar estimation target, practical applications often involve multiple targets. In response, we propose an asymptotically minimax approach to multi-target conformal prediction that provides tight prediction intervals while ensuring joint marginal coverage. We then outline how our minimax approach can be applied to multi-metric blind image quality assessment, multi-task uncertainty quantification, and multi-round measurement acquisition. Finally, we numerically demonstrate the benefits of our minimax method, relative to existing multi-target conformal prediction methods, using both synthetic and magnetic resonance imaging (MRI) data.",
+        "authors": "Jeffrey Wen, Rizwan Ahmad, Philip Schniter",
+        "url": "http://arxiv.org/abs/2511.13533v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13533v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种渐近 minimax 的多目标保形预测方法，可以在确保联合边际覆盖的同时提供紧密的预测区间。它还概述了该方法如何应用于多度量盲图像质量评估、多任务不确定性量化和多轮测量采集。摘要中“渐近 minimax 方法”、“紧密预测区间”、“联合边际覆盖”等表述，清晰地展示了其在统计保证和理论严谨性方面的强大贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13514v1",
+        "title": "A Quantum Tensor Network-Based Viewpoint for Modeling and Analysis of Time Series Data",
+        "summary": "Accurate uncertainty quantification is a critical challenge in machine learning. While neural networks are highly versatile and capable of learning complex patterns, they often lack interpretability due to their ``black box'' nature. On the other hand, probabilistic ``white box'' models, though interpretable, often suffer from a significant performance gap when compared to neural networks. To address this, we propose a novel quantum physics-based ``white box'' method that offers both accurate uncertainty quantification and enhanced interpretability. By mapping the kernel mean embedding (KME) of a time series data vector to a reproducing kernel Hilbert space (RKHS), we construct a tensor network-inspired 1D spin chain Hamiltonian, with the KME as one of its eigen-functions or eigen-modes. We then solve the associated Schr{ö}dinger equation and apply perturbation theory to quantify uncertainty, thereby improving the interpretability of tasks performed with the quantum tensor network-based model. We demonstrate the effectiveness of this methodology, compared to state-of-the-art ``white box\" models, in change point detection and time series clustering, providing insights into the uncertainties associated with decision-making throughout the process.",
+        "authors": "Pragatheeswaran Vipulananthan, Kamal Premaratne, Dilip Sarkar, Manohar N. Murthi",
+        "url": "http://arxiv.org/abs/2511.13514v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13514v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的基于量子物理的“白盒”方法，用于建模和分析时间序列数据，提供准确的不确定性量化和增强的可解释性。它将时间序列数据向量的核均值嵌入映射到再生核希尔伯特空间，构建了一个受张量网络启发的1D自旋链哈密顿量，并解决了相关的薛定谔方程，应用微扰理论量化不确定性。摘要中“量子物理”、“核均值嵌入”、“再生核希尔伯特空间”、“张量网络”、“薛定谔方程”、“微扰理论量化不确定性”等，无疑表明了极高的理论深度和严谨的数学/物理推导，与您的偏好完美契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13037v1",
+        "title": "On the Hierarchical Bayes justification of Empirical Bayes Confidence Intervals",
+        "summary": "Multi-level normal hierarchical models, also interpreted as mixed effects models, play an important role in developing statistical theory in multi-parameter estimation for a wide range of applications. In this article, we propose a novel reconciliation framework of the empirical Bayes (EB) and hierarchical Bayes approaches for interval estimation of random effects under a two-level normal model. Our framework shows that a second-order efficient empirical Bayes confidence interval, with EB coverage error of order $O(m^{-3/2})$, $m$ being the number of areas in the area-level model, can also be viewed as a credible interval whose posterior coverage is close to the nominal level, provided a carefully chosen prior - referred to as a 'matching prior' - is placed on the hyperparameters. While existing literature has examined matching priors that reconcile frequentist and Bayesian inference in various settings, this paper is the first to study matching priors with the goal of interval estimation of random effects in a two-level model. We obtain an area-dependent matching prior on the variance component that achieves a proper posterior under mild regularity conditions. The theoretical results in the paper are corroborated through a Monte Carlo simulation study and a real data analysis.",
+        "authors": "Aditi Sen, Masayo Y. Hirose, Partha Lahiri",
+        "url": "http://arxiv.org/abs/2511.13037v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13037v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个经验贝叶斯（EB）和分层贝叶斯方法在两级正态模型下随机效应区间估计的新颖协调框架。它表明二阶高效的经验贝叶斯置信区间，可以被视为后验覆盖率接近名义水平的置信区间，前提是选择了一个“匹配先验”。论文推导出了在温和正则条件下实现适当后验的区域依赖性匹配先验。摘要中“新颖协调框架”、“二阶高效”、“适当后验”、“理论结果”等表述，突出了其在统计保证和严谨数学逻辑方面的突出贡献。"
     }
 ]

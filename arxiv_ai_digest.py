@@ -8,7 +8,7 @@ import random
 import logging
 from datetime import date, timedelta
 
-import google.generativeai as genai   # 正确的导入方式
+from google import genai
 
 # ============================= 配置 =============================
 logging.basicConfig(

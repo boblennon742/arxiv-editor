@@ -172,8 +172,8 @@ def write_to_json(data_to_save, file_path):
 
 # --- 6. 主函数 ---
 if __name__ == "__main__":
-    #target_date = date.today()
-    target_date = date(2025, 11, 17)
+    target_date = date.today()
+    #target_date = date(2025, 11, 17)
     
     logger.info(f"--- 教程脚本开始运行 (V18 JSON5增强版)，目标周 (基于日期): {target_date.isoformat()} ---")
 

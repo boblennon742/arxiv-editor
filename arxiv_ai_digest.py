@@ -1,5 +1,6 @@
 import os
 import json
+import json5  # <--- 1. 新增导入
 import arxiv
 import re
 import logging
@@ -35,7 +36,7 @@ YOUR_DOMAINS_OF_INTEREST = {
         我寻求的论文必须具备**强大的理论基础**（如统计保证、优化收敛性、因果逻辑）和**清晰的数学推导**。
         """
     },
-   
+    
     # 核心 2: 前沿 AI 模型与应用
     "phd_methods": {
         "name_zh": "前沿 AI 模型与应用",
@@ -67,12 +68,11 @@ YOUR_DOMAINS_OF_INTEREST = {
 }
 
 # --------------------------------------------------------------------------
-# (V17.3) 抓取函数 (最终修复：加入 submittedDate 日期过滤)
+# (V17.3) 抓取函数
 # --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
     
-    # 关键修复：加入 submittedDate 精确日期过滤
     date_str = target_date.strftime("%Y%m%d")
     date_filter = f"submittedDate:[{date_str}0000 TO {date_str}2359]"
     category_query = " OR ".join([f"cat:{cat}" for cat in categories])
@@ -103,7 +103,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V17) AI 分析函数 (评分引擎) —— 完全保留你的原始写法
+# (V17) AI 分析函数 (评分引擎) —— <修改点：使用 json5>
 # --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
@@ -123,7 +123,7 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     我今天的任务是分析 "{domain_name}" 领域。
     我的个人偏好/任务是：
     "{user_preference_prompt}"
-   
+    
     下面是为该领域抓取的 {len(papers)} 篇论文。
     你的任务是“批量评分和筛选”：
     1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
@@ -134,7 +134,7 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     2. **排序：** 根据我的个人偏好，结合上述 4 个维度的分数，计算一个**总分**。
     3. **筛选：** 挑选出**总分最高的 5 篇（最多 5 篇）**论文。
     4. **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
-   
+    
     JSON 格式如下：
     [
       {{
@@ -157,36 +157,46 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
             model='gemini-2.5-flash',
             contents=full_prompt
         )
-       
+        
+        # 1. 清理 Markdown 标记
         cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
+        
+        # 2. 尝试用正则提取 [] 列表部分 (容错机制)
         match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
         if not match:
-             if cleaned.lower() == 'null':
+             if 'null' in cleaned.lower():
                  logger.info("AI 编辑认为今天没有值得推荐的。")
                  return None
-            
-             logger.error(f"AI 输出的文本中找不到 JSON 列表结构。输出：{response.text[:200]}...")
-             raise json.JSONDecodeError("JSON 列表结构缺失", response.text, 0)
-       
-        json_string = match.group(1)
-       
-        ai_picks_list = json.loads(json_string)
+             # 如果正则没匹配到，有些时候 json5 可以直接解析整个文本（如果只是缺少[]但格式是对的）
+             # 但为了安全，如果没匹配到且不是 null，我们尝试直接解析 cleaned
+             json_string = cleaned
+        else:
+             json_string = match.group(1)
+        
+        # 3. 使用 json5.loads 替代 json.loads
+        # json5 可以处理尾随逗号、单引号键名、无引号键名等常见 AI 格式错误
+        ai_picks_list = json5.loads(json_string) # <--- 2. 修改处
+        
         logger.info(f"AI 编辑已选出 {len(ai_picks_list)} 篇今日最佳。")
         return ai_picks_list
-    except json.JSONDecodeError as e:
-        logger.error(f"AI 总编辑分析失败: 无法解析 JSON: {e}")
+        
+    except ValueError as e: # json5 解析失败通常抛出 ValueError
+        logger.error(f"AI 总编辑分析失败: 无法解析 JSON (json5): {e}")
+        # 调试用：打印出解析失败的字符串
+        # logger.error(f"待解析字符串: {json_string}") 
         return None
     except Exception as e:
         logger.error(f"AI 总编辑分析失败: {e}")
         return None
 
 # --------------------------------------------------------------------------
-# 写入 JSON (V17 - 支持列表)
+# 写入 JSON (保持标准 json dump，因为输出文件需要标准格式兼容其他程序)
 # --------------------------------------------------------------------------
 def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
+            # 这里依然使用标准 json 库，确保生成的文件是严格的 JSON 标准
             json.dump(data_to_save, f, ensure_ascii=False, indent=4)
             if data_to_save:
                 logger.info(f"成功将 {len(data_to_save)} 篇“精选”写入 {file_path}")
@@ -196,23 +206,22 @@ def write_to_json(data_to_save, file_path):
         logger.error(f"写入 JSON 文件失败: {e}")
 
 # --------------------------------------------------------------------------
-# 主函数 (V17 - 支持列表)
+# 主函数
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
-    # 恢复为抓取“昨天”，这是自动化脚本的正确逻辑
     target_date = date.today() - timedelta(days=1)
-   
-    logger.info(f"--- 脚本开始运行 (V17 评分版)，目标日期: {target_date.isoformat()} ---")
+    
+    logger.info(f"--- 脚本开始运行 (V17.5 json5增强版)，目标日期: {target_date.isoformat()} ---")
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
         logger.info(f"\n--- 处理领域: {config['name_en']} ---")
-       
+        
         papers = fetch_papers_for_domain(
             domain_name=config["name_en"],
             categories=config["categories"],
             extra_query=config["search_query"],
             target_date=target_date
         )
-       
+        
         picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
         final_data_list = []
         if picks_list_json:
@@ -220,7 +229,7 @@ if __name__ == "__main__":
                 full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
                 if full_paper:
                     final_data_list.append({**full_paper, **pick_item})
-       
+        
         if not final_data_list:
              final_data_list = None
         output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")

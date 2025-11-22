@@ -4,6 +4,8 @@ import json5  # <--- 1. 新增导入
 import arxiv
 import re
 import logging
+import time
+import random
 from google import genai
 from datetime import date, timedelta
 
@@ -80,7 +82,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     
     search = arxiv.Search(
         query=full_query,
-        max_results=100,
+        max_results=200,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -105,90 +107,75 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
 # --------------------------------------------------------------------------
 # (V17) AI 分析函数 (评分引擎) —— <修改点：使用 json5>
 # --------------------------------------------------------------------------
-def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
+def get_ai_editor_pick(papers, domain_name, user_preference_prompt, max_retries=5):
     if not papers:
         logger.info("没有论文可供 AI 分析。")
         return None
     if not GEMINI_API_KEY:
         logger.error("未找到 GEMINI_API_KEY。")
         return None
-    logger.info(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 5 篇并评分...")
-    client = genai.Client()
+
     prompt_papers = "\n".join(
         [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
          for i, p in enumerate(papers)]
     )
     system_prompt = f"""
-    你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
-    我今天的任务是分析 "{domain_name}" 领域。
-    我的个人偏好/任务是：
-    "{user_preference_prompt}"
-    
-    下面是为该领域抓取的 {len(papers)} 篇论文。
-    你的任务是“批量评分和筛选”：
-    1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
-        - Novelty (创新性): 提出新方法或新视角 (1-5分)
-        - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
-        - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
-        - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
-    2. **排序：** 根据我的个人偏好，结合上述 4 个维度的分数，计算一个**总分**。
-    3. **筛选：** 挑选出**总分最高的 5 篇（最多 5 篇）**论文。
-    4. **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
-    
-    JSON 格式如下：
-    [
-      {{
-        "id": "被选中论文1的 ID",
-        "scores": {{
-          "Novelty": 5,
-          "Rigor": 4,
-          "Impact": 5,
-          "Clarity": 4
-        }},
-        "reason_zh": "（中文）详细说明为什么这篇论文**总分最高**并**完全符合**我的偏好/任务。"
-      }},
-      ... (最多 5 篇)
-    ]
-    如果返回 `null`，就只返回 `null` 这个词。
-    """
-    full_prompt = f"{system_prompt}\n\n--- 论文列表开始 ---\n{prompt_papers}\n--- 论文列表结束 ---"
-    try:
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=full_prompt
-        )
-        
-        # 1. 清理 Markdown 标记
-        cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
-        
-        # 2. 尝试用正则提取 [] 列表部分 (容错机制)
-        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
-        if not match:
-             if 'null' in cleaned.lower():
-                 logger.info("AI 编辑认为今天没有值得推荐的。")
-                 return None
-             # 如果正则没匹配到，有些时候 json5 可以直接解析整个文本（如果只是缺少[]但格式是对的）
-             # 但为了安全，如果没匹配到且不是 null，我们尝试直接解析 cleaned
-             json_string = cleaned
-        else:
-             json_string = match.group(1)
-        
-        # 3. 使用 json5.loads 替代 json.loads
-        # json5 可以处理尾随逗号、单引号键名、无引号键名等常见 AI 格式错误
-        ai_picks_list = json5.loads(json_string) # <--- 2. 修改处
-        
-        logger.info(f"AI 编辑已选出 {len(ai_picks_list)} 篇今日最佳。")
-        return ai_picks_list
-        
-    except ValueError as e: # json5 解析失败通常抛出 ValueError
-        logger.error(f"AI 总编辑分析失败: 无法解析 JSON (json5): {e}")
-        # 调试用：打印出解析失败的字符串
-        # logger.error(f"待解析字符串: {json_string}") 
-        return None
-    except Exception as e:
-        logger.error(f"AI 总编辑分析失败: {e}")
-        return None
+你是我（统计学博士生）的私人研究助手，“AI 总编辑”。
+今天任务是分析 "{domain_name}" 领域。
+我的偏好是：{user_preference_prompt}
 
+请严格按以下 JSON 格式返回（只返回 JSON，不要任何解释）：
+如果今天没有好论文 → 直接返回 null
+否则返回最多 10 篇最符合我偏好的论文（如果确实有10篇都极好就全给我！）：
+
+[
+  {{"id": "2411.12345", "scores": {{"Novelty":5,"Rigor":5,"Impact":4,"Clarity":5}}, "reason_zh": "详细中文理由..."}}
+] # 最多10篇，宁多勿少！
+
+现在开始分析：
+"""
+    full_prompt = system_prompt + "\n" + prompt_papers
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            logger.info(f"正在请求 Gemini（第 {attempt} 次）→ {domain_name}")
+            client = genai.Client()
+            response = client.models.generate_content(
+                model='gemini-1.5-flash',  # 或 gemini-1.5-pro
+                contents=full_prompt
+            )
+            text = response.text.strip()
+
+            # 去除代码块
+            text = re.sub(r'^```json\s*|```$', '', text, flags=re.MULTILINE).strip()
+
+            # 处理 "null" 字符串
+            if text.lower() == "null":
+                logger.info("AI 认为今天无优质论文")
+                return None
+
+            # 先尝试 json5（最宽容）
+            try:
+                result = json5.loads(text)
+            except:
+                result = json.loads(text)  # 兜底
+
+            if isinstance(result, list):
+                logger.info(f"成功挑选 {len(result)} 篇论文")
+                return result
+            else:
+                raise ValueError("返回的不是列表")
+
+        except Exception as e:
+            logger.warning(f"第 {attempt} 次失败: {e}")
+            if attempt == max_retries:
+                logger.error("已达最大重试次数，放弃本次分析")
+                return None
+            sleep_time = (2 ** attempt) + random.random()
+            logger.info(f"{sleep_time:.1f}s 后重试...")
+            time.sleep(sleep_time)
+
+    )
 # --------------------------------------------------------------------------
 # 写入 JSON (保持标准 json dump，因为输出文件需要标准格式兼容其他程序)
 # --------------------------------------------------------------------------

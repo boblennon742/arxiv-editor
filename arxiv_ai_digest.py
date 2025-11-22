@@ -227,7 +227,8 @@ def write_to_json(data_to_save, file_path):
 # 主函数
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
-    target_date = date.today() - timedelta(days=1)
+    #target_date = date.today() - timedelta(days=1)
+    target_date = date(2025, 11, 17)
     
     logger.info(f"--- 脚本开始运行 (V18 稳定增强版)，目标日期: {target_date.isoformat()} ---")
     logger.info(f"--- 配置: 抓取上限 {FETCH_LIMIT} 篇，推荐上限 {TOP_N_PICKS} 篇 ---")

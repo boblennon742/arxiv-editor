@@ -1,5 +1,20 @@
 [
     {
+        "id": "http://arxiv.org/abs/2511.08416v1",
+        "title": "Generative AI Meets 6G and Beyond: Diffusion Models for Semantic Communications",
+        "summary": "Semantic communications mark a paradigm shift from bit-accurate transmission toward meaning-centric communication, essential as wireless systems approach theoretical capacity limits. The emergence of generative AI has catalyzed generative semantic communications, where receivers reconstruct content from minimal semantic cues by leveraging learned priors. Among generative approaches, diffusion models stand out for their superior generation quality, stable training dynamics, and rigorous theoretical foundations. However, the field currently lacks systematic guidance connecting diffusion techniques to communication system design, forcing researchers to navigate disparate literatures. This article provides the first comprehensive tutorial on diffusion models for generative semantic communications. We present score-based diffusion foundations and systematically review three technical pillars: conditional diffusion for controllable generation, efficient diffusion for accelerated inference, and generalized diffusion for cross-domain adaptation. In addition, we introduce an inverse problem perspective that reformulates semantic decoding as posterior inference, bridging semantic communications with computational imaging. Through analysis of human-centric, machine-centric, and agent-centric scenarios, we illustrate how diffusion models enable extreme compression while maintaining semantic fidelity and robustness. By bridging generative AI innovations with communication system design, this article aims to establish diffusion models as foundational components of next-generation wireless networks and beyond.",
+        "authors": "Hai-Long Qin, Jincheng Dai, Guo Lu, Shuo Shao, Sixian Wang, Tongda Xu, Wenjun Zhang, Ping Zhang, Khaled B. Letaief",
+        "url": "http://arxiv.org/abs/2511.08416v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.08416v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "本文是关于扩散模型应用于生成式语义通信的综合教程，强调了其严谨的理论基础和对6G及未来通信的潜在变革性影响。它将生成式AI与通信系统设计融合，提供了条件扩散、高效扩散、广义扩散等技术支柱的系统性回顾，并引入了逆问题视角，非常符合您对“严谨的数学逻辑应用于现代AI系统”和“现代方法论（表示学习）”的兴趣。"
+    },
+    {
         "id": "http://arxiv.org/abs/2511.12869v1",
         "title": "On the Fundamental Limits of LLMs at Scale",
         "summary": "Large Language Models (LLMs) have benefited enormously from scaling, yet these gains are bounded by five fundamental limitations: (1) hallucination, (2) context compression, (3) reasoning degradation, (4) retrieval fragility, and (5) multimodal misalignment. While existing surveys describe these phenomena empirically, they lack a rigorous theoretical synthesis connecting them to the foundational limits of computation, information, and learning. This work closes that gap by presenting a unified, proof-informed framework that formalizes the innate theoretical ceilings of LLM scaling. First, computability and uncomputability imply an irreducible residue of error: for any computably enumerable model family, diagonalization guarantees inputs on which some model must fail, and undecidable queries (e.g., halting-style tasks) induce infinite failure sets for all computable predictors. Second, information-theoretic and statistical constraints bound attainable accuracy even on decidable tasks, finite description length enforces compression error, and long-tail factual knowledge requires prohibitive sample complexity. Third, geometric and computational effects compress long contexts far below their nominal size due to positional under-training, encoding attenuation, and softmax crowding. We further show how likelihood-based training favors pattern completion over inference, how retrieval under token limits suffers from semantic drift and coupling noise, and how multimodal scaling inherits shallow cross-modal alignment. Across sections, we pair theorems and empirical evidence to outline where scaling helps, where it saturates, and where it cannot progress, providing both theoretical foundations and practical mitigation paths like bounded-oracle retrieval, positional curricula, and sparse or hierarchical attention.",
@@ -12,21 +27,126 @@
             "Impact": 4,
             "Clarity": 5
         },
-        "reason_zh": "这篇综述深入探讨了大型语言模型（LLMs）的五大根本性限制，并提供了统一的、经过证明的框架，将这些限制与计算、信息和学习的理论基础联系起来。作为一名数理统计博士生，我专注于将严谨的数学逻辑应用于现代 AI 系统以提升其鲁棒性和效果，这篇论文完美契合了我的兴趣。它直接针对LLM的“理论瓶颈”，通过可计算性、信息论和统计约束等“数学基础”来分析LLM的幻觉、上下文压缩、推理退化等问题。文章不仅理论严谨（Rigor 5分），引用了定理和经验证据，而且逻辑脉络清晰（Clarity 5分），能够深入浅出地解释复杂的概念，并提出了可落地的缓解路径。这避免了纯粹抽象的理论，而是将数学原理直接应用于现代AI系统的前沿问题，是提升AI鲁棒性和效果的基石。"
+        "reason_zh": "这篇论文通过一个统一的、基于证明的框架，严谨地阐述了大型语言模型（LLM）扩展的根本性理论限制，涉及幻觉、上下文压缩、推理退化等问题。它将LLM的局限性与可计算性、信息论和统计约束等基础理论联系起来，并提供了缓解路径，完美契合您对“模型泛化界限的数学基础”和“理论瓶颈”的深入探究需求。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.13984v2",
-        "title": "Node-Level Uncertainty Estimation in LLM-Generated SQL",
-        "summary": "We present a practical framework for detecting errors in LLM-generated SQL by estimating uncertainty at the level of individual nodes in the query's abstract syntax tree (AST). Our approach proceeds in two stages. First, we introduce a semantically aware labeling algorithm that, given a generated SQL and a gold reference, assigns node-level correctness without over-penalizing structural containers or alias variation. Second, we represent each node with a rich set of schema-aware and lexical features - capturing identifier validity, alias resolution, type compatibility, ambiguity in scope, and typo signals - and train a supervised classifier to predict per-node error probabilities. We interpret these probabilities as calibrated uncertainty, enabling fine-grained diagnostics that pinpoint exactly where a query is likely to be wrong. Across multiple databases and datasets, our method substantially outperforms token log-probabilities: average AUC improves by +27.44% while maintaining robustness under cross-database evaluation. Beyond serving as an accuracy signal, node-level uncertainty supports targeted repair, human-in-the-loop review, and downstream selective execution. Together, these results establish node-centric, semantically grounded uncertainty estimation as a strong and interpretable alternative to aggregate sequence level confidence measures.",
-        "authors": "Hilaf Hasson, Ruocheng Guo",
-        "url": "http://arxiv.org/abs/2511.13984v2",
-        "pdf_url": "https://arxiv.org/pdf/2511.13984v2",
+        "id": "http://arxiv.org/abs/2511.10788v1",
+        "title": "From Efficiency to Adaptivity: A Deeper Look at Adaptive Reasoning in Large Language Models",
+        "summary": "Recent advances in large language models (LLMs) have made reasoning a central benchmark for evaluating intelligence. While prior surveys focus on efficiency by examining how to shorten reasoning chains or reduce computation, this view overlooks a fundamental challenge: current LLMs apply uniform reasoning strategies regardless of task complexity, generating long traces for trivial problems while failing to extend reasoning for difficult tasks. This survey reframes reasoning through the lens of {adaptivity}: the capability to allocate reasoning effort based on input characteristics such as difficulty and uncertainty. We make three contributions. First, we formalize deductive, inductive, and abductive reasoning within the LLM context, connecting these classical cognitive paradigms with their algorithmic realizations. Second, we formalize adaptive reasoning as a control-augmented policy optimization problem balancing task performance with computational cost, distinguishing learned policies from inference-time control mechanisms. Third, we propose a systematic taxonomy organizing existing methods into training-based approaches that internalize adaptivity through reinforcement learning, supervised fine-tuning, and learned controllers, and training-free approaches that achieve adaptivity through prompt conditioning, feedback-driven halting, and modular composition. This framework clarifies how different mechanisms realize adaptive reasoning in practice and enables systematic comparison across diverse strategies. We conclude by identifying open challenges in self-evaluation, meta-reasoning, and human-aligned reasoning control.",
+        "authors": "Chao Wu, Baoheng Li, Mingchen Gao, Zhenyi Wang",
+        "url": "http://arxiv.org/abs/2511.10788v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.10788v1",
         "scores": {
             "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "本文从“适应性”的角度重新审视大型语言模型（LLM）的推理能力，将其正式化为平衡性能与计算成本的“控制增强策略优化问题”。它深入探讨了LLM中的演绎、归纳、溯因推理，并提供了训练和非训练方法的系统分类，对理解和改进LLM的理论瓶颈及优化方法具有高度价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13608v1",
+        "title": "A Gentle Introduction to Conformal Time Series Forecasting",
+        "summary": "Conformal prediction is a powerful post-hoc framework for uncertainty quantification that provides distribution-free coverage guarantees. However, these guarantees crucially rely on the assumption of exchangeability. This assumption is fundamentally violated in time series data, where temporal dependence and distributional shifts are pervasive. As a result, classical split-conformal methods may yield prediction intervals that fail to maintain nominal validity. This review unifies recent advances in conformal forecasting methods specifically designed to address nonexchangeable data. We first present a theoretical foundation, deriving finite-sample guarantees for split-conformal prediction under mild weak-dependence conditions. We then survey and classify state-of-the-art approaches that mitigate serial dependence by reweighting calibration data, dynamically updating residual distributions, or adaptively tuning target coverage levels in real time. Finally, we present a comprehensive simulation study that compares these techniques in terms of empirical coverage, interval width, and computational cost, highlighting practical trade-offs and open research directions.",
+        "authors": "M. Stocker, W. Małgorzewicz, M. Fontana, S. Ben Taieb",
+        "url": "http://arxiv.org/abs/2511.13608v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13608v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇“温和的介绍”统一了针对非交换时间序列数据的保形预测方法，特别强调了在弱依赖条件下有限样本覆盖率的理论基础。它直接解决了高维统计中不确定性量化的核心挑战，并提供了实际的权衡分析和未来方向，其“温和介绍”的标题也预示了极高的清晰度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.13143v1",
+        "title": "SoK: The Last Line of Defense: On Backdoor Defense Evaluation",
+        "summary": "Backdoor attacks pose a significant threat to deep learning models by implanting hidden vulnerabilities that can be activated by malicious inputs. While numerous defenses have been proposed to mitigate these attacks, the heterogeneous landscape of evaluation methodologies hinders fair comparison between defenses. This work presents a systematic (meta-)analysis of backdoor defenses through a comprehensive literature review and empirical evaluation. We analyzed 183 backdoor defense papers published between 2018 and 2025 across major AI and security venues, examining the properties and evaluation methodologies of these defenses.   Our analysis reveals significant inconsistencies in experimental setups, evaluation metrics, and threat model assumptions in the literature. Through extensive experiments involving three datasets (MNIST, CIFAR-100, ImageNet-1K), four model architectures (ResNet-18, VGG-19, ViT-B/16, DenseNet-121), 16 representative defenses, and five commonly used attacks, totaling over 3\\,000 experiments, we demonstrate that defense effectiveness varies substantially across different evaluation setups. We identify critical gaps in current evaluation practices, including insufficient reporting of computational overhead and behavior under benign conditions, bias in hyperparameter selection, and incomplete experimentation. Based on our findings, we provide concrete challenges and well-motivated recommendations to standardize and improve future defense evaluations. Our work aims to equip researchers and industry practitioners with actionable insights for developing, assessing, and deploying defenses to different systems.",
+        "authors": "Gorka Abad, Marina Krček, Stefanos Koffas, Behrad Tajalli, Marco Arazzi, Roberto Riaño, Xiaoyun Xu, Zhuoran Liu, Antonino Nocera, Stjepan Picek",
+        "url": "http://arxiv.org/abs/2511.13143v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13143v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇综述对深度学习后门防御的评估方法进行了系统性的元分析和实证评估，揭示了文献中存在的评估不一致性，并提出了标准化建议。它专注于提升现代AI系统（深度学习模型）的鲁棒性和可靠性，特别是在防御攻击方面的实践影响力，且分析严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.11163v1",
+        "title": "Training Neural Networks at Any Scale",
+        "summary": "This article reviews modern optimization methods for training neural networks with an emphasis on efficiency and scale. We present state-of-the-art optimization algorithms under a unified algorithmic template that highlights the importance of adapting to the structures in the problem. We then cover how to make these algorithms agnostic to the scale of the problem. Our exposition is intended as an introduction for both practitioners and researchers who wish to be involved in these exciting new developments.",
+        "authors": "Thomas Pethick, Kimon Antonakopoulos, Antonio Silveti-Falls, Leena Chennuru Vankadara, Volkan Cevher",
+        "url": "http://arxiv.org/abs/2511.11163v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.11163v1",
+        "scores": {
+            "Novelty": 4,
             "Rigor": 4,
             "Impact": 5,
             "Clarity": 5
         },
-        "reason_zh": "这篇论文提出了一种实用的框架，通过在LLM生成的SQL查询的抽象语法树（AST）节点层面估计不确定性来检测错误。它通过语义感知的标注算法和丰富的Schema感知特征，训练分类器预测节点层面的错误概率，实现了校准的不确定性估计。这与我将“严谨的数学逻辑应用于现代 AI 系统，以提升其鲁棒性和效果”的兴趣高度吻合。它直接解决了LLM输出的“模型泛化界限”和“鲁棒性”问题，提供了一种新颖的“统计基础与保证”方法——细粒度的不确定性量化。其创新性（Novelty 5分）在于超越了传统的token级置信度，实现了节点级的、语义感知的误差检测，极具实践影响力（Impact 5分），能够支持目标修复和人机协作。文章的思路清晰、方法具体，深入浅出地解释了复杂的概念（Clarity 5分），且避免了纯粹抽象的理论，提供了高度逻辑性强、可落地的知识。"
+        "reason_zh": "这篇文章综述了训练神经网络的现代优化方法，着重于效率和规模，提出了统一的算法模板，并讨论了如何使算法独立于问题规模。这直接满足您对“深度学习优化”和“高效AI”的兴趣，其清晰的阐述方式对研究者和实践者都非常有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.11191v1",
+        "title": "Integrating Aggregated Electric Vehicle Flexibilities in Unit Commitment Models using Submodular Optimization",
+        "summary": "The Unit Commitment (UC) problem consists in controlling a large fleet of heterogeneous electricity production units in order to minimize the total production cost while satisfying consumer demand. Electric Vehicles (EVs) are used as a source of flexibility and are often aggregated for problem tractability. We develop a new approach to integrate EV flexibilities in the UC problem and exploit the generalized polymatroid structure of aggregated flexibilities of a large population of users to develop an exact optimization algorithm, combining a cutting-plane approach and submodular optimization. We show in particular that the UC can be solved exactly in a time which scales linearly, up to a logarithmic factor, in the number of EV users when each production unit is subject to convex constraints. We illustrate our approach by solving a real instance of a long-term UC problem, combining open-source data of the European grid (European Resource Adequacy Assessment project) and data originating from a survey of user behavior of the French EV fleet.",
+        "authors": "Hélène Arvis, Olivier Beaude, Nicolas Gast, Stéphane Gaubert, Bruno Gaujal",
+        "url": "http://arxiv.org/abs/2511.11191v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.11191v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了一种利用子模优化将电动汽车灵活性整合到机组组合问题中的新方法，利用聚合灵活性的广义多面体结构，并开发了一种精确的优化算法。其对“严谨的数学逻辑”和“优化”的关注，以及在能源系统中的实际应用，与您的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.10501v2",
+        "title": "Strategic Opponent Modeling with Graph Neural Networks, Deep Reinforcement Learning and Probabilistic Topic Modeling",
+        "summary": "This paper provides a comprehensive review of mainly Graph Neural Networks, Deep Reinforcement Learning, and Probabilistic Topic Modeling methods with a focus on their potential incorporation in strategic multiagent settings. We draw interest in (i) Machine Learning methods currently utilized for uncovering unknown model structures adaptable to the task of strategic opponent modeling, and (ii) the integration of these methods with Game Theoretic concepts that avoid relying on assumptions often invalid in real-world scenarios, such as the Common Prior Assumption (CPA) and the Self-Interest Hypothesis (SIH). We analyze the ability to handle uncertainty and heterogeneity, two characteristics that are very common in real-world application cases, as well as scalability. As a potential answer to effectively modeling relationships and interactions in multiagent settings, we champion the use of Graph Neural Networks (GNN). Such approaches are designed to operate upon graph-structured data, and have been shown to be a very powerful tool for performing tasks such as node classification and link prediction. Next, we review the domain of Reinforcement Learning (RL), and in particular that of Multiagent Deep Reinforcement Learning (MADRL). Following, we describe existing relevant game theoretic solution concepts and consider properties such as fairness and stability. Our review comes complete with a note on the literature that utilizes PTM in domains other than that of document analysis and classification. The capability of PTM to estimate unknown underlying distributions can help with tackling heterogeneity and unknown agent beliefs. Finally, we identify certain open challenges specifically, the need to (i) fit non-stationary environments, (ii) balance the degrees of stability and adaptation, (iii) tackle uncertainty and heterogeneity, (iv) guarantee scalability and solution tractability.",
+        "authors": "Georgios Chalkiadakis, Charilaos Akasiadis, Gerasimos Koresis, Stergios Plataniotis, Leonidas Bakopoulos",
+        "url": "http://arxiv.org/abs/2511.10501v2",
+        "pdf_url": "https://arxiv.org/pdf/2511.10501v2",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文全面回顾了图神经网络、深度强化学习和概率主题模型在战略多智能体设置中的应用，特别关注如何揭示未知模型结构并处理不确定性和异构性。它将多种现代AI方法与博弈论概念结合，提供了理论严谨性和实际挑战的深度分析，非常符合您对“高级强化学习”和“表示学习的理论瓶颈”的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.08991v1",
+        "title": "Robust Sampling for Active Statistical Inference",
+        "summary": "Active statistical inference is a new method for inference with AI-assisted data collection. Given a budget on the number of labeled data points that can be collected and assuming access to an AI predictive model, the basic idea is to improve estimation accuracy by prioritizing the collection of labels where the model is most uncertain. The drawback, however, is that inaccurate uncertainty estimates can make active sampling produce highly noisy results, potentially worse than those from naive uniform sampling. In this work, we present robust sampling strategies for active statistical inference. Robust sampling ensures that the resulting estimator is never worse than the estimator using uniform sampling. Furthermore, with reliable uncertainty estimates, the estimator usually outperforms standard active inference. This is achieved by optimally interpolating between uniform and active sampling, depending on the quality of the uncertainty scores, and by using ideas from robust optimization. We demonstrate the utility of the method on a series of real datasets from computational social science and survey research.",
+        "authors": "Puheng Li, Tijana Zrnic, Emmanuel Candès",
+        "url": "http://arxiv.org/abs/2511.08991v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.08991v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了主动统计推断中的鲁棒抽样策略，旨在解决不准确不确定性估计可能导致的噪音结果。它通过最优插值和鲁棒优化思想，确保估计器性能不劣于均匀抽样，并在可靠不确定性估计下超越标准主动推断，这直接满足您对“统计基础与保证”和“高维统计”的严谨数学逻辑需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.12826v1",
+        "title": "Discrete-Time Stability Analysis of ReLU Feedback Systems via Integral Quadratic Constraints",
+        "summary": "This paper analyzes internal stability of a discrete-time feedback system with a ReLU nonlinearity. This feedback system is motivated by recurrent neural networks. We first review existing static quadratic constraints (QCs) for slope-restricted nonlinearities. Next, we derive hard integral quadratic constraints (IQCs) for scalar ReLU by using finite impulse filters and structured matrices. These IQCs are combined with a dissipation inequality leading to an LMI condition that certifies internal stability. We show that our new dynamic IQCs for ReLU are a superset of the well-known Zames-Falb IQCs specified for slope-restricted nonlinearities. Numerical results show that the proposed hard IQCs give less conservative stability margins than Zames-Falb multipliers and prior static QC methods, sometimes dramatically so.",
+        "authors": "Sahel Vahedi Noori, Bin Hu, Geir Dullerud, Peter Seiler",
+        "url": "http://arxiv.org/abs/2511.12826v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.12826v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "本文通过推导ReLU非线性系统的硬积分二次约束（IQCs）和LMI条件，对离散时间ReLU反馈系统的内部稳定性进行了严谨的数学分析。它解决了深度学习系统（如循环神经网络）的理论瓶颈，并提供了比现有方法更不保守的稳定性裕度，高度符合您对“严谨的数学逻辑应用于现代AI系统”的专注。"
     }
 ]

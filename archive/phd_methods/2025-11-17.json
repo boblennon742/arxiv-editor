@@ -1,5 +1,20 @@
 [
     {
+        "id": "http://arxiv.org/abs/2511.13421v1",
+        "title": "Larger Datasets Can Be Repeated More: A Theoretical Analysis of Multi-Epoch Scaling in Linear Regression",
+        "summary": "While data scaling laws of large language models (LLMs) have been widely examined in the one-pass regime with massive corpora, their form under limited data and repeated epochs remains largely unexplored. This paper presents a theoretical analysis of how a common workaround, training for multiple epochs on the same dataset, reshapes the data scaling laws in linear regression. Concretely, we ask: to match the performance of training on a dataset of size $N$ for $K$ epochs, how much larger must a dataset be if the model is trained for only one pass? We quantify this using the \\textit{effective reuse rate} of the data, $E(K, N)$, which we define as the multiplicative factor by which the dataset must grow under one-pass training to achieve the same test loss as $K$-epoch training. Our analysis precisely characterizes the scaling behavior of $E(K, N)$ for SGD in linear regression under either strong convexity or Zipf-distributed data: (1) When $K$ is small, we prove that $E(K, N) \\approx K$, indicating that every new epoch yields a linear gain; (2) As $K$ increases, $E(K, N)$ plateaus at a problem-dependent value that grows with $N$ ($Θ(\\log N)$ for the strongly-convex case), implying that larger datasets can be repeated more times before the marginal benefit vanishes. These theoretical findings point out a neglected factor in a recent empirical study (Muennighoff et al. (2023)), which claimed that training LLMs for up to $4$ epochs results in negligible loss differences compared to using fresh data at each step, \\textit{i.e.}, $E(K, N) \\approx K$ for $K \\le 4$ in our notation. Supported by further empirical validation with LLMs, our results reveal that the maximum $K$ value for which $E(K, N) \\approx K$ in fact depends on the data size and distribution, and underscore the need to explicitly model both factors in future studies of scaling laws with data reuse.",
+        "authors": "Tingkai Yan, Haodong Wen, Binghui Li, Kairong Luo, Wenguang Chen, Kaifeng Lyu",
+        "url": "http://arxiv.org/abs/2511.13421v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13421v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文以数理统计博士生的高度严谨性，对多epoch训练下的LLM数据扩展定律进行了开创性的理论分析。它引入了“有效重用率”这一新概念，并提供了严格的数学证明，揭示了数据集大小和分布如何影响数据复用的效益。这直接解决了LLM训练中一个核心的实际应用瓶颈——数据效率与计算成本，为理解和优化未来大型模型的训练策略提供了深远的理论指导。其方法具有显著的理论创新性和严谨性，完美契合您对前沿算法和架构的关注。"
+    },
+    {
         "id": "http://arxiv.org/abs/2511.13411v1",
         "title": "An Operational Kardashev-Style Scale for Autonomous AI - Towards AGI and Superintelligence",
         "summary": "We propose a Kardashev-inspired yet operational Autonomous AI (AAI) Scale that measures the progression from fixed robotic process automation (AAI-0) to full artificial general intelligence (AAI-4) and beyond. Unlike narrative ladders, our scale is multi-axis and testable. We define ten capability axes (Autonomy, Generality, Planning, Memory/Persistence, Tool Economy, Self-Revision, Sociality/Coordination, Embodiment, World-Model Fidelity, Economic Throughput) aggregated by a composite AAI-Index (a weighted geometric mean). We introduce a measurable Self-Improvement Coefficient $κ$ (capability growth per unit of agent-initiated resources) and two closure properties (maintenance and expansion) that convert ``self-improving AI'' into falsifiable criteria. We specify OWA-Bench, an open-world agency benchmark suite that evaluates long-horizon, tool-using, persistent agents. We define level gates for AAI-0\\ldots AAI-4 using thresholds on the axes, $κ$, and closure proofs. Synthetic experiments illustrate how present-day systems map onto the scale and how the delegability frontier (quality vs.\\ autonomy) advances with self-improvement. We also prove a theorem that AAI-3 agent becomes AAI-5 over time with sufficient conditions, formalizing \"baby AGI\" becomes Superintelligence intuition.",
@@ -12,7 +27,7 @@
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一个卡尔达舍夫式的、可操作的自治AI (AAI) 量表，用于衡量从固定式RPA到通用人工智能(AGI)乃至超级智能的进展。它定义了十个能力维度和一个复合AAI指数，并引入了可测量的“自我改进系数κ”和两个闭合属性，为“自我改进AI”提供了可证伪的标准。**总分最高**，因为它在创新性、理论严谨性和实践影响力方面都达到了最高分。该研究为衡量和理解AGI的进展提供了一个急需的框架，从叙述性描述转向可测试的标准，这对于AI领域的未来研究和政策制定具有深远的**理论创新性**和**实践影响力**。它避免了纯粹的工程堆砌，而是专注于**逻辑清晰**地构建一个理论框架，以解决对AGI进展进行科学评估的根本**应用瓶颈**。"
+        "reason_zh": "该研究提出了一个新颖且可操作的Kardashev式自主AI（AAI）分级量表，旨在衡量AI从固定RPA到通用人工智能（AGI）乃至超级智能的演进。它通过多轴能力定义、可测量的“自我改进系数”和闭包属性，为理解和量化AI的进步提供了严格的理论框架，甚至证明了AAI-3代理在特定条件下可演变为AAI-5。这篇论文不仅具有极高的理论创新性，而且对定义AI的未来发展路径和衡量其能力边界具有里程碑式的实践影响力，深刻符合您对前沿算法和架构的哲学思考。"
     },
     {
         "id": "http://arxiv.org/abs/2511.13391v1",
@@ -27,51 +42,36 @@
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文将一个基础数学几何问题——亲吻数问题——建模为一个双人矩阵填充博弈，并训练了一个博弈论强化学习系统 PackingStar 来高效探索高维空间。该方法重现了现有配置，并在25到31维的多个维度上超越了所有已知的人类记录，包括在13维取得了自1971年以来的首次突破。**总分最高**，因其在创新性、理论严谨性和实践影响力方面都表现卓越。它展示了AI在纯科学发现方面的强大潜力，为解决复杂的组合优化问题开辟了新途径，具有极高的**理论创新性**。通过将一个长期存在的数学难题转化为可学习的博弈论问题，它**逻辑清晰**地展示了如何利用AI解决实际应用瓶颈（如高维空间的探索效率），这远非**纯粹的工程堆砌**。"
+        "reason_zh": "这篇论文将一个自17世纪以来就存在的数学难题——“亲吻数问题”——创造性地建模为一个双人矩阵填充博弈，并利用博弈论强化学习系统（PackingStar）来解决。它不仅复现了现有结果，还在25到31维空间中超越了所有人类已知记录，甚至在13维空间中首次突破了1971年以来的理性结构限制。这种将前沿算法（博弈论强化学习）应用于基础数学问题，并取得重大理论突破的能力，展现了极高的理论创新性和严谨的数理统计方法，完全符合您作为数理统计博士生对前沿算法和理论创新的追求。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.13288v1",
-        "title": "Multi-Agent Deep Research: Training Multi-Agent Systems with M-GRPO",
-        "summary": "Multi-agent systems perform well on general reasoning tasks. However, the lack of training in specialized areas hinders their accuracy. Current training methods train a unified large language model (LLM) for all agents in the system. This may limit the performances due to different distributions underlying for different agents. Therefore, training multi-agent systems with distinct LLMs should be the next step to solve. However, this approach introduces optimization challenges. For example, agents operate at different frequencies, rollouts involve varying sub-agent invocations, and agents are often deployed across separate servers, disrupting end-to-end gradient flow. To address these issues, we propose M-GRPO, a hierarchical extension of Group Relative Policy Optimization designed for vertical Multi-agent systems with a main agent (planner) and multiple sub-agents (multi-turn tool executors). M-GRPO computes group-relative advantages for both main and sub-agents, maintaining hierarchical credit assignment. It also introduces a trajectory-alignment scheme that generates fixed-size batches despite variable sub-agent invocations. We deploy a decoupled training pipeline in which agents run on separate servers and exchange minimal statistics via a shared store. This enables scalable training without cross-server backpropagation. In experiments on real-world benchmarks (e.g., GAIA, XBench-DeepSearch, and WebWalkerQA), M-GRPO consistently outperforms both single-agent GRPO and multi-agent GRPO with frozen sub-agents, demonstrating improved stability and sample efficiency. These results show that aligning heterogeneous trajectories and decoupling optimization across specialized agents enhances tool-augmented reasoning tasks.",
-        "authors": "Haoyang Hong, Jiajun Yin, Yuan Wang, Jingnan Liu, Zhe Chen, Ailing Yu, Ji Li, Zhiling Ye, Hansong Xiao, Yefei Chen, Hualei Zhou, Yun Yue, Minghui Yang, Chunxiao Guo, Junwei Liu, Peng Wei, Jinjie Gu",
-        "url": "http://arxiv.org/abs/2511.13288v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.13288v1",
+        "id": "http://arxiv.org/abs/2511.13193v1",
+        "title": "Cost-Effective Communication: An Auction-based Method for Language Agent Interaction",
+        "summary": "Multi-agent systems (MAS) built on large language models (LLMs) often suffer from inefficient \"free-for-all\" communication, leading to exponential token costs and low signal-to-noise ratios that hinder their practical deployment. We challenge the notion that more communication is always beneficial, hypothesizing instead that the core issue is the absence of resource rationality. We argue that \"free\" communication, by ignoring the principle of scarcity, inherently breeds inefficiency and unnecessary expenses. To address this, we introduce the Dynamic Auction-based Language Agent (DALA), a novel framework that treats communication bandwidth as a scarce and tradable resource. Specifically, our DALA regards inter-agent communication as a centralized auction, where agents learn to bid for the opportunity to speak based on the predicted value density of their messages. Thus, our DALA intrinsically encourages agents to produce concise, informative messages while filtering out low-value communication. Extensive and comprehensive experiments demonstrate that our economically-driven DALA achieves new state-of-the-art performance across seven challenging reasoning benchmarks, including 84.32% on MMLU and a 91.21% pass@1 rate on HumanEval. Note that this is accomplished with remarkable efficiency, i.e., our DALA uses only 6.25 million tokens, a fraction of the resources consumed by current state-of-the-art methods on GSM8K. Further analysis reveals that our DALA cultivates the emergent skill of strategic silence, effectively adapting its communication strategies from verbosity to silence in a dynamical manner via resource constraints.",
+        "authors": "Yijia Fan, Jusheng Zhang, Kaitong Cai, Jing Yang, Chengpei Tang, Jian Wang, Keze Wang",
+        "url": "http://arxiv.org/abs/2511.13193v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13193v1",
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文针对多智能体系统中不同LLM的训练优化挑战，提出了M-GRPO，一种分层扩展的群体相对策略优化方法。M-GRPO解决了智能体操作频率不同、子智能体调用可变以及解耦部署等问题，并通过轨迹对齐方案生成固定大小的批次。**总分最高**，因其在创新性、理论严谨性和实践影响力方面均达到最高分。该研究通过提出M-GRPO框架，从根本上解决了复杂多智能体系统的训练瓶颈，具有极高的**理论创新性**和**实践影响力**。它提供了一个原则性的、分层的优化方法，以实现更强大、专业和高效的AI协作，完美符合我的偏好，即关注前沿算法和架构的**理论创新性**，并能**解决实际应用瓶颈**，而非**纯粹的工程堆砌**。"
+        "reason_zh": "该研究引入了DALA（动态拍卖式语言代理）框架，将多代理LLM系统中的通信带宽视为稀缺资源，并通过集中的拍卖机制进行管理。这种经济学驱动的创新方法，使代理能够基于消息的价值密度学习出价，从而实现高效、有策略的通信，显著降低了高达数倍的Token成本（数据效率），同时在多个基准测试中取得了最先进的性能。其理论严谨性体现在将博弈论和经济学原理应用于多代理LLM通信，有效解决了LLM应用中的关键瓶颈（数据效率和通信效率），兼具理论深度和实际影响力。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.13371v1",
-        "title": "Cognitive Maps in Language Models: A Mechanistic Analysis of Spatial Planning",
-        "summary": "How do large language models solve spatial navigation tasks? We investigate this by training GPT-2 models on three spatial learning paradigms in grid environments: passive exploration (Foraging Model- predicting steps in random walks), goal-directed planning (generating optimal shortest paths) on structured Hamiltonian paths (SP-Hamiltonian), and a hybrid model fine-tuned with exploratory data (SP-Random Walk). Using behavioural, representational and mechanistic analyses, we uncover two fundamentally different learned algorithms. The Foraging model develops a robust, map-like representation of space, akin to a 'cognitive map'. Causal interventions reveal that it learns to consolidate spatial information into a self-sufficient coordinate system, evidenced by a sharp phase transition where its reliance on historical direction tokens vanishes by the middle layers of the network. The model also adopts an adaptive, hierarchical reasoning system, switching between a low-level heuristic for short contexts and map-based inference for longer ones. In contrast, the goal-directed models learn a path-dependent algorithm, remaining reliant on explicit directional inputs throughout all layers. The hybrid model, despite demonstrating improved generalisation over its parent, retains the same path-dependent strategy. These findings suggest that the nature of spatial intelligence in transformers may lie on a spectrum, ranging from generalisable world models shaped by exploratory data to heuristics optimised for goal-directed tasks. We provide a mechanistic account of this generalisation-optimisation trade-off and highlight how the choice of training regime influences the strategies that emerge.",
-        "authors": "Caroline Baumgartner, Eleanor Spens, Neil Burgess, Petru Manescu",
-        "url": "http://arxiv.org/abs/2511.13371v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.13371v1",
+        "id": "http://arxiv.org/abs/2511.13007v1",
+        "title": "GEM: Generative Entropy-Guided Preference Modeling for Few-shot Alignment of LLMs",
+        "summary": "Alignment of large language models (LLMs) with human preferences typically relies on supervised reward models or external judges that demand abundant annotations. However, in fields that rely on professional knowledge, such as medicine and law, such large-scale preference labels are often unachievable. In this paper, we propose a generative entropy-guided preference modeling approach named GEM for LLMs aligment at low-resource and domain-specific scenarios. Instead of training a discriminative reward model on preference data, we directly train the LLM to internalize a closed-loop optimization architecture that can extract and exploit the multi-dimensional, fine-grained cognitive signals implicit in human preferences. Specifically, our Cognitive Filtering module, based on entropy theory in decision making, first leverages Chain-of-Thought (CoT) prompting to generate diverse candidate reasoning chains (CoTs) from preference data. Subsequently, it introduces a token scoring mechanism to rank and weight the sampled CoTs, boosting the importance of high-confidence answers and strategically high-entropy tokens. Building on these filtered preferences, we fine-tune the LLM using a novel self-evaluated group advantage algorithm, SEGA, which effectively aggregates group-level cognitive signals and transforms the entropy-based scores into implicit rewards for policy optimization. In these ways, GEM empowers the LLM to rely on its own judgments and establishes an entropy-guided closed-loop cognitive optimization framework, enabling highly efficient few-shot alignment of LLMs. Experiments on general benchmarks and domain-specific tasks (such as mathematical reasoning and medical dialogues) demonstrate that our GEM achieves significant improvements with few-shot preference data.",
+        "authors": "Yiyang Zhao, Huiyu Bai, Xuejiao Zhao",
+        "url": "http://arxiv.org/abs/2511.13007v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.13007v1",
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文对语言模型中的空间规划进行了机制分析，揭示了GPT-2模型学习的两种根本不同的算法：一种是类似“认知地图”的鲁棒空间表示，另一种是路径依赖算法。它通过因果干预揭示了模型内部表征的演变。该研究具有极高的**理论创新性**和**理论严谨性**，深入剖析了LLM的内部运作机制，超出了简单的性能提升，旨在理解其智能的本质。其发现为设计更通用、更强大的AI智能体提供了基础原则，解决了AI可解释性这一重大**应用瓶颈**。这种对算法背后原理的深入探索，完全符合我对前沿算法和架构的关注，且避免了**纯粹的工程堆砌**。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.13297v1",
-        "title": "CorrectAD: A Self-Correcting Agentic System to Improve End-to-end Planning in Autonomous Driving",
-        "summary": "End-to-end planning methods are the de facto standard of the current autonomous driving system, while the robustness of the data-driven approaches suffers due to the notorious long-tail problem (i.e., rare but safety-critical failure cases). In this work, we explore whether recent diffusion-based video generation methods (a.k.a. world models), paired with structured 3D layouts, can enable a fully automated pipeline to self-correct such failure cases. We first introduce an agent to simulate the role of product manager, dubbed PM-Agent, which formulates data requirements to collect data similar to the failure cases. Then, we use a generative model that can simulate both data collection and annotation. However, existing generative models struggle to generate high-fidelity data conditioned on 3D layouts. To address this, we propose DriveSora, which can generate spatiotemporally consistent videos aligned with the 3D annotations requested by PM-Agent. We integrate these components into our self-correcting agentic system, CorrectAD. Importantly, our pipeline is an end-to-end model-agnostic and can be applied to improve any end-to-end planner. Evaluated on both nuScenes and a more challenging in-house dataset across multiple end-to-end planners, CorrectAD corrects 62.5% and 49.8% of failure cases, reducing collision rates by 39% and 27%, respectively.",
-        "authors": "Enhui Ma, Lijun Zhou, Tao Tang, Jiahuan Zhang, Junpeng Jiang, Zhan Zhang, Dong Han, Kun Zhan, Xueyang Zhang, XianPeng Lang, Haiyang Sun, Xia Zhou, Di Lin, Kaicheng Yu",
-        "url": "http://arxiv.org/abs/2511.13297v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.13297v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 4,
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了CorrectAD，一个端到端的自动驾驶规划**自校正智能体系统**，专门解决长尾问题导致的鲁棒性不足。它引入了PM-Agent（产品经理智能体）来制定数据需求，并使用DriveSora（一个可生成与3D布局对齐的时空一致视频的生成模型）进行数据收集和标注。该方法在NuScenes等数据集上显著降低了碰撞率。该研究在**算法和架构**上都具有极高的**创新性**，尤其是将“自校正”作为一个智能体驱动的闭环系统，结合生成模型解决实际应用中的关键**瓶颈**（长尾失败案例）。这对于自动驾驶这一安全关键领域具有极其重大的**实践影响力**，且并非**纯粹的工程堆砌**，而是智能体协作与生成模型相结合的**理论创新**。"
+        "reason_zh": "该论文提出了GEM（生成式熵引导偏好建模）方法，用于LLM的少样本对齐，这在专业知识（如医学、法律）领域数据稀缺的背景下尤为重要。它创新性地通过LLM直接内化闭环优化架构，利用熵理论进行认知过滤，并采用自评估群组优势算法（SEGA）将熵分数转化为隐式奖励。这种方法具有极高的理论创新性和严谨性，从决策制定中的熵理论出发，解决了LLM对齐中的数据效率和可靠性瓶颈，显著提升了少样本场景下的对齐效果，完美符合您对算法、架构和实际应用瓶颈的关注。"
     }
 ]

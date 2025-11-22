@@ -1,241 +1,237 @@
 import os
 import json
-import json5
+import json5  # <--- 1. 新增导入
 import arxiv
 import re
-import time
-import random
 import logging
+from google import genai
 from datetime import date, timedelta
 
-from google import genai
-
-# ============================= 配置 =============================
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.StreamHandler()]
-)
+# --- 1. 配置 Logging ---
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-if not GEMINI_API_KEY:
-    raise EnvironmentError("请设置环境变量 GEMINI_API_KEY")
-
-genai.configure(api_key=GEMINI_API_KEY)
-
+# --- 2. 核心配置 ---
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
-os.makedirs(ARCHIVE_DIR, exist_ok=True)
 
-# ============================= 三大领域 =============================
+# --------------------------------------------------------------------------
+# (V17.1) 3 个超级核心
+# --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
+    # 核心 1: AI 理论与统计基础
     "phd_foundations": {
         "name_zh": "AI 理论与统计基础",
         "name_en": "AI Theory & Statistical Foundations",
         "categories": ['stat.ML', 'cs.LG', 'stat.ME', 'math.ST', 'cs.AI', 'cs.CY', 'math.OC', 'stat.TH', 'cs.CV'],
         "search_query": (
-            '("statistical learning theory" OR "nonparametric regression" OR "model selection" OR '
-            '"high-dimensional inference" OR "uncertainty quantification") OR '
+            '("statistical learning theory" OR "nonparametric regression" OR "model selection" OR "high-dimensional inference" OR "uncertainty quantification") OR '
             '("causal inference" OR "fairness" OR "explainable AI" OR "interpretability" OR "treatment effect") OR '
-            '("generalization bound" OR "optimization landscape" OR "convergence analysis" OR '
-            '"deep neural network theory") OR '
-            '("high-dimensional statistics" OR "nonparametric estimation" OR "minimax rate" OR '
-            '"statistical guarantees") OR '
-            '("representation learning" OR "metric learning" OR "contrastive learning" OR '
-            '"self-supervised learning" OR "information bottleneck")'
+            '("generalization bound" OR "optimization landscape" OR "convergence analysis" OR "deep neural network theory") OR '
+            '("high-dimensional statistics" OR "nonparametric estimation" OR "minimax rate" OR "statistical guarantees") OR '
+            '("representation learning" OR "metric learning" OR "contrastive learning" OR "self-supervised learning" OR "information bottleneck")'
         ),
         "ai_preference_prompt": """
         我是一名数理统计博士生，专注于将严谨的数学逻辑应用于现代 AI 系统。
-        我寻求的论文必须具备强大的理论基础（如统计保证、优化收敛性、因果逻辑）和清晰的数学推导。
+        我寻求的论文必须具备**强大的理论基础**（如统计保证、优化收敛性、因果逻辑）和**清晰的数学推导**。
         """
     },
-
+    
+    # 核心 2: 前沿 AI 模型与应用
     "phd_methods": {
         "name_zh": "前沿 AI 模型与应用",
         "name_en": "Frontier AI Models & Applications",
         "categories": ['cs.LG', 'cs.AI', 'cs.SY', 'cs.CL', 'stat.AP', 'cs.CV', 'eess.IV', 'cs.AR'],
         "search_query": (
             '("Offline Reinforcement Learning" OR "Safe RL" OR "exploration" OR "Multi-Agent" OR "Model-Based RL") OR '
-            '("Large Language Model" OR "prompt engineering" OR "RAG system" OR "in-context learning" OR '
-            'OR "LLM for data analysis") OR '
+            '("Large Language Model" OR "prompt engineering" OR "RAG system" OR "in-context learning" OR "LLM for data analysis") OR '
             '("Vision Transformer" OR "Diffusion Model" OR "Graph Neural Network" OR "multimodal learning") OR '
-            '("efficient AI" OR "model compression" OR "knowledge distillation" OR '
-            '"on-device inference" OR "low-resource ML")'
+            '("efficient AI" OR "model compression" OR "knowledge distillation" OR "on-device inference" OR "low-resource ML")'
         ),
         "ai_preference_prompt": """
         我是一名数理统计博士生，专注于 AI 的前沿算法和架构。
-        我寻求的论文必须逻辑清晰，并能解决实际应用瓶颈。我不喜欢纯粹的工程堆砌，方法必须具有理论创新性。
+        我寻求的论文必须**逻辑清晰**，并能**解决实际应用瓶颈**（如数据效率、模型压缩、LLM 应用）。
+        我**不**喜欢纯粹的工程堆砌，方法必须具有**理论创新性**。
         """
     },
-
+    # 核心 3: 量化金融 (Crypto)
     "quant_crypto": {
         "name_zh": "量化金融 (Crypto)",
         "name_en": "Quantitative Finance (Crypto)",
         "categories": ['q-fin.ST', 'q-fin.CP', 'q-fin.PM', 'cs.CE', 'stat.ML'],
-        "search_query": '("cryptocurrency" OR "digital asset" OR "factor investing" OR '
-                       '"algorithmic trading" OR "market microstructure")',
+        "search_query": '("cryptocurrency" OR "digital asset" OR "factor investing" OR "algorithmic trading" OR "market microstructure")',
         "ai_preference_prompt": """
-        我正在帮助同学构造加密货币市场的量化因子。
-        我需要对因子构造、回测、策略设计最有帮助的论文。
+        我正在帮助同学**构造加密货币市场的量化因子**。
+        我需要对**这个具体任务**（因子构造、回测、策略设计）**最有帮助**的论文。
         """
     }
 }
 
-# ============================= 1. 抓取论文 =============================
+# --------------------------------------------------------------------------
+# (V17.3) 抓取函数
+# --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
-    logger.info(f"抓取 {domain_name} | 日期 {target_date}")
+    logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
+    
     date_str = target_date.strftime("%Y%m%d")
     date_filter = f"submittedDate:[{date_str}0000 TO {date_str}2359]"
-    category_query = " OR ".join(f"cat:{cat}" for cat in categories)
+    category_query = " OR ".join([f"cat:{cat}" for cat in categories])
     full_query = f"({category_query}) AND ({extra_query}) AND {date_filter}"
-
+    
     search = arxiv.Search(
         query=full_query,
-        max_results=300,                                   # 加大到 300
+        max_results=200,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
-
-    papers = []
+    papers_list = []
     try:
         client = arxiv.Client()
         for result in client.results(search):
-            arxiv_id = result.entry_id.split("/")[-1]      # 只存纯 ID，方便匹配
-            papers.append({
-                "id": arxiv_id,                            # 2411.12345v1
-                "title": result.title.strip(),
-                "summary": result.summary.replace("\n", " ").strip(),
-                "authors": ", ".join(a.name for a in result.authors),
-                "url": result.entry_id,                    # 完整链接给人看
-                "pdf_url": result.pdf_url,
+            papers_list.append({
+                'id': result.entry_id,
+                'title': result.title,
+                'summary': result.summary.replace("\n", " "),
+                'authors': ", ".join([a.name for a in result.authors]),
+                'url': result.entry_id,
+                'pdf_url': result.pdf_url
             })
-        logger.info(f"抓取完成 → {len(papers)} 篇")
-        return papers
+        logger.info(f"为 {domain_name} 抓取到 {len(papers_list)} 篇论文。")
+        return papers_list
     except Exception as e:
-        logger.error(f"arXiv 抓取失败: {e}")
+        logger.error(f"抓取 arXiv 失败: {e}")
         return []
 
-# ============================= 2. AI 总编辑（带重试 + json5） =============================
-def get_ai_editor_pick(papers, domain_name, preference_prompt, max_retries=5):
+# --------------------------------------------------------------------------
+# (V17) AI 分析函数 (评分引擎) —— <修改点：使用 json5>
+# --------------------------------------------------------------------------
+def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
-        logger.info("无论文可分析")
+        logger.info("没有论文可供 AI 分析。")
+        return None
+    if not GEMINI_API_KEY:
+        logger.error("未找到 GEMINI_API_KEY。")
+        return None
+    logger.info(f"正在请求 AI 总编辑为 {domain_name} 领域挑选 5 篇并评分...")
+    client = genai.Client()
+    prompt_papers = "\n".join(
+        [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
+         for i, p in enumerate(papers)]
+    )
+    system_prompt = f"""
+    你是我（统计学硕士）的私人研究助手，一个“AI 总编辑”。
+    我今天的任务是分析 "{domain_name}" 领域。
+    我的个人偏好/任务是：
+    "{user_preference_prompt}"
+    
+    下面是为该领域抓取的 {len(papers)} 篇论文。
+    你的任务是“批量评分和筛选”：
+    1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
+        - Novelty (创新性): 提出新方法或新视角 (1-5分)
+        - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
+        - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
+        - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
+    2. **排序：** 根据我的个人偏好，结合上述 4 个维度的分数，计算一个**总分**。
+    3. **筛选：** 挑选出**总分最高的 10 篇（最多 10 篇）**论文。
+    4. **返回：** 如果没有一篇论文足够好，请**必须**返回 `null`。如果你找到了，请以严格的 JSON **列表** 格式返回。
+    
+    JSON 格式如下：
+    [
+      {{
+        "id": "被选中论文1的 ID",
+        "scores": {{
+          "Novelty": 5,
+          "Rigor": 4,
+          "Impact": 5,
+          "Clarity": 4
+        }},
+        "reason_zh": "（中文）详细说明为什么这篇论文**总分最高**并**完全符合**我的偏好/任务。"
+      }},
+      ... (最多 5 篇)
+    ]
+    如果返回 `null`，就只返回 `null` 这个词。
+    """
+    full_prompt = f"{system_prompt}\n\n--- 论文列表开始 ---\n{prompt_papers}\n--- 论文列表结束 ---"
+    try:
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=full_prompt
+        )
+        
+        # 1. 清理 Markdown 标记
+        cleaned = response.text.strip().lstrip("```json").rstrip("```").strip()
+        
+        # 2. 尝试用正则提取 [] 列表部分 (容错机制)
+        match = re.search(r'(\[.*?\])', cleaned, re.DOTALL)
+        if not match:
+             if 'null' in cleaned.lower():
+                 logger.info("AI 编辑认为今天没有值得推荐的。")
+                 return None
+             # 如果正则没匹配到，有些时候 json5 可以直接解析整个文本（如果只是缺少[]但格式是对的）
+             # 但为了安全，如果没匹配到且不是 null，我们尝试直接解析 cleaned
+             json_string = cleaned
+        else:
+             json_string = match.group(1)
+        
+        # 3. 使用 json5.loads 替代 json.loads
+        # json5 可以处理尾随逗号、单引号键名、无引号键名等常见 AI 格式错误
+        ai_picks_list = json5.loads(json_string) # <--- 2. 修改处
+        
+        logger.info(f"AI 编辑已选出 {len(ai_picks_list)} 篇今日最佳。")
+        return ai_picks_list
+        
+    except ValueError as e: # json5 解析失败通常抛出 ValueError
+        logger.error(f"AI 总编辑分析失败: 无法解析 JSON (json5): {e}")
+        # 调试用：打印出解析失败的字符串
+        # logger.error(f"待解析字符串: {json_string}") 
+        return None
+    except Exception as e:
+        logger.error(f"AI 总编辑分析失败: {e}")
         return None
 
-    papers_text = "\n".join(
-        f"论文 {i+1} | ID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
-        for i, p in enumerate(papers)
-    )
-
-    system_prompt = f"""
-你是我私人 AI 总编辑，今天负责筛选领域：{domain_name}
-我的学术偏好如下：
-{preference_prompt.strip()}
-
-请严格只返回纯 JSON，不要任何解释文字：
-- 如果今天没有好论文 → 返回 null
-- 否则返回最多 10 篇最硬核、最符合我偏好的论文（如果真有 10 篇神作就全给我！）
-
-格式：
-[
-  {{"id": "2411.12345v1", "scores": {{"Novelty":5,"Rigor":5,"Impact":5,"Clarity":5}}, "reason_zh": "详细中文理由"}}
-]
-
-开始分析：
-""".strip()
-
-    full_prompt = system_prompt + "\n\n" + papers_text
-
-    for attempt in range(1, max_retries + 1):
-        try:
-            logger.info(f"Gemini 请求中… ({attempt}/{max_retries}) → {domain_name}")
-            model = genai.GenerativeModel("gemini-1.5-flash")
-            response = model.generate_content(
-                full_prompt,
-                generation_config=genai.types.GenerationConfig(
-                    temperature=0.3,
-                    max_output_tokens=8192,
-                )
-            )
-            text = response.text.strip()
-
-            # 去掉代码块
-            text = re.sub(r"^```json\s*|```$", "", text, flags=re.MULTILINE).strip()
-
-            if text.lower() == "null":
-                logger.info("AI 认为今天无优质论文")
-                return None
-
-            # json5 超宽容解析
-            try:
-                result = json5.loads(text)
-            except:
-                result = json.loads(text)
-
-            if isinstance(result, list):
-                logger.info(f"成功挑选 {len(result)} 篇神作！")
-                return result
+# --------------------------------------------------------------------------
+# 写入 JSON (保持标准 json dump，因为输出文件需要标准格式兼容其他程序)
+# --------------------------------------------------------------------------
+def write_to_json(data_to_save, file_path):
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    try:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            # 这里依然使用标准 json 库，确保生成的文件是严格的 JSON 标准
+            json.dump(data_to_save, f, ensure_ascii=False, indent=4)
+            if data_to_save:
+                logger.info(f"成功将 {len(data_to_save)} 篇“精选”写入 {file_path}")
             else:
-                raise ValueError("返回的不是列表")
+                logger.info(f"标记 {file_path} 为“无精选”。")
+    except Exception as e:
+        logger.error(f"写入 JSON 文件失败: {e}")
 
-        except Exception as e:
-            logger.warning(f"第 {attempt} 次失败: {e}")
-            if attempt == max_retries:
-                logger.error("全部重试失败，放弃该领域")
-                return None
-            sleep_sec = (2 ** attempt) + random.random()
-            logger.info(f"{sleep_sec:.1f}s 后重试...")
-            time.sleep(sleep_sec)
-
-    return None
-
-# ============================= 3. 保存结果 =============================
-def save_results(data, filepath):
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-    count = len(data) if data else 0
-    logger.info(f"已保存 {filepath} ({count} 篇)")
-
-# ============================= 主程序 =============================
+# --------------------------------------------------------------------------
+# 主函数
+# --------------------------------------------------------------------------
 if __name__ == "__main__":
-    # ==================== 手动调试时改这里 ====================
-    # 想测哪天就改哪天，跑完记得删掉或改回来
-    target_date = date(2025, 11, 17)        # 今晚强烈推荐这个日期，神作爆棚！
-
-    # 正式每天自动运行时使用下面这行（现在先注释掉）：
-    # target_date = date.today() - timedelta(days=1)
-
-    logger.info(f"ArXiv AI Daily Digest 启动！目标日期：{target_date.isoformat()}")
-
-    for key, cfg in YOUR_DOMAINS_OF_INTEREST.items():
-        logger.info(f"\n{'='*60}")
-        logger.info(f"正在处理：{cfg['name_zh']} ({cfg['name_en']})")
-        logger.info(f"{'='*60}")
-
+    target_date = date.today() - timedelta(days=1)
+    
+    logger.info(f"--- 脚本开始运行 (V17.5 json5增强版)，目标日期: {target_date.isoformat()} ---")
+    for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
+        logger.info(f"\n--- 处理领域: {config['name_en']} ---")
+        
         papers = fetch_papers_for_domain(
-            domain_name=cfg["name_en"],
-            categories=cfg["categories"],
-            extra_query=cfg["search_query"],
+            domain_name=config["name_en"],
+            categories=config["categories"],
+            extra_query=config["search_query"],
             target_date=target_date
         )
-
-        picks = get_ai_editor_pick(
-            papers=papers,
-            domain_name=cfg["name_en"],
-            preference_prompt=cfg["ai_preference_prompt"]
-        )
-
-        # 合并完整信息
-        final = []
-        if picks and papers:
-            paper_map = {p["id"]: p for p in papers}
-            for item in picks:
-                pid = item.get("id")
-                if pid in paper_map:
-                    final.append({**paper_map[pid], **item})
-
-        # 保存（没选中的日子也存 null，方便统计）
-        path = os.path.join(ARCHIVE_DIR, key, f"{target_date.isoformat()}.json")
-        save_results(final or None, path)
-
-    logger.info("\n全部完成！去 archive/ 目录里看今天的神作吧！")
+        
+        picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
+        final_data_list = []
+        if picks_list_json:
+            for pick_item in picks_list_json:
+                full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
+                if full_paper:
+                    final_data_list.append({**full_paper, **pick_item})
+        
+        if not final_data_list:
+             final_data_list = None
+        output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")
+        write_to_json(final_data_list, output_path)
+    logger.info(f"\n--- 所有领域处理完毕: {target_date.isoformat()} ---")

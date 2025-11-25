@@ -17,11 +17,11 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
 # 配置抓取和推荐数量
-FETCH_LIMIT = 200  # <--- 修改点：抓取数量改为 200
-TOP_N_PICKS = 10   # <--- 修改点：推荐数量改为 10
+FETCH_LIMIT = 200  
+TOP_N_PICKS = 10  
 
 # --------------------------------------------------------------------------
-# (V17.1) 3 个超级核心
+# 超级核心
 # --------------------------------------------------------------------------
 YOUR_DOMAINS_OF_INTEREST = {
     "phd_foundations": {
@@ -69,7 +69,7 @@ YOUR_DOMAINS_OF_INTEREST = {
 }
 
 # --------------------------------------------------------------------------
-# (V17.3) 抓取函数
+# 抓取函数
 # --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
@@ -81,7 +81,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     
     search = arxiv.Search(
         query=full_query,
-        max_results=FETCH_LIMIT, # <--- 修改点：使用配置的 200
+        max_results=FETCH_LIMIT,
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )

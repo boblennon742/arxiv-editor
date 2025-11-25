@@ -1,0 +1,152 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.18828v1",
+        "title": "Solving a Research Problem in Mathematical Statistics with AI Assistance",
+        "summary": "Over the last few months, AI models including large language models have improved greatly. There are now several documented examples where they have helped professional mathematical scientists prove new results, sometimes even helping resolve known open problems. In this short note, we add another example to the list, by documenting how we were able to solve a previously unsolved research problem in robust mathematical statistics with crucial help from GPT-5. Our problem concerns robust density estimation, where the observations are perturbed by Wasserstein-bounded contaminations.In a previous preprint (Chao and Dobriban, 2023, arxiv:2308.01853v2), we have obtained upper and lower bounds on the minimax optimal estimation error; which were, however, not sharp.   Starting in October 2025, making significant use of GPT-5 Pro, we were able to derive the minimax optimal error rate (reported in version 3 of the above arxiv preprint). GPT-5 provided crucial help along the way, including by suggesting calculations that we did not think of, and techniques that were not familiar to us, such as the dynamic Benamou-Brenier formulation, for key steps in the analysis. Working with GPT-5 took a few weeks of effort, and we estimate that it could have taken several months to get the same results otherwise. At the same time, there are still areas where working with GPT-5 was challenging: it sometimes provided incorrect references, and glossed over details that sometimes took days of work to fill in. We outline our workflow and steps taken to mitigate issues. Overall, our work can serve as additional documentation for a new age of human-AI collaborative work in mathematical science.",
+        "authors": "Edgar Dobriban",
+        "url": "http://arxiv.org/abs/2511.18828v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18828v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文记录了在 GPT-5 辅助下解决一个数理统计学中的未解研究问题，其核心内容（鲁棒密度估计、Wasserstein 污染、极小极大最优误差率）直接契合了您对严谨数学逻辑和统计保证的偏好。AI 在推导关键步骤中的作用，包括建议 Benamou-Brenier 公式，体现了理论深度和创新性，且清晰度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19124v1",
+        "title": "Uncertainty-Aware Deep Learning Framework for Remaining Useful Life Prediction in Turbofan Engines with Learned Aleatoric Uncertainty",
+        "summary": "Accurate Remaining Useful Life (RUL) prediction coupled with uncertainty quantification remains a critical challenge in aerospace prognostics. This research introduces a novel uncertainty-aware deep learning framework that learns aleatoric uncertainty directly through probabilistic modeling, an approach unexplored in existing CMAPSS-based literature. Our hierarchical architecture integrates multi-scale Inception blocks for temporal pattern extraction, bidirectional Long Short-Term Memory networks for sequential modeling, and a dual-level attention mechanism operating simultaneously on sensor and temporal dimensions. The innovation lies in the Bayesian output layer that predicts both mean RUL and variance, enabling the model to learn data-inherent uncertainty. Comprehensive preprocessing employs condition-aware clustering, wavelet denoising, and intelligent feature selection. Experimental validation on NASA CMAPSS benchmarks (FD001-FD004) demonstrates competitive overall performance with RMSE values of 16.22, 19.29, 16.84, and 19.98 respectively. Remarkably, our framework achieves breakthrough critical zone performance (RUL <= 30 cycles) with RMSE of 5.14, 6.89, 5.27, and 7.16, representing 25-40 percent improvements over conventional approaches and establishing new benchmarks for safety-critical predictions. The learned uncertainty provides well-calibrated 95 percent confidence intervals with coverage ranging from 93.5 percent to 95.2 percent, enabling risk-aware maintenance scheduling previously unattainable in CMAPSS literature.",
+        "authors": "Krishang Sharma",
+        "url": "http://arxiv.org/abs/2511.19124v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19124v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种新颖的不确定性感知深度学习框架，通过概率建模直接学习偶然不确定性，并在贝叶斯输出层预测 RUL 均值和方差，提供校准过的置信区间。这在统计学上非常严谨，且在航空预测中具有突破性的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18902v1",
+        "title": "VADE: Variance-Aware Dynamic Sampling via Online Sample-Level Difficulty Estimation for Multimodal RL",
+        "summary": "Group-based policy optimization methods like GRPO and GSPO have become standard for training multimodal models, leveraging group-wise rollouts and relative advantage estimation. However, they suffer from a critical \\emph{gradient vanishing} problem when all responses within a group receive identical rewards, causing advantage estimates to collapse and training signals to diminish. Existing attempts to mitigate this issue fall into two paradigms: filtering-based and sampling-based methods. Filtering-based methods first generate rollouts broadly and then retroactively filter out uninformative groups, leading to substantial computational overhead. Sampling-based methods proactively select effective samples before rollout but rely on static criteria or prior dataset knowledge, lacking real-time adaptability. To address these issues, we propose \\textbf{VADE}, a \\textbf{V}ariance-\\textbf{A}ware \\textbf{D}ynamic sampling framework via online sample-level difficulty \\textbf{E}stimation. Our framework integrates three key components: online sample-level difficulty estimation using Beta distributions, a Thompson sampler that maximizes information gain through the estimated correctness probability, and a two-scale prior decay mechanism that maintains robust estimation under policy evolution. This three components design enables VADE to dynamically select the most informative samples, thereby amplifying training signals while eliminating extra rollout costs. Extensive experiments on multimodal reasoning benchmarks show that VADE consistently outperforms strong baselines in both performance and sample efficiency, while achieving a dramatic reduction in computational overhead. More importantly, our framework can serves as a plug-and-play component to be seamlessly integrated into existing group-based RL algorithms. Code and models are available at https://VADE-RL.github.io.",
+        "authors": "Zengjie Hu, Jiantao Qiu, Tianyi Bai, Haojin Yang, Binhang Yuan, Qi Jing, Conghui He, Wentao Zhang",
+        "url": "http://arxiv.org/abs/2511.18902v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18902v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "VADE 框架通过在线样本级难度估计，利用 Beta 分布和 Thompson 采样解决多模态强化学习中的梯度消失问题。其统计学和强化学习理论基础非常扎实，具有强大的优化收敛性保证和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18839v1",
+        "title": "Enhancing Multi-Label Thoracic Disease Diagnosis with Deep Ensemble-Based Uncertainty Quantification",
+        "summary": "The utility of deep learning models, such as CheXNet, in high stakes clinical settings is fundamentally constrained by their purely deterministic nature, failing to provide reliable measures of predictive confidence. This project addresses this critical gap by integrating robust Uncertainty Quantification (UQ) into a high performance diagnostic platform for 14 common thoracic diseases on the NIH ChestX-ray14 dataset. Initial architectural development failed to stabilize performance and calibration using Monte Carlo Dropout (MCD), yielding an unacceptable Expected Calibration Error (ECE) of 0.7588. This technical failure necessitated a rigorous architectural pivot to a high diversity, 9-member Deep Ensemble (DE). This resulting DE successfully stabilized performance and delivered superior reliability, achieving a State-of-the-Art (SOTA) average Area Under the Receiver Operating Characteristic Curve (AUROC) of 0.8559 and an average F1 Score of 0.3857. Crucially, the DE demonstrated superior calibration (Mean ECE of 0.0728 and Negative Log-Likelihood (NLL) of 0.1916) and enabled the reliable decomposition of total uncertainty into its Aleatoric (irreducible data noise) and Epistemic (reducible model knowledge) components, with a mean Epistemic Uncertainty (EU) of 0.0240. These results establish the Deep Ensemble as a trustworthy and explainable platform, transforming the model from a probabilistic tool into a reliable clinical decision support system.",
+        "authors": "Yasiru Laksara, Uthayasanker Thayasivam",
+        "url": "http://arxiv.org/abs/2511.18839v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18839v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过构建高性能的深度集成模型，对多标签胸腔疾病诊断中的不确定性进行量化（包括偶然不确定性和认知不确定性），提供了 SOTA 的校准性能和可解释性，高度符合您对统计保证和严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18684v1",
+        "title": "Now You See It, Now You Don't - Instant Concept Erasure for Safe Text-to-Image and Video Generation",
+        "summary": "Robust concept removal for text-to-image (T2I) and text-to-video (T2V) models is essential for their safe deployment. Existing methods, however, suffer from costly retraining, inference overhead, or vulnerability to adversarial attacks. Crucially, they rarely model the latent semantic overlap between the target erase concept and surrounding content -- causing collateral damage post-erasure -- and even fewer methods work reliably across both T2I and T2V domains. We introduce Instant Concept Erasure (ICE), a training-free, modality-agnostic, one-shot weight modification approach that achieves precise, persistent unlearning with zero overhead. ICE defines erase and preserve subspaces using anisotropic energy-weighted scaling, then explicitly regularises against their intersection using a unique, closed-form overlap projector. We pose a convex and Lipschitz-bounded Spectral Unlearning Objective, balancing erasure fidelity and intersection preservation, that admits a stable and unique analytical solution. This solution defines a dissociation operator that is translated to the model's text-conditioning layers, making the edit permanent and runtime-free. Across targeted removals of artistic styles, objects, identities, and explicit content, ICE efficiently achieves strong erasure with improved robustness to red-teaming, all while causing only minimal degradation of original generative abilities in both T2I and T2V models.",
+        "authors": "Shristi Das Biswas, Arani Roy, Kaushik Roy",
+        "url": "http://arxiv.org/abs/2511.18684v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18684v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种训练无关、模态无关、一次性的即时概念擦除（ICE）方法，用于生成模型中的安全概念移除。其数学推导严谨（凸优化、Lipschitz 有界目标、闭式解），提供了强大的理论保证和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18843v1",
+        "title": "A Reproducible Framework for Neural Topic Modeling in Focus Group Analysis",
+        "summary": "Focus group discussions generate rich qualitative data but their analysis traditionally relies on labor-intensive manual coding that limits scalability and reproducibility. We present a rigorous, reproducible computational framework for applying neural topic modeling to focus group transcripts, addressing fundamental methodological challenges: hyperparameter sensitivity, model stability, and validation of interpretability. Using BERTopic applied to ten focus groups exploring HPV vaccine perceptions in Tunisia (1,076 utterances), we conducted systematic evaluation across 27 hyperparameter configurations, assessed stability through bootstrap resampling with 30 replicates per configuration, and validated interpretability through formal human evaluation by three domain experts. Our analysis demonstrates substantial sensitivity to hyperparameter choices and reveals that metric selection for stability assessment must align with analytical goals. A hierarchical merging strategy (extracting fine-grained topics for stability then consolidating for interpretability) effectively navigates the stability-coherence tradeoff, achieving coherence of 0.558 compared to 0.539 for direct extraction. Human validation confirmed topic quality with very good inter-rater reliability (ICC = 0.79, weighted Cohen's kappa = 0.578). Our framework provides practical guidelines that researchers can adapt to their own qualitative research contexts. All code, data processing scripts, and evaluation protocols are publicly available to support reproduction and extension of this work.",
+        "authors": "Heger Arfaoui, Mohammed Iheb Hergli, Beya Benzina, Slimane BenMiled",
+        "url": "http://arxiv.org/abs/2511.18843v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18843v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "提供了一个严谨、可重现的神经主题建模框架，系统性地解决了超参数敏感性、模型稳定性和可解释性验证的挑战，通过引导式重采样和人工评估确保了统计稳健性，对研究方法论具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18739v1",
+        "title": "A Problem-Oriented Taxonomy of Evaluation Metrics for Time Series Anomaly Detection",
+        "summary": "Time series anomaly detection is widely used in IoT and cyber-physical systems, yet its evaluation remains challenging due to diverse application objectives and heterogeneous metric assumptions. This study introduces a problem-oriented framework that reinterprets existing metrics based on the specific evaluation challenges they are designed to address, rather than their mathematical forms or output structures. We categorize over twenty commonly used metrics into six dimensions: 1) basic accuracy-driven evaluation; 2) timeliness-aware reward mechanisms; 3) tolerance to labeling imprecision; 4) penalties reflecting human-audit cost; 5) robustness against random or inflated scores; and 6) parameter-free comparability for cross-dataset benchmarking. Comprehensive experiments are conducted to examine metric behavior under genuine, random, and oracle detection scenarios. By comparing their resulting score distributions, we quantify each metric's discriminative ability -- its capability to distinguish meaningful detections from random noise. The results show that while most event-level metrics exhibit strong separability, several widely used metrics (e.g., NAB, Point-Adjust) demonstrate limited resistance to random-score inflation. These findings reveal that metric suitability must be inherently task-dependent and aligned with the operational objectives of IoT applications. The proposed framework offers a unified analytical perspective for understanding existing metrics and provides practical guidance for selecting or developing more context-aware, robust, and fair evaluation methodologies for time series anomaly detection.",
+        "authors": "Kaixiang Yang, Jiarong Liu, Yupeng Song, Shuanghua Yang, Yujue Zhou",
+        "url": "http://arxiv.org/abs/2511.18739v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18739v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "提出了一种面向问题的时序异常检测评估指标分类法，系统性地重新诠释并量化了 20 多个指标的辨别能力，揭示了其在不同场景下的行为，为选择或开发稳健公平的评估方法提供了严谨的指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19404v1",
+        "title": "Nonparametric Instrumental Variable Regression with Observed Covariates",
+        "summary": "We study the problem of nonparametric instrumental variable regression with observed covariates, which we refer to as NPIV-O. Compared with standard nonparametric instrumental variable regression (NPIV), the additional observed covariates facilitate causal identification and enables heterogeneous causal effect estimation. However, the presence of observed covariates introduces two challenges for its theoretical analysis. First, it induces a partial identity structure, which renders previous NPIV analyses - based on measures of ill-posedness, stability conditions, or link conditions - inapplicable. Second, it imposes anisotropic smoothness on the structural function. To address the first challenge, we introduce a novel Fourier measure of partial smoothing; for the second challenge, we extend the existing kernel 2SLS instrumental variable algorithm with observed covariates, termed KIV-O, to incorporate Gaussian kernel lengthscales adaptive to the anisotropic smoothness. We prove upper $L^2$-learning rates for KIV-O and the first $L^2$-minimax lower learning rates for NPIV-O. Both rates interpolate between known optimal rates of NPIV and nonparametric regression (NPR). Interestingly, we identify a gap between our upper and lower bounds, which arises from the choice of kernel lengthscales tuned to minimize a projected risk. Our theoretical analysis also applies to proximal causal inference, an emerging framework for causal effect estimation that shares the same conditional moment restriction as NPIV-O.",
+        "authors": "Zikai Shen, Zonghao Chen, Dimitri Meunier, Ingo Steinwart, Arthur Gretton, Zhu Li",
+        "url": "http://arxiv.org/abs/2511.19404v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19404v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了带观测协变量的非参数工具变量回归 (NPIV-O) 问题，引入了新颖的傅里叶局部平滑测度，并首次建立了 $L^2$-极小极大下学习率。对因果推断领域有深远的理论贡献，数学推导非常严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19398v1",
+        "title": "PTF Testing Lower Bounds for Non-Gaussian Component Analysis",
+        "summary": "This work studies information-computation gaps for statistical problems. A common approach for providing evidence of such gaps is to show sample complexity lower bounds (that are stronger than the information-theoretic optimum) against natural models of computation. A popular such model in the literature is the family of low-degree polynomial tests. While these tests are defined in such a way that make them easy to analyze, the class of algorithms that they rule out is somewhat restricted. An important goal in this context has been to obtain lower bounds against the stronger and more natural class of low-degree Polynomial Threshold Function (PTF) tests, i.e., any test that can be expressed as comparing some low-degree polynomial of the data to a threshold. Proving lower bounds against PTF tests has turned out to be challenging. Indeed, we are not aware of any non-trivial PTF testing lower bounds in the literature.   In this paper, we establish the first non-trivial PTF testing lower bounds for a range of statistical tasks. Specifically, we prove a near-optimal PTF testing lower bound for Non-Gaussian Component Analysis (NGCA). Our NGCA lower bound implies similar lower bounds for a number of other statistical problems. Our proof leverages a connection to recent work on pseudorandom generators for PTFs and recent techniques developed in that context. At the technical level, we develop several tools of independent interest, including novel structural results for analyzing the behavior of low-degree polynomials restricted to random directions.",
+        "authors": "Ilias Diakonikolas, Daniel M. Kane, Sihan Liu, Thanasis Pittas",
+        "url": "http://arxiv.org/abs/2511.19398v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19398v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究首次为多项式阈值函数 (PTF) 测试提供了非平凡的下界，尤其是在非高斯成分分析 (NGCA) 中实现了近乎最优的下界。这代表了信息-计算差距研究的重大突破，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19289v1",
+        "title": "Performance Guarantees for Quantum Neural Estimation of Entropies",
+        "summary": "Estimating quantum entropies and divergences is an important problem in quantum physics, information theory, and machine learning. Quantum neural estimators (QNEs), which utilize a hybrid classical-quantum architecture, have recently emerged as an appealing computational framework for estimating these measures. Such estimators combine classical neural networks with parametrized quantum circuits, and their deployment typically entails tedious tuning of hyperparameters controlling the sample size, network architecture, and circuit topology. This work initiates the study of formal guarantees for QNEs of measured (Rényi) relative entropies in the form of non-asymptotic error risk bounds. We further establish exponential tail bounds showing that the error is sub-Gaussian, and thus sharply concentrates about the ground truth value. For an appropriate sub-class of density operator pairs on a space of dimension $d$ with bounded Thompson metric, our theory establishes a copy complexity of $O(|Θ(\\mathcal{U})|d/ε^2)$ for QNE with a quantum circuit parameter set $Θ(\\mathcal{U})$, which has minimax optimal dependence on the accuracy $ε$. Additionally, if the density operator pairs are permutation invariant, we improve the dimension dependence above to $O(|Θ(\\mathcal{U})|\\mathrm{polylog}(d)/ε^2)$. Our theory aims to facilitate principled implementation of QNEs for measured relative entropies and guide hyperparameter tuning in practice.",
+        "authors": "Sreejith Sreekumar, Ziv Goldfeld, Mark M. Wilde",
+        "url": "http://arxiv.org/abs/2511.19289v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19289v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对量子神经网络估计算子，首次建立了量子熵估计的非渐近误差风险界限和指数尾界，证明了其亚高斯误差，并确定了具有极小极大最优依赖的拷贝复杂度。为量子机器学习提供了坚实的理论保证。"
+    }
+]

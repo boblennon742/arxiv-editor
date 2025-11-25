@@ -1,0 +1,152 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.19175v1",
+        "title": "LLM-Based Agentic Negotiation for 6G: Addressing Uncertainty Neglect and Tail-Event Risk",
+        "summary": "A critical barrier to the trustworthiness of sixth-generation (6G) agentic autonomous networks is the uncertainty neglect bias; a cognitive tendency for large language model (LLM)-powered agents to make high-stakes decisions based on simple averages while ignoring the tail risk of extreme events. This paper proposes an unbiased, risk-aware framework for agentic negotiation, designed to ensure robust resource allocation in 6G network slicing. Specifically, agents leverage Digital Twins (DTs) to predict full latency distributions, which are then evaluated using a formal framework from extreme value theory, namely, Conditional Value-at-Risk (CVaR). This approach fundamentally shifts the agent's objective from reasoning over the mean to reasoning over the tail, thereby building a statistically-grounded buffer against worst-case outcomes. Furthermore, our framework ensures full uncertainty awareness by requiring agents to quantify epistemic uncertainty -- confidence in their own DTs predictions -- and propagate this meta-verification to make robust decisions, preventing them from acting on unreliable data. We validate this framework in a 6G inter-slice negotiation use-case between an eMBB and a URLLC agent. The results demonstrate the profound failure of the biased, mean-based baseline, which consistently fails its SLAs with a 25\\% rate. Our unbiased, CVaR-aware agent successfully mitigates this bias, eliminating SLA violations and reducing the URLLC and eMBB p99.999 latencies by around 11\\%. We show this reliability comes at the rational and quantifiable cost of slightly reduced energy savings to 17\\%, exposing the false economy of the biased approach. This work provides a concrete methodology for building the trustworthy autonomous systems required for 6G.",
+        "authors": "Hatim Chergui, Farhad Rezazadeh, Mehdi Bennis, Merouane Debbah",
+        "url": "http://arxiv.org/abs/2511.19175v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19175v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个用于6G智能体协商的“无偏、风险感知框架”，它解决了LLM智能体中“不确定性忽视偏差”和“尾部事件风险”这一关键障碍。它通过结合数字孪生（Digital Twins）和极值理论中的条件风险价值（CVaR）来预测完整的延迟分布，从而在统计学上构建了针对最坏情况的缓冲。这项工作在理论上非常严谨，并且对6G网络中的鲁棒资源分配具有重大的实际影响，能够消除SLA违规并显著降低延迟，同时量化了成本，为构建可信赖的自主系统提供了具体的方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19428v1",
+        "title": "Flow Map Distillation Without Data",
+        "summary": "State-of-the-art flow models achieve remarkable quality but require slow, iterative sampling. To accelerate this, flow maps can be distilled from pre-trained teachers, a procedure that conventionally requires sampling from an external dataset. We argue that this data-dependency introduces a fundamental risk of Teacher-Data Mismatch, as a static dataset may provide an incomplete or even misaligned representation of the teacher's full generative capabilities. This leads us to question whether this reliance on data is truly necessary for successful flow map distillation. In this work, we explore a data-free alternative that samples only from the prior distribution, a distribution the teacher is guaranteed to follow by construction, thereby circumventing the mismatch risk entirely. To demonstrate the practical viability of this philosophy, we introduce a principled framework that learns to predict the teacher's sampling path while actively correcting for its own compounding errors to ensure high fidelity. Our approach surpasses all data-based counterparts and establishes a new state-of-the-art by a significant margin. Specifically, distilling from SiT-XL/2+REPA, our method reaches an impressive FID of 1.45 on ImageNet 256x256, and 1.49 on ImageNet 512x512, both with only 1 sampling step. We hope our work establishes a more robust paradigm for accelerating generative models and motivates the broader adoption of flow map distillation without data.",
+        "authors": "Shangyuan Tong, Nanye Ma, Saining Xie, Tommi Jaakkola",
+        "url": "http://arxiv.org/abs/2511.19428v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19428v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了一种新颖的“无数据”流图蒸馏方法，挑战了传统上对外部数据集的依赖，并解决了“教师-数据不匹配”这一根本风险。该方法通过仅从先验分布中采样，并引入一个原则性的框架来预测教师的采样路径并主动纠正自身错误，从而实现了SOTA性能（仅需1个采样步骤）。在理论上严谨且实用性极高，极大地提高了生成模型的效率，解决了迭代采样速度慢的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19390v1",
+        "title": "Predicting partially observable dynamical systems via diffusion models with a multiscale inference scheme",
+        "summary": "Conditional diffusion models provide a natural framework for probabilistic prediction of dynamical systems and have been successfully applied to fluid dynamics and weather prediction. However, in many settings, the available information at a given time represents only a small fraction of what is needed to predict future states, either due to measurement uncertainty or because only a small fraction of the state can be observed. This is true for example in solar physics, where we can observe the Sun's surface and atmosphere, but its evolution is driven by internal processes for which we lack direct measurements. In this paper, we tackle the probabilistic prediction of partially observable, long-memory dynamical systems, with applications to solar dynamics and the evolution of active regions. We show that standard inference schemes, such as autoregressive rollouts, fail to capture long-range dependencies in the data, largely because they do not integrate past information effectively. To overcome this, we propose a multiscale inference scheme for diffusion models, tailored to physical processes. Our method generates trajectories that are temporally fine-grained near the present and coarser as we move farther away, which enables capturing long-range temporal dependencies without increasing computational cost. When integrated into a diffusion model, we show that our inference scheme significantly reduces the bias of the predicted distributions and improves rollout stability.",
+        "authors": "Rudy Morel, Francesco Pio Ramunno, Jeff Shen, Alberto Bietti, Kyunghyun Cho, Miles Cranmer, Siavash Golkar, Olexandr Gugnin, Geraud Krawezik, Tanya Marwah, Michael McCabe, Lucas Meyer, Payel Mukhopadhyay, Ruben Ohana, Liam Parker, Helen Qu, François Rozet, K. D. Leka, François Lanusse, David Fouhey, Shirley Ho",
+        "url": "http://arxiv.org/abs/2511.19390v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19390v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了一个新颖的“多尺度推理方案”，用于扩散模型预测部分可观测的、长记忆的动力系统，特别针对太阳动力学等物理过程。该方案生成在时间上近距离精细、远距离粗糙的轨迹，有效捕捉了长程时间依赖性，同时不增加计算成本。方法具有很高的理论创新性和严谨性，并在实践中显著降低了预测分布的偏差并提高了稳定性，解决了复杂物理系统预测中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19274v1",
+        "title": "Diffusion Reconstruction-based Data Likelihood Estimation for Core-Set Selection",
+        "summary": "Existing core-set selection methods predominantly rely on heuristic scoring signals such as training dynamics or model uncertainty, lacking explicit modeling of data likelihood. This omission may hinder the constructed subset from capturing subtle yet critical distributional structures that underpin effective model training. In this work, we propose a novel, theoretically grounded approach that leverages diffusion models to estimate data likelihood via reconstruction deviation induced by partial reverse denoising. Specifically, we establish a formal connection between reconstruction error and data likelihood, grounded in the Evidence Lower Bound (ELBO) of Markovian diffusion processes, thereby enabling a principled, distribution-aware scoring criterion for data selection. Complementarily, we introduce an efficient information-theoretic method to identify the optimal reconstruction timestep, ensuring that the deviation provides a reliable signal indicative of underlying data likelihood. Extensive experiments on ImageNet demonstrate that reconstruction deviation offers an effective scoring criterion, consistently outperforming existing baselines across selection ratios, and closely matching full-data training using only 50% of the data. Further analysis shows that the likelihood-informed nature of our score reveals informative insights in data selection, shedding light on the interplay between data distributional characteristics and model learning preferences.",
+        "authors": "Mingyang Chen, Jiawei Du, Bo Huang, Yi Wang, Xiaobo Zhang, Wei Wang",
+        "url": "http://arxiv.org/abs/2511.19274v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19274v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本研究提出了一种新颖的、基于理论基础的方法，利用扩散模型通过部分逆向去噪引起的重建偏差来估计数据似然，从而进行核心集选择。该方法在理论上建立了重建误差与数据似然之间的正式联系，并引入了一种有效的信息论方法来确定最佳重建时间步。它在ImageNet上用50%的数据实现了与全数据训练相近的性能，极大地提高了数据效率，具有很高的理论严谨性和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19156v1",
+        "title": "Information Physics of Intelligence: Unifying Logical Depth and Entropy under Thermodynamic Constraints",
+        "summary": "The rapid scaling of artificial intelligence models has revealed a fundamental tension between model capacity (storage) and inference efficiency (computation). While classical information theory focuses on transmission and storage limits, it lacks a unified physical framework to quantify the thermodynamic costs of generating information from compressed laws versus retrieving it from memory. In this paper, we propose a theoretical framework that treats information processing as an enabling mapping from ontological states to carrier states. We introduce a novel metric, Derivation Entropy, which quantifies the effective work required to compute a target state from a given logical depth. By analyzing the interplay between Shannon entropy (storage) and computational complexity (time/energy), we demonstrate the existence of a critical phase transition point. Below this threshold, memory retrieval is thermodynamically favorable; above it, generative computation becomes the optimal strategy. This \"Energy-Time-Space\" conservation law provides a physical explanation for the efficiency of generative models and offers a rigorous mathematical bound for designing next-generation, energy-efficient AI architectures. Our findings suggest that the minimization of Derivation Entropy is a governing principle for the evolution of both biological and artificial intelligence.",
+        "authors": "Jianfeng Xu, Zeyan Li",
+        "url": "http://arxiv.org/abs/2511.19156v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19156v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的理论框架和新颖的指标“推导熵”，用于在热力学约束下统一逻辑深度和熵。它通过分析香农熵和计算复杂度之间的相互作用，揭示了一个临界相变点。这项工作具有极高的理论创新性和数学严谨性，为设计下一代节能AI架构提供了物理层面的解释和严格的数学界限，具有长远的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18902v1",
+        "title": "VADE: Variance-Aware Dynamic Sampling via Online Sample-Level Difficulty Estimation for Multimodal RL",
+        "summary": "Group-based policy optimization methods like GRPO and GSPO have become standard for training multimodal models, leveraging group-wise rollouts and relative advantage estimation. However, they suffer from a critical \\emph{gradient vanishing} problem when all responses within a group receive identical rewards, causing advantage estimates to collapse and training signals to diminish. Existing attempts to mitigate this issue fall into two paradigms: filtering-based and sampling-based methods. Filtering-based methods first generate rollouts broadly and then retroactively filter out uninformative groups, leading to substantial computational overhead. Sampling-based methods proactively select effective samples before rollout but rely on static criteria or prior dataset knowledge, lacking real-time adaptability. To address these issues, we propose \\textbf{VADE}, a \\textbf{V}ariance-\\textbf{A}ware \\textbf{D}ynamic sampling framework via online sample-level difficulty \\textbf{E}stimation. Our framework integrates three key components: online sample-level difficulty estimation using Beta distributions, a Thompson sampler that maximizes information gain through the estimated correctness probability, and a two-scale prior decay mechanism that maintains robust estimation under policy evolution. This three components design enables VADE to dynamically select the most informative samples, thereby amplifying training signals while eliminating extra rollout costs. Extensive experiments on multimodal reasoning benchmarks show that VADE consistently outperforms strong baselines in both performance and sample efficiency, while achieving a dramatic reduction in computational overhead. More importantly, our framework can serves as a plug-and-play component to be seamlessly integrated into existing group-based RL algorithms. Code and models are available at https://VADE-RL.github.io.",
+        "authors": "Zengjie Hu, Jiantao Qiu, Tianyi Bai, Haojin Yang, Binhang Yuan, Qi Jing, Conghui He, Wentao Zhang",
+        "url": "http://arxiv.org/abs/2511.18902v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18902v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了VADE，一个“方差感知动态采样框架”，通过在线样本级难度估计来解决多模态强化学习中“梯度消失”的关键问题。该框架整合了Beta分布的难度估计、Thompson采样器和两尺度先验衰减机制，从而动态选择信息最丰富的样本，显著提高了性能、样本效率并大幅降低了计算开销，具有很高的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.18955v1",
+        "title": "Active Inference is a Subtype of Variational Inference",
+        "summary": "Automated decision-making under uncertainty requires balancing exploitation and exploration. Classical methods treat these separately using heuristics, while Active Inference unifies them through Expected Free Energy (EFE) minimization. However, EFE minimization is computationally expensive, limiting scalability. We build on recent theory recasting EFE minimization as variational inference, formally unifying it with Planning-as-Inference and showing the epistemic drive as a unique entropic contribution. Our main contribution is a novel message-passing scheme for this unified objective, enabling scalable Active Inference in factored-state MDPs and overcoming high-dimensional planning intractability.",
+        "authors": "Wouter W. L. Nuijten, Mykola Lukashchuk",
+        "url": "http://arxiv.org/abs/2511.18955v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18955v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本研究通过将预期自由能（EFE）最小化重新构想为变分推理，提供了主动推理的理论统一。它提出了一个新颖的消息传递方案，实现了在因子化状态MDP中可扩展的主动推理，克服了高维规划的难处理性。这项工作在理论上具有很高的创新性和严谨性，解决了EFE最小化的计算开销和可扩展性瓶颈，对不确定性下的决策制定具有重要的实际影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19049v1",
+        "title": "Beyond Reward Margin: Rethinking and Resolving Likelihood Displacement in Diffusion Models via Video Generation",
+        "summary": "Direct Preference Optimization (DPO) has shown promising results in aligning generative outputs with human preferences by distinguishing between chosen and rejected samples. However, a critical limitation of DPO is likelihood displacement, where the probabilities of chosen samples paradoxically decrease during training, undermining the quality of generation. Although this issue has been investigated in autoregressive models, its impact within diffusion-based models remains largely unexplored. This gap leads to suboptimal performance in tasks involving video generation. To address this, we conduct a formal analysis of DPO loss through updating policy within the diffusion framework, which describes how the updating of specific training samples influences the model's predictions on other samples. Using this tool, we identify two main failure modes: (1) Optimization Conflict, which arises from small reward margins between chosen and rejected samples, and (2) Suboptimal Maximization, caused by large reward margins. Informed by these insights, we introduce a novel solution named Policy-Guided DPO (PG-DPO), combining Adaptive Rejection Scaling (ARS) and Implicit Preference Regularization (IPR) to effectively mitigate likelihood displacement. Experiments show that PG-DPO outperforms existing methods in both quantitative metrics and qualitative evaluations, offering a robust solution for improving preference alignment in video generation tasks.",
+        "authors": "Ruojun Xu, Yu Kai, Xuhua Ren, Jiaxiang Cheng, Bing Ma, Tianxiang Zheng, Qinhlin Lu",
+        "url": "http://arxiv.org/abs/2511.19049v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19049v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文正式分析了DPO在扩散模型中的“似然位移”问题，并提出了PG-DPO，一个结合自适应拒绝缩放（ARS）和隐式偏好正则化（IPR）的新颖解决方案。PG-DPO有效缓解了似然位移，显著增强了视频生成中的语义对齐、感知保真度和收敛速度，具有很高的理论深度和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19379v1",
+        "title": "Efficiency vs. Fidelity: A Comparative Analysis of Diffusion Probabilistic Models and Flow Matching on Low-Resource Hardware",
+        "summary": "Denoising Diffusion Probabilistic Models (DDPMs) have established a new state-of-the-art in generative image synthesis, yet their deployment is hindered by significant computational overhead during inference, often requiring up to 1,000 iterative steps. This study presents a rigorous comparative analysis of DDPMs against the emerging Flow Matching (Rectified Flow) paradigm, specifically isolating their geometric and efficiency properties on low-resource hardware. By implementing both frameworks on a shared Time-Conditioned U-Net backbone using the MNIST dataset, we demonstrate that Flow Matching significantly outperforms Diffusion in efficiency. Our geometric analysis reveals that Flow Matching learns a highly rectified transport path (Curvature $\\mathcal{C} \\approx 1.02$), which is near-optimal, whereas Diffusion trajectories remain stochastic and tortuous ($\\mathcal{C} \\approx 3.45$). Furthermore, we establish an ``efficiency frontier'' at $N=10$ function evaluations, where Flow Matching retains high fidelity while Diffusion collapses. Finally, we show via numerical sensitivity analysis that the learned vector field is sufficiently linear to render high-order ODE solvers (Runge-Kutta 4) unnecessary, validating the use of lightweight Euler solvers for edge deployment. \\textbf{This work concludes that Flow Matching is the superior algorithmic choice for real-time, resource-constrained generative tasks.}",
+        "authors": "Srishti Gupta, Yashasvee Taiwade",
+        "url": "http://arxiv.org/abs/2511.19379v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19379v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "本研究对DDPMs和Flow Matching（Rectified Flow）进行了严格的比较分析，特别关注了几何和效率特性。通过几何分析（传输路径曲率）揭示了Flow Matching在效率上的显著优势，并建立了“效率前沿”。该研究在理论上非常严谨，为低资源硬件上的实时、资源受限生成任务提供了明确的算法选择指导，解决了部署中的计算开销瓶颈，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19256v1",
+        "title": "SimDiff: Simpler Yet Better Diffusion Model for Time Series Point Forecasting",
+        "summary": "Diffusion models have recently shown promise in time series forecasting, particularly for probabilistic predictions. However, they often fail to achieve state-of-the-art point estimation performance compared to regression-based methods. This limitation stems from difficulties in providing sufficient contextual bias to track distribution shifts and in balancing output diversity with the stability and precision required for point forecasts. Existing diffusion-based approaches mainly focus on full-distribution modeling under probabilistic frameworks, often with likelihood maximization objectives, while paying little attention to dedicated strategies for high-accuracy point estimation. Moreover, other existing point prediction diffusion methods frequently rely on pre-trained or jointly trained mature models for contextual bias, sacrificing the generative flexibility of diffusion models.   To address these challenges, we propose SimDiff, a single-stage, end-to-end framework. SimDiff employs a single unified Transformer network carefully tailored to serve as both denoiser and predictor, eliminating the need for external pre-trained or jointly trained regressors. It achieves state-of-the-art point estimation performance by leveraging intrinsic output diversity and improving mean squared error accuracy through multiple inference ensembling. Key innovations, including normalization independence and the median-of-means estimator, further enhance adaptability and stability. Extensive experiments demonstrate that SimDiff significantly outperforms existing methods in time series point forecasting.",
+        "authors": "Hang Ding, Xue Wang, Tian Zhou, Tao Yao",
+        "url": "http://arxiv.org/abs/2511.19256v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19256v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本研究提出了SimDiff，一个端到端的单一阶段框架，用于时间序列点预测。SimDiff利用统一的Transformer网络作为去噪器和预测器，并通过输出多样性和多重推理集成提高了均方误差精度。其关键创新（如归一化独立性和均值中位数估计器）增强了适应性和稳定性。SimDiff解决了扩散模型在点预测方面的局限性，在实践中显著超越了现有方法，具有很高的创新性和影响力。"
+    }
+]

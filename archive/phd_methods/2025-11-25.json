@@ -1,0 +1,152 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2511.20639v1",
+        "title": "Latent Collaboration in Multi-Agent Systems",
+        "summary": "Multi-agent systems (MAS) extend large language models (LLMs) from independent single-model reasoning to coordinative system-level intelligence. While existing LLM agents depend on text-based mediation for reasoning and communication, we take a step forward by enabling models to collaborate directly within the continuous latent space. We introduce LatentMAS, an end-to-end training-free framework that enables pure latent collaboration among LLM agents. In LatentMAS, each agent first performs auto-regressive latent thoughts generation through last-layer hidden embeddings. A shared latent working memory then preserves and transfers each agent's internal representations, ensuring lossless information exchange. We provide theoretical analyses establishing that LatentMAS attains higher expressiveness and lossless information preservation with substantially lower complexity than vanilla text-based MAS. In addition, empirical evaluations across 9 comprehensive benchmarks spanning math and science reasoning, commonsense understanding, and code generation show that LatentMAS consistently outperforms strong single-model and text-based MAS baselines, achieving up to 14.6% higher accuracy, reducing output token usage by 70.8%-83.7%, and providing 4x-4.3x faster end-to-end inference. These results demonstrate that our new latent collaboration framework enhances system-level reasoning quality while offering substantial efficiency gains without any additional training. Code and data are fully open-sourced at https://github.com/Gen-Verse/LatentMAS.",
+        "authors": "Jiaru Zou, Xiyuan Yang, Ruizhong Qiu, Gaotang Li, Katherine Tieu, Pan Lu, Ke Shen, Hanghang Tong, Yejin Choi, Jingrui He, James Zou, Mengdi Wang, Ling Yang",
+        "url": "http://arxiv.org/abs/2511.20639v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20639v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种新颖的纯隐空间多智能体协作框架 LatentMAS，超越了传统的文本媒介。论文提供了扎实的理论分析，证明了其更高的表达能力、无损信息保留和更低的复杂度。在实际应用中，它显著减少了token使用并提升了推理速度，完美契合了对“前沿算法和架构”、“理论创新性”和“解决实际应用瓶颈”（如数据效率、LLM应用）的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20626v1",
+        "title": "ROOT: Robust Orthogonalized Optimizer for Neural Network Training",
+        "summary": "The optimization of large language models (LLMs) remains a critical challenge, particularly as model scaling exacerbates sensitivity to algorithmic imprecision and training instability. Recent advances in optimizers have improved convergence efficiency through momentum orthogonalization, but suffer from two key robustness limitations: dimensional fragility in orthogonalization precision and vulnerability to outlier-induced noise. To address these robustness challenges, we introduce ROOT, a Robust Orthogonalized Optimizer that enhances training stability through dual robustness mechanisms. First, we develop a dimension-robust orthogonalization scheme using adaptive Newton iterations with fine-grained coefficients tailored to specific matrix sizes, ensuring consistent precision across diverse architectural configurations. Second, we introduce an optimization-robust framework via proximal optimization that suppresses outlier noise while preserving meaningful gradient directions. Extensive experiments demonstrate that ROOT achieves significantly improved robustness, with faster convergence and superior final performance compared to both Muon and Adam-based optimizers, particularly in noisy and non-convex scenarios. Our work establishes a new paradigm for developing robust and precise optimizers capable of handling the complexities of modern large-scale model training. The code will be available at https://github.com/huawei-noah/noah-research/tree/master/ROOT.",
+        "authors": "Wei He, Kai Han, Hang Zhou, Hanting Chen, Zhicheng Liu, Xinghao Chen, Yunhe Wang",
+        "url": "http://arxiv.org/abs/2511.20626v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20626v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对大型语言模型优化器训练不稳定和对精度敏感的痛点，提出了 ROOT 优化器。该方法通过维度鲁棒正交化方案和近端优化框架解决了鲁棒性问题。论文具有严格的理论分析和收敛性证明，并在实践中显著提高了收敛速度和最终性能，非常符合对“理论创新性”和“解决实际应用瓶颈”的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20609v1",
+        "title": "Adaptive Hopfield Network: Rethinking Similarities in Associative Memory",
+        "summary": "Associative memory models are content-addressable memory systems fundamental to biological intelligence and are notable for their high interpretability. However, existing models evaluate the quality of retrieval based on proximity, which cannot guarantee that the retrieved pattern has the strongest association with the query, failing correctness. We reframe this problem by proposing that a query is a generative variant of a stored memory pattern, and define a variant distribution to model this subtle context-dependent generative process. Consequently, correct retrieval should return the memory pattern with the maximum a posteriori probability of being the query's origin. This perspective reveals that an ideal similarity measure should approximate the likelihood of each stored pattern generating the query in accordance with variant distribution, which is impossible for fixed and pre-defined similarities used by existing associative memories. To this end, we develop adaptive similarity, a novel mechanism that learns to approximate this insightful but unknown likelihood from samples drawn from context, aiming for correct retrieval. We theoretically prove that our proposed adaptive similarity achieves optimal correct retrieval under three canonical and widely applicable types of variants: noisy, masked, and biased. We integrate this mechanism into a novel adaptive Hopfield network (A-Hop), and empirical results show that it achieves state-of-the-art performance across diverse tasks, including memory retrieval, tabular classification, image classification, and multiple instance learning.",
+        "authors": "Shurong Wang, Yuqi Pan, Zhuoyang Shen, Meng Zhang, Hongwei Wang, Guoqi Li",
+        "url": "http://arxiv.org/abs/2511.20609v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20609v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究重新定义了联想记忆中的相似性度量，将其从简单的接近度转变为最大后验概率问题。论文提出了自适应相似性机制，并从理论上证明了其在多种变体下的最优检索能力，然后集成到新型自适应 Hopfield 网络中。该工作在理论和实践上都展现出高度创新性和严谨性，并在多任务上达到 SOTA。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20422v1",
+        "title": "VibraVerse: A Large-Scale Geometry-Acoustics Alignment Dataset for Physically-Consistent Multimodal Learning",
+        "summary": "Understanding the physical world requires perceptual models grounded in physical laws rather than mere statistical correlations. However, existing multimodal learning frameworks, focused on vision and language, lack physical consistency and overlook the intrinsic causal relationships among an object's geometry, material, vibration modes, and the sounds it produces. We introduce VibraVerse, a large-scale geometry-acoustics alignment dataset that explicitly bridges the causal chain from 3D geometry -> physical attributes -> modal parameters -> acoustic signals. Each 3D model has explicit physical properties (density, Young's modulus, Poisson's ratio) and volumetric geometry, from which modal eigenfrequencies and eigenvectors are computed for impact sound synthesis under controlled excitations. To establish this coherence, we introduce CLASP, a contrastive learning framework for cross-modal alignment that preserves the causal correspondence between an object's physical structure and its acoustic response. This framework enforces physically consistent alignment across modalities, ensuring that every sample is coherent, traceable to the governing equations, and embedded within a unified representation space spanning shape, image, and sound. Built upon VibraVerse, we define a suite of benchmark tasks for geometry-to-sound prediction, sound-guided shape reconstruction, and cross-modal representation learning. Extensive validations on these tasks demonstrate that models trained on VibraVerse exhibit superior accuracy, interpretability, and generalization across modalities. These results establish VibraVerse as a benchmark for physically consistent and causally interpretable multimodal learning, providing a foundation for sound-guided embodied perception and a deeper understanding of the physical world. The dataset will be open-sourced.",
+        "authors": "Bo Pang, Chenxi Xu, Jierui Ren, Guoping Wang, Sheng Li",
+        "url": "http://arxiv.org/abs/2511.20422v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20422v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "构建了首个大规模几何-声学对齐数据集 VibraVerse，明确地连接了 3D 几何、物理属性和声学信号之间的因果链。提出了 CLASP 对比学习框架以强制物理一致性对齐，为具身感知和物理世界理解奠定了基础。其深厚的物理学理论基础和多模态学习应用潜力，完美契合博士生对前沿算法、理论创新和实际应用的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20347v1",
+        "title": "Soft Adaptive Policy Optimization",
+        "summary": "Reinforcement learning (RL) plays an increasingly important role in enhancing the reasoning capabilities of large language models (LLMs), yet stable and performant policy optimization remains challenging. Token-level importance ratios often exhibit high variance-a phenomenon exacerbated in Mixture-of-Experts models-leading to unstable updates. Existing group-based policy optimization methods, such as GSPO and GRPO, alleviate this problem via hard clipping, making it difficult to maintain both stability and effective learning. We propose Soft Adaptive Policy Optimization (SAPO), which replaces hard clipping with a smooth, temperature-controlled gate that adaptively attenuates off-policy updates while preserving useful learning signals. Compared with GSPO and GRPO, SAPO is both sequence-coherent and token-adaptive. Like GSPO, SAPO maintains sequence-level coherence, but its soft gating forms a continuous trust region that avoids the brittle hard clipping band used in GSPO. When a sequence contains a few highly off-policy tokens, GSPO suppresses all gradients for that sequence, whereas SAPO selectively down-weights only the offending tokens and preserves the learning signal from the near-on-policy ones, improving sample efficiency. Relative to GRPO, SAPO replaces hard token-level clipping with smooth, temperature-controlled scaling, enabling more informative and stable updates. Empirical results on mathematical reasoning benchmarks indicate that SAPO exhibits improved training stability and higher Pass@1 performance under comparable training budgets. Moreover, we employ SAPO to train the Qwen3-VL model series, demonstrating that SAPO yields consistent performance gains across diverse tasks and different model sizes. Overall, SAPO provides a more reliable, scalable, and effective optimization strategy for RL training of LLMs.",
+        "authors": "Chang Gao, Chujie Zheng, Xiong-Hui Chen, Kai Dang, Shixuan Liu, Bowen Yu, An Yang, Shuai Bai, Jingren Zhou, Junyang Lin",
+        "url": "http://arxiv.org/abs/2511.20347v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20347v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了 SAPO 框架，通过引入平滑、温度控制的门控机制，解决了强化学习在 LLM 策略优化中高方差和不稳定的问题。该方法在理论上具有序列一致性和token自适应性，并在数学推理和 Qwen3-VL 模型上展现了显著的训练稳定性与性能提升，对强化学习在LLM中的应用有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20319v1",
+        "title": "IrisNet: Infrared Image Status Awareness Meta Decoder for Infrared Small Targets Detection",
+        "summary": "Infrared Small Target Detection (IRSTD) faces significant challenges due to low signal-to-noise ratios, complex backgrounds, and the absence of discernible target features. While deep learning-based encoder-decoder frameworks have advanced the field, their static pattern learning suffers from pattern drift across diverse scenarios (\\emph{e.g.}, day/night variations, sky/maritime/ground domains), limiting robustness. To address this, we propose IrisNet, a novel meta-learned framework that dynamically adapts detection strategies to the input infrared image status. Our approach establishes a dynamic mapping between infrared image features and entire decoder parameters via an image-to-decoder transformer. More concretely, we represent the parameterized decoder as a structured 2D tensor preserving hierarchical layer correlations and enable the transformer to model inter-layer dependencies through self-attention while generating adaptive decoding patterns via cross-attention. To further enhance the perception ability of infrared images, we integrate high-frequency components to supplement target-position and scene-edge information. Experiments on NUDT-SIRST, NUAA-SIRST, and IRSTD-1K datasets demonstrate the superiority of our IrisNet, achieving state-of-the-art performance.",
+        "authors": "Xuelin Qian, Jiaming Lu, Zixuan Wang, Wenxuan Wang, Zhongling Huang, Dingwen Zhang, Junwei Han",
+        "url": "http://arxiv.org/abs/2511.20319v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20319v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了自动驾驶端到端模型中“世界模型”乐观偏差的根本缺陷，提出了公正世界模型和反事实合成数据管道。该框架通过封闭循环强化学习进行策略优化，显著降低了模拟中的安全违规，是理论创新与实际安全应用结合的典范，对于自动驾驶这一重要应用领域具有突破性贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20277v1",
+        "title": "HVAdam: A Full-Dimension Adaptive Optimizer",
+        "summary": "Adaptive optimizers such as Adam have achieved great success in training large-scale models like large language models and diffusion models. However, they often generalize worse than non-adaptive methods, such as SGD on classical architectures like CNNs. We identify a key cause of this performance gap: adaptivity in pre-conditioners, which limits the optimizer's ability to adapt to diverse optimization landscapes. To address this, we propose Anon (Adaptivity Non-restricted Optimizer with Novel convergence technique), a novel optimizer with continuously tunable adaptivity   , allowing it to interpolate between SGD-like and Adam-like behaviors and even extrapolate beyond both. To ensure convergence across the entire adaptivity spectrum, we introduce incremental delay update (IDU), a novel mechanism that is more flexible than AMSGrad's hard max-tracking strategy and enhances robustness to gradient noise. We theoretically establish convergence guarantees under both convex and non-convex settings. Empirically, Anon consistently outperforms state-of-the-art optimizers on representative image classification, diffusion, and language modeling tasks. These results demonstrate that adaptivity can serve as a valuable tunable design principle, and Anon provides the first unified and reliable framework capable of bridging the gap between classical and modern optimizers and surpassing their advantageous properties.",
+        "authors": "Yiheng Zhang, Shaowu Wu, Yuanzhuo Xu, Jiajun Wu, Shang Xu, Steve Drew, Xiaoguang Niu",
+        "url": "http://arxiv.org/abs/2511.20277v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20277v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种全维度自适应优化器 Anon，通过连续可调的自适应性解决了预处理器中的自适应性瓶颈。该论文引入了增量延迟更新机制，并从理论上保证了凸和非凸设置下的收敛性。该优化器在多种任务上均超越现有SOTA，对优化算法的理论和实践都具有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20222v1",
+        "title": "Decoupling and Damping: Structurally-Regularized Gradient Matching for Multimodal Graph Condensation",
+        "summary": "In critical web applications such as e-commerce and recommendation systems, multimodal graphs integrating rich visual and textual attributes are increasingly central, yet their large scale introduces substantial computational burdens for training Graph Neural Networks (GNNs). While Graph Condensation (GC) offers a promising solution by synthesizing smaller datasets, existing methods falter in the multimodal setting. We identify a dual challenge causing this failure: (1) conflicting gradients arising from semantic misalignments between modalities, and (2) the GNN's message-passing architecture pathologically amplifying this gradient noise across the graph structure. To address this, we propose Structurally-Regularized Gradient Matching (SR-GM), a novel condensation framework tailored for multimodal graphs. SR-GM introduces two synergistic components: first, a gradient decoupling mechanism that resolves inter-modality conflicts at their source via orthogonal projection; and second, a structural damping regularizer that acts directly on the gradient field. By leveraging the graph's Dirichlet energy, this regularizer transforms the topology from a noise amplifier into a stabilizing force during optimization. Extensive experiments demonstrate that SR-GM significantly improves accuracy and accelerates convergence compared to baseline methods. Ablation studies confirm that addressing both gradient conflict and structural amplification in tandem is essential for achieving superior performance. Moreover, the condensed multimodal graphs exhibit strong cross-architecture generalization and promise to accelerate applications like Neural Architecture Search. This research provides a scalable methodology for multimodal graph-based learning in resource-constrained environments.",
+        "authors": "Lian Shen, Zhendan Chen, Yinhui jiang, Meijia Song, Ziming Su, Juan Liu, Xiangrong Liu",
+        "url": "http://arxiv.org/abs/2511.20222v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20222v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对多模态图凝聚在处理语义不一致和 GNN 梯度噪声放大问题上的不足，提出了结构正则化梯度匹配 (SR-GM) 框架。通过梯度解耦和结构阻尼正则化器，有效地解决了这些挑战。该论文在理论上利用图的 Dirichlet 能量，在实践中显著提高了准确性和收敛速度，对大规模图数据处理有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20621v1",
+        "title": "DiFR: Inference Verification Despite Nondeterminism",
+        "summary": "As demand for LLM inference grows, it is becoming increasingly important that providers and their customers can verify that inference processes are performed correctly, without errors or tampering. However, re-running the same inference process twice often leads to different results due to benign numerical noise, making it difficult to distinguish legitimate variation from actual problems. To address this problem, we introduce Token-DiFR (Token-Divergence-From-Reference), a method for verifying inference outputs by comparing generated tokens against predictions made by a trusted reference implementation conditioned on the same random seed. Sampling seed synchronization tightly constrains valid outputs, leaving providers minimal room to deviate from correct inference, which allows output tokens themselves to serve as auditable evidence of correctness at zero additional cost to the provider. Token-DiFR reliably identifies sampling errors, simulated bugs, and model quantization, detecting 4-bit quantization with AUC $>$ 0.999 within 300 output tokens. For applications requiring sample-efficient forward-pass verification, we additionally introduce Activation-DiFR, a scheme that uses random orthogonal projections to compress activations into compact fingerprints for subsequent verification. Activation-DiFR detects 4-bit quantization with AUC $>$ 0.999 using just 2 output tokens, while reducing communication overhead by 25-75% relative to existing methods. We release an open-source integration with vLLM to accelerate practical deployment of verifiable inference.",
+        "authors": "Adam Karvonen, Daniel Reuter, Roy Rinberg, Luke Marks, Adrià Garriga-Alonso, Keri Warr",
+        "url": "http://arxiv.org/abs/2511.20621v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20621v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了 LLM 推理过程中由于非确定性导致的验证难题。提出了 Token-DiFR 和 Activation-DiFR，通过采样种子同步和随机正交投影等方法，实现高效、可靠的推理正确性验证。该方法具有理论严谨性，能有效检测模型量化和采样错误，并在实际部署中提供显著效率增益，是解决 LLM 应用瓶颈的关键，尤其对计算效率和模型验证有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20471v1",
+        "title": "Universe of Thoughts: Enabling Creative Reasoning with Large Language Models",
+        "summary": "Reasoning based on Large Language Models (LLMs) has garnered increasing attention due to outstanding performance of these models in mathematical and complex logical tasks. Beginning with the Chain-of-Thought (CoT) prompting technique, numerous reasoning methods have emerged that decompose problems into smaller, sequential steps (or thoughts). However, existing reasoning models focus on conventional problem-solving and do not necessarily generate creative solutions by ``creative reasoning''. In domains where the solution space is expansive and conventional solutions are suboptimal, such as drug discovery or business strategization, creative reasoning to discover innovative solutions is crucial. To address this gap, first we introduce a computational framework for creative reasoning inspired by established cognitive science principles. With this framework, we propose three core creative reasoning paradigms, namely, \\textit{combinational}, \\textit{exploratory}, and \\textit{transformative} reasoning, where each offers specific directions for systematic exploration of the universe of thoughts to generate creative solutions. Next, to materialize this framework using LLMs, we introduce the \\textit{Universe of Thoughts} (or \\textit{UoT}, for short), a novel set of methods to implement the aforementioned three creative processes. Finally, we introduce three novel tasks that necessitate creative problem-solving, along with an evaluation benchmark to assess creativity from three orthogonal perspectives: feasibility as constraint, and utility and novelty as metrics. With a comparative analysis against the state-of-the-art (SOTA) reasoning techniques as well as representative commercial models with reasoning capability, we show that UoT demonstrates superior performance in creative reasoning.",
+        "authors": "Yuto Suzuki, Farnoush Banaei-Kashani",
+        "url": "http://arxiv.org/abs/2511.20471v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20471v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了基于认知科学原理的计算框架和“思想宇宙”（UoT）方法，旨在使大型语言模型进行创造性推理。该论文定义了组合、探索和转化三种创造性推理范式，并通过新任务和基准展示了其在药物发现、商业策略等领域超越现有SOTA方法的潜力，强调了理论创新和解决复杂应用瓶颈的能力。"
+    }
+]

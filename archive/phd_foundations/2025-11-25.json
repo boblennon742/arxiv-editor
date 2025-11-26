@@ -1,1 +1,227 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.20413v1",
+        "title": "PAC-Bayes Meets Online Contextual Optimization",
+        "summary": "The predict-then-optimize paradigm bridges online learning and contextual optimization in dynamic environments. Previous works have investigated the sequential updating of predictors using feedback from downstream decisions to minimize regret in the full-information settings. However, existing approaches are predominantly frequentist, rely heavily on gradient-based strategies, and employ deterministic predictors that could yield high variance in practice despite their asymptotic guarantees. This work introduces, to the best of our knowledge, the first Bayesian online contextual optimization framework. Grounded in PAC-Bayes theory and general Bayesian updating principles, our framework achieves $\\mathcal{O}(\\sqrt{T})$ regret for bounded and mixable losses via a Gibbs posterior, eliminates the dependence on gradients through sequential Monte Carlo samplers, and thereby accommodates nondifferentiable problems. Theoretical developments and numerical experiments substantiate our claims.",
+        "authors": "Zhuojun Xie, Adam Abdin, Yiping Fang",
+        "url": "http://arxiv.org/abs/2511.20413v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20413v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将 PAC-Bayes 理论引入在线上下文优化，提出了首个贝叶斯在线上下文优化框架。它提供了 $\\mathcal{O}(\\sqrt{T})$ 的遗憾界理论保证，并能处理不可微问题，通过序贯蒙特卡洛采样器避免了对梯度的依赖。这与您对统计保证、优化收敛性和严谨数学逻辑的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20315v1",
+        "title": "Geometry of Decision Making in Language Models",
+        "summary": "Large Language Models (LLMs) show strong generalization across diverse tasks, yet the internal decision-making processes behind their predictions remain opaque. In this work, we study the geometry of hidden representations in LLMs through the lens of \\textit{intrinsic dimension} (ID), focusing specifically on decision-making dynamics in a multiple-choice question answering (MCQA) setting. We perform a large-scale study, with 28 open-weight transformer models and estimate ID across layers using multiple estimators, while also quantifying per-layer performance on MCQA tasks. Our findings reveal a consistent ID pattern across models: early layers operate on low-dimensional manifolds, middle layers expand this space, and later layers compress it again, converging to decision-relevant representations. Together, these results suggest LLMs implicitly learn to project linguistic inputs onto structured, low-dimensional manifolds aligned with task-specific decisions, providing new geometric insights into how generalization and reasoning emerge in language models.",
+        "authors": "Abhinav Joshi, Divyanshu Bhatt, Ashutosh Modi",
+        "url": "http://arxiv.org/abs/2511.20315v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20315v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过“内在维度”（Intrinsic Dimension, ID）的视角，深入分析了大型语言模型（LLMs）内部决策过程的几何结构。它揭示了 LLM 隐藏表示在不同层中的维度变化模式，为理解 LLM 的泛化和推理机制提供了新的几何学洞察。这种对模型内部机制的数学分析非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20322v1",
+        "title": "Modified Equations for Stochastic Optimization",
+        "summary": "In this thesis, we extend the recently introduced theory of stochastic modified equations (SMEs) for stochastic gradient optimization algorithms.   In Ch. 3 we study time-inhomogeneous SDEs driven by Brownian motion. For certain SDEs we prove a 1st and 2nd-order weak approximation properties, and we compute their linear error terms explicitly, under certain regularity conditions. In Ch. 4 we instantiate our results for SGD, working out the example of linear regression explicitly. We use this example to compare the linear error terms of gradient flow and two commonly used 1st-order SMEs for SGD in Ch. 5.   In the second part of the thesis we introduce and study a novel diffusion approximation for SGD without replacement (SGDo) in the finite-data setting. In Ch. 6 we motivate and define the notion of an epoched Brownian motion (EBM). We argue that Young differential equations (YDEs) driven by EBMs serve as continuous-time models for SGDo for any shuffling scheme whose induced permutations converge to a det. permuton. Further, we prove a.s. convergence for these YDEs in the strongly convex setting. Moreover, we compute an upper asymptotic bound on the convergence rate which is as sharp as, or better than previous results for SGDo. In Ch. 7 we study scaling limits of families of random walks (RW) that share the same increments up to a random permutation. We show weak convergence under the assumption that the sequence of permutations converges to a det. (higher-dimensional) permuton. This permuton determines the covariance function of the limiting Gaussian process. Conversely, we show that every Gaussian process with a covariance function determined by a permuton in this way arises as a weak scaling limit of families of RW with shared increments. Finally, we apply our weak convergence theory to show that EBMs arise as scaling limits of RW with finitely many distinct increments.",
+        "authors": "Stefan Perko",
+        "url": "http://arxiv.org/abs/2511.20322v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20322v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇博士论文深入探讨了随机梯度优化算法的随机修正方程理论。它研究了布朗运动驱动的时变 SDEs，证明了其一阶和二阶弱近似性质，并显式计算了线性误差项。此外，它还为不带替换的 SGD 引入并研究了一种新的扩散近似，并提供了几乎必然收敛和渐近界限的证明。这是对随机优化算法理论基础的极其严谨和深入的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20207v1",
+        "title": "Adaptive SGD with Line-Search and Polyak Stepsizes: Nonconvex Convergence and Accelerated Rates",
+        "summary": "We extend the convergence analysis of AdaSLS and AdaSPS in [Jiang and Stich, 2024] to the nonconvex setting, presenting a unified convergence analysis of stochastic gradient descent with adaptive Armijo line-search (AdaSLS) and Polyak stepsize (AdaSPS) for nonconvex optimization. Our contributions include: (1) an $\\mathcal{O}(1/\\sqrt{T})$ convergence rate for general nonconvex smooth functions, (2) an $\\mathcal{O}(1/T)$ rate under quasar-convexity and interpolation, and (3) an $\\mathcal{O}(1/T)$ rate under the strong growth condition for general nonconvex functions.",
+        "authors": "Haotian Wu",
+        "url": "http://arxiv.org/abs/2511.20207v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20207v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文扩展了 AdaSLS 和 AdaSPS 在非凸设置下的收敛性分析，为带有 Armijo 线搜索和 Polyak 步长的随机梯度下降提供了统一的收敛性分析。它给出了在一般非凸光滑函数、拟星凸性和插值条件以及强增长条件下的收敛速率，展现了对优化算法收敛性理论的强大贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20168v1",
+        "title": "On the Limits of Momentum in Decentralized and Federated Optimization",
+        "summary": "Recent works have explored the use of momentum in local methods to enhance distributed SGD. This is particularly appealing in Federated Learning (FL), where momentum intuitively appears as a solution to mitigate the effects of statistical heterogeneity. Despite recent progress in this direction, it is still unclear if momentum can guarantee convergence under unbounded heterogeneity in decentralized scenarios, where only some workers participate at each round. In this work we analyze momentum under cyclic client participation, and theoretically prove that it remains inevitably affected by statistical heterogeneity. Similarly to SGD, we prove that decreasing step-sizes do not help either: in fact, any schedule decreasing faster than $Θ\\left(1/t\\right)$ leads to convergence to a constant value that depends on the initialization and the heterogeneity bound. Numerical results corroborate the theory, and deep learning experiments confirm its relevance for realistic settings.",
+        "authors": "Riccardo Zaccone, Sai Praneeth Karimireddy, Carlo Masone",
+        "url": "http://arxiv.org/abs/2511.20168v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20168v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文理论性地分析了动量在去中心化和联邦优化中的局限性。它证明了在循环客户端参与下，动量不可避免地受到统计异质性的影响，并揭示了特定步长调度会导致收敛到依赖于初始化和异质性界限的常数值。这是对分布式优化收敛性理论的严谨分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19937v1",
+        "title": "Adaptivity and Universality: Problem-dependent Universal Regret for Online Convex Optimization",
+        "summary": "Universal online learning aims to achieve optimal regret guarantees without requiring prior knowledge of the curvature of online functions. Existing methods have established minimax-optimal regret bounds for universal online learning, where a single algorithm can simultaneously attain $\\mathcal{O}(\\sqrt{T})$ regret for convex functions, $\\mathcal{O}(d \\log T)$ for exp-concave functions, and $\\mathcal{O}(\\log T)$ for strongly convex functions, where $T$ is the number of rounds and $d$ is the dimension of the feasible domain. However, these methods still lack problem-dependent adaptivity. In particular, no universal method provides regret bounds that scale with the gradient variation $V_T$, a key quantity that plays a crucial role in applications such as stochastic optimization and fast-rate convergence in games. In this work, we introduce UniGrad, a novel approach that achieves both universality and adaptivity, with two distinct realizations: UniGrad.Correct and UniGrad.Bregman. Both methods achieve universal regret guarantees that adapt to gradient variation, simultaneously attaining $\\mathcal{O}(\\log V_T)$ regret for strongly convex functions and $\\mathcal{O}(d \\log V_T)$ regret for exp-concave functions. For convex functions, the regret bounds differ: UniGrad.Correct achieves an $\\mathcal{O}(\\sqrt{V_T \\log V_T})$ bound while preserving the RVU property that is crucial for fast convergence in online games, whereas UniGrad.Bregman achieves the optimal $\\mathcal{O}(\\sqrt{V_T})$ regret bound through a novel design. Both methods employ a meta algorithm with $\\mathcal{O}(\\log T)$ base learners, which naturally requires $\\mathcal{O}(\\log T)$ gradient queries per round. To enhance computational efficiency, we introduce UniGrad++, which retains the regret while reducing the gradient query to just $1$ per round via surrogate optimization. We further provide various implications.",
+        "authors": "Peng Zhao, Yu-Hu Yan, Hang Yu, Zhi-Hua Zhou",
+        "url": "http://arxiv.org/abs/2511.19937v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19937v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 UniGrad，一种在在线凸优化中实现问题依赖的通用遗憾界的新方法。它在不要求先验知识的情况下，同时实现了对凸函数、指数凹函数和强凸函数的通用遗憾界，并能适应梯度变化。这在在线学习和优化理论中具有重要的理论突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20038v1",
+        "title": "Softmax Transformers are Turing-Complete",
+        "summary": "Hard attention Chain-of-Thought (CoT) transformers are known to be Turing-complete. However, it is an open problem whether softmax attention Chain-of-Thought (CoT) transformers are Turing-complete. In this paper, we prove a stronger result that length-generalizable softmax CoT transformers are Turing-complete. More precisely, our Turing-completeness proof goes via the CoT extension of the Counting RASP (C-RASP), which correspond to softmax CoT transformers that admit length generalization. We prove Turing-completeness for CoT C-RASP with causal masking over a unary alphabet (more generally, for letter-bounded languages). While we show this is not Turing-complete for arbitrary languages, we prove that its extension with relative positional encoding is Turing-complete for arbitrary languages. We empirically validate our theory by training transformers for languages requiring complex (non-linear) arithmetic reasoning.",
+        "authors": "Hongjian Jiang, Michael Hahn, Georg Zetzsche, Anthony Widjaja Lin",
+        "url": "http://arxiv.org/abs/2511.20038v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20038v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文证明了 Softmax Transformer 是图灵完备的，这是一个关于 Transformer 计算能力的根本性理论结果。它通过 Chain-of-Thought (CoT) 扩展的 Counting RASP 证明了长度可泛化的 Softmax CoT Transformer 的图灵完备性，对理解 LLM 的理论极限具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19989v1",
+        "title": "On the Square Root of Wishart Matrices: Exact Distributions and Asymptotic Gaussian Behavior",
+        "summary": "Random matrix theory has become a cornerstone in modern statistics and data science, providing fundamental tools for understanding high-dimensional covariance structures. Within this framework, the Wishart matrix plays a central role in multivariate analysis and related applications. This paper investigates both the exact and asymptotic distributions of the square root of a standard Wishart matrix. We first derive the exact distribution of the square root matrix. Then, by leveraging the Bartlett decomposition, we establish the joint asymptotic normality of the upper-triangular entries of the square root matrix. The resulting limiting distribution resembles that of a scaled Gaussian Wigner ensemble. Additionally, we quantify the rate of convergence using the 1-Wasserstein distance. To validate our theoretical findings, we conduct extensive Monte Carlo simulations, which demonstrate rapid convergence even with relatively low degrees of freedom. These results offer refined insights into the asymptotic behavior of random matrix functionals.",
+        "authors": "Fengcheng Liu",
+        "url": "http://arxiv.org/abs/2511.19989v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19989v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文深入研究了 Wishart 矩阵平方根的精确分布和渐近高斯行为。它推导了平方根矩阵的精确分布，并利用 Bartlett 分解建立了平方根矩阵上三角项的联合渐近正态性，量化了 1-Wasserstein 距离的收敛速度。这是纯粹的随机矩阵理论和统计学贡献，具有极高的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19980v1",
+        "title": "Operator Learning at Machine Precision",
+        "summary": "Neural operator learning methods have garnered significant attention in scientific computing for their ability to approximate infinite-dimensional operators. However, increasing their complexity often fails to substantially improve their accuracy, leaving them on par with much simpler approaches such as kernel methods and more traditional reduced-order models. In this article, we set out to address this shortcoming and introduce CHONKNORIS (Cholesky Newton--Kantorovich Neural Operator Residual Iterative System), an operator learning paradigm that can achieve machine precision. CHONKNORIS draws on numerical analysis: many nonlinear forward and inverse PDE problems are solvable by Newton-type methods. Rather than regressing the solution operator itself, our method regresses the Cholesky factors of the elliptic operator associated with Tikhonov-regularized Newton--Kantorovich updates. The resulting unrolled iteration yields a neural architecture whose machine-precision behavior follows from achieving a contractive map, requiring far lower accuracy than end-to-end approximation of the solution operator. We benchmark CHONKNORIS on a range of nonlinear forward and inverse problems, including a nonlinear elliptic equation, Burgers' equation, a nonlinear Darcy flow problem, the Calderón problem, an inverse wave scattering problem, and a problem from seismic imaging. We also present theoretical guarantees for the convergence of CHONKNORIS in terms of the accuracy of the emulated Cholesky factors. Additionally, we introduce a foundation model variant, FONKNORIS (Foundation Newton--Kantorovich Neural Operator Residual Iterative System), which aggregates multiple pre-trained CHONKNORIS experts for diverse PDEs to emulate the solution map of a novel nonlinear PDE. Our FONKNORIS model is able to accurately solve unseen nonlinear PDEs such as the Klein--Gordon and Sine--Gordon equations.",
+        "authors": "Aras Bacho, Aleksei G. Sorokin, Xianjin Yang, Théo Bourdais, Edoardo Calvello, Matthieu Darcy, Alexander Hsu, Bamdad Hosseini, Houman Owhadi",
+        "url": "http://arxiv.org/abs/2511.19980v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19980v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 CHONKNORIS 框架，旨在实现机器学习精度下的算子学习。它借鉴数值分析方法，通过回归 Tikhonov 正则化 Newton-Kantorovich 更新相关的椭圆算子的 Cholesky 因子，提供了算子学习收敛的理论保证。这结合了数值分析和深度学习的严谨理论。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20594v1",
+        "title": "Variational bagging: a robust approach for Bayesian uncertainty quantification",
+        "summary": "Variational Bayes methods are popular due to their computational efficiency and adaptability to diverse applications. In specifying the variational family, mean-field classes are commonly used, which enables efficient algorithms such as coordinate ascent variational inference (CAVI) but fails to capture parameter dependence and typically underestimates uncertainty. In this work, we introduce a variational bagging approach that integrates a bagging procedure with variational Bayes, resulting in a bagged variational posterior for improved inference. We establish strong theoretical guarantees, including posterior contraction rates for general models and a Bernstein-von Mises (BVM) type theorem that ensures valid uncertainty quantification. Notably, our results show that even when using a mean-field variational family, our approach can recover off-diagonal elements of the limiting covariance structure and provide proper uncertainty quantification. In addition, variational bagging is robust to model misspecification, with covariance structures matching those of the target covariance. We illustrate our variational bagging method in numerical studies through applications to parametric models, finite mixture models, deep neural networks, and variational autoencoders (VAEs).",
+        "authors": "Shitao Fan, Ilsang Ohn, David Dunson, Lizhen Lin",
+        "url": "http://arxiv.org/abs/2511.20594v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20594v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了变分 bagging 方法，用于改进贝叶斯不确定性量化。它建立了强大的理论保证，包括一般模型的后验收缩率和 Bernstein-von Mises (BVM) 型定理，确保了有效的不确定性量化，即使在使用平均场变分族时也能恢复协方差结构。这是贝叶斯统计学和不确定性量化领域的重大理论进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20406v1",
+        "title": "Short-Range Oversquashing",
+        "summary": "Message Passing Neural Networks (MPNNs) are widely used for learning on graphs, but their ability to process long-range information is limited by the phenomenon of oversquashing. This limitation has led some researchers to advocate Graph Transformers as a better alternative, whereas others suggest that it can be mitigated within the MPNN framework, using virtual nodes or other rewiring techniques.   In this work, we demonstrate that oversquashing is not limited to long-range tasks, but can also arise in short-range problems. This observation allows us to disentangle two distinct mechanisms underlying oversquashing: (1) the bottleneck phenomenon, which can arise even in low-range settings, and (2) the vanishing gradient phenomenon, which is closely associated with long-range tasks.   We further show that the short-range bottleneck effect is not captured by existing explanations for oversquashing, and that adding virtual nodes does not resolve it. In contrast, transformers do succeed in such tasks, positioning them as the more compelling solution to oversquashing, compared to specialized MPNNs.",
+        "authors": "Yaaqov Mishayev, Yonatan Sverdlov, Tal Amir, Nadav Dym",
+        "url": "http://arxiv.org/abs/2511.20406v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20406v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究揭示了消息传递神经网络（MPNNs）中过压缩现象不仅限于长距离任务，也存在于短距离问题中。它将过压缩分解为瓶颈现象和梯度消失现象，并提供了理论分析，表明现有解释和虚拟节点无法解决短距离瓶颈效应。这是对图神经网络理论局限性的深刻理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20558v1",
+        "title": "Spatio-Temporal Hierarchical Causal Models",
+        "summary": "The abundance of fine-grained spatio-temporal data, such as traffic sensor networks, offers vast opportunities for scientific discovery. However, inferring causal relationships from such observational data remains challenging, particularly due to unobserved confounders that are specific to units (e.g., geographical locations) yet influence outcomes over time. Most existing methods for spatio-temporal causal inference assume that all confounders are observed, an assumption that is often violated in practice. In this paper, we introduce Spatio-Temporal Hierarchical Causal Models (ST-HCMs), a novel graphical framework that extends hierarchical causal modeling to the spatio-temporal domain. At the core of our approach is the Spatio-Temporal Collapse Theorem, which shows that a complex ST-HCM converges to a simpler flat causal model as the amount of subunit data increases. This theoretical result enables a general procedure for causal identification, allowing ST-HCMs to recover causal effects even in the presence of unobserved, time-invariant unit-level confounders, a scenario where standard non-hierarchical models fail. We validate the effectiveness of our framework on both synthetic and real-world datasets, demonstrating its potential for robust causal inference in complex dynamic systems.",
+        "authors": "Xintong Li, Haoran Zhang, Xiao Zhou",
+        "url": "http://arxiv.org/abs/2511.20558v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20558v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了时空分层因果模型（ST-HCMs），一个用于时空因果推断的新型图形框架。其核心是时空塌缩定理，证明了复杂 ST-HCM 在数据量增加时会收敛到更简单的因果模型，从而在存在未观测到的时不变单元级混杂因素的情况下也能识别因果效应。这在因果推断领域具有重要的理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20407v1",
+        "title": "Tight Margin-Based Generalization Bounds for Voting Classifiers over Finite Hypothesis Sets",
+        "summary": "We prove the first margin-based generalization bound for voting classifiers, that is asymptotically tight in the tradeoff between the size of the hypothesis set, the margin, the fraction of training points with the given margin, the number of training samples and the failure probability.",
+        "authors": "Kasper Green Larsen, Natascha Schalburg",
+        "url": "http://arxiv.org/abs/2511.20407v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20407v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为投票分类器在有限假设集上证明了首个基于裕度的泛化界，该界在假设集大小、裕度、训练点比例、训练样本数量和失败概率之间实现了渐近紧密（asymptotically tight）的权衡。这是对机器学习泛化理论的直接和严谨的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20397v1",
+        "title": "Model-Based Learning of Whittle indices",
+        "summary": "We present BLINQ, a new model-based algorithm that learns the Whittle indices of an indexable, communicating and unichain Markov Decision Process (MDP). Our approach relies on building an empirical estimate of the MDP and then computing its Whittle indices using an extended version of a state-of-the-art existing algorithm. We provide a proof of convergence to the Whittle indices we want to learn as well as a bound on the time needed to learn them with arbitrary precision. Moreover, we investigate its computational complexity. Our numerical experiments suggest that BLINQ significantly outperforms existing Q-learning approaches in terms of the number of samples needed to get an accurate approximation. In addition, it has a total computational cost even lower than Q-learning for any reasonably high number of samples. These observations persist even when the Q-learning algorithms are speeded up using pre-trained neural networks to predict Q-values.",
+        "authors": "Joël Charles-Rebuffé, Nicolas Gast, Bruno Gaujal",
+        "url": "http://arxiv.org/abs/2511.20397v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20397v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 BLINQ，一种新的基于模型的算法，用于学习可索引、通信和单链马尔可夫决策过程（MDP）的 Whittle 指数。它提供了收敛到 Whittle 指数的证明，以及在任意精度下学习所需时间的界限，并分析了计算复杂度。这是强化学习理论中关于 Whittle 指数学习的严谨工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.19937v1",
+        "title": "Adaptivity and Universality: Problem-dependent Universal Regret for Online Convex Optimization",
+        "summary": "Universal online learning aims to achieve optimal regret guarantees without requiring prior knowledge of the curvature of online functions. Existing methods have established minimax-optimal regret bounds for universal online learning, where a single algorithm can simultaneously attain $\\mathcal{O}(\\sqrt{T})$ regret for convex functions, $\\mathcal{O}(d \\log T)$ for exp-concave functions, and $\\mathcal{O}(\\log T)$ for strongly convex functions, where $T$ is the number of rounds and $d$ is the dimension of the feasible domain. However, these methods still lack problem-dependent adaptivity. In particular, no universal method provides regret bounds that scale with the gradient variation $V_T$, a key quantity that plays a crucial role in applications such as stochastic optimization and fast-rate convergence in games. In this work, we introduce UniGrad, a novel approach that achieves both universality and adaptivity, with two distinct realizations: UniGrad.Correct and UniGrad.Bregman. Both methods achieve universal regret guarantees that adapt to gradient variation, simultaneously attaining $\\mathcal{O}(\\log V_T)$ regret for strongly convex functions and $\\mathcal{O}(d \\log V_T)$ regret for exp-concave functions. For convex functions, the regret bounds differ: UniGrad.Correct achieves an $\\mathcal{O}(\\sqrt{V_T \\log V_T})$ bound while preserving the RVU property that is crucial for fast convergence in online games, whereas UniGrad.Bregman achieves the optimal $\\mathcal{O}(\\sqrt{V_T})$ regret bound through a novel design. Both methods employ a meta algorithm with $\\mathcal{O}(\\log T)$ base learners, which naturally requires $\\mathcal{O}(\\log T)$ gradient queries per round. To enhance computational efficiency, we introduce UniGrad++, which retains the regret while reducing the gradient query to just $1$ per round via surrogate optimization. We further provide various implications.",
+        "authors": "Peng Zhao, Yu-Hu Yan, Hang Yu, Zhi-Hua Zhou",
+        "url": "http://arxiv.org/abs/2511.19937v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.19937v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过形式化证明解释了强化学习微调中“多样性崩溃”的现象，并提出了“差分平滑”这一原则性方法，可同时提升正确性和多样性。理论上，它精确地描述了现有启发式方法的有效性和失败原因，并证明了差分平滑的普遍优越性。这是对 LLM 强化学习行为的深刻理论分析和改进。"
+    }
+]

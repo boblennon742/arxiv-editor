@@ -26,7 +26,7 @@ ARCHIVE_DIR = "archive"
 ARXIV_CATEGORIES = ['stat.ML', 'cs.LG', 'math.OC', 'cs.NE', 'cs.AI', 'math.NA']
 TUTORIAL_KEYWORDS = ['tutorial', 'survey', '"lecture notes"', 'review', '"book chapter"']
 
-# --- 3. 抓取函数 (保持 V19 标准) ---
+# --- 3. 抓取函数 (V22 - 扩容至 120 篇) ---
 def fetch_weekly_tutorials(target_date):
     logger.info(f"--- 正在为 {target_date} 所在周抓取教程 (非金融) ---")
     
@@ -41,7 +41,7 @@ def fetch_weekly_tutorials(target_date):
     
     search = arxiv.Search(
         query=full_query,
-        max_results=80, #稍微增加一点抓取量以确保有足够的基础内容
+        max_results=120, # (V22) 提升至 120 篇，为选出 10 篇提供足够候选
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
@@ -64,7 +64,7 @@ def fetch_weekly_tutorials(target_date):
         logger.error(f"抓取教程失败: {e}")
         return []
 
-# --- 4. AI 教程总编辑 (V20 - 混合策略 3+3) ---
+# --- 4. AI 教程总编辑 (V22 - 5+5 策略) ---
 def get_ai_tutorial_pick(papers, user_preference_prompt):
     if not papers:
         logger.info("没有论文可供 AI 分析。")
@@ -86,10 +86,10 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
     
     下面是 {len(papers)} 篇教程。
     
-    **任务：请为我精选 Top 10 篇教程，必须严格遵循以下“混合配比”：**
+    **任务：请为我精选 Top 10 篇教程，必须严格遵循以下“5+5 混合配比”：**
     
-    1.  **前沿/深度类 (5 篇):** 针对高维统计、RL、LLM 等领域的最新、最深入的综述。要求理论深度高。
-    2.  **基础/入门类 (5 篇):** 针对某一具体数学概念或算法的“入门教程 (Tutorial)”或“讲义 (Lecture Notes)”。要求逻辑极其清晰，适合夯实基础。
+    1.  **前沿/深度类 (5 篇):** 针对高维统计、RL、LLM 等领域的最新、最深入的综述。要求理论深度高，指引研究方向。
+    2.  **研究生核心基础类 (5 篇):** 针对某一具体数学概念或算法的“入门教程 (Tutorial)”或“讲义 (Lecture Notes)”。要求逻辑极其清晰，适合补全博士数学/CS基础。
     
     **评分标准 (1-5分):**
     - Novelty (创新性)
@@ -97,13 +97,13 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
     - Clarity (清晰度 - 基础类教程此项权重最高)
     - Utility (实用性 - 是否适合学习)
 
-    请返回一个 JSON **列表**。如果找不到足够的，请尽可能多选，但不要凑数。
+    请返回一个 JSON **列表**。如果找不到足够的（例如少于10篇），请尽可能多选，宁缺毋滥，但尽量满足配比。
     
     JSON 格式示例:
     [
       {{
         "id": "论文ID",
-        "type": "基础入门" 或 "前沿深度", 
+        "type": "基础核心" 或 "前沿深度", 
         "scores": {{ "Novelty": 3, "Rigor": 5, "Clarity": 5, "Utility": 5 }},
         "core_value_zh": "一句话核心价值...",
         "reason_zh": "详细推荐理由..."
@@ -118,12 +118,12 @@ def get_ai_tutorial_pick(papers, user_preference_prompt):
 
     for attempt in range(max_retries):
         try:
-            logger.info(f"🚀 请求 AI 教程分析 (混合策略, 第 {attempt + 1}/{max_retries} 次)...")
+            logger.info(f"🚀 请求 AI 教程分析 (5+5 策略, 第 {attempt + 1}/{max_retries} 次)...")
             
             response = client.models.generate_content(
                 model='gemini-2.5-flash',
                 contents=full_prompt,
-                config=types.GenerateContentConfig(temperature=0.4) # 稍微提高温度以增加多样性
+                config=types.GenerateContentConfig(temperature=0.4)
             )
             
             cleaned = response.text.strip()
@@ -162,7 +162,7 @@ if __name__ == "__main__":
     target_date = date.today()
     logger.info(f"--- 教程脚本开始运行，目标周: {target_date.isoformat()} ---")
 
-    # (V21) 偏好升级：将“基础”明确定义为“研究生核心课”
+    # (V22) 偏好升级：5+5 策略
     my_tutorial_preference = """
     我是一名数理统计博士生，我的学习需求分为两类（请各选 5 篇）：
     

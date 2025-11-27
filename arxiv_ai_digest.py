@@ -9,22 +9,22 @@ from google import genai
 from google.genai import types
 from datetime import date, timedelta
 
-# --- 依赖检查 ---
+# --- 0. 依赖检查 ---
 try:
-    import json5
+    import json5 
 except ImportError:
-    print("未找到 json5，回退到标准 json。建议 pip install json5")
     import json as json5
+    logger.warning("未找到 json5 库，正在使用标准 json 库。")
 
-# --- 配置 Logging ---
+# --- 1. 配置 Logging ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# --- 核心配置 ---
+# --- 2. 核心配置 ---
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 ARCHIVE_DIR = "archive"
 
-# 3个超级核心配置
+# 3个超级核心配置 (V19)
 YOUR_DOMAINS_OF_INTEREST = {
     "phd_foundations": {
         "name_zh": "AI 理论与统计基础",
@@ -70,6 +70,9 @@ YOUR_DOMAINS_OF_INTEREST = {
     }
 }
 
+# --------------------------------------------------------------------------
+# 抓取函数 (V20 - 抗限流增强)
+# --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
     
@@ -81,14 +84,21 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     
     search = arxiv.Search(
         query=full_query,
-        max_results=150, # 扩容至 150 篇
+        max_results=120, # 维持 120 篇
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
 
     papers_list = []
     try:
-        client = arxiv.Client()
+        # --- 关键修复：配置 Client 增加延迟和重试 ---
+        client = arxiv.Client(
+            page_size=100,
+            delay_seconds=8.0,  # 关键：每次 API 请求等待 8 秒
+            num_retries=5       # 增加重试次数
+        )
+        # ----------------------------------------------
+        
         for result in client.results(search):
             papers_list.append({
                 'id': result.entry_id,
@@ -104,6 +114,9 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         logger.error(f"抓取 arXiv 失败: {e}")
         return []
 
+# --------------------------------------------------------------------------
+# (V19) AI 分析函数 - 带智能重试机制 (Top 10-15)
+# --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
         logger.info("没有论文可供 AI 分析。")
@@ -113,6 +126,7 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         return None
 
     client = genai.Client()
+    
     prompt_papers = "\n".join(
         [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
          for i, p in enumerate(papers)]
@@ -120,13 +134,16 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
 
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手。
-    我今天的任务是分析 "{domain_name}" 领域。
     我的个人偏好："{user_preference_prompt}"
     
     下面是 {len(papers)} 篇论文。
     你的任务是“批量评分和筛选”：
     
-    1. **海选**：浏览所有论文。
+    1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
+        - Novelty (创新性): 提出新方法或新视角 (1-5分)
+        - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
+        - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
+        - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
     2. **优选 Top 15**：请根据我的偏好，挑选出**总分最高的 10 到 15 篇**论文。
     3. **评分**：为每篇选中的论文打分 (Novelty, Rigor, Impact, Clarity)。
     
@@ -144,6 +161,7 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     
     full_prompt = f"{system_prompt}\n\n--- 论文列表 ---\n{prompt_papers}"
 
+    # --- (V19) 增强的重试逻辑 ---
     max_retries = 5
     base_delay = 10
 
@@ -171,41 +189,49 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
             if match:
                 cleaned = match.group(1)
             
+            # 使用 json5 宽容解析
             ai_picks_list = json5.loads(cleaned)
+            
             logger.info(f"✅ AI 成功选出 {len(ai_picks_list)} 篇今日最佳。")
             return ai_picks_list
 
         except Exception as e:
             logger.warning(f"⚠️ 第 {attempt + 1} 次尝试失败: {e}")
             if attempt < max_retries - 1:
+                # 指数退避
                 wait_time = base_delay * (2 ** attempt) + random.uniform(0, 3)
+                logger.info(f"⏳ 等待 {wait_time:.1f} 秒后重试...")
                 time.sleep(wait_time)
             else:
                 logger.error("❌ 所有重试均失败。")
                 return None
 
+# --------------------------------------------------------------------------
+# 写入 JSON
+# --------------------------------------------------------------------------
 def write_to_json(data_to_save, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data_to_save, f, ensure_ascii=False, indent=4)
             if data_to_save:
-                logger.info(f"成功将 {len(data_to_save)} 篇写入 {file_path}")
+                logger.info(f"成功将 {len(data_to_save)} 篇“精选”写入 {file_path}")
             else:
                 logger.info(f"标记 {file_path} 为“无精选”。")
     except Exception as e:
-        logger.error(f"写入 JSON 失败: {e}")
+        logger.error(f"写入 JSON 文件失败: {e}")
 
+# --------------------------------------------------------------------------
+# 主函数
+# --------------------------------------------------------------------------
 if __name__ == "__main__":
-    # 默认抓取昨天
     target_date = date.today() - timedelta(days=1)
     
-    # 若需测试今天的数据，请取消下行注释
-    # target_date = date.today()
-
-    logger.info(f"--- 脚本开始运行，目标日期: {target_date.isoformat()} ---")
+    logger.info(f"--- 脚本开始运行 (V20 抗限流版)，目标日期: {target_date.isoformat()} ---")
 
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
+        logger.info(f"\n--- 处理领域: {config['name_en']} ---")
+        
         papers = fetch_papers_for_domain(
             domain_name=config["name_en"],
             categories=config["categories"], 

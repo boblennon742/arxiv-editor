@@ -1,1 +1,227 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.21675v1",
+        "title": "On Evolution-Based Models for Experimentation Under Interference",
+        "summary": "Causal effect estimation in networked systems is central to data-driven decision making. In such settings, interventions on one unit can spill over to others, and in complex physical or social systems, the interaction pathways driving these interference structures remain largely unobserved. We argue that for identifying population-level causal effects, it is not necessary to recover the exact network structure; instead, it suffices to characterize how those interactions contribute to the evolution of outcomes. Building on this principle, we study an evolution-based approach that investigates how outcomes change across observation rounds in response to interventions, hence compensating for missing network information. Using an exposure-mapping perspective, we give an axiomatic characterization of when the empirical distribution of outcomes follows a low-dimensional recursive equation, and identify minimal structural conditions under which such evolution mappings exist. We frame this as a distributional counterpart to difference-in-differences. Rather than assuming parallel paths for individual units, it exploits parallel evolution patterns across treatment scenarios to estimate counterfactual trajectories. A key insight is that treatment randomization plays a role beyond eliminating latent confounding; it induces an implicit sampling from hidden interference channels, enabling consistent learning about heterogeneous spillover effects. We highlight causal message passing as an instantiation of this method in dense networks while extending to more general interference structures, including influencer networks where a small set of units drives most spillovers. Finally, we discuss the limits of this approach, showing that strong temporal trends or endogenous interference can undermine identification.",
+        "authors": "Sadegh Shirani, Mohsen Bayati",
+        "url": "http://arxiv.org/abs/2511.21675v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21675v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了在存在干扰的网络系统中进行因果效应估计的问题。它提出了一个基于演化的方法，通过公理化表征和最小结构条件来补偿缺失的网络信息，并将其框架化为差分中差分法的分布对应物。论文强调了处理异质溢出效应的统计学习，具有强大的理论基础和严谨的因果逻辑推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21666v1",
+        "title": "Uncertainty Quantification for Visual Object Pose Estimation",
+        "summary": "Quantifying the uncertainty of an object's pose estimate is essential for robust control and planning. Although pose estimation is a well-studied robotics problem, attaching statistically rigorous uncertainty is not well understood without strict distributional assumptions. We develop distribution-free pose uncertainty bounds about a given pose estimate in the monocular setting. Our pose uncertainty only requires high probability noise bounds on pixel detections of 2D semantic keypoints on a known object. This noise model induces an implicit, non-convex set of pose uncertainty constraints. Our key contribution is SLUE (S-Lemma Uncertainty Estimation), a convex program to reduce this set to a single ellipsoidal uncertainty bound that is guaranteed to contain the true object pose with high probability. SLUE solves a relaxation of the minimum volume bounding ellipsoid problem inspired by the celebrated S-lemma. It requires no initial guess of the bound's shape or size and is guaranteed to contain the true object pose with high probability. For tighter uncertainty bounds at the same confidence, we extend SLUE to a sum-of-squares relaxation hierarchy which is guaranteed to converge to the minimum volume ellipsoidal uncertainty bound for a given set of keypoint constraints. We show this pose uncertainty bound can easily be projected to independent translation and axis-angle orientation bounds. We evaluate SLUE on two pose estimation datasets and a real-world drone tracking scenario. Compared to prior work, SLUE generates substantially smaller translation bounds and competitive orientation bounds. We release code at https://github.com/MIT-SPARK/PoseUncertaintySets.",
+        "authors": "Lorenzo Shaikewitz, Charis Georgiou, Luca Carlone",
+        "url": "http://arxiv.org/abs/2511.21666v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21666v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文专注于视觉对象姿态估计中的不确定性量化，提出了SLUE框架，通过凸优化程序和S-引理来推导分布无关的姿态不确定性边界。它提供了高概率噪声边界下的统计严格不确定性量化，并保证收敛到最小体积椭球不确定性边界，数学推导清晰且理论严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21646v1",
+        "title": "Stochastic Optimal Control of Interacting Particle Systems in Hilbert Spaces and Applications",
+        "summary": "Optimal control of interacting particles governed by stochastic evolution equations in Hilbert spaces is an open area of research. Such systems naturally arise in formulations where each particle is modeled by stochastic partial differential equations, path-dependent stochastic differential equations (such as stochastic delay differential equations or stochastic Volterra integral equations), or partially observed stochastic systems. The purpose of this manuscript is to build the foundations for a limiting theory as the number of particles tends to infinity. We prove the convergence of the value functions $u_n$ of finite particle systems to a function $\\mathcal{V}$, {which} is the unique {$L$}-viscosity solution of the corresponding mean-field Hamilton-Jacobi-Bellman equation {in the space of probability measures}, and we identify its lift with the value function $U$ of the so-called ``lifted'' limit optimal control problem. Under suitable additional assumptions, we show $C^{1,1}$-regularity of $U$, we prove that $\\mathcal{V}$ projects precisely onto the value functions $u_n$, and that optimal (resp. optimal feedback) controls of the particle system correspond to optimal (resp. optimal feedback) controls of the lifted control problem started at the corresponding initial condition. To the best of our knowledge, these are the first results of this kind for stochastic optimal control problems for interacting particle systems of stochastic evolution equations in Hilbert spaces. We apply the developed theory to problems arising in economics where the particles are modeled by stochastic delay differential equations and stochastic partial differential equations.",
+        "authors": "Filippo de Feo, Fausto Gozzi, Andrzej Święch, Lukas Wessels",
+        "url": "http://arxiv.org/abs/2511.21646v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21646v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为希尔伯特空间中随机演化方程控制的相互作用粒子系统的随机最优控制奠定了理论基础。它证明了有限粒子系统价值函数向均值场Hamilton-Jacobi-Bellman方程粘性解的收敛性，并识别了其与“提升”极限最优控制问题的价值函数的关系，是该领域首次此类成果，具有极高的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21603v1",
+        "title": "Uniform inference for kernel instrumental variable regression",
+        "summary": "Instrumental variable regression is a foundational tool for causal analysis across the social and biomedical sciences. Recent advances use kernel methods to estimate nonparametric causal relationships, with general data types, while retaining a simple closed-form expression. Empirical researchers ultimately need reliable inference on causal estimates; however, uniform confidence sets for the method remain unavailable. To fill this gap, we develop valid and sharp confidence sets for kernel instrumental variable regression, allowing general nonlinearities and data types. Computationally, our bootstrap procedure requires only a single run of the kernel instrumental variable regression estimator. Theoretically, it relies on the same key assumptions. Overall, we provide a practical procedure for inference that substantially increases the value of kernel methods for causal analysis.",
+        "authors": "Marvin Lob, Rahul Singh, Suhas Vijaykumar",
+        "url": "http://arxiv.org/abs/2511.21603v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21603v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文解决了核工具变量回归中缺乏统一置信集的问题，为非参数因果关系提供了有效且尖锐的均匀置信集。其引导程序仅需单次估计，并依赖相同的关键理论假设，极大地提升了核方法在因果分析中的价值，理论推导和统计保证非常符合您的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21595v1",
+        "title": "On the Degrees of Freedom of some Lasso procedures",
+        "summary": "The effective degrees of freedom of penalized regression models quantify the actual amount of information used to generate predictions, playing a pivotal role in model evaluation and selection. Although a closed-form estimator is available for the Lasso penalty, adaptive extensions of widely used penalized approaches, including the Adaptive Lasso and Adaptive Group Lasso, have remained without analogous theoretical characterization. This paper presents the first unbiased estimator of the effective degrees of freedom for these methods, along with their main theoretical properties, for both orthogonal and non-orthogonal designs, derived within Stein's unbiased risk estimation framework. The resulting expressions feature inflation terms influenced by the regularization parameter, coefficient signs, and least-squares estimates. These advances enable more accurate model selection criteria and unbiased prediction error estimates, illustrated through synthetic and real data. These contributions offer a rigorous theoretical foundation for understanding model complexity in adaptive regression, bridging a critical gap between theory and practice.",
+        "authors": "Mauro Bernardi, Antonio Canale, Marco Stefanucci",
+        "url": "http://arxiv.org/abs/2511.21595v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21595v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次为自适应Lasso和自适应组Lasso等惩罚回归模型提供了有效自由度的无偏估计量及其主要理论性质。它在Stein的无偏风险估计框架下推导，弥补了理论与实践之间的关键空白，为理解模型复杂性提供了严格的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21534v1",
+        "title": "A Sensitivity Analysis Framework for Causal Inference Under Interference",
+        "summary": "In many applications of causal inference, the treatment received by one unit may influence the outcome of another, a phenomenon referred to as interference. Although there are several frameworks for conducting causal inference in the presence of interference, practitioners often lack the data necessary to adjust for its effects. In this paper, we propose a weighting-based sensitivity analysis framework that can be used to assess the systematic bias arising from ignoring interference. Unlike most of the existing literature, we allow for the presence of unmeasured confounding, and show that the combination of interference and unmeasured confounding is a notable challenge to causal inference. We also study a third factor contributing to systematic bias: lack of transportability. Our framework enables practitioners to assess the impact of these three issues simultaneously through several easily interpretable sensitivity parameters that can reflect a wide range of intuitions about the data.",
+        "authors": "Matvey Ortyashov, AmirEmad Ghassami",
+        "url": "http://arxiv.org/abs/2511.21534v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21534v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于加权的敏感性分析框架，用于评估在存在干扰、未测量混淆和缺乏可迁移性情况下因果推断的系统偏差。它通过易于解释的敏感性参数同时评估这三个因素的影响，为因果推断提供了严谨的统计评估方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21523v1",
+        "title": "EoS-FM: Can an Ensemble of Specialist Models act as a Generalist Feature Extractor?",
+        "summary": "Recent advances in foundation models have shown great promise in domains such as natural language processing and computer vision, and similar efforts are now emerging in the Earth Observation community. These models aim to generalize across tasks with limited supervision, reducing the need for training separate models for each task. However, current strategies, which largely focus on scaling model size and dataset volume, require prohibitive computational and data resources, limiting accessibility to only a few large institutions. Moreover, this paradigm of ever-larger models stands in stark contrast with the principles of sustainable and environmentally responsible AI, as it leads to immense carbon footprints and resource inefficiency. In this work, we present a novel and efficient alternative: an Ensemble-of-Specialists framework for building Remote Sensing Foundation Models (RSFMs). Our method decomposes the training process into lightweight, task-specific ConvNeXtV2 specialists that can be frozen and reused. This modular approach offers strong advantages in efficiency, interpretability, and extensibility. Moreover, it naturally supports federated training, pruning, and continuous specialist integration, making it particularly well-suited for collaborative and resource-constrained settings. Our framework sets a new direction for building scalable and efficient RSFMs.",
+        "authors": "Pierre Adorni, Minh-Tan Pham, Stéphane May, Sébastien Lefèvre",
+        "url": "http://arxiv.org/abs/2511.21523v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21523v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个解耦对齐核（MD-GAK）用于肽膜渗透性预测，并特别关注不确定性估计。它利用高斯过程作为预测模型，并引入了PMD-GAK变体以降低校准误差，其核方法和不确定性估计的统计学基础扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21553v1",
+        "title": "Efficient bayesian spatially varying coefficients modeling for censored data using the vecchia approximation",
+        "summary": "Spatially varying coefficients (SVC) models allow for marginal effects to be non-stationary over space and thus offer a higher degree of flexibility with respect to standard geostatistical models with external drift. At the same time, SVC models have the advantage that they are easily interpretable. They offer a flexible framework for understanding how the relationships between dependent and independent variables vary across space. The most common methods for modelling such data are the Geographically Weighted Regression (GWR) and Bayesian Gaussian Process (Bayes-GP). The Bayesian SVC model, which assumes that the coefficients follow Gaussian processes, provides a rigorous approach to account for spatial non-stationarity. However, the computational cost of Bayes-GP models can be prohibitively high when dealing with large datasets or/and when using a large number of covariates, due to the repeated inversion of dense covariance matrices required at each Markov chain Monte Carlo (MCMC) iteration. In this study, we propose an efficient Bayes-GP modeling framework leveraging the Vecchia approximation to reduce computational complexity while maintaining accuracy. The proposed method is applied to a challenging soil pollution data set in Toulouse, France, characterized by a high degree of censorship (two-thirds censored observations) and spatial clustering. Our results demonstrate the ability of the Vecchia-based Bayes-GP model to capture spatially varying effects and provide meaningful insights into spatial heterogeneity, even under the constraints of censored data.",
+        "authors": "Yacine Mohamed Idir, Thomas Romary",
+        "url": "http://arxiv.org/abs/2511.21553v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21553v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种高效的贝叶斯空间变系数建模框架，利用Vecchia近似来处理截尾数据，显著降低了计算复杂度同时保持了精度。该方法为理解空间异质性提供了严谨的贝叶斯高斯过程方法，符合您对贝叶斯方法和计算效率的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21280v1",
+        "title": "Improvement of Collision Avoidance in Cut-In Maneuvers Using Time-to-Collision Metrics",
+        "summary": "This paper proposes a new strategy for collision avoidance system leveraging Time-to-Collision (TTC) metrics for handling cut-in scenarios, which are particularly challenging for autonomous vehicles (AVs). By integrating a deep learning with TTC calculations, the system predicts potential collisions and determines appropriate evasive actions compared to traditional TTC -based approaches.",
+        "authors": "Jamal Raiyn",
+        "url": "http://arxiv.org/abs/2511.21280v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21280v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个局部经验贝叶斯框架，用于解决A/B测试中跨实验和时间存在的异质性问题。通过理论分析和实证评估，证明了该策略在减少方差的同时避免了偏差，显著提高了A/B测试的可靠性，具有强大的统计保证和因果推断价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21272v1",
+        "title": "Co-Training Vision Language Models for Remote Sensing Multi-task Learning",
+        "summary": "With Transformers achieving outstanding performance on individual remote sensing (RS) tasks, we are now approaching the realization of a unified model that excels across multiple tasks through multi-task learning (MTL). Compared to single-task approaches, MTL methods offer improved generalization, enhanced scalability, and greater practical applicability. Recently, vision language models (VLMs) have achieved promising results in RS image understanding, grounding, and ultra-high-resolution (UHR) image reasoning, respectively. Moreover, the unified text-based interface demonstrates significant potential for MTL. Hence, in this work, we present RSCoVLM, a simple yet flexible VLM baseline for RS MTL. Firstly, we create the data curation engine, including data acquisition, offline processing and integrating, as well as online loading and weighting. This data engine effectively addresses complex RS data enviroment and generates flexible vision-language conversations. Furthermore, we propose a unified dynamic-resolution strategy to address the diverse image scales inherent in RS imagery. For UHR images, we introduce the Zoom-in Chain mechanism together with its corresponding dataset, LRS-VQA-Zoom. The strategies are flexible and effectively mitigate the computational burdens. Additionally, we significantly enhance the model's object detection capability and propose a novel evaluation protocol that ensures fair comparison between VLMs and conventional detection models. Extensive experiments demonstrate that RSCoVLM achieves state-of-the-art performance across diverse tasks, outperforming existing RS VLMs and even rivaling specialized expert models. All the training and evaluating tools, model weights, and datasets have been fully open-sourced to support reproducibility. We expect that this baseline will promote further progress toward general-purpose RS models.",
+        "authors": "Qingyun Li, Shuran Ma, Junwei Luo, Yi Yu, Yue Zhou, Fengxiang Wang, Xudong Lu, Xiaoxing Wang, Xin He, Yushi Chen, Xue Yang, Junchi Yan",
+        "url": "http://arxiv.org/abs/2511.21272v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21272v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了垂直联邦期望最大化（VFEM）方法，用于在数据隔离和缺失值场景下进行企业利润预测。它嵌入了一个新的EM算法来处理复杂的缺失模式，并建立了VFEM的线性收敛率和统计推断框架，具有严谨的数学推导和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21265v1",
+        "title": "Unlocking Zero-shot Potential of Semi-dense Image Matching via Gaussian Splatting",
+        "summary": "Learning-based image matching critically depends on large-scale, diverse, and geometrically accurate training data. 3D Gaussian Splatting (3DGS) enables photorealistic novel-view synthesis and thus is attractive for data generation. However, its geometric inaccuracies and biased depth rendering currently prevent robust correspondence labeling. To address this, we introduce MatchGS, the first framework designed to systematically correct and leverage 3DGS for robust, zero-shot image matching. Our approach is twofold: (1) a geometrically-faithful data generation pipeline that refines 3DGS geometry to produce highly precise correspondence labels, enabling the synthesis of a vast and diverse range of viewpoints without compromising rendering fidelity; and (2) a 2D-3D representation alignment strategy that infuses 3DGS' explicit 3D knowledge into the 2D matcher, guiding 2D semi-dense matchers to learn viewpoint-invariant 3D representations. Our generated ground-truth correspondences reduce the epipolar error by up to 40 times compared to existing datasets, enable supervision under extreme viewpoint changes, and provide self-supervisory signals through Gaussian attributes. Consequently, state-of-the-art matchers trained solely on our data achieve significant zero-shot performance gains on public benchmarks, with improvements of up to 17.7%. Our work demonstrates that with proper geometric refinement, 3DGS can serve as a scalable, high-fidelity, and structurally-rich data source, paving the way for a new generation of robust zero-shot image matchers.",
+        "authors": "Juncheng Chen, Chao Xu, Yanjun Cao",
+        "url": "http://arxiv.org/abs/2511.21265v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21265v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文澄清了通过比较观测结果和预测结果来估计治疗效果的理论条件，特别是在放射治疗中的应用。它利用潜在结果框架，为平均治疗效果估计提供了有效的理论条件，对因果推断的理论基础进行了严谨的阐述。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21248v1",
+        "title": "Stability of data-driven Koopman MPC with terminal conditions",
+        "summary": "This paper derives conditions under which Model Predictive Control (MPC) with terminal conditions, using a data-driven surrogate model as a prediction model, asymptotically stabilizes the plant despite approximation errors. In particular, we prove recursive feasibility and asymptotic stability if a proportional error bound holds, where proportional means that the bound is linear in the norm of the state and the input. For a broad class of nonlinear systems, this condition can be satisfied using data-driven surrogate models generated by kernel Extended Dynamic Mode Decomposition (kEDMD) using the Koopman operator. Last, the applicability of the proposed framework is demonstrated in a numerical case study.",
+        "authors": "Irene Schimperna, Lea Bold, Johannes Köhler, Karl Worthmann, Lalo Magni",
+        "url": "http://arxiv.org/abs/2511.21248v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21248v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文推导了数据驱动的Koopman MPC在终端条件下稳定性的条件，证明了在比例误差界限下递归可行性和渐近稳定性。这为使用Koopman算子生成的数据驱动代理模型提供了严格的优化收敛性保证，理论深度和严谨性非常高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21219v1",
+        "title": "Conditional Generative Modeling of Stochastic LTI Systems: A Behavioral Approach",
+        "summary": "This paper presents a data-driven model for Linear Time-Invariant (LTI) stochastic systems by sampling from the conditional probability distribution of future outputs given past input-outputs and future inputs. It operates in a fully behavioral manner, relying solely on the current trajectory and pre-collected input-output data, without requiring explicit identification of system parameters. We refer to this model as a behavioral Conditional Generative Model (CGM). We prove the convergence of the distribution of samples generated by the CGM as the size of the trajectory library increases, with an explicit characterization of the convergence rate. Furthermore, we demonstrate that the gap between the asymptotic distribution of the proposed CGM and the true posterior distribution obtained by Kalman filter, which leverages the knowledge of all system parameters and all historical data, decreases exponentially with respect to the length of past samples. Finally, we integrate this generative model into predictive controllers for stochastic LTI systems. Numerical results verify the derived bounds and demonstrate the effectiveness of the controller equipped with the proposed behavioral CGM.",
+        "authors": "Jiayun Li, Yilin Mo",
+        "url": "http://arxiv.org/abs/2511.21219v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21219v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个数据驱动的线性时不变（LTI）随机系统条件生成模型，并证明了样本分布的收敛性及其收敛速度的明确表征。它还展示了与卡尔曼滤波器获得的真实后验分布之间的差距呈指数级减小，提供了强大的理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21122v1",
+        "title": "Which Layer Causes Distribution Deviation? Entropy-Guided Adaptive Pruning for Diffusion and Flow Models",
+        "summary": "Large-scale vision generative models, including diffusion and flow models, have demonstrated remarkable performance in visual generation tasks. However, transferring these pre-trained models to downstream tasks often results in significant parameter redundancy. In this paper, we propose EntPruner, an entropy-guided automatic progressive pruning framework for diffusion and flow models. First, we introduce entropy-guided pruning, a block-level importance assessment strategy specifically designed for generative models. Unlike discriminative models, generative models require preserving the diversity and condition-fidelity of the output distribution. As the importance of each module can vary significantly across downstream tasks, EntPruner prioritizes pruning of less important blocks using data-dependent Conditional Entropy Deviation (CED) as a guiding metric. CED quantifies how much the distribution diverges from the learned conditional data distribution after removing a block. Second, we propose a zero-shot adaptive pruning framework to automatically determine when and how much to prune during training. This dynamic strategy avoids the pitfalls of one-shot pruning, mitigating mode collapse, and preserving model performance. Extensive experiments on DiT and SiT models demonstrate the effectiveness of EntPruner, achieving up to 2.22$\\times$ inference speedup while maintaining competitive generation quality on ImageNet and three downstream datasets.",
+        "authors": "Changlin Li, Jiawei Zhang, Zeyi Shi, Zongxin Yang, Zhihui Li, Xiaojun Chang",
+        "url": "http://arxiv.org/abs/2511.21122v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21122v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了EntPruner，一个熵引导的自动渐进式剪枝框架，用于扩散和流模型。它引入了条件熵偏差（CED）作为指导指标，量化了移除模块后分布的偏离程度，旨在在保持生成质量的同时实现推理加速，具有统计学上的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21115v1",
+        "title": "Nonconvex Penalized LAD Estimation in Partial Linear Models with DNNs: Asymptotic Analysis and Proximal Algorithms",
+        "summary": "This paper investigates the partial linear model by Least Absolute Deviation (LAD) regression. We parameterize the nonparametric term using Deep Neural Networks (DNNs) and formulate a penalized LAD problem for estimation. Specifically, our model exhibits the following challenges. First, the regularization term can be nonconvex and nonsmooth, necessitating the introduction of infinite dimensional variational analysis and nonsmooth analysis into the asymptotic normality discussion. Second, our network must expand (in width, sparsity level and depth) as more samples are observed, thereby introducing additional difficulties for theoretical analysis. Third, the oracle of the proposed estimator is itself defined through a ultra high-dimensional, nonconvex, and discontinuous optimization problem, which already entails substantial computational and theoretical challenges. Under such the challenges, we establish the consistency, convergence rate, and asymptotic normality of the estimator. Furthermore, we analyze the oracle problem itself and its continuous relaxation. We study the convergence of a proximal subgradient method for both formulations, highlighting their structural differences lead to distinct computational subproblems along the iterations. In particular, the relaxed formulation admits significantly cheaper proximal updates, reflecting an inherent trade-off between statistical accuracy and computational tractability.",
+        "authors": "Lechen Feng, Haoran Li, Lucky Li, Xingqiu Zhao",
+        "url": "http://arxiv.org/abs/2511.21115v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21115v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了使用DNNs的偏线性模型中非凸惩罚LAD估计，并建立了估计量的一致性、收敛速度和渐近正态性。它将无限维变分分析和非光滑分析引入渐近正态性讨论，并分析了近端算法，具有非常深入的数学分析和理论推导。"
+    }
+]

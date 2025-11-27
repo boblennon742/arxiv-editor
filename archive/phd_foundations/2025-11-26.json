@@ -1,35 +1,5 @@
 [
     {
-        "id": "http://arxiv.org/abs/2511.21675v1",
-        "title": "On Evolution-Based Models for Experimentation Under Interference",
-        "summary": "Causal effect estimation in networked systems is central to data-driven decision making. In such settings, interventions on one unit can spill over to others, and in complex physical or social systems, the interaction pathways driving these interference structures remain largely unobserved. We argue that for identifying population-level causal effects, it is not necessary to recover the exact network structure; instead, it suffices to characterize how those interactions contribute to the evolution of outcomes. Building on this principle, we study an evolution-based approach that investigates how outcomes change across observation rounds in response to interventions, hence compensating for missing network information. Using an exposure-mapping perspective, we give an axiomatic characterization of when the empirical distribution of outcomes follows a low-dimensional recursive equation, and identify minimal structural conditions under which such evolution mappings exist. We frame this as a distributional counterpart to difference-in-differences. Rather than assuming parallel paths for individual units, it exploits parallel evolution patterns across treatment scenarios to estimate counterfactual trajectories. A key insight is that treatment randomization plays a role beyond eliminating latent confounding; it induces an implicit sampling from hidden interference channels, enabling consistent learning about heterogeneous spillover effects. We highlight causal message passing as an instantiation of this method in dense networks while extending to more general interference structures, including influencer networks where a small set of units drives most spillovers. Finally, we discuss the limits of this approach, showing that strong temporal trends or endogenous interference can undermine identification.",
-        "authors": "Sadegh Shirani, Mohsen Bayati",
-        "url": "http://arxiv.org/abs/2511.21675v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21675v1",
-        "scores": {
-            "Novelty": 4,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文深入探讨了在存在干扰的网络系统中进行因果效应估计的问题。它提出了一个基于演化的方法，通过公理化表征和最小结构条件来补偿缺失的网络信息，并将其框架化为差分中差分法的分布对应物。论文强调了处理异质溢出效应的统计学习，具有强大的理论基础和严谨的因果逻辑推导。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21666v1",
-        "title": "Uncertainty Quantification for Visual Object Pose Estimation",
-        "summary": "Quantifying the uncertainty of an object's pose estimate is essential for robust control and planning. Although pose estimation is a well-studied robotics problem, attaching statistically rigorous uncertainty is not well understood without strict distributional assumptions. We develop distribution-free pose uncertainty bounds about a given pose estimate in the monocular setting. Our pose uncertainty only requires high probability noise bounds on pixel detections of 2D semantic keypoints on a known object. This noise model induces an implicit, non-convex set of pose uncertainty constraints. Our key contribution is SLUE (S-Lemma Uncertainty Estimation), a convex program to reduce this set to a single ellipsoidal uncertainty bound that is guaranteed to contain the true object pose with high probability. SLUE solves a relaxation of the minimum volume bounding ellipsoid problem inspired by the celebrated S-lemma. It requires no initial guess of the bound's shape or size and is guaranteed to contain the true object pose with high probability. For tighter uncertainty bounds at the same confidence, we extend SLUE to a sum-of-squares relaxation hierarchy which is guaranteed to converge to the minimum volume ellipsoidal uncertainty bound for a given set of keypoint constraints. We show this pose uncertainty bound can easily be projected to independent translation and axis-angle orientation bounds. We evaluate SLUE on two pose estimation datasets and a real-world drone tracking scenario. Compared to prior work, SLUE generates substantially smaller translation bounds and competitive orientation bounds. We release code at https://github.com/MIT-SPARK/PoseUncertaintySets.",
-        "authors": "Lorenzo Shaikewitz, Charis Georgiou, Luca Carlone",
-        "url": "http://arxiv.org/abs/2511.21666v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21666v1",
-        "scores": {
-            "Novelty": 4,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "该论文专注于视觉对象姿态估计中的不确定性量化，提出了SLUE框架，通过凸优化程序和S-引理来推导分布无关的姿态不确定性边界。它提供了高概率噪声边界下的统计严格不确定性量化，并保证收敛到最小体积椭球不确定性边界，数学推导清晰且理论严谨。"
-    },
-    {
         "id": "http://arxiv.org/abs/2511.21646v1",
         "title": "Stochastic Optimal Control of Interacting Particle Systems in Hilbert Spaces and Applications",
         "summary": "Optimal control of interacting particles governed by stochastic evolution equations in Hilbert spaces is an open area of research. Such systems naturally arise in formulations where each particle is modeled by stochastic partial differential equations, path-dependent stochastic differential equations (such as stochastic delay differential equations or stochastic Volterra integral equations), or partially observed stochastic systems. The purpose of this manuscript is to build the foundations for a limiting theory as the number of particles tends to infinity. We prove the convergence of the value functions $u_n$ of finite particle systems to a function $\\mathcal{V}$, {which} is the unique {$L$}-viscosity solution of the corresponding mean-field Hamilton-Jacobi-Bellman equation {in the space of probability measures}, and we identify its lift with the value function $U$ of the so-called ``lifted'' limit optimal control problem. Under suitable additional assumptions, we show $C^{1,1}$-regularity of $U$, we prove that $\\mathcal{V}$ projects precisely onto the value functions $u_n$, and that optimal (resp. optimal feedback) controls of the particle system correspond to optimal (resp. optimal feedback) controls of the lifted control problem started at the corresponding initial condition. To the best of our knowledge, these are the first results of this kind for stochastic optimal control problems for interacting particle systems of stochastic evolution equations in Hilbert spaces. We apply the developed theory to problems arising in economics where the particles are modeled by stochastic delay differential equations and stochastic partial differential equations.",
@@ -39,10 +9,10 @@
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
-            "Impact": 3,
+            "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文为希尔伯特空间中随机演化方程控制的相互作用粒子系统的随机最优控制奠定了理论基础。它证明了有限粒子系统价值函数向均值场Hamilton-Jacobi-Bellman方程粘性解的收敛性，并识别了其与“提升”极限最优控制问题的价值函数的关系，是该领域首次此类成果，具有极高的数学严谨性。"
+        "reason_zh": "这篇论文为希尔伯特空间中随机演化方程控制的相互作用粒子系统建立了极限理论，并证明了价值函数的收敛性、HJB方程的粘性解唯一性以及最优控制的对应关系。其数学推导极其严谨，为复杂AI系统（如多智能体控制）提供了坚实的理论基础。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21603v1",
@@ -57,7 +27,7 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "论文解决了核工具变量回归中缺乏统一置信集的问题，为非参数因果关系提供了有效且尖锐的均匀置信集。其引导程序仅需单次估计，并依赖相同的关键理论假设，极大地提升了核方法在因果分析中的价值，理论推导和统计保证非常符合您的要求。"
+        "reason_zh": "该研究解决了核工具变量回归中缺乏一致置信集的问题，开发了有效且尖锐的统一置信集。其基于引导程序的推断方法依赖于关键理论假设，提供了严谨的统计推断，对因果分析的核方法具有重要价值。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21595v1",
@@ -72,7 +42,7 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文首次为自适应Lasso和自适应组Lasso等惩罚回归模型提供了有效自由度的无偏估计量及其主要理论性质。它在Stein的无偏风险估计框架下推导，弥补了理论与实践之间的关键空白，为理解模型复杂性提供了严格的理论基础。"
+        "reason_zh": "论文首次为自适应Lasso和自适应组Lasso等惩罚回归方法提供了有效自由度的无偏估计器，并在Stein无偏风险估计框架内推导了其理论性质。这填补了理论与实践之间的关键空白，为理解模型复杂性提供了严格的理论基础。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21534v1",
@@ -87,37 +57,37 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一个基于加权的敏感性分析框架，用于评估在存在干扰、未测量混淆和缺乏可迁移性情况下因果推断的系统偏差。它通过易于解释的敏感性参数同时评估这三个因素的影响，为因果推断提供了严谨的统计评估方法。"
+        "reason_zh": "这篇论文提出了一个基于权重的敏感性分析框架，用于评估干预、未测量混淆和不可迁移性对因果推断的系统偏差。其方法允许同时评估这三个因素的影响，并提供了可解释的敏感性参数，具有强大的因果逻辑和统计方法论。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.21523v1",
-        "title": "EoS-FM: Can an Ensemble of Specialist Models act as a Generalist Feature Extractor?",
-        "summary": "Recent advances in foundation models have shown great promise in domains such as natural language processing and computer vision, and similar efforts are now emerging in the Earth Observation community. These models aim to generalize across tasks with limited supervision, reducing the need for training separate models for each task. However, current strategies, which largely focus on scaling model size and dataset volume, require prohibitive computational and data resources, limiting accessibility to only a few large institutions. Moreover, this paradigm of ever-larger models stands in stark contrast with the principles of sustainable and environmentally responsible AI, as it leads to immense carbon footprints and resource inefficiency. In this work, we present a novel and efficient alternative: an Ensemble-of-Specialists framework for building Remote Sensing Foundation Models (RSFMs). Our method decomposes the training process into lightweight, task-specific ConvNeXtV2 specialists that can be frozen and reused. This modular approach offers strong advantages in efficiency, interpretability, and extensibility. Moreover, it naturally supports federated training, pruning, and continuous specialist integration, making it particularly well-suited for collaborative and resource-constrained settings. Our framework sets a new direction for building scalable and efficient RSFMs.",
-        "authors": "Pierre Adorni, Minh-Tan Pham, Stéphane May, Sébastien Lefèvre",
-        "url": "http://arxiv.org/abs/2511.21523v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21523v1",
+        "id": "http://arxiv.org/abs/2511.21526v1",
+        "title": "Phase Transition for Stochastic Block Model with more than $\\sqrt{n}$ Communities (II)",
+        "summary": "A fundamental theoretical question in network analysis is to determine under which conditions community recovery is possible in polynomial time in the Stochastic Block Model (SBM). When the number $K$ of communities remains smaller than $\\sqrt{n}$ --where $n$ denotes the number of nodes--, non-trivial community recovery is possible in polynomial time above, and only above, the Kesten--Stigum (KS) threshold, originally postulated using arguments from statistical physics.   When $K \\geq \\sqrt{n}$, Chin, Mossel, Sohn, and Wein recently proved that, in the \\emph{sparse regime}, community recovery in polynomial time is achievable below the KS threshold by counting non-backtracking paths. This finding led them to postulate a new threshold for the many-communities regime $K \\geq \\sqrt{n}$. Subsequently, Carpentier, Giraud, and Verzelen established the failure of low-degree polynomials below this new threshold across all density regimes, and demonstrated successful recovery above the threshold in certain moderately sparse settings. While these results provide strong evidence that, in the many community setting, the computational barrier lies at the threshold proposed in~Chin et al., the question of achieving recovery above this threshold still remains open in most density regimes.   The present work is a follow-up to~Carpentier et al., in which we prove Conjecture~1.4 stated therein by: \\\\ 1- Constructing a family of motifs satisfying specific structural properties; and\\\\ 2- Proving that community recovery is possible above the proposed threshold by counting such motifs.\\\\ Our results complete the picture of the computational barrier for community recovery in the SBM with $K \\geq \\sqrt{n}$ communities. They also indicate that, in moderately sparse regimes, the optimal algorithms appear to be fundamentally different from spectral methods.",
+        "authors": "Alexandra Carpentier, Christophe Giraud, Nicolas Verzelen",
+        "url": "http://arxiv.org/abs/2511.21526v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21526v1",
         "scores": {
-            "Novelty": 4,
-            "Rigor": 4,
-            "Impact": 3,
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文提出了一个解耦对齐核（MD-GAK）用于肽膜渗透性预测，并特别关注不确定性估计。它利用高斯过程作为预测模型，并引入了PMD-GAK变体以降低校准误差，其核方法和不确定性估计的统计学基础扎实。"
+        "reason_zh": "作为对Stochastic Block Model (SBM) 相变研究的后续工作，该论文证明了当社区数量 $K \\geq \\sqrt{n}$ 时，社区恢复的计算障碍。通过构建特定结构特性的motif并证明通过计数这些motif可以实现恢复，为网络分析提供了深刻的理论洞察和严格的数学证明。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.21553v1",
-        "title": "Efficient bayesian spatially varying coefficients modeling for censored data using the vecchia approximation",
-        "summary": "Spatially varying coefficients (SVC) models allow for marginal effects to be non-stationary over space and thus offer a higher degree of flexibility with respect to standard geostatistical models with external drift. At the same time, SVC models have the advantage that they are easily interpretable. They offer a flexible framework for understanding how the relationships between dependent and independent variables vary across space. The most common methods for modelling such data are the Geographically Weighted Regression (GWR) and Bayesian Gaussian Process (Bayes-GP). The Bayesian SVC model, which assumes that the coefficients follow Gaussian processes, provides a rigorous approach to account for spatial non-stationarity. However, the computational cost of Bayes-GP models can be prohibitively high when dealing with large datasets or/and when using a large number of covariates, due to the repeated inversion of dense covariance matrices required at each Markov chain Monte Carlo (MCMC) iteration. In this study, we propose an efficient Bayes-GP modeling framework leveraging the Vecchia approximation to reduce computational complexity while maintaining accuracy. The proposed method is applied to a challenging soil pollution data set in Toulouse, France, characterized by a high degree of censorship (two-thirds censored observations) and spatial clustering. Our results demonstrate the ability of the Vecchia-based Bayes-GP model to capture spatially varying effects and provide meaningful insights into spatial heterogeneity, even under the constraints of censored data.",
-        "authors": "Yacine Mohamed Idir, Thomas Romary",
-        "url": "http://arxiv.org/abs/2511.21553v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21553v1",
+        "id": "http://arxiv.org/abs/2511.21399v1",
+        "title": "Training Introspective Behavior: Fine-Tuning Induces Reliable Internal State Detection in a 7B Model",
+        "summary": "Lindsey (2025) investigates introspective awareness in language models through four experiments, finding that models can sometimes detect and identify injected activation patterns -- but unreliably (~20% success in the best model). We focus on the first of these experiments -- self-report of injected \"thoughts\" -- and ask whether this capability can be directly trained rather than waiting for emergence. Through fine-tuning on transient single-token injections, we transform a 7B parameter model from near-complete failure (0.4% accuracy, 6.7% false positive rate) to reliable detection (85% accuracy on held-out concepts at α=40, 0% false positives). Our model detects fleeting \"thoughts\" injected at a single token position, retains that information, and reports the semantic content across subsequent generation steps. On this task, our trained model satisfies three of Lindsey's criteria: accuracy (correct identification), grounding (0/60 false positives), and internality (detection precedes verbalization). Generalization to unseen concept vectors (7.5pp gap) demonstrates the model learns a transferable skill rather than memorizing specific vectors, though this does not establish metacognitive representation in Lindsey's sense. These results address an open question raised by Lindsey: whether \"training for introspection would help eliminate cross-model differences.\" We show that at least one component of introspective behavior can be directly induced, offering a pathway to built-in AI transparency.",
+        "authors": "Joshua Fonseca Rivera",
+        "url": "http://arxiv.org/abs/2511.21399v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21399v1",
         "scores": {
-            "Novelty": 4,
-            "Rigor": 4,
-            "Impact": 3,
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "论文提出了一种高效的贝叶斯空间变系数建模框架，利用Vecchia近似来处理截尾数据，显著降低了计算复杂度同时保持了精度。该方法为理解空间异质性提供了严谨的贝叶斯高斯过程方法，符合您对贝叶斯方法和计算效率的关注。"
+        "reason_zh": "论文提出了浅层通用多项式网络 (SUPNs)，并证明了它们以与最佳多项式近似相同的速率收敛，并推导了准最优SUPN参数的显式公式。这为函数逼近提供了严谨的理论基础，并展示了其在参数效率和近似误差方面的优势。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21280v1",
@@ -132,52 +102,22 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一个局部经验贝叶斯框架，用于解决A/B测试中跨实验和时间存在的异质性问题。通过理论分析和实证评估，证明了该策略在减少方差的同时避免了偏差，显著提高了A/B测试的可靠性，具有强大的统计保证和因果推断价值。"
+        "reason_zh": "该研究提出了一个局部经验贝叶斯框架，用于解决A/B测试中跨实验和时间异质性问题。通过理论分析，证明了该策略在降低方差和避免偏差方面的优势，为数据驱动的决策制定提供了可靠的统计保证。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.21272v1",
-        "title": "Co-Training Vision Language Models for Remote Sensing Multi-task Learning",
-        "summary": "With Transformers achieving outstanding performance on individual remote sensing (RS) tasks, we are now approaching the realization of a unified model that excels across multiple tasks through multi-task learning (MTL). Compared to single-task approaches, MTL methods offer improved generalization, enhanced scalability, and greater practical applicability. Recently, vision language models (VLMs) have achieved promising results in RS image understanding, grounding, and ultra-high-resolution (UHR) image reasoning, respectively. Moreover, the unified text-based interface demonstrates significant potential for MTL. Hence, in this work, we present RSCoVLM, a simple yet flexible VLM baseline for RS MTL. Firstly, we create the data curation engine, including data acquisition, offline processing and integrating, as well as online loading and weighting. This data engine effectively addresses complex RS data enviroment and generates flexible vision-language conversations. Furthermore, we propose a unified dynamic-resolution strategy to address the diverse image scales inherent in RS imagery. For UHR images, we introduce the Zoom-in Chain mechanism together with its corresponding dataset, LRS-VQA-Zoom. The strategies are flexible and effectively mitigate the computational burdens. Additionally, we significantly enhance the model's object detection capability and propose a novel evaluation protocol that ensures fair comparison between VLMs and conventional detection models. Extensive experiments demonstrate that RSCoVLM achieves state-of-the-art performance across diverse tasks, outperforming existing RS VLMs and even rivaling specialized expert models. All the training and evaluating tools, model weights, and datasets have been fully open-sourced to support reproducibility. We expect that this baseline will promote further progress toward general-purpose RS models.",
-        "authors": "Qingyun Li, Shuran Ma, Junwei Luo, Yi Yu, Yue Zhou, Fengxiang Wang, Xudong Lu, Xiaoxing Wang, Xin He, Yushi Chen, Xue Yang, Junchi Yan",
-        "url": "http://arxiv.org/abs/2511.21272v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21272v1",
+        "id": "http://arxiv.org/abs/2511.21245v1",
+        "title": "FIELDS: Face reconstruction with accurate Inference of Expression using Learning with Direct Supervision",
+        "summary": "Facial expressions convey the bulk of emotional information in human communication, yet existing 3D face reconstruction methods often miss subtle affective details due to reliance on 2D supervision and lack of 3D ground truth. We propose FIELDS (Face reconstruction with accurate Inference of Expression using Learning with Direct Supervision) to address these limitations by extending self-supervised 2D image consistency cues with direct 3D expression parameter supervision and an auxiliary emotion recognition branch. Our encoder is guided by authentic expression parameters from spontaneous 4D facial scans, while an intensity-aware emotion loss encourages the 3D expression parameters to capture genuine emotion content without exaggeration. This dual-supervision strategy bridges the 2D/3D domain gap and mitigates expression-intensity bias, yielding high-fidelity 3D reconstructions that preserve subtle emotional cues. From a single image, FIELDS produces emotion-rich face models with highly realistic expressions, significantly improving in-the-wild facial expression recognition performance without sacrificing naturalness.",
+        "authors": "Chen Ling, Henglin Shi, Hedvig Kjellström",
+        "url": "http://arxiv.org/abs/2511.21245v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21245v1",
         "scores": {
             "Novelty": 4,
             "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文提出了垂直联邦期望最大化（VFEM）方法，用于在数据隔离和缺失值场景下进行企业利润预测。它嵌入了一个新的EM算法来处理复杂的缺失模式，并建立了VFEM的线性收敛率和统计推断框架，具有严谨的数学推导和统计保证。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21265v1",
-        "title": "Unlocking Zero-shot Potential of Semi-dense Image Matching via Gaussian Splatting",
-        "summary": "Learning-based image matching critically depends on large-scale, diverse, and geometrically accurate training data. 3D Gaussian Splatting (3DGS) enables photorealistic novel-view synthesis and thus is attractive for data generation. However, its geometric inaccuracies and biased depth rendering currently prevent robust correspondence labeling. To address this, we introduce MatchGS, the first framework designed to systematically correct and leverage 3DGS for robust, zero-shot image matching. Our approach is twofold: (1) a geometrically-faithful data generation pipeline that refines 3DGS geometry to produce highly precise correspondence labels, enabling the synthesis of a vast and diverse range of viewpoints without compromising rendering fidelity; and (2) a 2D-3D representation alignment strategy that infuses 3DGS' explicit 3D knowledge into the 2D matcher, guiding 2D semi-dense matchers to learn viewpoint-invariant 3D representations. Our generated ground-truth correspondences reduce the epipolar error by up to 40 times compared to existing datasets, enable supervision under extreme viewpoint changes, and provide self-supervisory signals through Gaussian attributes. Consequently, state-of-the-art matchers trained solely on our data achieve significant zero-shot performance gains on public benchmarks, with improvements of up to 17.7%. Our work demonstrates that with proper geometric refinement, 3DGS can serve as a scalable, high-fidelity, and structurally-rich data source, paving the way for a new generation of robust zero-shot image matchers.",
-        "authors": "Juncheng Chen, Chao Xu, Yanjun Cao",
-        "url": "http://arxiv.org/abs/2511.21265v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21265v1",
-        "scores": {
-            "Novelty": 3,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文澄清了通过比较观测结果和预测结果来估计治疗效果的理论条件，特别是在放射治疗中的应用。它利用潜在结果框架，为平均治疗效果估计提供了有效的理论条件，对因果推断的理论基础进行了严谨的阐述。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21248v1",
-        "title": "Stability of data-driven Koopman MPC with terminal conditions",
-        "summary": "This paper derives conditions under which Model Predictive Control (MPC) with terminal conditions, using a data-driven surrogate model as a prediction model, asymptotically stabilizes the plant despite approximation errors. In particular, we prove recursive feasibility and asymptotic stability if a proportional error bound holds, where proportional means that the bound is linear in the norm of the state and the input. For a broad class of nonlinear systems, this condition can be satisfied using data-driven surrogate models generated by kernel Extended Dynamic Mode Decomposition (kEDMD) using the Koopman operator. Last, the applicability of the proposed framework is demonstrated in a numerical case study.",
-        "authors": "Irene Schimperna, Lea Bold, Johannes Köhler, Karl Worthmann, Lalo Magni",
-        "url": "http://arxiv.org/abs/2511.21248v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21248v1",
-        "scores": {
-            "Novelty": 4,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "论文推导了数据驱动的Koopman MPC在终端条件下稳定性的条件，证明了在比例误差界限下递归可行性和渐近稳定性。这为使用Koopman算子生成的数据驱动代理模型提供了严格的优化收敛性保证，理论深度和严谨性非常高。"
+        "reason_zh": "这篇论文推导了数据驱动的Koopman MPC在存在近似误差时渐近稳定的条件，并证明了递归可行性和渐近稳定性。其理论证明严谨，将数据驱动模型与控制理论的稳定性保证相结合，对现代AI系统中的鲁棒控制至关重要。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21219v1",
@@ -187,12 +127,12 @@
         "url": "http://arxiv.org/abs/2511.21219v1",
         "pdf_url": "https://arxiv.org/pdf/2511.21219v1",
         "scores": {
-            "Novelty": 4,
+            "Novelty": 5,
             "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文提出了一个数据驱动的线性时不变（LTI）随机系统条件生成模型，并证明了样本分布的收敛性及其收敛速度的明确表征。它还展示了与卡尔曼滤波器获得的真实后验分布之间的差距呈指数级减小，提供了强大的理论保证。"
+        "reason_zh": "论文提出了一个行为化的条件生成模型 (CGM)，用于随机LTI系统，并证明了样本分布的收敛性及其与卡尔曼滤波器后验分布之间差距的指数级减小。这是随机系统建模的开创性工作，具有非常强的数学严谨性和理论证明。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21122v1",
@@ -202,26 +142,86 @@
         "url": "http://arxiv.org/abs/2511.21122v1",
         "pdf_url": "https://arxiv.org/pdf/2511.21122v1",
         "scores": {
-            "Novelty": 4,
-            "Rigor": 4,
+            "Novelty": 5,
+            "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "论文提出了EntPruner，一个熵引导的自动渐进式剪枝框架，用于扩散和流模型。它引入了条件熵偏差（CED）作为指导指标，量化了移除模块后分布的偏离程度，旨在在保持生成质量的同时实现推理加速，具有统计学上的理论基础。"
+        "reason_zh": "该研究将因果图学习问题表述为带有组l0-正则化的凸混合整数规划，并提供了图恢复的一致性保证、优化与统计误差界限的联系以及早期停止准则。其方法在优化和统计上都具有严格保证，是因果图发现领域的重大进展。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.21115v1",
-        "title": "Nonconvex Penalized LAD Estimation in Partial Linear Models with DNNs: Asymptotic Analysis and Proximal Algorithms",
-        "summary": "This paper investigates the partial linear model by Least Absolute Deviation (LAD) regression. We parameterize the nonparametric term using Deep Neural Networks (DNNs) and formulate a penalized LAD problem for estimation. Specifically, our model exhibits the following challenges. First, the regularization term can be nonconvex and nonsmooth, necessitating the introduction of infinite dimensional variational analysis and nonsmooth analysis into the asymptotic normality discussion. Second, our network must expand (in width, sparsity level and depth) as more samples are observed, thereby introducing additional difficulties for theoretical analysis. Third, the oracle of the proposed estimator is itself defined through a ultra high-dimensional, nonconvex, and discontinuous optimization problem, which already entails substantial computational and theoretical challenges. Under such the challenges, we establish the consistency, convergence rate, and asymptotic normality of the estimator. Furthermore, we analyze the oracle problem itself and its continuous relaxation. We study the convergence of a proximal subgradient method for both formulations, highlighting their structural differences lead to distinct computational subproblems along the iterations. In particular, the relaxed formulation admits significantly cheaper proximal updates, reflecting an inherent trade-off between statistical accuracy and computational tractability.",
-        "authors": "Lechen Feng, Haoran Li, Lucky Li, Xingqiu Zhao",
-        "url": "http://arxiv.org/abs/2511.21115v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21115v1",
+        "id": "http://arxiv.org/abs/2511.21114v1",
+        "title": "Deformation-aware Temporal Generation for Early Prediction of Alzheimers Disease",
+        "summary": "Alzheimer's disease (AD), a degenerative brain condition, can benefit from early prediction to slow its progression. As the disease progresses, patients typically undergo brain atrophy. Current prediction methods for Alzheimers disease largely involve analyzing morphological changes in brain images through manual feature extraction. This paper proposes a novel method, the Deformation-Aware Temporal Generative Network (DATGN), to automate the learning of morphological changes in brain images about disease progression for early prediction. Given the common occurrence of missing data in the temporal sequences of MRI images, DATGN initially interpolates incomplete sequences. Subsequently, a bidirectional temporal deformation-aware module guides the network in generating future MRI images that adhere to the disease's progression, facilitating early prediction of Alzheimer's disease. DATGN was tested for the generation of temporal sequences of future MRI images using the ADNI dataset, and the experimental results are competitive in terms of PSNR and MMSE image quality metrics. Furthermore, when DATGN-generated synthetic data was integrated into the SVM vs. CNN vs. 3DCNN-based classification methods, significant improvements were achieved from 6. 21\\% to 16\\% in AD vs. NC classification accuracy and from 7. 34\\% to 21. 25\\% in AD vs. MCI vs. NC classification accuracy. The qualitative visualization results indicate that DATGN produces MRI images consistent with the brain atrophy trend in Alzheimer's disease, enabling early disease prediction.",
+        "authors": "Xin Honga, Jie Lin, Minghui Wang",
+        "url": "http://arxiv.org/abs/2511.21114v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21114v1",
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
-            "Impact": 3,
+            "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文研究了使用DNNs的偏线性模型中非凸惩罚LAD估计，并建立了估计量的一致性、收敛速度和渐近正态性。它将无限维变分分析和非光滑分析引入渐近正态性讨论，并分析了近端算法，具有非常深入的数学分析和理论推导。"
+        "reason_zh": "这篇论文深入探讨了带有DNN的偏线性模型中的非凸惩罚LAD估计，并建立了估计量的一致性、收敛速度和渐近正态性。其理论分析引入了无限维变分分析和非光滑分析，展现了极高的数学和统计严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21097v1",
+        "title": "CLRecogEye : Curriculum Learning towards exploiting convolution features for Dynamic Iris Recognition",
+        "summary": "Iris authentication algorithms have achieved impressive recognition performance, making them highly promising for real-world applications such as border control, citizen identification, and both criminal investigations and commercial systems. However, their robustness is still challenged by variations in rotation, scale, specular reflections, and defocus blur. In addition, most existing approaches rely on straightforward point-to-point comparisons, typically using cosine or L2 distance, without effectively leveraging the spatio-spatial-temporal structure of iris patterns. To address these limitations, we propose a novel and generalized matching pipeline that learns rich spatio-spatial-temporal representations of iris features. Our approach first splits each iris image along one dimension, generating a sequence of sub-images that serve as input to a 3D-CNN, enabling the network to capture both spatial and spatio-spatial-temporal cues. To further enhance the modeling of spatio-spatial-temporal feature dynamics, we train the model in curriculum manner. This design allows the network to embed temporal dependencies directly into the feature space, improving discriminability in the deep metric domain. The framework is trained end-to-end with triplet and ArcFace loss in a curriculum manner, enforcing highly discriminative embeddings despite challenges like rotation, scale, reflections, and blur. This design yields a robust and generalizable solution for iris authentication.Github code: https://github.com/GeetanjaliGTZ/CLRecogEye",
+        "authors": "Geetanjali Sharma, Gaurav Jaswal, Aditya Nigam, Raghavendra Ramachandra",
+        "url": "http://arxiv.org/abs/2511.21097v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21097v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对扩散语言模型 (DLMs) 的并行解码进行了信息论分析，证明了高置信度token的固有低效性，并提出了“比特到轮次”原理。其理论分析和实验验证为理解和优化现代LLM的生成效率提供了深刻的数学洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21064v1",
+        "title": "OVOD-Agent: A Markov-Bandit Framework for Proactive Visual Reasoning and Self-Evolving Detection",
+        "summary": "Open-Vocabulary Object Detection (OVOD) aims to enable detectors to generalize across categories by leveraging semantic information. Although existing methods are pretrained on large vision-language datasets, their inference is still limited to fixed category names, creating a gap between multimodal training and unimodal inference. Previous work has shown that improving textual representation can significantly enhance OVOD performance, indicating that the textual space is still underexplored. To this end, we propose OVOD-Agent, which transforms passive category matching into proactive visual reasoning and self-evolving detection. Inspired by the Chain-of-Thought (CoT) paradigm, OVOD-Agent extends the textual optimization process into an interpretable Visual-CoT with explicit actions. OVOD's lightweight nature makes LLM-based management unsuitable; instead, we model visual context transitions as a Weakly Markovian Decision Process (w-MDP) over eight state spaces, which naturally represents the agent's state, memory, and interaction dynamics. A Bandit module generates exploration signals under limited supervision, helping the agent focus on uncertain regions and adapt its detection policy. We further integrate Markov transition matrices with Bandit trajectories for self-supervised Reward Model (RM) optimization, forming a closed loop from Bandit exploration to RM learning. Experiments on COCO and LVIS show that OVOD-Agent provides consistent improvements across OVOD backbones, particularly on rare categories, confirming the effectiveness of the proposed framework.",
+        "authors": "Chujie Wang, Jianyu Lu, Zhiyuan Luo, Xi Chen, Chu He",
+        "url": "http://arxiv.org/abs/2511.21064v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21064v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个用于高维噪声数据集中流形相似性和对齐性的统计推断框架。通过分析样本协方差的谱并利用随机矩阵理论，开发了尺度不变距离、一致估计量和统计检验，并建立了渐近性质，具有极强的统计和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21056v1",
+        "title": "A Unified Understanding of Offline Data Selection and Online Self-refining Generation for Post-training LLMs",
+        "summary": "Offline data selection and online self-refining generation, which enhance the data quality, are crucial steps in adapting large language models (LLMs) to specific downstream tasks. We tackle offline data selection and online self-refining generations through an optimization perspective. Specifically, bilevel data selection is used for offline data selection with respect to the validation dataset, and we treat online self-refining generation as a model adaptation step of selecting the model trained on current responses that best fits the validation data. Our framework offers a unified understanding of offline data selection and self-refining generation by assigning a learned data weight to each question and response, either explicitly or implicitly. For the first time, we theoretically demonstrate the effectiveness of the bilevel data selection framework and demonstrate its performance gains over unfiltered direct mixing baselines. By combining offline data with validation-weighted online generations, our method enhances fine-tuning performance. Experiments on quality enhancement and safety-aware LLM fine-tuning validate its effectiveness.",
+        "authors": "Quan Xiao, Tianyi Chen",
+        "url": "http://arxiv.org/abs/2511.21056v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21056v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种新颖的随机算法G-Net，用于构建高精度随机二值神经网络。其核心贡献在于通过测度集中原理提供了理论保证，确保二值模型能保持浮点模型的精度，为二值神经网络的理论基础和实际应用开辟了新方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20960v1",
+        "title": "Geometric Calibration and Neutral Zones for Uncertainty-Aware Multi-Class Classification",
+        "summary": "Modern artificial intelligence systems make critical decisions yet often fail silently when uncertain. We develop a geometric framework for post-hoc calibration of neural network probability outputs, treating probability vectors as points on the $(c-1)$-dimensional probability simplex equipped with the Fisher--Rao metric. Our approach yields Additive Log-Ratio (ALR) calibration maps that reduce exactly to Platt scaling for binary problems (Proposition~1) while extending naturally to multi-class settings -- providing a principled generalization that existing methods lack. Complementing calibration, we define geometric reliability scores based on Fisher--Rao distance and construct neutral zones for principled deferral of uncertain predictions.   Theoretical contributions include: (i) consistency of the calibration estimator at rate $O_p(n^{-1/2})$ via M-estimation theory (Theorem~1), and (ii) tight concentration bounds for reliability scores with explicit sub-Gaussian parameters enabling sample size calculations for validation set design (Theorem~2). We conjecture Neyman--Pearson optimality of our neutral zone construction based on connections to Bhattacharyya coefficients. Empirical validation on Adeno-Associated Virus classification demonstrates that the two-stage framework (calibration followed by reliability-based deferral) captures 72.5\\% of errors while deferring 34.5\\% of samples. Notably, this operational gain is achievable with any well-calibrated probability output; the contribution of geometric calibration lies in its theoretical foundations rather than empirical superiority over simpler alternatives. This work bridges information geometry and statistical learning, offering formal guarantees relevant to applications requiring rigorous validation.",
+        "authors": "Soumojit Das, Nairanjana Dasgupta, Prashanta Dutta",
+        "url": "http://arxiv.org/abs/2511.20960v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20960v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文开发了一个用于多类别分类中不确定性感知几何校准和中立区的框架。其理论贡献包括ALR校准图与Platt缩放的联系、M-估计理论下估计量的一致性、可靠性分数的集中界限以及与信息几何和统计学习的桥接，提供了严谨的统计和数学保证。"
     }
 ]

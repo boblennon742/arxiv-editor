@@ -1,5 +1,35 @@
 [
     {
+        "id": "http://arxiv.org/abs/2511.21675v1",
+        "title": "On Evolution-Based Models for Experimentation Under Interference",
+        "summary": "Causal effect estimation in networked systems is central to data-driven decision making. In such settings, interventions on one unit can spill over to others, and in complex physical or social systems, the interaction pathways driving these interference structures remain largely unobserved. We argue that for identifying population-level causal effects, it is not necessary to recover the exact network structure; instead, it suffices to characterize how those interactions contribute to the evolution of outcomes. Building on this principle, we study an evolution-based approach that investigates how outcomes change across observation rounds in response to interventions, hence compensating for missing network information. Using an exposure-mapping perspective, we give an axiomatic characterization of when the empirical distribution of outcomes follows a low-dimensional recursive equation, and identify minimal structural conditions under which such evolution mappings exist. We frame this as a distributional counterpart to difference-in-differences. Rather than assuming parallel paths for individual units, it exploits parallel evolution patterns across treatment scenarios to estimate counterfactual trajectories. A key insight is that treatment randomization plays a role beyond eliminating latent confounding; it induces an implicit sampling from hidden interference channels, enabling consistent learning about heterogeneous spillover effects. We highlight causal message passing as an instantiation of this method in dense networks while extending to more general interference structures, including influencer networks where a small set of units drives most spillovers. Finally, we discuss the limits of this approach, showing that strong temporal trends or endogenous interference can undermine identification.",
+        "authors": "Sadegh Shirani, Mohsen Bayati",
+        "url": "http://arxiv.org/abs/2511.21675v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21675v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入探讨了网络系统中的因果效应估计，提出了基于演化的新方法，并进行了公理化表征和理论分析，非常符合您对因果逻辑和理论严谨性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21666v1",
+        "title": "Uncertainty Quantification for Visual Object Pose Estimation",
+        "summary": "Quantifying the uncertainty of an object's pose estimate is essential for robust control and planning. Although pose estimation is a well-studied robotics problem, attaching statistically rigorous uncertainty is not well understood without strict distributional assumptions. We develop distribution-free pose uncertainty bounds about a given pose estimate in the monocular setting. Our pose uncertainty only requires high probability noise bounds on pixel detections of 2D semantic keypoints on a known object. This noise model induces an implicit, non-convex set of pose uncertainty constraints. Our key contribution is SLUE (S-Lemma Uncertainty Estimation), a convex program to reduce this set to a single ellipsoidal uncertainty bound that is guaranteed to contain the true object pose with high probability. SLUE solves a relaxation of the minimum volume bounding ellipsoid problem inspired by the celebrated S-lemma. It requires no initial guess of the bound's shape or size and is guaranteed to contain the true object pose with high probability. For tighter uncertainty bounds at the same confidence, we extend SLUE to a sum-of-squares relaxation hierarchy which is guaranteed to converge to the minimum volume ellipsoidal uncertainty bound for a given set of keypoint constraints. We show this pose uncertainty bound can easily be projected to independent translation and axis-angle orientation bounds. We evaluate SLUE on two pose estimation datasets and a real-world drone tracking scenario. Compared to prior work, SLUE generates substantially smaller translation bounds and competitive orientation bounds. We release code at https://github.com/MIT-SPARK/PoseUncertaintySets.",
+        "authors": "Lorenzo Shaikewitz, Charis Georgiou, Luca Carlone",
+        "url": "http://arxiv.org/abs/2511.21666v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21666v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对视觉物体姿态估计的“不确定性量化”，提出了基于S-lemma的凸优化方法，并提供了收敛性保证，理论严谨性高，符合您对统计保证和清晰数学推导的要求。"
+    },
+    {
         "id": "http://arxiv.org/abs/2511.21646v1",
         "title": "Stochastic Optimal Control of Interacting Particle Systems in Hilbert Spaces and Applications",
         "summary": "Optimal control of interacting particles governed by stochastic evolution equations in Hilbert spaces is an open area of research. Such systems naturally arise in formulations where each particle is modeled by stochastic partial differential equations, path-dependent stochastic differential equations (such as stochastic delay differential equations or stochastic Volterra integral equations), or partially observed stochastic systems. The purpose of this manuscript is to build the foundations for a limiting theory as the number of particles tends to infinity. We prove the convergence of the value functions $u_n$ of finite particle systems to a function $\\mathcal{V}$, {which} is the unique {$L$}-viscosity solution of the corresponding mean-field Hamilton-Jacobi-Bellman equation {in the space of probability measures}, and we identify its lift with the value function $U$ of the so-called ``lifted'' limit optimal control problem. Under suitable additional assumptions, we show $C^{1,1}$-regularity of $U$, we prove that $\\mathcal{V}$ projects precisely onto the value functions $u_n$, and that optimal (resp. optimal feedback) controls of the particle system correspond to optimal (resp. optimal feedback) controls of the lifted control problem started at the corresponding initial condition. To the best of our knowledge, these are the first results of this kind for stochastic optimal control problems for interacting particle systems of stochastic evolution equations in Hilbert spaces. We apply the developed theory to problems arising in economics where the particles are modeled by stochastic delay differential equations and stochastic partial differential equations.",
@@ -9,25 +39,25 @@
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
-            "Impact": 4,
+            "Impact": 3,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文为希尔伯特空间中随机演化方程控制的相互作用粒子系统建立了极限理论，并证明了价值函数的收敛性、HJB方程的粘性解唯一性以及最优控制的对应关系。其数学推导极其严谨，为复杂AI系统（如多智能体控制）提供了坚实的理论基础。"
+        "reason_zh": "该论文研究希尔伯特空间中相互作用粒子系统的随机最优控制，涉及HJB方程、粘性解、收敛性等深层数学理论，是纯粹数学严谨性的典范，与您的研究方向高度契合。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.21603v1",
-        "title": "Uniform inference for kernel instrumental variable regression",
-        "summary": "Instrumental variable regression is a foundational tool for causal analysis across the social and biomedical sciences. Recent advances use kernel methods to estimate nonparametric causal relationships, with general data types, while retaining a simple closed-form expression. Empirical researchers ultimately need reliable inference on causal estimates; however, uniform confidence sets for the method remain unavailable. To fill this gap, we develop valid and sharp confidence sets for kernel instrumental variable regression, allowing general nonlinearities and data types. Computationally, our bootstrap procedure requires only a single run of the kernel instrumental variable regression estimator. Theoretically, it relies on the same key assumptions. Overall, we provide a practical procedure for inference that substantially increases the value of kernel methods for causal analysis.",
-        "authors": "Marvin Lob, Rahul Singh, Suhas Vijaykumar",
-        "url": "http://arxiv.org/abs/2511.21603v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21603v1",
+        "id": "http://arxiv.org/abs/2511.21613v1",
+        "title": "Beyond URLs: Metadata Diversity and Position for Efficient LLM Pretraining",
+        "summary": "Incorporating metadata in Large Language Models (LLMs) pretraining has recently emerged as a promising approach to accelerate training. However prior work highlighted only one useful signal-URLs, leaving open the question of whether other forms of metadata could yield greater benefits. In this study, we investigate a wider range of metadata types and find other types of metadata, such as fine-grained indicators of document quality that can also accelerate pretraining when prepended. We identify a common feature among effective metadata: they encode information at a finer granularity. We further introduce metadata appending as a means of improving training efficiency, where predicting an appropriate metadata as auxiliary task can help speed up pretraining. In addition, learnable meta-tokens trained with masked loss can recover part of the speedup by inducing quality-aware latent structure. Using probing, we analyze latent representations to understand how metadata shapes learning. Together, these results yield practical guidelines for integrating metadata to improve both the efficiency and effectiveness of LLM pretraining.",
+        "authors": "Dongyang Fan, Diba Hashemi, Sai Praneeth Karimireddy, Martin Jaggi",
+        "url": "http://arxiv.org/abs/2511.21613v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21613v1",
         "scores": {
             "Novelty": 4,
             "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该研究解决了核工具变量回归中缺乏一致置信集的问题，开发了有效且尖锐的统一置信集。其基于引导程序的推断方法依赖于关键理论假设，提供了严谨的统计推断，对因果分析的核方法具有重要价值。"
+        "reason_zh": "针对核工具变量回归的统一推断，提出了有效且尖锐的置信区间构建方法，并有坚实的理论支撑，是因果分析和统计推断领域的优秀工作。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21595v1",
@@ -42,7 +72,7 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "论文首次为自适应Lasso和自适应组Lasso等惩罚回归方法提供了有效自由度的无偏估计器，并在Stein无偏风险估计框架内推导了其理论性质。这填补了理论与实践之间的关键空白，为理解模型复杂性提供了严格的理论基础。"
+        "reason_zh": "深入研究了Lasso及其变体的有效自由度，提出了无偏估计量，并基于Stein的无偏风险估计框架进行了理论推导，对模型选择和理解模型复杂度有重要意义，理论严谨性极高。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21534v1",
@@ -57,7 +87,7 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一个基于权重的敏感性分析框架，用于评估干预、未测量混淆和不可迁移性对因果推断的系统偏差。其方法允许同时评估这三个因素的影响，并提供了可解释的敏感性参数，具有强大的因果逻辑和统计方法论。"
+        "reason_zh": "针对存在干扰和未测量混淆的因果推断，提出了基于权重的敏感性分析框架，引入了易于解释的敏感性参数，理论严谨且具有重要实践意义。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21526v1",
@@ -69,25 +99,55 @@
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
-            "Impact": 4,
+            "Impact": 3,
             "Clarity": 4
         },
-        "reason_zh": "作为对Stochastic Block Model (SBM) 相变研究的后续工作，该论文证明了当社区数量 $K \\geq \\sqrt{n}$ 时，社区恢复的计算障碍。通过构建特定结构特性的motif并证明通过计数这些motif可以实现恢复，为网络分析提供了深刻的理论洞察和严格的数学证明。"
+        "reason_zh": "该论文是随机块模型中社区恢复相变问题的续篇，是网络分析的理论前沿，涉及严格的数学证明和算法分析，理论严谨性极高。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.21399v1",
-        "title": "Training Introspective Behavior: Fine-Tuning Induces Reliable Internal State Detection in a 7B Model",
-        "summary": "Lindsey (2025) investigates introspective awareness in language models through four experiments, finding that models can sometimes detect and identify injected activation patterns -- but unreliably (~20% success in the best model). We focus on the first of these experiments -- self-report of injected \"thoughts\" -- and ask whether this capability can be directly trained rather than waiting for emergence. Through fine-tuning on transient single-token injections, we transform a 7B parameter model from near-complete failure (0.4% accuracy, 6.7% false positive rate) to reliable detection (85% accuracy on held-out concepts at α=40, 0% false positives). Our model detects fleeting \"thoughts\" injected at a single token position, retains that information, and reports the semantic content across subsequent generation steps. On this task, our trained model satisfies three of Lindsey's criteria: accuracy (correct identification), grounding (0/60 false positives), and internality (detection precedes verbalization). Generalization to unseen concept vectors (7.5pp gap) demonstrates the model learns a transferable skill rather than memorizing specific vectors, though this does not establish metacognitive representation in Lindsey's sense. These results address an open question raised by Lindsey: whether \"training for introspection would help eliminate cross-model differences.\" We show that at least one component of introspective behavior can be directly induced, offering a pathway to built-in AI transparency.",
-        "authors": "Joshua Fonseca Rivera",
-        "url": "http://arxiv.org/abs/2511.21399v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21399v1",
+        "id": "http://arxiv.org/abs/2511.21514v1",
+        "title": "Mechanistic Interpretability for Transformer-based Time Series Classification",
+        "summary": "Transformer-based models have become state-of-the-art tools in various machine learning tasks, including time series classification, yet their complexity makes understanding their internal decision-making challenging. Existing explainability methods often focus on input-output attributions, leaving the internal mechanisms largely opaque. This paper addresses this gap by adapting various Mechanistic Interpretability techniques; activation patching, attention saliency, and sparse autoencoders, from NLP to transformer architectures designed explicitly for time series classification. We systematically probe the internal causal roles of individual attention heads and timesteps, revealing causal structures within these models. Through experimentation on a benchmark time series dataset, we construct causal graphs illustrating how information propagates internally, highlighting key attention heads and temporal positions driving correct classifications. Additionally, we demonstrate the potential of sparse autoencoders for uncovering interpretable latent features. Our findings provide both methodological contributions to transformer interpretability and novel insights into the functional mechanics underlying transformer performance in time series classification tasks.",
+        "authors": "Matīss Kalnāre, Sofoklis Kitharidis, Thomas Bäck, Niki van Stein",
+        "url": "http://arxiv.org/abs/2511.21514v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21514v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这是一篇概念性论文，比较并澄清了因果推断三大框架（潜在结果、结构方程模型、DAG）之间的联系、优缺点，对理解因果逻辑和理论基础非常有帮助，清晰度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21414v1",
+        "title": "SUPN: Shallow Universal Polynomial Networks",
+        "summary": "Deep neural networks (DNNs) and Kolmogorov-Arnold networks (KANs) are popular methods for function approximation due to their flexibility and expressivity. However, they typically require a large number of trainable parameters to produce a suitable approximation. Beyond making the resulting network less transparent, overparameterization creates a large optimization space, likely producing local minima in training that have quite different generalization errors. In this case, network initialization can have an outsize impact on the model's out-of-sample accuracy. For these reasons, we propose shallow universal polynomial networks (SUPNs). These networks replace all but the last hidden layer with a single layer of polynomials with learnable coefficients, leveraging the strengths of DNNs and polynomials to achieve sufficient expressivity with far fewer parameters. We prove that SUPNs converge at the same rate as the best polynomial approximation of the same degree, and we derive explicit formulas for quasi-optimal SUPN parameters. We complement theory with an extensive suite of numerical experiments involving SUPNs, DNNs, KANs, and polynomial projection in one, two, and ten dimensions, consisting of over 13,000 trained models. On the target functions we numerically studied, for a given number of trainable parameters, the approximation error and variability are often lower for SUPNs than for DNNs and KANs by an order of magnitude. In our examples, SUPNs even outperform polynomial projection on non-smooth functions.",
+        "authors": "Zachary Morrow, Michael Penwarden, Brian Chen, Aurya Javeed, Akil Narayan, John D. Jakeman",
+        "url": "http://arxiv.org/abs/2511.21414v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21414v1",
         "scores": {
             "Novelty": 5,
             "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "论文提出了浅层通用多项式网络 (SUPNs)，并证明了它们以与最佳多项式近似相同的速率收敛，并推导了准最优SUPN参数的显式公式。这为函数逼近提供了严谨的理论基础，并展示了其在参数效率和近似误差方面的优势。"
+        "reason_zh": "提出了浅层通用多项式网络（SUPNs），并从理论上证明了其收敛速度与最优多项式逼近相同，并推导了准最优参数的显式公式，对函数逼近理论有重要贡献，数学严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21471v1",
+        "title": "SpatialBench: Benchmarking Multimodal Large Language Models for Spatial Cognition",
+        "summary": "Spatial cognition is fundamental to real-world multimodal intelligence, allowing models to effectively interact with the physical environment. While multimodal large language models (MLLMs) have made significant strides, existing benchmarks often oversimplify spatial cognition, reducing it to a single-dimensional metric, which fails to capture the hierarchical structure and interdependence of spatial abilities. To address this gap, we propose a hierarchical spatial cognition framework that decomposes spatial intelligence into five progressively complex levels from basic observation to high-level planning. Building upon this taxonomy, we construct SpatialBench, a large-scale, fine-grained benchmark covering 15 tasks aligned with these cognitive levels. To provide a unified evaluation across heterogeneous tasks, we further introduce a high-level capability-oriented metric that reliably assesses a model's overall spatial reasoning ability. Extensive experiments over massive MLLMs reveal distinct performance stratification across cognitive levels: models exhibit strong perceptual grounding yet remain limited in symbolic reasoning, causal inference, and planning. Additional human tests demonstrate that humans perform selective, goal-directed abstraction, while MLLMs tend to over-attend to surface details without coherent spatial intent. Our work establishes the first systematic framework for measuring hierarchical spatial cognition in MLLMs, laying the foundation for future spatially intelligent systems.",
+        "authors": "Peiran Xu, Sudong Wang, Yao Zhu, Jianing Li, Yunjian Zhang",
+        "url": "http://arxiv.org/abs/2511.21471v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21471v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文结合EnKF和SMC^2算法，针对非线性状态空间模型中的静态参数推断，具有扎实的贝叶斯统计推断理论基础和方法创新。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21280v1",
@@ -99,10 +159,25 @@
         "scores": {
             "Novelty": 4,
             "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对A/B测试中的异质性问题，提出了局部经验贝叶斯框架，并进行了理论分析，旨在降低方差和避免偏差，对因果推断和统计学有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21272v1",
+        "title": "Co-Training Vision Language Models for Remote Sensing Multi-task Learning",
+        "summary": "With Transformers achieving outstanding performance on individual remote sensing (RS) tasks, we are now approaching the realization of a unified model that excels across multiple tasks through multi-task learning (MTL). Compared to single-task approaches, MTL methods offer improved generalization, enhanced scalability, and greater practical applicability. Recently, vision language models (VLMs) have achieved promising results in RS image understanding, grounding, and ultra-high-resolution (UHR) image reasoning, respectively. Moreover, the unified text-based interface demonstrates significant potential for MTL. Hence, in this work, we present RSCoVLM, a simple yet flexible VLM baseline for RS MTL. Firstly, we create the data curation engine, including data acquisition, offline processing and integrating, as well as online loading and weighting. This data engine effectively addresses complex RS data enviroment and generates flexible vision-language conversations. Furthermore, we propose a unified dynamic-resolution strategy to address the diverse image scales inherent in RS imagery. For UHR images, we introduce the Zoom-in Chain mechanism together with its corresponding dataset, LRS-VQA-Zoom. The strategies are flexible and effectively mitigate the computational burdens. Additionally, we significantly enhance the model's object detection capability and propose a novel evaluation protocol that ensures fair comparison between VLMs and conventional detection models. Extensive experiments demonstrate that RSCoVLM achieves state-of-the-art performance across diverse tasks, outperforming existing RS VLMs and even rivaling specialized expert models. All the training and evaluating tools, model weights, and datasets have been fully open-sourced to support reproducibility. We expect that this baseline will promote further progress toward general-purpose RS models.",
+        "authors": "Qingyun Li, Shuran Ma, Junwei Luo, Yi Yu, Yue Zhou, Fengxiang Wang, Xudong Lu, Xiaoxing Wang, Xin He, Yushi Chen, Xue Yang, Junchi Yan",
+        "url": "http://arxiv.org/abs/2511.21272v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21272v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该研究提出了一个局部经验贝叶斯框架，用于解决A/B测试中跨实验和时间异质性问题。通过理论分析，证明了该策略在降低方差和避免偏差方面的优势，为数据驱动的决策制定提供了可靠的统计保证。"
+        "reason_zh": "在垂直联邦学习中处理缺失值的企业利润预测问题，提出了VFEM方法，并建立了线性收敛率和统计推断框架，理论严谨性高。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21245v1",
@@ -117,7 +192,22 @@
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "这篇论文推导了数据驱动的Koopman MPC在存在近似误差时渐近稳定的条件，并证明了递归可行性和渐近稳定性。其理论证明严谨，将数据驱动模型与控制理论的稳定性保证相结合，对现代AI系统中的鲁棒控制至关重要。"
+        "reason_zh": "数据驱动的Koopman MPC的稳定性分析，推导了渐近稳定性和递归可行性的条件，并利用Koopman算子，具有控制理论和优化收敛性的严谨理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21223v1",
+        "title": "Maxitive Donsker-Varadhan Formulation for Possibilistic Variational Inference",
+        "summary": "Variational inference (VI) is a cornerstone of modern Bayesian learning, enabling approximate inference in complex models that would otherwise be intractable. However, its formulation depends on expectations and divergences defined through high-dimensional integrals, often rendering analytical treatment impossible and necessitating heavy reliance on approximate learning and inference techniques. Possibility theory, an imprecise probability framework, allows to directly model epistemic uncertainty instead of leveraging subjective probabilities. While this framework provides robustness and interpretability under sparse or imprecise information, adapting VI to the possibilistic setting requires rethinking core concepts such as entropy and divergence, which presuppose additivity. In this work, we develop a principled formulation of possibilistic variational inference and apply it to a special class of exponential-family functions, highlighting parallels with their probabilistic counterparts and revealing the distinctive mathematical structures of possibility theory.",
+        "authors": "Jasraj Singh, Shelvia Wongso, Jeremie Houssineau, Badr-Eddine Chérief-Abdellatif",
+        "url": "http://arxiv.org/abs/2511.21223v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21223v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了可能性变分推断的原理性公式，涉及对熵和散度等核心概念的重新思考，并利用Donsker-Varadhan公式，具有极高的数学理论深度。"
     },
     {
         "id": "http://arxiv.org/abs/2511.21219v1",
@@ -127,101 +217,11 @@
         "url": "http://arxiv.org/abs/2511.21219v1",
         "pdf_url": "https://arxiv.org/pdf/2511.21219v1",
         "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "论文提出了一个行为化的条件生成模型 (CGM)，用于随机LTI系统，并证明了样本分布的收敛性及其与卡尔曼滤波器后验分布之间差距的指数级减小。这是随机系统建模的开创性工作，具有非常强的数学严谨性和理论证明。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21122v1",
-        "title": "Which Layer Causes Distribution Deviation? Entropy-Guided Adaptive Pruning for Diffusion and Flow Models",
-        "summary": "Large-scale vision generative models, including diffusion and flow models, have demonstrated remarkable performance in visual generation tasks. However, transferring these pre-trained models to downstream tasks often results in significant parameter redundancy. In this paper, we propose EntPruner, an entropy-guided automatic progressive pruning framework for diffusion and flow models. First, we introduce entropy-guided pruning, a block-level importance assessment strategy specifically designed for generative models. Unlike discriminative models, generative models require preserving the diversity and condition-fidelity of the output distribution. As the importance of each module can vary significantly across downstream tasks, EntPruner prioritizes pruning of less important blocks using data-dependent Conditional Entropy Deviation (CED) as a guiding metric. CED quantifies how much the distribution diverges from the learned conditional data distribution after removing a block. Second, we propose a zero-shot adaptive pruning framework to automatically determine when and how much to prune during training. This dynamic strategy avoids the pitfalls of one-shot pruning, mitigating mode collapse, and preserving model performance. Extensive experiments on DiT and SiT models demonstrate the effectiveness of EntPruner, achieving up to 2.22$\\times$ inference speedup while maintaining competitive generation quality on ImageNet and three downstream datasets.",
-        "authors": "Changlin Li, Jiawei Zhang, Zeyi Shi, Zongxin Yang, Zhihui Li, Xiaojun Chang",
-        "url": "http://arxiv.org/abs/2511.21122v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21122v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "该研究将因果图学习问题表述为带有组l0-正则化的凸混合整数规划，并提供了图恢复的一致性保证、优化与统计误差界限的联系以及早期停止准则。其方法在优化和统计上都具有严格保证，是因果图发现领域的重大进展。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21114v1",
-        "title": "Deformation-aware Temporal Generation for Early Prediction of Alzheimers Disease",
-        "summary": "Alzheimer's disease (AD), a degenerative brain condition, can benefit from early prediction to slow its progression. As the disease progresses, patients typically undergo brain atrophy. Current prediction methods for Alzheimers disease largely involve analyzing morphological changes in brain images through manual feature extraction. This paper proposes a novel method, the Deformation-Aware Temporal Generative Network (DATGN), to automate the learning of morphological changes in brain images about disease progression for early prediction. Given the common occurrence of missing data in the temporal sequences of MRI images, DATGN initially interpolates incomplete sequences. Subsequently, a bidirectional temporal deformation-aware module guides the network in generating future MRI images that adhere to the disease's progression, facilitating early prediction of Alzheimer's disease. DATGN was tested for the generation of temporal sequences of future MRI images using the ADNI dataset, and the experimental results are competitive in terms of PSNR and MMSE image quality metrics. Furthermore, when DATGN-generated synthetic data was integrated into the SVM vs. CNN vs. 3DCNN-based classification methods, significant improvements were achieved from 6. 21\\% to 16\\% in AD vs. NC classification accuracy and from 7. 34\\% to 21. 25\\% in AD vs. MCI vs. NC classification accuracy. The qualitative visualization results indicate that DATGN produces MRI images consistent with the brain atrophy trend in Alzheimer's disease, enabling early disease prediction.",
-        "authors": "Xin Honga, Jie Lin, Minghui Wang",
-        "url": "http://arxiv.org/abs/2511.21114v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21114v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文深入探讨了带有DNN的偏线性模型中的非凸惩罚LAD估计，并建立了估计量的一致性、收敛速度和渐近正态性。其理论分析引入了无限维变分分析和非光滑分析，展现了极高的数学和统计严谨性。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21097v1",
-        "title": "CLRecogEye : Curriculum Learning towards exploiting convolution features for Dynamic Iris Recognition",
-        "summary": "Iris authentication algorithms have achieved impressive recognition performance, making them highly promising for real-world applications such as border control, citizen identification, and both criminal investigations and commercial systems. However, their robustness is still challenged by variations in rotation, scale, specular reflections, and defocus blur. In addition, most existing approaches rely on straightforward point-to-point comparisons, typically using cosine or L2 distance, without effectively leveraging the spatio-spatial-temporal structure of iris patterns. To address these limitations, we propose a novel and generalized matching pipeline that learns rich spatio-spatial-temporal representations of iris features. Our approach first splits each iris image along one dimension, generating a sequence of sub-images that serve as input to a 3D-CNN, enabling the network to capture both spatial and spatio-spatial-temporal cues. To further enhance the modeling of spatio-spatial-temporal feature dynamics, we train the model in curriculum manner. This design allows the network to embed temporal dependencies directly into the feature space, improving discriminability in the deep metric domain. The framework is trained end-to-end with triplet and ArcFace loss in a curriculum manner, enforcing highly discriminative embeddings despite challenges like rotation, scale, reflections, and blur. This design yields a robust and generalizable solution for iris authentication.Github code: https://github.com/GeetanjaliGTZ/CLRecogEye",
-        "authors": "Geetanjali Sharma, Gaurav Jaswal, Aditya Nigam, Raghavendra Ramachandra",
-        "url": "http://arxiv.org/abs/2511.21097v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21097v1",
-        "scores": {
             "Novelty": 4,
             "Rigor": 5,
-            "Impact": 4,
+            "Impact": 3,
             "Clarity": 4
         },
-        "reason_zh": "论文对扩散语言模型 (DLMs) 的并行解码进行了信息论分析，证明了高置信度token的固有低效性，并提出了“比特到轮次”原理。其理论分析和实验验证为理解和优化现代LLM的生成效率提供了深刻的数学洞察。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21064v1",
-        "title": "OVOD-Agent: A Markov-Bandit Framework for Proactive Visual Reasoning and Self-Evolving Detection",
-        "summary": "Open-Vocabulary Object Detection (OVOD) aims to enable detectors to generalize across categories by leveraging semantic information. Although existing methods are pretrained on large vision-language datasets, their inference is still limited to fixed category names, creating a gap between multimodal training and unimodal inference. Previous work has shown that improving textual representation can significantly enhance OVOD performance, indicating that the textual space is still underexplored. To this end, we propose OVOD-Agent, which transforms passive category matching into proactive visual reasoning and self-evolving detection. Inspired by the Chain-of-Thought (CoT) paradigm, OVOD-Agent extends the textual optimization process into an interpretable Visual-CoT with explicit actions. OVOD's lightweight nature makes LLM-based management unsuitable; instead, we model visual context transitions as a Weakly Markovian Decision Process (w-MDP) over eight state spaces, which naturally represents the agent's state, memory, and interaction dynamics. A Bandit module generates exploration signals under limited supervision, helping the agent focus on uncertain regions and adapt its detection policy. We further integrate Markov transition matrices with Bandit trajectories for self-supervised Reward Model (RM) optimization, forming a closed loop from Bandit exploration to RM learning. Experiments on COCO and LVIS show that OVOD-Agent provides consistent improvements across OVOD backbones, particularly on rare categories, confirming the effectiveness of the proposed framework.",
-        "authors": "Chujie Wang, Jianyu Lu, Zhiyuan Luo, Xi Chen, Chu He",
-        "url": "http://arxiv.org/abs/2511.21064v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21064v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "该研究提出了一个用于高维噪声数据集中流形相似性和对齐性的统计推断框架。通过分析样本协方差的谱并利用随机矩阵理论，开发了尺度不变距离、一致估计量和统计检验，并建立了渐近性质，具有极强的统计和数学严谨性。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.21056v1",
-        "title": "A Unified Understanding of Offline Data Selection and Online Self-refining Generation for Post-training LLMs",
-        "summary": "Offline data selection and online self-refining generation, which enhance the data quality, are crucial steps in adapting large language models (LLMs) to specific downstream tasks. We tackle offline data selection and online self-refining generations through an optimization perspective. Specifically, bilevel data selection is used for offline data selection with respect to the validation dataset, and we treat online self-refining generation as a model adaptation step of selecting the model trained on current responses that best fits the validation data. Our framework offers a unified understanding of offline data selection and self-refining generation by assigning a learned data weight to each question and response, either explicitly or implicitly. For the first time, we theoretically demonstrate the effectiveness of the bilevel data selection framework and demonstrate its performance gains over unfiltered direct mixing baselines. By combining offline data with validation-weighted online generations, our method enhances fine-tuning performance. Experiments on quality enhancement and safety-aware LLM fine-tuning validate its effectiveness.",
-        "authors": "Quan Xiao, Tianyi Chen",
-        "url": "http://arxiv.org/abs/2511.21056v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.21056v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "论文提出了一种新颖的随机算法G-Net，用于构建高精度随机二值神经网络。其核心贡献在于通过测度集中原理提供了理论保证，确保二值模型能保持浮点模型的精度，为二值神经网络的理论基础和实际应用开辟了新方向。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.20960v1",
-        "title": "Geometric Calibration and Neutral Zones for Uncertainty-Aware Multi-Class Classification",
-        "summary": "Modern artificial intelligence systems make critical decisions yet often fail silently when uncertain. We develop a geometric framework for post-hoc calibration of neural network probability outputs, treating probability vectors as points on the $(c-1)$-dimensional probability simplex equipped with the Fisher--Rao metric. Our approach yields Additive Log-Ratio (ALR) calibration maps that reduce exactly to Platt scaling for binary problems (Proposition~1) while extending naturally to multi-class settings -- providing a principled generalization that existing methods lack. Complementing calibration, we define geometric reliability scores based on Fisher--Rao distance and construct neutral zones for principled deferral of uncertain predictions.   Theoretical contributions include: (i) consistency of the calibration estimator at rate $O_p(n^{-1/2})$ via M-estimation theory (Theorem~1), and (ii) tight concentration bounds for reliability scores with explicit sub-Gaussian parameters enabling sample size calculations for validation set design (Theorem~2). We conjecture Neyman--Pearson optimality of our neutral zone construction based on connections to Bhattacharyya coefficients. Empirical validation on Adeno-Associated Virus classification demonstrates that the two-stage framework (calibration followed by reliability-based deferral) captures 72.5\\% of errors while deferring 34.5\\% of samples. Notably, this operational gain is achievable with any well-calibrated probability output; the contribution of geometric calibration lies in its theoretical foundations rather than empirical superiority over simpler alternatives. This work bridges information geometry and statistical learning, offering formal guarantees relevant to applications requiring rigorous validation.",
-        "authors": "Soumojit Das, Nairanjana Dasgupta, Prashanta Dutta",
-        "url": "http://arxiv.org/abs/2511.20960v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.20960v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 4,
-            "Clarity": 4
-        },
-        "reason_zh": "这篇论文开发了一个用于多类别分类中不确定性感知几何校准和中立区的框架。其理论贡献包括ALR校准图与Platt缩放的联系、M-估计理论下估计量的一致性、可靠性分数的集中界限以及与信息几何和统计学习的桥接，提供了严谨的统计和数学保证。"
+        "reason_zh": "针对随机LTI系统提出了条件生成建模方法，并证明了样本分布的收敛性及收敛速度，与卡尔曼滤波器进行了比较，具有扎实的随机过程和控制理论基础。"
     }
 ]

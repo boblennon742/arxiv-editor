@@ -1,1 +1,227 @@
-null
+[
+    {
+        "id": "http://arxiv.org/abs/2511.21692v1",
+        "title": "Revisiting Generalization Across Difficulty Levels: It's Not So Easy",
+        "summary": "We investigate how well large language models (LLMs) generalize across different task difficulties, a key question for effective data curation and evaluation. Existing research is mixed regarding whether training on easier or harder data leads to better results, and whether those gains come on easier or harder test data. We address this question by conducting a systematic evaluation of LLMs' generalization across models, datasets, and fine-grained groups of example difficulty. We rank examples in six datasets using the outputs of thousands of different LLMs and Item Response Theory (IRT), a well-established difficulty metric in educational testing. Unlike prior work, our difficulty ratings are therefore determined solely by the abilities of many different LLMs, excluding human opinions of difficulty. With a more objective, larger-scale, and finer-grained analysis, we show that cross-difficulty generalization is often limited; training on either easy or hard data cannot achieve consistent improvements across the full range of difficulties. These results show the importance of having a range of difficulties in both training and evaluation data for LLMs, and that taking shortcuts with respect to difficulty is risky.",
+        "authors": "Yeganeh Kordi, Nihal V. Nayak, Max Zuo, Ilana Nguyen, Stephen H. Bach",
+        "url": "http://arxiv.org/abs/2511.21692v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21692v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文系统性地评估了LLM在不同难度级别任务上的泛化能力，并引入了教育测试中成熟的IRT理论来客观衡量难度。这为LLM的数据策展和评估提供了新的视角和严谨的方法，对解决LLM训练数据效率瓶颈具有实际指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21689v1",
+        "title": "ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration",
+        "summary": "Large language models are powerful generalists, yet solving deep and complex problems such as those of the Humanity's Last Exam (HLE) remains both conceptually challenging and computationally expensive. We show that small orchestrators managing other models and a variety of tools can both push the upper bound of intelligence and improve efficiency in solving difficult agentic tasks. We introduce ToolOrchestra, a method for training small orchestrators that coordinate intelligent tools. ToolOrchestra explicitly uses reinforcement learning with outcome-, efficiency-, and user-preference-aware rewards. Using ToolOrchestra, we produce Orchestrator, an 8B model that achieves higher accuracy at lower cost than previous tool-use agents while aligning with user preferences on which tools are to be used for a given query. On HLE, Orchestrator achieves a score of 37.1%, outperforming GPT-5 (35.1%) while being 2.5x more efficient. On tau2-Bench and FRAMES, Orchestrator surpasses GPT-5 by a wide margin while using only about 30% of the cost. Extensive analysis shows that Orchestrator achieves the best trade-off between performance and cost under multiple metrics, and generalizes robustly to unseen tools. These results demonstrate that composing diverse tools with a lightweight orchestration model is both more efficient and more effective than existing methods, paving the way for practical and scalable tool-augmented reasoning systems.",
+        "authors": "Hongjin Su, Shizhe Diao, Ximing Lu, Mingjie Liu, Jiacheng Xu, Xin Dong, Yonggan Fu, Peter Belcak, Hanrong Ye, Hongxu Yin, Yi Dong, Evelina Bakhturina, Tao Yu, Yejin Choi, Jan Kautz, Pavlo Molchanov",
+        "url": "http://arxiv.org/abs/2511.21689v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21689v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ToolOrchestra提出通过强化学习训练小型编排器来高效协调LLM和各种工具，以解决复杂问题。它明确考虑了结果、效率和用户偏好奖励，在提高LLM智能上限的同时显著提升了计算效率，是LLM应用和效率优化的前沿探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21686v1",
+        "title": "Matrix: Peer-to-Peer Multi-Agent Synthetic Data Generation Framework",
+        "summary": "Synthetic data has become increasingly important for training large language models, especially when real data is scarce, expensive, or privacy-sensitive. Many such generation tasks require coordinated multi-agent workflows, where specialized agents collaborate to produce data that is higher quality, more diverse, and structurally richer. However, existing frameworks for multi-agent synthesis often depend on a centralized orchestrator, creating scalability bottlenecks, or are hardcoded for specific domains, limiting flexibility. We present \\textbf{Matrix}, a decentralized framework that represents both control and data flow as serialized messages passed through distributed queues. This peer-to-peer design eliminates the central orchestrator. Each task progresses independently through lightweight agents, while compute-intensive operations, such as LLM inference or containerized environments, are handled by distributed services. Built on Ray, Matrix scales to tens of thousands of concurrent agentic workflows and provides a modular, configurable design that enables easy adaptation to a wide range of data generation workflows. We evaluate Matrix across diverse synthesis scenarios, such as multi-agent collaborative dialogue, web-based reasoning data extraction, and tool-use trajectory generation in customer service environments. In all cases, Matrix achieves $2$--$15\\times$ higher data generation throughput under identical hardware resources, without compromising output quality.",
+        "authors": "Dong Wang, Yang Li, Ansong Ni, Ching-Feng Yeh, Youssef Emad, Xinjie Lei, Liam Robbins, Karthik Padthe, Hu Xu, Xian Li, Asli Celikyilmaz, Ramya Raghavendra, Lifei Huang, Carole-Jean Wu, Shang-Wen Li",
+        "url": "http://arxiv.org/abs/2511.21686v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21686v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Matrix框架提出了一种去中心化的多智能体合成数据生成方法，通过分布式队列实现点对点设计，消除了中心化瓶颈。这在数据稀缺、昂贵或隐私敏感的场景下，能显著提高数据生成吞吐量，对LLM训练的数据效率和可扩展性有重要实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21669v1",
+        "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
+        "summary": "Large language model (LLM) inference often suffers from high decoding latency and limited scalability across heterogeneous edge-cloud environments. Existing speculative decoding (SD) techniques accelerate token generation but remain confined to single-node execution. We propose DSD, a distributed speculative decoding framework that extends SD to multi-device deployments through coordinated draft-target execution. Given the lack of prior work on simulating this paradigm, we first introduce DSD-Sim, a discrete-event simulator that captures network, batching, and scheduling dynamics. Building on insights from DSD-Sim, we further design an Adaptive Window Control (AWC) policy that dynamically adjusts speculation window size to optimize throughput. Experiments across diverse workloads show that DSD achieves up to 1.1x speedup and 9.7% higher throughput over existing SD baselines, enabling agile and scalable LLM serving across edge and cloud.",
+        "authors": "Fengze Yu, Leshu Li, Brad McDanel, Saiqian Zhang",
+        "url": "http://arxiv.org/abs/2511.21669v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21669v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DSD将推测解码技术扩展到多设备分布式部署，以解决LLM推理在高延迟和异构边缘-云环境中的可扩展性问题。其自适应窗口控制策略能优化吞吐量，对LLM应用中的模型效率和部署瓶颈提供了高效解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21652v1",
+        "title": "Continual Error Correction on Low-Resource Devices",
+        "summary": "The proliferation of AI models in everyday devices has highlighted a critical challenge: prediction errors that degrade user experience. While existing solutions focus on error detection, they rarely provide efficient correction mechanisms, especially for resource-constrained devices. We present a novel system enabling users to correct AI misclassifications through few-shot learning, requiring minimal computational resources and storage. Our approach combines server-side foundation model training with on-device prototype-based classification, enabling efficient error correction through prototype updates rather than model retraining. The system consists of two key components: (1) a server-side pipeline that leverages knowledge distillation to transfer robust feature representations from foundation models to device-compatible architectures, and (2) a device-side mechanism that enables ultra-efficient error correction through prototype adaptation. We demonstrate our system's effectiveness on both image classification and object detection tasks, achieving over 50% error correction in one-shot scenarios on Food-101 and Flowers-102 datasets while maintaining minimal forgetting (less than 0.02%) and negligible computational overhead. Our implementation, validated through an Android demonstration app, proves the system's practicality in real-world scenarios.",
+        "authors": "Kirill Paramonov, Mete Ozay, Aristeidis Mystakidis, Nikolaos Tsalikidis, Dimitrios Sotos, Anastasios Drosou, Dimitrios Tzovaras, Hyunjun Kim, Kiseok Chang, Sangdok Mo, Namwoong Kim, Woojong Yoo, Jijoong Moon, Umberto Michieli",
+        "url": "http://arxiv.org/abs/2511.21652v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21652v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该系统通过少样本学习实现低资源设备上的AI错误纠正，结合了服务器端基础模型蒸馏和设备端原型分类。它以极低的计算和存储开销实现高效错误纠正，对模型压缩和边缘AI的实际应用具有高度影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21613v1",
+        "title": "Beyond URLs: Metadata Diversity and Position for Efficient LLM Pretraining",
+        "summary": "Incorporating metadata in Large Language Models (LLMs) pretraining has recently emerged as a promising approach to accelerate training. However prior work highlighted only one useful signal-URLs, leaving open the question of whether other forms of metadata could yield greater benefits. In this study, we investigate a wider range of metadata types and find other types of metadata, such as fine-grained indicators of document quality that can also accelerate pretraining when prepended. We identify a common feature among effective metadata: they encode information at a finer granularity. We further introduce metadata appending as a means of improving training efficiency, where predicting an appropriate metadata as auxiliary task can help speed up pretraining. In addition, learnable meta-tokens trained with masked loss can recover part of the speedup by inducing quality-aware latent structure. Using probing, we analyze latent representations to understand how metadata shapes learning. Together, these results yield practical guidelines for integrating metadata to improve both the efficiency and effectiveness of LLM pretraining.",
+        "authors": "Dongyang Fan, Diba Hashemi, Sai Praneeth Karimireddy, Martin Jaggi",
+        "url": "http://arxiv.org/abs/2511.21613v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21613v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探索了除URL之外的元数据类型及其位置对LLM预训练效率的影响，发现细粒度质量指标和元数据追加作为辅助任务能加速预训练。这为LLM数据效率和预训练优化提供了实用指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21610v1",
+        "title": "Auxiliary Metrics Help Decoding Skill Neurons in the Wild",
+        "summary": "Large language models (LLMs) exhibit remarkable capabilities across a wide range of tasks, yet their internal mechanisms remain largely opaque. In this paper, we introduce a simple, lightweight, and broadly applicable method with a focus on isolating neurons that encode specific skills. Building upon prior work that identified \"skill neurons\" via soft prompt training on classification tasks, our approach extends the analysis to complex scenarios involving multiple skills. We correlate neuron activations with auxiliary metrics -- such as external labels and the model's own confidence score -- thereby uncovering interpretable and task-specific behaviors without the need for manual token aggregation. We empirically validate our method on tasks spanning open-ended text generation and natural language inference, demonstrating its ability to detect neurons that not only drive known skills but also reveal previously unidentified shortcuts in arithmetic reasoning on BigBench.",
+        "authors": "Yixiu Zhao, Xiaozhi Wang, Zijun Yao, Lei Hou, Juanzi Li",
+        "url": "http://arxiv.org/abs/2511.21610v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21610v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种轻量级方法，通过关联神经元激活与辅助指标（如外部标签和模型置信度）来识别LLM中编码特定技能的神经元。这有助于深入理解LLM的内部机制，对AI前沿算法的解释性研究有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21600v1",
+        "title": "TAB-DRW: A DFT-based Robust Watermark for Generative Tabular Data",
+        "summary": "The rise of generative AI has enabled the production of high-fidelity synthetic tabular data across fields such as healthcare, finance, and public policy, raising growing concerns about data provenance and misuse. Watermarking offers a promising solution to address these concerns by ensuring the traceability of synthetic data, but existing methods face many limitations: they are computationally expensive due to reliance on large diffusion models, struggle with mixed discrete-continuous data, or lack robustness to post-modifications. To address them, we propose TAB-DRW, an efficient and robust post-editing watermarking scheme for generative tabular data. TAB-DRW embeds watermark signals in the frequency domain: it normalizes heterogeneous features via the Yeo-Johnson transformation and standardization, applies the discrete Fourier transform (DFT), and adjusts the imaginary parts of adaptively selected entries according to precomputed pseudorandom bits. To further enhance robustness and efficiency, we introduce a novel rank-based pseudorandom bit generation method that enables row-wise retrieval without incurring storage overhead. Experiments on five benchmark tabular datasets show that TAB-DRW achieves strong detectability and robustness against common post-processing attacks, while preserving high data fidelity and fully supporting mixed-type features.",
+        "authors": "Yizhou Zhao, Xiang Li, Peter Song, Qi Long, Weijie Su",
+        "url": "http://arxiv.org/abs/2511.21600v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21600v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TAB-DRW提出了一种高效且鲁棒的生成式表格数据后编辑水印方案，通过离散傅里叶变换在频域嵌入水印信号。它解决了现有水印方法计算成本高、对混合数据支持差及鲁棒性不足的问题，对数据溯源和AI伦理有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21594v1",
+        "title": "Visualizing LLM Latent Space Geometry Through Dimensionality Reduction",
+        "summary": "Large language models (LLMs) achieve state-of-the-art results across many natural language tasks, but their internal mechanisms remain difficult to interpret. In this work, we extract, process, and visualize latent state geometries in Transformer-based language models through dimensionality reduction. We capture layerwise activations at multiple points within Transformer blocks and enable systematic analysis through Principal Component Analysis (PCA) and Uniform Manifold Approximation (UMAP). We demonstrate experiments on GPT-2 and LLaMa models, where we uncover interesting geometric patterns in latent space. Notably, we identify a clear separation between attention and MLP component outputs across intermediate layers, a pattern not documented in prior work to our knowledge. We also characterize the high norm of latent states at the initial sequence position and visualize the layerwise evolution of latent states. Additionally, we demonstrate the high-dimensional helical structure of GPT-2's positional embeddings, the sequence-wise geometric patterns in LLaMa, and experiment with repeating token sequences. We aim to support systematic analysis of Transformer internals with the goal of enabling further reproducible interpretability research. We make our code available at https://github.com/Vainateya/Feature_Geometry_Visualization.",
+        "authors": "Alex Ning, Vainateya Rangaraju",
+        "url": "http://arxiv.org/abs/2511.21594v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21594v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过降维技术提取、处理和可视化Transformer模型中的潜在状态几何，揭示了LLM潜在空间中的有趣几何模式，如注意力与MLP组件输出之间的分离。这有助于LLM内部机制的解释性研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21592v1",
+        "title": "MoGAN: Improving Motion Quality in Video Diffusion via Few-Step Motion Adversarial Post-Training",
+        "summary": "Video diffusion models achieve strong frame-level fidelity but still struggle with motion coherence, dynamics and realism, often producing jitter, ghosting, or implausible dynamics. A key limitation is that the standard denoising MSE objective provides no direct supervision on temporal consistency, allowing models to achieve low loss while still generating poor motion. We propose MoGAN, a motion-centric post-training framework that improves motion realism without reward models or human preference data. Built atop a 3-step distilled video diffusion model, we train a DiT-based optical-flow discriminator to differentiate real from generated motion, combined with a distribution-matching regularizer to preserve visual fidelity. With experiments on Wan2.1-T2V-1.3B, MoGAN substantially improves motion quality across benchmarks. On VBench, MoGAN boosts motion score by +7.3% over the 50-step teacher and +13.3% over the 3-step DMD model. On VideoJAM-Bench, MoGAN improves motion score by +7.4% over the teacher and +8.8% over DMD, while maintaining comparable or even better aesthetic and image-quality scores. A human study further confirms that MoGAN is preferred for motion quality (52% vs. 38% for the teacher; 56% vs. 29% for DMD). Overall, MoGAN delivers significantly more realistic motion without sacrificing visual fidelity or efficiency, offering a practical path toward fast, high-quality video generation. Project webpage is: https://xavihart.github.io/mogan.",
+        "authors": "Haotian Xue, Qi Chen, Zhonghao Wang, Xun Huang, Eli Shechtman, Jinrong Xie, Yongxin Chen",
+        "url": "http://arxiv.org/abs/2511.21592v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21592v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MoGAN提出了一种以运动为中心的视频扩散模型后训练框架，通过训练基于DiT的光流判别器来提高运动真实感。它在不牺牲视觉保真度和效率的情况下显著改善了视频生成中的运动质量，是生成式AI前沿算法的进步。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21584v1",
+        "title": "Model-Based Policy Adaptation for Closed-Loop End-to-End Autonomous Driving",
+        "summary": "End-to-end (E2E) autonomous driving models have demonstrated strong performance in open-loop evaluations but often suffer from cascading errors and poor generalization in closed-loop settings. To address this gap, we propose Model-based Policy Adaptation (MPA), a general framework that enhances the robustness and safety of pretrained E2E driving agents during deployment. MPA first generates diverse counterfactual trajectories using a geometry-consistent simulation engine, exposing the agent to scenarios beyond the original dataset. Based on this generated data, MPA trains a diffusion-based policy adapter to refine the base policy's predictions and a multi-step Q value model to evaluate long-term outcomes. At inference time, the adapter proposes multiple trajectory candidates, and the Q value model selects the one with the highest expected utility. Experiments on the nuScenes benchmark using a photorealistic closed-loop simulator demonstrate that MPA significantly improves performance across in-domain, out-of-domain, and safety-critical scenarios. We further investigate how the scale of counterfactual data and inference-time guidance strategies affect overall effectiveness.",
+        "authors": "Haohong Lin, Yunzhi Zhang, Wenhao Ding, Jiajun Wu, Ding Zhao",
+        "url": "http://arxiv.org/abs/2511.21584v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21584v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MPA提出了一种基于模型的策略适应框架，通过生成反事实轨迹和训练扩散策略适配器来增强端到端自动驾驶代理的鲁棒性和安全性。它解决了闭环设置中的级联错误和泛化问题，对AI在实际应用中的可靠性有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21581v1",
+        "title": "Learning When to Stop: Adaptive Latent Reasoning via Reinforcement Learning",
+        "summary": "Latent reasoning represents a new development in Transformer language models that has shown potential in compressing reasoning lengths compared to chain-of-thought reasoning. By directly passing the information-rich previous final latent state into the next sequence, latent reasoning removes the restriction to human language tokens as the medium for reasoning. We develop adaptive-length latent reasoning models and introduce a post-SFT reinforcement-learning methodology to optimize latent reasoning length by minimizing reasoning length while maintaining accuracy. This, in turn, further reduces compute usage and raises the bar on the compressive capabilities of latent reasoning models. Experiments on the Llama 3.2 1B model and the GSM8K-Aug dataset show a $52\\%$ drop in total reasoning length with no penalty to accuracy. In future work, we plan to extend to additional models and datasets, analyze relationships between training coefficients, experiment with architecture variations, and continue our knowledge distillation for latent reasoning SFT efforts. We make our code and pretrained weights available at https://github.com/apning/adaptive-latent-reasoning.",
+        "authors": "Alex Ning, Yen-Ling Kuo, Gabe Gomes",
+        "url": "http://arxiv.org/abs/2511.21581v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21581v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了自适应长度的潜在推理模型，并引入了后SFT强化学习方法来优化推理长度，同时保持准确性。它显著减少了LLM的推理长度和计算使用，直接解决了LLM应用中的效率瓶颈，具有理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21579v1",
+        "title": "Harmony: Harmonizing Audio and Video Generation through Cross-Task Synergy",
+        "summary": "The synthesis of synchronized audio-visual content is a key challenge in generative AI, with open-source models facing challenges in robust audio-video alignment. Our analysis reveals that this issue is rooted in three fundamental challenges of the joint diffusion process: (1) Correspondence Drift, where concurrently evolving noisy latents impede stable learning of alignment; (2) inefficient global attention mechanisms that fail to capture fine-grained temporal cues; and (3) the intra-modal bias of conventional Classifier-Free Guidance (CFG), which enhances conditionality but not cross-modal synchronization. To overcome these challenges, we introduce Harmony, a novel framework that mechanistically enforces audio-visual synchronization. We first propose a Cross-Task Synergy training paradigm to mitigate drift by leveraging strong supervisory signals from audio-driven video and video-driven audio generation tasks. Then, we design a Global-Local Decoupled Interaction Module for efficient and precise temporal-style alignment. Finally, we present a novel Synchronization-Enhanced CFG (SyncCFG) that explicitly isolates and amplifies the alignment signal during inference. Extensive experiments demonstrate that Harmony establishes a new state-of-the-art, significantly outperforming existing methods in both generation fidelity and, critically, in achieving fine-grained audio-visual synchronization.",
+        "authors": "Teng Hu, Zhentao Yu, Guozhen Zhang, Zihan Su, Zhengguang Zhou, Youliang Zhang, Yuan Zhou, Qinglin Lu, Ran Yi",
+        "url": "http://arxiv.org/abs/2511.21579v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21579v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Harmony框架通过跨任务协同训练、全局-局部解耦交互模块和同步增强CFG，解决了音视频生成中鲁棒对齐的挑战。它在生成保真度和音视频同步方面达到了新的SOTA，是多模态AI前沿算法的突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21574v1",
+        "title": "Multimodal Robust Prompt Distillation for 3D Point Cloud Models",
+        "summary": "Adversarial attacks pose a significant threat to learning-based 3D point cloud models, critically undermining their reliability in security-sensitive applications. Existing defense methods often suffer from (1) high computational overhead and (2) poor generalization ability across diverse attack types. To bridge these gaps, we propose a novel yet efficient teacher-student framework, namely Multimodal Robust Prompt Distillation (MRPD) for distilling robust 3D point cloud model. It learns lightweight prompts by aligning student point cloud model's features with robust embeddings from three distinct teachers: a vision model processing depth projections, a high-performance 3D model, and a text encoder. To ensure a reliable knowledge transfer, this distillation is guided by a confidence-gated mechanism which dynamically balances the contribution of all input modalities. Notably, since the distillation is all during the training stage, there is no additional computational cost at inference. Extensive experiments demonstrate that MRPD substantially outperforms state-of-the-art defense methods against a wide range of white-box and black-box attacks, while even achieving better performance on clean data. Our work presents a new, practical paradigm for building robust 3D vision systems by efficiently harnessing multimodal knowledge.",
+        "authors": "Xiang Gu, Liming Lu, Xu Zheng, Anan Du, Yongbin Zhou, Shuchao Pang",
+        "url": "http://arxiv.org/abs/2511.21574v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21574v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MRPD提出了一种多模态鲁棒提示蒸馏框架，通过将学生点云模型的特征与来自视觉、3D模型和文本编码器的鲁棒嵌入对齐，来构建鲁棒的3D点云模型。它在不增加推理成本的情况下，显著提高了模型对对抗性攻击的鲁棒性，对AI安全性有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21572v1",
+        "title": "BAMAS: Structuring Budget-Aware Multi-Agent Systems",
+        "summary": "Large language model (LLM)-based multi-agent systems have emerged as a powerful paradigm for enabling autonomous agents to solve complex tasks. As these systems scale in complexity, cost becomes an important consideration for practical deployment. However, existing work rarely addresses how to structure multi-agent systems under explicit budget constraints. In this paper, we propose BAMAS, a novel approach for building multi-agent systems with budget awareness. BAMAS first selects an optimal set of LLMs by formulating and solving an Integer Linear Programming problem that balances performance and cost. It then determines how these LLMs should collaborate by leveraging a reinforcement learning-based method to select the interaction topology. Finally, the system is instantiated and executed based on the selected agents and their collaboration topology. We evaluate BAMAS on three representative tasks and compare it with state-of-the-art agent construction methods. Results show that BAMAS achieves comparable performance while reducing cost by up to 86%.",
+        "authors": "Liming Yang, Junyu Luo, Xuanzhe Liu, Yiling Lou, Zhenpeng Chen",
+        "url": "http://arxiv.org/abs/2511.21572v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21572v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "BAMAS提出了一种预算感知的多智能体系统构建方法，通过整数线性规划选择最优LLM集合，并利用强化学习确定协作拓扑。它在保持性能的同时显著降低了成本，有效解决了LLM多智能体系统部署中的效率和成本瓶颈。"
+    }
+]

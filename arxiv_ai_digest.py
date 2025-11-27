@@ -11,7 +11,7 @@ from datetime import date, timedelta
 
 # --- 0. 依赖检查 ---
 try:
-    import json5 
+    import json5
 except ImportError:
     import json as json5
     logger.warning("未找到 json5 库，正在使用标准 json 库。")
@@ -75,30 +75,28 @@ YOUR_DOMAINS_OF_INTEREST = {
 # --------------------------------------------------------------------------
 def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
     logger.info(f"--- 正在为领域 {domain_name} (日期 {target_date}) 抓取论文 ---")
-    
+   
     date_str = target_date.strftime("%Y%m%d")
     date_filter = f"submittedDate:[{date_str}0000 TO {date_str}2359]"
-    
+   
     category_query = " OR ".join([f"cat:{cat}" for cat in categories])
     full_query = f"({category_query}) AND ({extra_query}) AND {date_filter}"
-    
+   
     search = arxiv.Search(
         query=full_query,
-        max_results=120, # 维持 120 篇
+        max_results=120,  # 维持 120 篇
         sort_by=arxiv.SortCriterion.SubmittedDate,
         sort_order=arxiv.SortOrder.Descending
     )
-
     papers_list = []
     try:
-        # --- 关键修复：配置 Client 增加延迟和重试 ---
+        # --- 关键修复：延迟大幅提升 + 重试次数增加 ---
         client = arxiv.Client(
             page_size=100,
-            delay_seconds=8.0,  # 关键：每次 API 请求等待 8 秒
-            num_retries=5       # 增加重试次数
+            delay_seconds=15.0,   
+            num_retries=8         
         )
-        # ----------------------------------------------
-        
+       
         for result in client.results(search):
             papers_list.append({
                 'id': result.entry_id,
@@ -124,21 +122,19 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not GEMINI_API_KEY:
         logger.error("未找到 GEMINI_API_KEY。")
         return None
-
     client = genai.Client()
-    
+   
     prompt_papers = "\n".join(
         [f"--- 论文 {i+1} ---\nID: {p['id']}\n标题: {p['title']}\n摘要: {p['summary']}\n"
          for i, p in enumerate(papers)]
     )
-
     system_prompt = f"""
     你是我（统计学硕士）的私人研究助手。
     我的个人偏好："{user_preference_prompt}"
-    
+   
     下面是 {len(papers)} 篇论文。
     你的任务是“批量评分和筛选”：
-    
+   
     1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
         - Novelty (创新性): 提出新方法或新视角 (1-5分)
         - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
@@ -146,9 +142,9 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
         - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
     2. **优选 Top 15**：请根据我的偏好，挑选出**总分最高的 10 到 15 篇**论文。
     3. **评分**：为每篇选中的论文打分 (Novelty, Rigor, Impact, Clarity)。
-    
+   
     请返回一个 JSON **列表**。如果实在没有值得读的，返回 `null`。
-    
+   
     JSON 格式示例:
     [
       {{
@@ -158,52 +154,46 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
       }}
     ]
     """
-    
+   
     full_prompt = f"{system_prompt}\n\n--- 论文列表 ---\n{prompt_papers}"
-
     # --- (V19) 增强的重试逻辑 ---
     max_retries = 5
     base_delay = 10
-
     for attempt in range(max_retries):
         try:
-            logger.info(f"🚀 请求 AI 分析 (第 {attempt + 1}/{max_retries} 次尝试)...")
-            
+            logger.info(f"请求 AI 分析 (第 {attempt + 1}/{max_retries} 次尝试)...")
+           
             response = client.models.generate_content(
                 model='gemini-2.5-flash',
                 contents=full_prompt,
                 config=types.GenerateContentConfig(temperature=0.3)
             )
-            
+           
             cleaned = response.text.strip()
             if cleaned.startswith("```"):
                 cleaned = re.sub(r"^```\w*\n", "", cleaned)
                 cleaned = re.sub(r"\n```$", "", cleaned)
             cleaned = cleaned.strip()
-
             if cleaned.lower() == 'null':
                 logger.info("AI 明确表示没有推荐 (NULL)。")
                 return None
-
             match = re.search(r'(\[.*\])', cleaned, re.DOTALL)
             if match:
                 cleaned = match.group(1)
-            
+           
             # 使用 json5 宽容解析
             ai_picks_list = json5.loads(cleaned)
-            
-            logger.info(f"✅ AI 成功选出 {len(ai_picks_list)} 篇今日最佳。")
+           
+            logger.info(f"AI 成功选出 {len(ai_picks_list)} 篇今日最佳。")
             return ai_picks_list
-
         except Exception as e:
-            logger.warning(f"⚠️ 第 {attempt + 1} 次尝试失败: {e}")
+            logger.warning(f"第 {attempt + 1} 次尝试失败: {e}")
             if attempt < max_retries - 1:
-                # 指数退避
                 wait_time = base_delay * (2 ** attempt) + random.uniform(0, 3)
-                logger.info(f"⏳ 等待 {wait_time:.1f} 秒后重试...")
+                logger.info(f"等待 {wait_time:.1f} 秒后重试...")
                 time.sleep(wait_time)
             else:
-                logger.error("❌ 所有重试均失败。")
+                logger.error("所有重试均失败。")
                 return None
 
 # --------------------------------------------------------------------------
@@ -226,32 +216,33 @@ def write_to_json(data_to_save, file_path):
 # --------------------------------------------------------------------------
 if __name__ == "__main__":
     target_date = date.today() - timedelta(days=1)
-    
-    logger.info(f"--- 脚本开始运行 (V20 抗限流版)，目标日期: {target_date.isoformat()} ---")
-
+   
+    logger.info(f"--- 脚本开始运行，目标日期: {target_date.isoformat()} ---")
     for domain_key, config in YOUR_DOMAINS_OF_INTEREST.items():
         logger.info(f"\n--- 处理领域: {config['name_en']} ---")
-        
+       
         papers = fetch_papers_for_domain(
             domain_name=config["name_en"],
-            categories=config["categories"], 
-            extra_query=config["search_query"], 
+            categories=config["categories"],
+            extra_query=config["search_query"],
             target_date=target_date
         )
-        
+       
         picks_list_json = get_ai_editor_pick(papers, config["name_en"], config["ai_preference_prompt"])
-
         final_data_list = []
         if picks_list_json:
             for pick_item in picks_list_json:
                 full_paper = next((p for p in papers if p['id'] == pick_item.get('id')), None)
                 if full_paper:
                     final_data_list.append({**full_paper, **pick_item})
-        
+       
         if not final_data_list:
-             final_data_list = None 
-
+             final_data_list = None
         output_path = os.path.join(ARCHIVE_DIR, domain_key, f"{target_date.isoformat()}.json")
         write_to_json(final_data_list, output_path)
+
+        logger.info("领域处理完毕，冷却 45 秒后继续下一个领域...")
+        time.sleep(45)
+        # =========================================
 
     logger.info(f"\n--- 所有领域处理完毕: {target_date.isoformat()} ---")

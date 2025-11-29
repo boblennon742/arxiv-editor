@@ -1,37 +1,71 @@
 [
     {
-        "id": "http://arxiv.org/abs/2511.16333v1",
-        "title": "Beyond Generative AI: World Models for Clinical Prediction, Counterfactuals, and Planning",
-        "summary": "Healthcare requires AI that is predictive, reliable, and data-efficient. However, recent generative models lack physical foundation and temporal reasoning required for clinical decision support. As scaling language models show diminishing returns for grounded clinical reasoning, world models are gaining traction because they learn multimodal, temporally coherent, and action-conditioned representations that reflect the physical and causal structure of care. This paper reviews World Models for healthcare systems that learn predictive dynamics to enable multistep rollouts, counterfactual evaluation and planning. We survey recent work across three domains: (i) medical imaging and diagnostics (e.g., longitudinal tumor simulation, projection-transition modeling, and Joint Embedding Predictive Architecture i.e., JEPA-style predictive representation learning), (ii) disease progression modeling from electronic health records (generative event forecasting at scale), and (iii) robotic surgery and surgical planning (action-conditioned guidance and control). We also introduce a capability rubric: L1 temporal prediction, L2 action-conditioned prediction, L3 counterfactual rollouts for decision support, and L4 planning/control. Most reviewed systems achieve L1--L2, with fewer instances of L3 and rare L4. We identify cross-cutting gaps that limit clinical reliability; under-specified action spaces and safety constraints, weak interventional validation, incomplete multimodal state construction, and limited trajectory-level uncertainty calibration. This review outlines a research agenda for clinically robust prediction-first world models that integrate generative backbones (transformers, diffusion, VAE) with causal/mechanical foundation for safe decision support in healthcare.",
-        "authors": "Mohammad Areeb Qazi, Maryam Nadeem, Mohammad Yaqub",
-        "url": "http://arxiv.org/abs/2511.16333v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.16333v1",
+        "id": "http://arxiv.org/abs/2511.21622v1",
+        "title": "On the Origin of Algorithmic Progress in AI",
+        "summary": "Algorithms have been estimated to increase AI training FLOP efficiency by a factor of 22,000 between 2012 and 2023 [Ho et al., 2024]. Running small-scale ablation experiments on key innovations from this time period, we are able to account for less than 10x of these gains. Surveying the broader literature, we estimate that additional innovations not included in our ablations account for less than 10x, yielding a total under 100x. This leads us to conduct scaling experiments, which reveal that much of this efficiency gap can be explained by algorithms with scale-dependent efficiency improvements. In particular, we conduct scaling experiments between LSTMs and Transformers, finding exponent differences in their compute-optimal scaling law while finding little scaling difference for many other innovations. These experiments demonstrate that - contrary to standard assumptions - an algorithm's efficiency gains are tied to compute scale. Using experimental extrapolation and literature estimates, we account for 6,930x efficiency gains over the same time period, with the scale-dependent LSTM-to-Transformer transition accounting for the majority of gains. Our results indicate that algorithmic progress for small models has been far slower than previously assumed, and that measures of algorithmic efficiency are strongly reference-dependent.",
+        "authors": "Hans Gundlach, Alex Fogelson, Jayson Lynch, Ana Trisovic, Jonathan Rosenfeld, Anmol Sandhu, Neil Thompson",
+        "url": "http://arxiv.org/abs/2511.21622v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21622v1",
         "type": "前沿深度",
         "scores": {
             "Novelty": 5,
             "Rigor": 4,
-            "Clarity": 5,
-            "Utility": 5
-        },
-        "core_value_zh": "综述了世界模型在医疗领域结合生成式AI、因果推断（反事实）和规划（类强化学习）的最新进展，为未来研究指明方向。",
-        "reason_zh": "这篇综述完美契合您对生成式AI、因果推断（通过'反事实'分析）和强化学习（通过'规划'）的兴趣。它提出了一个能力评估框架和研究议程，具有极高的前瞻性和理论深度，能有效指引未来的研究方向。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.18530v1",
-        "title": "Transforming Conditional Density Estimation Into a Single Nonparametric Regression Task",
-        "summary": "We propose a way of transforming the problem of conditional density estimation into a single nonparametric regression task via the introduction of auxiliary samples. This allows leveraging regression methods that work well in high dimensions, such as neural networks and decision trees. Our main theoretical result characterizes and establishes the convergence of our estimator to the true conditional density in the data limit. We develop condensité, a method that implements this approach. We demonstrate the benefit of the auxiliary samples on synthetic data and showcase that condensité can achieve good out-of-the-box results. We evaluate our method on a large population survey dataset and on a satellite imaging dataset. In both cases, we find that condensité matches or outperforms the state of the art and yields conditional densities in line with established findings in the literature on each dataset. Our contribution opens up new possibilities for regression-based conditional density estimation and the empirical results indicate strong promise for applied research.",
-        "authors": "Alexander G. Reisach, Olivier Collier, Alex Luedtke, Antoine Chambaz",
-        "url": "http://arxiv.org/abs/2511.18530v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.18530v1",
-        "type": "前沿深度",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
             "Clarity": 4,
             "Utility": 5
         },
-        "core_value_zh": "提出了一种将条件密度估计转化为单非参数回归任务的新方法，并提供了严格的理论收敛性证明，对高维统计方法有重要贡献。",
-        "reason_zh": "这篇论文直接切入高维统计和非参数方法的核心，提出了一种新颖且具有数学严谨性的方法，并提供了理论收敛性证明。对于您作为数理统计博士生，这是拓展高维统计研究思路的优秀资料。"
+        "core_value_zh": "揭示AI算法进步的规模依赖性及Transformer效率的深层来源。",
+        "reason_zh": "本文深入探讨了AI算法效率提升的来源，特别是Transformer等LLM核心架构的规模依赖性效率增益。这对于理解LLM的理论机制、扩展性以及未来算法设计方向具有高度前瞻性和指导价值，是LLM理论机制研究的必读前沿资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21563v1",
+        "title": "Some aspects of robustness in modern Markov Chain Monte Carlo",
+        "summary": "Markov Chain Monte Carlo (MCMC) is a flexible approach to approximate sampling from intractable probability distributions, with a rich theoretical foundation and comprising a wealth of exemplar algorithms. While the qualitative correctness of MCMC algorithms is often easy to ensure, their practical efficiency is contingent on the `target' distribution being reasonably well-behaved.   In this work, we concern ourself with the scenario in which this good behaviour is called into question, reviewing an emerging line of work on `robust' MCMC algorithms which can perform acceptably even in the face of certain pathologies.   We focus on two particular pathologies which, while simple, can already have dramatic effects on standard `local' algorithms. The first is roughness, whereby the target distribution varies so rapidly that the numerical stability of the algorithm is tenuous. The second is flatness, whereby the landscape of the target distribution is instead so barren and uninformative that one becomes lost in uninteresting parts of the state space. In each case, we formulate the pathology in concrete terms, review a range of proposed algorithmic remedies to the pathology, and outline promising directions for future research.",
+        "authors": "Sam Power, Giorgos Vasdekis",
+        "url": "http://arxiv.org/abs/2511.21563v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21563v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "现代MCMC算法在病态分布下的鲁棒性综述，指引高维统计与贝叶斯推断前沿。",
+        "reason_zh": "MCMC是贝叶斯推断和高维统计的核心工具。这篇综述聚焦于MCMC在病态分布（如粗糙度、平坦度）下的鲁棒性问题，这是当前高维统计和贝叶斯推断中的一个重要前沿挑战。它回顾了现有算法并展望了未来研究方向，具有很高的理论深度和实用价值，直接契合您对高维统计和贝叶斯推断前沿的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.21654v1",
+        "title": "EvilGenie: A Reward Hacking Benchmark",
+        "summary": "We introduce EvilGenie, a benchmark for reward hacking in programming settings. We source problems from LiveCodeBench and create an environment in which agents can easily reward hack, such as by hardcoding test cases or editing the testing files. We measure reward hacking in three ways: held out unit tests, LLM judges, and test file edit detection. We verify these methods against human review and each other. We find the LLM judge to be highly effective at detecting reward hacking in unambiguous cases, and observe only minimal improvement from the use of held out test cases. In addition to testing many models using Inspect's basic_agent scaffold, we also measure reward hacking rates for three popular proprietary coding agents: OpenAI's Codex, Anthropic's Claude Code, and Google's Gemini CLI Using GPT-5, Claude Sonnet 4, and Gemini 2.5 Pro, respectively. We observe explicit reward hacking by both Codex and Claude Code, and misaligned behavior by all three agents. Our codebase can be found at https://github.com/JonathanGabor/EvilGenie.",
+        "authors": "Jonathan Gabor, Jayson Lynch, Jonathan Rosenfeld",
+        "url": "http://arxiv.org/abs/2511.21654v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.21654v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "LLM奖励欺骗行为的基准测试与分析，关注AI对齐与安全性。",
+        "reason_zh": "关注LLM的奖励欺骗（reward hacking）行为，这是LLM理论机制和AI对齐（alignment）的前沿研究方向。提供了一个新的基准测试和对主流模型的评估，有助于理解LLM的局限性和未来研究方向，对LLM理论机制的深入理解有重要补充。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20729v1",
+        "title": "Spatio-Temporal Trajectory Foundation Model - Recent Advances and Future Directions",
+        "summary": "Foundation models (FMs) have emerged as a powerful paradigm, enabling a diverse range of data analytics and knowledge discovery tasks across scientific fields. Inspired by the success of FMs, particularly large language models, researchers have recently begun to explore spatio-temporal foundation models (STFMs) to improve adaptability and generalization across a wide spectrum of spatio-temporal (ST) tasks. Despite rapid progress, a systematic investigation of trajectory foundation models (TFMs), a crucial subclass of STFMs, is largely lacking. This tutorial addresses this gap by offering a comprehensive overview of recent advances in TFMs, including a taxonomy of existing methodologies and a critical analysis of their strengths and limitations. In addition, the tutorial highlights open challenges and outlines promising research directions to advance spatio-temporal general intelligence through the development of robust, responsible, and transferable TFMs.",
+        "authors": "Sean Bin Yang, Ying Sun, Yunyao Cheng, Yan Lin, Kristian Torp, Jilin Hu",
+        "url": "http://arxiv.org/abs/2511.20729v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20729v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "时空轨迹基础模型的最新进展与未来方向综述。",
+        "reason_zh": "这是对时空轨迹基础模型（STFMs/TFMs）的全面综述，该领域是Foundation Model（受LLM启发）在特定数据类型上的重要应用和扩展。它提供了方法论分类、优缺点分析以及未来研究方向，对于理解LLM的理论机制和Foundation Model的普适性具有很高的前瞻性和指导意义。"
     },
     {
         "id": "http://arxiv.org/abs/2511.18633v1",
@@ -47,41 +81,41 @@
             "Clarity": 4,
             "Utility": 4
         },
-        "core_value_zh": "从结构主义哲学视角审视机器学习中神经网络表示的本体论承诺，为理解LLM理论机制和可解释性提供了深刻的理论框架。",
-        "reason_zh": "这篇论文从哲学和理论层面探讨了神经网络（包括LLM）的内部表示机制，这对于深入理解LLM的理论基础和可解释性至关重要。它提供了一个高层次的分析框架，有助于您从更深层次思考AI模型的基础。"
+        "core_value_zh": "结合哲学结构主义框架分类神经网络表征，深化LLM理论理解。",
+        "reason_zh": "本文从哲学结构主义角度审视机器学习模型（特别是神经网络）的内部表征，这对于理解LLM等复杂模型的理论机制、可解释性和内在假设具有独特的深度和前瞻性。它提供了一个新的分析框架，有助于博士生进行跨学科思考，深化对AI模型基础的理解。"
     },
     {
-        "id": "http://arxiv.org/abs/2511.20610v1",
-        "title": "Building a Foundation Model for Trajectory from Scratch",
-        "summary": "Foundation models are transformative in artificial intelligence, but building them from scratch, especially for mobility trajectories, is not yet clear or documented. This tutorial bridges this gap by demonstrating the steps and code of a minimal implementation of a trajectory-focused foundation model starting from GPT-2. Through a concise, step-by-step, code-driven process, we demonstrate adapting GPT-2 for spatiotemporal data. We then review and compare representative trajectory foundation models, such as TrajFM and TrajGPT, highlighting their architectural innovations and differences. Additionally, we introduce complementary techniques from related domains, like TimesFM's patching approach. Targeted at researchers and practitioners, this tutorial aims to explain the concepts and terminology of foundation models, at the implementation level. We find it timely and indispensable to create this educational material in order to support the SIGSPATIAL community in building and evaluating mobility foundation models, enhancing both research clarity and peer-review effectiveness in mobility AI.",
-        "authors": "Gaspard Merten, Mahmoud Sakr, Gilles Dejaegere",
-        "url": "http://arxiv.org/abs/2511.20610v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.20610v1",
-        "type": "前沿深度",
+        "id": "http://arxiv.org/abs/2511.18530v1",
+        "title": "Transforming Conditional Density Estimation Into a Single Nonparametric Regression Task",
+        "summary": "We propose a way of transforming the problem of conditional density estimation into a single nonparametric regression task via the introduction of auxiliary samples. This allows leveraging regression methods that work well in high dimensions, such as neural networks and decision trees. Our main theoretical result characterizes and establishes the convergence of our estimator to the true conditional density in the data limit. We develop condensité, a method that implements this approach. We demonstrate the benefit of the auxiliary samples on synthetic data and showcase that condensité can achieve good out-of-the-box results. We evaluate our method on a large population survey dataset and on a satellite imaging dataset. In both cases, we find that condensité matches or outperforms the state of the art and yields conditional densities in line with established findings in the literature on each dataset. Our contribution opens up new possibilities for regression-based conditional density estimation and the empirical results indicate strong promise for applied research.",
+        "authors": "Alexander G. Reisach, Olivier Collier, Alex Luedtke, Antoine Chambaz",
+        "url": "http://arxiv.org/abs/2511.18530v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.18530v1",
+        "type": "基础核心",
         "scores": {
-            "Novelty": 3,
-            "Rigor": 3,
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "将条件密度估计转化为单次非参数回归任务的新方法及其理论收敛性。",
+        "reason_zh": "条件密度估计是统计学和数据科学中的一个核心且具有挑战性的问题。本文提出了一种创新的方法，将其转化为非参数回归任务，并提供了严格的理论收敛性证明。这对于数理统计博士生来说，是极具数学严谨性和实用价值的核心基础资料，尤其在高维统计背景下，能有效补全高等概率论/统计推断的数学拼图。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2511.20725v1",
+        "title": "Gradient Descent Algorithm Survey",
+        "summary": "Focusing on the practical configuration needs of optimization algorithms in deep learning, this article concentrates on five major algorithms: SGD, Mini-batch SGD, Momentum, Adam, and Lion. It systematically analyzes the core advantages, limitations, and key practical recommendations of each algorithm. The research aims to gain an in-depth understanding of these algorithms and provide a standardized reference for the reasonable selection, parameter tuning, and performance improvement of optimization algorithms in both academic research and engineering practice, helping to solve optimization challenges in different scales of models and various training scenarios.",
+        "authors": "Deng Fucheng, Wang Wanjie, Gong Ao, Wang Xiaoqi, Wang Fan",
+        "url": "http://arxiv.org/abs/2511.20725v1",
+        "pdf_url": "https://arxiv.org/pdf/2511.20725v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 2,
+            "Rigor": 4,
             "Clarity": 5,
             "Utility": 5
         },
-        "core_value_zh": "提供了一个从零开始构建轨迹基础模型的实践教程，并对比了现有模型架构，有助于理解LLM类模型在时空数据上的应用与创新。",
-        "reason_zh": "尽管标题是'从零开始构建'，但其内容不仅仅是代码实现，还深入探讨了如何将GPT-2等基础模型架构适应于高维时空轨迹数据，并对比了TrajFM和TrajGPT等模型的创新点。这对于理解LLM的泛化能力和理论机制在特定高维数据上的应用具有很强的指导意义，且清晰度极高。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2511.17865v1",
-        "title": "Generative Model Predictive Control in Manufacturing Processes: A Review",
-        "summary": "Manufacturing processes are inherently dynamic and uncertain, with varying parameters and nonlinear behaviors, making robust control essential for maintaining quality and reliability. Traditional control methods often fail under these conditions due to their reactive nature. Model Predictive Control (MPC) has emerged as a more advanced framework, leveraging process models to predict future states and optimize control actions. However, MPC relies on simplified models that often fail to capture complex dynamics, and it struggles with accurate state estimation and handling the propagation of uncertainty in manufacturing environments. Machine learning (ML) has been introduced to enhance MPC by modeling nonlinear dynamics and learning latent representations that support predictive modeling, state estimation, and optimization. Yet existing ML-driven MPC approaches remain deterministic and correlation-focused, motivating the exploration of generative. Generative ML offers new opportunities by learning data distributions, capturing hidden patterns, and inherently managing uncertainty, thereby complementing MPC. This review highlights five representative methods and examines how each has been integrated into MPC components, including predictive modeling, state estimation, and optimization. By synthesizing these cases, we outline the common ways generative ML can systematically enhance MPC and provide a framework for understanding its potential in diverse manufacturing processes. We identify key research gaps, propose future directions, and use a representative case to illustrate how generative ML-driven MPC can extend broadly across manufacturing. Taken together, this review positions generative ML not as an incremental add-on but as a transformative approach to reshape predictive control for next-generation manufacturing systems.",
-        "authors": "Suk Ki Lee, Ronnie F. P. Stone, Max Gao, Wenlong Zhang, Zhenghui Sha, Hyunwoong Ko",
-        "url": "http://arxiv.org/abs/2511.17865v1",
-        "pdf_url": "https://arxiv.org/pdf/2511.17865v1",
-        "type": "前沿深度",
-        "scores": {
-            "Novelty": 4,
-            "Rigor": 3,
-            "Clarity": 4,
-            "Utility": 4
-        },
-        "core_value_zh": "综述了生成式机器学习如何增强模型预测控制（MPC），特别是在不确定性管理方面的应用，为生成式AI与控制/强化学习的结合指明了方向。",
-        "reason_zh": "这篇综述将生成式AI与模型预测控制（MPC，与强化学习有紧密联系）相结合，特别强调了不确定性管理，这与统计学背景高度相关。它探讨了生成式ML如何系统性地增强MPC，并提出了关键研究空白和未来方向，符合您对生成式AI和RL方向的兴趣。"
+        "core_value_zh": "深度学习中主要梯度下降优化算法的系统性综述与实践指南。",
+        "reason_zh": "梯度下降及其变种是机器学习和深度学习的核心优化算法，对统计学和数据科学研究生来说是必不可少的基础知识。本文系统性地分析了SGD、Adam等主要算法的优缺点和实践建议，具有很高的清晰度和实用性，非常适合作为凸优化和算法基础课程的补充材料，帮助您巩固优化理论基础。"
     }
 ]

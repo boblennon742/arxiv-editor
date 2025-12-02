@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.01810v1",
+        "title": "DeepCAVE: A Visualization and Analysis Tool for Automated Machine Learning",
+        "summary": "Hyperparameter optimization (HPO), as a central paradigm of AutoML, is crucial for leveraging the full potential of machine learning (ML) models; yet its complexity poses challenges in understanding and debugging the optimization process. We present DeepCAVE, a tool for interactive visualization and analysis, providing insights into HPO. Through an interactive dashboard, researchers, data scientists, and ML engineers can explore various aspects of the HPO process and identify issues, untouched potentials, and new insights about the ML model being tuned. By empowering users with actionable insights, DeepCAVE contributes to the interpretability of HPO and ML on a design level and aims to foster the development of more robust and efficient methodologies in the future.",
+        "authors": "Sarah Segel, Helena Graf, Edward Bergman, Kristina Thieme, Marcel Wever, Alexander Tornede, Frank Hutter, Marius Lindauer",
+        "url": "http://arxiv.org/abs/2512.01810v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01810v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为扩散模型提供了显式的、与维度无关的误差估计，并推导了最优的时间调度策略。其理论严谨性极高，解决了扩散模型在处理高维数据时误差界限随维度扩展的根本性限制，为数理统计背景的AI研究者提供了深刻的理论创新和实践指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01723v1",
+        "title": "Probabilistic Neuro-Symbolic Reasoning for Sparse Historical Data: A Framework Integrating Bayesian Inference, Causal Models, and Game-Theoretic Allocation",
+        "summary": "Modeling historical events poses fundamental challenges for machine learning: extreme data scarcity (N << 100), heterogeneous and noisy measurements, missing counterfactuals, and the requirement for human interpretable explanations. We present HistoricalML, a probabilistic neuro-symbolic framework that addresses these challenges through principled integration of (1) Bayesian uncertainty quantification to separate epistemic from aleatoric uncertainty, (2) structural causal models for counterfactual reasoning under confounding, (3) cooperative game theory (Shapley values) for fair allocation modeling, and (4) attention based neural architectures for context dependent factor weighting. We provide theoretical analysis showing that our approach achieves consistent estimation in the sparse data regime when strong priors from domain knowledge are available, and that Shapley based allocation satisfies axiomatic fairness guarantees that pure regression approaches cannot provide. We instantiate the framework on two historical case studies: the 19th century partition of Africa (N = 7 colonial powers) and the Second Punic War (N = 2 factions). Our model identifies Germany's +107.9 percent discrepancy as a quantifiable structural tension preceding World War I, with tension factor 36.43 and 0.79 naval arms race correlation. For the Punic Wars, Monte Carlo battle simulations achieve a 57.3 percent win probability for Carthage at Cannae and 57.8 percent for Rome at Zama, aligning with historical outcomes. Counterfactual analysis reveals that Carthaginian political support (support score 6.4 vs Napoleon's 7.1), rather than military capability, was the decisive factor.",
+        "authors": "Saba Kublashvili",
+        "url": "http://arxiv.org/abs/2512.01723v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01723v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该框架将贝叶斯推断、因果模型和博弈论分配原理整合到概率神经符号推理中，以处理稀疏历史数据。其方法论在数理统计和理论创新方面表现出色，尤其在不确定性量化、反事实推理和公平分配建模方面具有严谨的理论基础，解决了实际应用中数据稀缺和可解释性的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02019v1",
+        "title": "A Diffusion Model Framework for Maximum Entropy Reinforcement Learning",
+        "summary": "Diffusion models have achieved remarkable success in data-driven learning and in sampling from complex, unnormalized target distributions. Building on this progress, we reinterpret Maximum Entropy Reinforcement Learning (MaxEntRL) as a diffusion model-based sampling problem. We tackle this problem by minimizing the reverse Kullback-Leibler (KL) divergence between the diffusion policy and the optimal policy distribution using a tractable upper bound. By applying the policy gradient theorem to this objective, we derive a modified surrogate objective for MaxEntRL that incorporates diffusion dynamics in a principled way. This leads to simple diffusion-based variants of Soft Actor-Critic (SAC), Proximal Policy Optimization (PPO) and Wasserstein Policy Optimization (WPO), termed DiffSAC, DiffPPO and DiffWPO. All of these methods require only minor implementation changes to their base algorithm. We find that on standard continuous control benchmarks, DiffSAC, DiffPPO and DiffWPO achieve better returns and higher sample efficiency than SAC and PPO.",
+        "authors": "Sebastian Sanokowski, Kaustubh Patil, Alois Knoll",
+        "url": "http://arxiv.org/abs/2512.02019v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02019v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将最大熵强化学习重新解释为基于扩散模型的采样问题，并从原理上推导了结合扩散动力学的替代目标。这在AI前沿算法（扩散模型与RL结合）上具有显著的理论创新性，并能提高样本效率，解决实际应用中的数据效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01389v1",
+        "title": "Consistency Flow Model Achieves One-step Denoising Error Correction Codes",
+        "summary": "Error Correction Codes (ECC) are fundamental to reliable digital communication, yet designing neural decoders that are both accurate and computationally efficient remains challenging. Recent denoising diffusion decoders with transformer backbones achieve state-of-the-art performance, but their iterative sampling limits practicality in low-latency settings. We introduce the Error Correction Consistency Flow Model (ECCFM), an architecture-agnostic training framework for high-fidelity one-step decoding. By casting the reverse denoising process as a Probability Flow Ordinary Differential Equation (PF-ODE) and enforcing smoothness through a differential time regularization, ECCFM learns to map noisy signals along the decoding trajectory directly to the original codeword in a single inference step. Across multiple decoding benchmarks, ECCFM attains lower bit-error rates (BER) than autoregressive and diffusion-based baselines, with notable improvements on longer codes, while delivering inference speeds up from 30x to 100x faster than denoising diffusion decoders.",
+        "authors": "Haoyu Lei, Chin Wa Lau, Kaiwen Zhou, Nian Guo, Farzan Farnia",
+        "url": "http://arxiv.org/abs/2512.01389v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01389v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了错误纠正一致性流模型（ECCFM），通过将逆去噪过程视为概率流常微分方程，实现了高保真的一步解码。这在神经解码器效率方面提供了理论创新，并显著提高了纠错码的推理速度，解决了低延迟通信中的实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01924v1",
+        "title": "Real-World Robot Control by Deep Active Inference With a Temporally Hierarchical World Model",
+        "summary": "Robots in uncertain real-world environments must perform both goal-directed and exploratory actions. However, most deep learning-based control methods neglect exploration and struggle under uncertainty. To address this, we adopt deep active inference, a framework that accounts for human goal-directed and exploratory actions. Yet, conventional deep active inference approaches face challenges due to limited environmental representation capacity and high computational cost in action selection. We propose a novel deep active inference framework that consists of a world model, an action model, and an abstract world model. The world model encodes environmental dynamics into hidden state representations at slow and fast timescales. The action model compresses action sequences into abstract actions using vector quantization, and the abstract world model predicts future slow states conditioned on the abstract action, enabling low-cost action selection. We evaluate the framework on object-manipulation tasks with a real-world robot. Results show that it achieves high success rates across diverse manipulation tasks and switches between goal-directed and exploratory actions in uncertain settings, while making action selection computationally tractable. These findings highlight the importance of modeling multiple timescale dynamics and abstracting actions and state transitions.",
+        "authors": "Kentaro Fujii, Shingo Murata",
+        "url": "http://arxiv.org/abs/2512.01924v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01924v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从优化角度分析LLM的推理过程，并提出了RePro（Rectifying Process-level Reward）框架，通过强化学习来优化LLM的推理行为。这不仅提供了对LLM推理机制的理论洞察，也解决了LLM过度思考和推理链过长等实际应用瓶瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01788v1",
+        "title": "Learned Image Compression for Earth Observation: Implications for Downstream Segmentation Tasks",
+        "summary": "The rapid growth of data from satellite-based Earth observation (EO) systems poses significant challenges in data transmission and storage. We evaluate the potential of task-specific learned compression algorithms in this context to reduce data volumes while retaining crucial information. In detail, we compare traditional compression (JPEG 2000) versus a learned compression approach (Discretized Mixed Gaussian Likelihood) on three EO segmentation tasks: Fire, cloud, and building detection. Learned compression notably outperforms JPEG 2000 for large-scale, multi-channel optical imagery in both reconstruction quality (PSNR) and segmentation accuracy. However, traditional codecs remain competitive on smaller, single-channel thermal infrared datasets due to limited data and architectural constraints. Additionally, joint end-to-end optimization of compression and segmentation models does not improve performance over standalone optimization.",
+        "authors": "Christian Mollière, Iker Cumplido, Marco Zeulner, Lukas Liesenhoff, Matthias Schubert, Julia Gottfriedsen",
+        "url": "http://arxiv.org/abs/2512.01788v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01788v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过将知识图谱推理与神经科学中的自由能原理联系起来，提出了基于图距离的“惊喜最小化”理论。这提供了新颖的理论视角和创新性，为理解和指导知识图谱推理提供了数学框架，具有潜在的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01788v1",
+        "title": "Learned Image Compression for Earth Observation: Implications for Downstream Segmentation Tasks",
+        "summary": "The rapid growth of data from satellite-based Earth observation (EO) systems poses significant challenges in data transmission and storage. We evaluate the potential of task-specific learned compression algorithms in this context to reduce data volumes while retaining crucial information. In detail, we compare traditional compression (JPEG 2000) versus a learned compression approach (Discretized Mixed Gaussian Likelihood) on three EO segmentation tasks: Fire, cloud, and building detection. Learned compression notably outperforms JPEG 2000 for large-scale, multi-channel optical imagery in both reconstruction quality (PSNR) and segmentation accuracy. However, traditional codecs remain competitive on smaller, single-channel thermal infrared datasets due to limited data and architectural constraints. Additionally, joint end-to-end optimization of compression and segmentation models does not improve performance over standalone optimization.",
+        "authors": "Christian Mollière, Iker Cumplido, Marco Zeulner, Lukas Liesenhoff, Matthias Schubert, Julia Gottfriedsen",
+        "url": "http://arxiv.org/abs/2512.01788v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01788v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将神经科学中的自由能原理与知识图谱推理联系起来，提出通过“惊喜最小化”来指导推理。它从理论上将图距离与惊喜度关联，为知识图谱系统提供了一个新颖的框架，具有很强的理论创新性和严谨性，尽管其直接实践影响力可能需要进一步探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01865v1",
+        "title": "Cross-Lingual Interleaving for Speech Language Models",
+        "summary": "Spoken Language Models (SLMs) aim to learn linguistic competence directly from speech using discrete units, widening access to Natural Language Processing (NLP) technologies for languages with limited written resources. However, progress has been largely English-centric due to scarce spoken evaluation benchmarks and training data, making cross-lingual learning difficult. We present a cross-lingual interleaving method that mixes speech tokens across languages without textual supervision. We also release an EN-FR training dataset, TinyStories (~42k hours), together with EN-FR spoken StoryCloze and TopicCloze benchmarks for cross-lingual semantic evaluation, both synthetically generated using GPT-4. On 360M and 1B SLMs under matched training-token budgets, interleaving improves monolingual semantic accuracy, enables robust cross-lingual continuation, and strengthens cross-lingual hidden-state alignment. Taken together, these results indicate that cross-lingual interleaving is a simple, scalable route to building multilingual SLMs that understand and converse across languages. All resources will be made open-source to support reproducibility.",
+        "authors": "Adel Moumen, Guangzhi Sun, Philip C. Woodland",
+        "url": "http://arxiv.org/abs/2512.01865v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01865v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探讨了Transformer在算术序列上的学习能力，通过将整数映射为有根平面树来构建算术文本。这从根本上探究了Transformer的内在学习机制，具有很强的理论创新性，对理解LLM的泛化能力和学习结构化数据有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02010v1",
+        "title": "Four Over Six: More Accurate NVFP4 Quantization with Adaptive Block Scaling",
+        "summary": "As large language models have grown larger, low-precision numerical formats such as NVFP4 have become increasingly popular due to the speed and memory benefits they provide. However, to accelerate computation with NVFP4, all matrix multiplication operands--weights and activations in the forward pass, and weights, activations, and gradients in the backward pass--must be quantized to NVFP4, often leading to divergence during training and performance degradation during inference. NVFP4 by evaluating multiple potential scale factors for each block of values. To address this issue, in this work we introduce Four Over Six (4/6), a modification to the NVFP4 quantization algorithm that evaluates two potential scale factors for each block of values. Unlike integer formats, floating-point formats such as FP4 have the most quantization error on near-maximal values in each block, which we find to be primarily responsible for downstream performance degradation. We find that for some blocks, scaling to smaller FP4 values makes the distribution of representable values more uniform, improving representation of near-maximal values. Importantly, 4/6 can be implemented efficiently on NVIDIA Blackwell GPUs, making it viable to use while training LLMs with NVFP4. In pre-training experiments with transformer and hybrid model architectures, we find that 4/6 prevents divergence in several cases, bringing training loss significantly closer to BF16 compared to models trained with current state-of-the-art NVFP4 training recipes. We also find that 4/6 can be easily incorporated into many different post-training quantization methods and generally improves downstream accuracy. We hope this inspires future work in training and deploying models with NVFP4.",
+        "authors": "Jack Cook, Junxian Guo, Guangxuan Xiao, Yujun Lin, Song Han",
+        "url": "http://arxiv.org/abs/2512.02010v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02010v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Four Over Six，一种改进的NVFP4量化算法，通过自适应块缩放来减少量化误差。这直接解决了LLM模型压缩和训练稳定性（实际应用瓶颈）的问题，具有明确的算法创新性，并能高效地在NVIDIA Blackwell GPU上实现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01979v1",
+        "title": "Chain-of-Ground: Improving GUI Grounding via Iterative Reasoning and Reference Feedback",
+        "summary": "GUI grounding aims to align natural language instructions with precise regions in complex user interfaces. Advanced multimodal large language models show strong ability in visual GUI grounding but still struggle with small or visually similar targets and ambiguity in real world layouts. These limitations arise from limited grounding capacity and from underuse of existing reasoning potential. We present Chain of Ground CoG a training free multi step grounding framework that uses multimodal large language models for iterative visual reasoning and refinement. Instead of direct prediction the model progressively reflects and adjusts its hypotheses leading to more accurate and interpretable localization. Our approach achieves 68.4 accuracy on the ScreenSpot Pro benchmark an improvement of 4.8 points. To measure real world generalization we introduce TPanel UI a dataset of 420 labeled industrial control panels with visual distortions such as blur and masking. On TPanel UI Chain of Ground improves over the strong baseline Qwen3 VL 235B by 6.9 points showing the effectiveness of multi step training free grounding across real world and digital interfaces. These results highlight a direction for unlocking grounding potential through structured iterative refinement instead of additional training.",
+        "authors": "Aiden Yiliu Li, Bizhi Yu, Daoan Lei, Tianhe Ren, Shilong Liu",
+        "url": "http://arxiv.org/abs/2512.01979v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01979v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了Low-Rank Prehab，一个预压缩微调阶段，通过鼓励权重矩阵的低秩结构来提高SVD压缩效果。这为LLM和其他Transformer架构的模型压缩（实际应用瓶颈）提供了理论创新性方法，显著提升了压缩后的性能恢复。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01735v1",
+        "title": "Automating modeling in mechanics: LLMs as designers of physics-constrained neural networks for constitutive modeling of materials",
+        "summary": "Large language model (LLM)-based agentic frameworks increasingly adopt the paradigm of dynamically generating task-specific agents. We suggest that not only agents but also specialized software modules for scientific and engineering tasks can be generated on demand. We demonstrate this concept in the field of solid mechanics. There, so-called constitutive models are required to describe the relationship between mechanical stress and body deformation. Constitutive models are essential for both the scientific understanding and industrial application of materials. However, even recent data-driven methods of constitutive modeling, such as constitutive artificial neural networks (CANNs), still require substantial expert knowledge and human labor. We present a framework in which an LLM generates a CANN on demand, tailored to a given material class and dataset provided by the user. The framework covers LLM-based architecture selection, integration of physical constraints, and complete code generation. Evaluation on three benchmark problems demonstrates that LLM-generated CANNs achieve accuracy comparable to or greater than manually engineered counterparts, while also exhibiting reliable generalization to unseen loading scenarios and extrapolation to large deformations. These findings indicate that LLM-based generation of physics-constrained neural networks can substantially reduce the expertise required for constitutive modeling and represent a step toward practical end-to-end automation.",
+        "authors": "Marius Tacke, Matthias Busch, Kian Abdolazizi, Jonas Eichinger, Kevin Linka, Christian Cyron, Roland Aydin",
+        "url": "http://arxiv.org/abs/2512.01735v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01735v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该框架展示了LLM如何作为设计者，按需生成物理约束的神经网络（CANNs）用于材料本构建模。这代表了AI前沿算法的重大突破，将LLM的代理能力扩展到科学工程领域，解决了传统数据驱动方法对专家知识和人工的依赖，具有显著的理论创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01541v1",
+        "title": "RoMe: Row Granularity Access Memory System for Large Language Models",
+        "summary": "Modern HBM-based memory systems have evolved over generations while retaining cache line granularity accesses. Preserving this fine granularity necessitated the introduction of bank groups and pseudo channels. These structures expand timing parameters and control overhead, significantly increasing memory controller scheduling complexity. Large language models (LLMs) now dominate deep learning workloads, streaming contiguous data blocks ranging from several kilobytes to megabytes per operation. In a conventional HBM-based memory system, these transfers are fragmented into hundreds of 32B cache line transactions. This forces the memory controller to employ unnecessarily intricate scheduling, leading to growing inefficiency.   To address this problem, we propose RoMe. RoMe accesses DRAM at row granularity and removes columns, bank groups, and pseudo channels from the memory interface. This design simplifies memory scheduling, thereby requiring fewer pins per channel. The freed pins are aggregated to form additional channels, increasing overall bandwidth by 12.5% with minimal extra pins. RoMe demonstrates how memory scheduling logic can be significantly simplified for representative LLM workloads, and presents an alternative approach for next-generation HBM-based memory systems achieving increased bandwidth with minimal hardware overhead.",
+        "authors": "Hwayong Nam, Seungmin Baek, Jumin Kim, Michael Jaemin Kim, Jung Ho Ahn",
+        "url": "http://arxiv.org/abs/2512.01541v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01541v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SA-ADP，一种敏感度感知的自适应差分隐私方法，根据PII的敏感度分配噪声。这在LLM隐私保护（实际应用瓶颈）方面具有算法和理论创新性，能在保持模型效用的同时提供强大的隐私保护。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01556v1",
+        "title": "LEC: Linear Expectation Constraints for False-Discovery Control in Selective Prediction and Routing Systems",
+        "summary": "Large language models (LLMs) often generate unreliable answers, while heuristic uncertainty methods fail to fully distinguish correct from incorrect predictions, causing users to accept erroneous answers without statistical guarantees. We address this issue through the lens of false discovery rate (FDR) control, ensuring that among all accepted predictions, the proportion of errors does not exceed a target risk level. To achieve this in a principled way, we propose LEC, which reinterprets selective prediction as a constrained decision problem by enforcing a Linear Expectation Constraint over selection and error indicators. Then, we establish a finite-sample sufficient condition, which relies only on a held-out set of exchangeable calibration samples, to compute an FDR-constrained, coverage-maximizing threshold. Furthermore, we extend LEC to a two-model routing mechanism: given a prompt, if the current model's uncertainty exceeds its calibrated threshold, we delegate it to a stronger model, while maintaining a unified FDR guarantee. Evaluations on closed-ended and open-ended question-answering (QA) datasets show that LEC achieves tighter FDR control and substantially improves sample retention over prior methods. Moreover, the two-model routing mechanism achieves lower risk levels while accepting more correct samples than each individual model.",
+        "authors": "Zhiyuan Wang, Aniri, Tianlong Chen, Yue Zhang, Heng Tao Shen, Xiaoshuang Shi, Kaidi Xu",
+        "url": "http://arxiv.org/abs/2512.01556v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01556v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了LEC框架，通过线性期望约束来实现选择性预测和路由系统中的错误发现率（FDR）控制。这为LLM的可靠性/不确定性（实际应用瓶颈）提供了新颖的统计学框架和理论严谨性，并能实现更紧密的FDR控制和更高的样本保留率。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01457v1",
+        "title": "ZIP-RC: Zero-overhead Inference-time Prediction of Reward and Cost for Adaptive and Interpretable Generation",
+        "summary": "Large language models excel at reasoning but lack key aspects of introspection, including anticipating their own success and the computation required to achieve it. Humans use real-time introspection to decide how much effort to invest, when to make multiple attempts, when to stop, and when to signal success or failure. Without this, LLMs struggle to make intelligent meta-cognition decisions. Test-time scaling methods like Best-of-N drive up cost and latency by using a fixed budget of samples regardless of the marginal benefit of each one at any point in generation, and the absence of confidence signals can mislead people, prevent appropriate escalation to better tools, and undermine trustworthiness. Learned verifiers or reward models can provide confidence estimates, but do not enable adaptive inference and add substantial cost by requiring extra models or forward passes. We present ZIP-RC, an adaptive inference method that equips models with zero-overhead inference-time predictions of reward and cost. At every token, ZIP-RC reuses reserved or unused logits in the same forward pass as next-token prediction to output a joint distribution over final reward and remaining length -- no extra models, architecture change, or inference overhead. This full joint distribution is used to compute a sampling utility which is the linear combination of the expected maximum reward, total compute, and latency of set of samples if generated to completion. During inference, we maximize this utility with meta-actions that determine which prefix of tokens to continue or initiate sampling from. On mixed-difficulty mathematical benchmarks, ZIP-RC improves accuracy by up to 12% over majority voting at equal or lower average cost, and traces smooth Pareto frontiers between quality, compute, and latency. By providing real-time reward-cost introspection, ZIP-RC enables adaptive, efficient reasoning.",
+        "authors": "Rohin Manvi, Joey Hong, Tim Seyde, Maxime Labonne, Mathias Lechner, Sergey Levine",
+        "url": "http://arxiv.org/abs/2512.01457v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01457v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ZIP-RC通过在推理时重用logits来预测奖励和成本，实现了LLM的零开销推理时自省。这为LLM的自适应推理和可解释性（实际应用瓶颈）提供了算法创新，使其能够进行智能的元认知决策，提高效率和信任度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01939v1",
+        "title": "An Empirical Study of Agent Developer Practices in AI Agent Frameworks",
+        "summary": "The rise of large language models (LLMs) has sparked a surge of interest in agents, leading to the rapid growth of agent frameworks. Agent frameworks are software toolkits and libraries that provide standardized components, abstractions, and orchestration mechanisms to simplify agent development. Despite widespread use of agent frameworks, their practical applications and how they influence the agent development process remain underexplored. Different agent frameworks encounter similar problems during use, indicating that these recurring issues deserve greater attention and call for further improvements in agent framework design. Meanwhile, as the number of agent frameworks continues to grow and evolve, more than 80% of developers report difficulties in identifying the frameworks that best meet their specific development requirements. In this paper, we conduct the first empirical study of LLM-based agent frameworks, exploring real-world experiences of developers in building AI agents. To compare how well the agent frameworks meet developer needs, we further collect developer discussions for the ten previously identified agent frameworks, resulting in a total of 11,910 discussions. Finally, by analyzing these discussions, we compare the frameworks across five dimensions: development efficiency, functional abstraction, learning cost, performance optimization, and maintainability, which refers to how easily developers can update and extend both the framework itself and the agents built upon it over time. Our comparative analysis reveals significant differences among frameworks in how they meet the needs of agent developers. Overall, we provide a set of findings and implications for the LLM-driven AI agent framework ecosystem and offer insights for the design of future LLM-based agent frameworks and agent developers.",
+        "authors": "Yanlin Wang, Xinyi Xu, Jiachi Chen, Tingting Bi, Wenchao Gu, Zibin Zheng",
+        "url": "http://arxiv.org/abs/2512.01939v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01939v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了跨语言交错方法，无需文本监督即可混合不同语言的语音token，以构建多语言语音语言模型（SLMs）。这在AI前沿算法（SLMs）和解决跨语言学习瓶颈方面具有创新性，提高了语义准确性并实现了鲁棒的跨语言连续性。"
+    }
+]

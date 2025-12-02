@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.01985v1",
+        "title": "A Dual Approach for Hierarchical Information-Theoretic Tree Abstractions",
+        "summary": "In this paper, we consider establishing a formal connection between two distinct tree-abstraction problems inspired by the information-bottleneck (IB) method. Specifically, we consider the hard- and soft-constrained formulations that have recently appeared in the literature to determine the conditions for which the two approaches are equivalent. Our analysis leverages concepts from Lagrangian relaxation and duality theory to relate the dual function of the hard-constrained problem to the Q-function employed in Q-tree search and shows the connection between tree phase transitions and solutions to the dual problem obtained by exploiting the problem structure. An algorithm is proposed that employs knowledge of the tree phase transitions to find a setting of the dual variable that solves the dual problem. Furthermore, we present an alternative approach to select the dual variable that leverages the integer programming formulation of the hard-constrained problem and the strong duality of linear programming. To obtain a linear program, we establish that a relaxation of the integer programming formulation of the hard-constrained tree-search problem has the integrality property by showing that the program constraint matrix is totally unimodular. Empirical results that corroborate the theoretical developments are presented and discussed throughout.",
+        "authors": "Daniel T. Larsson, Dipankar Maity, Panagiotis Tsiotras",
+        "url": "http://arxiv.org/abs/2512.01985v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01985v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，利用信息瓶颈方法、拉格朗日松弛、对偶理论和整数规划等严格数学工具，建立了层次信息论树抽象的正式连接，并分析了其结构特性和求解算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01984v1",
+        "title": "ECO: Energy-Constrained Operator Learning for Chaotic Dynamics with Boundedness Guarantees",
+        "summary": "Chaos is a fundamental feature of many complex dynamical systems, including weather systems and fluid turbulence. These systems are inherently difficult to predict due to their extreme sensitivity to initial conditions. Many chaotic systems are dissipative and ergodic, motivating data-driven models that aim to learn invariant statistical properties over long time horizons. While recent models have shown empirical success in preserving invariant statistics, they are prone to generating unbounded predictions, which prevent meaningful statistics evaluation. To overcome this, we introduce the Energy-Constrained Operator (ECO) that simultaneously learns the system dynamics while enforcing boundedness in predictions. We leverage concepts from control theory to develop algebraic conditions based on a learnable energy function, ensuring the learned dynamics is dissipative. ECO enforces these algebraic conditions through an efficient closed-form quadratic projection layer, which provides provable trajectory boundedness. To our knowledge, this is the first work establishing such formal guarantees for data-driven chaotic dynamics models. Additionally, the learned invariant level set provides an outer estimate for the strange attractor, a complex structure that is computationally intractable to characterize. We demonstrate empirical success in ECO's ability to generate stable long-horizon forecasts, capturing invariant statistics on systems governed by chaotic PDEs, including the Kuramoto--Sivashinsky and the Navier--Stokes equations.",
+        "authors": "Andrea Goertzen, Sunbochen Tang, Navid Azizan",
+        "url": "http://arxiv.org/abs/2512.01984v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01984v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，首次为数据驱动的混沌动力学模型提供了形式化保证，利用控制理论和代数条件确保预测轨迹的有界性，并有清晰的数学推导，对复杂系统建模具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01868v1",
+        "title": "The Mean-Field Dynamics of Transformers",
+        "summary": "We develop a mathematical framework that interprets Transformer attention as an interacting particle system and studies its continuum (mean-field) limits. By idealizing attention continuous on the sphere, we connect Transformer dynamics to Wasserstein gradient flows, synchronization models (Kuramoto), and mean-shift clustering. Central to our results is a global clustering phenomenon whereby tokens cluster asymptotically after long metastable states where they are arranged into multiple clusters. We further analyze a tractable equiangular reduction to obtain exact clustering rates, show how commonly used normalization schemes alter contraction speeds, and identify a phase transition for long-context attention. The results highlight both the mechanisms that drive representation collapse and the regimes that preserve expressive, multi-cluster structure in deep attention architectures.",
+        "authors": "Philippe Rigollet",
+        "url": "http://arxiv.org/abs/2512.01868v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01868v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，为Transformer注意力机制提供了深刻的数学框架，通过平均场动力学、Wasserstein梯度流等工具分析其收敛性和相变，对现代AI系统的核心组件有深远理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01861v1",
+        "title": "Storage capacity of perceptron with variable selection",
+        "summary": "A central challenge in machine learning is to distinguish genuine structure from chance correlations in high-dimensional data. In this work, we address this issue for the perceptron, a foundational model of neural computation. Specifically, we investigate the relationship between the pattern load $α$ and the variable selection ratio $ρ$ for which a simple perceptron can perfectly classify $P = αN$ random patterns by optimally selecting $M = ρN$ variables out of $N$ variables. While the Cover--Gardner theory establishes that a random subset of $ρN$ dimensions can separate $αN$ random patterns if and only if $α< 2ρ$, we demonstrate that optimal variable selection can surpass this bound by developing a method, based on the replica method from statistical mechanics, for enumerating the combinations of variables that enable perfect pattern classification. This not only provides a quantitative criterion for distinguishing true structure in the data from spurious regularities, but also yields the storage capacity of associative memory models with sparse asymmetric couplings.",
+        "authors": "Yingying Xu, Masayuki Ohzeki, Yoshiyuki Kabashima",
+        "url": "http://arxiv.org/abs/2512.01861v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01861v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，利用统计力学中的副本方法，深入研究了感知机的存储容量和变量选择问题，提供了超越Cover-Gardner界限的严格数学分析，对神经网络的理论基础有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01838v1",
+        "title": "Goodness-of-fit testing from observations with multiplicative measurement error",
+        "summary": "Given observations from a positive random variable contaminated by multiplicative measurement error, we consider a nonparametric goodness-of-fit testing task for its unknown density in a non-asymptotic framework. We propose a testing procedure based on estimating a quadratic functional of the Mellin transform of the unknown density and the null. We derive non-asymptotic testing radii and testing rates over Mellin-Sobolev spaces, which naturally characterize regularity and ill-posedness in this model. By employing a multiple testing procedure with Bonferroni correction, we obtain data-driven procedures and analyze their performance. Compared with the non-adaptive tests, their testing radii deteriorate by at most a logarithmic factor. We illustrate the testing procedures with a simulation study using various choices of densities.",
+        "authors": "Jan Johannes, Bianca Neubert",
+        "url": "http://arxiv.org/abs/2512.01838v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01838v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，在乘性测量误差模型下，提出了基于Mellin变换的非参数拟合优度检验方法，并推导了Mellin-Sobolev空间上的非渐近检验半径和速率，具有扎实的统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01831v1",
+        "title": "Deconstructing Generative Diversity: An Information Bottleneck Analysis of Discrete Latent Generative Models",
+        "summary": "Generative diversity varies significantly across discrete latent generative models such as AR, MIM, and Diffusion. We propose a diagnostic framework, grounded in Information Bottleneck (IB) theory, to analyze the underlying strategies resolving this behavior. The framework models generation as a conflict between a 'Compression Pressure' - a drive to minimize overall codebook entropy - and a 'Diversity Pressure' - a drive to maximize conditional entropy given an input. We further decompose this diversity into two primary sources: 'Path Diversity', representing the choice of high-level generative strategies, and 'Execution Diversity', the randomness in executing a chosen strategy. To make this decomposition operational, we introduce three zero-shot, inference-time interventions that directly perturb the latent generative process and reveal how models allocate and express diversity. Application of this probe-based framework to representative AR, MIM, and Diffusion systems reveals three distinct strategies: \"Diversity-Prioritized\" (MIM), \"Compression-Prioritized\" (AR), and \"Decoupled\" (Diffusion). Our analysis provides a principled explanation for their behavioral differences and informs a novel inference-time diversity enhancement technique.",
+        "authors": "Yudi Wu, Wenhao Zhao, Dianbo Liu",
+        "url": "http://arxiv.org/abs/2512.01831v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01831v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，利用信息瓶颈理论对离散潜在生成模型的生成多样性进行了深入分析和分解，提供了清晰的数学框架来理解生成过程中的压缩与多样性压力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01820v1",
+        "title": "Dimension-free error estimate for diffusion model and optimal scheduling",
+        "summary": "Diffusion generative models have emerged as powerful tools for producing synthetic data from an empirically observed distribution. A common approach involves simulating the time-reversal of an Ornstein-Uhlenbeck (OU) process initialized at the true data distribution. Since the score function associated with the OU process is typically unknown, it is approximated using a trained neural network. This approximation, along with finite time simulation, time discretization and statistical approximation, introduce several sources of error whose impact on the generated samples must be carefully understood. Previous analyses have quantified the error between the generated and the true data distributions in terms of Wasserstein distance or Kullback-Leibler (KL) divergence. However, both metrics present limitations: KL divergence requires absolute continuity between distributions, while Wasserstein distance, though more general, leads to error bounds that scale poorly with dimension, rendering them impractical in high-dimensional settings. In this work, we derive an explicit, dimension-free bound on the discrepancy between the generated and the true data distributions. The bound is expressed in terms of a smooth test functional with bounded first and second derivatives. The key novelty lies in the use of this weaker, functional metric to obtain dimension-independent guarantees, at the cost of higher regularity on the test functions. As an application, we formulate and solve a variational problem to minimize the time-discretization error, leading to the derivation of an optimal time-scheduling strategy for the reverse-time diffusion. Interestingly, this scheduler has appeared previously in the literature in a different context; our analysis provides a new justification for its optimality, now grounded in minimizing the discretization bias in generative sampling.",
+        "authors": "Valentin de Bortoli, Romuald Elie, Anna Kazeykina, Zhenjie Ren, Jiacheng Zhang",
+        "url": "http://arxiv.org/abs/2512.01820v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01820v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，为扩散模型提供了显式的、无维度限制的误差估计，并通过变分问题推导了最优时间调度策略，为现代AI生成模型提供了重要的理论基础和优化指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01759v1",
+        "title": "Weight Space Representation Learning with Neural Fields",
+        "summary": "In this work, we investigate the potential of weights to serve as effective representations, focusing on neural fields. Our key insight is that constraining the optimization space through a pre-trained base model and low-rank adaptation (LoRA) can induce structure in weight space. Across reconstruction, generation, and analysis tasks on 2D and 3D data, we find that multiplicative LoRA weights achieve high representation quality while exhibiting distinctiveness and semantic structure. When used with latent diffusion models, multiplicative LoRA weights enable higher-quality generation than existing weight-space methods.",
+        "authors": "Zhuoqian Yang, Mathieu Salzmann, Sabine Süsstrunk",
+        "url": "http://arxiv.org/abs/2512.01759v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01759v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，提出了一种新颖的顺序方法来构建分布矩的上下界，利用主化-最小化框架，并提供了严格的收敛性和精度控制证明，对统计推断中的积分近似问题具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01716v1",
+        "title": "Common Structure Discovery in Collections of Bipartite Networks: Application to Pollination Systems",
+        "summary": "Bipartite networks are widely used to encode the ecological interactions. Being able to compare the organization of bipartite networks is a first step toward a better understanding of how environmental factors shape community structure and resilience. Yet current methods for structure detection in bipartite networks overlook shared patterns across collections of networks. We introduce the \\emph{colBiSBM}, a family of probabilistic models for collections of bipartite networks that extends the classical Latent Block Model (LBM). The proposed framework assumes that networks are independent realizations of a shared mesoscale structure, encoded through common inter-block connectivity parameters. We establish identifiability conditions for the different variants of \\emph{colBiSBM} and develop a variational EM algorithm for parameter estimation, coupled with an adaptation of the Integrated Classification Likelihood (ICL) criterion for model selection. We demonstrate how our approach can be used to classify networks based on their topology or organization. Simulation studies highlight the ability of \\emph{colBiSBM} to recover common structures, improve clustering performance, and enhance link prediction by borrowing strength across networks. An application to plant--pollinator networks highlights how the method uncovers shared ecological roles and partitions networks into sub-collections with similar connectivity patterns. These results illustrate the methodological and practical advantages of joint modeling over separate network analyses in the study of bipartite systems.",
+        "authors": "Louis Lacoste, Pierre Barbillon, Sophie Donnet",
+        "url": "http://arxiv.org/abs/2512.01716v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01716v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，将贝叶斯推断、结构因果模型和合作博弈论（Shapley值）有机结合，为稀疏历史数据提供了概率神经符号推理框架，并提供了严格的理论分析和公平性保证，完美契合因果逻辑和数学推导偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01565v1",
+        "title": "Deep FlexQP: Accelerated Nonlinear Programming via Deep Unfolding",
+        "summary": "We propose an always-feasible quadratic programming (QP) optimizer, FlexQP, which is based on an exact relaxation of the QP constraints. If the original constraints are feasible, then the optimizer finds the optimal solution to the original QP. On the other hand, if the constraints are infeasible, the optimizer identifies a solution that minimizes the constraint violation in a sparse manner. FlexQP scales favorably with respect to the problem dimension, is robust to both feasible and infeasible QPs with minimal assumptions on the problem data, and can be effectively warm-started. We subsequently apply deep unfolding to improve our optimizer through data-driven techniques, leading to an accelerated Deep FlexQP. By learning dimension-agnostic feedback policies for the parameters from a small number of training examples, Deep FlexQP generalizes to problems with larger dimensions and can optimize for many more iterations than it was initially trained for. Our approach outperforms two recently proposed state-of-the-art accelerated QP approaches on a suite of benchmark systems including portfolio optimization, classification, and regression problems. We provide guarantees on the expected performance of our deep QP optimizer through probably approximately correct (PAC) Bayes generalization bounds. These certificates are used to design an accelerated sequential quadratic programming solver that solves nonlinear optimal control and predictive safety filter problems faster than traditional approaches. Overall, our approach is very robust and greatly outperforms existing non-learning and learning-based optimizers in terms of both runtime and convergence to the optimal solution across multiple classes of NLPs.",
+        "authors": "Alex Oshin, Rahul Vodeb Ghosh, Augustinos D. Saravanos, Evangelos A. Theodorou",
+        "url": "http://arxiv.org/abs/2512.01565v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01565v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，提出了基于精确松弛的二次规划优化器，并通过深度展开加速，提供了基于PAC贝叶斯泛化界限的性能保证，对优化收敛性有深入研究，适用于现代AI系统。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01556v1",
+        "title": "LEC: Linear Expectation Constraints for False-Discovery Control in Selective Prediction and Routing Systems",
+        "summary": "Large language models (LLMs) often generate unreliable answers, while heuristic uncertainty methods fail to fully distinguish correct from incorrect predictions, causing users to accept erroneous answers without statistical guarantees. We address this issue through the lens of false discovery rate (FDR) control, ensuring that among all accepted predictions, the proportion of errors does not exceed a target risk level. To achieve this in a principled way, we propose LEC, which reinterprets selective prediction as a constrained decision problem by enforcing a Linear Expectation Constraint over selection and error indicators. Then, we establish a finite-sample sufficient condition, which relies only on a held-out set of exchangeable calibration samples, to compute an FDR-constrained, coverage-maximizing threshold. Furthermore, we extend LEC to a two-model routing mechanism: given a prompt, if the current model's uncertainty exceeds its calibrated threshold, we delegate it to a stronger model, while maintaining a unified FDR guarantee. Evaluations on closed-ended and open-ended question-answering (QA) datasets show that LEC achieves tighter FDR control and substantially improves sample retention over prior methods. Moreover, the two-model routing mechanism achieves lower risk levels while accepting more correct samples than each individual model.",
+        "authors": "Zhiyuan Wang, Aniri, Tianlong Chen, Yue Zhang, Heng Tao Shen, Xiaoshuang Shi, Kaidi Xu",
+        "url": "http://arxiv.org/abs/2512.01556v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01556v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，从错误发现率（FDR）控制的角度重新审视了选择性预测问题，提出了基于线性期望约束的框架，并建立了有限样本的充分条件以提供统一的FDR保证，对现代AI系统的可靠性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01484v1",
+        "title": "Multi-view diffusion geometry using intertwined diffusion trajectories",
+        "summary": "This paper introduces a comprehensive unified framework for constructing multi-view diffusion geometries through intertwined multi-view diffusion trajectories (MDTs), a class of inhomogeneous diffusion processes that iteratively combine the random walk operators of multiple data views. Each MDT defines a trajectory-dependent diffusion operator with a clear probabilistic and geometric interpretation, capturing over time the interplay between data views. Our formulation encompasses existing multi-view diffusion models, while providing new degrees of freedom for view interaction and fusion. We establish theoretical properties under mild assumptions, including ergodicity of both the point-wise operator and the process in itself. We also derive MDT-based diffusion distances, and associated embeddings via singular value decompositions. Finally, we propose various strategies for learning MDT operators within the defined operator space, guided by internal quality measures. Beyond enabling flexible model design, MDTs also offer a neutral baseline for evaluating diffusion-based approaches through comparison with randomly selected MDTs. Experiments show the practical impact of the MDT operators in a manifold learning and data clustering context.",
+        "authors": "Gwendal Debaussart-Joniec, Argyris Kalogeratos",
+        "url": "http://arxiv.org/abs/2512.01484v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01484v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，提出了多视图扩散几何的统一框架，通过交织扩散轨迹定义了具有清晰概率和几何解释的算子，并建立了包括遍历性在内的严格理论性质，具有很高的创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01467v1",
+        "title": "Differentiable Weightless Controllers: Learning Logic Circuits for Continuous Control",
+        "summary": "We investigate whether continuous-control policies can be represented and learned as discrete logic circuits instead of continuous neural networks. We introduce Differentiable Weightless Controllers (DWCs), a symbolic-differentiable architecture that maps real-valued observations to actions using thermometer-encoded inputs, sparsely connected boolean lookup-table layers, and lightweight action heads. DWCs can be trained end-to-end by gradient-based techniques, yet compile directly into FPGA-compatible circuits with few- or even single-clock-cycle latency and nanojoule-level energy cost per action. Across five MuJoCo benchmarks, including high-dimensional Humanoid, DWCs achieve returns competitive with weight-based policies (full precision or quantized neural networks), matching performance on four tasks and isolating network capacity as the key limiting factor on HalfCheetah. Furthermore, DWCs exhibit structurally sparse and interpretable connectivity patterns, enabling a direct inspection of which input thresholds influence control decisions.",
+        "authors": "Fabian Kresse, Christoph H. Lampert",
+        "url": "http://arxiv.org/abs/2512.01467v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01467v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，深入探讨了单变量两层ReLU网络中逻辑损失下“平坦度是否蕴含泛化性”这一核心问题，通过严格的理论证明揭示了平坦度与泛化性之间更微妙的关系，对神经网络泛化理论有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01423v1",
+        "title": "Active Hypothesis Testing under Computational Budgets with Applications to GWAS and LLM",
+        "summary": "In large-scale hypothesis testing, computing exact $p$-values or $e$-values is often resource-intensive, creating a need for budget-aware inferential methods. We propose a general framework for active hypothesis testing that leverages inexpensive auxiliary statistics to allocate a global computational budget. For each hypothesis, our data-adaptive procedure probabilistically decides whether to compute the exact test statistic or a transformed proxy, guaranteeing a valid $p$-value or $e$-value while satisfying the budget constraint in expectation. Theoretical guarantees are established for our constructions, showing that the procedure achieves optimality for $e$-values and for $p$-values under independence, and admissibility for $p$-values under general dependence. Empirical results from simulations and two real-world applications, including a large-scale genome-wide association study (GWAS) and a clinical prediction task leveraging large language models (LLM), demonstrate that our framework improves statistical efficiency under fixed resource limits.",
+        "authors": "Qi Kuang, Bowen Gang, Yin Xia",
+        "url": "http://arxiv.org/abs/2512.01423v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01423v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，提出了计算预算下的主动假设检验通用框架，并建立了严格的理论保证，包括e值和p值的最优性与可接受性，对统计推断和LLM应用具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.01412v1",
+        "title": "A Self-explainable Model of Long Time Series by Extracting Informative Structured Causal Patterns",
+        "summary": "Explainability is essential for neural networks that model long time series, yet most existing explainable AI methods only produce point-wise importance scores and fail to capture temporal structures such as trends, cycles, and regime changes. This limitation weakens human interpretability and trust in long-horizon models. To address these issues, we identify four key requirements for interpretable time-series modeling: temporal continuity, pattern-centric explanation, causal disentanglement, and faithfulness to the model's inference process. We propose EXCAP, a unified framework that satisfies all four requirements. EXCAP combines an attention-based segmenter that extracts coherent temporal patterns, a causally structured decoder guided by a pre-trained causal graph, and a latent aggregation mechanism that enforces representation stability. Our theoretical analysis shows that EXCAP provides smooth and stable explanations over time and is robust to perturbations in causal masks. Extensive experiments on classification and forecasting benchmarks demonstrate that EXCAP achieves strong predictive accuracy while generating coherent and causally grounded explanations. These results show that EXCAP offers a principled and scalable approach to interpretable modeling of long time series with relevance to high-stakes domains such as healthcare and finance.",
+        "authors": "Ziqian Wang, Yuxiao Cheng, Jinli Suo",
+        "url": "http://arxiv.org/abs/2512.01412v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.01412v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "理论严谨性极高，提出了可解释长时序模型EXCAP，通过因果解耦和结构化因果图，提供了理论分析证明其解释的平滑性、稳定性和对因果掩码扰动的鲁棒性，完美契合因果逻辑和数学推导偏好。"
+    }
+]

@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.03023v1",
+        "title": "Asymptotic Analysis of Stochastic Splitting Methods for Multivariate Monotone Inclusions",
+        "summary": "We propose an abstract framework to establish the convergence of the iterates of stochastic versions of a broad range of monotone operator splitting methods in Hilbert spaces. This framework allows for the introduction of stochasticity at several levels: approximation of operators, selection of coordinates and operators in block-iterative implementations, and relaxation parameters. The proposed analysis involves a reduced inclusion model with two operators. At each iteration, stochastic approximations to points in the graphs of these two operators are used to form the update. The results are applied to derive the almost sure and $L^2$ convergence of stochastic versions of the proximal point algorithm, as well as of randomized block-iterative projective splitting methods for solving systems of coupled inclusions involving a mix of set-valued, cocoercive, and Lipschitzian monotone operators combined via various monotonicity-preserving operations.",
+        "authors": "Patrick L. Combettes, Javier I. Madariaga",
+        "url": "http://arxiv.org/abs/2512.03023v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03023v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个抽象框架，用于建立希尔伯特空间中各种单调算子分裂方法的随机版本的迭代收敛性。它明确提及了“渐近分析”、“几乎必然收敛”和“L2收敛”，并允许在多个层面引入随机性。这与您对优化收敛性和严谨数学推导的偏好高度契合，是优化理论的坚实基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03020v1",
+        "title": "Unrolled Networks are Conditional Probability Flows in MRI Reconstruction",
+        "summary": "Magnetic Resonance Imaging (MRI) offers excellent soft-tissue contrast without ionizing radiation, but its long acquisition time limits clinical utility. Recent methods accelerate MRI by under-sampling $k$-space and reconstructing the resulting images using deep learning. Unrolled networks have been widely used for the reconstruction task due to their efficiency, but suffer from unstable evolving caused by freely-learnable parameters in intermediate steps. In contrast, diffusion models based on stochastic differential equations offer theoretical stability in both medical and natural image tasks but are computationally expensive. In this work, we introduce flow ODEs to MRI reconstruction by theoretically proving that unrolled networks are discrete implementations of conditional probability flow ODEs. This connection provides explicit formulations for parameters and clarifies how intermediate states should evolve. Building on this insight, we propose Flow-Aligned Training (FLAT), which derives unrolled parameters from the ODE discretization and aligns intermediate reconstructions with the ideal ODE trajectory to improve stability and convergence. Experiments on three MRI datasets show that FLAT achieves high-quality reconstructions with up to $3\\times$ fewer iterations than diffusion-based generative models and significantly greater stability than unrolled networks.",
+        "authors": "Kehan Qi, Saumya Gupta, Qingqiao Hu, Weimin Lyu, Chao Chen",
+        "url": "http://arxiv.org/abs/2512.03020v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03020v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从理论上证明了展开网络是条件概率流 ODE 的离散实现，为 MRI 重建任务提供了理论稳定性。它建立了深度学习架构与连续数学过程之间的强理论联系，并提供了参数的显式公式，完美符合您对严谨数学逻辑应用于现代 AI 系统的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02966v1",
+        "title": "Lumos: Let there be Language Model System Certification",
+        "summary": "We introduce the first principled framework, Lumos, for specifying and formally certifying Language Model System (LMS) behaviors. Lumos is an imperative probabilistic programming DSL over graphs, with constructs to generate independent and identically distributed prompts for LMS. It offers a structured view of prompt distributions via graphs, forming random prompts from sampled subgraphs. Lumos supports certifying LMS for arbitrary prompt distributions via integration with statistical certifiers. We provide hybrid (operational and denotational) semantics for Lumos, providing a rigorous way to interpret the specifications. Using only a small set of composable constructs, Lumos can encode existing LMS specifications, including complex relational and temporal specifications. It also facilitates specifying new properties - we present the first safety specifications for vision-language models (VLMs) in autonomous driving scenarios developed with Lumos. Using these, we show that the state-of-the-art VLM Qwen-VL exhibits critical safety failures, producing incorrect and unsafe responses with at least 90% probability in right-turn scenarios under rainy driving conditions, revealing substantial safety risks. Lumos's modular structure allows easy modification of the specifications, enabling LMS certification to stay abreast with the rapidly evolving threat landscape. We further demonstrate that specification programs written in Lumos enable finding specific failure cases exhibited by state-of-the-art LMS. Lumos is the first systematic and extensible language-based framework for specifying and certifying LMS behaviors, paving the way for a wider adoption of LMS certification.",
+        "authors": "Isha Chaudhary, Vedaant Jain, Avaljot Singh, Kavya Sachdeva, Sayan Ranu, Gagandeep Singh",
+        "url": "http://arxiv.org/abs/2512.02966v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02966v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 HeteroJIVE，一个针对异构多视图数据的加权两阶段谱算法，用于联合子空间估计。它深入分析了误差界限，并证明了在特定几何条件下，偏差项消失且估计器能达到 O(K^{-1/2}) 的收敛速度。其明确的理论分析、误差界限和收敛率，使其成为统计学习理论领域的优秀之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02970v1",
+        "title": "Identification of Multivariate Measurement Error Models",
+        "summary": "This paper develops new identification results for multidimensional continuous measurement-error models where all observed measurements are contaminated by potentially correlated errors and none provides an injective mapping of the latent distribution. Using third order cross moments, the paper constructs a three way tensor whose unique decomposition, guaranteed by Kruskal theorem, identifies the factor loading matrices. Starting with a linear structure, the paper recovers the full distribution of latent factors by constructing suitable measurements and applying scalar or multivariate versions of Kotlarski identity. As a result, the joint distribution of the latent vector and measurement errors is fully identified without requiring injective measurements, showing that multivariate latent structure can be recovered in broader settings than previously believed. Under injectivity, the paper also provides user-friendly testable conditions for identification. Finally, this paper provides general identification results for nonlinear models using a newly-defined generalized Kruskal rank - signal rank - of intergral operators. These results have wide applicability in empirical work involving noisy or indirect measurements, including factor models, survey data with reporting errors, mismeasured regressors in econometrics, and multidimensional latent-trait models in psychology and marketing, potentially enabling more robust estimation and interpretation when clean measurements are unavailable.",
+        "authors": "Yingyao Hu",
+        "url": "http://arxiv.org/abs/2512.02970v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02970v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为多维连续测量误差模型开发了新的识别结果，利用三阶交叉矩和 Kruskal 定理来识别因子载荷矩阵，并通过 Kotlarski 恒等式恢复潜在因子分布。它在统计识别理论方面做出了强大贡献，使用了高级数学工具，对于您在统计学中的背景非常相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02952v1",
+        "title": "Layout Anything: One Transformer for Universal Room Layout Estimation",
+        "summary": "We present Layout Anything, a transformer-based framework for indoor layout estimation that adapts the OneFormer's universal segmentation architecture to geometric structure prediction. Our approach integrates OneFormer's task-conditioned queries and contrastive learning with two key modules: (1) a layout degeneration strategy that augments training data while preserving Manhattan-world constraints through topology-aware transformations, and (2) differentiable geometric losses that directly enforce planar consistency and sharp boundary predictions during training. By unifying these components in an end-to-end framework, the model eliminates complex post-processing pipelines while achieving high-speed inference at 114ms. Extensive experiments demonstrate state-of-the-art performance across standard benchmarks, with pixel error (PE) of 5.43% and corner error (CE) of 4.02% on the LSUN, PE of 7.04% (CE 5.17%) on the Hedau and PE of 4.03% (CE 3.15%) on the Matterport3D-Layout datasets. The framework's combination of geometric awareness and computational efficiency makes it particularly suitable for augmented reality applications and large-scale 3D scene reconstruction tasks.",
+        "authors": "Md Sohag Mia, Muhammad Abdullah Adnan",
+        "url": "http://arxiv.org/abs/2512.02952v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02952v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Lumos 提出了第一个用于指定和形式化认证大型语言模型系统 (LMS) 行为的原则性框架。它是一个基于图的命令式概率编程 DSL，提供了混合（操作和指称）语义以及与统计认证器的集成。这直接将严谨的数学逻辑应用于现代 AI 系统（LLMs）的安全性与可靠性认证，具有极高的创新性和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02914v1",
+        "title": "Martingale Score: An Unsupervised Metric for Bayesian Rationality in LLM Reasoning",
+        "summary": "Recent advances in reasoning techniques have substantially improved the performance of large language models (LLMs), raising expectations for their ability to provide accurate, truthful, and reliable information. However, emerging evidence suggests that iterative reasoning may foster belief entrenchment and confirmation bias, rather than enhancing truth-seeking behavior. In this study, we propose a systematic evaluation framework for belief entrenchment in LLM reasoning by leveraging the Martingale property from Bayesian statistics. This property implies that, under rational belief updating, the expected value of future beliefs should remain equal to the current belief, i.e., belief updates are unpredictable from the current belief. We propose the unsupervised, regression-based Martingale Score to measure violations of this property, which signal deviation from the Bayesian ability of updating on new evidence. In open-ended problem domains including event forecasting, value-laden questions, and academic paper review, we find such violations to be widespread across models and setups, where the current belief positively predicts future belief updates, a phenomenon which we term belief entrenchment. We identify the models, reasoning techniques, and domains more prone to belief entrenchment. Finally, we validate the Martingale Score by showing that it predicts ground-truth accuracy on problem domains where ground truth labels are available. This indicates that, while designed as an unsupervised metric that operates even in domains without access to ground truth, the Martingale Score is a useful proxy of the truth-seeking ability of a reasoning process.",
+        "authors": "Zhonghao He, Tianyi Qiu, Hirokazu Shirado, Maarten Sap",
+        "url": "http://arxiv.org/abs/2512.02914v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02914v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了基于贝叶斯统计中鞅性质的无监督度量——鞅分数，用于评估 LLM 推理中的信念固着现象。它将严谨的统计学概念应用于现代 AI 系统（LLMs）的评估，以衡量其寻求真相的能力，完美符合您对统计保证和贝叶斯推断的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02852v1",
+        "title": "Adaptive Decentralized Federated Learning for Robust Optimization",
+        "summary": "In decentralized federated learning (DFL), the presence of abnormal clients, often caused by noisy or poisoned data, can significantly disrupt the learning process and degrade the overall robustness of the model. Previous methods on this issue often require a sufficiently large number of normal neighboring clients or prior knowledge of reliable clients, which reduces the practical applicability of DFL. To address these limitations, we develop here a novel adaptive DFL (aDFL) approach for robust estimation. The key idea is to adaptively adjust the learning rates of clients. By assigning smaller rates to suspicious clients and larger rates to normal clients, aDFL mitigates the negative impact of abnormal clients on the global model in a fully adaptive way. Our theory does not put any stringent conditions on neighboring nodes and requires no prior knowledge. A rigorous convergence analysis is provided to guarantee the oracle property of aDFL. Extensive numerical experiments demonstrate the superior performance of the aDFL method.",
+        "authors": "Shuyuan Wu, Feifei Wang, Yuan Gao, Hansheng Wang",
+        "url": "http://arxiv.org/abs/2512.02852v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02852v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了自适应去中心化联邦学习 (aDFL) 方法，用于鲁棒估计，并提供了严格的收敛性分析以保证其“预言机性质”。这直接满足了您对优化收敛性、统计保证和现代 AI 系统（联邦学习）的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02831v1",
+        "title": "Revisiting Theory of Contrastive Learning for Domain Generalization",
+        "summary": "Contrastive learning is among the most popular and powerful approaches for self-supervised representation learning, where the goal is to map semantically similar samples close together while separating dissimilar ones in the latent space. Existing theoretical methods assume that downstream task classes are drawn from the same latent class distribution used during the pretraining phase. However, in real-world settings, downstream tasks may not only exhibit distributional shifts within the same label space but also introduce new or broader label spaces, leading to domain generalization challenges. In this work, we introduce novel generalization bounds that explicitly account for both types of mismatch: domain shift and domain generalization. Specifically, we analyze scenarios where downstream tasks either (i) draw classes from the same latent class space but with shifted distributions, or (ii) involve new label spaces beyond those seen during pretraining. Our analysis reveals how the performance of contrastively learned representations depends on the statistical discrepancy between pretraining and downstream distributions. This extended perspective allows us to derive provable guarantees on the performance of learned representations on average classification tasks involving class distributions outside the pretraining latent class set.",
+        "authors": "Ali Alvandi, Mina Rezaei",
+        "url": "http://arxiv.org/abs/2512.02831v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02831v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文重新审视了对比学习的理论，引入了新的泛化界限，明确考虑了领域漂移和领域泛化两种不匹配情况，并提供了学习表示在不同类分布上的可证明保证。这对于理解和改进现代 AI 系统（对比学习）的理论基础至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02823v1",
+        "title": "Tempering the Bayes Filter towards Improved Model-Based Estimation",
+        "summary": "Model-based filtering is often carried out while subject to an imperfect model, as learning partially-observable stochastic systems remains a challenge. Recent work on Bayesian inference found that tempering the likelihood or full posterior of an imperfect model can improve predictive accuracy, as measured by expected negative log likelihood. In this paper, we develop the tempered Bayes filter, improving estimation performance through both of the aforementioned, and one newly introduced, modalities. The result admits a recursive implementation with a computational complexity no higher than that of the original Bayes filter. Our analysis reveals that -- besides the well-known fact in the field of Bayesian inference that likelihood tempering affects the balance between prior and likelihood -- full-posterior tempering tunes the level of entropy in the final belief distribution. We further find that a region of the tempering space can be understood as interpolating between the Bayes- and MAP filters, recovering these as special cases. Analytical results further establish conditions under which a tempered Bayes filter achieves improved predictive performance. Specializing the results to the linear Gaussian case, we obtain the tempered Kalman filter. In this context, we interpret how the parameters affect the Kalman state estimate and covariance propagation. Empirical results confirm that our method consistently improves predictive accuracy over the Bayes filter baseline.",
+        "authors": "Menno van Zutphen, Domagoj Herceg, Giannis Delimpaltadakis, Duarte J. Antunes",
+        "url": "http://arxiv.org/abs/2512.02823v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02823v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了“回火贝叶斯滤波器”，通过对不完善模型的似然或后验进行回火来改进估计性能。它提供了分析结果，建立了回火贝叶斯滤波器实现改进预测性能的条件，并具有递归实现和计算复杂性分析。这是贝叶斯推断和估计理论的强大贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02727v1",
+        "title": "DF-Mamba: Deformable State Space Modeling for 3D Hand Pose Estimation in Interactions",
+        "summary": "Modeling daily hand interactions often struggles with severe occlusions, such as when two hands overlap, which highlights the need for robust feature learning in 3D hand pose estimation (HPE). To handle such occluded hand images, it is vital to effectively learn the relationship between local image features (e.g., for occluded joints) and global context (e.g., cues from inter-joints, inter-hands, or the scene). However, most current 3D HPE methods still rely on ResNet for feature extraction, and such CNN's inductive bias may not be optimal for 3D HPE due to its limited capability to model the global context. To address this limitation, we propose an effective and efficient framework for visual feature extraction in 3D HPE using recent state space modeling (i.e., Mamba), dubbed Deformable Mamba (DF-Mamba). DF-Mamba is designed to capture global context cues beyond standard convolution through Mamba's selective state modeling and the proposed deformable state scanning. Specifically, for local features after convolution, our deformable scanning aggregates these features within an image while selectively preserving useful cues that represent the global context. This approach significantly improves the accuracy of structured 3D HPE, with comparable inference speed to ResNet-50. Our experiments involve extensive evaluations on five divergent datasets including single-hand and two-hand scenarios, hand-only and hand-object interactions, as well as RGB and depth-based estimation. DF-Mamba outperforms the latest image backbones, including VMamba and Spatial-Mamba, on all datasets and achieves state-of-the-art performance.",
+        "authors": "Yifan Zhou, Takehiko Ohkawa, Guwenxiao Zhou, Kanoko Goto, Takumi Hirose, Yusuke Sekikawa, Nakamasa Inoue",
+        "url": "http://arxiv.org/abs/2512.02727v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02727v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个因果概念驱动的后验可解释人工智能 (XAI) 框架，通过计算概念干预的充分性概率来生成解释。它强调了可理解性和对模型的忠实性，并与“因果逻辑”和现代 AI 系统的可解释性需求高度相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02722v1",
+        "title": "Credal Graph Neural Networks",
+        "summary": "Uncertainty quantification is essential for deploying reliable Graph Neural Networks (GNNs), where existing approaches primarily rely on Bayesian inference or ensembles. In this paper, we introduce the first credal graph neural networks (CGNNs), which extend credal learning to the graph domain by training GNNs to output set-valued predictions in the form of credal sets. To account for the distinctive nature of message passing in GNNs, we develop a complementary approach to credal learning that leverages different aspects of layer-wise information propagation. We assess our approach on uncertainty quantification in node classification under out-of-distribution conditions. Our analysis highlights the critical role of the graph homophily assumption in shaping the effectiveness of uncertainty estimates. Extensive experiments demonstrate that CGNNs deliver more reliable representations of epistemic uncertainty and achieve state-of-the-art performance under distributional shift on heterophilic graphs.",
+        "authors": "Matteo Tolloso, Davide Bacciu",
+        "url": "http://arxiv.org/abs/2512.02722v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02722v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了第一个可信图神经网络 (CGNNs)，将可信学习扩展到图领域，通过训练 GNN 输出以可信集形式表示的集合值预测。它分析了图同质性假设在不确定性估计中的关键作用，为现代 AI 系统（GNNs）的不确定性量化提供了新颖的理论框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02495v1",
+        "title": "Bayesian Physics-Informed Neural Networks for Inverse Problems (BPINN-IP): Application in Infrared Image Processing",
+        "summary": "Inverse problems arise across scientific and engineering domains, where the goal is to infer hidden parameters or physical fields from indirect and noisy observations. Classical approaches, such as variational regularization and Bayesian inference, provide well established theoretical foundations for handling ill posedness. However, these methods often become computationally restrictive in high dimensional settings or when the forward model is governed by complex physics. Physics Informed Neural Networks (PINNs) have recently emerged as a promising framework for solving inverse problems by embedding physical laws directly into the training process of neural networks. In this paper, we introduce a new perspective on the Bayesian Physics Informed Neural Network (BPINN) framework, extending classical PINNs by explicitly incorporating training data generation, modeling and measurement uncertainties through Bayesian prior modeling and doing inference with the posterior laws. Also, as we focus on the inverse problems, we call this method BPINN-IP, and we show that the standard PINN formulation naturally appears as its special case corresponding to the Maximum A Posteriori (MAP) estimate. This unified formulation allows simultaneous exploitation of physical constraints, prior knowledge, and data-driven inference, while enabling uncertainty quantification through posterior distributions. To demonstrate the effectiveness of the proposed framework, we consider inverse problems arising in infrared image processing, including deconvolution and super-resolution, and present results on both simulated and real industrial data.",
+        "authors": "Ali Mohammad-Djafari, Ning Chu, Li Wang",
+        "url": "http://arxiv.org/abs/2512.02495v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02495v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了贝叶斯物理信息神经网络 (BPINN-IP) 框架的新视角，通过贝叶斯先验建模和后验推断，明确纳入训练数据生成、建模和测量不确定性。它统一了物理约束、先验知识和数据驱动推断，并实现了不确定性量化，是物理信息神经网络理论的重大进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02485v1",
+        "title": "UCAgents: Unidirectional Convergence for Visual Evidence Anchored Multi-Agent Medical Decision-Making",
+        "summary": "Vision-Language Models (VLMs) show promise in medical diagnosis, yet suffer from reasoning detachment, where linguistically fluent explanations drift from verifiable image evidence, undermining clinical trust. Recent multi-agent frameworks simulate Multidisciplinary Team (MDT) debates to mitigate single-model bias, but open-ended discussions amplify textual noise and computational cost while failing to anchor reasoning to visual evidence, the cornerstone of medical decision-making. We propose UCAgents, a hierarchical multi-agent framework enforcing unidirectional convergence through structured evidence auditing. Inspired by clinical workflows, UCAgents forbids position changes and limits agent interactions to targeted evidence verification, suppressing rhetorical drift while amplifying visual signal extraction. In UCAgents, a one-round inquiry discussion is introduced to uncover potential risks of visual-textual misalignment. This design jointly constrains visual ambiguity and textual noise, a dual-noise bottleneck that we formalize via information theory. Extensive experiments on four medical VQA benchmarks show UCAgents achieves superior accuracy (71.3% on PathVQA, +6.0% over state-of-the-art) with 87.7% lower token cost, the evaluation results further confirm that UCAgents strikes a balance between uncovering more visual evidence and avoiding confusing textual interference. These results demonstrate that UCAgents exhibits both diagnostic reliability and computational efficiency critical for real-world clinical deployment. Code is available at https://github.com/fqhank/UCAgents.",
+        "authors": "Qianhan Feng, Zhongzhen Huang, Yakun Zhu, Xiaofan Zhang, Qi Dou",
+        "url": "http://arxiv.org/abs/2512.02485v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02485v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "UCAgents 提出了一个分层多智能体框架，通过结构化证据审计强制单向收敛，并形式化了视觉-文本错位中的“双噪声瓶颈”问题，使用了信息论。这为多智能体系统提供了理论基础，并解决了现代 AI 系统在医疗决策中的可靠性问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02383v1",
+        "title": "Reinforcement Learning in POMDP's via Direct Gradient Ascent",
+        "summary": "This paper discusses theoretical and experimental aspects of gradient-based approaches to the direct optimization of policy performance in controlled POMDPs. We introduce GPOMDP, a REINFORCE-like algorithm for estimating an approximation to the gradient of the average reward as a function of the parameters of a stochastic policy. The algorithm's chief advantages are that it requires only a single sample path of the underlying Markov chain, it uses only one free parameter $β\\in [0,1)$, which has a natural interpretation in terms of bias-variance trade-off, and it requires no knowledge of the underlying state. We prove convergence of GPOMDP and show how the gradient estimates produced by GPOMDP can be used in a conjugate-gradient procedure to find local optima of the average reward.",
+        "authors": "Jonathan Baxter, Peter L. Bartlett",
+        "url": "http://arxiv.org/abs/2512.02383v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02383v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文讨论了在 POMDP 中通过直接梯度上升进行强化学习的理论和实验方面，并提出了 GPOMDP 算法。它提供了 GPOMDP 的收敛性证明，并展示了如何使用梯度估计来寻找平均奖励的局部最优值。这篇论文在强化学习理论方面具有强大的贡献，直接满足您对优化收敛性和数学推导的偏好。"
+    }
+]

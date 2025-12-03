@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.03019v1",
+        "title": "Distribution-Calibrated Inference time compute for Thinking LLM-as-a-Judge",
+        "summary": "Thinking Large Language Models (LLMs) used as judges for pairwise preferences remain noisy at the single-sample level, and common aggregation rules (majority vote, soft self-consistency, or instruction-based self-aggregation) are inconsistent when ties are allowed. We study inference-time compute (ITC) for evaluators that generate n independent thinking-rating samples per item, and propose a principled, distribution-calibrated aggregation scheme. Our method models three-way preferences with a Bradley-Terry-Davidson formulation on rating counts, leveraging both polarity (margin among non-ties) and decisiveness (non-tie rate) to distinguish narrow margins from strong consensus. Across various evaluation benchmarks, our approach consistently reduces MAE and increases pairwise accuracy versus standard baselines, and when evaluated against human-consensus meta-labels, matches or exceeds individual human raters. These results show that carefully allocating ITC and aggregating with distribution-aware methods turns noisy individual model judgments into reliable ratings for evaluation.",
+        "authors": "Hamid Dadkhahi, Firas Trabelsi, Parker Riley, Juraj Juraska, Mehdi Mirzazadeh",
+        "url": "http://arxiv.org/abs/2512.03019v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03019v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文理论上证明了展开网络是条件概率流ODE的离散实现，建立了两种重要生成模型范式（展开网络和扩散模型）之间的深刻联系。其理论创新性和严谨性极高，并能提升MRI重建的效率和稳定性，完美契合您对前沿算法和数理统计严谨性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02910v1",
+        "title": "In Silico Development of Psychometric Scales: Feasibility of Representative Population Data Simulation with LLMs",
+        "summary": "Developing and validating psychometric scales requires large samples, multiple testing phases, and substantial resources. Recent advances in Large Language Models (LLMs) enable the generation of synthetic participant data by prompting models to answer items while impersonating individuals of specific demographic profiles, potentially allowing in silico piloting before real data collection. Across four preregistered studies (N = circa 300 each), we tested whether LLM-simulated datasets can reproduce the latent structures and measurement properties of human responses. In Studies 1-2, we compared LLM-generated data with real datasets for two validated scales; in Studies 3-4, we created new scales using EFA on simulated data and then examined whether these structures generalized to newly collected human samples. Simulated datasets replicated the intended factor structures in three of four studies and showed consistent configural and metric invariance, with scalar invariance achieved for the two newly developed scales. However, correlation-based tests revealed substantial differences between real and synthetic datasets, and notable discrepancies appeared in score distributions and variances. Thus, while LLMs capture group-level latent structures, they do not approximate individual-level data properties. Simulated datasets also showed full internal invariance across gender. Overall, LLM-generated data appear useful for early-stage, group-level psychometric prototyping, but not as substitutes for individual-level validation. We discuss methodological limitations, risks of bias and data pollution, and ethical considerations related to in silico psychometric simulations.",
+        "authors": "Enrico Cipriani, Pavel Okopnyi, Danilo Menicucci, Simone Grassini",
+        "url": "http://arxiv.org/abs/2512.02910v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02910v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了基于贝叶斯统计马丁格尔性质的无监督度量Martingale Score，用于评估LLM推理的贝叶斯理性（即信念固着）。其理论严谨性极高，为LLM的可靠性评估提供了一个新颖且统计学上扎实的方法，直接解决了LLM应用中的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02892v1",
+        "title": "Fast-Decoding Diffusion Language Models via Progress-Aware Confidence Schedules",
+        "summary": "Diffusion large language models (dLLMs) offer a promising alternative to autoregressive models, but their practical utility is severely hampered by slow, iterative sampling. We present SchED, a training-free, model-agnostic early-exit algorithm that aggregates full-span logit margins and halts decoding once a smooth, progress-dependent confidence threshold is met. We evaluated SchED on two dLLM families (Dream and LLaDA), in base and instruction-tuned variants across ten benchmarks spanning downstream tasks including multiple-choice question answering (MCQ), math, long-form QA/summarization, and translation. SchED delivers large, stable accelerations: on instruction-tuned models, it achieves $3.8$-$4.0\\times$ speedups while retaining $99.8$-$100\\%$ of the baseline score on average. On base models, SchED yields consistent speedup gains with $99.1$-$100\\%$ performance retention, with up to $2.34\\times$ under more aggressive settings. Using a conservative speed metric that heavily penalizes quality loss (QPS, $γ{=}4$), we show that SchED is robust and clearly outperforms prior confidence-based early-exit methods, which break down on long-form generation. An entropy analysis of the model's token predictions reveals that instruction tuning speeds up the decay of predictive entropy. By turning genuine confidence stabilization into computational savings, SchED makes dLLM decoding substantially more efficient.",
+        "authors": "Amr Mohamed, Yang Zhang, Michalis Vazirgiannis, Guokan Shang",
+        "url": "http://arxiv.org/abs/2512.02892v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02892v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了FAIRY2I框架，创新性地将预训练的实值层转换为等效的广义线性复数形式，实现了极低位量化并证明了其无损数学等价性。理论严谨性极高，解决了模型压缩的重大实际瓶颈，对AI前沿算法和架构（尤其是效率方面）具有颠覆性影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02826v1",
+        "title": "From Navigation to Refinement: Revealing the Two-Stage Nature of Flow-based Diffusion Models through Oracle Velocity",
+        "summary": "Flow-based diffusion models have emerged as a leading paradigm for training generative models across images and videos. However, their memorization-generalization behavior remains poorly understood. In this work, we revisit the flow matching (FM) objective and study its marginal velocity field, which admits a closed-form expression, allowing exact computation of the oracle FM target. Analyzing this oracle velocity field reveals that flow-based diffusion models inherently formulate a two-stage training target: an early stage guided by a mixture of data modes, and a later stage dominated by the nearest data sample. The two-stage objective leads to distinct learning behaviors: the early navigation stage generalizes across data modes to form global layouts, whereas the later refinement stage increasingly memorizes fine-grained details. Leveraging these insights, we explain the effectiveness of practical techniques such as timestep-shifted schedules, classifier-free guidance intervals, and latent space design choices. Our study deepens the understanding of diffusion model training dynamics and offers principles for guiding future architectural and algorithmic improvements.",
+        "authors": "Haoming Liu, Jinnuo Liu, Yanhao Li, Liuyang Bai, Yunkai Ji, Yuanhe Guo, Shenji Wan, Hongyi Wen",
+        "url": "http://arxiv.org/abs/2512.02826v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02826v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过分析流匹配目标及其边际速度场，揭示了基于流的扩散模型固有的两阶段训练性质。这是对前沿生成模型（扩散模型）工作机制的基础性理论洞察，具有高度的创新性和严谨性，有助于指导未来的架构和算法改进。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02879v1",
+        "title": "The future of AI in critical mineral exploration",
+        "summary": "The energy transition through increased electrification has put the worlds attention on critical mineral exploration Even with increased investments a decrease in new discoveries has taken place over the last two decades Here I propose a solution to this problem where AI is implemented as the enabler of a rigorous scientific method for mineral exploration that aims to reduce cognitive bias and false positives drive down the cost of exploration I propose a new scientific method that is based on a philosophical approach founded on the principles of Bayesianism and falsification In this approach data acquisition is in the first place seen as a means to falsify human generated hypothesis Decision of what data to acquire next is quantified with verifiable metrics and based on rational decision making A practical protocol is provided that can be used as a template in any exploration campaign However in order to make this protocol practical various form of artificial intelligence are needed I will argue that the most important form are one novel unsupervised learning methods that collaborate with domain experts to better understand data and generate multiple competing geological hypotheses and two humanintheloop AI algorithms that can optimally plan various geological geophysical geochemical and drilling data acquisition where uncertainty reduction of geological hypothesis precedes the uncertainty reduction on grade and tonnage",
+        "authors": "Jef Caers",
+        "url": "http://arxiv.org/abs/2512.02879v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02879v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了OptPO框架，通过将投票过程公式化为贝叶斯序贯概率比检验，自适应地分配LLM智能体测试时策略优化的推理预算。其贝叶斯统计基础非常扎实，解决了LLM智能体计算成本高昂的实际瓶颈，具有高度的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02799v1",
+        "title": "TriLex: A Framework for Multilingual Sentiment Analysis in Low-Resource South African Languages",
+        "summary": "Low-resource African languages remain underrepresented in sentiment analysis, limiting both lexical coverage and the performance of multilingual Natural Language Processing (NLP) systems. This study proposes TriLex, a three-stage retrieval augmented framework that unifies corpus-based extraction, cross lingual mapping, and retrieval augmented generation (RAG) driven lexical refinement to systematically expand sentiment lexicons for low-resource languages. Using the enriched lexicon, the performance of two prominent African pretrained language models (AfroXLMR and AfriBERTa) is evaluated across multiple case studies. Results demonstrate that AfroXLMR delivers superior performance, achieving F1-scores above 80% for isiXhosa and isiZulu and exhibiting strong cross-lingual stability. Although AfriBERTa lacks pre-training on these target languages, it still achieves reliable F1-scores around 64%, validating its utility in computationally constrained settings. Both models outperform traditional machine learning baselines, and ensemble analyses further enhance precision and robustness. The findings establish TriLex as a scalable and effective framework for multilingual sentiment lexicon expansion and sentiment modeling in low-resource South African languages.",
+        "authors": "Mike Nkongolo, Hilton Vorster, Josh Warren, Trevor Naick, Deandre Vanmali, Masana Mashapha, Luke Brand, Alyssa Fernandes, Janco Calitz, Sibusiso Makhoba",
+        "url": "http://arxiv.org/abs/2512.02799v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02799v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了SR-GRPO，利用模型表示的稳定秩作为LLM对齐的内在、无需标注的几何奖励信号。稳定秩的理论基础严谨，为LLM对齐提供了一种可扩展且无需外部监督的新路径，是LLM前沿算法和架构的重要创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02722v1",
+        "title": "Credal Graph Neural Networks",
+        "summary": "Uncertainty quantification is essential for deploying reliable Graph Neural Networks (GNNs), where existing approaches primarily rely on Bayesian inference or ensembles. In this paper, we introduce the first credal graph neural networks (CGNNs), which extend credal learning to the graph domain by training GNNs to output set-valued predictions in the form of credal sets. To account for the distinctive nature of message passing in GNNs, we develop a complementary approach to credal learning that leverages different aspects of layer-wise information propagation. We assess our approach on uncertainty quantification in node classification under out-of-distribution conditions. Our analysis highlights the critical role of the graph homophily assumption in shaping the effectiveness of uncertainty estimates. Extensive experiments demonstrate that CGNNs deliver more reliable representations of epistemic uncertainty and achieve state-of-the-art performance under distributional shift on heterophilic graphs.",
+        "authors": "Matteo Tolloso, Davide Bacciu",
+        "url": "http://arxiv.org/abs/2512.02722v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02722v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次将Credal学习扩展到图领域，提出了Credal图神经网络，以集合值预测的形式量化不确定性。理论创新性高，严谨性强，解决了GNN在分布偏移下不确定性量化和可靠性的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02719v1",
+        "title": "Emergent Bayesian Behaviour and Optimal Cue Combination in LLMs",
+        "summary": "Large language models (LLMs) excel at explicit reasoning, but their implicit computational strategies remain underexplored. Decades of psychophysics research show that humans intuitively process and integrate noisy signals using near-optimal Bayesian strategies in perceptual tasks. We ask whether LLMs exhibit similar behaviour and perform optimal multimodal integration without explicit training or instruction. Adopting the psychophysics paradigm, we infer computational principles of LLMs from systematic behavioural studies. We introduce a behavioural benchmark - BayesBench: four magnitude estimation tasks (length, location, distance, and duration) over text and image, inspired by classic psychophysics, and evaluate a diverse set of nine LLMs alongside human judgments for calibration. Through controlled ablations of noise, context, and instruction prompts, we measure performance, behaviour and efficiency in multimodal cue-combination. Beyond accuracy and efficiency metrics, we introduce a Bayesian Consistency Score that detects Bayes-consistent behavioural shifts even when accuracy saturates. Our results show that while capable models often adapt in Bayes-consistent ways, accuracy does not guarantee robustness. Notably, GPT-5 Mini achieves perfect text accuracy but fails to integrate visual cues efficiently. This reveals a critical dissociation between capability and strategy, suggesting accuracy-centric benchmarks may over-index on performance while missing brittle uncertainty handling. These findings reveal emergent principled handling of uncertainty and highlight the correlation between accuracy and Bayesian tendencies. We release our psychophysics benchmark and consistency metric (https://bayes-bench.github.io) as evaluation tools and to inform future multimodal architecture designs.",
+        "authors": "Julian Ma, Jun Wang, Zafeirios Fountas",
+        "url": "http://arxiv.org/abs/2512.02719v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02719v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过心理物理学范式，深入研究了LLM中涌现的贝叶斯行为和最优线索组合，并引入了贝叶斯一致性分数。它从根本上理解LLM的认知机制，对数理统计背景的您来说，其理论严谨性和创新性极具吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02704v1",
+        "title": "Conformal Correction for Efficiency May be at Odds with Entropy",
+        "summary": "Conformal prediction (CP) provides a comprehensive framework to produce statistically rigorous uncertainty sets for black-box machine learning models. To further improve the efficiency of CP, conformal correction is proposed to fine-tune or wrap the base model with an extra module using a conformal-aware inefficiency loss. In this work, we empirically and theoretically identify a trade-off between the CP efficiency and the entropy of model prediction. We then propose an entropy-constrained conformal correction method, exploring a better Pareto optimum between efficiency and entropy. Extensive experimental results on both computer vision and graph datasets demonstrate the efficacy of the proposed method. For instance, it can significantly improve the efficiency of state-of-the-art CP methods by up to 34.4%, given an entropy threshold.",
+        "authors": "Senrong Xu, Tianyu Wang, Zenan Li, Yuan Yao, Taolue Chen, Feng Xu, Xiaoxing Ma",
+        "url": "http://arxiv.org/abs/2512.02704v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02704v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从理论和经验上揭示了共形预测效率与模型预测熵之间的权衡，并提出了熵约束的共形校正方法。其理论分析严谨，对改进共形预测这一统计学方法（不确定性量化）的效率具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02682v1",
+        "title": "Beyond Single-Agent Safety: A Taxonomy of Risks in LLM-to-LLM Interactions",
+        "summary": "This paper examines why safety mechanisms designed for human-model interaction do not scale to environments where large language models (LLMs) interact with each other. Most current governance practices still rely on single-agent safety containment, prompts, fine-tuning, and moderation layers that constrain individual model behavior but leave the dynamics of multi-model interaction ungoverned. These mechanisms assume a dyadic setting: one model responding to one user under stable oversight. Yet research and industrial development are rapidly shifting toward LLM-to-LLM ecosystems, where outputs are recursively reused as inputs across chains of agents. In such systems, local compliance can aggregate into collective failure even when every model is individually aligned. We propose a conceptual transition from model-level safety to system-level safety, introducing the framework of the Emergent Systemic Risk Horizon (ESRH) to formalize how instability arises from interaction structure rather than from isolated misbehavior. The paper contributes (i) a theoretical account of collective risk in interacting LLMs, (ii) a taxonomy connecting micro, meso, and macro-level failure modes, and (iii) a design proposal for InstitutionalAI, an architecture for embedding adaptive oversight within multi-agent systems.",
+        "authors": "Piercosma Bisconti, Marcello Galisai, Federico Pierucci, Marcantonio Bracale, Matteo Prandi",
+        "url": "http://arxiv.org/abs/2512.02682v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02682v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了超越单智能体安全的LLM-to-LLM交互风险的开创性理论框架，引入了“涌现系统性风险地平线”概念。其理论创新性和严谨性极高，对多智能体LLM系统的安全性和负责任AI具有深远影响，是LLM应用前沿的必读之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02677v1",
+        "title": "Exploring Depth Generalization in Large Language Models for Solving Recursive Logic Tasks",
+        "summary": "Large language models have demonstrated remarkable capabilities across many tasks, yet face significant challenges when dealing with recursive reasoning problems, those requiring the resolution of nested hierarchical structures. While prior research has extensively studied length generalization (a model's ability to handle longer sequences than seen during training), we investigate a distinct and underexplored limitation: depth generalization. Here, depth refers to the number of nested levels in a hierarchical problem, such as the layers of parentheses in a mathematical expression or the nesting of logical clauses in a Boolean formula. Our work reveals that standard transformer architectures struggle with problems involving deeper recursion than encountered during training, even when they perform well on longer but non-nested sequences. This limitation stems from their inability to maintain stack-like behavior, the capacity to track and resolve multiple levels of nested dependencies. Through systematic analysis, we demonstrate how this architectural constraint leads to rapid performance decay as the depth of the recursion increases. To address this challenge, we develop a novel looped locate-and-replace pipeline that decomposes recursive problems into manageable subcomponents. The approach employs two specialized models: a locator that identifies solvable subexpressions and a replacer that evaluates these components while preserving the overall structure. We evaluated this method in three carefully designed domains: Boolean algebra, recursive arithmetic, and propositional logic, each with a controllable depth of recursion. We show that our method effectively alleviates the performance decay when tested on out-of-distribution recursion depth.",
+        "authors": "Zhiyuan He",
+        "url": "http://arxiv.org/abs/2512.02677v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02677v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了LLM在递归逻辑任务中的深度泛化能力限制，并提出了新颖的循环定位-替换流水线来解决这一根本性推理瓶颈。具有高度的理论创新性和严谨性，对理解和改进LLM架构的推理能力至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02667v1",
+        "title": "Graph VQ-Transformer (GVT): Fast and Accurate Molecular Generation via High-Fidelity Discrete Latents",
+        "summary": "The de novo generation of molecules with desirable properties is a critical challenge, where diffusion models are computationally intensive and autoregressive models struggle with error propagation. In this work, we introduce the Graph VQ-Transformer (GVT), a two-stage generative framework that achieves both high accuracy and efficiency. The core of our approach is a novel Graph Vector Quantized Variational Autoencoder (VQ-VAE) that compresses molecular graphs into high-fidelity discrete latent sequences. By synergistically combining a Graph Transformer with canonical Reverse Cuthill-McKee (RCM) node ordering and Rotary Positional Embeddings (RoPE), our VQ-VAE achieves near-perfect reconstruction rates. An autoregressive Transformer is then trained on these discrete latents, effectively converting graph generation into a well-structured sequence modeling problem. Crucially, this mapping of complex graphs to high-fidelity discrete sequences bridges molecular design with the powerful paradigm of large-scale sequence modeling, unlocking potential synergies with Large Language Models (LLMs). Extensive experiments show that GVT achieves state-of-the-art or highly competitive performance across major benchmarks like ZINC250k, MOSES, and GuacaMol, and notably outperforms leading diffusion models on key distribution similarity metrics such as FCD and KL Divergence. With its superior performance, efficiency, and architectural novelty, GVT not only presents a compelling alternative to diffusion models but also establishes a strong new baseline for the field, paving the way for future research in discrete latent-space molecular generation.",
+        "authors": "Haozhuo Zheng, Cheng Wang, Yang Liu",
+        "url": "http://arxiv.org/abs/2512.02667v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02667v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Graph VQ-Transformer (GVT)，通过新颖的图向量量化变分自编码器将分子图压缩为高保真离散潜在序列。其理论创新性高，严谨性强，为分子生成这一实际应用提供了高效且高性能的前沿生成模型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02652v1",
+        "title": "Pianist Transformer: Towards Expressive Piano Performance Rendering via Scalable Self-Supervised Pre-Training",
+        "summary": "Existing methods for expressive music performance rendering rely on supervised learning over small labeled datasets, which limits scaling of both data volume and model size, despite the availability of vast unlabeled music, as in vision and language. To address this gap, we introduce Pianist Transformer, with four key contributions: 1) a unified Musical Instrument Digital Interface (MIDI) data representation for learning the shared principles of musical structure and expression without explicit annotation; 2) an efficient asymmetric architecture, enabling longer contexts and faster inference without sacrificing rendering quality; 3) a self-supervised pre-training pipeline with 10B tokens and 135M-parameter model, unlocking data and model scaling advantages for expressive performance rendering; 4) a state-of-the-art performance model, which achieves strong objective metrics and human-level subjective ratings. Overall, Pianist Transformer establishes a scalable path toward human-like performance synthesis in the music domain.",
+        "authors": "Hong-Jie You, Jie-Jing Shao, Xiao-Wen Yang, Lin-Han Jia, Lan-Zhe Guo, Yu-Feng Li",
+        "url": "http://arxiv.org/abs/2512.02652v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02652v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了基于生成蒸馏的持续遗忘框架，解决了文本到图像扩散模型中数据隐私和版权的实际瓶颈。其理论严谨性高，创新性强，对负责任AI和生成模型的可持续维护具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02636v1",
+        "title": "Joint Distillation for Fast Likelihood Evaluation and Sampling in Flow-based Models",
+        "summary": "Log-likelihood evaluation enables important capabilities in generative models, including model comparison, certain fine-tuning objectives, and many downstream applications. Yet paradoxically, some of today's best generative models -- diffusion and flow-based models -- still require hundreds to thousands of neural function evaluations (NFEs) to compute a single likelihood. While recent distillation methods have successfully accelerated sampling to just a few steps, they achieve this at the cost of likelihood tractability: existing approaches either abandon likelihood computation entirely or still require expensive integration over full trajectories. We present fast flow joint distillation (F2D2), a framework that simultaneously reduces the number of NFEs required for both sampling and likelihood evaluation by two orders of magnitude. Our key insight is that in continuous normalizing flows, the coupled ODEs for sampling and likelihood are computed from a shared underlying velocity field, allowing us to jointly distill both the sampling trajectory and cumulative divergence using a single model. F2D2 is modular, compatible with existing flow-based few-step sampling models, and requires only an additional divergence prediction head. Experiments demonstrate F2D2's capability of achieving accurate log-likelihood with few-step evaluations while maintaining high sample quality, solving a long-standing computational bottleneck in flow-based generative models. As an application of our approach, we propose a lightweight self-guidance method that enables a 2-step MeanFlow model to outperform a 1024 step teacher model with only a single additional backward NFE.",
+        "authors": "Xinyue Ai, Yutong He, Albert Gu, Ruslan Salakhutdinov, J Zico Kolter, Nicholas Matthew Boffi, Max Simchowitz",
+        "url": "http://arxiv.org/abs/2512.02636v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02636v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了F2D2框架，通过联合蒸馏显著减少了流模型采样和似然评估所需的NFE。其核心洞察在于采样和似然的ODE共享底层速度场，理论创新性高，严谨性强，解决了生成模型中的计算效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.02581v1",
+        "title": "GoRL: An Algorithm-Agnostic Framework for Online Reinforcement Learning with Generative Policies",
+        "summary": "Reinforcement learning (RL) faces a persistent tension: policies that are stable to optimize are often too simple to represent the multimodal action distributions needed for complex control. Gaussian policies provide tractable likelihoods and smooth gradients, but their unimodal form limits expressiveness. Conversely, generative policies based on diffusion or flow matching can model rich multimodal behaviors; however, in online RL, they are frequently unstable due to intractable likelihoods and noisy gradients propagating through deep sampling chains. We address this tension with a key structural principle: decoupling optimization from generation. Building on this insight, we introduce GoRL (Generative Online Reinforcement Learning), a framework that optimizes a tractable latent policy while utilizing a conditional generative decoder to synthesize actions. A two-timescale update schedule enables the latent policy to learn stably while the decoder steadily increases expressiveness, without requiring tractable action likelihoods. Across a range of continuous-control tasks, GoRL consistently outperforms both Gaussian policies and recent generative-policy baselines. Notably, on the HopperStand task, it reaches a normalized return above 870, more than 3 times that of the strongest baseline. These results demonstrate that separating optimization from generation provides a practical path to policies that are both stable and highly expressive.",
+        "authors": "Chubin Zhang, Zhenglin Wan, Feng Chen, Xingrui Yu, Ivor Tsang, Bo An",
+        "url": "http://arxiv.org/abs/2512.02581v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.02581v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了GoRL框架，通过解耦优化和生成，解决了在线强化学习中生成策略的稳定性和表达性之间的矛盾。具有高度的理论创新性和严谨性，为RL前沿算法（特别是生成策略）的实际应用提供了新的范式。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.04039v1",
+        "title": "Fast & Efficient Normalizing Flows and Applications of Image Generative Models",
+        "summary": "This thesis presents novel contributions in two primary areas: advancing the efficiency of generative models, particularly normalizing flows, and applying generative models to solve real-world computer vision challenges. The first part introduce significant improvements to normalizing flow architectures through six key innovations: 1) Development of invertible 3x3 Convolution layers with mathematically proven necessary and sufficient conditions for invertibility, (2) introduction of a more efficient Quad-coupling layer, 3) Design of a fast and efficient parallel inversion algorithm for kxk convolutional layers, 4) Fast & efficient backpropagation algorithm for inverse of convolution, 5) Using inverse of convolution, in Inverse-Flow, for the forward pass and training it using proposed backpropagation algorithm, and 6) Affine-StableSR, a compact and efficient super-resolution model that leverages pre-trained weights and Normalizing Flow layers to reduce parameter count while maintaining performance.   The second part: 1) An automated quality assessment system for agricultural produce using Conditional GANs to address class imbalance, data scarcity and annotation challenges, achieving good accuracy in seed purity testing; 2) An unsupervised geological mapping framework utilizing stacked autoencoders for dimensionality reduction, showing improved feature extraction compared to conventional methods; 3) We proposed a privacy preserving method for autonomous driving datasets using on face detection and image inpainting; 4) Utilizing Stable Diffusion based image inpainting for replacing the detected face and license plate to advancing privacy-preserving techniques and ethical considerations in the field.; and 5) An adapted diffusion model for art restoration that effectively handles multiple types of degradation through unified fine-tuning.",
+        "authors": "Sandeep Nagar",
+        "url": "http://arxiv.org/abs/2512.04039v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04039v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在生成模型（特别是归一化流）的效率方面做出了显著贡献，提出了可逆卷积层、高效的Quad-coupling层、并行反演算法等六项创新。其强调数学证明的严谨性（如可逆性条件）和对效率的关注，完美契合您对理论创新性、严谨性以及解决数据效率/模型压缩瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03915v1",
+        "title": "A Theoretical Framework for Auxiliary-Loss-Free Load Balancing of Sparse Mixture-of-Experts in Large-Scale AI Models",
+        "summary": "In large-scale AI training, Sparse Mixture-of-Experts (s-MoE) layers enable scaling by activating only a small subset of experts per token. An operational challenge in this design is load balancing: routing tokens to minimize the number of idle experts, which is important for the efficient utilization of (costly) GPUs. We provide a theoretical framework for analyzing the Auxiliary-Loss-Free Load Balancing (ALF-LB) procedure -- proposed by DeepSeek's Wang et al. (2024) -- by casting it as a one-step-per-iteration primal-dual method for an assignment problem. First, in a stylized deterministic setting, our framework yields several insightful structural properties: (i) a monotonic improvement of a Lagrangian objective, (ii) a preference rule that moves tokens from overloaded to underloaded experts, and (iii) an approximate-balancing guarantee. Then, we incorporate the stochastic and dynamic nature of AI training using a generalized online optimization formulation. In the online setting, we derive a strong convexity property of the objective that leads to a logarithmic expected regret bound under certain step-size choices. Additionally, we present real experiments on 1B-parameter DeepSeekMoE models to complement our theoretical findings. Together, these results build a principled framework for analyzing the Auxiliary-Loss-Free Load Balancing of s-MoE in AI models.",
+        "authors": "X. Y. Han, Yuan Zhong",
+        "url": "http://arxiv.org/abs/2512.03915v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03915v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了离散变量（DV）电路量子-经典物理信息神经网络（QCPINN）来解决储层渗流方程，首次将其应用于此类模型。它利用量子叠加和纠缠增强高维特征映射，并嵌入物理约束以确保解的一致性。其在量子计算与物理信息神经网络交叉领域的理论创新性和严谨性非常突出，且解决了传统方法和经典PINN的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03913v1",
+        "title": "Hierarchical Vision Language Action Model Using Success and Failure Demonstrations",
+        "summary": "Prior Vision-Language-Action (VLA) models are typically trained on teleoperated successful demonstrations, while discarding numerous failed attempts that occur naturally during data collection. However, these failures encode where and how policies can be fragile, information that can be exploited to improve robustness. We address this problem by leveraging mixed-quality datasets to learn failure-aware reasoning at planning time. We introduce VINE, a hierarchical vision-language-action model that separates high-level reasoning (System 2) from low-level control (System 1) under a hierarchical reinforcement learning formalism, making failures usable as a structured learning signal rather than noisy supervision. System 2 performs feasibility-guided tree search over a 2D scene-graph abstraction: it proposes subgoal transitions, predicts success probabilities from both successes and failures, and prunes brittle branches before execution, effectively casting plan evaluation as feasibility scoring. The selected subgoal sequence is then passed to System 1, which executes low-level actions without modifying the agent's core skills. Trained entirely from offline teleoperation data, VINE integrates negative experience directly into the decision loop. Across challenging manipulation tasks, this approach consistently improves success rates and robustness, demonstrating that failure data is an essential resource for converting the broad competence of VLAs into robust execution.",
+        "authors": "Jeongeun Park, Jihwan Yoon, Byungwoo Jeon, Juhan Park, Jinwoo Shin, Namhoon Cho, Kyungjae Lee, Sangdoo Yun, Sungjoon Choi",
+        "url": "http://arxiv.org/abs/2512.03913v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03913v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为稀疏混合专家（s-MoE）模型中的辅助损失无关负载均衡（ALF-LB）提供了一个理论框架，将其视为一个赋值问题的原始-对偶方法。它揭示了结构特性并推导了对数期望遗憾界限，具有强大的数理统计严谨性。直接解决了LLM训练中的GPU利用率和效率瓶颈，理论创新性与实际影响力兼具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03847v1",
+        "title": "DVPO: Distributional Value Modeling-based Policy Optimization for LLM Post-Training",
+        "summary": "Reinforcement learning (RL) has shown strong performance in LLM post-training, but real-world deployment often involves noisy or incomplete supervision. In such settings, complex and unreliable supervision signals can destabilize training and harm generalization. While existing approaches such as worst-case optimization (e.g., RFQI, CQL) and mean-based methods (e.g., PPO, GRPO) can improve stability, they often overlook generalization and may produce overly conservative policies, leading to uneven performance across diverse real scenarios. To this end, we introduce DVPO (Distributional Value Modeling with Risk-aware Policy Optimization), a new RL framework that combines conditional risk theory with distributional value modeling to better balance robustness and generalization. DVPO learns token-level value distributions to provide fine-grained supervision, and applies an asymmetric risk regularization to shape the distribution tails: it contracts the lower tail to dampen noisy negative deviations, while expanding the upper tail to preserve exploratory diversity. Across extensive experiments and analysis in multi-turn dialogue, math reasoning, and scientific QA, DVPO consistently outperforms PPO, GRPO, and robust Bellman-based PPO under noisy supervision, showing its potential for LLM post-training in the real-world.",
+        "authors": "Dingwei Zhu, Zhiheng Xi, Shihan Dou, Yuhui Wang, Sixian Li, Junjie Ye, Honglin Guo, Shichun Liu, Chenhao Huang, Yajie Yang, Junlin Shang, Senjie Jin, Ming Zhang, Jiazheng Zhang, Caishuang Huang, Yunke Zhang, Demei Yan, Yuran Wang, Tao Gui",
+        "url": "http://arxiv.org/abs/2512.03847v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03847v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DVPO是一个结合条件风险理论和分布价值建模的新型强化学习框架，用于LLM的后训练。它学习token级别的价值分布并应用非对称风险正则化，以平衡鲁棒性和泛化性。这在理论上非常严谨，解决了LLM在真实世界部署中面临的噪声和不完整监督问题，是LLM应用中的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03763v1",
+        "title": "Learning from crises: A new class of time-varying parameter VARs with observable adaptation",
+        "summary": "We revisit macroeconomic time-varying parameter vector autoregressions (TVP-VARs), whose persistent coefficients may adapt too slowly to large, abrupt shifts such as those during major crises. We explore the performance of an adaptively-varying parameter (AVP) VAR that incorporates deterministic adjustments driven by observable exogenous variables, replacing latent state innovations with linear combinations of macroeconomic and financial indicators. This reformulation collapses the state equation into the measurement equation, enabling simple linear estimation of the model. Simulations show that adaptive parameters are substantially more parsimonious than conventional TVPs, effectively disciplining parameter dynamics without sacrificing flexibility. Using macroeconomic datasets for both the U.S. and the euro area, we demonstrate that AVP-VAR consistently improves out-of-sample forecasts, especially during periods of heightened volatility.",
+        "authors": "Nicolas Hardy, Dimitris Korobilis",
+        "url": "http://arxiv.org/abs/2512.03763v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03763v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MPCFormer提出了一种物理信息和数据驱动耦合的社会交互动力学方法，用于可解释的社会感知自动驾驶。它首次明确建模了多车辆社会交互动力学，将物理先验嵌入离散空间状态表示中，并通过Transformer学习系数。其理论严谨性高，解决了自动驾驶在动态交互场景中类人行为的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03771v1",
+        "title": "In-Context Representation Hijacking",
+        "summary": "We introduce \\textbf{Doublespeak}, a simple \\emph{in-context representation hijacking} attack against large language models (LLMs). The attack works by systematically replacing a harmful keyword (e.g., \\textit{bomb}) with a benign token (e.g., \\textit{carrot}) across multiple in-context examples, provided a prefix to a harmful request. We demonstrate that this substitution leads to the internal representation of the benign token converging toward that of the harmful one, effectively embedding the harmful semantics under a euphemism. As a result, superficially innocuous prompts (e.g., ``How to build a carrot?'') are internally interpreted as disallowed instructions (e.g., ``How to build a bomb?''), thereby bypassing the model's safety alignment. We use interpretability tools to show that this semantic overwrite emerges layer by layer, with benign meanings in early layers converging into harmful semantics in later ones. Doublespeak is optimization-free, broadly transferable across model families, and achieves strong success rates on closed-source and open-source systems, reaching 74\\% ASR on Llama-3.3-70B-Instruct with a single-sentence context override. Our findings highlight a new attack surface in the latent space of LLMs, revealing that current alignment strategies are insufficient and should instead operate at the representation level.",
+        "authors": "Itay Yona, Amir Sarid, Michael Karasik, Yossi Gandelsman",
+        "url": "http://arxiv.org/abs/2512.03771v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03771v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Doublespeak提出了一种简单但具有破坏性的“上下文内表示劫持”攻击，通过系统性替换有害关键词来绕过LLM的安全对齐。它利用可解释性工具深入分析了LLM内部表示的语义覆盖过程，揭示了LLM潜在空间的新攻击面。这篇论文在LLM安全性和可解释性方面具有极高的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03759v1",
+        "title": "Principled RL for Diffusion LLMs Emerges from a Sequence-Level Perspective",
+        "summary": "Reinforcement Learning (RL) has proven highly effective for autoregressive language models, but adapting these methods to diffusion large language models (dLLMs) presents fundamental challenges. The core difficulty lies in likelihood approximation: while autoregressive models naturally provide token-level conditional probabilities essential for token-level RL objectives (e.g., GRPO), dLLMs generate sequences through iterative non-autoregressive denoising steps that lack this factorization. To address this fundamental mismatch, we propose ELBO-based Sequence-level Policy Optimization (ESPO), a principled RL framework that treats entire sequence generation as a single action and uses the ELBO as a tractable sequence-level likelihood proxy. Our method incorporates per-token normalization of importance ratios and robust KL-divergence estimation to ensure stable large-scale training. Extensive experiments on mathematical reasoning, coding, and planning tasks demonstrate that ESPO significantly outperforms token-level baselines, achieving dramatic improvements of 20-40 points on the Countdown task, while maintaining consistent gains on math and coding benchmarks. Our approach establishes sequence-level optimization as a principled and empirically effective paradigm for RL in dLLMs. Our code is available at https://github.com/ML-GSAI/ESPO.",
+        "authors": "Jingyang Ou, Jiaqi Han, Minkai Xu, Shaoxuan Xu, Jianwen Xie, Stefano Ermon, Yi Wu, Chongxuan Li",
+        "url": "http://arxiv.org/abs/2512.03759v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03759v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SUSS提出了一种结构化不确定性相似性评分，通过结构化多元正态分布对图像进行建模，并以生成式、自监督方式训练。它提供了可解释的局部相似性评估，并与人类感知判断高度一致。这在感知度量学习和概率建模方面具有很强的理论严谨性和创新性，对计算机视觉模型的训练和评估具有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03696v1",
+        "title": "Quantum Topological Graph Neural Networks for Detecting Complex Fraud Patterns",
+        "summary": "We propose a novel QTGNN framework for detecting fraudulent transactions in large-scale financial networks. By integrating quantum embedding, variational graph convolutions, and topological data analysis, QTGNN captures complex transaction dynamics and structural anomalies indicative of fraud. The methodology includes quantum data embedding with entanglement enhancement, variational quantum graph convolutions with non-linear dynamics, extraction of higher-order topological invariants, hybrid quantum-classical anomaly learning with adaptive optimization, and interpretable decision-making via topological attribution. Rigorous convergence guarantees ensure stable training on noisy intermediate-scale quantum (NISQ) devices, while stability of topological signatures provides robust fraud detection. Optimized for NISQ hardware with circuit simplifications and graph sampling, the framework scales to large transaction networks. Simulations on financial datasets, such as PaySim and Elliptic, benchmark QTGNN against classical and quantum baselines, using metrics like ROC-AUC, precision, and false positive rate. An ablation study evaluates the contributions of quantum embeddings, topological features, non-linear channels, and hybrid learning. QTGNN offers a theoretically sound, interpretable, and practical solution for financial fraud detection, bridging quantum machine learning, graph theory, and topological analysis.",
+        "authors": "Mohammad Doost, Mohammad Manthouri",
+        "url": "http://arxiv.org/abs/2512.03696v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03696v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "QTGNN框架将量子嵌入、变分图卷积和拓扑数据分析相结合，用于检测复杂的欺诈模式。它利用量子计算的优势，并提供严格的收敛保证和拓扑签名的稳定性。这篇论文在量子机器学习、图神经网络和拓扑分析的交叉领域具有极高的理论创新性和严谨性，解决了金融欺诈检测的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03608v1",
+        "title": "KVNAND: Efficient On-Device Large Language Model Inference Using DRAM-Free In-Flash Computing",
+        "summary": "Deploying large language models (LLMs) on edge devices enables personalized agents with strong privacy and low cost. However, with tens to hundreds of billions of parameters, single-batch autoregressive inference suffers from extremely low arithmetic intensity, creating severe weight-loading and bandwidth pressures on resource-constrained platforms. Recent in-flash computing (IFC) solutions alleviate this bottleneck by co-locating weight-related linear computations in the decode phase with flash, yet still rely on DRAM for the key-value (KV) cache. As context length grows, the KV cache can exceed model weights in size, imposing prohibitive DRAM cost and capacity requirements. Attempts to offload KV cache to flash suffer from severe performance penalties.   We propose KVNAND, the first DRAM-free, IFC-based architecture that stores both model weights and KV cache entirely in compute-enabled 3D NAND flash. KVNAND addresses the fundamental performance challenges of flash under intensive KV cache access by leveraging IFC for all memory-bound operations to reduce data transfer overhead, introducing head-group parallelism to boost throughput, and employing page-level KV cache mapping to align token access patterns with flash organization. In addition, we propose a design space exploration framework that evaluates discrete and compact KVNAND variants to balance weight and KV placement, automatically identifying the optimal design trade-off. These techniques mitigate latency, energy, and reliability concerns, turning flash into a practical medium for long-context KV storage. Evaluations on MHA 7B and GQA 70B LLMs show that KVNAND achieves 1.98\\(\\times\\)/1.94\\(\\times\\)/2.05\\(\\times\\) geomean speedup at 128/1K/10K-token contexts compared to DRAM-equipped IFC designs and addresses out-of-memory failures at 100K context length.",
+        "authors": "Lishuo Deng, Shaojie Xu, Jinwu Chen, Changwei Yan, Jiajie Wang, Zhe Jiang, Weiwei Shan",
+        "url": "http://arxiv.org/abs/2512.03608v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03608v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "KVNAND是首个无DRAM、基于In-Flash Computing的架构，将LLM的模型权重和KV缓存完全存储在可计算的3D NAND闪存中。它通过架构创新解决了边缘设备上LLM推理的KV缓存瓶颈，实现了显著的加速和内存效率提升。这在LLM模型压缩和数据效率方面具有极高的创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03619v1",
+        "title": "LAMP: Language-Assisted Motion Planning for Controllable Video Generation",
+        "summary": "Video generation has achieved remarkable progress in visual fidelity and controllability, enabling conditioning on text, layout, or motion. Among these, motion control - specifying object dynamics and camera trajectories - is essential for composing complex, cinematic scenes, yet existing interfaces remain limited. We introduce LAMP that leverages large language models (LLMs) as motion planners to translate natural language descriptions into explicit 3D trajectories for dynamic objects and (relatively defined) cameras. LAMP defines a motion domain-specific language (DSL), inspired by cinematography conventions. By harnessing program synthesis capabilities of LLMs, LAMP generates structured motion programs from natural language, which are deterministically mapped to 3D trajectories. We construct a large-scale procedural dataset pairing natural text descriptions with corresponding motion programs and 3D trajectories. Experiments demonstrate LAMP's improved performance in motion controllability and alignment with user intent compared to state-of-the-art alternatives establishing the first framework for generating both object and camera motions directly from natural language specifications.",
+        "authors": "Muhammed Burak Kizil, Enes Sanli, Niloy J. Mitra, Erkut Erdem, Aykut Erdem, Duygu Ceylan",
+        "url": "http://arxiv.org/abs/2512.03619v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03619v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ESPO提出了一个基于ELBO的序列级策略优化框架，用于扩散大语言模型（dLLMs）的强化学习。它将整个序列生成视为单一动作，并使用ELBO作为可处理的序列级似然代理，解决了dLLMs与传统token级RL的根本不匹配问题。这在LLM架构和算法方面具有开创性的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03620v1",
+        "title": "SELF: A Robust Singular Value and Eigenvalue Approach for LLM Fingerprinting",
+        "summary": "The protection of Intellectual Property (IP) in Large Language Models (LLMs) represents a critical challenge in contemporary AI research. While fingerprinting techniques have emerged as a fundamental mechanism for detecting unauthorized model usage, existing methods -- whether behavior-based or structural -- suffer from vulnerabilities such as false claim attacks or susceptible to weight manipulations. To overcome these limitations, we propose SELF, a novel intrinsic weight-based fingerprinting scheme that eliminates dependency on input and inherently resists false claims. SELF achieves robust IP protection through two key innovations: 1) unique, scalable and transformation-invariant fingerprint extraction via singular value and eigenvalue decomposition of LLM attention weights, and 2) effective neural network-based fingerprint similarity comparison based on few-shot learning and data augmentation. Experimental results demonstrate SELF maintains high IP infringement detection accuracy while showing strong robustness against various downstream modifications, including quantization, pruning, and fine-tuning attacks. Our code is available at https://github.com/HanxiuZhang/SELF_v2.",
+        "authors": "Hanxiu Zhang, Yue Zheng",
+        "url": "http://arxiv.org/abs/2512.03620v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03620v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SELF提出了一种新颖的基于内在权重的LLM指纹识别方案，通过注意力权重的奇异值和特征值分解提取独特、可扩展且变换不变的指纹。它解决了现有指纹技术的漏洞，提供了强大的IP保护。这在LLM安全和知识产权保护方面具有极高的理论创新性和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03491v1",
+        "title": "Modal Logical Neural Networks",
+        "summary": "We propose Modal Logical Neural Networks (MLNNs), a neurosymbolic framework that integrates deep learning with the formal semantics of modal logic, enabling reasoning about necessity and possibility. Drawing on Kripke semantics, we introduce specialized neurons for the modal operators $\\Box$ and $\\Diamond$ that operate over a set of possible worlds, enabling the framework to act as a differentiable ``logical guardrail.'' The architecture is highly flexible: the accessibility relation between worlds can either be fixed by the user to enforce known rules or, as an inductive feature, be parameterized by a neural network. This allows the model to optionally learn the relational structure of a logical system from data while simultaneously performing deductive reasoning within that structure.   This versatile construction is designed for flexibility. The entire framework is differentiable from end to end, with learning driven by minimizing a logical contradiction loss. This not only makes the system resilient to inconsistent knowledge but also enables it to learn nonlinear relationships that can help define the logic of a problem space. We illustrate MLNNs on four case studies: grammatical guardrailing, axiomatic detection of the unknown, multi-agent epistemic trust, and detecting constructive deception in natural language negotiation. These experiments demonstrate how enforcing or learning accessibility can increase logical consistency and interpretability without changing the underlying task architecture.",
+        "authors": "Antonin Sulc",
+        "url": "http://arxiv.org/abs/2512.03491v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03491v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MLNNs是一个神经符号框架，将深度学习与模态逻辑的形式语义相结合，引入了模态算子专用神经元。它能够学习逻辑系统的关系结构，并进行可微分的演绎推理。这在神经符号AI领域具有极高的理论创新性和严谨性，为可解释和可靠的AI提供了新途径。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04072v1",
+        "title": "SkillFactory: Self-Distillation For Learning Cognitive Behaviors",
+        "summary": "Reasoning models leveraging long chains of thought employ various cognitive skills, such as verification of their answers, backtracking, retrying by an alternate method, and more. Previous work has shown that when a base language model exhibits these skills, training that model further with reinforcement learning (RL) can learn to leverage them. How can we get models to leverage skills that aren't exhibited by base models? Our work, SkillFactory, is a method for fine-tuning models to roughly learn these skills during a supervised fine-tuning (SFT) stage prior to RL. Our approach does not rely on distillation from a stronger model, but instead uses samples from the model itself, rearranged to provide training data in the format of those skills. These \"silver\" SFT traces may be imperfect, but are nevertheless effective for priming a model to acquire skills during RL. Our evaluation shows that (1) starting from SkillFactory SFT initialization helps a model to generalize to harder variants of a task post-RL, despite lower performance pre-RL; (2) cognitive skills are indeed used by the model; (3) RLed SkillFactory models are more robust to regression on out-of-domain tasks than RLed base models. Our work suggests that inductive biases learned prior to RL help models learn robust cognitive skill use.",
+        "authors": "Zayne Sprague, Jack Lu, Manya Wadhwa, Sedrick Keh, Mengye Ren, Greg Durrett",
+        "url": "http://arxiv.org/abs/2512.04072v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04072v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SkillFactory提出了一种通过自蒸馏学习认知行为的方法，在强化学习之前使用模型自身生成的“银色”SFT轨迹来预训练模型。这是一种新颖的LLM学习范式，能让模型学习基础模型不具备的技能，并提高对更难任务的泛化能力，直接解决了LLM应用中的认知能力瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03838v1",
+        "title": "Training and Evaluation of Guideline-Based Medical Reasoning in LLMs",
+        "summary": "Machine learning for early prediction in medicine has recently shown breakthrough performance, however, the focus on improving prediction accuracy has led to a neglect of faithful explanations that are required to gain the trust of medical practitioners. The goal of this paper is to teach LLMs to follow medical consensus guidelines step-by-step in their reasoning and prediction process. Since consensus guidelines are ubiquitous in medicine, instantiations of verbalized medical inference rules to electronic health records provide data for fine-tuning LLMs to learn consensus rules and possible exceptions thereof for many medical areas. Consensus rules also enable an automatic evaluation of the model's inference process regarding its derivation correctness (evaluating correct and faithful deduction of a conclusion from given premises) and value correctness (comparing predicted values against real-world measurements). We exemplify our work using the complex Sepsis-3 consensus definition. Our experiments show that small fine-tuned models outperform one-shot learning of considerably larger LLMs that are prompted with the explicit definition and models that are trained on medical texts including consensus definitions. Since fine-tuning on verbalized rule instantiations of a specific medical area yields nearly perfect derivation correctness for rules (and exceptions) on unseen patient data in that area, the bottleneck for early prediction is not out-of-distribution generalization, but the orthogonal problem of generalization into the future by forecasting sparsely and irregularly sampled clinical variables. We show that the latter results can be improved by integrating the output representations of a time series forecasting model with the LLM in a multimodal setup.",
+        "authors": "Michael Staniek, Artem Sokolov, Stefan Riezler",
+        "url": "http://arxiv.org/abs/2512.03838v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03838v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CoDA提出了一个训练无关的数据集蒸馏（DD）框架，仅使用现成的文本到图像模型。它通过识别目标数据集的“内在核心分布”并引导生成过程与之对齐，解决了现有DD方法对目标特定预训练模型的依赖和分布不匹配问题。这在数据效率和模型压缩方面具有显著的实践影响力，且方法具有理论依据。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03667v1",
+        "title": "Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning",
+        "summary": "In this study, we present Colon-X, an open initiative aimed at advancing multimodal intelligence in colonoscopy. We begin by constructing ColonVQA, the most comprehensive multimodal dataset ever built for colonoscopy, featuring over 1.1M+ visual question answering entries across 76 clinical findings and 18 multimodal tasks. Beyond serving as a community-wide data foundation, we further investigate a critical yet underexplored transition in colonoscopy - evolving from multimodal understanding to clinical reasoning: (a) To capture the current landscape of multimodal understanding behaviors, we systematically assess the generalizability of 22 multimodal large language models and examine their reliability under human-induced perturbations. The results reveal that clinical outputs from leading MLLMs remain far from robust and trustworthy. (b) To narrow this gap, we further explore reasoning-centric intelligence tailored for colonoscopy. Specifically, we curate ColonReason, a clinically grounded reasoning dataset annotated through a multi-expert debating pipeline, and develop ColonR1, the first R1-styled model incorporating task-adaptive rewarding and gradient-stable optimization techniques. Under data-scarce conditions, our ColonR1 achieves 56.61% overall accuracy, outperforming supervised fine-tuning by 25.22%, and sets a new reasoning-enabled baseline for multimodal colonoscopy analysis. All data and model resources are publicly available at https://github.com/ai4colonoscopy/Colon-X.",
+        "authors": "Ge-Peng Ji, Jingyi Liu, Deng-Ping Fan, Nick Barnes",
+        "url": "http://arxiv.org/abs/2512.03667v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03667v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ConvRot提出了一种基于旋转的组式量化方法，利用正则Hadamard变换（RHT）来抑制扩散Transformer中的异常值，实现了即插即用的4位量化。这是首次将旋转量化应用于扩散Transformer，显著提高了推理速度和内存效率，同时保持图像质量。这在模型压缩和数据效率方面具有极高的实践影响力，且方法具有理论创新性。"
+    }
+]

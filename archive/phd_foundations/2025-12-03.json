@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.04059v1",
+        "title": "Inference for location and height of peaks of a standardized field after selection",
+        "summary": "Peak inference concerns the use of local maxima (\"peaks\") of a noisy random field to detect and localize regions where underlying signal is present. We propose a peak inference method that first subjects observed peaks to a significance test of the null hypothesis that no signal is present, and then uses the peaks that are declared significant to construct post-selectively valid confidence regions for the location and height of nearby true peaks. We analyze the performance of this method in a smooth signal plus constant variance noise model under a high-curvature asymptotic assumption, and prove that it asymptotically controls both the number of false discoveries, and the number of confidence regions that do not contain a true peak, relative to the number of points at which inference is conducted. An important intermediate theoretical result uses the Kac-Rice formula to derive a novel approximation to the intensity function of a point process that counts local maxima, which is second-order accurate under the alternative, nearby high-curvature true peaks.",
+        "authors": "Alden Green, Jonathan Taylor",
+        "url": "http://arxiv.org/abs/2512.04059v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04059v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个峰值推断方法，用于在噪声随机场中检测和定位信号区域。它通过显著性检验和后选择有效置信区域来推断真实峰值的位置和高度。论文的理论严谨性极高，明确提到了“渐近控制假阳性发现率”、“Kac-Rice公式”以及“二阶精确的强度函数近似”，这与您对统计保证和清晰数学推导的偏好高度契合。它为从噪声数据中提取可靠信息提供了坚实的统计学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04084v1",
+        "title": "SimFlow: Simplified and End-to-End Training of Latent Normalizing Flows",
+        "summary": "Normalizing Flows (NFs) learn invertible mappings between the data and a Gaussian distribution. Prior works usually suffer from two limitations. First, they add random noise to training samples or VAE latents as data augmentation, introducing complex pipelines including extra noising and denoising steps. Second, they use a pretrained and frozen VAE encoder, resulting in suboptimal reconstruction and generation quality. In this paper, we find that the two issues can be solved in a very simple way: just fixing the variance (which would otherwise be predicted by the VAE encoder) to a constant (e.g., 0.5). On the one hand, this method allows the encoder to output a broader distribution of tokens and the decoder to learn to reconstruct clean images from the augmented token distribution, avoiding additional noise or denoising design. On the other hand, fixed variance simplifies the VAE evidence lower bound, making it stable to train an NF with a VAE jointly. On the ImageNet $256 \\times 256$ generation task, our model SimFlow obtains a gFID score of 2.15, outperforming the state-of-the-art method STARFlow (gFID 2.40). Moreover, SimFlow can be seamlessly integrated with the end-to-end representation alignment (REPA-E) method and achieves an improved gFID of 1.91, setting a new state of the art among NFs.",
+        "authors": "Qinyu Zhao, Guangting Zheng, Tao Yang, Rui Zhu, Xingjian Leng, Stephen Gould, Liang Zheng",
+        "url": "http://arxiv.org/abs/2512.04084v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04084v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SimFlow通过固定VAE方差的简单方法，解决了现有Normalizing Flows (NFs)训练中的复杂性和次优性问题。论文指出这种方法简化了VAE的证据下界（ELBO），使其能够稳定地联合训练NF和VAE。虽然核心发现是经验性的，但其对ELBO的简化和对训练稳定性的理论解释，体现了对优化收敛性和数学推导的关注，且在图像生成任务上取得了SOTA性能，具有良好的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04022v1",
+        "title": "Non-Linear Determinants of Pedestrian Injury Severity: Evidence from Administrative Data in Great Britain",
+        "summary": "This study investigates the non-linear determinants of pedestrian injury severity using administrative data from Great Britain's 2023 STATS19 dataset. To address inherent data-quality challenges, including missing information and substantial class imbalance, we employ a rigorous preprocessing pipeline utilizing mode imputation and Synthetic Minority Over-sampling (SMOTE). We utilize non-parametric ensemble methods (Random Forest and XGBoost) to capture complex interactions and heterogeneity often missed by linear models, while Shapley Additive Explanations are employed to ensure interpretability and isolate marginal feature effects. Our analysis reveals that vehicle count, speed limits, lighting, and road surface conditions are the primary predictors of severity, with police attendance and junction characteristics further distinguishing severe collisions. Spatially, while pedestrian risk is concentrated in dense urban Local Authority Districts (LADs), we identify that certain rural LADs experience disproportionately severe outcomes conditional on a collision occurring. These findings underscore the value of combining spatial analysis with interpretable machine learning to guide geographically targeted speed management, infrastructure investment, and enforcement strategies.",
+        "authors": "Yifei Tong",
+        "url": "http://arxiv.org/abs/2512.04022v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04022v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过信息论的视角，首次理论解释了OOD检测方法在单域数据集上训练时出现的“域特征坍塌”现象。它证明了监督学习在单域数据上不可避免地导致域特征坍塌，并使用Fano不等式量化了部分坍塌。这种从信息论角度揭示深度学习模型内在机制的工作，具有强大的理论基础和清晰的数学推导，对理解OOD检测的根本限制及其解决方案具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04016v1",
+        "title": "TARA Test-by-Adaptive-Ranks for Quantum Anomaly Detection with Conformal Prediction Guarantees",
+        "summary": "Quantum key distribution (QKD) security fundamentally relies on the ability to distinguish genuine quantum correlations from classical eavesdropper simulations, yet existing certification methods lack rigorous statistical guarantees under finite-sample conditions and adversarial scenarios. We introduce TARA (Test by Adaptive Ranks), a novel framework combining conformal prediction with sequential martingale testing for quantum anomaly detection that provides distribution-free validity guarantees. TARA offers two complementary approaches. TARA k, based on Kolmogorov Smirnov calibration against local hidden variable (LHV) null distributions, achieving ROC AUC = 0.96 for quantum-classical discrimination. And TARA-m, employing betting martingales for streaming detection with anytime valid type I error control that enables real time monitoring of quantum channels. We establish theoretical guarantees proving that under (context conditional) exchangeability, conformal p-values remain uniformly distributed even for strongly contextual quantum data, confirming that quantum contextuality does not break conformal prediction validity a result with implications beyond quantum certification to any application of distribution-free methods to nonclassical data. Extensive validation on both IBM Torino (superconducting, CHSH = 2.725) and IonQ Forte Enterprise (trapped ion, CHSH = 2.716) quantum processors demonstrates cross-platform robustness, achieving 36% security margins above the classical CHSH bound of 2. Critically, our framework reveals a methodological concern affecting quantum certification more broadly: same-distribution calibration can inflate detection performance by up to 44 percentage points compared to proper cross-distribution calibration, suggesting that prior quantum certification studies using standard train test splits may have systematically overestimated adversarial robustness.",
+        "authors": "Davut Emre Tasar, Ceren Ocal Tasar",
+        "url": "http://arxiv.org/abs/2512.04016v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04016v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TARA框架结合了共形预测和序贯鞅检验，为量子异常检测提供了分布无关的有效性保证。论文建立了理论保证，证明了在交换性条件下，共形p值即使对于强上下文量子数据也保持均匀分布，直接解决了量子认证中缺乏严格统计保证的问题。这篇论文在统计保证、理论严谨性和对现代AI系统（量子计算）的应用方面表现出色，是您会非常感兴趣的类型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04008v1",
+        "title": "Efficient Public Verification of Private ML via Regularization",
+        "summary": "Training with differential privacy (DP) provides a guarantee to members in a dataset that they cannot be identified by users of the released model. However, those data providers, and, in general, the public, lack methods to efficiently verify that models trained on their data satisfy DP guarantees. The amount of compute needed to verify DP guarantees for current algorithms scales with the amount of compute required to train the model. In this paper we design the first DP algorithm with near optimal privacy-utility trade-offs but whose DP guarantees can be verified cheaper than training. We focus on DP stochastic convex optimization (DP-SCO), where optimal privacy-utility trade-offs are known. Here we show we can obtain tight privacy-utility trade-offs by privately minimizing a series of regularized objectives and only using the standard DP composition bound. Crucially, this method can be verified with much less compute than training. This leads to the first known DP-SCO algorithm with near optimal privacy-utility whose DP verification scales better than training cost, significantly reducing verification costs on large datasets.",
+        "authors": "Zoë Ruha Bell, Anvith Thudi, Olive Franzese-McLaughlin, Nicolas Papernot, Shafi Goldwasser",
+        "url": "http://arxiv.org/abs/2512.04008v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04008v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文设计了第一个DP算法，在接近最优的隐私-效用权衡下，其DP保证的验证成本低于训练成本。它通过私有化地最小化一系列正则化目标并使用标准DP组合界限来实现。这篇论文在差分隐私（一种统计保证）和优化收敛性方面提供了严格的理论分析，并显著降低了大规模数据集上的验证成本，具有重要的实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04004v1",
+        "title": "Physics-Embedded Gaussian Process for Traffic State Estimation",
+        "summary": "Traffic state estimation (TSE) becomes challenging when probe-vehicle penetration is low and observations are spatially sparse. Pure data-driven methods lack physical explanations and have poor generalization when observed data is sparse. In contrast, physical models have difficulty integrating uncertainties and capturing the real complexity of traffic. To bridge this gap, recent studies have explored combining them by embedding physical structure into Gaussian process. These approaches typically introduce the governing equations as soft constraints through pseudo-observations, enabling the integration of model structure within a variational framework. However, these methods rely heavily on penalty tuning and lack principled uncertainty calibration, which makes them sensitive to model mis-specification. In this work, we address these limitations by presenting a novel Physics-Embedded Gaussian Process (PEGP), designed to integrate domain knowledge with data-driven methods in traffic state estimation. Specifically, we design two multi-output kernels informed by classic traffic flow models, constructed via the explicit application of the linearized differential operator. Experiments on HighD, NGSIM show consistent improvements over non-physics baselines. PEGP-ARZ proves more reliable under sparse observation, while PEGP-LWR achieves lower errors with denser observation. Ablation study further reveals that PEGP-ARZ residuals align closely with physics and yield calibrated, interpretable uncertainty, whereas PEGP-LWR residuals are more orthogonal and produce nearly constant variance fields. This PEGP framework combines physical priors, uncertainty quantification, which can provide reliable support for TSE.",
+        "authors": "Yanlin Chen, Kehua Chen, Yinhai Wang",
+        "url": "http://arxiv.org/abs/2512.04004v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04004v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了多类别交叉熵（CE）优化动态，超越了凸模型限制。它首次证明了CE上的梯度流收敛到神经坍塌几何，并构建了一个显式Lyapunov函数来建立全局收敛性。更重要的是，它发现Hadamard初始化可以对角化softmax算子，为分析CE训练动态开辟了新途径。这篇论文在优化收敛性和清晰数学推导方面达到了极高水平，是深度学习理论的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04000v1",
+        "title": "Divide, then Ground: Adapting Frame Selection to Query Types for Long-Form Video Understanding",
+        "summary": "The application of Large Multimodal Models (LMMs) to long-form video understanding is constrained by limited context lengths and the computationally prohibitive cost of processing dense video tokens. Consequently, recent research has focused on query-aware frame selection, methods that often incur significant computational overhead. This paper challenges the assumption that such complex search mechanisms are universally necessary. We first identify and validate a query typology distinguishing between global query and localized query. We demonstrate that while uniform sampling is both effective and efficient for global queries, localized queries indeed necessitate query-aware selection for optimal performance. Building on this insight, we propose DIG, a training-free frame selection framework that adapts its strategy based on the query type. Specifically,DIG employs efficient uniform sampling for global queries while activating a specialized pipeline to extract query-relevant frames for localized queries. Experiments on three long-form video understanding benchmarks demonstrate that DIG consistently outperforms existing baselines and robustly improves LMM performance, even when scaling the input frame count to 256.",
+        "authors": "Jialuo Li, Bin Li, Jiahao Li, Yan Lu",
+        "url": "http://arxiv.org/abs/2512.04000v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04000v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Physics-Embedded Gaussian Process (PEGP)，通过将经典交通流模型中的线性化微分算子显式应用于多输出核，将领域知识与数据驱动方法相结合。它解决了传统方法在稀疏观测下缺乏物理解释和不确定性校准的问题。这种将物理先验与高斯过程结合，并提供可解释不确定性量化的方法，在理论严谨性和跨领域应用方面表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03975v1",
+        "title": "Sponsored Questions and How to Auction Them",
+        "summary": "Online platforms connect users with relevant products and services using ads. A key challenge is that a user's search query often leaves their true intent ambiguous. Typically, platforms passively predict relevance based on available signals and in some cases offer query refinements. The shift from traditional search to conversational AI provides a new approach. When a user's query is ambiguous, a Large Language Model (LLM) can proactively offer several clarifying follow-up prompts. In this paper we consider the following: what if some of these follow-up prompts can be ``sponsored,'' i.e., selected for their advertising potential. How should these ``suggestion slots'' be allocated? And, how does this new mechanism interact with the traditional ad auction that might follow?   This paper introduces a formal model for designing and analyzing these interactive platforms. We use this model to investigate a critical engineering choice: whether it is better to build an end-to-end pipeline that jointly optimizes the user interaction and the final ad auction, or to decouple them into separate mechanisms for the suggestion slots and another for the subsequent ad slot. We show that the VCG mechanism can be adopted to jointly optimize the sponsored suggestion and the ads that follow; while this mechanism is more complex, it achieves outcomes that are efficient and truthful. On the other hand, we prove that the simple-to-implement modular approach suffers from strategic inefficiency: its Price of Anarchy is unbounded.",
+        "authors": "Kshipra Bhawalkar, Alexandros Psomas, Di Wang",
+        "url": "http://arxiv.org/abs/2512.03975v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03975v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个形式模型来设计和分析互动平台中的赞助问题和拍卖机制。它证明了VCG机制可以实现高效且诚实的联合优化，而简单的模块化方法则会导致战略性低效，其无政府状态价格是无界的。这篇论文在因果逻辑（战略行为）、优化收敛性（效率）和清晰数学推导方面具有极高的严谨性，是机制设计领域的优秀工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03947v1",
+        "title": "Data-Dependent Complexity of First-Order Methods for Binary Classification",
+        "summary": "Large-scale problems in data science are often modeled with optimization, and the optimization model is usually solved with first-order methods that may converge at a sublinear rate. Therefore, it is of interest to terminate the optimization algorithm as soon as the underlying data science task is accomplished. We consider FISTA for solving two binary classification problems: the ellipsoid separation problem (ESP), and the soft-margin support-vector machine (SVM). For the ESP, we cast the dual second-order cone program into a form amenable to FISTA and show that the FISTA residual converges to the infimal displacement vector of the primal-dual hybrid gradient (PDHG) algorithm, that directly encodes a separating hyperplane. We further derive a data-dependent iteration upper bound scaling as $\\mathcal{O}(1/δ_{\\mathcal{A}}^2)$, where $δ_{\\mathcal{A}}$ is the minimal perturbation that destroys separability. For the SVM, we propose a strongly-concave perturbed dual that admits efficient FISTA updates under a linear time projection scheme, and with our parameter choices, the objective has small condition number, enabling rapid convergence. We prove that, under a reasonable data model, early-stopped iterates identify well-classified points and yield a hyperplane that exactly separates them, where the accuracy required of the dual iterate is governed by geometric properties of the data. In particular, the proposed early-stopping criteria diminish the need for hard-to-select tolerance-based stopping conditions. Our numerical experiments on ESP instances derived from MNIST data and on soft-margin SVM benchmarks indicate competitive runtimes and substantial speedups from stopping early.",
+        "authors": "Matthew Hough, Stephen A. Vavasis",
+        "url": "http://arxiv.org/abs/2512.03947v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03947v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文分析了FISTA等一阶方法在二元分类问题中的数据依赖复杂度。它推导了数据依赖的迭代上限，并证明了在合理数据模型下，早期停止的迭代可以识别分类良好的点并产生精确分离它们的超平面。这篇论文在优化收敛性、数学推导和对算法复杂度的理论分析方面表现出色，对理解优化算法在实际任务中的行为至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03915v1",
+        "title": "A Theoretical Framework for Auxiliary-Loss-Free Load Balancing of Sparse Mixture-of-Experts in Large-Scale AI Models",
+        "summary": "In large-scale AI training, Sparse Mixture-of-Experts (s-MoE) layers enable scaling by activating only a small subset of experts per token. An operational challenge in this design is load balancing: routing tokens to minimize the number of idle experts, which is important for the efficient utilization of (costly) GPUs. We provide a theoretical framework for analyzing the Auxiliary-Loss-Free Load Balancing (ALF-LB) procedure -- proposed by DeepSeek's Wang et al. (2024) -- by casting it as a one-step-per-iteration primal-dual method for an assignment problem. First, in a stylized deterministic setting, our framework yields several insightful structural properties: (i) a monotonic improvement of a Lagrangian objective, (ii) a preference rule that moves tokens from overloaded to underloaded experts, and (iii) an approximate-balancing guarantee. Then, we incorporate the stochastic and dynamic nature of AI training using a generalized online optimization formulation. In the online setting, we derive a strong convexity property of the objective that leads to a logarithmic expected regret bound under certain step-size choices. Additionally, we present real experiments on 1B-parameter DeepSeekMoE models to complement our theoretical findings. Together, these results build a principled framework for analyzing the Auxiliary-Loss-Free Load Balancing of s-MoE in AI models.",
+        "authors": "X. Y. Han, Yuan Zhong",
+        "url": "http://arxiv.org/abs/2512.03915v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03915v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为大型AI模型中稀疏专家混合（s-MoE）的无辅助损失负载均衡程序提供了一个理论框架。它将其建模为一个逐步迭代的原始-对偶方法，并推导了单调改进、近似均衡保证和对数期望遗憾界限等结构性质。这篇论文在优化收敛性和清晰数学推导方面具有极高水平，直接解决了现代AI系统中的一个关键工程挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03899v1",
+        "title": "Probabilistic Foundations of Fuzzy Simplicial Sets for Nonlinear Dimensionality Reduction",
+        "summary": "Fuzzy simplicial sets have become an object of interest in dimensionality reduction and manifold learning, most prominently through their role in UMAP. However, their definition through tools from algebraic topology without a clear probabilistic interpretation detaches them from commonly used theoretical frameworks in those areas. In this work we introduce a framework that explains fuzzy simplicial sets as marginals of probability measures on simplicial sets. In particular, this perspective shows that the fuzzy weights of UMAP arise from a generative model that samples Vietoris-Rips filtrations at random scales, yielding cumulative distribution functions of pairwise distances. More generally, the framework connects fuzzy simplicial sets to probabilistic models on the face poset, clarifies the relation between Kullback-Leibler divergence and fuzzy cross-entropy in this setting, and recovers standard t-norms and t-conorms via Boolean operations on the underlying simplicial sets. We then show how new embedding methods may be derived from this framework and illustrate this on an example where we generalize UMAP using Čech filtrations with triplet sampling. In summary, this probabilistic viewpoint provides a unified probabilistic theoretical foundation for fuzzy simplicial sets, clarifies the role of UMAP within this framework, and enables the systematic derivation of new dimensionality reduction methods.",
+        "authors": "Janis Keck, Lukas Silvester Barth, Fatemeh, Fahimi, Parvaneh Joharinad, Jürgen Jost",
+        "url": "http://arxiv.org/abs/2512.03899v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03899v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个框架，将模糊单纯集解释为单纯集上概率测度的边缘分布，为UMAP等降维方法提供了概率论基础。它揭示了UMAP中模糊权重源于随机尺度下Vietoris-Rips过滤的生成模型。这种将代数拓扑工具与概率论相结合，提供统一理论基础的工作，具有极高的理论严谨性和创新性，对理解和发展新的降维方法具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03738v1",
+        "title": "Weighted Conformal Prediction for Survival Analysis under Covariate Shift",
+        "summary": "Reliable uncertainty quantification is essential in survival prediction, particularly in clinical settings where erroneous decisions carry high risk. Conformal prediction has attracted substantial attention as it offers a model-agnostic framework with finite-sample coverage guarantees. Extending it to right-censored outcomes poses nontrivial challenges. Several adaptations of conformal approaches for survival outcomes have been developed, but they either rely on restrictive censoring settings or substantial computation. A recent conformal approach for right-censored data constructs censoring-adjusted p-values and enables prediction intervals in general survival settings. However, the empirical coverage depends sensitively on heuristic tuning choices and its validity is limited to scenarios without covariate shift. In this paper, we establish theoretical justification for its prediction-set construction, providing a principled basis for defining prediction-set bounds, and extend the approach to covariate-shift settings. Simulation studies and a real data application demonstrate that the proposed method achieves robust coverage and coherent interval structure across varying censoring levels and covariate-shift settings.",
+        "authors": "Jaeyoung Shin, Chi Hyun Lee, Sangwook Kang",
+        "url": "http://arxiv.org/abs/2512.03738v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03738v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为协变量偏移下的生存分析提出了加权共形预测方法，并提供了理论依据。它建立了预测集构建的理论基础，并将其扩展到协变量偏移设置，同时提供有限样本覆盖保证。这篇论文在统计保证和清晰数学推导方面表现出色，对于临床环境中生存预测的可靠不确定性量化具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03715v1",
+        "title": "DINO-RotateMatch: A Rotation-Aware Deep Framework for Robust Image Matching in Large-Scale 3D Reconstruction",
+        "summary": "This paper presents DINO-RotateMatch, a deep-learning framework designed to address the chal lenges of image matching in large-scale 3D reconstruction from unstructured Internet images. The   method integrates a dataset-adaptive image pairing strategy with rotation-aware keypoint extraction and   matching. DINO is employed to retrieve semantically relevant image pairs in large collections, while   rotation-based augmentation captures orientation-dependent local features using ALIKED and Light Glue. Experiments on the Kaggle Image Matching Challenge 2025 demonstrate consistent improve ments in mean Average Accuracy (mAA), achieving a Silver Award (47th of 943 teams). The results   confirm that combining self-supervised global descriptors with rotation-enhanced local matching offers   a robust and scalable solution for large-scale 3D reconstruction.",
+        "authors": "Kaichen Zhang, Tianxiang Sheng, Xuanming Shi",
+        "url": "http://arxiv.org/abs/2512.03715v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03715v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对高斯分布下的最优传输（OT）和Gromov-Wasserstein（GW）对齐进行了全面处理，填补了现有文献中的多个空白。它为非中心高斯分布之间的IGW对齐提供了闭式表达式，并推导了紧致的解析上下界。这种在最优传输理论和信息几何方面的深入数学推导和闭式解，具有极高的理论价值，并展示了在知识蒸馏和异构聚类中的应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03537v1",
+        "title": "Parameter-Efficient Augment Plugin for Class-Incremental Learning",
+        "summary": "Existing class-incremental learning (CIL) approaches based on replay or knowledge distillation are often constrained by forgetting or the stability-plasticity dilemma. Some expansion-based approaches could achieve higher accuracy. However, they always require significant parameter increases. In this paper, we propose a plugin extension paradigm termed the Deployment of extra LoRA Components (DLC) for non-pre-trained CIL scenarios.We treat the feature extractor trained through replay or distillation as a base model with rich knowledge. For each task, we use Low-Rank Adaptation (LoRA) to inject task-specific residuals into the base model's deep layers. During inference, representations with task-specific residuals are aggregated to produce classification predictions. To mitigate interference from non-target LoRA plugins, we introduce a lightweight weighting unit. This unit learns to assign importance scores to different LoRA-tuned representations. Like downloadable contents in software, our method serves as a plug-and-play enhancement that efficiently extends the base methods. Remarkably, on the large-scale ImageNet-100, with merely 4 % of the parameters of a standard ResNet-18, our DLC model achieves a significant 8 % improvement in accuracy, demonstrating exceptional efficiency. Moreover, it could surpass state-of-the-art methods under the fixed memory budget.",
+        "authors": "Zhiming Xu, Baile Xu, Jian Zhao, Furao Shen, Suorong Yang",
+        "url": "http://arxiv.org/abs/2512.03537v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03537v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一类加性因子模型，并推导了它们的极值极限，从而得到了一系列灵活且参数可控的模型，能够自然地捕捉多元极端事件中的非对称尾部依赖。它从分量最大值和阈值超峰值两个角度呈现了极限模型。这篇论文在极值理论和多元统计方面具有强大的理论基础和清晰的数学推导，对于处理复杂依赖结构的数据至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.03325v1",
+        "title": "When does Gaussian equivalence fail and how to fix it: Non-universal behavior of random features with quadratic scaling",
+        "summary": "A major effort in modern high-dimensional statistics has been devoted to the analysis of linear predictors trained on nonlinear feature embeddings via empirical risk minimization (ERM). Gaussian equivalence theory (GET) has emerged as a powerful universality principle in this context: it states that the behavior of high-dimensional, complex features can be captured by Gaussian surrogates, which are more amenable to analysis. Despite its remarkable successes, numerical experiments show that this equivalence can fail even for simple embeddings -- such as polynomial maps -- under general scaling regimes.   We investigate this breakdown in the setting of random feature (RF) models in the quadratic scaling regime, where both the number of features and the sample size grow quadratically with the data dimension. We show that when the target function depends on a low-dimensional projection of the data, such as generalized linear models, GET yields incorrect predictions. To capture the correct asymptotics, we introduce a Conditional Gaussian Equivalent (CGE) model, which can be viewed as appending a low-dimensional non-Gaussian component to an otherwise high-dimensional Gaussian model. This hybrid model retains the tractability of the Gaussian framework and accurately describes RF models in the quadratic scaling regime. We derive sharp asymptotics for the training and test errors in this setting, which continue to agree with numerical simulations even when GET fails.   Our analysis combines general results on CLT for Wiener chaos expansions and a careful two-phase Lindeberg swapping argument. Beyond RF models and quadratic scaling, our work hints at a rich landscape of universality phenomena in high-dimensional ERM.",
+        "authors": "Garrett G. Wen, Hong Hu, Yue M. Lu, Zhou Fan, Theodor Misiakiewicz",
+        "url": "http://arxiv.org/abs/2512.03325v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.03325v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了高维统计中高斯等价理论（GET）失效的条件，并提出了条件高斯等价（CGE）模型来修正。它在随机特征模型和二次缩放机制下，推导了训练和测试误差的精确渐近结果，并结合了Wiener混沌展开的中心极限定理和Lindeberg交换论证。这篇论文在统计保证、清晰数学推导和高维统计理论方面达到了极高水平，揭示了普遍性现象的丰富图景。"
+    }
+]

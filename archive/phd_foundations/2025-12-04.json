@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.05089v1",
+        "title": "The Geometry of Intelligence: Deterministic Functional Topology as a Foundation for Real-World Perception",
+        "summary": "Real-world physical processes do not generate arbitrary variability: their signals concentrate on compact and low-variability subsets of functional space. This geometric structure enables rapid generalization from a few examples in both biological and artificial systems.   This work develops a deterministic functional-topological framework in which the set of valid realizations of a physical phenomenon forms a compact perceptual manifold with stable invariants and a finite Hausdorff radius. We show that the boundaries of this manifold can be discovered in a fully self-supervised manner through Monte Carlo sampling, even when the governing equations of the system are unknown.   We provide theoretical guarantees, practical estimators of knowledge boundaries, and empirical validations across three domains: electromechanical railway point machines, electrochemical battery discharge curves, and physiological ECG signals.   Our results demonstrate that deterministic functional topology offers a unified mathematical foundation for perception, representation, and world-model construction, explaining why biological learners and self-supervised AI models can generalize from limited observations.",
+        "authors": "Eduardo Di Santi",
+        "url": "http://arxiv.org/abs/2512.05089v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.05089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "论文提出了一个确定性函数拓扑框架，为感知、表示和世界模型构建提供了统一的数学基础。其强调了紧致感知流形、有限Hausdorff半径、理论保证和实用估计器，完美符合您对强大理论基础和清晰数学推导的偏好，具有极高的理论严谨性和潜在影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04980v1",
+        "title": "Learning Causality for Longitudinal Data",
+        "summary": "This thesis develops methods for causal inference and causal representation learning (CRL) in high-dimensional, time-varying data.   The first contribution introduces the Causal Dynamic Variational Autoencoder (CDVAE), a model for estimating Individual Treatment Effects (ITEs) by capturing unobserved heterogeneity in treatment response driven by latent risk factors that affect only outcomes. CDVAE comes with theoretical guarantees on valid latent adjustment and generalization bounds for ITE error. Experiments on synthetic and real datasets show that CDVAE outperforms baselines, and that state-of-the-art models greatly improve when augmented with its latent substitutes, approaching oracle performance without access to true adjustment variables.   The second contribution proposes an efficient framework for long-term counterfactual regression based on RNNs enhanced with Contrastive Predictive Coding (CPC) and InfoMax. It captures long-range dependencies under time-varying confounding while avoiding the computational cost of transformers, achieving state-of-the-art results and introducing CPC into causal inference.   The third contribution advances CRL by addressing how latent causes manifest in observed variables. We introduce a model-agnostic interpretability layer based on the geometry of the decoder Jacobian. A sparse self-expression prior induces modular, possibly overlapping groups of observed features aligned with shared latent influences. We provide recovery guarantees in both disjoint and overlapping settings and show that meaningful latent-to-observed structure can be recovered without anchor features or single-parent assumptions. Scalable Jacobian-based regularization techniques are also developed.",
+        "authors": "Mouad EL Bouchattaoui",
+        "url": "http://arxiv.org/abs/2512.04980v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04980v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了纵向数据的因果推断和因果表示学习，提出了Causal Dynamic Variational Autoencoder (CDVAE) 模型，并提供了有效的潜在调整理论保证和ITE误差泛化界。其基于解码器雅可比几何的解释层和恢复保证，直接契合您对因果逻辑和统计保证的严格要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04841v1",
+        "title": "SoK: a Comprehensive Causality Analysis Framework for Large Language Model Security",
+        "summary": "Large Language Models (LLMs) exhibit remarkable capabilities but remain vulnerable to adversarial manipulations such as jailbreaking, where crafted prompts bypass safety mechanisms. Understanding the causal factors behind such vulnerabilities is essential for building reliable defenses.   In this work, we introduce a unified causality analysis framework that systematically supports all levels of causal investigation in LLMs, ranging from token-level, neuron-level, and layer-level interventions to representation-level analysis. The framework enables consistent experimentation and comparison across diverse causality-based attack and defense methods. Accompanying this implementation, we provide the first comprehensive survey of causality-driven jailbreak studies and empirically evaluate the framework on multiple open-weight models and safety-critical benchmarks including jailbreaks, hallucination detection, backdoor identification, and fairness evaluation. Our results reveal that: (1) targeted interventions on causally critical components can reliably modify safety behavior; (2) safety-related mechanisms are highly localized (i.e., concentrated in early-to-middle layers with only 1--2\\% of neurons exhibiting causal influence); and (3) causal features extracted from our framework achieve over 95\\% detection accuracy across multiple threat types.   By bridging theoretical causality analysis and practical model safety, our framework establishes a reproducible foundation for research on causality-based attacks, interpretability, and robust attack detection and mitigation in LLMs. Code is available at https://github.com/Amadeuszhao/SOK_Casuality.",
+        "authors": "Wei Zhao, Zhe Li, Jun Sun",
+        "url": "http://arxiv.org/abs/2512.04841v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04841v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个统一的因果分析框架，系统地支持LLM中所有层级的因果调查，并揭示了安全相关机制的局部性。其强大的因果逻辑理论基础和在AI系统安全领域的应用，使其成为您关注现代AI系统严谨数学逻辑的绝佳选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04781v1",
+        "title": "Pick-to-Learn for Systems and Control: Data-driven Synthesis with State-of-the-art Safety Guarantees",
+        "summary": "Data-driven methods have become paramount in modern systems and control problems characterized by growing levels of complexity. In safety-critical environments, deploying these methods requires rigorous guarantees, a need that has motivated much recent work at the interface of statistical learning and control. However, many existing approaches achieve this goal at the cost of sacrificing valuable data for testing and calibration, or by constraining the choice of learning algorithm, thus leading to suboptimal performances. In this paper, we describe Pick-to-Learn (P2L) for Systems and Control, a framework that allows any data-driven control method to be equipped with state-of-the-art safety and performance guarantees. P2L enables the use of all available data to jointly synthesize and certify the design, eliminating the need to set aside data for calibration or validation purposes. In presenting a comprehensive version of P2L for systems and control, this paper demonstrates its effectiveness across a range of core problems, including optimal control, reachability analysis, safe synthesis, and robust control. In many of these applications, P2L delivers designs and certificates that outperform commonly employed methods, and shows strong potential for broad applicability in diverse practical settings.",
+        "authors": "Dario Paccagnan, Daniel Marks, Marco C. Campi, Simone Garatti",
+        "url": "http://arxiv.org/abs/2512.04781v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04781v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Pick-to-Learn (P2L) 框架为数据驱动的控制方法提供了最先进的安全和性能保证，强调了严格的理论保证，并消除了校准或验证数据的需求。这直接满足您对统计保证和优化收敛性的要求，且在安全关键系统中有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04583v1",
+        "title": "Tensor Neyman-Pearson Classification: Theory, Algorithms, and Error Control",
+        "summary": "Biochemical discovery increasingly relies on classifying molecular structures when the consequences of different errors are highly asymmetric. In mutagenicity and carcinogenicity, misclassifying a harmful compound as benign can trigger substantial scientific, regulatory, and health risks, whereas false alarms primarily increase laboratory workload. Modern representations transform molecular graphs into persistence image tensors that preserve multiscale geometric and topological structure, yet existing tensor classifiers and deep tensor neural networks provide no finite-sample guarantees on type I error and often exhibit severe error inflation in practice.   We develop the first Tensor Neyman-Pearson (Tensor-NP) classification framework that achieves finite-sample control of type I error while exploiting the multi-mode structure of tensor data. Under a tensor-normal mixture model, we derive the oracle NP discriminant, characterize its Tucker low-rank manifold geometry, and establish tensor-specific margin and conditional detection conditions enabling high-probability bounds on excess type II error. We further propose a Discriminant Tensor Iterative Projection estimator and a Tensor-NP Neural Classifier combining deep learning with Tensor-NP umbrella calibration, yielding the first distribution-free NP-valid methods for multiway data. Across four biochemical datasets, Tensor-NP classifiers maintain type I errors at prespecified levels while delivering competitive type II error performance, providing reliable tools for asymmetric-risk decisions with complex molecular tensors.",
+        "authors": "Lingchong Liu, Elynn Chen, Yuefeng Han, Lucy Xia",
+        "url": "http://arxiv.org/abs/2512.04583v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04583v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了首个张量Neyman-Pearson分类框架，实现了I类错误率的有限样本控制，并推导了最优NP判别器，刻画了其Tucker低秩流形几何，建立了高概率的II类错误界限。其极其强大的统计保证和数学严谨性，完美符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04566v1",
+        "title": "Reliable Statistical Guarantees for Conformal Predictors with Small Datasets",
+        "summary": "Surrogate models (including deep neural networks and other machine learning algorithms in supervised learning) are capable of approximating arbitrarily complex, high-dimensional input-output problems in science and engineering, but require a thorough data-agnostic uncertainty quantification analysis before these can be deployed for any safety-critical application. The standard approach for data-agnostic uncertainty quantification is to use conformal prediction (CP), a well-established framework to build uncertainty models with proven statistical guarantees that do not assume any shape for the error distribution of the surrogate model. However, since the classic statistical guarantee offered by CP is given in terms of bounds for the marginal coverage, for small calibration set sizes (which are frequent in realistic surrogate modelling that aims to quantify error at different regions), the potentially strong dispersion of the coverage distribution around its average negatively impacts the reliability of the uncertainty model, often obtaining coverages below the expected value, resulting in a less applicable framework. After providing a gentle presentation of uncertainty quantification for surrogate models for machine learning practitioners, in this paper we bridge the gap by proposing a new statistical guarantee that offers probabilistic information for the coverage of a single conformal predictor. We show that the proposed framework converges to the standard solution offered by CP for large calibration set sizes and, unlike the classic guarantee, still offers reliable information about the coverage of a conformal predictor for small data sizes. We illustrate and validate the methodology in a suite of examples, and implement an open access software solution that can be used alongside common conformal prediction libraries to obtain uncertainty models that fulfil the new guarantee.",
+        "authors": "Miguel Sánchez-Domínguez, Lucas Lacasa, Javier de Vicente, Gonzalo Rubio, Eusebio Valero",
+        "url": "http://arxiv.org/abs/2512.04566v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04566v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个针对小数据集的共形预测器的新统计保证，解决了现有方法在小样本下的可靠性问题，并提供了概率信息。这直接回应了您对统计保证的需求，尤其是在数据受限场景下的可靠性分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04366v1",
+        "title": "Sequential Randomization Tests Using E-values: A Betting Approach for Clinical Trials",
+        "summary": "Sequential monitoring of randomized trials traditionally relies on parametric assumptions or asymptotic approximations. We present a nonparametric sequential test, the randomization e-process (e-RT), that derives validity solely from the randomization mechanism. Using a betting framework, e-RT constructs a test martingale by sequentially wagering on treatment assignments given observed outcomes. Under the null hypothesis of no treatment effect, the expected wealth cannot grow, guaranteeing anytime-valid Type I error control regardless of stopping rule. We prove validity and present simulation studies demonstrating calibration and power. The e-RT provides a conservative, assumption-free complement to model-based sequential analyses.",
+        "authors": "Fernando G Zampieri",
+        "url": "http://arxiv.org/abs/2512.04366v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04366v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个非参数序列随机化检验（随机化e-过程），其有效性完全源于随机化机制，并提供了随时有效的I类错误控制的理论证明。这篇论文在统计保证和非参数方法方面具有极高的理论严谨性，对临床试验等领域有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04747v1",
+        "title": "A Tutorial on Regression Analysis: From Linear Models to Deep Learning -- Lecture Notes on Artificial Intelligence",
+        "summary": "This article serves as the regression analysis lecture notes in the Intelligent Computing course cluster (including the courses of Artificial Intelligence, Data Mining, Machine Learning, and Pattern Recognition). It aims to provide students -- who are assumed to possess only basic university-level mathematics (i.e., with prerequisite courses in calculus, linear algebra, and probability theory) -- with a comprehensive and self-contained understanding of regression analysis without requiring any additional references. The lecture notes systematically introduce the fundamental concepts, modeling components, and theoretical foundations of regression analysis, covering linear regression, logistic regression, multinomial logistic regression, polynomial regression, basis-function models, kernel-based methods, and neural-network-based nonlinear regression. Core methodological topics include loss-function design, parameter-estimation principles, ordinary least squares, gradient-based optimization algorithms and their variants, as well as regularization techniques such as Ridge and LASSO regression. Through detailed mathematical derivations, illustrative examples, and intuitive visual explanations, the materials help students understand not only how regression models are constructed and optimized, but also how they reveal the underlying relationships between features and response variables. By bridging classical statistical modeling and modern machine-learning practice, these lecture notes aim to equip students with a solid conceptual and technical foundation for further study in advanced artificial intelligence models.",
+        "authors": "Jingyuan Wang, Jiahao Ji",
+        "url": "http://arxiv.org/abs/2512.04747v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04747v1",
+        "scores": {
+            "Novelty": 1,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "作为一篇回归分析的讲义，它系统介绍了回归分析的理论基础、建模组件和数学推导，涵盖了从经典统计模型到深度学习的广泛内容。虽然不是原创研究，但其内容的高度严谨性和清晰的数学推导使其成为您深入理解相关理论的极佳学习资源。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.05058v1",
+        "title": "Meta-Learning for Quantum Optimization via Quantum Sequence Model",
+        "summary": "The Quantum Approximate Optimization Algorithm (QAOA) is a leading approach for solving combinatorial optimization problems on near-term quantum processors. However, finding good variational parameters remains a significant challenge due to the non-convex energy landscape, often resulting in slow convergence and poor solution quality. In this work, we propose a quantum meta-learning framework that trains advanced quantum sequence models to generate effective parameter initialization policies. We investigate four classical or quantum sequence models, including the Quantum Kernel-based Long Short-Term Memory (QK-LSTM), as learned optimizers in a \"learning to learn\" paradigm. Our numerical experiments on the Max-Cut problem demonstrate that the QK-LSTM optimizer achieves superior performance, obtaining the highest approximation ratios and exhibiting the fastest convergence rate across all tested problem sizes (n=10 to 13). Crucially, the QK-LSTM model achieves perfect parameter transferability by synthesizing a single, fixed set of near-optimal parameters, leading to a remarkable sustained acceleration of convergence even when generalizing to larger problems. This capability, enabled by the compact and expressive power of the quantum kernel architecture, underscores its effectiveness. The QK-LSTM, with only 43 trainable parameters, substantially outperforms the classical LSTM (56 parameters) and other quantum sequence models, establishing a robust pathway toward highly efficient parameter initialization for variational quantum algorithms in the NISQ era.",
+        "authors": "Yu-Cheng Lin, Yu-Chao Hsu, Samuel Yen-Chi Chen",
+        "url": "http://arxiv.org/abs/2512.05058v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.05058v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个量子元学习框架，利用量子序列模型优化量子近似优化算法（QAOA）。强调了近似比、收敛速度和参数可迁移性，具有强大的量子计算和优化理论基础，非常符合您将严谨数学逻辑应用于现代AI系统的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.05049v1",
+        "title": "QKAN-LSTM: Quantum-inspired Kolmogorov-Arnold Long Short-term Memory",
+        "summary": "Long short-term memory (LSTM) models are a particular type of recurrent neural networks (RNNs) that are central to sequential modeling tasks in domains such as urban telecommunication forecasting, where temporal correlations and nonlinear dependencies dominate. However, conventional LSTMs suffer from high parameter redundancy and limited nonlinear expressivity. In this work, we propose the Quantum-inspired Kolmogorov-Arnold Long Short-Term Memory (QKAN-LSTM), which integrates Data Re-Uploading Activation (DARUAN) modules into the gating structure of LSTMs. Each DARUAN acts as a quantum variational activation function (QVAF), enhancing frequency adaptability and enabling an exponentially enriched spectral representation without multi-qubit entanglement. The resulting architecture preserves quantum-level expressivity while remaining fully executable on classical hardware. Empirical evaluations on three datasets, Damped Simple Harmonic Motion, Bessel Function, and Urban Telecommunication, demonstrate that QKAN-LSTM achieves superior predictive accuracy and generalization with a 79% reduction in trainable parameters compared to classical LSTMs. We extend the framework to the Jiang-Huang-Chen-Goan Network (JHCG Net), which generalizes KAN to encoder-decoder structures, and then further use QKAN to realize the latent KAN, thereby creating a Hybrid QKAN (HQKAN) for hierarchical representation learning. The proposed HQKAN-LSTM thus provides a scalable and interpretable pathway toward quantum-inspired sequential modeling in real-world data environments.",
+        "authors": "Yu-Chao Hsu, Jiun-Cheng Jiang, Chun-Hua Lin, Kuo-Chung Peng, Nan-Yow Chen, Samuel Yen-Chi Chen, En-Jui Kuo, Hsi-Sheng Goan",
+        "url": "http://arxiv.org/abs/2512.05049v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.05049v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了量子启发式的QKAN-LSTM，通过引入量子变分激活函数，实现了指数级丰富的谱表示，并在经典硬件上执行。其理论严谨性体现在对模型表达能力的数学分析，是量子启发AI系统的一个重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04888v1",
+        "title": "You Only Train Once (YOTO): A Retraining-Free Object Detection Framework",
+        "summary": "Object detection constitutes the primary task within the domain of computer vision. It is utilized in numerous domains. Nonetheless, object detection continues to encounter the issue of catastrophic forgetting. The model must be retrained whenever new products are introduced, utilizing not only the new products dataset but also the entirety of the previous dataset. The outcome is obvious: increasing model training expenses and significant time consumption. In numerous sectors, particularly retail checkout, the frequent introduction of new products presents a great challenge. This study introduces You Only Train Once (YOTO), a methodology designed to address the issue of catastrophic forgetting by integrating YOLO11n for object localization with DeIT and Proxy Anchor Loss for feature extraction and metric learning. For classification, we utilize cosine similarity between the embedding features of the target product and those in the Qdrant vector database. In a case study conducted in a retail store with 140 products, the experimental results demonstrate that our proposed framework achieves encouraging accuracy, whether for detecting new or existing products. Furthermore, without retraining, the training duration difference is significant. We achieve almost 3 times the training time efficiency compared to classical object detection approaches. This efficiency escalates as additional new products are added to the product database. The average inference time is 580 ms per image containing multiple products, on an edge device, validating the proposed framework's feasibility for practical use.",
+        "authors": "Priyanto Hidayatullah, Nurjannah Syakrani, Yudi Widhiyasana, Muhammad Rizqi Sholahuddin, Refdinal Tubagus, Zahri Al Adzani Hidayat, Hanri Fajar Ramadhan, Dafa Alfarizki Pratama, Farhan Muhammad Yasin",
+        "url": "http://arxiv.org/abs/2512.04888v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04888v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文建立了凸n-宽度与覆盖数之间的普遍性结果，并将其应用于神经网络的逼近速率上界。这篇论文提供了关于函数逼近和维度灾难的深层数学理论，对理解神经网络的泛化能力具有基础性意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04874v1",
+        "title": "Shorting Dynamics and Structured Kernel Regularization",
+        "summary": "This paper develops a nonlinear operator dynamic that progressively removes the influence of a prescribed feature subspace while retaining maximal structure elsewhere. The induced sequence of positive operators is monotone, admits an exact residual decomposition, and converges to the classical shorted operator. Transporting this dynamic to reproducing kernel Hilbert spaces yields a corresponding family of kernels that converges to the largest kernel dominated by the original one and annihilating the given subspace. In the finite-sample setting, the associated Gram operators inherit a structured residual decomposition that leads to a canonical form of kernel ridge regression and a principled way to enforce nuisance invariance. This gives a unified operator-analytic approach to invariant kernel construction and structured regularization in data analysis.",
+        "authors": "James Tian",
+        "url": "http://arxiv.org/abs/2512.04874v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04874v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文发展了一种非线性算子动力学，并将其推广到再生核希尔伯特空间，证明了其收敛性。它提供了一种统一的算子分析方法来构建不变核和结构化正则化，具有极其强大的泛函分析和核方法理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04861v1",
+        "title": "Concentration bounds for intrinsic dimension estimation using Gaussian kernels",
+        "summary": "We prove finite-sample concentration and anti-concentration bounds for dimension estimation using Gaussian kernel sums. Our bounds provide explicit dependence on sample size, bandwidth, and local geometric and distributional parameters, characterizing precisely how regularity conditions govern statistical performance. We also propose a bandwidth selection heuristic using derivative information, which shows promise in numerical experiments.",
+        "authors": "Martin Andersson",
+        "url": "http://arxiv.org/abs/2512.04861v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04861v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文证明了使用高斯核和的内蕴维度估计的有限样本集中和反集中界，明确刻画了正则性条件如何影响统计性能。这篇论文在统计理论方面提供了严谨的保证和数学推导，对高维数据分析至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04696v1",
+        "title": "Provable FDR Control for Deep Feature Selection: Deep MLPs and Beyond",
+        "summary": "We develop a flexible feature selection framework based on deep neural networks that approximately controls the false discovery rate (FDR), a measure of Type-I error. The method applies to architectures whose first layer is fully connected. From the second layer onward, it accommodates multilayer perceptrons (MLPs) of arbitrary width and depth, convolutional and recurrent networks, attention mechanisms, residual connections, and dropout. The procedure also accommodates stochastic gradient descent with data-independent initializations and learning rates. To the best of our knowledge, this is the first work to provide a theoretical guarantee of FDR control for feature selection within such a general deep learning setting.   Our analysis is built upon a multi-index data-generating model and an asymptotic regime in which the feature dimension $n$ diverges faster than the latent dimension $q^{*}$, while the sample size, the number of training iterations, the network depth, and hidden layer widths are left unrestricted. Under this setting, we show that each coordinate of the gradient-based feature-importance vector admits a marginal normal approximation, thereby supporting the validity of asymptotic FDR control. As a theoretical limitation, we assume $\\mathbf{B}$-right orthogonal invariance of the design matrix, and we discuss broader generalizations. We also present numerical experiments that underscore the theoretical findings.",
+        "authors": "Kazuma Sawaya",
+        "url": "http://arxiv.org/abs/2512.04696v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04696v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于深度神经网络的特征选择框架，并提供了可证明的FDR控制理论保证，是首个在通用深度学习设置下实现此目标的。这篇论文将统计保证引入深度学习，完美符合您对AI系统统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.04412v1",
+        "title": "Multi-source Learning for Target Population by High-dimensional Calibration",
+        "summary": "Multi-source learning is an emerging area of research in statistics, where information from multiple datasets with heterogeneous distributions is combined to estimate the parameter of interest for a target population without observed responses. We propose a high-dimensional debiased calibration (HDC) method and a multi-source HDC (MHDC) estimator for general estimating equations. The HDC method uses a novel approach to achieve Neyman orthogonality for the target parameter via high-dimensional covariate balancing on an augmented set of covariates. It avoids the augmented inverse probability weighting formulation and leads to an easier optimization algorithm for the target parameter in estimating equations and M-estimation. The proposed MHDC estimator integrates multi-source data while supporting flexible specifications for both density ratio and outcome regression models, achieving multiple robustness against model misspecification. Its asymptotic normality is established, and a specification test is proposed to examine the transferability condition for the multi-source data. Compared to the linear combination of single-source HDC estimators, the MHDC estimator improves efficiency by jointly utilizing all data sources. Through simulation studies, we show that the MHDC estimator accommodates multiple sources and multiple working models effectively and performs better than the existing doubly robust estimators for multi-source learning. An empirical analysis of a meteorological dataset demonstrates the utility of the proposed method in practice.",
+        "authors": "Haoxiang Zhan, Jae Kwang Kim, Yumou Qiu",
+        "url": "http://arxiv.org/abs/2512.04412v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.04412v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了高维去偏校准（HDC）方法和多源HDC（MHDC）估计器，通过高维协变量平衡实现了Neyman正交性，并建立了渐近正态性。其强大的统计保证、高维统计和因果推断理论基础，使其成为您研究的理想选择。"
+    }
+]

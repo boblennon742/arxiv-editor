@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.07652v1",
+        "title": "An AI-Powered Autonomous Underwater System for Sea Exploration and Scientific Research",
+        "summary": "Traditional sea exploration faces significant challenges due to extreme conditions, limited visibility, and high costs, resulting in vast unexplored ocean regions. This paper presents an innovative AI-powered Autonomous Underwater Vehicle (AUV) system designed to overcome these limitations by automating underwater object detection, analysis, and reporting. The system integrates YOLOv12 Nano for real-time object detection, a Convolutional Neural Network (CNN) (ResNet50) for feature extraction, Principal Component Analysis (PCA) for dimensionality reduction, and K-Means++ clustering for grouping marine objects based on visual characteristics. Furthermore, a Large Language Model (LLM) (GPT-4o Mini) is employed to generate structured reports and summaries of underwater findings, enhancing data interpretation. The system was trained and evaluated on a combined dataset of over 55,000 images from the DeepFish and OzFish datasets, capturing diverse Australian marine environments. Experimental results demonstrate the system's capability to detect marine objects with a mAP@0.5 of 0.512, a precision of 0.535, and a recall of 0.438. The integration of PCA effectively reduced feature dimensionality while preserving 98% variance, facilitating K-Means clustering which successfully grouped detected objects based on visual similarities. The LLM integration proved effective in generating insightful summaries of detections and clusters, supported by location data. This integrated approach significantly reduces the risks associated with human diving, increases mission efficiency, and enhances the speed and depth of underwater data analysis, paving the way for more effective scientific research and discovery in challenging marine environments.",
+        "authors": "Hamad Almazrouei, Mariam Al Nasseri, Maha Alzaabi",
+        "url": "http://arxiv.org/abs/2512.07652v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07652v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了测试时缩放（Test-time Scaling）和预测合并（Prediction Merging）的新颖概念，旨在解决大规模推荐系统中推理效率的瓶颈。它通过探索不同模型架构的异构性或同构架构下模型初始化的随机性来生成多样化预测，并在相同推理预算下超越了参数缩放。这为LLM应用中的模型压缩和数据效率提供了理论创新和实际指导，避免了纯粹的工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07612v1",
+        "title": "PCMind-2.1-Kaiyuan-2B Technical Report",
+        "summary": "The rapid advancement of Large Language Models (LLMs) has resulted in a significant knowledge gap between the open-source community and industry, primarily because the latter relies on closed-source, high-quality data and training recipes. To address this, we introduce PCMind-2.1-Kaiyuan-2B, a fully open-source 2-billion-parameter model focused on improving training efficiency and effectiveness under resource constraints. Our methodology includes three key innovations: a Quantile Data Benchmarking method for systematically comparing heterogeneous open-source datasets and providing insights on data mixing strategies; a Strategic Selective Repetition scheme within a multi-phase paradigm to effectively leverage sparse, high-quality data; and a Multi-Domain Curriculum Training policy that orders samples by quality. Supported by a highly optimized data preprocessing pipeline and architectural modifications for FP16 stability, Kaiyuan-2B achieves performance competitive with state-of-the-art fully open-source models, demonstrating practical and scalable solutions for resource-limited pretraining. We release all assets (including model weights, data, and code) under Apache 2.0 license at https://huggingface.co/thu-pacman/PCMind-2.1-Kaiyuan-2B.",
+        "authors": "Kairong Luo, Zhenbo Sun, Xinyu Shi, Shengqi Chen, Bowen Yu, Yunyi Chen, Chenyi Dang, Hengtao Tao, Hui Wang, Fangming Liu, Kaifeng Lyu, Wenguang Chen",
+        "url": "http://arxiv.org/abs/2512.07612v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07612v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇技术报告介绍了PCMind-2.1-Kaiyuan-2B，一个20亿参数的开源模型，其核心创新在于数据处理和训练策略。提出的分位数数据基准测试、战略性选择重复和多领域课程训练方法，有效地解决了资源受限下LLM预训练的数据效率和质量问题。这些方法具有理论指导性，能够以更低的成本实现高性能模型，对LLM应用具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07558v1",
+        "title": "ReLaX: Reasoning with Latent Exploration for Large Reasoning Models",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has recently demonstrated remarkable potential in enhancing the reasoning capability of Large Reasoning Models (LRMs). However, RLVR often leads to entropy collapse, resulting in premature policy convergence and performance saturation. While manipulating token-level entropy has proven effective for promoting policy exploration, we argue that the latent dynamics underlying token generation encode a far richer computational structure for steering policy optimization toward a more effective exploration-exploitation tradeoff. To enable tractable analysis and intervention of the latent dynamics of LRMs, we leverage Koopman operator theory to obtain a linearized representation of their hidden-state dynamics. This enables us to introduce Dynamic Spectral Dispersion (DSD), a new metric to quantify the heterogeneity of the model's latent dynamics, serving as a direct indicator of policy exploration. Building upon these foundations, we propose Reasoning with Latent eXploration (ReLaX), a paradigm that explicitly incorporates latent dynamics to regulate exploration and exploitation during policy optimization. Comprehensive experiments across a wide range of multimodal and text-only reasoning benchmarks show that ReLaX significantly mitigates premature convergence and consistently achieves state-of-the-art performance.",
+        "authors": "Shimin Zhang, Xianwei Chen, Yufan Shen, Ziyuan Ye, Jibin Wu",
+        "url": "http://arxiv.org/abs/2512.07558v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07558v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ReLaX框架，通过引入Koopman算子理论和动态谱散度（DSD）来量化和调节大型推理模型（LRMs）中潜在动态的异质性。这从根本上解决了强化学习中策略过早收敛和探索不足的问题，为LLM推理能力的提升提供了深刻的理论创新和严谨的数学基础，是AI算法前沿的突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07525v1",
+        "title": "Beyond Real: Imaginary Extension of Rotary Position Embeddings for Long-Context LLMs",
+        "summary": "Rotary Position Embeddings (RoPE) have become a standard for encoding sequence order in Large Language Models (LLMs) by applying rotations to query and key vectors in the complex plane. Standard implementations, however, utilize only the real component of the complex-valued dot product for attention score calculation. This simplification discards the imaginary component, which contains valuable phase information, leading to a potential loss of relational details crucial for modeling long-context dependencies. In this paper, we propose an extension that re-incorporates this discarded imaginary component. Our method leverages the full complex-valued representation to create a dual-component attention score. We theoretically and empirically demonstrate that this approach enhances the modeling of long-context dependencies by preserving more positional information. Furthermore, evaluations on a suite of long-context language modeling benchmarks show that our method consistently improves performance over the standard RoPE, with the benefits becoming more significant as context length increases. The code is available at https://github.com/OpenMOSS/rope_pp.",
+        "authors": "Xiaoran Liu, Yuerong Song, Zhigeng Liu, Zengfeng Huang, Qipeng Guo, Zhaoxiang Liu, Shiguo Lian, Ziwei He, Xipeng Qiu",
+        "url": "http://arxiv.org/abs/2512.07525v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07525v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对旋转位置嵌入（RoPE）进行了理论上的突破性扩展，通过重新引入复数点积的虚部，解决了标准RoPE在长上下文LLM中信息丢失的问题。该方法在理论和实践上都证明能显著增强长上下文依赖建模能力，是LLM架构层面的重要理论创新，直接解决了LLM长上下文处理的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07509v1",
+        "title": "Exploring possible vector systems for faster training of neural networks with preconfigured latent spaces",
+        "summary": "The overall neural network (NN) performance is closely related to the properties of its embedding distribution in latent space (LS). It has recently been shown that predefined vector systems, specifically An root system vectors, can be used as targets for latent space configurations (LSC) to ensure the desired LS structure. One of the main LSC advantage is the possibility of training classifier NNs without classification layers, which facilitates training NNs on datasets with extremely large numbers of classes. This paper provides a more general overview of possible vector systems for NN training along with their properties and methods for vector system construction. These systems are used to configure LS of encoders and visual transformers to significantly speed up ImageNet-1K and 50k-600k classes LSC training. It is also shown that using the minimum number of LS dimensions for a specific number of classes results in faster convergence. The latter has potential advantages for reducing the size of vector databases used to store NN embeddings.",
+        "authors": "Nikita Gabdullin",
+        "url": "http://arxiv.org/abs/2512.07509v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07509v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 3
+        },
+        "reason_zh": "该研究探索了利用预配置的潜在空间中的向量系统来加速神经网络训练的可能性。它提供了向量系统的通用概述、属性和构建方法，并证明了其在ImageNet等大型数据集上显著加速训练的效果。这种对潜在空间结构的理论性探索，为模型压缩和数据效率提供了新的视角和方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07497v1",
+        "title": "How Do LLMs Fail In Agentic Scenarios? A Qualitative Analysis of Success and Failure Scenarios of Various LLMs in Agentic Simulations",
+        "summary": "We investigate how large language models (LLMs) fail when operating as autonomous agents with tool-use capabilities. Using the Kamiwaza Agentic Merit Index (KAMI) v0.1 benchmark, we analyze 900 execution traces from three representative models - Granite 4 Small, Llama 4 Maverick, and DeepSeek V3.1 - across filesystem, text extraction, CSV analysis, and SQL scenarios. Rather than focusing on aggregate scores, we perform fine-grained, per-trial behavioral analysis to surface the strategies that enable successful multi-step tool execution and the recurrent failure modes that undermine reliability. Our findings show that model scale alone does not predict agentic robustness: Llama 4 Maverick (400B) performs only marginally better than Granite 4 Small (32B) in some uncertainty-driven tasks, while DeepSeek V3.1's superior reliability derives primarily from post-training reinforcement learning rather than architecture or size. Across models, we identify four recurring failure archetypes: premature action without grounding, over-helpfulness that substitutes missing entities, vulnerability to distractor-induced context pollution, and fragile execution under load. These patterns highlight the need for agentic evaluation methods that emphasize interactive grounding, recovery behavior, and environment-aware adaptation, suggesting that reliable enterprise deployment requires not just stronger models but deliberate training and design choices that reinforce verification, constraint discovery, and adherence to source-of-truth data.",
+        "authors": "JV Roig",
+        "url": "http://arxiv.org/abs/2512.07497v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07497v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过对LLM在Agentic场景下的成功与失败案例进行定性分析，深入揭示了LLM作为自主代理时的行为模式和局限性。它超越了聚合分数，识别出四种反复出现的失败原型，为设计更可靠、更稳健的LLM代理提供了关键的理论洞察和实践指导，解决了LLM应用中的可靠性瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07487v1",
+        "title": "Artificial Intelligence and Nuclear Weapons Proliferation: The Technological Arms Race for (In)visibility",
+        "summary": "A robust nonproliferation regime has contained the spread of nuclear weapons to just nine states. Yet, emerging and disruptive technologies are reshaping the landscape of nuclear risks, presenting a critical juncture for decision makers. This article lays out the contours of an overlooked but intensifying technological arms race for nuclear (in)visibility, driven by the interplay between proliferation-enabling technologies (PETs) and detection-enhancing technologies (DETs). We argue that the strategic pattern of proliferation will be increasingly shaped by the innovation pace in these domains. Artificial intelligence (AI) introduces unprecedented complexity to this equation, as its rapid scaling and knowledge substitution capabilities accelerate PET development and challenge traditional monitoring and verification methods. To analyze this dynamic, we develop a formal model centered on a Relative Advantage Index (RAI), quantifying the shifting balance between PETs and DETs. Our model explores how asymmetric technological advancement, particularly logistic AI-driven PET growth versus stepwise DET improvements, expands the band of uncertainty surrounding proliferation detectability. Through replicable scenario-based simulations, we evaluate the impact of varying PET growth rates and DET investment strategies on cumulative nuclear breakout risk. We identify a strategic fork ahead, where detection may no longer suffice without broader PET governance. Governments and international organizations should accordingly invest in policies and tools agile enough to keep pace with tomorrow's technology.",
+        "authors": "David M. Allison, Stephen Herzog",
+        "url": "http://arxiv.org/abs/2512.07487v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07487v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个量化AI在核武器扩散风险中作用的正式模型（相对优势指数RAI）。它通过数学建模和可复制的场景模拟，分析了AI驱动的PETs和DETs之间的动态平衡。这不仅具有高度的理论严谨性，也对AI治理和全球安全政策制定具有深远的实践影响力，是数理统计在AI前沿应用中的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07469v1",
+        "title": "Unified Video Editing with Temporal Reasoner",
+        "summary": "Existing video editing methods face a critical trade-off: expert models offer precision but rely on task-specific priors like masks, hindering unification; conversely, unified temporal in-context learning models are mask-free but lack explicit spatial cues, leading to weak instruction-to-region mapping and imprecise localization. To resolve this conflict, we propose VideoCoF, a novel Chain-of-Frames approach inspired by Chain-of-Thought reasoning. VideoCoF enforces a ``see, reason, then edit\" procedure by compelling the video diffusion model to first predict reasoning tokens (edit-region latents) before generating the target video tokens. This explicit reasoning step removes the need for user-provided masks while achieving precise instruction-to-region alignment and fine-grained video editing. Furthermore, we introduce a RoPE alignment strategy that leverages these reasoning tokens to ensure motion alignment and enable length extrapolation beyond the training duration. We demonstrate that with a minimal data cost of only 50k video pairs, VideoCoF achieves state-of-the-art performance on VideoCoF-Bench, validating the efficiency and effectiveness of our approach. Our code, weight, data are available at https://github.com/knightyxp/VideoCoF.",
+        "authors": "Xiangpeng Yang, Ji Xie, Yiyuan Yang, Yan Huang, Min Xu, Qiang Wu",
+        "url": "http://arxiv.org/abs/2512.07469v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07469v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了VideoCoF，一个受思维链（Chain-of-Thought）启发的帧链（Chain-of-Frames）方法，用于统一视频编辑。它通过强制视频扩散模型预测“推理token”（编辑区域潜在特征）来解决现有方法在精度和无掩码操作之间的矛盾。这种显式推理步骤和RoPE对齐策略，是算法上的创新，显著提升了视频编辑的效率和精度，解决了LLM在多模态生成中的应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07461v1",
+        "title": "Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning",
+        "summary": "We introduce Native Parallel Reasoner (NPR), a teacher-free framework that enables Large Language Models (LLMs) to self-evolve genuine parallel reasoning capabilities. NPR transforms the model from sequential emulation to native parallel cognition through three key innovations: 1) a self-distilled progressive training paradigm that transitions from ``cold-start'' format discovery to strict topological constraints without external supervision; 2) a novel Parallel-Aware Policy Optimization (PAPO) algorithm that optimizes branching policies directly within the execution graph, allowing the model to learn adaptive decomposition via trial and error; and 3) a robust NPR Engine that refactors memory management and flow control of SGLang to enable stable, large-scale parallel RL training. Across eight reasoning benchmarks, NPR trained on Qwen3-4B achieves performance gains of up to 24.5% and inference speedups up to 4.6x. Unlike prior baselines that often fall back to autoregressive decoding, NPR demonstrates 100% genuine parallel execution, establishing a new standard for self-evolving, efficient, and scalable agentic reasoning.",
+        "authors": "Tong Wu, Yang Liu, Jun Bai, Zixia Jia, Shuyi Zhang, Ziyong Lin, Yanting Wang, Song-Chun Zhu, Zilong Zheng",
+        "url": "http://arxiv.org/abs/2512.07461v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07461v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "NPR（Native Parallel Reasoner）是一个开创性的无教师框架，使LLM能够通过自蒸馏强化学习实现真正的并行推理能力。其核心创新包括自蒸馏渐进训练范式和并行感知策略优化（PAPO）算法。这从根本上解决了LLM推理效率和可扩展性的瓶颈，具有极高的理论创新性和实践影响力，是AI架构和算法的重大突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07453v1",
+        "title": "Social welfare optimisation in well-mixed and structured populations",
+        "summary": "Research on promoting cooperation among autonomous, self-regarding agents has often focused on the bi-objective optimisation problem: minimising the total incentive cost while maximising the frequency of cooperation. However, the optimal value of social welfare under such constraints remains largely unexplored. In this work, we hypothesise that achieving maximal social welfare is not guaranteed at the minimal incentive cost required to drive agents to a desired cooperative state. To address this gap, we adopt to a single-objective approach focused on maximising social welfare, building upon foundational evolutionary game theory models that examined cost efficiency in finite populations, in both well-mixed and structured population settings. Our analytical model and agent-based simulations show how different interference strategies, including rewarding local versus global behavioural patterns, affect social welfare and dynamics of cooperation. Our results reveal a significant gap in the per-individual incentive cost between optimising for pure cost efficiency or cooperation frequency and optimising for maximal social welfare. Overall, our findings indicate that incentive design, policy, and benchmarking in multi-agent systems and human societies should prioritise welfare-centric objectives over proxy targets of cost or cooperation frequency.",
+        "authors": "Van An Nguyen, Vuong Khang Huynh, Ho Nam Duong, Huu Loi Bui, Hai Anh Ha, Quang Dung Le, Le Quoc Dung Ngo, Tan Dat Nguyen, Ngoc Ngu Nguyen, Hoai Thuong Nguyen, Zhao Song, Le Hong Trang, The Anh Han",
+        "url": "http://arxiv.org/abs/2512.07453v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07453v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究采用单目标优化方法，以最大化社会福利为核心，在演化博弈论模型的基础上，探讨了在多智能体系统中促进合作的策略。其分析模型和基于智能体的模拟揭示了激励设计在社会福利最大化方面的关键作用。这篇论文具有高度的理论严谨性，为设计伦理和有益的多智能体AI系统提供了基础性指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07436v1",
+        "title": "LocalSearchBench: Benchmarking Agentic Search in Real-World Local Life Services",
+        "summary": "Recent advances in large reasoning models (LRMs) have enabled agentic search systems to perform complex multi-step reasoning across multiple sources. However, most studies focus on general information retrieval and rarely explores vertical domains with unique challenges. In this work, we focus on local life services and introduce LocalSearchBench, which encompass diverse and complex business scenarios. Real-world queries in this domain are often ambiguous and require multi-hop reasoning across merchants and products, remaining challenging and not fully addressed. As the first comprehensive benchmark for agentic search in local life services, LocalSearchBench includes over 150,000 high-quality entries from various cities and business types. We construct 300 multi-hop QA tasks based on real user queries, challenging agents to understand questions and retrieve information in multiple steps. We also developed LocalPlayground, a unified environment integrating multiple tools for agent interaction. Experiments show that even state-of-the-art LRMs struggle on LocalSearchBench: the best model (DeepSeek-V3.1) achieves only 34.34% correctness, and most models have issues with completeness (average 77.33%) and faithfulness (average 61.99%). This highlights the need for specialized benchmarks and domain-specific agent training in local life services. Code, Benchmark, and Leaderboard are available at localsearchbench.github.io.",
+        "authors": "Hang He, Chuhuai Yue, Chengqi Dong, Mingxue Tian, Zhenfeng Liu, Jiajun Chai, Xiaohan Wang, Yufei Zhang, Qun Liao, Guojun Yin, Wei Lin, Chengcheng Wan, Haiying Sun, Ting Su",
+        "url": "http://arxiv.org/abs/2512.07436v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07436v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "LocalSearchBench是首个针对本地生活服务领域代理搜索的综合基准测试，揭示了当前大型推理模型（LRMs）在处理模糊、多跳查询时的显著局限性。虽然本身是基准测试，但它明确指出了LLM在特定应用场景下的瓶颈，并强调了领域特定代理训练和基准测试的重要性，对LLM应用的发展具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07419v1",
+        "title": "Revolutionizing Mixed Precision Quantization: Towards Training-free Automatic Proxy Discovery via Large Language Models",
+        "summary": "Mixed-Precision Quantization (MPQ) liberates the Deep Neural Networks (DNNs) from the Out-Of-Memory (OOM) bottleneck, which garnered increasing research attention. However, conventional methods either searched from costly differentiable optimization, which is neither efficient nor flexible, or learned a quantized DNN from the proxy (i.e., HAWQ) manually designed by human experts, which is labor-intensive and requires huge expert knowledge. Can we design a proxy without involving any human experts and training? In this paper, we provide an affirmative answer by proposing a novel Large Language Models (LLMs)-driven Training-free Automatic Proxy (dubbed TAP) discovery framework, which reforms the design paradigm of MPQ by utilizing LLMs to find superior TAP tailored for MPQ, automatically. In addition, to bridge the gap between black-box LLMs and the tough MPQ task, we ingeniously propose simple Direct Policy Optimization (DPO) based reinforcement learning to enhance LLMs' reasoning by optimizing prompts, which can construct a positive feedback loop between the LLM and the MPQ task, enabling LLMs to generate better TAP in the next evolution. Extensive experiments on mainstream benchmarks demonstrate that TAP achieves state-of-the-art performance. Finally, we truly believe that our TAP will significantly contribute to the MPQ community by providing a new perspective on LLM-driven design algorithms.",
+        "authors": "Haidong Kang, Jun Du, Lihong Lin",
+        "url": "http://arxiv.org/abs/2512.07419v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07419v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了TAP（Training-free Automatic Proxy）框架，通过LLM驱动的训练无关自动代理发现，彻底改变了混合精度量化（MPQ）的设计范式。它巧妙地利用DPO（Direct Policy Optimization）强化学习来优化提示，构建了LLM与MPQ任务之间的正反馈循环。这在模型压缩领域实现了突破性的理论创新，解决了传统MPQ方法成本高昂和依赖专家知识的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07391v1",
+        "title": "GlimmerNet: A Lightweight Grouped Dilated Depthwise Convolutions for UAV-Based Emergency Monitoring",
+        "summary": "Convolutional Neural Networks (CNNs) have proven highly effective for edge and mobile vision tasks due to their computational efficiency. While many recent works seek to enhance CNNs with global contextual understanding via self-attention-based Vision Transformers, these approaches often introduce significant computational overhead. In this work, we demonstrate that it is possible to retain strong global perception without relying on computationally expensive components. We present GlimmerNet, an ultra-lightweight convolutional network built on the principle of separating receptive field diversity from feature recombination. GlimmerNet introduces Grouped Dilated Depthwise Convolutions(GDBlocks), which partition channels into groups with distinct dilation rates, enabling multi-scale feature extraction at no additional parameter cost. To fuse these features efficiently, we design a novel Aggregator module that recombines cross-group representations using grouped pointwise convolution, significantly lowering parameter overhead. With just 31K parameters and 29% fewer FLOPs than the most recent baseline, GlimmerNet achieves a new state-of-the-art weighted F1-score of 0.966 on the UAV-focused AIDERv2 dataset. These results establish a new accuracy-efficiency trade-off frontier for real-time emergency monitoring on resource-constrained UAV platforms. Our implementation is publicly available at https://github.com/djordjened92/gdd-cnn.",
+        "authors": "Đorđe Nedeljković",
+        "url": "http://arxiv.org/abs/2512.07391v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07391v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GlimmerNet是一个超轻量级卷积网络，通过分组膨胀深度卷积（GDBlocks）和新颖的聚合器模块，在不增加参数成本的情况下实现了多尺度特征提取和高效特征重组。它在参数量和FLOPs上显著优于现有模型，并在UAV紧急监测任务上达到SOTA。这在模型压缩和边缘AI效率方面具有变革性影响，是架构创新的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07375v1",
+        "title": "LUNE: Efficient LLM Unlearning via LoRA Fine-Tuning with Negative Examples",
+        "summary": "Large language models (LLMs) possess vast knowledge acquired from extensive training corpora, but they often cannot remove specific pieces of information when needed, which makes it hard to handle privacy, bias mitigation, and knowledge correction. Traditional model unlearning approaches require computationally expensive fine-tuning or direct weight editing, making them impractical for real-world deployment. In this work, we introduce LoRA-based Unlearning with Negative Examples (LUNE), a lightweight framework that performs negative-only unlearning by updating only low-rank adapters while freezing the backbone, thereby localizing edits and avoiding disruptive global changes. Leveraging Low-Rank Adaptation (LoRA), LUNE targets intermediate representations to suppress (or replace) requested knowledge with an order-of-magnitude lower compute and memory than full fine-tuning or direct weight editing. Extensive experiments on multiple factual unlearning tasks show that LUNE: (I) achieves effectiveness comparable to full fine-tuning and memory-editing methods, and (II) reduces computational cost by about an order of magnitude.",
+        "authors": "Yezi Liu, Hanning Chen, Wenjun Huang, Yang Ni, Mohsen Imani",
+        "url": "http://arxiv.org/abs/2512.07375v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07375v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "LUNE（LoRA-based Unlearning with Negative Examples）提出了一种轻量级框架，通过仅更新低秩适配器（LoRA）来实现LLM的负向遗忘。它有效地解决了LLM在隐私保护、偏见缓解和知识纠正方面计算成本高昂的瓶颈，实现了与全量微调相当的效果，同时将计算成本降低了一个数量级，是LLM应用中数据效率和模型压缩的优秀创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07345v1",
+        "title": "Debiasing Diffusion Priors via 3D Attention for Consistent Gaussian Splatting",
+        "summary": "Versatile 3D tasks (e.g., generation or editing) that distill from Text-to-Image (T2I) diffusion models have attracted significant research interest for not relying on extensive 3D training data. However, T2I models exhibit limitations resulting from prior view bias, which produces conflicting appearances between different views of an object. This bias causes subject-words to preferentially activate prior view features during cross-attention (CA) computation, regardless of the target view condition. To overcome this limitation, we conduct a comprehensive mathematical analysis to reveal the root cause of the prior view bias in T2I models. Moreover, we find different UNet layers show different effects of prior view in CA. Therefore, we propose a novel framework, TD-Attn, which addresses multi-view inconsistency via two key components: (1) the 3D-Aware Attention Guidance Module (3D-AAG) constructs a view-consistent 3D attention Gaussian for subject-words to enforce spatial consistency across attention-focused regions, thereby compensating for the limited spatial information in 2D individual view CA maps; (2) the Hierarchical Attention Modulation Module (HAM) utilizes a Semantic Guidance Tree (SGT) to direct the Semantic Response Profiler (SRP) in localizing and modulating CA layers that are highly responsive to view conditions, where the enhanced CA maps further support the construction of more consistent 3D attention Gaussians. Notably, HAM facilitates semantic-specific interventions, enabling controllable and precise 3D editing. Extensive experiments firmly establish that TD-Attn has the potential to serve as a universal plugin, significantly enhancing multi-view consistency across 3D tasks.",
+        "authors": "Shilong Jin, Haoran Duan, Litao Hua, Wentao Huang, Yuan Zhou",
+        "url": "http://arxiv.org/abs/2512.07345v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07345v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对T2I扩散模型中导致3D高斯泼溅（3DGS）视图不一致的先验视图偏差进行了全面的数学分析，并提出了TD-Attn框架。通过3D感知注意力引导模块和分层注意力调制模块，它从根本上解决了3D生成AI中的一致性瓶颈。这篇论文具有极高的理论严谨性和创新性，对3D内容生成和编辑具有变革性影响。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.07770v1",
+        "title": "Distribution-informed Online Conformal Prediction",
+        "summary": "Conformal prediction provides a pivotal and flexible technique for uncertainty quantification by constructing prediction sets with a predefined coverage rate. Many online conformal prediction methods have been developed to address data distribution shifts in fully adversarial environments, resulting in overly conservative prediction sets. We propose Conformal Optimistic Prediction (COP), an online conformal prediction algorithm incorporating underlying data pattern into the update rule. Through estimated cumulative distribution function of non-conformity scores, COP produces tighter prediction sets when predictable pattern exists, while retaining valid coverage guarantees even when estimates are inaccurate. We establish a joint bound on coverage and regret, which further confirms the validity of our approach. We also prove that COP achieves distribution-free, finite-sample coverage under arbitrary learning rates and can converge when scores are $i.i.d.$. The experimental results also show that COP can achieve valid coverage and construct shorter prediction intervals than other baselines.",
+        "authors": "Dongjian Hu, Junxi Wu, Shu-Tao Xia, Changliang Zou",
+        "url": "http://arxiv.org/abs/2512.07770v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07770v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了在线共形预测算法（COP），明确提供了覆盖率保证、联合界限和有限样本覆盖的理论证明，并证明了在i.i.d.条件下的收敛性。其对“分布无关、有限样本覆盖”和“收敛性”的证明，高度符合您对统计保证和数学推导的严谨要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07739v1",
+        "title": "Symmetric Vaccine Efficacy",
+        "summary": "Traditional measures of vaccine efficacy (VE) are inherently asymmetric, constrained above by $1$ but unbounded below. As a result, VE estimates and corresponding confidence intervals can extend far below zero, making interpretation difficult and potentially obscuring whether the apparent effect reflects true harm or simply statistical uncertainty. The proposed symmetric vaccine efficacy (SVE) is a bounded and interpretable alternative to VE that maintains desirable statistical properties while resolving these asymmetries. SVE is defined as a symmetric transformation of infection risks, with possible values within $[-1, 1]$, providing a common scale for both beneficial and harmful vaccine effects. This paper describes the relationship between SVE and traditional VE, considers inference about SVE, and illustrates the utility of the proposed measure by reanalyzing data from a randomized trial of a candidate HIV vaccine. Open-source tools for computing estimates of SVE and corresponding confidence intervals are available in R through the sve package.",
+        "authors": "Lucy D'Agostino McGowan, Sarah C. Lotspeich, Michael G. Hudgens",
+        "url": "http://arxiv.org/abs/2512.07739v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07739v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了一种新的对称疫苗效力（SVE）衡量标准，旨在解决传统VE的非对称性问题。它详细描述了SVE与传统VE的关系，并考虑了SVE的推断，明确提及“保持了理想的统计特性”，展现了严谨的统计学理论基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07590v1",
+        "title": "Robust Variational Model Based Tailored UNet: Leveraging Edge Detector and Mean Curvature for Improved Image Segmentation",
+        "summary": "To address the challenge of segmenting noisy images with blurred or fragmented boundaries, this paper presents a robust version of Variational Model Based Tailored UNet (VM_TUNet), a hybrid framework that integrates variational methods with deep learning. The proposed approach incorporates physical priors, an edge detector and a mean curvature term, into a modified Cahn-Hilliard equation, aiming to combine the interpretability and boundary-smoothing advantages of variational partial differential equations (PDEs) with the strong representational ability of deep neural networks. The architecture consists of two collaborative modules: an F module, which conducts efficient frequency domain preprocessing to alleviate poor local minima, and a T module, which ensures accurate and stable local computations, backed by a stability estimate. Extensive experiments on three benchmark datasets indicate that the proposed method achieves a balanced trade-off between performance and computational efficiency, which yields competitive quantitative results and improved visual quality compared to pure convolutional neural network (CNN) based models, while achieving performance close to that of transformer-based method with reasonable computational expense.",
+        "authors": "Kaili Qi, Zhongyi Huang, Wenli Yang",
+        "url": "http://arxiv.org/abs/2512.07590v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07590v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个结合变分方法和深度学习的混合框架，将物理先验（如边缘检测器和平均曲率项）融入修改后的Cahn-Hilliard方程，并明确提及“稳定性估计”。这种对变分偏微分方程（PDEs）的整合和理论分析，展现了深厚的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07462v1",
+        "title": "Understanding LLM Agent Behaviours via Game Theory: Strategy Recognition, Biases and Multi-Agent Dynamics",
+        "summary": "As Large Language Models (LLMs) increasingly operate as autonomous decision-makers in interactive and multi-agent systems and human societies, understanding their strategic behaviour has profound implications for safety, coordination, and the design of AI-driven social and economic infrastructures. Assessing such behaviour requires methods that capture not only what LLMs output, but the underlying intentions that guide their decisions. In this work, we extend the FAIRGAME framework to systematically evaluate LLM behaviour in repeated social dilemmas through two complementary advances: a payoff-scaled Prisoners Dilemma isolating sensitivity to incentive magnitude, and an integrated multi-agent Public Goods Game with dynamic payoffs and multi-agent histories. These environments reveal consistent behavioural signatures across models and languages, including incentive-sensitive cooperation, cross-linguistic divergence and end-game alignment toward defection. To interpret these patterns, we train traditional supervised classification models on canonical repeated-game strategies and apply them to FAIRGAME trajectories, showing that LLMs exhibit systematic, model- and language-dependent behavioural intentions, with linguistic framing at times exerting effects as strong as architectural differences. Together, these findings provide a unified methodological foundation for auditing LLMs as strategic agents and reveal systematic cooperation biases with direct implications for AI governance, collective decision-making, and the design of safe multi-agent systems.",
+        "authors": "Trung-Kiet Huynh, Duy-Minh Dao-Sy, Thanh-Bang Cao, Phong-Hao Le, Hong-Dan Nguyen, Phu-Quy Nguyen-Lam, Minh-Luan Nguyen-Vo, Hong-Phat Pham, Phu-Hoa Pham, Thien-Kim Than, Chi-Nguyen Tran, Huy Tran, Gia-Thoai Tran-Le, Alessio Buscemi, Le Hong Trang, The Anh Han",
+        "url": "http://arxiv.org/abs/2512.07462v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07462v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文运用博弈论这一严谨的数学框架来系统评估大型语言模型（LLM）的策略行为，分析其内在意图和多智能体动态。这种将博弈论应用于AI行为理解的方法，非常符合您对严谨数学逻辑和理论基础的偏好，尤其是在“因果逻辑”的广义范畴内。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07409v1",
+        "title": "Open qubit parameter identification with bounded pulses",
+        "summary": "We address the problem of parameter identification for a single open qubit subjected to relaxation and dephasing. Our approach is based on selecting a minimal set of carefully chosen qubit configurations that can be reliably prepared and measured in order to provide an interpretable methodology of parameter identification while potentially minimizing experimental overhead. The protocol relies on saturating control pulses to generate these configurations. In an idealized regime of infinite-amplitude pulses, we demonstrate that the parameters can be reconstructed analytically from the measured observables. We then consider large but finite pulses as a perturbation of this ideal regime and provide bounds on the estimation error introduced by the practical implementation. This framework allows us to separate the sources of uncertainty in the estimation procedure, distinguishing between statistical fluctuations arising from repeated measurements and modeling errors due to deviations from the ideal pulse regime.",
+        "authors": "Ghaieth Aloui, Ivan Beschastnyi, Ludovic Sacchelli",
+        "url": "http://arxiv.org/abs/2512.07409v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07409v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了开放量子比特参数识别协议，在理想情况下可进行解析重建，并对实际实现中有限脉冲引入的估计误差提供了理论界限，明确分离了不确定性来源。其“解析重建”和“估计误差界限”的提出，具有高度的数学严谨性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07380v1",
+        "title": "Nonparametric optimal density estimation for censored circular data",
+        "summary": "We consider the problem of estimating the probability density function of a circular random variable observed under censoring. To this end, we introduce a projection estimator constructed via a regression approach on linear sieves. We first establish a lower bound for the mean integrated squared error in the case of Sobolev densities, thereby identifying the minimax rate of convergence for this estimation problem. We then derive a matching upper bound for the same risk, showing that the proposed estimator attains the minimax rate when the underlying density belongs to a Sobolev class. Finally, we develop a data-driven version of the procedure that preserves this optimal rate, thus yielding an adaptive estimator. The practical performance of the method is demonstrated through simulation studies.",
+        "authors": "Nicolas Conanec, Claire Lacour, Thanh Mai Pham Ngoc",
+        "url": "http://arxiv.org/abs/2512.07380v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07380v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对审查圆形数据的非参数密度估计问题，建立了均方积分误差的下界，确定了极小极大收敛率，并证明了所提估计器能达到该最优率。这篇论文是纯粹的、高度严谨的数理统计工作，直接满足您对统计保证和数学推导的最高要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07355v1",
+        "title": "A Geometric Unification of Concept Learning with Concept Cones",
+        "summary": "Two traditions of interpretability have evolved side by side but seldom spoken to each other: Concept Bottleneck Models (CBMs), which prescribe what a concept should be, and Sparse Autoencoders (SAEs), which discover what concepts emerge. While CBMs use supervision to align activations with human-labeled concepts, SAEs rely on sparse coding to uncover emergent ones. We show that both paradigms instantiate the same geometric structure: each learns a set of linear directions in activation space whose nonnegative combinations form a concept cone. Supervised and unsupervised methods thus differ not in kind but in how they select this cone. Building on this view, we propose an operational bridge between the two paradigms. CBMs provide human-defined reference geometries, while SAEs can be evaluated by how well their learned cones approximate or contain those of CBMs. This containment framework yields quantitative metrics linking inductive biases -- such as SAE type, sparsity, or expansion ratio -- to emergence of plausible\\footnote{We adopt the terminology of \\citet{jacovi2020towards}, who distinguish between faithful explanations (accurately reflecting model computations) and plausible explanations (aligning with human intuition and domain knowledge). CBM concepts are plausible by construction -- selected or annotated by humans -- though not necessarily faithful to the true latent factors that organise the data manifold.} concepts. Using these metrics, we uncover a ``sweet spot'' in both sparsity and expansion factor that maximizes both geometric and semantic alignment with CBM concepts. Overall, our work unifies supervised and unsupervised concept discovery through a shared geometric framework, providing principled metrics to measure SAE progress and assess how well discovered concept align with plausible human concepts.",
+        "authors": "Alexandre Rocchi--Henry, Thomas Fel, Gianni Franchi",
+        "url": "http://arxiv.org/abs/2512.07355v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07355v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过“概念锥”的几何结构统一了概念瓶颈模型和稀疏自编码器，提出了量化度量来连接归纳偏置与概念涌现。这种基于几何学和数学的统一框架，为可解释性AI提供了严谨的理论基础和分析工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07313v1",
+        "title": "Learning-Augmented Ski Rental with Discrete Distributions: A Bayesian Approach",
+        "summary": "We revisit the classic ski rental problem through the lens of Bayesian decision-making and machine-learned predictions. While traditional algorithms minimize worst-case cost without assumptions, and recent learning-augmented approaches leverage noisy forecasts with robustness guarantees, our work unifies these perspectives. We propose a discrete Bayesian framework that maintains exact posterior distributions over the time horizon, enabling principled uncertainty quantification and seamless incorporation of expert priors. Our algorithm achieves prior-dependent competitive guarantees and gracefully interpolates between worst-case and fully-informed settings. Our extensive experimental evaluation demonstrates superior empirical performance across diverse scenarios, achieving near-optimal results under accurate priors while maintaining robust worst-case guarantees. This framework naturally extends to incorporate multiple predictions, non-uniform priors, and contextual information, highlighting the practical advantages of Bayesian reasoning in online decision problems with imperfect predictions.",
+        "authors": "Bosun Kang, Hyejun Park, Chenglin Fan",
+        "url": "http://arxiv.org/abs/2512.07313v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07313v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文采用离散贝叶斯框架解决学习增强的滑雪租赁问题，维护精确的后验分布，实现了原则性的不确定性量化和先验依赖的竞争性保证。其贝叶斯方法和竞争性分析，展现了强大的统计学和优化理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07249v1",
+        "title": "IFFair: Influence Function-driven Sample Reweighting for Fair Classification",
+        "summary": "Because machine learning has significantly improved efficiency and convenience in the society, it's increasingly used to assist or replace human decision-making. However, the data-based pattern makes related algorithms learn and even exacerbate potential bias in samples, resulting in discriminatory decisions against certain unprivileged groups, depriving them of the rights to equal treatment, thus damaging the social well-being and hindering the development of related applications. Therefore, we propose a pre-processing method IFFair based on the influence function. Compared with other fairness optimization approaches, IFFair only uses the influence disparity of training samples on different groups as a guidance to dynamically adjust the sample weights during training without modifying the network structure, data features and decision boundaries. To evaluate the validity of IFFair, we conduct experiments on multiple real-world datasets and metrics. The experimental results show that our approach mitigates bias of multiple accepted metrics in the classification setting, including demographic parity, equalized odds, equality of opportunity and error rate parity without conflicts. It also demonstrates that IFFair achieves better trade-off between multiple utility and fairness metrics compared with previous pre-processing methods.",
+        "authors": "Jingran Yang, Min Zhang, Lingfeng Zhang, Zhaohui Wang, Yonggang Zhang",
+        "url": "http://arxiv.org/abs/2512.07249v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07249v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文基于影响函数这一在稳健统计学中严谨的概念，提出了驱动样本重新加权的公平分类预处理方法。通过量化训练样本对不同群体的影响差异来动态调整权重以减轻偏见，具有强烈的统计学理论支撑和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07224v1",
+        "title": "Clinical Interpretability of Deep Learning Segmentation Through Shapley-Derived Agreement and Uncertainty Metrics",
+        "summary": "Segmentation is the identification of anatomical regions of interest, such as organs, tissue, and lesions, serving as a fundamental task in computer-aided diagnosis in medical imaging. Although deep learning models have achieved remarkable performance in medical image segmentation, the need for explainability remains critical for ensuring their acceptance and integration in clinical practice, despite the growing research attention in this area. Our approach explored the use of contrast-level Shapley values, a systematic perturbation of model inputs to assess feature importance. While other studies have investigated gradient-based techniques through identifying influential regions in imaging inputs, Shapley values offer a broader, clinically aligned approach, explaining how model performance is fairly attributed to certain imaging contrasts over others. Using the BraTS 2024 dataset, we generated rankings for Shapley values for four MRI contrasts across four model architectures. Two metrics were proposed from the Shapley ranking: agreement between model and ``clinician\" imaging ranking, and uncertainty quantified through Shapley ranking variance across cross-validation folds. Higher-performing cases (Dice \\textgreater0.6) showed significantly greater agreement with clinical rankings. Increased Shapley ranking variance correlated with decreased performance (U-Net: $r=-0.581$). These metrics provide clinically interpretable proxies for model reliability, helping clinicians better understand state-of-the-art segmentation models.",
+        "authors": "Tianyi Ren, Daniel Low, Pittra Jaengprajak, Juampablo Heras Rivera, Jacob Ruzevick, Mehmet Kurt",
+        "url": "http://arxiv.org/abs/2512.07224v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07224v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文利用Shapley值这一博弈论中的严谨概念来量化模型对不同图像对比度的贡献，并提出了基于Shapley值的模型一致性和不确定性度量。这种将Shapley值应用于深度学习解释性的方法，为模型可靠性提供了坚实的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07190v1",
+        "title": "Integrating Multi-scale and Multi-filtration Topological Features for Medical Image Classification",
+        "summary": "Modern deep neural networks have shown remarkable performance in medical image classification. However, such networks either emphasize pixel-intensity features instead of fundamental anatomical structures (e.g., those encoded by topological invariants), or they capture only simple topological features via single-parameter persistence. In this paper, we propose a new topology-guided classification framework that extracts multi-scale and multi-filtration persistent topological features and integrates them into vision classification backbones. For an input image, we first compute cubical persistence diagrams (PDs) across multiple image resolutions/scales. We then develop a ``vineyard'' algorithm that consolidates these PDs into a single, stable diagram capturing signatures at varying granularities, from global anatomy to subtle local irregularities that may indicate early-stage disease. To further exploit richer topological representations produced by multiple filtrations, we design a cross-attention-based neural network that directly processes the consolidated final PDs. The resulting topological embeddings are fused with feature maps from CNNs or Transformers. By integrating multi-scale and multi-filtration topologies into an end-to-end architecture, our approach enhances the model's capacity to recognize complex anatomical structures. Evaluations on three public datasets show consistent, considerable improvements over strong baselines and state-of-the-art methods, demonstrating the value of our comprehensive topological perspective for robust and interpretable medical image classification.",
+        "authors": "Pengfei Gu, Huimin Li, Haoteng Tang, Dongkuan, Xu, Erik Enriquez, DongChul Kim, Bin Fu, Danny Z. Chen",
+        "url": "http://arxiv.org/abs/2512.07190v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07190v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个拓扑引导的分类框架，提取多尺度和多过滤的持久拓扑特征，并开发了“葡萄园算法”来整合持久图。将持久同调这一高度数学化的工具应用于医学图像分析，展现了深厚的数学理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07795v1",
+        "title": "ReasonBENCH: Benchmarking the (In)Stability of LLM Reasoning",
+        "summary": "Large language models (LLMs) are increasingly deployed in settings where reasoning, such as multi-step problem solving and chain-of-thought, is essential. Yet, current evaluation practices overwhelmingly report single-run accuracy while ignoring the intrinsic uncertainty that naturally arises from stochastic decoding. This omission creates a blind spot because practitioners cannot reliably assess whether a method's reported performance is stable, reproducible, or cost-consistent. We introduce ReasonBENCH, the first benchmark designed to quantify the underlying instability in LLM reasoning. ReasonBENCH provides (i) a modular evaluation library that standardizes reasoning frameworks, models, and tasks, (ii) a multi-run protocol that reports statistically reliable metrics for both quality and cost, and (iii) a public leaderboard to encourage variance-aware reporting. Across tasks from different domains, we find that the vast majority of reasoning strategies and models exhibit high instability. Notably, even strategies with similar average performance can display confidence intervals up to four times wider, and the top-performing methods often incur higher and less stable costs. Such instability compromises reproducibility across runs and, consequently, the reliability of reported performance. To better understand these dynamics, we further analyze the impact of prompts, model families, and scale on the trade-off between solve rate and stability. Our results highlight reproducibility as a critical dimension for reliable LLM reasoning and provide a foundation for future reasoning methods and uncertainty quantification techniques. ReasonBENCH is publicly available at https://github.com/au-clan/ReasonBench .",
+        "authors": "Nearchos Potamitis, Lars Klein, Akhil Arora",
+        "url": "http://arxiv.org/abs/2512.07795v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07795v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了首个量化LLM推理不稳定性的基准，提出了多运行协议以报告统计可靠的指标和不确定性量化技术。其对“统计可靠性”和“不确定性量化”的强调，对理解LLM行为的统计特性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07782v1",
+        "title": "GatedFWA: Linear Flash Windowed Attention with Gated Associative Memory",
+        "summary": "Modern autoregressive models rely on attention, yet the Softmax full attention in Transformers scales quadratically with sequence length. Sliding Window Attention (SWA) achieves linear-time encoding/decoding by constraining the attention pattern, but under an \\textit{Associative Memory} interpretation, its difference-style update renders the training objective effectively \\emph{unbounded}. In contrast, Softmax attention normalizes updates, leading to \\emph{memory shrinkage and gradient vanishing}. We propose GatedFWA: a Memory-\\underline{Gated} (\\underline{F}lash) \\underline{W}indowed \\underline{A}ttention mechanism that preserves SWAs efficiency while stabilizing memory updates and making gradient flow controllable. In essence, GatedFWA accumulate a per-token/head gate into a decay bias added to the attention logits, acting as a learnable contraction in the memory recurrence. We implement a fused one-pass gate preprocessing and a FlashAttention-compatible kernel that injects the gate under a sliding mask, ensuring I/O efficiency and numerical stability. On language modelling benchmarks, GatedFWA delivers competitive throughput with negligible overhead and better use of global context, and it integrates cleanly with token compression/selection methods such as NSA and generalizes to various autoregressive domains.",
+        "authors": "Jiaxu Liu, Yuhe Bai, Christos-Savvas Bouganis",
+        "url": "http://arxiv.org/abs/2512.07782v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07782v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从联想记忆的角度深入分析了Transformer注意力机制的理论问题（如梯度消失），并提出了GatedFWA来稳定记忆更新和控制梯度流。其对注意力机制的理论分析、梯度流控制和数值稳定性考量，具有较强的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07608v1",
+        "title": "Metric-Fair Prompting: Treating Similar Samples Similarly",
+        "summary": "We introduce \\emph{Metric-Fair Prompting}, a fairness-aware prompting framework that guides large language models (LLMs) to make decisions under metric-fairness constraints. In the application of multiple-choice medical question answering, each {(question, option)} pair is treated as a binary instance with label $+1$ (correct) or $-1$ (incorrect). To promote {individual fairness}~--~treating similar instances similarly~--~we compute question similarity using NLP embeddings and solve items in \\emph{joint pairs of similar questions} rather than in isolation. The prompt enforces a global decision protocol: extract decisive clinical features, map each \\((\\text{question}, \\text{option})\\) to a score $f(x)$ that acts as confidence, and impose a Lipschitz-style constraint so that similar inputs receive similar scores and, hence, consistent outputs. Evaluated on the {MedQA (US)} benchmark, Metric-Fair Prompting is shown to improve performance over standard single-item prompting, demonstrating that fairness-guided, confidence-oriented reasoning can enhance LLM accuracy on high-stakes clinical multiple-choice questions.",
+        "authors": "Jing Wang, Jie Shen, Xing Niu, Tong Zhang, Jeremy Weiss",
+        "url": "http://arxiv.org/abs/2512.07608v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07608v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了度量公平提示框架，通过计算问题相似性并施加Lipschitz风格的约束来强制执行个体公平性，确保相似输入得到相似分数和一致输出。这种明确的数学公平性约束和推导，符合您对严谨数学逻辑的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.07568v1",
+        "title": "Dual-Stream Cross-Modal Representation Learning via Residual Semantic Decorrelation",
+        "summary": "Cross-modal learning has become a fundamental paradigm for integrating heterogeneous information sources such as images, text, and structured attributes. However, multimodal representations often suffer from modality dominance, redundant information coupling, and spurious cross-modal correlations, leading to suboptimal generalization and limited interpretability. In particular, high-variance modalities tend to overshadow weaker but semantically important signals, while naïve fusion strategies entangle modality-shared and modality-specific factors in an uncontrolled manner. This makes it difficult to understand which modality actually drives a prediction and to maintain robustness when some modalities are noisy or missing. To address these challenges, we propose a Dual-Stream Residual Semantic Decorrelation Network (DSRSD-Net), a simple yet effective framework that disentangles modality-specific and modality-shared information through residual decomposition and explicit semantic decorrelation constraints. DSRSD-Net introduces: (1) a dual-stream representation learning module that separates intra-modal (private) and inter-modal (shared) latent factors via residual projection; (2) a residual semantic alignment head that maps shared factors from different modalities into a common space using a combination of contrastive and regression-style objectives; and (3) a decorrelation and orthogonality loss that regularizes the covariance structure of the shared space while enforcing orthogonality between shared and private streams, thereby suppressing cross-modal redundancy and preventing feature collapse. Experimental results on two large-scale educational benchmarks demonstrate that DSRSD-Net consistently improves next-step prediction and final outcome prediction over strong single-modality, early-fusion, late-fusion, and co-attention baselines.",
+        "authors": "Xuecheng Li, Weikuan Jia, Alisher Kurbonaliev, Qurbonaliev Alisher, Khudzhamkulov Rustam, Ismoilov Shuhratjon, Eshmatov Javhariddin, Yuanjie Zheng",
+        "url": "http://arxiv.org/abs/2512.07568v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.07568v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过残差分解和显式语义去相关约束来解耦模态特定和模态共享信息，并引入去相关和正交性损失来规范协方差结构。这种清晰的数学建模和表示学习理论，有助于理解多模态数据中的信息解耦机制。"
+    }
+]

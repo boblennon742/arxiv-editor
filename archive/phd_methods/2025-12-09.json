@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.08894v1",
+        "title": "Revisiting the Scaling Properties of Downstream Metrics in Large Language Model Training",
+        "summary": "While scaling laws for Large Language Models (LLMs) traditionally focus on proxy metrics like pretraining loss, predicting downstream task performance has been considered unreliable. This paper challenges that view by proposing a direct framework to model the scaling of benchmark performance from the training budget. We find that for a fixed token-to-parameter ratio, a simple power law can accurately describe the scaling behavior of log accuracy on multiple popular downstream tasks. Our results show that the direct approach extrapolates better than the previously proposed two-stage procedure, which is prone to compounding errors. Furthermore, we introduce functional forms that predict accuracy across token-to-parameter ratios and account for inference compute under repeated sampling. We validate our findings on models with up to 17B parameters trained on up to 350B tokens across two dataset mixtures. To support reproducibility and encourage future research, we release the complete set of pretraining losses and downstream evaluation results.",
+        "authors": "Jakub Krajewski, Amitis Shidani, Dan Busbridge, Sam Wiseman, Jason Ramapuram",
+        "url": "http://arxiv.org/abs/2512.08894v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08894v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文挑战了LLM下游任务性能预测不可靠的传统观点，提出了直接建模训练预算与基准性能之间关系的新框架，并发现简单的幂律关系。这为LLM的训练效率和能力预测提供了重要的理论创新和实践指导，对AI架构设计具有深远影响，完美契合您对前沿算法和理论创新性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08892v1",
+        "title": "Toward Faithful Retrieval-Augmented Generation with Sparse Autoencoders",
+        "summary": "Retrieval-Augmented Generation (RAG) improves the factuality of large language models (LLMs) by grounding outputs in retrieved evidence, but faithfulness failures, where generations contradict or extend beyond the provided sources, remain a critical challenge. Existing hallucination detection methods for RAG often rely either on large-scale detector training, which requires substantial annotated data, or on querying external LLM judges, which leads to high inference costs. Although some approaches attempt to leverage internal representations of LLMs for hallucination detection, their accuracy remains limited. Motivated by recent advances in mechanistic interpretability, we employ sparse autoencoders (SAEs) to disentangle internal activations, successfully identifying features that are specifically triggered during RAG hallucinations. Building on a systematic pipeline of information-based feature selection and additive feature modeling, we introduce RAGLens, a lightweight hallucination detector that accurately flags unfaithful RAG outputs using LLM internal representations. RAGLens not only achieves superior detection performance compared to existing methods, but also provides interpretable rationales for its decisions, enabling effective post-hoc mitigation of unfaithful RAG. Finally, we justify our design choices and reveal new insights into the distribution of hallucination-related signals within LLMs. The code is available at https://github.com/Teddy-XiongGZ/RAGLens.",
+        "authors": "Guangzhi Xiong, Zhenghao He, Bohan Liu, Sanchit Sinha, Aidong Zhang",
+        "url": "http://arxiv.org/abs/2512.08892v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08892v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对RAG中幻觉问题，创新性地利用稀疏自编码器（SAEs）解耦LLM内部激活，识别与幻觉相关的特征。提出的RAGLens不仅提高了幻觉检测的准确性，还提供了可解释的决策依据，是LLM应用中可信度瓶颈的理论创新解决方案，具有很强的理论深度和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08809v1",
+        "title": "PrivTune: Efficient and Privacy-Preserving Fine-Tuning of Large Language Models via Device-Cloud Collaboration",
+        "summary": "With the rise of large language models, service providers offer language models as a service, enabling users to fine-tune customized models via uploaded private datasets. However, this raises concerns about sensitive data leakage. Prior methods, relying on differential privacy within device-cloud collaboration frameworks, struggle to balance privacy and utility, exposing users to inference attacks or degrading fine-tuning performance. To address this, we propose PrivTune, an efficient and privacy-preserving fine-tuning framework via Split Learning (SL). The key idea of PrivTune is to inject crafted noise into token representations from the SL bottom model, making each token resemble the $n$-hop indirect neighbors. PrivTune formulates this as an optimization problem to compute the optimal noise vector, aligning with defense-utility goals. On this basis, it then adjusts the parameters (i.e., mean) of the $d_χ$-Privacy noise distribution to align with the optimization direction and scales the noise according to token importance to minimize distortion. Experiments on five datasets (covering both classification and generation tasks) against three embedding inversion and three attribute inference attacks show that, using RoBERTa on the Stanford Sentiment Treebank dataset, PrivTune reduces the attack success rate to 10% with only a 3.33% drop in utility performance, outperforming state-of-the-art baselines.",
+        "authors": "Yi Liu, Weixiang Han, Chengjun Cai, Xingliang Yuan, Cong Wang",
+        "url": "http://arxiv.org/abs/2512.08809v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08809v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了PrivTune框架，通过在Split Learning的token表示中注入精心设计的噪声，实现了LLM高效且隐私保护的微调。将隐私保护问题建模为优化问题，并根据token重要性调整噪声，具有坚实的理论基础和重要的LLM隐私应用价值，直接解决了LLM应用中的隐私和效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08786v1",
+        "title": "A Systematic Evaluation of Preference Aggregation in Federated RLHF for Pluralistic Alignment of LLMs",
+        "summary": "This paper addresses the challenge of aligning large language models (LLMs) with diverse human preferences within federated learning (FL) environments, where standard methods often fail to adequately represent diverse viewpoints. We introduce a comprehensive evaluation framework that systematically assesses the trade-off between alignment quality and fairness when using different aggregation strategies for human preferences. In our federated setting, each group locally evaluates rollouts and produces reward signals, and the server aggregates these group-level rewards without accessing any raw data. Specifically, we evaluate standard reward aggregation techniques (min, max, and average) and introduce a novel adaptive scheme that dynamically adjusts preference weights based on a group's historical alignment performance. Our experiments on question-answering (Q/A) tasks using a PPO-based RLHF pipeline demonstrate that our adaptive approach consistently achieves superior fairness while maintaining competitive alignment scores. This work offers a robust methodology for evaluating LLM behavior across diverse populations and provides a practical solution for developing truly pluralistic and fairly aligned models.",
+        "authors": "Mahmoud Srewa, Tianyu Zhao, Salma Elmalaki",
+        "url": "http://arxiv.org/abs/2512.08786v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08786v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了联邦学习环境下LLM与多样化人类偏好对齐的挑战，引入了评估框架并提出了动态调整偏好权重的自适应聚合方案。这在LLM的公平性、多源对齐和联邦学习架构方面提供了重要的理论和算法创新，对LLM的社会影响和鲁棒性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08763v1",
+        "title": "Learning and Editing Universal Graph Prompt Tuning via Reinforcement Learning",
+        "summary": "Early graph prompt tuning approaches relied on task-specific designs for Graph Neural Networks (GNNs), limiting their adaptability across diverse pre-training strategies. In contrast, another promising line of research has investigated universal graph prompt tuning, which operates directly in the input graph's feature space and builds a theoretical foundation that universal graph prompt tuning can theoretically achieve an equivalent effect of any prompting function, eliminating dependence on specific pre-training strategies. Recent works propose selective node-based graph prompt tuning to pursue more ideal prompts. However, we argue that selective node-based graph prompt tuning inevitably compromises the theoretical foundation of universal graph prompt tuning. In this paper, we strengthen the theoretical foundation of universal graph prompt tuning by introducing stricter constraints, demonstrating that adding prompts to all nodes is a necessary condition for achieving the universality of graph prompts. To this end, we propose a novel model and paradigm, Learning and Editing Universal GrAph Prompt Tuning (LEAP), which preserves the theoretical foundation of universal graph prompt tuning while pursuing more ideal prompts. Specifically, we first build the basic universal graph prompts to preserve the theoretical foundation and then employ actor-critic reinforcement learning to select nodes and edit prompts. Extensive experiments on graph- and node-level tasks across various pre-training strategies in both full-shot and few-shot scenarios show that LEAP consistently outperforms fine-tuning and other prompt-based approaches.",
+        "authors": "Jinfeng Xu, Zheyu Chen, Shuo Yang, Jinze Li, Hewei Wang, Yijie Li, Edith C. H. Ngai",
+        "url": "http://arxiv.org/abs/2512.08763v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08763v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "强化了通用图提示调优的理论基础，证明了在所有节点上添加提示的必要性，并提出了LEAP框架，通过Actor-Critic强化学习选择和编辑提示。这为GNN的泛化性和效率提供了理论创新和算法突破，是图神经网络前沿研究的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08645v1",
+        "title": "Chain-of-Image Generation: Toward Monitorable and Controllable Image Generation",
+        "summary": "While state-of-the-art image generation models achieve remarkable visual quality, their internal generative processes remain a \"black box.\" This opacity limits human observation and intervention, and poses a barrier to ensuring model reliability, safety, and control. Furthermore, their non-human-like workflows make them difficult for human observers to interpret. To address this, we introduce the Chain-of-Image Generation (CoIG) framework, which reframes image generation as a sequential, semantic process analogous to how humans create art. Similar to the advantages in monitorability and performance that Chain-of-Thought (CoT) brought to large language models (LLMs), CoIG can produce equivalent benefits in text-to-image generation. CoIG utilizes an LLM to decompose a complex prompt into a sequence of simple, step-by-step instructions. The image generation model then executes this plan by progressively generating and editing the image. Each step focuses on a single semantic entity, enabling direct monitoring. We formally assess this property using two novel metrics: CoIG Readability, which evaluates the clarity of each intermediate step via its corresponding output; and Causal Relevance, which quantifies the impact of each procedural step on the final generated image. We further show that our framework mitigates entity collapse by decomposing the complex generation task into simple subproblems, analogous to the procedural reasoning employed by CoT. Our experimental results indicate that CoIG substantially enhances quantitative monitorability while achieving competitive compositional robustness compared to established baseline models. The framework is model-agnostic and can be integrated with any image generation model.",
+        "authors": "Young Kyung Kim, Oded Schlesinger, Yuzhou Zhao, J. Matias Di Martino, Guillermo Sapiro",
+        "url": "http://arxiv.org/abs/2512.08645v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08645v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出了CoIG框架，将图像生成重构为LLM引导的语义序列过程，显著提高了生成过程的可监控性和可控性。引入了CoIG Readability和Causal Relevance等新指标，为理解和控制生成模型提供了理论创新，解决了生成式AI的“黑箱”问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08625v1",
+        "title": "OpenMonoGS-SLAM: Monocular Gaussian Splatting SLAM with Open-set Semantics",
+        "summary": "Simultaneous Localization and Mapping (SLAM) is a foundational component in robotics, AR/VR, and autonomous systems. With the rising focus on spatial AI in recent years, combining SLAM with semantic understanding has become increasingly important for enabling intelligent perception and interaction. Recent efforts have explored this integration, but they often rely on depth sensors or closed-set semantic models, limiting their scalability and adaptability in open-world environments. In this work, we present OpenMonoGS-SLAM, the first monocular SLAM framework that unifies 3D Gaussian Splatting (3DGS) with open-set semantic understanding. To achieve our goal, we leverage recent advances in Visual Foundation Models (VFMs), including MASt3R for visual geometry and SAM and CLIP for open-vocabulary semantics. These models provide robust generalization across diverse tasks, enabling accurate monocular camera tracking and mapping, as well as a rich understanding of semantics in open-world environments. Our method operates without any depth input or 3D semantic ground truth, relying solely on self-supervised learning objectives. Furthermore, we propose a memory mechanism specifically designed to manage high-dimensional semantic features, which effectively constructs Gaussian semantic feature maps, leading to strong overall performance. Experimental results demonstrate that our approach achieves performance comparable to or surpassing existing baselines in both closed-set and open-set segmentation tasks, all without relying on supplementary sensors such as depth maps or semantic annotations.",
+        "authors": "Jisang Yoo, Gyeongjin Kang, Hyun-kyu Ko, Hyeonwoo Yu, Eunbyung Park",
+        "url": "http://arxiv.org/abs/2512.08625v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08625v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "首次将单目SLAM、3D Gaussian Splatting与开放词汇语义理解相结合，无需深度输入或3D语义真值，纯粹依赖自监督学习。这在SLAM领域提供了架构和算法上的重大创新，解决了开放世界环境下的可扩展性和适应性瓶颈，是具身智能和3D视觉的突破性工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08524v1",
+        "title": "Beyond Real Weights: Hypercomplex Representations for Stable Quantization",
+        "summary": "Multimodal language models (MLLMs) require large parameter capacity to align high-dimensional visual features with linguistic representations, making them computationally heavy and difficult to deploy efficiently. We introduce a progressive reparameterization strategy that compresses these models by gradually replacing dense feed-forward network blocks with compact Parameterized Hypercomplex Multiplication (PHM) layers. A residual interpolation schedule, together with lightweight reconstruction and knowledge distillation losses, ensures that the PHM modules inherit the functional behavior of their dense counterparts during training. This transition yields substantial parameter and FLOP reductions while preserving strong multimodal alignment, enabling faster inference without degrading output quality. We evaluate the approach on multiple vision-language models (VLMs). Our method maintains performance comparable to the base models while delivering significant reductions in model size and inference latency. Progressive PHM substitution thus offers an architecture-compatible path toward more efficient multimodal reasoning and complements existing low-bit quantization techniques.",
+        "authors": "Jawad Ibn Ahad, Maisha Rahman, Amrijit Biswas, Muhammad Rafsan Kabir, Robin Krambroeckers, Sifat Momen, Nabeel Mohammed, Shafin Rahman",
+        "url": "http://arxiv.org/abs/2512.08524v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08524v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了渐进式重参数化策略，通过超复数乘法（PHM）层压缩多模态语言模型（MLLMs）。这是一种新颖的架构和算法创新，有效解决了MLLM的计算开销和部署瓶颈，同时保持了性能，是模型压缩领域的重要理论进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08492v1",
+        "title": "Autonomous Issue Resolver: Towards Zero-Touch Code Maintenance",
+        "summary": "Recent advances in Large Language Models have revolutionized function-level code generation; however, repository-scale Automated Program Repair (APR) remains a significant challenge. Current approaches typically employ a control-centric paradigm, forcing agents to navigate complex directory structures and irrelevant control logic. In this paper, we propose a paradigm shift from the standard Code Property Graphs (CPGs) to the concept of Data Transformation Graph (DTG) that inverts the topology by modeling data states as nodes and functions as edges, enabling agents to trace logic defects through data lineage rather than control flow. We introduce a multi-agent framework that reconciles data integrity navigation with control flow logic. Our theoretical analysis and case studies demonstrate that this approach resolves the \"Semantic Trap\" inherent in standard RAG systems in modern coding agents. We provide a comprehensive implementation in the form of Autonomous Issue Resolver (AIR), a self-improvement system for zero-touch code maintenance that utilizes neuro-symbolic reasoning and uses the DTG structure for scalable logic repair. Our approach has demonstrated good results on several SWE benchmarks, reaching a resolution rate of 87.1% on SWE-Verified benchmark. Our approach directly addresses the core limitations of current AI code-assistant tools and tackles the critical need for a more robust foundation for our increasingly software-dependent world.",
+        "authors": "Aliaksei Kaliutau",
+        "url": "http://arxiv.org/abs/2512.08492v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08492v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了从代码属性图（CPG）到数据转换图（DTG）的范式转变，以数据血缘而非控制流追踪逻辑缺陷，并构建了多智能体框架AIR。这为自动化程序修复（APR）和零接触代码维护提供了理论创新和算法突破，对软件工程和AI智能体应用具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08449v1",
+        "title": "From Accuracy to Impact: The Impact-Driven AI Framework (IDAIF) for Aligning Engineering Architecture with Theory of Change",
+        "summary": "This paper introduces the Impact-Driven AI Framework (IDAIF), a novel architectural methodology that integrates Theory of Change (ToC) principles with modern artificial intelligence system design. As AI systems increasingly influence high-stakes domains including healthcare, finance, and public policy, the alignment problem--ensuring AI behavior corresponds with human values and intentions--has become critical. Current approaches predominantly optimize technical performance metrics while neglecting the sociotechnical dimensions of AI deployment. IDAIF addresses this gap by establishing a systematic mapping between ToC's five-stage model (Inputs-Activities-Outputs-Outcomes-Impact) and corresponding AI architectural layers (Data Layer-Pipeline Layer-Inference Layer-Agentic Layer-Normative Layer). Each layer incorporates rigorous theoretical foundations: multi-objective Pareto optimization for value alignment, hierarchical multi-agent orchestration for outcome achievement, causal directed acyclic graphs (DAGs) for hallucination mitigation, and adversarial debiasing with Reinforcement Learning from Human Feedback (RLHF) for fairness assurance. We provide formal mathematical formulations for each component and introduce an Assurance Layer that manages assumption failures through guardian architectures. Three case studies demonstrate IDAIF application across healthcare, cybersecurity, and software engineering domains. This framework represents a paradigm shift from model-centric to impact-centric AI development, providing engineers with concrete architectural patterns for building ethical, trustworthy, and socially beneficial AI systems.",
+        "authors": "Yong-Woon Kim",
+        "url": "http://arxiv.org/abs/2512.08449v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08449v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出了IDAIF框架，系统地将“变革理论”（ToC）原则与AI系统设计相结合，提供了将AI行为与人类价值观对齐的架构方法。该框架整合了多目标优化、多智能体编排、因果图等理论，是伦理AI和AI对齐领域的重大理论创新，具有高度的哲学和工程结合性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08374v1",
+        "title": "The Unseen Bias: How Norm Discrepancy in Pre-Norm MLLMs Leads to Visual Information Loss",
+        "summary": "Multimodal Large Language Models (MLLMs), which couple pre-trained vision encoders and language models, have shown remarkable capabilities. However, their reliance on the ubiquitous Pre-Norm architecture introduces a subtle yet critical flaw: a severe norm disparity between the high-norm visual tokens and the low-norm text tokens. In this work, we present a formal theoretical analysis demonstrating that this imbalance is not a static issue. Instead, it induces an ``asymmetric update dynamic,'' where high-norm visual tokens exhibit a ``representational inertia,'' causing them to transform semantically much slower than their textual counterparts. This fundamentally impairs effective cross-modal feature fusion. Our empirical validation across a range of mainstream MLLMs confirms that this theoretical dynamic -- the persistence of norm disparity and the resulting asymmetric update rates -- is a prevalent phenomenon. Based on this insight, we propose a remarkably simple yet effective solution: inserting a single, carefully initialized LayerNorm layer after the visual projector to enforce norm alignment. Experiments conducted on the LLaVA-1.5 architecture show that this intervention yields significant performance gains not only on a wide suite of multimodal benchmarks but also, notably, on text-only evaluations such as MMLU, suggesting that resolving the architectural imbalance leads to a more holistically capable model.",
+        "authors": "Bozhou Li, Xinda Xue, Sihan Yang, Yang Shi, Xinlong Chen, Yushuo Guan, Yuanxing Zhang, Wentao Zhang",
+        "url": "http://arxiv.org/abs/2512.08374v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08374v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提供了理论分析，揭示了Pre-Norm MLLM中视觉和文本token的范数差异导致“不对称更新动态”，从而造成视觉信息损失。并提出了一个简单而有效的解决方案。这是对MLLM架构深层机制的理论创新性洞察，解决了跨模态融合中的一个根本性问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08309v1",
+        "title": "Terrain Diffusion: A Diffusion-Based Successor to Perlin Noise in Infinite, Real-Time Terrain Generation",
+        "summary": "For decades, procedural worlds have been built on procedural noise functions such as Perlin noise, which are fast and infinite, yet fundamentally limited in realism and large-scale coherence. We introduce Terrain Diffusion, an AI-era successor to Perlin noise that bridges the fidelity of diffusion models with the properties that made procedural noise indispensable: seamless infinite extent, seed-consistency, and constant-time random access. At its core is InfiniteDiffusion, a novel algorithm for infinite generation, enabling seamless, real-time synthesis of boundless landscapes. A hierarchical stack of diffusion models couples planetary context with local detail, while a compact Laplacian encoding stabilizes outputs across Earth-scale dynamic ranges. An open-source infinite-tensor framework supports constant-memory manipulation of unbounded tensors, and few-step consistency distillation enables efficient generation. Together, these components establish diffusion models as a practical foundation for procedural world generation, capable of synthesizing entire planets coherently, controllably, and without limits.",
+        "authors": "Alexander Goslin",
+        "url": "http://arxiv.org/abs/2512.08309v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08309v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出了Terrain Diffusion，作为Perlin噪声的AI时代继承者，用于无限、实时地形生成。核心是InfiniteDiffusion算法，结合分层扩散模型和拉普拉斯编码。这在生成式AI领域提供了开创性的算法和理论创新，解决了传统噪声函数的局限性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08296v1",
+        "title": "Towards a Science of Scaling Agent Systems",
+        "summary": "Agents, language model (LM)-based systems that are capable of reasoning, planning, and acting are becoming the dominant paradigm for real-world AI applications. Despite this widespread adoption, the principles that determine their performance remain underexplored, leaving practitioners to rely on heuristics rather than principled design choices. We address this gap by deriving quantitative scaling principles for agent systems. We evaluate this across four diverse benchmarks: Finance-Agent, BrowseComp-Plus, PlanCraft, and Workbench. Using five canonical architectures (Single, Independent, Centralized, Decentralized, Hybrid) instantiated across three LLM families, we perform a controlled evaluation spanning 180 configurations with standardized tools and token budgets. We derive a predictive model using empirical coordination metrics, including efficiency, overhead, error amplification, and redundancy, that achieves cross-validated R^2=0.513. We identify three dominant effects: (1) a tool-coordination trade-off: under fixed computational budgets, tool-heavy tasks suffer disproportionately from multi-agent overhead. (2) a capability saturation: coordination yields diminishing or negative returns (beta=-0.408, p<0.001) once single-agent baselines exceed ~45%. (3) topology-dependent error amplification: independent agents amplify errors 17.2x through unchecked propagation, while centralized coordination contains this to 4.4x. Centralized coordination improves performance by 80.9% on parallelizable tasks like financial reasoning, while decentralized coordination excels on dynamic web navigation (+9.2% vs. +0.2%). Yet for sequential reasoning tasks, all multi-agent variants degraded performance by 39-70%. The framework predicts the optimal coordination strategy for 87% of held-out configurations, providing a predictive principle of agentic scaling based on measurable task properties.",
+        "authors": "Yubin Kim, Ken Gu, Chanwoo Park, Chunjong Park, Samuel Schmidgall, A. Ali Heydari, Yao Yan, Zhihan Zhang, Yuchen Zhuang, Mark Malhotra, Paul Pu Liang, Hae Won Park, Yuzhe Yang, Xuhai Xu, Yilun Du, Shwetak Patel, Tim Althoff, Daniel McDuff, Xin Liu",
+        "url": "http://arxiv.org/abs/2512.08296v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08296v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "首次为智能体系统推导了量化扩展原则，并构建了预测模型。识别了工具-协调权衡、能力饱和和拓扑依赖错误放大等主导效应。这为智能体系统的设计和优化提供了基础性的理论创新和实践指导，是理解复杂AI系统行为的关键。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08290v1",
+        "title": "Systematization of Knowledge: Security and Safety in the Model Context Protocol Ecosystem",
+        "summary": "The Model Context Protocol (MCP) has emerged as the de facto standard for connecting Large Language Models (LLMs) to external data and tools, effectively functioning as the \"USB-C for Agentic AI.\" While this decoupling of context and execution solves critical interoperability challenges, it introduces a profound new threat landscape where the boundary between epistemic errors (hallucinations) and security breaches (unauthorized actions) dissolves. This Systematization of Knowledge (SoK) aims to provide a comprehensive taxonomy of risks in the MCP ecosystem, distinguishing between adversarial security threats (e.g., indirect prompt injection, tool poisoning) and epistemic safety hazards (e.g., alignment failures in distributed tool delegation). We analyze the structural vulnerabilities of MCP primitives, specifically Resources, Prompts, and Tools, and demonstrate how \"context\" can be weaponized to trigger unauthorized operations in multi-agent environments. Furthermore, we survey state-of-the-art defenses, ranging from cryptographic provenance (ETDI) to runtime intent verification, and conclude with a roadmap for securing the transition from conversational chatbots to autonomous agentic operating systems.",
+        "authors": "Shiva Gaire, Srijan Gyawali, Saroj Mishra, Suman Niroula, Dilip Thakur, Umesh Yadav",
+        "url": "http://arxiv.org/abs/2512.08290v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08290v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "作为一篇SoK（Systematization of Knowledge），对模型上下文协议（MCP）生态系统中的安全和风险进行了全面分类和分析，区分了对抗性安全威胁和认知安全危害。这为新兴的智能体AI安全领域提供了关键的理论框架和知识体系，具有极高的前瞻性和指导价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.08132v1",
+        "title": "Multi-agent learning under uncertainty: Recurrence vs. concentration",
+        "summary": "In this paper, we examine the convergence landscape of multi-agent learning under uncertainty. Specifically, we analyze two stochastic models of regularized learning in continuous games -- one in continuous and one in discrete time with the aim of characterizing the long-run behavior of the induced sequence of play. In stark contrast to deterministic, full-information models of learning (or models with a vanishing learning rate), we show that the resulting dynamics do not converge in general. In lieu of this, we ask instead which actions are played more often in the long run, and by how much. We show that, in strongly monotone games, the dynamics of regularized learning may wander away from equilibrium infinitely often, but they always return to its vicinity in finite time (which we estimate), and their long-run distribution is sharply concentrated around a neighborhood thereof. We quantify the degree of this concentration, and we show that these favorable properties may all break down if the underlying game is not strongly monotone -- underscoring in this way the limits of regularized learning in the presence of persistent randomness and uncertainty.",
+        "authors": "Kyriakos Lotidis, Panayotis Mertikopoulos, Nicholas Bambos, Jose Blanchet",
+        "url": "http://arxiv.org/abs/2512.08132v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.08132v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "对不确定性下多智能体学习的收敛性进行了理论分析，揭示了在强单调博弈中动态行为的周期性和集中性，并量化了集中程度。这为多智能体强化学习的理论基础和算法设计提供了深刻的数学洞察，是您作为数理统计博士生会非常感兴趣的理论工作。"
+    }
+]

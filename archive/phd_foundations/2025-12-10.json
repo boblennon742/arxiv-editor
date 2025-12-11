@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.09850v1",
+        "title": "Conformal Bandits: Bringing statistical validity and reward efficiency to the small-gap regime",
+        "summary": "We introduce Conformal Bandits, a novel framework integrating Conformal Prediction (CP) into bandit problems, a classic paradigm for sequential decision-making under uncertainty. Traditional regret-minimisation bandit strategies like Thompson Sampling and Upper Confidence Bound (UCB) typically rely on distributional assumptions or asymptotic guarantees; further, they remain largely focused on regret, neglecting their statistical properties. We address this gap. Through the adoption of CP, we bridge the regret-minimising potential of a decision-making bandit policy with statistical guarantees in the form of finite-time prediction coverage.   We demonstrate the potential of it Conformal Bandits through simulation studies and an application to portfolio allocation, a typical small-gap regime, where differences in arm rewards are far too small for classical policies to achieve optimal regret bounds in finite sample. Motivated by this, we showcase our framework's practical advantage in terms of regret in small-gap settings, as well as its added value in achieving nominal coverage guarantees where classical UCB policies fail. Focusing on our application of interest, we further illustrate how integrating hidden Markov models to capture the regime-switching behaviour of financial markets, enhances the exploration-exploitation trade-off, and translates into higher risk-adjusted regret efficiency returns, while preserving coverage guarantees.",
+        "authors": "Simone Cuonzo, Nina Deliu",
+        "url": "http://arxiv.org/abs/2512.09850v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09850v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将共形预测（Conformal Prediction）引入多臂老虎机问题，旨在提供有限时间预测覆盖的统计保证，并提升小差距场景下的回报效率。其核心在于弥补传统老虎机策略在统计性质上的不足，明确强调了统计有效性和理论保证，完美契合您对统计保证和严谨数学逻辑的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09712v1",
+        "title": "Computer-Assisted Search for Differential Equations Corresponding to Optimization Methods and Their Convergence Rates",
+        "summary": "Let $f:\\mathbb{R}^n \\to \\mathbb{R}$ be a continuously differentiable convex function with its minimizer denoted by $x_*$ and optimal value $f_* = f(x_*)$. Optimization algorithms such as the gradient descent method can often be interpreted in the continuous-time limit as differential equations known as continuous dynamical systems. Analyzing the convergence rate of $f(x) - f_*$ in such systems often relies on constructing appropriate Lyapunov functions. However, these Lyapunov functions have been designed through heuristic reasoning rather than a systematic framework. Several studies have addressed this issue. In particular, Suh, Roh, and Ryu (2022) proposed a constructive approach that involves introducing dilated coordinates and applying integration by parts. Although this method significantly improves the process of designing Lyapunov functions, it still involves arbitrary choices among many possible options, and thus retains a heuristic nature in identifying Lyapunov functions that yield the best convergence rates. In this study, we propose a systematic framework for exploring these choices computationally. More precisely, we propose a brute-force approach using symbolic computation by computer algebra systems to explore every possibility. By formulating the design of Lyapunov functions for continuous dynamical systems as an optimization problem, we aim to optimize the Lyapunov function itself. As a result, our framework successfully reproduces many previously reported results and, in several cases, discovers new convergence rates that have not been shown in the existing studies.",
+        "authors": "Atsushi Tabei, Ken'ichiro Tanaka",
+        "url": "http://arxiv.org/abs/2512.09712v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09712v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种通过计算机辅助的符号计算框架，系统性地探索优化方法对应微分方程的李雅普诺夫函数，并优化其收敛率。这直接涉及优化收敛性、微分方程和严谨的数学推导，是您会非常感兴趣的理论研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09667v1",
+        "title": "Adaptive Optimal Control for Avatar-Guided Motor Rehabilitation in Virtual Reality",
+        "summary": "A control-theoretic framework for autonomous avatar-guided rehabilitation in virtual reality, based on interpretable, adaptive motor guidance through optimal control, is presented. The framework faces critical challenges in motor rehabilitation due to accessibility, cost, and continuity of care, with over 50% of patients inability to attend regular clinic sessions. The system enables post-stroke patients to undergo personalized therapy in immersive virtual reality at home, while being monitored by clinicians. The core is a nonlinear, human-in-the-loop control strategy, where the avatar adapts in real time to the patient's performance. Balance between following the patient's movements and guiding them to ideal kinematic profiles based on the Hogan minimum-jerk model is achieved through multi-objective optimal control. A data-driven \"ability index\" uses smoothness metrics to dynamically adjust control gains according to the patient's progress. The system was validated through simulations and preliminary trials, and shows potential for delivering adaptive, engaging and scalable remote physiotherapy guided by interpretable control-theoretic principles.",
+        "authors": "Francesco De Lellis, Maria Lombardi, Egidio De Benedetto, Pasquale Arpaia, Mario di Bernardo",
+        "url": "http://arxiv.org/abs/2512.09667v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09667v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个基于可解释的自适应最优控制的虚拟现实康复训练控制理论框架。它运用了非线性、人机交互的控制策略和多目标最优控制，具有强大的控制理论基础和数学建模严谨性，与您对严谨数学逻辑应用于现代AI系统的兴趣高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09665v1",
+        "title": "OxEnsemble: Fair Ensembles for Low-Data Classification",
+        "summary": "We address the problem of fair classification in settings where data is scarce and unbalanced across demographic groups. Such low-data regimes are common in domains like medical imaging, where false negatives can have fatal consequences.   We propose a novel approach \\emph{OxEnsemble} for efficiently training ensembles and enforcing fairness in these low-data regimes. Unlike other approaches, we aggregate predictions across ensemble members, each trained to satisfy fairness constraints. By construction, \\emph{OxEnsemble} is both data-efficient, carefully reusing held-out data to enforce fairness reliably, and compute-efficient, requiring little more compute than used to fine-tune or evaluate an existing model. We validate this approach with new theoretical guarantees. Experimentally, our approach yields more consistent outcomes and stronger fairness-accuracy trade-offs than existing methods across multiple challenging medical imaging classification datasets.",
+        "authors": "Jonathan Rystrøm, Zihao Fu, Chris Russell",
+        "url": "http://arxiv.org/abs/2512.09665v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09665v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文针对低数据量和群体不平衡下的公平分类问题，提出了一种名为 OxEnsemble 的新方法，并提供了新的理论保证。这直接满足了您对统计保证和公平性理论基础的需求，尤其在医疗影像等关键领域具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09538v1",
+        "title": "Don't Throw Away Your Beams: Improving Consistency-based Uncertainties in LLMs via Beam Search",
+        "summary": "Consistency-based methods have emerged as an effective approach to uncertainty quantification (UQ) in large language models. These methods typically rely on several generations obtained via multinomial sampling, measuring their agreement level. However, in short-form QA, multinomial sampling is prone to producing duplicates due to peaked distributions, and its stochasticity introduces considerable variance in uncertainty estimates across runs. We introduce a new family of methods that employ beam search to generate candidates for consistency-based UQ, yielding improved performance and reduced variance compared to multinomial sampling. We also provide a theoretical lower bound on the beam set probability mass under which beam search achieves a smaller error than multinomial sampling. We empirically evaluate our approach on six QA datasets and find that its consistent improvements over multinomial sampling lead to state-of-the-art UQ performance.",
+        "authors": "Ekaterina Fadeeva, Maiya Goloburda, Aleksandr Rubashevskii, Roman Vashurin, Artem Shelmanov, Preslav Nakov, Mrinmaya Sachan, Maxim Panov",
+        "url": "http://arxiv.org/abs/2512.09538v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09538v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过束搜索（beam search）改进了大型语言模型中基于一致性的不确定性量化（UQ）方法，并提供了束集合概率质量的理论下界。这篇论文在理论上对LLM的不确定性量化提供了严谨的数学分析和保证，非常符合您的研究偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09514v1",
+        "title": "Transport Novelty Distance: A Distributional Metric for Evaluating Material Generative Models",
+        "summary": "Recent advances in generative machine learning have opened new possibilities for the discovery and design of novel materials. However, as these models become more sophisticated, the need for rigorous and meaningful evaluation metrics has grown. Existing evaluation approaches often fail to capture both the quality and novelty of generated structures, limiting our ability to assess true generative performance. In this paper, we introduce the Transport Novelty Distance (TNovD) to judge generative models used for materials discovery jointly by the quality and novelty of the generated materials. Based on ideas from Optimal Transport theory, TNovD uses a coupling between the features of the training and generated sets, which is refined into a quality and memorization regime by a threshold. The features are generated from crystal structures using a graph neural network that is trained to distinguish between materials, their augmented counterparts, and differently sized supercells using contrastive learning. We evaluate our proposed metric on typical toy experiments relevant for crystal structure prediction, including memorization, noise injection and lattice deformations. Additionally, we validate the TNovD on the MP20 validation set and the WBM substitution dataset, demonstrating that it is capable of detecting both memorized and low-quality material data. We also benchmark the performance of several popular material generative models. While introduced for materials, our TNovD framework is domain-agnostic and can be adapted for other areas, such as images and molecules.",
+        "authors": "Paul Hagemann, Simon Müller, Janine George, Philipp Benner",
+        "url": "http://arxiv.org/abs/2512.09514v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09514v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文基于最优传输理论，引入了一种新的分布度量 Transport Novelty Distance (TNovD)，用于联合评估材料生成模型的质量和新颖性。最优传输理论本身具有深厚的数学基础，该工作在度量设计上展现了极高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09467v1",
+        "title": "Cauchy-Schwarz Fairness Regularizer",
+        "summary": "Group fairness in machine learning is often enforced by adding a regularizer that reduces the dependence between model predictions and sensitive attributes. However, existing regularizers are built on heterogeneous distance measures and design choices, which makes their behavior hard to reason about and their performance inconsistent across tasks. This raises a basic question: what properties make a good fairness regularizer? We address this question by first organizing existing in-process methods into three families: (i) matching prediction statistics across sensitive groups, (ii) aligning latent representations, and (iii) directly minimizing dependence between predictions and sensitive attributes. Through this lens, we identify desirable properties of the underlying distance measure, including tight generalization bounds, robustness to scale differences, and the ability to handle arbitrary prediction distributions. Motivated by these properties, we propose a Cauchy-Schwarz (CS) fairness regularizer that penalizes the empirical CS divergence between prediction distributions conditioned on sensitive groups. Under a Gaussian comparison, we show that CS divergence yields a tighter bound than Kullback-Leibler divergence, Maximum Mean Discrepancy, and the mean disparity used in Demographic Parity, and we discuss how these advantages translate to a distribution-free, kernel-based estimator that naturally extends to multiple sensitive attributes. Extensive experiments on four tabular benchmarks and one image dataset demonstrate that the proposed CS regularizer consistently improves Demographic Parity and Equal Opportunity metrics while maintaining competitive accuracy, and achieves a more stable utility-fairness trade-off across hyperparameter settings compared to prior regularizers.",
+        "authors": "Yezi Liu, Hanning Chen, Wenjun Huang, Yang Ni, Mohsen Imani",
+        "url": "http://arxiv.org/abs/2512.09467v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09467v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种基于柯西-施瓦茨（Cauchy-Schwarz）散度的新型公平性正则化器，并从理论上分析了其泛化界限、对尺度差异的鲁棒性以及处理任意预测分布的能力。这篇论文提供了严谨的数学推导和统计保证，是公平性研究中理论基础扎实的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09433v1",
+        "title": "Multiply-robust Estimator of Cumulative Incidence Function Difference for Right-Censored Competing Risks Data",
+        "summary": "In causal inference, estimating the average treatment effect is a central objective, and in the context of competing risks data, this effect can be quantified by the cause-specific cumulative incidence function (CIF) difference. While doubly robust estimators give a more robust way to estimate the causal effect from the observational study, they remain inconsistent if both models are misspecified. To improve the robustness, we develop a multiply robust estimator for the difference in cause-specific CIFs using right-censored competing risks data. The proposed framework integrates the pseudo-value approach, which transforms the censored, time-dependent CIF into a complete-data outcome, with the multiply robust estimation framework. By specifying multiple candidate models for both the propensity score and the outcome regression, the resulting estimator is consistent and asymptotically unbiased, provided that at least one of the multiple propensity score or outcome regression models is correctly specified. Simulation studies show our multiply robust estimator remains virtually unbiased and maintains nominal coverage rates under various model misspecification scenarios and a wide range of choices for the censoring rate. Finally, the proposed multiply robust model is illustrated using the Right Heart Catheterization dataset.",
+        "authors": "Yifei Tian, Ying Wu",
+        "url": "http://arxiv.org/abs/2512.09433v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09433v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究针对右删失竞争风险数据，开发了一种多重稳健估计器，用于估计因果效应（累积发生函数差异）。论文明确指出其估计器在模型错误设定下仍能保持一致性和渐近无偏性，是因果推断领域具有强大统计保证的严谨工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09430v1",
+        "title": "Model-robust Inference for Seamless II/III Trials with Covariate Adaptive Randomization",
+        "summary": "Seamless phase II/III trials have become a cornerstone of modern drug development, offering a means to accelerate evaluation while maintaining statistical rigor. However, most existing inference procedures are model-based, designed primarily for continuous outcomes, and often neglect the stratification used in covariate-adaptive randomization (CAR), limiting their practical relevance. In this paper, we propose a unified, model-robust framework for seamless phase II/III trials grounded in generalized linear models (GLMs), enabling valid inference across diverse outcome types, estimands, and CAR schemes. Using Z-estimation, we derive the asymptotic properties of treatment effect estimators and explicitly characterize how their variance depends on the underlying randomization procedure.Based on these results, we develop adjusted Wald tests that, together with Dunnett's multiple-comparison procedure and the inverse chi-square combination method, ensure valid overall Type I error. Extensive simulation studies and a trial example demonstrate that the proposed model-robust tests achieve superior power and reliable inference compared to conventional approaches.",
+        "authors": "Kun Yi, Lucy Xia",
+        "url": "http://arxiv.org/abs/2512.09430v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09430v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的、模型稳健的框架，用于无缝II/III期临床试验中的推断。它基于广义线性模型和Z-估计，推导了处理效应估计量的渐近性质，并确保了I类错误控制。这是临床试验统计学中非常严谨且具有理论深度的研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09368v1",
+        "title": "CFLight: Enhancing Safety with Traffic Signal Control through Counterfactual Learning",
+        "summary": "Traffic accidents result in millions of injuries and fatalities globally, with a significant number occurring at intersections each year. Traffic Signal Control (TSC) is an effective strategy for enhancing safety at these urban junctures. Despite the growing popularity of Reinforcement Learning (RL) methods in optimizing TSC, these methods often prioritize driving efficiency over safety, thus failing to address the critical balance between these two aspects. Additionally, these methods usually need more interpretability. CounterFactual (CF) learning is a promising approach for various causal analysis fields. In this study, we introduce a novel framework to improve RL for safety aspects in TSC. This framework introduces a novel method based on CF learning to address the question: ``What if, when an unsafe event occurs, we backtrack to perform alternative actions, and will this unsafe event still occur in the subsequent period?'' To answer this question, we propose a new structure causal model to predict the result after executing different actions, and we propose a new CF module that integrates with additional ``X'' modules to promote safe RL practices. Our new algorithm, CFLight, which is derived from this framework, effectively tackles challenging safety events and significantly improves safety at intersections through a near-zero collision control strategy. Through extensive numerical experiments on both real-world and synthetic datasets, we demonstrate that CFLight reduces collisions and improves overall traffic performance compared to conventional RL methods and the recent safe RL model. Moreover, our method represents a generalized and safe framework for RL methods, opening possibilities for applications in other domains. The data and code are available in the github https://github.com/MJLee00/CFLight-Enhancing-Safety-with-Traffic-Signal-Control-through-Counterfactual-Learning.",
+        "authors": "Mingyuan Li, Chunyu Liu, Zhuojun Li, Xiao Liu, Guangsheng Yu, Bo Du, Jun Shen, Qiang Wu",
+        "url": "http://arxiv.org/abs/2512.09368v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09368v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了一个基于反事实学习（Counterfactual Learning）的新框架 CFLight，以提升交通信号控制的安全性。它构建了新的结构因果模型来预测不同动作的结果，强调了因果逻辑和安全强化学习，与您对因果逻辑的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09322v1",
+        "title": "Self-Supervised Learning with Gaussian Processes",
+        "summary": "Self supervised learning (SSL) is a machine learning paradigm where models learn to understand the underlying structure of data without explicit supervision from labeled samples. The acquired representations from SSL have demonstrated useful for many downstream tasks including clustering, and linear classification, etc. To ensure smoothness of the representation space, most SSL methods rely on the ability to generate pairs of observations that are similar to a given instance. However, generating these pairs may be challenging for many types of data. Moreover, these methods lack consideration of uncertainty quantification and can perform poorly in out-of-sample prediction settings. To address these limitations, we propose Gaussian process self supervised learning (GPSSL), a novel approach that utilizes Gaussian processes (GP) models on representation learning. GP priors are imposed on the representations, and we obtain a generalized Bayesian posterior minimizing a loss function that encourages informative representations. The covariance function inherent in GPs naturally pulls representations of similar units together, serving as an alternative to using explicitly defined positive samples. We show that GPSSL is closely related to both kernel PCA and VICReg, a popular neural network-based SSL method, but unlike both allows for posterior uncertainties that can be propagated to downstream tasks. Experiments on various datasets, considering classification and regression tasks, demonstrate that GPSSL outperforms traditional methods in terms of accuracy, uncertainty quantification, and error control.",
+        "authors": "Yunshan Duan, Sinead Williamson",
+        "url": "http://arxiv.org/abs/2512.09322v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09322v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的自监督学习（SSL）方法 GPSSL，通过引入高斯过程（Gaussian Processes）来解决不确定性量化和样本外预测问题。高斯过程本身具有强大的统计基础，该工作在表示学习中融入了贝叶斯后验和不确定性控制，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09275v1",
+        "title": "Impact of Positional Encoding: Clean and Adversarial Rademacher Complexity for Transformers under In-Context Regression",
+        "summary": "Positional encoding (PE) is a core architectural component of Transformers, yet its impact on the Transformer's generalization and robustness remains unclear. In this work, we provide the first generalization analysis for a single-layer Transformer under in-context regression that explicitly accounts for a completely trainable PE module. Our result shows that PE systematically enlarges the generalization gap. Extending to the adversarial setting, we derive the adversarial Rademacher generalization bound. We find that the gap between models with and without PE is magnified under attack, demonstrating that PE amplifies the vulnerability of models. Our bounds are empirically validated by a simulation study. Together, this work establishes a new framework for understanding the clean and adversarial generalization in ICL with PE.",
+        "authors": "Weiyi He, Yue Xing",
+        "url": "http://arxiv.org/abs/2512.09275v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09275v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究首次对带有可训练位置编码的 Transformer 在上下文回归下的泛化能力进行了分析，并推导了干净和对抗性 Rademacher 泛化界限。这提供了严格的统计学习理论保证，深入探讨了 Transformer 架构的理论基础和鲁棒性，是您会高度重视的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09273v1",
+        "title": "On the inverse of covariance matrices for unbalanced crossed designs",
+        "summary": "This paper addresses a long-standing open problem in the analysis of linear mixed models with crossed random effects under unbalanced designs: how to find an analytic expression for the inverse of $\\mathbf{V}$, the covariance matrix of the observed response. The inverse matrix $\\mathbf{V}^{-1}$ is required for likelihood-based estimation and inference. However, for unbalanced crossed designs, $\\mathbf{V}$ is dense and the lack of a closed-form representation for $\\mathbf{V}^{-1}$, until now, has made using likelihood-based methods computationally challenging and difficult to analyse mathematically. We use the Khatri--Rao product to represent $\\mathbf{V}$ and then to construct a modified covariance matrix whose inverse admits an exact spectral decomposition. Building on this construction, we obtain an elegant and simple approximation to $\\mathbf{V}^{-1}$ for asymptotic unbalanced designs. For non-asymptotic settings, we derive an accurate and interpretable approximation under mildly unbalanced data and establish an exact inverse representation as a low-rank correction to this approximation, applicable to arbitrary degrees of unbalance. Simulation studies demonstrate the accuracy, stability, and computational tractability of the proposed framework.",
+        "authors": "Ziyang Lyu, S. A. Sisson, A. H. Welsh",
+        "url": "http://arxiv.org/abs/2512.09273v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09273v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了非平衡交叉设计中线性混合模型协方差矩阵逆的长期开放问题，提供了精确的谱分解和近似表示。这是一项纯粹且严谨的数理统计贡献，具有深厚的数学推导，对统计建模有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09267v1",
+        "title": "Contrastive Learning for Semi-Supervised Deep Regression with Generalized Ordinal Rankings from Spectral Seriation",
+        "summary": "Contrastive learning methods enforce label distance relationships in feature space to improve representation capability for regression models. However, these methods highly depend on label information to correctly recover ordinal relationships of features, limiting their applications to semi-supervised regression. In this work, we extend contrastive regression methods to allow unlabeled data to be used in the semi-supervised setting, thereby reducing the dependence on costly annotations. Particularly we construct the feature similarity matrix with both labeled and unlabeled samples in a mini-batch to reflect inter-sample relationships, and an accurate ordinal ranking of involved unlabeled samples can be recovered through spectral seriation algorithms if the level of error is within certain bounds. The introduction of labeled samples above provides regularization of the ordinal ranking with guidance from the ground-truth label information, making the ranking more reliable. To reduce feature perturbations, we further utilize the dynamic programming algorithm to select robust features for the matrix construction. The recovered ordinal relationship is then used for contrastive learning on unlabeled samples, and we thus allow more data to be used for feature representation learning, thereby achieving more robust results. The ordinal rankings can also be used to supervise predictions on unlabeled samples, serving as an additional training signal. We provide theoretical guarantees and empirical verification through experiments on various datasets, demonstrating that our method can surpass existing state-of-the-art semi-supervised deep regression methods. Our code have been released on https://github.com/xmed-lab/CLSS.",
+        "authors": "Ce Wang, Weihang Dai, Hanru Bai, Xiaomeng Li",
+        "url": "http://arxiv.org/abs/2512.09267v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09267v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将对比学习扩展到半监督深度回归，通过谱序列化（Spectral Seriation）生成广义序数排名，并提供了理论保证。这结合了数学推导和统计学习，为半监督回归提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09237v1",
+        "title": "Prenatal alcohol exposure and child cognition: semi-continuous exposures, causal inference and evidence synthesis",
+        "summary": "We address the challenge of causal inference status and the dose-response effects with a semi-continuous exposure. A two-stage approach is proposed using estimating equation for multiple outcomes with large sample properties derived for the resulting estimators. Homogeneity tests are developed to assess whether causal effects of exposure status and the dose-response effects are the same across multiple outcomes. A global homogeneity test is also developed to assess whether the effect of exposure status (exposed/not exposed) and the dose-response effect of the continuous exposure level are each equal across all outcomes. The methods of estimation and testing are rigorously evaluated in simulation studies and applied to a motivating study on the effects of prenatal alcohol exposure on childhood cognition defined by executive function (EF), academic achievement in math, and learning and memory (LM).",
+        "authors": "Xiaoya Wang, Richard J. Cook, Yeying Zhu, Tugba Akkaya-Hocagil, R. Colin Carter, Sandra W. Jacobson, Joseph L. Jacobson, Louise M. Ryan",
+        "url": "http://arxiv.org/abs/2512.09237v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09237v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究针对半连续暴露的因果推断问题，提出了一种两阶段估计方程方法，并推导了由此产生的估计量的大样本性质和同质性检验。这是一项在因果推断和统计学方法论上都极其严谨的工作，非常符合您对因果逻辑和统计保证的偏好。"
+    }
+]

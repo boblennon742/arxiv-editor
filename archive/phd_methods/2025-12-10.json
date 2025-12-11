@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.09850v1",
+        "title": "Conformal Bandits: Bringing statistical validity and reward efficiency to the small-gap regime",
+        "summary": "We introduce Conformal Bandits, a novel framework integrating Conformal Prediction (CP) into bandit problems, a classic paradigm for sequential decision-making under uncertainty. Traditional regret-minimisation bandit strategies like Thompson Sampling and Upper Confidence Bound (UCB) typically rely on distributional assumptions or asymptotic guarantees; further, they remain largely focused on regret, neglecting their statistical properties. We address this gap. Through the adoption of CP, we bridge the regret-minimising potential of a decision-making bandit policy with statistical guarantees in the form of finite-time prediction coverage.   We demonstrate the potential of it Conformal Bandits through simulation studies and an application to portfolio allocation, a typical small-gap regime, where differences in arm rewards are far too small for classical policies to achieve optimal regret bounds in finite sample. Motivated by this, we showcase our framework's practical advantage in terms of regret in small-gap settings, as well as its added value in achieving nominal coverage guarantees where classical UCB policies fail. Focusing on our application of interest, we further illustrate how integrating hidden Markov models to capture the regime-switching behaviour of financial markets, enhances the exploration-exploitation trade-off, and translates into higher risk-adjusted regret efficiency returns, while preserving coverage guarantees.",
+        "authors": "Simone Cuonzo, Nina Deliu",
+        "url": "http://arxiv.org/abs/2512.09850v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09850v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将共形预测（Conformal Prediction, CP）引入到多臂老虎机问题中，为序列决策提供了统计学上的有效性保证，特别是在传统方法难以奏效的“小间隙”场景。作为数理统计博士生，其在理论严谨性（有限时间预测覆盖、小间隙机制分析）和方法创新性（CP与Bandit的结合）上都非常突出，且在投资组合分配等实际应用中展现了潜力，完美契合您对理论创新和实际影响力的双重需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09514v1",
+        "title": "Transport Novelty Distance: A Distributional Metric for Evaluating Material Generative Models",
+        "summary": "Recent advances in generative machine learning have opened new possibilities for the discovery and design of novel materials. However, as these models become more sophisticated, the need for rigorous and meaningful evaluation metrics has grown. Existing evaluation approaches often fail to capture both the quality and novelty of generated structures, limiting our ability to assess true generative performance. In this paper, we introduce the Transport Novelty Distance (TNovD) to judge generative models used for materials discovery jointly by the quality and novelty of the generated materials. Based on ideas from Optimal Transport theory, TNovD uses a coupling between the features of the training and generated sets, which is refined into a quality and memorization regime by a threshold. The features are generated from crystal structures using a graph neural network that is trained to distinguish between materials, their augmented counterparts, and differently sized supercells using contrastive learning. We evaluate our proposed metric on typical toy experiments relevant for crystal structure prediction, including memorization, noise injection and lattice deformations. Additionally, we validate the TNovD on the MP20 validation set and the WBM substitution dataset, demonstrating that it is capable of detecting both memorized and low-quality material data. We also benchmark the performance of several popular material generative models. While introduced for materials, our TNovD framework is domain-agnostic and can be adapted for other areas, such as images and molecules.",
+        "authors": "Paul Hagemann, Simon Müller, Janine George, Philipp Benner",
+        "url": "http://arxiv.org/abs/2512.09514v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09514v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于最优传输理论的新型度量标准Transport Novelty Distance (TNovD)，用于联合评估生成模型在材料发现中的质量和新颖性。其理论基础深厚（最优传输），解决了现有评估方法无法同时捕捉质量和新颖性的痛点，具有高度的理论创新性和普适性（领域无关），对您在AI前沿算法（生成模型）的理解和评估有重要参考价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09368v1",
+        "title": "CFLight: Enhancing Safety with Traffic Signal Control through Counterfactual Learning",
+        "summary": "Traffic accidents result in millions of injuries and fatalities globally, with a significant number occurring at intersections each year. Traffic Signal Control (TSC) is an effective strategy for enhancing safety at these urban junctures. Despite the growing popularity of Reinforcement Learning (RL) methods in optimizing TSC, these methods often prioritize driving efficiency over safety, thus failing to address the critical balance between these two aspects. Additionally, these methods usually need more interpretability. CounterFactual (CF) learning is a promising approach for various causal analysis fields. In this study, we introduce a novel framework to improve RL for safety aspects in TSC. This framework introduces a novel method based on CF learning to address the question: ``What if, when an unsafe event occurs, we backtrack to perform alternative actions, and will this unsafe event still occur in the subsequent period?'' To answer this question, we propose a new structure causal model to predict the result after executing different actions, and we propose a new CF module that integrates with additional ``X'' modules to promote safe RL practices. Our new algorithm, CFLight, which is derived from this framework, effectively tackles challenging safety events and significantly improves safety at intersections through a near-zero collision control strategy. Through extensive numerical experiments on both real-world and synthetic datasets, we demonstrate that CFLight reduces collisions and improves overall traffic performance compared to conventional RL methods and the recent safe RL model. Moreover, our method represents a generalized and safe framework for RL methods, opening possibilities for applications in other domains. The data and code are available in the github https://github.com/MJLee00/CFLight-Enhancing-Safety-with-Traffic-Signal-Control-through-Counterfactual-Learning.",
+        "authors": "Mingyuan Li, Chunyu Liu, Zhuojun Li, Xiao Liu, Guangsheng Yu, Bo Du, Jun Shen, Qiang Wu",
+        "url": "http://arxiv.org/abs/2512.09368v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09368v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种轻量级、无编码器的知识图谱推理框架PathHD，通过超维度计算（HDC）替代神经网络路径评分，并仅需单次LLM调用。它显著降低了延迟和GPU内存消耗，同时提供了可解释的路径归因。这直接解决了LLM应用中的效率和可解释性瓶颈，方法具有高度创新性，且理论分析支持其效率提升，非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09458v1",
+        "title": "Architectures for Building Agentic AI",
+        "summary": "This chapter argues that the reliability of agentic and generative AI is chiefly an architectural property. We define agentic systems as goal-directed, tool-using decision makers operating in closed loops, and show how reliability emerges from principled componentisation (goal manager, planner, tool-router, executor, memory, verifiers, safety monitor, telemetry), disciplined interfaces (schema-constrained, validated, least-privilege tool calls), and explicit control and assurance loops. Building on classical foundations, we propose a practical taxonomy-tool-using agents, memory-augmented agents, planning and self-improvement agents, multi-agent systems, and embodied or web agents - and analyse how each pattern reshapes the reliability envelope and failure modes. We distil design guidance on typed schemas, idempotency, permissioning, transactional semantics, memory provenance and hygiene, runtime governance (budgets, termination conditions), and simulate-before-actuate safeguards.",
+        "authors": "Sławomir Nowaczyk",
+        "url": "http://arxiv.org/abs/2512.09458v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09458v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种免训练的上下文自适应注意力机制TCA-Attention，用于高效的长上下文建模。它通过离线校准和在线令牌选择，在不修改模型架构或参数的情况下，实现了显著的推理加速和KV缓存内存减少。其理论分析证明了近似误差的有界性，解决了LLM长上下文处理的效率和内存瓶颈，且“免训练”特性使其具有极高的实用价值和理论优雅性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09563v1",
+        "title": "System Report for CCL25-Eval Task 10: Prompt-Driven Large Language Model Merge for Fine-Grained Chinese Hate Speech Detection",
+        "summary": "The proliferation of hate speech on Chinese social media poses urgent societal risks, yet traditional systems struggle to decode context-dependent rhetorical strategies and evolving slang. To bridge this gap, we propose a novel three-stage LLM-based framework: Prompt Engineering, Supervised Fine-tuning, and LLM Merging. First, context-aware prompts are designed to guide LLMs in extracting implicit hate patterns. Next, task-specific features are integrated during supervised fine-tuning to enhance domain adaptation. Finally, merging fine-tuned LLMs improves robustness against out-of-distribution cases. Evaluations on the STATE-ToxiCN benchmark validate the framework's effectiveness, demonstrating superior performance over baseline methods in detecting fine-grained hate speech.",
+        "authors": "Binglin Wu, Jiaxiu Zou, Xianneng Li",
+        "url": "http://arxiv.org/abs/2512.09563v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09563v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Trio框架，整合了基于片段的分子语言建模、强化学习和蒙特卡洛树搜索，用于闭环靶向分子设计。它在药物发现中取得了显著突破，提高了结合亲和力、药物相似性和合成可及性，并扩大了分子多样性。这不仅是AI前沿算法（生成模型）的创新应用，更解决了实际应用中的重大瓶颈，具有巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09485v1",
+        "title": "Advancing LLM-Based Security Automation with Customized Group Relative Policy Optimization for Zero-Touch Networks",
+        "summary": "Zero-Touch Networks (ZTNs) represent a transformative paradigm toward fully automated and intelligent network management, providing the scalability and adaptability required for the complexity of sixth-generation (6G) networks. However, the distributed architecture, high openness, and deep heterogeneity of 6G networks expand the attack surface and pose unprecedented security challenges. To address this, security automation aims to enable intelligent security management across dynamic and complex environments, serving as a key capability for securing 6G ZTNs. Despite its promise, implementing security automation in 6G ZTNs presents two primary challenges: 1) automating the lifecycle from security strategy generation to validation and update under real-world, parallel, and adversarial conditions, and 2) adapting security strategies to evolving threats and dynamic environments. This motivates us to propose SecLoop and SA-GRPO. SecLoop constitutes the first fully automated framework that integrates large language models (LLMs) across the entire lifecycle of security strategy generation, orchestration, response, and feedback, enabling intelligent and adaptive defenses in dynamic network environments, thus tackling the first challenge. Furthermore, we propose SA-GRPO, a novel security-aware group relative policy optimization algorithm that iteratively refines security strategies by contrasting group feedback collected from parallel SecLoop executions, thereby addressing the second challenge. Extensive real-world experiments on five benchmarks, including 11 MITRE ATT&CK processes and over 20 types of attacks, demonstrate the superiority of the proposed SecLoop and SA-GRPO. We will release our platform to the community, facilitating the advancement of security automation towards next generation communications.",
+        "authors": "Xinye Cao, Yihan Lin, Guoshun Nan, Qinchuan Zhou, Yuhang Luo, Yurui Gao, Zeliang Zhang, Haolang Lu, Qimei Cui, Yanzhao Hou, Xiaofeng Tao, Tony Q. S. Quek",
+        "url": "http://arxiv.org/abs/2512.09485v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09485v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SecLoop框架和SA-GRPO算法，实现了基于LLM的零接触网络安全自动化。SecLoop是首个涵盖安全策略生成、编排、响应和反馈全生命周期的自动化框架，SA-GRPO则通过群组相对策略优化迭代优化安全策略。这解决了6G网络安全管理的复杂性和动态性挑战，具有极高的实践影响力，且RL算法的创新性符合您对前沿算法的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09487v1",
+        "title": "RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning",
+        "summary": "Retrieval-Augmented Generation (RAG) integrates non-parametric knowledge into Large Language Models (LLMs), typically from unstructured texts and structured graphs. While recent progress has advanced text-based RAG to multi-turn reasoning through Reinforcement Learning (RL), extending these advances to hybrid retrieval introduces additional challenges. Existing graph-based or hybrid systems typically depend on fixed or handcrafted retrieval pipelines, lacking the ability to integrate supplementary evidence as reasoning unfolds. Besides, while graph evidence provides relational structures crucial for multi-hop reasoning, it is substantially more expensive to retrieve. To address these limitations, we introduce \\model{}, an RL-based framework that enables LLMs to perform multi-turn and adaptive graph-text hybrid RAG. \\model{} jointly optimizes the entire generation process via RL, allowing the model to learn when to reason, what to retrieve from either texts or graphs, and when to produce final answers, all within a unified generation policy. To guide this learning process, we design a two-stage training framework that accounts for both task outcome and retrieval efficiency, enabling the model to exploit hybrid evidence while avoiding unnecessary retrieval overhead. Experimental results across five question answering benchmarks demonstrate that \\model{} significantly outperforms existing RAG baselines, highlighting the benefits of end-to-end RL in supporting adaptive and efficient retrieval for complex reasoning.",
+        "authors": "Yucan Guo, Miao Su, Saiping Guan, Zihao Sun, Xiaolong Jin, Jiafeng Guo, Xueqi Cheng",
+        "url": "http://arxiv.org/abs/2512.09487v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09487v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RouteRAG是一个基于强化学习的框架，用于多轮自适应图文混合检索增强生成（RAG）。它通过联合优化整个生成过程，使LLM能够学习何时推理、何时从文本或图谱中检索以及何时生成最终答案。这显著提升了RAG的性能和效率，解决了LLM在复杂推理中检索效率和适应性的瓶颈，具有很强的算法创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09886v1",
+        "title": "HPM-KD: Hierarchical Progressive Multi-Teacher Framework for Knowledge Distillation and Efficient Model Compression",
+        "summary": "Knowledge Distillation (KD) has emerged as a promising technique for model compression but faces critical limitations: (1) sensitivity to hyperparameters requiring extensive manual tuning, (2) capacity gap when distilling from very large teachers to small students, (3) suboptimal coordination in multi-teacher scenarios, and (4) inefficient use of computational resources. We present \\textbf{HPM-KD}, a framework that integrates six synergistic components: (i) Adaptive Configuration Manager via meta-learning that eliminates manual hyperparameter tuning, (ii) Progressive Distillation Chain with automatically determined intermediate models, (iii) Attention-Weighted Multi-Teacher Ensemble that learns dynamic per-sample weights, (iv) Meta-Learned Temperature Scheduler that adapts temperature throughout training, (v) Parallel Processing Pipeline with intelligent load balancing, and (vi) Shared Optimization Memory for cross-experiment reuse. Experiments on CIFAR-10, CIFAR-100, and tabular datasets demonstrate that HPM-KD: achieves 10x-15x compression while maintaining 85% accuracy retention, eliminates the need for manual tuning, and reduces training time by 30-40% via parallelization. Ablation studies confirm independent contribution of each component (0.10-0.98 pp). HPM-KD is available as part of the open-source DeepBridge library.",
+        "authors": "Gustavo Coelho Haase, Paulo Henrique Dourado da Silva",
+        "url": "http://arxiv.org/abs/2512.09886v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09886v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HPM-KD是一个分层渐进式多教师知识蒸馏框架，通过整合六个协同组件（如自适应配置管理器、元学习温度调度器）解决了传统KD在超参数敏感性、容量差距和多教师协调方面的局限性。它实现了10-15倍的模型压缩和85%的精度保持，同时减少了训练时间，直接解决了模型压缩和数据效率的实际瓶颈，具有显著的工程创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09871v1",
+        "title": "Diffusion Posterior Sampler for Hyperspectral Unmixing with Spectral Variability Modeling",
+        "summary": "Linear spectral mixture models (LMM) provide a concise form to disentangle the constituent materials (endmembers) and their corresponding proportions (abundance) in a single pixel. The critical challenges are how to model the spectral prior distribution and spectral variability. Prior knowledge and spectral variability can be rigorously modeled under the Bayesian framework, where posterior estimation of Abundance is derived by combining observed data with endmember prior distribution. Considering the key challenges and the advantages of the Bayesian framework, a novel method using a diffusion posterior sampler for semiblind unmixing, denoted as DPS4Un, is proposed to deal with these challenges with the following features: (1) we view the pretrained conditional spectrum diffusion model as a posterior sampler, which can combine the learned endmember prior with observation to get the refined abundance distribution. (2) Instead of using the existing spectral library as prior, which may raise bias, we establish the image-based endmember bundles within superpixels, which are used to train the endmember prior learner with diffusion model. Superpixels make sure the sub-scene is more homogeneous. (3) Instead of using the image-level data consistency constraint, the superpixel-based data fidelity term is proposed. (4) The endmember is initialized as Gaussian noise for each superpixel region, DPS4Un iteratively updates the abundance and endmember, contributing to spectral variability modeling. The experimental results on three real-world benchmark datasets demonstrate that DPS4Un outperforms the state-of-the-art hyperspectral unmixing methods.",
+        "authors": "Yimin Zhu, Lincoln Linlin Xu",
+        "url": "http://arxiv.org/abs/2512.09871v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09871v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种利用扩散后验采样器进行高光谱解混的新方法DPS4Un，通过预训练的条件谱扩散模型结合观测数据，并引入基于超像素的端元束来建模光谱变异性。其贝叶斯框架下的严谨建模和迭代更新机制，在理论上具有创新性，并解决了高光谱解混中的关键挑战，对统计推导严谨性的要求有很好的体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09872v1",
+        "title": "FlipLLM: Efficient Bit-Flip Attacks on Multimodal LLMs using Reinforcement Learning",
+        "summary": "Generative Artificial Intelligence models, such as Large Language Models (LLMs) and Large Vision Models (VLMs), exhibit state-of-the-art performance but remain vulnerable to hardware-based threats, specifically bit-flip attacks (BFAs). Existing BFA discovery methods lack generalizability and struggle to scale, often failing to analyze the vast parameter space and complex interdependencies of modern foundation models in a reasonable time. This paper proposes FlipLLM, a reinforcement learning (RL) architecture-agnostic framework that formulates BFA discovery as a sequential decision-making problem. FlipLLM combines sensitivity-guided layer pruning with Q-learning to efficiently identify minimal, high-impact bit sets that can induce catastrophic failure. We demonstrate the effectiveness and generalizability of FlipLLM by applying it to a diverse set of models, including prominent text-only LLMs (GPT-2 Large, LLaMA 3.1 8B, and DeepSeek-V2 7B), VLMs such as LLaVA 1.6, and datasets, such as MMLU, MMLU-Pro, VQAv2, and TextVQA. Our results show that FlipLLM can identify critical bits that are vulnerable to BFAs up to 2.5x faster than SOTA methods. We demonstrate that flipping the FlipLLM-identified bits plummets the accuracy of LLaMA 3.1 8B from 69.9% to ~0.2%, and for LLaVA's VQA score from 78% to almost 0%, by flipping as few as 5 and 7 bits, respectively. Further analysis reveals that applying standard hardware protection mechanisms, such as ECC SECDED, to the FlipLLM-identified bit locations completely mitigates the BFA impact, demonstrating the practical value of our framework in guiding hardware-level defenses. FlipLLM offers the first scalable and adaptive methodology for exploring the BFA vulnerability of both language and multimodal foundation models, paving the way for comprehensive hardware-security evaluation.",
+        "authors": "Khurram Khalil, Khaza Anuarul Hoque",
+        "url": "http://arxiv.org/abs/2512.09872v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09872v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FlipLLM是一个基于强化学习的架构无关框架，用于高效识别多模态LLM中的位翻转攻击（BFA）漏洞。它将BFA发现建模为序列决策问题，结合敏感度引导剪枝和Q-learning。这对于LLM的硬件安全性至关重要，能以更快的速度识别关键位并指导硬件级防御，直接解决了LLM应用中的安全瓶颈，具有很强的实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09829v1",
+        "title": "RIFT: A Scalable Methodology for LLM Accelerator Fault Assessment using Reinforcement Learning",
+        "summary": "The massive scale of modern AI accelerators presents critical challenges to traditional fault assessment methodologies, which face prohibitive computational costs and provide poor coverage of critical failure modes. This paper introduces RIFT (Reinforcement Learning-guided Intelligent Fault Targeting), a scalable framework that automates the discovery of minimal, high-impact fault scenarios for efficient design-time fault assessment. RIFT transforms the complex search for worst-case faults into a sequential decision-making problem, combining hybrid sensitivity analysis for search space pruning with reinforcement learning to intelligently generate minimal, high-impact test suites. Evaluated on billion-parameter Large Language Model (LLM) workloads using NVIDIA A100 GPUs, RIFT achieves a \\textbf{2.2$\\times$} fault assessment speedup over evolutionary methods and reduces the required test vector volume by over \\textbf{99\\%} compared to random fault injection, all while achieving \\textbf{superior fault coverage}. The proposed framework also provides actionable data to enable intelligent hardware protection strategies, demonstrating that RIFT-guided selective error correction code provides a \\textbf{12.8$\\times$} improvement in \\textbf{cost-effectiveness} (coverage per unit area) compared to uniform triple modular redundancy protection. RIFT automatically generates UVM-compliant verification artifacts, ensuring its findings are directly actionable and integrable into commercial RTL verification workflows.",
+        "authors": "Khurram Khalil, Muhammad Mahad Khaliq, Khaza Anuarul Hoque",
+        "url": "http://arxiv.org/abs/2512.09829v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09829v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RIFT提出了一种可扩展的LLM加速器故障评估方法，通过强化学习自动化发现最小、高影响的故障场景。它显著提高了故障评估速度，减少了测试向量量，同时实现了卓越的故障覆盖。这对于确保LLM在实际部署中的硬件可靠性和效率至关重要，解决了模型部署的实际瓶颈，具有很强的工程创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09427v1",
+        "title": "ODMA: On-Demand Memory Allocation Framework for LLM Serving on LPDDR-Class Accelerators",
+        "summary": "Serving large language models (LLMs) on accelerators with poor random-access bandwidth (e.g., LPDDR5-based) is limited by current memory managers. Static pre-allocation wastes memory, while fine-grained paging (e.g., PagedAttention) is ill-suited due to high random-access costs. Existing HBM-centric solutions do not exploit the characteristics of random-access-constrained memory (RACM) accelerators like Cambricon MLU370. We present ODMA, an on-demand memory allocation framework for RACM. ODMA addresses distribution drift and heavy-tailed requests by coupling a lightweight length predictor with dynamic bucket partitioning and a large-bucket safeguard. Boundaries are periodically updated from live traces to maximize utilization. On Alpaca and Google-NQ, ODMA improves prediction accuracy of prior work significantly (e.g., from 82.68% to 93.36%). Serving DeepSeek-R1-Distill-Qwen-7B on Cambricon MLU370-X4, ODMA raises memory utilization from 55.05% to 72.45% and improves RPS and TPS by 29% and 27% over static baselines. This demonstrates that hardware-aware allocation unlocks efficient LLM serving on RACM platforms.",
+        "authors": "Guoqiang Zou, Wanyu Wang, Hao Zheng, Longxiang Yin, Yinhe Han",
+        "url": "http://arxiv.org/abs/2512.09427v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09427v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ODMA是一个按需内存分配框架，专为LPDDR类加速器上的LLM服务设计。它通过轻量级长度预测器、动态桶分区和大型桶保护机制，解决了静态预分配和细粒度分页的局限性。这显著提高了内存利用率和请求/令牌吞吐量，直接解决了LLM服务中的内存和效率瓶颈，对LLM架构优化有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09792v1",
+        "title": "FastPose-ViT: A Vision Transformer for Real-Time Spacecraft Pose Estimation",
+        "summary": "Estimating the 6-degrees-of-freedom (6DoF) pose of a spacecraft from a single image is critical for autonomous operations like in-orbit servicing and space debris removal. Existing state-of-the-art methods often rely on iterative Perspective-n-Point (PnP)-based algorithms, which are computationally intensive and ill-suited for real-time deployment on resource-constrained edge devices. To overcome these limitations, we propose FastPose-ViT, a Vision Transformer (ViT)-based architecture that directly regresses the 6DoF pose. Our approach processes cropped images from object bounding boxes and introduces a novel mathematical formalism to map these localized predictions back to the full-image scale. This formalism is derived from the principles of projective geometry and the concept of \"apparent rotation\", where the model predicts an apparent rotation matrix that is then corrected to find the true orientation. We demonstrate that our method outperforms other non-PnP strategies and achieves performance competitive with state-of-the-art PnP-based techniques on the SPEED dataset. Furthermore, we validate our model's suitability for real-world space missions by quantizing it and deploying it on power-constrained edge hardware. On the NVIDIA Jetson Orin Nano, our end-to-end pipeline achieves a latency of ~75 ms per frame under sequential execution, and a non-blocking throughput of up to 33 FPS when stages are scheduled concurrently.",
+        "authors": "Pierre Ancey, Andrew Price, Saqib Javed, Mathieu Salzmann",
+        "url": "http://arxiv.org/abs/2512.09792v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09792v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FastPose-ViT是一个基于Vision Transformer的架构，用于实时航天器姿态估计。它直接回归6自由度姿态，并引入了一种新的数学形式来将局部预测映射回全图像尺度。该方法在资源受限的边缘设备上实现了实时部署，解决了航天器自主操作中的计算效率瓶颈，具有明确的实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09912v1",
+        "title": "Supervised learning pays attention",
+        "summary": "In-context learning with attention enables large neural networks to make context-specific predictions by selectively focusing on relevant examples. Here, we adapt this idea to supervised learning procedures such as lasso regression and gradient boosting, for tabular data. Our goals are to (1) flexibly fit personalized models for each prediction point and (2) retain model simplicity and interpretability.   Our method fits a local model for each test observation by weighting the training data according to attention, a supervised similarity measure that emphasizes features and interactions that are predictive of the outcome. Attention weighting allows the method to adapt to heterogeneous data in a data-driven way, without requiring cluster or similarity pre-specification. Further, our approach is uniquely interpretable: for each test observation, we identify which features are most predictive and which training observations are most relevant. We then show how to use attention weighting for time series and spatial data, and we present a method for adapting pretrained tree-based models to distributional shift using attention-weighted residual corrections. Across real and simulated datasets, attention weighting improves predictive performance while preserving interpretability, and theory shows that attention-weighting linear models attain lower mean squared error than the standard linear model under mixture-of-models data-generating processes with known subgroup structure.",
+        "authors": "Erin Craig, Robert Tibshirani",
+        "url": "http://arxiv.org/abs/2512.09912v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09912v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将注意力机制应用于Lasso回归和梯度提升等监督学习过程，以实现表格数据的个性化模型和可解释性。它通过注意力加权适应异构数据，并提供了理论支持（在混合模型数据生成过程中降低均方误差）。这在传统统计学习方法中引入了前沿AI概念，同时保持了理论严谨性和可解释性，对数理统计背景的您非常有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.09621v1",
+        "title": "Semantic-Aware Cooperative Communication and Computation Framework in Vehicular Networks",
+        "summary": "Semantic Communication (SC) combined with Vehicular edge computing (VEC) provides an efficient edge task processing paradigm for Internet of Vehicles (IoV). Focusing on highway scenarios, this paper proposes a Tripartite Cooperative Semantic Communication (TCSC) framework, which enables Vehicle Users (VUs) to perform semantic task offloading via Vehicle-to-Infrastructure (V2I) and Vehicle-to-Vehicle (V2V) communications. Considering task latency and the number of semantic symbols, the framework constructs a Mixed-Integer Nonlinear Programming (MINLP) problem, which is transformed into two subproblems. First, we innovatively propose a multi-agent proximal policy optimization task offloading optimization method based on parametric distribution noise (MAPPO-PDN) to solve the optimization problem of the number of semantic symbols; second, linear programming (LP) is used to solve offloading ratio. Simulations show that performance of this scheme is superior to that of other algorithms.",
+        "authors": "Jingbo Zhang, Maoxin Ji, Qiong Wu, Pingyi Fan, Kezhi Wang, Wen Chen",
+        "url": "http://arxiv.org/abs/2512.09621v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.09621v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个三方协同语义通信（TCSC）框架，结合语义通信和车载边缘计算，用于车联网中的高效边缘任务处理。它将任务卸载问题建模为混合整数非线性规划，并提出了一种多智能体近端策略优化方法（MAPPO-PDN）来解决。这展示了AI前沿算法在通信架构中的应用，解决了实际应用中的效率瓶颈。"
+    }
+]

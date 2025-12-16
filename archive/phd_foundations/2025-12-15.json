@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.13506v1",
+        "title": "Learning under Distributional Drift: Reproducibility as an Intrinsic Statistical Resource",
+        "summary": "Statistical learning under distributional drift remains insufficiently characterized: when each observation alters the data-generating law, classical generalization bounds can collapse. We introduce a new statistical primitive, the reproducibility budget $C_T$, which quantifies a system's finite capacity for statistical reproducibility - the extent to which its sampling process can remain governed by a consistent underlying distribution in the presence of both exogenous change and endogenous feedback. Formally, $C_T$ is defined as the cumulative Fisher-Rao path length of the coupled learner-environment evolution, measuring the total distributional motion accumulated during learning. From this construct we derive a drift-feedback generalization bound of order $O(T^{-1/2} + C_T/T)$, and we prove a matching minimax lower bound showing that this rate is minimax-optimal. Consequently, the results establish a reproducibility speed limit: no algorithm can achieve smaller worst-case generalization error than that imposed by the average Fisher-Rao drift rate $C_T/T$ of the data-generating process. The framework situates exogenous drift, adaptive data analysis, and performative prediction within a common geometric structure, with $C_T$ emerging as the intrinsic quantity measuring distributional motion across these settings.",
+        "authors": "Sofiya Zaichyk",
+        "url": "http://arxiv.org/abs/2512.13506v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13506v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个新的统计原语——可复现性预算，并推导出了具有匹配极小极大下界的泛化界限。它将分布漂移、自适应数据分析和性能预测统一在一个几何结构中，提供了强大的统计保证和深刻的理论见解，非常符合您对理论基础和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13196v1",
+        "title": "Noise-Resilient Quantum Aggregation on NISQ for Federated ADAS Learning",
+        "summary": "Advanced Driver Assistance Systems (ADAS) increasingly employ Federated Learning (FL) to collaboratively train models across distributed vehicular nodes while preserving data privacy. Yet, conventional FL aggregation remains susceptible to noise, latency, and security constraints inherent to real-time vehicular networks. This paper introduces Noise-Resilient Quantum Federated Learning (NR-QFL), a hybrid quantum-classical framework that enables secure, low-latency aggregation through variational quantum circuits (VQCs) operating under Noisy Intermediate-Scale Quantum (NISQ) conditions. The framework encodes model parameters as quantum states with adaptive gate reparameterization, ensuring bounded-error convergence and provable resilience under Completely Positive Trace-Preserving (CPTP) dynamics. NR-QFL employs quantum entropy-based client selection and multi-server coordination for fairness and stability. Empirical validation shows consistent convergence with reduced gradient variance, lower communication overhead, and enhanced noise tolerance under constrained edge conditions. The framework establishes a scalable foundation for quantum-enhanced federated learning, enabling secure, efficient, and dynamically stable ADAS intelligence at the vehicular edge.",
+        "authors": "Chethana Prasad Kabgere, Sudarshan T S B",
+        "url": "http://arxiv.org/abs/2512.13196v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13196v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个混合量子-经典联邦学习框架，并提供了在NISQ条件下具有“有界误差收敛”和“可证明弹性”的理论保证。它涉及量子理论、CPTP动力学等，将严谨的数学逻辑应用于现代AI系统（联邦学习），创新性与理论深度兼具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13125v1",
+        "title": "Quanvolutional Neural Networks for Spectrum Peak-Finding",
+        "summary": "The analysis of spectra, such as Nuclear Magnetic Resonance (NMR) spectra, for the comprehensive characterization of peaks is a challenging task for both experts and machines, especially with complex molecules. This process, also known as deconvolution, involves identifying and quantifying the peaks in the spectrum. Machine learning techniques have shown promising results in automating this process. With the advent of quantum computing, there is potential to further enhance these techniques. In this work, inspired by the success of classical Convolutional Neural Networks (CNNs), we explore the use of Quanvolutional Neural Networks (QuanvNNs) for the multi-task peak finding problem, involving both peak counting and position estimation. We implement a simple and interpretable QuanvNN architecture that can be directly compared to its classical CNN counterpart, and evaluate its performance on a synthetic NMR-inspired dataset. Our results demonstrate that QuanvNNs outperform classical CNNs on challenging spectra, achieving an 11\\% improvement in F1 score and a 30\\% reduction in mean absolute error for peak position estimation. Additionally, QuanvNNs appear to exhibit better convergence stability for harder problems.",
+        "authors": "Lukas Bischof, Rudolf M. Füchslin, Kurt Stockinger, Pavel Sulimov",
+        "url": "http://arxiv.org/abs/2512.13125v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13125v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探索了Quanvolutional Neural Networks（量子卷积神经网络）在频谱峰值查找中的应用。虽然是量子计算领域，但其对模型性能和收敛稳定性的分析，以及与经典CNN的对比，暗示了对底层数学原理的关注。量子计算本身就具有强大的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13473v1",
+        "title": "Parsimonious Ultrametric Manly Mixture Models",
+        "summary": "A family of parsimonious ultrametric mixture models with the Manly transformation is developed for clustering high-dimensional and asymmetric data. Advances in Gaussian mixture modeling sufficiently handle high-dimensional data but struggle with the common presence of skewness. While these advances reduce the number of free parameters, they often provide limited insight into the structure and interpretation of the clusters. To address this shortcoming, this research implements the extended ultrametric covariance structure and the Manly transformation resulting in the parsimonious ultrametric Manly mixture model family. The ultrametric covariance structure reduces the number of free parameters while identifying latent hierarchical relationships between and within groups of variables. This phenomenon allows the visualization of hierarchical relationships within individual clusters, improving cluster interpretability. Additionally, as with many classes of mixture models, model selection remains a fundamental challenge; a two-step model selection procedure is proposed herein. With simulation studies and real data analyses, we demonstrate improved model selection via the proposed two-step method, and the effective clustering performance for the proposed family.",
+        "authors": "Alexa A. Sochaniwsky, Paul D. McNicholas",
+        "url": "http://arxiv.org/abs/2512.13473v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13473v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了一系列用于高维和非对称数据聚类的“简约超度量Manly混合模型”。它深入探讨了协方差结构、潜在层次关系和模型选择，是核心统计建模领域的严谨理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13622v1",
+        "title": "Empirical Bayes learning from selectively reported confidence intervals",
+        "summary": "We develop a statistical framework for empirical Bayes learning from selectively reported confidence intervals, applied here to provide context for interpreting results published in MEDLINE abstracts. A collection of 326,060 z-scores from MEDLINE abstracts (2000-2018) provides context for interpreting individual studies; we formalize this as an empirical Bayes task complicated by selection bias. We address selection bias through a selective tilting approach that extends empirical Bayes confidence intervals to truncated sampling mechanisms. Sign information is unreliable (a positive z-score need not indicate benefit, and investigators may choose contrast directions post hoc), so we work with absolute z-scores and identify only the distribution of absolute signal-to-noise ratios (SNRs). Our framework provides coverage guarantees for functionals including posterior estimands describing idealized replications and the symmetrized posterior mean, which we justify decision-theoretically as optimal among sign-equivariant (odd) estimators and minimax among priors inducing the same absolute SNR distribution.",
+        "authors": "Hunter Chen, Junming Guan, Erik van Zwet, Nikolaos Ignatiadis",
+        "url": "http://arxiv.org/abs/2512.13622v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13622v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个用于从选择性报告的置信区间中进行经验贝叶斯学习的统计框架，解决了选择偏差问题，并提供了“覆盖保证”和“极小极大”估计量。这是统计理论的深度研究，非常符合您对统计保证和决策理论的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13400v1",
+        "title": "Policy-Aligned Estimation of Conditional Average Treatment Effects",
+        "summary": "Firms often develop targeting policies to personalize marketing actions and improve incremental profits. Effective targeting depends on accurately separating customers with positive versus negative treatment effects. We propose an approach to estimate the conditional average treatment effects (CATEs) of marketing actions that aligns their estimation with the firm's profit objective. The method recognizes that, for many customers, treatment effects are so extreme that additional accuracy is unlikely to change the recommended actions. However, accuracy matters near the decision boundary, as small errors can alter targeting decisions. By modifying the firm's objective function in the standard profit maximization problem, our method yields a near-optimal targeting policy while simultaneously estimating CATEs. This introduces a new perspective on CATE estimation, reframing it as a problem of profit optimization rather than prediction accuracy. We establish the theoretical properties of the proposed method and demonstrate its performance and trade-offs using synthetic data.",
+        "authors": "Artem Timoshenko, Caio Waisman",
+        "url": "http://arxiv.org/abs/2512.13400v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13400v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文关注条件平均治疗效果（CATEs）的估计，并将其与企业利润目标对齐。它建立了所提出方法的“理论性质”，并将CATE估计重新定义为利润优化问题。这直接涉及因果推断和优化理论，是您偏好的核心领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13285v1",
+        "title": "CausalCLIP: Causally-Informed Feature Disentanglement and Filtering for Generalizable Detection of Generated Images",
+        "summary": "The rapid advancement of generative models has increased the demand for generated image detectors capable of generalizing across diverse and evolving generation techniques. However, existing methods, including those leveraging pre-trained vision-language models, often produce highly entangled representations, mixing task-relevant forensic cues (causal features) with spurious or irrelevant patterns (non-causal features), thus limiting generalization. To address this issue, we propose CausalCLIP, a framework that explicitly disentangles causal from non-causal features and employs targeted filtering guided by causal inference principles to retain only the most transferable and discriminative forensic cues. By modeling the generation process with a structural causal model and enforcing statistical independence through Gumbel-Softmax-based feature masking and Hilbert-Schmidt Independence Criterion (HSIC) constraints, CausalCLIP isolates stable causal features robust to distribution shifts. When tested on unseen generative models from different series, CausalCLIP demonstrates strong generalization ability, achieving improvements of 6.83% in accuracy and 4.06% in average precision over state-of-the-art methods.",
+        "authors": "Bo Liu, Qiao Qin, Qinghui He",
+        "url": "http://arxiv.org/abs/2512.13285v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13285v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CausalCLIP利用“因果推理原则”和“结构因果模型”来解耦生成图像检测中的特征，并通过HSIC约束强制执行“统计独立性”。这完美结合了因果逻辑和严谨的数学方法，应用于现代AI系统（生成模型检测）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13073v1",
+        "title": "Spectral Equivariance and Geometric Transport in Reproducing Kernel Hilbert Spaces: A Unified Framework for Orthogonal Polynomial and Kernel Estimation",
+        "summary": "We develop a unified geometric framework for nonparametric estimation based on the notion of Twin Kernel Spaces, defined as orbits of a reproducing kernel under a group action. This structure induces a family of transported RKHS geometries in which classical orthogonal polynomial estimators, kernel estimators, and spectral smoothing methods arise as projections onto transported eigenfunction systems. Our main contribution is a Spectral Equivariance Theorem showing that the eigenfunctions of any transported kernel are obtained by unitary transport of the base eigenfunctions. As a consequence, orthogonal polynomial estimators are equivariant under geometric deformation, kernel estimators correspond to soft spectral filtering in a twin space, and minimax rates and bias--variance tradeoffs are invariant under transport. We provide examples based on Hermite and Legendre polynomials, affine and Gaussian groups, and illustrate the effectiveness of twin transport for adaptive and multimodal estimation. The framework reveals a deep connection between group actions, RKHS geometry, and spectral nonparametrics, offering a unified perspective that encompasses kernel smoothing, orthogonal series, splines, and multiscale methods.",
+        "authors": "Jocelyn Nembé",
+        "url": "http://arxiv.org/abs/2512.13073v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13073v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为再生核希尔伯特空间（RKHS）中的非参数估计开发了一个统一的几何框架，提出了“谱等变性定理”，并讨论了“极小极大率”和“偏差-方差权衡”。这是非常深刻的数学理论工作，涉及群作用和RKHS几何，是纯粹的理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13155v1",
+        "title": "Clinical transfusion-outcomes research: A practical guide",
+        "summary": "Clinical transfusion-outcomes research faces unique methodological challenges compared with other areas of clinical research. These challenges arise because patients frequently receive multiple transfusions, each unit originates from a different donor, and the probability of receiving specific blood product characteristics is influenced by external, often uncontrollable, factors. These complexities complicate causal inference in observational studies of transfusion effectiveness and safety. This guide addresses key challenges in observational transfusion research, with a focus on time-varying exposure, time-varying confounding, and treatment-confounder feedback. Using the example of donor sex and pregnancy history in relation to recipient mortality, we illustrate the strengths and limitations of commonly used analytical approaches. We compare restriction-based analyses, time-varying Cox regression, and inverse probability weighted marginal structural models using a large observational dataset of male transfusion recipients. In the applied example, restriction and conventional time-varying approaches suggested an increased mortality risk associated with transfusion of red blood cells from ever-pregnant female donors compared with male-only donors (hazard ratio [HR] 1.22; 95% CI 1.05-1.42 and HR 1.21; 95% CI 1.04-1.41, respectively). In contrast, inverse probability of treatment and censoring weighted analyses, which account for treatment-confounder feedback, showed no evidence of an association (HR 1.01; 95% CI 0.85-1.20). These findings demonstrate how conventional methods can yield biased estimates when complex longitudinal structures are not adequately handled. We provide practical guidance on study design, target trial emulation, and the use of g-methods, including a reproducible tutorial and example dataset, to support valid causal inference in clinical transfusion research.",
+        "authors": "Sarah J Valk, Camila Caram-Deelder, Rolf. H. H. Groenwold, Johanna G van der Bom",
+        "url": "http://arxiv.org/abs/2512.13155v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13155v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "作为一份“实践指南”，它深入探讨了临床输血结果研究中的“因果推断”挑战，特别是时间变量混淆和治疗-混淆反馈。它比较了多种统计方法，包括“逆概率加权边际结构模型”和“g-方法”，这些都是严谨的因果推断技术，并提供了可复现的教程，清晰度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.12971v1",
+        "title": "A Regime-Switching Approach to the Unbalanced Schrödinger Bridge Problem",
+        "summary": "The unbalanced Schrödinger bridge problem (uSBP) seeks to interpolate between a probability measure $ρ_0$ and a sub-probability measure $ρ_T$ while minimizing KL divergence to a reference measure $\\mathbf{R}$ on a path space. In this work, we investigate the case where $\\mathbf{R}$ is the path measure of a diffusion process with killing, which we interpret as a regime-switching diffusion. In addition to matching the initial and terminal distributions of trajectories that survive up to time $T$, we consider a general constraint $ψ(t,x)$ on the distribution of killing times and/or killing locations.   We investigate the uSBPs corresponding to four choices of $ψ$ in detail which reflect different levels of information available to an observer. We also provide a rigorous analysis of the connections and the comparisons among the outcomes of these four cases. Our results are novel in the field of uSBP. The regime-switching approach proposed in this work provides a unified framework for tackling different uSBP scenarios, which not only reconciles but also extends the existing literature on uSBP.",
+        "authors": "Andrei Zlotchevski, Linan Chen",
+        "url": "http://arxiv.org/abs/2512.12971v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.12971v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了“非平衡薛定谔桥问题”，采用“机制转换扩散”方法，并承诺进行“严格分析”。它涉及随机过程和最优传输等深层数学理论，非常符合您对数学严谨性的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.12939v1",
+        "title": "Continuous Edit Distance, Geodesics and Barycenters of Time-varying Persistence Diagrams",
+        "summary": "We introduce the Continuous Edit Distance (CED), a geodesic and elastic distance for time-varying persistence diagrams (TVPDs). The CED extends edit-distance ideas to TVPDs by combining local substitution costs with penalized deletions/insertions, controlled by two parameters: \\(α\\) (trade-off between temporal misalignment and diagram discrepancy) and \\(β\\) (gap penalty). We also provide an explicit construction of CED-geodesics. Building on these ingredients, we present two practical barycenter solvers, one stochastic and one greedy, that monotonically decrease the CED Frechet energy. Empirically, the CED is robust to additive perturbations (both temporal and spatial), recovers temporal shifts, and supports temporal pattern search. On real-life datasets, the CED achieves clustering performance comparable or better than standard elastic dissimilarities, while our clustering based on CED-barycenters yields superior classification results. Overall, the CED equips TVPD analysis with a principled distance, interpretable geodesics, and practical barycenters, enabling alignment, comparison, averaging, and clustering directly in the space of TVPDs. A C++ implementation is provided for reproducibility at the following address https://github.com/sebastien-tchitchek/ContinuousEditDistance.",
+        "authors": "Sebastien Tchitchek, Mohamed Kissi, Julien Tierny",
+        "url": "http://arxiv.org/abs/2512.12939v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.12939v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了“连续编辑距离”（CED）作为时变持久性图的测地线和弹性距离，并提供了CED测地线的显式构造和重心求解器。拓扑数据分析（TDA）是一个严谨的数学领域，这篇论文在其中做出了重要的理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.12887v1",
+        "title": "Revisiting 2D Foundation Models for Scalable 3D Medical Image Classification",
+        "summary": "3D medical image classification is essential for modern clinical workflows. Medical foundation models (FMs) have emerged as a promising approach for scaling to new tasks, yet current research suffers from three critical pitfalls: data-regime bias, suboptimal adaptation, and insufficient task coverage. In this paper, we address these pitfalls and introduce AnyMC3D, a scalable 3D classifier adapted from 2D FMs. Our method scales efficiently to new tasks by adding only lightweight plugins (about 1M parameters per task) on top of a single frozen backbone. This versatile framework also supports multi-view inputs, auxiliary pixel-level supervision, and interpretable heatmap generation. We establish a comprehensive benchmark of 12 tasks covering diverse pathologies, anatomies, and modalities, and systematically analyze state-of-the-art 3D classification techniques. Our analysis reveals key insights: (1) effective adaptation is essential to unlock FM potential, (2) general-purpose FMs can match medical-specific FMs if properly adapted, and (3) 2D-based methods surpass 3D architectures for 3D classification. For the first time, we demonstrate the feasibility of achieving state-of-the-art performance across diverse applications using a single scalable framework (including 1st place in the VLM3D challenge), eliminating the need for separate task-specific models.",
+        "authors": "Han Liu, Bogdan Georgescu, Yanbo Zhang, Youngjin Yoo, Michael Baumgartner, Riqiang Gao, Jianing Wang, Gengyan Zhao, Eli Gibson, Dorin Comaniciu, Sasa Grbic",
+        "url": "http://arxiv.org/abs/2512.12887v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.12887v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文明确提出了“PAC-贝叶斯界限”用于多元线性回归和线性自编码器，并研究了模型的“泛化能力”和“收敛的充分条件”。这是核心的统计学习理论工作，提供了强大的统计保证，对理解现代AI模型（如推荐系统中的LAE）的理论基础至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13260v1",
+        "title": "From Educational Analytics to AI Governance: Transferable Lessons from Complex Systems Interventions",
+        "summary": "Both student retention in higher education and artificial intelligence governance face a common structural challenge: the application of linear regulatory frameworks to complex adaptive systems. Risk-based approaches dominate both domains, yet systematically fail because they assume stable causal pathways, predictable actor responses, and controllable system boundaries. This paper extracts transferable methodological principles from CAPIRE (Curriculum, Archetypes, Policies, Interventions & Research Environment), an empirically validated framework for educational analytics that treats student dropout as an emergent property of curricular structures, institutional rules, and macroeconomic shocks. Drawing on longitudinal data from engineering programmes and causal inference methods, CAPIRE demonstrates that well-intentioned interventions routinely generate unintended consequences when system complexity is ignored. We argue that five core principles developed within CAPIRE - temporal observation discipline, structural mapping over categorical classification, archetype-based heterogeneity analysis, causal mechanism identification, and simulation-based policy design - transfer directly to the challenge of governing AI systems. The isomorphism is not merely analogical: both domains exhibit non-linearity, emergence, feedback loops, strategic adaptation, and path dependence. We propose Complex Systems AI Governance (CSAIG) as an integrated framework that operationalises these principles for regulatory design, shifting the central question from \"how risky is this AI system?\" to \"how does this intervention reshape system dynamics?\" The contribution is twofold: demonstrating that empirical lessons from one complex systems domain can accelerate governance design in another, and offering a concrete methodological architecture for complexity-aware AI regulation.",
+        "authors": "Hugo Roger Paz",
+        "url": "http://arxiv.org/abs/2512.13260v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13260v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从教育分析中提取可转移的方法论原则，应用于AI治理，强调“因果推断方法”和复杂系统动力学（非线性、反馈循环）。它提供了一个复杂系统AI治理框架，将因果逻辑应用于AI系统的宏观治理问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13337v1",
+        "title": "FROC: A Unified Framework with Risk-Optimized Control for Machine Unlearning in LLMs",
+        "summary": "Machine unlearning (MU) seeks to eliminate the influence of specific training examples from deployed models. As large language models (LLMs) become widely used, managing risks arising from insufficient forgetting or utility loss is increasingly crucial. Current MU techniques lack effective mechanisms for evaluating and controlling these risks, hindering the selection of strategies that appropriately balance safety and utility, and raising trust concerns surrounding the \"right to be forgotten.\" To address these issues, we propose FROC, a unified framework with Risk-Optimized Control for machine unlearning in LLMs. FROC is built around a conformal-style risk-control formulation that expresses a user-specified risk budget on unlearning behavior. This probability-based constraint enables FROC to compare MU strategies, identify feasible operating regions, and guide hyperparameter selection according to desired trade-offs between forgetting sufficiency and utility preservation. To operationalize this constraint, FROC introduces a smoothly varying continuous risk model that aggregates forgetting deficiency and utility degradation into a single configuration-level score. Building on conformal risk analysis, FROC computes (1) the Conformal Unlearning Risk (CUR), a data-driven estimated value on the probability that forgotten samples continue to influence model predictions, and (2) risk-controlled configuration sets, which identify unlearning hyperparameters that are valid under the specified risk budget. Experiments across multiple LLM MU methods demonstrate that FROC produces stable, interpretable risk landscapes and reveals consistent relationships between unlearning configurations, semantic shift, and utility impact. FROC reframes MU as a controllable, risk-aware process and offers a practical foundation for managing unlearning behavior in large-scale LLM deployments.",
+        "authors": "Si Qi Goh, Yongsen Zheng, Ziyao Liu, Sami Hormi, Kwok-Yan Lam",
+        "url": "http://arxiv.org/abs/2512.13337v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13337v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FROC框架为LLM中的机器遗忘提供了“风险优化控制”，基于“共形风格的风险控制公式”和“概率约束”。共形预测提供了强大的统计保证，将其应用于LLM的风险管理，是理论与现代AI系统结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.13069v1",
+        "title": "Multi-fidelity aerodynamic data fusion by autoencoder transfer learning",
+        "summary": "Accurate aerodynamic prediction often relies on high-fidelity simulations; however, their prohibitive computational costs severely limit their applicability in data-driven modeling. This limitation motivates the development of multi-fidelity strategies that leverage inexpensive low-fidelity information without compromising accuracy. Addressing this challenge, this work presents a multi-fidelity deep learning framework that combines autoencoder-based transfer learning with a newly developed Multi-Split Conformal Prediction (MSCP) strategy to achieve uncertainty-aware aerodynamic data fusion under extreme data scarcity. The methodology leverages abundant Low-Fidelity (LF) data to learn a compact latent physics representation, which acts as a frozen knowledge base for a decoder that is subsequently fine-tuned using scarce HF samples. Tested on surface-pressure distributions for NACA airfoils (2D) and a transonic wing (3D) databases, the model successfully corrects LF deviations and achieves high-accuracy pressure predictions using minimal HF training data. Furthermore, the MSCP framework produces robust, actionable uncertainty bands with pointwise coverage exceeding 95%. By combining extreme data efficiency with uncertainty quantification, this work offers a scalable and reliable solution for aerodynamic regression in data-scarce environments.",
+        "authors": "Javier Nieto-Centenero, Esther Andrés, Rodrigo Castellanos",
+        "url": "http://arxiv.org/abs/2512.13069v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.13069v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文结合自编码器和迁移学习，利用“多分裂共形预测”（MSCP）策略实现不确定性感知的空气动力学数据融合。共形预测提供了强大的统计保证（覆盖率），将其应用于AI模型的不确定性量化，是理论严谨性与实践影响力的良好结合。"
+    }
+]

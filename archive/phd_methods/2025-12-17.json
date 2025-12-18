@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.15687v1",
+        "title": "Can LLMs Guide Their Own Exploration? Gradient-Guided Reinforcement Learning for LLM Reasoning",
+        "summary": "Reinforcement learning has become essential for strengthening the reasoning abilities of large language models, yet current exploration mechanisms remain fundamentally misaligned with how these models actually learn. Entropy bonuses and external semantic comparators encourage surface level variation but offer no guarantee that sampled trajectories differ in the update directions that shape optimization. We propose G2RL, a gradient guided reinforcement learning framework in which exploration is driven not by external heuristics but by the model own first order update geometry. For each response, G2RL constructs a sequence level feature from the model final layer sensitivity, obtainable at negligible cost from a standard forward pass, and measures how each trajectory would reshape the policy by comparing these features within a sampled group. Trajectories that introduce novel gradient directions receive a bounded multiplicative reward scaler, while redundant or off manifold updates are deemphasized, yielding a self referential exploration signal that is naturally aligned with PPO style stability and KL control. Across math and general reasoning benchmarks (MATH500, AMC, AIME24, AIME25, GPQA, MMLUpro) on Qwen3 base 1.7B and 4B models, G2RL consistently improves pass@1, maj@16, and pass@k over entropy based GRPO and external embedding methods. Analyzing the induced geometry, we find that G2RL expands exploration into substantially more orthogonal and often opposing gradient directions while maintaining semantic coherence, revealing that a policy own update space provides a far more faithful and effective basis for guiding exploration in large language model reinforcement learning.",
+        "authors": "Zhenwen Liang, Sidi Lu, Wenhao Yu, Kishan Panaganti, Yujun Zhou, Haitao Mi, Dong Yu",
+        "url": "http://arxiv.org/abs/2512.15687v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15687v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了G2RL，一种梯度引导的强化学习框架，其探索机制由模型自身的一阶更新几何驱动。这种从模型内部学习机制出发的探索策略具有高度创新性和理论严谨性，为提升LLM的推理能力提供了新的、根本性的方法，契合您对前沿算法和理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15605v1",
+        "title": "Autoregressive Language Models are Secretly Energy-Based Models: Insights into the Lookahead Capabilities of Next-Token Prediction",
+        "summary": "Autoregressive models (ARMs) currently constitute the dominant paradigm for large language models (LLMs). Energy-based models (EBMs) represent another class of models, which have historically been less prevalent in LLM development, yet naturally characterize the optimal policy in post-training alignment. In this paper, we provide a unified view of these two model classes. Taking the chain rule of probability as a starting point, we establish an explicit bijection between ARMs and EBMs in function space, which we show to correspond to a special case of the soft Bellman equation in maximum entropy reinforcement learning. Building upon this bijection, we derive the equivalence between supervised learning of ARMs and EBMs. Furthermore, we analyze the distillation of EBMs into ARMs by providing theoretical error bounds. Our results provide insights into the ability of ARMs to plan ahead, despite being based on the next-token prediction paradigm.",
+        "authors": "Mathieu Blondel, Michael E. Sander, Germain Vivier-Ardisson, Tianlin Liu, Vincent Roulet",
+        "url": "http://arxiv.org/abs/2512.15605v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15605v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在理论层面取得了重大突破，建立了自回归模型（ARMs）和能量基模型（EBMs）在函数空间中的显式双射，并将其与最大熵强化学习的软贝尔曼方程联系起来。它为理解LLM的“预判”能力提供了深刻的理论洞察，是您作为数理统计博士生会非常感兴趣的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15405v1",
+        "title": "EUBRL: Epistemic Uncertainty Directed Bayesian Reinforcement Learning",
+        "summary": "At the boundary between the known and the unknown, an agent inevitably confronts the dilemma of whether to explore or to exploit. Epistemic uncertainty reflects such boundaries, representing systematic uncertainty due to limited knowledge. In this paper, we propose a Bayesian reinforcement learning (RL) algorithm, $\\texttt{EUBRL}$, which leverages epistemic guidance to achieve principled exploration. This guidance adaptively reduces per-step regret arising from estimation errors. We establish nearly minimax-optimal regret and sample complexity guarantees for a class of sufficiently expressive priors in infinite-horizon discounted MDPs. Empirically, we evaluate $\\texttt{EUBRL}$ on tasks characterized by sparse rewards, long horizons, and stochasticity. Results demonstrate that $\\texttt{EUBRL}$ achieves superior sample efficiency, scalability, and consistency.",
+        "authors": "Jianfei Ma, Wee Sun Lee",
+        "url": "http://arxiv.org/abs/2512.15405v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15405v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "EUBRL是一种利用认知不确定性引导的贝叶斯强化学习算法，通过自适应地减少估计误差带来的每步遗憾来指导探索。该方法具有近乎minimax最优的遗憾界和样本复杂度保证，理论严谨性极高，能有效提升RL在稀疏奖励、长时序和随机性任务中的样本效率和一致性，解决了RL的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15176v1",
+        "title": "DEER: Draft with Diffusion, Verify with Autoregressive Models",
+        "summary": "Efficiency, as a critical practical challenge for LLM-driven agentic and reasoning systems, is increasingly constrained by the inherent latency of autoregressive (AR) decoding. Speculative decoding mitigates this cost through a draft-verify scheme, yet existing approaches rely on AR draft models (a.k.a., drafters), which introduce two fundamental issues: (1) step-wise uncertainty accumulation leads to a progressive collapse of trust between the target model and the drafter, and (2) inherently sequential decoding of AR drafters. Together, these factors cause limited speedups. In this paper, we show that a diffusion large language model (dLLM) drafters can naturally overcome these issues through its fundamentally different probabilistic modeling and efficient parallel decoding strategy. Building on this insight, we introduce DEER, an efficient speculative decoding framework that drafts with diffusion and verifies with AR models. To enable high-quality drafting, DEER employs a two-stage training pipeline to align the dLLM-based drafters with the target AR model, and further adopts single-step decoding to generate long draft segments. Experiments show DEER reaches draft acceptance lengths of up to 32 tokens, far surpassing the 10 tokens achieved by EAGLE-3. Moreover, on HumanEval with Qwen3-30B-A3B, DEER attains a 5.54x speedup, while EAGLE-3 achieves only 2.41x. Code, model, demo, etc, will be available at https://czc726.github.io/DEER/",
+        "authors": "Zicong Cheng, Guo-Wei Yang, Jia Li, Zhijie Deng, Meng-Hao Guo, Shi-Min Hu",
+        "url": "http://arxiv.org/abs/2512.15176v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15176v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DEER提出了一种高效的推测解码框架，创新性地利用扩散大语言模型（dLLM）进行草稿生成，并由自回归模型进行验证。这种方法从根本上解决了传统推测解码中自回归草稿模型的局限性，显著提升了LLM推理效率（高达5.54倍加速），对LLM应用中的延迟瓶颈有巨大实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15053v1",
+        "title": "The Meta-Prompting Protocol: Orchestrating LLMs via Adversarial Feedback Loops",
+        "summary": "The transition of Large Language Models (LLMs) from stochastic chat interfaces to reliable software components necessitates a fundamental re-engineering of interaction paradigms. Current methodologies, predominantly heuristic-based \"prompt engineering,\" fail to provide the deterministic guarantees required for mission-critical applications. We introduce the Meta-Prompting Protocol, a rigorous theoretical framework that formalizes the orchestration of LLMs as a programmable, self-optimizing system. Central to this protocol is the Adversarial Trinity, a tripartite topology comprising a Generator (P), an Auditor (A), and an Optimizer (O). By treating natural language instructions as differentiable variables within a semantic computation graph and utilizing textual critiques as gradients, this architecture mitigates hallucination and prevents model collapse. We demonstrate the theoretical viability of this approach using declarative programming paradigms (DSPy) and automatic textual differentiation (TextGrad), establishing a foundation for \"Observable Software Engineering\" in the era of probabilistic computing.",
+        "authors": "Fanzhe Fu",
+        "url": "http://arxiv.org/abs/2512.15053v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15053v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Meta-Prompting Protocol是一个严谨的理论框架，将LLM的编排形式化为可编程、自优化的系统，通过“对抗三元组”（生成器、审计器、优化器）和文本批评作为梯度来缓解幻觉并防止模型崩溃。其理论创新性和严谨性极高，为LLM的可靠性提供了新的控制范式。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15036v1",
+        "title": "Spectral Representation-based Reinforcement Learning",
+        "summary": "In real-world applications with large state and action spaces, reinforcement learning (RL) typically employs function approximations to represent core components like the policies, value functions, and dynamics models. Although powerful approximations such as neural networks offer great expressiveness, they often present theoretical ambiguities, suffer from optimization instability and exploration difficulty, and incur substantial computational costs in practice. In this paper, we introduce the perspective of spectral representations as a solution to address these difficulties in RL. Stemming from the spectral decomposition of the transition operator, this framework yields an effective abstraction of the system dynamics for subsequent policy optimization while also providing a clear theoretical characterization. We reveal how to construct spectral representations for transition operators that possess latent variable structures or energy-based structures, which implies different learning methods to extract spectral representations from data. Notably, each of these learning methods realizes an effective RL algorithm under this framework. We also provably extend this spectral view to partially observable MDPs. Finally, we validate these algorithms on over 20 challenging tasks from the DeepMind Control Suite, where they achieve performances comparable or superior to current state-of-the-art model-free and model-based baselines.",
+        "authors": "Chenxiao Gao, Haotian Sun, Na Li, Dale Schuurmans, Bo Dai",
+        "url": "http://arxiv.org/abs/2512.15036v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15036v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了谱表示作为解决强化学习（RL）中大状态/动作空间、理论模糊性、优化不稳定性和计算成本等困难的统一视角。它揭示了如何为具有潜在变量结构或能量基结构的转移算子构建谱表示，并将其扩展到部分可观测MDPs，是RL算法的根本性理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.14991v1",
+        "title": "Adaptive Partitioning and Learning for Stochastic Control of Diffusion Processes",
+        "summary": "We study reinforcement learning for controlled diffusion processes with unbounded continuous state spaces, bounded continuous actions, and polynomially growing rewards: settings that arise naturally in finance, economics, and operations research. To overcome the challenges of continuous and high-dimensional domains, we introduce a model-based algorithm that adaptively partitions the joint state-action space. The algorithm maintains estimators of drift, volatility, and rewards within each partition, refining the discretization whenever estimation bias exceeds statistical confidence. This adaptive scheme balances exploration and approximation, enabling efficient learning in unbounded domains. Our analysis establishes regret bounds that depend on the problem horizon, state dimension, reward growth order, and a newly defined notion of zooming dimension tailored to unbounded diffusion processes. The bounds recover existing results for bounded settings as a special case, while extending theoretical guarantees to a broader class of diffusion-type problems. Finally, we validate the effectiveness of our approach through numerical experiments, including applications to high-dimensional problems such as multi-asset mean-variance portfolio selection.",
+        "authors": "Hanqing Jin, Renyuan Xu, Yanzhao Yang",
+        "url": "http://arxiv.org/abs/2512.14991v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.14991v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种模型驱动的强化学习算法，用于解决具有无界连续状态空间、连续动作和多项式增长奖励的扩散过程控制问题。其核心创新在于自适应地划分联合状态-动作空间，并在估计偏差超过统计置信度时细化离散化，提供了严格的遗憾界，理论严谨性高，对金融、经济等领域的连续RL问题具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15068v1",
+        "title": "The Semantic Illusion: Certified Limits of Embedding-Based Hallucination Detection in RAG Systems",
+        "summary": "Retrieval-Augmented Generation (RAG) systems remain susceptible to hallucinations despite grounding in retrieved evidence. Current detection methods rely on semantic similarity and natural language inference (NLI), but their fundamental limitations have not been rigorously characterized. We apply conformal prediction to hallucination detection, providing finite-sample coverage guarantees that enable precise quantification of detection capabilities. Using calibration sets of approximately 600 examples, we achieve 94% coverage with 0% false positive rate on synthetic hallucinations (Natural Questions). However, on three real hallucination benchmarks spanning multiple LLMs (GPT-4, ChatGPT, GPT-3, Llama-2, Mistral), embedding-based methods - including state-of-the-art OpenAI text-embedding-3-large and cross-encoder models - exhibit unacceptable false positive rates: 100% on HaluEval, 88% on RAGTruth, and 50% on WikiBio. Crucially, GPT-4 as an LLM judge achieves only 7% FPR (95% CI: [3.4%, 13.7%]) on the same data, proving the task is solvable through reasoning. We term this the \"semantic illusion\": semantically plausible hallucinations preserve similarity to source documents while introducing factual errors invisible to embeddings. This limitation persists across embedding architectures, LLM generators, and task types, suggesting embedding-based detection is insufficient for production RAG deployment.",
+        "authors": "Debu Sinha",
+        "url": "http://arxiv.org/abs/2512.15068v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15068v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过共形预测（conformal prediction）严格量化了RAG系统中基于嵌入的幻觉检测方法的局限性，并提出了“语义幻觉”的概念。其理论严谨性高，揭示了现有检测方法的根本性缺陷，对提升RAG系统可靠性这一关键瓶颈具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15310v1",
+        "title": "SynthSeg-Agents: Multi-Agent Synthetic Data Generation for Zero-Shot Weakly Supervised Semantic Segmentation",
+        "summary": "Weakly Supervised Semantic Segmentation (WSSS) with image level labels aims to produce pixel level predictions without requiring dense annotations. While recent approaches have leveraged generative models to augment existing data, they remain dependent on real world training samples. In this paper, we introduce a novel direction, Zero Shot Weakly Supervised Semantic Segmentation (ZSWSSS), and propose SynthSeg Agents, a multi agent framework driven by Large Language Models (LLMs) to generate synthetic training data entirely without real images. SynthSeg Agents comprises two key modules, a Self Refine Prompt Agent and an Image Generation Agent. The Self Refine Prompt Agent autonomously crafts diverse and semantically rich image prompts via iterative refinement, memory mechanisms, and prompt space exploration, guided by CLIP based similarity and nearest neighbor diversity filtering. These prompts are then passed to the Image Generation Agent, which leverages Vision Language Models (VLMs) to synthesize candidate images. A frozen CLIP scoring model is employed to select high quality samples, and a ViT based classifier is further trained to relabel the entire synthetic dataset with improved semantic precision. Our framework produces high quality training data without any real image supervision. Experiments on PASCAL VOC 2012 and COCO 2014 show that SynthSeg Agents achieves competitive performance without using real training images. This highlights the potential of LLM driven agents in enabling cost efficient and scalable semantic segmentation.",
+        "authors": "Wangyu Wu, Zhenhong Chen, Xiaowei Huang, Fei Ma, Jimin Xiao",
+        "url": "http://arxiv.org/abs/2512.15310v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15310v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SynthSeg-Agents提出了一种高度创新的零样本弱监督语义分割（ZSWSSS）范式，通过LLM驱动的多智能体框架完全生成合成训练数据，无需任何真实图像监督。这从根本上解决了语义分割中数据稀缺和标注成本高的实际瓶颈，具有巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15705v1",
+        "title": "Dynamic Rebatching for Efficient Early-Exit Inference with DREX",
+        "summary": "Early-Exit (EE) is a Large Language Model (LLM) architecture that accelerates inference by allowing easier tokens to be generated using only a subset of the model's layers. However, traditional batching frameworks are ill-suited for EE LLMs, as not all requests in a batch may be ready to exit at the same time. Existing solutions either force a uniform decision on the batch, which overlooks EE opportunities, or degrade output quality by forcing premature exits. We propose Dynamic Rebatching, a solution where we dynamically reorganize the batch at each early-exit point. Requests that meet the exit criteria are immediately processed, while those that continue are held in a buffer, re-grouped into a new batch, and forwarded to deeper layers. We introduce DREX, an early-exit inference system that implements Dynamic Rebatching with two key optimizations: 1) a copy-free rebatching buffer that avoids physical data movement, and 2) an EE and SLA-aware scheduler that analytically predicts whether a given rebatching operation will be profitable. DREX also efficiently handles the missing KV cache from skipped layers using memory-efficient state-copying. Our evaluation shows that DREX improves throughput by 2-12% compared to baseline approaches while maintaining output quality. Crucially, DREX completely eliminates involuntary exits, providing a key guarantee for preserving the output quality intended by the EE model.",
+        "authors": "Xuting Liu, Daniel Alexander, Siva Kesava Reddy Kakarla, Behnaz Arzani, Vincent Liu",
+        "url": "http://arxiv.org/abs/2512.15705v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15705v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DREX提出动态重批处理（Dynamic Rebatching）方案，解决了早期退出（Early-Exit）LLM推理中批处理效率和输出质量的矛盾。通过无拷贝重批处理缓冲区和EE/SLA感知调度器等优化，显著提升了LLM推理吞吐量并消除了非自愿退出，直接解决了LLM应用中的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15550v1",
+        "title": "CTkvr: KV Cache Retrieval for Long-Context LLMs via Centroid then Token Indexing",
+        "summary": "Large language models (LLMs) are increasingly applied in long-context scenarios such as multi-turn conversations. However, long contexts pose significant challenges for inference efficiency, including high memory overhead from Key-Value (KV) cache and increased latency due to excessive memory accesses. Recent methods for dynamic KV selection struggle with trade-offs: block-level indexing degrades accuracy by retrieving irrelevant KV entries, while token-level indexing incurs high latency from inefficient retrieval mechanisms. In this paper, we propose CTKVR, a novel centroid-then-token KV retrieval scheme that addresses these limitations. CTKVR leverages a key observation: query vectors adjacent in position exhibit high similarity after Rotary Position Embedding (RoPE) and share most of their top-k KV cache entries. Based on this insight, CTKVR employs a two-stage retrieval strategy: lightweight centroids are precomputed during prefilling for centroid-grained indexing, followed by token-level refinement for precise KV retrieval. This approach balances retrieval efficiency and accuracy. To further enhance performance, we implement an optimized system for indexing construction and search using CPU-GPU co-execution. Experimentally, CTKVR achieves superior performance across multiple benchmarks with less than 1% accuracy degradation. Meanwhile, CTKVR delivers 3 times and 4 times throughput speedups on Llama-3-8B and Yi-9B at 96K context length across diverse GPU hardware.",
+        "authors": "Kuan Lu, Shuhang Lin, Sai Wu, Yichen Yao, Junhan Yang, Huan Li, Wei Chu, Xu Yinghui, Yuan Qi, Gang Chen",
+        "url": "http://arxiv.org/abs/2512.15550v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15550v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CTkvr针对长上下文LLM的KV缓存效率问题，提出了一种新颖的“质心-令牌”KV检索方案。该方法利用RoPE后查询向量的相似性，通过两阶段检索策略平衡效率和准确性，实现了高达4倍的吞吐量加速，是解决LLM长上下文推理效率瓶颈的有效算法创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15372v1",
+        "title": "Image Complexity-Aware Adaptive Retrieval for Efficient Vision-Language Models",
+        "summary": "Vision transformers in vision-language models apply uniform computational effort across all images, expending 175.33 GFLOPs (ViT-L/14) whether analysing a straightforward product photograph or a complex street scene. We propose ICAR (Image Complexity-Aware Retrieval), which enables vision transformers to use less compute for simple images whilst processing complex images through their full network depth. The key challenge is maintaining cross-modal alignment: embeddings from different processing depths must remain compatible for text matching. ICAR solves this through dual-path training that produces compatible embeddings from both reduced-compute and full-compute processing. This maintains compatibility between image representations and text embeddings in the same semantic space, whether an image exits early or processes fully. Unlike existing two-stage approaches that require expensive reranking, ICAR enables direct image-text matching without additional overhead. To determine how much compute to use, we develop ConvNeXt-IC, which treats image complexity assessment as a classification task. By applying modern classifier backbones rather than specialised architectures, ConvNeXt-IC achieves state-of-the-art performance with 0.959 correlation with human judgement (Pearson) and 4.4x speedup. Evaluated on standard benchmarks augmented with real-world web data, ICAR achieves 20% practical speedup while maintaining category-level performance and 95% of instance-level performance, enabling sustainable scaling of vision-language systems.",
+        "authors": "Mikel Williams-Lekuona, Georgina Cosma",
+        "url": "http://arxiv.org/abs/2512.15372v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15372v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ICAR提出了一种图像复杂度感知自适应检索机制，使视觉-语言模型（VLM）能根据图像复杂度动态调整计算量。通过双路径训练确保跨模态对齐，并在保持性能的同时实现了20%的实际加速，有效解决了VLM计算效率的实际瓶颈，具有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15358v1",
+        "title": "Dual-Density Inference for Efficient Language Model Reasoning",
+        "summary": "Large Language Models (LLMs) have shown impressive capabilities in complex reasoning tasks. However, current approaches employ uniform language density for both intermediate reasoning and final answers, leading to computational inefficiency. Our observation found that reasoning process serves a computational function for the model itself, while answering serves a communicative function for human understanding. This distinction enables the use of compressed, symbol-rich language for intermediate computations while maintaining human-readable final explanations. To address this inefficiency, we present Denser: \\underline{D}ual-d\\underline{ens}ity inf\\underline{er}ence, a novel framework that optimizes information density separately for reasoning and answering phases. Our framework implements this through three components: a query processing module that analyzes input problems, a high-density compressed reasoning mechanism for efficient intermediate computations, and an answer generation component that translates compressed reasoning into human-readable solutions. Experimental evaluation across multiple reasoning question answering benchmarks demonstrates that Denser reduces token consumption by up to 62\\% compared to standard Chain-of-Thought methods while preserving or improving accuracy. These efficiency gains are particularly significant for complex multi-step reasoning problems where traditional methods generate extensive explanations.",
+        "authors": "Zhengyi Zhao, Shubo Zhang, Yuxi Zhang, Huimin Wang, Binyang Li, Kam-Fai Wong",
+        "url": "http://arxiv.org/abs/2512.15358v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15358v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Denser提出了一种双密度推理框架，创新性地为LLM的中间推理和最终回答阶段分别优化信息密度。通过使用压缩的符号语言进行中间计算，大幅减少了高达62%的token消耗，同时保持或提升了准确性，是解决LLM推理效率瓶颈的有效算法创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15311v1",
+        "title": "KD360-VoxelBEV: LiDAR and 360-degree Camera Cross Modality Knowledge Distillation for Bird's-Eye-View Segmentation",
+        "summary": "We present the first cross-modality distillation framework specifically tailored for single-panoramic-camera Bird's-Eye-View (BEV) segmentation. Our approach leverages a novel LiDAR image representation fused from range, intensity and ambient channels, together with a voxel-aligned view transformer that preserves spatial fidelity while enabling efficient BEV processing. During training, a high-capacity LiDAR and camera fusion Teacher network extracts both rich spatial and semantic features for cross-modality knowledge distillation into a lightweight Student network that relies solely on a single 360-degree panoramic camera image. Extensive experiments on the Dur360BEV dataset demonstrate that our teacher model significantly outperforms existing camera-based BEV segmentation methods, achieving a 25.6\\% IoU improvement. Meanwhile, the distilled Student network attains competitive performance with an 8.5\\% IoU gain and state-of-the-art inference speed of 31.2 FPS. Moreover, evaluations on KITTI-360 (two fisheye cameras) confirm that our distillation framework generalises to diverse camera setups, underscoring its feasibility and robustness. This approach reduces sensor complexity and deployment costs while providing a practical solution for efficient, low-cost BEV segmentation in real-world autonomous driving.",
+        "authors": "Wenke E, Yixin Sun, Jiaxu Liu, Hubert P. H. Shum, Amir Atapour-Abarghouei, Toby P. Breckon",
+        "url": "http://arxiv.org/abs/2512.15311v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15311v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "KD360-VoxelBEV提出了首个针对单全景相机鸟瞰图（BEV）分割的跨模态知识蒸馏框架。它利用LiDAR和360度相机融合的教师网络，将知识蒸馏到轻量级学生网络，实现了高精度和31.2 FPS的推理速度，显著降低了自动驾驶中BEV分割的传感器复杂性和部署成本，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.15000v1",
+        "title": "DreamPRM-Code: Function-as-Step Process Reward Model with Label Correction for LLM Coding",
+        "summary": "Process Reward Models (PRMs) have become essential for improving Large Language Models (LLMs) via test-time scaling, yet their effectiveness in coding remains limited due to the lack of meaningful step decompositions in code and the noise of Monte-Carlo-generated partial labels. We propose DreamPRM-Code, a coding-focused PRM that treats functions as reasoning steps using a Chain-of-Function prompting strategy to induce modular code generation, enabling PRM training and application analogous to mathematical reasoning tasks. To address label noise, DreamPRM-Code introduces a meta-learning-based correction mechanism that leverages clean final-solution unit-test labels and performs bi-level optimization to refine intermediate labels. Applying on test-time scaling, DreamPRM-Code achieved state-of-the-art performance on LiveCodeBench with 80.9 pass@1 rate, surpassing OpenAI o4-mini.",
+        "authors": "Ruiyi Zhang, Peijia Qin, Qi Cao, Pengtao Xie",
+        "url": "http://arxiv.org/abs/2512.15000v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.15000v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DreamPRM-Code是一种专注于代码生成的进程奖励模型（PRM），创新性地将函数视为推理步骤，并引入了基于元学习的标签校正机制来解决蒙特卡洛生成部分标签的噪声问题。它显著提升了LLM在编码任务中的表现，解决了LLM编程能力提升的关键瓶颈。"
+    }
+]

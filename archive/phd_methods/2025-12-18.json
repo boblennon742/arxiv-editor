@@ -9,10 +9,10 @@
         "scores": {
             "Novelty": 5,
             "Rigor": 4,
-            "Impact": 5,
-            "Clarity": 5
+            "Impact": 4,
+            "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了一个新颖的自监督视觉学习范式——“Next-Embedding Predictive Autoregression (NEPA)”，通过预测未来嵌入来训练模型，避免了像素重建、离散token或对比损失等复杂设计。它将NLP中生成式预训练的成功原则引入视觉领域，具有高度的理论创新性，并能有效解决数据效率问题，实现强大的视觉学习器，对AI算法和架构有重要影响。"
+        "reason_zh": "这篇论文提出了一种新颖的自监督视觉学习范式——Next-Embedding Predictive Autoregression (NEPA)，通过预测未来patch embedding来训练模型，而非传统的特征提取。它摒弃了像素重建、离散token、对比学习等复杂设计，以简洁的Transformer架构实现了强大的视觉学习能力。其理论创新性在于将生成式预训练的成功经验从NLP推广到视觉领域，并提出了一个简洁、可扩展且可能与模态无关的自监督学习替代方案，有望解决数据效率瓶颈。"
     },
     {
         "id": "http://arxiv.org/abs/2512.16917v1",
@@ -22,27 +22,102 @@
         "url": "http://arxiv.org/abs/2512.16917v1",
         "pdf_url": "https://arxiv.org/pdf/2512.16917v1",
         "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
+            "Novelty": 4,
+            "Rigor": 4,
             "Impact": 5,
-            "Clarity": 5
+            "Clarity": 4
         },
-        "reason_zh": "该论文引入了“Generative Adversarial Reasoner”，一个通过对抗强化学习共同演化LLM推理器和判别器的在策略联合训练框架。其计算高效的推理链切片审查机制和密集的、校准良好的步级奖励，为LLM推理中的过程错误提供了理论创新性的解决方案，显著提升了数学推理能力，直接解决了LLM应用中的一个关键瓶颈。"
+        "reason_zh": "Generative Adversarial Reasoner (GAR) 引入了一个对抗性强化学习框架，通过共同进化LLM推理器和基于LLM的判别器来增强LLM的数学推理能力。其创新点在于利用判别器对推理链进行切片评估，生成密集、校准良好的步级奖励，有效解决了稀疏奖励下的信用分配问题。这不仅具有理论上的新颖性（对抗性RL用于推理），也直接解决了LLM在复杂推理中常见的逻辑错误和计算不准确等实际瓶颈，显著提升了数学基准上的性能。"
     },
     {
-        "id": "http://arxiv.org/abs/2512.16913v1",
-        "title": "Depth Any Panoramas: A Foundation Model for Panoramic Depth Estimation",
-        "summary": "In this work, we present a panoramic metric depth foundation model that generalizes across diverse scene distances. We explore a data-in-the-loop paradigm from the view of both data construction and framework design. We collect a large-scale dataset by combining public datasets, high-quality synthetic data from our UE5 simulator and text-to-image models, and real panoramic images from the web. To reduce domain gaps between indoor/outdoor and synthetic/real data, we introduce a three-stage pseudo-label curation pipeline to generate reliable ground truth for unlabeled images. For the model, we adopt DINOv3-Large as the backbone for its strong pre-trained generalization, and introduce a plug-and-play range mask head, sharpness-centric optimization, and geometry-centric optimization to improve robustness to varying distances and enforce geometric consistency across views. Experiments on multiple benchmarks (e.g., Stanford2D3D, Matterport3D, and Deep360) demonstrate strong performance and zero-shot generalization, with particularly robust and stable metric predictions in diverse real-world scenes. The project page can be found at: \\href{https://insta360-research-team.github.io/DAP_website/} {https://insta360-research-team.github.io/DAP\\_website/}",
-        "authors": "Xin Lin, Meixi Song, Dizhe Zhang, Wenxuan Lu, Haodong Li, Bo Du, Ming-Hsuan Yang, Truong Nguyen, Lu Qi",
-        "url": "http://arxiv.org/abs/2512.16913v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16913v1",
+        "id": "http://arxiv.org/abs/2512.16912v1",
+        "title": "Exploration v.s. Exploitation: Rethinking RLVR through Clipping, Entropy, and Spurious Reward",
+        "summary": "This paper examines the exploration-exploitation trade-off in reinforcement learning with verifiable rewards (RLVR), a framework for improving the reasoning of Large Language Models (LLMs). Recent studies suggest that RLVR can elicit strong mathematical reasoning in LLMs through two seemingly paradoxical mechanisms: spurious rewards, which suppress exploitation by rewarding outcomes unrelated to the ground truth, and entropy minimization, which suppresses exploration by pushing the model toward more confident and deterministic outputs, highlighting a puzzling dynamic: both discouraging exploitation and discouraging exploration improve reasoning performance, yet the underlying principles that reconcile these effects remain poorly understood. We focus on two fundamental questions: (i) how policy entropy relates to performance, and (ii) whether spurious rewards yield gains, potentially through the interplay of clipping bias and model contamination. Our results show that clipping bias under spurious rewards reduces policy entropy, leading to more confident and deterministic outputs, while entropy minimization alone is insufficient for improvement. We further propose a reward-misalignment model explaining why spurious rewards can enhance performance beyond contaminated settings. Our findings clarify the mechanisms behind spurious-reward benefits and provide principles for more effective RLVR training.",
+        "authors": "Peter Chen, Xiaopeng Li, Ziniu Li, Wotao Yin, Xi Chen, Tianyi Lin",
+        "url": "http://arxiv.org/abs/2512.16912v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16912v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了RLVR（可验证奖励强化学习）中的探索-利用权衡，特别是虚假奖励和熵最小化对LLM推理性能的影响。它通过引入剪裁偏差和模型污染的概念，解释了虚假奖励如何通过降低策略熵来提高性能。该研究不仅揭示了RLVR机制背后的深层原理，还提出了一个奖励错位模型，具有较高的理论严谨性，为更有效的RLVR训练提供了指导原则，有助于优化LLM的对齐算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16905v1",
+        "title": "Alchemist: Unlocking Efficiency in Text-to-Image Model Training via Meta-Gradient Data Selection",
+        "summary": "Recent advances in Text-to-Image (T2I) generative models, such as Imagen, Stable Diffusion, and FLUX, have led to remarkable improvements in visual quality. However, their performance is fundamentally limited by the quality of training data. Web-crawled and synthetic image datasets often contain low-quality or redundant samples, which lead to degraded visual fidelity, unstable training, and inefficient computation. Hence, effective data selection is crucial for improving data efficiency. Existing approaches rely on costly manual curation or heuristic scoring based on single-dimensional features in Text-to-Image data filtering. Although meta-learning based method has been explored in LLM, there is no adaptation for image modalities. To this end, we propose **Alchemist**, a meta-gradient-based framework to select a suitable subset from large-scale text-image data pairs. Our approach automatically learns to assess the influence of each sample by iteratively optimizing the model from a data-centric perspective. Alchemist consists of two key stages: data rating and data pruning. We train a lightweight rater to estimate each sample's influence based on gradient information, enhanced with multi-granularity perception. We then use the Shift-Gsampling strategy to select informative subsets for efficient model training. Alchemist is the first automatic, scalable, meta-gradient-based data selection framework for Text-to-Image model training. Experiments on both synthetic and web-crawled datasets demonstrate that Alchemist consistently improves visual quality and downstream performance. Training on an Alchemist-selected 50% of the data can outperform training on the full dataset.",
+        "authors": "Kaixin Ding, Yang Zhou, Xi Chen, Miao Yang, Jiarong Ou, Rui Chen, Xin Tao, Hengshuang Zhao",
+        "url": "http://arxiv.org/abs/2512.16905v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16905v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Alchemist 提出了一个基于元梯度的框架，用于从大规模文本-图像数据对中选择高质量子集，以提高Text-to-Image模型的训练效率和视觉质量。其创新性在于将元学习应用于图像模态的数据选择，通过训练一个轻量级评分器来评估样本影响力，并结合Shift-Gsampling策略进行剪枝。这直接解决了T2I模型训练中数据质量和计算效率的实际瓶颈，具有很高的实践影响力，同时元梯度方法也体现了理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16866v1",
+        "title": "Semi-Supervised Online Learning on the Edge by Transforming Knowledge from Teacher Models",
+        "summary": "Edge machine learning (Edge ML) enables training ML models using the vast data distributed across network edges. However, many existing approaches assume static models trained centrally and then deployed, making them ineffective against unseen data. To address this, Online Edge ML allows models to be trained directly on edge devices and updated continuously with new data. This paper explores a key challenge of Online Edge ML: \"How to determine labels for truly future, unseen data points\". We propose Knowledge Transformation (KT), a hybrid method combining Knowledge Distillation, Active Learning, and causal reasoning. In short, KT acts as the oracle in active learning by transforming knowledge from a teacher model to generate pseudo-labels for training a student model. To verify the validity of the method, we conducted simulation experiments with two setups: (1) using a less stable teacher model and (2) a relatively more stable teacher model. Results indicate that when a stable teacher model is given, the student model can eventually reach its expected maximum performance. KT is potentially beneficial for scenarios that meet the following circumstances: (1) when the teacher's task is generic, which means existing pre-trained models might be adequate for its task, so there will be no need to train the teacher model from scratch; and/or (2) when the label for the student's task is difficult or expensive to acquire.",
+        "authors": "Jiabin Xue",
+        "url": "http://arxiv.org/abs/2512.16866v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16866v1",
         "scores": {
             "Novelty": 5,
-            "Rigor": 5,
+            "Rigor": 4,
             "Impact": 5,
-            "Clarity": 5
+            "Clarity": 4
         },
-        "reason_zh": "这篇论文提出了“Temporal Logic-Guided Large Language Model Compression (TOGGLE)”，首次将形式化方法（信号时序逻辑STL）整合到LLM压缩中，以形式化地指定和强制执行语言属性。通过STL鲁棒性引导的贝叶斯优化，它在不重新训练或微调的情况下，实现了模型计算成本和大小的大幅减少，同时保证了语言属性，是解决模型压缩瓶颈的理论创新性方法。"
+        "reason_zh": "TOGGLE 提出了一种新颖的LLM压缩框架，利用Signal Temporal Logic (STL) 正式指定和强制执行语言属性，以实现资源受限边缘设备上的高效部署。其核心创新在于将形式化方法（STL）集成到LLM压缩中，通过STL鲁棒性引导的贝叶斯优化来探索量化和剪枝配置，同时提供模型行为的形式化保证。这不仅解决了LLM模型压缩的实际瓶颈，更在理论上提供了可验证的压缩方法，避免了传统方法可能导致的语言属性退化，具有极高的创新性和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16848v1",
+        "title": "Meta-RL Induces Exploration in Language Agents",
+        "summary": "Reinforcement learning (RL) has enabled the training of large language model (LLM) agents to interact with the environment and to solve multi-turn long-horizon tasks. However, the RL-trained agents often struggle in tasks that require active exploration and fail to efficiently adapt from trial-and-error experiences. In this paper, we present LaMer, a general Meta-RL framework that enables LLM agents to actively explore and learn from the environment feedback at test time. LaMer consists of two key components: (i) a cross-episode training framework to encourage exploration and long-term rewards optimization; and (ii) in-context policy adaptation via reflection, allowing the agent to adapt their policy from task feedback signal without gradient update. Experiments across diverse environments show that LaMer significantly improves performance over RL baselines, with 11%, 14%, and 19% performance gains on Sokoban, MineSweeper and Webshop, respectively. Moreover, LaMer also demonstrates better generalization to more challenging or previously unseen tasks compared to the RL-trained agents. Overall, our results demonstrate that Meta-RL provides a principled approach to induce exploration in language agents, enabling more robust adaptation to novel environments through learned exploration strategies.",
+        "authors": "Yulun Jiang, Liangze Jiang, Damien Teney, Michael Moor, Maria Brbic",
+        "url": "http://arxiv.org/abs/2512.16848v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16848v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "LaMer 提出了一个通用的Meta-RL框架，使LLM代理能够在测试时主动探索并从环境反馈中学习。其创新点在于跨回合训练框架鼓励探索和长期奖励优化，以及通过反思进行上下文策略适应，无需梯度更新。这解决了LLM代理在需要主动探索和从试错中高效适应的任务中表现不佳的瓶颈。Meta-RL为语言代理引入探索提供了一个原则性方法，具有良好的理论基础和实际应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16813v1",
+        "title": "Coordinated Anti-Jamming Resilience in Swarm Networks via Multi-Agent Reinforcement Learning",
+        "summary": "Reactive jammers pose a severe security threat to robotic-swarm networks by selectively disrupting inter-agent communications and undermining formation integrity and mission success. Conventional countermeasures such as fixed power control or static channel hopping are largely ineffective against such adaptive adversaries. This paper presents a multi-agent reinforcement learning (MARL) framework based on the QMIX algorithm to improve the resilience of swarm communications under reactive jamming. We consider a network of multiple transmitter-receiver pairs sharing channels while a reactive jammer with Markovian threshold dynamics senses aggregate power and reacts accordingly. Each agent jointly selects transmit frequency (channel) and power, and QMIX learns a centralized but factorizable action-value function that enables coordinated yet decentralized execution. We benchmark QMIX against a genie-aided optimal policy in a no-channel-reuse setting, and against local Upper Confidence Bound (UCB) and a stateless reactive policy in a more general fading regime with channel reuse enabled. Simulation results show that QMIX rapidly converges to cooperative policies that nearly match the genie-aided bound, while achieving higher throughput and lower jamming incidence than the baselines, thereby demonstrating MARL's effectiveness for securing autonomous swarms in contested environments.",
+        "authors": "Bahman Abolhassani, Tugba Erpek, Kemal Davaslioglu, Yalin E. Sagduyu, Sastry Kompella",
+        "url": "http://arxiv.org/abs/2512.16813v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16813v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于QMIX的多智能体强化学习（MARL）框架，用于提高蜂群网络在反应式干扰下的通信弹性。其创新性在于将QMIX算法应用于蜂群通信的抗干扰问题，通过学习集中式但可分解的动作-值函数，实现协调的去中心化执行。这解决了传统对抗干扰方法在面对自适应干扰时效率低下的实际瓶颈，并展示了MARL在安全自主蜂群通信中的有效性，具有扎实的理论基础和潜在的军事/民用应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16762v1",
+        "title": "NRGPT: An Energy-based Alternative for GPT",
+        "summary": "Generative Pre-trained Transformer (GPT) architectures are the most popular design for language modeling. Energy-based modeling is a different paradigm that views inference as a dynamical process operating on an energy landscape. We propose a minimal modification of the GPT setting to unify it with the EBM framework. The inference step of our model, which we call eNeRgy-GPT (NRGPT), is conceptualized as an exploration of the tokens on the energy landscape. We prove, and verify empirically, that under certain circumstances this exploration becomes gradient descent, although they don't necessarily lead to the best performing models. We demonstrate that our model performs well for simple language (Shakespeare dataset), algebraic ListOPS tasks, and richer settings such as OpenWebText language modeling. We also observe that our models may be more resistant to overfitting, doing so only during very long training.",
+        "authors": "Nima Dehmamy, Benjamin Hoover, Bishwajit Saha, Leo Kozachkov, Jean-Jacques Slotine, Dmitry Krotov",
+        "url": "http://arxiv.org/abs/2512.16762v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16762v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "NRGPT 提出了一种基于能量的GPT替代方案，将推理步骤概念化为能量景观上的token探索。其核心创新在于将GPT架构与能量基模型（EBM）框架统一，提供了一种全新的语言建模视角。虽然其在复杂任务上的性能提升可能不如其他论文显著，但其理论上的新颖性（将EBM引入GPT）和对推理过程的重新概念化，使其在AI前沿算法和架构探索方面具有重要价值，为理解和设计生成模型提供了新的理论工具。"
     },
     {
         "id": "http://arxiv.org/abs/2512.16626v1",
@@ -53,175 +128,100 @@
         "pdf_url": "https://arxiv.org/pdf/2512.16626v1",
         "scores": {
             "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
-        },
-        "reason_zh": "该论文引入了“Stackelberg Learning from Human Feedback (SLHF)”，一个将偏好优化框架为序贯博弈的新方法。它将对齐问题分解为Leader和Follower策略，利用序贯博弈的不对称性捕捉更丰富的偏好结构。这种理论创新不仅提供了更一致、数据敏感且对非传递偏好更鲁棒的对齐方法，还在LLM对齐方面展现了强大的实践影响力。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2512.16602v1",
-        "title": "Refusal Steering: Fine-grained Control over LLM Refusal Behaviour for Sensitive Topics",
-        "summary": "We introduce Refusal Steering, an inference-time method to exercise fine-grained control over Large Language Models refusal behaviour on politically sensitive topics without retraining. We replace fragile pattern-based refusal detection with an LLM-as-a-judge that assigns refusal confidence scores and we propose a ridge-regularized variant to compute steering vectors that better isolate the refusal--compliance direction. On Qwen3-Next-80B-A3B-Thinking, our method removes the refusal behaviour of the model around politically sensitive topics while maintaining safety on JailbreakBench and near-baseline performance on general benchmarks. The approach generalizes across 4B and 80B models and can also induce targeted refusals when desired. We analize the steering vectors and show that refusal signals concentrate in deeper layers of the transformer and are distributed across many dimensions. Together, these results demonstrate that activation steering can remove political refusal behaviour while retaining safety alignment for harmful content, offering a practical path to controllable, transparent moderation at inference time.",
-        "authors": "Iker García-Ferrero, David Montero, Roman Orus",
-        "url": "http://arxiv.org/abs/2512.16602v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16602v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
-        },
-        "reason_zh": "SemMark提出了一种新颖的语义感知水印范式，用于Embedding-as-a-Service (EaaS) 的版权保护。它利用局部敏感哈希划分语义空间并注入语义感知水印，并通过局部异常因子自适应调整水印权重，确保水印信号的不可感知性和多样性。这在理论上具有高度创新性，并为EaaS的知识产权保护提供了强大的实践解决方案。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2512.16607v1",
-        "title": "Riemannian Stochastic Interpolants for Amorphous Particle Systems",
-        "summary": "Modern generative models hold great promise for accelerating diverse tasks involving the simulation of physical systems, but they must be adapted to the specific constraints of each domain. Significant progress has been made for biomolecules and crystalline materials. Here, we address amorphous materials (glasses), which are disordered particle systems lacking atomic periodicity. Sampling equilibrium configurations of glass-forming materials is a notoriously slow and difficult task. This obstacle could be overcome by developing a generative framework capable of producing equilibrium configurations with well-defined likelihoods. In this work, we address this challenge by leveraging an equivariant Riemannian stochastic interpolation framework which combines Riemannian stochastic interpolant and equivariant flow matching. Our method rigorously incorporates periodic boundary conditions and the symmetries of multi-component particle systems, adapting an equivariant graph neural network to operate directly on the torus. Our numerical experiments on model amorphous systems demonstrate that enforcing geometric and symmetry constraints significantly improves generative performance.",
-        "authors": "Louis Grenioux, Leonardo Galliano, Ludovic Berthier, Giulio Biroli, Marylou Gabrié",
-        "url": "http://arxiv.org/abs/2512.16607v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16607v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
+            "Rigor": 4,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "该论文提出了一个利用“equivariant Riemannian stochastic interpolation framework”来模拟无定形粒子系统的方法，结合了黎曼随机插值和等变流匹配。它严谨地整合了周期性边界条件和多组分粒子系统的对称性，将等变图神经网络应用于环面。这在理论和算法上都具有高度创新性，为物理系统模拟提供了新的视角和高效方法。"
+        "reason_zh": "SLHF (Stackelberg Learning from Human Feedback) 引入了一个新颖的偏好优化框架，将对齐问题建模为领导者-追随者（Stackelberg）序贯博弈。这与传统的RLHF（标量奖励）和NLHF（同时博弈）不同，它利用序贯博弈的不对称性捕捉更丰富的偏好结构，并自然地支持推理时细化。其理论创新性在于将博弈论应用于LLM对齐，提供了在一致性、数据敏感性和对非传递偏好的鲁棒性方面的潜在优势，是LLM对齐算法前沿的重要探索。"
     },
     {
-        "id": "http://arxiv.org/abs/2512.16292v1",
-        "title": "In-Context Probing for Membership Inference in Fine-Tuned Language Models",
-        "summary": "Membership inference attacks (MIAs) pose a critical privacy threat to fine-tuned large language models (LLMs), especially when models are adapted to domain-specific tasks using sensitive data. While prior black-box MIA techniques rely on confidence scores or token likelihoods, these signals are often entangled with a sample's intrinsic properties - such as content difficulty or rarity - leading to poor generalization and low signal-to-noise ratios. In this paper, we propose ICP-MIA, a novel MIA framework grounded in the theory of training dynamics, particularly the phenomenon of diminishing returns during optimization. We introduce the Optimization Gap as a fundamental signal of membership: at convergence, member samples exhibit minimal remaining loss-reduction potential, while non-members retain significant potential for further optimization. To estimate this gap in a black-box setting, we propose In-Context Probing (ICP), a training-free method that simulates fine-tuning-like behavior via strategically constructed input contexts. We propose two probing strategies: reference-data-based (using semantically similar public samples) and self-perturbation (via masking or generation). Experiments on three tasks and multiple LLMs show that ICP-MIA significantly outperforms prior black-box MIAs, particularly at low false positive rates. We further analyze how reference data alignment, model type, PEFT configurations, and training schedules affect attack effectiveness. Our findings establish ICP-MIA as a practical and theoretically grounded framework for auditing privacy risks in deployed LLMs.",
-        "authors": "Zhexi Lu, Hongliang Chi, Nathalie Baracaldo, Swanand Ravindra Kadhe, Yuseok Jeon, Lei Yu",
-        "url": "http://arxiv.org/abs/2512.16292v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16292v1",
+        "id": "http://arxiv.org/abs/2512.16553v1",
+        "title": "Needle in the Web: A Benchmark for Retrieving Targeted Web Pages in the Wild",
+        "summary": "Large Language Models (LLMs) have evolved from simple chatbots into sophisticated agents capable of automating complex real-world tasks, where browsing and reasoning over live web content is key to assessing retrieval and cognitive skills. Existing benchmarks like BrowseComp and xBench-DeepSearch emphasize complex reasoning searches requiring multi-hop synthesis but neglect Fuzzy Exploratory Search, namely queries that are vague and multifaceted, where users seek the most relevant webpage rather than a single factual answer. To address this gap, we introduce Needle in the Web, a novel benchmark specifically designed to evaluate modern search agents and LLM-based systems on their ability to retrieve and reason over real-world web content in response to ambiguous, exploratory queries under varying levels of difficulty. Needle in the Web comprises 663 questions spanning seven distinct domains. To ensure high query quality and answer uniqueness, we employ a flexible methodology that reliably generates queries of controllable difficulty based on factual claims of web contents. We benchmark three leading LLMs and three agent-based search systems on Needle in the Web, finding that most models struggle: many achieve below 35% accuracy, and none consistently excel across domains or difficulty levels. These findings reveal that Needle in the Web presents a significant challenge for current search systems and highlights the open problem of effective fuzzy retrieval under semantic ambiguity.",
+        "authors": "Yumeng Wang, Tianyu Fan, Lingrui Xu, Chao Huang",
+        "url": "http://arxiv.org/abs/2512.16553v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16553v1",
         "scores": {
             "Novelty": 4,
-            "Rigor": 5,
+            "Rigor": 3,
             "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "ICP-MIA是一个基于训练动态理论（特别是优化过程中的收益递减现象）的新型成员推断攻击（MIA）框架。它引入了“In-Context Probing (ICP)”来在黑盒设置中估计优化差距，作为成员身份的基本信号。该方法具有坚实的理论基础和算法创新，能显著优于现有黑盒MIA，对LLM隐私风险审计具有重要实践意义。"
+        "reason_zh": "这篇论文提出了一个名为Needle in the Web的新基准，专门用于评估现代搜索代理和基于LLM的系统在模糊、探索性查询下检索和推理真实世界网络内容的能力。虽然它是一个基准论文，但其创新性在于关注“模糊探索性搜索”这一未被充分探索的LLM应用瓶颈，并提出了灵活的查询生成方法。它揭示了当前LLM在处理语义模糊性方面的局限性，为未来LLM搜索代理的设计和优化指明了方向，具有重要的实践指导意义。"
     },
     {
-        "id": "http://arxiv.org/abs/2512.16287v1",
-        "title": "Evaluating OpenAI GPT Models for Translation of Endangered Uralic Languages: A Comparison of Reasoning and Non-Reasoning Architectures",
-        "summary": "The evaluation of Large Language Models (LLMs) for translation tasks has primarily focused on high-resource languages, leaving a significant gap in understanding their performance on low-resource and endangered languages. This study presents a comprehensive comparison of OpenAI's GPT models, specifically examining the differences between reasoning and non-reasoning architectures for translating between Finnish and four low-resource Uralic languages: Komi-Zyrian, Moksha, Erzya, and Udmurt. Using a parallel corpus of literary texts, we evaluate model willingness to attempt translation through refusal rate analysis across different model architectures. Our findings reveal significant performance variations between reasoning and non-reasoning models, with reasoning models showing 16 percentage points lower refusal rates. The results provide valuable insights for researchers and practitioners working with Uralic languages and contribute to the broader understanding of reasoning model capabilities for endangered language preservation.",
-        "authors": "Yehor Tereshchenko, Mika Hämäläinen, Svitlana Myroniuk",
-        "url": "http://arxiv.org/abs/2512.16287v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16287v1",
+        "id": "http://arxiv.org/abs/2512.16453v1",
+        "title": "TimeSeries2Report prompting enables adaptive large language model management of lithium-ion batteries",
+        "summary": "Large language models (LLMs) offer promising capabilities for interpreting multivariate time-series data, yet their application to real-world battery energy storage system (BESS) operation and maintenance remains largely unexplored. Here, we present TimeSeries2Report (TS2R), a prompting framework that converts raw lithium-ion battery operational time-series into structured, semantically enriched reports, enabling LLMs to reason, predict, and make decisions in BESS management scenarios. TS2R encodes short-term temporal dynamics into natural language through a combination of segmentation, semantic abstraction, and rule-based interpretation, effectively bridging low-level sensor signals with high-level contextual insights. We benchmark TS2R across both lab-scale and real-world datasets, evaluating report quality and downstream task performance in anomaly detection, state-of-charge prediction, and charging/discharging management. Compared with vision-, embedding-, and text-based prompting baselines, report-based prompting via TS2R consistently improves LLM performance in terms of across accuracy, robustness, and explainability metrics. Notably, TS2R-integrated LLMs achieve expert-level decision quality and predictive consistency without retraining or architecture modification, establishing a practical path for adaptive, LLM-driven battery intelligence.",
+        "authors": "Jiayang Yang, Chunhui Zhao, Martin Guay, Zhixing Cao",
+        "url": "http://arxiv.org/abs/2512.16453v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16453v1",
         "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
+            "Novelty": 4,
+            "Rigor": 3,
             "Impact": 5,
-            "Clarity": 5
+            "Clarity": 4
         },
-        "reason_zh": "该论文提出了“Selective Representation Misdirection for Unlearning (SRMU)”，一个新颖的激活编辑框架，通过特征感知和方向控制的扰动来执行机器遗忘。它使用结构化的误导向量和激活重要性图，选择性地抑制有害表示同时保留良性实用性。这在理论上具有高度创新性，并为安全驱动的模型治理和隐私合规提供了强大的实践基础。"
+        "reason_zh": "TimeSeries2Report (TS2R) 提出了一个创新的提示框架，将锂离子电池的原始操作时间序列数据转换为结构化、语义丰富的报告，从而使LLM能够进行推理、预测和决策。其创新性在于通过分割、语义抽象和基于规则的解释，有效地弥合了低级传感器信号与高级上下文洞察之间的鸿沟。这直接解决了LLM在解释多变量时间序列数据方面的应用瓶颈，为电池能源存储系统（BESS）的管理提供了无需重新训练或修改架构的自适应、LLM驱动的智能解决方案，具有极高的实践影响力。"
     },
     {
-        "id": "http://arxiv.org/abs/2512.16279v1",
-        "title": "QuadSentinel: Sequent Safety for Machine-Checkable Control in Multi-agent Systems",
-        "summary": "Safety risks arise as large language model-based agents solve complex tasks with tools, multi-step plans, and inter-agent messages. However, deployer-written policies in natural language are ambiguous and context dependent, so they map poorly to machine-checkable rules, and runtime enforcement is unreliable. Expressing safety policies as sequents, we propose \\textsc{QuadSentinel}, a four-agent guard (state tracker, policy verifier, threat watcher, and referee) that compiles these policies into machine-checkable rules built from predicates over observable state and enforces them online. Referee logic plus an efficient top-$k$ predicate updater keeps costs low by prioritizing checks and resolving conflicts hierarchically. Measured on ST-WebAgentBench (ICML CUA~'25) and AgentHarm (ICLR~'25), \\textsc{QuadSentinel} improves guardrail accuracy and rule recall while reducing false positives. Against single-agent baselines such as ShieldAgent (ICML~'25), it yields better overall safety control. Near-term deployments can adopt this pattern without modifying core agents by keeping policies separate and machine-checkable. Our code will be made publicly available at https://github.com/yyiliu/QuadSentinel.",
-        "authors": "Yiliu Yang, Yilei Jiang, Qunzhong Wang, Yingshui Tan, Xiaoyong Zhu, Sherman S. M. Chow, Bo Zheng, Xiangyu Yue",
-        "url": "http://arxiv.org/abs/2512.16279v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16279v1",
+        "id": "http://arxiv.org/abs/2512.16433v1",
+        "title": "Emergent Bias and Fairness in Multi-Agent Decision Systems",
+        "summary": "Multi-agent systems have demonstrated the ability to improve performance on a variety of predictive tasks by leveraging collaborative decision making. However, the lack of effective evaluation methodologies has made it difficult to estimate the risk of bias, making deployment of such systems unsafe in high stakes domains such as consumer finance, where biased decisions can translate directly into regulatory breaches and financial loss. To address this challenge, we need to develop fairness evaluation methodologies for multi-agent predictive systems and measure the fairness characteristics of these systems in the financial tabular domain. Examining fairness metrics using large-scale simulations across diverse multi-agent configurations, with varying communication and collaboration mechanisms, we reveal patterns of emergent bias in financial decision-making that cannot be traced to individual agent components, indicating that multi-agent systems may exhibit genuinely collective behaviors. Our findings highlight that fairness risks in financial multi-agent systems represent a significant component of model risk, with tangible impacts on tasks such as credit scoring and income estimation. We advocate that multi-agent decision systems must be evaluated as holistic entities rather than through reductionist analyses of their constituent components.",
+        "authors": "Maeve Madigan, Parameswaran Kamalaruban, Glenn Moynihan, Tom Kempton, David Sutton, Stuart Burrell",
+        "url": "http://arxiv.org/abs/2512.16433v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16433v1",
         "scores": {
             "Novelty": 4,
             "Rigor": 4,
-            "Impact": 5,
+            "Impact": 4,
             "Clarity": 4
         },
-        "reason_zh": "CKA Guided Modular Quantization是一个免微调、即插即用的异构量化框架。它独立评估每个层的多个PTQ算法，并使用线性中心核对齐（CKA）作为指标来自动选择最优量化策略。这种算法创新解决了传统统一量化策略的局限性，显著提高了LLM压缩的性能，具有很高的实践影响力。"
+        "reason_zh": "这篇论文研究了多智能体决策系统中涌现的偏见和公平性问题，特别是在金融领域。其创新性在于提出了针对多智能体预测系统的公平性评估方法，并揭示了无法追溯到单个智能体组件的“涌现偏见”模式。这具有重要的理论意义，因为它挑战了对多智能体系统进行还原论分析的传统观点，强调了将其作为整体进行评估的必要性。这解决了AI应用中一个关键的伦理和实际瓶颈，即多智能体系统中的偏见风险。"
     },
     {
-        "id": "http://arxiv.org/abs/2512.16275v1",
-        "title": "GFLAN: Generative Functional Layouts",
-        "summary": "Automated floor plan generation lies at the intersection of combinatorial search, geometric constraint satisfaction, and functional design requirements -- a confluence that has historically resisted a unified computational treatment. While recent deep learning approaches have improved the state of the art, they often struggle to capture architectural reasoning: the precedence of topological relationships over geometric instantiation, the propagation of functional constraints through adjacency networks, and the emergence of circulation patterns from local connectivity decisions. To address these fundamental challenges, this paper introduces GFLAN, a generative framework that restructures floor plan synthesis through explicit factorization into topological planning and geometric realization. Given a single exterior boundary and a front-door location, our approach departs from direct pixel-to-pixel or wall-tracing generation in favor of a principled two-stage decomposition. Stage A employs a specialized convolutional architecture with dual encoders -- separating invariant spatial context from evolving layout state -- to sequentially allocate room centroids within the building envelope via discrete probability maps over feasible placements. Stage B constructs a heterogeneous graph linking room nodes to boundary vertices, then applies a Transformer-augmented graph neural network (GNN) that jointly regresses room boundaries.",
-        "authors": "Mohamed Abouagour, Eleftherios Garyfallidis",
-        "url": "http://arxiv.org/abs/2512.16275v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16275v1",
+        "id": "http://arxiv.org/abs/2512.16317v1",
+        "title": "Design and Evaluation of Cost-Aware PoQ for Decentralized LLM Inference",
+        "summary": "Decentralized large language model (LLM) inference promises transparent and censorship resistant access to advanced AI, yet existing verification approaches struggle to scale to modern models. Proof of Quality (PoQ) replaces cryptographic verification of computation with consensus over output quality, but the original formulation ignores heterogeneous computational costs across inference and evaluator nodes. This paper introduces a cost-aware PoQ framework that integrates explicit efficiency measurements into the reward mechanism for both types of nodes. The design combines ground truth token level F1, lightweight learned evaluators, and GPT based judgments within a unified evaluation pipeline, and adopts a linear reward function that balances normalized quality and cost.   Experiments on extractive question answering and abstractive summarization use five instruction tuned LLMs ranging from TinyLlama-1.1B to Llama-3.2-3B and three evaluation models spanning cross encoder and bi encoder architectures. Results show that a semantic textual similarity bi encoder achieves much higher correlation with both ground truth and GPT scores than cross encoders, indicating that evaluator architecture is a critical design choice for PoQ. Quality-cost analysis further reveals that the largest models in the pool are also the most efficient in terms of quality per unit latency. Monte Carlo simulations over 5\\,000 PoQ rounds demonstrate that the cost-aware reward scheme consistently assigns higher average rewards to high quality low cost inference models and to efficient evaluators, while penalizing slow low quality nodes. These findings suggest that cost-aware PoQ provides a practical foundation for economically sustainable decentralized LLM inference.",
+        "authors": "Arther Tian, Alex Ding, Frank Chen, Alan Wu, Aaron Chan, Bruce Zhang",
+        "url": "http://arxiv.org/abs/2512.16317v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16317v1",
         "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
-        },
-        "reason_zh": "QuadSentinel是一个“四代理守卫”框架，它将以序贯形式表达的安全策略编译成机器可检查的规则并在线执行。其高效的top-k谓词更新器和分层冲突解决机制，在多代理系统中实现了安全控制的理论创新。它显著提高了LLM代理的安全防护准确性和规则召回率，对高风险AI应用具有极高的实践价值。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2512.16247v1",
-        "title": "Sharpness-aware Federated Graph Learning",
-        "summary": "One of many impediments to applying graph neural networks (GNNs) to large-scale real-world graph data is the challenge of centralized training, which requires aggregating data from different organizations, raising privacy concerns. Federated graph learning (FGL) addresses this by enabling collaborative GNN model training without sharing private data. However, a core challenge in FGL systems is the variation in local training data distributions among clients, known as the data heterogeneity problem. Most existing solutions suffer from two problems: (1) The typical optimizer based on empirical risk minimization tends to cause local models to fall into sharp valleys and weakens their generalization to out-of-distribution graph data. (2) The prevalent dimensional collapse in the learned representations of local graph data has an adverse impact on the classification capacity of the GNN model. To this end, we formulate a novel optimization objective that is aware of the sharpness (i.e., the curvature of the loss surface) of local GNN models. By minimizing the loss function and its sharpness simultaneously, we seek out model parameters in a flat region with uniformly low loss values, thus improving the generalization over heterogeneous data. By introducing a regularizer based on the correlation matrix of local representations, we relax the correlations of representations generated by individual local graph samples, so as to alleviate the dimensional collapse of the learned model. The proposed \\textbf{S}harpness-aware f\\textbf{E}derated gr\\textbf{A}ph \\textbf{L}earning (SEAL) algorithm can enhance the classification accuracy and generalization ability of local GNN models in federated graph learning. Experimental studies on several graph classification benchmarks show that SEAL consistently outperforms SOTA FGL baselines and provides gains for more participants.",
-        "authors": "Ruiyu Li, Peige Zhao, Guangxia Li, Pengcheng Wu, Xingyu Gao, Zhiqiang Xu",
-        "url": "http://arxiv.org/abs/2512.16247v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16247v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
-        },
-        "reason_zh": "该论文提出了一个新颖的优化目标，即“Sharpness-aware Federated Graph Learning (SEAL)”，它同时最小化损失函数及其锐度，并引入基于局部表示相关矩阵的正则化器以缓解维度坍塌。这在理论上具有高度创新性，显著提高了联邦图学习中GNN模型的分类准确性和泛化能力，对隐私保护GNN有重要实践意义。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2512.16245v1",
-        "title": "AlignMerge - Alignment-Preserving Large Language Model Merging via Fisher-Guided Geometric Constraints",
-        "summary": "Merging large language models (LLMs) is a practical way to compose capabilities from multiple fine-tuned checkpoints without retraining. Yet standard schemes (linear weight soups, task vectors, and Fisher-weighted averaging) can preserve loss while quietly destroying alignment. We argue that merging is not a numerical trick but a geometry-constrained operation around an already-aligned anchor: fusion must be steered to respect safety geometry, not validated post hoc.   We introduce AlignMerge, a geometry-aware merging framework that makes alignment an explicit invariant. In a local Fisher chart around an instruction-tuned base, we estimate an alignment subspace with projector P_A and optimize:   L_AlignMerge = L_geo + lambda_align * L_align + lambda_bud * L_bud,   where L_geo keeps the merge close to its experts in Fisher-Rao geometry, L_align penalizes motion along alignment-sensitive directions, and L_bud enforces a soft alignment budget. As the alignment functional we use the decoding-invariant Alignment Quality Index (AQI), a latent-space criterion that captures how cleanly aligned and misaligned behaviors separate in representation space.   Across five model families (LLaMA-3 8B, Mistral 7B, Qwen 2, Phi-3.5, Gemma 2), merging safety anchors with task experts, AlignMerge improves alignment metrics (AQI, toxicity, LLM-judge alignment) while matching or exceeding the best expert on instruction-following, reasoning, and helpfulness. It also exhibits smaller alignment-subspace drift and fewer budget violations than Fisher soups, TIES, SafeMerge, and MergeAlign. These results make alignment-preserving merging a first-class design goal and suggest a path to geometry-aware composition of future foundation models.",
-        "authors": "Aniruddha Roy, Jyoti Patel, Aman Chadha, Vinija Jain, Amitava Das",
-        "url": "http://arxiv.org/abs/2512.16245v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16245v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
-        },
-        "reason_zh": "AlignMerge是一个“几何感知合并框架”，它将对齐作为LLM合并的显式不变性。通过在指令微调基座的局部Fisher图上优化，估计对齐子空间并使用解码不变的对齐质量指数（AQI）。这在理论上具有高度创新性，解决了LLM合并中对齐被破坏的问题，对LLM部署和组合具有重要实践影响力。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2512.16167v1",
-        "title": "Ev-Trust: A Strategy Equilibrium Trust Mechanism for Evolutionary Games in LLM-Based Multi-Agent Services",
-        "summary": "The rapid evolution of the Web toward an agent-centric paradigm, driven by large language models (LLMs), has enabled autonomous agents to reason, plan, and interact in complex decentralized environments. However, the openness and heterogeneity of LLM-based multi-agent systems also amplify the risks of deception, fraud, and misinformation, posing severe challenges to trust establishment and system robustness. To address this issue, we propose Ev-Trust, a strategy-equilibrium trust mechanism grounded in evolutionary game theory. This mechanism integrates direct trust, indirect trust, and expected revenue into a dynamic feedback structure that guides agents' behavioral evolution toward equilibria. Within a decentralized \"Request-Response-Payment-Evaluation\" service framework, Ev-Trust enables agents to adaptively adjust strategies, naturally excluding malicious participants while reinforcing high-quality collaboration. Furthermore, our theoretical derivation based on replicator dynamics equations proves the existence and stability of local evolutionary equilibria. Experimental results indicate that our approach effectively reflects agent trustworthiness in LLM-driven open service interaction scenarios, reduces malicious strategies, and increases collective revenue. We hope Ev-Trust can provide a new perspective on trust modeling for the agentic service web in group evolutionary game scenarios.",
-        "authors": "Shiduo Yang, Jiye Wang, Jiayu Qin, Jianbin Li, Yu Wang, Yuanhe Zhao, Kenan Guo",
-        "url": "http://arxiv.org/abs/2512.16167v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16167v1",
-        "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
-        },
-        "reason_zh": "Ev-Trust提出了一种基于演化博弈论的“策略均衡信任机制”，用于LLM多代理服务。它将直接信任、间接信任和预期收益整合到动态反馈结构中，引导代理行为演化。该机制具有坚实的数学理论基础（复制器动力学方程），并能有效提高多代理系统中的信任建立和鲁棒性，对代理服务网络有重要实践意义。"
-    },
-    {
-        "id": "http://arxiv.org/abs/2512.16125v1",
-        "title": "Convolutional Lie Operator for Sentence Classification",
-        "summary": "Traditional Convolutional Neural Networks have been successful in capturing local, position-invariant features in text, but their capacity to model complex transformation within language can be further explored. In this work, we explore a novel approach by integrating Lie Convolutions into Convolutional-based sentence classifiers, inspired by the ability of Lie group operations to capture complex, non-Euclidean symmetries. Our proposed models SCLie and DPCLie empirically outperform traditional Convolutional-based sentence classifiers, suggesting that Lie-based models relatively improve the accuracy by capturing transformations not commonly associated with language. Our findings motivate more exploration of new paradigms in language modeling.",
-        "authors": "Daniela N. Rim, Heeyoul Choi",
-        "url": "http://arxiv.org/abs/2512.16125v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16125v1",
-        "scores": {
-            "Novelty": 5,
+            "Novelty": 4,
             "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个成本感知PoQ（Proof of Quality）框架，用于去中心化LLM推理，解决了现有验证方法难以扩展到现代模型以及忽略异构计算成本的瓶颈。其创新性在于将显式效率测量集成到奖励机制中，并结合F1分数、轻量级学习评估器和GPT判断。这不仅具有理论上的严谨性（成本感知奖励函数、蒙特卡洛模拟），也为构建经济可持续的去中心化LLM推理提供了实用基础，对LLM应用架构有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16229v1",
+        "title": "LoPA: Scaling dLLM Inference via Lookahead Parallel Decoding",
+        "summary": "Diffusion Large Language Models (dLLMs) have demonstrated significant potential for high-speed inference. However, current confidence-driven decoding strategies are constrained by limited parallelism, typically achieving only 1--3 tokens per forward pass (TPF). In this work, we identify that the degree of parallelism during dLLM inference is highly sensitive to the Token Filling Order (TFO). Then, we introduce Lookahead PArallel Decoding LoPA, a training-free, plug-and-play algorithm, to identify a superior TFO and hence accelerate inference. LoPA concurrently explores distinct candidate TFOs via parallel branches, and selects the one with the highest potential for future parallelism based on branch confidence. We apply LoPA to the state-of-the-art D2F model and observe a substantial enhancement in decoding efficiency. Notably, LoPA increases the TPF of D2F-Dream to 10.1 on the GSM8K while maintaining performance superior to the Dream baseline. Furthermore, to facilitate this unprecedented degree of parallelism, we develop a specialized multi-device inference system featuring Branch Parallelism (BP), which achieves a single-sample throughput of 1073.9 tokens per second under multi-GPU deployment. The code is available at https://github.com/zhijie-group/LoPA.",
+        "authors": "Chenkai Xu, Yijie Jin, Jiajun Li, Yi Tu, Guoping Long, Dandan Tu, Tianqi Hou, Junchi Yan, Zhijie Deng",
+        "url": "http://arxiv.org/abs/2512.16229v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16229v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
             "Impact": 5,
             "Clarity": 4
         },
-        "reason_zh": "LoPA是一个免训练、即插即用的算法，通过识别更优的Token Filling Order (TFO) 来加速dLLM推理。它通过并行分支并发探索不同的TFO，并开发了具有分支并行性（BP）的多设备推理系统。这在算法和系统层面都具有高度创新性，显著解决了dLLM推理速度瓶颈，对LLM服务具有极高的实践影响力。"
+        "reason_zh": "LoPA (Lookahead PArallel Decoding) 提出了一种训练无关、即插即用的算法，通过识别更优的Token Filling Order (TFO) 来加速扩散LLM (dLLM) 的推理。其创新性在于发现dLLM推理的并行度对TFO高度敏感，并通过并行探索和分支置信度选择来优化TFO。这显著提升了dLLM的解码效率，将TPF提高到10.1，并开发了专门的多设备推理系统。这直接解决了LLM推理速度的实际瓶颈，具有极高的实践影响力，同时其对TFO的洞察也具有算法创新性。"
     },
     {
-        "id": "http://arxiv.org/abs/2512.16103v1",
-        "title": "AIMM: An AI-Driven Multimodal Framework for Detecting Social-Media-Influenced Stock Market Manipulation",
-        "summary": "Market manipulation now routinely originates from coordinated social media campaigns, not isolated trades. Retail investors, regulators, and brokerages need tools that connect online narratives and coordination patterns to market behavior. We present AIMM, an AI-driven framework that fuses Reddit activity, bot and coordination indicators, and OHLCV market features into a daily AIMM Manipulation Risk Score for each ticker.   The system uses a parquet-native pipeline with a Streamlit dashboard that allows analysts to explore suspicious windows, inspect underlying posts and price action, and log model outputs over time. Due to Reddit API restrictions, we employ calibrated synthetic social features matching documented event characteristics; market data (OHLCV) uses real historical data from Yahoo Finance. This release makes three contributions. First, we build the AIMM Ground Truth dataset (AIMM-GT): 33 labeled ticker-days spanning eight equities, drawing from SEC enforcement actions, community-verified manipulation cases, and matched normal controls. Second, we implement forward-walk evaluation and prospective prediction logging for both retrospective and deployment-style assessment. Third, we analyze lead times and show that AIMM flagged GME 22 days before the January 2021 squeeze peak.   The current labeled set is small (33 ticker-days, 3 positive events), but results show preliminary discriminative capability and early warnings for the GME incident. We release the code, dataset schema, and dashboard design to support research on social media-driven market surveillance.",
-        "authors": "Sandeep Neela",
-        "url": "http://arxiv.org/abs/2512.16103v1",
-        "pdf_url": "https://arxiv.org/pdf/2512.16103v1",
+        "id": "http://arxiv.org/abs/2512.16219v1",
+        "title": "Learning High-Quality Initial Noise for Single-View Synthesis with Diffusion Models",
+        "summary": "Single-view novel view synthesis (NVS) models based on diffusion models have recently attracted increasing attention, as they can generate a series of novel view images from a single image prompt and camera pose information as conditions. It has been observed that in diffusion models, certain high-quality initial noise patterns lead to better generation results than others. However, there remains a lack of dedicated learning frameworks that enable NVS models to learn such high-quality noise. To obtain high-quality initial noise from random Gaussian noise, we make the following contributions. First, we design a discretized Euler inversion method to inject image semantic information into random noise, thereby constructing paired datasets of random and high-quality noise. Second, we propose a learning framework based on an encoder-decoder network (EDN) that directly transforms random noise into high-quality noise. Experiments demonstrate that the proposed EDN can be seamlessly plugged into various NVS models, such as SV3D and MV-Adapter, achieving significant performance improvements across multiple datasets. Code is available at: https://github.com/zhihao0512/EDN.",
+        "authors": "Zhihao Zhang, Xuejun Yang, Weihua Liu, Mouquan Shen",
+        "url": "http://arxiv.org/abs/2512.16219v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16219v1",
         "scores": {
-            "Novelty": 5,
-            "Rigor": 5,
-            "Impact": 5,
-            "Clarity": 5
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
         },
-        "reason_zh": "该论文提出了一个基于信息瓶颈理论的LLM编辑框架，引入了“Information Bottleneck Knowledge Editor (IBKE)”，利用紧凑的潜在表示指导基于梯度的更新。这在理论上具有高度创新性，能够实现鲁棒且广泛适用的模型编辑，解决了LLM知识更新的挑战，对LLM的实用性和可信度有重要实践意义。"
+        "reason_zh": "这篇论文提出了一个学习高质量初始噪声的框架，用于扩散模型中的单视图合成（NVS）。其创新性在于设计了一种离散欧拉反演方法来将图像语义信息注入随机噪声，从而构建高质量噪声数据集，并提出了一个基于编码器-解码器网络（EDN）的学习框架来直接将随机噪声转换为高质量噪声。这解决了扩散模型中初始噪声质量对生成结果影响的瓶颈，通过学习机制提升了NVS模型的性能，具有算法创新性和实际效果提升。"
     }
 ]

@@ -113,7 +113,7 @@ def fetch_papers_for_domain(domain_name, categories, extra_query, target_date):
         return []
 
 # --------------------------------------------------------------------------
-# (V19) AI 分析函数 - 带智能重试机制 (Top 10-15)
+# (V19) AI 分析函数 - 带智能重试机制 (Top 5)
 # --------------------------------------------------------------------------
 def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     if not papers:
@@ -135,12 +135,12 @@ def get_ai_editor_pick(papers, domain_name, user_preference_prompt):
     下面是 {len(papers)} 篇论文。
     你的任务是“批量评分和筛选”：
    
-    1. **评分：** 根据以下 4 个标准（1-5分）为每一篇论文打分：
+    1. **评分：** 根据以下 4 个标准（1-5分）非常严格为每一篇论文打分：
         - Novelty (创新性): 提出新方法或新视角 (1-5分)
         - Rigor (理论严谨性): 数学/统计推导是否严谨 (1-5分)
         - Impact (实践影响力): 是否可落地、能提高效果 (1-5分)
         - Clarity (清晰度): 是否深入浅出、逻辑脉络清晰 (1-5分)
-    2. **优选 Top 15**：请根据我的偏好，挑选出**总分最高的 10 到 15 篇**论文。
+    2. **优选 Top 15**：根据我的偏好，挑选出**总分最高的 10 到 15 篇**论文。
     3. **评分**：为每篇选中的论文打分 (Novelty, Rigor, Impact, Clarity)。
    
     请返回一个 JSON **列表**。如果实在没有值得读的，返回 `null`。

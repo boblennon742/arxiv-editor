@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.16922v1",
+        "title": "Next-Embedding Prediction Makes Strong Vision Learners",
+        "summary": "Inspired by the success of generative pretraining in natural language, we ask whether the same principles can yield strong self-supervised visual learners. Instead of training models to output features for downstream use, we train them to generate embeddings to perform predictive tasks directly. This work explores such a shift from learning representations to learning models. Specifically, models learn to predict future patch embeddings conditioned on past ones, using causal masking and stop gradient, which we refer to as Next-Embedding Predictive Autoregression (NEPA). We demonstrate that a simple Transformer pretrained on ImageNet-1k with next embedding prediction as its sole learning objective is effective - no pixel reconstruction, discrete tokens, contrastive loss, or task-specific heads. This formulation retains architectural simplicity and scalability, without requiring additional design complexity. NEPA achieves strong results across tasks, attaining 83.8% and 85.3% top-1 accuracy on ImageNet-1K with ViT-B and ViT-L backbones after fine-tuning, and transferring effectively to semantic segmentation on ADE20K. We believe generative pretraining from embeddings provides a simple, scalable, and potentially modality-agnostic alternative to visual self-supervised learning.",
+        "authors": "Sihan Xu, Ziqiao Ma, Wenhao Chai, Xuweiyi Chen, Weiyang Jin, Joyce Chai, Saining Xie, Stella X. Yu",
+        "url": "http://arxiv.org/abs/2512.16922v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16922v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个新颖的自监督视觉学习范式——“Next-Embedding Predictive Autoregression (NEPA)”，通过预测未来嵌入来训练模型，避免了像素重建、离散token或对比损失等复杂设计。它将NLP中生成式预训练的成功原则引入视觉领域，具有高度的理论创新性，并能有效解决数据效率问题，实现强大的视觉学习器，对AI算法和架构有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16917v1",
+        "title": "Generative Adversarial Reasoner: Enhancing LLM Reasoning with Adversarial Reinforcement Learning",
+        "summary": "Large language models (LLMs) with explicit reasoning capabilities excel at mathematical reasoning yet still commit process errors, such as incorrect calculations, brittle logic, and superficially plausible but invalid steps. In this paper, we introduce Generative Adversarial Reasoner, an on-policy joint training framework designed to enhance reasoning by co-evolving an LLM reasoner and an LLM-based discriminator through adversarial reinforcement learning. A compute-efficient review schedule partitions each reasoning chain into logically complete slices of comparable length, and the discriminator evaluates each slice's soundness with concise, structured justifications. Learning couples complementary signals: the LLM reasoner is rewarded for logically consistent steps that yield correct answers, while the discriminator earns rewards for correctly detecting errors or distinguishing traces in the reasoning process. This produces dense, well-calibrated, on-policy step-level rewards that supplement sparse exact-match signals, improving credit assignment, increasing sample efficiency, and enhancing overall reasoning quality of LLMs. Across various mathematical benchmarks, the method delivers consistent gains over strong baselines with standard RL post-training. Specifically, on AIME24, we improve DeepSeek-R1-Distill-Qwen-7B from 54.0 to 61.3 (+7.3) and DeepSeek-R1-Distill-Llama-8B from 43.7 to 53.7 (+10.0). The modular discriminator also enables flexible reward shaping for objectives such as teacher distillation, preference alignment, and mathematical proof-based reasoning.",
+        "authors": "Qihao Liu, Luoxin Ye, Wufei Ma, Yu-Cheng Chou, Alan Yuille",
+        "url": "http://arxiv.org/abs/2512.16917v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16917v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文引入了“Generative Adversarial Reasoner”，一个通过对抗强化学习共同演化LLM推理器和判别器的在策略联合训练框架。其计算高效的推理链切片审查机制和密集的、校准良好的步级奖励，为LLM推理中的过程错误提供了理论创新性的解决方案，显著提升了数学推理能力，直接解决了LLM应用中的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16913v1",
+        "title": "Depth Any Panoramas: A Foundation Model for Panoramic Depth Estimation",
+        "summary": "In this work, we present a panoramic metric depth foundation model that generalizes across diverse scene distances. We explore a data-in-the-loop paradigm from the view of both data construction and framework design. We collect a large-scale dataset by combining public datasets, high-quality synthetic data from our UE5 simulator and text-to-image models, and real panoramic images from the web. To reduce domain gaps between indoor/outdoor and synthetic/real data, we introduce a three-stage pseudo-label curation pipeline to generate reliable ground truth for unlabeled images. For the model, we adopt DINOv3-Large as the backbone for its strong pre-trained generalization, and introduce a plug-and-play range mask head, sharpness-centric optimization, and geometry-centric optimization to improve robustness to varying distances and enforce geometric consistency across views. Experiments on multiple benchmarks (e.g., Stanford2D3D, Matterport3D, and Deep360) demonstrate strong performance and zero-shot generalization, with particularly robust and stable metric predictions in diverse real-world scenes. The project page can be found at: \\href{https://insta360-research-team.github.io/DAP_website/} {https://insta360-research-team.github.io/DAP\\_website/}",
+        "authors": "Xin Lin, Meixi Song, Dizhe Zhang, Wenxuan Lu, Haodong Li, Bo Du, Ming-Hsuan Yang, Truong Nguyen, Lu Qi",
+        "url": "http://arxiv.org/abs/2512.16913v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16913v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了“Temporal Logic-Guided Large Language Model Compression (TOGGLE)”，首次将形式化方法（信号时序逻辑STL）整合到LLM压缩中，以形式化地指定和强制执行语言属性。通过STL鲁棒性引导的贝叶斯优化，它在不重新训练或微调的情况下，实现了模型计算成本和大小的大幅减少，同时保证了语言属性，是解决模型压缩瓶颈的理论创新性方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16626v1",
+        "title": "Stackelberg Learning from Human Feedback: Preference Optimization as a Sequential Game",
+        "summary": "We introduce Stackelberg Learning from Human Feedback (SLHF), a new framework for preference optimization. SLHF frames the alignment problem as a sequential-move game between two policies: a Leader, which commits to an action, and a Follower, which responds conditionally on the Leader's action. This approach decomposes preference optimization into a refinement problem for the Follower and an optimization problem against an adversary for the Leader. Unlike Reinforcement Learning from Human Feedback (RLHF), which assigns scalar rewards to actions, or Nash Learning from Human Feedback (NLHF), which seeks a simultaneous-move equilibrium, SLHF leverages the asymmetry of sequential play to capture richer preference structures. The sequential design of SLHF naturally enables inference-time refinement, as the Follower learns to improve the Leader's actions, and these refinements can be leveraged through iterative sampling. We compare the solution concepts of SLHF, RLHF, and NLHF, and lay out key advantages in consistency, data sensitivity, and robustness to intransitive preferences. Experiments on large language models demonstrate that SLHF achieves strong alignment across diverse preference datasets, scales from 0.5B to 8B parameters, and yields inference-time refinements that transfer across model families without further fine-tuning.",
+        "authors": "Barna Pásztor, Thomas Kleine Buening, Andreas Krause",
+        "url": "http://arxiv.org/abs/2512.16626v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16626v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文引入了“Stackelberg Learning from Human Feedback (SLHF)”，一个将偏好优化框架为序贯博弈的新方法。它将对齐问题分解为Leader和Follower策略，利用序贯博弈的不对称性捕捉更丰富的偏好结构。这种理论创新不仅提供了更一致、数据敏感且对非传递偏好更鲁棒的对齐方法，还在LLM对齐方面展现了强大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16602v1",
+        "title": "Refusal Steering: Fine-grained Control over LLM Refusal Behaviour for Sensitive Topics",
+        "summary": "We introduce Refusal Steering, an inference-time method to exercise fine-grained control over Large Language Models refusal behaviour on politically sensitive topics without retraining. We replace fragile pattern-based refusal detection with an LLM-as-a-judge that assigns refusal confidence scores and we propose a ridge-regularized variant to compute steering vectors that better isolate the refusal--compliance direction. On Qwen3-Next-80B-A3B-Thinking, our method removes the refusal behaviour of the model around politically sensitive topics while maintaining safety on JailbreakBench and near-baseline performance on general benchmarks. The approach generalizes across 4B and 80B models and can also induce targeted refusals when desired. We analize the steering vectors and show that refusal signals concentrate in deeper layers of the transformer and are distributed across many dimensions. Together, these results demonstrate that activation steering can remove political refusal behaviour while retaining safety alignment for harmful content, offering a practical path to controllable, transparent moderation at inference time.",
+        "authors": "Iker García-Ferrero, David Montero, Roman Orus",
+        "url": "http://arxiv.org/abs/2512.16602v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16602v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "SemMark提出了一种新颖的语义感知水印范式，用于Embedding-as-a-Service (EaaS) 的版权保护。它利用局部敏感哈希划分语义空间并注入语义感知水印，并通过局部异常因子自适应调整水印权重，确保水印信号的不可感知性和多样性。这在理论上具有高度创新性，并为EaaS的知识产权保护提供了强大的实践解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16607v1",
+        "title": "Riemannian Stochastic Interpolants for Amorphous Particle Systems",
+        "summary": "Modern generative models hold great promise for accelerating diverse tasks involving the simulation of physical systems, but they must be adapted to the specific constraints of each domain. Significant progress has been made for biomolecules and crystalline materials. Here, we address amorphous materials (glasses), which are disordered particle systems lacking atomic periodicity. Sampling equilibrium configurations of glass-forming materials is a notoriously slow and difficult task. This obstacle could be overcome by developing a generative framework capable of producing equilibrium configurations with well-defined likelihoods. In this work, we address this challenge by leveraging an equivariant Riemannian stochastic interpolation framework which combines Riemannian stochastic interpolant and equivariant flow matching. Our method rigorously incorporates periodic boundary conditions and the symmetries of multi-component particle systems, adapting an equivariant graph neural network to operate directly on the torus. Our numerical experiments on model amorphous systems demonstrate that enforcing geometric and symmetry constraints significantly improves generative performance.",
+        "authors": "Louis Grenioux, Leonardo Galliano, Ludovic Berthier, Giulio Biroli, Marylou Gabrié",
+        "url": "http://arxiv.org/abs/2512.16607v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16607v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个利用“equivariant Riemannian stochastic interpolation framework”来模拟无定形粒子系统的方法，结合了黎曼随机插值和等变流匹配。它严谨地整合了周期性边界条件和多组分粒子系统的对称性，将等变图神经网络应用于环面。这在理论和算法上都具有高度创新性，为物理系统模拟提供了新的视角和高效方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16292v1",
+        "title": "In-Context Probing for Membership Inference in Fine-Tuned Language Models",
+        "summary": "Membership inference attacks (MIAs) pose a critical privacy threat to fine-tuned large language models (LLMs), especially when models are adapted to domain-specific tasks using sensitive data. While prior black-box MIA techniques rely on confidence scores or token likelihoods, these signals are often entangled with a sample's intrinsic properties - such as content difficulty or rarity - leading to poor generalization and low signal-to-noise ratios. In this paper, we propose ICP-MIA, a novel MIA framework grounded in the theory of training dynamics, particularly the phenomenon of diminishing returns during optimization. We introduce the Optimization Gap as a fundamental signal of membership: at convergence, member samples exhibit minimal remaining loss-reduction potential, while non-members retain significant potential for further optimization. To estimate this gap in a black-box setting, we propose In-Context Probing (ICP), a training-free method that simulates fine-tuning-like behavior via strategically constructed input contexts. We propose two probing strategies: reference-data-based (using semantically similar public samples) and self-perturbation (via masking or generation). Experiments on three tasks and multiple LLMs show that ICP-MIA significantly outperforms prior black-box MIAs, particularly at low false positive rates. We further analyze how reference data alignment, model type, PEFT configurations, and training schedules affect attack effectiveness. Our findings establish ICP-MIA as a practical and theoretically grounded framework for auditing privacy risks in deployed LLMs.",
+        "authors": "Zhexi Lu, Hongliang Chi, Nathalie Baracaldo, Swanand Ravindra Kadhe, Yuseok Jeon, Lei Yu",
+        "url": "http://arxiv.org/abs/2512.16292v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16292v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "ICP-MIA是一个基于训练动态理论（特别是优化过程中的收益递减现象）的新型成员推断攻击（MIA）框架。它引入了“In-Context Probing (ICP)”来在黑盒设置中估计优化差距，作为成员身份的基本信号。该方法具有坚实的理论基础和算法创新，能显著优于现有黑盒MIA，对LLM隐私风险审计具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16287v1",
+        "title": "Evaluating OpenAI GPT Models for Translation of Endangered Uralic Languages: A Comparison of Reasoning and Non-Reasoning Architectures",
+        "summary": "The evaluation of Large Language Models (LLMs) for translation tasks has primarily focused on high-resource languages, leaving a significant gap in understanding their performance on low-resource and endangered languages. This study presents a comprehensive comparison of OpenAI's GPT models, specifically examining the differences between reasoning and non-reasoning architectures for translating between Finnish and four low-resource Uralic languages: Komi-Zyrian, Moksha, Erzya, and Udmurt. Using a parallel corpus of literary texts, we evaluate model willingness to attempt translation through refusal rate analysis across different model architectures. Our findings reveal significant performance variations between reasoning and non-reasoning models, with reasoning models showing 16 percentage points lower refusal rates. The results provide valuable insights for researchers and practitioners working with Uralic languages and contribute to the broader understanding of reasoning model capabilities for endangered language preservation.",
+        "authors": "Yehor Tereshchenko, Mika Hämäläinen, Svitlana Myroniuk",
+        "url": "http://arxiv.org/abs/2512.16287v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16287v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了“Selective Representation Misdirection for Unlearning (SRMU)”，一个新颖的激活编辑框架，通过特征感知和方向控制的扰动来执行机器遗忘。它使用结构化的误导向量和激活重要性图，选择性地抑制有害表示同时保留良性实用性。这在理论上具有高度创新性，并为安全驱动的模型治理和隐私合规提供了强大的实践基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16279v1",
+        "title": "QuadSentinel: Sequent Safety for Machine-Checkable Control in Multi-agent Systems",
+        "summary": "Safety risks arise as large language model-based agents solve complex tasks with tools, multi-step plans, and inter-agent messages. However, deployer-written policies in natural language are ambiguous and context dependent, so they map poorly to machine-checkable rules, and runtime enforcement is unreliable. Expressing safety policies as sequents, we propose \\textsc{QuadSentinel}, a four-agent guard (state tracker, policy verifier, threat watcher, and referee) that compiles these policies into machine-checkable rules built from predicates over observable state and enforces them online. Referee logic plus an efficient top-$k$ predicate updater keeps costs low by prioritizing checks and resolving conflicts hierarchically. Measured on ST-WebAgentBench (ICML CUA~'25) and AgentHarm (ICLR~'25), \\textsc{QuadSentinel} improves guardrail accuracy and rule recall while reducing false positives. Against single-agent baselines such as ShieldAgent (ICML~'25), it yields better overall safety control. Near-term deployments can adopt this pattern without modifying core agents by keeping policies separate and machine-checkable. Our code will be made publicly available at https://github.com/yyiliu/QuadSentinel.",
+        "authors": "Yiliu Yang, Yilei Jiang, Qunzhong Wang, Yingshui Tan, Xiaoyong Zhu, Sherman S. M. Chow, Bo Zheng, Xiangyu Yue",
+        "url": "http://arxiv.org/abs/2512.16279v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16279v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CKA Guided Modular Quantization是一个免微调、即插即用的异构量化框架。它独立评估每个层的多个PTQ算法，并使用线性中心核对齐（CKA）作为指标来自动选择最优量化策略。这种算法创新解决了传统统一量化策略的局限性，显著提高了LLM压缩的性能，具有很高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16275v1",
+        "title": "GFLAN: Generative Functional Layouts",
+        "summary": "Automated floor plan generation lies at the intersection of combinatorial search, geometric constraint satisfaction, and functional design requirements -- a confluence that has historically resisted a unified computational treatment. While recent deep learning approaches have improved the state of the art, they often struggle to capture architectural reasoning: the precedence of topological relationships over geometric instantiation, the propagation of functional constraints through adjacency networks, and the emergence of circulation patterns from local connectivity decisions. To address these fundamental challenges, this paper introduces GFLAN, a generative framework that restructures floor plan synthesis through explicit factorization into topological planning and geometric realization. Given a single exterior boundary and a front-door location, our approach departs from direct pixel-to-pixel or wall-tracing generation in favor of a principled two-stage decomposition. Stage A employs a specialized convolutional architecture with dual encoders -- separating invariant spatial context from evolving layout state -- to sequentially allocate room centroids within the building envelope via discrete probability maps over feasible placements. Stage B constructs a heterogeneous graph linking room nodes to boundary vertices, then applies a Transformer-augmented graph neural network (GNN) that jointly regresses room boundaries.",
+        "authors": "Mohamed Abouagour, Eleftherios Garyfallidis",
+        "url": "http://arxiv.org/abs/2512.16275v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16275v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "QuadSentinel是一个“四代理守卫”框架，它将以序贯形式表达的安全策略编译成机器可检查的规则并在线执行。其高效的top-k谓词更新器和分层冲突解决机制，在多代理系统中实现了安全控制的理论创新。它显著提高了LLM代理的安全防护准确性和规则召回率，对高风险AI应用具有极高的实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16247v1",
+        "title": "Sharpness-aware Federated Graph Learning",
+        "summary": "One of many impediments to applying graph neural networks (GNNs) to large-scale real-world graph data is the challenge of centralized training, which requires aggregating data from different organizations, raising privacy concerns. Federated graph learning (FGL) addresses this by enabling collaborative GNN model training without sharing private data. However, a core challenge in FGL systems is the variation in local training data distributions among clients, known as the data heterogeneity problem. Most existing solutions suffer from two problems: (1) The typical optimizer based on empirical risk minimization tends to cause local models to fall into sharp valleys and weakens their generalization to out-of-distribution graph data. (2) The prevalent dimensional collapse in the learned representations of local graph data has an adverse impact on the classification capacity of the GNN model. To this end, we formulate a novel optimization objective that is aware of the sharpness (i.e., the curvature of the loss surface) of local GNN models. By minimizing the loss function and its sharpness simultaneously, we seek out model parameters in a flat region with uniformly low loss values, thus improving the generalization over heterogeneous data. By introducing a regularizer based on the correlation matrix of local representations, we relax the correlations of representations generated by individual local graph samples, so as to alleviate the dimensional collapse of the learned model. The proposed \\textbf{S}harpness-aware f\\textbf{E}derated gr\\textbf{A}ph \\textbf{L}earning (SEAL) algorithm can enhance the classification accuracy and generalization ability of local GNN models in federated graph learning. Experimental studies on several graph classification benchmarks show that SEAL consistently outperforms SOTA FGL baselines and provides gains for more participants.",
+        "authors": "Ruiyu Li, Peige Zhao, Guangxia Li, Pengcheng Wu, Xingyu Gao, Zhiqiang Xu",
+        "url": "http://arxiv.org/abs/2512.16247v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16247v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个新颖的优化目标，即“Sharpness-aware Federated Graph Learning (SEAL)”，它同时最小化损失函数及其锐度，并引入基于局部表示相关矩阵的正则化器以缓解维度坍塌。这在理论上具有高度创新性，显著提高了联邦图学习中GNN模型的分类准确性和泛化能力，对隐私保护GNN有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16245v1",
+        "title": "AlignMerge - Alignment-Preserving Large Language Model Merging via Fisher-Guided Geometric Constraints",
+        "summary": "Merging large language models (LLMs) is a practical way to compose capabilities from multiple fine-tuned checkpoints without retraining. Yet standard schemes (linear weight soups, task vectors, and Fisher-weighted averaging) can preserve loss while quietly destroying alignment. We argue that merging is not a numerical trick but a geometry-constrained operation around an already-aligned anchor: fusion must be steered to respect safety geometry, not validated post hoc.   We introduce AlignMerge, a geometry-aware merging framework that makes alignment an explicit invariant. In a local Fisher chart around an instruction-tuned base, we estimate an alignment subspace with projector P_A and optimize:   L_AlignMerge = L_geo + lambda_align * L_align + lambda_bud * L_bud,   where L_geo keeps the merge close to its experts in Fisher-Rao geometry, L_align penalizes motion along alignment-sensitive directions, and L_bud enforces a soft alignment budget. As the alignment functional we use the decoding-invariant Alignment Quality Index (AQI), a latent-space criterion that captures how cleanly aligned and misaligned behaviors separate in representation space.   Across five model families (LLaMA-3 8B, Mistral 7B, Qwen 2, Phi-3.5, Gemma 2), merging safety anchors with task experts, AlignMerge improves alignment metrics (AQI, toxicity, LLM-judge alignment) while matching or exceeding the best expert on instruction-following, reasoning, and helpfulness. It also exhibits smaller alignment-subspace drift and fewer budget violations than Fisher soups, TIES, SafeMerge, and MergeAlign. These results make alignment-preserving merging a first-class design goal and suggest a path to geometry-aware composition of future foundation models.",
+        "authors": "Aniruddha Roy, Jyoti Patel, Aman Chadha, Vinija Jain, Amitava Das",
+        "url": "http://arxiv.org/abs/2512.16245v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16245v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "AlignMerge是一个“几何感知合并框架”，它将对齐作为LLM合并的显式不变性。通过在指令微调基座的局部Fisher图上优化，估计对齐子空间并使用解码不变的对齐质量指数（AQI）。这在理论上具有高度创新性，解决了LLM合并中对齐被破坏的问题，对LLM部署和组合具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16167v1",
+        "title": "Ev-Trust: A Strategy Equilibrium Trust Mechanism for Evolutionary Games in LLM-Based Multi-Agent Services",
+        "summary": "The rapid evolution of the Web toward an agent-centric paradigm, driven by large language models (LLMs), has enabled autonomous agents to reason, plan, and interact in complex decentralized environments. However, the openness and heterogeneity of LLM-based multi-agent systems also amplify the risks of deception, fraud, and misinformation, posing severe challenges to trust establishment and system robustness. To address this issue, we propose Ev-Trust, a strategy-equilibrium trust mechanism grounded in evolutionary game theory. This mechanism integrates direct trust, indirect trust, and expected revenue into a dynamic feedback structure that guides agents' behavioral evolution toward equilibria. Within a decentralized \"Request-Response-Payment-Evaluation\" service framework, Ev-Trust enables agents to adaptively adjust strategies, naturally excluding malicious participants while reinforcing high-quality collaboration. Furthermore, our theoretical derivation based on replicator dynamics equations proves the existence and stability of local evolutionary equilibria. Experimental results indicate that our approach effectively reflects agent trustworthiness in LLM-driven open service interaction scenarios, reduces malicious strategies, and increases collective revenue. We hope Ev-Trust can provide a new perspective on trust modeling for the agentic service web in group evolutionary game scenarios.",
+        "authors": "Shiduo Yang, Jiye Wang, Jiayu Qin, Jianbin Li, Yu Wang, Yuanhe Zhao, Kenan Guo",
+        "url": "http://arxiv.org/abs/2512.16167v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16167v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "Ev-Trust提出了一种基于演化博弈论的“策略均衡信任机制”，用于LLM多代理服务。它将直接信任、间接信任和预期收益整合到动态反馈结构中，引导代理行为演化。该机制具有坚实的数学理论基础（复制器动力学方程），并能有效提高多代理系统中的信任建立和鲁棒性，对代理服务网络有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16125v1",
+        "title": "Convolutional Lie Operator for Sentence Classification",
+        "summary": "Traditional Convolutional Neural Networks have been successful in capturing local, position-invariant features in text, but their capacity to model complex transformation within language can be further explored. In this work, we explore a novel approach by integrating Lie Convolutions into Convolutional-based sentence classifiers, inspired by the ability of Lie group operations to capture complex, non-Euclidean symmetries. Our proposed models SCLie and DPCLie empirically outperform traditional Convolutional-based sentence classifiers, suggesting that Lie-based models relatively improve the accuracy by capturing transformations not commonly associated with language. Our findings motivate more exploration of new paradigms in language modeling.",
+        "authors": "Daniela N. Rim, Heeyoul Choi",
+        "url": "http://arxiv.org/abs/2512.16125v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16125v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LoPA是一个免训练、即插即用的算法，通过识别更优的Token Filling Order (TFO) 来加速dLLM推理。它通过并行分支并发探索不同的TFO，并开发了具有分支并行性（BP）的多设备推理系统。这在算法和系统层面都具有高度创新性，显著解决了dLLM推理速度瓶颈，对LLM服务具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.16103v1",
+        "title": "AIMM: An AI-Driven Multimodal Framework for Detecting Social-Media-Influenced Stock Market Manipulation",
+        "summary": "Market manipulation now routinely originates from coordinated social media campaigns, not isolated trades. Retail investors, regulators, and brokerages need tools that connect online narratives and coordination patterns to market behavior. We present AIMM, an AI-driven framework that fuses Reddit activity, bot and coordination indicators, and OHLCV market features into a daily AIMM Manipulation Risk Score for each ticker.   The system uses a parquet-native pipeline with a Streamlit dashboard that allows analysts to explore suspicious windows, inspect underlying posts and price action, and log model outputs over time. Due to Reddit API restrictions, we employ calibrated synthetic social features matching documented event characteristics; market data (OHLCV) uses real historical data from Yahoo Finance. This release makes three contributions. First, we build the AIMM Ground Truth dataset (AIMM-GT): 33 labeled ticker-days spanning eight equities, drawing from SEC enforcement actions, community-verified manipulation cases, and matched normal controls. Second, we implement forward-walk evaluation and prospective prediction logging for both retrospective and deployment-style assessment. Third, we analyze lead times and show that AIMM flagged GME 22 days before the January 2021 squeeze peak.   The current labeled set is small (33 ticker-days, 3 positive events), but results show preliminary discriminative capability and early warnings for the GME incident. We release the code, dataset schema, and dashboard design to support research on social media-driven market surveillance.",
+        "authors": "Sandeep Neela",
+        "url": "http://arxiv.org/abs/2512.16103v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.16103v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个基于信息瓶颈理论的LLM编辑框架，引入了“Information Bottleneck Knowledge Editor (IBKE)”，利用紧凑的潜在表示指导基于梯度的更新。这在理论上具有高度创新性，能够实现鲁棒且广泛适用的模型编辑，解决了LLM知识更新的挑战，对LLM的实用性和可信度有重要实践意义。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.19605v1",
+        "title": "KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning",
+        "summary": "Recent breakthroughs in self-supervised Joint-Embedding Predictive Architectures (JEPAs) have established that regularizing Euclidean representations toward isotropic Gaussian priors yields provable gains in training stability and downstream generalization. We introduce a new, flexible family of KerJEPAs, self-supervised learning algorithms with kernel-based regularizers. One instance of this family corresponds to the recently-introduced LeJEPA Epps-Pulley regularizer which approximates a sliced maximum mean discrepancy (MMD) with a Gaussian prior and Gaussian kernel. By expanding the class of viable kernels and priors and computing the closed-form high-dimensional limit of sliced MMDs, we develop alternative KerJEPAs with a number of favorable properties including improved training stability and design flexibility.",
+        "authors": "Eric Zimmermann, Harley Wiltzer, Justin Szeto, David Alvarez-Melis, Lester Mackey",
+        "url": "http://arxiv.org/abs/2512.19605v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19605v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了KerJEPAs，一种基于核的自监督学习算法，并明确指出其在训练稳定性上的可证明增益。摘要中提及了“sliced maximum mean discrepancy (MMD) 的闭式高维极限”以及“可证明的增益”，这直接体现了强大的统计理论基础和清晰的数学推导，非常符合您对理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19588v1",
+        "title": "Possibilistic Inferential Models for Post-Selection Inference in High-Dimensional Linear Regression",
+        "summary": "Valid uncertainty quantification after model selection remains challenging in high-dimensional linear regression, especially within the possibilistic inferential model (PIM) framework. We develop possibilistic inferential models for post-selection inference based on a regularized split possibilistic construction (RSPIM) that combines generic high-dimensional selectors with PIM validification through sample splitting. A first subsample is used to select a sparse model; ordinary least-squares refits on an independent inference subsample yield classical t/F pivots, which are then turned into consonant plausibility contours. In Gaussian linear models this leads to coor-dinatewise intervals with exact finite-sample strong validity conditional on the split and selected model, uniformly over all selectors that use only the selection data. We further analyze RSPIM in a sparse p >> n regime under high-level screening conditions, develop orthogonalized and bootstrap-based extensions for low-dimensional targets with high-dimensional nuisance, and study a maxitive multi-split aggregation that stabilizes inference across random splits while preserving strong validity. Simulations and a riboflavin gene-expression example show that calibrated RSPIM intervals are well behaved under both Gaussian and heteroskedastic errors and are competitive with state-of-the-art post-selection methods, while plausibility contours provide transparent diagnostics of post-selection uncertainty.",
+        "authors": "Yaohui Lin",
+        "url": "http://arxiv.org/abs/2512.19588v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19588v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文专注于高维线性回归中的模型选择后推断（post-selection inference）问题，并提出了基于正则化分裂可能性推断模型（RSPIM）的方法。摘要中强调了“精确有限样本强有效性（exact finite-sample strong validity）”和“保留强有效性”，这表明了其在统计保证方面的强大理论贡献，是数理统计领域的典型研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19553v1",
+        "title": "A Statistical Framework for Understanding Causal Effects that Vary by Treatment Initiation Time in EHR-based Studies",
+        "summary": "Comparative effectiveness studies using electronic health records (EHR) consider data from patients who could ``enter'' the study cohort at any point during an interval that spans many years in calendar time. Unlike treatments in tightly controlled trials, real-world treatments can evolve over calendar time, especially if comparators include standard of care, or procedures where techniques may improve. Efforts to assess whether treatment efficacy itself is changing are complicated by changing patient populations, with potential covariate shift in key effect modifiers. In this work, we propose a statistical framework to estimate calendar-time specific average treatment effects and describe both how and why effects vary across treatment initiation time in EHR-based studies. Our approach projects doubly robust, time-specific treatment effect estimates onto candidate marginal structural models and uses a model selection procedure to best describe how effects vary by treatment initiation time. We further introduce a novel summary metric, based on standardization analysis, to quantify the role of covariate shift in explaining observed effect changes and disentangle changes in treatment effects from changes in the patient population receiving treatment. Extensive simulations using EHR data from Kaiser Permanente are used to validate the utility of the framework, which we apply to study changes in relative weight loss following two bariatric surgical interventions versus no surgery among patients with severe obesity between 2005-2011.",
+        "authors": "Luke Benz, Rajarshi Mukherjee, Rui Wang, David Arterburn, Heidi Fischer, Catherine Lee, Susan M. Shortreed, Alexander W. Levis, Sebastien Haneuse",
+        "url": "http://arxiv.org/abs/2512.19553v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19553v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统计框架，用于理解EHR研究中随治疗开始时间变化的因果效应。它明确提及了“统计框架”、“因果效应”、“双重鲁棒（doubly robust）”估计和“标准化分析”，这些都是因果推断和统计学中的核心概念，具有坚实的理论基础和严谨的数学逻辑，非常符合您对因果逻辑和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19510v1",
+        "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
+        "summary": "Conditional independence (CI) is central to causal inference, feature selection, and graphical modeling, yet it is untestable in many settings without additional assumptions. Existing CI tests often rely on restrictive structural conditions, limiting their validity on real-world data. Kernel methods using the partial covariance operator offer a more principled approach but suffer from limited adaptivity, slow convergence, and poor scalability. In this work, we explore whether representation learning can help address these limitations. Specifically, we focus on representations derived from the singular value decomposition of the partial covariance operator and use them to construct a simple test statistic, reminiscent of the Hilbert-Schmidt Independence Criterion (HSIC). We also introduce a practical bi-level contrastive algorithm to learn these representations. Our theory links representation learning error to test performance and establishes asymptotic validity and power guarantees. Preliminary experiments suggest that this approach offers a practical and statistically grounded path toward scalable CI testing, bridging kernel-based theory with modern representation learning.",
+        "authors": "Alek Frohlich, Vladimir Kostic, Karim Lounici, Daniel Perazzo, Massimiliano Pontil",
+        "url": "http://arxiv.org/abs/2512.19510v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19510v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文探讨了使用谱表示进行可扩展且有效的条件独立性检验。摘要中明确指出其理论“将表示学习误差与测试性能联系起来”，并“建立了渐近有效性（asymptotic validity）和功效保证（power guarantees）”。这直接满足了您对统计保证和理论严谨性的要求，并涉及了核方法和算子理论等数学工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19489v1",
+        "title": "Rethinking Coupled Tensor Analysis for Hyperspectral Super-Resolution: Recoverable Modeling Under Endmember Variability",
+        "summary": "This work revisits the hyperspectral super-resolution (HSR) problem, i.e., fusing a pair of spatially co-registered hyperspectral (HSI) and multispectral (MSI) images to recover a super-resolution image (SRI) that enhances the spatial resolution of the HSI. Coupled tensor decomposition (CTD)-based methods have gained traction in this domain, offering recoverability guarantees under various assumptions. Existing models such as canonical polyadic decomposition (CPD) and Tucker decomposition provide strong expressive power but lack physical interpretability. The block-term decomposition model with rank-$(L_r, L_r, 1)$ terms (the LL1 model) yields interpretable factors under the linear mixture model (LMM) of spectral images, but LMM assumptions are often violated in practice -- primarily due to nonlinear effects such as endmember variability (EV). To address this, we propose modeling spectral images using a more flexible block-term tensor decomposition with rank-$(L_r, M_r, N_r)$ terms (the LMN model). This modeling choice retains interpretability, subsumes CPD, Tucker, and LL1 as special cases, and robustly accounts for non-ideal effects such as EV, offering a balanced tradeoff between expressiveness and interpretability for HSR. Importantly, under the LMN model for HSI and MSI, recoverability of the SRI can still be established under proper conditions -- providing strong theoretical support. Extensive experiments on synthetic and real datasets further validate the effectiveness and robustness of the proposed method compared with existing CTD-based approaches.",
+        "authors": "Meng Ding, Xiao Fu",
+        "url": "http://arxiv.org/abs/2512.19489v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19489v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文重新审视了高光谱超分辨率中的耦合张量分析，并提出了在端元变异性下可恢复的建模方法。摘要中多次强调“可恢复性保证（recoverability guarantees）”和“强大的理论支持”，并详细阐述了其LMN模型如何“在适当条件下建立SRI的可恢复性”，这显示了其在张量分解和信号处理领域深厚的数学理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19363v1",
+        "title": "From Points to Coalitions: Hierarchical Contrastive Shapley Values for Prioritizing Data Samples",
+        "summary": "How should we quantify the value of each training example when datasets are large, heterogeneous, and geometrically structured? Classical Data-Shapley answers in principle, but its O(n!) complexity and point-wise perspective are ill-suited to modern scales. We propose Hierarchical Contrastive Data Valuation (HCDV), a three-stage framework that (i) learns a contrastive, geometry-preserving representation, (ii) organizes the data into a balanced coarse-to-fine hierarchy of clusters, and (iii) assigns Shapley-style payoffs to coalitions via local Monte-Carlo games whose budgets are propagated downward. HCDV collapses the factorial burden to O(T sum_{l} K_{l}) = O(T K_max log n), rewards examples that sharpen decision boundaries, and regularizes outliers through curvature-based smoothness. We prove that HCDV approximately satisfies the four Shapley axioms with surplus loss O(eta log n), enjoys sub-Gaussian coalition deviation tilde O(1/sqrt{T}), and incurs at most k epsilon_infty regret for top-k selection. Experiments on four benchmarks--tabular, vision, streaming, and a 45M-sample CTR task--plus the OpenDataVal suite show that HCDV lifts accuracy by up to +5 pp, slashes valuation time by up to 100x, and directly supports tasks such as augmentation filtering, low-latency streaming updates, and fair marketplace payouts.",
+        "authors": "Canran Xiao, Jiabao Dou, Zhiming Lin, Zong Ke, Liwei Hou",
+        "url": "http://arxiv.org/abs/2512.19363v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19363v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了分层对比Shapley值（HCDV）框架，用于数据样本的优先级排序。它明确证明了HCDV“近似满足四个Shapley公理，具有剩余损失O(eta log n)”，并享有“次高斯联盟偏差”和“至多k epsilon_infty的top-k选择遗憾”。这些都是非常强大的理论保证和数学推导，完美契合您对理论基础和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19317v1",
+        "title": "SafeMed-R1: Adversarial Reinforcement Learning for Generalizable and Robust Medical Reasoning in Vision-Language Models",
+        "summary": "Vision--Language Models (VLMs) show significant promise for Medical Visual Question Answering (VQA), yet their deployment in clinical settings is hindered by severe vulnerability to adversarial attacks. Standard adversarial training, while effective for simpler tasks, often degrades both generalization performance and the quality of generated clinical reasoning. We introduce SafeMed-R1, a hybrid defense framework that ensures robust performance while preserving high-quality, interpretable medical reasoning. SafeMed-R1 employs a two-stage approach: at training time, we integrate Adversarial Training with Group Relative Policy Optimization (AT-GRPO) to explicitly robustify the reasoning process against worst-case perturbations; at inference time, we augment the model with Randomized Smoothing to provide certified $L_2$-norm robustness guarantees. We evaluate SafeMed-R1 on the OmniMedVQA benchmark across eight medical imaging modalities comprising over 88,000 samples. Our experiments reveal that standard fine-tuned VLMs, despite achieving 95\\% accuracy on clean inputs, collapse to approximately 25\\% under PGD attacks. In contrast, SafeMed-R1 maintains 84.45\\% accuracy under the same adversarial conditions, representing a 59 percentage point improvement in robustness. Furthermore, we demonstrate that models trained with explicit chain-of-thought reasoning exhibit superior adversarial robustness compared to instruction-only variants, suggesting a synergy between interpretability and security in medical AI systems.",
+        "authors": "A. A. Gde Yogi Pramana, Jason Ray, Anthony Jaya, Michael Wijaya",
+        "url": "http://arxiv.org/abs/2512.19317v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19317v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了SafeMed-R1框架，旨在为医学视觉语言模型提供可泛化和鲁棒的医疗推理。摘要中明确提及“提供经过认证的L2范数鲁棒性保证（certified L2-norm robustness guarantees）”，这是一种强大的统计保证，表明了其在对抗性鲁棒性理论方面的严谨性，并结合了优化方法（AT-GRPO）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19349v1",
+        "title": "VIGOR+: Iterative Confounder Generation and Validation via LLM-CEVAE Feedback Loop",
+        "summary": "Hidden confounding remains a fundamental challenge in causal inference from observational data. Recent advances leverage Large Language Models (LLMs) to generate plausible hidden confounders based on domain knowledge, yet a critical gap exists: LLM-generated confounders often exhibit semantic plausibility without statistical utility. We propose VIGOR+ (Variational Information Gain for iterative cOnfounder Refinement), a novel framework that closes the loop between LLM-based confounder generation and CEVAE-based statistical validation. Unlike prior approaches that treat generation and validation as separate stages, VIGOR+ establishes an iterative feedback mechanism: validation signals from CEVAE (including information gain, latent consistency metrics, and diagnostic messages) are transformed into natural language feedback that guides subsequent LLM generation rounds. This iterative refinement continues until convergence criteria are met. We formalize the feedback mechanism, prove convergence properties under mild assumptions, and provide a complete algorithmic framework.",
+        "authors": "JiaWei Zhu, ZiHeng Liu",
+        "url": "http://arxiv.org/abs/2512.19349v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19349v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了VIGOR+框架，通过LLM-CEVAE反馈循环进行迭代混杂因子生成和验证。摘要中明确指出其“形式化了反馈机制，并在温和假设下证明了收敛性质（prove convergence properties under mild assumptions）”。这在因果推断领域提供了强大的理论基础和优化收敛性保证，是您会非常感兴趣的方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19273v1",
+        "title": "Scale-Invariant Robust Estimation of High-Dimensional Kronecker-Structured Matrices",
+        "summary": "High-dimensional Kronecker-structured estimation faces a conflict between non-convex scaling ambiguities and statistical robustness. The arbitrary factor scaling distorts gradient magnitudes, rendering standard fixed-threshold robust methods ineffective. We resolve this via Scaled Robust Gradient Descent (SRGD), which stabilizes optimization by de-scaling gradients before truncation. To further enforce interpretability, we introduce Scaled Hard Thresholding (SHT) for invariant variable selection. A two-step estimation procedure, built upon robust initialization and SRGD--SHT iterative updates, is proposed for canonical matrix problems, such as trace regression, matrix GLMs, and bilinear models. The convergence rates are established for heavy-tailed predictors and noise, identifying a phase transition where optimal convergence rates recover under finite noise variance and degrade optimally for heavier tails. Experiments on simulated data and two real-world applications confirm superior robustness and efficiency of the proposed procedure.",
+        "authors": "Xiaoyu Zhang, Zhiyun Fan, Wenyang Zhang, Di Wang",
+        "url": "http://arxiv.org/abs/2512.19273v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19273v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了高维Kronecker结构矩阵的尺度不变鲁棒估计问题。摘要中明确指出“为重尾预测因子和噪声建立了收敛速度（convergence rates are established）”，并识别了“最优收敛速度”的相变。这体现了其在统计鲁棒性、高维统计和优化收敛性方面的深厚理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19199v1",
+        "title": "On the Koopman-Based Generalization Bounds for Multi-Task Deep Learning",
+        "summary": "The paper establishes generalization bounds for multitask deep neural networks using operator-theoretic techniques. The authors propose a tighter bound than those derived from conventional norm based methods by leveraging small condition numbers in the weight matrices and introducing a tailored Sobolev space as an expanded hypothesis space. This enhanced bound remains valid even in single output settings, outperforming existing Koopman based bounds. The resulting framework maintains key advantages such as flexibility and independence from network width, offering a more precise theoretical understanding of multitask deep learning in the context of kernel methods.",
+        "authors": "Mahdi Mohammadigohari, Giuseppe Di Fatta, Giuseppe Nicosia, Panos M. Pardalos",
+        "url": "http://arxiv.org/abs/2512.19199v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19199v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文利用算子理论技术，为多任务深度神经网络建立了泛化界限。摘要中强调了“算子理论技术”、“更紧密的界限”、“定制的Sobolev空间”以及“对多任务深度学习更精确的理论理解”。这篇论文的数学推导和理论基础非常强大，直接关注深度学习的泛化性能，与您的研究兴趣高度吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19184v1",
+        "title": "Operator-Based Generalization Bound for Deep Learning: Insights on Multi-Task Learning",
+        "summary": "This paper presents novel generalization bounds for vector-valued neural networks and deep kernel methods, focusing on multi-task learning through an operator-theoretic framework. Our key development lies in strategically combining a Koopman based approach with existing techniques, achieving tighter generalization guarantees compared to traditional norm-based bounds. To mitigate computational challenges associated with Koopman-based methods, we introduce sketching techniques applicable to vector valued neural networks. These techniques yield excess risk bounds under generic Lipschitz losses, providing performance guarantees for applications including robust and multiple quantile regression. Furthermore, we propose a novel deep learning framework, deep vector-valued reproducing kernel Hilbert spaces (vvRKHS), leveraging Perron Frobenius (PF) operators to enhance deep kernel methods. We derive a new Rademacher generalization bound for this framework, explicitly addressing underfitting and overfitting through kernel refinement strategies. This work offers novel insights into the generalization properties of multitask learning with deep learning architectures, an area that has been relatively unexplored until recent developments.",
+        "authors": "Mahdi Mohammadigohari, Giuseppe Di Fatta, Giuseppe Nicosia, Panos M. Pardalos",
+        "url": "http://arxiv.org/abs/2512.19184v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19184v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了针对向量值神经网络和深度核方法的新型泛化界限，并侧重于通过算子理论框架进行多任务学习。它明确提及了“算子理论框架”、“更紧密的泛化保证”、“Rademacher泛化界限”和“Perron Frobenius (PF) 算子”，这些都表明了其在统计学习理论和泛函分析方面的强大理论基础，与Paper 30类似，但有更多扩展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19194v1",
+        "title": "Causal Heterogeneous Graph Learning Method for Chronic Obstructive Pulmonary Disease Prediction",
+        "summary": "Due to the insufficient diagnosis and treatment capabilities at the grassroots level, there are still deficiencies in the early identification and early warning of acute exacerbation of Chronic obstructive pulmonary disease (COPD), often resulting in a high prevalence rate and high burden, but the screening rate is relatively low. In order to gradually improve this situation. In this paper, this study develop a Causal Heterogeneous Graph Representation Learning (CHGRL) method for COPD comorbidity risk prediction method that: a) constructing a heterogeneous Our dataset includes the interaction between patients and diseases; b) A cause-aware heterogeneous graph learning architecture has been constructed, combining causal inference mechanisms with heterogeneous graph learning, which can support heterogeneous graph causal learning for different types of relationships; and c) Incorporate the causal loss function in the model design, and add counterfactual reasoning learning loss and causal regularization loss on the basis of the cross-entropy classification loss. We evaluate our method and compare its performance with strong GNN baselines. Following experimental evaluation, the proposed model demonstrates high detection accuracy.",
+        "authors": "Leming Zhou, Zuo Wang, Zhigang Liu",
+        "url": "http://arxiv.org/abs/2512.19194v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19194v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种因果异构图学习方法（CHGRL）用于COPD预测。摘要中明确指出其“结合了因果推断机制与异构图学习”，并“融入了因果损失函数，增加了反事实推理学习损失和因果正则化损失”。这直接体现了其在因果逻辑和理论严谨性方面的强大贡献，将因果推断应用于现代AI系统。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19135v1",
+        "title": "Understanding Chain-of-Thought in Large Language Models via Topological Data Analysis",
+        "summary": "With the development of large language models (LLMs), particularly with the introduction of the long reasoning chain technique, the reasoning ability of LLMs in complex problem-solving has been significantly enhanced. While acknowledging the power of long reasoning chains, we cannot help but wonder: Why do different reasoning chains perform differently in reasoning? What components of the reasoning chains play a key role? Existing studies mainly focus on evaluating reasoning chains from a functional perspective, with little attention paid to their structural mechanisms. To address this gap, this work is the first to analyze and evaluate the quality of the reasoning chain from a structural perspective. We apply persistent homology from Topological Data Analysis (TDA) to map reasoning steps into semantic space, extract topological features, and analyze structural changes. These changes reveal semantic coherence, logical redundancy, and identify logical breaks and gaps. By calculating homology groups, we assess connectivity and redundancy at various scales, using barcode and persistence diagrams to quantify stability and consistency. Our results show that the topological structural complexity of reasoning chains correlates positively with accuracy. More complex chains identify correct answers sooner, while successful reasoning exhibits simpler topologies, reducing redundancy and cycles, enhancing efficiency and interpretability. This work provides a new perspective on reasoning chain quality assessment and offers guidance for future optimization.",
+        "authors": "Chenghao Li, Chaoning Zhang, Yi Lu, Shuxu Chen, Xudong Wang, Jiaquan Zhang, Zhicheng Wang, Zhengxun Jin, Kuien Liu, Sung-Ho Bae, Guoqing Wang, Yang Yang, Hen Tao Shen",
+        "url": "http://arxiv.org/abs/2512.19135v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19135v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次通过拓扑数据分析（TDA）来理解大型语言模型（LLMs）的思维链。它应用了“持久同调（persistent homology）”来提取拓扑特征，分析结构变化，并使用“同调群（homology groups）”量化连接性和冗余。这是一种高度数学化的方法，为LLM的推理机制提供了结构化的理论洞察，非常符合您对严谨数学逻辑的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19099v1",
+        "title": "Dual Model Deep Learning for Alzheimer Prognostication",
+        "summary": "Disease modifying therapies for Alzheimer's disease demand precise timing decisions, yet current predictive models require longitudinal observations and provide no uncertainty quantification, rendering them impractical at the critical first visit when treatment decisions must be made. We developed PROGRESS (PRognostic Generalization from REsting Static Signatures), a dual-model deep learning framework that transforms a single baseline cerebrospinal fluid biomarker assessment into actionable prognostic estimates without requiring prior clinical history. The framework addresses two complementary clinical questions: a probabilistic trajectory network predicts individualized cognitive decline with calibrated uncertainty bounds achieving near-nominal coverage, enabling honest prognostic communication; and a deep survival model estimates time to conversion from mild cognitive impairment to dementia. Using data from over 3,000 participants across 43 Alzheimer's Disease Research Centers in the National Alzheimer's Coordinating Center database, PROGRESS substantially outperforms Cox proportional hazards, Random Survival Forests, and gradient boosting methods for survival prediction. Risk stratification identifies patient groups with seven-fold differences in conversion rates, enabling clinically meaningful treatment prioritization. Leave-one-center-out validation demonstrates robust generalizability, with survival discrimination remaining strong across held-out sites despite heterogeneous measurement conditions spanning four decades of assay technologies. By combining superior survival prediction with trustworthy trajectory uncertainty quantification, PROGRESS bridges the gap between biomarker measurement and personalized clinical decision-making.",
+        "authors": "Alireza Moayedikia, Sara Fin, Uffe Kock Wiil",
+        "url": "http://arxiv.org/abs/2512.19099v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19099v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了PROGRESS框架，用于阿尔茨海默病的预后。它强调了“不确定性量化”、“校准的不确定性界限（calibrated uncertainty bounds）”和“接近名义覆盖（near-nominal coverage）”，这些都是统计学中关于预测模型可靠性的重要保证。其双模型深度学习框架在提供统计保证方面表现出色，对临床决策具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.18984v1",
+        "title": "Bi-Level Optimal Control Framework For Missed-Thrust-Design With First-Order Bounds On Maximum Missed-Thrust-Duration",
+        "summary": "In this paper, we present a bi-level optimal control framework for designing low-thrust spacecraft trajectories with robustness against missed-thrust-events. The upper-level (UL) problem generates a nominal trajectory assuming full control authority, while each lower-level (LL) problem computes the optimal recovery maneuver following a missed-thrust-event along the nominal solution. Under suitable regularity conditions ensuring uniqueness and smoothness of the LL response, the hierarchy admits a single-level reformulation by embedding the LL first-order optimality conditions within the UL constraints. We further establish a robustness certificate, which provides an upper bound on the maximum admissible missed-thrust-duration for which the structural assumptions remain valid for the LL problem. The bound depends explicitly on precomputable dynamical quantities along the nominal solution, enabling rapid evaluation over large ensembles without iterative solves. Numerical experiments show that while the certificate identifies when modeling assumptions are valid, it does not fully characterize recoverability after missed-thrust-events. A finite-horizon controllability-energy analysis is therefore used to interpret recovery beyond the theoretical bounds. Collectively, these results provide a deterministic, certifiable approach for incorporating robustness directly into trajectory design, replacing post-hoc margin allocation techniques with formal guarantees.",
+        "authors": "Amlan Sinha, Ryne Beeson",
+        "url": "http://arxiv.org/abs/2512.18984v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.18984v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个双层最优控制框架，用于设计具有抗推力缺失事件鲁棒性的低推力航天器轨迹。摘要中明确提及“确保LL响应唯一性和平滑性的正则性条件”、“鲁棒性证书（robustness certificate）”以及“形式化保证（formal guarantees）”。这体现了其在优化理论和控制理论方面的强大数学严谨性，提供了明确的理论保证。"
+    }
+]

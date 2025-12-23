@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.19673v1",
+        "title": "Bottom-up Policy Optimization: Your Language Model Policy Secretly Contains Internal Policies",
+        "summary": "Existing reinforcement learning (RL) approaches treat large language models (LLMs) as a single unified policy, overlooking their internal mechanisms. Understanding how policy evolves across layers and modules is therefore crucial for enabling more targeted optimization and raveling out complex reasoning mechanisms. In this paper, we decompose the language model policy by leveraging the intrinsic split of the Transformer residual stream and the equivalence between the composition of hidden states with the unembedding matrix and the resulting samplable policy. This decomposition reveals Internal Layer Policies, corresponding to contributions from individual layers, and Internal Modular Policies, which align with the self-attention and feed-forward network (FFN) components within each layer. By analyzing the entropy of internal policy, we find that: (a) Early layers keep high entropy for exploration, top layers converge to near-zero entropy for refinement, with convergence patterns varying across model series. (b) LLama's prediction space rapidly converges in the final layer, whereas Qwen-series models, especially Qwen3, exhibit a more human-like, progressively structured reasoning pattern. Motivated by these findings, we propose Bottom-up Policy Optimization (BuPO), a novel RL paradigm that directly optimizes the internal layer policy during early training. By aligning training objective at lower layer, BuPO reconstructs foundational reasoning capabilities and achieves superior performance. Extensive experiments on complex reasoning benchmarks demonstrates the effectiveness of our method. Our code is available at https://github.com/Trae1ounG/BuPO.",
+        "authors": "Yuqiao Tan, Minzheng Wang, Shizhu He, Huanxuan Liao, Chengfeng Zhao, Qiunan Lu, Tian Liang, Jun Zhao, Kang Liu",
+        "url": "http://arxiv.org/abs/2512.19673v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19673v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过分解LLM的内部策略，揭示了Transformer层级和模块的贡献，并提出了Bottom-up Policy Optimization这一新颖的优化范式。其理论严谨性高，对LLM内部机制的理解和优化具有深远影响，解决了LLM推理机制的瓶颈，是理论创新和实践影响力的完美结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19570v1",
+        "title": "The Epistemological Consequences of Large Language Models: Rethinking collective intelligence and institutional knowledge",
+        "summary": "We examine epistemological threats posed by human and LLM interaction. We develop collective epistemology as a theory of epistemic warrant distributed across human collectives, using bounded rationality and dual process theory as background. We distinguish internalist justification, defined as reflective understanding of why a proposition is true, from externalist justification, defined as reliable transmission of truths. Both are necessary for collective rationality, but only internalist justification produces reflective knowledge. We specify reflective knowledge as follows: agents understand the evaluative basis of a claim, when that basis is unavailable agents consistently assess the reliability of truth sources, and agents have a duty to apply these standards within their domains of competence. We argue that LLMs approximate externalist reliabilism because they can reliably transmit information whose justificatory basis is established elsewhere, but they do not themselves possess reflective justification. Widespread outsourcing of reflective work to reliable LLM outputs can weaken reflective standards of justification, disincentivize comprehension, and reduce agents' capacity to meet professional and civic epistemic duties. To mitigate these risks, we propose a three tier norm program that includes an epistemic interaction model for individual use, institutional and organizational frameworks that seed and enforce norms for epistemically optimal outcomes, and deontic constraints at organizational and or legislative levels that instantiate discursive norms and curb epistemic vices.",
+        "authors": "Angjelin Hila",
+        "url": "http://arxiv.org/abs/2512.19570v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19570v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这是一篇关于LLM的深刻理论分析论文，提出了“集体认识论”和“Epistemia”等新概念，探讨了LLM对人类知识和集体智能的认识论威胁。虽然不是算法创新，但其对AI基础和影响的理论严谨性及深远社会影响力，对专注于AI前沿的博士生而言具有极高的阅读价值，有助于从宏观层面理解AI的本质和未来发展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19550v1",
+        "title": "DFORD: Directional Feedback based Online Ordinal Regression Learning",
+        "summary": "In this paper, we introduce directional feedback in the ordinal regression setting, in which the learner receives feedback on whether the predicted label is on the left or the right side of the actual label. This is a weak supervision setting for ordinal regression compared to the full information setting, where the learner can access the labels. We propose an online algorithm for ordinal regression using directional feedback. The proposed algorithm uses an exploration-exploitation scheme to learn from directional feedback efficiently. Furthermore, we introduce its kernel-based variant to learn non-linear ordinal regression models in an online setting. We use a truncation trick to make the kernel implementation more memory efficient. The proposed algorithm maintains the ordering of the thresholds in the expected sense. Moreover, it achieves the expected regret of $\\mathcal{O}(\\log T)$. We compare our approach with a full information and a weakly supervised algorithm for ordinal regression on synthetic and real-world datasets. The proposed approach, which learns using directional feedback, performs comparably (sometimes better) to its full information counterpart.",
+        "authors": "Naresh Manwani, M Elamparithy, Tanish Taneja",
+        "url": "http://arxiv.org/abs/2512.19550v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19550v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了基于方向反馈的在线序数回归学习这一新颖的弱监督设置，并提出了具有理论保证（O(log T) 遗憾）的在线算法。它解决了数据效率瓶颈，在理论严谨性和算法创新性方面表现出色，非常适合数理统计背景的您。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19510v1",
+        "title": "Toward Scalable and Valid Conditional Independence Testing with Spectral Representations",
+        "summary": "Conditional independence (CI) is central to causal inference, feature selection, and graphical modeling, yet it is untestable in many settings without additional assumptions. Existing CI tests often rely on restrictive structural conditions, limiting their validity on real-world data. Kernel methods using the partial covariance operator offer a more principled approach but suffer from limited adaptivity, slow convergence, and poor scalability. In this work, we explore whether representation learning can help address these limitations. Specifically, we focus on representations derived from the singular value decomposition of the partial covariance operator and use them to construct a simple test statistic, reminiscent of the Hilbert-Schmidt Independence Criterion (HSIC). We also introduce a practical bi-level contrastive algorithm to learn these representations. Our theory links representation learning error to test performance and establishes asymptotic validity and power guarantees. Preliminary experiments suggest that this approach offers a practical and statistically grounded path toward scalable CI testing, bridging kernel-based theory with modern representation learning.",
+        "authors": "Alek Frohlich, Vladimir Kostic, Karim Lounici, Daniel Perazzo, Massimiliano Pontil",
+        "url": "http://arxiv.org/abs/2512.19510v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19510v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文探索了利用谱表示进行可扩展且有效的条件独立性测试，并提出了学习这些表示的双层对比算法。它在数理统计领域具有很高的理论严谨性，为因果推断和特征选择等核心问题提供了新的、有理论基础的解决方案，与您的专业背景高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19466v1",
+        "title": "Epistemological Fault Lines Between Human and Artificial Intelligence",
+        "summary": "Large language models (LLMs) are widely described as artificial intelligence, yet their epistemic profile diverges sharply from human cognition. Here we show that the apparent alignment between human and machine outputs conceals a deeper structural mismatch in how judgments are produced. Tracing the historical shift from symbolic AI and information filtering systems to large-scale generative transformers, we argue that LLMs are not epistemic agents but stochastic pattern-completion systems, formally describable as walks on high-dimensional graphs of linguistic transitions rather than as systems that form beliefs or models of the world. By systematically mapping human and artificial epistemic pipelines, we identify seven epistemic fault lines, divergences in grounding, parsing, experience, motivation, causal reasoning, metacognition, and value. We call the resulting condition Epistemia: a structural situation in which linguistic plausibility substitutes for epistemic evaluation, producing the feeling of knowing without the labor of judgment. We conclude by outlining consequences for evaluation, governance, and epistemic literacy in societies increasingly organized around generative AI.",
+        "authors": "Walter Quattrociocchi, Valerio Capraro, Matjaž Perc",
+        "url": "http://arxiv.org/abs/2512.19466v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19466v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "论文深入分析了人类与AI认知之间的“认识论断层”，提出了“Epistemia”的概念。与P17类似，它提供了对AI本质的深刻理论洞察，对于理解AI的局限性、伦理和社会影响至关重要，具有极高的理论严谨性和影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19428v1",
+        "title": "Attention Is Not What You Need",
+        "summary": "We revisit a basic question in sequence modeling: is explicit self-attention actually necessary for strong performance and reasoning? We argue that standard multi-head attention is best seen as a form of tensor lifting: hidden vectors are mapped into a high-dimensional space of pairwise interactions, and learning proceeds by constraining this lifted tensor through gradient descent. This mechanism is extremely expressive but mathematically opaque, because after many layers it becomes very hard to describe the model with a small family of explicit invariants.   To explore an alternative, we propose an attention-free architecture based on Grassmann flows. Instead of forming an L by L attention matrix, our Causal Grassmann layer (i) linearly reduces token states, (ii) encodes local token pairs as two-dimensional subspaces on a Grassmann manifold via Plucker coordinates, and (iii) fuses these geometric features back into the hidden states through gated mixing. Information therefore propagates by controlled deformations of low-rank subspaces over multi-scale local windows, so the core computation lives on a finite-dimensional manifold rather than in an unstructured tensor space.   On the Wikitext-2 language modeling benchmark, purely Grassmann-based models with 13 to 18 million parameters achieve validation perplexities within about 10 to 15 percent of size-matched Transformers. On the SNLI natural language inference task, a Grassmann-Plucker head on top of DistilBERT slightly outperforms a Transformer head, with best validation and test accuracies of 0.8550 and 0.8538 compared to 0.8545 and 0.8511. We analyze the complexity of Grassmann mixing, show linear scaling in sequence length for fixed rank, and argue that such manifold-based designs offer a more structured route toward geometric and invariant-based interpretations of neural reasoning.",
+        "authors": "Zhang Chong",
+        "url": "http://arxiv.org/abs/2512.19428v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19428v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对Transformer的核心组件自注意力机制提出了根本性挑战，提出了一种基于Grassmann流的无注意力架构。它具有极高的理论创新性，通过几何方法重新思考序列建模，可能带来更可解释和高效的模型，解决了架构瓶颈，是前沿算法和架构的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19399v1",
+        "title": "Brain-Grounded Axes for Reading and Steering LLM States",
+        "summary": "Interpretability methods for large language models (LLMs) typically derive directions from textual supervision, which can lack external grounding. We propose using human brain activity not as a training signal but as a coordinate system for reading and steering LLM states. Using the SMN4Lang MEG dataset, we construct a word-level brain atlas of phase-locking value (PLV) patterns and extract latent axes via ICA. We validate axes with independent lexica and NER-based labels (POS/log-frequency used as sanity checks), then train lightweight adapters that map LLM hidden states to these brain axes without fine-tuning the LLM. Steering along the resulting brain-derived directions yields a robust lexical (frequency-linked) axis in a mid TinyLlama layer, surviving perplexity-matched controls, and a brain-vs-text probe comparison shows larger log-frequency shifts (relative to the text probe) with lower perplexity for the brain axis. A function/content axis (axis 13) shows consistent steering in TinyLlama, Qwen2-0.5B, and GPT-2, with PPL-matched text-level corroboration. Layer-4 effects in TinyLlama are large but inconsistent, so we treat them as secondary (Appendix). Axis structure is stable when the atlas is rebuilt without GPT embedding-change features or with word2vec embeddings (|r|=0.64-0.95 across matched axes), reducing circularity concerns. Exploratory fMRI anchoring suggests potential alignment for embedding change and log frequency, but effects are sensitive to hemodynamic modeling assumptions and are treated as population-level evidence only. These results support a new interface: neurophysiology-grounded axes provide interpretable and controllable handles for LLM behavior.",
+        "authors": "Sandro Andric",
+        "url": "http://arxiv.org/abs/2512.19399v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19399v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种高度新颖的方法，利用人脑活动（MEG数据）作为坐标系来解读和引导LLM状态，建立了神经科学与LLM可解释性/控制之间的深层理论联系。其理论严谨性高，对理解LLM内部表征和行为控制具有开创性意义，是跨学科理论创新的杰出代表。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19349v1",
+        "title": "VIGOR+: Iterative Confounder Generation and Validation via LLM-CEVAE Feedback Loop",
+        "summary": "Hidden confounding remains a fundamental challenge in causal inference from observational data. Recent advances leverage Large Language Models (LLMs) to generate plausible hidden confounders based on domain knowledge, yet a critical gap exists: LLM-generated confounders often exhibit semantic plausibility without statistical utility. We propose VIGOR+ (Variational Information Gain for iterative cOnfounder Refinement), a novel framework that closes the loop between LLM-based confounder generation and CEVAE-based statistical validation. Unlike prior approaches that treat generation and validation as separate stages, VIGOR+ establishes an iterative feedback mechanism: validation signals from CEVAE (including information gain, latent consistency metrics, and diagnostic messages) are transformed into natural language feedback that guides subsequent LLM generation rounds. This iterative refinement continues until convergence criteria are met. We formalize the feedback mechanism, prove convergence properties under mild assumptions, and provide a complete algorithmic framework.",
+        "authors": "JiaWei Zhu, ZiHeng Liu",
+        "url": "http://arxiv.org/abs/2512.19349v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19349v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了VIGOR+框架，通过LLM生成混淆因子并与CEVAE进行统计验证，形成迭代反馈循环。该框架在理论上严谨，证明了收敛性，解决了LLM生成混淆因子缺乏统计效用的关键问题，对因果推断领域具有重大影响，非常适合您的数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19332v1",
+        "title": "A Logical View of GNN-Style Computation and the Role of Activation Functions",
+        "summary": "We study the numerical and Boolean expressiveness of MPLang, a declarative language that captures the computation of graph neural networks (GNNs) through linear message passing and activation functions. We begin with A-MPLang, the fragment without activation functions, and give a characterization of its expressive power in terms of walk-summed features. For bounded activation functions, we show that (under mild conditions) all eventually constant activations yield the same expressive power - numerical and Boolean - and that it subsumes previously established logics for GNNs with eventually constant activation functions but without linear layers. Finally, we prove the first expressive separation between unbounded and bounded activations in the presence of linear layers: MPLang with ReLU is strictly more powerful for numerical queries than MPLang with eventually constant activation functions, e.g., truncated ReLU. This hinges on subtle interactions between linear aggregation and eventually constant non-linearities, and it establishes that GNNs using ReLU are more expressive than those restricted to eventually constant activations and linear layers.",
+        "authors": "Pablo Barceló, Floris Geerts, Matthias Lanzinger, Klara Pakhomenko, Jan Van den Bussche",
+        "url": "http://arxiv.org/abs/2512.19332v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19332v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从逻辑角度深入分析了GNN计算的数值和布尔表达能力，并首次证明了ReLU激活函数在GNN中比有限常数激活函数具有更强的表达能力。这是对GNN架构基础的深刻理论洞察，具有极高的理论严谨性，对理解AI架构的底层机制至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19134v1",
+        "title": "QuCo-RAG: Quantifying Uncertainty from the Pre-training Corpus for Dynamic Retrieval-Augmented Generation",
+        "summary": "Dynamic Retrieval-Augmented Generation adaptively determines when to retrieve during generation to mitigate hallucinations in large language models (LLMs). However, existing methods rely on model-internal signals (e.g., logits, entropy), which are fundamentally unreliable because LLMs are typically ill-calibrated and often exhibit high confidence in erroneous outputs. We propose QuCo-RAG, which shifts from subjective confidence to objective statistics computed from pre-training data. Our method quantifies uncertainty through two stages: (1) before generation, we identify low-frequency entities indicating long-tail knowledge gaps; (2) during generation, we verify entity co-occurrence in the pre-training corpus, where zero co-occurrence often signals hallucination risk. Both stages leverage Infini-gram for millisecond-latency queries over 4 trillion tokens, triggering retrieval when uncertainty is high. Experiments on multi-hop QA benchmarks show QuCo-RAG achieves EM gains of 5--12 points over state-of-the-art baselines with OLMo-2 models, and transfers effectively to models with undisclosed pre-training data (Llama, Qwen, GPT), improving EM by up to 14 points. Domain generalization on biomedical QA further validates the robustness of our paradigm. These results establish corpus-grounded verification as a principled, practically model-agnostic paradigm for dynamic RAG. Our code is publicly available at https://github.com/ZhishanQ/QuCo-RAG.",
+        "authors": "Dehai Min, Kailin Zhang, Tongtong Wu, Lu Cheng",
+        "url": "http://arxiv.org/abs/2512.19134v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19134v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文首次将拓扑数据分析（TDA）应用于LLM思维链的结构分析，通过持久同源性揭示推理过程的语义连贯性、逻辑冗余等。这种跨学科的理论创新性极高，为理解和优化LLM推理提供了全新的视角，是数理统计方法在AI前沿应用中的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19117v1",
+        "title": "Stop saying LLM: Large Discourse Models (LDM) and Artificial Discursive Agent (ADA)?",
+        "summary": "This paper proposes an epistemological shift in the analysis of large generative models, replacing the category ''Large Language Models'' (LLM) with that of ''Large Discourse Models'' (LDM), and then with that of Artificial Discursive Agent (ADA). The theoretical framework is based on an ontological triad distinguishing three regulatory instances: the apprehension of the phenomenal regularities of the referential world, the structuring of embodied cognition, and the structural-linguistic sedimentation of the utterance within a socio-historical context. LDMs, operating on the product of these three instances (the document), model the discursive projection of a portion of human experience reified by the learning corpus. The proposed program aims to replace the ''fascination/fear'' dichotomy with public trials and procedures that make the place, uses, and limits of artificial discursive agents in contemporary social space decipherable, situating this approach within a perspective of governance and co-regulation involving the State, industry, civil society, and academia.",
+        "authors": "Amar Lakel",
+        "url": "http://arxiv.org/abs/2512.19117v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19117v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "论文提出将“大型语言模型”重新概念化为“大型语篇模型”和“人工语篇代理”，并基于本体论三元组进行理论框架构建。与P17、P31类似，这是一篇关于AI本质的深刻理论探讨，对于理解和治理AI具有重要意义，有助于您从更深层次思考AI的定义和影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19115v1",
+        "title": "Generative Giants, Retrieval Weaklings: Why do Multimodal Large Language Models Fail at Multimodal Retrieval?",
+        "summary": "Despite the remarkable success of multimodal large language models (MLLMs) in generative tasks, we observe that they exhibit a counterintuitive deficiency in the zero-shot multimodal retrieval task. In this work, we investigate the underlying mechanisms that hinder MLLMs from serving as effective retrievers. With the help of sparse autoencoders (SAEs), we decompose MLLM output representations into interpretable semantic concepts to probe their intrinsic behavior. Our analysis reveals that the representation space of MLLMs is overwhelmingly dominated by textual semantics; the visual information essential for multimodal retrieval only constitutes a small portion. This imbalance is compounded by the heavy focus of MLLMs on bridging image-text modalities, which facilitates generation but homogenizes embeddings and finally diminishes the discriminative power required for multimodal retrieval. We further discover that the specific feature components that contribute most to the similarity computations for MLLMs are in fact distractors that actively degrade retrieval performance. Overall, our work provides the first in-depth interpretability analysis of MLLM representations in the context of multimodal retrieval and offers possible directions for enhancing the multimodal retrieval capabilities of MLLMs.",
+        "authors": "Hengyi Feng, Zeang Sheng, Meiyi Qiang, Wentao Zhang",
+        "url": "http://arxiv.org/abs/2512.19115v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19115v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文深入探究了MLLM在多模态检索任务中表现不佳的根本原因，首次利用稀疏自编码器对MLLM表征进行可解释性分析，揭示了其文本语义主导和嵌入同质化问题。这项工作具有极高的理论严谨性和对MLLM架构理解的深远影响，解决了MLLM能力上的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19025v1",
+        "title": "The Erasure Illusion: Stress-Testing the Generalization of LLM Forgetting Evaluation",
+        "summary": "Machine unlearning aims to remove specific data influences from trained models, a capability essential for adhering to copyright laws and ensuring AI safety. Current unlearning metrics typically measure success by monitoring the model's performance degradation on the specific unlearning dataset ($D_u$). We argue that for Large Language Models (LLMs), this evaluation paradigm is insufficient and potentially misleading. Many real-world uses of unlearning--motivated by copyright or safety--implicitly target not only verbatim content in $D_u$, but also behaviors influenced by the broader generalizations the model derived from it. We demonstrate that LLMs can pass standard unlearning evaluation and appear to have ``forgotten'' the target knowledge, while simultaneously retaining strong capabilities on content that is semantically adjacent to $D_u$. This phenomenon indicates that erasing exact sentences does not necessarily equate to removing the underlying knowledge. To address this gap, we propose \\name, an automated stress-testing framework that generates a surrogate dataset, $\\tilde{D}_u$. This surrogate set is constructed to be semantically derived from $D_u$ yet sufficiently distinct in embedding space. By comparing unlearning metric scores between $D_u$ and $\\tilde{D}_u$, we can stress-test the reliability of the metric itself. Our extensive evaluation across three LLM families (Llama-3-8B, Qwen2.5-7B, and Zephyr-7B-$β$), three distinct datasets, and seven standard metrics reveals widespread inconsistencies. We find that current metrics frequently overestimate unlearning success, failing to detect retained knowledge exposed by our stress-test datasets.",
+        "authors": "Hengrui Jia, Taoran Li, Jonas Guan, Varun Chandrasekaran",
+        "url": "http://arxiv.org/abs/2512.19025v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19025v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对LLM遗忘评估的现有范式提出了根本性批判，并提出了“擦除幻觉”这一新概念和自动化压力测试框架。其理论严谨性高，揭示了LLM遗忘评估的局限性，对AI安全和负责任的AI开发具有极其重要的实践影响力，是AI伦理和评估领域的重要理论突破。"
+    }
+]

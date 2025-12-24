@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.20237v1",
+        "title": "MemR$^3$: Memory Retrieval via Reflective Reasoning for LLM Agents",
+        "summary": "Memory systems have been designed to leverage past experiences in Large Language Model (LLM) agents. However, many deployed memory systems primarily optimize compression and storage, with comparatively less emphasis on explicit, closed-loop control of memory retrieval. From this observation, we build memory retrieval as an autonomous, accurate, and compatible agent system, named MemR$^3$, which has two core mechanisms: 1) a router that selects among retrieve, reflect, and answer actions to optimize answer quality; 2) a global evidence-gap tracker that explicitly renders the answering process transparent and tracks the evidence collection process. This design departs from the standard retrieve-then-answer pipeline by introducing a closed-loop control mechanism that enables autonomous decision-making. Empirical results on the LoCoMo benchmark demonstrate that MemR$^3$ surpasses strong baselines on LLM-as-a-Judge score, and particularly, it improves existing retrievers across four categories with an overall improvement on RAG (+7.29%) and Zep (+1.94%) using GPT-4.1-mini backend, offering a plug-and-play controller for existing memory stores.",
+        "authors": "Xingbo Du, Loka Li, Duzhen Zhang, Le Song",
+        "url": "http://arxiv.org/abs/2512.20237v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20237v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 3
+        },
+        "reason_zh": "这篇论文提出了一个极具创新性的生物启发式架构——声学轨迹记忆（PTM），通过将语言编码为遍历流形上的连续路径，从根本上解决了LLM上下文长度的物理瓶颈。其将导航与重建解耦，实现了惊人的压缩比和即时访问延迟，理论深度和对LLM核心问题的解决能力都非常突出。虽然摘要的清晰度因概念新颖而略有挑战，但其理论创新性和潜在影响使其成为必读之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20115v1",
+        "title": "Sample-Efficient Policy Constraint Offline Deep Reinforcement Learning based on Sample Filtering",
+        "summary": "Offline reinforcement learning (RL) aims to learn a policy that maximizes the expected return using a given static dataset of transitions. However, offline RL faces the distribution shift problem. The policy constraint offline RL method is proposed to solve the distribution shift problem. During the policy constraint offline RL training, it is important to ensure the difference between the learned policy and behavior policy within a given threshold. Thus, the learned policy heavily relies on the quality of the behavior policy. However, a problem exists in existing policy constraint methods: if the dataset contains many low-reward transitions, the learned will be contained with a suboptimal reference policy, leading to slow learning speed, low sample efficiency, and inferior performances. This paper shows that the sampling method in policy constraint offline RL that uses all the transitions in the dataset can be improved. A simple but efficient sample filtering method is proposed to improve the sample efficiency and the final performance. First, we evaluate the score of the transitions by average reward and average discounted reward of episodes in the dataset and extract the transition samples of high scores. Second, the high-score transition samples are used to train the offline RL algorithms. We verify the proposed method in a series of offline RL algorithms and benchmark tasks. Experimental results show that the proposed method outperforms baselines.",
+        "authors": "Yuanhao Chen, Qi Liu, Pengbin Chen, Zhongjian Qiao, Yanjie Li",
+        "url": "http://arxiv.org/abs/2512.20115v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20115v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HEART-ViT是首个统一的、二阶的、输入自适应的ViT优化框架，通过Hessian引导的敏感度估计进行动态注意力与Token剪枝。它不仅理论严谨（基于Hessian-vector乘积），而且直接解决了ViT二次注意力成本和冗余计算的效率瓶颈，实现了显著的FLOPs、延迟和吞吐量优化，同时保持甚至超越了基线精度，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20003v1",
+        "title": "Control Variate Score Matching for Diffusion Models",
+        "summary": "Diffusion models offer a robust framework for sampling from unnormalized probability densities, which requires accurately estimating the score of the noise-perturbed target distribution. While the standard Denoising Score Identity (DSI) relies on data samples, access to the target energy function enables an alternative formulation via the Target Score Identity (TSI). However, these estimators face a fundamental variance trade-off: DSI exhibits high variance in low-noise regimes, whereas TSI suffers from high variance at high noise levels. In this work, we reconcile these approaches by unifying both estimators within the principled framework of control variates. We introduce the Control Variate Score Identity (CVSI), deriving an optimal, time-dependent control coefficient that theoretically guarantees variance minimization across the entire noise spectrum. We demonstrate that CVSI serves as a robust, low-variance plug-in estimator that significantly enhances sample efficiency in both data-free sampler learning and inference-time diffusion sampling.",
+        "authors": "Khaled Kahouli, Romuald Elie, Klaus-Robert Müller, Quentin Berthet, Oliver T. Unke, Arnaud Doucet",
+        "url": "http://arxiv.org/abs/2512.20003v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20003v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在扩散模型领域取得了重要理论突破，通过控制变量法统一了Denoising Score Identity (DSI) 和 Target Score Identity (TSI) 估计器，并推导了最优、时变控制系数，从理论上保证了整个噪声谱上的方差最小化。这显著提升了扩散模型在数据无关采样学习和推理时的采样效率，直接解决了生成模型效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20578v1",
+        "title": "Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits",
+        "summary": "Large language models (LLMs) generate fluent and complex outputs but often fail to recognize their own mistakes and hallucinations. Existing approaches typically rely on external judges, multi-sample consistency, or text-based self-critique, which incur additional compute or correlate weakly with true correctness. We ask: can LLMs predict their own failures by inspecting internal states during inference? We introduce Gnosis, a lightweight self-awareness mechanism that enables frozen LLMs to perform intrinsic self-verification by decoding signals from hidden states and attention patterns. Gnosis passively observes internal traces, compresses them into fixed-budget descriptors, and predicts correctness with negligible inference cost, adding only ~5M parameters and operating independently of sequence length. Across math reasoning, open-domain question answering, and academic knowledge benchmarks, and over frozen backbones ranging from 1.7B to 20B parameters, Gnosis consistently outperforms strong internal baselines and large external judges in both accuracy and calibration. Moreover, it generalizes zero-shot to partial generations, enabling early detection of failing trajectories and compute-aware control. These results show that reliable correctness cues are intrinsic to generation process and can be extracted efficiently without external supervision.",
+        "authors": "Amirhosein Ghasemabadi, Di Niu",
+        "url": "http://arxiv.org/abs/2512.20578v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20578v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "Gnosis机制提出了一种轻量级的自感知方法，使冻结的LLM能够通过检查内部状态（隐藏状态和注意力模式）来预测自身的失败和幻觉。这种方法以可忽略的推理成本解决了LLM可靠性这一关键应用瓶颈，并且能够零样本泛化到部分生成，实现早期错误检测，具有高度创新性和实用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20362v1",
+        "title": "CRAFT: Continuous Reasoning and Agentic Feedback Tuning for Multimodal Text-to-Image Generation",
+        "summary": "Recent work has shown that inference-time reasoning and reflection can improve text-to-image generation without retraining. However, existing approaches often rely on implicit, holistic critiques or unconstrained prompt rewrites, making their behavior difficult to interpret, control, or stop reliably. In contrast, large language models have benefited from explicit, structured forms of **thinking** based on verification, targeted correction, and early stopping.   We introduce CRAFT (Continuous Reasoning and Agentic Feedback Tuning), a training-free, model-agnostic framework that brings this structured reasoning paradigm to multimodal image generation. CRAFT decomposes a prompt into dependency-structured visual questions, veries generated images using a vision-language model, and applies targeted prompt edits through an LLM agent only where constraints fail. The process iterates with an explicit stopping criterion once all constraints are satised, yielding an interpretable and controllable inference-time renement loop.   Across multiple model families and challenging benchmarks, CRAFT consistently improves compositional accuracy, text rendering, and preference-based evaluations, with particularly strong gains for lightweight generators. Importantly, these improvements incur only a negligible inference-time overhead, allowing smaller or cheaper models to approach the quality of substantially more expensive systems. Our results suggest that explicitly structured, constraint-driven inference-time reasoning is a key ingredient for improving the reliability of multimodal generative models.",
+        "authors": "V. Kovalev, A. Kuvshinov, A. Buzovkin, D. Pokidov, D. Timonin",
+        "url": "http://arxiv.org/abs/2512.20362v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20362v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "CRAFT框架将结构化推理范式引入多模态图像生成，通过VLM验证和LLM代理的靶向编辑，以训练无关、模型无关的方式显著提升了文生图的组合准确性、文本渲染和用户偏好，尤其对轻量级生成器效果显著。它以极低的推理开销解决了生成质量和可控性的瓶颈，具有很高的创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20612v1",
+        "title": "Making Large Language Models Efficient Dense Retrievers",
+        "summary": "Recent work has shown that directly fine-tuning large language models (LLMs) for dense retrieval yields strong performance, but their substantial parameter counts make them computationally inefficient. While prior studies have revealed significant layer redundancy in LLMs for generative tasks, it remains unclear whether similar redundancy exists when these models are adapted for retrieval tasks, which require encoding entire sequences into fixed representations rather than generating tokens iteratively. To this end, we conduct a comprehensive analysis of layer redundancy in LLM-based dense retrievers. We find that, in contrast to generative settings, MLP layers are substantially more prunable, while attention layers remain critical for semantic aggregation. Building on this insight, we propose EffiR, a framework for developing efficient retrievers that performs large-scale MLP compression through a coarse-to-fine strategy (coarse-grained depth reduction followed by fine-grained width reduction), combined with retrieval-specific fine-tuning. Across diverse BEIR datasets and LLM backbones, EffiR achieves substantial reductions in model size and inference cost while preserving the performance of full-size models.",
+        "authors": "Yibin Lei, Shwai He, Ang Li, Andrew Yates",
+        "url": "http://arxiv.org/abs/2512.20612v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20612v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这项工作对LLM作为密集检索器时的层冗余进行了全面分析，发现MLP层比注意力层更可剪枝，这与生成任务中的发现形成对比。基于此洞察，提出了EffiR框架进行大规模MLP压缩，显著减少了模型大小和推理成本，直接解决了LLM在检索任务中的计算效率瓶颈，具有明确的理论洞察和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20144v1",
+        "title": "Multi-hop Reasoning via Early Knowledge Alignment",
+        "summary": "Retrieval-Augmented Generation (RAG) has emerged as a powerful paradigm for Large Language Models (LLMs) to address knowledge-intensive queries requiring domain-specific or up-to-date information. To handle complex multi-hop questions that are challenging for single-step retrieval, iterative RAG approaches incorporating reinforcement learning have been proposed. However, existing iterative RAG systems typically plan to decompose questions without leveraging information about the available retrieval corpus, leading to inefficient retrieval and reasoning chains that cascade into suboptimal performance. In this paper, we introduce Early Knowledge Alignment (EKA), a simple but effective module that aligns LLMs with retrieval set before planning in iterative RAG systems with contextually relevant retrieved knowledge. Extensive experiments on six standard RAG datasets demonstrate that by establishing a stronger reasoning foundation, EKA significantly improves retrieval precision, reduces cascading errors, and enhances both performance and efficiency. Our analysis from an entropy perspective demonstrate that incorporating early knowledge reduces unnecessary exploration during the reasoning process, enabling the model to focus more effectively on relevant information subsets. Moreover, EKA proves effective as a versatile, training-free inference strategy that scales seamlessly to large models. Generalization tests across diverse datasets and retrieval corpora confirm the robustness of our approach. Overall, EKA advances the state-of-the-art in iterative RAG systems while illuminating the critical interplay between structured reasoning and efficient exploration in reinforcement learning-augmented frameworks. The code is released at \\href{https://github.com/yxzwang/EarlyKnowledgeAlignment}{Github}.",
+        "authors": "Yuxin Wang, Shicheng Fang, Bo Wang, Qi Luo, Xuanjing Huang, Yining Zheng, Xipeng Qiu",
+        "url": "http://arxiv.org/abs/2512.20144v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20144v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对迭代RAG系统中LLM在规划时未充分利用检索语料信息导致效率低下的问题，提出了Early Knowledge Alignment (EKA) 模块。该模块在规划前将LLM与检索集对齐，显著提高了检索精度，减少了级联错误，并提升了RAG的性能和效率，是LLM在知识密集型任务中应用的关键优化。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20002v1",
+        "title": "LoFT-LLM: Low-Frequency Time-Series Forecasting with Large Language Models",
+        "summary": "Time-series forecasting in real-world applications such as finance and energy often faces challenges due to limited training data and complex, noisy temporal dynamics. Existing deep forecasting models typically supervise predictions using full-length temporal windows, which include substantial high-frequency noise and obscure long-term trends. Moreover, auxiliary variables containing rich domain-specific information are often underutilized, especially in few-shot settings. To address these challenges, we propose LoFT-LLM, a frequency-aware forecasting pipeline that integrates low-frequency learning with semantic calibration via a large language model (LLM). Firstly, a Patch Low-Frequency forecasting Module (PLFM) extracts stable low-frequency trends from localized spectral patches. Secondly, a residual learner then models high-frequency variations. Finally, a fine-tuned LLM refines the predictions by incorporating auxiliary context and domain knowledge through structured natural language prompts. Extensive experiments on financial and energy datasets demonstrate that LoFT-LLM significantly outperforms strong baselines under both full-data and few-shot regimes, delivering superior accuracy, robustness, and interpretability.",
+        "authors": "Jiacheng You, Jingcheng Yang, Yuhang Xie, Zhongxuan Wu, Xiucheng Li, Feng Li, Pengjie Wang, Jian Xu, Bo Zheng, Xinyang Chen",
+        "url": "http://arxiv.org/abs/2512.20002v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20002v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LoFT-LLM是一个频率感知的预测管道，通过结合低频学习和LLM语义校准进行时间序列预测。它通过提取稳定的低频趋势并利用LLM的领域知识进行细化，有效解决了有限训练数据和复杂噪声动态下的预测挑战，尤其在少样本场景下表现优异，对LLM在时间序列预测中的应用具有重要实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20576v1",
+        "title": "Performative Policy Gradient: Optimality in Performative Reinforcement Learning",
+        "summary": "Post-deployment machine learning algorithms often influence the environments they act in, and thus shift the underlying dynamics that the standard reinforcement learning (RL) methods ignore. While designing optimal algorithms in this performative setting has recently been studied in supervised learning, the RL counterpart remains under-explored. In this paper, we prove the performative counterparts of the performance difference lemma and the policy gradient theorem in RL, and further introduce the Performative Policy Gradient algorithm (PePG). PePG is the first policy gradient algorithm designed to account for performativity in RL. Under softmax parametrisation, and also with and without entropy regularisation, we prove that PePG converges to performatively optimal policies, i.e. policies that remain optimal under the distribution shifts induced by themselves. Thus, PePG significantly extends the prior works in Performative RL that achieves performative stability but not optimality. Furthermore, our empirical analysis on standard performative RL environments validate that PePG outperforms standard policy gradient algorithms and the existing performative RL algorithms aiming for stability.",
+        "authors": "Debabrota Basu, Udvas Das, Brahim Driss, Uddalak Mukherjee",
+        "url": "http://arxiv.org/abs/2512.20576v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20576v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在Performative RL领域做出了开创性贡献，首次提出了Performative Policy Gradient (PePG) 算法，并在理论上证明其收敛到Performatively Optimal Policies，而非仅仅是稳定性。它扩展了RL理论，使其能够应对算法影响环境导致的分布偏移，具有极高的理论严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20169v1",
+        "title": "Learning to Reason in LLMs by Expectation Maximization",
+        "summary": "Large language models (LLMs) solve reasoning problems by first generating a rationale and then answering. We formalize reasoning as a latent variable model and derive an expectation-maximization (EM) objective for learning to reason. This view connects EM and modern reward-based optimization, and shows that the main challenge lies in designing a sampling distribution that generates rationales that justify correct answers. We instantiate and compare several sampling schemes: rejection sampling with a budget, self-taught reasoner (STaR), and prompt posterior sampling (PPS), which only keeps the rationalization stage of STaR. Our experiments on the ARC, MMLU, and OpenBookQA datasets with the Llama and Qwen models show that the sampling scheme can significantly affect the accuracy of learned reasoning models. Despite its simplicity, we observe that PPS outperforms the other sampling schemes.",
+        "authors": "Junghyun Lee, Branislav Kveton, Sunav Choudhary, Subhojyoti Mukherjee, Anup Rao, Ryan A. Rossi, Alexa Siu",
+        "url": "http://arxiv.org/abs/2512.20169v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20169v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这项工作将LLM的推理过程形式化为潜在变量模型，并推导了用于学习推理的期望最大化（EM）目标。它将EM与现代基于奖励的优化联系起来，为理解和训练LLM的推理能力提供了严谨的理论框架和新颖的视角，具有很高的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20344v1",
+        "title": "A DeepSeek-Powered AI System for Automated Chest Radiograph Interpretation in Clinical Practice",
+        "summary": "A global shortage of radiologists has been exacerbated by the significant volume of chest X-ray workloads, particularly in primary care. Although multimodal large language models show promise, existing evaluations predominantly rely on automated metrics or retrospective analyses, lacking rigorous prospective clinical validation. Janus-Pro-CXR (1B), a chest X-ray interpretation system based on DeepSeek Janus-Pro model, was developed and rigorously validated through a multicenter prospective trial (NCT07117266). Our system outperforms state-of-the-art X-ray report generation models in automated report generation, surpassing even larger-scale models including ChatGPT 4o (200B parameters), while demonstrating reliable detection of six clinically critical radiographic findings. Retrospective evaluation confirms significantly higher report accuracy than Janus-Pro and ChatGPT 4o. In prospective clinical deployment, AI assistance significantly improved report quality scores, reduced interpretation time by 18.3% (P < 0.001), and was preferred by a majority of experts in 54.3% of cases. Through lightweight architecture and domain-specific optimization, Janus-Pro-CXR improves diagnostic reliability and workflow efficiency, particularly in resource-constrained settings. The model architecture and implementation framework will be open-sourced to facilitate the clinical translation of AI-assisted radiology solutions.",
+        "authors": "Yaowei Bai, Ruiheng Zhang, Yu Lei, Xuhua Duan, Jingfeng Yao, Shuguang Ju, Chaoyang Wang, Wei Yao, Yiwan Guo, Guilin Zhang, Chao Wan, Qian Yuan, Lei Chen, Wenjuan Tang, Biqiang Zhu, Xinggang Wang, Tao Sun, Wei Zhou, Dacheng Tao, Yongchao Xu, Chuansheng Zheng, Huangxuan Zhao, Bo Du",
+        "url": "http://arxiv.org/abs/2512.20344v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20344v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了Field-Space Attention机制，使地球系统Transformer在物理域而非潜在空间中计算注意力，从而保持了中间表示的连续性和底层几何结构。这不仅提升了模型的可解释性，还促进了科学约束的实施，为数据驱动的地球系统建模提供了理论上更严谨、性能更优越的架构。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.19941v1",
+        "title": "Block-Recurrent Dynamics in Vision Transformers",
+        "summary": "As Vision Transformers (ViTs) become standard vision backbones, a mechanistic account of their computational phenomenology is essential. Despite architectural cues that hint at dynamical structure, there is no settled framework that interprets Transformer depth as a well-characterized flow. In this work, we introduce the Block-Recurrent Hypothesis (BRH), arguing that trained ViTs admit a block-recurrent depth structure such that the computation of the original $L$ blocks can be accurately rewritten using only $k \\ll L$ distinct blocks applied recurrently. Across diverse ViTs, between-layer representational similarity matrices suggest few contiguous phases. To determine whether these phases reflect genuinely reusable computation, we train block-recurrent surrogates of pretrained ViTs: Recurrent Approximations to Phase-structured TransfORmers (Raptor). In small-scale, we demonstrate that stochastic depth and training promote recurrent structure and subsequently correlate with our ability to accurately fit Raptor. We then provide an empirical existence proof for BRH by training a Raptor model to recover $96\\%$ of DINOv2 ImageNet-1k linear probe accuracy in only 2 blocks at equivalent computational cost. Finally, we leverage our hypothesis to develop a program of Dynamical Interpretability. We find i) directional convergence into class-dependent angular basins with self-correcting trajectories under small perturbations, ii) token-specific dynamics, where cls executes sharp late reorientations while patch tokens exhibit strong late-stage coherence toward their mean direction, and iii) a collapse to low rank updates in late depth, consistent with convergence to low-dimensional attractors. Altogether, we find a compact recurrent program emerges along ViT depth, pointing to a low-complexity normative solution that enables these models to be studied through principled dynamical systems analysis.",
+        "authors": "Mozes Jacobs, Thomas Fel, Richard Hakim, Alessandra Brondetta, Demba Ba, T. Andy Keller",
+        "url": "http://arxiv.org/abs/2512.19941v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.19941v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Block-Recurrent Hypothesis，深入分析了Vision Transformer的计算动力学，揭示了其深度结构中存在紧凑的循环程序。通过训练Raptor模型，证明了这一假设的经验存在性，并发展了动态可解释性，为理解和优化Transformer架构提供了重要的理论基础和新的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20605v1",
+        "title": "Emergent temporal abstractions in autoregressive models enable hierarchical reinforcement learning",
+        "summary": "Large-scale autoregressive models pretrained on next-token prediction and finetuned with reinforcement learning (RL) have achieved unprecedented success on many problem domains. During RL, these models explore by generating new outputs, one token at a time. However, sampling actions token-by-token can result in highly inefficient learning, particularly when rewards are sparse. Here, we show that it is possible to overcome this problem by acting and exploring within the internal representations of an autoregressive model. Specifically, to discover temporally-abstract actions, we introduce a higher-order, non-causal sequence model whose outputs control the residual stream activations of a base autoregressive model. On grid world and MuJoCo-based tasks with hierarchical structure, we find that the higher-order model learns to compress long activation sequence chunks onto internal controllers. Critically, each controller executes a sequence of behaviorally meaningful actions that unfold over long timescales and are accompanied with a learned termination condition, such that composing multiple controllers over time leads to efficient exploration on novel tasks. We show that direct internal controller reinforcement, a process we term \"internal RL\", enables learning from sparse rewards in cases where standard RL finetuning fails. Our results demonstrate the benefits of latent action generation and reinforcement in autoregressive models, suggesting internal RL as a promising avenue for realizing hierarchical RL within foundation models.",
+        "authors": "Seijin Kobayashi, Yanick Schimpf, Maximilian Schlegel, Angelika Steger, Maciej Wolczyk, Johannes von Oswald, Nino Scherre, Kaitlin Maile, Guillaume Lajoie, Blake A. Richards, Rif A. Saurous, James Manyika, Blaise Agüera y Arcas, Alexander Meulemans, João Sacramento",
+        "url": "http://arxiv.org/abs/2512.20605v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20605v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种新颖的方法，通过在自回归模型的内部表示中进行行动和探索，发现时间抽象动作，从而克服了稀疏奖励下低效学习的问题。这种“内部RL”机制为在基础模型中实现分层强化学习提供了有前景的途径，具有较高的创新性和理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20275v1",
+        "title": "Graph-Symbolic Policy Enforcement and Control (G-SPEC): A Neuro-Symbolic Framework for Safe Agentic AI in 5G Autonomous Networks",
+        "summary": "As networks evolve toward 5G Standalone and 6G, operators face orchestration challenges that exceed the limits of static automation and Deep Reinforcement Learning. Although Large Language Model (LLM) agents offer a path toward intent-based networking, they introduce stochastic risks, including topology hallucinations and policy non-compliance. To mitigate this, we propose Graph-Symbolic Policy Enforcement and Control (G-SPEC), a neuro-symbolic framework that constrains probabilistic planning with deterministic verification. The architecture relies on a Governance Triad - a telecom-adapted agent (TSLAM-4B), a Network Knowledge Graph (NKG), and SHACL constraints. We evaluated G-SPEC on a simulated 450-node 5G Core, achieving zero safety violations and a 94.1% remediation success rate, significantly outperforming the 82.4% baseline. Ablation analysis indicates that NKG validation drives the majority of safety gains (68%), followed by SHACL policies (24%). Scalability tests on topologies ranging from 10K to 100K nodes demonstrate that validation latency scales as $O(k^{1.2})$ where $k$ is subgraph size. With a processing overhead of 142ms, G-SPEC is viable for SMO-layer operations.",
+        "authors": "Divya Vijay, Vignesh Ethiraj",
+        "url": "http://arxiv.org/abs/2512.20275v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20275v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "G-SPEC是一个神经符号框架，通过确定性验证来约束LLM代理的概率规划，从而在5G自治网络中实现安全的人工智能。它成功解决了LLM代理在关键基础设施中可能出现的拓扑幻觉和策略不合规等随机风险，实现了零安全违规，具有极高的实践影响力和理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20074v1",
+        "title": "Reason2Decide: Rationale-Driven Multi-Task Learning",
+        "summary": "Despite the wide adoption of Large Language Models (LLM)s, clinical decision support systems face a critical challenge: achieving high predictive accuracy while generating explanations aligned with the predictions. Current approaches suffer from exposure bias leading to misaligned explanations. We propose Reason2Decide, a two-stage training framework that addresses key challenges in self-rationalization, including exposure bias and task separation. In Stage-1, our model is trained on rationale generation, while in Stage-2, we jointly train on label prediction and rationale generation, applying scheduled sampling to gradually transition from conditioning on gold labels to model predictions. We evaluate Reason2Decide on three medical datasets, including a proprietary triage dataset and public biomedical QA datasets. Across model sizes, Reason2Decide outperforms other fine-tuning baselines and some zero-shot LLMs in prediction (F1) and rationale fidelity (BERTScore, BLEU, LLM-as-a-Judge). In triage, Reason2Decide is rationale source-robust across LLM-generated, nurse-authored, and nurse-post-processed rationales. In our experiments, while using only LLM-generated rationales in Stage-1, Reason2Decide outperforms other fine-tuning variants. This indicates that LLM-generated rationales are suitable for pretraining models, reducing reliance on human annotations. Remarkably, Reason2Decide achieves these gains with models 40x smaller than contemporary foundation models, making clinical reasoning more accessible for resource-constrained deployments while still providing explainable decision support.",
+        "authors": "H M Quamran Hasan, Housam Khalifa Bashier, Jiayi Dai, Mi-Young Kim, Randy Goebel",
+        "url": "http://arxiv.org/abs/2512.20074v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20074v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Reason2Decide是一个两阶段训练框架，通过调度采样逐步从黄金标签过渡到模型预测，解决了临床决策支持系统中LLM解释与预测之间的曝光偏差和任务分离问题。它显著提升了预测准确性和解释保真度，且模型规模远小于当代基础模型，使得在资源受限环境下实现可解释的临床推理成为可能，具有重要的实践价值和方法创新。"
+    }
+]

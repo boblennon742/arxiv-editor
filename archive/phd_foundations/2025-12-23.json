@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.20582v1",
+        "title": "Relu and softplus neural nets as zero-sum turn-based games",
+        "summary": "We show that the output of a ReLU neural network can be interpreted as the value of a zero-sum, turn-based, stopping game, which we call the ReLU net game. The game runs in the direction opposite to that of the network, and the input of the network serves as the terminal reward of the game. In fact, evaluating the network is the same as running the Shapley-Bellman backward recursion for the value of the game. Using the expression of the value of the game as an expected total payoff with respect to the path measure induced by the transition probabilities and a pair of optimal policies, we derive a discrete Feynman-Kac-type path-integral formula for the network output. This game-theoretic representation can be used to derive bounds on the output from bounds on the input, leveraging the monotonicity of Shapley operators, and to verify robustness properties using policies as certificates. Moreover, training the neural network becomes an inverse game problem: given pairs of terminal rewards and corresponding values, one seeks transition probabilities and rewards of a game that reproduces them. Finally, we show that a similar approach applies to neural networks with Softplus activation functions, where the ReLU net game is replaced by its entropic regularization.",
+        "authors": "Stephane Gaubert, Yiannis Vlassopoulos",
+        "url": "http://arxiv.org/abs/2512.20582v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20582v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "将ReLU和Softplus神经网络的输出解释为零和博弈的价值，并推导出Feynman-Kac型路径积分公式。理论基础强大，涉及博弈论、Shapley-Bellman递归和随机过程，为神经网络的鲁棒性验证和逆向问题提供了严谨的数学框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20562v1",
+        "title": "Shallow Neural Networks Learn Low-Degree Spherical Polynomials with Learnable Channel Attention",
+        "summary": "We study the problem of learning a low-degree spherical polynomial of degree $\\ell_0 = Θ(1) \\ge 1$ defined on the unit sphere in $\\RR^d$ by training an over-parameterized two-layer neural network (NN) with channel attention in this paper. Our main result is the significantly improved sample complexity for learning such low-degree polynomials. We show that, for any regression risk $\\eps \\in (0,1)$, a carefully designed two-layer NN with channel attention and finite width of $m \\ge Θ({n^4 \\log (2n/δ)}/{d^{2\\ell_0}})$ trained by the vanilla gradient descent (GD) requires the lowest sample complexity of $n \\asymp Θ(d^{\\ell_0}/\\eps)$ with probability $1-δ$ for every $δ\\in (0,1)$, in contrast with the representative sample complexity $Θ\\pth{d^{\\ell_0} \\max\\set{\\eps^{-2},\\log d}}$, where $n$ is the training daata size. Moreover, such sample complexity is not improvable since the trained network renders a sharp rate of the nonparametric regression risk of the order $Θ(d^{\\ell_0}/{n})$ with probability at least $1-δ$. On the other hand, the minimax optimal rate for the regression risk with a kernel of rank $Θ(d^{\\ell_0})$ is $Θ(d^{\\ell_0}/{n})$, so that the rate of the nonparametric regression risk of the network trained by GD is minimax optimal. The training of the two-layer NN with channel attention consists of two stages. In Stage 1, a provable learnable channel selection algorithm identifies the ground-truth channel number $\\ell_0$ from the initial $L \\ge \\ell_0$ channels in the first-layer activation, with high probability. This learnable selection is achieved by an efficient one-step GD update on both layers, enabling feature learning for low-degree polynomial targets. In Stage 2, the second layer is trained by standard GD using the activation function with the selected channels.",
+        "authors": "Yingzhen Yang",
+        "url": "http://arxiv.org/abs/2512.20562v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20562v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "针对两层神经网络学习低阶球面多项式的问题，提供了显著改进的样本复杂度理论，并证明了其在非参数回归风险上的最优性。具备严谨的统计学习理论基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20523v1",
+        "title": "ScoreMatchingRiesz: Auto-DML with Infinitesimal Classification",
+        "summary": "This study proposes Riesz representer estimation methods based on score matching. The Riesz representer is a key component in debiased machine learning for constructing $\\sqrt{n}$-consistent and efficient estimators in causal inference and structural parameter estimation. To estimate the Riesz representer, direct approaches have garnered attention, such as Riesz regression and the covariate balancing propensity score. These approaches can also be interpreted as variants of direct density ratio estimation (DRE) in several applications such as average treatment effect estimation. In DRE, it is well known that flexible models can easily overfit the observed data due to the estimand and the form of the loss function. To address this issue, recent work has proposed modeling the density ratio as a product of multiple intermediate density ratios and estimating it using score-matching techniques, which are often used in the diffusion model literature. We extend score-matching-based DRE methods to Riesz representer estimation. Our proposed method not only mitigates overfitting but also provides insights for causal inference by bridging marginal effects and average policy effects through time score functions.",
+        "authors": "Masahiro Kato",
+        "url": "http://arxiv.org/abs/2512.20523v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20523v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出基于分数匹配的Riesz表示估计方法，用于去偏机器学习、因果推断和结构参数估计，并提供$\\sqrt{n}$-一致且高效的估计量。理论严谨，涉及统计保证和因果逻辑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20503v1",
+        "title": "$L^2-$posterior contraction rates for Gaussian process and random series priors in Bayesian nonparametric regression models",
+        "summary": "The nonparametric regression model with normal errors has been extensively studied, both from the frequentist and Bayesian viewpoint. A central result in Bayesian nonparametrics is that under assumptions on the prior, the data-generating distribution (assuming a true frequentist model) and a semi-metric $ρ(.,.)$ on the space of regression functions that satisfy the so called testing condition, the posterior contracts around the true distribution with respect to $ρ(.,.)$, and the rate of contraction can be estimated. In the regression setting, the semi-metric $ρ(.,.)$ is often taken to be the Hellinger distance or the empirical $L^2$ norm (i.e., the $L^2$ norm with respect to the empirical distribution of the design) in the present regression context. However, extending contraction rates to the ``integrated\" $L^2$ norm usually requires more work, and has previously been done for instance under sufficient smoothness or boundedness assumptions, which may not necessarily hold. In this work we show that, for classes of priors based on random basis expansions or Gaussian processes with RKHS of Sobolev type and in the random design setting, such $L^2$ posterior contraction rates can be obtained under substantially weaker assumptions than those currently used in the literature. Importantly we do not require a known a priori upper bound on its supremum norm or that its smoothness is larger than $d/2$, where $d$ is the dimension of the covariates. Our proof crucially relies on an application of the matrix Bernstein concentration inequality to empirical inner product matrices, which require explicit upper bounds on the basis functions at hand that we prove in several cases of interest. In particular we obtain upper bounds on the supremum norm of Mercer eigenfunctions of several reproducing kernels (including several Matérn kernels) which are of independent interest.",
+        "authors": "Paul Rosa",
+        "url": "http://arxiv.org/abs/2512.20503v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20503v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "在贝叶斯非参数回归模型中，针对高斯过程和随机级数先验，推导了$L^2$后验收缩率，且在比现有文献更弱的假设下成立。证明依赖于矩阵Bernstein集中不等式，具有强大的统计理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20433v1",
+        "title": "Shadow splitting methods for nonconvex optimisation: epi-approximation, convergence and saddle point avoidance",
+        "summary": "We propose the shadow Davis-Yin three-operator splitting method to solve nonconvex optimisation problems. Its convergence analysis is based on a merit function resembling the Moreau envelope. We explore variational analysis properties behind the merit function and the iteration operators associated with the shadow method. By capitalising on these results, we establish convergence of a damped version of the shadow method via sufficient descent of the merit function, and obtain (almost surely) guarantees of avoidance of strict saddle points of weakly convex semialgebraic optimisation problems. We perform numerical experiments for a nonconvex variable selection problem to test our findings.",
+        "authors": "Felipe Atenas",
+        "url": "http://arxiv.org/abs/2512.20433v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20433v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出一种用于非凸优化的影子Davis-Yin三算子分裂方法，并对其收敛性进行了严格分析，包括莫罗包络的变分分析和严格鞍点的规避保证。完全符合优化收敛性和严谨数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20363v1",
+        "title": "Clust-PSI-PFL: A Population Stability Index Approach for Clustered Non-IID Personalized Federated Learning",
+        "summary": "Federated learning (FL) supports privacy-preserving, decentralized machine learning (ML) model training by keeping data on client devices. However, non-independent and identically distributed (non-IID) data across clients biases updates and degrades performance. To alleviate these issues, we propose Clust-PSI-PFL, a clustering-based personalized FL framework that uses the Population Stability Index (PSI) to quantify the level of non-IID data. We compute a weighted PSI metric, $WPSI^L$, which we show to be more informative than common non-IID metrics (Hellinger, Jensen-Shannon, and Earth Mover's distance). Using PSI features, we form distributionally homogeneous groups of clients via K-means++; the number of optimal clusters is chosen by a systematic silhouette-based procedure, typically yielding few clusters with modest overhead. Across six datasets (tabular, image, and text modalities), two partition protocols (Dirichlet with parameter $α$ and Similarity with parameter S), and multiple client sizes, Clust-PSI-PFL delivers up to 18% higher global accuracy than state-of-the-art baselines and markedly improves client fairness by a relative improvement of 37% under severe non-IID data. These results establish PSI-guided clustering as a principled, lightweight mechanism for robust PFL under label skew.",
+        "authors": "Daniel M. Jimenez-Gutierrez, Mehrdad Hassanzadeh, Aris Anagnostopoulos, Ioannis Chatzigiannakis, Andrea Vitaletti",
+        "url": "http://arxiv.org/abs/2512.20363v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20363v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出BRIDGE框架，通过中间蒸馏解决大型专有模型到小型模型知识蒸馏的容量-预算限制。理论分析表明其泛化界限更紧，为LLM部署提供了统计保证和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20328v1",
+        "title": "Toward Explaining Large Language Models in Software Engineering Tasks",
+        "summary": "Recent progress in Large Language Models (LLMs) has substantially advanced the automation of software engineering (SE) tasks, enabling complex activities such as code generation and code summarization. However, the black-box nature of LLMs remains a major barrier to their adoption in high-stakes and safety-critical domains, where explainability and transparency are vital for trust, accountability, and effective human supervision. Despite increasing interest in explainable AI for software engineering, existing methods lack domain-specific explanations aligned with how practitioners reason about SE artifacts. To address this gap, we introduce FeatureSHAP, the first fully automated, model-agnostic explainability framework tailored to software engineering tasks. Based on Shapley values, FeatureSHAP attributes model outputs to high-level input features through systematic input perturbation and task-specific similarity comparisons, while remaining compatible with both open-source and proprietary LLMs. We evaluate FeatureSHAP on two bi-modal SE tasks: code generation and code summarization. The results show that FeatureSHAP assigns less importance to irrelevant input features and produces explanations with higher fidelity than baseline methods. A practitioner survey involving 37 participants shows that FeatureSHAP helps practitioners better interpret model outputs and make more informed decisions. Collectively, FeatureSHAP represents a meaningful step toward practical explainable AI in software engineering. FeatureSHAP is available at https://github.com/deviserlab/FeatureSHAP.",
+        "authors": "Antonio Vitale, Khai-Nguyen Nguyen, Denys Poshyvanyk, Rocco Oliveto, Simone Scalabrino, Antonio Mastropaolo",
+        "url": "http://arxiv.org/abs/2512.20328v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20328v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出FeatureSHAP，一个针对软件工程任务的、基于Shapley值的模型无关可解释性框架。将严谨的博弈论概念（Shapley值）应用于现代AI系统（LLM）的可解释性，具有坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20220v1",
+        "title": "Generalisation in Multitask Fitted Q-Iteration and Offline Q-learning",
+        "summary": "We study offline multitask reinforcement learning in settings where multiple tasks share a low-rank representation of their action-value functions. In this regime, a learner is provided with fixed datasets collected from several related tasks, without access to further online interaction, and seeks to exploit shared structure to improve statistical efficiency and generalization. We analyze a multitask variant of fitted Q-iteration that jointly learns a shared representation and task-specific value functions via Bellman error minimization on offline data. Under standard realizability and coverage assumptions commonly used in offline reinforcement learning, we establish finite-sample generalization guarantees for the learned value functions. Our analysis explicitly characterizes how pooling data across tasks improves estimation accuracy, yielding a $1/\\sqrt{nT}$ dependence on the total number of samples across tasks, while retaining the usual dependence on the horizon and concentrability coefficients arising from distribution shift. In addition, we consider a downstream offline setting in which a new task shares the same underlying representation as the upstream tasks. We study how reusing the representation learned during the multitask phase affects value estimation for this new task, and show that it can reduce the effective complexity of downstream learning relative to learning from scratch. Together, our results clarify the role of shared representations in multitask offline Q-learning and provide theoretical insight into when and how multitask structure can improve generalization in model-free, value-based reinforcement learning.",
+        "authors": "Kausthubh Manda, Raghuram Bharadwaj Diddigi",
+        "url": "http://arxiv.org/abs/2512.20220v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20220v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "针对离线多任务强化学习，建立了学习值函数的有限样本泛化保证，并量化了跨任务数据池化如何提高统计效率。提供了严谨的统计保证和强化学习理论。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20096v1",
+        "title": "Information-directed sampling for bandits: a primer",
+        "summary": "The Multi-Armed Bandit problem provides a fundamental framework for analyzing the tension between exploration and exploitation in sequential learning. This paper explores Information Directed Sampling (IDS) policies, a class of heuristics that balance immediate regret against information gain. We focus on the tractable environment of two-state Bernoulli bandits as a minimal model to rigorously compare heuristic strategies against the optimal policy. We extend the IDS framework to the discounted infinite-horizon setting by introducing a modified information measure and a tuning parameter to modulate the decision-making behavior. We examine two specific problem classes: symmetric bandits and the scenario involving one fair coin. In the symmetric case we show that IDS achieves bounded cumulative regret, whereas in the one-fair-coin scenario the IDS policy yields a regret that scales logarithmically with the horizon, in agreement with classical asymptotic lower bounds. This work serves as a pedagogical synthesis, aiming to bridge concepts from reinforcement learning and information theory for an audience of statistical physicists.",
+        "authors": "Annika Hirling, Giorgio Nicoletti, Antonio Celani",
+        "url": "http://arxiv.org/abs/2512.20096v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20096v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 5
+        },
+        "reason_zh": "对多臂老虎机问题中的信息导向采样（IDS）策略进行了严格分析，推导了累积遗憾的界限和对数级遗憾率，与经典渐近下界一致。是强化学习基础理论的严谨数学工作，且清晰度高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20057v1",
+        "title": "Structure-Preserving Nonlinear Sufficient Dimension Reduction for Tensors",
+        "summary": "We introduce two nonlinear sufficient dimension reduction methods for regressions with tensor-valued predictors. Our goal is two-fold: the first is to preserve the tensor structure when performing dimension reduction, particularly the meaning of the tensor modes, for improved interpretation; the second is to substantially reduce the number of parameters in dimension reduction, thereby achieving model parsimony and enhancing estimation accuracy. Our two tensor dimension reduction methods echo the two commonly used tensor decomposition mechanisms: one is the Tucker decomposition, which reduces a larger tensor to a smaller one; the other is the CP-decomposition, which represents an arbitrary tensor as a sequence of rank-one tensors. We developed the Fisher consistency of our methods at the population level and established their consistency and convergence rates. Both methods are easy to implement numerically: the Tucker-form can be implemented through a sequence of least-squares steps, and the CP-form can be implemented through a sequence of singular value decompositions. We investigated the finite-sample performance of our methods and showed substantial improvement in accuracy over existing methods in simulations and two data applications.",
+        "authors": "Dianjun Lin, Bing Li, Lingzhou Xue",
+        "url": "http://arxiv.org/abs/2512.20057v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20057v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了两种针对张量值预测变量的非线性充分降维方法，旨在保留张量结构并减少参数。建立了方法的Fisher一致性、一致性和收敛速度，具有强大的统计理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20046v1",
+        "title": "Assumption-lean covariate adjustment under covariate adaptive randomization when $p = o (n)$",
+        "summary": "Adjusting for (baseline) covariates with working regression models becomes standard practice in the analysis of randomized clinical trials (RCT). When the dimension $p$ of the covariates is large relative to the sample size $n$, specifically $p = o (n)$, adjusting for covariates even in a linear working model by ordinary least squares can yield overly large bias, defeating the purpose of improving efficiency. This issue arises when no structural assumptions are imposed on the outcome model, a scenario that we refer to as the assumption-lean setting. Several new estimators have been proposed to address this issue. However, they focus mainly on simple randomization under the finite-population model, not covering covariate adaptive randomization (CAR) schemes under the superpopulation model. Due to improved covariate balance between treatment groups, CAR is more widely adopted in RCT; and the superpopulation model fits better when subjects are enrolled sequentially or when generalizing to a larger population is of interest. Thus, there is an urgent need to develop procedures in these settings, as the current regulatory guidance provides little concrete direction. In this paper, we fill this gap by demonstrating that an adjusted estimator based on second-order $U$-statistics can almost unbiasedly estimate the average treatment effect and enjoy a guaranteed efficiency gain if $p = o (n)$. In our analysis, we generalize the coupling technique commonly used in the CAR literature to $U$-statistics and also obtain several useful results for analyzing inverse sample Gram matrices by a delicate leave-$m$-out analysis, which may be of independent interest. Both synthetic and semi-synthetic experiments are conducted to demonstrate the superior finite-sample performance of our new estimator compared to popular benchmarks.",
+        "authors": "Yujia Gu, Lin Liu, Wei Ma",
+        "url": "http://arxiv.org/abs/2512.20046v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20046v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对协变量自适应随机化下的随机临床试验，提出了一种基于二阶U统计量的协变量调整估计量，能够几乎无偏地估计平均治疗效果并保证效率增益。具备强大的统计保证和因果逻辑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20041v1",
+        "title": "Convergence analysis of data augmentation algorithms in Bayesian lasso models with log-concave likelihoods",
+        "summary": "We study the convergence properties of a class of data augmentation algorithms targeting posterior distributions of Bayesian lasso models with log-concave likelihoods. Leveraging isoperimetric inequalities, we derive a generic convergence bound for this class of algorithms and apply it to Bayesian probit, logistic, and heteroskedastic Gaussian linear lasso models. Under feasible initializations, the mixing times for the probit and logistic models are of order $O[(p+n)^3 (pn^{1-c} + n)]$, up to logarithmic factors, where $n$ is the sample size, $p$ is the dimension of the regression coefficients, and $c \\in [0,1]$ is determined by the lasso penalty parameter. The mixing time for the heteroskedastic Gaussian model is $O[n(n+p)^3 (p n^{1-c} + n)]$, up to logarithmic factors.",
+        "authors": "Jingkai Cui, Qian Qin",
+        "url": "http://arxiv.org/abs/2512.20041v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20041v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "研究了贝叶斯lasso模型中数据增强算法的收敛性质，利用等周不等式推导了算法的通用收敛界和混合时间。是MCMC算法收敛性分析的严谨理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20019v1",
+        "title": "CoLaS: Copula-Seeded Sparse Local Graphs with Tunable Assortativity, Persistent Clustering, and a Degree-Tail Dichotomy",
+        "summary": "Empirical networks are typically sparse yet display pronounced degree variation, persistent transitivity, and systematic degree mixing. Most sparse generators control at most two of these features, and assortativity is often achieved by degree-preserving rewiring, which obscures the mechanism-parameter link. We introduce CoLaS (copula-seeded local latent-space graphs), a modular latent-variable model that separates marginal specifications from dependence. Each node has a popularity variable governing degree heterogeneity and a latent geometric location governing locality. A low-dimensional copula couples popularity and location, providing an interpretable dependence parameter that tunes degree mixing while leaving the chosen marginals unchanged. Under shrinking-range locality, edges are conditionally independent, the graph remains sparse, and clustering does not vanish. We develop sparse-limit theory for degrees, transitivity, and assortativity. Degrees converge to mixed-Poisson limits and we establish a degree-tail dichotomy: with fixed-range local kernels, degree tails are necessarily light, even under heavy-ailed popularity. To recover power-law degrees without sacrificing sparsity or locality, we propose CoLaS-HT, a minimal tail-inheriting extension in which effective connection ranges grow with popularity. Finally, under an identifiability condition, we provide a consistent one-graph calibration method based on jointly matching transitivity and assortativity.",
+        "authors": "Marios Papamichalis, Regina Ruane",
+        "url": "http://arxiv.org/abs/2512.20019v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20019v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种模块化的潜在变量模型CoLaS用于生成稀疏局部图，通过copula耦合流行度和位置变量。发展了度、传递性和同配性的稀疏极限理论，并提供了可识别性条件下的校准方法，理论基础深厚。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20011v1",
+        "title": "PaveSync: A Unified and Comprehensive Dataset for Pavement Distress Analysis and Classification",
+        "summary": "Automated pavement defect detection often struggles to generalize across diverse real-world conditions due to the lack of standardized datasets. Existing datasets differ in annotation styles, distress type definitions, and formats, limiting their integration for unified training. To address this gap, we introduce a comprehensive benchmark dataset that consolidates multiple publicly available sources into a standardized collection of 52747 images from seven countries, with 135277 bounding box annotations covering 13 distinct distress types. The dataset captures broad real-world variation in image quality, resolution, viewing angles, and weather conditions, offering a unique resource for consistent training and evaluation. Its effectiveness was demonstrated through benchmarking with state-of-the-art object detection models including YOLOv8-YOLOv12, Faster R-CNN, and DETR, which achieved competitive performance across diverse scenarios. By standardizing class definitions and annotation formats, this dataset provides the first globally representative benchmark for pavement defect detection and enables fair comparison of models, including zero-shot transfer to new environments.",
+        "authors": "Blessing Agyei Kyem, Joshua Kofi Asamoah, Anthony Dontoh, Andrews Danyo, Eugene Denteh, Armstrong Aboah",
+        "url": "http://arxiv.org/abs/2512.20011v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20011v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对电信知识系统中的LLM部署，提出了一种基于多重假设检验的统计严谨阈值选择方法，并提供了关于错位风险的有限样本保证。将严谨的统计保证应用于现代AI系统（LLM）的可靠性问题，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20005v1",
+        "title": "A Markov-switching dynamic matrix factor model for the high-dimensional matrix time series",
+        "summary": "In this study, we propose a novel model called the Markov-switching dynamic matrix factor (Ms-DMF) model, which serves the dual purpose of structural interpretation and prediction for high-dimensional matrix time series. When estimating the parameters of the Ms-DMF model, an EM (expectation maximization) algorithm was used to get a quasi-maximum likelihood estimation, where all the parameters are estimated jointly. A filtering and smoothing algorithm is used to compute the posterior expectations corresponding to the latent regimes and factors. The consistency, convergence rates, and limit distributions of the estimated parameters are established under mild conditions. The effectiveness of this estimation method is also validated by rigorous numerical simulations. Furthermore, we apply the Ms-DMF model to an international trade flow network. Compared to existing matrix factor models, our approach not only identifies the main import and export centers, but also recognizes the trade cycles between these centers. This provides profound insights and analytical capabilities to advance research in the field of international trade.",
+        "authors": "Chaofeng Yuan, Sainan Xu, Xingbing Kong, Jianhua Guo",
+        "url": "http://arxiv.org/abs/2512.20005v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20005v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种马尔可夫切换动态矩阵因子（Ms-DMF）模型用于高维矩阵时间序列的结构解释和预测。建立了估计参数的一致性、收敛速度和极限分布，具有强大的统计理论和清晰的数学推导。"
+    }
+]

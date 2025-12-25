@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.21319v1",
+        "title": "Variationally correct operator learning: Reduced basis neural operator with a posteriori error estimation",
+        "summary": "Minimizing PDE-residual losses is a common strategy to promote physical consistency in neural operators. However, standard formulations often lack variational correctness, meaning that small residuals do not guarantee small solution errors due to the use of non-compliant norms or ad hoc penalty terms for boundary conditions. This work develops a variationally correct operator learning framework by constructing first-order system least-squares (FOSLS) objectives whose values are provably equivalent to the solution error in PDE-induced norms. We demonstrate this framework on stationary diffusion and linear elasticity, incorporating mixed Dirichlet-Neumann boundary conditions via variational lifts to preserve norm equivalence without inconsistent penalties. To ensure the function space conformity required by the FOSLS loss, we propose a Reduced Basis Neural Operator (RBNO). The RBNO predicts coefficients for a pre-computed, conforming reduced basis, thereby ensuring variational stability by design while enabling efficient training. We provide a rigorous convergence analysis that bounds the total error by the sum of finite element discretization bias, reduced basis truncation error, neural network approximation error, and statistical estimation errors arising from finite sampling and optimization. Numerical benchmarks validate these theoretical bounds and demonstrate that the proposed approach achieves superior accuracy in PDE-compliant norms compared to standard baselines, while the residual loss serves as a reliable, computable a posteriori error estimator.",
+        "authors": "Yuan Qiu, Wolfgang Dahmen, Peng Chen",
+        "url": "http://arxiv.org/abs/2512.21319v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21319v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个变分正确的算子学习框架，通过FOSLS目标函数确保解误差与PDE诱导范数等价。它提供了严格的收敛性分析和理论界限，并引入了Reduced Basis Neural Operator (RBNO)。这与您对强大理论基础、清晰数学推导以及将严谨数学逻辑应用于AI系统的偏好高度契合，尤其是在PDE和数值方法领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21288v1",
+        "title": "Model Merging via Multi-Teacher Knowledge Distillation",
+        "summary": "Model merging has emerged as a lightweight alternative to joint multi-task learning (MTL), yet the generalization properties of merged models remain largely unexplored. Establishing such theoretical guarantees is non-trivial, as the merging process typically forbids access to the original training data and involves combining fine-tuned models trained on fundamentally heterogeneous data distributions. Without a principled understanding of these dynamics, current methods often rely on heuristics to approximate the optimal combination of parameters. This dependence is most critical in coefficient scaling, the weighting factors that modulate the magnitude of each fine-tuned model's contribution to the shared parameter. However, without a principled objective to guide their selection, these methods lead to brittle performance and are highly sensitive to scaling initialization. We address this gap by (i) establishing a novel flatness-aware PAC-Bayes generalization bound specifically for the model merging setting. This analysis introduces a \"cross-task heterogeneity\" term that formally captures the mismatch between diverse fine-tuned model priors and the target multi-task distributions. Guided by this theoretical insight, (ii) we frame model merging as multi-teacher knowledge distillation on scarce, unlabeled data. We formally demonstrate that minimizing the student-teacher Kullback-Leibler divergence directly tightens the upper bound on the merged model's excess risk. Guided by the flatness-aware bound derived, (iii) we operationalize this objective via SAMerging, a method that employs Sharpness-Aware Minimization (SAM) to find flat minima. Empirically, SAMerging establishes a new state of the art across vision and NLP benchmarks, achieving remarkable performance. The code is available at https://github.com/arshandalili/SAMerging.",
+        "authors": "Seyed Arshan Dalili, Mehrdad Mahdavi",
+        "url": "http://arxiv.org/abs/2512.21288v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21288v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为模型合并建立了新颖的平坦度感知PAC-Bayes泛化界限，并形式化地证明了最小化学生-教师KL散度能收紧合并模型的超额风险上限。它提供了强大的统计保证和理论洞察，完美符合您对理论严谨性和数学推导清晰度的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21269v1",
+        "title": "The Dynamical Anatomy of Anderson Acceleration:From Adaptive Momentum to Variable-Mass ODEs",
+        "summary": "This paper provides a rigorous derivation and analysis of accelerated optimization algorithms through the lens of High-Resolution Ordinary Differential Equations (ODEs). While classical Nesterov acceleration is well-understood via asymptotic vanishing damping, the dynamics of Anderson Acceleration (AA) remain less transparent. This work makes significant theoretical contributions to AA by bridging discrete acceleration algorithms with continuous dynamical systems, while also providing practical algorithmic innovations. Our work addresses fundamental questions about the physical nature of Anderson Acceleration that have remained unanswered since its introduction in 1965. Firstly, we prove that AA can be exactly rewritten as an adaptive momentum method and, in the high-resolution limit, converges to a second-order ODE with Variable Effective Mass. Through a Lyapunov energy analysis, we reveal the specific instability mechanism of standard AA: unchecked growth in effective mass acts as negative damping, physically injecting energy into the system and violating dissipation constraints. Conversely, high-resolution analysis identifies an implicit Hessian-driven damping term that provides stabilization in stiff regimes. Leveraging these dynamical insights, we then propose Energy-Guarded Anderson Acceleration (EG-AA), an algorithm that acts as an inertial governor to enforce thermodynamic consistency. Morevoer, our convergence analysis, formulated via the Acceleration Gain Factor, proves that EG-AA improves upon gradient descent by maximizing the geometric contraction of the linear subspace projection while actively suppressing nonlinear approximation errors. Theoretical bounds confirm that EG-AA is no worse than standard AA, and numerical experiments demonstrate strictly improved convergence stability and rates in ill-conditioned convex composite problems compared to standard Anderson mixing.",
+        "authors": "Kewang Chen, Yongqiu Jiang, Kees Vuik",
+        "url": "http://arxiv.org/abs/2512.21269v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21269v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过高分辨率ODE的视角，对Anderson加速算法进行了严格的推导和分析，证明了其与自适应动量方法的等价性，并收敛到变质量ODE。它运用了Lyapunov能量分析和收敛性分析，提出了Energy-Guarded Anderson Acceleration (EG-AA)。这是优化算法理论基础和数学严谨性的典范，与您的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21266v1",
+        "title": "$\\mathcal{K}$-Lorentzian Polynomials, Semipositive Cones, and Cone-Stable EVI Systems",
+        "summary": "Lorentzian and completely log-concave polynomials have recently emerged as a unifying framework for negative dependence, log-concavity, and convexity in combinatorics and probability. We extend this theory to variational analysis and cone-constrained dynamics by studying $K$-Lorentzian and $K$-completely log-concave polynomials over a proper convex cone $K\\subset\\mathbb{R}^n$. For a $K$-Lorentzian form $f$ and $v\\in\\operatorname{int}K$, we define an open cone $K^\\circ(f,v)$ and a closed cone $K(f,v)$ via directional derivatives along $v$, recovering the usual hyperbolicity cone when $f$ is hyperbolic. We prove that $K^\\circ(f,v)$ is a proper cone and equals $\\operatorname{int}K(f,v)$. If $f$ is $K(f,v)$-Lorentzian, then $K(f,v)$ is convex and maximal among convex cones on which $f$ is Lorentzian.   Using the Rayleigh matrix $M_f(x)=\\nabla f(x)\\nabla f(x)^T - f(x)\\nabla^2 f(x)$, we obtain cone-restricted Rayleigh inequalities and show that two-direction Rayleigh inequalities on $K$ are equivalent to an acuteness condition for the bilinear form $v^T M_f(x) w$. This yields a cone-restricted negative-dependence interpretation linking the curvature of $\\log f$ to covariance properties of associated Gibbs measures. For determinantal generating polynomials, we identify the intersection of the hyperbolicity cone with the nonnegative orthant as the classical semipositive cone, and we extend this construction to general proper cones via $K$-semipositive cones. Finally, for linear evolution variational inequality (LEVI) systems, we show that if $q(x)=x^T A x$ is (strictly) $K$-Lorentzian, then $A$ is (strictly) $K$-copositive and yields Lyapunov (semi-)stability on $K$, giving new Lyapunov criteria for cone-constrained dynamics.",
+        "authors": "Papri Dey",
+        "url": "http://arxiv.org/abs/2512.21266v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21266v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "这篇论文将Lorentzian多项式理论扩展到变分分析和锥约束动力学，定义了K-Lorentzian多项式并证明了其性质，并为线性演化变分不等式系统提供了新的Lyapunov判据。这是一篇非常理论化、数学严谨的论文，虽然直接实践影响力可能较低，但其深厚的理论基础和数学推导对数理统计博士生极具吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21113v1",
+        "title": "A Mechanistic Analysis of Transformers for Dynamical Systems",
+        "summary": "Transformers are increasingly adopted for modeling and forecasting time-series, yet their internal mechanisms remain poorly understood from a dynamical systems perspective. In contrast to classical autoregressive and state-space models, which benefit from well-established theoretical foundations, Transformer architectures are typically treated as black boxes. This gap becomes particularly relevant as attention-based models are considered for general-purpose or zero-shot forecasting across diverse dynamical regimes. In this work, we do not propose a new forecasting model, but instead investigate the representational capabilities and limitations of single-layer Transformers when applied to dynamical data. Building on a dynamical systems perspective we interpret causal self-attention as a linear, history-dependent recurrence and analyze how it processes temporal information. Through a series of linear and nonlinear case studies, we identify distinct operational regimes. For linear systems, we show that the convexity constraint imposed by softmax attention fundamentally restricts the class of dynamics that can be represented, leading to oversmoothing in oscillatory settings. For nonlinear systems under partial observability, attention instead acts as an adaptive delay-embedding mechanism, enabling effective state reconstruction when sufficient temporal context and latent dimensionality are available. These results help bridge empirical observations with classical dynamical systems theory, providing insight into when and why Transformers succeed or fail as models of dynamical systems.",
+        "authors": "Gregory Duthé, Nikolaos Evangelou, Wei Liu, Ioannis G. Kevrekidis, Eleni Chatzi",
+        "url": "http://arxiv.org/abs/2512.21113v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21113v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从动力系统角度对Transformer进行了机制分析，将因果自注意力解释为线性、历史依赖的递归，并分析了其处理时间信息的能力。它深入探讨了Transformer的内部机制及其数学限制，为理解现代AI系统提供了严谨的数学逻辑基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20991v1",
+        "title": "FinAgent: An Agentic AI Framework Integrating Personal Finance and Nutrition Planning",
+        "summary": "The issue of limited household budgets and nutritional demands continues to be a challenge especially in the middle-income environment where food prices fluctuate. This paper introduces a price aware agentic AI system, which combines personal finance management with diet optimization. With household income and fixed expenditures, medical and well-being status, as well as real-time food costs, the system creates nutritionally sufficient meals plans at comparatively reasonable prices that automatically adjust to market changes. The framework is implemented in a modular multi-agent architecture, which has specific agents (budgeting, nutrition, price monitoring, and health personalization). These agents share the knowledge base and use the substitution graph to ensure that the nutritional quality is maintained at a minimum cost. Simulations with a representative Saudi household case study show a steady 12-18\\% reduction in costs relative to a static weekly menu, nutrient adequacy of over 95\\% and high performance with price changes of 20-30%. The findings indicate that the framework can locally combine affordability with nutritional adequacy and provide a viable avenue of capacity-building towards sustainable and fair diet planning in line with Sustainable Development Goals on Zero Hunger and Good Health.",
+        "authors": "Toqeer Ali Syed, Abdulaziz Alshahrani, Ali Ullah, Ali Akarma, Sohail Khan, Muhammad Nauman, Salman Jan",
+        "url": "http://arxiv.org/abs/2512.20991v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20991v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过表示学习的视角，对扩散模型的泛化能力进行了理论分析。它证明了记忆化对应于“尖峰”表示，而泛化则源于“平衡”表示，并在真实模型上验证了这些理论发现。这为现代生成式AI提供了强大的理论基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21204v1",
+        "title": "SpidR-Adapt: A Universal Speech Representation Model for Few-Shot Adaptation",
+        "summary": "Human infants, with only a few hundred hours of speech exposure, acquire basic units of new languages, highlighting a striking efficiency gap compared to the data-hungry self-supervised speech models. To address this gap, this paper introduces SpidR-Adapt for rapid adaptation to new languages using minimal unlabeled data. We cast such low-resource speech representation learning as a meta-learning problem and construct a multi-task adaptive pre-training (MAdaPT) protocol which formulates the adaptation process as a bi-level optimization framework. To enable scalable meta-training under this framework, we propose a novel heuristic solution, first-order bi-level optimization (FOBLO), avoiding heavy computation costs. Finally, we stabilize meta-training by using a robust initialization through interleaved supervision which alternates self-supervised and supervised objectives. Empirically, SpidR-Adapt achieves rapid gains in phonemic discriminability (ABX) and spoken language modeling (sWUGGY, sBLIMP, tSC), improving over in-domain language models after training on less than 1h of target-language audio, over $100\\times$ more data-efficient than standard training. These findings highlight a practical, architecture-agnostic path toward biologically inspired, data-efficient representations. We open-source the training code and model checkpoints at https://github.com/facebookresearch/spidr-adapt.",
+        "authors": "Mahi Luthra, Jiayi Shen, Maxime Poli, Angelo Ortiz, Yosuke Higuchi, Youssef Benchekroun, Martin Gleize, Charles-Eric Saint-James, Dongyan Lin, Phillip Rust, Angel Villar, Surya Parimi, Vanessa Stark, Rashel Moritz, Juan Pino, Yann LeCun, Emmanuel Dupoux",
+        "url": "http://arxiv.org/abs/2512.21204v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21204v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个因果驱动归因（CDA）框架，利用时间因果发现（PCMCI）和结构因果模型（SCM）来推断渠道影响力，而无需用户级数据。它直接涉及因果逻辑和严谨的数学逻辑，解决了营销归因中的隐私和数据限制问题，具有很强的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21124v1",
+        "title": "Measuring Variable Importance via Accumulated Local Effects",
+        "summary": "A shortcoming of black-box supervised learning models is their lack of interpretability or transparency. To facilitate interpretation, post-hoc global variable importance measures (VIMs) are widely used to assign to each predictor or input variable a numerical score that represents the extent to which that predictor impacts the fitted model's response predictions across the training data. It is well known that the most common existing VIMs, namely marginal Shapley and marginal permutation-based methods, can produce unreliable results if the predictors are highly correlated, because they require extrapolation of the response at predictor values that fall far outside the training data. Conditional versions of Shapley and permutation VIMs avoid or reduce the extrapolation but can substantially deflate the importance of correlated predictors. For the related goal of visualizing the effects of each predictor when strong predictor correlation is present, accumulated local effects (ALE) plots were recently introduced and have been widely adopted. This paper presents a new VIM approach based on ALE concepts that avoids both the extrapolation and the VIM deflation problems when predictors are correlated. We contrast, both theoretically and numerically, ALE VIMs with Shapley and permutation VIMs. Our results indicate that ALE VIMs produce similar variable importance rankings as Shapley and permutation VIMs when predictor correlations are mild and more reliable rankings when correlations are strong. An additional advantage is that ALE VIMs are far less computationally expensive.",
+        "authors": "Jingyu Zhu, Daniel W. Apley",
+        "url": "http://arxiv.org/abs/2512.21124v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21124v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文基于累积局部效应（ALE）概念提出了一种新的变量重要性度量（VIM），解决了现有方法在预测变量高度相关时可能出现的不可靠问题。它承诺在理论和数值上与Shapley和置换VIM进行对比，展现了统计解释性方面的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21152v1",
+        "title": "MODE: Multi-Objective Adaptive Coreset Selection",
+        "summary": "We present Mode(Multi-Objective adaptive Data Efficiency), a framework that dynamically combines coreset selection strategies based on their evolving contribution to model performance. Unlike static methods, \\mode adapts selection criteria to training phases: emphasizing class balance early, diversity during representation learning, and uncertainty at convergence. We show that MODE achieves (1-1/e)-approximation with O(n \\log n) complexity and demonstrates competitive accuracy while providing interpretable insights into data utility evolution. Experiments show \\mode reduces memory requirements",
+        "authors": "Tanmoy Mukherjee, Pierre Marquis, Zied Bouraoui",
+        "url": "http://arxiv.org/abs/2512.21152v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21152v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个多目标自适应核集选择框架，并提供了(1-1/e)-近似保证和O(n log n)的复杂度分析。这些明确的理论保证和算法效率分析，使其在理论严谨性方面表现突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21024v1",
+        "title": "Policy-Conditioned Policies for Multi-Agent Task Solving",
+        "summary": "In multi-agent tasks, the central challenge lies in the dynamic adaptation of strategies. However, directly conditioning on opponents' strategies is intractable in the prevalent deep reinforcement learning paradigm due to a fundamental ``representational bottleneck'': neural policies are opaque, high-dimensional parameter vectors that are incomprehensible to other agents. In this work, we propose a paradigm shift that bridges this gap by representing policies as human-interpretable source code and utilizing Large Language Models (LLMs) as approximate interpreters. This programmatic representation allows us to operationalize the game-theoretic concept of \\textit{Program Equilibrium}. We reformulate the learning problem by utilizing LLMs to perform optimization directly in the space of programmatic policies. The LLM functions as a point-wise best-response operator that iteratively synthesizes and refines the ego agent's policy code to respond to the opponent's strategy. We formalize this process as \\textit{Programmatic Iterated Best Response (PIBR)}, an algorithm where the policy code is optimized by textual gradients, using structured feedback derived from game utility and runtime unit tests. We demonstrate that this approach effectively solves several standard coordination matrix games and a cooperative Level-Based Foraging environment.",
+        "authors": "Yue Lin, Shuhui Zhu, Wenhao Li, Ang Li, Dan Qiao, Pascal Poupart, Hongyuan Zha, Baoxiang Wang",
+        "url": "http://arxiv.org/abs/2512.21024v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21024v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过将策略表示为人类可解释的源代码，并利用LLM作为近似解释器，将博弈论中的“程序均衡”概念应用于多智能体任务。它形式化了“程序迭代最佳响应（PIBR）”算法，将LLM与形式化博弈论结合，展现了严谨的逻辑和理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21335v1",
+        "title": "Autonomous Uncertainty Quantification for Computational Point-of-care Sensors",
+        "summary": "Computational point-of-care (POC) sensors enable rapid, low-cost, and accessible diagnostics in emergency, remote and resource-limited areas that lack access to centralized medical facilities. These systems can utilize neural network-based algorithms to accurately infer a diagnosis from the signals generated by rapid diagnostic tests or sensors. However, neural network-based diagnostic models are subject to hallucinations and can produce erroneous predictions, posing a risk of misdiagnosis and inaccurate clinical decisions. To address this challenge, here we present an autonomous uncertainty quantification technique developed for POC diagnostics. As our testbed, we used a paper-based, computational vertical flow assay (xVFA) platform developed for rapid POC diagnosis of Lyme disease, the most prevalent tick-borne disease globally. The xVFA platform integrates a disposable paper-based assay, a handheld optical reader and a neural network-based inference algorithm, providing rapid and cost-effective Lyme disease diagnostics in under 20 min using only 20 uL of patient serum. By incorporating a Monte Carlo dropout (MCDO)-based uncertainty quantification approach into the diagnostics pipeline, we identified and excluded erroneous predictions with high uncertainty, significantly improving the sensitivity and reliability of the xVFA in an autonomous manner, without access to the ground truth diagnostic information of patients. Blinded testing using new patient samples demonstrated an increase in diagnostic sensitivity from 88.2% to 95.7%, indicating the effectiveness of MCDO-based uncertainty quantification in enhancing the robustness of neural network-driven computational POC sensing systems.",
+        "authors": "Artem Goncharov, Rajesh Ghosh, Hyou-Arm Joung, Dino Di Carlo, Aydogan Ozcan",
+        "url": "http://arxiv.org/abs/2512.21335v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21335v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将蒙特卡洛Dropout（MCDO）不确定性量化技术应用于计算即时诊断传感器，显著提高了诊断灵敏度和可靠性。不确定性量化是统计学核心概念，虽然是现有技术的应用，但其在关键AI系统中的严谨应用仍具价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21211v1",
+        "title": "Causal-driven attribution (CDA): Estimating channel influence without user-level data",
+        "summary": "Attribution modelling lies at the heart of marketing effectiveness, yet most existing approaches depend on user-level path data, which are increasingly inaccessible due to privacy regulations and platform restrictions. This paper introduces a Causal-Driven Attribution (CDA) framework that infers channel influence using only aggregated impression-level data, avoiding any reliance on user identifiers or click-path tracking. CDA integrates temporal causal discovery (using PCMCI) with causal effect estimation via a Structural Causal Model to recover directional channel relationships and quantify their contributions to conversions. Using large-scale synthetic data designed to replicate real marketing dynamics, we show that CDA achieves an average relative RMSE of 9.50% when given the true causal graph, and 24.23% when using the predicted graph, demonstrating strong accuracy under correct structure and meaningful signal recovery even under structural uncertainty. CDA captures cross-channel interdependencies while providing interpretable, privacy-preserving attribution insights, offering a scalable and future-proof alternative to traditional path-based models.",
+        "authors": "Georgios Filippou, Boi Mai Quach, Diana Lenghel, Arthur White, Ashish Kumar Jha",
+        "url": "http://arxiv.org/abs/2512.21211v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21211v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过元学习和双层优化框架，提出了SpidR-Adapt模型以实现语音表示学习的少样本适应。双层优化是优化理论中的一个重要分支，尽管FOBLO是启发式解决方案，但其背后的数学优化思想与您的偏好相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21220v1",
+        "title": "RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic",
+        "summary": "Embodied agents powered by vision-language models (VLMs) are increasingly capable of executing complex real-world tasks, yet they remain vulnerable to hazardous instructions that may trigger unsafe behaviors. Runtime safety guardrails, which intercept hazardous actions during task execution, offer a promising solution due to their flexibility. However, existing defenses often rely on static rule filters or prompt-level control, which struggle to address implicit risks arising in dynamic, temporally dependent, and context-rich environments. To address this, we propose RoboSafe, a hybrid reasoning runtime safeguard for embodied agents through executable predicate-based safety logic. RoboSafe integrates two complementary reasoning processes on a Hybrid Long-Short Safety Memory. We first propose a Backward Reflective Reasoning module that continuously revisits recent trajectories in short-term memory to infer temporal safety predicates and proactively triggers replanning when violations are detected. We then propose a Forward Predictive Reasoning module that anticipates upcoming risks by generating context-aware safety predicates from the long-term safety memory and the agent's multimodal observations. Together, these components form an adaptive, verifiable safety logic that is both interpretable and executable as code. Extensive experiments across multiple agents demonstrate that RoboSafe substantially reduces hazardous actions (-36.8% risk occurrence) compared with leading baselines, while maintaining near-original task performance. Real-world evaluations on physical robotic arms further confirm its practicality. Code will be released upon acceptance.",
+        "authors": "Le Wang, Zonghao Ying, Xiao Yang, Quanchen Zou, Zhenfei Yin, Tianlin Li, Jian Yang, Yaodong Yang, Aishan Liu, Xianglong Liu",
+        "url": "http://arxiv.org/abs/2512.21220v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21220v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了RoboSafe，一个通过可执行的基于谓词的安全逻辑来保护具身智能体的混合推理运行时安全框架。虽然抽象中未详细说明新数学逻辑的推导，但形式化安全和推理的概念对构建严谨的AI系统至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21231v1",
+        "title": "MiST: Understanding the Role of Mid-Stage Scientific Training in Developing Chemical Reasoning Models",
+        "summary": "Large Language Models can develop reasoning capabilities through online fine-tuning with rule-based rewards. However, recent studies reveal a critical constraint: reinforcement learning succeeds only when the base model already assigns non-negligible probability to correct answers -- a property we term 'latent solvability'. This work investigates the emergence of chemical reasoning capabilities and what these prerequisites mean for chemistry. We identify two necessary conditions for RL-based chemical reasoning: 1) Symbolic competence, and 2) Latent chemical knowledge. We propose mid-stage scientific training (MiST): a set of mid-stage training techniques to satisfy these, including data-mixing with SMILES/CIF-aware pre-processing, continued pre-training on 2.9B tokens, and supervised fine-tuning on 1B tokens. These steps raise the latent-solvability score on 3B and 7B models by up to 1.8x, and enable RL to lift top-1 accuracy from 10.9 to 63.9% on organic reaction naming, and from 40.6 to 67.4% on inorganic material generation. Similar results are observed for other challenging chemical tasks, while producing interpretable reasoning traces. Our results define clear prerequisites for chemical reasoning training and highlight the broader role of mid-stage training in unlocking reasoning capabilities.",
+        "authors": "Andres M Bran, Tong Xie, Shai Pranesh, Jeffrey Meng, Xuan Vu Nguyen, Jeremy Goumaz, David Ming Segura, Ruizhi Xu, Dongzhan Zhou, Wenjie Zhang, Bram Hoex, Philippe Schwaller",
+        "url": "http://arxiv.org/abs/2512.21231v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21231v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了LLM中化学推理能力的出现，并提出了“中段科学训练（MiST）”策略。虽然主要侧重于经验性洞察，但对LLM推理能力先决条件的系统性探索，有助于从更严谨的角度理解现代AI系统。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20936v1",
+        "title": "Reasoning-Driven Amodal Completion: Collaborative Agents and Perceptual Evaluation",
+        "summary": "Amodal completion, the task of inferring invisible object parts, faces significant challenges in maintaining semantic consistency and structural integrity. Prior progressive approaches are inherently limited by inference instability and error accumulation. To tackle these limitations, we present a Collaborative Multi-Agent Reasoning Framework that explicitly decouples Semantic Planning from Visual Synthesis. By employing specialized agents for upfront reasoning, our method generates a structured, explicit plan before pixel generation, enabling visually and semantically coherent single-pass synthesis. We integrate this framework with two critical mechanisms: (1) a self-correcting Verification Agent that employs Chain-of-Thought reasoning to rectify visible region segmentation and identify residual occluders strictly within the Semantic Planning phase, and (2) a Diverse Hypothesis Generator that addresses the ambiguity of invisible regions by offering diverse, plausible semantic interpretations, surpassing the limited pixel-level variations of standard random seed sampling. Furthermore, addressing the limitations of traditional metrics in assessing inferred invisible content, we introduce the MAC-Score (MLLM Amodal Completion Score), a novel human-aligned evaluation metric. Validated against human judgment and ground truth, these metrics establish a robust standard for assessing structural completeness and semantic consistency with visible context. Extensive experiments demonstrate that our framework significantly outperforms state-of-the-art methods across multiple datasets. Our project is available at: https://fanhongxing.github.io/remac-page.",
+        "authors": "Hongxing Fan, Shuyu Zhao, Jiayang Ao, Lu Sheng",
+        "url": "http://arxiv.org/abs/2512.20936v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20936v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个协作多智能体推理框架用于非模态补全，并引入了一个新颖的、与人类对齐的评估指标MAC-Score，并对其进行了验证。新指标的开发和验证具有重要的统计学意义，有助于对AI系统进行更严谨的评估。"
+    }
+]

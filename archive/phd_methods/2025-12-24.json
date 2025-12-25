@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.21336v1",
+        "title": "Optimizing Decoding Paths in Masked Diffusion Models by Quantifying Uncertainty",
+        "summary": "Masked Diffusion Models (MDMs) offer flexible, non-autoregressive generation, but this freedom introduces a challenge: final output quality is highly sensitive to the decoding order. We are the first to formalize this issue, attributing the variability in output quality to the cumulative predictive uncertainty along a generative path. To quantify this uncertainty, we introduce Denoising Entropy, a computable metric that serves as an internal signal for evaluating generative process. Leveraging this metric, we propose two algorithms designed to optimize the decoding path: a post-hoc selection method and a real-time guidance strategy. Experiments demonstrate that our entropy-guided methods significantly improve generation quality, consistently boosting accuracy on challenging reasoning, planning, and code benchmarks. Our work establishes Denoising Entropy as a principled tool for understanding and controlling generation, effectively turning the uncertainty in MDMs from a liability into a key advantage for discovering high-quality solutions.",
+        "authors": "Ziyu Chen, Xinbei Jiang, Peng Sun, Tao Lin",
+        "url": "http://arxiv.org/abs/2512.21336v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21336v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文首次形式化了Masked Diffusion Models (MDMs)中解码路径对生成质量的敏感性问题，并引入了“去噪熵”（Denoising Entropy）这一可计算的度量来量化生成过程中的预测不确定性。这提供了一个理解和控制MDM生成过程的原理性工具，通过优化解码路径显著提升了生成质量。其理论创新性在于提出了新的不确定性量化方法，并将其应用于解决实际的生成模型瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21315v1",
+        "title": "Does the Data Processing Inequality Reflect Practice? On the Utility of Low-Level Tasks",
+        "summary": "The data processing inequality is an information-theoretic principle stating that the information content of a signal cannot be increased by processing the observations. In particular, it suggests that there is no benefit in enhancing the signal or encoding it before addressing a classification problem. This assertion can be proven to be true for the case of the optimal Bayes classifier. However, in practice, it is common to perform \"low-level\" tasks before \"high-level\" downstream tasks despite the overwhelming capabilities of modern deep neural networks. In this paper, we aim to understand when and why low-level processing can be beneficial for classification. We present a comprehensive theoretical study of a binary classification setup, where we consider a classifier that is tightly connected to the optimal Bayes classifier and converges to it as the number of training samples increases. We prove that for any finite number of training samples, there exists a pre-classification processing that improves the classification accuracy. We also explore the effect of class separation, training set size, and class balance on the relative gain from this procedure. We support our theory with an empirical investigation of the theoretical setup. Finally, we conduct an empirical study where we investigate the effect of denoising and encoding on the performance of practical deep classifiers on benchmark datasets. Specifically, we vary the size and class distribution of the training set, and the noise level, and demonstrate trends that are consistent with our theoretical results.",
+        "authors": "Roy Turgeman, Tom Tirer",
+        "url": "http://arxiv.org/abs/2512.21315v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21315v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文从信息论原理（数据处理不等式）出发，深入探讨了低级任务（如信号增强、编码）对分类任务的实际益处。它通过严谨的理论研究证明，在有限训练样本下，预处理可以提高分类精度，并分析了其影响因素。这不仅挑战了信息论中的一个基本假设在实践中的适用性，还为数据预处理提供了坚实的理论基础，对理解深度学习模型的泛化能力有重要启示。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21288v1",
+        "title": "Model Merging via Multi-Teacher Knowledge Distillation",
+        "summary": "Model merging has emerged as a lightweight alternative to joint multi-task learning (MTL), yet the generalization properties of merged models remain largely unexplored. Establishing such theoretical guarantees is non-trivial, as the merging process typically forbids access to the original training data and involves combining fine-tuned models trained on fundamentally heterogeneous data distributions. Without a principled understanding of these dynamics, current methods often rely on heuristics to approximate the optimal combination of parameters. This dependence is most critical in coefficient scaling, the weighting factors that modulate the magnitude of each fine-tuned model's contribution to the shared parameter. However, without a principled objective to guide their selection, these methods lead to brittle performance and are highly sensitive to scaling initialization. We address this gap by (i) establishing a novel flatness-aware PAC-Bayes generalization bound specifically for the model merging setting. This analysis introduces a \"cross-task heterogeneity\" term that formally captures the mismatch between diverse fine-tuned model priors and the target multi-task distributions. Guided by this theoretical insight, (ii) we frame model merging as multi-teacher knowledge distillation on scarce, unlabeled data. We formally demonstrate that minimizing the student-teacher Kullback-Leibler divergence directly tightens the upper bound on the merged model's excess risk. Guided by the flatness-aware bound derived, (iii) we operationalize this objective via SAMerging, a method that employs Sharpness-Aware Minimization (SAM) to find flat minima. Empirically, SAMerging establishes a new state of the art across vision and NLP benchmarks, achieving remarkable performance. The code is available at https://github.com/arshandalili/SAMerging.",
+        "authors": "Seyed Arshan Dalili, Mehrdad Mahdavi",
+        "url": "http://arxiv.org/abs/2512.21288v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21288v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究为模型合并（Model Merging）这一轻量级多任务学习方法提供了理论保障。它首次建立了针对模型合并的“平坦度感知PAC-Bayes泛化界限”，引入了“跨任务异质性”项来量化不同微调模型与目标多任务分布之间的不匹配。在此理论指导下，将模型合并重新定义为多教师知识蒸馏，并提出了SAMerging方法。其理论严谨性、对实际应用瓶颈（模型泛化、参数组合）的解决能力以及方法创新性都非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21183v1",
+        "title": "Towards Arbitrary Motion Completing via Hierarchical Continuous Representation",
+        "summary": "Physical motions are inherently continuous, and higher camera frame rates typically contribute to improved smoothness and temporal coherence. For the first time, we explore continuous representations of human motion sequences, featuring the ability to interpolate, inbetween, and even extrapolate any input motion sequences at arbitrary frame rates. To achieve this, we propose a novel parametric activation-induced hierarchical implicit representation framework, referred to as NAME, based on Implicit Neural Representations (INRs). Our method introduces a hierarchical temporal encoding mechanism that extracts features from motion sequences at multiple temporal scales, enabling effective capture of intricate temporal patterns. Additionally, we integrate a custom parametric activation function, powered by Fourier transformations, into the MLP-based decoder to enhance the expressiveness of the continuous representation. This parametric formulation significantly augments the model's ability to represent complex motion behaviors with high accuracy. Extensive evaluations across several benchmark datasets demonstrate the effectiveness and robustness of our proposed approach.",
+        "authors": "Chenghao Xu, Guangtao Lyu, Qi Liu, Jiexi Yan, Muli Yang, Cheng Deng",
+        "url": "http://arxiv.org/abs/2512.21183v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21183v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文首次探索了人体运动序列的连续表示，旨在实现任意帧率的插值、补帧和外推。它提出了一个新颖的基于隐式神经表示（INRs）的参数化激活诱导分层隐式表示框架（NAME），并集成了傅里叶变换驱动的参数化激活函数。这种方法在运动表示上具有显著的理论创新性，解决了传统离散帧表示的局限性，对动画、机器人等领域有重要应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21024v1",
+        "title": "Policy-Conditioned Policies for Multi-Agent Task Solving",
+        "summary": "In multi-agent tasks, the central challenge lies in the dynamic adaptation of strategies. However, directly conditioning on opponents' strategies is intractable in the prevalent deep reinforcement learning paradigm due to a fundamental ``representational bottleneck'': neural policies are opaque, high-dimensional parameter vectors that are incomprehensible to other agents. In this work, we propose a paradigm shift that bridges this gap by representing policies as human-interpretable source code and utilizing Large Language Models (LLMs) as approximate interpreters. This programmatic representation allows us to operationalize the game-theoretic concept of \\textit{Program Equilibrium}. We reformulate the learning problem by utilizing LLMs to perform optimization directly in the space of programmatic policies. The LLM functions as a point-wise best-response operator that iteratively synthesizes and refines the ego agent's policy code to respond to the opponent's strategy. We formalize this process as \\textit{Programmatic Iterated Best Response (PIBR)}, an algorithm where the policy code is optimized by textual gradients, using structured feedback derived from game utility and runtime unit tests. We demonstrate that this approach effectively solves several standard coordination matrix games and a cooperative Level-Based Foraging environment.",
+        "authors": "Yue Lin, Shuhui Zhu, Wenhao Li, Ang Li, Dan Qiao, Pascal Poupart, Hongyuan Zha, Baoxiang Wang",
+        "url": "http://arxiv.org/abs/2512.21024v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21024v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个多智能体任务解决的范式转变，通过将策略表示为人类可解释的源代码，并利用大型语言模型（LLMs）作为近似解释器。它将博弈论中的“程序均衡”（Program Equilibrium）概念操作化，并形式化了“程序化迭代最佳响应”（PIBR）算法。这种方法解决了深度强化学习中策略不透明的“表示瓶颈”问题，具有深远的理论和实践意义，是LLM在多智能体系统中的前沿应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21010v1",
+        "title": "LLM Swiss Round: Aggregating Multi-Benchmark Performance via Competitive Swiss-System Dynamics",
+        "summary": "The rapid proliferation of Large Language Models (LLMs) and diverse specialized benchmarks necessitates a shift from fragmented, task-specific metrics to a holistic, competitive ranking system that effectively aggregates performance across multiple ability dimensions. Primarily using static scoring, current evaluation methods are fundamentally limited. They struggle to determine the proper mix ratio across diverse benchmarks, and critically, they fail to capture a model's dynamic competitive fitness or its vulnerability when confronted with sequential, high-stakes tasks. To address this, we introduce the novel Competitive Swiss-System Dynamics (CSD) framework. CSD simulates a multi-round, sequential contest where models are dynamically paired across a curated sequence of benchmarks based on their accumulated win-loss record. And Monte Carlo Simulation ($N=100,000$ iterations) is used to approximate the statistically robust Expected Win Score ($E[S_m]$), which eliminates the noise of random pairing and early-round luck. Furthermore, we implement a Failure Sensitivity Analysis by parameterizing the per-round elimination quantity ($T_k$), which allows us to profile models based on their risk appetite--distinguishing between robust generalists and aggressive specialists. We demonstrate that CSD provides a more nuanced and context-aware ranking than traditional aggregate scoring and static pairwise models, representing a vital step towards risk-informed, next-generation LLM evaluation.",
+        "authors": "Jiashuo Liu, Jiayun Wu, Chunjie Wu, Jingkai Liu, Zaiyuan Wang, Huan Zhou, Wenhao Huang, Hongseok Namkoong",
+        "url": "http://arxiv.org/abs/2512.21010v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21010v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM评估中碎片化、静态评分的局限性，该论文引入了新颖的“竞争性瑞士系统动态”（Competitive Swiss-System Dynamics, CSD）框架。CSD通过模拟多轮、序列化的竞赛，动态配对模型，并利用蒙特卡洛模拟近似统计稳健的预期胜分。此外，还引入了失效敏感性分析。这为LLM的评估提供了一个更细致、更具竞争力的排名系统，具有很强的统计学和方法论创新性，解决了LLM评估的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.21002v1",
+        "title": "Distilling the Essence: Efficient Reasoning Distillation via Sequence Truncation",
+        "summary": "Distilling the reasoning capabilities from a large language model (LLM) to a smaller student model often involves training on substantial amounts of reasoning data. However, distillation over lengthy sequences with prompt (P), chain-of-thought (CoT), and answer (A) segments makes the process computationally expensive. In this work, we investigate how the allocation of supervision across different segments (P, CoT, A) affects student performance. Our analysis shows that selective knowledge distillation over only the CoT tokens can be effective when the prompt and answer information is encompassed by it. Building on this insight, we establish a truncation protocol to quantify computation-quality tradeoffs as a function of sequence length. We observe that training on only the first $50\\%$ of tokens of every training sequence can retain, on average, $\\approx94\\%$ of full-sequence performance on math benchmarks while reducing training time, memory usage, and FLOPs by about $50\\%$ each. These findings suggest that reasoning distillation benefits from prioritizing early reasoning tokens and provides a simple lever for computation-quality tradeoffs. Codes are available at https://github.com/weiruichen01/distilling-the-essence.",
+        "authors": "Wei-Rui Chen, Vignesh Kothapalli, Ata Fatahibaarzi, Hejian Sang, Shao Tang, Qingquan Song, Zhipeng Wang, Muhammad Abdul-Mageed",
+        "url": "http://arxiv.org/abs/2512.21002v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.21002v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究深入探讨了LLM推理能力蒸馏的效率问题，发现长序列中的思维链（CoT）部分可能导致计算成本过高，并提出了一个通过序列截断实现高效推理蒸馏的协议。通过优先处理早期推理token，该方法在保持94%性能的同时，将训练时间、内存和FLOPs减少了约50%。这篇论文不仅解决了LLM蒸馏的实际效率瓶颈，还通过分析监督分配对学生模型性能的影响，提供了对知识蒸馏过程的原理性理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20968v1",
+        "title": "Mesh-Attention: A New Communication-Efficient Distributed Attention with Improved Data Locality",
+        "summary": "Distributed attention is a fundamental problem for scaling context window for Large Language Models (LLMs). The state-of-the-art method, Ring-Attention, suffers from scalability limitations due to its excessive communication traffic. This paper proposes a new distributed attention algorithm, Mesh-Attention, by rethinking the design space of distributed attention with a new matrix-based model. Our method assigns a two-dimensional tile -- rather than one-dimensional row or column -- of computation blocks to each GPU to achieve higher efficiency through lower communication-computation (CommCom) ratio. The general approach covers Ring-Attention as a special case, and allows the tuning of CommCom ratio with different tile shapes. Importantly, we propose a greedy algorithm that can efficiently search the scheduling space within the tile with restrictions that ensure efficient communication among GPUs. The theoretical analysis shows that Mesh-Attention leads to a much lower communication complexity and exhibits good scalability comparing to other current algorithms.   Our extensive experiment results show that Mesh-Attention can achieve up to 3.4x speedup (2.9x on average) and reduce the communication volume by up to 85.4% (79.0% on average) on 256 GPUs. Our scalability results further demonstrate that Mesh-Attention sustains superior performance as the system scales, substantially reducing overhead in large-scale deployments. The results convincingly confirm the advantage of Mesh-Attention.",
+        "authors": "Sirui Chen, Jingji Chen, Siqi Zhu, Ziheng Jiang, Yanghua Peng, Xuehai Qian",
+        "url": "http://arxiv.org/abs/2512.20968v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20968v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了Mesh-Attention，一种新的通信高效分布式注意力算法，通过重新思考分布式注意力的设计空间，采用基于矩阵的新模型和二维计算块分配策略。理论分析表明，Mesh-Attention具有更低的通信复杂性，并能显著降低LLM上下文窗口扩展的通信瓶颈，在256个GPU上实现了高达3.4倍的加速和85.4%的通信量减少。这是LLM架构和效率方面的重大理论与工程创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20963v1",
+        "title": "Generalization of Diffusion Models Arises with a Balanced Representation Space",
+        "summary": "Diffusion models excel at generating high-quality, diverse samples, yet they risk memorizing training data when overfit to the training objective. We analyze the distinctions between memorization and generalization in diffusion models through the lens of representation learning. By investigating a two-layer ReLU denoising autoencoder (DAE), we prove that (i) memorization corresponds to the model storing raw training samples in the learned weights for encoding and decoding, yielding localized \"spiky\" representations, whereas (ii) generalization arises when the model captures local data statistics, producing \"balanced\" representations. Furthermore, we validate these theoretical findings on real-world unconditional and text-to-image diffusion models, demonstrating that the same representation structures emerge in deep generative models with significant practical implications. Building on these insights, we propose a representation-based method for detecting memorization and a training-free editing technique that allows precise control via representation steering. Together, our results highlight that learning good representations is central to novel and meaningful generative modeling.",
+        "authors": "Zekai Zhang, Xiao Li, Xiang Li, Lianghe Shi, Meng Wu, Molei Tao, Qing Qu",
+        "url": "http://arxiv.org/abs/2512.20963v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20963v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究通过表征学习的视角，深入分析了扩散模型中记忆化与泛化之间的区别。通过对两层ReLU去噪自编码器（DAE）的理论证明，论文指出记忆化对应于模型在权重中存储原始训练样本，产生“尖峰”表征；而泛化则对应于模型捕获局部数据统计，产生“平衡”表征。这些理论发现对理解生成模型的核心机制具有重要意义，并启发了检测记忆化和通过表征引导进行编辑的实用方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20954v1",
+        "title": "Reflection Pretraining Enables Token-Level Self-Correction in Biological Sequence Models",
+        "summary": "Chain-of-Thought (CoT) prompting has significantly advanced task-solving capabilities in natural language processing with large language models. Unlike standard prompting, CoT encourages the model to generate intermediate reasoning steps, non-answer tokens, that help guide the model toward more accurate final outputs. These intermediate steps enable more complex reasoning processes such as error correction, memory management, future planning, and self-reflection. However, applying CoT to non-natural language domains, such as protein and RNA language models, is not yet possible, primarily due to the limited expressiveness of their token spaces (e.g., amino acid tokens). In this work, we propose and define the concept of language expressiveness: the ability of a given language, using its tokens and grammar, to encode information. We show that the limited expressiveness of protein language severely restricts the applicability of CoT-style reasoning. To overcome this, we introduce reflection pretraining, for the first time in a biological sequence model, which enables the model to engage in intermediate reasoning through the generation of auxiliary \"thinking tokens\" beyond simple answer tokens. Theoretically, we demonstrate that our augmented token set significantly enhances biological language expressiveness, thereby improving the overall reasoning capacity of the model. Experimentally, our pretraining approach teaches protein models to self-correct and leads to substantial performance gains compared to standard pretraining.",
+        "authors": "Xiang Zhang, Jiaqi Wei, Yuejin Yang, Zijie Qiu, Yuhan Chen, Zhiqiang Gao, Muhammad Abdul-Mageed, Laks V. S. Lakshmanan, Wanli Ouyang, Chenyu You, Siqi Sun",
+        "url": "http://arxiv.org/abs/2512.20954v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20954v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "论文提出了“语言表达能力”的概念，并引入了“反射预训练”（Reflection Pretraining），通过生成辅助“思考token”在生物序列模型中首次实现了token级别的自我纠正和CoT式推理。理论上证明了增强的token集显著提升了生物语言表达能力和模型的推理容量。这解决了非自然语言领域（如蛋白质和RNA）LLM推理能力受限的根本问题，具有深刻的理论创新和在生物信息学领域的巨大应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20949v1",
+        "title": "Neural Probe-Based Hallucination Detection for Large Language Models",
+        "summary": "Large language models(LLMs) excel at text generation and knowledge question-answering tasks, but they are prone to generating hallucinated content, severely limiting their application in high-risk domains. Current hallucination detection methods based on uncertainty estimation and external knowledge retrieval suffer from the limitation that they still produce erroneous content at high confidence levels and rely heavily on retrieval efficiency and knowledge coverage. In contrast, probe methods that leverage the model's hidden-layer states offer real-time and lightweight advantages. However, traditional linear probes struggle to capture nonlinear structures in deep semantic spaces.To overcome these limitations, we propose a neural network-based framework for token-level hallucination detection. By freezing language model parameters, we employ lightweight MLP probes to perform nonlinear modeling of high-level hidden states. A multi-objective joint loss function is designed to enhance detection stability and semantic disambiguity. Additionally, we establish a layer position-probe performance response model, using Bayesian optimization to automatically search for optimal probe insertion layers and achieve superior training results.Experimental results on LongFact, HealthBench, and TriviaQA demonstrate that MLP probes significantly outperform state-of-the-art methods in accuracy, recall, and detection capability under low false-positive conditions.",
+        "authors": "Shize Liang, Hongzhi Wang",
+        "url": "http://arxiv.org/abs/2512.20949v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20949v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM幻觉问题，该论文提出了一个基于神经网络的token级幻觉检测框架。通过轻量级MLP探针在冻结LLM隐藏状态上进行非线性建模，并设计了多目标联合损失函数。更重要的是，它建立了“层位置-探针性能响应模型”，利用贝叶斯优化自动搜索最优探针插入层。这提供了一种原理性且高效的幻觉检测方法，解决了LLM在风险领域应用的关键安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20936v1",
+        "title": "Reasoning-Driven Amodal Completion: Collaborative Agents and Perceptual Evaluation",
+        "summary": "Amodal completion, the task of inferring invisible object parts, faces significant challenges in maintaining semantic consistency and structural integrity. Prior progressive approaches are inherently limited by inference instability and error accumulation. To tackle these limitations, we present a Collaborative Multi-Agent Reasoning Framework that explicitly decouples Semantic Planning from Visual Synthesis. By employing specialized agents for upfront reasoning, our method generates a structured, explicit plan before pixel generation, enabling visually and semantically coherent single-pass synthesis. We integrate this framework with two critical mechanisms: (1) a self-correcting Verification Agent that employs Chain-of-Thought reasoning to rectify visible region segmentation and identify residual occluders strictly within the Semantic Planning phase, and (2) a Diverse Hypothesis Generator that addresses the ambiguity of invisible regions by offering diverse, plausible semantic interpretations, surpassing the limited pixel-level variations of standard random seed sampling. Furthermore, addressing the limitations of traditional metrics in assessing inferred invisible content, we introduce the MAC-Score (MLLM Amodal Completion Score), a novel human-aligned evaluation metric. Validated against human judgment and ground truth, these metrics establish a robust standard for assessing structural completeness and semantic consistency with visible context. Extensive experiments demonstrate that our framework significantly outperforms state-of-the-art methods across multiple datasets. Our project is available at: https://fanhongxing.github.io/remac-page.",
+        "authors": "Hongxing Fan, Shuyu Zhao, Jiayang Ao, Lu Sheng",
+        "url": "http://arxiv.org/abs/2512.20936v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20936v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个协作式多智能体推理框架，用于非模态补全（Amodal Completion），明确地将语义规划与视觉合成解耦。通过引入自纠正验证智能体和多样性假设生成器，解决了推理不稳定和误差累积的问题。此外，还引入了MAC-Score这一新颖的人类对齐评估指标。其智能体架构的创新性、对推理与合成解耦的深刻理解以及新评估指标的提出，都使其成为一个值得关注的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20920v1",
+        "title": "RevFFN: Memory-Efficient Full-Parameter Fine-Tuning of Mixture-of-Experts LLMs with Reversible Blocks",
+        "summary": "Full parameter fine tuning is a key technique for adapting large language models (LLMs) to downstream tasks, but it incurs substantial memory overhead due to the need to cache extensive intermediate activations for backpropagation. This bottleneck makes full fine tuning of contemporary large scale LLMs challenging in practice. Existing distributed training frameworks such as DeepSpeed alleviate this issue using techniques like ZeRO and FSDP, which rely on multi GPU memory or CPU offloading, but often require additional hardware resources and reduce training speed. We introduce RevFFN, a memory efficient fine tuning paradigm for mixture of experts (MoE) LLMs. RevFFN employs carefully designed reversible Transformer blocks that allow reconstruction of layer input activations from outputs during backpropagation, eliminating the need to store most intermediate activations in memory. While preserving the expressive capacity of MoE architectures, this approach significantly reduces peak memory consumption for full parameter fine tuning. As a result, RevFFN enables efficient full fine tuning on a single consumer grade or server grade GPU.",
+        "authors": "Ningyuan Liu, Jing Yang, Kaitong Cai, Keze Wang",
+        "url": "http://arxiv.org/abs/2512.20920v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20920v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了RevFFN，一种针对MoE LLMs的内存高效全参数微调范式。通过精心设计的“可逆Transformer块”，RevFFN能够在反向传播过程中从输出重建层输入激活，从而显著减少了中间激活的内存消耗。这解决了大型LLM全参数微调的内存瓶颈，使得在单个消费级或服务器级GPU上进行高效微调成为可能，具有重要的架构创新和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20905v1",
+        "title": "DiEC: Diffusion Embedded Clustering",
+        "summary": "Deep clustering hinges on learning representations that are inherently clusterable. However, using a single encoder to produce a fixed embedding ignores the representation trajectory formed by a pretrained diffusion model across network hierarchies and noise timesteps, where clusterability varies substantially. We propose DiEC (Diffusion Embedded Clustering), which performs unsupervised clustering by directly reading internal activations from a pretrained diffusion U-Net.   DiEC formulates representation selection as a two-dimensional search over layer x timestep, and exploits a weak-coupling property to decompose it into two stages. Specifically, we first fix the U-Net bottleneck layer as the Clustering-friendly Middle Layer (CML), and then use Optimal Timestep Search (OTS) to identify the clustering-optimal timestep (t*). During training, we extract bottleneck features at the fixed t* and obtain clustering representations via a lightweight residual mapping. We optimize a DEC-style KL self-training objective, augmented with adaptive graph regularization and entropy regularization to strengthen cluster structures. In parallel, we introduce a denoising-consistency branch at random timesteps to stabilize the representations and preserve generative consistency. Experiments show that DiEC achieves competitive clustering performance on multiple standard benchmarks.",
+        "authors": "Haidong Hu",
+        "url": "http://arxiv.org/abs/2512.20905v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20905v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了DiEC（Diffusion Embedded Clustering），一种通过直接读取预训练扩散U-Net内部激活进行无监督聚类的新方法。它将表示选择公式化为层x时间步的二维搜索，并利用弱耦合特性进行分解，通过最优时间步搜索识别聚类最佳时间步。这种方法创新性地利用了扩散模型丰富的内部表示进行聚类，具有原理性的搜索策略和对深度学习表征的深刻理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.20892v1",
+        "title": "Beyond Weight Adaptation: Feature-Space Domain Injection for Cross-Modal Ship Re-Identification",
+        "summary": "Cross-Modality Ship Re-Identification (CMS Re-ID) is critical for achieving all-day and all-weather maritime target tracking, yet it is fundamentally challenged by significant modality discrepancies. Mainstream solutions typically rely on explicit modality alignment strategies; however, this paradigm heavily depends on constructing large-scale paired datasets for pre-training. To address this, grounded in the Platonic Representation Hypothesis, we explore the potential of Vision Foundation Models (VFMs) in bridging modality gaps. Recognizing the suboptimal performance of existing generic Parameter-Efficient Fine-Tuning (PEFT) methods that operate within the weight space, particularly on limited-capacity models, we shift the optimization perspective to the feature space and propose a novel PEFT strategy termed Domain Representation Injection (DRI). Specifically, while keeping the VFM fully frozen to maximize the preservation of general knowledge, we design a lightweight, learnable Offset Encoder to extract domain-specific representations rich in modality and identity attributes from raw inputs. Guided by the contextual information of intermediate features at different layers, a Modulator adaptively transforms these representations. Subsequently, they are injected into the intermediate layers via additive fusion, dynamically reshaping the feature distribution to adapt to the downstream task without altering the VFM's pre-trained weights. Extensive experimental results demonstrate the superiority of our method, achieving State-of-the-Art (SOTA) performance with minimal trainable parameters. For instance, on the HOSS-ReID dataset, we attain 57.9\\% and 60.5\\% mAP using only 1.54M and 7.05M parameters, respectively. The code is available at https://github.com/TingfengXian/DRI.",
+        "authors": "Tingfeng Xian, Wenlve Zhou, Zhiheng Zhou, Zhelin Li",
+        "url": "http://arxiv.org/abs/2512.20892v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.20892v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Domain Representation Injection (DRI)，一种新颖的参数高效微调（PEFT）策略，用于跨模态船舶重识别。它基于“柏拉图式表示假设”，将优化重心从权重空间转移到特征空间，通过可学习的Offset Encoder和Modulator将领域特定表示注入到VFM的中间层，从而在不改变VFM预训练权重的情况下适应下游任务。这种特征空间注入的PEFT方法具有理论创新性，解决了模态差异和数据稀缺的实际瓶颈，并实现了SOTA性能。"
+    }
+]

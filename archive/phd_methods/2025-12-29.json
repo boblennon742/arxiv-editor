@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.23705v1",
+        "title": "Diffusion Knows Transparency: Repurposing Video Diffusion for Transparent Object Depth and Normal Estimation",
+        "summary": "Transparent objects remain notoriously hard for perception systems: refraction, reflection and transmission break the assumptions behind stereo, ToF and purely discriminative monocular depth, causing holes and temporally unstable estimates. Our key observation is that modern video diffusion models already synthesize convincing transparent phenomena, suggesting they have internalized the optical rules. We build TransPhy3D, a synthetic video corpus of transparent/reflective scenes: 11k sequences rendered with Blender/Cycles. Scenes are assembled from a curated bank of category-rich static assets and shape-rich procedural assets paired with glass/plastic/metal materials. We render RGB + depth + normals with physically based ray tracing and OptiX denoising. Starting from a large video diffusion model, we learn a video-to-video translator for depth (and normals) via lightweight LoRA adapters. During training we concatenate RGB and (noisy) depth latents in the DiT backbone and co-train on TransPhy3D and existing frame-wise synthetic datasets, yielding temporally consistent predictions for arbitrary-length input videos. The resulting model, DKT, achieves zero-shot SOTA on real and synthetic video benchmarks involving transparency: ClearPose, DREDS (CatKnown/CatNovel), and TransPhy3D-Test. It improves accuracy and temporal consistency over strong image/video baselines, and a normal variant sets the best video normal estimation results on ClearPose. A compact 1.3B version runs at ~0.17 s/frame. Integrated into a grasping stack, DKT's depth boosts success rates across translucent, reflective and diffuse surfaces, outperforming prior estimators. Together, these results support a broader claim: \"Diffusion knows transparency.\" Generative video priors can be repurposed, efficiently and label-free, into robust, temporally coherent perception for challenging real-world manipulation.",
+        "authors": "Shaocong Xu, Songlin Wei, Qizhe Wei, Zheng Geng, Hong Li, Licheng Shen, Qianpu Sun, Shu Han, Bin Ma, Bohan Li, Chongjie Ye, Yuhang Zheng, Nan Wang, Saining Zhang, Hao Zhao",
+        "url": "http://arxiv.org/abs/2512.23705v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23705v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将视频扩散模型创新性地应用于透明物体深度和法线估计这一极具挑战性的感知任务。其核心观察“Diffusion knows transparency”引人深思，并构建了新的合成数据集TransPhy3D。虽然LoRA微调是工程技术，但将生成模型重定向到感知任务，并解决机器人抓取等实际应用瓶颈，具有很强的实践意义和方法创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23694v1",
+        "title": "Bellman Calibration for V-Learning in Offline Reinforcement Learning",
+        "summary": "We introduce Iterated Bellman Calibration, a simple, model-agnostic, post-hoc procedure for calibrating off-policy value predictions in infinite-horizon Markov decision processes. Bellman calibration requires that states with similar predicted long-term returns exhibit one-step returns consistent with the Bellman equation under the target policy. We adapt classical histogram and isotonic calibration to the dynamic, counterfactual setting by repeatedly regressing fitted Bellman targets onto a model's predictions, using a doubly robust pseudo-outcome to handle off-policy data. This yields a one-dimensional fitted value iteration scheme that can be applied to any value estimator. Our analysis provides finite-sample guarantees for both calibration and prediction under weak assumptions, and critically, without requiring Bellman completeness or realizability.",
+        "authors": "Lars van der Laan, Nathan Kallus",
+        "url": "http://arxiv.org/abs/2512.23694v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23694v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了迭代贝尔曼校准（Iterated Bellman Calibration），一个针对无限 horizon 马尔可夫决策过程中的离策略价值预测的后处理校准方法。它将经典的校准技术应用于动态、反事实的设定，并利用双重鲁棒伪结果处理离策略数据。最重要的是，它在弱假设下提供了有限样本保证，且不要求贝尔曼完备性或可实现性，这在理论严谨性上非常突出，对离线强化学习的可靠性有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23631v1",
+        "title": "BOAD: Discovering Hierarchical Software Engineering Agents via Bandit Optimization",
+        "summary": "Large language models (LLMs) have shown strong reasoning and coding capabilities, yet they struggle to generalize to real-world software engineering (SWE) problems that are long-horizon and out of distribution. Existing systems often rely on a single agent to handle the entire workflow-interpreting issues, navigating large codebases, and implementing fixes-within one reasoning chain. Such monolithic designs force the model to retain irrelevant context, leading to spurious correlations and poor generalization. Motivated by how human engineers decompose complex problems, we propose structuring SWE agents as orchestrators coordinating specialized sub-agents for sub-tasks such as localization, editing, and validation. The challenge lies in discovering effective hierarchies automatically: as the number of sub-agents grows, the search space becomes combinatorial, and it is difficult to attribute credit to individual sub-agents within a team. We address these challenges by formulating hierarchy discovery as a multi-armed bandit (MAB) problem, where each arm represents a candidate sub-agent and the reward measures its helpfulness when collaborating with others. This framework, termed Bandit Optimization for Agent Design (BOAD), enables efficient exploration of sub-agent designs under limited evaluation budgets. On SWE-bench-Verified, BOAD outperforms single-agent and manually designed multi-agent systems. On SWE-bench-Live, featuring more recent and out-of-distribution issues, our 36B system ranks second on the leaderboard at the time of evaluation, surpassing larger models such as GPT-4 and Claude. These results demonstrate that automatically discovered hierarchical multi-agent systems significantly improve generalization on challenging long-horizon SWE tasks. Code is available at https://github.com/iamxjy/BOAD-SWE-Agent.",
+        "authors": "Iris Xu, Guangtao Zeng, Zexue He, Charles Jin, Aldo Pareja, Dan Gutfreund, Chuang Gan, Zhang-Wei Hong",
+        "url": "http://arxiv.org/abs/2512.23631v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23631v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了BOAD框架，通过将层次化软件工程代理的发现问题建模为多臂老虎机（MAB）问题，实现了自动化的代理架构设计。这种将优化理论应用于复杂代理系统设计的思路非常新颖，解决了LLM在长周期、分布外软件工程问题上泛化能力不足的瓶颈，具有显著的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23611v1",
+        "title": "Close the Loop: Synthesizing Infinite Tool-Use Data via Multi-Agent Role-Playing",
+        "summary": "Enabling Large Language Models (LLMs) to reliably invoke external tools remains a critical bottleneck for autonomous agents. Existing approaches suffer from three fundamental challenges: expensive human annotation for high-quality trajectories, poor generalization to unseen tools, and quality ceilings inherent in single-model synthesis that perpetuate biases and coverage gaps. We introduce InfTool, a fully autonomous framework that breaks these barriers through self-evolving multi-agent synthesis. Given only raw API specifications, InfTool orchestrates three collaborative agents (User Simulator, Tool-Calling Assistant, and MCP Server) to generate diverse, verified trajectories spanning single-turn calls to complex multi-step workflows. The framework establishes a closed loop: synthesized data trains the model via Group Relative Policy Optimization (GRPO) with gated rewards, the improved model generates higher-quality data targeting capability gaps, and this cycle iterates without human intervention. Experiments on the Berkeley Function-Calling Leaderboard (BFCL) demonstrate that InfTool transforms a base 32B model from 19.8% to 70.9% accuracy (+258%), surpassing models 10x larger and rivaling Claude-Opus, and entirely from synthetic data without human annotation.",
+        "authors": "Yuwen Li, Wei Zhang, Zelong Huang, Mason Yang, Jiajun Wu, Shawn Guo, Huahao Hu, Lingyi Sun, Jian Yang, Mingjie Tang, Byran Dai",
+        "url": "http://arxiv.org/abs/2512.23611v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23611v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "InfTool是一个高度创新的框架，通过多智能体角色扮演实现工具使用数据的自主合成。它解决了LLM代理在工具调用方面对昂贵人工标注的依赖，并通过自进化的闭环训练（Group Relative Policy Optimization）显著提升了数据效率和模型性能。这在LLM应用的数据效率和泛化性方面具有突破性贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23576v1",
+        "title": "LiveTalk: Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation",
+        "summary": "Real-time video generation via diffusion is essential for building general-purpose multimodal interactive AI systems. However, the simultaneous denoising of all video frames with bidirectional attention via an iterative process in diffusion models prevents real-time interaction. While existing distillation methods can make the model autoregressive and reduce sampling steps to mitigate this, they focus primarily on text-to-video generation, leaving the human-AI interaction unnatural and less efficient. This paper targets real-time interactive video diffusion conditioned on a multimodal context, including text, image, and audio, to bridge the gap. Given the observation that the leading on-policy distillation approach Self Forcing encounters challenges (visual artifacts like flickering, black frames, and quality degradation) with multimodal conditioning, we investigate an improved distillation recipe with emphasis on the quality of condition inputs as well as the initialization and schedule for the on-policy optimization. On benchmarks for multimodal-conditioned (audio, image, and text) avatar video generation including HDTF, AVSpeech, and CelebV-HQ, our distilled model matches the visual quality of the full-step, bidirectional baselines of similar or larger size with 20x less inference cost and latency. Further, we integrate our model with audio language models and long-form video inference technique Anchor-Heavy Identity Sinks to build LiveTalk, a real-time multimodal interactive avatar system. System-level evaluation on our curated multi-turn interaction benchmark shows LiveTalk outperforms state-of-the-art models (Sora2, Veo3) in multi-turn video coherence and content quality, while reducing response latency from 1 to 2 minutes to real-time generation, enabling seamless human-AI multimodal interaction.",
+        "authors": "Ethan Chern, Zhulin Hu, Bohao Tang, Jiadi Su, Steffi Chern, Zhijie Deng, Pengfei Liu",
+        "url": "http://arxiv.org/abs/2512.23576v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23576v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LiveTalk致力于实现实时、多模态交互式视频生成，通过改进的On-Policy蒸馏方法解决了扩散模型在实时交互中的延迟问题。它将文本、图像、音频等多种模态融入视频生成，并构建了LiveTalk系统。这在实时生成AI领域具有重要的架构和算法创新，解决了交互式AI系统的关键延迟瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23518v1",
+        "title": "Single LLM Debate, MoLaCE: Mixture of Latent Concept Experts Against Confirmation Bias",
+        "summary": "Large language models (LLMs) are highly vulnerable to input confirmation bias. When a prompt implies a preferred answer, models often reinforce that bias rather than explore alternatives. This phenomenon remains underexplored, yet it is already harmful in base models and poses an even greater risk in multi-agent debate, where echo chambers reinforce bias instead of correction. We introduce Mixture of Latent Concept Experts (MoLaCE), a lightweight inference-time framework that addresses confirmation bias by mixing experts instantiated as different activation strengths over latent concepts that shape model responses. Our key insight is that, due to the compositional nature of language, differently phrased prompts reweight latent concepts in prompt-specific ways that affect factual correctness, so no single fixed intervention can be applied universally across inputs. This design enables a single LLM to emulate the benefits of debate internally while remaining computationally efficient and scalable. It can also be integrated into multi-agent debate frameworks to diversify perspectives and reduce correlated errors. We empirically show that it consistently reduces confirmation bias, improves robustness, and matches or surpasses multi-agent debate while requiring only a fraction of the computation.",
+        "authors": "Hazel Kim, Philip Torr",
+        "url": "http://arxiv.org/abs/2512.23518v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23518v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MoLaCE提出了一种轻量级的推理时框架，通过混合潜在概念专家来解决LLM的确认偏差问题。它通过调整潜在概念的激活强度，使单个LLM能够模拟多智能体辩论的效果，同时保持计算效率。这是一种新颖的算法方法，从理论上探讨了语言的组合性如何影响模型响应，对LLM的鲁棒性和可信度有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23480v1",
+        "title": "Agentic AI for Autonomous Defense in Software Supply Chain Security: Beyond Provenance to Vulnerability Mitigation",
+        "summary": "The software supply chain attacks are becoming more and more focused on trusted development and delivery procedures, so the conventional post-build integrity mechanisms cannot be used anymore. The available frameworks like SLSA, SBOM and in toto are majorly used to offer provenance and traceability but do not have the capabilities of actively identifying and removing vulnerabilities in software production. The current paper includes an example of agentic artificial intelligence (AI) based on autonomous software supply chain security that combines large language model (LLM)-based reasoning, reinforcement learning (RL), and multi-agent coordination. The suggested system utilizes specialized security agents coordinated with the help of LangChain and LangGraph, communicates with actual CI/CD environments with the Model Context Protocol (MCP), and documents all the observations and actions in a blockchain security ledger to ensure integrity and auditing. Reinforcement learning can be used to achieve adaptive mitigation strategies that consider the balance between security effectiveness and the operational overhead, and LLMs can be used to achieve semantic vulnerability analysis, as well as explainable decisions. This framework is tested based on simulated pipelines, as well as, actual world CI/CD integrations on GitHub Actions and Jenkins, including injection attacks, insecure deserialization, access control violations, and configuration errors. Experimental outcomes indicate better detection accuracy, shorter mitigation latency and reasonable build-time overhead than rule-based, provenance only and RL only baselines. These results show that agentic AI can facilitate the transition to self defending, proactive software supply chains rather than reactive verification ones.",
+        "authors": "Toqeer Ali Syed, Mohammad Riyaz Belgaum, Salman Jan, Asadullah Abdullah Khan, Saad Said Alqahtani",
+        "url": "http://arxiv.org/abs/2512.23480v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23480v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于智能体AI的自主软件供应链安全防御系统，结合了LLM推理、强化学习和多智能体协调。它超越了传统的溯源机制，实现了主动识别和缓解漏洞。这种将智能体AI应用于高风险安全领域的架构创新，解决了软件供应链安全中的关键瓶颈，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23461v1",
+        "title": "Eliminating Inductive Bias in Reward Models with Information-Theoretic Guidance",
+        "summary": "Reward models (RMs) are essential in reinforcement learning from human feedback (RLHF) to align large language models (LLMs) with human values. However, RM training data is commonly recognized as low-quality, containing inductive biases that can easily lead to overfitting and reward hacking. For example, more detailed and comprehensive responses are usually human-preferred but with more words, leading response length to become one of the inevitable inductive biases. A limited number of prior RM debiasing approaches either target a single specific type of bias or model the problem with only simple linear correlations, \\textit{e.g.}, Pearson coefficients. To mitigate more complex and diverse inductive biases in reward modeling, we introduce a novel information-theoretic debiasing method called \\textbf{D}ebiasing via \\textbf{I}nformation optimization for \\textbf{R}M (DIR). Inspired by the information bottleneck (IB), we maximize the mutual information (MI) between RM scores and human preference pairs, while minimizing the MI between RM outputs and biased attributes of preference inputs. With theoretical justification from information theory, DIR can handle more sophisticated types of biases with non-linear correlations, broadly extending the real-world application scenarios for RM debiasing methods. In experiments, we verify the effectiveness of DIR with three types of inductive biases: \\textit{response length}, \\textit{sycophancy}, and \\textit{format}. We discover that DIR not only effectively mitigates target inductive biases but also enhances RLHF performance across diverse benchmarks, yielding better generalization abilities. The code and training recipes are available at https://github.com/Qwen-Applications/DIR.",
+        "authors": "Zhuo Li, Pengyu Cheng, Zhechao Yu, Feifei Tong, Anningzhe Gao, Tsung-Hui Chang, Xiang Wan, Erchao Zhao, Xiaoxi Jiang, Guanjun Jiang",
+        "url": "http://arxiv.org/abs/2512.23461v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23461v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DIR引入了一种新颖的信息论去偏方法，用于强化学习中的奖励模型（RMs）。它通过最大化RM分数与人类偏好之间的互信息，同时最小化RM输出与偏置属性之间的互信息，来处理复杂的非线性归纳偏置。该方法具有坚实的理论基础（信息瓶颈），解决了RLHF中奖励模型偏置这一核心瓶颈，对LLM对齐和可信度至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23407v1",
+        "title": "Theoretical Foundations of Scaling Law in Familial Models",
+        "summary": "Neural scaling laws have become foundational for optimizing large language model (LLM) training, yet they typically assume a single dense model output. This limitation effectively overlooks \"Familial models, a transformative paradigm essential for realizing ubiquitous intelligence across heterogeneous device-edge-cloud hierarchies. Transcending static architectures, familial models integrate early exits with relay-style inference to spawn G deployable sub-models from a single shared backbone. In this work, we theoretically and empirically extend the scaling law to capture this \"one-run, many-models\" paradigm by introducing Granularity (G) as a fundamental scaling variable alongside model size (N) and training tokens (D). To rigorously quantify this relationship, we propose a unified functional form L(N, D, G) and parameterize it using large-scale empirical runs. Specifically, we employ a rigorous IsoFLOP experimental design to strictly isolate architectural impact from computational scale. Across fixed budgets, we systematically sweep model sizes (N) and granularities (G) while dynamically adjusting tokens (D). This approach effectively decouples the marginal cost of granularity from the benefits of scale, ensuring high-fidelity parameterization of our unified scaling law. Our results reveal that the granularity penalty follows a multiplicative power law with an extremely small exponent. Theoretically, this bridges fixed-compute training with dynamic architectures. Practically, it validates the \"train once, deploy many\" paradigm, demonstrating that deployment flexibility is achievable without compromising the compute-optimality of dense baselines.",
+        "authors": "Huan Song, Qingfei Zhao, Ting Long, Shuyu Tian, Hongjun An, Jiawei Shao, Chi Zhang, Xuelong Li",
+        "url": "http://arxiv.org/abs/2512.23407v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23407v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将神经缩放定律扩展到“家族模型”（Familial models），引入了粒度（Granularity）作为新的缩放变量。它提出了统一的函数形式L(N, D, G)并进行了严格的实证参数化。这种对LLM基础理论的扩展具有极高的理论创新性和严谨性，为在异构设备上实现普适智能提供了理论指导，解决了模型压缩和部署的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23385v1",
+        "title": "Securing the AI Supply Chain: What Can We Learn From Developer-Reported Security Issues and Solutions of AI Projects?",
+        "summary": "The rapid growth of Artificial Intelligence (AI) models and applications has led to an increasingly complex security landscape. Developers of AI projects must contend not only with traditional software supply chain issues but also with novel, AI-specific security threats. However, little is known about what security issues are commonly encountered and how they are resolved in practice. This gap hinders the development of effective security measures for each component of the AI supply chain. We bridge this gap by conducting an empirical investigation of developer-reported issues and solutions, based on discussions from Hugging Face and GitHub. To identify security-related discussions, we develop a pipeline that combines keyword matching with an optimal fine-tuned distilBERT classifier, which achieved the best performance in our extensive comparison of various deep learning and large language models. This pipeline produces a dataset of 312,868 security discussions, providing insights into the security reporting practices of AI applications and projects. We conduct a thematic analysis of 753 posts sampled from our dataset and uncover a fine-grained taxonomy of 32 security issues and 24 solutions across four themes: (1) System and Software, (2) External Tools and Ecosystem, (3) Model, and (4) Data. We reveal that many security issues arise from the complex dependencies and black-box nature of AI components. Notably, challenges related to Models and Data often lack concrete solutions. Our insights can offer evidence-based guidance for developers and researchers to address real-world security threats across the AI supply chain.",
+        "authors": "The Anh Nguyen, Triet Huynh Minh Le, M. Ali Babar",
+        "url": "http://arxiv.org/abs/2512.23385v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23385v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FgGSL提出了一种频率引导的图结构学习框架，用于处理异质图（heterophilic graphs）。它联合学习同质和异质图结构，并利用预设计的低通和高通图滤波器组。该方法推导了结构损失的稳定性界限和滤波器组在图扰动下的鲁棒性保证，在理论严谨性上表现出色，解决了GNN在异质图上的核心挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23340v1",
+        "title": "The Law of Multi-Model Collaboration: Scaling Limits of Model Ensembling for Large Language Models",
+        "summary": "Recent advances in large language models (LLMs) have been largely driven by scaling laws for individual models, which predict performance improvements as model parameters and data volume increase. However, the capabilities of any single LLM are inherently bounded. One solution originates from intricate interactions among multiple LLMs, rendering their collective performance surpasses that of any constituent model. Despite the rapid proliferation of multi-model integration techniques such as model routing and post-hoc ensembling, a unifying theoretical framework of performance scaling for multi-model collaboration remains absent. In this work, we propose the Law of Multi-model Collaboration, a scaling law that predicts the performance limits of LLM ensembles based on their aggregated parameter budget. To quantify the intrinsic upper bound of multi-model collaboration, we adopt a method-agnostic formulation and assume an idealized integration oracle where the total cross-entropy loss of each sample is determined by the minimum loss of any model in the model pool. Experimental results reveal that multi-model systems follow a power-law scaling with respect to the total parameter count, exhibiting a more significant improvement trend and a lower theoretical loss floor compared to single model scaling. Moreover, ensembles of heterogeneous model families achieve better performance scaling than those formed within a single model family, indicating that model diversity is a primary driver of collaboration gains. These findings suggest that model collaboration represents a critical axis for extending the intelligence frontier of LLMs.",
+        "authors": "Dakuan Lu, Jiaqi Zhang, Cheng Yuan, Jiawei Shao, Chi Zhang, Xuelong Li",
+        "url": "http://arxiv.org/abs/2512.23340v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23340v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“多模型协作定律”，一个预测LLM集成性能上限的缩放定律。它采用与方法无关的公式，并揭示了多模型系统遵循幂律缩放，且异构模型家族的集成表现出更好的性能缩放。这在理论上扩展了LLM缩放定律，对理解和设计更强大的LLM系统具有基础性指导意义，解决了LLM能力上限的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23310v1",
+        "title": "Splitwise: Collaborative Edge-Cloud Inference for LLMs via Lyapunov-Assisted DRL",
+        "summary": "Deploying large language models (LLMs) on edge devices is challenging due to their limited memory and power resources. Cloud-only inference reduces device burden but introduces high latency and cost. Static edge-cloud partitions optimize a single metric and struggle when bandwidth fluctuates. We propose Splitwise, a novel Lyapunov-assisted deep reinforcement learning (DRL) framework for fine-grained, adaptive partitioning of LLMs across edge and cloud environments. Splitwise decomposes transformer layers into attention heads and feed-forward sub-blocks, exposing more partition choices than layer-wise schemes. A hierarchical DRL policy, guided by Lyapunov optimization, jointly minimizes latency, energy consumption, and accuracy degradation while guaranteeing queue stability under stochastic workloads and variable network bandwidth. Splitwise also guarantees robustness via partition checkpoints with exponential backoff recovery in case of communication failures. Experiments on Jetson Orin NX, Galaxy S23, and Raspberry Pi 5 with GPT-2 (1.5B), LLaMA-7B, and LLaMA-13B show that Splitwise reduces end-to-end latency by 1.4x-2.8x and cuts energy consumption by up to 41% compared with existing partitioners. It lowers the 95th-percentile latency by 53-61% relative to cloud-only execution, while maintaining accuracy and modest memory requirements.",
+        "authors": "Abolfazl Younesi, Abbas Shabrang Maryan, Elyas Oustad, Zahra Najafabadi Samani, Mohsen Ansari, Thomas Fahringer",
+        "url": "http://arxiv.org/abs/2512.23310v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23310v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Splitwise是一个高度创新的Lyapunov辅助深度强化学习（DRL）框架，用于LLM在边缘-云环境中的自适应、细粒度分区推理。它将Transformer层分解为更小的单元，并通过分层DRL优化延迟、能耗和精度，同时保证队列稳定性。该方法在理论上基于Lyapunov优化，解决了LLM在边缘设备部署的计算效率和延迟瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23260v1",
+        "title": "Interpretable Safety Alignment via SAE-Constructed Low-Rank Subspace Adaptation",
+        "summary": "Parameter-efficient fine-tuning has become the dominant paradigm for adapting large language models to downstream tasks. Low-rank adaptation methods such as LoRA operate under the assumption that task-relevant weight updates reside in a low-rank subspace, yet this subspace is learned implicitly from data in a black-box manner, offering no interpretability or direct control. We hypothesize that this difficulty stems from polysemanticity--individual dimensions encoding multiple entangled concepts. To address this, we leverage pre-trained Sparse Autoencoders (SAEs) to identify task-relevant features in a disentangled feature space, then construct an explicit, interpretable low-rank subspace to guide adapter initialization. We provide theoretical analysis proving that under monosemanticity assumptions, SAE-based subspace identification achieves arbitrarily small recovery error, while direct identification in polysemantic space suffers an irreducible error floor. On safety alignment, our method achieves up to 99.6% safety rate--exceeding full fine-tuning by 7.4 percentage points and approaching RLHF-based methods--while updating only 0.19-0.24% of parameters. Crucially, our method provides interpretable insights into the learned alignment subspace through the semantic grounding of SAE features. Our work demonstrates that incorporating mechanistic interpretability into the fine-tuning process can simultaneously improve both performance and transparency.",
+        "authors": "Dianyun Wang, Qingsen Ma, Yuhu Shang, Zhifeng Lu, Lechen Ning, Zhenbo Xu, Huijia Wu, Zhaofeng He",
+        "url": "http://arxiv.org/abs/2512.23260v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23260v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过利用稀疏自编码器（SAEs）来构建可解释的低秩子空间，实现了可解释的安全对齐。它提供了理论分析，证明了在单义性假设下，基于SAE的子空间识别可以实现任意小的恢复误差。这种将可解释性与参数高效微调相结合的理论创新，解决了LLM安全性和透明度的关键瓶颈，具有深远的意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23214v1",
+        "title": "Anka: A Domain-Specific Language for Reliable LLM Code Generation",
+        "summary": "Large Language Models (LLMs) have demonstrated remarkable capabilities in code generation, yet they exhibit systematic errors on complex, multi-step programming tasks. We hypothesize that these errors stem from the flexibility of general-purpose languages, which permits multiple valid approaches and requires implicit state management. To test this hypothesis, we introduce Anka, a domain-specific language (DSL) for data transformation pipelines designed with explicit, constrained syntax that reduces ambiguity in code generation. Despite having zero prior training exposure to Anka, Claude 3.5 Haiku achieves 99.9% parse success and 95.8% overall task accuracy across 100 benchmark problems. Critically, Anka demonstrates a 40 percentage point accuracy advantage over Python on multi-step pipeline tasks (100% vs. 60%), where Python's flexible syntax leads to frequent errors in operation sequencing and variable management. Cross-model validation with GPT-4o-mini confirms this advantage (+26.7 percentage points on multi-step tasks). Our results demonstrate that: (1) LLMs can learn novel DSLs entirely from in-context prompts, achieving near-native accuracy; (2) constrained syntax significantly reduces errors on complex tasks; and (3) domain-specific languages purposefully designed for LLM generation can outperform general-purpose languages on which the LLM has extensive training. We release the complete language implementation, benchmark suite, and evaluation framework to facilitate further research.",
+        "authors": "Saif Khalfan Saif Al Mazrouei",
+        "url": "http://arxiv.org/abs/2512.23214v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23214v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Anka提出了一种为LLM代码生成设计的领域特定语言（DSL），其显式、受约束的语法显著降低了歧义，从而提高了LLM在复杂多步编程任务上的可靠性。这种通过语言设计来优化LLM性能的思路非常新颖，解决了LLM代码生成中的系统性错误瓶颈，具有重要的架构和应用创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.23126v1",
+        "title": "InSPO: Unlocking Intrinsic Self-Reflection for LLM Preference Optimization",
+        "summary": "Direct Preference Optimization (DPO) and its variants have become standard for aligning Large Language Models due to their simplicity and offline stability. However, we identify two fundamental limitations. First, the optimal policy depends on arbitrary modeling choices (scalarization function, reference policy), yielding behavior reflecting parameterization artifacts rather than true preferences. Second, treating response generation in isolation fails to leverage comparative information in pairwise data, leaving the model's capacity for intrinsic self-reflection untapped. To address it, we propose Intrinsic Self-reflective Preference Optimization (\\q), deriving a globally optimal policy conditioning on both context and alternative responses. We prove this formulation superior to DPO/RLHF while guaranteeing invariance to scalarization and reference choices. \\q~serves as a plug-and-play enhancement without architectural changes or inference overhead. Experiments demonstrate consistent improvements in win rates and length-controlled metrics, validating that unlocking self-reflection yields more robust, human-aligned LLMs.",
+        "authors": "Yu Li, Tian Lan, Zhengling Qi",
+        "url": "http://arxiv.org/abs/2512.23126v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.23126v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "InSPO提出了一种内在自反思偏好优化框架，解决了DPO/RLHF的局限性。它通过推导一个全局最优策略，同时考虑上下文和替代响应，并从理论上证明了其优于现有方法且对标量化和参考选择具有不变性。这在LLM对齐理论上具有突破性，为构建更鲁棒、更符合人类偏好的LLM提供了严谨的数学基础。"
+    }
+]

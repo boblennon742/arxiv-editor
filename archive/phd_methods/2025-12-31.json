@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2512.24863v1",
+        "title": "Big AI is accelerating the metacrisis: What can we do?",
+        "summary": "The world is in the grip of ecological, meaning, and language crises which are converging into a metacrisis. Big AI is accelerating them all. Language engineers are playing a central role, persisting with a scalability story that is failing humanity, supplying critical talent to plutocrats and kleptocrats, and creating new technologies as if the whole endeavour was value-free. We urgently need to explore alternatives, applying our collective intelligence to design a life-affirming future for NLP that is centered on human flourishing on a living planet.",
+        "authors": "Steven Bird",
+        "url": "http://arxiv.org/abs/2512.24863v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24863v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 GenZ，一个将基础模型与传统统计模型结合的混合模型。其核心创新在于通过迭代过程和广义 EM 算法，从统计建模误差中发现语义特征描述，并将 LLM 作为潜在变量生成器。这不仅提供了可解释的语义特征，还显著提升了预测性能，解决了基础模型难以捕捉数据集特定模式的瓶颈。理论严谨性高，且在实际应用中（如房价预测、冷启动推荐）展现出巨大潜力，完美契合您对理论创新性和解决实际瓶颈的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24618v1",
+        "title": "Youtu-LLM: Unlocking the Native Agentic Potential for Lightweight Large Language Models",
+        "summary": "We introduce Youtu-LLM, a lightweight yet powerful language model that harmonizes high computational efficiency with native agentic intelligence. Unlike typical small models that rely on distillation, Youtu-LLM (1.96B) is pre-trained from scratch to systematically cultivate reasoning and planning capabilities. The key technical advancements are as follows: (1) Compact Architecture with Long-Context Support: Built on a dense Multi-Latent Attention (MLA) architecture with a novel STEM-oriented vocabulary, Youtu-LLM supports a 128k context window. This design enables robust long-context reasoning and state tracking within a minimal memory footprint, making it ideal for long-horizon agent and reasoning tasks. (2) Principled \"Commonsense-STEM-Agent\" Curriculum: We curated a massive corpus of approximately 11T tokens and implemented a multi-stage training strategy. By progressively shifting the pre-training data distribution from general commonsense to complex STEM and agentic tasks, we ensure the model acquires deep cognitive abilities rather than superficial alignment. (3) Scalable Agentic Mid-training: Specifically for the agentic mid-training, we employ diverse data construction schemes to synthesize rich and varied trajectories across math, coding, and tool-use domains. This high-quality data enables the model to internalize planning and reflection behaviors effectively. Extensive evaluations show that Youtu-LLM sets a new state-of-the-art for sub-2B LLMs. On general benchmarks, it achieves competitive performance against larger models, while on agent-specific tasks, it significantly surpasses existing SOTA baselines, demonstrating that lightweight models can possess strong intrinsic agentic capabilities.",
+        "authors": "Junru Lu, Jiarui Qin, Lingfeng Qiao, Yinghui Li, Xinyi Dai, Bo Ke, Jianfeng He, Ruizhi Qiao, Di Yin, Xing Sun, Yunsheng Wu, Yinsong Liu, Shuangyin Liu, Mingkong Tang, Haodong Lin, Jiayi Kuang, Fanxu Meng, Xiaojuan Tang, Yunjia Xi, Junjie Huang, Haotong Yang, Zhenyi Shen, Yangning Li, Qianwen Zhang, Yifei Yu, Siyu An, Junnan Dong, Qiufeng Wang, Jie Wang, Keyu Chen, Wei Wen, Taian Guo, Zhifeng Shen, Daohai Yu, Jiahao Li, Ke Li, Zongyi Li, Xiaoyu Tan",
+        "url": "http://arxiv.org/abs/2512.24618v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24618v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Youtu-LLM 提出了一种轻量级但功能强大的语言模型，通过从头开始预训练，系统地培养了推理和规划能力。其创新点在于 Multi-Latent Attention (MLA) 架构、STEM 导向的词汇表、128k 上下文窗口支持，以及“常识-STEM-Agent”课程和可扩展的 Agentic 中期训练策略。这不仅解决了模型压缩和效率的瓶颈，还通过架构和训练方法的创新，实现了轻量级模型的原生智能体潜力，具有很高的理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24617v1",
+        "title": "Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space",
+        "summary": "Large Language Models (LLMs) apply uniform computation to all tokens, despite language exhibiting highly non-uniform information density. This token-uniform regime wastes capacity on locally predictable spans while under-allocating computation to semantically critical transitions. We propose $\\textbf{Dynamic Large Concept Models (DLCM)}$, a hierarchical language modeling framework that learns semantic boundaries from latent representations and shifts computation from tokens to a compressed concept space where reasoning is more efficient. DLCM discovers variable-length concepts end-to-end without relying on predefined linguistic units. Hierarchical compression fundamentally changes scaling behavior. We introduce the first $\\textbf{compression-aware scaling law}$, which disentangles token-level capacity, concept-level reasoning capacity, and compression ratio, enabling principled compute allocation under fixed FLOPs. To stably train this heterogeneous architecture, we further develop a $\\textbf{decoupled $μ$P parametrization}$ that supports zero-shot hyperparameter transfer across widths and compression regimes. At a practical setting ($R=4$, corresponding to an average of four tokens per concept), DLCM reallocates roughly one-third of inference compute into a higher-capacity reasoning backbone, achieving a $\\textbf{+2.69$\\%$ average improvement}$ across 12 zero-shot benchmarks under matched inference FLOPs.",
+        "authors": "Xingwei Qu, Shaowen Wang, Zihao Huang, Kai Hua, Fan Yin, Rui-Jie Zhu, Jundong Zhou, Qiyang Min, Zihao Wang, Yizhi Li, Tianyu Zhang, He Xing, Zheng Zhang, Yuxuan Song, Tianyu Zheng, Zhiyuan Zeng, Chenghua Lin, Ge Zhang, Wenhao Huang",
+        "url": "http://arxiv.org/abs/2512.24617v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24617v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Dynamic Large Concept Models (DLCM) 提出了一个分层语言建模框架，通过从潜在表示中学习语义边界，将计算从 token 转移到压缩的概念空间，从而实现更高效的推理。其核心创新包括可变长度概念的端到端发现、压缩感知缩放定律（compression-aware scaling law）以及解耦的 μP 参数化。这从根本上改变了 LLM 的扩展行为，解决了计算效率的瓶颈，并具有深厚的理论基础和显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24615v1",
+        "title": "Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization",
+        "summary": "Existing Large Language Model (LLM) agent frameworks face two significant challenges: high configuration costs and static capabilities. Building a high-quality agent often requires extensive manual effort in tool integration and prompt engineering, while deployed agents struggle to adapt to dynamic environments without expensive fine-tuning. To address these issues, we propose \\textbf{Youtu-Agent}, a modular framework designed for the automated generation and continuous evolution of LLM agents. Youtu-Agent features a structured configuration system that decouples execution environments, toolkits, and context management, enabling flexible reuse and automated synthesis. We introduce two generation paradigms: a \\textbf{Workflow} mode for standard tasks and a \\textbf{Meta-Agent} mode for complex, non-standard requirements, capable of automatically generating tool code, prompts, and configurations. Furthermore, Youtu-Agent establishes a hybrid policy optimization system: (1) an \\textbf{Agent Practice} module that enables agents to accumulate experience and improve performance through in-context optimization without parameter updates; and (2) an \\textbf{Agent RL} module that integrates with distributed training frameworks to enable scalable and stable reinforcement learning of any Youtu-Agents in an end-to-end, large-scale manner. Experiments demonstrate that Youtu-Agent achieves state-of-the-art performance on WebWalkerQA (71.47\\%) and GAIA (72.8\\%) using open-weight models. Our automated generation pipeline achieves over 81\\% tool synthesis success rate, while the Practice module improves performance on AIME 2024/2025 by +2.7\\% and +5.4\\% respectively. Moreover, our Agent RL training achieves 40\\% speedup with steady performance improvement on 7B LLMs, enhancing coding/reasoning and searching capabilities respectively up to 35\\% and 21\\% on Maths and general/multi-hop QA benchmarks.",
+        "authors": "Yuchen Shi, Yuzheng Cai, Siqi Cai, Zihan Xu, Lichao Chen, Yulei Qin, Zhijian Zhou, Xiang Fei, Chaofan Qiu, Xiaoyu Tan, Gang Li, Zongyi Li, Haojia Lin, Guocan Cai, Yong Mao, Yunsheng Wu, Ke Li, Xing Sun",
+        "url": "http://arxiv.org/abs/2512.24615v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24615v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Youtu-Agent 提出了一个模块化框架，用于 LLM 智能体的自动化生成和持续演进。其创新之处在于结构化的配置系统、Workflow 和 Meta-Agent 两种生成范式，以及混合策略优化系统（Agent Practice 和 Agent RL）。这解决了现有 LLM 智能体框架配置成本高和能力静态的瓶颈，通过方法论创新显著提升了智能体生产力、自动化能力和性能，对 LLM 应用领域具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24609v1",
+        "title": "Reinforcement Learning-Augmented LLM Agents for Collaborative Decision Making and Performance Optimization",
+        "summary": "Large Language Models (LLMs) perform well in language tasks but often lack collaborative awareness and struggle to optimize global performance in multi-agent settings. We present a reinforcement learning-augmented LLM agent framework that formulates cooperation as a decentralized partially observable Markov decision process (Dec-POMDP) and adopts centralized training with decentralized execution (CTDE). We introduce Group Relative Policy Optimization (GRPO) to jointly optimize agent policies with access to global signals during training, together with a simplified joint reward that balances task quality, speed, and coordination cost. On collaborative writing and coding benchmarks, our framework delivers a 3x increase in task processing speed over single-agent baselines, 98.7% structural/style consistency in writing, and a 74.6% test pass rate in coding. The approach consistently outperforms strong multi-agent LLM baselines and provides a practical path toward reliable collaboration in complex workflows.",
+        "authors": "Dong Qiu, Duo Xu, Limengxi Yue",
+        "url": "http://arxiv.org/abs/2512.24609v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24609v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个强化学习增强的 LLM 智能体框架，用于协同决策和性能优化。它将多智能体协作建模为去中心化部分可观察马尔可夫决策过程 (Dec-POMDP)，并引入了 Group Relative Policy Optimization (GRPO) 算法和简化的联合奖励函数。这种将强化学习理论与 LLM 智能体结合的方法，解决了 LLM 在多智能体设置中缺乏协作意识和优化全局性能的瓶颈，具有很强的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24587v1",
+        "title": "MultiRisk: Multiple Risk Control via Iterative Score Thresholding",
+        "summary": "As generative AI systems are increasingly deployed in real-world applications, regulating multiple dimensions of model behavior has become essential. We focus on test-time filtering: a lightweight mechanism for behavior control that compares performance scores to estimated thresholds, and modifies outputs when these bounds are violated. We formalize the problem of enforcing multiple risk constraints with user-defined priorities, and introduce two efficient dynamic programming algorithms that leverage this sequential structure. The first, MULTIRISK-BASE, provides a direct finite-sample procedure for selecting thresholds, while the second, MULTIRISK, leverages data exchangeability to guarantee simultaneous control of the risks. Under mild assumptions, we show that MULTIRISK achieves nearly tight control of all constraint risks. The analysis requires an intricate iterative argument, upper bounding the risks by introducing several forms of intermediate symmetrized risk functions, and carefully lower bounding the risks by recursively counting jumps in symmetrized risk functions between appropriate risk levels. We evaluate our framework on a three-constraint Large Language Model alignment task using the PKU-SafeRLHF dataset, where the goal is to maximize helpfulness subject to multiple safety constraints, and where scores are generated by a Large Language Model judge and a perplexity filter. Our experimental results show that our algorithm can control each individual risk at close to the target level.",
+        "authors": "Sunay Joshi, Yan Sun, Hamed Hassani, Edgar Dobriban",
+        "url": "http://arxiv.org/abs/2512.24587v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24587v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MultiRisk 提出了一个通过迭代分数阈值化实现多重风险控制的框架，用于生成式 AI 系统。它形式化了强制执行具有用户定义优先级的多重风险约束问题，并引入了两种高效的动态规划算法。该工作具有高度的理论严谨性，提供了同时控制风险的保证，并通过复杂的迭代论证进行分析。这对于 AI 系统的安全部署至关重要，解决了 LLM 对齐任务中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24574v1",
+        "title": "Understanding and Steering the Cognitive Behaviors of Reasoning Models at Test-Time",
+        "summary": "Large Language Models (LLMs) often rely on long chain-of-thought (CoT) reasoning to solve complex tasks. While effective, these trajectories are frequently inefficient, leading to high latency from excessive token generation, or unstable reasoning that alternates between underthinking (shallow, inconsistent steps) and overthinking (repetitive, verbose reasoning). In this work, we study the structure of reasoning trajectories and uncover specialized attention heads that correlate with distinct cognitive behaviors such as verification and backtracking. By lightly intervening on these heads at inference time, we can steer the model away from inefficient modes. Building on this insight, we propose CREST, a training-free method for Cognitive REasoning Steering at Test-time. CREST has two components: (1) an offline calibration step that identifies cognitive heads and derives head-specific steering vectors, and (2) an inference-time procedure that rotates hidden representations to suppress components along those vectors. CREST adaptively suppresses unproductive reasoning behaviors, yielding both higher accuracy and lower computational cost. Across diverse reasoning benchmarks and models, CREST improves accuracy by up to 17.5% while reducing token usage by 37.6%, offering a simple and effective pathway to faster, more reliable LLM reasoning.",
+        "authors": "Zhenyu Zhang, Xiaoxia Wu, Zhongzhu Zhou, Qingyang Wu, Yineng Zhang, Pragaash Ponnusamy, Harikaran Subbaraj, Jue Wang, Shuaiwen Leon Song, Ben Athiwaratkun",
+        "url": "http://arxiv.org/abs/2512.24574v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24574v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了 LLM 推理模型中的认知行为，并提出了 CREST (Cognitive REasoning Steering at Test-time) 方法，通过在推理时干预注意力头来引导模型。其创新性在于发现了与特定认知行为相关的专业注意力头，并开发了一种无需训练的测试时干预方法。这解决了 LLM 推理轨迹效率低下和不稳定的瓶颈，显著提高了准确性并降低了 token 使用量，对 LLM 效率和可靠性具有重要实践意义和理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24555v1",
+        "title": "From Perception to Punchline: Empowering VLM with the Art of In-the-wild Meme",
+        "summary": "Generating humorous memes is a challenging multimodal task that moves beyond direct image-to-caption supervision. It requires a nuanced reasoning over visual content, contextual cues, and subjective humor. To bridge this gap between visual perception and humorous punchline creation, we propose HUMOR}, a novel framework that guides VLMs through hierarchical reasoning and aligns them with group-wise human preferences. First, HUMOR employs a hierarchical, multi-path Chain-of-Thought (CoT): the model begins by identifying a template-level intent, then explores diverse reasoning paths under different contexts, and finally anchors onto a high-quality, context-specific path. This CoT supervision, which traces back from ground-truth captions, enhances reasoning diversity. We further analyze that this multi-path exploration with anchoring maintains a high expected humor quality, under the practical condition that high-quality paths retain significant probability mass. Second, to capture subjective humor, we train a pairwise reward model that operates within groups of memes sharing the same template. Following established theory, this approach ensures a consistent and robust proxy for human preference, even with subjective and noisy labels. The reward model then enables a group-wise reinforcement learning optimization, guaranteeing providing a theoretical guarantee for monotonic improvement within the trust region. Extensive experiments show that HUMOR empowers various VLMs with superior reasoning diversity, more reliable preference alignment, and higher overall meme quality. Beyond memes, our work presents a general training paradigm for open-ended, human-aligned multimodal generation, where success is guided by comparative judgment within coherent output group.",
+        "authors": "Xueyan Li, Yingyi Xue, Mengjie Jiang, Qingzi Zhu, Yazhe Niu",
+        "url": "http://arxiv.org/abs/2512.24555v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24555v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对 LLM 的时间性和语言脆弱性进行了系统性审计，揭示了安全对齐在跨语言和时间框架下失效的深层机制。它提出了“复杂干扰”、“反向语言”效应和“时间不对称”等新概念，并倡导“不变对齐”范式。这项工作虽然不是直接的算法创新，但它对 LLM 安全性进行了基础性的诊断研究，揭示了其根本性漏洞，为未来更鲁棒的安全算法和架构设计提供了关键的理论指导和实践方向，对 AI 安全领域影响深远。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24542v1",
+        "title": "A Graph Neural Network with Auxiliary Task Learning for Missing PMU Data Reconstruction",
+        "summary": "In wide-area measurement systems (WAMS), phasor measurement unit (PMU) measurement is prone to data missingness due to hardware failures, communication delays, and cyber-attacks. Existing data-driven methods are limited by inadaptability to concept drift in power systems, poor robustness under high missing rates, and reliance on the unrealistic assumption of full system observability. Thus, this paper proposes an auxiliary task learning (ATL) method for reconstructing missing PMU data. First, a K-hop graph neural network (GNN) is proposed to enable direct learning on the subgraph consisting of PMU nodes, overcoming the limitation of the incompletely observable system. Then, an auxiliary learning framework consisting of two complementary graph networks is designed for accurate reconstruction: a spatial-temporal GNN extracts spatial-temporal dependencies from PMU data to reconstruct missing values, and another auxiliary GNN utilizes the low-rank property of PMU data to achieve unsupervised online learning. In this way, the low-rank properties of the PMU data are dynamically leveraged across the architecture to ensure robustness and self-adaptation. Numerical results demonstrate the superior offline and online performance of the proposed method under high missing rates and incomplete observability.",
+        "authors": "Bo Li, Zijun Chen, Haiwang Zhong, Di Cao, Guangchun Ruan",
+        "url": "http://arxiv.org/abs/2512.24542v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24542v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Recursive Language Models (RLMs) 提出了一种通用的推理策略，允许 LLM 通过程序化地检查、分解并递归调用自身来处理任意长的提示。这解决了 LLM 上下文窗口受限的重大瓶颈，使其能够处理远超模型原生上下文长度的输入。该方法在推理时实现了上下文扩展，具有高度的创新性、显著的实践影响力，并且在成本上具有竞争力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24532v1",
+        "title": "From Building Blocks to Planning: Multi-Step Spatial Reasoning in LLMs with Reinforcement Learning",
+        "summary": "Spatial reasoning in large language models (LLMs) has gained increasing attention due to applications in navigation and planning. Despite strong general language capabilities, LLMs still struggle with spatial transformations and multi-step planning in structured environments. We propose a two-stage approach that decomposes spatial reasoning into atomic building blocks and their composition. First, we apply supervised fine-tuning on elementary spatial transformations, such as rotation, translation, and scaling, to equip the model with basic spatial physics. We then freeze this physics-aware model and train lightweight LoRA adapters within the GRPO framework to learn policies that compose these building blocks for multi-step planning in puzzle-based environments, in a closed-loop manner. To support this pipeline, we synthesize an ASCII-art dataset and construct a corresponding ASCII-based reinforcement learning environment. Our method consistently outperforms baselines, including the generic backbone, physics-aware model, and end-to-end RL models, under both Dynamic environments with explicit state updates and Static environments where the model must rely on its internal state across steps. In addition, the proposed approach converges faster and exhibits more stable training compared to end-to-end reinforcement learning from scratch. Finally, we analyze attention patterns to assess whether fine-tuning induces meaningful improvements in spatial understanding.",
+        "authors": "Amir Tahmasbi, Sadegh Majidi, Kazem Taram, Aniket Bera",
+        "url": "http://arxiv.org/abs/2512.24532v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24532v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Multi-envelope Double Binary Factorization (MDBF) 提出了一种用于 LLM 极端低比特量化的新方法。它通过引入秩-$l$ 包络来替代单一包络，解决了现有 Double Binary Factorization (DBF) 在表达能力上的限制，从而避免了性能饱和。MDBF 在保持二进制载体的同时，有效利用有限的内存预算来提高幅度表达能力。这在模型压缩领域具有显著的理论创新，并能大幅提升量化模型的性能和部署效率。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24957v1",
+        "title": "AMAP Agentic Planning Technical Report",
+        "summary": "We present STAgent, an agentic large language model tailored for spatio-temporal understanding, designed to solve complex tasks such as constrained point-of-interest discovery and itinerary planning. STAgent is a specialized model capable of interacting with ten distinct tools within spatio-temporal scenarios, enabling it to explore, verify, and refine intermediate steps during complex reasoning. Notably, STAgent effectively preserves its general capabilities. We empower STAgent with these capabilities through three key contributions: (1) a stable tool environment that supports over ten domain-specific tools, enabling asynchronous rollout and training; (2) a hierarchical data curation framework that identifies high-quality data like a needle in a haystack, curating high-quality queries with a filter ratio of 1:10,000, emphasizing both diversity and difficulty; and (3) a cascaded training recipe that starts with a seed SFT stage acting as a guardian to measure query difficulty, followed by a second SFT stage fine-tuned on queries with high certainty, and an ultimate RL stage that leverages data of low certainty. Initialized with Qwen3-30B-A3B to establish a strong SFT foundation and leverage insights into sample difficulty, STAgent yields promising performance on TravelBench while maintaining its general capabilities across a wide range of general benchmarks, thereby demonstrating the effectiveness of our proposed agentic model.",
+        "authors": "Yulan Hu, Xiangwen Zhang, Sheng Ouyang, Hao Yi, Lu Xu, Qinglin Lang, Lide Tan, Xiang Cheng, Tianchen Ye, Zhicong Li, Ge Chen, Wenjin Yang, Zheng Pan, Shaopan Xiong, Siran Yang, Ju Huang, Yan Zhang, Jiamang Wang, Yong Liu, Yinfeng Huang, Tucheng Lin, Xin Li, Ning Guo",
+        "url": "http://arxiv.org/abs/2512.24957v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24957v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MSACL 框架通过多步 Lyapunov 证书学习，将指数稳定性理论与最大熵强化学习相结合，解决了模型无关强化学习中可证明稳定性与探索-安全平衡的挑战。该方法利用离策略多步数据学习满足理论稳定性条件的 Lyapunov 证书，并通过稳定性感知优势函数指导策略优化。这在理论上具有极高的严谨性，为可验证安全的学习型控制提供了基础，是强化学习前沿算法的重大突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24959v1",
+        "title": "Semi-overlapping Multi-bandit Best Arm Identification for Sequential Support Network Learning",
+        "summary": "Many modern AI and ML problems require evaluating partners' contributions through shared yet asymmetric, computationally intensive processes and the simultaneous selection of the most beneficial candidates. Sequential approaches to these problems can be unified under a new framework, Sequential Support Network Learning (SSNL), in which the goal is to select the most beneficial candidate set of partners for all participants using trials; that is, to learn a directed graph that represents the highest-performing contributions. We demonstrate that a new pure-exploration model, the semi-overlapping multi-(multi-armed) bandit (SOMMAB), in which a single evaluation provides distinct feedback to multiple bandits due to structural overlap among their arms, can be used to learn a support network from sparse candidate lists efficiently.   We develop a generalized GapE algorithm for SOMMABs and derive new exponential error bounds that improve the best known constant in the exponent for multi-bandit best-arm identification. The bounds scale linearly with the degree of overlap, revealing significant sample-complexity gains arising from shared evaluations.   From an application point of view, this work provides a theoretical foundation and improved performance guarantees for sequential learning tools for identifying support networks from sparse candidates in multiple learning problems, such as in multi-task learning (MTL), auxiliary task learning (ATL), federated learning (FL), and in multi-agent systems (MAS).",
+        "authors": "András Antos, András Millinghoffer, Péter Antal",
+        "url": "http://arxiv.org/abs/2512.24959v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24959v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个新的纯探索模型——半重叠多臂老虎机 (SOMMAB)，并开发了广义 GapE 算法，推导了新的指数误差界。它解决了在多任务学习、联邦学习和多智能体系统等场景中，如何高效地从稀疏候选列表中学习支持网络的瓶颈。该工作提供了强大的理论基础和改进的性能保证，具有卓越的统计/数学严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24818v1",
+        "title": "Unregularized Linear Convergence in Zero-Sum Game from Preference Feedback",
+        "summary": "Aligning large language models (LLMs) with human preferences has proven effective for enhancing model capabilities, yet standard preference modeling using the Bradley-Terry model assumes transitivity, overlooking the inherent complexity of human population preferences. Nash learning from human feedback (NLHF) addresses this by framing non-transitive preferences as a two-player zero-sum game, where alignment reduces to finding the Nash equilibrium (NE). However, existing algorithms typically rely on regularization, incurring unavoidable bias when computing the duality gap in the original game. In this work, we provide the first convergence guarantee for Optimistic Multiplicative Weights Update ($\\mathtt{OMWU}$) in NLHF, showing that it achieves last-iterate linear convergence after a burn-in phase whenever an NE with full support exists, with an instance-dependent linear convergence rate to the original NE, measured by duality gaps. Compared to prior results in Wei et al. (2020), we do not require the assumption of NE uniqueness. Our analysis identifies a novel marginal convergence behavior, where the probability of rarely played actions grows exponentially from exponentially small values, enabling exponentially better dependence on instance-dependent constants than prior results. Experiments corroborate the theoretical strengths of $\\mathtt{OMWU}$ in both tabular and neural policy classes, demonstrating its potential for LLM applications.",
+        "authors": "Shulun Chen, Runlong Zhou, Zihan Zhang, Maryam Fazel, Simon S. Du",
+        "url": "http://arxiv.org/abs/2512.24818v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24818v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为 Nash 学习从人类反馈 (NLHF) 中的 Optimistic Multiplicative Weights Update (OMWU) 算法提供了第一个收敛性保证，实现了无正则化的最终迭代线性收敛。它解决了标准偏好建模中忽略非传递性偏好的问题，并避免了现有算法因正则化引入的偏差。这项工作在博弈论和 RLHF 领域具有极高的理论严谨性和创新性，对 LLM 对齐应用具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24768v1",
+        "title": "Sparse Offline Reinforcement Learning with Corruption Robustness",
+        "summary": "We investigate robustness to strong data corruption in offline sparse reinforcement learning (RL). In our setting, an adversary may arbitrarily perturb a fraction of the collected trajectories from a high-dimensional but sparse Markov decision process, and our goal is to estimate a near optimal policy. The main challenge is that, in the high-dimensional regime where the number of samples $N$ is smaller than the feature dimension $d$, exploiting sparsity is essential for obtaining non-vacuous guarantees but has not been systematically studied in offline RL. We analyse the problem under uniform coverage and sparse single-concentrability assumptions. While Least Square Value Iteration (LSVI), a standard approach for robust offline RL, performs well under uniform coverage, we show that integrating sparsity into LSVI is unnatural, and its analysis may break down due to overly pessimistic bonuses. To overcome this, we propose actor-critic methods with sparse robust estimator oracles, which avoid the use of pointwise pessimistic bonuses and provide the first non-vacuous guarantees for sparse offline RL under single-policy concentrability coverage. Moreover, we extend our results to the contaminated setting and show that our algorithm remains robust under strong contamination. Our results provide the first non-vacuous guarantees in high-dimensional sparse MDPs with single-policy concentrability coverage and corruption, showing that learning a near-optimal policy remains possible in regimes where traditional robust offline RL techniques may fail.",
+        "authors": "Nam Phuong Tran, Andi Nika, Goran Radanovic, Long Tran-Thanh, Debmalya Mandal",
+        "url": "http://arxiv.org/abs/2512.24768v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24768v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了离线稀疏强化学习在强数据损坏下的鲁棒性，并提出了带有稀疏鲁棒估计器预言机的 Actor-Critic 方法。它解决了在高维稀疏 MDP 中，现有方法难以利用稀疏性或提供非空保证的挑战。该工作提供了在单策略集中覆盖和损坏下的第一个非空保证，具有极高的理论严谨性和创新性，对于在复杂、高维和受污染环境中学习最优策略至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2512.24693v1",
+        "title": "MUSIC: MUlti-Step Instruction Contrast for Multi-Turn Reward Models",
+        "summary": "Evaluating the quality of multi-turn conversations is crucial for developing capable Large Language Models (LLMs), yet remains a significant challenge, often requiring costly human evaluation. Multi-turn reward models (RMs) offer a scalable alternative and can provide valuable signals for guiding LLM training. While recent work has advanced multi-turn \\textit{training} techniques, effective automated \\textit{evaluation} specifically for multi-turn interactions lags behind. We observe that standard preference datasets, typically contrasting responses based only on the final conversational turn, provide insufficient signal to capture the nuances of multi-turn interactions. Instead, we find that incorporating contrasts spanning \\textit{multiple} turns is critical for building robust multi-turn RMs. Motivated by this finding, we propose \\textbf{MU}lti-\\textbf{S}tep \\textbf{I}nstruction \\textbf{C}ontrast (MUSIC), an unsupervised data augmentation strategy that synthesizes contrastive conversation pairs exhibiting differences across multiple turns. Leveraging MUSIC on the Skywork preference dataset, we train a multi-turn RM based on the Gemma-2-9B-Instruct model. Empirical results demonstrate that our MUSIC-augmented RM outperforms baseline methods, achieving higher alignment with judgments from advanced proprietary LLM judges on multi-turn conversations, crucially, without compromising performance on standard single-turn RM benchmarks.",
+        "authors": "Wenzhe Li, Shujian Zhang, Wenxuan Zhou, John Lambert, Chi Jin, Andrew Hard, Rajiv Mathews, Lun Wang",
+        "url": "http://arxiv.org/abs/2512.24693v1",
+        "pdf_url": "https://arxiv.org/pdf/2512.24693v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 3
+        },
+        "reason_zh": "Nested Learning (NL) 提出了一种新的学习范式，将机器学习模型表示为一组嵌套、多层次和/或并行优化问题。它重新诠释了梯度优化器为关联记忆模块，并提出了更具表达力的优化器、自修改学习模块和连续记忆系统。这项工作具有极高的理论创新性，旨在解决深度学习模型在持续学习、自改进和寻找有效解决方案方面的根本性挑战，有望解锁有效的持续学习能力。"
+    }
+]

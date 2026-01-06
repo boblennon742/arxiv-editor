@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.02314v1",
+        "title": "Project Ariadne: A Structural Causal Framework for Auditing Faithfulness in LLM Agents",
+        "summary": "As Large Language Model (LLM) agents are increasingly tasked with high-stakes autonomous decision-making, the transparency of their reasoning processes has become a critical safety concern. While \\textit{Chain-of-Thought} (CoT) prompting allows agents to generate human-readable reasoning traces, it remains unclear whether these traces are \\textbf{faithful} generative drivers of the model's output or merely \\textbf{post-hoc rationalizations}. We introduce \\textbf{Project Ariadne}, a novel XAI framework that utilizes Structural Causal Models (SCMs) and counterfactual logic to audit the causal integrity of agentic reasoning. Unlike existing interpretability methods that rely on surface-level textual similarity, Project Ariadne performs \\textbf{hard interventions} ($do$-calculus) on intermediate reasoning nodes -- systematically inverting logic, negating premises, and reversing factual claims -- to measure the \\textbf{Causal Sensitivity} ($φ$) of the terminal answer. Our empirical evaluation of state-of-the-art models reveals a persistent \\textit{Faithfulness Gap}. We define and detect a widespread failure mode termed \\textbf{Causal Decoupling}, where agents exhibit a violation density ($ρ$) of up to $0.77$ in factual and scientific domains. In these instances, agents arrive at identical conclusions despite contradictory internal logic, proving that their reasoning traces function as \"Reasoning Theater\" while decision-making is governed by latent parametric priors. Our findings suggest that current agentic architectures are inherently prone to unfaithful explanation, and we propose the Ariadne Score as a new benchmark for aligning stated logic with model action.",
+        "authors": "Sourena Khanzadeh",
+        "url": "http://arxiv.org/abs/2601.02314v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02314v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于结构因果模型（SCM）和反事实逻辑的框架，用于审计LLM代理的忠实性。明确提及了$do$-calculus、因果敏感性等概念，具有非常强大的因果推断理论基础和清晰的数学逻辑，完美符合您对因果逻辑和理论严谨性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02307v1",
+        "title": "Differential Privacy for Transformer Embeddings of Text with Nonparametric Variational Information Bottleneck",
+        "summary": "We propose a privacy-preserving method for sharing text data by sharing noisy versions of their transformer embeddings. It has been shown that hidden representations learned by deep models can encode sensitive information from the input, making it possible for adversaries to recover the input data with considerable accuracy. This problem is exacerbated in transformer embeddings because they consist of multiple vectors, one per token. To mitigate this risk, we propose Nonparametric Variational Differential Privacy (NVDP), which ensures both useful data sharing and strong privacy protection. We take a differential privacy approach, integrating a Nonparametric Variational Information Bottleneck (NVIB) layer into the transformer architecture to inject noise into its multi-vector embeddings and thereby hide information, and measuring privacy protection with Rényi divergence and its corresponding Bayesian Differential Privacy (BDP) guarantee. Training the NVIB layer calibrates the noise level according to utility. We test NVDP on the GLUE benchmark and show that varying the noise level gives us a useful tradeoff between privacy and accuracy. With lower noise levels, our model maintains high accuracy while offering strong privacy guarantees, effectively balancing privacy and utility.",
+        "authors": "Dina El Zein, James Henderson",
+        "url": "http://arxiv.org/abs/2601.02307v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02307v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将差分隐私（Differential Privacy）与非参数变分信息瓶颈（NVIB）结合，用于Transformer嵌入的隐私保护。其核心在于提供强大的隐私理论保证，并使用Rényi散度和贝叶斯差分隐私进行量化，理论严谨性极高，符合您对统计保证和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02292v1",
+        "title": "A neighbour selection approach for identifying differential networks in conditional functional graphical models",
+        "summary": "Estimation of brain functional connectivity from EEG data is of great importance both for medical research and diagnosis. It involves quantifying the conditional dependencies among the activity of different brain areas from the time-varying electric field recorded by sensors placed outside the scalp. These dependencies may vary within and across individuals and be influenced by covariates such as age, mental status, or disease severity. Motivated by this problem, we propose a novel neighbour selection approach based on functional-on-functional regression for the characterization of conditional Gaussian functional graphical models. We provide a fully automated, data-driven procedure for inferring conditional dependence structures among observed functional variables. In particular, pairwise interactions are directly identified and allowed to vary as a function of covariates, enabling covariate-specific modulation of connectivity patterns. Our proposed method accommodates an arbitrary number of continuous and discrete covariates. Moreover, unlike existing methods for direct estimation of differential graphical models, the proposed approach yields directly interpretable coefficients, allowing discrimination between covariate-induced increases and decreases in interaction strength. The methodology is evaluated through extensive simulation studies and an application to experimental EEG data. The results demonstrate clear advantages over existing approaches, including higher estimation accuracy and substantially reduced computational cost, especially in high-dimensional settings.",
+        "authors": "Alessia Mapelli, Laura Carini, Francesca Ieva, Sara Sommariva",
+        "url": "http://arxiv.org/abs/2601.02292v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02292v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种基于函数对函数回归的邻居选择方法，用于条件高斯函数图模型中的差异网络识别。强调了条件依赖结构的推断、协变量特定调制以及可解释系数，涉及严谨的统计推断和渐近性质分析，是统计学理论的优秀应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02264v1",
+        "title": "POSEIDON: Physics-Optimized Seismic Energy Inference and Detection Operating Network",
+        "summary": "Earthquake prediction and seismic hazard assessment remain fundamental challenges in geophysics, with existing machine learning approaches often operating as black boxes that ignore established physical laws. We introduce POSEIDON (Physics-Optimized Seismic Energy Inference and Detection Operating Network), a physics-informed energy-based model for unified multi-task seismic event prediction, alongside the Poseidon dataset -- the largest open-source global earthquake catalog comprising 2.8 million events spanning 30 years. POSEIDON embeds fundamental seismological principles, including the Gutenberg-Richter magnitude-frequency relationship and Omori-Utsu aftershock decay law, as learnable constraints within an energy-based modeling framework. The architecture simultaneously addresses three interconnected prediction tasks: aftershock sequence identification, tsunami generation potential, and foreshock detection. Extensive experiments demonstrate that POSEIDON achieves state-of-the-art performance across all tasks, outperforming gradient boosting, random forest, and CNN baselines with the highest average F1 score among all compared methods. Crucially, the learned physics parameters converge to scientifically interpretable values -- Gutenberg-Richter b-value of 0.752 and Omori-Utsu parameters p=0.835, c=0.1948 days -- falling within established seismological ranges while enhancing rather than compromising predictive accuracy. The Poseidon dataset is publicly available at https://huggingface.co/datasets/BorisKriuk/Poseidon, providing pre-computed energy features, spatial grid indices, and standardized quality metrics to advance physics-informed seismic research.",
+        "authors": "Boris Kriuk, Fedor Kriuk",
+        "url": "http://arxiv.org/abs/2601.02264v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02264v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了物理信息能量模型POSEIDON，将古登堡-里希特定律和大森-宇津余震衰减定律等基本地震学原理作为可学习约束嵌入模型中。这种将物理定律融入深度学习的“物理信息”方法，展现了极高的理论严谨性和跨学科的数学应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02080v1",
+        "title": "The Homogeneity Trap: Spectral Collapse in Doubly-Stochastic Deep Networks",
+        "summary": "Doubly-stochastic matrices (DSM) are increasingly utilized in structure-preserving deep architectures -- such as Optimal Transport layers and Sinkhorn-based attention -- to enforce numerical stability and probabilistic interpretability. In this work, we identify a critical spectral degradation phenomenon inherent to these constraints, termed the Homogeneity Trap. We demonstrate that the maximum-entropy bias, typical of Sinkhorn-based projections, drives the mixing operator towards the uniform barycenter, thereby suppressing the subdominant singular value σ_2 and filtering out high-frequency feature components. We derive a spectral bound linking σ_2 to the network's effective depth, showing that high-entropy constraints restrict feature transformation to a shallow effective receptive field. Furthermore, we formally demonstrate that Layer Normalization fails to mitigate this collapse in noise-dominated regimes; specifically, when spectral filtering degrades the Signal-to-Noise Ratio (SNR) below a critical threshold, geometric structure is irreversibly lost to noise-induced orthogonal collapse. Our findings highlight a fundamental trade-off between entropic stability and spectral expressivity in DSM-constrained networks.",
+        "authors": "Yizhi Liu",
+        "url": "http://arxiv.org/abs/2601.02080v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02080v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对双随机深度网络中的“同质性陷阱”进行了深入的理论分析，揭示了谱退化现象，并推导了谱界限。其对网络内在数学性质的严谨分析和形式化证明，是您所看重的强大理论基础和清晰数学推导的体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01940v1",
+        "title": "Policy Optimization with Differentiable MPC: Convergence Analysis under Uncertainty",
+        "summary": "Model-based policy optimization is a well-established framework for designing reliable and high-performance controllers across a wide range of control applications. Recently, this approach has been extended to model predictive control policies, where explicit dynamical models are embedded within the control law. However, the performance of the resulting controllers, and the convergence of the associated optimization algorithms, critically depends on the accuracy of the models. In this paper, we demonstrate that combining gradient-based policy optimization with recursive system identification ensures convergence to an optimal controller design and showcase our finding in several control examples.",
+        "authors": "Riccardo Zuliani, Efe C. Balta, John Lygeros",
+        "url": "http://arxiv.org/abs/2601.01940v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01940v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文的核心是关于带有可微分MPC的策略优化的收敛性分析。明确指出结合梯度策略优化和递归系统识别可确保收敛到最优控制器设计，这直接满足了您对优化收敛性和理论保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01871v1",
+        "title": "On lead-lag estimation of non-synchronously observed point processes",
+        "summary": "This paper introduces a new theoretical framework for analyzing lead-lag relationships between point processes, with a special focus on applications to high-frequency financial data. In particular, we are interested in lead-lag relationships between two sequences of order arrival timestamps. The seminal work of Dobrev and Schaumburg proposed model-free measures of cross-market trading activity based on cross-counts of timestamps. While their method is known to yield reliable results, it faces limitations because its original formulation inherently relies on discrete-time observations, an issue we address in this study. Specifically, we formulate the problem of estimating lead-lag relationships in two point processes as that of estimating the shape of the cross-pair correlation function (CPCF) of a bivariate stationary point process, a quantity well-studied in the neuroscience and spatial statistics literature. Within this framework, the prevailing lead-lag time is defined as the location of the CPCF's sharpest peak. Under this interpretation, the peak location in Dobrev and Schaumburg's cross-market activity measure can be viewed as an estimator of the lead-lag time in the aforementioned sense. We further propose an alternative lead-lag time estimator based on kernel density estimation and show that it possesses desirable theoretical properties and delivers superior numerical performance. Empirical evidence from high-frequency financial data demonstrates the effectiveness of our proposed method.",
+        "authors": "Takaaki Shiotani, Takaki Hayashi, Yuta Koike",
+        "url": "http://arxiv.org/abs/2601.01871v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01871v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个分析非同步观测点过程之间领先-滞后关系的新理论框架，并基于核密度估计提出了具有理想理论性质的估计器。其对点过程的交叉对相关函数（CPCF）形状的估计，展现了深厚的统计学和随机过程理论功底。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01854v1",
+        "title": "Causal inference for censored data with continuous marks",
+        "summary": "This paper presents a framework for causal inference in the presence of censored data, where the failure time is marked by a continuous variable known as a mark. The mark can be viewed as an extension of the failure cause in the classical competing risks model where the cause of failure is replaced by a continuous mark only observed at uncensored failure times. Due to the continuous nature of the marks, observations at each specific mark are sparse, making the identification and estimation of causality a challenging task. To address this issue, we define a new mark-specific treatment effect within the potential outcomes framework and characterize its identifying conditions. We then propose a local smoothing causal estimand and establish its asymptotic properties. We evaluate our method using simulation studies as well as a real dataset from the Antibody Mediated Prevention trials.",
+        "authors": "Lianqiang Qu, Long Lv, Liuquan Sun",
+        "url": "http://arxiv.org/abs/2601.01854v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01854v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个处理带连续标记的删失数据的因果推断框架。它定义了新的标记特定处理效应，刻画了其识别条件，并提出了局部平滑因果估计量并建立了其渐近性质，是因果推断领域非常严谨和理论驱动的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01853v1",
+        "title": "Asymptotic Convergence and Stability of Adaptive Gradient Methods in Smooth Non-convex Optimization",
+        "summary": "Adaptive gradient methods, such as AdaGrad, have become fundamental tools in deep learning. Despite their widespread use, the asymptotic convergence of AdaGrad remains poorly understood in non-convex scenarios. In this work, we present the first rigorous asymptotic convergence analysis of AdaGrad-Norm for smooth non-convex optimization. Using a novel stopping-time partitioning technique, we establish a key stability result: the objective function values remain bounded in expectation, and the iterates are bounded almost surely under a mild coercivity assumption. Building on these stability results, we prove that AdaGrad-Norm achieves both almost sure and mean-square convergence. Furthermore, we extend our analysis to RMSProp and show that, with appropriate hyperparameter choices, it also enjoys stability and asymptotic convergence. The techniques developed herein may be of independent interest for analyzing other adaptive stochastic optimization algorithms.",
+        "authors": "Ruinan Jin, Xiaoyu Wang",
+        "url": "http://arxiv.org/abs/2601.01853v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01853v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次对AdaGrad-Norm在光滑非凸优化中的渐近收敛性进行了严格分析，建立了关键的稳定性结果，并证明了几乎必然收敛和均方收敛。这直接契合了您对优化收敛性和数学推导严谨性的核心要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01811v1",
+        "title": "On regional treatment effect assessment using robust MAP priors",
+        "summary": "Bayesian dynamic borrowing has become an increasingly important tool for evaluating the consistency of regional treatment effects which is a key requirement for local regulatory approval of a new drug. It helps increase the precision of regional treatment effect estimate when regional and global data are similar, while guarding against potential bias when they differ. In practice, the two-component mixture prior, of which one mixture component utilizes the power prior to incorporate external data, is widely used. It allows convenient prior specification, analytical posterior computation, and fast evaluation of operating characteristics. Though the robust meta-analytical-predictive (MAP) prior is broadly used with multiple external data sources, it remains underutilized for regional treatment effect assessment (typically only one external data source is available) due to its inherit complexity in prior specification and posterior computation. In this article, we illustrate the applicability of the robust MAP prior in the regional treatment effect assessment by developing a closed-form approximation for its posterior distribution while leveraging its relationship with the power prior. The proposed methodology substantially reduces the computational burden of identifying prior parameters for desired operating characteristics. Moreover, we have demonstrated that the MAP prior is an attractive choice to construct the informative component of the mixture prior compared to the power prior. The advantage can be explained through a Bayesian hypothesis testing perspective. Using a real-world example, we illustrate how our proposed method enables efficient and transparent development of a Bayesian dynamic borrowing design to show regional consistency.",
+        "authors": "Xin Zhang, Hui Zhang, Satrajit Roychoudhury",
+        "url": "http://arxiv.org/abs/2601.01811v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01811v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在区域治疗效果评估中应用了鲁棒的MAP先验，并开发了其后验分布的闭式近似。它从贝叶斯假设检验的角度解释了MAP先验的优势，展现了强大的贝叶斯统计理论和计算方法学，非常适合您的背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02310v1",
+        "title": "Temporal Kolmogorov-Arnold Networks (T-KAN) for High-Frequency Limit Order Book Forecasting: Efficiency, Interpretability, and Alpha Decay",
+        "summary": "High-Frequency trading (HFT) environments are characterised by large volumes of limit order book (LOB) data, which is notoriously noisy and non-linear. Alpha decay represents a significant challenge, with traditional models such as DeepLOB losing predictive power as the time horizon (k) increases. In this paper, using data from the FI-2010 dataset, we introduce Temporal Kolmogorov-Arnold Networks (T-KAN) to replace the fixed, linear weights of standard LSTMs with learnable B-spline activation functions. This allows the model to learn the 'shape' of market signals as opposed to just their magnitude. This resulted in a 19.1% relative improvement in the F1-score at the k = 100 horizon. The efficacy of T-KAN networks cannot be understated, producing a 132.48% return compared to the -82.76% DeepLOB drawdown under 1.0 bps transaction costs. In addition to this, the T-KAN model proves quite interpretable, with the 'dead-zones' being clearly visible in the splines. The T-KAN architecture is also uniquely optimized for low-latency FPGA implementation via High level Synthesis (HLS). The code for the experiments in this project can be found at https://github.com/AhmadMak/Temporal-Kolmogorov-Arnold-Networks-T-KAN-for-High-Frequency-Limit-Order-Book-Forecasting.",
+        "authors": "Ahmad Makinde",
+        "url": "http://arxiv.org/abs/2601.02310v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02310v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了时间柯尔莫哥洛夫-阿诺德网络（T-KAN），用可学习的B样条激活函数替代了LSTM的线性权重。KANs本身具有强大的通用逼近定理理论基础，且论文强调了模型的可解释性，符合您对理论和清晰度的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02081v1",
+        "title": "A Differentiable Adversarial Framework for Task-Aware Data Subsampling",
+        "summary": "The proliferation of large-scale datasets poses a major computational challenge to model training. The traditional data subsampling method works as a static, task independent preprocessing step which usually discards information that is critical to downstream prediction. In this paper, we introduces the antagonistic soft selection subsampling (ASSS) framework as is a novel paradigm that reconstructs data reduction into a differentiable end-to-end learning problem. ASSS uses the adversarial game between selector network and task network, and selector network learning assigns continuous importance weights to samples. This direct optimization implemented by Gumbel-Softmax relaxation allows the selector to identify and retain samples with the maximum amount of information for a specific task target under the guidance of the loss function that balances the fidelity and sparsity of the prediction. Theoretical analysis links this framework with the information bottleneck principle. Comprehensive experiments on four large-scale real world datasets show that ASSS has always been better than heuristic subsampling baselines such as clustering and nearest neighbor thinning in maintaining model performance. It is worth noting that ASSS can not only match, but also sometimes exceed the training performance of the entire dataset, showcasing the effect of intelligent denoising. This work establishes task aware data subsampling as a learnable component, providing a principled solution for effective large-scale data learning.",
+        "authors": "Jiacheng Lyu, Bihua Bao",
+        "url": "http://arxiv.org/abs/2601.02081v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02081v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该框架将数据子采样重构为可微分的端到端学习问题，并明确将该框架与信息瓶颈原理联系起来。这种理论联系和可微分优化方法，体现了良好的数学推导和理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02050v1",
+        "title": "Explore the Ideology of Deep Learning in ENSO Forecasts",
+        "summary": "The El Ni{~n}o-Southern Oscillation (ENSO) exerts profound influence on global climate variability, yet its prediction remains a grand challenge. Recent advances in deep learning have significantly improved forecasting skill, but the opacity of these models hampers scientific trust and operational deployment. Here, we introduce a mathematically grounded interpretability framework based on bounded variation function. By rescuing the \"dead\" neurons from the saturation zone of the activation function, we enhance the model's expressive capacity. Our analysis reveals that ENSO predictability emerges dominantly from the tropical Pacific, with contributions from the Indian and Atlantic Oceans, consistent with physical understanding. Controlled experiments affirm the robustness of our method and its alignment with established predictors. Notably, we probe the persistent Spring Predictability Barrier (SPB), finding that despite expanded sensitivity during spring, predictive performance declines-likely due to suboptimal variable selection. These results suggest that incorporating additional ocean-atmosphere variables may help transcend SPB limitations and advance long-range ENSO prediction.",
+        "authors": "Yanhai Gan, Yipeng Chen, Ning Li, Xingguo Liu, Junyu Dong, Xianyao Chen",
+        "url": "http://arxiv.org/abs/2601.02050v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02050v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于有界变差函数的数学解释性框架，用于深度学习在ENSO预测中的应用。强调了“数学上扎根的解释性框架”，并通过“拯救”饱和区神经元来增强表达能力，具有较强的数学理论支撑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01813v1",
+        "title": "Spatio-temporal modeling and forecasting with Fourier neural operators",
+        "summary": "Spatio-temporal process models are often used for modeling dynamic physical and biological phenomena that evolve across space and time. These phenomena may exhibit environmental heterogeneity and complex interactions that are difficult to capture using traditional statistical process models such as Gaussian processes. This work proposes the use of Fourier neural operators (FNOs) for constructing statistical dynamical spatio-temporal models for forecasting. An FNO is a flexible mapping of functions that approximates the solution operator of possibly unknown linear or non-linear partial differential equations (PDEs) in a computationally efficient manner. It does so using samples of inputs and their respective outputs, and hence explicit knowledge of the underlying PDE is not required. Through simulations from a nonlinear PDE with known solution, we compare FNO forecasts to those from state-of-the-art statistical spatio-temporal-forecasting methods. Further, using sea surface temperature data over the Atlantic Ocean and precipitation data across Europe, we demonstrate the ability of FNO-based dynamic spatio-temporal (DST) statistical modeling to capture complex real-world spatio-temporal dependencies. Using collections of testing instances, we show that the FNO-DST forecasts are accurate with valid uncertainty quantification.",
+        "authors": "Pratik Nag, Andrew Zammit-Mangion, Sumeetpal Singh, Noel Cressie",
+        "url": "http://arxiv.org/abs/2601.01813v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01813v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作利用傅里叶神经算子（FNOs）构建统计动态时空模型进行预测。FNOs能够近似偏微分方程（PDEs）的解算子，这本身就具有深厚的函数分析和PDE理论基础，即使不显式知道底层PDE，也体现了强大的数学建模能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01741v1",
+        "title": "Latent Space Element Method",
+        "summary": "How can we build surrogate solvers that train on small domains but scale to larger ones without intrusive access to PDE operators? Inspired by the Data-Driven Finite Element Method (DD-FEM) framework for modular data-driven solvers, we propose the Latent Space Element Method (LSEM), an element-based latent surrogate assembly approach in which a learned subdomain (\"element\") model can be tiled and coupled to form a larger computational domain. Each element is a LaSDI latent ODE surrogate trained from snapshots on a local patch, and neighboring elements are coupled through learned directional interaction terms in latent space, avoiding Schwarz iterations and interface residual evaluations. A smooth window-based blending reconstructs a global field from overlapping element predictions, yielding a scalable assembled latent dynamical system. Experiments on the 1D Burgers and Korteweg-de Vries equations show that LSEM maintains predictive accuracy while scaling to spatial domains larger than those seen in training. LSEM offers an interpretable and extensible route toward foundation-model surrogate solvers built from reusable local models.",
+        "authors": "Seung Whan Chung, Youngsoo Choi, Christopher Miller, H. Keo Springer, Kyle T. Sullivan",
+        "url": "http://arxiv.org/abs/2601.01741v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01741v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了潜空间单元法（LSEM），一种基于单元的潜空间代理求解器组装方法，用于PDE求解。它利用学习到的潜ODE代理和潜空间中的方向交互项，展现了将复杂物理系统分解为可学习数学单元的严谨方法。"
+    }
+]

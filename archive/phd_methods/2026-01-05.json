@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.02314v1",
+        "title": "Project Ariadne: A Structural Causal Framework for Auditing Faithfulness in LLM Agents",
+        "summary": "As Large Language Model (LLM) agents are increasingly tasked with high-stakes autonomous decision-making, the transparency of their reasoning processes has become a critical safety concern. While \\textit{Chain-of-Thought} (CoT) prompting allows agents to generate human-readable reasoning traces, it remains unclear whether these traces are \\textbf{faithful} generative drivers of the model's output or merely \\textbf{post-hoc rationalizations}. We introduce \\textbf{Project Ariadne}, a novel XAI framework that utilizes Structural Causal Models (SCMs) and counterfactual logic to audit the causal integrity of agentic reasoning. Unlike existing interpretability methods that rely on surface-level textual similarity, Project Ariadne performs \\textbf{hard interventions} ($do$-calculus) on intermediate reasoning nodes -- systematically inverting logic, negating premises, and reversing factual claims -- to measure the \\textbf{Causal Sensitivity} ($φ$) of the terminal answer. Our empirical evaluation of state-of-the-art models reveals a persistent \\textit{Faithfulness Gap}. We define and detect a widespread failure mode termed \\textbf{Causal Decoupling}, where agents exhibit a violation density ($ρ$) of up to $0.77$ in factual and scientific domains. In these instances, agents arrive at identical conclusions despite contradictory internal logic, proving that their reasoning traces function as \"Reasoning Theater\" while decision-making is governed by latent parametric priors. Our findings suggest that current agentic architectures are inherently prone to unfaithful explanation, and we propose the Ariadne Score as a new benchmark for aligning stated logic with model action.",
+        "authors": "Sourena Khanzadeh",
+        "url": "http://arxiv.org/abs/2601.02314v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02314v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文引入了Project Ariadne，一个利用结构因果模型（SCM）和反事实逻辑来审计LLM代理推理忠实性的新型XAI框架。它通过对中间推理节点进行硬干预来测量因果敏感性，揭示了LLM代理中普遍存在的“因果脱钩”现象。这不仅在理论上具有高度创新性（SCM和do-calculus的应用），而且解决了LLM代理在关键决策场景中的透明度和可信度瓶颈，对可信AI领域有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02311v1",
+        "title": "Placement Semantics for Distributed Deep Learning: A Systematic Framework for Analyzing Parallelism Strategies",
+        "summary": "Training large language models requires distributing computation across many accelerators, yet practitioners select parallelism strategies (data, tensor, pipeline, ZeRO) through trial and error because no unified systematic framework predicts their behavior. We introduce placement semantics: each strategy is specified by how it places four training states (parameters, optimizer, gradients, activations) across devices using five modes (replicated, sharded, sharded-with-gather, materialized, offloaded). From placement alone, without implementation details, we derive memory consumption and communication volume. Our predictions match published results exactly: ZeRO-3 uses 8x less memory than data parallelism at 1.5x communication cost, as reported in the original paper. We prove two conditions (gradient integrity, state consistency) are necessary and sufficient for distributed training to match single-device results, and provide composition rules for combining strategies safely. The framework unifies ZeRO Stages 1-3, Fully Sharded Data Parallel (FSDP), tensor parallelism, and pipeline parallelism as instances with different placement choices.",
+        "authors": "Deep Pankajbhai Mehta",
+        "url": "http://arxiv.org/abs/2601.02311v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02311v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了“放置语义”（placement semantics），一个统一的系统框架，用于分析分布式深度学习中的并行策略（如数据并行、张量并行、流水线并行、ZeRO）。它仅从放置方式推导出内存消耗和通信量，并提供了组合策略的必要和充分条件。这在理论上具有极高的严谨性和创新性，为理解和优化LLM分布式训练提供了基础性工具，直接解决了LLM扩展性的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02232v1",
+        "title": "ELLA: Efficient Lifelong Learning for Adapters in Large Language Models",
+        "summary": "Large Language Models (LLMs) suffer severe catastrophic forgetting when adapted sequentially to new tasks in a continual learning (CL) setting. Existing approaches are fundamentally limited: replay-based methods are impractical and privacy-violating, while strict orthogonality-based methods collapse under scale: each new task is projected onto an orthogonal complement, progressively reducing the residual degrees of freedom and eliminating forward transfer by forbidding overlap in shared representations. In this work, we introduce ELLA, a training framework built on the principle of selective subspace de-correlation. Rather than forbidding all overlap, ELLA explicitly characterizes the structure of past updates and penalizes alignments along their high-energy, task-specific directions, while preserving freedom in the low-energy residual subspaces to enable transfer. Formally, this is realized via a lightweight regularizer on a single aggregated update matrix. We prove this mechanism corresponds to an anisotropic shrinkage operator that bounds interference, yielding a penalty that is both memory- and compute-constant regardless of task sequence length. ELLA requires no data replay, no architectural expansion, and negligible storage. Empirically, it achieves state-of-the-art CL performance on three popular benchmarks, with relative accuracy gains of up to $9.6\\%$ and a $35\\times$ smaller memory footprint. Further, ELLA scales robustly across architectures and actively enhances the model's zero-shot generalization performance on unseen tasks, establishing a principled and scalable solution for constructive lifelong LLM adaptation.",
+        "authors": "Shristi Das Biswas, Yue Zhang, Anwesan Pal, Radhika Bhargava, Kaushik Roy",
+        "url": "http://arxiv.org/abs/2601.02232v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02232v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "ELLA是一个针对LLM适配器的高效终身学习框架，旨在解决灾难性遗忘问题。它基于选择性子空间去相关原理，通过轻量级正则化惩罚高能量、任务特定方向的对齐，同时保留低能量残差子空间的自由度以实现知识迁移。该方法无需数据回放，无架构扩展，存储开销可忽略不计。其理论基础扎实，且在实践中显著提升了LLM的持续学习性能和泛化能力，对LLM的长期部署和适应性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01887v1",
+        "title": "Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance",
+        "summary": "Fine-tuning safety-aligned large language models (LLMs) can substantially compromise their safety. Previous approaches require many safety samples or calibration sets, which not only incur significant computational overhead during realignment but also lead to noticeable degradation in model utility. Contrary to this belief, we show that safety alignment can be fully recovered with only a single safety example, without sacrificing utility and at minimal cost. Remarkably, this recovery is effective regardless of the number of harmful examples used in fine-tuning or the size of the underlying model, and convergence is achieved within just a few epochs. Furthermore, we uncover the low-rank structure of the safety gradient, which explains why such efficient correction is possible. We validate our findings across five safety-aligned LLMs and multiple datasets, demonstrating the generality of our approach.",
+        "authors": "Jiawen Zhang, Lipeng He, Kejia Chen, Jian Lou, Jian Liu, Xiaohu Yang, Ruoxi Jia",
+        "url": "http://arxiv.org/abs/2601.01887v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01887v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个惊人的发现：只需一个安全示例，即可完全恢复经过微调的LLM的安全对齐，且不牺牲模型效用，成本极低。作者还揭示了安全梯度的低秩结构，解释了这种高效修正的可能性。这在理论上具有深刻的洞察力，并为LLM的安全性和对齐提供了一个高效且通用的解决方案，对LLM的实际部署具有里程碑式的意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01828v1",
+        "title": "Emergent Introspective Awareness in Large Language Models",
+        "summary": "We investigate whether large language models can introspect on their internal states. It is difficult to answer this question through conversation alone, as genuine introspection cannot be distinguished from confabulations. Here, we address this challenge by injecting representations of known concepts into a model's activations, and measuring the influence of these manipulations on the model's self-reported states. We find that models can, in certain scenarios, notice the presence of injected concepts and accurately identify them. Models demonstrate some ability to recall prior internal representations and distinguish them from raw text inputs. Strikingly, we find that some models can use their ability to recall prior intentions in order to distinguish their own outputs from artificial prefills. In all these experiments, Claude Opus 4 and 4.1, the most capable models we tested, generally demonstrate the greatest introspective awareness; however, trends across models are complex and sensitive to post-training strategies. Finally, we explore whether models can explicitly control their internal representations, finding that models can modulate their activations when instructed or incentivized to \"think about\" a concept. Overall, our results indicate that current language models possess some functional introspective awareness of their own internal states. We stress that in today's models, this capacity is highly unreliable and context-dependent; however, it may continue to develop with further improvements to model capabilities.",
+        "authors": "Jack Lindsey",
+        "url": "http://arxiv.org/abs/2601.01828v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01828v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究通过向LLM的激活中注入已知概念的表示，并测量这些操作对其自报告状态的影响，开创性地探讨了LLM的内省意识。这种方法在概念和实验设计上都具有极高的创新性，旨在深入理解LLM的内部工作机制。它揭示了LLM在某些情境下具备功能性内省意识，对AI基础理论和未来更高级AI系统的发展具有重大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02163v1",
+        "title": "EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning",
+        "summary": "Large Language Models (LLMs) are increasingly deployed as long-term interactive agents, yet their limited context windows make it difficult to sustain coherent behavior over extended interactions. Existing memory systems often store isolated records and retrieve fragments, limiting their ability to consolidate evolving user states and resolve conflicts. We introduce EverMemOS, a self-organizing memory operating system that implements an engram-inspired lifecycle for computational memory. Episodic Trace Formation converts dialogue streams into MemCells that capture episodic traces, atomic facts, and time-bounded Foresight signals. Semantic Consolidation organizes MemCells into thematic MemScenes, distilling stable semantic structures and updating user profiles. Reconstructive Recollection performs MemScene-guided agentic retrieval to compose the necessary and sufficient context for downstream reasoning. Experiments on LoCoMo and LongMemEval show that EverMemOS achieves state-of-the-art performance on memory-augmented reasoning tasks. We further report a profile study on PersonaMem v2 and qualitative case studies illustrating chat-oriented capabilities such as user profiling and Foresight. Code is available at https://github.com/EverMind-AI/EverMemOS.",
+        "authors": "Chuanrui Hu, Xingze Gao, Zuyi Zhou, Dannong Xu, Yi Bai, Xintong Li, Hui Zhang, Tong Li, Chong Zhang, Lidong Bing, Yafeng Deng",
+        "url": "http://arxiv.org/abs/2601.02163v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02163v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "EverMemOS是一个受记忆痕迹（engram）启发的自组织记忆操作系统，旨在解决LLM代理在长程推理中有限上下文窗口的根本限制。它通过情景追踪形成、语义整合和重构性回忆三个阶段，实现计算记忆的生命周期管理。该框架在概念上非常新颖，并显著提升了LLM代理在记忆增强推理任务上的SOTA性能，对构建更智能、更持久的LLM代理具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01885v1",
+        "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents",
+        "summary": "Large language model (LLM) agents face fundamental limitations in long-horizon reasoning due to finite context windows, making effective memory management critical. Existing methods typically handle long-term memory (LTM) and short-term memory (STM) as separate components, relying on heuristics or auxiliary controllers, which limits adaptability and end-to-end optimization. In this paper, we propose Agentic Memory (AgeMem), a unified framework that integrates LTM and STM management directly into the agent's policy. AgeMem exposes memory operations as tool-based actions, enabling the LLM agent to autonomously decide what and when to store, retrieve, update, summarize, or discard information. To train such unified behaviors, we propose a three-stage progressive reinforcement learning strategy and design a step-wise GRPO to address sparse and discontinuous rewards induced by memory operations. Experiments on five long-horizon benchmarks demonstrate that AgeMem consistently outperforms strong memory-augmented baselines across multiple LLM backbones, achieving improved task performance, higher-quality long-term memory, and more efficient context usage.",
+        "authors": "Yi Yu, Liuyi Yao, Yuexiang Xie, Qingquan Tan, Jiaqi Feng, Yaliang Li, Libing Wu",
+        "url": "http://arxiv.org/abs/2601.01885v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01885v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "AgeMem是一个统一的框架，将LLM代理的长期记忆（LTM）和短期记忆（STM）管理直接整合到代理策略中，通过工具化动作使LLM代理自主决定记忆操作。它提出了一个三阶段渐进式强化学习策略和分步GRPO来处理稀疏奖励。该方法在统一记忆管理方面具有高度创新性，解决了LLM代理长程推理的根本限制，显著提升了任务性能和记忆效率。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02313v1",
+        "title": "Game of Coding: Coding Theory in the Presence of Rational Adversaries, Motivated by Decentralized Machine Learning",
+        "summary": "Coding theory plays a crucial role in enabling reliable communication, storage, and computation. Classical approaches assume a worst-case adversarial model and ensure error correction and data recovery only when the number of honest nodes exceeds the number of adversarial ones by some margin. However, in some emerging decentralized applications, particularly in decentralized machine learning (DeML), participating nodes are rewarded for accepted contributions. This incentive structure naturally gives rise to rational adversaries who act strategically rather than behaving in purely malicious ways.   In this paper, we first motivate the need for coding in the presence of rational adversaries, particularly in the context of outsourced computation in decentralized systems. We contrast this need with existing approaches and highlight their limitations. We then introduce the game of coding, a novel game-theoretic framework that extends coding theory to trust-minimized settings where honest nodes are not in the majority. Focusing on repetition coding, we highlight two key features of this framework: (1) the ability to achieve a non-zero probability of data recovery even when adversarial nodes are in the majority, and (2) Sybil resistance, i.e., the equilibrium remains unchanged even as the number of adversarial nodes increases. Finally, we explore scenarios in which the adversary's strategy is unknown and outline several open problems for future research.",
+        "authors": "Hanzaleh Akbari Nodehi, Viveck R. Cadambe, Mohammad Ali Maddah-Ali",
+        "url": "http://arxiv.org/abs/2601.02313v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02313v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了“编码博弈”（game of coding），一个新颖的博弈论框架，将编码理论扩展到存在理性对手的信任最小化设置中，其动机来源于去中心化机器学习（DeML）。它在理论上具有极高的创新性和严谨性，证明了即使在对手占多数的情况下也能实现数据恢复，并具备Sybil抵抗性。这为DeML中的可靠通信和计算提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02236v1",
+        "title": "CD4LM: Consistency Distillation and aDaptive Decoding for Diffusion Language Models",
+        "summary": "Autoregressive large language models achieve strong results on many benchmarks, but decoding remains fundamentally latency-limited by sequential dependence on previously generated tokens. Diffusion language models (DLMs) promise parallel generation but suffer from a fundamental static-to-dynamic misalignment: Training optimizes local transitions under fixed schedules, whereas efficient inference requires adaptive \"long-jump\" refinements through unseen states. Our goal is to enable highly parallel decoding for DLMs with low number of function evaluations while preserving generation quality. To achieve this, we propose CD4LM, a framework that decouples training from inference via Discrete-Space Consistency Distillation (DSCD) and Confidence-Adaptive Decoding (CAD). Unlike standard objectives, DSCD trains a student to be trajectory-invariant, mapping diverse noisy states directly to the clean distribution. This intrinsic robustness enables CAD to dynamically allocate compute resources based on token confidence, aggressively skipping steps without the quality collapse typical of heuristic acceleration. On GSM8K, CD4LM matches the LLaDA baseline with a 5.18x wall-clock speedup; across code and math benchmarks, it strictly dominates the accuracy-efficiency Pareto frontier, achieving a 3.62x mean speedup while improving average accuracy. Code is available at https://github.com/yihao-liang/CDLM",
+        "authors": "Yihao Liang, Ze Wang, Hao Chen, Ximeng Sun, Jialian Wu, Xiaodong Yu, Jiang Liu, Emad Barsoum, Zicheng Liu, Niraj K. Jha",
+        "url": "http://arxiv.org/abs/2601.02236v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02236v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CD4LM是一个用于扩散语言模型（DLM）的框架，通过离散空间一致性蒸馏（DSCD）和置信度自适应解码（CAD）实现高效并行解码。它解决了DLM训练与推理之间的静态-动态错位问题，显著提升了DLM的生成速度和效率，同时保持甚至提高了生成质量。这在DLM的算法创新和效率提升方面具有重要突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02036v1",
+        "title": "GDRO: Group-level Reward Post-training Suitable for Diffusion Models",
+        "summary": "Recent advancements adopt online reinforcement learning (RL) from LLMs to text-to-image rectified flow diffusion models for reward alignment. The use of group-level rewards successfully aligns the model with the targeted reward. However, it faces challenges including low efficiency, dependency on stochastic samplers, and reward hacking. The problem is that rectified flow models are fundamentally different from LLMs: 1) For efficiency, online image sampling takes much more time and dominates the time of training. 2) For stochasticity, rectified flow is deterministic once the initial noise is fixed. Aiming at these problems and inspired by the effects of group-level rewards from LLMs, we design Group-level Direct Reward Optimization (GDRO). GDRO is a new post-training paradigm for group-level reward alignment that combines the characteristics of rectified flow models. Through rigorous theoretical analysis, we point out that GDRO supports full offline training that saves the large time cost for image rollout sampling. Also, it is diffusion-sampler-independent, which eliminates the need for the ODE-to-SDE approximation to obtain stochasticity. We also empirically study the reward hacking trap that may mislead the evaluation, and involve this factor in the evaluation using a corrected score that not only considers the original evaluation reward but also the trend of reward hacking. Extensive experiments demonstrate that GDRO effectively and efficiently improves the reward score of the diffusion model through group-wise offline optimization across the OCR and GenEval tasks, while demonstrating strong stability and robustness in mitigating reward hacking.",
+        "authors": "Yiyang Wang, Xi Chen, Xiaogang Xu, Yu Liu, Hengshuang Zhao",
+        "url": "http://arxiv.org/abs/2601.02036v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02036v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GDRO是一种针对扩散模型的新型组级奖励后训练范式，解决了现有方法在效率、随机采样器依赖和奖励作弊方面的挑战。它通过严格的理论分析证明了离线训练和采样器独立性，并实证研究了奖励作弊问题。这在扩散模型的训练算法和理论严谨性方面具有显著创新，对提高扩散模型的对齐效率和鲁棒性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02046v1",
+        "title": "Agentic Retoucher for Text-To-Image Generation",
+        "summary": "Text-to-image (T2I) diffusion models such as SDXL and FLUX have achieved impressive photorealism, yet small-scale distortions remain pervasive in limbs, face, text and so on. Existing refinement approaches either perform costly iterative re-generation or rely on vision-language models (VLMs) with weak spatial grounding, leading to semantic drift and unreliable local edits. To close this gap, we propose Agentic Retoucher, a hierarchical decision-driven framework that reformulates post-generation correction as a human-like perception-reasoning-action loop. Specifically, we design (1) a perception agent that learns contextual saliency for fine-grained distortion localization under text-image consistency cues, (2) a reasoning agent that performs human-aligned inferential diagnosis via progressive preference alignment, and (3) an action agent that adaptively plans localized inpainting guided by user preference. This design integrates perceptual evidence, linguistic reasoning, and controllable correction into a unified, self-corrective decision process. To enable fine-grained supervision and quantitative evaluation, we further construct GenBlemish-27K, a dataset of 6K T2I images with 27K annotated artifact regions across 12 categories. Extensive experiments demonstrate that Agentic Retoucher consistently outperforms state-of-the-art methods in perceptual quality, distortion localization and human preference alignment, establishing a new paradigm for self-corrective and perceptually reliable T2I generation.",
+        "authors": "Shaocheng Shen, Jianfeng Liang. Chunlei Cai, Cong Geng, Huiyu Duan, Xiaoyun Zhang, Qiang Hu, Guangtao Zhai",
+        "url": "http://arxiv.org/abs/2601.02046v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02046v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Agentic Retoucher是一个分层决策驱动框架，将T2I生成后的修正重构为类人感知-推理-行动循环。它设计了感知、推理和行动代理，以实现细粒度失真定位、人类对齐诊断和可控局部修复。该方法在代理架构和T2I生成质量提升方面具有高度创新性，解决了扩散模型生成图像中普遍存在的局部失真问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01925v1",
+        "title": "AR-MOT: Autoregressive Multi-object Tracking",
+        "summary": "As multi-object tracking (MOT) tasks continue to evolve toward more general and multi-modal scenarios, the rigid and task-specific architectures of existing MOT methods increasingly hinder their applicability across diverse tasks and limit flexibility in adapting to new tracking formulations. Most approaches rely on fixed output heads and bespoke tracking pipelines, making them difficult to extend to more complex or instruction-driven tasks. To address these limitations, we propose AR-MOT, a novel autoregressive paradigm that formulates MOT as a sequence generation task within a large language model (LLM) framework. This design enables the model to output structured results through flexible sequence construction, without requiring any task-specific heads. To enhance region-level visual perception, we introduce an Object Tokenizer based on a pretrained detector. To mitigate the misalignment between global and regional features, we propose a Region-Aware Alignment (RAA) module, and to support long-term tracking, we design a Temporal Memory Fusion (TMF) module that caches historical object tokens. AR-MOT offers strong potential for extensibility, as new modalities or instructions can be integrated by simply modifying the output sequence format without altering the model architecture. Extensive experiments on MOT17 and DanceTrack validate the feasibility of our approach, achieving performance comparable to state-of-the-art methods while laying the foundation for more general and flexible MOT systems.",
+        "authors": "Lianjie Jia, Yuhan Wu, Binghao Ran, Yifan Wang, Lijun Wang, Huchuan Lu",
+        "url": "http://arxiv.org/abs/2601.01925v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01925v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "AR-MOT提出了一种新颖的自回归范式，将多目标跟踪（MOT）任务转化为LLM框架内的序列生成任务。它引入了对象分词器、区域感知对齐模块和时间记忆融合模块。这种设计打破了传统MOT架构的僵化，为更通用、多模态和指令驱动的MOT系统奠定了基础，具有显著的架构创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01914v1",
+        "title": "Learning Action Hierarchies via Hybrid Geometric Diffusion",
+        "summary": "Temporal action segmentation is a critical task in video understanding, where the goal is to assign action labels to each frame in a video. While recent advances leverage iterative refinement-based strategies, they fail to explicitly utilize the hierarchical nature of human actions. In this work, we propose HybridTAS - a novel framework that incorporates a hybrid of Euclidean and hyperbolic geometries into the denoising process of diffusion models to exploit the hierarchical structure of actions. Hyperbolic geometry naturally provides tree-like relationships between embeddings, enabling us to guide the action label denoising process in a coarse-to-fine manner: higher diffusion timesteps are influenced by abstract, high-level action categories (root nodes), while lower timesteps are refined using fine-grained action classes (leaf nodes). Extensive experiments on three benchmark datasets, GTEA, 50Salads, and Breakfast, demonstrate that our method achieves state-of-the-art performance, validating the effectiveness of hyperbolic-guided denoising for the temporal action segmentation task.",
+        "authors": "Arjun Ramesh Kaushik, Nalini K. Ratha, Venu Govindaraju",
+        "url": "http://arxiv.org/abs/2601.01914v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01914v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "HybridTAS是一个新颖的框架，将欧几里得和双曲几何混合融入扩散模型的去噪过程，以利用人类动作的层次结构进行时间动作分割。双曲几何自然地提供了嵌入之间的树状关系，从而以粗到细的方式指导动作标签去噪。这种几何学与扩散模型结合的创新方法，为视频理解中的层次结构建模提供了新的理论视角和SOTA性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.01874v1",
+        "title": "CogFlow: Bridging Perception and Reasoning through Knowledge Internalization for Visual Mathematical Problem Solving",
+        "summary": "Despite significant progress, multimodal large language models continue to struggle with visual mathematical problem solving. Some recent works recognize that visual perception is a bottleneck in visual mathematical reasoning, but their solutions are limited to improving the extraction and interpretation of visual inputs. Notably, they all ignore the key issue of whether the extracted visual cues are faithfully integrated and properly utilized in subsequent reasoning. Motivated by this, we present CogFlow, a novel cognitive-inspired three-stage framework that incorporates a knowledge internalization stage, explicitly simulating the hierarchical flow of human reasoning: perception$\\Rightarrow$internalization$\\Rightarrow$reasoning. Inline with this hierarchical flow, we holistically enhance all its stages. We devise Synergistic Visual Rewards to boost perception capabilities in parametric and semantic spaces, jointly improving visual information extraction from symbols and diagrams. To guarantee faithful integration of extracted visual cues into subsequent reasoning, we introduce a Knowledge Internalization Reward model in the internalization stage, bridging perception and reasoning. Moreover, we design a Visual-Gated Policy Optimization algorithm to further enforce the reasoning is grounded with the visual knowledge, preventing models seeking shortcuts that appear coherent but are visually ungrounded reasoning chains. Moreover, we contribute a new dataset MathCog for model training, which contains samples with over 120K high-quality perception-reasoning aligned annotations. Comprehensive experiments and analysis on commonly used visual mathematical reasoning benchmarks validate the superiority of the proposed CogFlow.",
+        "authors": "Shuhang Chen, Yunqiu Xu, Junjie Xie, Aojun Lu, Tao Feng, Zeying Huang, Ning Zhang, Yi Sun, Yi Yang, Hangjie Yuan",
+        "url": "http://arxiv.org/abs/2601.01874v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.01874v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CogFlow是一个认知启发的三阶段框架（感知-内化-推理），用于解决视觉数学问题。它引入了协同视觉奖励、知识内化奖励模型和视觉门控策略优化算法，以确保视觉线索的忠实整合和利用。该框架在模拟人类推理流程方面具有高度创新性，解决了多模态LLM在视觉数学推理中的关键瓶颈，并提供了高质量的感知-推理对齐数据集。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02031v1",
+        "title": "Output Embedding Centering for Stable LLM Pretraining",
+        "summary": "Pretraining of large language models is not only expensive but also prone to certain training instabilities. A specific instability that often occurs for large learning rates at the end of training is output logit divergence. The most widely used mitigation strategy, z-loss, merely addresses the symptoms rather than the underlying cause of the problem. In this paper, we analyze the instability from the perspective of the output embeddings' geometry and identify its cause. Based on this, we propose output embedding centering (OEC) as a new mitigation strategy, and prove that it suppresses output logit divergence. OEC can be implemented in two different ways, as a deterministic operation called μ-centering, or a regularization method called μ-loss. Our experiments show that both variants outperform z-loss in terms of training stability and learning rate sensitivity. In particular, they ensure that training converges even for large learning rates when z-loss fails. Furthermore, we find that μ-loss is significantly less sensitive to regularization hyperparameter tuning than z-loss.",
+        "authors": "Felix Stollenwerk, Anna Lokrantz, Niclas Hertzberg",
+        "url": "http://arxiv.org/abs/2601.02031v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02031v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从输出嵌入几何学的角度分析了LLM预训练中的不稳定性（输出logit发散），并提出了输出嵌入居中（OEC）作为一种新的缓解策略。它通过理论证明OEC能抑制发散，并提供了两种实现方式。这篇论文在理论严谨性上表现出色，深入分析了LLM训练的底层机制，并提出了有效的解决方案，对LLM训练的稳定性和鲁棒性具有重要价值。"
+    }
+]

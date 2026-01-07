@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.03220v1",
+        "title": "From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence",
+        "summary": "Can we learn more from data than existed in the generating process itself? Can new and useful information be constructed from merely applying deterministic transformations to existing data? Can the learnable content in data be evaluated without considering a downstream task? On these questions, Shannon information and Kolmogorov complexity come up nearly empty-handed, in part because they assume observers with unlimited computational capacity and fail to target the useful information content. In this work, we identify and exemplify three seeming paradoxes in information theory: (1) information cannot be increased by deterministic transformations; (2) information is independent of the order of data; (3) likelihood modeling is merely distribution matching. To shed light on the tension between these results and modern practice, and to quantify the value of data, we introduce epiplexity, a formalization of information capturing what computationally bounded observers can learn from data. Epiplexity captures the structural content in data while excluding time-bounded entropy, the random unpredictable content exemplified by pseudorandom number generators and chaotic dynamical systems. With these concepts, we demonstrate how information can be created with computation, how it depends on the ordering of the data, and how likelihood modeling can produce more complex programs than present in the data generating process itself. We also present practical procedures to estimate epiplexity which we show capture differences across data sources, track with downstream performance, and highlight dataset interventions that improve out-of-distribution generalization. In contrast to principles of model selection, epiplexity provides a theoretical foundation for data selection, guiding how to select, generate, or transform data for learning systems.",
+        "authors": "Marc Finzi, Shikai Qiu, Yiding Jiang, Pavel Izmailov, J. Zico Kolter, Andrew Gordon Wilson",
+        "url": "http://arxiv.org/abs/2601.03220v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03220v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了“epiplexity”这一全新的信息理论概念，挑战了香农信息和柯尔莫哥洛夫复杂度的传统假设，为计算受限的智能体提供了新的信息量化方式。其理论基础极其强大，旨在提供信息理论的“形式化”，并深入探讨了信息论中的悖论，完全符合对强大理论基础和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.03201v1",
+        "title": "Recursive querying of neural networks via weighted structures",
+        "summary": "Expressive querying of machine learning models - viewed as a form of intentional data - enables their verification and interpretation using declarative languages, thereby making learned representations of data more accessible. Motivated by the querying of feedforward neural networks, we investigate logics for weighted structures. In the absence of a bound on neural network depth, such logics must incorporate recursion; thereto we revisit the functional fixpoint mechanism proposed by Grädel and Gurevich. We adopt it in a Datalog-like syntax; we extend normal forms for fixpoint logics to weighted structures; and show an equivalent \"loose\" fixpoint mechanism that allows values of inductively defined weight functions to be overwritten. We propose a \"scalar\" restriction of functional fixpoint logic, of polynomial-time data complexity, and show it can express all PTIME model-agnostic queries over reduced networks with polynomially bounded weights. In contrast, we show that very simple model-agnostic queries are already NP-complete. Finally, we consider transformations of weighted structures by iterated transductions.",
+        "authors": "Martin Grohe, Christoph Standke, Juno Steegmans, Jan Van den Bussche",
+        "url": "http://arxiv.org/abs/2601.03201v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03201v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "深入探讨了加权结构逻辑，用于神经网络的查询、验证和解释。引入了函数不动点机制，扩展了不动点逻辑的范式，并分析了查询的计算复杂度（PTIME, NP-complete）。这篇论文在形式逻辑和计算理论方面具有极高的严谨性，提供了清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.03132v1",
+        "title": "Finite Memory Belief Approximation for Optimal Control in Partially Observable Markov Decision Processes",
+        "summary": "We study finite memory belief approximation for partially observable (PO) stochastic optimal control (SOC) problems. While belief states are sufficient for SOC in partially observable Markov decision processes (POMDPs), they are generally infinite-dimensional and impractical. We interpret truncated input-output (IO) histories as inducing a belief approximation and develop a metric-based theory that directly relates information loss to control performance. Using the Wasserstein metric, we derive policy-conditional performance bounds that quantify value degradation induced by finite memory along typical closed-loop trajectories. Our analysis proceeds via a fixed-policy comparison: we evaluate two cost functionals under the same closed-loop execution and isolate the effect of replacing the true belief by its finite memory approximation inside the belief-level cost. For linear quadratic Gaussian (LQG) systems, we provide closed-form belief mismatch evaluation and empirically validate the predicted mechanism, demonstrating that belief mismatch decays approximately exponentially with memory length and that the induced performance mismatch scales accordingly. Together, these results provide a metric-aware characterization of what finite memory belief approximation can and cannot achieve in PO settings.",
+        "authors": "Mintae Kim",
+        "url": "http://arxiv.org/abs/2601.03132v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03132v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "针对部分可观测马尔可夫决策过程（POMDPs）中的有限记忆信念近似问题，建立了基于度量的理论，将信息损失与控制性能直接关联。利用Wasserstein度量推导了策略条件下的性能界限，并提供了LQG系统的闭式信念失配评估。这篇论文在控制理论和数学分析方面具有强大的理论基础和严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.03059v1",
+        "title": "On the bias of the Hoover index estimator: Results for the gamma distribution",
+        "summary": "The Hoover index is a widely used measure of inequality with an intuitive interpretation, yet little is known about the finite-sample properties of its empirical estimator. In this paper, we derive a simple expression for the expected value of the Hoover index estimator for general non-negative populations, based on Laplace transform techniques and exponential tilting. This unified framework applies to both continuous and discrete distributions. Explicit bias expressions are obtained for gamma population, showing that the estimator is generally biased in finite samples. Numerical and simulation results illustrate the magnitude of the bias and its dependence on the underlying distribution and sample size.",
+        "authors": "Roberto Vila, Helton Saulo",
+        "url": "http://arxiv.org/abs/2601.03059v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03059v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "利用拉普拉斯变换和指数倾斜技术，推导了Hoover指数估计器在一般非负总体下的期望值表达式，并明确给出了伽马分布的偏差表达式。这是一篇纯粹的统计理论论文，专注于估计量的有限样本性质和精确的数学推导，统计严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.03032v1",
+        "title": "Causal Manifold Fairness: Enforcing Geometric Invariance in Representation Learning",
+        "summary": "Fairness in machine learning is increasingly critical, yet standard approaches often treat data as static points in a high-dimensional space, ignoring the underlying generative structure. We posit that sensitive attributes (e.g., race, gender) do not merely shift data distributions but causally warp the geometry of the data manifold itself. To address this, we introduce Causal Manifold Fairness (CMF), a novel framework that bridges causal inference and geometric deep learning. CMF learns a latent representation where the local Riemannian geometry, defined by the metric tensor and curvature, remains invariant under counterfactual interventions on sensitive attributes. By enforcing constraints on the Jacobian and Hessian of the decoder, CMF ensures that the rules of the latent space (distances and shapes) are preserved across demographic groups. We validate CMF on synthetic Structural Causal Models (SCMs), demonstrating that it effectively disentangles sensitive geometric warping while preserving task utility, offering a rigorous quantification of the fairness-utility trade-off via geometric metrics.",
+        "authors": "Vidhi Rathore",
+        "url": "http://arxiv.org/abs/2601.03032v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03032v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了因果流形公平性（CMF）框架，结合了因果推断和几何深度学习，通过在敏感属性的反事实干预下保持潜在表示的局部黎曼几何不变性来确保公平性。明确提及了度量张量、曲率、雅可比矩阵和海森矩阵，具有极高的数学和因果逻辑严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02998v1",
+        "title": "Multi-Distribution Robust Conformal Prediction",
+        "summary": "In many fairness and distribution robustness problems, one has access to labeled data from multiple source distributions yet the test data may come from an arbitrary member or a mixture of them. We study the problem of constructing a conformal prediction set that is uniformly valid across multiple, heterogeneous distributions, in the sense that no matter which distribution the test point is from, the coverage of the prediction set is guaranteed to exceed a pre-specified level. We first propose a max-p aggregation scheme that delivers finite-sample, multi-distribution coverage given any conformity scores associated with each distribution. Upon studying several efficiency optimization programs subject to uniform coverage, we prove the optimality and tightness of our aggregation scheme, and propose a general algorithm to learn conformity scores that lead to efficient prediction sets after the aggregation under standard conditions. We discuss how our framework relates to group-wise distributionally robust optimization, sub-population shift, fairness, and multi-source learning. In synthetic and real-data experiments, our method delivers valid worst-case coverage across multiple distributions while greatly reducing the set size compared with naively applying max-p aggregation to single-source conformity scores, and can be comparable in size to single-source prediction sets with popular, standard conformity scores.",
+        "authors": "Yuqi Yang, Ying Jin",
+        "url": "http://arxiv.org/abs/2601.02998v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02998v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了在多分布异构数据下构建一致有效的共形预测集的方法，通过max-p聚合方案实现有限样本、多分布覆盖，并证明了其最优性和紧致性。这篇论文在统计保证和不确定性量化方面具有非常强大的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02951v1",
+        "title": "Hopfield neural networks as port-Hamiltonian and gradient systems",
+        "summary": "The structure of continuous Hopfield networks is revisited from a system-theoretic point of view. After adopting a novel electrical network interpretation involving nonlinear capacitors, it is shown that Hopfield networks admit a port-Hamiltonian formulation provided an extra passivity condition is satisfied. Subsequently it is shown that any Hopfield network can be represented as a gradient system, with Riemannian metric given by the inverse of the Hessian matrix of the total energy stored in the nonlinear capacitors. On the other hand, the well-known 'energy' function employed by Hopfield turns out to be the dissipation potential of the gradient system, and this potential is shown to satisfy a dissipation inequality that can be used for analysis and interconnection.",
+        "authors": "Arjan van der Schaft",
+        "url": "http://arxiv.org/abs/2601.02951v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02951v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "从系统理论角度重新审视了连续Hopfield网络，证明其可被表述为端口-哈密顿系统和具有黎曼度量的梯度系统。这篇论文将神经网络与控制理论和微分几何相结合，提供了极高的数学严谨性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02828v1",
+        "title": "Collapsed Structured Block Models for Community Detection in Complex Networks",
+        "summary": "Community detection seeks to recover mesoscopic structure from network data that may be binary, count-valued, signed, directed, weighted, or multilayer. The stochastic block model (SBM) explains such structure by positing a latent partition of nodes and block-specific edge distributions. In Bayesian SBMs, standard MCMC alternates between updating the partition and sampling block parameters, which can hinder mixing and complicate principled comparison across different partitions and numbers of communities. We develop a collapsed Bayesian SBM framework in which block-specific nuisance parameters are analytically integrated out under conjugate priors, so the marginal likelihood p(Y|z) depends only on the partition z and blockwise sufficient statistics. This yields fast local Gibbs/Metropolis updates based on ratios of closed-form integrated likelihoods and provides evidence-based complexity control that discourages gratuitous over-partitioning. We derive exact collapsed marginals for the most common SBM edge types-Beta-Bernoulli (binary), Gamma-Poisson (counts), and Normal-Inverse-Gamma (Gaussian weights)-and we extend collapsing to gap-constrained SBMs via truncated conjugate priors that enforce explicit upper bounds on between-community connectivity. We further show that the same collapsed strategy supports directed SBMs that model reciprocity through dyad states, signed SBMs via categorical block models, and multiplex SBMs where multiple layers contribute additive evidence for a shared partition. Across synthetic benchmarks and real networks (including email communication, hospital contact counts, and citation graphs), collapsed inference produces accurate partitions and interpretable posterior block summaries of within- and between-community interaction strengths while remaining computationally simple and modular.",
+        "authors": "Marios Papamichalis, Regina Ruane",
+        "url": "http://arxiv.org/abs/2601.02828v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02828v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个折叠贝叶斯SBM框架，通过解析积分掉块特定干扰参数来提高社区检测的效率和稳健性。为多种边缘类型推导了精确的折叠边际似然，并支持证据驱动的复杂性控制。这篇论文在贝叶斯统计建模和网络理论方面具有强大的理论基础和严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02811v1",
+        "title": "Decision-Theoretic Robustness for Network Models",
+        "summary": "Bayesian network models (Erdos Renyi, stochastic block models, random dot product graphs, graphons) are widely used in neuroscience, epidemiology, and the social sciences, yet real networks are sparse, heterogeneous, and exhibit higher-order dependence. How stable are network-based decisions, model selection, and policy recommendations to small model misspecification? We study local decision-theoretic robustness by allowing the posterior to vary within a small Kullback-Leibler neighborhood and choosing actions that minimize worst-case posterior expected loss. Exploiting low-dimensional functionals available under exchangeability, we (i) adapt decision-theoretic robustness to exchangeable graphs via graphon limits and derive sharp small-radius expansions of robust posterior risk; under squared loss the leading inflation is controlled by the posterior variance of the loss, and for robustness indices that diverge at percolation/fragmentation thresholds we obtain a universal critical exponent describing the explosion of decision uncertainty near criticality. (ii) Develop a nonparametric minimax theory for robust model selection between sparse Erdos-Renyi and block models, showing-via robustness error exponents-that no Bayesian or frequentist method can uniformly improve upon the decision-theoretic limits over configuration models and sparse graphon classes for percolation-type functionals. (iii) Propose a practical algorithm based on entropic tilting of posterior or variational samples, and demonstrate it on functional brain connectivity and Karnataka village social networks.",
+        "authors": "Marios Papamichalis, Regina Ruane, Simon Lunagomez, Swati Chandna",
+        "url": "http://arxiv.org/abs/2601.02811v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02811v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "探讨了网络模型的决策理论鲁棒性，通过允许后验分布在KL邻域内变化来最小化最坏情况下的后验期望损失。推导了鲁棒后验风险的尖锐小半径展开，并发展了鲁棒模型选择的非参数极小极大理论。这篇论文在决策理论、统计学和网络科学方面具有极高的理论严谨性和数学深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02666v1",
+        "title": "Inferring Causal Graph Temporal Logic Formulas to Expedite Reinforcement Learning in Temporally Extended Tasks",
+        "summary": "Decision-making tasks often unfold on graphs with spatial-temporal dynamics. Black-box reinforcement learning often overlooks how local changes spread through network structure, limiting sample efficiency and interpretability. We present GTL-CIRL, a closed-loop framework that simultaneously learns policies and mines Causal Graph Temporal Logic (Causal GTL) specifications. The method shapes rewards with robustness, collects counterexamples when effects fail, and uses Gaussian Process (GP) driven Bayesian optimization to refine parameterized cause templates. The GP models capture spatial and temporal correlations in the system dynamics, enabling efficient exploration of complex parameter spaces. Case studies in gene and power networks show faster learning and clearer, verifiable behavior compared to standard RL baselines.",
+        "authors": "Hadi Partovi Aria, Zhe Xu",
+        "url": "http://arxiv.org/abs/2601.02666v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02666v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了GTL-CIRL框架，同时学习策略并挖掘因果图时序逻辑（Causal GTL）规范，结合高斯过程驱动的贝叶斯优化来精炼因果模板。这篇论文将因果推断、形式逻辑和强化学习结合，提供了强大的理论基础和数学建模。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02656v1",
+        "title": "Statistical Inference for Fuzzy Clustering",
+        "summary": "Clustering is a central tool in biomedical research for discovering heterogeneous patient subpopulations, where group boundaries are often diffuse rather than sharply separated. Traditional methods produce hard partitions, whereas soft clustering methods such as fuzzy $c$-means (FCM) allow mixed memberships and better capture uncertainty and gradual transitions. Despite the widespread use of FCM, principled statistical inference for fuzzy clustering remains limited.   We develop a new framework for weighted fuzzy $c$-means (WFCM) for settings with potential cluster size imbalance. Cluster-specific weights rebalance the classical FCM criterion so that smaller clusters are not overwhelmed by dominant groups, and the weighted objective induces a normalized density model with scale parameter $σ$ and fuzziness parameter $m$. Estimation is performed via a blockwise majorize--minimize (MM) procedure that alternates closed-form membership and centroid updates with likelihood-based updates of $(σ,\\bw)$. The intractable normalizing constant is approximated by importance sampling using a data-adaptive Gaussian mixture proposal. We further provide likelihood ratio tests for comparing cluster centers and bootstrap-based confidence intervals.   We establish consistency and asymptotic normality of the maximum likelihood estimator, validate the method through simulations, and illustrate it using single-cell RNA-seq and Alzheimer disease Neuroimaging Initiative (ADNI) data. These applications demonstrate stable uncertainty quantification and biologically meaningful soft memberships, ranging from well-separated cell populations under imbalance to a graded AD versus non-AD continuum consistent with disease progression.",
+        "authors": "Qiuyi Wu, Zihan Zhu, Anru R. Zhang",
+        "url": "http://arxiv.org/abs/2601.02656v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02656v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了加权模糊c均值（WFCM）的新框架，解决了聚类大小不平衡问题，并通过MM过程进行估计。建立了最大似然估计量的一致性和渐近正态性，并提供了似然比检验和自助法置信区间。这篇论文在统计推断和聚类理论方面具有极高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02640v1",
+        "title": "Bayesian Multiple Multivariate Density-Density Regression",
+        "summary": "We propose the first approach for multiple multivariate density-density regression (MDDR), making it possible to consider the regression of a multivariate density-valued response on multiple multivariate density-valued predictors. The core idea is to define a fitted distribution using a sliced Wasserstein barycenter (SWB) of push-forwards of the predictors and to quantify deviations from the observed response using the sliced Wasserstein (SW) distance. Regression functions, which map predictors' supports to the response support, and barycenter weights are inferred within a generalized Bayes framework, enabling principled uncertainty quantification without requiring a fully specified likelihood. The inference process can be seen as an instance of an inverse SWB problem. We establish theoretical guarantees, including the stability of the SWB under perturbations of marginals and barycenter weights, sample complexity of the generalized likelihood, and posterior consistency. For practical inference, we introduce a differentiable approximation of the SWB and a smooth reparameterization to handle the simplex constraint on barycenter weights, allowing efficient gradient-based MCMC sampling. We demonstrate MDDR in an application to inference for population-scale single-cell data. Posterior analysis under the MDDR model in this example includes inference on communication between multiple source/sender cell types and a target/receiver cell type. The proposed approach provides accurate fits, reliable predictions, and interpretable posterior estimates of barycenter weights, which can be used to construct sparse cell-cell communication networks.",
+        "authors": "Khai Nguyen, Yang Ni, Peter Mueller",
+        "url": "http://arxiv.org/abs/2601.02640v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02640v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "首次提出了多重多元密度-密度回归（MDDR）方法，利用切片Wasserstein重心和切片Wasserstein距离来定义拟合分布和量化偏差。在广义贝叶斯框架下进行推断，并建立了理论保证，包括SWB的稳定性、样本复杂度和后验一致性。这篇论文在贝叶斯统计、最优传输理论和不确定性量化方面具有极高的理论严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02610v1",
+        "title": "Conformal novelty detection with false discovery rate control at the boundary",
+        "summary": "Conformal novelty detection is a classical machine learning task for which uncertainty quantification is essential for providing reliable results. Recent work has shown that the BH procedure applied to conformal p-values controls the false discovery rate (FDR). Unfortunately, the BH procedure can lead to over-optimistic assessments near the rejection threshold, with an increase of false discoveries at the margin as pointed out by Soloff et al. (2024). This issue is solved therein by the support line (SL) correction, which is proven to control the boundary false discovery rate (bFDR) in the independent, non-conformal setting. The present work extends the SL method to the conformal setting: first, we show that the SL procedure can violate the bFDR control in this specific setting. Second, we propose several alternatives that provably control the bFDR in the conformal setting. Finally, numerical experiments with both synthetic and real data support our theoretical findings and show the relevance of the new proposed procedures.",
+        "authors": "Zijun Gao, Etienne Roquain, Daniel Xiang",
+        "url": "http://arxiv.org/abs/2601.02610v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02610v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "将支持线（SL）方法扩展到共形设置下的边界错误发现率（bFDR）控制，并提出了能够可靠控制bFDR的新方法。这篇论文在统计学、不确定性量化和假设检验方面提供了严格的理论证明和统计保证。"
+    }
+]

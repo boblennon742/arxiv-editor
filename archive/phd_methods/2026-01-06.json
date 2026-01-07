@@ -1,0 +1,182 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.03195v1",
+        "title": "Sparse Knowledge Distillation: A Mathematical Framework for Probability-Domain Temperature Scaling and Multi-Stage Compression",
+        "summary": "We develop a unified theoretical framework for sparse knowledge distillation based on probability-domain softening operators. While the equivalence $p^{1/T} \\propto \\mathrm{softmax}(z/T)$ is well known, our contribution is an operator-level analytical framework built on this foundation rather than the equivalence itself.   The framework comprises four core components: (i) operator-agnostic bias--variance decompositions that characterize when sparse students outperform dense teachers, (ii) a homotopy path formalization of multi-stage pruning in function space explaining why iterative compression succeeds where one-shot pruning fails, (iii) convergence guarantees establishing $O(1/n)$ rates for $n$-stage distillation with explicit parameter dependence, and (iv) equivalence class characterizations identifying distinct probability-domain operators that yield identical student models under capacity constraints.   We introduce an axiomatic definition of probability-domain softening operators based on ranking preservation, continuity, entropy monotonicity, identity, and boundary behavior, and show that multiple non-equivalent operator families satisfy these axioms. All learning-theoretic guarantees are shown to hold uniformly across this operator class, independent of implementation details. These results provide theoretical grounding for black-box teacher distillation, partial-access settings such as top-$k$ truncation and text-only outputs, and privacy-preserving model compression.",
+        "authors": "Aaron R. Flouro, Shawn P. Chadwick",
+        "url": "http://arxiv.org/abs/2601.03195v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03195v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的稀疏知识蒸馏理论框架，基于概率域软化算子，并提供了严谨的数学/统计推导，包括偏置-方差分解、多阶段剪枝的同伦路径形式化、收敛性保证和等价类表征。这直接解决了模型压缩的实际瓶颈，并具有极高的理论创新性和严谨性，非常符合您的数理统计背景和对理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.03066v1",
+        "title": "Do LLMs Encode Functional Importance of Reasoning Tokens?",
+        "summary": "Large language models solve complex tasks by generating long reasoning chains, achieving higher accuracy at the cost of increased computational cost and reduced ability to isolate functionally relevant reasoning. Prior work on compact reasoning shortens such chains through probabilistic sampling, heuristics, or supervision from frontier models, but offers limited insight into whether models internally encode token-level functional importance for answer generation. We address this gap diagnostically and propose greedy pruning, a likelihood-preserving deletion procedure that iteratively removes reasoning tokens whose removal minimally degrades model likelihood under a specified objective, yielding length-controlled reasoning chains. We evaluate pruned reasoning in a distillation framework and show that students trained on pruned chains outperform a frontier-model-supervised compression baseline at matched reasoning lengths. Finally, our analysis reveals systematic pruning patterns and shows that attention scores can predict greedy pruning ranks, further suggesting that models encode a nontrivial functional importance structure over reasoning tokens.",
+        "authors": "Janvijay Singh, Dilek Hakkani-Tür",
+        "url": "http://arxiv.org/abs/2601.03066v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03066v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种联合编码 KV-Cache 块的方法，以解决 LLM 服务中 KV-Cache 内存瓶颈。它通过将相似的块融合为共享表示来提高并发性。论文在理论上分析了泊松过程模型下融合缓存块的速率-失真权衡，展现了强大的理论严谨性。在实践中，实现了显著的 KV-Cache 压缩和吞吐量提升，对 LLM 部署的效率瓶颈有重大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.03015v1",
+        "title": "In-Context Reinforcement Learning through Bayesian Fusion of Context and Value Prior",
+        "summary": "In-context reinforcement learning (ICRL) promises fast adaptation to unseen environments without parameter updates, but current methods either cannot improve beyond the training distribution or require near-optimal data, limiting practical adoption. We introduce SPICE, a Bayesian ICRL method that learns a prior over Q-values via deep ensemble and updates this prior at test-time using in-context information through Bayesian updates. To recover from poor priors resulting from training on sub-optimal data, our online inference follows an Upper-Confidence Bound rule that favours exploration and adaptation. We prove that SPICE achieves regret-optimal behaviour in both stochastic bandits and finite-horizon MDPs, even when pretrained only on suboptimal trajectories. We validate these findings empirically across bandit and control benchmarks. SPICE achieves near-optimal decisions on unseen tasks, substantially reduces regret compared to prior ICRL and meta-RL approaches while rapidly adapting to unseen tasks and remaining robust under distribution shift.",
+        "authors": "Anaïs Berkes, Vincent Taboga, Donna Vakalis, David Rolnick, Yoshua Bengio",
+        "url": "http://arxiv.org/abs/2601.03015v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.03015v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了 SPICE，一种通过贝叶斯融合上下文和价值先验的上下文强化学习（ICRL）方法。它通过深度集成学习 Q 值先验，并在测试时通过贝叶斯更新进行调整。最重要的是，它证明了 SPICE 即使在次优轨迹上预训练也能实现最优后悔行为，具有极高的理论严谨性。这为在不更新参数的情况下快速适应新环境提供了强大的数据效率和泛化能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02907v1",
+        "title": "Beyond the Black Box: Theory and Mechanism of Large Language Models",
+        "summary": "The rapid emergence of Large Language Models (LLMs) has precipitated a profound paradigm shift in Artificial Intelligence, delivering monumental engineering successes that increasingly impact modern society. However, a critical paradox persists within the current field: despite the empirical efficacy, our theoretical understanding of LLMs remains disproportionately nascent, forcing these systems to be treated largely as ``black boxes''. To address this theoretical fragmentation, this survey proposes a unified lifecycle-based taxonomy that organizes the research landscape into six distinct stages: Data Preparation, Model Preparation, Training, Alignment, Inference, and Evaluation. Within this framework, we provide a systematic review of the foundational theories and internal mechanisms driving LLM performance. Specifically, we analyze core theoretical issues such as the mathematical justification for data mixtures, the representational limits of various architectures, and the optimization dynamics of alignment algorithms. Moving beyond current best practices, we identify critical frontier challenges, including the theoretical limits of synthetic data self-improvement, the mathematical bounds of safety guarantees, and the mechanistic origins of emergent intelligence. By connecting empirical observations with rigorous scientific inquiry, this work provides a structured roadmap for transitioning LLM development from engineering heuristics toward a principled scientific discipline.",
+        "authors": "Zeyu Gan, Ruifeng Ren, Wei Yao, Xiaolin Hu, Gengze Xu, Chen Qian, Huayi Tang, Zixuan Gong, Xinhao Yao, Pengwei Tang, Zhenxing Dou, Yong Liu",
+        "url": "http://arxiv.org/abs/2601.02907v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02907v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "作为一篇综述论文，它提出了一个统一的基于生命周期的分类法，系统地回顾了驱动 LLM 性能的基础理论和内部机制。它分析了数据混合的数学依据、架构的表示限制以及对齐算法的优化动力学。尽管不是提出新算法，但其对 LLM 理论和机制的深入探讨，以及对未来研究挑战的识别，对于博士生理解领域前沿和指导研究方向具有极高的价值和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02896v1",
+        "title": "Bridging Mechanistic Interpretability and Prompt Engineering with Gradient Ascent for Interpretable Persona Control",
+        "summary": "Controlling emergent behavioral personas (e.g., sycophancy, hallucination) in Large Language Models (LLMs) is critical for AI safety, yet remains a persistent challenge. Existing solutions face a dilemma: manual prompt engineering is intuitive but unscalable and imprecise, while automatic optimization methods are effective but operate as \"black boxes\" with no interpretable connection to model internals. We propose a novel framework that adapts gradient ascent to LLMs, enabling targeted prompt discovery. In specific, we propose two methods, RESGA and SAEGA, that both optimize randomly initialized prompts to achieve better aligned representation with an identified persona direction. We introduce fluent gradient ascent to control the fluency of discovered persona steering prompts. We demonstrate RESGA and SAEGA's effectiveness across Llama 3.1, Qwen 2.5, and Gemma 3 for steering three different personas,sycophancy, hallucination, and myopic reward. Crucially, on sycophancy, our automatically discovered prompts achieve significant improvement (49.90% compared with 79.24%). By grounding prompt discovery in mechanistically meaningful features, our method offers a new paradigm for controllable and interpretable behavior modification.",
+        "authors": "Harshvardhan Saini, Yiming Tang, Dianbo Liu",
+        "url": "http://arxiv.org/abs/2601.02896v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02896v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究揭示了 LLM 逻辑推理中的“逻辑相变”现象，即性能在达到临界逻辑深度后突然崩溃。为解决此问题，论文提出了神经符号课程调优框架，通过自适应对齐自然语言与逻辑符号，并重塑训练动态来增强推理能力。这不仅提供了对 LLM 行为的深刻理论洞察，还提出了一个具有严谨性的算法解决方案，直接解决了 LLM 复杂推理的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02845v1",
+        "title": "TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents",
+        "summary": "Long-horizon conversational agents have to manage ever-growing interaction histories that quickly exceed the finite context windows of large language models (LLMs). Existing memory frameworks provide limited support for temporally structured information across hierarchical levels, often leading to fragmented memories and unstable long-horizon personalization. We present TiMem, a temporal--hierarchical memory framework that organizes conversations through a Temporal Memory Tree (TMT), enabling systematic memory consolidation from raw conversational observations to progressively abstracted persona representations. TiMem is characterized by three core properties: (1) temporal--hierarchical organization through TMT; (2) semantic-guided consolidation that enables memory integration across hierarchical levels without fine-tuning; and (3) complexity-aware memory recall that balances precision and efficiency across queries of varying complexity. Under a consistent evaluation setup, TiMem achieves state-of-the-art accuracy on both benchmarks, reaching 75.30% on LoCoMo and 76.88% on LongMemEval-S. It outperforms all evaluated baselines while reducing the recalled memory length by 52.20% on LoCoMo. Manifold analysis indicates clear persona separation on LoCoMo and reduced dispersion on LongMemEval-S. Overall, TiMem treats temporal continuity as a first-class organizing principle for long-horizon memory in conversational agents.",
+        "authors": "Kai Li, Xuanqing Yu, Ziyi Ni, Yi Zeng, Yao Xu, Zheqing Zhang, Xin Li, Jitao Sang, Xiaogang Duan, Xuelei Wang, Chengbao Liu, Jie Tan",
+        "url": "http://arxiv.org/abs/2601.02845v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02845v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种神经符号深度强化学习方法，通过整合背景符号知识来提高样本效率和泛化能力。它将部分策略表示为逻辑规则，并通过在线推理（偏置行动分布和重新调整 Q 值）指导训练过程。这种方法在理论上具有很强的严谨性，能够显著提升 RL 的数据效率、泛化能力和可解释性，是 AI 算法前沿的重要方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02819v1",
+        "title": "Punctuation-aware Hybrid Trainable Sparse Attention for Large Language Models",
+        "summary": "Attention serves as the fundamental mechanism for long-context modeling in large language models (LLMs), yet dense attention becomes structurally prohibitive for long sequences due to its quadratic complexity. Consequently, sparse attention has received increasing attention as a scalable alternative. However, existing sparse attention methods rely on coarse-grained semantic representations during block selection, which blur intra-block semantic boundaries and lead to the loss of critical information. To address this issue, we propose \\textbf{P}unctuation-aware \\textbf{H}ybrid \\textbf{S}parse \\textbf{A}ttention \\textbf{(PHSA)}, a natively trainable sparse attention framework that leverages punctuation tokens as semantic boundary anchors. Specifically, (1) we design a dual-branch aggregation mechanism that fuses global semantic representations with punctuation-enhanced boundary features, preserving the core semantic structure while introducing almost no additional computational overhead; (2) we introduce an extreme-sparsity-adaptive training and inference strategy that stabilizes model behavior under very low token activation ratios; Extensive experiments on general benchmarks and long-context evaluations demonstrate that PHSA consistently outperforms dense attention and state-of-the-art sparse attention baselines, including InfLLM v2. Specifically, for the 0.6B-parameter model with 32k-token input sequences, PHSA can reduce the information loss by 10.8\\% at a sparsity ratio of 97.3\\%.",
+        "authors": "Junxiang Qiu, Shuo Wang, Zhengsu Chen, Hengheng Zhang, Jinda Lu, Changcheng Li, Qi Tian",
+        "url": "http://arxiv.org/abs/2601.02819v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02819v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 PHSA（Punctuation-aware Hybrid Sparse Attention），一种可训练的稀疏注意力框架，利用标点符号作为语义边界锚点。它设计了双分支聚合机制和极端稀疏自适应训练策略。论文在架构和算法上都具有高度创新性，并展现了严谨的设计。它有效解决了 LLM 长上下文建模中的二次复杂度瓶颈，显著提高了效率并减少了信息损失。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02785v1",
+        "title": "DreamStyle: A Unified Framework for Video Stylization",
+        "summary": "Video stylization, an important downstream task of video generation models, has not yet been thoroughly explored. Its input style conditions typically include text, style image, and stylized first frame. Each condition has a characteristic advantage: text is more flexible, style image provides a more accurate visual anchor, and stylized first frame makes long-video stylization feasible. However, existing methods are largely confined to a single type of style condition, which limits their scope of application. Additionally, their lack of high-quality datasets leads to style inconsistency and temporal flicker. To address these limitations, we introduce DreamStyle, a unified framework for video stylization, supporting (1) text-guided, (2) style-image-guided, and (3) first-frame-guided video stylization, accompanied by a well-designed data curation pipeline to acquire high-quality paired video data. DreamStyle is built on a vanilla Image-to-Video (I2V) model and trained using a Low-Rank Adaptation (LoRA) with token-specific up matrices that reduces the confusion among different condition tokens. Both qualitative and quantitative evaluations demonstrate that DreamStyle is competent in all three video stylization tasks, and outperforms the competitors in style consistency and video quality.",
+        "authors": "Mengtian Li, Jinshu Chen, Songtao Zhao, Wanquan Feng, Pengqi Tu, Qian He",
+        "url": "http://arxiv.org/abs/2601.02785v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02785v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RadioDiff-Flux 揭示了扩散过程中潜在中间点在语义相似场景中高度一致的关键结构特性，并基于此提出了一种新颖的两阶段潜在扩散框架。该框架解耦了静态环境建模和动态细化，通过重用预计算的中间点来绕过冗余去噪。这种对扩散模型内在机制的理论洞察带来了高达 50 倍的推理加速，同时保持了高保真度，对 6G 网络等实时应用具有巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02731v1",
+        "title": "Omni2Sound: Towards Unified Video-Text-to-Audio Generation",
+        "summary": "Training a unified model integrating video-to-audio (V2A), text-to-audio (T2A), and joint video-text-to-audio (VT2A) generation offers significant application flexibility, yet faces two unexplored foundational challenges: (1) the scarcity of high-quality audio captions with tight A-V-T alignment, leading to severe semantic conflict between multimodal conditions, and (2) cross-task and intra-task competition, manifesting as an adverse V2A-T2A performance trade-off and modality bias in the VT2A task. First, to address data scarcity, we introduce SoundAtlas, a large-scale dataset (470k pairs) that significantly outperforms existing benchmarks and even human experts in quality. Powered by a novel agentic pipeline, it integrates Vision-to-Language Compression to mitigate visual bias of MLLMs, a Junior-Senior Agent Handoff for a 5 times cost reduction, and rigorous Post-hoc Filtering to ensure fidelity. Consequently, SoundAtlas delivers semantically rich and temporally detailed captions with tight V-A-T alignment. Second, we propose Omni2Sound, a unified VT2A diffusion model supporting flexible input modalities. To resolve the inherent cross-task and intra-task competition, we design a three-stage multi-task progressive training schedule that converts cross-task competition into joint optimization and mitigates modality bias in the VT2A task, maintaining both audio-visual alignment and off-screen audio generation faithfulness. Finally, we construct VGGSound-Omni, a comprehensive benchmark for unified evaluation, including challenging off-screen tracks. With a standard DiT backbone, Omni2Sound achieves unified SOTA performance across all three tasks within a single model, demonstrating strong generalization across benchmarks with heterogeneous input conditions. The project page is at https://swapforward.github.io/Omni2Sound.",
+        "authors": "Yusheng Dai, Zehua Chen, Yuxuan Jiang, Baolong Gao, Qiuhong Ke, Jun Zhu, Jianfei Cai",
+        "url": "http://arxiv.org/abs/2601.02731v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02731v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文致力于统一视频-文本-音频生成，解决了数据稀缺、语义冲突和任务间竞争等挑战。它引入了 SoundAtlas 数据集（通过代理管道生成高质量字幕），并提出了 Omni2Sound 统一扩散模型，采用三阶段多任务渐进训练。其在数据生成、模型架构和训练策略上的创新性、严谨性以及在多模态生成任务中取得的 SOTA 性能，使其成为 AI 前沿算法的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02695v1",
+        "title": "EvoRoute: Experience-Driven Self-Routing LLM Agent Systems",
+        "summary": "Complex agentic AI systems, powered by a coordinated ensemble of Large Language Models (LLMs), tool and memory modules, have demonstrated remarkable capabilities on intricate, multi-turn tasks. However, this success is shadowed by prohibitive economic costs and severe latency, exposing a critical, yet underexplored, trade-off. We formalize this challenge as the \\textbf{Agent System Trilemma}: the inherent tension among achieving state-of-the-art performance, minimizing monetary cost, and ensuring rapid task completion. To dismantle this trilemma, we introduce EvoRoute, a self-evolving model routing paradigm that transcends static, pre-defined model assignments. Leveraging an ever-expanding knowledge base of prior experience, EvoRoute dynamically selects Pareto-optimal LLM backbones at each step, balancing accuracy, efficiency, and resource use, while continually refining its own selection policy through environment feedback. Experiments on challenging agentic benchmarks such as GAIA and BrowseComp+ demonstrate that EvoRoute, when integrated into off-the-shelf agentic systems, not only sustains or enhances system performance but also reduces execution cost by up to $80\\%$ and latency by over $70\\%$.",
+        "authors": "Guibin Zhang, Haiyang Yu, Kaiming Yang, Bingli Wu, Fei Huang, Yongbin Li, Shuicheng Yan",
+        "url": "http://arxiv.org/abs/2601.02695v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02695v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "EvoRoute 形式化了“代理系统三难困境”（性能、成本、延迟），并提出了一个自进化的模型路由范式。它动态选择 Pareto 最优的 LLM 主干，平衡准确性、效率和资源使用，并通过环境反馈不断完善选择策略。该论文在理论上对代理系统瓶颈进行了深刻分析，并提出了具有严谨算法设计的解决方案，显著降低了 LLM 代理系统的执行成本和延迟，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02663v1",
+        "title": "When Do Tools and Planning Help LLMs Think? A Cost- and Latency-Aware Benchmark",
+        "summary": "Modern large language models (LLMs) increasingly rely on inference-time planning and external tools to improve reasoning. We benchmark this behavior on two real-world settings: event-centric question answering over graph-structured knowledge (Event-QA) and persuasive response generation in Reddit ChangeMyView (CMV). Using LangChain and LangGraph, we compare a one-shot baseline against a plan-execute-replan agent equipped with task-specific tools (DBpedia SPARQL/lookup/schema exploration, Wikipedia-focused retrieval, and topical web search). We evaluate on 60 examples each from Event-QA and CMV (3 splits of 20), and report both mean end-to-end latency and per-example token cost estimates. We evaluate GPT-4o and GPT-4o-mini under identical workflows and report accuracy and end-to-end latency. On Event-QA, the best tool-augmented configuration improves accuracy (e.g., 47.5\\% $\\rightarrow$ 67.5\\% for GPT-4o) while increasing latency by orders of magnitude ($\\sim$8s $\\rightarrow$ $\\sim$317s per example). On CMV, one-shot prompting is strongest (e.g., GPT-4o-mini achieves 75\\% at $\\sim$6s), and planning+search increases latency substantially without consistent gains. However, complex multi-tool orchestration exposes failure modes where the smaller model degrades. Overall, the findings highlight the need for task-specific, cost-aware choices of both model size and agent/tooling complexity.",
+        "authors": "Subha Ghoshal, Ali Al-Bustami",
+        "url": "http://arxiv.org/abs/2601.02663v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02663v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GTL-CIRL 框架同时学习策略并挖掘因果图时间逻辑（Causal GTL）规范，通过鲁棒性塑造奖励，收集反例，并使用高斯过程（GP）驱动的贝叶斯优化来完善参数化原因模板。该方法在理论上将 RL 与形式逻辑推理结合，GP 模型捕捉时空相关性，实现了更快的学习和更清晰、可验证的行为。这在 RL 样本效率和可解释性方面具有突破性创新和严谨的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.02609v1",
+        "title": "Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth",
+        "summary": "Large language model fine-tuning is bottlenecked by memory: a 7B parameter model requires 84GB--14GB for weights, 14GB for gradients, and 56GB for FP32 optimizer states--exceeding even A100-40GB capacity. We present Chronicals, an open-source training framework achieving 3.51x speedup over Unsloth through four synergistic optimizations: (1) fused Triton kernels eliminating 75% of memory traffic via RMSNorm (7x), SwiGLU (5x), and QK-RoPE (2.3x) fusion; (2) Cut Cross-Entropy reducing logit memory from 5GB to 135MB through online softmax computation; (3) LoRA+ with theoretically-derived 16x differential learning rates between adapter matrices; and (4) Best-Fit Decreasing sequence packing recovering 60-75% of compute wasted on padding.   On Qwen2.5-0.5B with A100-40GB, Chronicals achieves 41,184 tokens/second for full fine-tuning versus Unsloth's 11,736 tokens/second (3.51x). For LoRA at rank 32, we reach 11,699 tokens/second versus Unsloth MAX's 2,857 tokens/second (4.10x). Critically, we discovered that Unsloth's reported 46,000 tokens/second benchmark exhibited zero gradient norms--the model was not training.   We provide complete mathematical foundations: online softmax correctness proofs, FlashAttention IO complexity bounds O(N^2 d^2 M^{-1}), LoRA+ learning rate derivations from gradient magnitude analysis, and bin-packing approximation guarantees. All implementations, benchmarks, and proofs are available at https://github.com/Ajwebdevs/Chronicals with pip installation via https://pypi.org/project/chronicals/.",
+        "authors": "Arjun S. Nair",
+        "url": "http://arxiv.org/abs/2601.02609v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.02609v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Chronicals 是一个高性能的 LLM 微调框架，通过四种协同优化（融合 Triton 内核、Cut Cross-Entropy、LoRA+ 的差异学习率、Best-Fit Decreasing 序列打包）实现了显著加速。论文提供了完整的数学基础，包括在线 softmax 正确性证明、FlashAttention IO 复杂度界限、LoRA+ 学习率推导和 bin-packing 近似保证。其理论深度和对 LLM 微调内存/速度瓶颈的实际解决能力，使其成为一个极其出色的工作。"
+    }
+]

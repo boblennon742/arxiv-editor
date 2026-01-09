@@ -1,0 +1,32 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.04959v1",
+        "title": "Intraday Limit Order Price Change Transition Dynamics Across Market Capitalizations Through Markov Analysis",
+        "summary": "Quantitative understanding of stochastic dynamics in limit order price changes is essential for execution strategy design. We analyze intraday transition dynamics of ask and bid orders across market capitalization tiers using high-frequency NASDAQ100 tick data. Employing a discrete-time Markov chain framework, we categorize consecutive price changes into nine states and estimate transition probability matrices (TPMs) for six intraday intervals across High ($\\mathtt{HMC}$), Medium ($\\mathtt{MMC}$), and Low ($\\mathtt{LMC}$) market cap stocks. Element-wise TPM comparison reveals systematic patterns: price inertia peaks during opening and closing hours, stabilizing midday. A capitalization gradient is observed: $\\mathtt{HMC}$ stocks exhibit the strongest inertia, while $\\mathtt{LMC}$ stocks show lower stability and wider spreads. Markov metrics, including spectral gap, entropy rate, and mean recurrence times, quantify these dynamics. Clustering analysis identifies three distinct temporal phases on the bid side -- Opening, Midday, and Closing, and four phases on the ask side by distinguishing Opening, Midday, Pre-Close, and Close. This indicates that sellers initiate end-of-day positioning earlier than buyers. Stationary distributions show limit order dynamics are dominated by neutral and mild price changes. Jensen-Shannon divergence confirms the closing hour as the most distinct phase, with capitalization modulating temporal contrasts and bid-ask asymmetry. These findings support capitalization-aware and time-adaptive execution algorithms.",
+        "authors": "Salam Rabindrajit Luwang, Kundan Mukhia, Buddha Nath Sharma, Md. Nurujjaman, Anish Rai, Filippo Petroni",
+        "url": "http://arxiv.org/abs/2601.04959v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04959v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过马尔可夫链分析高频限价订单簿（LOB）的日内动态。虽然研究数据来自传统股票市场，但其对市场微观结构（如价格惯性、买卖价差不对称性、时间阶段划分）的深入分析方法，对于加密货币市场因子构建具有极高的借鉴意义。作为统计学硕士，你将能深入理解其严谨的数学推导，并将其应用于加密货币LOB数据，以构建预测性因子或优化交易执行策略。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04602v1",
+        "title": "Forecasting Equity Correlations with Hybrid Transformer Graph Neural Network",
+        "summary": "This paper studies forward-looking stock-stock correlation forecasting for S\\&P 500 constituents and evaluates whether learned correlation forecasts can improve graph-based clustering used in basket trading strategies. We cast 10-day ahead correlation prediction in Fisher-z space and train a Temporal-Heterogeneous Graph Neural Network (THGNN) to predict residual deviations from a rolling historical baseline. The architecture combines a Transformer-based temporal encoder, which captures non-stationary, complex, temporal dependencies, with an edge-aware graph attention network that propagates cross-asset information over the equity network. Inputs span daily returns, technicals, sector structure, previous correlations, and macro signals, enabling regime-aware forecasts and attention-based feature and neighbor importance to provide interpretability. Out-of-sample results from 2019-2024 show that the proposed model meaningfully reduces correlation forecasting error relative to rolling-window estimates. When integrated into a graph-based clustering framework, forward-looking correlations produce adaptable and economically meaningfully baskets, particularly during periods of market stress. These findings suggest that improvements in correlation forecasts translate into meaningful gains during portfolio construction tasks.",
+        "authors": "Jack Fanshawe, Rumi Masih, Alexander Cameron",
+        "url": "http://arxiv.org/abs/2601.04602v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04602v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种结合Transformer和图神经网络（GNN）的先进模型来预测股票相关性，并将其应用于篮子交易策略。尽管研究对象是传统股票，但其前沿的机器学习方法（THGNN）在捕捉复杂时间依赖和跨资产关系方面，对于加密货币市场中的因子构建（如网络因子、相关性因子）和策略设计（如配对交易、投资组合优化）具有极强的启发性和可迁移性。其对可解释性的关注也很有价值。"
+    }
+]

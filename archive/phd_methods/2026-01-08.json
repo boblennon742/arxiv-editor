@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.05240v1",
+        "title": "Robust Reasoning as a Symmetry-Protected Topological Phase",
+        "summary": "Large language models suffer from \"hallucinations\"-logical inconsistencies induced by semantic noise. We propose that current architectures operate in a \"Metric Phase,\" where causal order is vulnerable to spontaneous symmetry breaking. Here, we identify robust inference as an effective Symmetry-Protected Topological phase, where logical operations are formally isomorphic to non-Abelian anyon braiding, replacing fragile geometric interpolation with robust topological invariants. Empirically, we demonstrate a sharp topological phase transition: while Transformers and RNNs exhibit gapless decay, our Holonomic Network reveals a macroscopic \"mass gap,\" maintaining invariant fidelity below a critical noise threshold. Furthermore, in a variable-binding task on $S_{10}$ ($3.6 \\times 10^6$ states) representing symbolic manipulation, we demonstrate holonomic generalization: the topological model maintains perfect fidelity extrapolating $100\\times$ beyond training ($L=50 \\to 5000$), consistent with a theoretically indefinite causal horizon, whereas Transformers lose logical coherence. Ablation studies indicate this protection emerges strictly from non-Abelian gauge symmetry. This provides strong evidence for a new universality class for logical reasoning, linking causal stability to the topology of the semantic manifold.",
+        "authors": "Ilmo Sung",
+        "url": "http://arxiv.org/abs/2601.05240v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05240v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个高度创新的理论框架，将大型语言模型的鲁棒推理与对称保护拓扑相联系，通过非阿贝尔任意子编织来替代脆弱的几何插值。它从物理学角度为LLM的幻觉问题提供了深刻的理论解释和解决方案，并提出了'Holonomic Network'，展现了强大的理论严谨性和解决LLM核心瓶颈（鲁棒性、泛化能力）的巨大潜力，非常符合您对理论创新和前沿算法的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05167v1",
+        "title": "RelayLLM: Efficient Reasoning via Collaborative Decoding",
+        "summary": "Large Language Models (LLMs) for complex reasoning is often hindered by high computational costs and latency, while resource-efficient Small Language Models (SLMs) typically lack the necessary reasoning capacity. Existing collaborative approaches, such as cascading or routing, operate at a coarse granularity by offloading entire queries to LLMs, resulting in significant computational waste when the SLM is capable of handling the majority of reasoning steps. To address this, we propose RelayLLM, a novel framework for efficient reasoning via token-level collaborative decoding. Unlike routers, RelayLLM empowers the SLM to act as an active controller that dynamically invokes the LLM only for critical tokens via a special command, effectively \"relaying\" the generation process. We introduce a two-stage training framework, including warm-up and Group Relative Policy Optimization (GRPO) to teach the model to balance independence with strategic help-seeking. Empirical results across six benchmarks demonstrate that RelayLLM achieves an average accuracy of 49.52%, effectively bridging the performance gap between the two models. Notably, this is achieved by invoking the LLM for only 1.07% of the total generated tokens, offering a 98.2% cost reduction compared to performance-matched random routers.",
+        "authors": "Chengsong Huang, Tong Zheng, Langlin Huang, Jinyuan Li, Haolin Liu, Jiaxin Huang",
+        "url": "http://arxiv.org/abs/2601.05167v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05167v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RelayLLM 提出了一种新颖的令牌级协作解码框架，通过让小型语言模型（SLM）动态调用大型语言模型（LLM）的关键令牌，显著提高了推理效率。论文提供了理论分析，证明了其方法在扩展策略类方面的优势，有效解决了LLM推理的高计算成本和延迟瓶颈，兼具理论深度和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05106v1",
+        "title": "Token-Level LLM Collaboration via FusionRoute",
+        "summary": "Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.",
+        "authors": "Nuoya Xiong, Yuhang Zhou, Hanqing Zeng, Zhaorun Chen, Furong Huang, Shuchao Bi, Lizhu Zhang, Zhuokai Zhao",
+        "url": "http://arxiv.org/abs/2601.05106v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05106v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FusionRoute 提出了一种鲁棒有效的令牌级多LLM协作框架，通过轻量级路由器选择专家并贡献互补的 logit。它提供了理论分析，揭示了纯专家路由的局限性，并通过可训练的互补生成器扩展了有效策略类。这篇论文在解决LLM扩展性、泛化性和效率瓶颈方面具有高度创新性和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04895v1",
+        "title": "DVD: A Robust Method for Detecting Variant Contamination in Large Language Model Evaluation",
+        "summary": "Evaluating large language models (LLMs) is increasingly confounded by \\emph{variant contamination}: the training corpus contains semantically equivalent yet lexically or syntactically altered versions of test items. Unlike verbatim leakage, these paraphrased or structurally transformed variants evade existing detectors based on sampling consistency or perplexity, thereby inflating benchmark scores via memorization rather than genuine reasoning. We formalize this problem and introduce \\textbf{DVD} (\\textbf{D}etection via \\textbf{V}ariance of generation \\textbf{D}istribution), a single-sample detector that models the local output distribution induced by temperature sampling. Our key insight is that contaminated items trigger alternation between a \\emph{memory-adherence} state and a \\emph{perturbation-drift} state, yielding abnormally high variance in the synthetic difficulty of low-probability tokens; uncontaminated items remain in drift with comparatively smooth variance. We construct the first benchmark for variant contamination across two domains Omni-MATH and SuperGPQA by generating and filtering semantically equivalent variants, and simulate contamination via fine-tuning models of different scales and architectures (Qwen2.5 and Llama3.1). Across datasets and models, \\textbf{DVD} consistently outperforms perplexity-based, Min-$k$\\%++, edit-distance (CDD), and embedding-similarity baselines, while exhibiting strong robustness to hyperparameters. Our results establish variance of the generation distribution as a principled and practical fingerprint for detecting variant contamination in LLM evaluation.",
+        "authors": "Renzhao Liang, Jingru Chen, Bo Jia, Bo Deng, Chenggang Xie, Yidong Wang, Ke Jin, Xin Wang, Linfeng Zhang, Cunxiang Wang",
+        "url": "http://arxiv.org/abs/2601.04895v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04895v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DVD 提出了一种鲁棒的单样本检测器，用于识别LLM评估中的'变体污染'问题，即训练语料库中存在语义等效但词法或句法不同的测试项。论文形式化了该问题，并利用温度采样诱导的局部输出分布方差作为指纹。这解决了LLM基准测试中一个关键的信任和评估瓶颈，具有高度的理论创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04885v1",
+        "title": "CuMA: Aligning LLMs with Sparse Cultural Values via Demographic-Aware Mixture of Adapters",
+        "summary": "As Large Language Models (LLMs) serve a global audience, alignment must transition from enforcing universal consensus to respecting cultural pluralism. We demonstrate that dense models, when forced to fit conflicting value distributions, suffer from \\textbf{Mean Collapse}, converging to a generic average that fails to represent diverse groups. We attribute this to \\textbf{Cultural Sparsity}, where gradient interference prevents dense parameters from spanning distinct cultural modes. To resolve this, we propose \\textbf{\\textsc{CuMA}} (\\textbf{Cu}ltural \\textbf{M}ixture of \\textbf{A}dapters), a framework that frames alignment as a \\textbf{conditional capacity separation} problem. By incorporating demographic-aware routing, \\textsc{CuMA} internalizes a \\textit{Latent Cultural Topology} to explicitly disentangle conflicting gradients into specialized expert subspaces. Extensive evaluations on WorldValuesBench, Community Alignment, and PRISM demonstrate that \\textsc{CuMA} achieves state-of-the-art performance, significantly outperforming both dense baselines and semantic-only MoEs. Crucially, our analysis confirms that \\textsc{CuMA} effectively mitigates mean collapse, preserving cultural diversity. Our code is available at https://github.com/Throll/CuMA.",
+        "authors": "Ao Sun, Xiaoyu Wang, Zhe Tan, Yu Li, Jiachen Zhu, Shu Su, Yuheng Jia",
+        "url": "http://arxiv.org/abs/2601.04885v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04885v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CuMA 框架通过'人口统计学感知适配器混合'来解决LLM在对齐稀疏文化价值观时遇到的'平均值崩溃'和'文化稀疏性'问题。它将对齐视为一个'条件容量分离'问题，并通过显式解耦冲突梯度来保留文化多样性。这篇论文在LLM对齐和偏见缓解方面具有开创性的理论贡献和重要的社会实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04861v1",
+        "title": "Orchestrating Intelligence: Confidence-Aware Routing for Efficient Multi-Agent Collaboration across Multi-Scale Models",
+        "summary": "While multi-agent systems (MAS) have demonstrated superior performance over single-agent approaches in complex reasoning tasks, they often suffer from significant computational inefficiencies. Existing frameworks typically deploy large language models (LLMs) uniformly across all agent roles, failing to account for the varying cognitive demands of different reasoning stages. We address this inefficiency by proposing OI-MAS framework, a novel multi-agent framework that implements an adaptive model-selection policy across a heterogeneous pool of multi-scale LLMs. Specifically, OI-MAS introduces a state-dependent routing mechanism that dynamically selects agent roles and model scales throughout the reasoning process. In addition, we introduce a confidence-aware mechanism that selects appropriate model scales conditioned on task complexity, thus reducing unnecessary reliance on large-scale models. Experimental results show that OI-MAS consistently outperforms baseline multi-agent systems, improving accuracy by up to 12.88\\% while reducing cost by up to 79.78\\%.",
+        "authors": "Jingbo Wang, Sendong Zhao, Jiatong Liu, Haochun Wang, Wanting Li, Bing Qin, Ting Liu",
+        "url": "http://arxiv.org/abs/2601.04861v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04861v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种构建超图知识表示的方法，用于代理科学推理，解决了传统知识图谱在捕捉高阶实体交互方面的局限性。它通过超图拓扑作为可验证的护栏，加速科学发现。其在知识表示和推理算法上的创新性，以及对科学发现的潜在影响，使其成为一篇极具吸引力的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04785v1",
+        "title": "SRU-Pix2Pix: A Fusion-Driven Generator Network for Medical Image Translation with Few-Shot Learning",
+        "summary": "Magnetic Resonance Imaging (MRI) provides detailed tissue information, but its clinical application is limited by long acquisition time, high cost, and restricted resolution. Image translation has recently gained attention as a strategy to address these limitations. Although Pix2Pix has been widely applied in medical image translation, its potential has not been fully explored. In this study, we propose an enhanced Pix2Pix framework that integrates Squeeze-and-Excitation Residual Networks (SEResNet) and U-Net++ to improve image generation quality and structural fidelity. SEResNet strengthens critical feature representation through channel attention, while U-Net++ enhances multi-scale feature fusion. A simplified PatchGAN discriminator further stabilizes training and refines local anatomical realism. Experimental results demonstrate that under few-shot conditions with fewer than 500 images, the proposed method achieves consistent structural fidelity and superior image quality across multiple intra-modality MRI translation tasks, showing strong generalization ability. These results suggest an effective extension of Pix2Pix for medical image translation.",
+        "authors": "Xihe Qiu, Yang Dai, Xiaoyu Tan, Sijia Li, Fenghao Sun, Lu Gan, Liang Liu",
+        "url": "http://arxiv.org/abs/2601.04785v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04785v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "NC2C 是一个基于LLM的端到端自动化框架，旨在将非凸优化问题转换为可解的凸形式。它利用LLM的数学推理能力，结合符号推理、自适应转换和迭代验证，解决了手动凸化效率低下和过度依赖专家知识的瓶颈。这在数学规划和优化领域具有基础性的理论创新和广泛的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04786v1",
+        "title": "AgentOCR: Reimagining Agent History via Optical Self-Compression",
+        "summary": "Recent advances in large language models (LLMs) enable agentic systems trained with reinforcement learning (RL) over multi-turn interaction trajectories, but practical deployment is bottlenecked by rapidly growing textual histories that inflate token budgets and memory usage. We introduce AgentOCR, a framework that exploits the superior information density of visual tokens by representing the accumulated observation-action history as a compact rendered image. To make multi-turn rollouts scalable, AgentOCR proposes segment optical caching. By decomposing history into hashable segments and maintaining a visual cache, this mechanism eliminates redundant re-rendering. Beyond fixed rendering, AgentOCR introduces agentic self-compression, where the agent actively emits a compression rate and is trained with compression-aware reward to adaptively balance task success and token efficiency. We conduct extensive experiments on challenging agentic benchmarks, ALFWorld and search-based QA. Remarkably, results demonstrate that AgentOCR preserves over 95\\% of text-based agent performance while substantially reducing token consumption (>50\\%), yielding consistent token and memory efficiency. Our further analysis validates a 20x rendering speedup from segment optical caching and the effective strategic balancing of self-compression.",
+        "authors": "Lang Feng, Fuchao Yang, Feng Chen, Xin Cheng, Haiyang Xu, Zhenglin Wan, Ming Yan, Bo An",
+        "url": "http://arxiv.org/abs/2601.04786v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04786v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "AgentOCR 提出了一种通过'光学自压缩'来重新构想代理历史的框架，将LLM代理的观察-行动历史表示为紧凑的渲染图像。它引入了'分段光学缓存'和'代理自压缩'机制，显著减少了令牌消耗和内存使用，解决了LLM代理在长序列交互中的关键效率瓶颈，具有高度创新性和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04731v1",
+        "title": "Miner:Mining Intrinsic Mastery for Data-Efficient RL in Large Reasoning Models",
+        "summary": "Current critic-free RL methods for large reasoning models suffer from severe inefficiency when training on positive homogeneous prompts (where all rollouts are correct), resulting in waste of rollouts due to zero advantage estimates. We introduce a radically simple yet powerful solution to \\uline{M}ine \\uline{in}trinsic mast\\uline{er}y (Miner), that repurposes the policy's intrinsic uncertainty as a self-supervised reward signal, with no external supervision, auxiliary models, or additional inference cost. Our method pioneers two key innovations: (1) a token-level focal credit assignment mechanism that dynamically amplifies gradients on critical uncertain tokens while suppressing overconfident ones, and (2) adaptive advantage calibration to seamlessly integrate intrinsic and verifiable rewards. Evaluated across six reasoning benchmarks on Qwen3-4B and Qwen3-8B base models, Miner achieves state-of-the-art performance among the other four algorithms, yielding up to \\textbf{4.58} absolute gains in Pass@1 and \\textbf{6.66} gains in Pass@K compared to GRPO. Comparison with other methods targeted at exploration enhancement further discloses the superiority of the two newly proposed innovations. This demonstrates that latent uncertainty exploitation is both necessary and sufficient for efficient and scalable RL training of reasoning models.",
+        "authors": "Shuyang Jiang, Yuhao Wang, Ya Zhang, Yanfeng Wang, Yu Wang",
+        "url": "http://arxiv.org/abs/2601.04731v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04731v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Miner 提出了一种从策略的内在不确定性中挖掘自监督奖励信号的方法，以实现大型推理模型中数据高效的强化学习。它引入了令牌级焦点信用分配和自适应优势校准。这解决了无批评者RL方法在同质正向提示上训练效率低下的问题，具有高度的理论创新和对LLM训练效率的重大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04686v1",
+        "title": "Nightmare Dreamer: Dreaming About Unsafe States And Planning Ahead",
+        "summary": "Reinforcement Learning (RL) has shown remarkable success in real-world applications, particularly in robotics control. However, RL adoption remains limited due to insufficient safety guarantees. We introduce Nightmare Dreamer, a model-based Safe RL algorithm that addresses safety concerns by leveraging a learned world model to predict potential safety violations and plan actions accordingly. Nightmare Dreamer achieves nearly zero safety violations while maximizing rewards. Nightmare Dreamer outperforms model-free baselines on Safety Gymnasium tasks using only image observations, achieving nearly a 20x improvement in efficiency.",
+        "authors": "Oluwatosin Oseni, Shengjie Wang, Jun Zhu, Micah Corah",
+        "url": "http://arxiv.org/abs/2601.04686v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04686v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ToolGate 提出了一个契约驱动和可验证的LLM工具执行框架，通过显式符号状态空间和Hoare风格的工具契约（前置条件和后置条件）来提供逻辑安全保证和可验证的状态演化。这解决了LLM工具调用中缺乏形式化安全和可验证性保证的关键瓶颈，具有极高的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04675v1",
+        "title": "LLM-Guided Quantified SMT Solving over Uninterpreted Functions",
+        "summary": "Quantified formulas with Uninterpreted Functions (UFs) over non-linear real arithmetic pose fundamental challenges for Satisfiability Modulo Theories (SMT) solving. Traditional quantifier instantiation methods struggle because they lack semantic understanding of UF constraints, forcing them to search through unbounded solution spaces with limited guidance. We present AquaForte, a framework that leverages Large Language Models to provide semantic guidance for UF instantiation by generating instantiated candidates for function definitions that satisfy the constraints, thereby significantly reducing the search space and complexity for solvers. Our approach preprocesses formulas through constraint separation, uses structured prompts to extract mathematical reasoning from LLMs, and integrates the results with traditional SMT algorithms through adaptive instantiation. AquaForte maintains soundness through systematic validation: LLM-guided instantiations yielding SAT solve the original problem, while UNSAT results generate exclusion clauses for iterative refinement. Completeness is preserved by fallback to traditional solvers augmented with learned constraints. Experimental evaluation on SMT-COMP benchmarks demonstrates that AquaForte solves numerous instances where state-of-the-art solvers like Z3 and CVC5 timeout, with particular effectiveness on satisfiable formulas. Our work shows that LLMs can provide valuable mathematical intuition for symbolic reasoning, establishing a new paradigm for SMT constraint solving.",
+        "authors": "Kunhang Lv, Yuhang Dong, Rui Han, Fuqi Jia, Feifei Ma, Jian Zhang",
+        "url": "http://arxiv.org/abs/2601.04675v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04675v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "AquaForte 框架利用LLM为带有未解释函数的量化SMT求解提供语义指导，通过生成满足约束的函数定义候选来显著缩小搜索空间。它将LLM的数学直觉与传统SMT算法相结合，同时通过系统验证保持了完备性和可靠性。这在符号推理和SMT求解领域具有开创性的理论创新和解决复杂推理瓶颈的巨大潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05075v1",
+        "title": "SemPA: Improving Sentence Embeddings of Large Language Models through Semantic Preference Alignment",
+        "summary": "Traditional sentence embedding methods employ token-level contrastive learning on non-generative pre-trained models. Recently, there have emerged embedding methods based on generative large language models (LLMs). These methods either rely on fixed prompt templates or involve modifications to the model architecture. The former lacks further optimization of the model and results in limited performance, while the latter alters the internal computational mechanisms of the model, thereby compromising its generative capabilities. We propose SemPA, a novel approach that boosts the sentence representations while preserving the generative ability of LLMs via semantic preference alignment. We leverage sentence-level Direct Preference Optimization (DPO) to efficiently optimize LLMs on a paraphrase generation task, where the model learns to discriminate semantically equivalent sentences while preserving inherent generative capacity. Theoretically, we establish a formal connection between DPO and contrastive learning under the Plackett-Luce model framework. Empirically, experimental results on both semantic textual similarity tasks and various benchmarks for LLMs show that SemPA achieves better semantic representations without sacrificing the inherent generation capability of LLMs.",
+        "authors": "Ziyang Chen, Zhenxuan Huang, Yile Wang, Weiqin Wang, Lu Yin, Hui Huang",
+        "url": "http://arxiv.org/abs/2601.05075v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05075v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SemPA 提出了一种通过语义偏好对齐来提升LLM句子表示同时保留生成能力的新方法。它利用句子级DPO在释义生成任务上优化LLM，并从理论上建立了DPO与对比学习的联系。这篇论文在LLM表示学习方面具有坚实的理论基础和重要的实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04709v1",
+        "title": "Bridging Temporal and Textual Modalities: A Multimodal Framework for Automated Cloud Failure Root Cause Analysis",
+        "summary": "Root cause analysis in modern cloud infrastructure demands sophisticated understanding of heterogeneous data sources, particularly time-series performance metrics that involve core failure signatures. While large language models demonstrate remarkable capabilities in textual reasoning, their discrete token-based architecture creates fundamental incompatibilities with continuous numerical sequences exhibiting temporal dependencies. Current methodologies inadequately address this modality mismatch, constraining the potential of language model-driven automation in incident management workflows. This paper presents a multimodal diagnostic framework that harmonizes time-series representations with pretrained language model embedding spaces. Our approach contributes three technical advances: (1) a semantic compression technique that distills temporal segments into single-token abstractions while preserving pattern semantics, (2) an alignment encoder utilizing gated cross-attention to project time-series features into language model latent space, and (3) a retrieval-augmented diagnostic pipeline that synthesizes aligned embeddings with historical incident knowledge for expert-level failure attribution. Comprehensive evaluation across six cloud system benchmarks demonstrates that our framework achieves leading performance, reaching 48.75% diagnostic accuracy with notable improvements on scenarios involving compound failure modes. The results validate embedding-space alignment as an effective strategy for enabling language models to reason over multimodal telemetry data in production incident response contexts.",
+        "authors": "Gijun Park",
+        "url": "http://arxiv.org/abs/2601.04709v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04709v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种先验信息零阶优化方法，通过自适应方向对齐来提高LLM微调的内存效率。它通过引入先验信息扰动来优化梯度估计，并从理论上证明了其梯度估计器与真实梯度方向的更强对齐。这解决了LLM微调中内存开销大和收敛慢的瓶颈，具有高度的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05214v1",
+        "title": "Internal Representations as Indicators of Hallucinations in Agent Tool Selection",
+        "summary": "Large Language Models (LLMs) have shown remarkable capabilities in tool calling and tool usage, but suffer from hallucinations where they choose incorrect tools, provide malformed parameters and exhibit 'tool bypass' behavior by performing simulations and generating outputs instead of invoking specialized tools or external systems. This undermines the reliability of LLM based agents in production systems as it leads to inconsistent results, and bypasses security and audit controls. Such hallucinations in agent tool selection require early detection and error handling. Unlike existing hallucination detection methods that require multiple forward passes or external validation, we present a computationally efficient framework that detects tool-calling hallucinations in real-time by leveraging LLMs' internal representations during the same forward pass used for generation. We evaluate this approach on reasoning tasks across multiple domains, demonstrating strong detection performance (up to 86.4\\% accuracy) while maintaining real-time inference capabilities with minimal computational overhead, particularly excelling at detecting parameter-level hallucinations and inappropriate tool selections, critical for reliable agent deployment.",
+        "authors": "Kait Healy, Bharathi Srinivasan, Visakh Madathil, Jing Wu",
+        "url": "http://arxiv.org/abs/2601.05214v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05214v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个计算高效的框架，通过利用LLM在生成过程中的内部表示来实时检测工具选择中的幻觉。它解决了LLM代理在生产系统中可靠性不足的关键瓶颈，尤其在参数级幻觉和不当工具选择方面表现出色，具有很高的实践价值和方法创新性。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.05227v1",
+        "title": "Stochastic Deep Learning: A Probabilistic Framework for Modeling Uncertainty in Structured Temporal Data",
+        "summary": "I propose a novel framework that integrates stochastic differential equations (SDEs) with deep generative models to improve uncertainty quantification in machine learning applications involving structured and temporal data. This approach, termed Stochastic Latent Differential Inference (SLDI), embeds an Itô SDE in the latent space of a variational autoencoder, allowing for flexible, continuous-time modeling of uncertainty while preserving a principled mathematical foundation. The drift and diffusion terms of the SDE are parameterized by neural networks, enabling data-driven inference and generalizing classical time series models to handle irregular sampling and complex dynamic structure.   A central theoretical contribution is the co-parameterization of the adjoint state with a dedicated neural network, forming a coupled forward-backward system that captures not only latent evolution but also gradient dynamics. I introduce a pathwise-regularized adjoint loss and analyze variance-reduced gradient flows through the lens of stochastic calculus, offering new tools for improving training stability in deep latent SDEs. My paper unifies and extends variational inference, continuous-time generative modeling, and control-theoretic optimization, providing a rigorous foundation for future developments in stochastic probabilistic machine learning.",
+        "authors": "James Rice",
+        "url": "http://arxiv.org/abs/2601.05227v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05227v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个将随机微分方程（SDEs）与深度生成模型结合的新框架，用于结构化时间数据的不确定性量化。摘要中明确提到了Itô SDE、变分自编码器、伴随状态的共同参数化、路径正则化伴随损失、随机微积分视角下的方差缩减梯度流等概念，并强调了“严谨的数学基础”和“统一并扩展了变分推断、连续时间生成建模和控制理论优化”。这与您对强大理论基础、优化收敛性和清晰数学推导的偏好高度契合，是理论与现代AI系统结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05219v1",
+        "title": "CAOS: Conformal Aggregation of One-Shot Predictors",
+        "summary": "One-shot prediction enables rapid adaptation of pretrained foundation models to new tasks using only one labeled example, but lacks principled uncertainty quantification. While conformal prediction provides finite-sample coverage guarantees, standard split conformal methods are inefficient in the one-shot setting due to data splitting and reliance on a single predictor. We propose Conformal Aggregation of One-Shot Predictors (CAOS), a conformal framework that adaptively aggregates multiple one-shot predictors and uses a leave-one-out calibration scheme to fully exploit scarce labeled data. Despite violating classical exchangeability assumptions, we prove that CAOS achieves valid marginal coverage using a monotonicity-based argument. Experiments on one-shot facial landmarking and RAFT text classification tasks show that CAOS produces substantially smaller prediction sets than split conformal baselines while maintaining reliable coverage.",
+        "authors": "Maja Waldron",
+        "url": "http://arxiv.org/abs/2601.05219v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05219v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了CAOS框架，将共形预测应用于一次性预测（one-shot prediction）场景，解决了现有方法在数据稀缺时的效率问题。核心亮点在于，即使违反了经典的交换性假设，论文仍通过基于单调性的论证，证明了CAOS能够实现有效的边际覆盖（valid marginal coverage）。这种对有限样本覆盖保证的严格证明，以及对统计假设的深入探讨，完全符合您对统计保证和理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05159v1",
+        "title": "Vision-Language Introspection: Mitigating Overconfident Hallucinations in MLLMs via Interpretable Bi-Causal Steering",
+        "summary": "Object hallucination critically undermines the reliability of Multimodal Large Language Models, often stemming from a fundamental failure in cognitive introspection, where models blindly trust linguistic priors over specific visual evidence. Existing mitigations remain limited: contrastive decoding approaches operate superficially without rectifying internal semantic misalignments, while current latent steering methods rely on static vectors that lack instance-specific precision. We introduce Vision-Language Introspection (VLI), a training-free inference framework that simulates a metacognitive self-correction process. VLI first performs Attributive Introspection to diagnose hallucination risks via probabilistic conflict detection and localize the causal visual anchors. It then employs Interpretable Bi-Causal Steering to actively modulate the inference process, dynamically isolating visual evidence from background noise while neutralizing blind confidence through adaptive calibration. VLI achieves state-of-the-art performance on advanced models, reducing object hallucination rates by 12.67% on MMHal-Bench and improving accuracy by 5.8% on POPE.",
+        "authors": "Shuliang Liu, Songbo Yang, Dong Fang, Sihang Jia, Yuqi Tang, Lingfeng Su, Ruoshui Peng, Yibo Yan, Xin Zou, Xuming Hu",
+        "url": "http://arxiv.org/abs/2601.05159v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05159v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了Vision-Language Introspection (VLI) 框架，旨在通过可解释的因果引导来缓解多模态大语言模型（MLLMs）中的幻觉问题。摘要中提及“通过概率冲突检测诊断幻觉风险并定位因果视觉锚点”，以及“可解释的双向因果引导”，这表明论文在因果逻辑和模型可解释性方面有深入的理论探索，符合您对因果逻辑的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05128v1",
+        "title": "Revealing the Truth: Calculating True Values in Causal Inference Simulation Studies via Gaussian Quadrature",
+        "summary": "Simulation studies are used to understand the properties of statistical methods. A key luxury in many simulation studies is knowledge of the true value (i.e. the estimand) being targeted. With this oracle knowledge in-hand, the researcher conducting the simulation study can assess across repeated realizations of the data how well a given method recovers the truth. In causal inference simulation studies, the truth is rarely a simple parameter of the statistical model chosen to generate the data. Instead, the estimand is often an average treatment effect, marginalized over the distribution of confounders and/or mediators. Luckily, these variables are often generated from common distributions such as the normal, uniform, exponential, or gamma. For all these distributions, Gaussian quadratures provide efficient and accurate calculation for integrands with integral kernels that stem from known probability density functions. We demonstrate through four applications how to use Gaussian quadrature to accurately and efficiently compute the true causal estimand. We also compare the pros and cons of Gauss-Hermite quadrature to Monte Carlo integration approaches, which we use as benchmarks. Overall, we demonstrate that the Gaussian quadrature is an accurate tool with negligible computation time, yet is underused for calculating the true causal estimands in simulation studies.",
+        "authors": "Alex Ocampo, Enrico Giudice, Zachary R. McCaw, Tim P. Morris",
+        "url": "http://arxiv.org/abs/2601.05128v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05128v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文探讨了在因果推断模拟研究中，如何通过高斯求积（Gaussian Quadrature）准确高效地计算真实因果估计量。它解决了因果推断模拟中“真值”难以精确获取的痛点，并与蒙特卡洛积分进行了比较。虽然高斯求积本身不是新方法，但其在因果推断模拟中计算真值的应用及其数值准确性和效率的分析，对因果推断研究的严谨性具有重要方法论意义，完美符合您对因果逻辑和数学推导严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05114v1",
+        "title": "Evaluative Fingerprints: Stable and Systematic Differences in LLM Evaluator Behavior",
+        "summary": "LLM-as-judge systems promise scalable, consistent evaluation. We find the opposite: judges are consistent, but not with each other; they are consistent with themselves. Across 3,240 evaluations (9 judges x 120 unique video x pack items x 3 independent runs), inter-judge agreement is near-zero (Krippendorff's α = 0.042). On two dimensions, judges disagree more than random noise would predict (α < 0). Yet this disagreement isn't chaos; it's structured. A classifier identifies which judge produced an evaluation with 77.1% accuracy from rubric scores alone, rising to 89.9% with disposition features. Within model families, the signal is even stronger: GPT-4.1 and GPT-5.2 are distinguishable with 99.6% accuracy. We call this the reliability paradox: judges cannot agree on what constitutes quality, yet their disagreement patterns are so stable they function as fingerprints. Each judge implements a distinct, stable theory of quality: an \"evaluative disposition\" that shapes how it interprets any rubric. We characterize these dispositions along multiple axes: harshness/leniency, dimension emphasis, within-judge stability (ICC), and evidence behavior (receipt validity, semantic linkage via NLI, and shotgun index). The implication is stark: LLM judges are not interchangeable instruments measuring a shared construct. They are distinct measurement devices, each encoding its own implicit theory of quality. Averaging their scores produces a synthetic verdict that corresponds to no judge's actual values.",
+        "authors": "Wajid Nasser",
+        "url": "http://arxiv.org/abs/2601.05114v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05114v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文揭示了LLM评估器行为中存在“评估指纹”——即LLM评委之间缺乏一致性，但各自内部却高度稳定。论文使用了Krippendorff's α、ICC等统计指标进行严谨的实证分析，并提出了“可靠性悖论”。尽管其理论严谨性并非体现在新的数学模型或优化收敛性上，但其对LLM行为的深入统计分析和对评估方法论的深刻反思，对于数理统计背景的您来说，在理解现代AI系统行为方面具有重要价值，且清晰度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.05029v1",
+        "title": "Stochastic convergence of a class of greedy-type algorithms for Configuration Optimization Problems",
+        "summary": "Greedy Sampling Methods (GSMs) are widely used to construct approximate solutions of Configuration Optimization Problems (COPs), where a loss functional is minimized over finite configurations of points in a compact domain. While effective in practice, deterministic convergence analyses of greedy-type algorithms are often restrictive and difficult to verify. We propose a stochastic framework in which greedy-type methods are formulated as continuous-time Markov processes on the space of configurations. This viewpoint enables convergence analysis in expectation and in probability under mild structural assumptions on the error functional and the transition kernel. For global error functionals, we derive explicit convergence rates, including logarithmic, polynomial, and exponential decay, depending on an abstract improvement condition. As a pedagogical example, we study stochastic greedy sampling for one-dimensional piecewise linear interpolation and prove exponential convergence of the $L^1$-interpolation error for $C^2$-functions. Motivated by this analysis, we introduce the Randomized Polytope Division Method (R-PDM), a randomized variant of the classical Polytope Division Method, and demonstrate its effectiveness and variance reduction in numerical experiments",
+        "authors": "Evie Nielen, Oliver Tse",
+        "url": "http://arxiv.org/abs/2601.05029v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.05029v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个随机框架，将贪婪型算法（greedy-type algorithms）建模为连续时间马尔可夫过程，用于配置优化问题（COPs）的收敛性分析。论文明确指出其能够“在期望和概率上进行收敛性分析”，并“推导出明确的收敛速率，包括对数、多项式和指数衰减”。这种对算法收敛性的严格数学分析，以及对随机过程的运用，与您对优化收敛性和数学推导的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04799v1",
+        "title": "Neural-Symbolic Integration with Evolvable Policies",
+        "summary": "Neural-Symbolic (NeSy) Artificial Intelligence has emerged as a promising approach for combining the learning capabilities of neural networks with the interpretable reasoning of symbolic systems. However, existing NeSy frameworks typically require either predefined symbolic policies or policies that are differentiable, limiting their applicability when domain expertise is unavailable or when policies are inherently non-differentiable. We propose a framework that addresses this limitation by enabling the concurrent learning of both non-differentiable symbolic policies and neural network weights through an evolutionary process. Our approach casts NeSy systems as organisms in a population that evolve through mutations (both symbolic rule additions and neural weight changes), with fitness-based selection guiding convergence toward hidden target policies. The framework extends the NEUROLOG architecture to make symbolic policies trainable, adapts Valiant's Evolvability framework to the NeSy context, and employs Machine Coaching semantics for mutable symbolic representations. Neural networks are trained through abductive reasoning from the symbolic component, eliminating differentiability requirements. Through extensive experimentation, we demonstrate that NeSy systems starting with empty policies and random neural weights can successfully approximate hidden non-differentiable target policies, achieving median correct performance approaching 100%. This work represents a step toward enabling NeSy research in domains where the acquisition of symbolic knowledge from experts is challenging or infeasible.",
+        "authors": "Marios Thoma, Vassilis Vassiliades, Loizos Michael",
+        "url": "http://arxiv.org/abs/2601.04799v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04799v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个神经符号（NeSy）AI框架，通过进化过程同时学习不可微分的符号策略和神经网络权重。它通过将NeSy系统视为种群中的有机体，并适应Valiant的Evolvability框架，解决了现有NeSy系统对预定义或可微分策略的限制。这种将进化理论、符号逻辑和神经网络结合的理论探索，展现了强大的理论基础和对AI系统深层机制的理解，符合您对严谨数学逻辑应用于AI系统的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04673v1",
+        "title": "Estimating Causal Effects in Gaussian Linear SCMs with Finite Data",
+        "summary": "Estimating causal effects from observational data remains a fundamental challenge in causal inference, especially in the presence of latent confounders. This paper focuses on estimating causal effects in Gaussian Linear Structural Causal Models (GL-SCMs), which are widely used due to their analytical tractability. However, parameter estimation in GL-SCMs is often infeasible with finite data, primarily due to overparameterization. To address this, we introduce the class of Centralized Gaussian Linear SCMs (CGL-SCMs), a simplified yet expressive subclass where exogenous variables follow standardized distributions. We show that CGL-SCMs are equally expressive in terms of causal effect identifiability from observational distributions and present a novel EM-based estimation algorithm that can learn CGL-SCM parameters and estimate identifiable causal effects from finite observational samples. Our theoretical analysis is validated through experiments on synthetic data and benchmark causal graphs, demonstrating that the learned models accurately recover causal distributions.",
+        "authors": "Aurghya Maiti, Prateek Jain",
+        "url": "http://arxiv.org/abs/2601.04673v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04673v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文聚焦于在有限数据下，高斯线性结构因果模型（GL-SCMs）中因果效应的估计，尤其是在存在潜在混杂因素的情况下。它引入了集中式高斯线性SCMs（CGL-SCMs）并证明了其在因果效应可识别性方面的表达能力，并提出了一个新颖的基于EM的估计算法。摘要中明确提及“理论分析”和“准确恢复因果分布”，这直接满足了您对因果逻辑、统计保证和数学推导的严格要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04663v1",
+        "title": "Quantile Vector Autoregression without Crossing",
+        "summary": "This paper considers estimation and model selection of quantile vector autoregression (QVAR). Conventional quantile regression often yields undesirable crossing quantile curves, violating the monotonicity of quantiles. To address this issue, we propose a simplex quantile vector autoregression (SQVAR) framework, which transforms the autoregressive (AR) structure of the original QVAR model into a simplex, ensuring that the estimated quantile curves remain monotonic across all quantile levels. In addition, we impose the smoothly clipped absolute deviation (SCAD) penalty on the SQVAR model to mitigate the explosive nature of the parameter space. We further develop a Bayesian information criterion (BIC)-based procedure for selecting the optimal penalty parameter and introduce new frameworks for impulse response analysis of QVAR models. Finally, we establish asymptotic properties of the proposed method, including the convergence rate and asymptotic normality of the estimator, the consistency of AR order selection, and the validity of the BIC-based penalty selection. For illustration, we apply the proposed method to U.S. financial market data, highlighting the usefulness of our SQVAR method.",
+        "authors": "Tomohiro Ando, Tadao Hoshino, Ruey Tsay",
+        "url": "http://arxiv.org/abs/2601.04663v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04663v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个无交叉分位数向量自回归（SQVAR）框架，通过将AR结构转换为单纯形，确保了估计的分位数曲线在所有分位数水平上保持单调性。更重要的是，论文建立了所提方法的渐近性质，包括估计量的收敛速度和渐近正态性、AR阶选择的一致性以及BIC罚函数选择的有效性。这些严格的渐近理论分析是数理统计领域的典型贡献，与您的偏好高度吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04616v1",
+        "title": "DeepHalo: A Neural Choice Model with Controllable Context Effects",
+        "summary": "Modeling human decision-making is central to applications such as recommendation, preference learning, and human-AI alignment. While many classic models assume context-independent choice behavior, a large body of behavioral research shows that preferences are often influenced by the composition of the choice set itself -- a phenomenon known as the context effect or Halo effect. These effects can manifest as pairwise (first-order) or even higher-order interactions among the available alternatives. Recent models that attempt to capture such effects either focus on the featureless setting or, in the feature-based setting, rely on restrictive interaction structures or entangle interactions across all orders, which limits interpretability. In this work, we propose DeepHalo, a neural modeling framework that incorporates features while enabling explicit control over interaction order and principled interpretation of context effects. Our model enables systematic identification of interaction effects by order and serves as a universal approximator of context-dependent choice functions when specialized to a featureless setting. Experiments on synthetic and real-world datasets demonstrate strong predictive performance while providing greater transparency into the drivers of choice.",
+        "authors": "Shuhan Zhang, Zhi Wang, Rui Gao, Shuang Li",
+        "url": "http://arxiv.org/abs/2601.04616v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04616v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了DeepHalo，一个具有可控上下文效应的神经选择模型，旨在更好地建模人类决策。它通过明确控制交互顺序和对上下文效应进行原理性解释，并证明其在特定设置下可作为上下文依赖选择函数的通用逼近器。这种对决策行为建模的理论基础和通用逼近器属性，体现了严谨的数学逻辑和理论深度，符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04592v1",
+        "title": "Density Matrix RNN (DM-RNN): A Quantum Information Theoretic Framework for Modeling Musical Context and Polyphony",
+        "summary": "Classical Recurrent Neural Networks (RNNs) summarize musical context into a deterministic hidden state vector, imposing an information bottleneck that fails to capture the inherent ambiguity in music. We propose the Density Matrix RNN (DM-RNN), a novel theoretical architecture utilizing the Density Matrix. This allows the model to maintain a statistical ensemble of musical interpretations (a mixed state), capturing both classical probabilities and quantum coherences. We rigorously define the temporal dynamics using Quantum Channels (CPTP maps). Crucially, we detail a parameterization strategy based on the Choi-Jamiolkowski isomorphism, ensuring the learned dynamics remain physically valid (CPTP) by construction. We introduce an analytical framework using Von Neumann Entropy to quantify musical uncertainty and Quantum Mutual Information (QMI) to measure entanglement between voices. The DM-RNN provides a mathematically rigorous framework for modeling complex, ambiguous musical structures.",
+        "authors": "Joonwon Seo, Mariana Montiel",
+        "url": "http://arxiv.org/abs/2601.04592v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04592v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了密度矩阵RNN（DM-RNN），一个利用密度矩阵的量子信息理论框架来建模音乐上下文和复调。它“严格定义了使用量子通道（CPTP映射）的时间动力学”，并基于Choi-Jamiolkowski同构确保了学习动力学的物理有效性。此外，它引入了使用冯诺依曼熵和量子互信息来量化音乐不确定性和纠缠的分析框架。这是将量子信息理论的严谨数学应用于AI系统（音乐建模）的杰出范例，理论深度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04587v1",
+        "title": "FedKDX: Federated Learning with Negative Knowledge Distillation for Enhanced Healthcare AI Systems",
+        "summary": "This paper introduces FedKDX, a federated learning framework that addresses limitations in healthcare AI through Negative Knowledge Distillation (NKD). Unlike existing approaches that focus solely on positive knowledge transfer, FedKDX captures both target and non-target information to improve model generalization in healthcare applications. The framework integrates multiple knowledge transfer techniques--including traditional knowledge distillation, contrastive learning, and NKD--within a unified architecture that maintains privacy while reducing communication costs. Through experiments on healthcare datasets (SLEEP, UCI-HAR, and PAMAP2), FedKDX demonstrates improved accuracy (up to 2.53% over state-of-the-art methods), faster convergence, and better performance on non-IID data distributions. Theoretical analysis supports NKD's contribution to addressing statistical heterogeneity in distributed healthcare data. The approach shows promise for privacy-sensitive medical applications under regulatory frameworks like HIPAA and GDPR, offering a balanced solution between performance and practical implementation requirements in decentralized healthcare settings. The code and model are available at https://github.com/phamdinhdat-ai/Fed_2024.",
+        "authors": "Quang-Tu Pham, Hoang-Dieu Vu, Dinh-Dat Pham, Hieu H. Pham",
+        "url": "http://arxiv.org/abs/2601.04587v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04587v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FedKDX是一个联邦学习框架，通过负知识蒸馏（NKD）解决医疗AI的局限性。论文强调了“理论分析支持NKD在解决分布式医疗数据统计异质性方面的贡献”。这种对统计异质性的理论分析和在隐私敏感的联邦学习环境中的应用，展现了坚实的统计理论基础和实际影响力，符合您对统计保证和现代AI系统的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04538v1",
+        "title": "A new method for augmenting short time series, with application to pain events in sickle cell disease",
+        "summary": "Researchers across different fields, including but not limited to ecology, biology, and healthcare, often face the challenge of sparse data. Such sparsity can lead to uncertainties, estimation difficulties, and potential biases in modeling. Here we introduce a novel data augmentation method that combines multiple sparse time series datasets when they share similar statistical properties, thereby improving parameter estimation and model selection reliability. We demonstrate the effectiveness of this approach through validation studies comparing Hawkes and Poisson processes, followed by application to subjective pain dynamics in patients with sickle cell disease (SCD), a condition affecting millions worldwide, particularly those of African, Mediterranean, Middle Eastern, and Indian descent.",
+        "authors": "Kumar Utkarsh, Nirmish R. Shah, Tanvi Banerjee, Daniel M. Abrams",
+        "url": "http://arxiv.org/abs/2601.04538v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04538v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文介绍了一种新的短时间序列数据增强方法，通过结合具有相似统计特性的多个稀疏数据集，以提高参数估计和模型选择的可靠性。摘要中提及通过与Hawkes和Poisson过程的验证研究来证明其有效性，这表明了其在统计建模和方法论上的严谨性，以及对估计可靠性的关注，符合您对统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04517v1",
+        "title": "Bridging Distance and Spectral Positional Encodings via Anchor-Based Diffusion Geometry Approximation",
+        "summary": "Molecular graph learning benefits from positional signals that capture both local neighborhoods and global topology. Two widely used families are spectral encodings derived from Laplacian or diffusion operators and anchor-based distance encodings built from shortest-path information, yet their precise relationship is poorly understood. We interpret distance encodings as a low-rank surrogate of diffusion geometry and derive an explicit trilateration map that reconstructs truncated diffusion coordinates from transformed anchor distances and anchor spectral positions, with pointwise and Frobenius-gap guarantees on random regular graphs. On DrugBank molecular graphs using a shared GNP-based DDI prediction backbone, a distance-driven Nyström scheme closely recovers diffusion geometry, and both Laplacian and distance encodings substantially outperform a no-encoding baseline.",
+        "authors": "Zimo Yan, Zheng Xie, Runfan Duan, Chang Liu, Wumei Du",
+        "url": "http://arxiv.org/abs/2601.04517v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04517v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过将距离编码解释为扩散几何的低秩替代，并推导出一个显式三角测量映射，来连接距离和谱位置编码。论文提供了“在随机正则图上的逐点和Frobenius-gap保证”。这种对图学习中位置编码的深层几何理解和严格数学保证，是您会非常感兴趣的理论贡献，尤其是在图神经网络的理论基础方面。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.04480v1",
+        "title": "When Models Manipulate Manifolds: The Geometry of a Counting Task",
+        "summary": "Language models can perceive visual properties of text despite receiving only sequences of tokens-we mechanistically investigate how Claude 3.5 Haiku accomplishes one such task: linebreaking in fixed-width text. We find that character counts are represented on low-dimensional curved manifolds discretized by sparse feature families, analogous to biological place cells. Accurate predictions emerge from a sequence of geometric transformations: token lengths are accumulated into character count manifolds, attention heads twist these manifolds to estimate distance to the line boundary, and the decision to break the line is enabled by arranging estimates orthogonally to create a linear decision boundary. We validate our findings through causal interventions and discover visual illusions--character sequences that hijack the counting mechanism. Our work demonstrates the rich sensory processing of early layers, the intricacy of attention algorithms, and the importance of combining feature-based and geometric views of interpretability.",
+        "authors": "Wes Gurnee, Emmanuel Ameisen, Isaac Kauvar, Julius Tarng, Adam Pearce, Chris Olah, Joshua Batson",
+        "url": "http://arxiv.org/abs/2601.04480v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.04480v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过机制可解释性（mechanistic interpretability）深入研究了LLM（Claude 3.5 Haiku）如何感知文本的视觉属性，特别是固定宽度文本中的换行任务。它发现字符计数在低维弯曲流形上表示，并通过几何变换和因果干预来验证这些发现。这种对LLM内部工作机制的几何和因果分析，以及对流形、几何变换的数学描述，是前沿且高度严谨的理论工作，完美符合您对严谨数学逻辑、几何分析和因果逻辑的偏好。"
+    }
+]

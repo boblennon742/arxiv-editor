@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.07512v1",
+        "title": "Land-then-transport: A Flow Matching-Based Generative Decoder for Wireless Image Transmission",
+        "summary": "Due to strict rate and reliability demands, wireless image transmission remains difficult for both classical layered designs and joint source-channel coding (JSCC), especially under low latency. Diffusion-based generative decoders can deliver strong perceptual quality by leveraging learned image priors, but iterative stochastic denoising leads to high decoding delay. To enable low-latency decoding, we propose a flow-matching (FM) generative decoder under a new land-then-transport (LTT) paradigm that tightly integrates the physical wireless channel into a continuous-time probability flow. For AWGN channels, we build a Gaussian smoothing path whose noise schedule indexes effective noise levels, and derive a closed-form teacher velocity field along this path. A neural-network student vector field is trained by conditional flow matching, yielding a deterministic, channel-aware ODE decoder with complexity linear in the number of ODE steps. At inference, it only needs an estimate of the effective noise variance to set the ODE starting time. We further show that Rayleigh fading and MIMO channels can be mapped, via linear MMSE equalization and singular-value-domain processing, to AWGN-equivalent channels with calibrated starting times. Therefore, the same probability path and trained velocity field can be reused for Rayleigh and MIMO without retraining. Experiments on MNIST, Fashion-MNIST, and DIV2K over AWGN, Rayleigh, and MIMO demonstrate consistent gains over JPEG2000+LDPC, DeepJSCC, and diffusion-based baselines, while achieving good perceptual quality with only a few ODE steps. Overall, LTT provides a deterministic, physically interpretable, and computation-efficient framework for generative wireless image decoding across diverse channels.",
+        "authors": "Jingwen Fu, Ming Xiao, Mikael Skoglund, Dong In Kim",
+        "url": "http://arxiv.org/abs/2601.07512v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07512v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于流匹配的生成式解码器，用于无线图像传输。它通过将物理无线信道整合到连续时间概率流中，推导出了一个闭式教师速度场，并利用条件流匹配进行训练。其核心在于严谨的数学推导、物理可解释性以及对概率流的理论建模，与您对数学逻辑和理论基础的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07282v1",
+        "title": "Minimum Wasserstein distance estimator under covariate shift: closed-form, super-efficiency and irregularity",
+        "summary": "Covariate shift arises when covariate distributions differ between source and target populations while the conditional distribution of the response remains invariant, and it underlies problems in missing data and causal inference. We propose a minimum Wasserstein distance estimation framework for inference under covariate shift that avoids explicit modeling of outcome regressions or importance weights. The resulting W-estimator admits a closed-form expression and is numerically equivalent to the classical 1-nearest neighbor estimator, yielding a new optimal transport interpretation of nearest neighbor methods. We establish root-$n$ asymptotic normality and show that the estimator is not asymptotically linear, leading to super-efficiency relative to the semiparametric efficient estimator under covariate shift in certain regimes, and uniformly in missing data problems. Numerical simulations, along with an analysis of a rainfall dataset, underscore the exceptional performance of our W-estimator.",
+        "authors": "Junjun Lang, Qiong Zhang, Yukun Liu",
+        "url": "http://arxiv.org/abs/2601.07282v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07282v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个在协变量偏移下基于最小Wasserstein距离的估计框架，并将其应用于缺失数据和因果推断问题。论文明确指出其W-估计器具有闭式解，与1-最近邻估计器数值等价，并建立了根-n渐近正态性，展示了相对于半参数有效估计器的超效率。这篇论文在统计理论、最优传输和渐近分析方面具有极高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07267v1",
+        "title": "Connections as treatment: causal inference with edge interventions in networks",
+        "summary": "Causal inference has traditionally focused on interventions at the unit level. In many applications, however, the central question concerns the causal effects of connections between units, such as transportation links, social relationships, or collaborative ties. We develop a causal framework for edge interventions in networks, where treatments correspond to the presence or absence of edges. Our framework defines causal estimands under stochastic interventions on the network structure and introduces an inverse probability weighting estimator under an unconfoundedness assumption on edge assignment. We estimate edge probabilities using exponential random graph models, a widely used class of network models. We establish consistency and asymptotic normality of the proposed estimator. Finally, we apply our methodology to China's transportation network to estimate the causal impact of railroad connections on regional economic development.",
+        "authors": "Shuli Chen, Jie Hu, Zhichao Jiang",
+        "url": "http://arxiv.org/abs/2601.07267v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07267v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为网络中的边干预开发了一个因果推断框架，将连接视为治疗。它引入了在边分配无混淆假设下的逆概率加权估计器，并建立了该估计器的一致性和渐近正态性。这直接满足了您对因果逻辑、统计保证和清晰数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07201v1",
+        "title": "CalPro: Prior-Aware Evidential--Conformal Prediction with Structure-Aware Guarantees for Protein Structures",
+        "summary": "Deep protein structure predictors such as AlphaFold provide confidence estimates (e.g., pLDDT) that are often miscalibrated and degrade under distribution shifts across experimental modalities, temporal changes, and intrinsically disordered regions. We introduce CalPro, a prior-aware evidential-conformal framework for shift-robust uncertainty quantification. CalPro combines (i) a geometric evidential head that outputs Normal-Inverse-Gamma predictive distributions via a graph-based architecture; (ii) a differentiable conformal layer that enables end-to-end training with finite-sample coverage guarantees; and (iii) domain priors (disorder, flexibility) encoded as soft constraints. We derive structure-aware coverage guarantees under distribution shift using PAC-Bayesian bounds over ambiguity sets, and show that CalPro maintains near-nominal coverage while producing tighter intervals than standard conformal methods in regions where priors are informative. Empirically, CalPro exhibits at most 5% coverage degradation across modalities (vs. 15-25% for baselines), reduces calibration error by 30-50%, and improves downstream ligand-docking success by 25%. Beyond proteins, CalPro applies to structured regression tasks in which priors encode local reliability, validated on non-biological benchmarks.",
+        "authors": "Ibne Farabi Shihab, Sanjeda Akter, Anuj Sharma",
+        "url": "http://arxiv.org/abs/2601.07201v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07201v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CalPro 提出了一个结合证据学习和共形预测的框架，用于蛋白质结构的不确定性量化。它通过几何证据头输出正态-逆伽马预测分布，并推导了在分布偏移下基于PAC-Bayesian界限的结构感知覆盖率保证。这篇论文在统计保证、不确定性量化和理论界限方面表现出色，是数理统计领域的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07144v1",
+        "title": "Optimal Transport under Group Fairness Constraints",
+        "summary": "Ensuring fairness in matching algorithms is a key challenge in allocating scarce resources and positions. Focusing on Optimal Transport (OT), we introduce a novel notion of group fairness requiring that the probability of matching two individuals from any two given groups in the OT plan satisfies a predefined target. We first propose \\texttt{FairSinkhorn}, a modified Sinkhorn algorithm to compute perfectly fair transport plans efficiently. Since exact fairness can significantly degrade matching quality in practice, we then develop two relaxation strategies. The first one involves solving a penalised OT problem, for which we derive novel finite-sample complexity guarantees. This result is of independent interest as it can be generalized to arbitrary convex penalties. Our second strategy leverages bilevel optimization to learn a ground cost that induces a fair OT solution, and we establish a bound guaranteeing that the learned cost yields fair matchings on unseen data. Finally, we present empirical results that illustrate the trade-offs between fairness and performance.",
+        "authors": "Linus Bleistein, Mathieu Dagréou, Francisco Andrade, Thomas Boudou, Aurélien Bellet",
+        "url": "http://arxiv.org/abs/2601.07144v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07144v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了在群体公平性约束下的最优传输（OT）新概念，并提出了FairSinkhorn算法。它为惩罚性OT问题推导了新颖的有限样本复杂度保证，并利用双层优化学习成本函数以确保对未见数据的公平匹配。这篇论文在优化理论、统计保证和公平性建模方面具有强大的理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07805v1",
+        "title": "Exchange Is All You Need for Remote Sensing Change Detection",
+        "summary": "Remote sensing change detection fundamentally relies on the effective fusion and discrimination of bi-temporal features. Prevailing paradigms typically utilize Siamese encoders bridged by explicit difference computation modules, such as subtraction or concatenation, to identify changes. In this work, we challenge this complexity with SEED (Siamese Encoder-Exchange-Decoder), a streamlined paradigm that replaces explicit differencing with parameter-free feature exchange. By sharing weights across both Siamese encoders and decoders, SEED effectively operates as a single parameter set model. Theoretically, we formalize feature exchange as an orthogonal permutation operator and prove that, under pixel consistency, this mechanism preserves mutual information and Bayes optimal risk, whereas common arithmetic fusion methods often introduce information loss. Extensive experiments across five benchmarks, including SYSU-CD, LEVIR-CD, PX-CLCD, WaterCD, and CDD, and three backbones, namely SwinT, EfficientNet, and ResNet, demonstrate that SEED matches or surpasses state of the art methods despite its simplicity. Furthermore, we reveal that standard semantic segmentation models can be transformed into competitive change detectors solely by inserting this exchange mechanism, referred to as SEG2CD. The proposed paradigm offers a robust, unified, and interpretable framework for change detection, demonstrating that simple feature exchange is sufficient for high performance information fusion. Code and full training and evaluation protocols will be released at https://github.com/dyzy41/open-rscd.",
+        "authors": "Sijun Dong, Siming Fu, Kaiyu Li, Xiangyong Cao, Xiaoliang Meng, Bo Du",
+        "url": "http://arxiv.org/abs/2601.07805v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07805v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SEED 提出了一种简化的遥感变化检测范式，用无参数的特征交换取代了显式差异计算。理论上，它将特征交换形式化为正交置换算子，并证明在像素一致性下，该机制能保留互信息和贝叶斯最优风险。这种将简单方法进行严谨数学形式化并提供理论保证的思路非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07752v1",
+        "title": "Riesz Representer Fitting under Bregman Divergence: A Unified Framework for Debiased Machine Learning",
+        "summary": "Estimating the Riesz representer is a central problem in debiased machine learning for causal and structural parameter estimation. Various methods for Riesz representer estimation have been proposed, including Riesz regression and covariate balancing. This study unifies these methods within a single framework. Our framework fits a Riesz representer model to the true Riesz representer under a Bregman divergence, which includes the squared loss and the Kullback--Leibler (KL) divergence as special cases. We show that the squared loss corresponds to Riesz regression, and the KL divergence corresponds to tailored loss minimization, where the dual solutions correspond to stable balancing weights and entropy balancing weights, respectively, under specific model specifications. We refer to our method as generalized Riesz regression, and we refer to the associated duality as automatic covariate balancing. Our framework also generalizes density ratio fitting under a Bregman divergence to Riesz representer estimation, and it includes various applications beyond density ratio estimation. We also provide a convergence analysis for both cases where the model class is a reproducing kernel Hilbert space (RKHS) and where it is a neural network.",
+        "authors": "Masahiro Kato",
+        "url": "http://arxiv.org/abs/2601.07752v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07752v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将Riesz表示估计的各种方法统一在一个基于Bregman散度的框架下，这对于因果和结构参数估计中的去偏机器学习至关重要。它提供了在RKHS和神经网络模型类下的收敛性分析，并建立了自动协变量平衡的对偶性。其统一框架、理论推导和收敛性分析都非常严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07573v1",
+        "title": "A Model of Artificial Jagged Intelligence",
+        "summary": "Generative AI systems often display highly uneven performance across tasks that appear ``nearby'': they can be excellent on one prompt and confidently wrong on another with only small changes in wording or context. We call this phenomenon Artificial Jagged Intelligence (AJI). This paper develops a tractable economic model of AJI that treats adoption as an information problem: users care about \\emph{local} reliability, but typically observe only coarse, global quality signals. In a baseline one-dimensional landscape, truth is a rough Brownian process, and the model ``knows'' scattered points drawn from a Poisson process. The model interpolates optimally, and the local error is measured by posterior variance. We derive an adoption threshold for a blind user, show that experienced errors are amplified by the inspection paradox, and interpret scaling laws as denser coverage that improves average quality without eliminating jaggedness. We then study mastery and calibration: a calibrated user who can condition on local uncertainty enjoys positive expected value even in domains that fail the blind adoption test. Modelling mastery as learning a reliability map via Gaussian process regression yields a learning-rate bound driven by information gain, clarifying when discovering ``where the model works'' is slow. Finally, we study how scaling interacts with discoverability: when calibrated signals and user mastery accelerate the harvesting of scale improvements, and when opacity can make gains from scaling effectively invisible.",
+        "authors": "Joshua Gans",
+        "url": "http://arxiv.org/abs/2601.07573v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07573v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个可处理的“人工锯齿智能”（AJI）经济模型，将AI系统的局部可靠性问题视为信息问题。它利用布朗过程、泊松过程、后验方差、高斯过程回归等概念，并推导了由信息增益驱动的学习率界限。这篇论文通过严谨的数学建模来理解AI现象，具有很强的理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07384v1",
+        "title": "CompNO: A Novel Foundation Model approach for solving Partial Differential Equations",
+        "summary": "Partial differential equations (PDEs) govern a wide range of physical phenomena, but their numerical solution remains computationally demanding, especially when repeated simulations are required across many parameter settings. Recent Scientific Foundation Models (SFMs) aim to alleviate this cost by learning universal surrogates from large collections of simulated systems, yet they typically rely on monolithic architectures with limited interpretability and high pretraining expense. In this work we introduce Compositional Neural Operators (CompNO), a compositional neural operator framework for parametric PDEs. Instead of pretraining a single large model on heterogeneous data, CompNO first learns a library of Foundation Blocks, where each block is a parametric Fourier neural operator specialized to a fundamental differential operator (e.g. convection, diffusion, nonlinear convection). These blocks are then assembled, via lightweight Adaptation Blocks, into task-specific solvers that approximate the temporal evolution operator for target PDEs. A dedicated boundary-condition operator further enforces Dirichlet constraints exactly at inference time. We validate CompNO on one-dimensional convection, diffusion, convection--diffusion and Burgers' equations from the PDEBench suite. The proposed framework achieves lower relative L2 error than strong baselines (PFNO, PDEFormer and in-context learning based models) on linear parametric systems, while remaining competitive on nonlinear Burgers' flows. The model maintains exact boundary satisfaction with zero loss at domain boundaries, and exhibits robust generalization across a broad range of Peclet and Reynolds numbers. These results demonstrate that compositional neural operators provide a scalable and physically interpretable pathway towards foundation models for PDEs.",
+        "authors": "Hamda Hmida, Hsiu-Wen Chang Joly, Youssef Mesri",
+        "url": "http://arxiv.org/abs/2601.07384v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07384v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CompNO 提出了一个用于参数偏微分方程（PDEs）的组合神经算子框架。它通过学习基础微分算子的“基础块”并进行组装，实现了对PDEs时间演化算子的近似。论文强调了“在域边界处精确满足边界条件且损失为零”，以及“物理可解释性”，这表明了其深厚的数学和物理理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07158v1",
+        "title": "The Bayesian Intransitive Bradley-Terry Model via Combinatorial Hodge Theory",
+        "summary": "Pairwise comparison data are widely used to infer latent rankings in areas such as sports, social choice, and machine learning. The Bradley-Terry model provides a foundational probabilistic framework but inherently assumes transitive preferences, explaining all comparisons solely through subject-specific parameters. In many competitive networks, however, cycle-induced effects are intrinsic, and ignoring them can distort both estimation and uncertainty quantification. To address this limitation, we propose a Bayesian extension of the Bradley-Terry model that explicitly separates the transitive and intransitive components. The proposed Bayesian Intransitive Bradley-Terry model embeds combinatorial Hodge theory into a logistic framework, decomposing paired relationships into a gradient flow representing transitive strength and a curl flow capturing cycle-induced structure. We impose global-local shrinkage priors on the curl component, enabling data-adaptive regularization and ensuring a natural reduction to the classical Bradley-Terry model when intransitivity is absent. Posterior inference is performed using an efficient Gibbs sampler, providing scalable computation and full Bayesian uncertainty quantification. Simulation studies demonstrate improved estimation accuracy, well-calibrated uncertainty, and substantial computational advantages over existing Bayesian models for intransitivity. The proposed framework enables uncertainty-aware quantification of intransitivity at both the global and triad levels, while also characterizing cycle-induced competitive advantages among teams.",
+        "authors": "Hisaya Okahara, Tomoyuki Nakagawa, Shonosuke Sugasawa",
+        "url": "http://arxiv.org/abs/2601.07158v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07158v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过组合Hodge理论提出了Bradley-Terry模型的贝叶斯扩展，明确分离了传递性和非传递性成分。它将配对关系分解为代表传递性强度的梯度流和捕获循环诱导结构的旋度流，并利用全局-局部收缩先验和Gibbs采样器进行后验推断。这结合了高级统计建模和深刻的数学理论（Hodge理论），非常符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07281v1",
+        "title": "Covariance-Driven Regression Trees: Reducing Overfitting in CART",
+        "summary": "Decision trees are powerful machine learning algorithms, widely used in fields such as economics and medicine for their simplicity and interpretability. However, decision trees such as CART are prone to overfitting, especially when grown deep or the sample size is small. Conventional methods to reduce overfitting include pre-pruning and post-pruning, which constrain the growth of uninformative branches. In this paper, we propose a complementary approach by introducing a covariance-driven splitting criterion for regression trees (CovRT). This method is more robust to overfitting than the empirical risk minimization criterion used in CART, as it produces more balanced and stable splits and more effectively identifies covariates with true signals. We establish an oracle inequality of CovRT and prove that its predictive accuracy is comparable to that of CART in high-dimensional settings. We find that CovRT achieves superior prediction accuracy compared to CART in both simulations and real-world tasks.",
+        "authors": "Likun Zhang, Wei Ma",
+        "url": "http://arxiv.org/abs/2601.07281v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07281v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种协方差驱动的回归树（CovRT）分裂准则，以减少CART模型的过拟合。论文建立了CovRT的“预言机不等式”（oracle inequality），并证明了其在处理高维数据时与CART相当的预测准确性。这种对机器学习算法进行理论分析并提供统计保证的工作是您会感兴趣的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07242v1",
+        "title": "HERE: Hierarchical Active Exploration of Radiance Field with Epistemic Uncertainty Minimization",
+        "summary": "We present HERE, an active 3D scene reconstruction framework based on neural radiance fields, enabling high-fidelity implicit mapping. Our approach centers around an active learning strategy for camera trajectory generation, driven by accurate identification of unseen regions, which supports efficient data acquisition and precise scene reconstruction. The key to our approach is epistemic uncertainty quantification based on evidential deep learning, which directly captures data insufficiency and exhibits a strong correlation with reconstruction errors. This allows our framework to more reliably identify unexplored or poorly reconstructed regions compared to existing methods, leading to more informed and targeted exploration. Additionally, we design a hierarchical exploration strategy that leverages learned epistemic uncertainty, where local planning extracts target viewpoints from high-uncertainty voxels based on visibility for trajectory generation, and global planning uses uncertainty to guide large-scale coverage for efficient and comprehensive reconstruction. The effectiveness of the proposed method in active 3D reconstruction is demonstrated by achieving higher reconstruction completeness compared to previous approaches on photorealistic simulated scenes across varying scales, while a hardware demonstration further validates its real-world applicability.",
+        "authors": "Taekbeom Lee, Dabin Kim, Youngseok Jang, H. Jin Kim",
+        "url": "http://arxiv.org/abs/2601.07242v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07242v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "HERE 提出了一个基于神经辐射场的活跃3D场景重建框架，其核心在于基于证据深度学习的认知不确定性量化。论文通过使用PAC-Bayesian界限在模糊集上推导了结构感知覆盖率保证，以实现对分布偏移的鲁棒性。这篇论文在不确定性量化和统计保证方面具有强大的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07514v1",
+        "title": "Data-Driven Stochastic VRP: Integration of Forecast Duration into Optimization for Utility Workforce Management",
+        "summary": "This paper investigates the integration of machine learning forecasts of intervention durations into a stochastic variant of the Capacitated Vehicle Routing Problem with Time Windows (CVRPTW). In particular, we exploit tree-based gradient boosting (XGBoost) trained on eight years of gas meter maintenance data to produce point predictions and uncertainty estimates, which then drive a multi-objective evolutionary optimization routine. The methodology addresses uncertainty through sub-Gaussian concentration bounds for route-level risk buffers and explicitly accounts for competing operational KPIs through a multi-objective formulation. Empirical analysis of prediction residuals validates the sub-Gaussian assumption underlying the risk model. From an empirical point of view, our results report improvements around 20-25\\% in operator utilization and completion rates compared with plans computed using default durations. The integration of uncertainty quantification and risk-aware optimization provides a practical framework for handling stochastic service durations in real-world routing applications.",
+        "authors": "Matteo Garbelli",
+        "url": "http://arxiv.org/abs/2601.07514v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07514v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将机器学习预测（包括不确定性估计）整合到随机车辆路径问题（VRP）中。它特别利用了子高斯集中界限来构建路线级别的风险缓冲区，并明确考虑了风险感知优化。这种将统计保证（集中界限）应用于优化问题的思路，体现了严谨的数学逻辑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07214v1",
+        "title": "BlindU: Blind Machine Unlearning without Revealing Erasing Data",
+        "summary": "Machine unlearning enables data holders to remove the contribution of their specified samples from trained models to protect their privacy. However, it is paradoxical that most unlearning methods require the unlearning requesters to firstly upload their data to the server as a prerequisite for unlearning. These methods are infeasible in many privacy-preserving scenarios where servers are prohibited from accessing users' data, such as federated learning (FL). In this paper, we explore how to implement unlearning under the condition of not uncovering the erasing data to the server. We propose \\textbf{Blind Unlearning (BlindU)}, which carries out unlearning using compressed representations instead of original inputs. BlindU only involves the server and the unlearning user: the user locally generates privacy-preserving representations, and the server performs unlearning solely on these representations and their labels. For the FL model training, we employ the information bottleneck (IB) mechanism. The encoder of the IB-based FL model learns representations that distort maximum task-irrelevant information from inputs, allowing FL users to generate compressed representations locally. For effective unlearning using compressed representation, BlindU integrates two dedicated unlearning modules tailored explicitly for IB-based models and uses a multiple gradient descent algorithm to balance forgetting and utility retaining. While IB compression already provides protection for task-irrelevant information of inputs, to further enhance the privacy protection, we introduce a noise-free differential privacy (DP) masking method to deal with the raw erasing data before compressing. Theoretical analysis and extensive experimental results illustrate the superiority of BlindU in privacy protection and unlearning effectiveness compared with the best existing privacy-preserving unlearning benchmarks.",
+        "authors": "Weiqi Wang, Zhiyi Tian, Chenhan Zhang, Shui Yu",
+        "url": "http://arxiv.org/abs/2601.07214v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07214v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "BlindU 提出了一种在不泄露擦除数据的情况下实现机器遗忘的方法。它利用信息瓶颈（IB）机制和无噪声差分隐私（DP）掩码，并提供了理论分析来证明其在隐私保护和遗忘有效性方面的优越性。这篇论文在隐私保护和理论分析方面具有坚实的统计学和信息论基础。"
+    }
+]

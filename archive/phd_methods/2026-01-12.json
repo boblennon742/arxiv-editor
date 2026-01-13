@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.07760v1",
+        "title": "Free-RBF-KAN: Kolmogorov-Arnold Networks with Adaptive Radial Basis Functions for Efficient Function Learning",
+        "summary": "Kolmogorov-Arnold Networks (KANs) have shown strong potential for efficiently approximating complex nonlinear functions. However, the original KAN formulation relies on B-spline basis functions, which incur substantial computational overhead due to De Boor's algorithm. To address this limitation, recent work has explored alternative basis functions such as radial basis functions (RBFs) that can improve computational efficiency and flexibility. Yet, standard RBF-KANs often sacrifice accuracy relative to the original KAN design. In this work, we propose Free-RBF-KAN, a RBF-based KAN architecture that incorporates adaptive learning grids and trainable smoothness to close this performance gap. Our method employs freely learnable RBF shapes that dynamically align grid representations with activation patterns, enabling expressive and adaptive function approximation. Additionally, we treat smoothness as a kernel parameter optimized jointly with network weights, without increasing computational complexity. We provide a general universality proof for RBF-KANs, which encompasses our Free-RBF-KAN formulation. Through a broad set of experiments, including multiscale function approximation, physics-informed machine learning, and PDE solution operator learning, Free-RBF-KAN achieves accuracy comparable to the original B-spline-based KAN while delivering faster training and inference. These results highlight Free-RBF-KAN as a compelling balance between computational efficiency and adaptive resolution, particularly for high-dimensional structured modeling tasks.",
+        "authors": "Shao-Ting Chiu, Siu Wun Cheung, Ulisses Braga-Neto, Chak Shing Lee, Rui Peng Li",
+        "url": "http://arxiv.org/abs/2601.07760v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07760v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对新兴的Kolmogorov-Arnold Networks (KANs) 架构进行了理论和实践上的显著改进。通过引入自适应径向基函数（RBFs）和可训练平滑度，它解决了原始KANs中B-spline基函数带来的计算开销和灵活性限制，并提供了普适性证明。其理论创新性强，方法严谨，对高效函数学习、物理信息机器学习和偏微分方程（PDE）求解等前沿领域具有广泛且重要的应用潜力，完美契合您对理论创新和解决实际瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07632v1",
+        "title": "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
+        "summary": "Discrete motion tokenization has recently enabled Large Language Models (LLMs) to serve as versatile backbones for motion understanding and motion-language reasoning. However, existing pipelines typically decouple motion quantization from semantic embedding learning, linking them solely via token IDs. This approach fails to effectively align the intrinsic geometry of the motion space with the embedding space, thereby hindering the LLM's capacity for nuanced motion reasoning. We argue that alignment is most effective when both modalities share a unified geometric basis. Therefore, instead of forcing the LLM to reconstruct the complex geometry among motion tokens from scratch, we present a novel framework that explicitly enforces orthogonality on both the motion codebook and the LLM embedding space, ensuring that their relational structures naturally mirror each other. Specifically, we employ a decoder-only quantizer with Gumbel-Softmax for differentiable training and balanced codebook usage. To bridge the modalities, we use a sparse projection that maps motion codes into the LLM embedding space while preserving orthogonality. Finally, a two-stage orthonormal regularization schedule enforces soft constraints during tokenizer training and LLM fine-tuning to maintain geometric alignment without hindering semantic adaptation. Extensive experiments on HumanML3D demonstrate that our framework achieves a 20% performance improvement over current state-of-the-art methods, validating that a unified geometric basis effectively empowers the LLM for nuanced motion reasoning.",
+        "authors": "Zhankai Ye, Bofan Li, Yukai Jin, Shuoqiu Li, Wei Wang, Yanfu Zhang, Shangqian Gao, Xin Liu",
+        "url": "http://arxiv.org/abs/2601.07632v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07632v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个新颖的几何对齐多模态大型语言模型（LLM）框架GeoMotionGPT，解决了现有方法中运动量化与语义嵌入学习解耦的问题。通过在运动码本和LLM嵌入空间中明确强制正交性，它实现了模态间的内在几何对齐。方法设计严谨，包括Gumbel-Softmax解码器、稀疏投影和两阶段正交正则化，显著提升了LLM在运动理解和运动-语言推理方面的能力，是多模态LLM架构上的重要创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07475v1",
+        "title": "ARCQuant: Boosting NVFP4 Quantization with Augmented Residual Channels for LLMs",
+        "summary": "The emergence of fine-grained numerical formats like NVFP4 presents new opportunities for efficient Large Language Model (LLM) inference. However, it is difficult to adapt existing Post-Training Quantization (PTQ) strategies to these formats: rotation-based methods compromise fine-grained block isolation; smoothing techniques struggle with significant 4-bit quantization errors; and mixed-precision approaches often conflict with hardware constraints on unified-precision computation. To address these challenges, we propose ARCQuant, a framework that boosts NVFP4 performance via Augmented Residual Channels. Distinct from methods that compromise block isolation or hardware uniformity, ARCQuant maintains a strictly unified NVFP4 format by augmenting the activation matrix with quantized residual channels. This design integrates the error compensation process directly into the matrix reduction dimension, enabling the use of standard, highly optimized GEMM kernels with minimal overhead. Theoretical analysis confirms that the worst-case error bound of our dual-stage NVFP4 quantization is comparable to that of standard 8-bit formats such as MXFP8. Extensive experiments on LLaMA and Qwen models demonstrate that ARCQuant achieves state-of-the-art accuracy, comparable to full-precision baselines in perplexity and downstream tasks. Furthermore, deployment on RTX 5090 and RTX PRO 6000 GPUs confirms practical benefits, achieving up to 3x speedup over FP16. Our code is available at https://github.com/actypedef/ARCQuant .",
+        "authors": "Haoqian Meng, Yilun Luo, Yafei Zhao, Wenyuan Liu, Peng Zhang, Xindian Ma",
+        "url": "http://arxiv.org/abs/2601.07475v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07475v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对LLM量化效率瓶颈，提出了创新的ARCQuant框架，通过增强残差通道（Augmented Residual Channels）来提升NVFP4量化性能。它将误差补偿过程直接集成到矩阵归约维度中，解决了现有后训练量化（PTQ）策略的局限性。论文提供了严格的理论分析，确认了其误差界限，并在实践中实现了SOTA精度和显著加速，是模型压缩领域具有理论深度和实践价值的重大突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07449v1",
+        "title": "RLPO: Residual Listwise Preference Optimization for Long-Context Review Ranking",
+        "summary": "Review ranking is pivotal in e-commerce for prioritizing diagnostic and authentic feedback from the deluge of user-generated content. While large language models have improved semantic assessment, existing ranking paradigms face a persistent trade-off in long-context settings. Pointwise scoring is efficient but often fails to account for list-level interactions, leading to miscalibrated top-$k$ rankings. Listwise approaches can leverage global context, yet they are computationally expensive and become unstable as candidate lists grow. To address this, we propose Residual Listwise Preference Optimization (RLPO), which formulates ranking as listwise representation-level residual correction over a strong pointwise LLM scorer. RLPO first produces calibrated pointwise scores and item representations, then applies a lightweight encoder over the representations to predict listwise score residuals, avoiding full token-level listwise processing. We also introduce a large-scale benchmark for long-context review ranking with human verification. Experiments show RLPO improves NDCG@k over strong pointwise and listwise baselines and remains robust as list length increases.",
+        "authors": "Hao Jiang, Zhi Yang, Annan Wang, Yichi Zhang, Weisi Lin",
+        "url": "http://arxiv.org/abs/2601.07449v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07449v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了新颖的局部到全局（LOGO）世界模型，解决了离线多智能体强化学习（MARL）中高维、非平稳和复杂性的挑战。它通过利用局部预测推断全局状态动态，并引入不确定性感知采样机制来扩展数据集，从而提高了策略的泛化能力。该方法设计严谨且高效，显著超越了SOTA基线，为可泛化的离线多智能体学习建立了新的模型基线，对复杂多智能体系统的实际部署具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07422v1",
+        "title": "Two Pathways to Truthfulness: On the Intrinsic Encoding of LLM Hallucinations",
+        "summary": "Despite their impressive capabilities, large language models (LLMs) frequently generate hallucinations. Previous work shows that their internal states encode rich signals of truthfulness, yet the origins and mechanisms of these signals remain unclear. In this paper, we demonstrate that truthfulness cues arise from two distinct information pathways: (1) a Question-Anchored pathway that depends on question-answer information flow, and (2) an Answer-Anchored pathway that derives self-contained evidence from the generated answer itself. First, we validate and disentangle these pathways through attention knockout and token patching. Afterwards, we uncover notable and intriguing properties of these two mechanisms. Further experiments reveal that (1) the two mechanisms are closely associated with LLM knowledge boundaries; and (2) internal representations are aware of their distinctions. Finally, building on these insightful findings, two applications are proposed to enhance hallucination detection performance. Overall, our work provides new insight into how LLMs internally encode truthfulness, offering directions for more reliable and self-aware generative systems.",
+        "authors": "Wen Luo, Guangyue Peng, Wei Li, Shaohang Wei, Feifan Song, Liang Wang, Nan Yang, Xingxing Zhang, Jing Jin, Furu Wei, Houfeng Wang",
+        "url": "http://arxiv.org/abs/2601.07422v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07422v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探究了LLM幻觉的内在编码机制，首次揭示了真实性线索来源于两个独立的内部信息路径（问题锚定和答案锚定）。通过注意力消融和token修补等严格的机制分析，它为LLM的可靠性和可解释性提供了基础性洞察。这项工作不仅具有极高的理论创新性，也直接解决了LLM幻觉这一核心瓶颈，对构建更可靠和自感知的生成系统至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07398v1",
+        "title": "On Narrative: The Rhetorical Mechanisms of Online Polarisation",
+        "summary": "Polarisation research has demonstrated how people cluster in homogeneous groups with opposing opinions. However, this effect emerges not only through interaction between people, limiting communication between groups, but also between narratives, shaping opinions and partisan identities. Yet, how polarised groups collectively construct and negotiate opposing interpretations of reality, and whether narratives move between groups despite limited interactions, remains unexplored. To address this gap, we formalise the concept of narrative polarisation and demonstrate its measurement in 212 YouTube videos and 90,029 comments on the Israeli-Palestinian conflict. Based on structural narrative theory and implemented through a large language model, we extract the narrative roles assigned to central actors in two partisan information environments. We find that while videos produce highly polarised narratives, comments significantly reduce narrative polarisation, harmonising discourse on the surface level. However, on a deeper narrative level, recurring narrative motifs reveal additional differences between partisan groups.",
+        "authors": "Jan Elfes, Marco Bastos, Luca Maria Aiello",
+        "url": "http://arxiv.org/abs/2601.07398v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07398v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SCALPEL框架，将LLM能力表示为低秩参数子空间进行选择性消融，挑战了传统基于模块的归因方法。其核心洞察是LLM能力可以通过低秩修改在层和模块间分布，通过训练LoRA适配器实现精确的能力移除。这种方法设计严谨且具有理论基础，为理解LLM内部机制和构建可信赖AI系统提供了细粒度的洞察，是LLM可解释性分析的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07389v1",
+        "title": "On the Non-decoupling of Supervised Fine-tuning and Reinforcement Learning in Post-training",
+        "summary": "Post-training of large language models routinely interleaves supervised fine-tuning (SFT) with reinforcement learning (RL). These two methods have different objectives: SFT minimizes the cross-entropy loss between model outputs and expert responses, while RL maximizes reward signals derived from human preferences or rule-based verifiers. Modern reasoning models have widely adopted the practice of alternating SFT and RL training. However, there is no theoretical account of whether they can be decoupled. We prove that decoupling is impossible in either order: (1) SFT-then-RL coupling: RL increases SFT loss under SFT optimality and (2) RL-then-SFT coupling: SFT lowers the reward achieved by RL. Experiments on Qwen3-0.6B confirm the predicted degradation, verifying that SFT and RL cannot be separated without loss of prior performance in the post-training",
+        "authors": "Xueyan Niu, Bo Bai, Wei Han, Weixi Zhang",
+        "url": "http://arxiv.org/abs/2601.07389v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07389v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从理论上证明了大型语言模型（LLM）后训练中监督微调（SFT）和强化学习（RL）目标函数之间的不可解耦性。它通过严格的数学证明，阐明了SFT和RL在不同顺序下对彼此性能的负面影响，并辅以实验验证。这项工作具有极高的理论严谨性，为LLM的后训练策略提供了根本性的理论指导，挑战了现有实践，对优化LLM训练流程和解决效率性能瓶颈具有深远意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07384v1",
+        "title": "CompNO: A Novel Foundation Model approach for solving Partial Differential Equations",
+        "summary": "Partial differential equations (PDEs) govern a wide range of physical phenomena, but their numerical solution remains computationally demanding, especially when repeated simulations are required across many parameter settings. Recent Scientific Foundation Models (SFMs) aim to alleviate this cost by learning universal surrogates from large collections of simulated systems, yet they typically rely on monolithic architectures with limited interpretability and high pretraining expense. In this work we introduce Compositional Neural Operators (CompNO), a compositional neural operator framework for parametric PDEs. Instead of pretraining a single large model on heterogeneous data, CompNO first learns a library of Foundation Blocks, where each block is a parametric Fourier neural operator specialized to a fundamental differential operator (e.g. convection, diffusion, nonlinear convection). These blocks are then assembled, via lightweight Adaptation Blocks, into task-specific solvers that approximate the temporal evolution operator for target PDEs. A dedicated boundary-condition operator further enforces Dirichlet constraints exactly at inference time. We validate CompNO on one-dimensional convection, diffusion, convection--diffusion and Burgers' equations from the PDEBench suite. The proposed framework achieves lower relative L2 error than strong baselines (PFNO, PDEFormer and in-context learning based models) on linear parametric systems, while remaining competitive on nonlinear Burgers' flows. The model maintains exact boundary satisfaction with zero loss at domain boundaries, and exhibits robust generalization across a broad range of Peclet and Reynolds numbers. These results demonstrate that compositional neural operators provide a scalable and physically interpretable pathway towards foundation models for PDEs.",
+        "authors": "Hamda Hmida, Hsiu-Wen Chang Joly, Youssef Mesri",
+        "url": "http://arxiv.org/abs/2601.07384v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07384v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了组合神经算子（CompNO）框架，这是一种新颖的解决偏微分方程（PDE）的基础模型方法。它通过学习一系列专门针对基本微分算子的“基础块”，然后通过轻量级“适应块”组装成任务特定求解器，并引入专用边界条件算子以精确强制Dirichlet约束。这种模块化设计具有物理可解释性和理论严谨性，为科学计算和PDE求解提供了可扩展且可解释的新范式。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07372v1",
+        "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+        "summary": "While Mixture-of-Experts (MoE) scales capacity via conditional computation, Transformers lack a native primitive for knowledge lookup, forcing them to inefficiently simulate retrieval through computation. To address this, we introduce conditional memory as a complementary sparsity axis, instantiated via Engram, a module that modernizes classic $N$-gram embedding for O(1) lookup. By formulating the Sparsity Allocation problem, we uncover a U-shaped scaling law that optimizes the trade-off between neural computation (MoE) and static memory (Engram). Guided by this law, we scale Engram to 27B parameters, achieving superior performance over a strictly iso-parameter and iso-FLOPs MoE baseline. Most notably, while the memory module is expected to aid knowledge retrieval (e.g., MMLU +3.4; CMMLU +4.0), we observe even larger gains in general reasoning (e.g., BBH +5.0; ARC-Challenge +3.7) and code/math domains~(HumanEval +3.0; MATH +2.4). Mechanistic analyses reveal that Engram relieves the backbone's early layers from static reconstruction, effectively deepening the network for complex reasoning. Furthermore, by delegating local dependencies to lookups, it frees up attention capacity for global context, substantially boosting long-context retrieval (e.g., Multi-Query NIAH: 84.2 to 97.0). Finally, Engram establishes infrastructure-aware efficiency: its deterministic addressing enables runtime prefetching from host memory, incurring negligible overhead. We envision conditional memory as an indispensable modeling primitive for next-generation sparse models.",
+        "authors": "Xin Cheng, Wangding Zeng, Damai Dai, Qinyu Chen, Bingxuan Wang, Zhenda Xie, Kezhao Huang, Xingkai Yu, Zhewen Hao, Yukun Li, Han Zhang, Huishuai Zhang, Dongyan Zhao, Wenfeng Liang",
+        "url": "http://arxiv.org/abs/2601.07372v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07372v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了条件记忆作为大型语言模型（LLM）稀疏性的新维度，通过Engram模块实现了O(1)查找，并揭示了优化神经计算和静态记忆权衡的U形缩放定律。该方法通过稀疏性分配问题的公式化，从理论上解决了Transformer中低效的检索模拟问题。它显著提升了LLM在通用推理、代码/数学能力和长上下文检索方面的性能，同时实现了基础设施感知的效率，是LLM架构上的重要创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07271v1",
+        "title": "Document-Level Zero-Shot Relation Extraction with Entity Side Information",
+        "summary": "Document-Level Zero-Shot Relation Extraction (DocZSRE) aims to predict unseen relation labels in text documents without prior training on specific relations. Existing approaches rely on Large Language Models (LLMs) to generate synthetic data for unseen labels, which poses challenges for low-resource languages like Malaysian English. These challenges include the incorporation of local linguistic nuances and the risk of factual inaccuracies in LLM-generated data. This paper introduces Document-Level Zero-Shot Relation Extraction with Entity Side Information (DocZSRE-SI) to address limitations in the existing DocZSRE approach. The DocZSRE-SI framework leverages Entity Side Information, such as Entity Mention Descriptions and Entity Mention Hypernyms, to perform ZSRE without depending on LLM-generated synthetic data. The proposed low-complexity model achieves an average improvement of 11.6% in the macro F1-Score compared to baseline models and existing benchmarks. By utilizing Entity Side Information, DocZSRE-SI offers a robust and efficient alternative to error-prone, LLM-based methods, demonstrating significant advancements in handling low-resource languages and linguistic diversity in relation extraction tasks. This research provides a scalable and reliable solution for ZSRE, particularly in contexts like Malaysian English news articles, where traditional LLM-based approaches fall short.",
+        "authors": "Mohan Raj Chanthran, Soon Lay Ki, Ong Huey Fang, Bhawani Selvaretnam",
+        "url": "http://arxiv.org/abs/2601.07271v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07271v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了GenDet框架，将目标检测重新定义为图像生成任务。它利用大型预训练的Stable Diffusion模型，在给定输入图像的条件下，直接在原始图像空间中生成带有语义标注的边界框。这种方法为统一视觉理解系统提供了全新的范式，有效弥合了生成模型和判别任务之间的鸿沟，在保持生成模型灵活性的同时实现了与判别式检测器相当的精度，具有很高的创新性和潜在影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07264v1",
+        "title": "The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in Tool-Use Agents",
+        "summary": "Autonomous agents based on large language models (LLMs) are rapidly evolving to handle multi-turn tasks, but ensuring their trustworthiness remains a critical challenge. A fundamental pillar of this trustworthiness is calibration, which refers to an agent's ability to express confidence that reliably reflects its actual performance. While calibration is well-established for static models, its dynamics in tool-integrated agentic workflows remain underexplored. In this work, we systematically investigate verbalized calibration in tool-use agents, revealing a fundamental confidence dichotomy driven by tool type. Specifically, our pilot study identifies that evidence tools (e.g., web search) systematically induce severe overconfidence due to inherent noise in retrieved information, while verification tools (e.g., code interpreters) can ground reasoning through deterministic feedback and mitigate miscalibration. To robustly improve calibration across tool types, we propose a reinforcement learning (RL) fine-tuning framework that jointly optimizes task accuracy and calibration, supported by a holistic benchmark of reward designs. We demonstrate that our trained agents not only achieve superior calibration but also exhibit robust generalization from local training environments to noisy web settings and to distinct domains such as mathematical reasoning. Our results highlight the necessity of domain-specific calibration strategies for tool-use agents. More broadly, this work establishes a foundation for building self-aware agents that can reliably communicate uncertainty in high-stakes, real-world deployments.",
+        "authors": "Weihao Xuan, Qingcheng Zeng, Heli Qi, Yunze Xiao, Junjue Wang, Naoto Yokoya",
+        "url": "http://arxiv.org/abs/2601.07264v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07264v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了工具使用型LLM智能体中的置信度校准问题，首次系统性地揭示了由工具类型驱动的“置信度二分法”现象。它提出了一个结合任务准确性和校准的强化学习（RL）微调框架，以鲁棒地改善校准。该研究具有严格的实证和理论分析，对构建自感知、能可靠传达不确定性的LLM智能体奠定了基础，解决了高风险实际部署中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07238v1",
+        "title": "Group Pattern Selection Optimization: Let LRMs Pick the Right Pattern for Reasoning",
+        "summary": "Large reasoning models (LRMs) exhibit diverse high-level reasoning patterns (e.g., direct solution, reflection-and-verification, and exploring multiple solutions), yet prevailing training recipes implicitly bias models toward a limited set of dominant patterns. Through a systematic analysis, we identify substantial accuracy variance across these patterns on mathematics and science benchmarks, revealing that a model's default reasoning pattern is often sub-optimal for a given problem. To address this, we introduce Group Pattern Selection Optimization (GPSO), a reinforcement learning framework that extends GRPO by incorporating multi-pattern rollouts, verifier-guided optimal pattern selection per problem, and attention masking during optimization to prevent the leakage of explicit pattern suffixes into the learned policy. By exploring a portfolio of diverse reasoning strategies and optimizing the policy on the most effective ones, GPSO enables the model to internalize the mapping from problem characteristics to optimal reasoning patterns. Extensive experiments demonstrate that GPSO delivers consistent and substantial performance gains across various model backbones and benchmarks, effectively mitigating pattern sub-optimality and fostering more robust, adaptable reasoning. All data and codes are available at https://github.com/wanghanbinpanda/GPSO.",
+        "authors": "Hanbin Wang, Jingwei Song, Jinpeng Li, Fei Mi, Lifeng Shang",
+        "url": "http://arxiv.org/abs/2601.07238v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07238v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这是一篇具有深刻哲学和实践意义的立场论文，挑战了LLM确定性推理的普遍假设，倡导将分布变异性视为人工智能认知的核心信号（Stochastic CHAOS）。论文通过大量实证证据，系统性地揭示了确定性推理如何误导对LLM能力、脆弱性、涌现能力和安全风险的评估。其论证严谨且具有说服力，对LLM的未来发展方向、评估方法和安全策略具有根本性影响，是您作为博士生必须关注的理论前沿。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07224v1",
+        "title": "Consolidation or Adaptation? PRISM: Disentangling SFT and RL Data via Gradient Concentration",
+        "summary": "While Hybrid Supervised Fine-Tuning (SFT) followed by Reinforcement Learning (RL) has become the standard paradigm for training LLM agents, effective mechanisms for data allocation between these stages remain largely underexplored. Current data arbitration strategies often rely on surface-level heuristics that fail to diagnose intrinsic learning needs. Since SFT targets pattern consolidation through imitation while RL drives structural adaptation via exploration, misaligning data with these functional roles causes severe optimization interference. We propose PRISM, a dynamics-aware framework grounded in Schema Theory that arbitrates data based on its degree of cognitive conflict with the model's existing knowledge. By analyzing the spatial geometric structure of gradients, PRISM identifies data triggering high spatial concentration as high-conflict signals that require RL for structural restructuring. In contrast, data yielding diffuse updates is routed to SFT for efficient consolidation. Extensive experiments on WebShop and ALFWorld demonstrate that PRISM achieves a Pareto improvement, outperforming state-of-the-art hybrid methods while reducing computational costs by up to 3.22$\\times$. Our findings suggest that disentangling data based on internal optimization regimes is crucial for scalable and robust agent alignment.",
+        "authors": "Yang Zhao, Yangou Ouyang, Xiao Ding, Hepeng Wang, Bibo Cai, Kai Xiong, Jinglong Gao, Zhouhao Sun, Li Du, Bing Qin, Ting Liu",
+        "url": "http://arxiv.org/abs/2601.07224v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07224v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了PRISM框架，这是一种动态感知LLM训练数据分配的方法，通过分析梯度空间几何结构中的“梯度集中度”来仲裁监督微调（SFT）和强化学习（RL）数据。该方法基于Schema Theory，通过梯度动力学诊断内在学习需求，解决了SFT和RL数据分配不当导致的优化干扰。其理论基础扎实且严谨，实践中实现了Pareto改进，显著提升了效率和性能，对可扩展和鲁棒的LLM智能体对齐至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07212v1",
+        "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
+        "summary": "Large Language Models (LLMs) have become indispensable across various domains, but this comes at the cost of substantial computational and memory resources. Model pruning addresses this by removing redundant components from models. In particular, block pruning can achieve significant compression and inference acceleration. However, existing block pruning methods are often unstable and struggle to attain globally optimal solutions. In this paper, we propose a mutual information based pruning method MI-PRUN for LLMs. Specifically, we leverages mutual information to identify redundant blocks by evaluating transitions in hidden states. Additionally, we incorporate the Data Processing Inequality (DPI) to reveal the relationship between the importance of entire contiguous blocks and that of individual blocks. Moreover, we develop the Fast-Block-Select algorithm, which iteratively updates block combinations to achieve a globally optimal solution while significantly improving the efficiency. Extensive experiments across various models and datasets demonstrate the stability and effectiveness of our method.",
+        "authors": "Hao Zhang, Zhibin Zhang, Guangxin Wu, He Chen, Jiafeng Guo, Xueqi Cheng",
+        "url": "http://arxiv.org/abs/2601.07212v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07212v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了MI-PRUN，一种基于互信息（Mutual Information）的LLM剪枝方法。它利用互信息评估隐藏状态的转换来识别冗余块，并结合数据处理不等式（DPI）揭示块的重要性，从而解决了现有块剪枝方法的不稳定性和次优性问题。论文还开发了Fast-Block-Select算法以实现全局最优解。该方法理论严谨，在实践中实现了显著的模型压缩和推理加速，是LLM效率瓶颈解决方案中的重要创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.07197v1",
+        "title": "Beyond Variance: Knowledge-Aware LLM Compression via Fisher-Aligned Subspace Diagnostics",
+        "summary": "Post-training activation compression is essential for deploying Large Language Models (LLMs) on resource-constrained hardware. However, standard methods like Singular Value Decomposition (SVD) are gradient-blind: they preserve high-variance dimensions regardless of their impact on factual knowledge preservation. We introduce Fisher-Aligned Subspace Compression (FASC), a knowledge-aware compression framework that selects subspaces by directly modeling activation-gradient coupling, minimizing a second-order surrogate of the loss function. FASC leverages the Fisher Information Matrix to identify dimensions critical for factual knowledge, which often reside in low-variance but high-gradient-sensitivity subspaces. We propose the Dependence Violation Score (\\r{ho}) as a general-purpose diagnostic metric that quantifies activation-gradient coupling, revealing where factual knowledge is stored within transformer architectures. Extensive experiments on Mistral-7B and Llama-3-8B demonstrate that FASC preserves 6-8% more accuracy on knowledge-intensive benchmarks (MMLU, LAMA) compared to variance-based methods at 50% rank reduction, effectively enabling a 7B model to match the factual recall of a 13B uncompressed model. Our analysis reveals that \\r{ho} serves as a fundamental signal of stored knowledge, with high-\\r{ho} layers emerging only when models internalize factual associations during training.",
+        "authors": "Ibne Farabi Shihab, Sanjeda Akter, Anuj Sharma",
+        "url": "http://arxiv.org/abs/2601.07197v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.07197v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了知识感知LLM压缩框架FASC（Fisher-Aligned Subspace Compression），通过直接建模激活-梯度耦合来选择子空间，解决了传统压缩方法对事实知识保留的盲区。它利用Fisher信息矩阵识别对知识至关重要的维度，并引入依赖违反分数（$\rho$）作为诊断指标。该方法理论基础扎实且严谨，在知识密集型任务上显著提升了精度，对LLM压缩和部署效率具有巨大实践影响力。"
+    }
+]

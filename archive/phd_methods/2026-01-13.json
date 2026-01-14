@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.08440v1",
+        "title": "Incentivizing Cardiologist-Like Reasoning in MLLMs for Interpretable Echocardiographic Diagnosis",
+        "summary": "Echocardiographic diagnosis is vital for cardiac screening yet remains challenging. Existing echocardiography foundation models do not effectively capture the relationships between quantitative measurements and clinical manifestations, whereas medical reasoning multimodal large language models (MLLMs) require costly construction of detailed reasoning paths and remain ineffective at directly incorporating such echocardiographic priors into their reasoning. To address these limitations, we propose a novel approach comprising Cardiac Reasoning Template (CRT) and CardiacMind to enhance MLLM's echocardiographic reasoning by introducing cardiologist-like mindset. Specifically, CRT provides stepwise canonical diagnostic procedures for complex cardiac diseases to streamline reasoning path construction without the need for costly case-by-case verification. To incentivize reasoning MLLM under CRT, we develop CardiacMind, a new reinforcement learning scheme with three novel rewards: Procedural Quantity Reward (PQtR), Procedural Quality Reward (PQlR), and Echocardiographic Semantic Reward (ESR). PQtR promotes detailed reasoning; PQlR promotes integration of evidence across views and modalities, while ESR grounds stepwise descriptions in visual content. Our methods show a 48% improvement in multiview echocardiographic diagnosis for 15 complex cardiac diseases and a 5% improvement on CardiacNet-PAH over prior methods. The user study on our method's reasoning outputs shows 93.33% clinician agreement with cardiologist-like reasoning logic. Our code will be available.",
+        "authors": "Yi Qin, Lehan Wang, Chenxu Zhao, Alex P. W. Lee, Xiaomeng Li",
+        "url": "http://arxiv.org/abs/2601.08440v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08440v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了YaPO，一种通过稀疏自编码器（SAE）在潜在空间中学习稀疏引导向量的无参考方法，用于LLM的领域适应。这在理论上解决了现有密集引导向量在精细化对齐中可能存在的神经元多语义纠缠问题，提供了更解耦、可解释且高效的引导方向。其方法具有严谨的理论基础，并通过实验证明了更快的收敛、更强的性能和训练稳定性，对LLM对齐和可控性具有极高的理论创新性和实践影响力，完美契合您对理论创新性和解决实际瓶颈的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08166v1",
+        "title": "ZeroDVFS: Zero-Shot LLM-Guided Core and Frequency Allocation for Embedded Platforms",
+        "summary": "Dynamic voltage and frequency scaling (DVFS) and task-to-core allocation are critical for thermal management and balancing energy and performance in embedded systems. Existing approaches either rely on utilization-based heuristics that overlook stall times, or require extensive offline profiling for table generation, preventing runtime adaptation. We propose a model-based hierarchical multi-agent reinforcement learning (MARL) framework for thermal- and energy-aware scheduling on multi-core platforms. Two collaborative agents decompose the exponential action space, achieving 358ms latency for subsequent decisions. First decisions require 3.5 to 8.0s including one-time LLM feature extraction. An accurate environment model leverages regression techniques to predict thermal dynamics and performance states. When combined with LLM-extracted semantic features, the environment model enables zero-shot deployment for new workloads on trained platforms by generating synthetic training data without requiring workload-specific profiling samples. We introduce LLM-based semantic feature extraction that characterizes OpenMP programs through 13 code-level features without execution. The Dyna-Q-inspired framework integrates direct reinforcement learning with model-based planning, achieving 20x faster convergence than model-free methods. Experiments on BOTS and PolybenchC benchmarks across NVIDIA Jetson TX2, Jetson Orin NX, RubikPi, and Intel Core i7 demonstrate 7.09x better energy efficiency and 4.0x better makespan than Linux ondemand governor. First-decision latency is 8,300x faster than table-based profiling, enabling practical deployment in dynamic embedded systems.",
+        "authors": "Mohammad Pivezhandi, Mahdi Banisharif, Abusayeed Saifullah, Ali Jannesari",
+        "url": "http://arxiv.org/abs/2601.08166v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08166v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ZeroDVFS，一个LLM引导的分层多智能体强化学习框架，用于嵌入式平台的热管理和能效调度。其创新性在于利用LLM提取语义特征实现新工作负载的零样本部署，并结合Dyna-Q启发式框架进行模型规划。该方法具有严谨的数学/统计推导，解决了嵌入式系统在能耗、性能和运行时适应性方面的关键瓶颈，实现了显著的能效提升，是AI算法和架构在实际应用中解决效率问题的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08777v1",
+        "title": "Asymptotic Universal Alignment: A New Alignment Framework via Test-Time Scaling",
+        "summary": "Aligning large language models (LLMs) to serve users with heterogeneous and potentially conflicting preferences is a central challenge for personalized and trustworthy AI. We formalize an ideal notion of universal alignment through test-time scaling: for each prompt, the model produces $k\\ge 1$ candidate responses and a user selects their preferred one. We introduce $(k,f(k))$-robust alignment, which requires the $k$-output model to have win rate $f(k)$ against any other single-output model, and asymptotic universal alignment (U-alignment), which requires $f(k)\\to 1$ as $k\\to\\infty$. Our main result characterizes the optimal convergence rate: there exists a family of single-output policies whose $k$-sample product policies achieve U-alignment at rate $f(k)=\\frac{k}{k+1}$, and no method can achieve a faster rate in general.   We show that popular post-training methods, including Nash learning from human feedback (NLHF), can fundamentally underutilize the benefits of test-time scaling. Even though NLHF is optimal for $k=1$, sampling from the resulting (often deterministic) policy cannot guarantee win rates above $\\tfrac{1}{2}$ except for an arbitrarily small slack. This stems from a lack of output diversity: existing alignment methods can collapse to a single majority-preferred response, making additional samples redundant. In contrast, our approach preserves output diversity and achieves the optimal test-time scaling rate. In particular, we propose a family of symmetric multi-player alignment games and prove that any symmetric Nash equilibrium policy of the $(k+1)$-player alignment game achieves the optimal $(k,\\frac{k}{k+1})$-robust alignment. Finally, we provide theoretical convergence guarantees for self-play learning dynamics in these games and extend the framework to opponents that also generate multiple responses.",
+        "authors": "Yang Cai, Weiqiang Zheng",
+        "url": "http://arxiv.org/abs/2601.08777v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08777v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个通过测试时缩放实现通用对齐的新框架，形式化了(k,f(k))-鲁棒对齐和渐近通用对齐的理想概念，并表征了最优收敛速度。它揭示了现有对齐方法（如NLHF）在输出多样性方面的局限性。该工作具有极高的理论严谨性和创新性，为个性化和可信赖AI中的LLM对齐这一核心挑战提供了深刻的理论见解和解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08198v1",
+        "title": "Triplets Better Than Pairs: Towards Stable and Effective Self-Play Fine-Tuning for LLMs",
+        "summary": "Recently, self-play fine-tuning (SPIN) has been proposed to adapt large language models to downstream applications with scarce expert-annotated data, by iteratively generating synthetic responses from the model itself. However, SPIN is designed to optimize the current reward advantages of annotated responses over synthetic responses at hand, which may gradually vanish during iterations, leading to unstable optimization. Moreover, the utilization of reference policy induces a misalignment issue between the reward formulation for training and the metric for generation. To address these limitations, we propose a novel Triplet-based Self-Play fIne-tuNing (T-SPIN) method that integrates two key designs. First, beyond current advantages, T-SPIN additionally incorporates historical advantages between iteratively generated responses and proto-synthetic responses produced by the initial policy. Even if the current advantages diminish, historical advantages remain effective, stabilizing the overall optimization. Second, T-SPIN introduces the entropy constraint into the self-play framework, which is theoretically justified to support reference-free fine-tuning, eliminating the training-generation discrepancy. Empirical results on various tasks demonstrate not only the superior performance of T-SPIN over SPIN, but also its stable evolution during iterations. Remarkably, compared to supervised fine-tuning, T-SPIN achieves comparable or even better performance with only 25% samples, highlighting its effectiveness when faced with scarce annotated data.",
+        "authors": "Yibo Wang, Hai-Long Sun, Qing-Guo Chen, Zhao Xu, Weihua Luo, Kaifu Zhang, Lijun Zhang",
+        "url": "http://arxiv.org/abs/2601.08198v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08198v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Owen-Shapley策略优化（OSPO），一种基于Shapley-Owen归因的强化学习算法，用于生成式搜索LLM中的信用分配。它通过将序列级优势重新分配到token的边际贡献上，解决了传统RL中稀疏奖励导致的信用分配鸿沟。该方法具有坚实的博弈论和统计学理论基础，严谨性极高，对LLM训练和可解释性有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08149v1",
+        "title": "Dynamic Graph Structure Learning via Resistance Curvature Flow",
+        "summary": "Geometric Representation Learning (GRL) aims to approximate the non-Euclidean topology of high-dimensional data through discrete graph structures, grounded in the manifold hypothesis. However, traditional static graph construction methods based on Euclidean distance often fail to capture the intrinsic curvature characteristics of the data manifold. Although Ollivier-Ricci Curvature Flow (OCF) has proven to be a powerful tool for dynamic topological optimization, its core reliance on Optimal Transport (Wasserstein distance) leads to prohibitive computational complexity, severely limiting its application in large-scale datasets and deep learning frameworks. To break this bottleneck, this paper proposes a novel geometric evolution framework: Resistance Curvature Flow (RCF). Leveraging the concept of effective resistance from circuit physics, RCF transforms expensive curvature optimization into efficient matrix operations. This approach achieves over 100x computational acceleration while maintaining geometric optimization capabilities comparable to OCF. We provide an in-depth exploration of the theoretical foundations and dynamical principles of RCF, elucidating how it guides the redistribution of edge weights via curvature gradients to eliminate topological noise and strengthen local cluster structures. Furthermore, we provide a mechanistic explanation of RCF's role in manifold enhancement and noise suppression, as well as its compatibility with deep learning models. We design a graph optimization algorithm, DGSL-RCF, based on this framework. Experimental results across deep metric learning, manifold learning, and graph structure learning demonstrate that DGSL-RCF significantly improves representation quality and downstream task performance.",
+        "authors": "Chaoqun Fei, Huanjiang Liu, Tinglve Zhou, Yangyang Li, Tianyong Hao",
+        "url": "http://arxiv.org/abs/2601.08149v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08149v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了电阻曲率流（RCF），一个新颖的几何演化框架，用于动态图结构学习。它利用电路物理中的有效电阻概念，将昂贵的曲率优化转化为高效的矩阵运算，实现了计算加速。该工作深入探讨了RCF的理论基础和动力学原理，具有极高的数学/理论严谨性和创新性，对图表示学习和GNN性能提升有基础性贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08808v1",
+        "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
+        "summary": "Large language models often solve complex reasoning tasks more effectively with Chain-of-Thought (CoT), but at the cost of long, low-bandwidth token sequences. Humans, by contrast, often reason softly by maintaining a distribution over plausible next steps. Motivated by this, we propose Multiplex Thinking, a stochastic soft reasoning mechanism that, at each thinking step, samples K candidate tokens and aggregates their embeddings into a single continuous multiplex token. This preserves the vocabulary embedding prior and the sampling dynamics of standard discrete generation, while inducing a tractable probability distribution over multiplex rollouts. Consequently, multiplex trajectories can be directly optimized with on-policy reinforcement learning (RL). Importantly, Multiplex Thinking is self-adaptive: when the model is confident, the multiplex token is nearly discrete and behaves like standard CoT; when it is uncertain, it compactly represents multiple plausible next steps without increasing sequence length. Across challenging math reasoning benchmarks, Multiplex Thinking consistently outperforms strong discrete CoT and RL baselines from Pass@1 through Pass@1024, while producing shorter sequences. The code and checkpoints are available at https://github.com/GMLR-Penn/Multiplex-Thinking.",
+        "authors": "Yao Tang, Li Dong, Yaru Hao, Qingxiu Dong, Furu Wei, Jiatao Gu",
+        "url": "http://arxiv.org/abs/2601.08808v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08808v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“多路复用思维”（Multiplex Thinking），一种新颖的随机软推理机制，通过在每个思考步骤采样K个候选token并聚合其嵌入来解决LLM复杂推理任务中CoT序列长、带宽低的瓶颈。该方法诱导了可处理的概率分布，并可通过RL直接优化，具有显著的理论创新性，并能生成更短的序列，提高推理效率。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08531v1",
+        "title": "Sketch-Based Facade Renovation With Generative AI: A Streamlined Framework for Bypassing As-Built Modelling in Industrial Adaptive Reuse",
+        "summary": "Facade renovation offers a more sustainable alternative to full demolition, yet producing design proposals that preserve existing structures while expressing new intent remains challenging. Current workflows typically require detailed as-built modelling before design, which is time-consuming, labour-intensive, and often involves repeated revisions. To solve this issue, we propose a three-stage framework combining generative artificial intelligence (AI) and vision-language models (VLM) that directly processes rough structural sketch and textual descriptions to produce consistent renovation proposals. First, the input sketch is used by a fine-tuned VLM model to predict bounding boxes specifying where modifications are needed and which components should be added. Next, a stable diffusion model generates detailed sketches of new elements, which are merged with the original outline through a generative inpainting pipeline. Finally, ControlNet is employed to refine the result into a photorealistic image. Experiments on datasets and real industrial buildings indicate that the proposed framework can generate renovation proposals that preserve the original structure while improving facade detail quality. This approach effectively bypasses the need for detailed as-built modelling, enabling architects to rapidly explore design alternatives, iterate on early-stage concepts, and communicate renovation intentions with greater clarity.",
+        "authors": "Warissara Booranamaitree, Xusheng Du, Yushu Cai, Zhengyang Wang, Ye Zhang, Haoran Xie",
+        "url": "http://arxiv.org/abs/2601.08531v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08531v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了基于熵正则化的可证明安全强化学习算法，旨在确保学习阶段的安全约束具有任意高的概率。它对算法进行了有限样本分析并推导了遗憾界，证明了熵正则化能改善遗憾并控制变异性。该工作在理论严谨性方面表现出色，对RL在实际应用中的安全性保障具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08521v1",
+        "title": "Your Group-Relative Advantage Is Biased",
+        "summary": "Reinforcement Learning from Verifier Rewards (RLVR) has emerged as a widely used approach for post-training large language models on reasoning tasks, with group-based methods such as GRPO and its variants gaining broad adoption. These methods rely on group-relative advantage estimation to avoid learned critics, yet its theoretical properties remain poorly understood.   In this work, we uncover a fundamental issue of group-based RL: the group-relative advantage estimator is inherently biased relative to the true (expected) advantage. We provide the first theoretical analysis showing that it systematically underestimates advantages for hard prompts and overestimates them for easy prompts, leading to imbalanced exploration and exploitation. To address this issue, we propose History-Aware Adaptive Difficulty Weighting (HA-DW), an adaptive reweighting scheme that adjusts advantage estimates based on an evolving difficulty anchor and training dynamics. Both theoretical analysis and experiments on five mathematical reasoning benchmarks demonstrate that HA-DW consistently improves performance when integrated into GRPO and its variants. Our results suggest that correcting biased advantage estimation is critical for robust and efficient RLVR training.",
+        "authors": "Fengkai Yang, Zherui Chen, Xiaohan Wang, Xiaodong Lu, Jiajun Chai, Guojun Yin, Wei Lin, Shuai Ma, Fuzhen Zhuang, Deqing Wang, Yaodong Yang, Jianxin Li, Yikun Ban",
+        "url": "http://arxiv.org/abs/2601.08521v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08521v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文揭示了群组相对优势估计器在强化学习从验证器奖励（RLVR）中存在固有偏差，并提供了首次理论分析。为解决此问题，提出了历史感知自适应难度加权（HA-DW）方案。该工作具有极高的理论严谨性，对LLM后训练中广泛使用的RLVR方法的鲁棒性和效率有直接影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08198v1",
+        "title": "Triplets Better Than Pairs: Towards Stable and Effective Self-Play Fine-Tuning for LLMs",
+        "summary": "Recently, self-play fine-tuning (SPIN) has been proposed to adapt large language models to downstream applications with scarce expert-annotated data, by iteratively generating synthetic responses from the model itself. However, SPIN is designed to optimize the current reward advantages of annotated responses over synthetic responses at hand, which may gradually vanish during iterations, leading to unstable optimization. Moreover, the utilization of reference policy induces a misalignment issue between the reward formulation for training and the metric for generation. To address these limitations, we propose a novel Triplet-based Self-Play fIne-tuNing (T-SPIN) method that integrates two key designs. First, beyond current advantages, T-SPIN additionally incorporates historical advantages between iteratively generated responses and proto-synthetic responses produced by the initial policy. Even if the current advantages diminish, historical advantages remain effective, stabilizing the overall optimization. Second, T-SPIN introduces the entropy constraint into the self-play framework, which is theoretically justified to support reference-free fine-tuning, eliminating the training-generation discrepancy. Empirical results on various tasks demonstrate not only the superior performance of T-SPIN over SPIN, but also its stable evolution during iterations. Remarkably, compared to supervised fine-tuning, T-SPIN achieves comparable or even better performance with only 25% samples, highlighting its effectiveness when faced with scarce annotated data.",
+        "authors": "Yibo Wang, Hai-Long Sun, Qing-Guo Chen, Zhao Xu, Weihua Luo, Kaifu Zhang, Lijun Zhang",
+        "url": "http://arxiv.org/abs/2601.08198v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08198v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了生成增强生成（GAG）框架，将私有领域知识作为额外模态注入LLM，通过紧凑的、表征层接口与冻结的基础模型对齐。该方法解决了传统微调成本高、遗忘风险大以及RAG在专业语料库中脆弱的问题，实现了即插即用、可扩展的多领域组合，具有高创新性和极强的实践影响力，尤其适用于生物医学、材料科学等高风险领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08499v1",
+        "title": "EfficientFSL: Enhancing Few-Shot Classification via Query-Only Tuning in Vision Transformers",
+        "summary": "Large models such as Vision Transformers (ViTs) have demonstrated remarkable superiority over smaller architectures like ResNet in few-shot classification, owing to their powerful representational capacity. However, fine-tuning such large models demands extensive GPU memory and prolonged training time, making them impractical for many real-world low-resource scenarios. To bridge this gap, we propose EfficientFSL, a query-only fine-tuning framework tailored specifically for few-shot classification with ViT, which achieves competitive performance while significantly reducing computational overhead. EfficientFSL fully leverages the knowledge embedded in the pre-trained model and its strong comprehension ability, achieving high classification accuracy with an extremely small number of tunable parameters. Specifically, we introduce a lightweight trainable Forward Block to synthesize task-specific queries that extract informative features from the intermediate representations of the pre-trained model in a query-only manner. We further propose a Combine Block to fuse multi-layer outputs, enhancing the depth and robustness of feature representations. Finally, a Support-Query Attention Block mitigates distribution shift by adjusting prototypes to align with the query set distribution. With minimal trainable parameters, EfficientFSL achieves state-of-the-art performance on four in-domain few-shot datasets and six cross-domain datasets, demonstrating its effectiveness in real-world applications.",
+        "authors": "Wenwen Liao, Hang Ruan",
+        "url": "http://arxiv.org/abs/2601.08499v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08499v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了EfficientFSL，一个针对Vision Transformers（ViTs）少样本分类的仅查询微调框架。通过引入轻量级可训练的前向块、组合块和支持-查询注意力块，在显著减少计算开销的同时实现了SOTA性能。该方法在模型压缩和数据效率方面具有高实践影响力，是解决大型模型在资源受限场景下部署瓶颈的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08303v1",
+        "title": "SnapGen++: Unleashing Diffusion Transformers for Efficient High-Fidelity Image Generation on Edge Devices",
+        "summary": "Recent advances in diffusion transformers (DiTs) have set new standards in image generation, yet remain impractical for on-device deployment due to their high computational and memory costs. In this work, we present an efficient DiT framework tailored for mobile and edge devices that achieves transformer-level generation quality under strict resource constraints. Our design combines three key components. First, we propose a compact DiT architecture with an adaptive global-local sparse attention mechanism that balances global context modeling and local detail preservation. Second, we propose an elastic training framework that jointly optimizes sub-DiTs of varying capacities within a unified supernetwork, allowing a single model to dynamically adjust for efficient inference across different hardware. Finally, we develop Knowledge-Guided Distribution Matching Distillation, a step-distillation pipeline that integrates the DMD objective with knowledge transfer from few-step teacher models, producing high-fidelity and low-latency generation (e.g., 4-step) suitable for real-time on-device use. Together, these contributions enable scalable, efficient, and high-quality diffusion models for deployment on diverse hardware.",
+        "authors": "Dongting Hu, Aarush Gupta, Magzhan Gabidolla, Arpit Sahni, Huseyin Coskun, Yanyu Li, Yerlan Idelbayev, Ahsan Mahmood, Aleksei Lebedev, Dishani Lahiri, Anujraaj Goyal, Ju Hu, Mingming Gong, Sergey Tulyakov, Anil Kag",
+        "url": "http://arxiv.org/abs/2601.08303v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08303v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SnapGen++，一个针对移动和边缘设备的高效扩散Transformer（DiT）框架。通过结合紧凑架构、自适应全局-局部稀疏注意力、弹性训练和知识引导分布匹配蒸馏，实现了在严格资源限制下的高效高保真图像生成。该工作在模型压缩和效率方面具有高实践影响力，对边缘AI部署有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08297v1",
+        "title": "Demystifying the Slash Pattern in Attention: The Role of RoPE",
+        "summary": "Large Language Models (LLMs) often exhibit slash attention patterns, where attention scores concentrate along the $Δ$-th sub-diagonal for some offset $Δ$. These patterns play a key role in passing information across tokens. But why do they emerge? In this paper, we demystify the emergence of these Slash-Dominant Heads (SDHs) from both empirical and theoretical perspectives. First, by analyzing open-source LLMs, we find that SDHs are intrinsic to models and generalize to out-of-distribution prompts. To explain the intrinsic emergence, we analyze the queries, keys, and Rotary Position Embedding (RoPE), which jointly determine attention scores. Our empirical analysis reveals two characteristic conditions of SDHs: (1) Queries and keys are almost rank-one, and (2) RoPE is dominated by medium- and high-frequency components. Under these conditions, queries and keys are nearly identical across tokens, and interactions between medium- and high-frequency components of RoPE give rise to SDHs. Beyond empirical evidence, we theoretically show that these conditions are sufficient to ensure the emergence of SDHs by formalizing them as our modeling assumptions. Particularly, we analyze the training dynamics of a shallow Transformer equipped with RoPE under these conditions, and prove that models trained via gradient descent exhibit SDHs. The SDHs generalize to out-of-distribution prompts.",
+        "authors": "Yuan Cheng, Fengzhuo Zhang, Yunlong Hou, Cunxiao Du, Chao Du, Tianyu Pang, Aixin Sun, Zhuoran Yang",
+        "url": "http://arxiv.org/abs/2601.08297v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08297v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从经验和理论两方面揭示了LLM注意力中“斜线模式”（Slash-Dominant Heads, SDHs）的出现机制，并将其与旋转位置嵌入（RoPE）的关键组件联系起来。通过形式化建模假设并证明在梯度下降训练下SDHs的出现，该工作提供了对LLM架构深层机制的严谨理论分析，对未来模型设计和优化具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08297v1",
+        "title": "Demystifying the Slash Pattern in Attention: The Role of RoPE",
+        "summary": "Large Language Models (LLMs) often exhibit slash attention patterns, where attention scores concentrate along the $Δ$-th sub-diagonal for some offset $Δ$. These patterns play a key role in passing information across tokens. But why do they emerge? In this paper, we demystify the emergence of these Slash-Dominant Heads (SDHs) from both empirical and theoretical perspectives. First, by analyzing open-source LLMs, we find that SDHs are intrinsic to models and generalize to out-of-distribution prompts. To explain the intrinsic emergence, we analyze the queries, keys, and Rotary Position Embedding (RoPE), which jointly determine attention scores. Our empirical analysis reveals two characteristic conditions of SDHs: (1) Queries and keys are almost rank-one, and (2) RoPE is dominated by medium- and high-frequency components. Under these conditions, queries and keys are nearly identical across tokens, and interactions between medium- and high-frequency components of RoPE give rise to SDHs. Beyond empirical evidence, we theoretically show that these conditions are sufficient to ensure the emergence of SDHs by formalizing them as our modeling assumptions. Particularly, we analyze the training dynamics of a shallow Transformer equipped with RoPE under these conditions, and prove that models trained via gradient descent exhibit SDHs. The SDHs generalize to out-of-distribution prompts.",
+        "authors": "Yuan Cheng, Fengzhuo Zhang, Yunlong Hou, Cunxiao Du, Chao Du, Tianyu Pang, Aixin Sun, Zhuoran Yang",
+        "url": "http://arxiv.org/abs/2601.08297v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08297v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ReCo-KD，一个区域和上下文感知的知识蒸馏框架，用于高效3D医学图像分割。通过多尺度结构感知区域蒸馏和多尺度上下文对齐，将高容量教师模型的细粒度解剖细节和长程上下文信息转移到紧凑的学生网络。该方法解决了大型3D医学模型在资源受限临床环境中部署的瓶颈，具有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.08267v1",
+        "title": "Med-CoReasoner: Reducing Language Disparities in Medical Reasoning via Language-Informed Co-Reasoning",
+        "summary": "While reasoning-enhanced large language models perform strongly on English medical tasks, a persistent multilingual gap remains, with substantially weaker reasoning in local languages, limiting equitable global medical deployment. To bridge this gap, we introduce Med-CoReasoner, a language-informed co-reasoning framework that elicits parallel English and local-language reasoning, abstracts them into structured concepts, and integrates local clinical knowledge into an English logical scaffold via concept-level alignment and retrieval. This design combines the structural robustness of English reasoning with the practice-grounded expertise encoded in local languages. To evaluate multilingual medical reasoning beyond multiple-choice settings, we construct MultiMed-X, a benchmark covering seven languages with expert-annotated long-form question answering and natural language inference tasks, comprising 350 instances per language. Experiments across three benchmarks show that Med-CoReasoner improves multilingual reasoning performance by an average of 5%, with particularly substantial gains in low-resource languages. Moreover, model distillation and expert evaluation analysis further confirm that Med-CoReasoner produces clinically sound and culturally grounded reasoning traces.",
+        "authors": "Fan Gao, Sherry T. Tong, Jiwoong Sohn, Jiahao Huang, Junfeng Jiang, Ding Xia, Piyalitt Ittichaiwong, Kanyakorn Veerakanjana, Hyunjae Kim, Qingyu Chen, Edison Marrese Taylor, Kazuma Kobayashi, Akkiko Aizawa, Irene Li",
+        "url": "http://arxiv.org/abs/2601.08267v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.08267v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了HIPPO，一个整体感知并行推测解码框架，用于加速视频LLM推理。它通过语义感知token保留方法和视频并行SD算法，解决了现有方法在保留视觉语义和加速效果上的局限性。该方法显著提高了视频LLM的推理效率，解决了大规模多模态LLM应用中的关键性能瓶颈，具有高实践影响力。"
+    }
+]

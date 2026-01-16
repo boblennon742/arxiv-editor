@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.10708v1",
+        "title": "High-accuracy and dimension-free sampling with diffusions",
+        "summary": "Diffusion models have shown remarkable empirical success in sampling from rich multi-modal distributions. Their inference relies on numerically solving a certain differential equation. This differential equation cannot be solved in closed form, and its resolution via discretization typically requires many small iterations to produce \\emph{high-quality} samples.   More precisely, prior works have shown that the iteration complexity of discretization methods for diffusion models scales polynomially in the ambient dimension and the inverse accuracy $1/\\varepsilon$. In this work, we propose a new solver for diffusion models relying on a subtle interplay between low-degree approximation and the collocation method (Lee, Song, Vempala 2018), and we prove that its iteration complexity scales \\emph{polylogarithmically} in $1/\\varepsilon$, yielding the first ``high-accuracy'' guarantee for a diffusion-based sampler that only uses (approximate) access to the scores of the data distribution. In addition, our bound does not depend explicitly on the ambient dimension; more precisely, the dimension affects the complexity of our solver through the \\emph{effective radius} of the support of the target distribution only.",
+        "authors": "Khashayar Gatmiry, Sitan Chen, Adil Salim",
+        "url": "http://arxiv.org/abs/2601.10708v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10708v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在扩散模型的核心算法层面做出了重大理论创新。它提出了一个新的求解器，能够实现高精度且与环境维度无关的采样，将迭代复杂度从多项式降低到多对数，并提供了严格的理论证明。这直接解决了扩散模型在生成高质量样本时计算成本高昂的瓶颈，具有深远的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10679v1",
+        "title": "Are Your Reasoning Models Reasoning or Guessing? A Mechanistic Analysis of Hierarchical Reasoning Models",
+        "summary": "Hierarchical reasoning model (HRM) achieves extraordinary performance on various reasoning tasks, significantly outperforming large language model-based reasoners. To understand the strengths and potential failure modes of HRM, we conduct a mechanistic study on its reasoning patterns and find three surprising facts: (a) Failure of extremely simple puzzles, e.g., HRM can fail on a puzzle with only one unknown cell. We attribute this failure to the violation of the fixed point property, a fundamental assumption of HRM. (b) \"Grokking\" dynamics in reasoning steps, i.e., the answer is not improved uniformly, but instead there is a critical reasoning step that suddenly makes the answer correct; (c) Existence of multiple fixed points. HRM \"guesses\" the first fixed point, which could be incorrect, and gets trapped there for a while or forever. All facts imply that HRM appears to be \"guessing\" instead of \"reasoning\". Leveraging this \"guessing\" picture, we propose three strategies to scale HRM's guesses: data augmentation (scaling the quality of guesses), input perturbation (scaling the number of guesses by leveraging inference randomness), and model bootstrapping (scaling the number of guesses by leveraging training randomness). On the practical side, by combining all methods, we develop Augmented HRM, boosting accuracy on Sudoku-Extreme from 54.5% to 96.9%. On the scientific side, our analysis provides new insights into how reasoning models \"reason\".",
+        "authors": "Zirui Ren, Ziming Liu",
+        "url": "http://arxiv.org/abs/2601.10679v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10679v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究对分层推理模型（HRM）进行了深入的机制分析，揭示了其在推理过程中可能存在的“猜测”行为，并指出了违反不动点性质等理论缺陷。基于这些深刻的洞察，论文提出了数据增强、输入扰动和模型自举等策略来提升HRM的性能。这种从理论分析出发，理解模型行为并指导改进的方法，正是您所追求的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10589v1",
+        "title": "Be Your Own Red Teamer: Safety Alignment via Self-Play and Reflective Experience Replay",
+        "summary": "Large Language Models (LLMs) have achieved remarkable capabilities but remain vulnerable to adversarial ``jailbreak'' attacks designed to bypass safety guardrails. Current safety alignment methods depend heavily on static external red teaming, utilizing fixed defense prompts or pre-collected adversarial datasets. This leads to a rigid defense that overfits known patterns and fails to generalize to novel, sophisticated threats. To address this critical limitation, we propose empowering the model to be its own red teamer, capable of achieving autonomous and evolving adversarial attacks. Specifically, we introduce Safety Self- Play (SSP), a system that utilizes a single LLM to act concurrently as both the Attacker (generating jailbreaks) and the Defender (refusing harmful requests) within a unified Reinforcement Learning (RL) loop, dynamically evolving attack strategies to uncover vulnerabilities while simultaneously strengthening defense mechanisms. To ensure the Defender effectively addresses critical safety issues during the self-play, we introduce an advanced Reflective Experience Replay Mechanism, which uses an experience pool accumulated throughout the process. The mechanism employs a Upper Confidence Bound (UCB) sampling strategy to focus on failure cases with low rewards, helping the model learn from past hard mistakes while balancing exploration and exploitation. Extensive experiments demonstrate that our SSP approach autonomously evolves robust defense capabilities, significantly outperforming baselines trained on static adversarial datasets and establishing a new benchmark for proactive safety alignment.",
+        "authors": "Hao Wang, Yanting Wang, Hao Li, Rui Li, Lei Sha",
+        "url": "http://arxiv.org/abs/2601.10589v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10589v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了LLM安全对齐中的一个关键瓶颈：现有方法依赖静态外部红队，难以应对新型越狱攻击。它提出了一种新颖的自博弈强化学习框架（Safety Self-Play, SSP），让LLM同时扮演攻击者和防御者，通过动态演化攻击策略和反思经验回放机制，实现主动的安全对齐。该方法具有高度创新性，并对LLM的实际应用安全具有重要影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10479v1",
+        "title": "H-EFT-VA: An Effective-Field-Theory Variational Ansatz with Provable Barren Plateau Avoidance",
+        "summary": "Variational Quantum Algorithms (VQAs) are critically threatened by the Barren Plateau (BP) phenomenon. In this work, we introduce the H-EFT Variational Ansatz (H-EFT-VA), an architecture inspired by Effective Field Theory (EFT). By enforcing a hierarchical \"UV-cutoff\" on initialization, we theoretically restrict the circuit's state exploration, preventing the formation of approximate unitary 2-designs. We provide a rigorous proof that this localization guarantees an inverse-polynomial lower bound on the gradient variance: $Var[\\partial θ] \\in Ω(1/poly(N))$. Crucially, unlike approaches that avoid BPs by limiting entanglement, we demonstrate that H-EFT-VA maintains volume-law entanglement and near-Haar purity, ensuring sufficient expressibility for complex quantum states. Extensive benchmarking across 16 experiments -- including Transverse Field Ising and Heisenberg XXZ models -- confirms a 109x improvement in energy convergence and a 10.7x increase in ground-state fidelity over standard Hardware-Efficient Ansatze (HEA), with a statistical significance of $p < 10^{-88}$.",
+        "authors": "Eyad I. B Hamid",
+        "url": "http://arxiv.org/abs/2601.10479v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10479v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究解决了变分量子算法（VQAs）中“贫瘠高原”现象这一核心理论挑战。它引入了一种受有效场论启发的变分Ansatz (H-EFT-VA)，通过理论证明保证了梯度方差的逆多项式下界，从而避免了贫瘠高原。这不仅具有极高的理论严谨性，而且对量子机器学习这一前沿领域具有突破性意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10413v1",
+        "title": "LADFA: A Framework of Using Large Language Models and Retrieval-Augmented Generation for Personal Data Flow Analysis in Privacy Policies",
+        "summary": "Privacy policies help inform people about organisations' personal data processing practices, covering different aspects such as data collection, data storage, and sharing of personal data with third parties. Privacy policies are often difficult for people to fully comprehend due to the lengthy and complex legal language used and inconsistent practices across different sectors and organisations. To help conduct automated and large-scale analyses of privacy policies, many researchers have studied applications of machine learning and natural language processing techniques, including large language models (LLMs). While a limited number of prior studies utilised LLMs for extracting personal data flows from privacy policies, our approach builds on this line of work by combining LLMs with retrieval-augmented generation (RAG) and a customised knowledge base derived from existing studies. This paper presents the development of LADFA, an end-to-end computational framework, which can process unstructured text in a given privacy policy, extract personal data flows and construct a personal data flow graph, and conduct analysis of the data flow graph to facilitate insight discovery. The framework consists of a pre-processor, an LLM-based processor, and a data flow post-processor. We demonstrated and validated the effectiveness and accuracy of the proposed approach by conducting a case study that involved examining ten selected privacy policies from the automotive industry. Moreover, it is worth noting that LADFA is designed to be flexible and customisable, making it suitable for a range of text-based analysis tasks beyond privacy policy analysis.",
+        "authors": "Haiyue Yuan, Nikolay Matyunin, Ali Raza, Shujun Li",
+        "url": "http://arxiv.org/abs/2601.10413v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10413v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了LLMdoctor框架，通过令牌级别的流引导偏好优化（TFPO）实现高效的测试时对齐，解决了传统微调计算成本高昂和现有测试时对齐方法性能受限的瓶颈。其核心创新在于从患者模型行为变化中提取细粒度的令牌级偏好信号，并引导医生模型训练，甚至超越了DPO等全微调方法，具有显著的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10403v1",
+        "title": "Discrete Feynman-Kac Correctors",
+        "summary": "Discrete diffusion models have recently emerged as a promising alternative to the autoregressive approach for generating discrete sequences. Sample generation via gradual denoising or demasking processes allows them to capture hierarchical non-sequential interdependencies in the data. These custom processes, however, do not assume a flexible control over the distribution of generated samples. We propose Discrete Feynman-Kac Correctors, a framework that allows for controlling the generated distribution of discrete masked diffusion models at inference time. We derive Sequential Monte Carlo (SMC) algorithms that, given a trained discrete diffusion model, control the temperature of the sampled distribution (i.e. perform annealing), sample from the product of marginals of several diffusion processes (e.g. differently conditioned processes), and sample from the product of the marginal with an external reward function, producing likely samples from the target distribution that also have high reward. Notably, our framework does not require any training of additional models or fine-tuning of the original model. We illustrate the utility of our framework in several applications including: efficient sampling from the annealed Boltzmann distribution of the Ising model, improving the performance of language models for code generation and amortized learning, as well as reward-tilted protein sequence generation.",
+        "authors": "Mohsin Hasan, Viktor Ohanesian, Artem Gazizov, Yoshua Bengio, Alán Aspuru-Guzik, Roberto Bondesan, Marta Skreta, Kirill Neklyudov",
+        "url": "http://arxiv.org/abs/2601.10403v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10403v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了离散费曼-卡茨校正器（Discrete Feynman-Kac Correctors）框架，解决了离散扩散模型在样本生成过程中缺乏灵活控制的限制。它通过推导序列蒙特卡洛（SMC）算法，实现了在不额外训练或微调模型的情况下，对生成分布进行温度控制、多进程边缘乘积采样以及与外部奖励函数结合采样。这在理论上非常严谨，为离散生成模型提供了强大的控制能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10398v1",
+        "title": "LatentRefusal: Latent-Signal Refusal for Unanswerable Text-to-SQL Queries",
+        "summary": "In LLM-based text-to-SQL systems, unanswerable and underspecified user queries may generate not only incorrect text but also executable programs that yield misleading results or violate safety constraints, posing a major barrier to safe deployment. Existing refusal strategies for such queries either rely on output-level instruction following, which is brittle due to model hallucinations, or estimate output uncertainty, which adds complexity and overhead. To address this challenge, we formalize safe refusal in text-to-SQL systems as an answerability-gating problem and propose LatentRefusal, a latent-signal refusal mechanism that predicts query answerability from intermediate hidden activations of a large language model. We introduce the Tri-Residual Gated Encoder, a lightweight probing architecture, to suppress schema noise and amplify sparse, localized cues of question-schema mismatch that indicate unanswerability. Extensive empirical evaluations across diverse ambiguous and unanswerable settings, together with ablation studies and interpretability analyses, demonstrate the effectiveness of the proposed approach and show that LatentRefusal provides an attachable and efficient safety layer for text-to-SQL systems. Across four benchmarks, LatentRefusal improves average F1 to 88.5 percent on both backbones while adding approximately 2 milliseconds of probe overhead.",
+        "authors": "Xuancheng Ren, Shijing Hu, Zhihui Lu, Jiangqi Huang, Qiang Duan",
+        "url": "http://arxiv.org/abs/2601.10398v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10398v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了LLM代理在超长周期任务中面临的上下文管理和反馈整合瓶颈。它提出了ML-Master 2.0，一个通过分层认知缓存（HCC）实现认知积累的自主代理架构。HCC通过动态蒸馏瞬态执行轨迹为稳定知识，有效克服了静态上下文窗口的限制，是LLM代理架构和算法上的重大创新，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10378v1",
+        "title": "Global Context Compression with Interleaved Vision-Text Transformation",
+        "summary": "Recent achievements of vision-language models in end-to-end OCR point to a new avenue for low-loss compression of textual information. This motivates earlier works that render the Transformer's input into images for prefilling, which effectively reduces the number of tokens through visual encoding, thereby alleviating the quadratically increased Attention computations. However, this partial compression fails to save computational or memory costs at token-by-token inference. In this paper, we investigate global context compression, which saves tokens at both prefilling and inference stages. Consequently, we propose VIST2, a novel Transformer that interleaves input text chunks alongside their visual encoding, while depending exclusively on visual tokens in the pre-context to predict the next text token distribution. Around this idea, we render text chunks into sketch images and train VIST2 in multiple stages, starting from curriculum-scheduled pretraining for optical language modeling, followed by modal-interleaved instruction tuning. We conduct extensive experiments using VIST2 families scaled from 0.6B to 8B to explore the training recipe and hyperparameters. With a 4$\\times$ compression ratio, the resulting models demonstrate significant superiority over baselines on long writing tasks, achieving, on average, a 3$\\times$ speedup in first-token generation, 77% reduction in memory usage, and 74% reduction in FLOPS. Our codes and datasets will be public to support further studies.",
+        "authors": "Dian Jiao, Jiaxin Duan, Shuai Zhao, Jiabing Leng, Yiran Zhang, Feng Huang",
+        "url": "http://arxiv.org/abs/2601.10378v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10378v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对LLM中Attention计算的二次方复杂度及其带来的长上下文内存瓶颈，提出了一种新颖的VIST2架构，通过交错视觉-文本转换实现全局上下文压缩。这种方法在预填充和推理阶段都能节省令牌，显著提升了长文本任务的速度、内存和FLOPS效率，是LLM架构和效率上的重要突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10307v1",
+        "title": "The Straight and Narrow: Do LLMs Possess an Internal Moral Path?",
+        "summary": "Enhancing the moral alignment of Large Language Models (LLMs) is a critical challenge in AI safety. Current alignment techniques often act as superficial guardrails, leaving the intrinsic moral representations of LLMs largely untouched. In this paper, we bridge this gap by leveraging Moral Foundations Theory (MFT) to map and manipulate the fine-grained moral landscape of LLMs. Through cross-lingual linear probing, we validate the shared nature of moral representations in middle layers and uncover a shared yet different moral subspace between English and Chinese. Building upon this, we extract steerable Moral Vectors and successfully validate their efficacy at both internal and behavioral levels. Leveraging the high generalizability of morality, we propose Adaptive Moral Fusion (AMF), a dynamic inference-time intervention that synergizes probe detection with vector injection to tackle the safety-helpfulness trade-off. Empirical results confirm that our approach acts as a targeted intrinsic defense, effectively reducing incorrect refusals on benign queries while minimizing jailbreak success rates compared to standard baselines.",
+        "authors": "Luoming Hu, Jingjie Zeng, Liang Yang, Hongfei Lin",
+        "url": "http://arxiv.org/abs/2601.10307v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10307v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探究了LLM的内在道德表征，超越了表层对齐技术。它利用道德基础理论（MFT）映射和操纵LLM的细粒度道德图景，并提出了自适应道德融合（AMF）这一动态推理时干预方法，以解决安全-有用性权衡问题。这是一种机制可解释性研究，为LLM对齐提供了深刻的理论洞察和算法控制手段。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10274v1",
+        "title": "Queueing-Aware Optimization of Reasoning Tokens for Accuracy-Latency Trade-offs in LLM Servers",
+        "summary": "We consider a single large language model (LLM) server that serves a heterogeneous stream of queries belonging to $N$ distinct task types. Queries arrive according to a Poisson process, and each type occurs with a known prior probability. For each task type, the server allocates a fixed number of internal thinking tokens, which determines the computational effort devoted to that query. The token allocation induces an accuracy-latency trade-off: the service time follows an approximately affine function of the allocated tokens, while the probability of a correct response exhibits diminishing returns. Under a first-in, first-out (FIFO) service discipline, the system operates as an $M/G/1$ queue, and the mean system time depends on the first and second moments of the resulting service-time distribution. We formulate a constrained optimization problem that maximizes a weighted average accuracy objective penalized by the mean system time, subject to architectural token-budget constraints and queue-stability conditions. The objective function is shown to be strictly concave over the stability region, which ensures existence and uniqueness of the optimal token allocation. The first-order optimality conditions yield a coupled projected fixed-point characterization of the optimum, together with an iterative solution and an explicit sufficient condition for contraction. Moreover, a projected gradient method with a computable global step-size bound is developed to guarantee convergence beyond the contractive regime. Finally, integer-valued token allocations are attained via rounding of the continuous solution, and the resulting performance loss is evaluated in simulation results.",
+        "authors": "Emre Ozbas, Melih Bastopcu",
+        "url": "http://arxiv.org/abs/2601.10274v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10274v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究针对LLM服务器中推理令牌分配的准确性-延迟权衡问题，提出了一个严格的排队感知优化框架。它将问题建模为M/G/1排队系统，并提供了目标函数的严格凹性证明、最优解的固定点刻画及迭代求解方法。这篇论文在LLM服务效率方面提供了高度严谨的数学/统计推导和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10229v1",
+        "title": "GeoSteer: Faithful Chain-of-Thought Steering via Latent Manifold Gradients",
+        "summary": "Recent advances in Large Language Models (LLMs) have improved multi-step reasoning. Most approaches rely on Chain-of-Thought (CoT) rationales. Previous studies have shown that LLMs often generate logically inconsistent reasoning steps even when their final answers are correct. These inconsistencies reduce the reliability of step-level reasoning. We propose GeoSteer, a manifold-based framework that improves the quality of intermediate reasoning. The method consists of: (1) constructing a CoT dataset with segment-level scores, (2) training a Variational Autoencoder (VAE) model and a quality estimation model to learn a low-dimensional manifold of high-quality CoT trajectories, and (3) steering hidden states of target LLMs toward higher-quality regions in the latent space. This update in a latent space behaves like a natural-gradient adjustment in the original hidden-state space. It ensures geometrically coherent steering. We evaluate GeoSteer on the GSM8k dataset using the Qwen3 series. We measure via answer accuracy and overall reasoning performance. GeoSteer improved the exact match accuracy by up to 2.6 points. It also enhanced the pairwise win rate by 5.3 points. These results indicate that GeoSteer provides an effective and controllable mechanism for improving the quality of intermediate reasoning in LLMs.",
+        "authors": "Kentaro Kazama, Daiki Shirafuji, Tatsuhiko Saito",
+        "url": "http://arxiv.org/abs/2601.10229v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10229v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了LLM链式思考（CoT）推理中逻辑不一致的瓶颈。它提出了GeoSteer，一个基于流形的框架，通过学习高质量CoT轨迹的低维流形，并利用潜在流形梯度来引导LLM的隐藏状态，实现几何上连贯的推理。这是一种具有理论创新性的算法，显著提升了LLM中间推理步骤的质量和可靠性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10201v1",
+        "title": "PRL: Process Reward Learning Improves LLMs' Reasoning Ability and Broadens the Reasoning Boundary",
+        "summary": "Improving the reasoning abilities of Large Language Models (LLMs) has been a continuous topic recently. But most relevant works are based on outcome rewards at the trajectory level, missing fine-grained supervision during the reasoning process. Other existing training frameworks that try to combine process signals together to optimize LLMs also rely heavily on tedious additional steps like MCTS, training a separate reward model, etc., doing harm to the training efficiency. Moreover, the intuition behind the process signals design lacks rigorous theoretical support, leaving the understanding of the optimization mechanism opaque. In this paper, we propose Process Reward Learning (PRL), which decomposes the entropy regularized reinforcement learning objective into intermediate steps, with rigorous process rewards that could be assigned to models accordingly. Starting from theoretical motivation, we derive the formulation of PRL that is essentially equivalent to the objective of reward maximization plus a KL-divergence penalty term between the policy model and a reference model. However, PRL could turn the outcome reward into process supervision signals, which helps better guide the exploration during RL optimization. From our experiment results, we demonstrate that PRL not only improves the average performance for LLMs' reasoning ability measured by average @ n, but also broadens the reasoning boundary by improving the pass @ n metric. Extensive experiments show the effectiveness of PRL could be verified and generalized.",
+        "authors": "Jiarui Yao, Ruida Wang, Tong Zhang",
+        "url": "http://arxiv.org/abs/2601.10201v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10201v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了过程奖励学习（PRL）框架，解决了LLM推理能力提升中缺乏细粒度过程监督的瓶颈。它从理论上将熵正则化强化学习目标分解为中间步骤，并推导出严格的过程奖励。PRL能够将结果奖励转化为过程监督信号，有效指导RL优化，显著提升LLM的推理能力，具有重要的理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10148v1",
+        "title": "DecisionLLM: Large Language Models for Long Sequence Decision Exploration",
+        "summary": "Long-sequence decision-making, which is usually addressed through reinforcement learning (RL), is a critical component for optimizing strategic operations in dynamic environments, such as real-time bidding in computational advertising. The Decision Transformer (DT) introduced a powerful paradigm by framing RL as an autoregressive sequence modeling problem. Concurrently, Large Language Models (LLMs) have demonstrated remarkable success in complex reasoning and planning tasks. This inspires us whether LLMs, which share the same Transformer foundation, but operate at a much larger scale, can unlock new levels of performance in long-horizon sequential decision-making problem. This work investigates the application of LLMs to offline decision making tasks. A fundamental challenge in this domain is the LLMs' inherent inability to interpret continuous values, as they lack a native understanding of numerical magnitude and order when values are represented as text strings. To address this, we propose treating trajectories as a distinct modality. By learning to align trajectory data with natural language task descriptions, our model can autoregressively predict future decisions within a cohesive framework we term DecisionLLM. We establish a set of scaling laws governing this paradigm, demonstrating that performance hinges on three factors: model scale, data volume, and data quality. In offline experimental benchmarks and bidding scenarios, DecisionLLM achieves strong performance. Specifically, DecisionLLM-3B outperforms the traditional Decision Transformer (DT) by 69.4 on Maze2D umaze-v1 and by 0.085 on AuctionNet. It extends the AIGB paradigm and points to promising directions for future exploration in online bidding.",
+        "authors": "Xiaowei Lv, Zhilin Zhang, Yijun Li, Yusen Huo, Siyuan Ju, Xuyan Li, Chunxiang Hong, Tianyu Wang, Yongcai Wang, Peng Sun, Chuan Yu, Jian Xu, Bo Zheng",
+        "url": "http://arxiv.org/abs/2601.10148v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10148v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了LLM部署中KV缓存压缩的关键内存瓶颈。它提出了LOOKAT，一种将向量数据库压缩技术应用于Transformer注意力机制的新方法，将注意力计算从内存密集型转变为计算密集型。该方法在实现高压缩率的同时保持输出保真度，并提供了理论分析，是LLM效率和架构上的重大创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.10131v1",
+        "title": "M^4olGen: Multi-Agent, Multi-Stage Molecular Generation under Precise Multi-Property Constraints",
+        "summary": "Generating molecules that satisfy precise numeric constraints over multiple physicochemical properties is critical and challenging. Although large language models (LLMs) are expressive, they struggle with precise multi-objective control and numeric reasoning without external structure and feedback. We introduce \\textbf{M olGen}, a fragment-level, retrieval-augmented, two-stage framework for molecule generation under multi-property constraints. Stage I : Prototype generation: a multi-agent reasoner performs retrieval-anchored, fragment-level edits to produce a candidate near the feasible region. Stage II : RL-based fine-grained optimization: a fragment-level optimizer trained with Group Relative Policy Optimization (GRPO) applies one- or multi-hop refinements to explicitly minimize the property errors toward our target while regulating edit complexity and deviation from the prototype. A large, automatically curated dataset with reasoning chains of fragment edits and measured property deltas underpins both stages, enabling deterministic, reproducible supervision and controllable multi-hop reasoning. Unlike prior work, our framework better reasons about molecules by leveraging fragments and supports controllable refinement toward numeric targets. Experiments on generation under two sets of property constraints (QED, LogP, Molecular Weight and HOMO, LUMO) show consistent gains in validity and precise satisfaction of multi-property targets, outperforming strong LLMs and graph-based algorithms.",
+        "authors": "Yizhan Li, Florence Cloutier, Sifan Wu, Ali Parviz, Boris Knyazev, Yan Zhang, Glen Berseth, Bang Liu",
+        "url": "http://arxiv.org/abs/2601.10131v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.10131v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了在多属性约束下分子生成这一复杂的科学AI问题。它提出了M^4olGen，一个多智能体、多阶段的分子生成框架，结合了LLM、RAG和RL（GRPO），实现了对分子属性的精确控制和可控的多跳优化。该方法在科学发现领域具有高度创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.09982v1",
+        "title": "Context Volume Drives Performance: Tackling Domain Shift in Extremely Low-Resource Translation via RAG",
+        "summary": "Neural Machine Translation (NMT) models for low-resource languages suffer significant performance degradation under domain shift. We quantify this challenge using Dhao, an indigenous language of Eastern Indonesia with no digital footprint beyond the New Testament (NT). When applied to the unseen Old Testament (OT), a standard NMT model fine-tuned on the NT drops from an in-domain score of 36.17 chrF++ to 27.11 chrF++. To recover this loss, we introduce a hybrid framework where a fine-tuned NMT model generates an initial draft, which is then refined by a Large Language Model (LLM) using Retrieval-Augmented Generation (RAG). The final system achieves 35.21 chrF++ (+8.10 recovery), effectively matching the original in-domain quality. Our analysis reveals that this performance is driven primarily by the number of retrieved examples rather than the choice of retrieval algorithm. Qualitative analysis confirms the LLM acts as a robust \"safety net,\" repairing severe failures in zero-shot domains.",
+        "authors": "David Samuel Setiawan, Raphaël Merx, Jey Han Lau",
+        "url": "http://arxiv.org/abs/2601.09982v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.09982v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从理论上证明了无标签数据可以显著提升Transformer模型的上下文学习（ICL）性能，解决了ICL对昂贵标注数据依赖的瓶颈。它通过展示多层Transformer能够有效模拟期望最大化（EM）算法，从而隐式地从无标签数据中提取有用信息，提供了严谨的理论支撑和极高的实践影响力，是LLM数据效率方面的重大突破。"
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.15254v1",
+        "title": "Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible?",
+        "summary": "We study the problem of estimating causal effects under hidden confounding in the following unpaired data setting: we observe some covariates $X$ and an outcome $Y$ under different experimental conditions (environments) but do not observe them jointly; we either observe $X$ or $Y$. Under appropriate regularity conditions, the problem can be cast as an instrumental variable (IV) regression with the environment acting as a (possibly high-dimensional) instrument. When there are many environments but only a few observations per environment, standard two-sample IV estimators fail to be consistent. We propose a GMM-type estimator based on cross-fold sample splitting of the instrument-covariate sample and prove that it is consistent as the number of environments grows but the sample size per environment remains constant. We further extend the method to sparse causal effects via $\\ell_1$-regularized estimation and post-selection refitting.",
+        "authors": "Felix Schur, Niklas Pfister, Peng Ding, Sach Mukherjee, Jonas Peters",
+        "url": "http://arxiv.org/abs/2601.15254v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15254v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了在复杂数据设置下（非配对数据、隐藏混杂）的因果效应估计问题，提出了基于GMM的估计器，并**严格证明了其一致性**。这与您对“强大的理论基础”、“统计保证”和“清晰的数学推导”的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15158v1",
+        "title": "Outcome-Based RL Provably Leads Transformers to Reason, but Only With the Right Data",
+        "summary": "Transformers trained via Reinforcement Learning (RL) with outcome-based supervision can spontaneously develop the ability to generate intermediate reasoning steps (Chain-of-Thought). Yet the mechanism by which sparse rewards drive gradient descent to discover such systematic reasoning remains poorly understood. We address this by analyzing the gradient flow dynamics of single-layer Transformers on a synthetic graph traversal task that cannot be solved without Chain-of-Thought (CoT) but admits a simple iterative solution. We prove that despite training solely on final-answer correctness, gradient flow drives the model to converge to a structured, interpretable algorithm that iteratively traverses the graph vertex-by-vertex. We characterize the distributional properties required for this emergence, identifying the critical role of \"simple examples\": instances requiring fewer reasoning steps. When the training distribution places sufficient mass on these simpler instances, the model learns a generalizable traversal strategy that extrapolates to longer chains; when this mass vanishes, gradient-based learning becomes infeasible. We corroborate our theoretical results through experiments on synthetic data and with real-world language models on mathematical reasoning tasks, validating that our theoretical findings carry over to practical settings.",
+        "authors": "Yuval Ran-Milo, Yotam Alexander, Shahar Mendel, Nadav Cohen",
+        "url": "http://arxiv.org/abs/2601.15158v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15158v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过分析Transformer在RL训练下的梯度流动态，**从理论上证明了模型如何收敛到可解释的推理算法**，并刻画了数据分布的关键作用。这完美符合您对“严谨的数学逻辑”、“优化收敛性”和“清晰的数学推导”的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15111v1",
+        "title": "Auditing Language Model Unlearning via Information Decomposition",
+        "summary": "We expose a critical limitation in current approaches to machine unlearning in language models: despite the apparent success of unlearning algorithms, information about the forgotten data remains linearly decodable from internal representations. To systematically assess this discrepancy, we introduce an interpretable, information-theoretic framework for auditing unlearning using Partial Information Decomposition (PID). By comparing model representations before and after unlearning, we decompose the mutual information with the forgotten data into distinct components, formalizing the notions of unlearned and residual knowledge. Our analysis reveals that redundant information, shared across both models, constitutes residual knowledge that persists post-unlearning and correlates with susceptibility to known adversarial reconstruction attacks. Leveraging these insights, we propose a representation-based risk score that can guide abstention on sensitive inputs at inference time, providing a practical mechanism to mitigate privacy leakage. Our work introduces a principled, representation-level audit for unlearning, offering theoretical insight and actionable tools for safer deployment of language models.",
+        "authors": "Anmol Goel, Alan Ritter, Iryna Gurevych",
+        "url": "http://arxiv.org/abs/2601.15111v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15111v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了一个**可解释的、信息论框架（基于偏信息分解PID）**来审计语言模型遗忘过程中的信息残留，并对“遗忘知识”和“残留知识”进行了形式化定义。这体现了强大的理论基础和严谨的数学推导，对理解现代AI系统的内部机制至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15014v1",
+        "title": "Efficient and Minimax-optimal In-context Nonparametric Regression with Transformers",
+        "summary": "We study in-context learning for nonparametric regression with $α$-Hölder smooth regression functions, for some $α>0$. We prove that, with $n$ in-context examples and $d$-dimensional regression covariates, a pretrained transformer with $Θ(\\log n)$ parameters and $Ω\\bigl(n^{2α/(2α+d)}\\log^3 n\\bigr)$ pretraining sequences can achieve the minimax-optimal rate of convergence $O\\bigl(n^{-2α/(2α+d)}\\bigr)$ in mean squared error. Our result requires substantially fewer transformer parameters and pretraining sequences than previous results in the literature. This is achieved by showing that transformers are able to approximate local polynomial estimators efficiently by implementing a kernel-weighted polynomial basis and then running gradient descent.",
+        "authors": "Michelle Ching, Ioana Popescu, Nico Smith, Tianyi Ma, William G. Underwood, Richard J. Samworth",
+        "url": "http://arxiv.org/abs/2601.15014v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15014v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在非参数回归的背景下，**从理论上证明了Transformer能够达到最小最大最优的收敛速度**，并解释了其机制。这直接满足了您对“统计保证”、“优化收敛性”和“清晰的数学推导”的严格要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14818v1",
+        "title": "Statistical Learning Theory for Distributional Classification",
+        "summary": "In supervised learning with distributional inputs in the two-stage sampling setup, relevant to applications like learning-based medical screening or causal learning, the inputs (which are probability distributions) are not accessible in the learning phase, but only samples thereof. This problem is particularly amenable to kernel-based learning methods, where the distributions or samples are first embedded into a Hilbert space, often using kernel mean embeddings (KMEs), and then a standard kernel method like Support Vector Machines (SVMs) is applied, using a kernel defined on the embedding Hilbert space. In this work, we contribute to the theoretical analysis of this latter approach, with a particular focus on classification with distributional inputs using SVMs. We establish a new oracle inequality and derive consistency and learning rate results. Furthermore, for SVMs using the hinge loss and Gaussian kernels, we formulate a novel variant of an established noise assumption from the binary classification literature, under which we can establish learning rates. Finally, some of our technical tools like a new feature space for Gaussian kernels on Hilbert spaces are of independent interest.",
+        "authors": "Christian Fiedler",
+        "url": "http://arxiv.org/abs/2601.14818v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14818v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了分布输入分类的统计学习理论，**建立了新的Oracle不等式，并推导了其一致性和学习率结果**。它还为高斯核SVM提出了新的噪声假设。这正是您作为数理统计博士生所寻求的“强大的理论基础”和“统计保证”。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14663v1",
+        "title": "Calibrated uncertainty quantification for prosumer flexibility aggregation in ancillary service markets",
+        "summary": "Reliable forecasting of prosumer flexibility is critical for demand response aggregators participating in frequency controlled ancillary services market, where strict reliability requirements such as the P90 standard are enforced. Limited historical data, dependence on exogeneous factors, and heterogenous prosumer behaviour introduce significant epistemic uncertainty, making deterministic or poorly calibrated probabilistic models unsuitable for market bidding. This paper proposes the use of scalable uncertainty quantification framework that integrates Monte Carlo dropout (MCD) with conformal prediction (CP) to produce calibrated, finite sample prediction intervals for aggregated prosumer flexibility. The proposed framework is applied to a behind-the-meter aggregator participating in the Danish manual frequency restoration reserve capacity market. A large-scale synthetic dataset is generated using a modified industry-grade home energy management system, combined with publicly available load, solar, price, activation and device-level data. The resulting machine learning surrogate model captures aggregate prosumer price responsiveness and provides uncertainty-aware estimates suitable for market bidding. Multiple multivariate CP strategies are evaluated and benchmarked against conventional MCD-based methods. Results show that standalone MCD systematically overestimates available flexibility and violates P90 compliance, whereas the proposed MCD-CP framework achieves reliable coverage with controlled conservatism. When embedded in aggregator bidding model, conformalised methods substantially reduce overbidding risk and achieve upto 70% of perfect-information profit while satisfying regulatory reliability constraints, providing practical, computationally efficient, and market-compliant solution for aggregator flexibility forecasting under uncertainty.",
+        "authors": "Yogesh Pipada Sunil Kumar, S. Ali Pourmousavi, Jon A. R. Liisberg, Julian Lesmos-Vinasco",
+        "url": "http://arxiv.org/abs/2601.14663v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14663v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个结合Monte Carlo dropout和**共形预测（Conformal Prediction）的校准不确定性量化框架**，以生成**具有统计保证的预测区间**。共形预测本身就以其严格的有限样本覆盖率保证而闻名，完美符合您对“统计保证”和“严谨数学逻辑”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14609v1",
+        "title": "Communication-Efficient Federated Risk Difference Estimation for Time-to-Event Clinical Outcomes",
+        "summary": "Privacy-preserving model co-training in medical research is often hindered by server-dependent architectures incompatible with protected hospital data systems and by the predominant focus on relative effect measures (hazard ratios) which lack clinical interpretability for absolute survival risk assessment. We propose FedRD, a communication-efficient framework for federated risk difference estimation in distributed survival data. Unlike typical federated learning frameworks (e.g., FedAvg) that require persistent server connections and extensive iterative communication, FedRD is server-independent with minimal communication: one round of summary statistics exchange for the stratified model and three rounds for the unstratified model. Crucially, FedRD provides valid confidence intervals and hypothesis testing--capabilities absent in FedAvg-based frameworks. We provide theoretical guarantees by establishing the asymptotic properties of FedRD and prove that FedRD (unstratified) is asymptotically equivalent to pooled individual-level analysis. Simulation studies and real-world clinical applications across different countries demonstrate that FedRD outperforms local and federated baselines in both estimation accuracy and prediction performance, providing an architecturally feasible solution for absolute risk assessment in privacy-restricted, multi-site clinical studies.",
+        "authors": "Ziwen Wang, Siqi Li, Marcus Eng Hock Ong, Nan Liu",
+        "url": "http://arxiv.org/abs/2601.14609v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14609v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个联邦风险差异估计框架，**提供了有效的置信区间和假设检验，并建立了渐近性质的理论保证**。这充分体现了“统计保证”和“严谨的数学逻辑”。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14895v1",
+        "title": "SpatialMem: Unified 3D Memory with Metric Anchoring and Fast Retrieval",
+        "summary": "We present SpatialMem, a memory-centric system that unifies 3D geometry, semantics, and language into a single, queryable representation. Starting from casually captured egocentric RGB video, SpatialMem reconstructs metrically scaled indoor environments, detects structural 3D anchors (walls, doors, windows) as the first-layer scaffold, and populates a hierarchical memory with open-vocabulary object nodes -- linking evidence patches, visual embeddings, and two-layer textual descriptions to 3D coordinates -- for compact storage and fast retrieval. This design enables interpretable reasoning over spatial relations (e.g., distance, direction, visibility) and supports downstream tasks such as language-guided navigation and object retrieval without specialized sensors. Experiments across three real-life indoor scenes demonstrate that SpatialMem maintains strong anchor-description-level navigation completion and hierarchical retrieval accuracy under increasing clutter and occlusion, offering an efficient and extensible framework for embodied spatial intelligence.",
+        "authors": "Xinyi Zheng, Yunze Liu, Chi-Hao Wu, Fan Zhang, Hao Zheng, Wenqi Zhou, Walterio W. Mayol-Cuevas, Junxiao Shen",
+        "url": "http://arxiv.org/abs/2601.14895v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14895v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了时间条件流匹配模型，通过学习向量场迭代地将噪声掩码传输到真实值。流匹配作为一种生成模型，其背后有**坚实的数学基础（如ODE/SDE和最优传输理论）**，暗示了较高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14553v1",
+        "title": "Self-Blinding and Counterfactual Self-Simulation Mitigate Biases and Sycophancy in Large Language Models",
+        "summary": "Fair decisions require ignoring irrelevant, potentially biasing, information. To achieve this, decision-makers need to approximate what decision they would have made had they not known certain facts, such as the gender or race of a job candidate. This counterfactual self-simulation is notoriously hard for humans, leading to biased judgments even by well-meaning actors. Here we show that large language models (LLMs) suffer from similar limitations in their ability to approximate what decisions they would make under counterfactual knowledge in offsetting gender and race biases and overcoming sycophancy. We show that prompting models to ignore or pretend not to know biasing information fails to offset these biases and occasionally backfires. However, unlike humans, LLMs can be given access to a ground-truth model of their own counterfactual cognition -- their own API. We show that this access to the responses of a blinded replica enables fairer decisions, while providing greater transparency to distinguish implicit from intentionally biased behavior.",
+        "authors": "Brian Christian, Matan Mazor",
+        "url": "http://arxiv.org/abs/2601.14553v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14553v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文探讨了LLM中的偏见和谄媚问题，并提出了**基于反事实自模拟的解决方案**。反事实推理是因果推断的核心概念，该方法通过模拟“如果不知道某些信息会如何决策”来缓解偏见，具有深刻的因果逻辑和理论启发性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14942v1",
+        "title": "Communication-Efficient Multi-Modal Edge Inference via Uncertainty-Aware Distributed Learning",
+        "summary": "Semantic communication is emerging as a key enabler for distributed edge intelligence due to its capability to convey task-relevant meaning. However, achieving communication-efficient training and robust inference over wireless links remains challenging. This challenge is further exacerbated for multi-modal edge inference (MMEI) by two factors: 1) prohibitive communication overhead for distributed learning over bandwidth-limited wireless links, due to the \\emph{multi-modal} nature of the system; and 2) limited robustness under varying channels and noisy multi-modal inputs. In this paper, we propose a three-stage communication-aware distributed learning framework to improve training and inference efficiency while maintaining robustness over wireless channels. In Stage~I, devices perform local multi-modal self-supervised learning to obtain shared and modality-specific encoders without device--server exchange, thereby reducing the communication cost. In Stage~II, distributed fine-tuning with centralized evidential fusion calibrates per-modality uncertainty and reliably aggregates features distorted by noise or channel fading. In Stage~III, an uncertainty-guided feedback mechanism selectively requests additional features for uncertain samples, optimizing the communication--accuracy tradeoff in the distributed setting. Experiments on RGB--depth indoor scene classification show that the proposed framework attains higher accuracy with far fewer training communication rounds and remains robust to modality degradation or channel variation, outperforming existing self-supervised and fully supervised baselines.",
+        "authors": "Hang Zhao, Hongru Li, Dongfang Xu, Shenghui Song, Khaled B. Letaief",
+        "url": "http://arxiv.org/abs/2601.14942v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14942v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个不确定性感知分布式学习框架，其中“集中式证据融合”和“校准每模态不确定性”等概念，暗示了**对不确定性进行统计建模和校准的严谨方法**，对统计学背景的您会很有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14693v1",
+        "title": "Beyond Error-Based Optimization: Experience-Driven Symbolic Regression with Goal-Conditioned Reinforcement Learning",
+        "summary": "Symbolic Regression aims to automatically identify compact and interpretable mathematical expressions that model the functional relationship between input and output variables. Most existing search-based symbolic regression methods typically rely on the fitting error to inform the search process. However, in the vast expression space, numerous candidate expressions may exhibit similar error values while differing substantially in structure, leading to ambiguous search directions and hindering convergence to the underlying true function. To address this challenge, we propose a novel framework named EGRL-SR (Experience-driven Goal-conditioned Reinforcement Learning for Symbolic Regression). In contrast to traditional error-driven approaches, EGRL-SR introduces a new perspective: leveraging precise historical trajectories and optimizing the action-value network to proactively guide the search process, thereby achieving a more robust expression search. Specifically, we formulate symbolic regression as a goal-conditioned reinforcement learning problem and incorporate hindsight experience replay, allowing the action-value network to generalize common mapping patterns from diverse input-output pairs. Moreover, we design an all-point satisfaction binary reward function that encourages the action-value network to focus on structural patterns rather than low-error expressions, and concurrently propose a structure-guided heuristic exploration strategy to enhance search diversity and space coverage. Experiments on public benchmarks show that EGRL-SR consistently outperforms state-of-the-art methods in recovery rate and robustness, and can recover more complex expressions under the same search budget. Ablation results validate that the action-value network effectively guides the search, with both the reward function and the exploration strategy playing critical roles.",
+        "authors": "Jianwen Sun, Xinrui Li, Fuqing Li, Xiaoxuan Shen",
+        "url": "http://arxiv.org/abs/2601.14693v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14693v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "符号回归本身就是寻找数学表达式，具有固有的数学性质。该论文将其表述为**目标条件强化学习问题，涉及行动值网络和奖励函数设计**，这些都与优化理论和算法设计紧密相关，对您来说具有理论探索价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14590v1",
+        "title": "Counterfactual Modeling with Fine-Tuned LLMs for Health Intervention Design and Sensor Data Augmentation",
+        "summary": "Counterfactual explanations (CFEs) provide human-centric interpretability by identifying the minimal, actionable changes required to alter a machine learning model's prediction. Therefore, CFs can be used as (i) interventions for abnormality prevention and (ii) augmented data for training robust models. We conduct a comprehensive evaluation of CF generation using large language models (LLMs), including GPT-4 (zero-shot and few-shot) and two open-source models-BioMistral-7B and LLaMA-3.1-8B, in both pretrained and fine-tuned configurations. Using the multimodal AI-READI clinical dataset, we assess CFs across three dimensions: intervention quality, feature diversity, and augmentation effectiveness. Fine-tuned LLMs, particularly LLaMA-3.1-8B, produce CFs with high plausibility (up to 99%), strong validity (up to 0.99), and realistic, behaviorally modifiable feature adjustments. When used for data augmentation under controlled label-scarcity settings, LLM-generated CFs substantially restore classifier performance, yielding an average 20% F1 recovery across three scarcity scenarios. Compared with optimization-based baselines such as DiCE, CFNOW, and NICE, LLMs offer a flexible, model-agnostic approach that generates more clinically actionable and semantically coherent counterfactuals. Overall, this work demonstrates the promise of LLM-driven counterfactuals for both interpretable intervention design and data-efficient model training in sensor-based digital health.   Impact: SenseCF fine-tunes an LLM to generate valid, representative counterfactual explanations and supplement minority class in an imbalanced dataset for improving model training and boosting model robustness and predictive performance",
+        "authors": "Shovito Barua Soumma, Asiful Arefeen, Stephanie M. Carpenter, Melanie Hingle, Hassan Ghasemzadeh",
+        "url": "http://arxiv.org/abs/2601.14590v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14590v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文评估了使用LLM生成反事实解释（CFE），并将其用于干预设计和数据增强。反事实解释是**因果推断和可解释AI的关键概念**，论文中对CFE的“有效性”评估以及与“基于优化的基线”的比较，表明了其潜在的理论严谨性。"
+    }
+]

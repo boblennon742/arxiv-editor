@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.15160v1",
+        "title": "Knowledge Graphs are Implicit Reward Models: Path-Derived Signals Enable Compositional Reasoning",
+        "summary": "Large language models have achieved near-expert performance in structured reasoning domains like mathematics and programming, yet their ability to perform compositional multi-hop reasoning in specialized scientific fields remains limited. We propose a bottom-up learning paradigm in which models are grounded in axiomatic domain facts and compose them to solve complex, unseen tasks. To this end, we present a post-training pipeline, based on a combination of supervised fine-tuning and reinforcement learning (RL), in which knowledge graphs act as implicit reward models. By deriving novel reward signals from knowledge graph paths, we provide verifiable, scalable, and grounded supervision that encourages models to compose intermediate axioms rather than optimize only final answers during RL. We validate this approach in the medical domain, training a 14B model on short-hop reasoning paths (1-3 hops) and evaluating its zero-shot generalization to complex multi-hop queries (4-5 hops). Our experiments show that path-derived rewards act as a \"compositional bridge\", enabling our model to significantly outperform much larger models and frontier systems like GPT-5.2 and Gemini 3 Pro, on the most difficult reasoning tasks. Furthermore, we demonstrate the robustness of our approach to adversarial perturbations against option-shuffling stress tests. This work suggests that grounding the reasoning process in structured knowledge is a scalable and efficient path toward intelligent reasoning.",
+        "authors": "Yuval Kansal, Niraj K. Jha",
+        "url": "http://arxiv.org/abs/2601.15160v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15160v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个将知识图谱作为隐式奖励模型的全新范式，通过路径派生信号来训练LLM进行组合式多跳推理。其理论创新性极强，将知识图谱的结构信息转化为可验证、可扩展的奖励信号，有效解决了LLM在专业领域多跳推理能力不足的瓶颈，甚至超越了GPT-5.2和Gemini 3 Pro等前沿模型，具有巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14710v1",
+        "title": "Case-Guided Sequential Assay Planning in Drug Discovery",
+        "summary": "Optimally sequencing experimental assays in drug discovery is a high-stakes planning problem under severe uncertainty and resource constraints. A primary obstacle for standard reinforcement learning (RL) is the absence of an explicit environment simulator or transition data $(s, a, s')$; planning must rely solely on a static database of historical outcomes. We introduce the Implicit Bayesian Markov Decision Process (IBMDP), a model-based RL framework designed for such simulator-free settings. IBMDP constructs a case-guided implicit model of transition dynamics by forming a nonparametric belief distribution using similar historical outcomes. This mechanism enables Bayesian belief updating as evidence accumulates and employs ensemble MCTS planning to generate stable policies that balance information gain toward desired outcomes with resource efficiency. We validate IBMDP through comprehensive experiments. On a real-world central nervous system (CNS) drug discovery task, IBMDP reduced resource consumption by up to 92\\% compared to established heuristics while maintaining decision confidence. To rigorously assess decision quality, we also benchmarked IBMDP in a synthetic environment with a computable optimal policy. Our framework achieves significantly higher alignment with this optimal policy than a deterministic value iteration alternative that uses the same similarity-based model, demonstrating the superiority of our ensemble planner. IBMDP offers a practical solution for sequential experimental design in data-rich but simulator-poor domains.",
+        "authors": "Tianchi Chen, Jan Bima, Sean L. Wu, Otto Ritter, Bingjia Yang, Xiang Yu",
+        "url": "http://arxiv.org/abs/2601.14710v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14710v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对药物发现中无模拟器环境下的序列实验设计问题，提出了隐式贝叶斯马尔可夫决策过程（IBMDP）这一新颖的模型基强化学习框架。它通过案例引导的隐式模型和集成MCTS规划，在理论上严谨地解决了数据稀缺和不确定性下的决策瓶颈，并在实际任务中显著减少了资源消耗，具有极高的理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14660v1",
+        "title": "NeuroFilter: Privacy Guardrails for Conversational LLM Agents",
+        "summary": "This work addresses the computational challenge of enforcing privacy for agentic Large Language Models (LLMs), where privacy is governed by the contextual integrity framework. Indeed, existing defenses rely on LLM-mediated checking stages that add substantial latency and cost, and that can be undermined in multi-turn interactions through manipulation or benign-looking conversational scaffolding. Contrasting this background, this paper makes a key observation: internal representations associated with privacy-violating intent can be separated from benign requests using linear structure. Using this insight, the paper proposes NeuroFilter, a guardrail framework that operationalizes contextual integrity by mapping norm violations to simple directions in the model's activation space, enabling detection even when semantic filters are bypassed. The proposed filter is also extended to capture threats arising during long conversations using the concept of activation velocity, which measures cumulative drift in internal representations across turns. A comprehensive evaluation across over 150,000 interactions and covering models from 7B to 70B parameters, illustrates the strong performance of NeuroFilter in detecting privacy attacks while maintaining zero false positives on benign prompts, all while reducing the computational inference cost by several orders of magnitude when compared to LLM-based agentic privacy defenses.",
+        "authors": "Saswat Das, Ferdinando Fioretto",
+        "url": "http://arxiv.org/abs/2601.14660v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14660v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过对LLM内部表示的深刻洞察，提出了NeuroFilter框架，利用激活空间中的线性结构来高效地检测和阻止隐私违规意图。其理论创新在于将上下文完整性框架操作化为激活空间中的方向，并引入激活速度来处理长对话，极大地降低了推理成本，是解决LLM代理隐私和效率瓶颈的关键性工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14553v1",
+        "title": "Self-Blinding and Counterfactual Self-Simulation Mitigate Biases and Sycophancy in Large Language Models",
+        "summary": "Fair decisions require ignoring irrelevant, potentially biasing, information. To achieve this, decision-makers need to approximate what decision they would have made had they not known certain facts, such as the gender or race of a job candidate. This counterfactual self-simulation is notoriously hard for humans, leading to biased judgments even by well-meaning actors. Here we show that large language models (LLMs) suffer from similar limitations in their ability to approximate what decisions they would make under counterfactual knowledge in offsetting gender and race biases and overcoming sycophancy. We show that prompting models to ignore or pretend not to know biasing information fails to offset these biases and occasionally backfires. However, unlike humans, LLMs can be given access to a ground-truth model of their own counterfactual cognition -- their own API. We show that this access to the responses of a blinded replica enables fairer decisions, while providing greater transparency to distinguish implicit from intentionally biased behavior.",
+        "authors": "Brian Christian, Matan Mazor",
+        "url": "http://arxiv.org/abs/2601.14553v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14553v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究揭示了LLM在反事实知识近似中存在的偏见和奉承问题，并提出了一种高度新颖的“自我蒙蔽和反事实自我模拟”方法。通过让LLM访问其自身API作为反事实认知的“真实模型”，实现了更公平的决策和更高的透明度。这不仅是理论上的重大突破，也为解决LLM的伦理和偏见问题提供了实际可行的方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15250v1",
+        "title": "FlowSSC: Universal Generative Monocular Semantic Scene Completion via One-Step Latent Diffusion",
+        "summary": "Semantic Scene Completion (SSC) from monocular RGB images is a fundamental yet challenging task due to the inherent ambiguity of inferring occluded 3D geometry from a single view. While feed-forward methods have made progress, they often struggle to generate plausible details in occluded regions and preserve the fundamental spatial relationships of objects. Such accurate generative reasoning capability for the entire 3D space is critical in real-world applications. In this paper, we present FlowSSC, the first generative framework applied directly to monocular semantic scene completion. FlowSSC treats the SSC task as a conditional generation problem and can seamlessly integrate with existing feed-forward SSC methods to significantly boost their performance. To achieve real-time inference without compromising quality, we introduce Shortcut Flow-matching that operates in a compact triplane latent space. Unlike standard diffusion models that require hundreds of steps, our method utilizes a shortcut mechanism to achieve high-fidelity generation in a single step, enabling practical deployment in autonomous systems. Extensive experiments on SemanticKITTI demonstrate that FlowSSC achieves state-of-the-art performance, significantly outperforming existing baselines.",
+        "authors": "Zichen Xi, Hao-Xiang Chen, Nan Xue, Hongyu Yan, Qi-Yuan Feng, Levent Burak Kara, Joaquim Jorge, Qun-Ce Xu",
+        "url": "http://arxiv.org/abs/2601.15250v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15250v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FlowSSC是首个用于单目语义场景补全的生成框架，通过新颖的Shortcut Flow-matching技术在紧凑的triplane潜在空间中实现单步高保真生成。它解决了从单视图推断遮挡3D几何的固有模糊性，并实现了实时推理，对自动驾驶等实际应用具有显著的落地价值和性能提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15165v1",
+        "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+        "summary": "Diffusion Large Language Models (dLLMs) break the rigid left-to-right constraint of traditional LLMs, enabling token generation in arbitrary orders. Intuitively, this flexibility implies a solution space that strictly supersets the fixed autoregressive trajectory, theoretically unlocking superior reasoning potential for general tasks like mathematics and coding. Consequently, numerous works have leveraged reinforcement learning (RL) to elicit the reasoning capability of dLLMs. In this paper, we reveal a counter-intuitive reality: arbitrary order generation, in its current form, narrows rather than expands the reasoning boundary of dLLMs. We find that dLLMs tend to exploit this order flexibility to bypass high-uncertainty tokens that are crucial for exploration, leading to a premature collapse of the solution space. This observation challenges the premise of existing RL approaches for dLLMs, where considerable complexities, such as handling combinatorial trajectories and intractable likelihoods, are often devoted to preserving this flexibility. We demonstrate that effective reasoning is better elicited by intentionally forgoing arbitrary order and applying standard Group Relative Policy Optimization (GRPO) instead. Our approach, JustGRPO, is minimalist yet surprisingly effective (e.g., 89.1% accuracy on GSM8K) while fully retaining the parallel decoding ability of dLLMs. Project page: https://nzl-thu.github.io/the-flexibility-trap",
+        "authors": "Zanlin Ni, Shenzhi Wang, Yang Yue, Tianyu Yu, Weilin Zhao, Yeguo Hua, Tianyi Chen, Jun Song, Cheng Yu, Bo Zheng, Gao Huang",
+        "url": "http://arxiv.org/abs/2601.15165v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15165v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了扩散语言模型（dLLMs）中任意顺序生成的一个反直觉的“灵活性陷阱”，即这种灵活性反而限制了推理潜力。它通过深入的机制分析，挑战了现有RL方法的前提，并提出了JustGRPO，在放弃任意顺序的同时实现了卓越的推理准确性和并行解码能力，具有重要的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15102v1",
+        "title": "Field-Space Autoencoder for Scalable Climate Emulators",
+        "summary": "Kilometer-scale Earth system models are essential for capturing local climate change. However, these models are computationally expensive and produce petabyte-scale outputs, which limits their utility for applications such as probabilistic risk assessment. Here, we present the Field-Space Autoencoder, a scalable climate emulation framework based on a spherical compression model that overcomes these challenges. By utilizing Field-Space Attention, the model efficiently operates on native climate model output and therefore avoids geometric distortions caused by forcing spherical data onto Euclidean grids. This approach preserves physical structures significantly better than convolutional baselines. By producing a structured compressed field, it serves as a good baseline for downstream generative emulation. In addition, the model can perform zero-shot super-resolution that maps low-resolution large ensembles and scarce high-resolution data into a shared representation. We train a generative diffusion model on these compressed fields. The model can simultaneously learn internal variability from abundant low-resolution data and fine-scale physics from sparse high-resolution data. Our work bridges the gap between the high volume of low-resolution ensemble statistics and the scarcity of high-resolution physical detail.",
+        "authors": "Johannes Meuer, Maximilian Witte, Étiénne Plésiat, Thomas Ludwig, Christopher Kadow",
+        "url": "http://arxiv.org/abs/2601.15102v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15102v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Field-Space Autoencoder是一个可扩展的气候模拟框架，通过Field-Space Attention在原生气候模型输出上操作，避免了球面数据投影到欧几里得网格造成的几何畸变。这种新颖的架构设计显著保留了物理结构，并实现了零样本超分辨率，对解决气候模型计算昂贵和数据量大的瓶颈至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15077v1",
+        "title": "Multi-Agent Constraint Factorization Reveals Latent Invariant Solution Structure",
+        "summary": "Multi-agent systems (MAS) composed of large language models often exhibit improved problem-solving performance despite operating on identical information. In this work, we provide a formal explanation for this phenomenon grounded in operator theory and constrained optimization. We model each agent as enforcing a distinct family of validity constraints on a shared solution state, and show that a MAS implements a factorized composition of constraint-enforcement operators. Under mild conditions, these dynamics converge to invariant solution sets defined by the intersection of agent constraint sets. Such invariant structures are generally not dynamically accessible to a single agent applying all constraints simultaneously, even when expressive capacity and information are identical. We extend this result from exact constraint enforcement to soft constraints via proximal operators, and apply the formalism to contemporary text-based dialog systems.",
+        "authors": "Christopher Scofield",
+        "url": "http://arxiv.org/abs/2601.15077v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15077v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从算子理论和约束优化的角度，形式化解释了多智能体系统（MAS）中LLM优越问题解决能力的根本原因。它提出了“约束因子化”的概念，并证明MAS能收敛到单个智能体无法动态访问的不变解集。这为理解和设计更有效的多智能体AI系统提供了深刻的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15050v1",
+        "title": "\\textsc{LogicScore}: Fine-grained Logic Evaluation of Conciseness, Completeness, and Determinateness in Attributed Question Answering",
+        "summary": "Current evaluation methods for Attributed Question Answering (AQA) suffer from \\textit{attribution myopia}: they emphasize verification of isolated statements and their attributions but overlook the global logical integrity of long-form answers. Consequently, Large Language Models (LLMs) often produce factually grounded yet logically incoherent responses with elusive deductive gaps. To mitigate this limitation, we present \\textsc{LogicScore}, a unified evaluation framework that shifts the paradigm from local assessment to global reasoning scrutiny. Grounded in Horn Rules, our approach integrates a backward verification mechanism to systematically evaluate three key reasoning dimensions: \\textit{Completeness} (logically sound deduction), \\textit{Conciseness} (non-redundancy), and \\textit{Determinateness} (consistent answer entailment). Extensive experiments across three multi-hop QA datasets (HotpotQA, MusiQue, and 2WikiMultiHopQA) and over 20 LLMs (including GPT-5, Gemini-3-Pro, LLaMA3, and task-specific tuned models) reveal a critical capability gap: leading models often achieve high attribution scores (e.g., 92.85\\% precision for Gemini-3 Pro) but struggle with global reasoning quality (e.g., 35.11\\% Conciseness for Gemini-3 Pro). Our work establishes a robust standard for logical evaluation, highlighting the need to prioritize reasoning coherence alongside factual grounding in LLM development. Codes are available at: https://github.com/zhichaoyan11/LogicScore.",
+        "authors": "Zhichao Yan, Yunxiao Zhao, Jiapu Wang, Jiaoyan Chen, Shaoru Guo, Xiaoli Li, Ru Li, Jeff Z. Pan",
+        "url": "http://arxiv.org/abs/2601.15050v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15050v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "LogicScore是一个基于Horn规则的统一评估框架，通过反向验证机制，细粒度地评估归因问答（AQA）中LLM答案的逻辑完整性（简洁性、完整性和确定性）。它解决了现有AQA评估方法中“归因近视”的局限性，揭示了领先模型在全局推理质量上的关键差距，为LLM的逻辑推理能力评估树立了严谨的标准。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14994v1",
+        "title": "Obscuring Data Contamination Through Translation: Evidence from Arabic Corpora",
+        "summary": "Data contamination undermines the validity of Large Language Model evaluation by enabling models to rely on memorized benchmark content rather than true generalization. While prior work has proposed contamination detection methods, these approaches are largely limited to English benchmarks, leaving multilingual contamination poorly understood. In this work, we investigate contamination dynamics in multilingual settings by fine-tuning several open-weight LLMs on varying proportions of Arabic datasets and evaluating them on original English benchmarks. To detect memorization, we extend the Tested Slot Guessing method with a choice-reordering strategy and incorporate Min-K% probability analysis, capturing both behavioral and distributional contamination signals.   Our results show that translation into Arabic suppresses conventional contamination indicators, yet models still benefit from exposure to contaminated data, particularly those with stronger Arabic capabilities. This effect is consistently reflected in rising Mink% scores and increased cross-lingual answer consistency as contamination levels grow. To address this blind spot, we propose Translation-Aware Contamination Detection, which identifies contamination by comparing signals across multiple translated benchmark variants rather than English alone. The Translation-Aware Contamination Detection reliably exposes contamination even when English-only methods fail. Together, our findings highlight the need for multilingual, translation-aware evaluation pipelines to ensure fair, transparent, and reproducible assessment of LLMs.",
+        "authors": "Chaymaa Abbas, Nour Shamaa, Mariette Awad",
+        "url": "http://arxiv.org/abs/2601.14994v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14994v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在理论上证明了Transformer在上下文非参数回归中可以实现最小最大最优收敛率，并且所需参数和预训练序列显著减少。通过揭示Transformer能够通过核加权多项式基和梯度下降有效近似局部多项式估计器，为理解Transformer的上下文学习机制提供了严谨的数学/统计推导和理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14952v1",
+        "title": "CorpusQA: A 10 Million Token Benchmark for Corpus-Level Analysis and Reasoning",
+        "summary": "While large language models now handle million-token contexts, their capacity for reasoning across entire document repositories remains largely untested. Existing benchmarks are inadequate, as they are mostly limited to single long texts or rely on a \"sparse retrieval\" assumption-that answers can be derived from a few relevant chunks. This assumption fails for true corpus-level analysis, where evidence is highly dispersed across hundreds of documents and answers require global integration, comparison, and statistical aggregation. To address this critical gap, we introduce CorpusQA, a new benchmark scaling up to 10 million tokens, generated via a novel data synthesis framework. By decoupling reasoning from textual representation, this framework creates complex, computation-intensive queries with programmatically guaranteed ground-truth answers, challenging systems to perform holistic reasoning over vast, unstructured text without relying on fallible human annotation. We further demonstrate the utility of our framework beyond evaluation, showing that fine-tuning on our synthesized data effectively enhances an LLM's general long-context reasoning capabilities. Extensive experiments reveal that even state-of-the-art long-context LLMs struggle as input length increases, and standard retrieval-augmented generation systems collapse entirely. Our findings indicate that memory-augmented agentic architectures offer a more robust alternative, suggesting a critical shift is needed from simply extending context windows to developing advanced architectures for global information synthesis.",
+        "authors": "Zhiyuan Lu, Chenliang Li, Yingcheng Shi, Weizhou Shen, Ming Yan, Fei Huang",
+        "url": "http://arxiv.org/abs/2601.14952v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14952v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "TGA（Transition-Aware Graph Attention Network）是一种线性复杂度的多行为序列建模方法，通过构建结构化稀疏图和转换感知图注意力机制，解决了现有方法计算成本高的问题。它在保持计算效率的同时显著提升了推荐系统的性能，并已在工业环境中部署，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14790v1",
+        "title": "CI4A: Semantic Component Interfaces for Agents Empowering Web Automation",
+        "summary": "While Large Language Models demonstrate remarkable proficiency in high-level semantic planning, they remain limited in handling fine-grained, low-level web component manipulations. To address this limitation, extensive research has focused on enhancing model grounding capabilities through techniques such as Reinforcement Learning. However, rather than compelling agents to adapt to human-centric interfaces, we propose constructing interaction interfaces specifically optimized for agents. This paper introduces Component Interface for Agent (CI4A), a semantic encapsulation mechanism that abstracts the complex interaction logic of UI components into a set of unified tool primitives accessible to agents. We implemented CI4A within Ant Design, an industrial-grade front-end framework, covering 23 categories of commonly used UI components. Furthermore, we developed a hybrid agent featuring an action space that dynamically updates according to the page state, enabling flexible invocation of available CI4A tools. Leveraging the CI4A-integrated Ant Design, we refactored and upgraded the WebArena benchmark to evaluate existing SoTA methods. Experimental results demonstrate that the CI4A-based agent significantly outperforms existing approaches, achieving a new SoTA task success rate of 86.3%, alongside substantial improvements in execution efficiency.",
+        "authors": "Zhi Qiu, Jiazheng Sun, Chenxiao Xia, Jun Zheng, Xin Peng",
+        "url": "http://arxiv.org/abs/2601.14790v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14790v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CI4A（Component Interface for Agent）提出了一种语义封装机制，将UI组件的复杂交互逻辑抽象为统一的工具原语，专为智能体优化。这种新颖的架构设计显著提升了LLM代理在Web自动化中的接地能力和执行效率，解决了LLM在细粒度Web操作中的瓶颈，具有重要的实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14788v1",
+        "title": "Reconstruction-Anchored Diffusion Model for Text-to-Motion Generation",
+        "summary": "Diffusion models have seen widespread adoption for text-driven human motion generation and related tasks due to their impressive generative capabilities and flexibility. However, current motion diffusion models face two major limitations: a representational gap caused by pre-trained text encoders that lack motion-specific information, and error propagation during the iterative denoising process. This paper introduces Reconstruction-Anchored Diffusion Model (RAM) to address these challenges. First, RAM leverages a motion latent space as intermediate supervision for text-to-motion generation. To this end, RAM co-trains a motion reconstruction branch with two key objective functions: self-regularization to enhance the discrimination of the motion space and motion-centric latent alignment to enable accurate mapping from text to the motion latent space. Second, we propose Reconstructive Error Guidance (REG), a testing-stage guidance mechanism that exploits the diffusion model's inherent self-correction ability to mitigate error propagation. At each denoising step, REG uses the motion reconstruction branch to reconstruct the previous estimate, reproducing the prior error patterns. By amplifying the residual between the current prediction and the reconstructed estimate, REG highlights the improvements in the current prediction. Extensive experiments demonstrate that RAM achieves significant improvements and state-of-the-art performance. Our code will be released.",
+        "authors": "Yifei Liu, Changxing Ding, Ling Guo, Huaiguang Jiang, Qiong Cao",
+        "url": "http://arxiv.org/abs/2601.14788v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14788v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "RAM（Reconstruction-Anchored Diffusion Model）通过引入运动潜在空间作为中间监督和提出Reconstructive Error Guidance（REG）机制，解决了文本到运动生成中表示差距和迭代去噪误差传播的问题。这种新颖的扩散模型架构设计显著提升了生成质量，达到了SOTA水平，对动画和机器人等领域有重要应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14730v1",
+        "title": "FSX: Message Flow Sensitivity Enhanced Structural Explainer for Graph Neural Networks",
+        "summary": "Despite the widespread success of Graph Neural Networks (GNNs), understanding the reasons behind their specific predictions remains challenging. Existing explainability methods face a trade-off that gradient-based approaches are computationally efficient but often ignore structural interactions, while game-theoretic techniques capture interactions at the cost of high computational overhead and potential deviation from the model's true reasoning path. To address this gap, we propose FSX (Message Flow Sensitivity Enhanced Structural Explainer), a novel hybrid framework that synergistically combines the internal message flows of the model with a cooperative game approach applied to the external graph data. FSX first identifies critical message flows via a novel flow-sensitivity analysis: during a single forward pass, it simulates localized node perturbations and measures the resulting changes in message flow intensities. These sensitivity-ranked flows are then projected onto the input graph to define compact, semantically meaningful subgraphs. Within each subgraph, a flow-aware cooperative game is conducted, where node contributions are evaluated fairly through a Shapley-like value that incorporates both node-feature importance and their roles in sustaining or destabilizing the identified critical flows. Extensive evaluation across multiple datasets and GNN architectures demonstrates that FSX achieves superior explanation fidelity with significantly reduced runtime, while providing unprecedented insights into the structural logic underlying model predictions--specifically, how important sub-structures exert influence by governing the stability of key internal computational pathways.",
+        "authors": "Bizu Feng, Zhimu Yang, Shaode Yu, Zixin Hu",
+        "url": "http://arxiv.org/abs/2601.14730v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14730v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FSX（Message Flow Sensitivity Enhanced Structural Explainer）是一个新颖的混合框架，结合了GNN的内部消息流和合作博弈理论，解决了GNN可解释性方法在效率和结构交互捕捉上的权衡问题。它通过流敏感性分析识别关键消息流，并进行流感知合作博弈，以更低的运行时提供更忠实、更具洞察力的解释。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14693v1",
+        "title": "Beyond Error-Based Optimization: Experience-Driven Symbolic Regression with Goal-Conditioned Reinforcement Learning",
+        "summary": "Symbolic Regression aims to automatically identify compact and interpretable mathematical expressions that model the functional relationship between input and output variables. Most existing search-based symbolic regression methods typically rely on the fitting error to inform the search process. However, in the vast expression space, numerous candidate expressions may exhibit similar error values while differing substantially in structure, leading to ambiguous search directions and hindering convergence to the underlying true function. To address this challenge, we propose a novel framework named EGRL-SR (Experience-driven Goal-conditioned Reinforcement Learning for Symbolic Regression). In contrast to traditional error-driven approaches, EGRL-SR introduces a new perspective: leveraging precise historical trajectories and optimizing the action-value network to proactively guide the search process, thereby achieving a more robust expression search. Specifically, we formulate symbolic regression as a goal-conditioned reinforcement learning problem and incorporate hindsight experience replay, allowing the action-value network to generalize common mapping patterns from diverse input-output pairs. Moreover, we design an all-point satisfaction binary reward function that encourages the action-value network to focus on structural patterns rather than low-error expressions, and concurrently propose a structure-guided heuristic exploration strategy to enhance search diversity and space coverage. Experiments on public benchmarks show that EGRL-SR consistently outperforms state-of-the-art methods in recovery rate and robustness, and can recover more complex expressions under the same search budget. Ablation results validate that the action-value network effectively guides the search, with both the reward function and the exploration strategy playing critical roles.",
+        "authors": "Jianwen Sun, Xinrui Li, Fuqing Li, Xiaoxuan Shen",
+        "url": "http://arxiv.org/abs/2601.14693v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14693v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "EGRL-SR（Experience-driven Goal-conditioned Reinforcement Learning for Symbolic Regression）将符号回归重新定义为目标条件强化学习问题，通过利用精确的历史轨迹和优化行动价值网络来指导搜索过程。它引入了新的奖励函数和探索策略，解决了传统基于误差优化方法的局限性，在恢复复杂表达式方面超越了SOTA方法，具有重要的理论和应用价值。"
+    }
+]

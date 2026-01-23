@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.16200v1",
+        "title": "Provable Robustness in Multimodal Large Language Models via Feature Space Smoothing",
+        "summary": "Multimodal large language models (MLLMs) exhibit strong capabilities across diverse applications, yet remain vulnerable to adversarial perturbations that distort their feature representations and induce erroneous predictions. To address this vulnerability, we propose the Feature-space Smoothing (FS) and theoretically prove that FS offers certified robustness on the feature representations of MLLMs. Specifically, FS transforms any feature encoder into a smoothed variant that is guaranteed to maintain a certified lower bound on the feature cosine similarity between clean and adversarial representations under $\\ell_2$-bounded attacks. Moreover, we indicate that the value of this Feature Cosine Similarity Bound (FCSB) derived from FS can be improved by enlarging the defined Gaussian robustness score on the vanilla encoder. Building upon this, we introduce the Purifier and Smoothness Mapper (PSM), a plug-and-play module that improves the Gaussian robustness score of MLLMs and thus enhances their certified robustness under FS, without requiring any retraining on MLLMs. We demonstrate that the FS with PSM not only provides a strong theoretical robustness guarantee but also exhibits superior empirical performance compared to adversarial training. Extensive experiments across diverse MLLMs and downstream tasks indicate the effectiveness of the FS-PSM, reducing the Attack Success Rate (ASR) of various white-box attacks from nearly 90\\% to about 1\\%.",
+        "authors": "Song Xia, Meiwen Ding, Chenqi Kong, Wenhan Yang, Xudong Jiang",
+        "url": "http://arxiv.org/abs/2601.16200v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.16200v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文理论严谨地提出了多模态LLM特征空间平滑方法（Feature-space Smoothing），提供了可证明的鲁棒性（certified robustness），并引入了无需重训练的即插即用模块（PSM）。它有效解决了LLM在实际应用中的对抗性攻击瓶颈，具有高度理论创新和实践价值，完美契合您对理论严谨性和解决实际瓶颈的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.16027v1",
+        "title": "Deja Vu in Plots: Leveraging Cross-Session Evidence with Retrieval-Augmented LLMs for Live Streaming Risk Assessment",
+        "summary": "The rise of live streaming has transformed online interaction, enabling massive real-time engagement but also exposing platforms to complex risks such as scams and coordinated malicious behaviors. Detecting these risks is challenging because harmful actions often accumulate gradually and recur across seemingly unrelated streams. To address this, we propose CS-VAR (Cross-Session Evidence-Aware Retrieval-Augmented Detector) for live streaming risk assessment. In CS-VAR, a lightweight, domain-specific model performs fast session-level risk inference, guided during training by a Large Language Model (LLM) that reasons over retrieved cross-session behavioral evidence and transfers its local-to-global insights to the small model. This design enables the small model to recognize recurring patterns across streams, perform structured risk assessment, and maintain efficiency for real-time deployment. Extensive offline experiments on large-scale industrial datasets, combined with online validation, demonstrate the state-of-the-art performance of CS-VAR. Furthermore, CS-VAR provides interpretable, localized signals that effectively empower real-world moderation for live streaming.",
+        "authors": "Yiran Qiao, Xiang Ao, Jing Chen, Yang Liu, Qiwei Zhong, Qing He",
+        "url": "http://arxiv.org/abs/2601.16027v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.16027v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文深入分析了CuTile-based Flash Attention在NVIDIA GB10新硬件上的L2缓存行为，并提出了创新的锯齿波前重排序技术（Sawtooth Wavefront Reordering），显著提升了LLM计算效率和吞吐量。这是底层算法和架构优化的典范，具有极高的理论深度和实际影响力，是您关注前沿算法和架构的绝佳选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15812v1",
+        "title": "ErrorMap and ErrorAtlas: Charting the Failure Landscape of Large Language Models",
+        "summary": "Large Language Models (LLM) benchmarks tell us when models fail, but not why they fail. A wrong answer on a reasoning dataset may stem from formatting issues, calculation errors, or dataset noise rather than weak reasoning. Without disentangling such causes, benchmarks remain incomplete and cannot reliably guide model improvement. We introduce ErrorMap, the first method to chart the sources of LLM failure. It extracts a model's unique \"failure signature\", clarifies what benchmarks measure, and broadens error identification to reduce blind spots. This helps developers debug models, aligns benchmark goals with outcomes, and supports informed model selection. ErrorMap works on any model or dataset with the same logic. Applying our method to 35 datasets and 83 models we generate ErrorAtlas, a taxonomy of model errors, revealing recurring failure patterns. ErrorAtlas highlights error types that are currently underexplored in LLM research, such as omissions of required details in the output and question misinterpretation. By shifting focus from where models succeed to why they fail, ErrorMap and ErrorAtlas enable advanced evaluation - one that exposes hidden weaknesses and directs progress. Unlike success, typically measured by task-level metrics, our approach introduces a deeper evaluation layer that can be applied globally across models and tasks, offering richer insights into model behavior and limitations. We make the taxonomy and code publicly available with plans to periodically update ErrorAtlas as new benchmarks and models emerge.",
+        "authors": "Shir Ashury-Tahan, Yifan Mai, Elron Bandel, Michal Shmueli-Scheuer, Leshem Choshen",
+        "url": "http://arxiv.org/abs/2601.15812v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15812v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了首个系统性分析LLM失败原因的框架ErrorMap和错误分类法ErrorAtlas，从理论上深化了对LLM局限性的理解。它为模型调试、改进和选择提供了可解释的指导，对LLM的可靠性发展具有关键推动作用，是LLM应用瓶颈分析和理论创新的优秀结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15755v1",
+        "title": "Beyond Marginal Distributions: A Framework to Evaluate the Representativeness of Demographic-Aligned LLMs",
+        "summary": "Large language models are increasingly used to represent human opinions, values, or beliefs, and their steerability towards these ideals is an active area of research. Existing work focuses predominantly on aligning marginal response distributions, treating each survey item independently. While essential, this may overlook deeper latent structures that characterise real populations and underpin cultural values theories. We propose a framework for evaluating the representativeness of aligned models through multivariate correlation patterns in addition to marginal distributions. We show the value of our evaluation scheme by comparing two model steering techniques (persona prompting and demographic fine-tuning) and evaluating them against human responses from the World Values Survey. While the demographically fine-tuned model better approximates marginal response distributions than persona prompting, both techniques fail to fully capture the gold standard correlation patterns. We conclude that representativeness is a distinct aspect of value alignment and an evaluation focused on marginals can mask structural failures, leading to overly optimistic conclusions about model capabilities.",
+        "authors": "Tristan Williams, Franziska Weeber, Sebastian Padó, Alan Akbik",
+        "url": "http://arxiv.org/abs/2601.15755v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15755v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了超越边际分布、基于多元相关模式评估LLM代表性的新框架，揭示了现有对齐方法的深层结构性缺陷。它具有重要的理论创新性，对LLM价值对齐的深入研究具有指导意义，符合您对理论创新性和LLM应用瓶颈的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15626v1",
+        "title": "Bridging Qualitative Rubrics and AI: A Binary Question Framework for Criterion-Referenced Grading in Engineering",
+        "summary": "PURPOSE OR GOAL: This study investigates how GenAI can be integrated with a criterion-referenced grading framework to improve the efficiency and quality of grading for mathematical assessments in engineering. It specifically explores the challenges demonstrators face with manual, model solution-based grading and how a GenAI-supported system can be designed to reliably identify student errors, provide high-quality feedback, and support human graders. The research also examines human graders' perceptions of the effectiveness of this GenAI-assisted approach. ACTUAL OR ANTICIPATED OUTCOMES: The study found that GenAI achieved an overall grading accuracy of 92.5%, comparable to two experienced human graders. The two researchers, who also served as subject demonstrators, perceived the GenAI as a helpful second reviewer that improved accuracy by catching small errors and provided more complete feedback than they could manually. A central outcome was the significant enhancement of formative feedback. However, they noted the GenAI tool is not yet reliable enough for autonomous use, especially with unconventional solutions. CONCLUSIONS/RECOMMENDATIONS/SUMMARY: This study demonstrates that GenAI, when paired with a structured, criterion-referenced framework using binary questions, can grade engineering mathematical assessments with an accuracy comparable to human experts. Its primary contribution is a novel methodological approach that embeds the generation of high-quality, scalable formative feedback directly into the assessment workflow. Future work should investigate student perceptions of GenAI grading and feedback.",
+        "authors": "Lili Chen, Winn Wing-Yiu Chow, Stella Peng, Bencheng Fan, Sachitha Bandara",
+        "url": "http://arxiv.org/abs/2601.15626v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15626v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文结合神经科学的预测编码和信息瓶颈理论，提出了高效、可解释的LLM幻觉检测框架。在数据效率和推理速度上显著优于现有方法，同时保持可解释性，为LLM在关键领域的部署提供了可靠的理论和技术支撑。其理论基础和解决LLM幻觉这一核心瓶颈的方案非常出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15645v1",
+        "title": "Towards Reliable Medical LLMs: Benchmarking and Enhancing Confidence Estimation of Large Language Models in Medical Consultation",
+        "summary": "Large-scale language models (LLMs) often offer clinical judgments based on incomplete information, increasing the risk of misdiagnosis. Existing studies have primarily evaluated confidence in single-turn, static settings, overlooking the coupling between confidence and correctness as clinical evidence accumulates during real consultations, which limits their support for reliable decision-making. We propose the first benchmark for assessing confidence in multi-turn interaction during realistic medical consultations. Our benchmark unifies three types of medical data for open-ended diagnostic generation and introduces an information sufficiency gradient to characterize the confidence-correctness dynamics as evidence increases. We implement and compare 27 representative methods on this benchmark; two key insights emerge: (1) medical data amplifies the inherent limitations of token-level and consistency-level confidence methods, and (2) medical reasoning must be evaluated for both diagnostic accuracy and information completeness. Based on these insights, we present MedConf, an evidence-grounded linguistic self-assessment framework that constructs symptom profiles via retrieval-augmented generation, aligns patient information with supporting, missing, and contradictory relations, and aggregates them into an interpretable confidence estimate through weighted integration. Across two LLMs and three medical datasets, MedConf consistently outperforms state-of-the-art methods on both AUROC and Pearson correlation coefficient metrics, maintaining stable performance under conditions of information insufficiency and multimorbidity. These results demonstrate that information adequacy is a key determinant of credible medical confidence modeling, providing a new pathway toward building more reliable and interpretable large medical models.",
+        "authors": "Zhiyao Ren, Yibing Zhan, Siyuan Liang, Guozheng Ma, Baosheng Yu, Dacheng Tao",
+        "url": "http://arxiv.org/abs/2601.15645v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15645v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文首次提出了多轮医疗咨询中LLM置信度评估的基准，并引入了信息充分性梯度和基于RAG的自评估框架MedConf。它解决了LLM在医疗领域可靠性不足的瓶颈，具有高度的理论和实践价值，是LLM在高风险应用中提升可靠性的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15595v1",
+        "title": "Data-Free Privacy-Preserving for LLMs via Model Inversion and Selective Unlearning",
+        "summary": "Large language models (LLMs) exhibit powerful capabilities but risk memorizing sensitive personally identifiable information (PII) from their training data, posing significant privacy concerns. While machine unlearning techniques aim to remove such data, they predominantly depend on access to the training data. This requirement is often impractical, as training data in real-world deployments is commonly proprietary or inaccessible. To address this limitation, we propose Data-Free Selective Unlearning (DFSU), a novel privacy-preserving framework that removes sensitive PII from an LLM without requiring its training data. Our approach first synthesizes pseudo-PII through language model inversion, then constructs token-level privacy masks for these synthetic samples, and finally performs token-level selective unlearning via a contrastive mask loss within a low-rank adaptation (LoRA) subspace. Extensive experiments on the AI4Privacy PII-Masking dataset using Pythia models demonstrate that our method effectively removes target PII while maintaining model utility.",
+        "authors": "Xinjie Zhou, Zhihui Yang, Lechao Cheng, Sai Wu, Gang Chen",
+        "url": "http://arxiv.org/abs/2601.15595v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15595v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了无需训练数据即可对LLM进行选择性遗忘的DFSU框架，通过模型反演合成伪PII并进行LoRA子空间内的遗忘。理论创新性强，解决了LLM隐私保护在实际部署中训练数据不可访问的关键瓶颈，是数据效率和LLM隐私保护的优秀结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15551v1",
+        "title": "ALIGNAgent: Adaptive Learner Intelligence for Gap Identification and Next-step guidance",
+        "summary": "Personalized learning systems have emerged as a promising approach to enhance student outcomes by tailoring educational content, pacing, and feedback to individual needs. However, most existing systems remain fragmented, specializing in either knowledge tracing, diagnostic modeling, or resource recommendation, but rarely integrating these components into a cohesive adaptive cycle. In this paper, we propose ALIGNAgent (Adaptive Learner Intelligence for Gap Identification and Next-step guidance), a multi-agent educational framework designed to deliver personalized learning through integrated knowledge estimation, skill-gap identification, and targeted resource recommendation.ALIGNAgent begins by processing student quiz performance, gradebook data, and learner preferences to generate topic-level proficiency estimates using a Skill Gap Agent that employs concept-level diagnostic reasoning to identify specific misconceptions and knowledge deficiencies. After identifying skill gaps, the Recommender Agent retrieves preference-aware learning materials aligned with diagnosed deficiencies, implementing a continuous feedback loop where interventions occur before advancing to subsequent topics. Extensive empirical evaluation on authentic datasets from two undergraduate computer science courses demonstrates ALIGNAgent's effectiveness, with GPT-4o-based agents achieving precision of 0.87-0.90 and F1 scores of 0.84-0.87 in knowledge proficiency estimation validated against actual exam performance.",
+        "authors": "Bismack Tokoli, Luis Jaimes, Ayesha S. Dina",
+        "url": "http://arxiv.org/abs/2601.15551v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15551v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了可扩展的多利益相关方上下文bandit框架BanditLP，将神经Thompson Sampling与大规模线性规划相结合。它在理论上统一了探索与约束优化，解决了大规模个性化推荐系统中的效率和复杂性瓶颈，具有强大的理论基础和广泛的实际应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.16206v1",
+        "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+        "summary": "We introduce LLM-in-Sandbox, enabling LLMs to explore within a code sandbox (i.e., a virtual computer), to elicit general intelligence in non-code domains. We first demonstrate that strong LLMs, without additional training, exhibit generalization capabilities to leverage the code sandbox for non-code tasks. For example, LLMs spontaneously access external resources to acquire new knowledge, leverage the file system to handle long contexts, and execute scripts to satisfy formatting requirements. We further show that these agentic capabilities can be enhanced through LLM-in-Sandbox Reinforcement Learning (LLM-in-Sandbox-RL), which uses only non-agentic data to train models for sandbox exploration. Experiments demonstrate that LLM-in-Sandbox, in both training-free and post-trained settings, achieves robust generalization spanning mathematics, physics, chemistry, biomedicine, long-context understanding, and instruction following. Finally, we analyze LLM-in-Sandbox's efficiency from computational and system perspectives, and open-source it as a Python package to facilitate real-world deployment.",
+        "authors": "Daixuan Cheng, Shaohan Huang, Yuxian Gu, Huatong Song, Guoxin Chen, Li Dong, Wayne Xin Zhao, Ji-Rong Wen, Furu Wei",
+        "url": "http://arxiv.org/abs/2601.16206v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.16206v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了LLM-in-Sandbox框架，通过代码沙盒探索激发LLM的通用智能，并利用强化学习增强其智能体能力。方法具有创新性，有效提升了LLM在非代码任务中的泛化能力和应用潜力，是LLM智能体研究的前沿探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.16138v1",
+        "title": "Automatic Classification of Arabic Literature into Historical Eras",
+        "summary": "The Arabic language has undergone notable transformations over time, including the emergence of new vocabulary, the obsolescence of others, and shifts in word usage. This evolution is evident in the distinction between the classical and modern Arabic eras. Although historians and linguists have partitioned Arabic literature into multiple eras, relatively little research has explored the automatic classification of Arabic texts by time period, particularly beyond the domain of poetry. This paper addresses this gap by employing neural networks and deep learning techniques to automatically classify Arabic texts into distinct eras and periods. The proposed models are evaluated using two datasets derived from two publicly available corpora, covering texts from the pre-Islamic to the modern era. The study examines class setups ranging from binary to 15-class classification and considers both predefined historical eras and custom periodizations. Results range from F1-scores of 0.83 and 0.79 on the binary-era classification task using the OpenITI and APCD datasets, respectively, to 0.20 on the 15-era classification task using OpenITI and 0.18 on the 12-era classification task using APCD.",
+        "authors": "Zainab Alhathloul, Irfan Ahmad",
+        "url": "http://arxiv.org/abs/2601.16138v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.16138v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了DistSeal，一种在生成模型潜在空间进行水印的新方法，通过蒸馏实现模型内水印。在保持鲁棒性和隐匿性的同时，实现了高达20倍的速度提升，有效解决了生成内容溯源和效率的实际瓶颈，是生成模型应用的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.16065v1",
+        "title": "DTP: A Simple yet Effective Distracting Token Pruning Framework for Vision-Language Action Models",
+        "summary": "Vision-Language Action (VLA) models have shown remarkable progress in robotic manipulation by leveraging the powerful perception abilities of Vision-Language Models (VLMs) to understand environments and directly output actions. However, by default, VLA models may overly attend to image tokens in the task-irrelevant region, which we describe as 'distracting tokens'. This behavior can disturb the model from the generation of the desired action tokens in each step, affecting the success rate of tasks. In this paper, we introduce a simple yet effective plug-and-play Distracting Token Pruning (DTP) framework, which dynamically detects and prunes these distracting image tokens. By correcting the model's visual attention patterns, we aim to improve the task success rate, as well as exploring the performance upper boundaries of the model without altering its original architecture or adding additional inputs. Experiments on the SIMPLER Benchmark (Li et al., 2024) show that our method consistently achieving relative improvements in task success rates across different types of novel VLA models, demonstrating generalizability to transformer-based VLAs. Further analysis reveals a negative correlation between the task success rate and the amount of attentions in the task-irrelevant region for all models tested, highlighting a common phenomenon of VLA models that could guide future research. We also publish our code at: https://anonymous.4open.science/r/CBD3.",
+        "authors": "Chenyang Li, Jieyuan Liu, Bin Li, Bo Gao, Yilin Yuan, Yangfan He, Yuchen Li, Jingqun Tang",
+        "url": "http://arxiv.org/abs/2601.16065v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.16065v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了DSFedMed，一个双尺度联邦学习框架，通过基础模型和轻量级客户端模型之间的相互蒸馏，解决了联邦学习中基础模型部署的计算、通信和推理成本高昂问题。其理论创新和显著实践影响力，使其成为联邦学习和模型压缩领域的优秀研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15892v1",
+        "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model",
+        "summary": "Diffusion-based language models (DLLMs) offer non-sequential, block-wise generation and richer data reuse compared to autoregressive (AR) models, but existing code DLLMs still lag behind strong AR baselines under comparable budgets. We revisit this setting in a controlled study and introduce Stable-DiffCoder, a block diffusion code model that reuses the Seed-Coder architecture, data, and training pipeline. To enable efficient knowledge learning and stable training, we incorporate a block diffusion continual pretraining (CPT) stage enhanced by a tailored warmup and block-wise clipped noise schedule. Under the same data and architecture, Stable-DiffCoder overall outperforms its AR counterpart on a broad suite of code benchmarks. Moreover, relying only on the CPT and supervised fine-tuning stages, Stable-DiffCoder achieves stronger performance than a wide range of \\~8B ARs and DLLMs, demonstrating that diffusion-based training can improve code modeling quality beyond AR training alone. Moreover, diffusion-based any-order modeling improves structured code modeling for editing and reasoning, and through data augmentation, benefits low-resource coding languages.",
+        "authors": "Chenghao Fan, Wen Heng, Bo Li, Sichen Liu, Yuxuan Song, Jing Su, Xiaoye Qu, Kai Shen, Wei Wei",
+        "url": "http://arxiv.org/abs/2601.15892v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15892v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Stable-DiffCoder，通过块扩散持续预训练和定制的噪声调度，显著提升了代码扩散LLM的性能。在代码生成质量和效率方面超越了自回归模型，对LLM架构和训练方法有重要创新，是LLM在代码领域应用的前沿探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15829v1",
+        "title": "Towards Realistic Remote Sensing Dataset Distillation with Discriminative Prototype-guided Diffusion",
+        "summary": "Recent years have witnessed the remarkable success of deep learning in remote sensing image interpretation, driven by the availability of large-scale benchmark datasets. However, this reliance on massive training data also brings two major challenges: (1) high storage and computational costs, and (2) the risk of data leakage, especially when sensitive categories are involved. To address these challenges, this study introduces the concept of dataset distillation into the field of remote sensing image interpretation for the first time. Specifically, we train a text-to-image diffusion model to condense a large-scale remote sensing dataset into a compact and representative distilled dataset. To improve the discriminative quality of the synthesized samples, we propose a classifier-driven guidance by injecting a classification consistency loss from a pre-trained model into the diffusion training process. Besides, considering the rich semantic complexity of remote sensing imagery, we further perform latent space clustering on training samples to select representative and diverse prototypes as visual style guidance, while using a visual language model to provide aggregated text descriptions. Experiments on three high-resolution remote sensing scene classification benchmarks show that the proposed method can distill realistic and diverse samples for downstream model training. Code and pre-trained models are available online (https://github.com/YonghaoXu/DPD).",
+        "authors": "Yonghao Xu, Pedram Ghamisi, Qihao Weng",
+        "url": "http://arxiv.org/abs/2601.15829v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15829v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次将数据集蒸馏引入遥感领域，并提出了判别性原型引导扩散模型。通过分类器引导和潜在空间聚类，解决了大规模遥感数据存储、计算成本和数据泄露的瓶颈，具有理论创新和数据效率优势，对数据效率和扩散模型应用有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15816v1",
+        "title": "Virtual Traffic Police: Large Language Model-Augmented Traffic Signal Control for Unforeseen Incidents",
+        "summary": "Adaptive traffic signal control (TSC) has demonstrated strong effectiveness in managing dynamic traffic flows. However, conventional methods often struggle when unforeseen traffic incidents occur (e.g., accidents and road maintenance), which typically require labor-intensive and inefficient manual interventions by traffic police officers. Large Language Models (LLMs) appear to be a promising solution thanks to their remarkable reasoning and generalization capabilities. Nevertheless, existing works often propose to replace existing TSC systems with LLM-based systems, which can be (i) unreliable due to the inherent hallucinations of LLMs and (ii) costly due to the need for system replacement. To address the issues of existing works, we propose a hierarchical framework that augments existing TSC systems with LLMs, whereby a virtual traffic police agent at the upper level dynamically fine-tunes selected parameters of signal controllers at the lower level in response to real-time traffic incidents. To enhance domain-specific reliability in response to unforeseen traffic incidents, we devise a self-refined traffic language retrieval system (TLRS), whereby retrieval-augmented generation is employed to draw knowledge from a tailored traffic language database that encompasses traffic conditions and controller operation principles. Moreover, we devise an LLM-based verifier to update the TLRS continuously over the reasoning process. Our results show that LLMs can serve as trustworthy virtual traffic police officers that can adapt conventional TSC methods to unforeseen traffic incidents with significantly improved operational efficiency and reliability.",
+        "authors": "Shiqi Wei, Qiqing Wang, Kaidi Yang",
+        "url": "http://arxiv.org/abs/2601.15816v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15816v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个分层LLM增强的交通信号控制框架，使LLM能作为“虚拟交警”处理突发事件。其自完善的交通语言检索系统和LLM验证器具有新颖的系统架构和理论创新，显著提升了交通控制的效率和可靠性，是LLM在实际复杂系统中的创新应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15724v1",
+        "title": "VideoThinker: Building Agentic VideoLLMs with LLM-Guided Tool Reasoning",
+        "summary": "Long-form video understanding remains a fundamental challenge for current Video Large Language Models. Most existing models rely on static reasoning over uniformly sampled frames, which weakens temporal localization and leads to substantial information loss in long videos. Agentic tools such as temporal retrieval, spatial zoom, and temporal zoom offer a natural way to overcome these limitations by enabling adaptive exploration of key moments. However, constructing agentic video understanding data requires models that already possess strong long-form video comprehension, creating a circular dependency. We address this challenge with VideoThinker, an agentic Video Large Language Model trained entirely on synthetic tool interaction trajectories. Our key idea is to convert videos into rich captions and employ a powerful agentic language model to generate multi-step tool use sequences in caption space. These trajectories are subsequently grounded back to video by replacing captions with the corresponding frames, yielding a large-scale interleaved video and tool reasoning dataset without requiring any long-form understanding from the underlying model. Training on this synthetic agentic dataset equips VideoThinker with dynamic reasoning capabilities, adaptive temporal exploration, and multi-step tool use. Remarkably, VideoThinker significantly outperforms both caption-only language model agents and strong video model baselines across long-video benchmarks, demonstrating the effectiveness of tool augmented synthetic data and adaptive retrieval and zoom reasoning for long-form video understanding.",
+        "authors": "Chenglin Li, Qianglong Chen, Feng Han, Yikun Wang, Xingxi Yin, Yan Gong, Ruilin Li, Yin Zhang, Jiaqi Wang",
+        "url": "http://arxiv.org/abs/2601.15724v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15724v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了VideoThinker，通过合成工具交互轨迹训练智能体VideoLLM，解决了长视频理解中时间定位和信息丢失的挑战。其数据高效的训练范式和自适应工具使用能力具有显著创新性，是VideoLLM在数据效率和长视频理解方面的突破。"
+    }
+]

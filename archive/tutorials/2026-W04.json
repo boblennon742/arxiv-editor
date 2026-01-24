@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.14053v1",
+        "title": "LLMOrbit: A Circular Taxonomy of Large Language Models -From Scaling Walls to Agentic AI Systems",
+        "summary": "The field of artificial intelligence has undergone a revolution from foundational Transformer architectures to reasoning-capable systems approaching human-level performance. We present LLMOrbit, a comprehensive circular taxonomy navigating the landscape of large language models spanning 2019-2025. This survey examines over 50 models across 15 organizations through eight interconnected orbital dimensions, documenting architectural innovations, training methodologies, and efficiency patterns defining modern LLMs, generative AI, and agentic systems. We identify three critical crises: (1) data scarcity (9-27T tokens depleted by 2026-2028), (2) exponential cost growth ($3M to $300M+ in 5 years), and (3) unsustainable energy consumption (22x increase), establishing the scaling wall limiting brute-force approaches. Our analysis reveals six paradigms breaking this wall: (1) test-time compute (o1, DeepSeek-R1 achieve GPT-4 performance with 10x inference compute), (2) quantization (4-8x compression), (3) distributed edge computing (10x cost reduction), (4) model merging, (5) efficient training (ORPO reduces memory 50%), and (6) small specialized models (Phi-4 14B matches larger models). Three paradigm shifts emerge: (1) post-training gains (RLHF, GRPO, pure RL contribute substantially, DeepSeek-R1 achieving 79.8% MATH), (2) efficiency revolution (MoE routing 18x efficiency, Multi-head Latent Attention 8x KV cache compression enables GPT-4-level performance at <$0.30/M tokens), and (3) democratization (open-source Llama 3 88.6% MMLU surpasses GPT-4 86.4%). We provide insights into techniques (RLHF, PPO, DPO, GRPO, ORPO), trace evolution from passive generation to tool-using agents (ReAct, RAG, multi-agent systems), and analyze post-training innovations.",
+        "authors": "Badri N. Patro, Vijay S. Agneeswaran",
+        "url": "http://arxiv.org/abs/2601.14053v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14053v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "一份全面且富有洞察力的LLM发展路线图，涵盖架构创新、效率挑战及Agentic AI的未来方向。",
+        "reason_zh": "这篇综述是理解LLM前沿领域的绝佳起点。它提供了一个全面的LLM圆形分类法，深入分析了从Transformer架构到Agentic AI的演变，并指出了数据稀缺、成本、能耗等关键挑战及其突破范式。对于关注“LLM理论机制”并希望把握未来研究方向的博士生来说，其视野开阔、理论深度高，是不可多得的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15690v1",
+        "title": "From Passive Metric to Active Signal: The Evolving Role of Uncertainty Quantification in Large Language Models",
+        "summary": "While Large Language Models (LLMs) show remarkable capabilities, their unreliability remains a critical barrier to deployment in high-stakes domains. This survey charts a functional evolution in addressing this challenge: the evolution of uncertainty from a passive diagnostic metric to an active control signal guiding real-time model behavior. We demonstrate how uncertainty is leveraged as an active control signal across three frontiers: in \\textbf{advanced reasoning} to optimize computation and trigger self-correction; in \\textbf{autonomous agents} to govern metacognitive decisions about tool use and information seeking; and in \\textbf{reinforcement learning} to mitigate reward hacking and enable self-improvement via intrinsic rewards. By grounding these advancements in emerging theoretical frameworks like Bayesian methods and Conformal Prediction, we provide a unified perspective on this transformative trend. This survey provides a comprehensive overview, critical analysis, and practical design patterns, arguing that mastering the new trend of uncertainty is essential for building the next generation of scalable, reliable, and trustworthy AI.",
+        "authors": "Jiaxin Zhang, Wendi Cui, Zhuohang Li, Lifu Huang, Bradley Malin, Caiming Xiong, Chien-Sheng Wu",
+        "url": "http://arxiv.org/abs/2601.15690v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15690v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "系统阐述不确定性量化（UQ）在LLM中从被动指标到主动控制信号的演变，并关联贝叶斯与共形预测。",
+        "reason_zh": "这篇综述将统计学核心概念“不确定性量化（UQ）”与LLM、自主智能体和强化学习的前沿应用紧密结合。它不仅提供了UQ在LLM高级推理、智能体决策和RL中的应用视角，还明确提及了贝叶斯方法和共形预测等统计学工具，对于数理统计博士生理解“LLM理论机制”和“高维统计”在AI前沿中的作用具有极高的实用价值和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15353v1",
+        "title": "Statistical Reinforcement Learning in the Real World: A Survey of Challenges and Future Directions",
+        "summary": "Reinforcement learning (RL) has achieved remarkable success in real-world decision-making across diverse domains, including gaming, robotics, online advertising, public health, and natural language processing. Despite these advances, a substantial gap remains between RL research and its deployment in many practical settings. Two recurring challenges often underlie this gap. First, many settings offer limited opportunity for the agent to interact extensively with the target environment due to practical constraints. Second, many target environments often undergo substantial changes, requiring redesign and redeployment of RL systems (e.g., advancements in science and technology that change the landscape of healthcare delivery). Addressing these challenges and bridging the gap between basic research and application requires theory and methodology that directly inform the design, implementation, and continual improvement of RL systems in real-world settings.   In this paper, we frame the application of RL in practice as a three-component process: (i) online learning and optimization during deployment, (ii) post- or between-deployment offline analyses, and (iii) repeated cycles of deployment and redeployment to continually improve the RL system. We provide a narrative review of recent advances in statistical RL that address these components, including methods for maximizing data utility for between-deployment inference, enhancing sample efficiency for online learning within-deployment, and designing sequences of deployments for continual improvement. We also outline future research directions in statistical RL that are use-inspired -- aiming for impactful application of RL in practice.",
+        "authors": "Asim H. Gazi, Yongyi Guo, Daiqi Gao, Ziping Xu, Kelly W. Zhang, Susan A. Murphy",
+        "url": "http://arxiv.org/abs/2601.15353v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15353v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "全面回顾真实世界统计强化学习的挑战、方法和未来方向，涵盖在线学习、离线分析与持续改进。",
+        "reason_zh": "这篇综述直接切中了您对“Offline RL”的关注点，并从“统计学”的角度深入探讨了真实世界RL的挑战和解决方案。它将RL的应用框架为在线学习、离线分析和重复部署的循环，并提出了利用数据效用、提高样本效率和持续改进的方法。其理论严谨性高，对未来的研究方向有明确指引，是统计学博士生深入理解RL理论与实践的理想资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.15468v1",
+        "title": "Learning from Synthetic Data: Limitations of ERM",
+        "summary": "The prevalence and low cost of LLMs have led to a rise of synthetic content. From review sites to court documents, ``natural'' content has been contaminated by data points that appear similar to natural data, but are in fact LLM-generated. In this work we revisit fundamental learning theory questions in this, now ubiquitous, setting. We model this scenario as a sequence of learning tasks where the input is a mix of natural and synthetic data, and the learning algorithms are oblivious to the origin of any individual example.   We study the possibilities and limitations of ERM in this setting. For the problem of estimating the mean of an arbitrary $d$-dimensional distribution, we find that while ERM converges to the true mean, it is outperformed by an algorithm that assigns non-uniform weights to examples from different generations of data. For the PAC learning setting, the disparity is even more stark. We find that ERM does not always converge to the true concept, echoing the model collapse literature. However, we show there are algorithms capable of learning the correct hypothesis for arbitrary VC classes and arbitrary amounts of contamination.",
+        "authors": "Kareem Amin, Alex Bie, Weiwei Kong, Umar Syed, Sergei Vassilvitskii",
+        "url": "http://arxiv.org/abs/2601.15468v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.15468v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "探讨LLM生成合成数据背景下经验风险最小化（ERM）的局限性，并提出可学习正确假设的算法。",
+        "reason_zh": "这篇论文从基础学习理论的角度，探讨了LLM生成合成数据对传统学习算法（如ERM）的影响，揭示了模型崩溃等深层问题，并提出了能够学习正确假设的算法。这对于理解“LLM理论机制”对机器学习基础的冲击，以及“高维统计”中学习理论的最新发展至关重要。其数学严谨性高，直接触及了统计与机器学习的理论前沿。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.13082v1",
+        "title": "Adversarial News and Lost Profits: Manipulating Headlines in LLM-Driven Algorithmic Trading",
+        "summary": "Large Language Models (LLMs) are increasingly adopted in the financial domain. Their exceptional capabilities to analyse textual data make them well-suited for inferring the sentiment of finance-related news. Such feedback can be leveraged by algorithmic trading systems (ATS) to guide buy/sell decisions. However, this practice bears the risk that a threat actor may craft \"adversarial news\" intended to mislead an LLM. In particular, the news headline may include \"malicious\" content that remains invisible to human readers but which is still ingested by the LLM. Although prior work has studied textual adversarial examples, their system-wide impact on LLM-supported ATS has not yet been quantified in terms of monetary risk. To address this threat, we consider an adversary with no direct access to an ATS but able to alter stock-related news headlines on a single day. We evaluate two human-imperceptible manipulations in a financial context: Unicode homoglyph substitutions that misroute models during stock-name recognition, and hidden-text clauses that alter the sentiment of the news headline. We implement a realistic ATS in Backtrader that fuses an LSTM-based price forecast with LLM-derived sentiment (FinBERT, FinGPT, FinLLaMA, and six general-purpose LLMs), and quantify monetary impact using portfolio metrics. Experiments on real-world data show that manipulating a one-day attack over 14 months can reliably mislead LLMs and reduce annual returns by up to 17.7 percentage points. To assess real-world feasibility, we analyze popular scraping libraries and trading platforms and survey 27 FinTech practitioners, confirming our hypotheses. We notified trading platform owners of this security issue.",
+        "authors": "Advije Rizvani, Giovanni Apruzzese, Pavel Laskov",
+        "url": "http://arxiv.org/abs/2601.13082v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.13082v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "量化LLM驱动的量化交易系统中，对抗性新闻操纵标题所导致的经济损失和安全风险。",
+        "reason_zh": "这篇论文完美契合您对“加密货币量化”的兴趣，并结合了“LLM理论机制”中的安全与鲁棒性问题。它通过量化对抗性新闻对LLM驱动的算法交易系统造成的经济损失，揭示了LLM在金融高风险领域应用中潜在的巨大风险。其研究具有极高的实用性和前瞻性，能指引您未来在加密货币量化安全与鲁棒性方面的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.12633v1",
+        "title": "New Trends in the Stability of Sinkhorn Semigroups",
+        "summary": "Entropic optimal transport problems play an increasingly important role in machine learning and generative modelling. In contrast with optimal transport maps which often have limited applicability in high dimensions, Schrodinger bridges can be solved using the celebrated Sinkhorn's algorithm, a.k.a. the iterative proportional fitting procedure. The stability properties of Sinkhorn bridges when the number of iterations tends to infinity is a very active research area in applied probability and machine learning. Traditional proofs of convergence are mainly based on nonlinear versions of Perron-Frobenius theory and related Hilbert projective metric techniques, gradient descent, Bregman divergence techniques and Hamilton-Jacobi-Bellman equations, including propagation of convexity profiles based on coupling diffusions by reflection methods. The objective of this review article is to present, in a self-contained manner, recently developed Sinkhorn/Gibbs-type semigroup analysis based upon contraction coefficients and Lyapunov-type operator-theoretic techniques. These powerful, off-the-shelf semigroup methods are based upon transportation cost inequalities (e.g. log-Sobolev, Talagrand quadratic inequality, curvature estimates), $φ$-divergences, Kantorovich-type criteria and Dobrushin contraction-type coefficients on weighted Banach spaces as well as Wasserstein distances. This novel semigroup analysis allows one to unify and simplify many arguments in the stability of Sinkhorn algorithm. It also yields new contraction estimates w.r.t. generalized $φ$-entropies, as well as weighted total variation norms, Kantorovich criteria and Wasserstein distances.",
+        "authors": "Pierre Del Moral, Ajay Jasra",
+        "url": "http://arxiv.org/abs/2601.12633v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.12633v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述Sinkhorn半群稳定性研究的新趋势，利用收缩系数和Lyapunov算子理论统一并简化了最优传输的分析。",
+        "reason_zh": "这篇综述具有极高的数学严谨性，深入探讨了熵最优传输问题中Sinkhorn半群的稳定性。它运用了泛函分析、概率论中的收缩系数、Lyapunov算子理论、运输成本不等式、$phi$-散度以及Wasserstein距离等高级数学工具。这对于您巩固“高等概率论/随机过程”和“信息论”的数学基础，以及深入理解最优传输理论至关重要，是补全博士数学拼图的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.14457v1",
+        "title": "p-Wasserstein distances on networks and 3D to 1D convergence",
+        "summary": "We study transport distances on metric graphs representing gas networks. Starting from the dynamic formulation of the Wasserstein distance, we review extensions to networks, with and without the possibility of storing mass on the vertices.   Next, we examine the asymptotic behavior of the static Wasserstein distance on a three-dimensional network domain that converges to a metric graph. We show convergence of the distance with a proof that is based on the characterization of optimal transport plans as $c$-cyclically monotone sets.   We conclude by illustrating our finding with several numerical examples.",
+        "authors": "Martin Burger, Ariane Fazeny, Gilles Mordant, Jan-Frederik Pietschmann",
+        "url": "http://arxiv.org/abs/2601.14457v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.14457v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "回顾网络上的p-Wasserstein距离，并证明三维网络域向度量图收敛时静态Wasserstein距离的渐近行为。",
+        "reason_zh": "这篇论文聚焦于最优传输理论中的“p-Wasserstein距离”，并将其扩展到网络结构，同时严谨地分析了三维到一维收敛的渐近行为，其证明基于c-循环单调集。这完美契合您对“高等概率论/随机过程”和“数学严谨性”的需求，是理解度量几何、泛函分析和最优传输核心概念的优秀材料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.13256v2",
+        "title": "Deep Neural networks for solving high-dimensional parabolic partial differential equations",
+        "summary": "The numerical solution of high dimensional partial differential equations (PDEs) is severely constrained by the curse of dimensionality (CoD), rendering classical grid--based methods impractical beyond a few dimensions. In recent years, deep neural networks have emerged as a promising mesh free alternative, enabling the approximation of PDE solutions in tens to thousands of dimensions. This review provides a tutorial--oriented introduction to neural--network--based methods for solving high dimensional parabolic PDEs, emphasizing conceptual clarity and methodological connections. We organize the literature around three unifying paradigms: (i) PDE residual--based approaches, including physicsinformed neural networks and their high dimensional variants; (ii) stochastic methods derived from Feynman--Kac and backward stochastic differential equation formulations; and (iii) hybrid derivative--free random difference approaches designed to alleviate the computational cost of derivatives in high dimensions. For each paradigm, we outline the underlying mathematical formulation, algorithmic implementation, and practical strengths and limitations. Representative benchmark problems--including Hamilton--Jacobi--Bellman and Black--Scholes equations in up to 1000 dimensions --illustrate the scalability, effectiveness, and accuracy of the methods. The paper concludes with a discussion of open challenges and future directions for reliable and scalable solvers of high dimensional PDEs.",
+        "authors": "Wenzhong Zhang, Zheyuan Hu, Wei Cai, George EM Karniadakis",
+        "url": "http://arxiv.org/abs/2601.13256v2",
+        "pdf_url": "https://arxiv.org/pdf/2601.13256v2",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "一份教程性质的综述，介绍使用深度神经网络求解高维抛物型偏微分方程的方法，涵盖多种数学公式和算法。",
+        "reason_zh": "这篇论文明确指出是“教程导向的介绍”，专注于使用深度神经网络解决“高维”抛物型偏微分方程，这正是“高维统计”和“高等概率论/随机过程”的交叉点。它详细阐述了基于PDE残差、随机方法（如Feynman-Kac和BSDEs）和混合方法的数学公式和算法实现，具有极高的数学严谨性和清晰度，能有效帮助您补全博士阶段的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.12213v1",
+        "title": "One-Sided Matrix Completion from Ultra-Sparse Samples",
+        "summary": "Matrix completion is a classical problem that has received recurring interest across a wide range of fields. In this paper, we revisit this problem in an ultra-sparse sampling regime, where each entry of an unknown, $n\\times d$ matrix $M$ (with $n \\ge d$) is observed independently with probability $p = C / d$, for a fixed integer $C \\ge 2$. This setting is motivated by applications involving large, sparse panel datasets, where the number of rows far exceeds the number of columns. When each row contains only $C$ entries -- fewer than the rank of $M$ -- accurate imputation of $M$ is impossible. Instead, we estimate the row span of $M$ or the averaged second-moment matrix $T = M^{\\top} M / n$.   The empirical second-moment matrix computed from observed entries exhibits non-random and sparse missingness. We propose an unbiased estimator that normalizes each nonzero entry of the second moment by its observed frequency, followed by gradient descent to impute the missing entries of $T$. The normalization divides a weighted sum of $n$ binomial random variables by the total number of ones. We show that the estimator is unbiased for any $p$ and enjoys low variance. When the row vectors of $M$ are drawn uniformly from a rank-$r$ factor model satisfying an incoherence condition, we prove that if $n \\ge O({d r^5 ε^{-2} C^{-2} \\log d})$, any local minimum of the gradient-descent objective is approximately global and recovers $T$ with error at most $ε^2$.   Experiments on both synthetic and real-world data validate our approach. On three MovieLens datasets, our algorithm reduces bias by $88\\%$ relative to baseline estimators. We also empirically validate the linear sampling complexity of $n$ relative to $d$ on synthetic data. On an Amazon reviews dataset with sparsity $10^{-7}$, our method reduces the recovery error of $T$ by $59\\%$ and $M$ by $38\\%$ compared to baseline methods.",
+        "authors": "Hongyang R. Zhang, Zhenshuo Zhang, Huy L. Nguyen, Guanghui Lan",
+        "url": "http://arxiv.org/abs/2601.12213v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.12213v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "在超稀疏采样情境下重访矩阵补全问题，提出无偏估计器并提供理论保证，用于估计行空间或二阶矩矩阵。",
+        "reason_zh": "这篇论文直接解决了“高维统计”和“矩阵分析”中的核心问题——矩阵补全，特别是在极具挑战性的超稀疏采样情境下。它提出了一个无偏估计器，并提供了严格的理论保证，这对于数理统计博士生来说，是理解高维数据分析中矩阵理论和统计推断的绝佳硬核资料，其数学严谨性非常高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.13045v1",
+        "title": "Markovian restless bandits and index policies: A review",
+        "summary": "The restless multi-armed bandit problem is a paradigmatic modeling framework for optimal dynamic priority allocation in stochastic models of wide-ranging applications that has been widely investigated and applied since its inception in a seminal paper by Whittle in the late 1980s. The problem has generated a vast and fast-growing literature from which a significant sample is thematically organized and reviewed in this paper. While the main focus is on priority-index policies due to their intuitive appeal, tractability, asymptotic optimality properties, and often strong empirical performance, other lines of work are also reviewed. Theoretical and algorithmic developments are discussed, along with diverse applications. The main goals are to highlight the remarkable breadth of work that has been carried out on the topic and to stimulate further research in the field.",
+        "authors": "José Niño-Mora",
+        "url": "http://arxiv.org/abs/2601.13045v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.13045v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "全面回顾马尔可夫无休止多臂老虎机问题及其索引策略，涵盖理论、算法和广泛应用。",
+        "reason_zh": "这篇综述深入探讨了“马尔可夫无休止多臂老虎机问题”，这是“高等概率论/随机过程”和强化学习理论的基石。它系统地组织了该领域的理论和算法发展，特别是索引策略，对于理解随机过程中的动态优化和序贯决策具有极高的数学严谨性和清晰度。它能为您的“Offline RL”研究打下坚实的理论基础。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.18778v1",
+        "title": "Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability",
+        "summary": "Can a model learn to escape its own learning plateau? Reinforcement learning methods for finetuning large reasoning models stall on datasets with low initial success rates, and thus little training signal. We investigate a fundamental question: Can a pretrained LLM leverage latent knowledge to generate an automated curriculum for problems it cannot solve? To explore this, we design SOAR: A self-improvement framework designed to surface these pedagogical signals through meta-RL. A teacher copy of the model proposes synthetic problems for a student copy, and is rewarded with its improvement on a small subset of hard problems. Critically, SOAR grounds the curriculum in measured student progress rather than intrinsic proxy rewards. Our study on the hardest subsets of mathematical benchmarks (0/128 success) reveals three core findings. First, we show that it is possible to realize bi-level meta-RL that unlocks learning under sparse, binary rewards by sharpening a latent capacity of pretrained models to generate useful stepping stones. Second, grounded rewards outperform intrinsic reward schemes used in prior LLM self-play, reliably avoiding the instability and diversity collapse modes they typically exhibit. Third, analyzing the generated questions reveals that structural quality and well-posedness are more critical for learning progress than solution correctness. Our results suggest that the ability to generate useful stepping stones does not require the preexisting ability to actually solve the hard problems, paving a principled path to escape reasoning plateaus without additional curated data.",
+        "authors": "Shobhita Sundaram, John Quan, Ariel Kwiatkowski, Kartik Ahuja, Yann Ollivier, Julia Kempe",
+        "url": "http://arxiv.org/abs/2601.18778v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18778v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SOAR框架，通过元强化学习实现模型自学习和自动化课程生成，以解决LLM在稀疏奖励下学习停滞的根本性瓶颈。其理论创新性强，尤其在利用模型潜在知识生成教学步骤方面，对LLM推理能力的提升有巨大潜力，且解决了数据效率和学习效率的实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18777v1",
+        "title": "PRECISE: Reducing the Bias of LLM Evaluations Using Prediction-Powered Ranking Estimation",
+        "summary": "Evaluating the quality of search, ranking and RAG systems traditionally requires a significant number of human relevance annotations. In recent times, several deployed systems have explored the usage of Large Language Models (LLMs) as automated judges for this task while their inherent biases prevent direct use for metric estimation. We present a statistical framework extending Prediction-Powered Inference (PPI) that combines minimal human annotations with LLM judgments to produce reliable estimates of metrics which require sub-instance annotations. Our method requires as few as 100 human-annotated queries and 10,000 unlabeled examples, reducing annotation requirements significantly compared to traditional approaches. We formulate our proposed framework (PRECISE) for inference of relevance uplift for an LLM-based query reformulation application, extending PPI to sub-instance annotations at the query-document level. By reformulating the metric-integration space, we reduced the computational complexity from O(2^|C|) to O(2^K), where |C| represents corpus size (in order of millions). Detailed experiments across prominent retrieval datasets demonstrate that our method reduces the variance of estimates for the business-critical Precision@K metric, while effectively correcting for LLM bias in low-resource settings.",
+        "authors": "Abhishek Divekar, Anirban Majumder",
+        "url": "http://arxiv.org/abs/2601.18777v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18777v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了PRECISE，一个严谨的统计框架，将Prediction-Powered Inference扩展到LLM评估中的子实例标注，有效减少了LLM评估偏差和标注成本。其数理统计推导严谨，逻辑清晰，解决了LLM应用中评估效率和准确性的实际瓶颈，非常符合数理统计博士生的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18753v1",
+        "title": "HalluGuard: Demystifying Data-Driven and Reasoning-Driven Hallucinations in LLMs",
+        "summary": "The reliability of Large Language Models (LLMs) in high-stakes domains such as healthcare, law, and scientific discovery is often compromised by hallucinations. These failures typically stem from two sources: data-driven hallucinations and reasoning-driven hallucinations. However, existing detection methods usually address only one source and rely on task-specific heuristics, limiting their generalization to complex scenarios. To overcome these limitations, we introduce the Hallucination Risk Bound, a unified theoretical framework that formally decomposes hallucination risk into data-driven and reasoning-driven components, linked respectively to training-time mismatches and inference-time instabilities. This provides a principled foundation for analyzing how hallucinations emerge and evolve. Building on this foundation, we introduce HalluGuard, an NTK-based score that leverages the induced geometry and captured representations of the NTK to jointly identify data-driven and reasoning-driven hallucinations. We evaluate HalluGuard on 10 diverse benchmarks, 11 competitive baselines, and 9 popular LLM backbones, consistently achieving state-of-the-art performance in detecting diverse forms of LLM hallucinations.",
+        "authors": "Xinyue Zeng, Junhong Lin, Yujun Yan, Feng Guo, Liang Shi, Jun Wu, Dawei Zhou",
+        "url": "http://arxiv.org/abs/2601.18753v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18753v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HalluGuard提出了一个统一的幻觉风险理论框架，并基于NTK（Neural Tangent Kernel）设计了联合检测数据驱动和推理驱动幻觉的方法。该工作理论严谨性高，创新性强，解决了LLM可靠性这一关键瓶颈，对LLM在高风险领域的安全部署至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18735v1",
+        "title": "Why Keep Your Doubts to Yourself? Trading Visual Uncertainties in Multi-Agent Bandit Systems",
+        "summary": "Vision-Language Models (VLMs) enable powerful multi-agent systems, but scaling them is economically unsustainable: coordinating heterogeneous agents under information asymmetry often spirals costs. Existing paradigms, such as Mixture-of-Agents and knowledge-based routers, rely on heuristic proxies that ignore costs and collapse uncertainty structure, leading to provably suboptimal coordination. We introduce Agora, a framework that reframes coordination as a decentralized market for uncertainty. Agora formalizes epistemic uncertainty into a structured, tradable asset (perceptual, semantic, inferential), and enforces profitability-driven trading among agents based on rational economic rules. A market-aware broker, extending Thompson Sampling, initiates collaboration and guides the system toward cost-efficient equilibria. Experiments on five multimodal benchmarks (MMMU, MMBench, MathVision, InfoVQA, CC-OCR) show that Agora outperforms strong VLMs and heuristic multi-agent strategies, e.g., achieving +8.5% accuracy over the best baseline on MMMU while reducing cost by over 3x. These results establish market-based coordination as a principled and scalable paradigm for building economically viable multi-agent visual intelligence systems.",
+        "authors": "Jusheng Zhang, Yijia Fan, Kaitong Cai, Jing Yang, Jiawei Yao, Jian Wang, Guanlong Qu, Ziliang Chen, Keze Wang",
+        "url": "http://arxiv.org/abs/2601.18735v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18735v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Agora框架将多智能体协调重构为不确定性交易的去中心化市场，形式化了认知不确定性为可交易资产，并引入了基于Thompson Sampling的市场感知代理。其理论创新性极高，数理推导严谨，为构建成本效益高、可扩展的多智能体视觉智能系统提供了全新的范式，解决了多智能体协调的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18699v1",
+        "title": "Mechanistic Analysis of Catastrophic Forgetting in Large Language Models During Continual Fine-tuning",
+        "summary": "Large language models exhibit remarkable performance across diverse tasks through pre-training and fine-tuning paradigms. However, continual fine-tuning on sequential tasks induces catastrophic forgetting, where newly acquired knowledge interferes with previously learned capabilities. Despite widespread observations of this phenomenon, the mechanistic understanding remains limited. Here, we present a comprehensive mechanistic analysis of catastrophic forgetting in transformer-based LLMs during sequential fine-tuning. Through systematic experiments across multiple model scales (109B to 400B total parameters) and task sequences, we identify three primary mechanisms driving forgetting: gradient interference in attention weights, representational drift in intermediate layers, and loss landscape flattening. We demonstrate that forgetting severity correlates strongly with task similarity (Pearson r = 0.87) and gradient alignment metrics. Our analysis reveals that approximately 15 to 23 percent of attention heads undergo severe disruption during fine-tuning, with lower layers showing greater susceptibility. These findings establish mechanistic foundations for developing targeted mitigation strategies in continual learning systems.",
+        "authors": "Olaf Yunus Laitinen Imanov",
+        "url": "http://arxiv.org/abs/2601.18699v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18699v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“精确性假设”和Halo架构，通过有理数算术（Rational Arithmetic）和新型精确推理单元（EIU）解决LLM幻觉和逻辑不连贯的根本问题。它挑战了深度学习依赖浮点近似的传统计算范式，具有颠覆性的理论创新性，对实现System 2 AGI有深远影响，解决了LLM推理的底层瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18589v1",
+        "title": "AGSP-DSA: An Adaptive Graph Signal Processing Framework for Robust Multimodal Fusion with Dynamic Semantic Alignment",
+        "summary": "In this paper, we introduce an Adaptive Graph Signal Processing with Dynamic Semantic Alignment (AGSP DSA) framework to perform robust multimodal data fusion over heterogeneous sources, including text, audio, and images. The requested approach uses a dual-graph construction to learn both intra-modal and inter-modal relations, spectral graph filtering to boost the informative signals, and effective node embedding with Multi-scale Graph Convolutional Networks (GCNs). Semantic aware attention mechanism: each modality may dynamically contribute to the context with respect to contextual relevance. The experimental outcomes on three benchmark datasets, including CMU-MOSEI, AVE, and MM-IMDB, show that AGSP-DSA performs as the state of the art. More precisely, it achieves 95.3% accuracy, 0.936 F1-score, and 0.924 mAP on CMU-MOSEI, improving MM-GNN by 2.6 percent in accuracy. It gets 93.4% accuracy and 0.911 F1-score on AVE and 91.8% accuracy and 0.886 F1-score on MM-IMDB, which demonstrate good generalization and robustness in the missing modality setting. These findings verify the efficiency of AGSP-DSA in promoting multimodal learning in sentiment analysis, event recognition and multimedia classification.",
+        "authors": "KV Karthikeya, Ashok Kumar Das, Shantanu Pal, Vivekananda Bhat K, Arun Sekar Rajasekaran",
+        "url": "http://arxiv.org/abs/2601.18589v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18589v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "AGSP-DSA框架通过自适应图信号处理和动态语义对齐实现鲁棒的多模态数据融合。它采用双图构建、谱图滤波和语义感知注意力机制，理论上严谨，解决了多模态学习中信息融合的复杂性和鲁棒性瓶颈，尤其在缺失模态场景下表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18588v1",
+        "title": "Stability as a Liability:Systematic Breakdown of Linguistic Structure in LLMs",
+        "summary": "Training stability is typically regarded as a prerequisite for reliable optimization in large language models. In this work, we analyze how stabilizing training dynamics affects the induced generation distribution. We show that under standard maximum likelihood training, stable parameter trajectories lead stationary solutions to approximately minimize the forward KL divergence to the empirical distribution, while implicitly reducing generative entropy. As a consequence, the learned model can concentrate probability mass on a limited subset of empirical modes, exhibiting systematic degeneration despite smooth loss convergence. We empirically validate this effect using a controlled feedback-based training framework that stabilizes internal generation statistics, observing consistent low-entropy outputs and repetitive behavior across architectures and random seeds. It indicates that optimization stability and generative expressivity are not inherently aligned, and that stability alone is an insufficient indicator of generative quality.",
+        "authors": "Xianzhe Meng, Qiangsheng Zeng, Ling Luo, Qinghan Yang, Jiarui Hao, Wenbo Wu, Qinyu Wang, Rui Yin, Lin Qi, Renzhi Lu",
+        "url": "http://arxiv.org/abs/2601.18588v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18588v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文挑战了训练稳定性作为LLM优化前提的传统观念，从理论上分析了其如何导致LLM生成分布的系统性退化和低熵输出。它提供了对LLM生成质量的深刻理论洞察，具有重要的理论创新性，对理解和改进LLM的生成多样性具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18486v1",
+        "title": "Demographic Probing of Large Language Models Lacks Construct Validity",
+        "summary": "Demographic probing is widely used to study how large language models (LLMs) adapt their behavior to signaled demographic attributes. This approach typically uses a single demographic cue in isolation (e.g., a name or dialect) as a signal for group membership, implicitly assuming strong construct validity: that such cues are interchangeable operationalizations of the same underlying, demographically conditioned behavior. We test this assumption in realistic advice-seeking interactions, focusing on race and gender in a U.S. context. We find that cues intended to represent the same demographic group induce only partially overlapping changes in model behavior, while differentiation between groups within a given cue is weak and uneven. Consequently, estimated disparities are unstable, with both magnitude and direction varying across cues. We further show that these inconsistencies partly arise from variation in how strongly cues encode demographic attributes and from linguistic confounders that independently shape model behavior. Together, our findings suggest that demographic probing lacks construct validity: it does not yield a single, stable characterization of how LLMs condition on demographic information, which may reflect a misspecified or fragmented construct. We conclude by recommending the use of multiple, ecologically valid cues and explicit control of confounders to support more defensible claims about demographic effects in LLMs.",
+        "authors": "Manuel Tonneau, Neil K. R. Seghal, Niyati Malhotra, Victor Orozco-Olvera, Ana María Muñoz Boudet, Lakshmi Subramanian, Sharath Chandra Guntuku, Valentin Hofmann",
+        "url": "http://arxiv.org/abs/2601.18486v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18486v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "JitRL提出了一个无需梯度更新的即时强化学习框架，理论上证明了其加性更新规则是KL约束策略优化的精确闭式解。该方法在LLM智能体持续学习方面具有高创新性和严谨性，显著降低了计算成本，解决了LLM智能体适应性和效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18255v1",
+        "title": "Beyond Retention: Orchestrating Structural Safety and Plasticity in Continual Learning for LLMs",
+        "summary": "Continual learning in Large Language Models (LLMs) faces the critical challenge of balancing stability (retaining old knowledge) and plasticity (learning new tasks). While Experience Replay (ER) is a standard countermeasure against catastrophic forgetting, its impact across diverse capabilities remains underexplored. In this work, we uncover a critical dichotomy in ER's behavior: while it induces positive backward transfer on robust, unstructured tasks (e.g., boosting performance on previous NLP classification tasks through repeated rehearsal), it causes severe negative transfer on fragile, structured domains like code generation (e.g., a significant relative drop in coding accuracy). This reveals that ER trades structural integrity for broad consolidation. To address this dilemma, we propose \\textbf{Orthogonal Subspace Wake-up (OSW)}. OSW identifies essential parameter subspaces of previous tasks via a brief \"wake-up\" phase and enforces orthogonal updates for new tasks, providing a mathematically grounded \"safety guarantee\" for established knowledge structures. Empirical results across a diverse four-task sequence demonstrate that OSW uniquely succeeds in preserving fragile coding abilities where Replay fails, while simultaneously maintaining high plasticity for novel tasks. Our findings emphasize the necessity of evaluating structural safety alongside average retention in LLM continual learning.",
+        "authors": "Fei Meng",
+        "url": "http://arxiv.org/abs/2601.18255v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18255v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文揭示了经验回放对LLM持续学习的二元行为，并提出了OSW框架，通过数学上严谨的正交更新来平衡结构安全性和可塑性。它解决了LLM持续学习中的一个核心理论难题，对LLM的鲁棒性和知识保留具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18142v1",
+        "title": "Enhance the Safety in Reinforcement Learning by ADRC Lagrangian Methods",
+        "summary": "Safe reinforcement learning (Safe RL) seeks to maximize rewards while satisfying safety constraints, typically addressed through Lagrangian-based methods. However, existing approaches, including PID and classical Lagrangian methods, suffer from oscillations and frequent safety violations due to parameter sensitivity and inherent phase lag. To address these limitations, we propose ADRC-Lagrangian methods that leverage Active Disturbance Rejection Control (ADRC) for enhanced robustness and reduced oscillations. Our unified framework encompasses classical and PID Lagrangian methods as special cases while significantly improving safety performance. Extensive experiments demonstrate that our approach reduces safety violations by up to 74%, constraint violation magnitudes by 89%, and average costs by 67\\%, establishing superior effectiveness for Safe RL in complex environments.",
+        "authors": "Mingxu Zhang, Huicheng Zhang, Jiaming Ji, Yaodong Yang, Ying Sun",
+        "url": "http://arxiv.org/abs/2601.18142v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18142v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ADRC-Lagrangian方法，利用主动抗扰控制（ADRC）增强安全强化学习（Safe RL）的鲁棒性，减少振荡和安全违规。它统一了经典和PID拉格朗日方法，在RL和控制理论方面具有创新性，解决了复杂环境中Safe RL的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18132v1",
+        "title": "RareAlert: Aligning heterogeneous large language model reasoning for early rare disease risk screening",
+        "summary": "Missed and delayed diagnosis remains a major challenge in rare disease care. At the initial clinical encounters, physicians assess rare disease risk using only limited information under high uncertainty. When high-risk patients are not recognised at this stage, targeted diagnostic testing is often not initiated, resulting in missed diagnosis. Existing primary care triage processes are structurally insufficient to reliably identify patients with rare diseases at initial clinical presentation and universal screening is needed to reduce diagnostic delay. Here we present RareAlert, an early screening system which predict patient-level rare disease risk from routinely available primary-visit information. RareAlert integrates reasoning generated by ten LLMs, calibrates and weights these signals using machine learning, and distils the aligned reasoning into a single locally deployable model. To develop and evaluate RareAlert, we curated RareBench, a real-world dataset of 158,666 cases covering 33 Orphanet disease categories and more than 7,000 rare conditions, including both rare and non-rare presentations. The results showed that rare disease identification can be reconceptualised as a universal uncertainty resolution process applied to the general patient population. On an independent test set, RareAlert, a Qwen3-4B based model trained with calibrated reasoning signals, achieved an AUC of 0.917, outperforming the best machine learning ensemble and all evaluated LLMs, including GPT-5, DeepSeek-R1, Claude-3.7-Sonnet, o3-mini, Gemini-2.5-Pro, and Qwen3-235B. These findings demonstrate the diversity in LLM medical reasoning and the effectiveness of aligning such reasoning in highly uncertain clinical tasks. By incorporating calibrated reasoning into a single model, RareAlert enables accurate, privacy-preserving, and scalable rare disease risk screening suitable for large-scale local deployment.",
+        "authors": "Xi Chen, Hongru Zhou, Huahui Yi, Shiyu Feng, Hanyu Zhou, Tiancheng He, Mingke You, Li Wang, Qiankun Li, Kun Wang, Weili Fu, Kang Li, Jian Li",
+        "url": "http://arxiv.org/abs/2601.18132v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18132v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RareAlert系统通过整合、校准和对齐多个LLM的异构推理，实现罕见病风险早期筛查。该方法在医疗领域具有极高实践影响力，其对齐异构LLM推理的统计学方法具有创新性，解决了医疗诊断中的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18116v1",
+        "title": "FABLE: Forest-Based Adaptive Bi-Path LLM-Enhanced Retrieval for Multi-Document Reasoning",
+        "summary": "The rapid expansion of long-context Large Language Models (LLMs) has reignited debate on whether Retrieval-Augmented Generation (RAG) remains necessary. However, empirical evidence reveals persistent limitations of long-context inference, including the lost-in-the-middle phenomenon, high computational cost, and poor scalability for multi-document reasoning. Conversely, traditional RAG systems, while efficient, are constrained by flat chunk-level retrieval that introduces semantic noise and fails to support structured cross-document synthesis.   We present \\textbf{FABLE}, a \\textbf{F}orest-based \\textbf{A}daptive \\textbf{B}i-path \\textbf{L}LM-\\textbf{E}nhanced retrieval framework that integrates LLMs into both knowledge organization and retrieval. FABLE constructs LLM-enhanced hierarchical forest indexes with multi-granularity semantic structures, then employs a bi-path strategy combining LLM-guided hierarchical traversal with structure-aware propagation for fine-grained evidence acquisition, with explicit budget control for adaptive efficiency trade-offs.   Extensive experiments demonstrate that FABLE consistently outperforms SOTA RAG methods and achieves comparable accuracy to full-context LLM inference with up to 94\\% token reduction, showing that long-context LLMs amplify rather than fully replace the need for structured retrieval.",
+        "authors": "Lin Sun, Linglin Zhang, Jingang Huang, Change Jia, Zhengwei Cheng, Xiangzheng Zhang",
+        "url": "http://arxiv.org/abs/2601.18116v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18116v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FABLE框架将LLM整合到知识组织和检索中，通过分层森林索引和双路径策略解决长上下文LLM和传统RAG的局限性。该工作在RAG领域具有高创新性和严谨性，显著提升了多文档推理效率，解决了LLM长上下文推理和数据效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18110v1",
+        "title": "AttenMIA: LLM Membership Inference Attack through Attention Signals",
+        "summary": "Large Language Models (LLMs) are increasingly deployed to enable or improve a multitude of real-world applications. Given the large size of their training data sets, their tendency to memorize training data raises serious privacy and intellectual property concerns. A key threat is the membership inference attack (MIA), which aims to determine whether a given sample was included in the model's training set. Existing MIAs for LLMs rely primarily on output confidence scores or embedding-based features, but these signals are often brittle, leading to limited attack success. We introduce AttenMIA, a new MIA framework that exploits self-attention patterns inside the transformer model to infer membership. Attention controls the information flow within the transformer, exposing different patterns for memorization that can be used to identify members of the dataset. Our method uses information from attention heads across layers and combines them with perturbation-based divergence metrics to train an effective MIA classifier. Using extensive experiments on open-source models including LLaMA-2, Pythia, and Opt models, we show that attention-based features consistently outperform baselines, particularly under the important low-false-positive metric (e.g., achieving up to 0.996 ROC AUC & 87.9% TPR@1%FPR on the WikiMIA-32 benchmark with Llama2-13b). We show that attention signals generalize across datasets and architectures, and provide a layer- and head-level analysis of where membership leakage is most pronounced. We also show that using AttenMIA to replace other membership inference attacks in a data extraction framework results in training data extraction attacks that outperform the state of the art. Our findings reveal that attention mechanisms, originally introduced to enhance interpretability, can inadvertently amplify privacy risks in LLMs, underscoring the need for new defenses.",
+        "authors": "Pedram Zaree, Md Abdullah Al Mamun, Yue Dong, Ihsen Alouani, Nael Abu-Ghazaleh",
+        "url": "http://arxiv.org/abs/2601.18110v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18110v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "AttenMIA提出了一个利用Transformer模型内部自注意力模式进行成员推断攻击的新框架。它揭示了注意力机制可能带来的隐私风险，具有高创新性和严谨性，对LLM安全和隐私有深远影响，解决了LLM隐私保护的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18089v1",
+        "title": "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts",
+        "summary": "Mixture of Experts (MoEs) have become a central component of many state-of-the-art open-source and proprietary large language models. Despite their widespread adoption, it remains unclear how close existing MoE architectures are to optimal with respect to inference cost, as measured by accuracy per floating-point operation and per parameter. In this work, we revisit MoE design from a hardware-software co-design perspective, grounded in empirical and theoretical considerations. We characterize key performance bottlenecks across diverse deployment regimes, spanning offline high-throughput execution and online, latency-critical inference. Guided by these insights, we introduce LatentMoE, a new model architecture resulting from systematic design exploration and optimized for maximal accuracy per unit of compute. Empirical design space exploration at scales of up to 95B parameters and over a 1T-token training horizon, together with supporting theoretical analysis, shows that LatentMoE consistently outperforms standard MoE architectures in terms of accuracy per FLOP and per parameter. Given its strong performance, the LatentMoE architecture has been adopted by the flagship Nemotron-3 Super and Ultra models and scaled to substantially larger regimes, including longer token horizons and larger model sizes, as reported in Nvidia et al. (arXiv:2512.20856).",
+        "authors": "Venmugil Elango, Nidhi Bhatia, Roger Waleffe, Rasoul Shafipour, Tomer Asida, Abhinav Khattar, Nave Assaf, Maximilian Golub, Joey Guman, Tiyasa Mitra, Ritchie Zhao, Ritika Borkar, Ran Zilberstein, Mostofa Patwary, Mohammad Shoeybi, Bita Rouhani",
+        "url": "http://arxiv.org/abs/2601.18089v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LatentMoE提出了一种新的MoE架构，从软硬件协同设计的角度优化了每FLOP和每参数的准确性。该工作具有高创新性和严谨性，解决了LLM效率和扩展性的核心瓶颈，是AI架构前沿的代表性研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18069v1",
+        "title": "Diffusion Model-based Reinforcement Learning for Version Age of Information Scheduling: Average and Tail-Risk-Sensitive Control",
+        "summary": "Ensuring timely and semantically accurate information delivery is critical in real-time wireless systems. While Age of Information (AoI) quantifies temporal freshness, Version Age of Information (VAoI) captures semantic staleness by accounting for version evolution between transmitters and receivers. Existing VAoI scheduling approaches primarily focus on minimizing average VAoI, overlooking rare but severe staleness events that can compromise reliability under stochastic packet arrivals and unreliable channels. This paper investigates both average-oriented and tail-risk-sensitive VAoI scheduling in a multi-user status update system with long-term transmission cost constraints. We first formulate the average VAoI minimization problem as a constrained Markov decision process and introduce a deep diffusion-based Soft Actor-Critic (D2SAC) algorithm. By generating actions through a diffusion-based denoising process, D2SAC enhances policy expressiveness and establishes a strong baseline for mean performance. Building on this foundation, we put forth RS-D3SAC, a risk-sensitive deep distributional diffusion-based Soft Actor-Critic algorithm. RS-D3SAC integrates a diffusion-based actor with a quantile-based distributional critic, explicitly modeling the full VAoI return distribution. This enables principled tail-risk optimization via Conditional Value-at-Risk (CVaR) while satisfying long-term transmission cost constraints. Extensive simulations show that, while D2SAC reduces average VAoI, RS-D3SAC consistently achieves substantial reductions in CVaR without sacrificing mean performance. The dominant gain in tail-risk reduction stems from the distributional critic, with the diffusion-based actor providing complementary refinement to stabilize and enrich policy decisions, highlighting their effectiveness for robust and risk-aware VAoI scheduling in multi-user wireless systems.",
+        "authors": "Haoyuan Pan, Sizhao Chen, Zhaorui Wang, Tse-Tin Chan",
+        "url": "http://arxiv.org/abs/2601.18069v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18069v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了D2SAC和RS-D3SAC，将扩散模型与强化学习结合，用于信息版本年龄（VAoI）调度，并实现了平均和尾部风险敏感控制。在RL和控制理论方面具有高创新性和严谨性，通过显式建模VAoI回报分布，解决了实时无线系统中信息传输效率和可靠性的关键瓶颈。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.18702v1",
+        "title": "From Fuzzy to Exact: The Halo Architecture for Infinite-Depth Reasoning via Rational Arithmetic",
+        "summary": "Current paradigms in Deep Learning prioritize computational throughput over numerical precision, relying on the assumption that intelligence emerges from statistical correlation at scale. In this paper, we challenge this orthodoxy. We propose the Exactness Hypothesis: that General Intelligence (AGI), specifically high-order causal inference, requires a computational substrate capable of Arbitrary Precision Arithmetic. We argue that the \"hallucinations\" and logical incoherence seen in current Large Language Models (LLMs) are artifacts of IEEE 754 floating-point approximation errors accumulating over deep compositional functions. To mitigate this, we introduce the Halo Architecture, a paradigm shift to Rational Arithmetic ($\\mathbb{Q}$) supported by a novel Exact Inference Unit (EIU). Empirical validation on the Huginn-0125 prototype demonstrates that while 600B-parameter scale BF16 baselines collapse in chaotic systems, Halo maintains zero numerical divergence indefinitely. This work establishes exact arithmetic as a prerequisite for reducing logical uncertainty in System 2 AGI.",
+        "authors": "Hansheng Ren",
+        "url": "http://arxiv.org/abs/2601.18702v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18702v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“精确性假设”，挑战了深度学习中浮点精度的正统观念，并引入了基于有理数算术的Halo架构，以实现无限深度推理和零数值发散。其对计算基础的深刻数学探讨和对AGI逻辑一致性的理论追求，与您对严谨数学逻辑和理论基础的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18676v1",
+        "title": "Quasi Monte Carlo methods enable extremely low-dimensional deep generative models",
+        "summary": "This paper introduces quasi-Monte Carlo latent variable models (QLVMs): a class of deep generative models that are specialized for finding extremely low-dimensional and interpretable embeddings of high-dimensional datasets. Unlike standard approaches, which rely on a learned encoder and variational lower bounds, QLVMs directly approximate the marginal likelihood by randomized quasi-Monte Carlo integration. While this brute force approach has drawbacks in higher-dimensional spaces, we find that it excels in fitting one, two, and three dimensional deep latent variable models. Empirical results on a range of datasets show that QLVMs consistently outperform conventional variational autoencoders (VAEs) and importance weighted autoencoders (IWAEs) with matched latent dimensionality. The resulting embeddings enable transparent visualization and post hoc analyses such as nonparametric density estimation, clustering, and geodesic path computation, which are nontrivial to validate in higher-dimensional spaces. While our approach is compute-intensive and struggles to generate fine-scale details in complex datasets, it offers a compelling solution for applications prioritizing interpretability and latent space analysis.",
+        "authors": "Miles Martinez, Alex H. Williams",
+        "url": "http://arxiv.org/abs/2601.18676v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18676v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了准蒙特卡洛潜在变量模型（QLVMs），通过随机准蒙特卡洛积分直接近似边际似然，以实现极低维度和可解释的深度生成模型。其核心在于统计积分方法，并强调了在低维空间中优于传统VAE和IWAE的经验结果，具有扎实的统计学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18656v1",
+        "title": "A varying-coefficient model for characterizing duration-driven heterogeneity in flood-related health impacts",
+        "summary": "Previous work revealed associations between flood exposure and adverse health outcomes during and in the aftermath of flood events. Floods are highly heterogeneous events, largely owing to vast differences in flood durations, i.e., flash-floods versus slow-moving floods. However, little to no work has incorporated exposure duration into the modeling of flood-related health impacts or has investigated duration-driven effect heterogeneity. To address this gap, we propose an exposure duration varying coefficient modeling (EDVCM) framework for estimating exposure day-specific health effects of consecutive-day environmental exposures that vary in duration. We develop the EDVCM within an area-level self-matched study design to eliminate time-invariant confounding followed by conditional Poisson regression modeling for exposure effect estimation and adjustment of time-varying confounders. Using a Bayesian framework, we introduce duration- and exposure day-specific exposure coefficients within the conditional Poisson model and assign them a two-dimensional Gaussian process prior to allow for sharing of information across both duration and exposure day. This approach enables highly-resolved insights into duration-driven effect heterogeneity while ensuring model stability through information sharing. Through simulations, we demonstrate that the EDVCM out-performs conventional approaches in terms of both effect estimation and uncertainty quantification. We apply the EDVCM to nationwide, multi-decade Medicare claims data linked with high-resolution flood exposure measures to investigate duration-driven heterogeneity in flood effects on musculoskeletal system disease hospitalizations.",
+        "authors": "Sarika Aggarwal, Phillip B. Nicol, Brent A. Coull, Rachel C. Nethery",
+        "url": "http://arxiv.org/abs/2601.18656v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18656v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个暴露持续时间变系数建模（EDVCM）框架，用于估计连续环境暴露对健康影响的持续时间驱动异质性。它采用了贝叶斯框架和二维高斯过程先验，结合条件泊松回归，提供了严谨的统计建模和不确定性量化，非常符合您对贝叶斯方法和统计保证的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18638v1",
+        "title": "Physics-Informed Uncertainty Enables Reliable AI-driven Design",
+        "summary": "Inverse design is a central goal in much of science and engineering, including frequency-selective surfaces (FSS) that are critical to microelectronics for telecommunications and optical metamaterials. Traditional surrogate-assisted optimization methods using deep learning can accelerate the design process but do not usually incorporate uncertainty quantification, leading to poorer optimization performance due to erroneous predictions in data-sparse regions. Here, we introduce and validate a fundamentally different paradigm of Physics-Informed Uncertainty, where the degree to which a model's prediction violates fundamental physical laws serves as a computationally-cheap and effective proxy for predictive uncertainty. By integrating physics-informed uncertainty into a multi-fidelity uncertainty-aware optimization workflow to design complex frequency-selective surfaces within the 20 - 30 GHz range, we increase the success rate of finding performant solutions from less than 10% to over 50%, while simultaneously reducing computational cost by an order of magnitude compared to the sole use of a high-fidelity solver. These results highlight the necessity of incorporating uncertainty quantification in machine-learning-driven inverse design for high-dimensional problems, and establish physics-informed uncertainty as a viable alternative to quantifying uncertainty in surrogate models for physical systems, thereby setting the stage for autonomous scientific discovery systems that can efficiently and robustly explore and evaluate candidate designs.",
+        "authors": "Tingkai Xue, Chin Chun Ooi, Yang Jiang, Luu Trung Pham Duong, Pao-Hsiung Chiu, Weijiang Zhao, Nagarajan Raghavan, My Ha Dao",
+        "url": "http://arxiv.org/abs/2601.18638v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18638v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了“物理信息不确定性”这一新范式，将模型预测违反基本物理定律的程度作为预测不确定性的廉价有效代理。这种将物理原理与不确定性量化相结合的方法，为AI驱动设计提供了可靠性，体现了严谨的理论基础和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18608v1",
+        "title": "PolySHAP: Extending KernelSHAP with Interaction-Informed Polynomial Regression",
+        "summary": "Shapley values have emerged as a central game-theoretic tool in explainable AI (XAI). However, computing Shapley values exactly requires $2^d$ game evaluations for a model with $d$ features. Lundberg and Lee's KernelSHAP algorithm has emerged as a leading method for avoiding this exponential cost. KernelSHAP approximates Shapley values by approximating the game as a linear function, which is fit using a small number of game evaluations for random feature subsets.   In this work, we extend KernelSHAP by approximating the game via higher degree polynomials, which capture non-linear interactions between features. Our resulting PolySHAP method yields empirically better Shapley value estimates for various benchmark datasets, and we prove that these estimates are consistent.   Moreover, we connect our approach to paired sampling (antithetic sampling), a ubiquitous modification to KernelSHAP that improves empirical accuracy. We prove that paired sampling outputs exactly the same Shapley value approximations as second-order PolySHAP, without ever fitting a degree 2 polynomial. To the best of our knowledge, this finding provides the first strong theoretical justification for the excellent practical performance of the paired sampling heuristic.",
+        "authors": "Fabian Fumagalli, R. Teal Witter, Christopher Musco",
+        "url": "http://arxiv.org/abs/2601.18608v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18608v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过多项式回归扩展了KernelSHAP，提出了PolySHAP方法，并证明了其估计的一致性。更重要的是，它为广泛使用的配对采样启发式方法提供了首个强有力的理论依据。这直接涉及博弈论（Shapley值）和统计学（一致性），具有很强的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18587v1",
+        "title": "Vaccine Efficacy Estimands Implied by Common Estimators Used in Individual Randomized Field Trials",
+        "summary": "We review vaccine efficacy (VE) estimands for susceptibility in individual randomized trials with natural (unmeasured) exposure, where individual responses are measured as time from vaccination until an event (e.g., disease from the infectious agent). Common VE estimands are written as $1-θ$, where $θ$ is some ratio effect measure (e.g., ratio of incidence rates, cumulative incidences, hazards, or odds) comparing outcomes under vaccination versus control. Although the ratio effects are approximately equal with low control event rates, we explore the quality of that approximation using a nonparametric formulation. Traditionally, the primary endpoint VE estimands are full immunization (or biological) estimands that represent a subset of the intent-to-treat population, excluding those that have the event before the vaccine has been able to ramp-up to its full effect, requiring care for proper causal interpretation. Besides these primary VE estimands that summarize an effect of the vaccine over the full course of the study, we also consider local VE estimands that measure the effect at particular time points. We discuss interpretational difficulties of local VE estimands (e.g., depletion of susceptibles bias), and using frailty models as sensitivity analyses for the individual-level causal effects over time.",
+        "authors": "Michael P. Fay, Dean Follmann, Bruce J. Swihart, Lauren E. Dang",
+        "url": "http://arxiv.org/abs/2601.18587v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18587v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文回顾了疫苗效力（VE）估计量，探讨了非参数公式，并讨论了局部VE估计量的解释困难（如易感者耗尽偏差），并使用脆弱性模型进行敏感性分析。这篇论文专注于因果推断、统计估计量和严谨的解释，是纯粹的统计学理论研究，非常符合您的核心偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18509v1",
+        "title": "Conformal Prediction Algorithms for Time Series Forecasting: Methods and Benchmark",
+        "summary": "Reliable uncertainty quantification is of critical importance in time series forecasting, yet traditional methods often rely on restrictive distributional assumptions. Conformal prediction (CP) has emerged as a promising distribution-free framework for generating prediction intervals with rigorous theoretical guarantees. However, applying CP to sequential data presents a primary challenge: the temporal dependencies inherent in time series fundamentally violate the core assumption of data exchangeability, upon which standard CP guarantees are built. This review critically examines the main categories of algorithmic solutions designed to address this conflict. We survey and benchmark methods that relax the exchangeability assumption, those that redefine the data unit to be a collection of independent time series, approaches that explicitly model the dynamics of the prediction residuals, and online learning algorithms that adapt to distribution shifts to maintain long-run coverage. By synthesizing these approaches, we highlight computational efficiency and practical performance on real-world data.",
+        "authors": "Andro Sabashvili",
+        "url": "http://arxiv.org/abs/2601.18509v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18509v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇综述和基准测试论文深入探讨了时间序列预测中的共形预测（CP）算法，特别关注了时间依赖性违反数据可交换性这一核心假设的挑战。它批判性地审视了解决这些冲突的算法方案，强调了CP的严格理论保证和统计学基础，对您理解理论保证和统计假设至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18356v1",
+        "title": "Making medical vision-language models think causally across modalities with retrieval-augmented cross-modal reasoning",
+        "summary": "Medical vision-language models (VLMs) achieve strong performance in diagnostic reporting and image-text alignment, yet their underlying reasoning mechanisms remain fundamentally correlational, exhibiting reliance on superficial statistical associations that fail to capture the causal pathophysiological mechanisms central to clinical decision-making. This limitation makes them fragile, prone to hallucinations, and sensitive to dataset biases. Retrieval-augmented generation (RAG) offers a partial remedy by grounding predictions in external knowledge. However, conventional RAG depends on semantic similarity, introducing new spurious correlations. We propose Multimodal Causal Retrieval-Augmented Generation, a framework that integrates causal inference principles with multimodal retrieval. It retrieves clinically relevant exemplars and causal graphs from external sources, conditioning model reasoning on counterfactual and interventional evidence rather than correlations alone. Applied to radiology report generation, diagnosis prediction, and visual question answering, it improves factual accuracy, robustness to distribution shifts, and interpretability. Our results highlight causal retrieval as a scalable path toward medical VLMs that think beyond pattern matching, enabling trustworthy multimodal reasoning in high-stakes clinical settings.",
+        "authors": "Weiqin Yang, Haowen Xue, Qingyi Peng, Hexuan Hu, Qian Huang, Tingbo Zhang",
+        "url": "http://arxiv.org/abs/2601.18356v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18356v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了多模态因果检索增强生成框架，将因果推断原则与多模态检索相结合，通过反事实和干预证据而非单纯相关性来指导模型推理。这直接解决了因果逻辑问题，旨在构建更值得信赖的医疗VLM，与您对因果逻辑的兴趣高度吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18342v1",
+        "title": "Structural Gender Bias in Credit Scoring: Proxy Leakage",
+        "summary": "As financial institutions increasingly adopt machine learning for credit risk assessment, the persistence of algorithmic bias remains a critical barrier to equitable financial inclusion. This study provides a comprehensive audit of structural gender bias within the Taiwan Credit Default dataset, specifically challenging the prevailing doctrine of \"fairness through blindness.\" Despite the removal of explicit protected attributes and the application of industry standard fairness interventions, our results demonstrate that gendered predictive signals remain deeply embedded within non-sensitive features. Utilizing SHAP (SHapley Additive exPlanations), we identify that variables such as Marital Status, Age, and Credit Limit function as potent proxies for gender, allowing models to maintain discriminatory pathways while appearing statistically fair. To mathematically quantify this leakage, we employ an adversarial inverse modeling framework. Our findings reveal that the protected gender attribute can be reconstructed from purely non-sensitive financial features with an ROC AUC score of 0.65, demonstrating that traditional fairness audits are insufficient for detecting implicit structural bias. These results advocate for a shift from surface-level statistical parity toward causal-aware modeling and structural accountability in financial AI.",
+        "authors": "Navya SD, Sreekanth D, SS Uma Sankari",
+        "url": "http://arxiv.org/abs/2601.18342v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18342v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究对信用评分中的结构性性别偏见进行了全面审计，利用SHAP和对抗性逆向建模框架量化了代理泄露，并倡导从表面统计公平性转向因果感知建模和结构性问责制。这篇论文在统计分析和因果建模方面具有很强的严谨性，对理解和解决AI系统中的偏见问题提供了深刻见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18336v1",
+        "title": "PPISP: Physically-Plausible Compensation and Control of Photometric Variations in Radiance Field Reconstruction",
+        "summary": "Multi-view 3D reconstruction methods remain highly sensitive to photometric inconsistencies arising from camera optical characteristics and variations in image signal processing (ISP). Existing mitigation strategies such as per-frame latent variables or affine color corrections lack physical grounding and generalize poorly to novel views. We propose the Physically-Plausible ISP (PPISP) correction module, which disentangles camera-intrinsic and capture-dependent effects through physically based and interpretable transformations. A dedicated PPISP controller, trained on the input views, predicts ISP parameters for novel viewpoints, analogous to auto exposure and auto white balance in real cameras. This design enables realistic and fair evaluation on novel views without access to ground-truth images. PPISP achieves SoTA performance on standard benchmarks, while providing intuitive control and supporting the integration of metadata when available. The source code is available at: https://github.com/nv-tlabs/ppisp",
+        "authors": "Isaac Deutsch, Nicolas Moënne-Loccoz, Gavriel State, Zan Gojcic",
+        "url": "http://arxiv.org/abs/2601.18336v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18336v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了物理合理ISP（PPISP）校正模块，通过基于物理的可解释变换来解耦相机内在和捕获依赖效应。其强调基于物理的模型和可解释的变换，意味着底层有严谨的数学和物理学推导，符合您对理论基础的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18231v1",
+        "title": "Rethinking Cross-Modal Fine-Tuning: Optimizing the Interaction between Feature Alignment and Target Fitting",
+        "summary": "Adapting pre-trained models to unseen feature modalities has become increasingly important due to the growing need for cross-disciplinary knowledge integration.~A key challenge here is how to align the representation of new modalities with the most relevant parts of the pre-trained model's representation space to enable accurate knowledge transfer.~This requires combining feature alignment with target fine-tuning, but uncalibrated combinations can exacerbate misalignment between the source and target feature-label structures and reduce target generalization.~Existing work however lacks a theoretical understanding of this critical interaction between feature alignment and target fitting.~To bridge this gap, we develop a principled framework that establishes a provable generalization bound on the target error, which explains the interaction between feature alignment and target fitting through a novel concept of feature-label distortion.~This bound offers actionable insights into how this interaction should be optimized for practical algorithm design. The resulting approach achieves significantly improved performance over state-of-the-art methods across a wide range of benchmark datasets.",
+        "authors": "Trong Khiem Tran, Manh Cuong Dao, Phi Le Nguyen, Thao Nguyen Truong, Trong Nghia Hoang",
+        "url": "http://arxiv.org/abs/2601.18231v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18231v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个原则性框架，建立了可证明的目标误差泛化界限，并通过“特征-标签失真”的新概念解释了特征对齐和目标拟合之间的相互作用。这篇论文提供了强大的理论基础和数学推导，直接解决了机器学习中的泛化理论问题，是您会非常感兴趣的类型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18219v1",
+        "title": "Automated HER2 scoring with uncertainty quantification using lensfree holography and deep learning",
+        "summary": "Accurate assessment of human epidermal growth factor receptor 2 (HER2) expression is critical for breast cancer diagnosis, prognosis, and therapy selection; yet, most existing digital HER2 scoring methods rely on bulky and expensive optical systems. Here, we present a compact and cost-effective lensfree holography platform integrated with deep learning for automated HER2 scoring of immunohistochemically stained breast tissue sections. The system captures lensfree diffraction patterns of stained HER2 tissue sections under RGB laser illumination and acquires complex field information over a sample area of ~1,250 mm^2 at an effective throughput of ~84 mm^2 per minute. To enhance diagnostic reliability, we incorporated an uncertainty quantification strategy based on Bayesian Monte Carlo dropout, which provides autonomous uncertainty estimates for each prediction and supports reliable, robust HER2 scoring, with an overall correction rate of 30.4%. Using a blinded test set of 412 unique tissue samples, our approach achieved a testing accuracy of 84.9% for 4-class (0, 1+, 2+, 3+) HER2 classification and 94.8% for binary (0/1+ vs. 2+/3+) HER2 scoring with uncertainty quantification. Overall, this lensfree holography approach provides a practical pathway toward portable, high-throughput, and cost-effective HER2 scoring, particularly suited for resource-limited settings, where traditional digital pathology infrastructure is unavailable.",
+        "authors": "Che-Yung Shen, Xilin Yang, Yuzhu Li, Leon Lenk, Aydogan Ozcan",
+        "url": "http://arxiv.org/abs/2601.18219v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18219v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究将无透镜全息技术与深度学习相结合，用于自动化HER2评分，并特别强调了基于贝叶斯蒙特卡洛dropout的不确定性量化策略。贝叶斯方法和不确定性量化是您关注的核心统计概念，这使得该论文具有较高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18118v1",
+        "title": "LungCRCT: Causal Representation based Lung CT Processing for Lung Cancer Treatment",
+        "summary": "Due to silence in early stages, lung cancer has been one of the most leading causes of mortality in cancer patients world-wide. Moreover, major symptoms of lung cancer are hard to differentiate with other respiratory disease symptoms such as COPD, further leading patients to overlook cancer progression in early stages. Thus, to enhance survival rates in lung cancer, early detection from consistent proactive respiratory system monitoring becomes crucial. One of the most prevalent and effective methods for lung cancer monitoring would be low-dose computed tomography(LDCT) chest scans, which led to remarkable enhancements in lung cancer detection or tumor classification tasks under rapid advancements and applications of computer vision based AI models such as EfficientNet or ResNet in image processing. However, though advanced CNN models under transfer learning or ViT based models led to high performing lung cancer detections, due to its intrinsic limitations in terms of correlation dependence and low interpretability due to complexity, expansions of deep learning models to lung cancer treatment analysis or causal intervention analysis simulations are still limited. Therefore, this research introduced LungCRCT: a latent causal representation learning based lung cancer analysis framework that retrieves causal representations of factors within the physical causal mechanism of lung cancer progression. With the use of advanced graph autoencoder based causal discovery algorithms with distance Correlation disentanglement and entropy-based image reconstruction refinement, LungCRCT not only enables causal intervention analysis for lung cancer treatments, but also leads to robust, yet extremely light downstream models in malignant tumor classification tasks with an AUC score of 93.91%.",
+        "authors": "Daeyoung Kim",
+        "url": "http://arxiv.org/abs/2601.18118v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18118v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了LungCRCT，一个基于潜在因果表示学习的肺癌分析框架，通过图自编码器和距离相关解耦算法来发现物理因果机制中的因果表示。它明确强调了因果推断、因果表示学习和数学方法，与您对因果逻辑和严谨数学推导的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18085v1",
+        "title": "\"Crash Test Dummies\" for AI-Enabled Clinical Assessment: Validating Virtual Patient Scenarios with Virtual Learners",
+        "summary": "Background: In medical and health professions education (HPE), AI is increasingly used to assess clinical competencies, including via virtual standardized patients. However, most evaluations rely on AI-human interrater reliability and lack a measurement framework for how cases, learners, and raters jointly shape scores. This leaves robustness uncertain and can expose learners to misguidance from unvalidated systems. We address this by using AI \"simulated learners\" to stress-test and psychometrically characterize assessment pipelines before human use.   Objective: Develop an open-source AI virtual patient platform and measurement model for robust competency evaluation across cases and rating conditions.   Methods: We built a platform with virtual patients, virtual learners with tunable ACGME-aligned competency profiles, and multiple independent AI raters scoring encounters with structured Key-Features items. Transcripts were analyzed with a Bayesian HRM-SDT model that treats ratings as decisions under uncertainty and separates learner ability, case performance, and rater behavior; parameters were estimated with MCMC.   Results: The model recovered simulated learners' competencies, with significant correlations to the generating competencies across all ACGME domains despite a non-deterministic pipeline. It estimated case difficulty by competency and showed stable rater detection (sensitivity) and criteria (severity/leniency thresholds) across AI raters using identical models/prompts but different seeds. We also propose a staged \"safety blueprint\" for deploying AI tools with learners, tied to entrustment-based validation milestones.   Conclusions: Combining a purpose-built virtual patient platform with a principled psychometric model enables robust, interpretable, generalizable competency estimates and supports validation of AI-assisted assessment prior to use with human learners.",
+        "authors": "Brian Gin, Ahreum Lim, Flávia Silva e Oliveira, Kuan Xing, Xiaomei Song, Gayana Amiyangoda, Thilanka Seneviratne, Alison F. Doubleday, Ananya Gangopadhyaya, Bob Kiser, Lukas Shum-Tim, Dhruva Patel, Kosala Marambe, Lauren Maggio, Ara Tekian, Yoon Soo Park",
+        "url": "http://arxiv.org/abs/2601.18085v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18085v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究开发了一个AI虚拟患者平台和“稳健能力评估测量模型”，通过贝叶斯HRM-SDT模型分析转录本，该模型将评分视为不确定性下的决策，并分离学习者能力、案例表现和评分者行为，参数通过MCMC估计。这展示了强大的贝叶斯统计建模、不确定性处理和心理测量学方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18052v1",
+        "title": "BASTION: A Bayesian Framework for Trend and Seasonality Decomposition",
+        "summary": "We introduce BASTION (Bayesian Adaptive Seasonality and Trend DecompositION), a flexible Bayesian framework for decomposing time series into trend and multiple seasonality components. We cast the decomposition as a penalized nonparametric regression and establish formal conditions under which the trend and seasonal components are uniquely identifiable, an issue only treated informally in the existing literature. BASTION offers three key advantages over existing decomposition methods: (1) accurate estimation of trend and seasonality amidst abrupt changes, (2) enhanced robustness against outliers and time-varying volatility, and (3) robust uncertainty quantification. We evaluate BASTION against established methods, including TBATS, STR, and MSTL, using both simulated and real-world datasets. By effectively capturing complex dynamics while accounting for irregular components such as outliers and heteroskedasticity, BASTION delivers a more nuanced and interpretable decomposition. To support further research and practical applications, BASTION is available as an R package at https://github.com/Jasoncho0914/BASTION",
+        "authors": "Jason B. Cho, David S. Matteson",
+        "url": "http://arxiv.org/abs/2601.18052v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18052v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文引入了BASTION，一个灵活的贝叶斯框架，用于时间序列的趋势和季节性分解。它将分解视为惩罚非参数回归，并建立了趋势和季节性分量唯一可识别的正式条件，同时提供了稳健的不确定性量化。其在贝叶斯方法、非参数回归、可识别性条件和不确定性量化方面的理论深度非常符合您的要求。"
+    }
+]

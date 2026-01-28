@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.19895v1",
+        "title": "Post-LayerNorm Is Back: Stable, ExpressivE, and Deep",
+        "summary": "Large language model (LLM) scaling is hitting a wall. Widening models yields diminishing returns, and extending context length does not improve fundamental expressivity. In contrast, depth scaling offers theoretically superior expressivity, yet current Transformer architectures struggle to train reliably at extreme depths. We revisit the Post-LayerNorm (Post-LN) formulation, whose instability at scale caused its replacement by Pre-LN in modern LLMs. We show that the central failure mode of Post-LN arises from the ResNet-style residual pathway, which introduces gradient vanishing in deep networks. We present Keel, a Post-LN Transformer that replaces this residual path with a Highway-style connection. This modification preserves the gradient flow through the residual branch, preventing signal vanishing from the top layers to the bottom. Unlike prior methods, Keel enables stable training at extreme depths without requiring specialized initialization or complex optimization tricks. Keel trains robustly at depths exceeding 1000 layers and consistently improves perplexity and depth-scaling characteristics over Pre-LN. These findings indicate that Post-LN, when paired with a Highway-style connection, provides a simple and effective foundation for building deeply scalable LLMs, opening the possibility for future infinite-depth architectures.",
+        "authors": "Chen Chen, Lai Wei",
+        "url": "http://arxiv.org/abs/2601.19895v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19895v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文对LLM架构中的Post-LayerNorm进行了深入的理论分析，揭示了其在深层网络中梯度消失的根本原因，并创新性地提出了基于Highway连接的Keel架构。这不仅具有极高的理论创新性，解决了LLM深度扩展的实际瓶颈，而且逻辑清晰，完全符合您对前沿算法和架构的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19745v1",
+        "title": "GraphDLG: Exploring Deep Leakage from Gradients in Federated Graph Learning",
+        "summary": "Federated graph learning (FGL) has recently emerged as a promising privacy-preserving paradigm that enables distributed graph learning across multiple data owners. A critical privacy concern in federated learning is whether an adversary can recover raw data from shared gradients, a vulnerability known as deep leakage from gradients (DLG). However, most prior studies on the DLG problem focused on image or text data, and it remains an open question whether graphs can be effectively recovered, particularly when the graph structure and node features are uniquely entangled in GNNs. In this work, we first theoretically analyze the components in FGL and derive a crucial insight: once the graph structure is recovered, node features can be obtained through a closed-form recursive rule. Building on this analysis, we propose GraphDLG, a novel approach to recover raw training graphs from shared gradients in FGL, which can utilize randomly generated graphs or client-side training graphs as auxiliaries to enhance recovery. Extensive experiments demonstrate that GraphDLG outperforms existing solutions by successfully decoupling the graph structure and node features, achieving improvements of over 5.46% (by MSE) for node feature reconstruction and over 25.04% (by AUC) for graph structure reconstruction.",
+        "authors": "Shuyue Wei, Wantong Chen, Tongyu Wei, Chen Gong, Yongxin Tong, Lizhen Cui",
+        "url": "http://arxiv.org/abs/2601.19745v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19745v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文首次对联邦图学习中从梯度恢复原始数据的深度泄露问题进行了理论分析，并推导出了通过闭式递归规则恢复节点特征的方法。这在理论上具有开创性，解决了联邦学习中的核心隐私瓶颈，且阐述清晰，是理论与实践结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19375v1",
+        "title": "Selective Steering: Norm-Preserving Control Through Discriminative Layer Selection",
+        "summary": "Despite significant progress in alignment, large language models (LLMs) remain vulnerable to adversarial attacks that elicit harmful behaviors. Activation steering techniques offer a promising inference-time intervention approach, but existing methods suffer from critical limitations: activation addition requires careful coefficient tuning and is sensitive to layer-specific norm variations, while directional ablation provides only binary control. Recent work on Angular Steering introduces continuous control via rotation in a 2D subspace, but its practical implementation violates norm preservation, causing distribution shift and generation collapse, particularly in models below 7B parameters. We propose Selective Steering, which addresses these limitations through two key innovations: (1) a mathematically rigorous norm-preserving rotation formulation that maintains activation distribution integrity, and (2) discriminative layer selection that applies steering only where feature representations exhibit opposite-signed class alignment. Experiments across nine models demonstrate that Selective Steering achieves 5.5x higher attack success rates than prior methods while maintaining zero perplexity violations and approximately 100\\% capability retention on standard benchmarks. Our approach provides a principled, efficient framework for controllable and stable LLM behavior modification. Code: https://github.com/knoveleng/steering",
+        "authors": "Quy-Anh Dang, Chris Ngo",
+        "url": "http://arxiv.org/abs/2601.19375v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19375v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个数学上严谨的范数守恒激活引导框架，解决了现有LLM激活引导方法在可控性和稳定性上的根本缺陷。其理论创新性在于保证了激活分布的完整性，同时解决了LLM安全和可控性的实际瓶颈，逻辑清晰，是LLM机制理解和控制的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19285v1",
+        "title": "Smoothing the Score Function for Generalization in Diffusion Models: An Optimization-based Explanation Framework",
+        "summary": "Diffusion models achieve remarkable generation quality, yet face a fundamental challenge known as memorization, where generated samples can replicate training samples exactly. We develop a theoretical framework to explain this phenomenon by showing that the empirical score function (the score function corresponding to the empirical distribution) is a weighted sum of the score functions of Gaussian distributions, in which the weights are sharp softmax functions. This structure causes individual training samples to dominate the score function, resulting in sampling collapse. In practice, approximating the empirical score function with a neural network can partially alleviate this issue and improve generalization. Our theoretical framework explains why: In training, the neural network learns a smoother approximation of the weighted sum, allowing the sampling process to be influenced by local manifolds rather than single points. Leveraging this insight, we propose two novel methods to further enhance generalization: (1) Noise Unconditioning enables each training sample to adaptively determine its score function weight to increase the effect of more training samples, thereby preventing single-point dominance and mitigating collapse. (2) Temperature Smoothing introduces an explicit parameter to control the smoothness. By increasing the temperature in the softmax weights, we naturally reduce the dominance of any single training sample and mitigate memorization. Experiments across multiple datasets validate our theoretical analysis and demonstrate the effectiveness of the proposed methods in improving generalization while maintaining high generation quality.",
+        "authors": "Xinyu Zhou, Jiawei Zhang, Stephen J. Wright",
+        "url": "http://arxiv.org/abs/2601.19285v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19285v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个理论框架来解释扩散模型中的记忆化现象，并基于分数函数平滑的洞察提出了两种增强泛化的方法。这不仅具有深刻的理论创新性，解决了生成模型泛化能力的实际瓶颈，而且理论分析和方法阐述都非常清晰，对生成模型研究具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19208v1",
+        "title": "How Do Transformers Learn to Associate Tokens: Gradient Leading Terms Bring Mechanistic Interpretability",
+        "summary": "Semantic associations such as the link between \"bird\" and \"flew\" are foundational for language modeling as they enable models to go beyond memorization and instead generalize and generate coherent text. Understanding how these associations are learned and represented in language models is essential for connecting deep learning with linguistic theory and developing a mechanistic foundation for large language models. In this work, we analyze how these associations emerge from natural language data in attention-based language models through the lens of training dynamics. By leveraging a leading-term approximation of the gradients, we develop closed-form expressions for the weights at early stages of training that explain how semantic associations first take shape. Through our analysis, we reveal that each set of weights of the transformer has closed-form expressions as simple compositions of three basis functions (bigram, token-interchangeability, and context mappings), reflecting the statistics of the text corpus and uncovering how each component of the transformer captures semantic associations based on these compositions. Experiments on real-world LLMs demonstrate that our theoretical weight characterizations closely match the learned weights, and qualitative analyses further show how our theorem shines light on interpreting the learned associations in transformers.",
+        "authors": "Shawn Im, Changdae Oh, Zhen Fang, Sharon Li",
+        "url": "http://arxiv.org/abs/2601.19208v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19208v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文通过梯度主导项的理论近似，从训练动力学角度揭示了Transformer如何学习语义关联，并推导出了权重的闭式表达式。这为LLM的可解释性提供了坚实的理论基础，解决了理解LLM内部机制的瓶颈，且逻辑严谨清晰，是LLM基础理论研究的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19186v1",
+        "title": "Double Fairness Policy Learning: Integrating Action Fairness and Outcome Fairness in Decision-making",
+        "summary": "Fairness is a central pillar of trustworthy machine learning, especially in domains where accuracy- or profit-driven optimization is insufficient. While most fairness research focuses on supervised learning, fairness in policy learning remains less explored. Because policy learning is interventional, it induces two distinct fairness targets: action fairness (equitable action assignments) and outcome fairness (equitable downstream consequences). Crucially, equalizing actions does not generally equalize outcomes when groups face different constraints or respond differently to the same action. We propose a novel double fairness learning (DFL) framework that explicitly manages the trade-off among three objectives: action fairness, outcome fairness, and value maximization. We integrate fairness directly into a multi-objective optimization problem for policy learning and employ a lexicographic weighted Tchebyshev method that recovers Pareto solutions beyond convex settings, with theoretical guarantees on the regret bounds. Our framework is flexible and accommodates various commonly used fairness notions. Extensive simulations demonstrate improved performance relative to competing methods. In applications to a motor third-party liability insurance dataset and an entrepreneurship training dataset, DFL substantially improves both action and outcome fairness while incurring only a modest reduction in overall value.",
+        "authors": "Zeyu Bian, Lan Wang, Chengchun Shi, Zhengling Qi",
+        "url": "http://arxiv.org/abs/2601.19186v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19186v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文首次提出了双重公平性策略学习框架，明确区分了行动公平和结果公平，并将其整合到多目标优化中，提供了遗憾界限的理论保证。这在公平性研究和策略学习领域具有重要的理论创新，解决了可信赖AI决策制定中的公平性瓶颈，且逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19766v1",
+        "title": "The Effect of Architecture During Continual Learning",
+        "summary": "Continual learning is a challenge for models with static architecture, as they fail to adapt to when data distributions evolve across tasks. We introduce a mathematical framework that jointly models architecture and weights in a Sobolev space, enabling a rigorous investigation into the role of neural network architecture in continual learning and its effect on the forgetting loss. We derive necessary conditions for the continual learning solution and prove that learning only model weights is insufficient to mitigate catastrophic forgetting under distribution shifts. Consequently, we prove that by learning the architecture and weights simultaneously at each task, we can reduce catastrophic forgetting.   To learn weights and architecture simultaneously, we formulate continual learning as a bilevel optimization problem: the upper level selects an optimal architecture for a given task, while the lower level computes optimal weights via dynamic programming over all tasks. To solve the upper level problem, we introduce a derivative-free direct search algorithm to determine the optimal architecture. Once found, we must transfer knowledge from the current architecture to the optimal one. However, the optimal architecture will result in a weights parameter space different from the current architecture (i.e., dimensions of weights matrices will not match). To bridge the dimensionality gap, we develop a low-rank transfer mechanism to map knowledge across architectures of mismatched dimensions. Empirical studies across regression and classification problems, including feedforward, convolutional, and graph neural networks, demonstrate that learning the optimal architecture and weights simultaneously yields substantially improved performance (up to two orders of magnitude), reduced forgetting, and enhanced robustness to noise compared with static architecture approaches.",
+        "authors": "Allyson Hahn, Krishnan Raghavan",
+        "url": "http://arxiv.org/abs/2601.19766v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19766v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了一个数学框架，在Sobolev空间中严格研究了架构在持续学习中的作用，并证明了同时学习架构和权重可以显著减少灾难性遗忘。其理论深度和对持续学习根本挑战的解决使其非常符合您对理论创新和解决核心瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19624v1",
+        "title": "Tracking Drift: Variation-Aware Entropy Scheduling for Non-Stationary Reinforcement Learning",
+        "summary": "Real-world reinforcement learning often faces environment drift, but most existing methods rely on static entropy coefficients/target entropy, causing over-exploration during stable periods and under-exploration after drift (thus slow recovery), and leaving unanswered the principled question of how exploration intensity should scale with drift magnitude. We prove that entropy scheduling under non-stationarity can be reduced to a one-dimensional, round-by-round trade-off, faster tracking of the optimal solution after drift vs. avoiding gratuitous randomness when the environment is stable, so exploration strength can be driven by measurable online drift signals. Building on this, we propose AES (Adaptive Entropy Scheduling), which adaptively adjusts the entropy coefficient/temperature online using observable drift proxies during training, requiring almost no structural changes and incurring minimal overhead. Across 4 algorithm variants, 12 tasks, and 4 drift modes, AES significantly reduces the fraction of performance degradation caused by drift and accelerates recovery after abrupt changes.",
+        "authors": "Tongxi Wang, Zhuoyang Xia, Xinran Chen, Shan Liu",
+        "url": "http://arxiv.org/abs/2601.19624v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19624v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文理论证明了非平稳强化学习中熵调度与环境漂移信号之间的关系，并提出了自适应熵调度方法。这具有很强的理论创新性，显著提高了RL在动态环境中的探索效率和恢复能力，解决了实际RL部署的瓶颈，且逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19612v1",
+        "title": "Safe Exploration via Policy Priors",
+        "summary": "Safe exploration is a key requirement for reinforcement learning (RL) agents to learn and adapt online, beyond controlled (e.g. simulated) environments. In this work, we tackle this challenge by utilizing suboptimal yet conservative policies (e.g., obtained from offline data or simulators) as priors. Our approach, SOOPER, uses probabilistic dynamics models to optimistically explore, yet pessimistically fall back to the conservative policy prior if needed. We prove that SOOPER guarantees safety throughout learning, and establish convergence to an optimal policy by bounding its cumulative regret. Extensive experiments on key safe RL benchmarks and real-world hardware demonstrate that SOOPER is scalable, outperforms the state-of-the-art and validate our theoretical guarantees in practice.",
+        "authors": "Manuel Wendl, Yarden As, Manish Prajapat, Anton Pollak, Stelian Coros, Andreas Krause",
+        "url": "http://arxiv.org/abs/2601.19612v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19612v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了SOOPER框架，通过利用次优但保守的策略先验，结合概率动力学模型实现安全探索，并提供了学习过程中的安全性保证和累积遗憾界限的理论证明。其理论严谨性（R5）和解决RL在真实世界部署中安全瓶颈的实践影响力（I5）非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19333v1",
+        "title": "Metric $k$-clustering using only Weak Comparison Oracles",
+        "summary": "Clustering is a fundamental primitive in unsupervised learning. However, classical algorithms for $k$-clustering (such as $k$-median and $k$-means) assume access to exact pairwise distances -- an unrealistic requirement in many modern applications. We study clustering in the \\emph{Rank-model (R-model)}, where access to distances is entirely replaced by a \\emph{quadruplet oracle} that provides only relative distance comparisons. In practice, such an oracle can represent learned models or human feedback, and is expected to be noisy and entail an access cost.   Given a metric space with $n$ input items, we design randomized algorithms that, using only a noisy quadruplet oracle, compute a set of $O(k \\cdot \\mathsf{polylog}(n))$ centers along with a mapping from the input items to the centers such that the clustering cost of the mapping is at most constant times the optimum $k$-clustering cost. Our method achieves a query complexity of $O(n\\cdot k \\cdot \\mathsf{polylog}(n))$ for arbitrary metric spaces and improves to $O((n+k^2) \\cdot \\mathsf{polylog}(n))$ when the underlying metric has bounded doubling dimension. When the metric has bounded doubling dimension we can further improve the approximation from constant to $1+\\varepsilon$, for any arbitrarily small constant $\\varepsilon\\in(0,1)$, while preserving the same asymptotic query complexity. Our framework demonstrates how noisy, low-cost oracles, such as those derived from large language models, can be systematically integrated into scalable clustering algorithms.",
+        "authors": "Rahul Raychaudhury, Aryan Esmailpour, Sainyam Galhotra, Stavros Sintos",
+        "url": "http://arxiv.org/abs/2601.19333v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19333v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文在仅有弱比较预言机（如LLM或人类反馈）的情况下研究度量k-聚类，设计了具有理论近似保证的随机算法。这在理论上具有高度创新性，解决了传统聚类算法对精确距离的依赖，为实际应用提供了新思路。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19280v1",
+        "title": "Group Distributionally Robust Optimization-Driven Reinforcement Learning for LLM Reasoning",
+        "summary": "Recent progress in Large Language Model (LLM) reasoning is increasingly driven by the refinement of post-training loss functions and alignment strategies. However, standard Reinforcement Learning (RL) paradigms like Group Relative Policy Optimization (GRPO) remain constrained by static uniformity: uniform prompt sampling and a fixed number of rollouts per prompt. For heterogeneous, heavy-tailed reasoning data, this creates structural inefficiencies that waste compute on already-solved patterns while under-training the long tail of hard problems. To address this, we propose Multi-Adversary Group Distributionally Robust Optimization (GDRO), an optimization-first framework that moves beyond uniform reasoning models by dynamically adapting the training distribution.   We introduce an Online Difficulty Classifier that partitions prompts into dynamic pass@k difficulty groups. We then propose two independent GDRO games for post-training: (1) Prompt-GDRO, which employs an EMA-debiased multiplicative-weights bandit sampler to target the intensive difficulty margin and upweight persistently hard groups without frequency bias; and (2) Rollout-GDRO, which uses a shadow-price controller to reallocate rollouts across groups, maximizing gradient variance reduction on hard tasks under a fixed mean budget (compute-neutral). We provide no-regret guarantees for both controllers and additionally a variance-proxy analysis motivating a square-root optimal rollout allocation for Rollout-GDRO. We validate our framework on the DAPO 14.1k dataset using Qwen3-Base models. Prompt-GDRO and Rollout-GDRO achieve average relative gains of +10.6% and +10.1%, respectively, in pass@8 accuracy across 1.7B, 4B, and 8B scales compared to the GRPO baseline. Qualitative analysis shows an emergent curriculum: the adversaries shift resources to the evolving reasoning frontier, enhancing the reasoning model's performance.",
+        "authors": "Kishan Panaganti, Zhenwen Liang, Wenhao Yu, Haitao Mi, Dong Yu",
+        "url": "http://arxiv.org/abs/2601.19280v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19280v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将分布鲁棒优化引入LLM强化学习，通过动态调整训练分布来解决现有RL范式在异构推理数据上的效率瓶颈，并提供了无遗憾保证。其理论创新性（N5, R5）和对LLM训练效率的提升（I5）非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19278v1",
+        "title": "DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference",
+        "summary": "Speculative decoding is an effective and lossless approach for accelerating LLM inference. However, existing widely adopted model-based draft designs, such as EAGLE3, improve accuracy at the cost of multi-step autoregressive inference, resulting in high drafting latency and ultimately rendering the drafting stage itself a performance bottleneck. Inspired by diffusion-based large language models (dLLMs), we propose DART, which leverages parallel generation to reduce drafting latency. DART predicts logits for multiple future masked positions in parallel within a single forward pass based on hidden states of the target model, thereby eliminating autoregressive rollouts in the draft model while preserving a lightweight design. Based on these parallel logit predictions, we further introduce an efficient tree pruning algorithm that constructs high-quality draft token trees with N-gram-enforced semantic continuity. DART substantially reduces draft-stage overhead while preserving high draft accuracy, leading to significantly improved end-to-end decoding speed. Experimental results demonstrate that DART achieves a 2.03x--3.44x wall-clock time speedup across multiple datasets, surpassing EAGLE3 by 30% on average and offering a practical speculative decoding framework. Code is released at https://github.com/fvliang/DART.",
+        "authors": "Fuliang Liu, Xue Li, Ketai Zhao, Yinxi Gao, Ziyan Zhou, Zhonghui Zhang, Zhibin Wang, Wanchun Dou, Sheng Zhong, Chen Tian",
+        "url": "http://arxiv.org/abs/2601.19278v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19278v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文受扩散模型启发，提出了DART框架，通过并行生成减少推测解码的延迟，显著提高了LLM的推理速度。其架构和方法创新性（N5）以及解决LLM应用效率瓶颈的巨大实践影响力（I5）非常突出，且逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19213v1",
+        "title": "M$^{\\text{2}}$XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization",
+        "summary": "Existing low-bit Microscaling (MX) formats, such as MXFP4, often suffer from substantial accuracy degradation due to the use of a shared scaling factor with the Power-of-Two format. In this work, we explore strategies that introduce minimal metadata to recover accuracy lost during quantization while maintaining high bit efficiency across a wide range of large language models. We propose a complete algorithm-hardware co-design based on flexible metadata, featuring an online quantization with simple encoding. To support the proposed method efficiently, we implement a lightweight hardware unit and integrate it into the accelerator. Evaluation results demonstrate that our method substantially narrows the accuracy gap, achieving on average a 70.63% reduction in accuracy loss compared to MXFP4 and a 37.30% reduction relative to the latest NVFP4 on LLM benchmarks. Furthermore, our design delivers up to 1.91$\\times$ speedup and 1.75$\\times$ energy savings over state-of-the-art accelerators. Our code is available at https://github.com/SJTU-ReArch-Group/M2XFP_ASPLOS26.",
+        "authors": "Weiming Hu, Zihan Zhang, Haoyan Zhang, Chen Zhang, Cong Guo, Yu Feng, Tianchi Hu, Guanglin Li, Guipeng Hu, Junsong Wang, Jingwen Leng",
+        "url": "http://arxiv.org/abs/2601.19213v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19213v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了M$^2$XFP，一种通过引入最小元数据来增强低位量化精度的格式，并实现了算法-硬件协同设计。这在模型压缩和硬件效率方面具有系统级创新（N5），显著解决了LLM部署的效率和精度瓶颈（I5），且逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19834v1",
+        "title": "Visual Generation Unlocks Human-Like Reasoning through Multimodal World Models",
+        "summary": "Humans construct internal world models and reason by manipulating the concepts within these models. Recent advances in AI, particularly chain-of-thought (CoT) reasoning, approximate such human cognitive abilities, where world models are believed to be embedded within large language models. Expert-level performance in formal and abstract domains such as mathematics and programming has been achieved in current systems by relying predominantly on verbal reasoning. However, they still lag far behind humans in domains like physical and spatial intelligence, which require richer representations and prior knowledge. The emergence of unified multimodal models (UMMs) capable of both verbal and visual generation has therefore sparked interest in more human-like reasoning grounded in complementary multimodal pathways, though their benefits remain unclear. From a world-model perspective, this paper presents the first principled study of when and how visual generation benefits reasoning. Our key position is the visual superiority hypothesis: for certain tasks--particularly those grounded in the physical world--visual generation more naturally serves as world models, whereas purely verbal world models encounter bottlenecks arising from representational limitations or insufficient prior knowledge. Theoretically, we formalize internal world modeling as a core component of CoT reasoning and analyze distinctions among different forms of world models. Empirically, we identify tasks that necessitate interleaved visual-verbal CoT reasoning, constructing a new evaluation suite, VisWorld-Eval. Controlled experiments on a state-of-the-art UMM show that interleaved CoT significantly outperforms purely verbal CoT on tasks that favor visual world modeling, but offers no clear advantage otherwise. Together, this work clarifies the potential of multimodal world modeling for more powerful, human-like multimodal AI.",
+        "authors": "Jialong Wu, Xiaoying Zhang, Hongyi Yuan, Xiangcheng Zhang, Tianhao Huang, Changjing He, Chaoyi Deng, Renrui Zhang, Youbin Wu, Mingsheng Long",
+        "url": "http://arxiv.org/abs/2601.19834v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19834v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文首次从世界模型的角度系统研究了视觉生成如何促进类人推理，提出了“视觉优越性假设”，并对CoT推理进行了理论化。其深刻的理论洞察（N5, R5）为多模态AI的未来发展提供了新的框架，逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19726v1",
+        "title": "RvB: Automating AI System Hardening via Iterative Red-Blue Games",
+        "summary": "The dual offensive and defensive utility of Large Language Models (LLMs) highlights a critical gap in AI security: the lack of unified frameworks for dynamic, iterative adversarial adaptation hardening. To bridge this gap, we propose the Red Team vs. Blue Team (RvB) framework, formulated as a training-free, sequential, imperfect-information game. In this process, the Red Team exposes vulnerabilities, driving the Blue Team to learning effective solutions without parameter updates. We validate our framework across two challenging domains: dynamic code hardening against CVEs and guardrail optimization against jailbreaks. Our empirical results show that this interaction compels the Blue Team to learn fundamental defensive principles, leading to robust remediations that are not merely overfitted to specific exploits. RvB achieves Defense Success Rates of 90\\% and 45\\% across the respective tasks while maintaining near 0\\% False Positive Rates, significantly surpassing baselines. This work establishes the iterative adversarial interaction framework as a practical paradigm that automates the continuous hardening of AI systems.",
+        "authors": "Lige Huang, Zicheng Liu, Jie Zhang, Lewen Yan, Dongrui Liu, Jing Shao",
+        "url": "http://arxiv.org/abs/2601.19726v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19726v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文将AI系统强化问题形式化为训练无关的序贯不完全信息红蓝博弈，提供了一种自动化、持续强化的框架。其将博弈论应用于AI安全领域的创新性（N5）和解决AI安全瓶颈的实践影响力（I5）非常突出，且逻辑清晰。"
+    }
+]

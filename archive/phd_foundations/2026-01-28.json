@@ -1,0 +1,287 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.20769v1",
+        "title": "Leveraging Second-Order Curvature for Efficient Learned Image Compression: Theory and Empirical Evidence",
+        "summary": "Training learned image compression (LIC) models entails navigating a challenging optimization landscape defined by the fundamental trade-off between rate and distortion. Standard first-order optimizers, such as SGD and Adam, struggle with \\emph{gradient conflicts} arising from competing objectives, leading to slow convergence and suboptimal rate-distortion performance. In this work, we demonstrate that a simple utilization of a second-order quasi-Newton optimizer, \\textbf{SOAP}, dramatically improves both training efficiency and final performance across diverse LICs. Our theoretical and empirical analyses reveal that Newton preconditioning inherently resolves the intra-step and inter-step update conflicts intrinsic to the R-D objective, facilitating faster, more stable convergence. Beyond acceleration, we uncover a critical deployability benefit: second-order trained models exhibit significantly fewer activation and latent outliers. This substantially enhances robustness to post-training quantization. Together, these results establish second-order optimization, achievable as a seamless drop-in replacement of the imported optimizer, as a powerful, practical tool for advancing the efficiency and real-world readiness of LICs.",
+        "authors": "Yichi Zhang, Fengqing Zhu",
+        "url": "http://arxiv.org/abs/2601.20769v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20769v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提供了关于二阶优化器（如牛顿预处理）在学习图像压缩中收敛性、稳定性和鲁棒性的理论和实证分析，强调了其数学严谨性，对优化理论有深入探讨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20745v1",
+        "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+        "summary": "As large language models (LLMs) continue to scale, deployment is increasingly bottlenecked by the memory wall, motivating a shift toward extremely low-bit quantization. However, most quantization-aware training (QAT) methods apply hard rounding and the straight-through estimator (STE) from the beginning of the training, which prematurely discretizes the optimization landscape and induces persistent gradient mismatch between latent weights and quantized weights, hindering effective optimization of quantized models. To address this, we propose Hestia, a Hessian-guided differentiable QAT framework for extremely low-bit LLMs, which replaces the rigid step function with a temperature-controlled softmax relaxation to maintain gradient flow early in training while progressively hardening quantization. Furthermore, Hestia leverages a tensor-wise Hessian trace metric as a lightweight curvature signal to drive fine-grained temperature annealing, enabling sensitivity-aware discretization across the model. Evaluations on Llama-3.2 show that Hestia consistently outperforms existing ternary QAT baselines, yielding average zero-shot improvements of 5.39% and 4.34% for the 1B and 3B models. These results indicate that Hessian-guided relaxation effectively recovers representational capacity, establishing a more robust training path for 1.58-bit LLMs. The code is available at https://github.com/hestia2026/Hestia.",
+        "authors": "Guoan Wang, Feiyu Wang, Zongwei Lv, Yikun Zong, Tong Yang",
+        "url": "http://arxiv.org/abs/2601.20745v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20745v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了基于Hessian指导的可微分量化感知训练框架，利用曲率信号进行温度退火，涉及深度优化理论和清晰的数学推导，对LLM量化有重要理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20697v1",
+        "title": "Adaptive Dimension Reduction for Overlapping Group Sparsity",
+        "summary": "Typical dimension reduction techniques for nonoverlapping sparse optimization involve screening or sieving strategies based on a dual certificate derived from the first-order optimality condition, approximating the gradients or exploiting certain inherent low-dimensional structure of the sparse solution. In comparison, dimension reduction rules for overlapping group sparsity are generally less developed because the subgradient structure is more complex, making the link between sparsity pattern and the dual variable indirect due to the non-separability. In this work, we propose new dual certificates for overlapping group sparsity and a novel adaptive scheme for identifying the support of the overlapping group LASSO. We demonstrate how this scheme can be integrated into and significantly accelerate existing algorithms, including Primal-Dual splitting method, alternating direction method of multipliers and a recently developed variable projection scheme based on over-parameterization. We provide convergence analysis of the method and verify its practical effectiveness through experiments on standard datasets.",
+        "authors": "Yifan Bai, Clarice Poon, Jingwei Liang",
+        "url": "http://arxiv.org/abs/2601.20697v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20697v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了重叠组稀疏性的新对偶证书和自适应支持识别方案，并提供了严格的收敛性分析，是稀疏优化领域具有强大理论基础的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20692v1",
+        "title": "Optimal Transport Group Counterfactual Explanations",
+        "summary": "Group counterfactual explanations find a set of counterfactual instances to explain a group of input instances contrastively. However, existing methods either (i) optimize counterfactuals only for a fixed group and do not generalize to new group members, (ii) strictly rely on strong model assumptions (e.g., linearity) for tractability or/and (iii) poorly control the counterfactual group geometry distortion. We instead learn an explicit optimal transport map that sends any group instance to its counterfactual without re-optimization, minimizing the group's total transport cost. This enables generalization with fewer parameters, making it easier to interpret the common actionable recourse. For linear classifiers, we prove that functions representing group counterfactuals are derived via mathematical optimization, identifying the underlying convex optimization type (QP, QCQP, ...). Experiments show that they accurately generalize, preserve group geometry and incur only negligible additional transport cost compared to baseline methods. If model linearity cannot be exploited, our approach also significantly outperforms the baselines.",
+        "authors": "Enrique Valero-Leal, Bernd Bischl, Pedro Larrañaga, Concha Bielza, Giuseppe Casalicchio",
+        "url": "http://arxiv.org/abs/2601.20692v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20692v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "利用最优传输理论为群体反事实解释构建数学优化框架，并证明了线性分类器下的凸优化类型，具有很强的数学严谨性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20610v1",
+        "title": "Causal Inference in Biomedical Imaging via Functional Linear Structural Equation Models",
+        "summary": "Understanding the causal effects of organ-specific features from medical imaging on clinical outcomes is essential for biomedical research and patient care. We propose a novel Functional Linear Structural Equation Model (FLSEM) to capture the relationships among clinical outcomes, functional imaging exposures, and scalar covariates like genetics, sex, and age. Traditional methods struggle with the infinite-dimensional nature of exposures and complex covariates. Our FLSEM overcomes these challenges by establishing identifiable conditions using scalar instrumental variables. We develop the Functional Group Support Detection and Root Finding (FGS-DAR) algorithm for efficient variable selection, supported by rigorous theoretical guarantees, including selection consistency and accurate parameter estimation. We further propose a test statistic to test the nullity of the functional coefficient, establishing its null limit distribution. Our approach is validated through extensive simulations and applied to UK Biobank data, demonstrating robust performance in detecting causal relationships from medical imaging.",
+        "authors": "Ting Li, Ethan Fan, Tengfei Li, Hongtu Zhu",
+        "url": "http://arxiv.org/abs/2601.20610v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20610v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了功能线性结构方程模型（FLSEM）用于生物医学图像的因果推断，并提供了严格的理论保证，包括选择一致性和参数估计的渐近性质，完美契合因果逻辑和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20589v1",
+        "title": "Exact Graph Learning via Integer Programming",
+        "summary": "Learning the dependence structure among variables in complex systems is a central problem across medical, natural, and social sciences. These structures can be naturally represented by graphs, and the task of inferring such graphs from data is known as graph learning or as causal discovery if the graphs are given a causal interpretation. Existing approaches typically rely on restrictive assumptions about the data-generating process, employ greedy oracle algorithms, or solve approximate formulations of the graph learning problem. As a result, they are either sensitive to violations of central assumptions or fail to guarantee globally optimal solutions. We address these limitations by introducing a nonparametric graph learning framework based on nonparametric conditional independence testing and integer programming. We reformulate the graph learning problem as an integer-programming problem and prove that solving the integer-programming problem provides a globally optimal solution to the original graph learning problem. Our method leverages efficient encodings of graphical separation criteria, enabling the exact recovery of larger graphs than was previously feasible. We provide an implementation in the openly available R package 'glip' which supports learning (acyclic) directed (mixed) graphs and chain graphs. From the resulting output one can compute representations of the corresponding Markov equivalence classes or weak equivalence classes. Empirically, we demonstrate that our approach is faster than other existing exact graph learning procedures for a large fraction of instances and graphs of various sizes. GLIP also achieves state-of-the-art performance on simulated data and benchmark datasets across all aforementioned classes of graphs.",
+        "authors": "Lucas Kook, Søren Wengel Mogensen",
+        "url": "http://arxiv.org/abs/2601.20589v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20589v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "将图学习问题重新表述为整数规划问题，并证明了其全局最优解，实现了图的精确恢复，理论基础扎实，结合了非参数统计和优化理论。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20528v1",
+        "title": "Spectral Bayesian Regression on the Sphere",
+        "summary": "We develop a fully intrinsic Bayesian framework for nonparametric regression on the unit sphere based on isotropic Gaussian field priors and the harmonic structure induced by the Laplace-Beltrami operator. Under uniform random design, the regression model admits an exact diagonalization in the spherical harmonic basis, yielding a Gaussian sequence representation with frequency-dependent multiplicities.   Exploiting this structure, we derive closed-form posterior distributions, optimal spectral truncation schemes, and sharp posterior contraction rates under integrated squared loss. For Gaussian priors with polynomially decaying angular power spectra, including spherical Matérn priors, we establish posterior contraction rates over Sobolev classes, which are minimax-optimal under correct prior calibration.   We further show that the posterior mean admits an exact variational characterization as a geometrically intrinsic penalized least-squares estimator, equivalent to a Laplace-Beltrami smoothing spline.",
+        "authors": "Claudio Durastanti",
+        "url": "http://arxiv.org/abs/2601.20528v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20528v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了在单位球面上进行非参数回归的内在贝叶斯框架，利用拉普拉斯-贝尔特拉米算子和球面谐波，推导了闭式后验分布和最优收缩率，具有极高的统计和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20420v1",
+        "title": "Concept Component Analysis: A Principled Approach for Concept Extraction in LLMs",
+        "summary": "Developing human understandable interpretation of large language models (LLMs) becomes increasingly critical for their deployment in essential domains. Mechanistic interpretability seeks to mitigate the issues through extracts human-interpretable process and concepts from LLMs' activations. Sparse autoencoders (SAEs) have emerged as a popular approach for extracting interpretable and monosemantic concepts by decomposing the LLM internal representations into a dictionary. Despite their empirical progress, SAEs suffer from a fundamental theoretical ambiguity: the well-defined correspondence between LLM representations and human-interpretable concepts remains unclear. This lack of theoretical grounding gives rise to several methodological challenges, including difficulties in principled method design and evaluation criteria. In this work, we show that, under mild assumptions, LLM representations can be approximated as a {linear mixture} of the log-posteriors over concepts given the input context, through the lens of a latent variable model where concepts are treated as latent variables. This motivates a principled framework for concept extraction, namely Concept Component Analysis (ConCA), which aims to recover the log-posterior of each concept from LLM representations through a {unsupervised} linear unmixing process. We explore a specific variant, termed sparse ConCA, which leverages a sparsity prior to address the inherent ill-posedness of the unmixing problem. We implement 12 sparse ConCA variants and demonstrate their ability to extract meaningful concepts across multiple LLMs, offering theory-backed advantages over SAEs.",
+        "authors": "Yuhang Liu, Erdun Gao, Dong Gong, Anton van den Hengel, Javen Qinfeng Shi",
+        "url": "http://arxiv.org/abs/2601.20420v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20420v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "从潜在变量模型的角度，将LLM表示近似为概念对数后验的线性混合，提出了概念成分分析（ConCA），为LLM概念提取提供了坚实的理论基础和数学模型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20399v1",
+        "title": "Convergence Analysis of Randomized Subspace Normalized SGD under Heavy-Tailed Noise",
+        "summary": "Randomized subspace methods reduce per-iteration cost; however, in nonconvex optimization, most analyses are expectation-based, and high-probability bounds remain scarce even under sub-Gaussian noise. We first prove that randomized subspace SGD (RS-SGD) admits a high-probability convergence bound under sub-Gaussian noise, achieving the same order of oracle complexity as prior in-expectation results. Motivated by the prevalence of heavy-tailed gradients in modern machine learning, we then propose randomized subspace normalized SGD (RS-NSGD), which integrates direction normalization into subspace updates. Assuming the noise has bounded $p$-th moments, we establish both in-expectation and high-probability convergence guarantees, and show that RS-NSGD can achieve better oracle complexity than full-dimensional normalized SGD.",
+        "authors": "Gaku Omiya, Pierre-Louis Poirion, Akiko Takeda",
+        "url": "http://arxiv.org/abs/2601.20399v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20399v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提供了随机子空间归一化SGD在重尾噪声下的高概率和期望收敛性分析，是优化算法理论保证的典范，对理解算法行为至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20341v1",
+        "title": "Partial heteroscedastic deconvolution estimation in nonparametric regression",
+        "summary": "In this paper, we consider a partial deconvolution kernel estimator for nonparametric regression when some covariates are measured with error while others are observed without error. We focus on a general and realistic setting in which the measurement errors are heteroscedastic. We propose a kernel-based estimator of the regression function in this framework and show that it achieves the optimal convergence rate under suitable regularity conditions. The finite-sample performance of the proposed estimator is illustrated through simulation studies.",
+        "authors": "Baba Thiam",
+        "url": "http://arxiv.org/abs/2601.20341v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20341v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了非参数回归中部分异方差反卷积核估计器，并证明其达到最优收敛率，具有扎实的统计推导和理论保证，解决了测量误差问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20338v1",
+        "title": "A novel neural network with predefined-time stability for solving generalized monotone inclusion problems with applications",
+        "summary": "We propose a novel dynamical framework for solving inclusion   problems of the form \\(0 \\in F(x) + G(x)\\) in Hilbert spaces, where \\(F\\) is a   maximal set-valued operator and \\(G\\) is a single-valued mapping. The analysis is   conducted under a generalized monotonicity assumption, which relaxes the   classical monotonicity conditions commonly imposed in the literature and thereby   extends the applicability of the proposed approach.   Under mild conditions on the system parameters, we establish both fixed-time and   predefined-time stability of the resulting dynamical system. The fixed-time   stability guarantees a uniform upper bound on the settling time that is   independent of the initial condition, whereas the predefined-time stability   framework allows the system parameters to be selected \\emph{a priori} in order   to ensure convergence within a user-specified time horizon.   Moreover, we investigate an explicit forward Euler discretization of the   continuous-time dynamics, leading to a novel forward--backward iterative   algorithm. A rigorous convergence analysis of the resulting discrete scheme is   provided. Finally, the effectiveness and versatility of the proposed method are   illustrated through several classes of problems, including constrained   optimization problems, mixed variational inequalities, and variational   inequalities, together with numerical experiments that corroborate the   theoretical results.",
+        "authors": "Nam Van Tran",
+        "url": "http://arxiv.org/abs/2601.20338v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20338v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了解决广义单调包含问题的新型动力学框架，并建立了预定义时间稳定性及离散方案的严格收敛性分析，是优化理论和动力系统结合的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20292v1",
+        "title": "Improved Global Landscape Guarantees for Low-rank Factorization in Synchronization",
+        "summary": "The orthogonal group synchronization problem, which aims to recover a set of $d \\times d$ orthogonal matrices from their pairwise noisy products, plays a fundamental role in signal processing, computer vision, and network analysis. In recent years, numerous optimization techniques, such as semidefinite relaxation (SDR) and low-rank (Burer-Monteiro) factorization, have been proposed to address this problem and their theoretical guarantees have been extensively studied. While SDR is provably powerful and exact in recovering the least-squares estimator under certain mild conditions, it is not scalable. In contrast, the low-rank factorization is highly efficient but nonconvex, meaning its iterates may get trapped in local minima. To close the gap, we analyze the low-rank approach and focus on understanding when the associated nonconvex optimization landscape is benign, i.e., free of spurious local minima. Recent works suggest that the benignness depends on the condition number of the Hessian at the global minimizer, but it remains unclear whether sharp guarantees can be achieved. In this work, we consider the low-rank approach which corresponds to an optimization problem over the Stiefel manifold ${\\rm St}(p,d)^{\\otimes n}$. By formulating the landscape analysis into another convex optimization problem, we provide a unified characterization of the optimization landscape for all parameter pairs $(p,d)$ with $p \\geq d+2$ for $d\\geq 1$ and $p = d+1$ for $1\\leq d\\leq 3$ which gives a much improved dependence on the condition number of the Hessian. Our results recover the known sharp state-of-the-art bound for $d=1$ which is extremely useful for characterizing the Kuramoto synchronization, and significantly improved the guarantees for the general case $d \\geq 2$ with $p \\geq d+2$ over the existing results. The theoretical results are versatile and applicable to a wide range of examples.",
+        "authors": "Shuyang Ling",
+        "url": "http://arxiv.org/abs/2601.20292v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20292v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "深入分析了正交群同步中低秩分解的非凸优化景观，提供了改进的全局景观保证，强调了优化收敛性，具有深厚的数学分析功底。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20280v1",
+        "title": "The Forecast After the Forecast: A Post-Processing Shift in Time Series",
+        "summary": "Time series forecasting has long been dominated by advances in model architecture, with recent progress driven by deep learning and hybrid statistical techniques. However, as forecasting models approach diminishing returns in accuracy, a critical yet underexplored opportunity emerges: the strategic use of post-processing. In this paper, we address the last-mile gap in time-series forecasting, which is to improve accuracy and uncertainty without retraining or modifying a deployed backbone. We propose $δ$-Adapter, a lightweight, architecture-agnostic way to boost deployed time series forecasters without retraining. $δ$-Adapter learns tiny, bounded modules at two interfaces: input nudging (soft edits to covariates) and output residual correction. We provide local descent guarantees, $O(δ)$ drift bounds, and compositional stability for combined adapters. Meanwhile, it can act as a feature selector by learning a sparse, horizon-aware mask over inputs to select important features, thereby improving interpretability. In addition, it can also be used as a distribution calibrator to measure uncertainty. Thus, we introduce a Quantile Calibrator and a Conformal Corrector that together deliver calibrated, personalized intervals with finite-sample coverage. Our experiments across diverse backbones and datasets show that $δ$-Adapter improves accuracy and calibration with negligible compute and no interface changes.",
+        "authors": "Daojun Liang, Qi Li, Yinglong Wang, Jing Chen, Hu Zhang, Xiaoxiao Cui, Qizheng Wang, Shuo Li",
+        "url": "http://arxiv.org/abs/2601.20280v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20280v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了时间序列后处理框架，并提供了局部下降保证、漂移界限、组合稳定性以及有限样本覆盖率的统计保证，理论基础强大且实用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20269v1",
+        "title": "Empirical Likelihood-Based Fairness Auditing: Distribution-Free Certification and Flagging",
+        "summary": "Machine learning models in high-stakes applications, such as recidivism prediction and automated personnel selection, often exhibit systematic performance disparities across sensitive subpopulations, raising critical concerns regarding algorithmic bias. Fairness auditing addresses these risks through two primary functions: certification, which verifies adherence to fairness constraints; and flagging, which isolates specific demographic groups experiencing disparate treatment. However, existing auditing techniques are frequently limited by restrictive distributional assumptions or prohibitive computational overhead. We propose a novel empirical likelihood-based (EL) framework that constructs robust statistical measures for model performance disparities. Unlike traditional methods, our approach is non-parametric; the proposed disparity statistics follow asymptotically chi-square or mixed chi-square distributions, ensuring valid inference without assuming underlying data distributions. This framework uses a constrained optimization profile that admits stable numerical solutions, facilitating both large-scale certification and efficient subpopulation discovery. Empirically, the EL methods outperform bootstrap-based approaches, yielding coverage rates closer to nominal levels while reducing computational latency by several orders of magnitude. We demonstrate the practical utility of this framework on the COMPAS dataset, where it successfully flags intersectional biases, specifically identifying a significantly higher positive prediction rate for African-American males under 25 and a systemic under-prediction for Caucasian females relative to the population mean.",
+        "authors": "Jie Tang, Chuanlong Xie, Xianli Zeng, Lixing Zhu",
+        "url": "http://arxiv.org/abs/2601.20269v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20269v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了基于经验似然的公平性审计框架，具有非参数性、渐近卡方分布和分布无关的有效推断，提供了强大的统计保证，对算法公平性有重要理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20254v1",
+        "title": "Wavelet Tree Ensembles for Triangulable Manifolds",
+        "summary": "We develop unbalanced Haar (UH) wavelet tree ensembles for regression on triangulable manifolds. Given data sampled on a triangulated manifold, we construct UH wavelet trees whose atoms are supported on geodesic triangles and form an orthonormal system in $L^2(μ_n)$, where $μ_n$ is the empirical measure on the sample, which allows us to use UH trees as weak learners in additive ensembles. Our construction extends classical UH wavelet trees from regular Euclidean grids to generic triangulable manifolds while preserving three key properties: (i) orthogonality and exact reconstruction at the sampled locations, (ii) recursive, data-driven partitions adapted to the geometry of the manifold via geodesic triangulations, and (iii) compatibility with optimization-based and Bayesian ensemble building. In Euclidean settings, the framework reduces to standard UH wavelet tree regression and provides a baseline for comparison. We illustrate the method on synthetic regression on the sphere and on climate anomaly fields on a spherical mesh, where UH ensembles on triangulated manifolds substantially outperform classical tree ensembles and non-adaptive mesh-based wavelets. For completeness, we also report results on image denoising on regular grids. A Bayesian variant (RUHWT) provides posterior uncertainty quantification for function estimates on manifolds. Our implementation is available at http://www.github.com/hrluo/WaveletTrees.",
+        "authors": "Hengrui Luo, Akira Horiguchi, Li Ma",
+        "url": "http://arxiv.org/abs/2601.20254v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20254v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "将非平衡Haar小波树扩展到可三角化流形，构建了在L2空间中正交的系统，并保留了正交性和精确重建等关键性质，具有深厚的数学基础和泛函分析背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20251v1",
+        "title": "Efficient Evaluation of LLM Performance with Statistical Guarantees",
+        "summary": "Exhaustively evaluating many large language models (LLMs) on a large suite of benchmarks is expensive. We cast benchmarking as finite-population inference and, under a fixed query budget, seek tight confidence intervals (CIs) for model accuracy with valid frequentist coverage. We propose Factorized Active Querying (FAQ), which (a) leverages historical information through a Bayesian factor model; (b) adaptively selects questions using a hybrid variance-reduction/active-learning sampling policy; and (c) maintains validity through Proactive Active Inference -- a finite-population extension of active inference (Zrnic & Candes, 2024) that enables direct question selection while preserving coverage. With negligible overhead cost, FAQ delivers up to $5\\times$ effective sample size gains over strong baselines on two benchmark suites, across varying historical-data missingness levels: this means that it matches the CI width of uniform sampling while using up to $5\\times$ fewer queries. We release our source code and our curated datasets to support reproducible evaluation and future research.",
+        "authors": "Skyler Wu, Yash Nair, Emmanuel J. Candés",
+        "url": "http://arxiv.org/abs/2601.20251v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20251v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "将基准测试视为有限总体推断问题，提出了具有贝叶斯因子模型、自适应采样策略和有效频率覆盖率的统计保证的评估框架，对LLM评估提供了严谨的统计方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20227v1",
+        "title": "ProFlow: Zero-Shot Physics-Consistent Sampling via Proximal Flow Guidance",
+        "summary": "Inferring physical fields from sparse observations while strictly satisfying partial differential equations (PDEs) is a fundamental challenge in computational physics. Recently, deep generative models offer powerful data-driven priors for such inverse problems, yet existing methods struggle to enforce hard physical constraints without costly retraining or disrupting the learned generative prior. Consequently, there is a critical need for a sampling mechanism that can reconcile strict physical consistency and observational fidelity with the statistical structure of the pre-trained prior. To this end, we present ProFlow, a proximal guidance framework for zero-shot physics-consistent sampling, defined as inferring solutions from sparse observations using a fixed generative prior without task-specific retraining. The algorithm employs a rigorous two-step scheme that alternates between: (\\romannumeral1) a terminal optimization step, which projects the flow prediction onto the intersection of the physically and observationally consistent sets via proximal minimization; and (\\romannumeral2) an interpolation step, which maps the refined state back to the generative trajectory to maintain consistency with the learned flow probability path. This procedure admits a Bayesian interpretation as a sequence of local maximum a posteriori (MAP) updates. Comprehensive benchmarks on Poisson, Helmholtz, Darcy, and viscous Burgers' equations demonstrate that ProFlow achieves superior physical and observational consistency, as well as more accurate distributional statistics, compared to state-of-the-art diffusion- and flow-based baselines.",
+        "authors": "Zichao Yu, Ming Li, Wenyi Zhang, Difan Zou, Weiguo Gao",
+        "url": "http://arxiv.org/abs/2601.20227v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20227v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了零样本物理一致性采样的近端流指导框架，严格满足偏微分方程，并提供了贝叶斯解释和MAP更新，结合了物理、优化和贝叶斯理论，具有极高理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20217v1",
+        "title": "An Accounting Identity for Algorithmic Fairness",
+        "summary": "We derive an accounting identity for predictive models that links accuracy with common fairness criteria. The identity shows that for globally calibrated models, the weighted sums of miscalibration within groups and error imbalance across groups is equal to a \"total unfairness budget.\" For binary outcomes, this budget is the model's mean-squared error times the difference in group prevalence across outcome classes. The identity nests standard impossibility results as special cases, while also describing inherent tradeoffs when one or more fairness measures are not perfectly satisfied. The results suggest that accuracy and fairness are best viewed as complements in binary prediction tasks: increasing accuracy necessarily shrinks the total unfairness budget and vice-versa. Experiments on benchmark data confirm the theory and show that many fairness interventions largely substitute between fairness violations, and when they reduce accuracy they tend to expand the total unfairness budget. The results extend naturally to prediction tasks with non-binary outcomes, illustrating how additional outcome information can relax fairness incompatibilities and identifying conditions under which the binary-style impossibility does and does not extend to regression tasks.",
+        "authors": "Hadi Elzayn, Jacob Goldin",
+        "url": "http://arxiv.org/abs/2601.20217v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20217v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "推导了连接准确性和公平性标准的会计恒等式，揭示了内在的权衡和不可能结果，为理解算法公平性提供了基础性的数学理论，具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20154v1",
+        "title": "Spectral Ghost in Representation Learning: from Component Analysis to Self-Supervised Learning",
+        "summary": "Self-supervised learning (SSL) have improved empirical performance by unleashing the power of unlabeled data for practical applications. Specifically, SSL extracts the representation from massive unlabeled data, which will be transferred to a plenty of down streaming tasks with limited data. The significant improvement on diverse applications of representation learning has attracted increasing attention, resulting in a variety of dramatically different self-supervised learning objectives for representation extraction, with an assortment of learning procedures, but the lack of a clear and unified understanding. Such an absence hampers the ongoing development of representation learning, leaving a theoretical understanding missing, principles for efficient algorithm design unclear, and the use of representation learning methods in practice unjustified. The urgency for a unified framework is further motivated by the rapid growth in representation learning methods. In this paper, we are therefore compelled to develop a principled foundation of representation learning. We first theoretically investigate the sufficiency of the representation from a spectral representation view, which reveals the spectral essence of the existing successful SSL algorithms and paves the path to a unified framework for understanding and analysis. Such a framework work also inspires the development of more efficient and easy-to-use representation learning algorithms with principled way in real-world applications.",
+        "authors": "Bo Dai, Na Li, Dale Schuurmans",
+        "url": "http://arxiv.org/abs/2601.20154v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20154v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "从谱表示的角度理论性地探讨了表示学习的充分性，揭示了现有自监督学习算法的谱本质，为理解和分析提供了统一的理论框架，具有强大的理论洞察力。"
+    }
+]

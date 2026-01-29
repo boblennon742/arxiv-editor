@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.20745v1",
+        "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+        "summary": "As large language models (LLMs) continue to scale, deployment is increasingly bottlenecked by the memory wall, motivating a shift toward extremely low-bit quantization. However, most quantization-aware training (QAT) methods apply hard rounding and the straight-through estimator (STE) from the beginning of the training, which prematurely discretizes the optimization landscape and induces persistent gradient mismatch between latent weights and quantized weights, hindering effective optimization of quantized models. To address this, we propose Hestia, a Hessian-guided differentiable QAT framework for extremely low-bit LLMs, which replaces the rigid step function with a temperature-controlled softmax relaxation to maintain gradient flow early in training while progressively hardening quantization. Furthermore, Hestia leverages a tensor-wise Hessian trace metric as a lightweight curvature signal to drive fine-grained temperature annealing, enabling sensitivity-aware discretization across the model. Evaluations on Llama-3.2 show that Hestia consistently outperforms existing ternary QAT baselines, yielding average zero-shot improvements of 5.39% and 4.34% for the 1B and 3B models. These results indicate that Hessian-guided relaxation effectively recovers representational capacity, establishing a more robust training path for 1.58-bit LLMs. The code is available at https://github.com/hestia2026/Hestia.",
+        "authors": "Guoan Wang, Feiyu Wang, Zongwei Lv, Yikun Zong, Tong Yang",
+        "url": "http://arxiv.org/abs/2601.20745v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20745v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Hestia 框架，通过 Hessian 引导的可微分量化感知训练，解决了 LLM 极端低比特量化的内存瓶颈。其温度控制的 softmax 弛豫和张量级 Hessian 迹度量，在理论上具有创新性，并带来了显著的实践效果提升，完美契合您对模型压缩和理论创新的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20642v1",
+        "title": "Detecting and Mitigating Memorization in Diffusion Models through Anisotropy of the Log-Probability",
+        "summary": "Diffusion-based image generative models produce high-fidelity images through iterative denoising but remain vulnerable to memorization, where they unintentionally reproduce exact copies or parts of training images. Recent memorization detection methods are primarily based on the norm of score difference as indicators of memorization. We prove that such norm-based metrics are mainly effective under the assumption of isotropic log-probability distributions, which generally holds at high or medium noise levels. In contrast, analyzing the anisotropic regime reveals that memorized samples exhibit strong angular alignment between the guidance vector and unconditional scores in the low-noise setting. Through these insights, we develop a memorization detection metric by integrating isotropic norm and anisotropic alignment. Our detection metric can be computed directly on pure noise inputs via two conditional and unconditional forward passes, eliminating the need for costly denoising steps. Detection experiments on Stable Diffusion v1.4 and v2 show that our metric outperforms existing denoising-free detection methods while being at least approximately 5x faster than the previous best approach. Finally, we demonstrate the effectiveness of our approach by utilizing a mitigation strategy that adapts memorized prompts based on our developed metric.",
+        "authors": "Rohan Asthana, Vasileios Belagiannis",
+        "url": "http://arxiv.org/abs/2601.20642v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20642v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过对数概率的各向异性，深入分析了扩散模型中的记忆化问题，并提出了高效的检测与缓解方法。其理论洞察力强，解决了生成模型安全性和可信度的关键瓶颈，具有高度的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20379v1",
+        "title": "Policy of Thoughts: Scaling LLM Reasoning via Test-time Policy Evolution",
+        "summary": "Large language models (LLMs) struggle with complex, long-horizon reasoning due to instability caused by their frozen policy assumption. Current test-time scaling methods treat execution feedback merely as an external signal for filtering or rewriting trajectories, without internalizing it to improve the underlying reasoning strategy. Inspired by Popper's epistemology of \"conjectures and refutations,\" we argue that intelligence requires real-time evolution of the model's policy through learning from failed attempts. We introduce Policy of Thoughts (PoT), a framework that recasts reasoning as a within-instance online optimization process. PoT first generates diverse candidate solutions via an efficient exploration mechanism, then uses Group Relative Policy Optimization (GRPO) to update a transient LoRA adapter based on execution feedback. This closed-loop design enables dynamic, instance-specific refinement of the model's reasoning priors. Experiments show that PoT dramatically boosts performance: a 4B model achieves 49.71% accuracy on LiveCodeBench, outperforming GPT-4o and DeepSeek-V3 despite being over 50 smaller.",
+        "authors": "Zhengbo Jiao, Hongyu Xian, Qinglong Wang, Yunpu Ma, Zhebo Wang, Zifan Zhang, Dezhang Kong, Meng Han",
+        "url": "http://arxiv.org/abs/2601.20379v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20379v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Policy of Thoughts (PoT) 框架将 LLM 推理重构为实例内在线优化过程，通过 GRPO 和瞬态 LoRA 适配器实现测试时策略演化。这在理论上极具创新性，能显著提升 LLM 在复杂长程推理任务上的性能，甚至超越大型模型，解决了 LLM 推理能力的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20299v1",
+        "title": "Truthfulness Despite Weak Supervision: Evaluating and Training LLMs Using Peer Prediction",
+        "summary": "The evaluation and post-training of large language models (LLMs) rely on supervision, but strong supervision for difficult tasks is often unavailable, especially when evaluating frontier models. In such cases, models are demonstrated to exploit evaluations built on such imperfect supervision, leading to deceptive results. However, underutilized in LLM research, a wealth of mechanism design research focuses on game-theoretic incentive compatibility, i.e., eliciting honest and informative answers with weak supervision. Drawing from this literature, we introduce the peer prediction method for model evaluation and post-training. It rewards honest and informative answers over deceptive and uninformative ones, using a metric based on mutual predictability and without requiring ground truth labels. We demonstrate the method's effectiveness and resistance to deception, with both theoretical guarantees and empirical validation on models with up to 405B parameters. We show that training an 8B model with peer prediction-based reward recovers most of the drop in truthfulness due to prior malicious finetuning, even when the reward is produced by a 0.135B language model with no finetuning. On the evaluation front, in contrast to LLM-as-a-Judge which requires strong and trusted judges, we discover an inverse scaling property in peer prediction, where, surprisingly, resistance to deception is strengthened as the capability gap between the experts and participants widens, enabling reliable evaluation of strong models with weak supervision. In particular, LLM-as-a-Judge become worse than random guess when facing deceptive models 5-20x the judge's size, while peer prediction thrives when such gaps are large, including in cases with over 100x size difference.",
+        "authors": "Tianyi Alex Qiu, Micah Carroll, Cameron Allen",
+        "url": "http://arxiv.org/abs/2601.20299v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20299v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Compression-aware Sharpness Minimization (C-SAM)，通过对掩码扰动而非参数扰动进行锐度感知学习，同时提升了 DNN 的紧凑性和鲁棒性。其方法具有深刻的理论基础，解决了模型压缩和鲁棒性的双重瓶颈，对设备端部署意义重大。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20295v1",
+        "title": "Cheap2Rich: A Multi-Fidelity Framework for Data Assimilation and System Identification of Multiscale Physics -- Rotating Detonation Engines",
+        "summary": "Bridging the sim2real gap between computationally inexpensive models and complex physical systems remains a central challenge in machine learning applications to engineering problems, particularly in multi-scale settings where reduced-order models typically capture only dominant dynamics. In this work, we present Cheap2Rich, a multi-scale data assimilation framework that reconstructs high-fidelity state spaces from sparse sensor histories by combining a fast low-fidelity prior with learned, interpretable discrepancy corrections. We demonstrate the performance on rotating detonation engines (RDEs), a challenging class of systems that couple detonation-front propagation with injector-driven unsteadiness, mixing, and stiff chemistry across disparate scales. Our approach successfully reconstructs high-fidelity RDE states from sparse measurements while isolating physically meaningful discrepancy dynamics associated with injector-driven effects. The results highlight a general multi-fidelity framework for data assimilation and system identification in complex multi-scale systems, enabling rapid design exploration and real-time monitoring and control while providing interpretable discrepancy dynamics. Code for this project is is available at: github.com/kro0l1k/Cheap2Rich.",
+        "authors": "Yuxuan Bao, Jan Zajac, Megan Powers, Venkat Raman, J. Nathan Kutz",
+        "url": "http://arxiv.org/abs/2601.20295v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20295v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了基于对等预测（Peer Prediction）的方法来评估和训练 LLM，即使在弱监督下也能保证真实性。其理论创新性在于将机制设计引入 LLM 评估，并发现了反向扩展特性，解决了 LLM 评估和后训练中真实性与可信度的核心瓶颈，具有极高的理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20255v1",
+        "title": "HE-SNR: Uncovering Latent Logic via Entropy for Guiding Mid-Training on SWE-BENCH",
+        "summary": "SWE-bench has emerged as the premier benchmark for evaluating Large Language Models on complex software engineering tasks. While these capabilities are fundamentally acquired during the mid-training phase and subsequently elicited during Supervised Fine-Tuning (SFT), there remains a critical deficit in metrics capable of guiding mid-training effectively. Standard metrics such as Perplexity (PPL) are compromised by the \"Long-Context Tax\" and exhibit weak correlation with downstream SWE performance. In this paper, we bridge this gap by first introducing a rigorous data filtering strategy. Crucially, we propose the Entropy Compression Hypothesis, redefining intelligence not by scalar Top-1 compression, but by the capacity to structure uncertainty into Entropy-Compressed States of low orders (\"reasonable hesitation\"). Grounded in this fine-grained entropy analysis, we formulate a novel metric, HE-SNR (High-Entropy Signal-to-Noise Ratio). Validated on industrial-scale Mixture-of-Experts (MoE) models across varying context windows (32K/128K), our approach demonstrates superior robustness and predictive power. This work provides both the theoretical foundation and practical tools for optimizing the latent potential of LLMs in complex engineering domains.",
+        "authors": "Yueyang Wang, Jiawei Fu, Baolong Bi, Xili Wang, Xiaoqing Liu",
+        "url": "http://arxiv.org/abs/2601.20255v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20255v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了“熵压缩假说”和 HE-SNR 指标，用于指导 LLM 在 SWE-BENCH 等复杂任务上的中期训练。这为 LLM 训练过程中的潜在逻辑和性能优化提供了理论指导和实用工具，解决了 LLM 训练效率和效果的关键瓶颈，具有很强的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20251v1",
+        "title": "Efficient Evaluation of LLM Performance with Statistical Guarantees",
+        "summary": "Exhaustively evaluating many large language models (LLMs) on a large suite of benchmarks is expensive. We cast benchmarking as finite-population inference and, under a fixed query budget, seek tight confidence intervals (CIs) for model accuracy with valid frequentist coverage. We propose Factorized Active Querying (FAQ), which (a) leverages historical information through a Bayesian factor model; (b) adaptively selects questions using a hybrid variance-reduction/active-learning sampling policy; and (c) maintains validity through Proactive Active Inference -- a finite-population extension of active inference (Zrnic & Candes, 2024) that enables direct question selection while preserving coverage. With negligible overhead cost, FAQ delivers up to $5\\times$ effective sample size gains over strong baselines on two benchmark suites, across varying historical-data missingness levels: this means that it matches the CI width of uniform sampling while using up to $5\\times$ fewer queries. We release our source code and our curated datasets to support reproducible evaluation and future research.",
+        "authors": "Skyler Wu, Yash Nair, Emmanuel J. Candés",
+        "url": "http://arxiv.org/abs/2601.20251v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20251v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将 LLM 基准测试视为有限总体推断问题，提出了 Factorized Active Querying (FAQ) 框架，通过贝叶斯因子模型和自适应采样，在保证统计严谨性的前提下，将评估效率提升了 5 倍。这完美契合您对数据效率和理论严谨性的要求，解决了 LLM 评估成本高昂的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20802v1",
+        "title": "Reinforcement Learning via Self-Distillation",
+        "summary": "Large language models are increasingly post-trained with reinforcement learning in verifiable domains such as code and math. Yet, current methods for reinforcement learning with verifiable rewards (RLVR) learn only from a scalar outcome reward per attempt, creating a severe credit-assignment bottleneck. Many verifiable environments actually provide rich textual feedback, such as runtime errors or judge evaluations, that explain why an attempt failed. We formalize this setting as reinforcement learning with rich feedback and introduce Self-Distillation Policy Optimization (SDPO), which converts tokenized feedback into a dense learning signal without any external teacher or explicit reward model. SDPO treats the current model conditioned on feedback as a self-teacher and distills its feedback-informed next-token predictions back into the policy. In this way, SDPO leverages the model's ability to retrospectively identify its own mistakes in-context. Across scientific reasoning, tool use, and competitive programming on LiveCodeBench v6, SDPO improves sample efficiency and final accuracy over strong RLVR baselines. Notably, SDPO also outperforms baselines in standard RLVR environments that only return scalar feedback by using successful rollouts as implicit feedback for failed attempts. Finally, applying SDPO to individual questions at test time accelerates discovery on difficult binary-reward tasks, achieving the same discovery probability as best-of-k sampling or multi-turn conversations with 3x fewer attempts.",
+        "authors": "Jonas Hübotter, Frederike Lübeck, Lejs Behric, Anton Baumann, Marco Bagatella, Daniel Marta, Ido Hakimi, Idan Shenfeld, Thomas Kleine Buening, Carlos Guestrin, Andreas Krause",
+        "url": "http://arxiv.org/abs/2601.20802v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20802v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Self-Distillation Policy Optimization (SDPO) 框架通过将文本反馈转化为密集的学习信号，解决了 LLM 在可验证领域（如代码、数学）中强化学习的信用分配瓶颈。其自蒸馏机制无需外部教师，显著提高了样本效率和最终准确率，具有很强的算法创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20439v1",
+        "title": "PEARL: Plan Exploration and Adaptive Reinforcement Learning for Multihop Tool Use",
+        "summary": "Large Language Models show great potential with external tools, but face significant challenges in complex, multi-turn tool invocation. They often exhibit weak planning, tool hallucination, erroneous parameter generation, and struggle with robust interaction. To tackle these issues, we present PEARL, a novel framework to enhance LLM planning and execution for sophisticated tool use. PEARL adopts a two-stage approach: an offline phase where the agent explores tools to learn valid usage patterns and failure conditions, and an online reinforcement learning phase. In the online phase, a dedicated Planner is trained via group Relative Policy Optimization (GRPO) with a carefully designed reward function that provides distinct signals for planning quality. Experiments on the ToolHop and T-Eval benchmarks show PEARL significantly outperforms existing methods, achieving a new state-of-the-art success rate of \\textbf{56.5\\%} on ToolHop while maintaining a low invocation error rate. Our work marks a key advance in addressing the complex planning challenges of tool use, contributing to the development of more robust and reliable LLM-based agents.",
+        "authors": "Qihao Wang, Mingzhe Lu, Jiayue Wu, Yue Hu, Yanbing Liu",
+        "url": "http://arxiv.org/abs/2601.20439v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20439v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PEARL 框架通过离线工具探索和在线 GRPO 强化学习，显著提升了 LLM 在多跳工具使用中的规划和执行能力。其两阶段方法和精心设计的奖励函数，解决了 LLM 复杂工具使用中的规划弱、幻觉等实际瓶颈，具有重要的算法创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20352v1",
+        "title": "AMA: Adaptive Memory via Multi-Agent Collaboration",
+        "summary": "The rapid evolution of Large Language Model (LLM) agents has necessitated robust memory systems to support cohesive long-term interaction and complex reasoning. Benefiting from the strong capabilities of LLMs, recent research focus has shifted from simple context extension to the development of dedicated agentic memory systems. However, existing approaches typically rely on rigid retrieval granularity, accumulation-heavy maintenance strategies, and coarse-grained update mechanisms. These design choices create a persistent mismatch between stored information and task-specific reasoning demands, while leading to the unchecked accumulation of logical inconsistencies over time. To address these challenges, we propose Adaptive Memory via Multi-Agent Collaboration (AMA), a novel framework that leverages coordinated agents to manage memory across multiple granularities. AMA employs a hierarchical memory design that dynamically aligns retrieval granularity with task complexity. Specifically, the Constructor and Retriever jointly enable multi-granularity memory construction and adaptive query routing. The Judge verifies the relevance and consistency of retrieved content, triggering iterative retrieval when evidence is insufficient or invoking the Refresher upon detecting logical conflicts. The Refresher then enforces memory consistency by performing targeted updates or removing outdated entries. Extensive experiments on challenging long-context benchmarks show that AMA significantly outperforms state-of-the-art baselines while reducing token consumption by approximately 80% compared to full-context methods, demonstrating its effectiveness in maintaining retrieval precision and long-term memory consistency.",
+        "authors": "Weiquan Huang, Zixuan Wang, Hehai Lin, Sudong Wang, Bo Xu, Qian Li, Beier Zhu, Linyi Yang, Chengwei Qin",
+        "url": "http://arxiv.org/abs/2601.20352v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20352v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "AMA 框架通过多智能体协作实现自适应内存管理，解决了 LLM 智能体在长程交互中内存一致性和效率的瓶颈。其分层内存设计和动态粒度调整，显著提高了检索精度并减少了 80% 的 token 消耗，是内存效率和智能体架构的重大创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20334v1",
+        "title": "Demonstration-Free Robotic Control via LLM Agents",
+        "summary": "Robotic manipulation has increasingly adopted vision-language-action (VLA) models, which achieve strong performance but typically require task-specific demonstrations and fine-tuning, and often generalize poorly under domain shift. We investigate whether general-purpose large language model (LLM) agent frameworks, originally developed for software engineering, can serve as an alternative control paradigm for embodied manipulation. We introduce FAEA (Frontier Agent as Embodied Agent), which applies an LLM agent framework directly to embodied manipulation without modification. Using the same iterative reasoning that enables software agents to debug code, FAEA enables embodied agents to reason through manipulation strategies. We evaluate an unmodified frontier agent, Claude Agent SDK, across the LIBERO, ManiSkill3, and MetaWorld benchmarks. With privileged environment state access, FAEA achieves success rates of 84.9%, 85.7%, and 96%, respectively. This level of task success approaches that of VLA models trained with less than 100 demonstrations per task, without requiring demonstrations or fine-tuning. With one round of human feedback as an optional optimization, performance increases to 88.2% on LIBERO. This demonstration-free capability has immediate practical value: FAEA can autonomously explore novel scenarios in simulation and generate successful trajectories for training data augmentation in embodied learning. Our results indicate that general-purpose agents are sufficient for a class of manipulation tasks dominated by deliberative, task-level planning. This opens a path for robotics systems to leverage actively maintained agent infrastructure and benefit directly from ongoing advances in frontier models. Code is available at https://github.com/robiemusketeer/faea-sim",
+        "authors": "Brian Y. Tsui, Alan Y. Fang, Tiffany J. Hwu",
+        "url": "http://arxiv.org/abs/2601.20334v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20334v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文展示了通用 LLM 智能体框架 FAEA 如何无需演示和微调，直接应用于具身机器人操作。这在数据效率上是巨大的突破，解决了机器人控制中对大量演示数据的依赖，为 LLM 智能体在物理世界中的应用开辟了新路径，具有极高的创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20310v1",
+        "title": "SemBind: Binding Diffusion Watermarks to Semantics Against Black-Box Forgery Attacks",
+        "summary": "Latent-based watermarks, integrated into the generation process of latent diffusion models (LDMs), simplify detection and attribution of generated images. However, recent black-box forgery attacks, where an attacker needs at least one watermarked image and black-box access to the provider's model, can embed the provider's watermark into images not produced by the provider, posing outsized risk to provenance and trust. We propose SemBind, the first defense framework for latent-based watermarks that resists black-box forgery by binding latent signals to image semantics via a learned semantic masker. Trained with contrastive learning, the masker yields near-invariant codes for the same prompt and near-orthogonal codes across prompts; these codes are reshaped and permuted to modulate the target latent before any standard latent-based watermark. SemBind is generally compatible with existing latent-based watermarking schemes and keeps image quality essentially unchanged, while a simple mask-ratio parameter offers a tunable trade-off between anti-forgery strength and robustness. Across four mainstream latent-based watermark methods, our SemBind-enabled anti-forgery variants markedly reduce false acceptance under black-box forgery while providing a controllable robustness-security balance.",
+        "authors": "Xin Zhang, Zijin Yang, Kejiang Chen, Linfeng Ma, Weiming Zhang, Nenghai Yu",
+        "url": "http://arxiv.org/abs/2601.20310v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20310v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SemBind 框架通过将潜在信号与图像语义绑定，首次实现了针对黑盒伪造攻击的扩散模型水印防御。其基于对比学习的语义掩码器，解决了生成图像溯源和信任的重大安全瓶颈，具有高度的理论创新性和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20309v1",
+        "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+        "summary": "Large Language Model (LLM) serving faces a fundamental tension between stringent latency Service Level Objectives (SLOs) and limited GPU memory capacity. When high request rates exhaust the KV cache budget, existing LLM inference systems often suffer severe head-of-line (HOL) blocking. While prior work explored PCIe-based offloading, these approaches cannot sustain responsiveness under high request rates, often failing to meet tight Time-To-First-Token (TTFT) and Time-Between-Tokens (TBT) SLOs. We present SuperInfer, a high-performance LLM inference system designed for emerging Superchips (e.g., NVIDIA GH200) with tightly coupled GPU-CPU architecture via NVLink-C2C. SuperInfer introduces RotaSched, the first proactive, SLO-aware rotary scheduler that rotates requests to maintain responsiveness on Superchips, and DuplexKV, an optimized rotation engine that enables full-duplex transfer over NVLink-C2C. Evaluations on GH200 using various models and datasets show that SuperInfer improves TTFT SLO attainment rates by up to 74.7% while maintaining comparable TBT and throughput compared to state-of-the-art systems, demonstrating that SLO-aware scheduling and memory co-design unlocks the full potential of Superchips for responsive LLM serving.",
+        "authors": "Jiahuan Yu, Mingtao Hu, Zichao Lin, Minjia Zhang",
+        "url": "http://arxiv.org/abs/2601.20309v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20309v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SuperInfer 系统通过 SLO 感知的旋转调度器 RotaSched 和优化的 DuplexKV 引擎，解决了 LLM 在 Superchips 上推理时严格延迟 SLO 和 GPU 内存限制的矛盾。它显著提升了 TTFT SLO 达成率，是 LLM 推理效率和硬件架构协同设计的重大突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20221v1",
+        "title": "Scaling Medical Reasoning Verification via Tool-Integrated Reinforcement Learning",
+        "summary": "Large language models have achieved strong performance on medical reasoning benchmarks, yet their deployment in clinical settings demands rigorous verification to ensure factual accuracy. While reward models offer a scalable approach for reasoning trace verification, existing methods face two limitations: they produce only scalar reward values without explicit justification, and they rely on single-pass retrieval that precludes adaptive knowledge access as verification unfolds. We introduce $\\method$, an agentic framework that addresses these limitations by training medical reasoning verifiers to iteratively query external medical corpora during evaluation. Our approach combines tool-augmented verification with an iterative reinforcement learning paradigm that requires only trace-level supervision, alongside an adaptive curriculum mechanism that dynamically adjusts training data distribution. Across four medical reasoning benchmarks, $\\method$ achieves substantial gains over existing methods, improving MedQA accuracy by 23.5% and MedXpertQA by 32.0% relative to the base generator in particular. Crucially, $\\method$ demonstrates an $\\mathbf{8\\times}$ reduction in sampling budget requirement compared to prior reward model baselines. These findings establish that grounding verification in dynamically retrieved evidence offers a principled path toward more reliable medical reasoning systems.",
+        "authors": "Hang Zhang, Ruheng Wang, Yuelyu Ji, Mingu Kwak, Xizhi Wu, Chenyu Li, Li Zhang, Wenqi Shi, Yifan Peng, Yanshan Wang",
+        "url": "http://arxiv.org/abs/2601.20221v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20221v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个工具集成强化学习框架，用于医学推理验证，通过迭代查询外部医学语料库来确保事实准确性。它显著减少了采样预算，解决了 LLM 在医疗领域部署中可信度和效率的关键瓶颈，具有重要的算法创新和实践意义。"
+    }
+]

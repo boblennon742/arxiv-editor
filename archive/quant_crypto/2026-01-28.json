@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.20336v1",
+        "title": "Do Whitepaper Claims Predict Market Behavior? Evidence from Cryptocurrency Factor Analysis",
+        "summary": "Cryptocurrency projects articulate value propositions through whitepapers, making claims about functionality and technical capabilities. This study investigates whether these narratives align with observed market behavior. We construct a pipeline combining zero-shot NLP classification (BART-MNLI) with CP tensor decomposition to compare three spaces: (1) a claims matrix from 24 whitepapers across 10 semantic categories, (2) market statistics for 49 assets over two years of hourly data, and (3) latent factors from tensor decomposition (rank 2, 92.45% variance explained). Using Procrustes rotation and Tucker's congruence coefficient, we test alignment across 23 common entities.   Results show weak alignment: claims-statistics (phi=0.341, p=0.332), claims-factors (phi=0.077, p=0.747), and statistics-factors (phi=0.197, p<0.001). The statistics-factors significance validates our methodology, confirming the pipeline detects relationships when present. Inter-model validation with DeBERTa-v3 yields 32% exact agreement but 67% top-3 agreement. Cross-sectional analysis reveals heterogeneous contributions: NEAR, MKR, ATOM show positive alignment while ENS, UNI, Bitcoin diverge most. Excluding Bitcoin confirms results are not driven by market dominance.   We interpret findings as weak alignment between whitepaper narratives and market factor structure. Limited power (n=23) precludes distinguishing weak from no alignment, but strong alignment (phi>=0.70) can be confidently rejected. Implications for narrative economics and investment analysis are discussed.",
+        "authors": "Murad Farzulla",
+        "url": "http://arxiv.org/abs/2601.20336v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20336v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为加密货币市场的因子构造提供了一个新颖的视角，它结合了先进的自然语言处理（NLP）技术（零样本分类）和张量分解来分析白皮书叙述与市场行为之间的关系。尽管研究结果表明白皮书声明与市场因子结构之间存在弱关联，但其严谨的方法论——构建一个从文本数据中提取潜在因子并进行统计验证的流程——对于统计学硕士生在因子构造、回测和策略设计方面具有很高的参考价值。你可以学习如何将非结构化数据（如白皮书文本）转化为量化因子，并使用多维数据分析技术（如张量分解）来发现市场中的潜在结构。这为探索其他类型的文本或非传统数据源作为加密货币量化因子提供了思路。"
+    }
+]

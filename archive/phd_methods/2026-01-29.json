@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.22156v1",
+        "title": "Hybrid Linear Attention Done Right: Efficient Distillation and Effective Architectures for Extremely Long Contexts",
+        "summary": "Hybrid Transformer architectures, which combine softmax attention blocks and recurrent neural networks (RNNs), have shown a desirable performance-throughput tradeoff for long-context modeling, but their adoption and studies are hindered by the prohibitive cost of large-scale pre-training from scratch. Some recent studies have shown that pre-trained softmax attention blocks can be converted into RNN blocks through parameter transfer and knowledge distillation. However, these transfer methods require substantial amounts of training data (more than 10B tokens), and the resulting hybrid models also exhibit poor long-context performance, which is the scenario where hybrid models enjoy significant inference speedups over Transformer-based models. In this paper, we present HALO (Hybrid Attention via Layer Optimization), a pipeline for distilling Transformer models into RNN-attention hybrid models. We then present HypeNet, a hybrid architecture with superior length generalization enabled by a novel position encoding scheme (named HyPE) and various architectural modifications. We convert the Qwen3 series into HypeNet using HALO, achieving performance comparable to the original Transformer models while enjoying superior long-context performance and efficiency. The conversion requires just 2.3B tokens, less than 0.01% of their pre-training data",
+        "authors": "Yingfa Chen, Zhen Leng Thai, Zihan Zhou, Zhu Zhang, Xingyu Shen, Shuo Wang, Chaojun Xiao, Xu Han, Zhiyuan Liu",
+        "url": "http://arxiv.org/abs/2601.22156v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22156v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种混合Transformer架构（HypeNet）和蒸馏流程（HALO），旨在解决LLM长上下文建模的效率瓶颈。其创新性在于通过参数迁移和知识蒸馏将预训练的softmax注意力块转换为RNN块，并引入了新颖的位置编码方案（HyPE）。这不仅提升了长上下文性能和效率，还显著降低了预训练成本，对LLM架构和数据效率有实际意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.22135v1",
+        "title": "PI-Light: Physics-Inspired Diffusion for Full-Image Relighting",
+        "summary": "Full-image relighting remains a challenging problem due to the difficulty of collecting large-scale structured paired data, the difficulty of maintaining physical plausibility, and the limited generalizability imposed by data-driven priors. Existing attempts to bridge the synthetic-to-real gap for full-scene relighting remain suboptimal. To tackle these challenges, we introduce Physics-Inspired diffusion for full-image reLight ($π$-Light, or PI-Light), a two-stage framework that leverages physics-inspired diffusion models. Our design incorporates (i) batch-aware attention, which improves the consistency of intrinsic predictions across a collection of images, (ii) a physics-guided neural rendering module that enforces physically plausible light transport, (iii) physics-inspired losses that regularize training dynamics toward a physically meaningful landscape, thereby enhancing generalizability to real-world image editing, and (iv) a carefully curated dataset of diverse objects and scenes captured under controlled lighting conditions. Together, these components enable efficient finetuning of pretrained diffusion models while also providing a solid benchmark for downstream evaluation. Experiments demonstrate that $π$-Light synthesizes specular highlights and diffuse reflections across a wide variety of materials, achieving superior generalization to real-world scenes compared with prior approaches.",
+        "authors": "Zhexin Liang, Zhaoxi Chen, Yongwei Chen, Tianyi Wei, Tengfei Wang, Xingang Pan",
+        "url": "http://arxiv.org/abs/2601.22135v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22135v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了LLM Shepherding框架，通过让小型语言模型（SLM）向大型语言模型（LLM）请求“提示”而非完整答案，显著降低了LLM推理成本。其核心创新在于首次利用了token级别的预算控制进行SLM-LLM协作，这是一种具有理论创新性的算法设计，直接解决了LLM应用中的成本瓶颈，并提供了显著的效率提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.22128v1",
+        "title": "The Patient is not a Moving Document: A World Model Training Paradigm for Longitudinal EHR",
+        "summary": "Large language models (LLMs) trained with next-word-prediction have achieved success as clinical foundation models. Representations from these language backbones yield strong linear probe performance across biomedical tasks, suggesting that patient semantics emerge from next-token prediction at scale. However, this paradigm treats patients as a document to be summarized rather than a dynamical system to be simulated; a patient's trajectory emerges from their state evolving under interventions and time, requiring models that simulate dynamics rather than predict tokens. To address this, we introduce SMB-Structure, a world model for structured EHR that grounds a joint-embedding prediction architecture (JEPA) with next-token prediction (SFT). SFT grounds our model to reconstruct future patient states in token space, while JEPA predicts those futures in latent space from the initial patient representation alone, forcing trajectory dynamics to be encoded before the next state is observed. We validate across two large-scale cohorts: Memorial Sloan Kettering (23,319 oncology patients; 323,000+ patient-years) and INSPECT (19,402 pulmonary embolism patients). Using a linear probe evaluated at multiple points along the disease trajectory, we demonstrate that our training paradigm learns embeddings that capture disease dynamics not recoverable by autoregressive baselines, enabling SMB-Structure to achieve competitive performance on complex tasks characterized by high patient heterogeneity. Model weights are available at https://huggingface.co/standardmodelbio/SMB-v1-1.7B-Structure.",
+        "authors": "Irsyad Adam, Zekai Chen, David Laprade, Shaun Porwal, David Laub, Erik Reinertsen, Arda Pekis, Kevin Brown",
+        "url": "http://arxiv.org/abs/2601.22128v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22128v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文批判了将患者电子健康记录（EHR）视为静态文档的传统LLM范式，并提出了SMB-Structure，一个将患者视为动态系统的世界模型训练范式。通过结合联合嵌入预测架构（JEPA）和下一词预测（SFT），模型被强制学习患者轨迹的动态。这代表了医疗AI领域建模方法上的根本性转变，具有深刻的理论意义和实际应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.22031v1",
+        "title": "Causal Autoregressive Diffusion Language Model",
+        "summary": "In this work, we propose Causal Autoregressive Diffusion (CARD), a novel framework that unifies the training efficiency of ARMs with the high-throughput inference of diffusion models. CARD reformulates the diffusion process within a strictly causal attention mask, enabling dense, per-token supervision in a single forward pass. To address the optimization instability of causal diffusion, we introduce a soft-tailed masking schema to preserve local context and a context-aware reweighting mechanism derived from signal-to-noise principles. This design enables dynamic parallel decoding, where the model leverages KV-caching to adaptively generate variable-length token sequences based on confidence. Empirically, CARD outperforms existing discrete diffusion baselines while reducing training latency by 3 $\\times$ compared to block diffusion methods. Our results demonstrate that CARD achieves ARM-level data efficiency while unlocking the latency benefits of parallel generation, establishing a robust paradigm for next-generation efficient LLMs.",
+        "authors": "Junhao Ruan, Bei Li, Yongjing Yin, Pengcheng Huang, Xin Chen, Jingang Wang, Xunliang Cai, Tong Xiao, JingBo Zhu",
+        "url": "http://arxiv.org/abs/2601.22031v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22031v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Causal Autoregressive Diffusion (CARD)，一个新颖的框架，统一了自回归模型（ARM）的训练效率和扩散模型的高吞吐量推理。通过在严格因果注意力掩码内重构扩散过程，并引入软尾掩码和上下文感知重加权机制，实现了动态并行解码。这在LLM算法和架构上具有显著创新性，解决了训练和推理效率的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.22027v1",
+        "title": "CAR-bench: Evaluating the Consistency and Limit-Awareness of LLM Agents under Real-World Uncertainty",
+        "summary": "Existing benchmarks for Large Language Model (LLM) agents focus on task completion under idealistic settings but overlook reliability in real-world, user-facing applications. In domains, such as in-car voice assistants, users often issue incomplete or ambiguous requests, creating intrinsic uncertainty that agents must manage through dialogue, tool use, and policy adherence. We introduce CAR-bench, a benchmark for evaluating consistency, uncertainty handling, and capability awareness in multi-turn, tool-using LLM agents in an in-car assistant domain. The environment features an LLM-simulated user, domain policies, and 58 interconnected tools spanning navigation, productivity, charging, and vehicle control. Beyond standard task completion, CAR-bench introduces Hallucination tasks that test agents' limit-awareness under missing tools or information, and Disambiguation tasks that require resolving uncertainty through clarification or internal information gathering. Baseline results reveal large gaps between occasional and consistent success on all task types. Even frontier reasoning LLMs achieve less than 50% consistent pass rate on Disambiguation tasks due to premature actions, and frequently violate policies or fabricate information to satisfy user requests in Hallucination tasks, underscoring the need for more reliable and self-aware LLM agents in real-world settings.",
+        "authors": "Johannes Kirmayr, Lukas Stappen, Elisabeth André",
+        "url": "http://arxiv.org/abs/2601.22027v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22027v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了CAR-bench，一个用于评估LLM代理在真实世界不确定性下的一致性、不确定性处理和能力意识的基准。虽然是基准论文，但它揭示了LLM代理在实际应用中（如车载语音助手）面临的深层挑战，特别是“过早行动”和“捏造信息”等问题，为未来LLM代理的算法和架构研究指明了方向。其对问题本身的严谨分析具有一定理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.22016v1",
+        "title": "TBDFiltering: Sample-Efficient Tree-Based Data Filtering",
+        "summary": "The quality of machine learning models depends heavily on their training data. Selecting high-quality, diverse training sets for large language models (LLMs) is a difficult task, due to the lack of cheap and reliable quality metrics. While querying existing LLMs for document quality is common, this is not scalable to the large number (billions) of documents used in training. Instead, practitioners often use classifiers trained on sparse quality signals. In this paper, we propose a text-embedding-based hierarchical clustering approach that adaptively selects the documents to be evaluated by the LLM to estimate cluster quality. We prove that our method is query efficient: under the assumption that the hierarchical clustering contains a subtree such that each leaf cluster in the tree is pure enough (i.e., it mostly contains either only good or only bad documents), with high probability, the method can correctly predict the quality of each document after querying a small number of documents. The number of such documents is proportional to the size of the smallest subtree with (almost) pure leaves, without the algorithm knowing this subtree in advance. Furthermore, in a comprehensive experimental study, we demonstrate the benefits of our algorithm compared to other classifier-based filtering methods.",
+        "authors": "Robert Istvan Busa-Fekete, Julian Zimmert, Anne Xiangyi Zheng, Claudio Gentile, Andras Gyorgy",
+        "url": "http://arxiv.org/abs/2601.22016v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22016v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Error-Compensating Optimizer (ECO)，一种在不使用全精度主权重的情况下进行量化训练的新型优化器。它通过将量化误差注入优化器动量形成误差反馈循环，并提供了收敛性理论证明。这在LLM模型压缩和内存效率方面具有极高的理论创新性和实践影响力，直接解决了大规模模型训练的内存瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.22069v1",
+        "title": "VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning",
+        "summary": "Long-context reasoning has significantly empowered large language models (LLMs) to tackle complex tasks, yet it introduces severe efficiency bottlenecks due to the computational complexity. Existing efficient approaches often rely on complex additional training or external models for compression, which limits scalability and discards critical fine-grained information. In this paper, we propose VTC-R1, a new efficient reasoning paradigm that integrates vision-text compression into the reasoning process. Instead of processing lengthy textual traces, VTC-R1 renders intermediate reasoning segments into compact images, which are iteratively fed back into vision-language models as \"optical memory.\" We construct a training dataset based on OpenR1-Math-220K achieving 3.4x token compression and fine-tune representative VLMs-Glyph and Qwen3-VL. Extensive experiments on benchmarks such as MATH500, AIME25, AMC23 and GPQA-D demonstrate that VTC-R1 consistently outperforms standard long-context reasoning. Furthermore, our approach significantly improves inference efficiency, achieving 2.7x speedup in end-to-end latency, highlighting its potential as a scalable solution for reasoning-intensive applications. Our code is available at https://github.com/w-yibo/VTC-R1.",
+        "authors": "Yibo Wang, Yongcheng Jing, Shunyu Liu, Hao Guan, Rong-cheng Tu, Chengyu Wang, Jun Huang, Dacheng Tao",
+        "url": "http://arxiv.org/abs/2601.22069v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22069v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了VTC-R1，一种将视觉-文本压缩整合到推理过程中的高效推理范式，以解决长上下文推理的效率瓶颈。它将中间推理片段渲染成紧凑图像作为“光学记忆”反馈给视觉-语言模型。这种跨模态的压缩方法具有高度的创新性，显著提升了推理效率和性能，对LLM应用的数据效率和模型架构有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21988v1",
+        "title": "Generalized Information Gathering Under Dynamics Uncertainty",
+        "summary": "An agent operating in an unknown dynamical system must learn its dynamics from observations. Active information gathering accelerates this learning, but existing methods derive bespoke costs for specific modeling choices: dynamics models, belief update procedures, observation models, and planners. We present a unifying framework that decouples these choices from the information-gathering cost by explicitly exposing the causal dependencies between parameters, beliefs, and controls. Using this framework, we derive a general information-gathering cost based on Massey's directed information that assumes only Markov dynamics with additive noise and is otherwise agnostic to modeling choices. We prove that the mutual information cost used in existing literature is a special case of our cost. Then, we leverage our framework to establish an explicit connection between the mutual information cost and information gain in linearized Bayesian estimation, thereby providing theoretical justification for mutual information-based active learning approaches. Finally, we illustrate the practical utility of our framework through experiments spanning linear, nonlinear, and multi-agent systems.",
+        "authors": "Fernando Palafox, Jingqi Li, Jesse Milzman, David Fridovich-Keil",
+        "url": "http://arxiv.org/abs/2601.21988v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21988v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从理论上探讨了图神经网络（GNN）在存在节点标识符时的表达能力，将其与模态逻辑和有界变量逻辑联系起来。这项工作对GNN的理论基础进行了深入研究，提出了“键不变表达能力”的概念。对于专注于AI前沿算法和架构的博士生来说，这种对模型表达能力的严谨数学分析具有很高的理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21985v1",
+        "title": "Elign: Equivariant Diffusion Model Alignment from Foundational Machine Learning Force Fields",
+        "summary": "Generative models for 3D molecular conformations must respect Euclidean symmetries and concentrate probability mass on thermodynamically favorable, mechanically stable structures. However, E(3)-equivariant diffusion models often reproduce biases from semi-empirical training data rather than capturing the equilibrium distribution of a high-fidelity Hamiltonian. While physics-based guidance can correct this, it faces two computational bottlenecks: expensive quantum-chemical evaluations (e.g., DFT) and the need to repeat such queries at every sampling step. We present Elign, a post-training framework that amortizes both costs. First, we replace expensive DFT evaluations with a faster, pretrained foundational machine-learning force field (MLFF) to provide physical signals. Second, we eliminate repeated run-time queries by shifting physical steering to the training phase. To achieve the second amortization, we formulate reverse diffusion as a reinforcement learning problem and introduce Force--Energy Disentangled Group Relative Policy Optimization (FED-GRPO) to fine-tune the denoising policy. FED-GRPO includes a potential-based energy reward and a force-based stability reward, which are optimized and group-normalized independently. Experiments show that Elign generates conformations with lower gold-standard DFT energies and forces, while improving stability. Crucially, inference remains as fast as unguided sampling, since no energy evaluations are required during generation.",
+        "authors": "Yunyang Li, Lin Huang, Luojia Xia, Wenhe Zhang, Mark Gerstein",
+        "url": "http://arxiv.org/abs/2601.21985v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21985v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Elign，一个用于E(3)-等变扩散模型的后训练框架，旨在通过基础机器学习力场（MLFF）和强化学习（FED-GRPO）来校准模型，使其生成符合物理规律的分子构象。它通过将物理引导转移到训练阶段来摊销计算成本。这项工作在生成模型中融入物理原理，并优化了训练效率，具有显著的理论创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21951v1",
+        "title": "Diffusion Path Samplers via Sequential Monte Carlo",
+        "summary": "We develop a diffusion-based sampler for target distributions known up to a normalising constant. To this end, we rely on the well-known diffusion path that smoothly interpolates between a (simple) base distribution and the target distribution, widely used in diffusion models. Our approach is based on a practical implementation of diffusion-annealed Langevin Monte Carlo, which approximates the diffusion path with convergence guarantees. We tackle the score estimation problem by developing an efficient sequential Monte Carlo sampler that evolves auxiliary variables from conditional distributions along the path, which provides principled score estimates for time-varying distributions. We further develop novel control variate schedules that minimise the variance of these score estimates. Finally, we provide theoretical guarantees and empirically demonstrate the effectiveness of our method on several synthetic and real-world datasets.",
+        "authors": "James Matthew Young, Paula Cordero-Encinar, Sebastian Reich, Andrew Duncan, O. Deniz Akyildiz",
+        "url": "http://arxiv.org/abs/2601.21951v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21951v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了一种基于扩散路径的采样器，用于已知归一化常数的目标分布。它通过序列蒙特卡洛（SMC）方法来估计分数，并提出了新颖的控制变量调度以最小化估计方差。这项工作在扩散模型和蒙特卡洛方法方面具有深厚的数理统计理论基础和创新性，对生成模型和采样算法有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21943v1",
+        "title": "Entropy-Based Dimension-Free Convergence and Loss-Adaptive Schedules for Diffusion Models",
+        "summary": "Diffusion generative models synthesize samples by discretizing reverse-time dynamics driven by a learned score (or denoiser). Existing convergence analyses of diffusion models typically scale at least linearly with the ambient dimension, and sharper rates often depend on intrinsic-dimension assumptions or other geometric restrictions on the target distribution. We develop an alternative, information-theoretic approach to dimension-free convergence that avoids any geometric assumptions. Under mild assumptions on the target distribution, we bound KL divergence between the target and generated distributions by $O(H^2/K)$ (up to endpoint factors), where $H$ is the Shannon entropy and $K$ is the number of sampling steps. Moreover, using a reformulation of the KL divergence, we propose a Loss-Adaptive Schedule (LAS) for efficient discretization of reverse SDE which is lightweight and relies only on the training loss, requiring no post-training heavy computation. Empirically, LAS improves sampling quality over common heuristic schedules.",
+        "authors": "Ahmad Aghapour, Erhan Bayraktar, Ziqing Zhang",
+        "url": "http://arxiv.org/abs/2601.21943v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21943v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于信息论的无维度收敛方法，用于扩散生成模型，并开发了一种轻量级的损失自适应调度（LAS）来高效离散化逆向SDE。它在理论上给出了KL散度的界限，并经验性地证明了LAS能提高采样质量。这项工作在扩散模型的理论分析和效率优化方面具有极高的创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21767v1",
+        "title": "Evaluating ChatGPT on Medical Information Extraction Tasks: Performance, Explainability and Beyond",
+        "summary": "Large Language Models (LLMs) like ChatGPT have demonstrated amazing capabilities in comprehending user intents and generate reasonable and useful responses. Beside their ability to chat, their capabilities in various natural language processing (NLP) tasks are of interest to the research community. In this paper, we focus on assessing the overall ability of ChatGPT in 4 different medical information extraction (MedIE) tasks across 6 benchmark datasets. We present the systematically analysis by measuring ChatGPT's performance, explainability, confidence, faithfulness, and uncertainty. Our experiments reveal that: (a) ChatGPT's performance scores on MedIE tasks fall behind those of the fine-tuned baseline models. (b) ChatGPT can provide high-quality explanations for its decisions, however, ChatGPT is over-confident in its predcitions. (c) ChatGPT demonstrates a high level of faithfulness to the original text in the majority of cases. (d) The uncertainty in generation causes uncertainty in information extraction results, thus may hinder its applications in MedIE tasks.",
+        "authors": "Wei Zhu",
+        "url": "http://arxiv.org/abs/2601.21767v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21767v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Zonkey，一个分层扩散语言模型，通过可微分的分词器和概率注意力机制，实现了从原始字符到文档级表示的完全可训练管道。它解决了传统LLM固定分词器的局限性，实现了端到端优化和对噪声数据的适应性。这项工作在LLM架构和算法上具有根本性的创新，对未来的LLM设计具有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21822v1",
+        "title": "CORE:Toward Ubiquitous 6G Intelligence Through Collaborative Orchestration of Large Language Model Agents Over Hierarchical Edge",
+        "summary": "Rapid advancements in sixth-generation (6G) networks and large language models (LLMs) have paved the way for ubiquitous intelligence, wherein seamless connectivity and distributed artificial intelligence (AI) have revolutionized various aspects of our lives.However, realizing this vision faces significant challenges owing to the fragmented and heterogeneous computing resources across hierarchical networks, which are insufficient for individual LLM agents to perform complex reasoning tasks.To address this issue, we propose Collaborative Orchestration Role at Edge (CORE), an innovative framework that employs a collaborative learning system in which multiple LLMs, each assigned a distinct functional role, are distributed across mobile devices and tiered edge servers. The system integrates three optimization modules, encompassing real-time perception,dynamic role orchestration, and pipeline-parallel execution, to facilitate efficient and rapid collaboration among distributed agents. Furthermore, we introduce a novel role affinity scheduling algorithm for dynamically orchestrating LLM role assignments across the hierarchical edge infrastructure, intelligently matching computational demands with available dispersed resources.Finally, comprehensive case studies and performance evaluations across various 6G application scenarios demonstrated the efficacy of CORE, revealing significant enhancements in the system efficiency and task completion rates. Building on these promising outcomes, we further validated the practical applicability of CORE by deploying it on a real-world edge-computing platform,that exhibits robust performance in operational environments.",
+        "authors": "Zitong Yu, Boquan Sun, Yang Li, Zheyan Qu, Xing Zhang",
+        "url": "http://arxiv.org/abs/2601.21822v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21822v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了CORE框架，通过在分层边缘网络上协作编排LLM代理，以实现普适的6G智能。它整合了实时感知、动态角色编排和流水线并行执行等优化模块，并引入了新颖的角色亲和调度算法。这在分布式AI系统架构和LLM应用方面具有创新性，解决了异构计算资源和复杂推理的挑战，具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21709v1",
+        "title": "Why Attention Patterns Exist: A Unifying Temporal Perspective Analysis",
+        "summary": "Attention patterns play a crucial role in both training and inference of large language models (LLMs). Prior works have identified individual patterns such as retrieval heads, sink heads, and diagonal traces, yet these observations remain fragmented and lack a unifying explanation. To bridge this gap, we introduce \\textbf{Temporal Attention Pattern Predictability Analysis (TAPPA), a unifying framework that explains diverse attention patterns by analyzing their underlying mathematical formulations} from a temporally continuous perspective. TAPPA both deepens the understanding of attention behavior and guides inference acceleration approaches. Specifically, TAPPA characterizes attention patterns as predictable patterns with clear regularities and unpredictable patterns that appear effectively random. Our analysis further reveals that this distinction can be explained by the degree of query self-similarity along the temporal dimension. Focusing on the predictable patterns, we further provide a detailed mathematical analysis of three representative cases through the joint effect of queries, keys, and Rotary Positional Embeddings (RoPE). We validate TAPPA by applying its insights to KV cache compression and LLM pruning tasks. Across these tasks, a simple metric motivated by TAPPA consistently improves performance over baseline methods. The code is available at https://github.com/MIRALab-USTC/LLM-TAPPA.",
+        "authors": "Qingyue Yang, Jie Wang, Xing Li, Yinqi Bai, Xialiang Tong, Huiling Zhen, Jianye Hao, Mingxuan Yuan, Bin Li",
+        "url": "http://arxiv.org/abs/2601.21709v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21709v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了Temporal Attention Pattern Predictability Analysis (TAPPA) 框架，通过分析注意力模式的底层数学公式，从时间连续性角度统一解释了LLM中多样化的注意力模式。它揭示了查询自相似性与模式可预测性之间的关系，并指导了KV缓存压缩和LLM剪枝。这项工作对LLM架构的理论理解和效率优化具有深远的创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21626v1",
+        "title": "HeRo-Q: A General Framework for Stable Low Bit Quantization via Hessian Conditioning",
+        "summary": "Post Training Quantization (PTQ), a mainstream model compression technique, often leads to the paradoxical 'low error, high loss' phenomenon because it focuses solely on minimizing quantization error. The root cause lies in the Hessian matrix of the LLM loss landscape: a few high curvature directions are extremely sensitive to perturbations. To address this, we propose the Hessian Robust Quantization (HeRo Q) algorithm, which applies a lightweight, learnable rotation-compression matrix to the weight space prior to quantization. This joint framework reshapes the loss landscape by reducing the largest Hessian eigenvalue and reducing its max eigenvalue, thereby significantly enhancing robustness to quantization noise. HeRo-Q requires no architectural modifications, incurs negligible computational overhead, and integrates seamlessly into existing PTQ pipelines. Experiments on Llama and Qwen models show that HeRo Q consistently outperforms state of the art methods including GPTQ, AWQ, and SpinQuant not only achieving superior performance under standard W4A8 settings, but also excelling in the highly challenging W3A16 ultra low bit regime, where it boosts GSM8K accuracy on Llama3 8B to 70.15\\% and effectively avoids the logical collapse commonly seen in aggressive quantization.",
+        "authors": "Jinhao Zhang Yunquan Zhang, Zicheng yan, Boyang Zhang, Jun Sun, Daning Cheng",
+        "url": "http://arxiv.org/abs/2601.21626v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21626v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Hessian Robust Quantization (HeRo-Q) 算法，通过引入轻量级、可学习的旋转-压缩矩阵来重塑LLM损失景观，降低最大Hessian特征值，从而显著增强量化噪声的鲁棒性。这项工作从Hessian矩阵分析的理论角度解决了后训练量化（PTQ）中的“低误差，高损失”现象，在LLM模型压缩方面具有极高的理论创新性和实践影响力。"
+    }
+]

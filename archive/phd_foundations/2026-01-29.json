@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.22095v1",
+        "title": "GeoNorm: Unify Pre-Norm and Post-Norm with Geodesic Optimization",
+        "summary": "The placement of normalization layers, specifically Pre-Norm and Post-Norm, remains an open question in Transformer architecture design. In this work, we rethink these approaches through the lens of manifold optimization, interpreting the outputs of the Feed-Forward Network (FFN) and attention layers as update directions in optimization. Building on this perspective, we introduce GeoNorm, a novel method that replaces standard normalization with geodesic updates on the manifold. Furthermore, analogous to learning rate schedules, we propose a layer-wise update decay for the FFN and attention components. Comprehensive experiments demonstrate that GeoNorm consistently outperforms existing normalization methods in Transformer models. Crucially, GeoNorm can be seamlessly integrated into standard Transformer architectures, achieving performance improvements with negligible additional computational cost.",
+        "authors": "Chuanyang Zheng, Jiankai Sun, Yihang Gao, Chi Wang, Yuehao Wang, Jing Xiong, Liliang Ren, Bo Peng, Qingmei Wang, Xiaoran Shang, Mac Schwager, Anderson Schneider, Yuriy Nevmyvaka, Xiaodong Liu",
+        "url": "http://arxiv.org/abs/2601.22095v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.22095v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过流形优化和测地线更新的视角重新思考了 Transformer 中的归一化层，提出了 GeoNorm。其核心思想是数学和几何驱动的，明确提及“流形优化”和“测地线更新”，这与您对严谨数学逻辑的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21999v1",
+        "title": "Negatives-Dominant Contrastive Learning for Generalization in Imbalanced Domains",
+        "summary": "Imbalanced Domain Generalization (IDG) focuses on mitigating both domain and label shifts, both of which fundamentally shape the model's decision boundaries, particularly under heterogeneous long-tailed distributions across domains. Despite its practical significance, it remains underexplored, primarily due to the technical complexity of handling their entanglement and the paucity of theoretical foundations. In this paper, we begin by theoretically establishing the generalization bound for IDG, highlighting the role of posterior discrepancy and decision margin. This bound motivates us to focus on directly steering decision boundaries, marking a clear departure from existing methods. Subsequently, we technically propose a novel Negative-Dominant Contrastive Learning (NDCL) for IDG to enhance discriminability while enforce posterior consistency across domains. Specifically, inter-class decision-boundary separation is enhanced by placing greater emphasis on negatives as the primary signal in our contrastive learning, naturally amplifying gradient signals for minority classes to avoid the decision boundary being biased toward majority classes. Meanwhile, intra-class compactness is encouraged through a re-weighted cross-entropy strategy, and posterior consistency across domains is enforced through a prediction-central alignment strategy. Finally, rigorous yet challenging experiments on benchmarks validate the effectiveness of our NDCL. The code is available at https://github.com/Alrash/NDCL.",
+        "authors": "Meng Cao, Jiexi Liu, Songcan Chen",
+        "url": "http://arxiv.org/abs/2601.21999v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21999v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在不平衡域泛化 (IDG) 方面，理论性地建立了泛化界限，并在此基础上提出了负样本主导的对比学习方法。明确提及“理论性地建立泛化界限”、“后验差异和决策边界的作用”，直接满足您对统计保证和理论基础的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21959v1",
+        "title": "Near-Optimal Private Tests for Simple and MLR Hypotheses",
+        "summary": "We develop a near-optimal testing procedure under the framework of Gaussian differential privacy for simple as well as one- and two-sided tests under monotone likelihood ratio conditions. Our mechanism is based on a private mean estimator with data-driven clamping bounds, whose population risk matches the private minimax rate up to logarithmic factors. Using this estimator, we construct private test statistics that achieve the same asymptotic relative efficiency as the non-private, most powerful tests while maintaining conservative type I error control. In addition to our theoretical results, our numerical experiments show that our private tests outperform competing DP methods and offer comparable power to the non-private most powerful tests, even at moderately small sample sizes and privacy loss budgets.",
+        "authors": "Yu-Wei Chen, Raghu Pasupathy, Jordan Awan",
+        "url": "http://arxiv.org/abs/2601.21959v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21959v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在高斯差分隐私框架下，开发了一种近乎最优的假设检验程序。它明确提及“私有极小极大率”、“渐近相对效率”和“保守的第一类错误控制”，是核心的数理统计工作，具有强大的理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21892v1",
+        "title": "Improving Classifier-Free Guidance of Flow Matching via Manifold Projection",
+        "summary": "Classifier-free guidance (CFG) is a widely used technique for controllable generation in diffusion and flow-based models. Despite its empirical success, CFG relies on a heuristic linear extrapolation that is often sensitive to the guidance scale. In this work, we provide a principled interpretation of CFG through the lens of optimization. We demonstrate that the velocity field in flow matching corresponds to the gradient of a sequence of smoothed distance functions, which guides latent variables toward the scaled target image set. This perspective reveals that the standard CFG formulation is an approximation of this gradient, where the prediction gap, the discrepancy between conditional and unconditional outputs, governs guidance sensitivity. Leveraging this insight, we reformulate the CFG sampling as a homotopy optimization with a manifold constraint. This formulation necessitates a manifold projection step, which we implement via an incremental gradient descent scheme during sampling. To improve computational efficiency and stability, we further enhance this iterative process with Anderson Acceleration without requiring additional model evaluations. Our proposed methods are training-free and consistently refine generation fidelity, prompt alignment, and robustness to the guidance scale. We validate their effectiveness across diverse benchmarks, demonstrating significant improvements on large-scale models such as DiT-XL-2-256, Flux, and Stable Diffusion 3.5.",
+        "authors": "Jian-Feng Cai, Haixia Liu, Zhengyi Su, Chao Wang",
+        "url": "http://arxiv.org/abs/2601.21892v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21892v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过优化理论的视角，对分类器无关引导 (CFG) 提供了原理性解释，并将其重新表述为具有流形约束的同伦优化问题。明确提及“原理性解释”、“优化”、“流形约束”和“流形投影”，展现了极高的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21817v1",
+        "title": "A Judge-Aware Ranking Framework for Evaluating Large Language Models without Ground Truth",
+        "summary": "Evaluating large language models (LLMs) on open-ended tasks without ground-truth labels is increasingly done via the LLM-as-a-judge paradigm. A critical but under-modeled issue is that judge LLMs differ substantially in reliability; treating all judges equally can yield biased leaderboards and misleading uncertainty estimates. More data can make evaluation more confidently wrong under misspecified aggregation. We propose a judge-aware ranking framework that extends the Bradley-Terry-Luce model by introducing judge-specific discrimination parameters, jointly estimating latent model quality and judge reliability from pairwise comparisons without reference labels. We establish identifiability up to natural normalizations and prove consistency and asymptotic normality of the maximum likelihood estimator, enabling confidence intervals for score differences and rank comparisons. Across multiple public benchmarks and a newly collected dataset, our method improves agreement with human preferences, achieves higher data efficiency than unweighted baselines, and produces calibrated uncertainty quantification for LLM rankings.",
+        "authors": "Mingyuan Xu, Xinzi Tan, Jiawei Wu, Doudou Zhou",
+        "url": "http://arxiv.org/abs/2601.21817v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21817v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个评委感知的 LLM 排名框架，扩展了 Bradley-Terry-Luce 模型，并证明了最大似然估计量的可识别性、一致性和渐近正态性。这是纯粹的数理统计方法论，具有严格的理论推导和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21816v1",
+        "title": "Nonparametric LLM Evaluation from Preference Data",
+        "summary": "Evaluating the performance of large language models (LLMs) from human preference data is crucial for obtaining LLM leaderboards. However, many existing approaches either rely on restrictive parametric assumptions or lack valid uncertainty quantification when flexible machine learning methods are used. In this paper, we propose a nonparametric statistical framework, DMLEval, for comparing and ranking LLMs from preference data using debiased machine learning (DML). For this, we introduce generalized average ranking scores (GARS), which generalize commonly used ranking models, including the Bradley-Terry model or PageRank/ Rank centrality, with complex human responses such as ties. DMLEval comes with the following advantages: (i) It produces statistically efficient estimates of GARS ranking scores. (ii) It naturally allows the incorporation of black-box machine learning methods for estimation. (iii) It can be combined with pre-trained LLM evaluators (e.g., using LLM-as-a-judge). (iv) It suggests optimal policies for collecting preference data under budget constraints. We demonstrate these advantages both theoretically and empirically using both synthetic and real-world preference datasets. In summary, our framework provides practitioners with powerful, state-of-the-art methods for comparing or ranking LLMs.",
+        "authors": "Dennis Frauen, Athiya Deviyani, Mihaela van der Schaar, Stefan Feuerriegel",
+        "url": "http://arxiv.org/abs/2601.21816v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21816v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于去偏机器学习 (DML) 的非参数统计框架 DMLEval，用于从偏好数据评估 LLM。强调了“非参数统计框架”、“统计高效估计”和“有效的不确定性量化”，是高度严谨的统计学研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21633v1",
+        "title": "A Tilted Seesaw: Revisiting Autoencoder Trade-off for Controllable Diffusion",
+        "summary": "In latent diffusion models, the autoencoder (AE) is typically expected to balance two capabilities: faithful reconstruction and a generation-friendly latent space (e.g., low gFID). In recent ImageNet-scale AE studies, we observe a systematic bias toward generative metrics in handling this trade-off: reconstruction metrics are increasingly under-reported, and ablation-based AE selection often favors the best-gFID configuration even when reconstruction fidelity degrades. We theoretically analyze why this gFID-dominant preference can appear unproblematic for ImageNet generation, yet becomes risky when scaling to controllable diffusion: AEs can induce condition drift, which limits achievable condition alignment. Meanwhile, we find that reconstruction fidelity, especially instance-level measures, better indicates controllability. We empirically validate the impact of tilted autoencoder evaluation on controllability by studying several recent ImageNet AEs. Using a multi-dimensional condition-drift evaluation protocol reflecting controllable generation tasks, we find that gFID is only weakly predictive of condition preservation, whereas reconstruction-oriented metrics are substantially more aligned. ControlNet experiments further confirm that controllability tracks condition preservation rather than gFID. Overall, our results expose a gap between ImageNet-centric AE evaluation and the requirements of scalable controllable diffusion, offering practical guidance for more reliable benchmarking and model selection.",
+        "authors": "Pu Cao, Yiyang Ma, Feng Zhou, Xuedan Yin, Qing Song, Lu Yang",
+        "url": "http://arxiv.org/abs/2601.21633v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21633v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过黎曼流匹配，理论性地将嵌入的负对数密度作为认知不确定性的代理，并在超球面流形上计算概率密度。明确提及“理论性地动机”、“超球面流形”和“黎曼流匹配”，具有极强的数学和统计学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21567v1",
+        "title": "FlexCausal: Flexible Causal Disentanglement via Structural Flow Priors and Manifold-Aware Interventions",
+        "summary": "Causal Disentangled Representation Learning(CDRL) aims to learn and disentangle low dimensional representations and their underlying causal structure from observations. However, existing disentanglement methods rely on a standard mean-field approximation with a diagonal posterior covariance, which decorrelates all latent dimensions. Additionally, these methods often assume isotropic Gaussian priors for exogenous noise, failing to capture the complex, non-Gaussian statistical properties prevalent in real-world causal factors. Therefore, we propose FlexCausal, a novel CDRL framework based on a block-diagonal covariance VAE. FlexCausal utilizes a Factorized Flow-based Prior to realistically model the complex densities of exogenous noise, effectively decoupling the learning of causal mechanisms from distributional statistics. By integrating supervised alignment objectives with counterfactual consistency constraints, our framework ensures a precise structural correspondence between the learned latent subspaces and the ground-truth causal relations. Finally, we introduce a manifold-aware relative intervention strategy to ensure high-fidelity generation. Experimental results on both synthetic and real-world datasets demonstrate that FlexCausal significantly outperforms other methods.",
+        "authors": "Yutao Jin, Yuang Tao, Junyong Zhai",
+        "url": "http://arxiv.org/abs/2601.21567v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21567v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 FlexCausal，一个基于块对角协方差 VAE 和因子化流先验的因果解耦表示学习框架。它整合了“反事实一致性约束”和“流形感知干预策略”，在因果逻辑和数学建模方面表现出高度严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21541v1",
+        "title": "Vision KAN: Towards an Attention-Free Backbone for Vision with Kolmogorov-Arnold Networks",
+        "summary": "Attention mechanisms have become a key module in modern vision backbones due to their ability to model long-range dependencies. However, their quadratic complexity in sequence length and the difficulty of interpreting attention weights limit both scalability and clarity. Recent attention-free architectures demonstrate that strong performance can be achieved without pairwise attention, motivating the search for alternatives. In this work, we introduce Vision KAN (ViK), an attention-free backbone inspired by the Kolmogorov-Arnold Networks. At its core lies MultiPatch-RBFKAN, a unified token mixer that combines (a) patch-wise nonlinear transform with Radial Basis Function-based KANs, (b) axis-wise separable mixing for efficient local propagation, and (c) low-rank global mapping for long-range interaction. Employing as a drop-in replacement for attention modules, this formulation tackles the prohibitive cost of full KANs on high-resolution features by adopting a patch-wise grouping strategy with lightweight operators to restore cross-patch dependencies. Experiments on ImageNet-1K show that ViK achieves competitive accuracy with linear complexity, demonstrating the potential of KAN-based token mixing as an efficient and theoretically grounded alternative to attention.",
+        "authors": "Zhuoqin Yang, Jiansong Zhang, Xiaoling Luo, Xu Wu, Zheng Lu, Linlin Shen",
+        "url": "http://arxiv.org/abs/2601.21541v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21541v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了 Vision KAN，一个基于 Kolmogorov-Arnold Networks (KANs) 的无注意力视觉骨干网络。KANs 直接来源于 Kolmogorov-Arnold 表示定理，这使其具有深厚的数学理论基础，是理论驱动的架构创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21529v1",
+        "title": "Fast and Geometrically Grounded Lorentz Neural Networks",
+        "summary": "Hyperbolic space is quickly gaining traction as a promising geometry for hierarchical and robust representation learning. A core open challenge is the development of a mathematical formulation of hyperbolic neural networks that is both efficient and captures the key properties of hyperbolic space. The Lorentz model of hyperbolic space has been shown to enable both fast forward and backward propagation. However, we prove that, with the current formulation of Lorentz linear layers, the hyperbolic norms of the outputs scale logarithmically with the number of gradient descent steps, nullifying the key advantage of hyperbolic geometry. We propose a new Lorentz linear layer grounded in the well-known ``distance-to-hyperplane\" formulation. We prove that our formulation results in the usual linear scaling of output hyperbolic norms with respect to the number of gradient descent steps. Our new formulation, together with further algorithmic efficiencies through Lorentzian activation functions and a new caching strategy results in neural networks fully abiding by hyperbolic geometry while simultaneously bridging the computation gap to Euclidean neural networks. Code available at: https://github.com/robertdvdk/hyperbolic-fully-connected.",
+        "authors": "Robert van der Klis, Ricardo Chávez Torres, Max van Spengler, Yuhui Ding, Thomas Hofmann, Pascal Mettes",
+        "url": "http://arxiv.org/abs/2601.21529v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21529v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个在洛伦兹模型中快速且几何上扎实的双曲神经网络新公式，并证明了其输出双曲范数的线性缩放特性，完全符合双曲几何。明确提及“我们证明”、“完全遵循双曲几何”，是严谨的几何数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21455v1",
+        "title": "Questioning the Coverage-Length Metric in Conformal Prediction: When Shorter Intervals Are Not Better",
+        "summary": "Conformal prediction (CP) has become a cornerstone of distribution-free uncertainty quantification, conventionally evaluated by its coverage and interval length. This work critically examines the sufficiency of these standard metrics. We demonstrate that the interval length might be deceptively improved through a counter-intuitive approach termed Prejudicial Trick (PT), while the coverage remains valid. Specifically, for any given test sample, PT probabilistically returns an interval, which is either null or constructed using an adjusted confidence level, thereby preserving marginal coverage. While PT potentially yields a deceptively lower interval length, it introduces practical vulnerabilities: the same input can yield completely different prediction intervals across repeated runs of the algorithm. We formally derive the conditions under which PT achieves these misleading improvements and provides extensive empirical evidence across various regression and classification tasks. Furthermore, we introduce a new metric interval stability which helps detect whether a new CP method implicitly improves the length based on such PT-like techniques.",
+        "authors": "Yizhou Min, Yizhou Lu, Lanqi Li, Zhen Zhang, Jiaye Teng",
+        "url": "http://arxiv.org/abs/2601.21455v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21455v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为深度线性网络开发了一个理论，确定了局部自监督学习算法能够精确实现与全局反向传播相同权重更新的条件。这是对学习算法基本数学性质的深入理论分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21355v1",
+        "title": "Decentralized Learning with Dynamically Refined Edge Weights: A Data-Dependent Framework",
+        "summary": "This paper aims to accelerate decentralized optimization by strategically designing the edge weights used in the agent-to-agent message exchanges. We propose a Dynamic Directed Decentralized Gradient (D3GD) framework and show that the proposed data-dependent framework is a practical alternative to the classical directed DGD (Di-DGD) algorithm for learning on directed graphs. To obtain a strategy for edge weights refinement, we derive a design function inspired by the cost-to-go function in a new convergence analysis for Di-DGD. This results in a data-dependent dynamical design for the edge weights. A fully decentralized version of D3GD is developed such that each agent refines its communication strategy using only neighbor's information. Numerical experiments show that D3GD accelerates convergence towards stationary solution by 30-40\\% over Di-DGD, and learns edge weights that adapt to data similarity.",
+        "authors": "Rongxing Du, Hoi-To Wai",
+        "url": "http://arxiv.org/abs/2601.21355v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21355v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个数据依赖的框架 D3GD，通过在新的收敛性分析中，从成本-到-去函数中导出一个设计函数，来动态优化去中心化学习中的边权重。明确提及“新的收敛性分析”，是严谨的优化理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21324v1",
+        "title": "Bulk-Calibrated Credal Ambiguity Sets: Fast, Tractable Decision Making under Out-of-Sample Contamination",
+        "summary": "Distributionally robust optimisation (DRO) minimises the worst-case expected loss over an ambiguity set that can capture distributional shifts in out-of-sample environments. While Huber (linear-vacuous) contamination is a classical minimal-assumption model for an $\\varepsilon$-fraction of arbitrary perturbations, including it in an ambiguity set can make the worst-case risk infinite and the DRO objective vacuous unless one imposes strong boundedness or support assumptions. We address these challenges by introducing bulk-calibrated credal ambiguity sets: we learn a high-mass bulk set from data while considering contamination inside the bulk and bounding the remaining tail contribution separately. This leads to a closed-form, finite $\\mathrm{mean}+\\sup$ robust objective and tractable linear or second-order cone programs for common losses and bulk geometries. Through this framework, we highlight and exploit the equivalence between the imprecise probability (IP) notion of upper expectation and the worst-case risk, demonstrating how IP credal sets translate into DRO objectives with interpretable tolerance levels. Experiments on heavy-tailed inventory control, geographically shifted house-price regression, and demographically shifted text classification show competitive robustness-accuracy trade-offs and efficient optimisation times, using Bayesian, frequentist, or empirical reference distributions.",
+        "authors": "Mengqi Chen, Thomas B. Berrett, Theodoros Damoulas, Michele Caprio",
+        "url": "http://arxiv.org/abs/2601.21324v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21324v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了批量校准的 Credal Ambiguity Sets 用于分布鲁棒优化 (DRO)，解决了 Huber 污染的挑战。它导出了“封闭形式的、有限的均值+上界鲁棒目标”和“可处理的线性或二阶锥规划”，并强调了与不精确概率的等价性，具有极强的优化和概率论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21255v1",
+        "title": "Hypersolid: Emergent Vision Representations via Short-Range Repulsion",
+        "summary": "A recurring challenge in self-supervised learning is preventing representation collapse. Existing solutions typically rely on global regularization, such as maximizing distances, decorrelating dimensions or enforcing certain distributions. We instead reinterpret representation learning as a discrete packing problem, where preserving information simplifies to maintaining injectivity. We operationalize this in Hypersolid, a method using short-range hard-ball repulsion to prevent local collisions. This constraint results in a high-separation geometric regime that preserves augmentation diversity, excelling on fine-grained and low-resolution classification tasks.",
+        "authors": "Esteban Rodríguez-Betancourt, Edgar Casasola-Murillo",
+        "url": "http://arxiv.org/abs/2601.21255v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21255v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将表示学习重新解释为“离散打包问题”，并通过“短程硬球排斥”来防止表示崩溃，以保持信息的“内射性”。其核心概念是数学和几何驱动的，旨在从基本原理解决表示学习问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21135v1",
+        "title": "TRACE: Trajectory Recovery for Continuous Mechanism Evolution in Causal Representation Learning",
+        "summary": "Temporal causal representation learning methods assume that causal mechanisms switch instantaneously between discrete domains, yet real-world systems often exhibit continuous mechanism transitions. For example, a vehicle's dynamics evolve gradually through a turning maneuver, and human gait shifts smoothly from walking to running. We formalize this setting by modeling transitional mechanisms as convex combinations of finitely many atomic mechanisms, governed by time-varying mixing coefficients. Our theoretical contributions establish that both the latent causal variables and the continuous mixing trajectory are jointly identifiable. We further propose TRACE, a Mixture-of-Experts framework where each expert learns one atomic mechanism during training, enabling recovery of mechanism trajectories at test time. This formulation generalizes to intermediate mechanism states never observed during training. Experiments on synthetic and real-world data demonstrate that TRACE recovers mixing trajectories with up to 0.99 correlation, substantially outperforming discrete-switching baselines.",
+        "authors": "Shicheng Fan, Kun Zhang, Lu Cheng",
+        "url": "http://arxiv.org/abs/2601.21135v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21135v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文形式化了因果表示学习中的连续机制转换，并建立了潜在因果变量和连续混合轨迹的联合可识别性。明确提及“理论贡献建立了...联合可识别性”，这是因果逻辑和统计保证的核心内容。"
+    }
+]

@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2601.21624v1",
+        "title": "Training Memory in Deep Neural Networks: Mechanisms, Evidence, and Measurement Gaps",
+        "summary": "Modern deep-learning training is not memoryless. Updates depend on optimizer moments and averaging, data-order policies (random reshuffling vs with-replacement, staged augmentations and replay), the nonconvex path, and auxiliary state (teacher EMA/SWA, contrastive queues, BatchNorm statistics). This survey organizes mechanisms by source, lifetime, and visibility. It introduces seed-paired, function-space causal estimands; portable perturbation primitives (carry/reset of momentum/Adam/EMA/BN, order-window swaps, queue/teacher tweaks); and a reporting checklist with audit artifacts (order hashes, buffer/BN checksums, RNG contracts). The conclusion is a protocol for portable, causal, uncertainty-aware measurement that attributes how much training history matters across models, data, and regimes.",
+        "authors": "Vasileios Sevetlidis, George Pavlidis",
+        "url": "http://arxiv.org/abs/2601.21624v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21624v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "深度剖析深度神经网络训练的内在机制与因果效应，为理解LLM理论机制提供硬核基础。",
+        "reason_zh": "这篇论文深入探讨了深度神经网络训练过程中“记忆”的机制，包括优化器、数据顺序、非凸路径等因素的影响，并引入了因果估计量来量化这些影响。对于统计学博士生而言，理解LLM等复杂模型的理论机制，以及高维统计中的优化问题，这提供了非常硬核的数学和理论基础。它不是一个入门教程，而是一个对核心机制的深入剖析，非常适合补全博士阶段的理论拼图。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21067v1",
+        "title": "Out-of-Distribution Generalization in Graph Foundation Models",
+        "summary": "Graphs are a fundamental data structure for representing relational information in domains such as social networks, molecular systems, and knowledge graphs. However, graph learning models often suffer from limited generalization when applied beyond their training distributions. In practice, distribution shifts may arise from changes in graph structure, domain semantics, available modalities, or task formulations. To address these challenges, graph foundation models (GFMs) have recently emerged, aiming to learn general-purpose representations through large-scale pretraining across diverse graphs and tasks. In this survey, we review recent progress on GFMs from the perspective of out-of-distribution (OOD) generalization. We first discuss the main challenges posed by distribution shifts in graph learning and outline a unified problem setting. We then organize existing approaches based on whether they are designed to operate under a fixed task specification or to support generalization across heterogeneous task formulations, and summarize the corresponding OOD handling strategies and pretraining objectives. Finally, we review common evaluation protocols and discuss open directions for future research. To the best of our knowledge, this paper is the first survey for OOD generalization in GFMs.",
+        "authors": "Haoyang Li, Haibo Chen, Xin Wang, Wenwu Zhu",
+        "url": "http://arxiv.org/abs/2601.21067v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21067v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "系统综述图基础模型中的OOD泛化挑战与策略，为理解鲁棒机器学习提供理论基石。",
+        "reason_zh": "OOD（Out-of-Distribution）泛化是现代统计学和机器学习中的核心挑战。这篇综述从统一的问题设定出发，系统地讨论了图基础模型中分布偏移的挑战及应对策略。尽管聚焦于图模型，但其对OOD泛化这一基本问题的理论探讨和方法分类，对于理解高维统计和因果推断中的泛化能力具有重要的基础价值和数学严谨性，是构建鲁棒机器学习理论体系的重要一环。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.20428v1",
+        "title": "Nonlinear Dimensionality Reduction with Diffusion Maps in Practice",
+        "summary": "Diffusion Map is a spectral dimensionality reduction technique which is able to uncover nonlinear submanifolds in high-dimensional data. And, it is increasingly applied across a wide range of scientific disciplines, such as biology, engineering, and social sciences. But data preprocessing, parameter settings and component selection have a significant influence on the resulting manifold, something which has not been comprehensively discussed in the literature so far. We provide a practice oriented review of the Diffusion Map technique, illustrate pitfalls and showcase a recently introduced technique for identifying the most relevant components. Our results show that the first components are not necessarily the most relevant ones.",
+        "authors": "Sönke Beier, Paula Pirker-Díaz, Friedrich Pagenkopf, Karoline Wiesner",
+        "url": "http://arxiv.org/abs/2601.20428v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.20428v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "实践导向但理论严谨地回顾扩散映射，帮助理解高维数据的非线性降维技术。",
+        "reason_zh": "Diffusion Map 是一种重要的谱降维技术，用于揭示高维数据中的非线性流形。虽然标题有“in Practice”，但摘要强调了其在科学领域的广泛应用，并且谱方法通常具有坚实的数学基础（如特征值分解、图拉普拉斯算子）。如果这篇综述能深入阐述 Diffusion Map 的数学原理和理论属性，它将是高维统计中一个硬核的数学基础资料，有助于理解高维数据的内在结构。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18932v1",
+        "title": "Advances in Diffusion-Based Generative Compression",
+        "summary": "Popularized by their strong image generation performance, diffusion and related methods for generative modeling have found widespread success in visual media applications. In particular, diffusion methods have enabled new approaches to data compression, where realistic reconstructions can be generated at extremely low bit-rates. This article provides a unifying review of recent diffusion-based methods for generative lossy compression, with a focus on image compression. These methods generally encode the source into an embedding and employ a diffusion model to iteratively refine it in the decoding procedure, such that the final reconstruction approximately follows the ground truth data distribution. The embedding can take various forms and is typically transmitted via an auxiliary entropy model, and recent methods also explore the use of diffusion models themselves for information transmission via channel simulation. We review representative approaches through the lens of rate-distortion-perception theory, highlighting the role of common randomness and connections to inverse problems, and identify open challenges.",
+        "authors": "Yibo Yang, Stephan Mandt",
+        "url": "http://arxiv.org/abs/2601.18932v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18932v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "全面回顾基于扩散的生成式压缩，深入探讨其与率失真理论和信息论的联系。",
+        "reason_zh": "扩散模型是当前生成模型的前沿，这篇综述将其与数据压缩理论（特别是率失真感知理论）和逆问题联系起来。理解扩散模型的数学原理及其与信息论核心概念的结合，对于博士生深入研究生成模型和信息论具有重要的基础价值和理论深度。它提供了从信息论角度理解生成模型的新视角，是补全相关数学拼图的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18509v1",
+        "title": "Conformal Prediction Algorithms for Time Series Forecasting: Methods and Benchmark",
+        "summary": "Reliable uncertainty quantification is of critical importance in time series forecasting, yet traditional methods often rely on restrictive distributional assumptions. Conformal prediction (CP) has emerged as a promising distribution-free framework for generating prediction intervals with rigorous theoretical guarantees. However, applying CP to sequential data presents a primary challenge: the temporal dependencies inherent in time series fundamentally violate the core assumption of data exchangeability, upon which standard CP guarantees are built. This review critically examines the main categories of algorithmic solutions designed to address this conflict. We survey and benchmark methods that relax the exchangeability assumption, those that redefine the data unit to be a collection of independent time series, approaches that explicitly model the dynamics of the prediction residuals, and online learning algorithms that adapt to distribution shifts to maintain long-run coverage. By synthesizing these approaches, we highlight computational efficiency and practical performance on real-world data.",
+        "authors": "Andro Sabashvili",
+        "url": "http://arxiv.org/abs/2601.18509v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18509v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "系统性综述时间序列预测中的共形预测算法，提供严格的不确定性量化理论基础。",
+        "reason_zh": "Conformal Prediction (CP) 是一种提供严格理论保证的不确定性量化框架，对于时间序列数据尤其具有挑战性。这篇综述批判性地审视了解决时间依赖性挑战的算法方案，强调了其“严格理论保证”和“免分布”特性。这对于高维统计和因果推断中对稳健推断和不确定性量化的需求，提供了非常坚实的数学和统计学基础，是理解现代统计推断中不确定性量化的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.21700v1",
+        "title": "Toward Culturally Aligned LLMs through Ontology-Guided Multi-Agent Reasoning",
+        "summary": "Large Language Models (LLMs) increasingly support culturally sensitive decision making, yet often exhibit misalignment due to skewed pretraining data and the absence of structured value representations. Existing methods can steer outputs, but often lack demographic grounding and treat values as independent, unstructured signals, reducing consistency and interpretability. We propose OG-MAR, an Ontology-Guided Multi-Agent Reasoning framework. OG-MAR summarizes respondent-specific values from the World Values Survey (WVS) and constructs a global cultural ontology by eliciting relations over a fixed taxonomy via competency questions. At inference time, it retrieves ontology-consistent relations and demographically similar profiles to instantiate multiple value-persona agents, whose outputs are synthesized by a judgment agent that enforces ontology consistency and demographic proximity. Experiments on regional social-survey benchmarks across four LLM backbones show that OG-MAR improves cultural alignment and robustness over competitive baselines, while producing more transparent reasoning traces.",
+        "authors": "Wonduk Seo, Wonseok Choi, Junseo Koh, Juhyeon Lee, Hyunjin An, Minhyeong Yu, Jian Park, Qingshan Zhou, Seunghyun Lee, Yi Bu",
+        "url": "http://arxiv.org/abs/2601.21700v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.21700v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "探索通过本体论引导的多智能体推理，实现LLM的文化对齐，指引LLM在复杂社会场景的应用研究。",
+        "reason_zh": "这篇论文探讨了如何通过本体论引导的多智能体推理框架，实现LLM的文化对齐。它不仅涉及LLM的最新进展，还融合了多智能体系统、知识表示（本体论）和文化敏感性等复杂问题，具有高度的理论深度和前瞻性。这对于LLM在跨文化、高风险决策场景中的应用和理论机制研究，提供了重要的指引和研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19778v1",
+        "title": "Reimagining Peer Review Process Through Multi-Agent Mechanism Design",
+        "summary": "The software engineering research community faces a systemic crisis: peer review is failing under growing submissions, misaligned incentives, and reviewer fatigue. Community surveys reveal that researchers perceive the process as \"broken.\" This position paper argues that these dysfunctions are mechanism design failures amenable to computational solutions. We propose modeling the research community as a stochastic multi-agent system and applying multi-agent reinforcement learning to design incentive-compatible protocols. We outline three interventions: a credit-based submission economy, MARL-optimized reviewer assignment, and hybrid verification of review consistency. We present threat models, equity considerations, and phased pilot metrics. This vision charts a research agenda toward sustainable peer review.",
+        "authors": "Ahmad Farooq, Kamran Iqbal",
+        "url": "http://arxiv.org/abs/2601.19778v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19778v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "将同行评审建模为多智能体系统，利用强化学习设计激励兼容协议，开辟机制设计新范式。",
+        "reason_zh": "这篇论文将学术同行评审建模为随机多智能体系统，并应用多智能体强化学习来设计激励兼容的协议。它将RL和博弈论中的机制设计理论应用于解决现实世界的复杂社会系统问题，具有很强的理论创新性和跨学科视野。这与Offline RL和LLM理论机制（作为智能体）紧密相关，为未来研究如何设计高效、公平的智能系统提供了新的思路和方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.19151v1",
+        "title": "TS-Debate: Multimodal Collaborative Debate for Zero-Shot Time Series Reasoning",
+        "summary": "Recent progress at the intersection of large language models (LLMs) and time series (TS) analysis has revealed both promise and fragility. While LLMs can reason over temporal structure given carefully engineered context, they often struggle with numeric fidelity, modality interference, and principled cross-modal integration. We present TS-Debate, a modality-specialized, collaborative multi-agent debate framework for zero-shot time series reasoning. TS-Debate assigns dedicated expert agents to textual context, visual patterns, and numerical signals, preceded by explicit domain knowledge elicitation, and coordinates their interaction via a structured debate protocol. Reviewer agents evaluate agent claims using a verification-conflict-calibration mechanism, supported by lightweight code execution and numerical lookup for programmatic verification. This architecture preserves modality fidelity, exposes conflicting evidence, and mitigates numeric hallucinations without task-specific fine-tuning. Across 20 tasks spanning three public benchmarks, TS-Debate achieves consistent and significant performance improvements over strong baselines, including standard multimodal debate in which all agents observe all inputs.",
+        "authors": "Patara Trirat, Jin Myung Kwak, Jay Heo, Heejun Lee, Sung Ju Hwang",
+        "url": "http://arxiv.org/abs/2601.19151v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.19151v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出多模态协作辩论框架，提升LLM在零样本时间序列推理中的表现，深化LLM推理机制理解。",
+        "reason_zh": "这篇论文提出了一个多模态协作辩论框架 TS-Debate，用于零样本时间序列推理，有效解决了LLM在时间序列分析中数值保真度、模态干扰等问题。它深入探讨了LLM在复杂多模态推理任务中的机制，特别是通过多智能体协作和程序化验证来提高推理能力。这对于理解LLM的理论机制、多智能体系统以及多模态数据处理，具有非常前沿的研究价值和方向指引。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.18953v1",
+        "title": "Reinforcement Learning for Quantum Technology",
+        "summary": "Many challenges arising in Quantum Technology can be successfully addressed using a set of machine learning algorithms collectively known as reinforcement learning (RL), based on adaptive decision-making through interaction with the quantum device. After a concise and intuitive introduction to RL aimed at a broad physics readership, we discuss the key ideas and core concepts in reinforcement learning with a particular focus on quantum systems. We then survey recent progress in RL in all relevant areas. We discuss state preparation in few- and many-body quantum systems, the design and optimization of high-fidelity quantum gates, and the automated construction of quantum circuits, including applications to variational quantum eigensolvers and architecture search. We further highlight the interactive capabilities of RL agents, emphasizing recent progress in quantum feedback control and quantum error correction, and briefly discuss quantum reinforcement learning as well as applications to quantum metrology. The review concludes with a discussion of open challenges -- such as scalability, interpretability, and integration with experimental platforms -- and outlines promising directions for future research. Throughout, we highlight experimental implementations that exemplify the increasing role of reinforcement learning in shaping the development of quantum technologies.",
+        "authors": "Marin Bukov, Florian Marquardt",
+        "url": "http://arxiv.org/abs/2601.18953v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.18953v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述强化学习在量子技术中的应用进展，为RL在物理学前沿的交叉研究提供广阔视野。",
+        "reason_zh": "这是一篇关于强化学习在量子技术中应用的综述，涵盖了量子态制备、量子门设计、量子电路优化等多个方面。量子技术是极具前瞻性的领域，而RL作为其核心方法之一，这篇综述为博士生提供了理解RL在这一前沿领域应用的关键概念和未来研究方向。它展现了RL在物理学前沿的巨大潜力，具有跨学科的视野和实用性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2601.17920v1",
+        "title": "Agentic AI for Self-Driving Laboratories in Soft Matter: Taxonomy, Benchmarks,and Open Challenges",
+        "summary": "Self-driving laboratories (SDLs) close the loop between experiment design, automated execution, and data-driven decision making, and they provide a demanding testbed for agentic AI under expensive actions, noisy and delayed feedback, strict feasibility and safety constraints, and non-stationarity. This survey uses soft matter as a representative setting but focuses on the AI questions that arise in real laboratories. We frame SDL autonomy as an agent environment interaction problem with explicit observations, actions, costs, and constraints, and we use this formulation to connect common SDL pipelines to established AI principles. We review the main method families that enable closed loop experimentation, including Bayesian optimization and active learning for sample efficient experiment selection, planning and reinforcement learning for long horizon protocol optimization, and tool using agents that orchestrate heterogeneous instruments and software. We emphasize verifiable and provenance aware policies that support debugging, reproducibility, and safe operation. We then propose a capability driven taxonomy that organizes systems by decision horizon, uncertainty modeling, action parameterization, constraint handling, failure recovery, and human involvement. To enable meaningful comparison, we synthesize benchmark task templates and evaluation metrics that prioritize cost aware performance, robustness to drift, constraint violation behavior, and reproducibility. Finally, we distill lessons from deployed SDLs and outline open challenges in multi-modal representation, calibrated uncertainty, safe exploration, and shared benchmark infrastructure.",
+        "authors": "Xuanzhou Chen, Audrey Wang, Stanley Yin, Hanyang Jiang, Dong Zhang",
+        "url": "http://arxiv.org/abs/2601.17920v1",
+        "pdf_url": "https://arxiv.org/pdf/2601.17920v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "系统性探讨Agentic AI在自驱动实验室中的应用，融合多种AI方法，指引科学发现新范式。",
+        "reason_zh": "这篇综述探讨了 Agentic AI 在自驱动实验室（SDLs）中的应用，这是一个结合了贝叶斯优化、主动学习、规划和强化学习的复杂系统。它不仅提供了 SDLs 的 AI 问题框架，还提出了能力驱动的分类法和基准。对于理解多智能体系统、Offline RL 和贝叶斯优化在科学发现这一高成本、高约束环境下的理论和实践挑战，具有高度的前沿性和指导意义，指引了未来AI辅助科学发现的研究方向。"
+    }
+]

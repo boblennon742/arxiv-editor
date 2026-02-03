@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.02366v1",
+        "title": "ReasonCACHE: Teaching LLMs To Reason Without Weight Updates",
+        "summary": "Can Large language models (LLMs) learn to reason without any weight update and only through in-context learning (ICL)? ICL is strikingly sample-efficient, often learning from only a handful of demonstrations, but complex reasoning tasks typically demand many training examples to learn from. However, naively scaling ICL by adding more demonstrations breaks down at this scale: attention costs grow quadratically, performance saturates or degrades with longer contexts, and the approach remains a shallow form of learning. Due to these limitations, practitioners predominantly rely on in-weight learning (IWL) to induce reasoning. In this work, we show that by using Prefix Tuning, LLMs can learn to reason without overloading the context window and without any weight updates. We introduce $\\textbf{ReasonCACHE}$, an instantiation of this mechanism that distills demonstrations into a fixed key-value cache. Empirically, across challenging reasoning benchmarks, including GPQA-Diamond, ReasonCACHE outperforms standard ICL and matches or surpasses IWL approaches. Further, it achieves this all while being more efficient across three key axes: data, inference cost, and trainable parameters. We also theoretically prove that ReasonCACHE can be strictly more expressive than low-rank weight update since the latter ties expressivity to input rank, whereas ReasonCACHE bypasses this constraint by directly injecting key-values into the attention mechanism. Together, our findings identify ReasonCACHE as a middle path between in-context and in-weight learning, providing a scalable algorithm for learning reasoning skills beyond the context window without modifying parameters. Our project page: https://reasoncache.github.io/",
+        "authors": "Sharut Gupta, Phillip Isola, Stefanie Jegelka, David Lopez-Paz, Kartik Ahuja, Mark Ibrahim, Mohammad Pezeshki",
+        "url": "http://arxiv.org/abs/2602.02366v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02366v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 ReasonCACHE 框架，通过 Prefix Tuning 和 KV 缓存蒸馏，使 LLM 能够在不更新权重的情况下进行可扩展的推理。它在数据、推理成本和可训练参数方面都更高效，并且理论上证明比低秩权重更新更具表达力。这完美契合了您对前沿算法、理论创新和解决 LLM 实际瓶颈（如推理效率、上下文限制）的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02128v1",
+        "title": "Scalable Spatio-Temporal SE(3) Diffusion for Long-Horizon Protein Dynamics",
+        "summary": "Molecular dynamics (MD) simulations remain the gold standard for studying protein dynamics, but their computational cost limits access to biologically relevant timescales. Recent generative models have shown promise in accelerating simulations, yet they struggle with long-horizon generation due to architectural constraints, error accumulation, and inadequate modeling of spatio-temporal dynamics. We present STAR-MD (Spatio-Temporal Autoregressive Rollout for Molecular Dynamics), a scalable SE(3)-equivariant diffusion model that generates physically plausible protein trajectories over microsecond timescales. Our key innovation is a causal diffusion transformer with joint spatio-temporal attention that efficiently captures complex space-time dependencies while avoiding the memory bottlenecks of existing methods. On the standard ATLAS benchmark, STAR-MD achieves state-of-the-art performance across all metrics--substantially improving conformational coverage, structural validity, and dynamic fidelity compared to previous methods. STAR-MD successfully extrapolates to generate stable microsecond-scale trajectories where baseline methods fail catastrophically, maintaining high structural quality throughout the extended rollout. Our comprehensive evaluation reveals severe limitations in current models for long-horizon generation, while demonstrating that STAR-MD's joint spatio-temporal modeling enables robust dynamics simulation at biologically relevant timescales, paving the way for accelerated exploration of protein function.",
+        "authors": "Nima Shoghi, Yuxuan Liu, Yuning Shen, Rob Brekelmans, Pan Li, Quanquan Gu",
+        "url": "http://arxiv.org/abs/2602.02128v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02128v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "STAR-MD 提出了一个可扩展的 SE(3) 等变扩散模型，用于生成微秒级蛋白质动力学轨迹。其核心创新在于因果扩散 Transformer 与联合时空注意力机制，有效解决了现有方法在长序列生成中的内存瓶颈和误差累积问题。这在科学 AI 领域具有极高的理论创新性和实践影响力，尤其对数理统计背景的您而言，其严谨的等变性设计和对复杂动力学系统的建模将非常有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02113v1",
+        "title": "Training-free score-based diffusion for parameter-dependent stochastic dynamical systems",
+        "summary": "Simulating parameter-dependent stochastic differential equations (SDEs) presents significant computational challenges, as separate high-fidelity simulations are typically required for each parameter value of interest. Despite the success of machine learning methods in learning SDE dynamics, existing approaches either require expensive neural network training for score function estimation or lack the ability to handle continuous parameter dependence. We present a training-free conditional diffusion model framework for learning stochastic flow maps of parameter-dependent SDEs, where both drift and diffusion coefficients depend on physical parameters. The key technical innovation is a joint kernel-weighted Monte Carlo estimator that approximates the conditional score function using trajectory data sampled at discrete parameter values, enabling interpolation across both state space and the continuous parameter domain. Once trained, the resulting generative model produces sample trajectories for any parameter value within the training range without retraining, significantly accelerating parameter studies, uncertainty quantification, and real-time filtering applications. The performance of the proposed approach is demonstrated via three numerical examples of increasing complexity, showing accurate approximation of conditional distributions across varying parameter values.",
+        "authors": "Minglei Yang, Sicheng He",
+        "url": "http://arxiv.org/abs/2602.02113v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02113v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个免训练的条件扩散模型框架，用于学习参数依赖型随机微分方程 (SDE) 的随机流映射。其关键技术创新是联合核加权蒙特卡洛估计器，能够近似条件分数函数并在连续参数域上进行插值。这在理论上非常新颖和严谨，解决了科学计算中的一个重要瓶颈，对您的数理统计背景而言，其对 SDE 建模和不确定性量化的贡献将是亮点。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02061v1",
+        "title": "Learning to Route and Schedule LLMs from User Retrials via Contextual Queueing Bandits",
+        "summary": "Explosive demands for LLMs often cause user queries to accumulate in server queues, requiring efficient routing (query-LLM matching) and scheduling (query prioritization) mechanisms. Several online algorithms are being deployed, but they overlook the following two key challenges inherent to conversational LLM services: (1) unsatisfied users may retry queries, increasing the server backlog, and (2) requests for ``explicit\" feedback, such as ratings, degrade user experiences. In this paper, we develop a joint routing and scheduling algorithm that leverages ``implicit\" feedback inferred from user retrial behaviors. The key idea is to propose and study the framework of contextual queueing bandits with multinomial logit feedback (CQB-MNL). CQB-MNL models query retrials, as well as context-based learning for user preferences over LLMs. Our algorithm, anytime CQB (ACQB), achieves efficient learning while maintaining queue stability by combining Thompson sampling with forced exploration at a decaying rate. We show that ACQB simultaneously achieves a cumulative regret of $\\widetilde{\\mathcal{O}}(\\sqrt{t})$ for routing and a queue length regret of $\\widetilde{\\mathcal{O}}(t^{-1/4})$ for any large $t$. For experiments, we refine query embeddings via contrastive learning while adopting a disjoint parameter model to learn LLM-specific parameters. Experiments on SPROUT, EmbedLLM, and RouterBench datasets confirm that both algorithms consistently outperform baselines.",
+        "authors": "Seoungbin Bae, Junyoung Son, Dabeen Lee",
+        "url": "http://arxiv.org/abs/2602.02061v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02061v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了一种联合路由和调度算法，通过上下文排队多项式 Logit 强盗 (CQB-MNL) 框架，利用用户重试行为的隐式反馈来优化 LLM 服务。算法 ACQB 实现了高效学习和队列稳定性，并提供了强有力的理论保证。这在 LLM 部署和资源管理方面具有显著的理论创新和实际应用价值，其统计学和优化理论的结合非常适合您的背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02035v1",
+        "title": "Bandwidth-Efficient Multi-Agent Communication through Information Bottleneck and Vector Quantization",
+        "summary": "Multi-agent reinforcement learning systems deployed in real-world robotics applications face severe communication constraints that significantly impact coordination effectiveness. We present a framework that combines information bottleneck theory with vector quantization to enable selective, bandwidth-efficient communication in multi-agent environments. Our approach learns to compress and discretize communication messages while preserving task-critical information through principled information-theoretic optimization. We introduce a gated communication mechanism that dynamically determines when communication is necessary based on environmental context and agent states. Experimental evaluation on challenging coordination tasks demonstrates that our method achieves 181.8% performance improvement over no-communication baselines while reducing bandwidth usage by 41.4%. Comprehensive Pareto frontier analysis shows dominance across the entire success-bandwidth spectrum with area-under-curve of 0.198 vs 0.142 for next-best methods. Our approach significantly outperforms existing communication strategies and establishes a theoretically grounded framework for deploying multi-agent systems in bandwidth-constrained environments such as robotic swarms, autonomous vehicle fleets, and distributed sensor networks.",
+        "authors": "Ahmad Farooq, Kamran Iqbal",
+        "url": "http://arxiv.org/abs/2602.02035v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02035v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个结合信息瓶颈理论和向量量化的框架，用于多智能体系统中带宽高效的通信。它学习压缩和离散化通信消息，同时通过信息论优化保留任务关键信息。这在理论上非常严谨，解决了多智能体系统在实际应用中面临的关键通信瓶颈，对前沿算法和架构的研究具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.01988v1",
+        "title": "Stochastic Interpolants in Hilbert Spaces",
+        "summary": "Although diffusion models have successfully extended to function-valued data, stochastic interpolants -- which offer a flexible way to bridge arbitrary distributions -- remain limited to finite-dimensional settings. This work bridges this gap by establishing a rigorous framework for stochastic interpolants in infinite-dimensional Hilbert spaces. We provide comprehensive theoretical foundations, including proofs of well-posedness and explicit error bounds. We demonstrate the effectiveness of the proposed framework for conditional generation, focusing particularly on complex PDE-based benchmarks. By enabling generative bridges between arbitrary functional distributions, our approach achieves state-of-the-art results, offering a powerful, general-purpose tool for scientific discovery.",
+        "authors": "James Boran Yu, RuiKang OuYang, Julien Horwood, José Miguel Hernández-Lobato",
+        "url": "http://arxiv.org/abs/2602.01988v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.01988v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在无限维 Hilbert 空间中建立了随机插值器的严格框架，提供了完备的理论基础，包括适定性证明和显式误差界限。它在条件生成方面表现出色，并在基于 PDE 的基准测试中取得了 SOTA 结果。这篇论文在生成模型和函数值数据处理方面具有极高的理论创新性和严谨性，是数理统计博士生深入研究生成模型理论的绝佳选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02474v1",
+        "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+        "summary": "Most Large Language Model (LLM) agent memory systems rely on a small set of static, hand-designed operations for extracting memory. These fixed procedures hard-code human priors about what to store and how to revise memory, making them rigid under diverse interaction patterns and inefficient on long histories. To this end, we present \\textbf{MemSkill}, which reframes these operations as learnable and evolvable memory skills, structured and reusable routines for extracting, consolidating, and pruning information from interaction traces. Inspired by the design philosophy of agent skills, MemSkill employs a \\emph{controller} that learns to select a small set of relevant skills, paired with an LLM-based \\emph{executor} that produces skill-guided memories. Beyond learning skill selection, MemSkill introduces a \\emph{designer} that periodically reviews hard cases where selected skills yield incorrect or incomplete memories, and evolves the skill set by proposing refinements and new skills. Together, MemSkill forms a closed-loop procedure that improves both the skill-selection policy and the skill set itself. Experiments on LoCoMo, LongMemEval, HotpotQA, and ALFWorld demonstrate that MemSkill improves task performance over strong baselines and generalizes well across settings. Further analyses shed light on how skills evolve, offering insights toward more adaptive, self-evolving memory management for LLM agents.",
+        "authors": "Haozhen Zhang, Quanyu Long, Jianzhu Bao, Tao Feng, Weizhi Zhang, Haodong Yue, Wenya Wang",
+        "url": "http://arxiv.org/abs/2602.02474v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02474v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MemSkill 将 LLM 智能体的记忆操作重新定义为可学习和可进化的技能，并通过控制器、执行器和设计器形成闭环自进化过程。这在智能体架构和算法层面具有高度创新性，解决了 LLM 智能体记忆系统僵化和长历史记录效率低下的实际瓶颈，对提升智能体性能和泛化能力有显著影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02369v1",
+        "title": "Live-Evo: Online Evolution of Agentic Memory from Continuous Feedback",
+        "summary": "Large language model (LLM) agents are increasingly equipped with memory, which are stored experience and reusable guidance that can improve task-solving performance. Recent \\emph{self-evolving} systems update memory based on interaction outcomes, but most existing evolution pipelines are developed for static train/test splits and only approximate online learning by folding static benchmarks, making them brittle under true distribution shift and continuous feedback. We introduce \\textsc{Live-Evo}, an online self-evolving memory system that learns from a stream of incoming data over time. \\textsc{Live-Evo} decouples \\emph{what happened} from \\emph{how to use it} via an Experience Bank and a Meta-Guideline Bank, compiling task-adaptive guidelines from retrieved experiences for each task. To manage memory online, \\textsc{Live-Evo} maintains experience weights and updates them from feedback: experiences that consistently help are reinforced and retrieved more often, while misleading or stale experiences are down-weighted and gradually forgotten, analogous to reinforcement and decay in human memory. On the live \\textit{Prophet Arena} benchmark over a 10-week horizon, \\textsc{Live-Evo} improves Brier score by 20.8\\% and increases market returns by 12.9\\%, while also transferring to deep-research benchmarks with consistent gains over strong baselines. Our code is available at https://github.com/ag2ai/Live-Evo.",
+        "authors": "Yaolun Zhang, Yiran Wu, Yijiong Yu, Qingyun Wu, Huazheng Wang",
+        "url": "http://arxiv.org/abs/2602.02369v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02369v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Live-Evo 提出了一个在线自进化的智能体记忆系统，通过经验库和元指南库将“发生了什么”与“如何使用”解耦，并根据反馈更新记忆权重。这在智能体记忆管理和在线学习方面具有高度创新性，解决了 LLM 智能体适应性和持续学习的实际瓶颈，并在真实基准测试中取得了显著提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02107v1",
+        "title": "Teacher-Guided Student Self-Knowledge Distillation Using Diffusion Model",
+        "summary": "Existing Knowledge Distillation (KD) methods often align feature information between teacher and student by exploring meaningful feature processing and loss functions. However, due to the difference in feature distributions between the teacher and student, the student model may learn incompatible information from the teacher. To address this problem, we propose teacher-guided student Diffusion Self-KD, dubbed as DSKD. Instead of the direct teacher-student alignment, we leverage the teacher classifier to guide the sampling process of denoising student features through a light-weight diffusion model. We then propose a novel locality-sensitive hashing (LSH)-guided feature distillation method between the original and denoised student features. The denoised student features encapsulate teacher knowledge and could be regarded as a teacher role. In this way, our DSKD method could eliminate discrepancies in mapping manners and feature distributions between the teacher and student, while learning meaningful knowledge from the teacher. Experiments on visual recognition tasks demonstrate that DSKD significantly outperforms existing KD methods across various models and datasets. Our code is attached in supplementary material.",
+        "authors": "Yu Wang, Chuanguang Yang, Zhulin An, Weilun Feng, Jiarui Zhao, Chengqing Yu, Libo Huang, Boyu Diao, Yongjun Xu",
+        "url": "http://arxiv.org/abs/2602.02107v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02107v1",
+        "scores": {
+            "Novelty": 5,
+            "R4": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "OOMB 提出了一种高效内存的 LLM 训练系统，用于百万级上下文长度的 LLM 训练。它采用分块循环训练和即时激活重计算，将激活内存占用保持在 O(1)，并通过一系列优化管理 KV 缓存。这在 LLM 训练效率和长上下文处理方面具有极高的架构和算法创新性，解决了 LLM 扩展性的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.01991v1",
+        "title": "Leveraging Latent Vector Prediction for Localized Control in Image Generation via Diffusion Models",
+        "summary": "Diffusion models emerged as a leading approach in text-to-image generation, producing high-quality images from textual descriptions. However, attempting to achieve detailed control to get a desired image solely through text remains a laborious trial-and-error endeavor. Recent methods have introduced image-level controls alongside with text prompts, using prior images to extract conditional information such as edges, segmentation and depth maps. While effective, these methods apply conditions uniformly across the entire image, limiting localized control. In this paper, we propose a novel methodology to enable precise local control over user-defined regions of an image, while leaving to the diffusion model the task of autonomously generating the remaining areas according to the original prompt. Our approach introduces a new training framework that incorporates masking features and an additional loss term, which leverages the prediction of the initial latent vector at any diffusion step to enhance the correspondence between the current step and the final sample in the latent space. Extensive experiments demonstrate that our method effectively synthesizes high-quality images with controlled local conditions.",
+        "authors": "Pablo Domingo-Gregorio, Javier Ruiz-Hidalgo",
+        "url": "http://arxiv.org/abs/2602.01991v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.01991v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "OpticalDNA 提出了一个基于视觉的基因组建模框架，将基因组建模重构为 OCR 风格的文档理解。它将 DNA 渲染为结构化视觉布局，并训练一个 OCR 视觉-语言模型。这在基因组建模领域具有高度创新性，通过减少有效 token 数量解决了长上下文处理的计算瓶颈，并取得了 SOTA 性能，对交叉学科研究具有重要启发。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02470v1",
+        "title": "Breaking the Reversal Curse in Autoregressive Language Models via Identity Bridge",
+        "summary": "Autoregressive large language models (LLMs) have achieved remarkable success in many complex tasks, yet they can still fail in very simple logical reasoning such as the \"reversal curse\" -- when trained on forward knowledge data of the form \"$A \\rightarrow B$\" (e.g., Alice's husband is Bob), the model is unable to deduce the reversal knowledge \"$B \\leftarrow A$\" (e.g., Bob's wife is Alice) during test. Extensive prior research suggests that this failure is an inherent, fundamental limit of autoregressive causal LLMs, indicating that these models tend to memorize factual-level knowledge rather than capture higher-level rules. In this paper, we challenge this view by showing that this seemingly fundamental limit can be mitigated by slightly tweaking the training data with a simple regularization data recipe called the Identity Bridge of the form \"$A \\to A$\" (e.g., The name of Alice is Alice). Theoretically, we prove that under this recipe, even a one-layer transformer can break the reversal curse by analyzing the implicit bias of gradient descent. Empirically, we show that a 1B pretrained language model finetuned with the proposed data recipe achieves a 40% success rate on reversal tasks, in stark contrast to a near-zero success rate when trained solely on forward-knowledge data. Our work provides a novel theoretical foundation for the reversal curse and offers a principled, low-cost path to encouraging LLMs to learn higher-level rules from data.",
+        "authors": "Xutao Ma, Yixiao Huang, Hanlin Zhu, Somayeh Sojoudi",
+        "url": "http://arxiv.org/abs/2602.02470v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02470v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过引入“Identity Bridge”数据配方，挑战了自回归 LLM 中“逆转诅咒”的固有局限性。它提供了单层 Transformer 的理论证明，并经验性地展示了显著的性能提升。这在 LLM 推理的理论理解和算法创新方面具有极高价值，直接解决了 LLM 的一个根本性推理缺陷。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02341v1",
+        "title": "LongVPO: From Anchored Cues to Self-Reasoning for Long-Form Video Preference Optimization",
+        "summary": "We present LongVPO, a novel two-stage Direct Preference Optimization framework that enables short-context vision-language models to robustly understand ultra-long videos without any long-video annotations. In Stage 1, we synthesize preference triples by anchoring questions to individual short clips, interleaving them with distractors, and applying visual-similarity and question-specificity filtering to mitigate positional bias and ensure unambiguous supervision. We also approximate the reference model's scoring over long contexts by evaluating only the anchor clip, reducing computational overhead. In Stage 2, we employ a recursive captioning pipeline on long videos to generate scene-level metadata, then use a large language model to craft multi-segment reasoning queries and dispreferred responses, aligning the model's preferences through multi-segment reasoning tasks. With only 16K synthetic examples and no costly human labels, LongVPO outperforms the state-of-the-art open-source models on multiple long-video benchmarks, while maintaining strong short-video performance (e.g., on MVBench), offering a scalable paradigm for efficient long-form video understanding.",
+        "authors": "Zhenpeng Huang, Jiaqi Li, Zihan Jia, Xinhao Li, Desen Meng, Lingxue Song, Xi Chen, Liang Li, Limin Wang",
+        "url": "http://arxiv.org/abs/2602.02341v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02341v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个统一的视角，将 LLM 的控制方法（如微调、LoRA、激活干预）视为由控制信号引起的动态权重更新。它引入了统一的偏好-效用分析，并通过激活流形视角解释了控制行为。这在 LLM 控制机制的理论理解和算法设计方面具有高度创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02315v1",
+        "title": "The Shape of Beliefs: Geometry, Dynamics, and Interventions along Representation Manifolds of Language Models' Posteriors",
+        "summary": "Large language models (LLMs) represent prompt-conditioned beliefs (posteriors over answers and claims), but we lack a mechanistic account of how these beliefs are encoded in representation space, how they update with new evidence, and how interventions reshape them. We study a controlled setting in which Llama-3.2 generates samples from a normal distribution by implicitly inferring its parameters (mean and standard deviation) given only samples from the distribution in context. We find representations of curved \"belief manifolds\" for these parameters form with sufficient in-context learning and study how the model adapts when the distribution suddenly changes. While standard linear steering often pushes the model off-manifold and induces coupled, out-of-distribution shifts, geometry and field-aware steering better preserves the intended belief family. Our work demonstrates an example of linear field probing (LFP) as a simple approach to tile the data manifold and make interventions that respect the underlying geometry. We conclude that rich structure emerges naturally in LLMs and that purely linear concept representations are often an inadequate abstraction.",
+        "authors": "Raphaël Sarfati, Eric Bigelow, Daniel Wurgaft, Jack Merullo, Atticus Geiger, Owen Lewis, Tom McGrath, Ekdeep Singh Lubana",
+        "url": "http://arxiv.org/abs/2602.02315v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02315v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了 LLM 中信念如何在表示空间中编码、更新和重塑，并发现了弯曲的“信念流形”。它展示了几何和场感知转向比线性转向更能保留预期的信念家族。这在 LLM 内部机制的理论理解和干预方法上具有极高创新性，对数理统计背景的您而言，其几何学和流形分析的严谨性将非常吸引人。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02261v1",
+        "title": "Unlocking the Duality between Flow and Field Matching",
+        "summary": "Conditional Flow Matching (CFM) unifies conventional generative paradigms such as diffusion models and flow matching. Interaction Field Matching (IFM) is a newer framework that generalizes Electrostatic Field Matching (EFM) rooted in Poisson Flow Generative Models (PFGM). While both frameworks define generative dynamics, they start from different objects: CFM specifies a conditional probability path in data space, whereas IFM specifies a physics-inspired interaction field in an augmented data space. This raises a basic question: are CFM and IFM genuinely different, or are they two descriptions of the same underlying dynamics? We show that they coincide for a natural subclass of IFM that we call forward-only IFM. Specifically, we construct a bijection between CFM and forward-only IFM. We further show that general IFM is strictly more expressive: it includes EFM and other interaction fields that cannot be realized within the standard CFM formulation. Finally, we highlight how this duality can benefit both frameworks: it provides a probabilistic interpretation of forward-only IFM and yields novel, IFM-driven techniques for CFM.",
+        "authors": "Daniil Shlenskii, Alexander Varlamov, Nazar Buzun, Alexander Korotin",
+        "url": "http://arxiv.org/abs/2602.02261v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02261v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了条件流匹配 (CFM) 和交互场匹配 (IFM) 之间的对偶性，证明了它们在特定子类下的一致性，并构建了双射。它进一步证明了通用 IFM 具有更强的表达能力。这在生成模型的理论基础方面具有极高的创新性和严谨性，为理解和发展新的生成范式提供了深刻见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02193v1",
+        "title": "SSI-DM: Singularity Skipping Inversion of Diffusion Models",
+        "summary": "Inverting real images into the noise space is essential for editing tasks using diffusion models, yet existing methods produce non-Gaussian noise with poor editability due to the inaccuracy in early noising steps. We identify the root cause: a mathematical singularity that renders inversion fundamentally ill-posed. We propose Singularity Skipping Inversion of Diffusion Models (SSI-DM), which bypasses this singular region by adding small noise before standard inversion. This simple approach produces inverted noise with natural Gaussian properties while maintaining reconstruction fidelity. As a plug-and-play technique compatible with general diffusion models, our method achieves superior performance on public image datasets for reconstruction and interpolation tasks, providing a principled and efficient solution to diffusion model inversion.",
+        "authors": "Chen Min, Enze Jiang, Jishen Peng, Zheng Ma",
+        "url": "http://arxiv.org/abs/2602.02193v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02193v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SSI-DM 提出了一个绕过扩散模型早期去噪步骤中数学奇异性的方法，解决了现有方法生成非高斯噪声和可编辑性差的问题。通过在标准反演前添加少量噪声，它能生成具有高斯特性的反演噪声，同时保持重建保真度。这在扩散模型反演的理论理解和算法创新方面具有极高价值，解决了生成模型的一个根本性问题。"
+    }
+]

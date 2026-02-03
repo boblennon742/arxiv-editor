@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.02431v1",
+        "title": "Full-Batch Gradient Descent Outperforms One-Pass SGD: Sample Complexity Separation in Single-Index Learning",
+        "summary": "It is folklore that reusing training data more than once can improve the statistical efficiency of gradient-based learning. However, beyond linear regression, the theoretical advantage of full-batch gradient descent (GD, which always reuses all the data) over one-pass stochastic gradient descent (online SGD, which uses each data point only once) remains unclear. In this work, we consider learning a $d$-dimensional single-index model with a quadratic activation, for which it is known that one-pass SGD requires $n\\gtrsim d\\log d$ samples to achieve weak recovery. We first show that this $\\log d$ factor in the sample complexity persists for full-batch spherical GD on the correlation loss; however, by simply truncating the activation, full-batch GD exhibits a favorable optimization landscape at $n \\simeq d$ samples, thereby outperforming one-pass SGD (with the same activation) in statistical efficiency. We complement this result with a trajectory analysis of full-batch GD on the squared loss from small initialization, showing that $n \\gtrsim d$ samples and $T \\gtrsim\\log d$ gradient steps suffice to achieve strong (exact) recovery.",
+        "authors": "Filip Kovačević, Hong Chang Ji, Denny Wu, Mahdi Soltanolkotabi, Marco Mondelli",
+        "url": "http://arxiv.org/abs/2602.02431v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02431v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文理论上证明了全批量梯度下降在单索引模型中优于单次SGD的样本复杂度优势，并进行了轨迹分析，提供了优化收敛性的深刻理论洞察。非常符合您对优化收敛性和数学推导严谨性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02371v1",
+        "title": "C-kNN-LSH: A Nearest-Neighbor Algorithm for Sequential Counterfactual Inference",
+        "summary": "Estimating causal effects from longitudinal trajectories is central to understanding the progression of complex conditions and optimizing clinical decision-making, such as comorbidities and long COVID recovery. We introduce \\emph{C-kNN--LSH}, a nearest-neighbor framework for sequential causal inference designed to handle such high-dimensional, confounded situations. By utilizing locality-sensitive hashing, we efficiently identify ``clinical twins'' with similar covariate histories, enabling local estimation of conditional treatment effects across evolving disease states. To mitigate bias from irregular sampling and shifting patient recovery profiles, we integrate neighborhood estimator with a doubly-robust correction.   Theoretical analysis guarantees our estimator is consistent and second-order robust to nuisance error.   Evaluated on a real-world Long COVID cohort with 13,511 participants, \\emph{C-kNN-LSH} demonstrates superior performance in capturing recovery heterogeneity and estimating policy values compared to existing baselines.",
+        "authors": "Jing Wang, Jie Shen, Qiaomin Xie, Jeremy C Weiss",
+        "url": "http://arxiv.org/abs/2602.02371v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02371v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出用于序列因果推断的C-kNN-LSH算法，并提供理论分析，保证估计器的一致性和对混杂误差的二阶鲁棒性。其强大的因果逻辑和统计保证与您的研究方向高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02355v1",
+        "title": "Hierarchical Federated Learning with SignSGD: A Highly Communication-Efficient Approach",
+        "summary": "Hierarchical federated learning (HFL) has emerged as a key architecture for large-scale wireless and Internet of Things systems, where devices communicate with nearby edge servers before reaching the cloud. In these environments, uplink bandwidth and latency impose strict communication limits, thereby making aggressive gradient compression essential. One-bit methods such as sign-based stochastic gradient descent (SignSGD) offer an attractive solution in flat federated settings, but existing theory and algorithms do not naturally extend to hierarchical settings. In particular, the interaction between majority-vote aggregation at the edge layer and model aggregation at the cloud layer, and its impact on end-to-end performance, remains unknown. To bridge this gap, we propose a highly communication-efficient sign-based HFL framework and develop its corresponding formulation for nonconvex learning, where devices send only signed stochastic gradients, edge servers combine them through majority-vote, and the cloud periodically averages the obtained edge models, while utilizing downlink quantization to broadcast the global model. We introduce the resulting scalable HFL algorithm, HierSignSGD, and provide the convergence analysis for SignSGD in a hierarchical setting. Our core technical contribution is a characterization of how biased sign compression, two-level aggregation intervals, and inter-cluster heterogeneity collectively affect convergence. Numerical experiments under homogeneous and heterogeneous data splits show that HierSignSGD, despite employing extreme compression, achieves accuracy comparable to or better than full-precision stochastic gradient descent while reducing communication cost in the process, and remains robust under aggressive downlink sparsification.",
+        "authors": "Amirreza Kazemi, Seyed Mohammad Azimi-Abarghouyi, Gabor Fodor, Carlo Fischione",
+        "url": "http://arxiv.org/abs/2602.02355v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02355v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了分层联邦学习中的SignSGD框架，并提供了严格的收敛性分析，详细刻画了压缩、聚合和异质性对收敛的影响。其在优化收敛性方面的理论贡献非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02385v1",
+        "title": "Transformers learn factored representations",
+        "summary": "Transformers pretrained via next token prediction learn to factor their world into parts, representing these factors in orthogonal subspaces of the residual stream. We formalize two representational hypotheses: (1) a representation in the product space of all factors, whose dimension grows exponentially with the number of parts, or (2) a factored representation in orthogonal subspaces, whose dimension grows linearly. The factored representation is lossless when factors are conditionally independent, but sacrifices predictive fidelity otherwise, creating a tradeoff between dimensional efficiency and accuracy. We derive precise predictions about the geometric structure of activations for each, including the number of subspaces, their dimensionality, and the arrangement of context embeddings within them. We test between these hypotheses on transformers trained on synthetic processes with known latent structure. Models learn factored representations when factors are conditionally independent, and continue to favor them early in training even when noise or hidden dependencies undermine conditional independence, reflecting an inductive bias toward factoring at the cost of fidelity. This provides a principled explanation for why transformers decompose the world into parts, and suggests that interpretable low dimensional structure may persist even in models trained on complex data.",
+        "authors": "Adam Shai, Loren Amdahl-Culleton, Casper L. Christensen, Henry R. Bigelow, Fernando E. Rosas, Alexander B. Boyd, Eric A. Alt, Kyle J. Ray, Paul M. Riechers",
+        "url": "http://arxiv.org/abs/2602.02385v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02385v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入分析了Transformer内部机制，提出特征几何理论，通过谱分析揭示特征结构，并有严谨的数学推导和预测。对现代AI系统（Transformer）的理论基础进行了深刻探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02319v1",
+        "title": "Leave-One-Out Neighborhood Smoothing for Graphons: Berry-Esseen Bounds, Confidence Intervals, and Honest Tuning",
+        "summary": "Neighborhood smoothing methods achieve minimax-optimal rates for estimating edge probabilities under graphon models, but their use for statistical inference has remained limited. The main obstacle is that classical neighborhood smoothers select data-driven neighborhoods and average edges using the same adjacency matrix, inducing complex dependencies that invalidate standard concentration and normal approximation arguments.   We introduce a leave-one-out modification of neighborhood smoothing for undirected simple graphs. When estimating a single entry P_ij, the neighborhood of node i is constructed from an adjacency matrix in which the jth row and column are set to zero, thereby decoupling neighborhood selection from the edges being averaged. We show that this construction restores conditional independence of the centered summands, enabling the use of classical probabilistic tools for inference.   Under piecewise Lipschitz graphon assumptions and logarithmic degree growth, we derive variance-adaptive concentration inequalities based on Bousquet's inequality and establish Berry-Esseen bounds with explicit rates for the normalized estimation error. These results yield both finite-sample and asymptotic confidence intervals for individual edge probabilities. The same leave-one-out structure also supports an honest cross-validation scheme for tuning parameter selection, for which we prove an oracle inequality. The proposed estimator retains the optimal row-wise mean-squared error rates of classical neighborhood smoothing while providing valid entrywise uncertainty quantification.",
+        "authors": "Behzad Aalipur, Rachel Kilby",
+        "url": "http://arxiv.org/abs/2602.02319v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02319v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对Graphon模型提出新颖的留一法邻域平滑方法，恢复条件独立性，并提供严格的Berry-Esseen界、有限样本和渐近置信区间，以及Oracle不等式。统计推断的严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02277v1",
+        "title": "A spatial random forest algorithm for population-level epidemiological risk assessment",
+        "summary": "Spatial epidemiology identifies the drivers of elevated population-level disease risks, using disease counts, exposures and known confounders at the areal unit level. Poisson regression models are typically used for inference, which incorporate a linear/additive regression component and allow for unmeasured confounding via a set of spatially autocorrelated random effects. This approach requires the confounder interactions and their functional relationships with disease risk to be specified in advance, rather than being learned from the data. Therefore, this paper proposes the SPAR-Forest-ERF algorithm, which is the first fusion of random forests for capturing non-linear and interacting confounder-response effects with Bayesian spatial autocorrelation models that can estimate interpretable exposure response functions (ERF) with full uncertainty quantification. Methodologically, we extend existing methods set in a prediction context by propagating uncertainty between both the ML and statistical models, developing a new stopping criteria designed to ensure the stability of the primary inferential target, and incorporating a range of different ERFs for maximum model flexibility. This methodology is motivated by a new study quantifying the impact of air pollution concentrations on self-rated health in Scotland, using data from the recently released 2022 national census.",
+        "authors": "Duncan Lee, Vinny Davies",
+        "url": "http://arxiv.org/abs/2602.02277v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02277v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了SPAR-Forest-ERF算法，融合随机森林与贝叶斯空间自相关模型，以量化不确定性并估计可解释的暴露响应函数。其贝叶斯统计建模和不确定性量化方法具有很强的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02268v1",
+        "title": "HopFormer: Sparse Graph Transformers with Explicit Receptive Field Control",
+        "summary": "Graph Transformers typically rely on explicit positional or structural encodings and dense global attention to incorporate graph topology. In this work, we show that neither is essential. We introduce HopFormer, a graph Transformer that injects structure exclusively through head-specific n-hop masked sparse attention, without the use of positional encodings or architectural modifications. This design provides explicit and interpretable control over receptive fields while enabling genuinely sparse attention whose computational cost scales linearly with mask sparsity. Through extensive experiments on both node-level and graph-level benchmarks, we demonstrate that our approach achieves competitive or superior performance across diverse graph structures. Our results further reveal that dense global attention is often unnecessary: on graphs with strong small-world properties, localized attention yields more stable and consistently high performance, while on graphs with weaker small-world effects, global attention offers diminishing returns. Together, these findings challenge prevailing assumptions in graph Transformer design and highlight sparsity-controlled attention as a principled and efficient alternative.",
+        "authors": "Sanggeon Yun, Raheeb Hassan, Ryozo Masukawa, Sungheon Jeong, Mohsen Imani",
+        "url": "http://arxiv.org/abs/2602.02268v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02268v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "HopFormer通过头特异性n跳掩码稀疏注意力注入图结构，无需位置编码，实现了对感受野的显式和可解释控制。虽然理论严谨性主要体现在设计原则而非新数学推导，但其对图Transformer机制的理解和控制具有创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02265v1",
+        "title": "Nonparametric Inference with an Instrumental Variable under a Separable Binary Treatment Choice Model",
+        "summary": "Instrumental variable (IV) methods are widely used to infer treatment effects in the presence of unmeasured confounding. In this paper, we study nonparametric inference with an IV under a separable binary treatment choice model, which posits that the odds of the probability of taking the treatment, conditional on the instrument and the treatment-free potential outcome, factor into separable components for each variable. While nonparametric identification of smooth functionals of the treatment-free potential outcome among the treated, such as the average treatment effect on the treated, has been established under this model, corresponding nonparametric efficient estimation has proven elusive due to variationally dependent nuisance parameters defined in terms of counterfactual quantities. To address this challenge, we introduce a new variationally independent parameterization based on nuisance functions defined directly from the observed data. This parameterization, coupled with a novel fixed-point argument, enables the use of modern machine learning methods for nuisance function estimation. We characterize the semiparametric efficiency bound for any smooth functional of the treatment-free potential outcome among the treated and construct a corresponding semiparametric efficient estimator without imposing any unnecessary restriction on nuisance functions. Furthermore, we describe a straightforward generative model justifying our identifying assumptions and characterize empirically falsifiable implications of the framework to evaluate our assumptions in practical settings. Our approach seamlessly extends to nonlinear treatment effects, population-level effects, and nonignorable missing data settings. We illustrate our methods through simulation studies and an application to the Job Corps study.",
+        "authors": "Chan Park, Eric Tchetgen Tchetgen",
+        "url": "http://arxiv.org/abs/2602.02265v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02265v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对可分离二元处理选择模型下的工具变量，提出非参数推断方法，引入新的变分独立参数化，并推导半参数效率界和渐近性质。在非参数因果推断领域具有极高的理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02250v1",
+        "title": "Well-Posed KL-Regularized Control via Wasserstein and Kalman-Wasserstein KL Divergences",
+        "summary": "Kullback-Leibler divergence (KL) regularization is widely used in reinforcement learning, but it becomes infinite under support mismatch and can degenerate in low-noise limits. Utilizing a unified information-geometric framework, we introduce (Kalman)-Wasserstein-based KL analogues by replacing the Fisher-Rao geometry in the dynamical formulation of the KL with transport-based geometries, and we derive closed-form values for common distribution families. These divergences remain finite under support mismatch and yield a geometric interpretation of regularization heuristics used in Kalman ensemble methods. We demonstrate the utility of these divergences in KL-regularized optimal control. In the fully tractable setting of linear time-invariant systems with Gaussian process noise, the classical KL reduces to a quadratic control penalty that becomes singular as process noise vanishes. Our variants remove this singularity, yielding well-posed problems. On a double integrator and a cart-pole example, the resulting controls outperform KL-based regularization.",
+        "authors": "Viktor Stein, Adwait Datar, Nihat Ay",
+        "url": "http://arxiv.org/abs/2602.02250v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02250v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入基于Wasserstein的KL散度模拟，在统一的信息几何框架下推导闭式解，并应用于KL正则化最优控制，解决了经典KL的奇异性问题。其信息理论和优化基础非常扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02246v1",
+        "title": "Cumulative Treatment Effect Testing under Continuous Time Reinforcement Learning",
+        "summary": "Understanding the impact of treatment effect over time is a fundamental aspect of many scientific and medical studies. In this paper, we introduce a novel approach under a continuous-time reinforcement learning framework for testing a treatment effect. Specifically, our method provides an effective test on carryover effects of treatment over time utilizing the average treatment effect (ATE). The average treatment effect is defined as difference of value functions over an infinite horizon, which accounts for cumulative treatment effects, both immediate and carryover. The proposed method outperforms existing testing procedures such as discrete time reinforcement learning strategies in multi-resolution observation settings where observation times can be irregular. Another advantage of the proposed method is that it can capture treatment effects of a shorter duration and provide greater accuracy compared to discrete-time approximations, through the use of continuous-time estimation for the value function. We establish the asymptotic normality of the proposed test statistics and apply it to OhioT1DM diabetes data to evaluate the cumulative treatment effects of bolus insulin on patients' glucose levels.",
+        "authors": "Jiuchen Zhang, Annie Qu",
+        "url": "http://arxiv.org/abs/2602.02246v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02246v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在连续时间强化学习框架下，提出了一种新颖的治疗效果检验方法，并建立了所提出检验统计量的渐近正态性。结合了强化学习和严谨的统计理论。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02240v1",
+        "title": "Causal Inference for Preprocessed Outcomes with an Application to Functional Connectivity",
+        "summary": "In biomedical research, repeated measurements within each subject are often processed to remove artifacts and unwanted sources of variation. The resulting data are used to construct derived outcomes that act as proxies for scientific outcomes that are not directly observable. Although intra-subject processing is widely used, its impact on inter-subject statistical inference has not been systematically studied, and a principled framework for causal analysis in this setting is lacking. In this article, we propose a semiparametric framework for causal inference with derived outcomes obtained after intra-subject processing. This framework applies to settings with a modular structure, where intra-subject analyses are conducted independently across subjects and are followed by inter-subject analyses based on parameters from the intra-subject stage. We develop multiply robust estimators of causal parameters under rate conditions on both intra-subject and inter-subject models, which allows the use of flexible machine learning. We specialize the framework to a mediation setting and focus on the natural direct effect. For high dimensional inference, we employ a step-down procedure that controls the exceedance rate of the false discovery proportion. Simulation studies demonstrate the superior performance of the proposed approach. We apply our method to estimate the impact of stimulant medication on brain connectivity in children with autism spectrum disorder.",
+        "authors": "Zihang Wang, Razieh Nabi, Benjamin B. Risk",
+        "url": "http://arxiv.org/abs/2602.02240v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02240v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出变分熵最优传输（VarEOT），基于对数配分函数的精确变分重构，并提供了理论保证，包括有限样本泛化界和通用函数逼近下的近似结果。对最优传输理论有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02239v1",
+        "title": "Interpretability in Deep Time Series Models Demands Semantic Alignment",
+        "summary": "Deep time series models continue to improve predictive performance, yet their deployment remains limited by their black-box nature. In response, existing interpretability approaches in the field keep focusing on explaining the internal model computations, without addressing whether they align or not with how a human would reason about the studied phenomenon. Instead, we state interpretability in deep time series models should pursue semantic alignment: predictions should be expressed in terms of variables that are meaningful to the end user, mediated by spatial and temporal mechanisms that admit user-dependent constraints. In this paper, we formalize this requirement and require that, once established, semantic alignment must be preserved under temporal evolution: a constraint with no analog in static settings. Provided with this definition, we outline a blueprint for semantically aligned deep time series models, identify properties that support trust, and discuss implications for model design.",
+        "authors": "Giovanni De Felice, Riccardo D'Elia, Alberto Termine, Pietro Barbiero, Giuseppe Marra, Silvia Santini",
+        "url": "http://arxiv.org/abs/2602.02239v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02239v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个用于处理预处理结果的半参数因果推断框架，并开发了多重鲁棒估计器，具有强大的统计保证和渐近性质。对因果推断的理论和应用都有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02224v1",
+        "title": "Spectral Superposition: A Theory of Feature Geometry",
+        "summary": "Neural networks represent more features than they have dimensions via superposition, forcing features to share representational space. Current methods decompose activations into sparse linear features but discard geometric structure. We develop a theory for studying the geometric structre of features by analyzing the spectra (eigenvalues, eigenspaces, etc.) of weight derived matrices. In particular, we introduce the frame operator $F = WW^\\top$, which gives us a spectral measure that describes how each feature allocates norm across eigenspaces. While previous tools could describe the pairwise interactions between features, spectral methods capture the global geometry (``how do all features interact?''). In toy models of superposition, we use this theory to prove that capacity saturation forces spectral localization: features collapse onto single eigenspaces, organize into tight frames, and admit discrete classification via association schemes, classifying all geometries from prior work (simplices, polygons, antiprisms). The spectral measure formalism applies to arbitrary weight matrices, enabling diagnosis of feature localization beyond toy settings. These results point toward a broader program: applying operator theory to interpretability.",
+        "authors": "Georgi Ivanov, Narmeen Oozeer, Shivam Raval, Tasana Pejovic, Shriyash Upadhyay, Amir Abdullah",
+        "url": "http://arxiv.org/abs/2602.02224v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02224v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了特征几何理论，通过分析权重导出矩阵的谱来研究特征的几何结构，并证明了容量饱和导致谱局部化，为神经网络可解释性提供了深刻的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02216v1",
+        "title": "Posterior Uncertainty for Targeted Parameters in Bayesian Bootstrap Procedures",
+        "summary": "We propose a general method to carry out a valid Bayesian analysis of a finite-dimensional `targeted' parameter in the presence of a finite-dimensional nuisance parameter. We apply our methods to causal inference based on estimating equations. While much of the literature in Bayesian causal inference has relied on the conventional 'likelihood times prior' framework, a recently proposed method, the 'Linked Bayesian Bootstrap', deviated from this classical setting to obtain valid Bayesian inference using the Dirichlet process and the Bayesian bootstrap. These methods rely on an adjustment based on the propensity score and explain how to handle the uncertainty concerning it when studying the posterior distribution of a treatment effect. We examine theoretically the asymptotic properties of the posterior distribution obtained and show that our proposed method, a generalized version of the 'Linked Bayesian Bootstrap', enjoys desirable frequentist properties. In addition, we show that the credible intervals have asymptotically the correct coverage properties. We discuss the applications of our method to mis-specified and singly-robust models in causal inference.",
+        "authors": "Magid Sabbagh, David A. Stephens",
+        "url": "http://arxiv.org/abs/2602.02216v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02216v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在Lean 4中首次全面形式化了统计学习理论，包括高斯Lipschitz集中和Dudley熵积分定理，并应用于稀疏回归，具有极高的理论严谨性和数学推导清晰度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.02173v1",
+        "title": "Generalized Optimal Classification Trees: A Mixed-Integer Programming Approach",
+        "summary": "Global optimization of decision trees is a long-standing challenge in combinatorial optimization, yet such models play an important role in interpretable machine learning. Although the problem has been investigated for several decades, only recent advances in discrete optimization have enabled practical algorithms for solving optimal classification tree problems on real-world datasets. Mixed-integer programming (MIP) offers a high degree of modeling flexibility, and we therefore propose a MIP-based framework for learning optimal classification trees under nonlinear performance metrics, such as the F1-score, that explicitly addresses class imbalance. To improve scalability, we develop problem-specific acceleration techniques, including a tailored branch-and-cut algorithm, an instance-reduction scheme, and warm-start strategies. We evaluate the proposed approach on 50 benchmark datasets. The computational results show that the framework can efficiently optimize nonlinear metrics while achieving strong predictive performance and reduced solution times compared with existing methods.",
+        "authors": "Jiancheng Tu, Wenqi Fan, Zhibin Wu",
+        "url": "http://arxiv.org/abs/2602.02173v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.02173v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于混合整数规划（MIP）的框架，用于学习非线性性能指标下的最优分类树，并开发了问题特定的加速技术。其全局优化和组合优化方法具有很强的数学严谨性。"
+    }
+]

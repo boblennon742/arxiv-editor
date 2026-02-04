@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.03839v1",
+        "title": "Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL",
+        "summary": "Reinforcement learning (RL) is a critical component for post-training large language models (LLMs). However, in bandwidth-constrained distributed RL, scalability is often bottlenecked by the synchronization of policy weights from trainers to inference workers, particularly over commodity networks or in decentralized settings. While recent studies suggest that RL updates modify only a small fraction of model parameters, these observations are typically based on coarse checkpoint differences. We present a systematic empirical study of weight-update sparsity at both step-level and multi-step granularities, examining its evolution across training dynamics, off-policy delay, and model scale. We find that update sparsity is consistently high, frequently exceeding 99% across practically relevant settings. Leveraging this structure, we propose PULSE (Patch Updates via Lossless Sparse Encoding), a simple yet highly efficient lossless weight synchronization method that transmits only the indices and values of modified parameters. PULSE is robust to transmission errors and avoids floating-point drift inherent in additive delta schemes. In bandwidth-constrained decentralized environments, our approach achieves over 100x (14 GB to ~108 MB) communication reduction while maintaining bit-identical training dynamics and performance compared to full weight synchronization. By exploiting this structure, PULSE enables decentralized RL training to approach centralized throughput, reducing the bandwidth required for weight synchronization from 20 Gbit/s to 0.2 Gbit/s to maintain high GPU utilization.",
+        "authors": "Erfan Miahi, Eugene Belilovsky",
+        "url": "http://arxiv.org/abs/2602.03839v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03839v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文系统性地研究了分布式强化学习中权重更新的稀疏性，并提出了PULSE方法，通过无损稀疏编码实现通信效率的大幅提升。其对LLM后训练的实际瓶颈（带宽受限的分布式RL）有直接且显著的解决作用，理论分析了更新稀疏性，并提供了100倍的通信减少，具有很强的实践影响力。方法并非纯粹工程堆砌，而是基于对RL更新机制的深入理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03814v1",
+        "title": "Conformal Thinking: Risk Control for Reasoning on a Compute Budget",
+        "summary": "Reasoning Large Language Models (LLMs) enable test-time scaling, with dataset-level accuracy improving as the token budget increases, motivating adaptive reasoning -- spending tokens when they improve reliability and stopping early when additional computation is unlikely to help. However, setting the token budget, as well as the threshold for adaptive reasoning, is a practical challenge that entails a fundamental risk-accuracy trade-off. We re-frame the budget setting problem as risk control, limiting the error rate while minimizing compute. Our framework introduces an upper threshold that stops reasoning when the model is confident (risking incorrect output) and a novel parametric lower threshold that preemptively stops unsolvable instances (risking premature stoppage). Given a target risk and a validation set, we use distribution-free risk control to optimally specify these stopping mechanisms. For scenarios with multiple budget controlling criteria, we incorporate an efficiency loss to select the most computationally efficient exiting mechanism. Empirical results across diverse reasoning tasks and models demonstrate the effectiveness of our risk control approach, demonstrating computational efficiency gains from the lower threshold and ensemble stopping mechanisms while adhering to the user-specified risk target.",
+        "authors": "Xi Wang, Anushri Suresh, Alvin Zhang, Rishi More, William Jurayj, Benjamin Van Durme, Mehrdad Farajtabar, Daniel Khashabi, Eric Nalisnick",
+        "url": "http://arxiv.org/abs/2602.03814v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03814v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个信息论框架来理解LLM多智能体系统（MAS）中的智能体扩展问题，并指出性能受限于内在任务不确定性而非智能体数量。通过引入K*量化有效通道数，强调了异构性对MAS性能提升的关键作用。这为LLM多智能体系统的设计提供了理论指导，解决了效率瓶颈，具有较强的理论创新性和实践指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03789v1",
+        "title": "Fast Sampling for Flows and Diffusions with Lazy and Point Mass Stochastic Interpolants",
+        "summary": "Stochastic interpolants unify flows and diffusions, popular generative modeling frameworks. A primary hyperparameter in these methods is the interpolation schedule that determines how to bridge a standard Gaussian base measure to an arbitrary target measure. We prove how to convert a sample path of a stochastic differential equation (SDE) with arbitrary diffusion coefficient under any schedule into the unique sample path under another arbitrary schedule and diffusion coefficient. We then extend the stochastic interpolant framework to admit a larger class of point mass schedules in which the Gaussian base measure collapses to a point mass measure. Under the assumption of Gaussian data, we identify lazy schedule families that make the drift identically zero and show that with deterministic sampling one gets a variance-preserving schedule commonly used in diffusion models, whereas with statistically optimal SDE sampling one gets our point mass schedule. Finally, to demonstrate the usefulness of our theoretical results on realistic highly non-Gaussian data, we apply our lazy schedule conversion to a state-of-the-art pretrained flow model and show that this allows for generating images in fewer steps without retraining the model.",
+        "authors": "Gabriel Damsholt, Jes Frellsen, Susanne Ditlevsen",
+        "url": "http://arxiv.org/abs/2602.03789v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03789v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在随机插值（Stochastic Interpolants）框架下，证明了如何转换SDE样本路径以适应不同的插值调度和扩散系数，并扩展了框架以支持点质量调度。理论严谨性高，特别是识别了使漂移项为零的'lazy schedule'家族。其成果可用于在不重新训练模型的情况下，以更少的步骤生成图像，直接解决了生成模型（扩散模型）的计算效率瓶颈，具有理论深度和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03784v1",
+        "title": "Context Compression via Explicit Information Transmission",
+        "summary": "Long-context inference with Large Language Models (LLMs) is costly due to quadratic attention and growing key-value caches, motivating context compression. In this work, we study soft context compression, where a long context is condensed into a small set of continuous representations. Existing methods typically re-purpose the LLM itself as a trainable compressor, relying on layer-by-layer self-attention to iteratively aggregate information. We argue that this paradigm suffers from two structural limitations: (i) progressive representation overwriting across layers (ii) uncoordinated allocation of compression capacity across tokens. We propose ComprExIT (Context Compression via Explicit Information Transmission), a lightweight framework that formulates soft compression into a new paradigm: explicit information transmission over frozen LLM hidden states. This decouples compression from the model's internal self-attention dynamics. ComprExIT performs (i) depth-wise transmission to selectively transmit multi-layer information into token anchors, mitigating progressive overwriting, and (ii) width-wise transmission to aggregate anchors into a small number of slots via a globally optimized transmission plan, ensuring coordinated allocation of information. Across six question-answering benchmarks, ComprExIT consistently outperforms state-of-the-art context compression methods while introducing only ~1% additional parameters, demonstrating that explicit and coordinated information transmission enables more effective and robust long-context compression.",
+        "authors": "Jiangnan Ye, Hanqi Yan, Zhenyi Shen, Heng Chang, Ye Mao, Yulan He",
+        "url": "http://arxiv.org/abs/2602.03784v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03784v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了ComprExIT框架，通过显式信息传输解决LLM长上下文推理中的软上下文压缩问题。它指出了现有方法的结构性局限性（表示覆盖和压缩容量分配），并提出了深度和宽度传输机制。该方法引入了约1%的额外参数，却能显著优于现有方法，有效解决了LLM长上下文处理的效率瓶颈，具有清晰的理论洞察和实际效果。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03783v1",
+        "title": "Efficient Estimation of Kernel Surrogate Models for Task Attribution",
+        "summary": "Modern AI agents such as large language models are trained on diverse tasks -- translation, code generation, mathematical reasoning, and text prediction -- simultaneously. A key question is to quantify how each individual training task influences performance on a target task, a problem we refer to as task attribution. The direct approach, leave-one-out retraining, measures the effect of removing each task, but is computationally infeasible at scale. An alternative approach that builds surrogate models to predict a target task's performance for any subset of training tasks has emerged in recent literature. Prior work focuses on linear surrogate models, which capture first-order relationships, but miss nonlinear interactions such as synergy, antagonism, or XOR-type effects. In this paper, we first consider a unified task weighting framework for analyzing task attribution methods, and show a new connection between linear surrogate models and influence functions through a second-order analysis. Then, we introduce kernel surrogate models, which more effectively represent second-order task interactions. To efficiently learn the kernel surrogate, we develop a gradient-based estimation procedure that leverages a first-order approximation of pretrained models; empirically, this yields accurate estimates with less than $2\\%$ relative error without repeated retraining. Experiments across multiple domains -- including math reasoning in transformers, in-context learning, and multi-objective reinforcement learning -- demonstrate the effectiveness of kernel surrogate models. They achieve a $25\\%$ higher correlation with the leave-one-out ground truth than linear surrogates and influence-function baselines. When used for downstream task selection, kernel surrogate models yield a $40\\%$ improvement in demonstration selection for in-context learning and multi-objective reinforcement learning benchmarks.",
+        "authors": "Zhenshuo Zhang, Minxuan Duan, Hongyang R. Zhang",
+        "url": "http://arxiv.org/abs/2602.03783v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03783v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了多任务训练中任务归因问题，提出了核代理模型（Kernel Surrogate Models）来捕捉任务间的非线性交互，并建立了与线性代理模型和影响力函数的联系。通过梯度估计程序高效学习核代理模型，实现了对任务影响的准确估计。这对于LLM等AI代理的多任务训练和任务选择具有重要指导意义，解决了训练数据效率和模型性能优化的瓶颈，理论分析和实验验证都比较扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03773v1",
+        "title": "Reasoning Cache: Continual Improvement Over Long Horizons via Short-Horizon RL",
+        "summary": "Large Language Models (LLMs) that can continually improve beyond their training budgets are able to solve increasingly difficult problems by adapting at test time, a property we refer to as extrapolation. However, standard reinforcement learning (RL) operates over fixed problem distributions and training budgets, which limits extrapolation amidst distribution shift at test time. To address this, we introduce RC, an iterative decoding algorithm that replaces standard autoregressive decoding during both training and inference. RC exploits an asymmetry between the response generation and summarization capabilities of LLMs to construct reasoning chains that consistently improve across iterations. Models trained to use RC can extrapolate and continually improve over reasoning horizons more than an order of magnitude longer than those seen during training. Empirically, training a 4B model with RC using a 16k-token training budget improves performance on HMMT 2025 from 40% to nearly 70% with 0.5m tokens at test time, outperforming both comparably sized models and many larger reasoning LLMs. Finally, we also show that models trained with RC can more effectively leverage existing scaffolds to further scale test-time performance, due to the improved summary-conditioned generation abilities learned through training.",
+        "authors": "Ian Wu, Yuxiao Qu, Amrith Setlur, Aviral Kumar",
+        "url": "http://arxiv.org/abs/2602.03773v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03773v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Reasoning Cache (RC)，一个迭代解码算法，通过利用LLM响应生成和摘要能力的不对称性来构建推理链。RC使得模型能够在比训练时更长的推理范围内持续改进，展现了强大的外推能力。它解决了LLM在长序列推理中持续改进和泛化的瓶颈，其方法具有新颖性，并提供了理论上的解释和显著的经验效果。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03769v1",
+        "title": "Reasoning with Latent Tokens in Diffusion Language Models",
+        "summary": "Discrete diffusion models have recently become competitive with autoregressive models for language modeling, even outperforming them on reasoning tasks requiring planning and global coherence, but they require more computation at inference time. We trace this trade-off to a key mechanism: diffusion models are trained to jointly predict a distribution over all unknown tokens, including those that will not actually be decoded in the current step. Ablating this joint prediction yields faster inference but degrades performance, revealing that accurate prediction at the decoded position relies on joint reasoning about the distribution of undecoded tokens. We interpret these as latent tokens and introduce a method for modulating their number, demonstrating empirically that this enables a smooth tradeoff between inference speed and sample quality. Furthermore, we demonstrate that latent tokens can be introduced into autoregressive models through an auxiliary multi-token prediction objective, yielding substantial improvements on the same reasoning tasks where they have traditionally struggled. Our results suggest that latent tokens, while arising naturally in diffusion, represent a general mechanism for improving performance on tasks requiring global coherence or lookahead.",
+        "authors": "Andre He, Sean Welleck, Daniel Fried",
+        "url": "http://arxiv.org/abs/2602.03769v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03769v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文探讨了离散扩散模型在语言建模中的'潜在token'机制，指出其在推理时需要更多计算的原因在于联合预测所有未知token。通过调节潜在token的数量，实现了推理速度和样本质量的平滑权衡。更重要的是，它将潜在token引入自回归模型，通过辅助多token预测目标显著提升了推理任务性能。这揭示了扩散模型深层机制，并为自回归模型提供了新的理论创新方向，以解决全局一致性或前瞻性推理的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03702v1",
+        "title": "Anytime Pretraining: Horizon-Free Learning-Rate Schedules with Weight Averaging",
+        "summary": "Large language models are increasingly trained in continual or open-ended settings, where the total training horizon is not known in advance. Despite this, most existing pretraining recipes are not anytime: they rely on horizon-dependent learning rate schedules and extensive tuning under a fixed compute budget. In this work, we provide a theoretical analysis demonstrating the existence of anytime learning schedules for overparameterized linear regression, and we highlight the central role of weight averaging - also known as model merging - in achieving the minimax convergence rates of stochastic gradient descent. We show that these anytime schedules polynomially decay with time, with the decay rate determined by the source and capacity conditions of the problem. Empirically, we evaluate 150M and 300M parameter language models trained at 1-32x Chinchilla scale, comparing constant learning rates with weight averaging and $1/\\sqrt{t}$ schedules with weight averaging against a well-tuned cosine schedule. Across the full training range, the anytime schedules achieve comparable final loss to cosine decay. Taken together, our results suggest that weight averaging combined with simple, horizon-free step sizes offers a practical and effective anytime alternative to cosine learning rate schedules for large language model pretraining.",
+        "authors": "Alexandru Meterez, Pranav Ajit Nair, Depen Morwani, Cengiz Pehlevan, Sham Kakade",
+        "url": "http://arxiv.org/abs/2602.03702v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03702v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对LLM预训练中学习率调度依赖于预设训练时长的问题，提出了'Anytime Pretraining'，通过理论分析证明了超参数化线性回归中随时可用的学习率调度存在性，并强调了权重平均在实现收敛率中的核心作用。这为LLM的持续学习和开放式训练提供了理论基础和实用方法，解决了训练效率和灵活性瓶颈，具有理论创新和实际指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03698v1",
+        "title": "Data-Driven Graph Filters via Adaptive Spectral Shaping",
+        "summary": "We introduce Adaptive Spectral Shaping, a data-driven framework for graph filtering that learns a reusable baseline spectral kernel and modulates it with a small set of Gaussian factors. The resulting multi-peak, multi-scale responses allocate energy to heterogeneous regions of the Laplacian spectrum while remaining interpretable via explicit centers and bandwidths. To scale, we implement filters with Chebyshev polynomial expansions, avoiding eigendecompositions. We further propose Transferable Adaptive Spectral Shaping (TASS): the baseline kernel is learned on source graphs and, on a target graph, kept fixed while only the shaping parameters are adapted, enabling few-shot transfer under matched compute. Across controlled synthetic benchmarks spanning graph families and signal regimes, Adaptive Spectral Shaping reduces reconstruction error relative to fixed-prototype wavelets and learned linear banks, and TASS yields consistent positive transfer. The framework provides compact spectral modules that plug into graph signal processing pipelines and graph neural networks, combining scalability, interpretability, and cross-graph generalization.",
+        "authors": "Dylan Sandfelder, Mihai Cucuringu, Xiaowen Dong",
+        "url": "http://arxiv.org/abs/2602.03698v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03698v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了自适应谱整形（Adaptive Spectral Shaping），一个数据驱动的图滤波框架，通过学习基线谱核并用高斯因子调制，实现多峰多尺度的响应。该方法通过Chebyshev多项式展开实现可扩展性，并提出了可迁移的TASS。这在图信号处理和GNN中提供了可扩展、可解释且跨图泛化的紧凑谱模块，具有理论创新和解决图数据处理效率的潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03685v1",
+        "title": "Universal One-third Time Scaling in Learning Peaked Distributions",
+        "summary": "Training large language models (LLMs) is computationally expensive, partly because the loss exhibits slow power-law convergence whose origin remains debatable. Through systematic analysis of toy models and empirical evaluation of LLMs, we show that this behavior can arise intrinsically from the use of softmax and cross-entropy. When learning peaked probability distributions, e.g., next-token distributions, these components yield power-law vanishing losses and gradients, creating a fundamental optimization bottleneck. This ultimately leads to power-law time scaling of the loss with a universal exponent of $1/3$. Our results provide a mechanistic explanation for observed neural scaling and suggest new directions for improving LLM training efficiency.",
+        "authors": "Yizhou Liu, Ziming Liu, Cengiz Pehlevan, Jeff Gore",
+        "url": "http://arxiv.org/abs/2602.03685v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03685v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过对LLM损失函数的系统分析，揭示了softmax和交叉熵在学习尖峰概率分布时可能导致幂律收敛，从而产生优化瓶颈和1/3的通用时间缩放指数。这为LLM训练效率提供了机制性解释，并指出了改进方向。其理论洞察力强，直接触及LLM训练的核心效率问题，具有很高的理论价值和潜在的实践指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03677v1",
+        "title": "Instruction Anchors: Dissecting the Causal Dynamics of Modality Arbitration",
+        "summary": "Modality following serves as the capacity of multimodal large language models (MLLMs) to selectively utilize multimodal contexts based on user instructions. It is fundamental to ensuring safety and reliability in real-world deployments. However, the underlying mechanisms governing this decision-making process remain poorly understood. In this paper, we investigate its working mechanism through an information flow lens. Our findings reveal that instruction tokens function as structural anchors for modality arbitration: Shallow attention layers perform non-selective information transfer, routing multimodal cues to these anchors as a latent buffer; Modality competition is resolved within deep attention layers guided by the instruction intent, while MLP layers exhibit semantic inertia, acting as an adversarial force. Furthermore, we identify a sparse set of specialized attention heads that drive this arbitration. Causal interventions demonstrate that manipulating a mere $5\\%$ of these critical heads can decrease the modality-following ratio by $60\\%$ through blocking, or increase it by $60\\%$ through targeted amplification of failed samples. Our work provides a substantial step toward model transparency and offers a principled framework for the orchestration of multimodal information in MLLMs.",
+        "authors": "Yu Zhang, Mufan Xu, Xuefeng Bai, Kehai chen, Pengfei Zhang, Yang Xiang, Min Zhang",
+        "url": "http://arxiv.org/abs/2602.03677v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03677v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过信息流视角深入研究了多模态大语言模型（MLLMs）中模态仲裁的机制，发现指令token作为结构锚点，浅层注意力层进行非选择性信息传输，深层注意力层解决模态竞争，MLP层表现出语义惯性。识别出驱动仲裁的稀疏注意力头，并通过因果干预证明了其关键性。这极大地提升了MLLMs的透明度和可控性，为解决其安全性和可靠性瓶颈提供了理论创新和实践方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03586v1",
+        "title": "APEX: Probing Neural Networks via Activation Perturbation",
+        "summary": "Prior work on probing neural networks primarily relies on input-space analysis or parameter perturbation, both of which face fundamental limitations in accessing structural information encoded in intermediate representations. We introduce Activation Perturbation for EXploration (APEX), an inference-time probing paradigm that perturbs hidden activations while keeping both inputs and model parameters fixed. We theoretically show that activation perturbation induces a principled transition from sample-dependent to model-dependent behavior by suppressing input-specific signals and amplifying representation-level structure, and further establish that input perturbation corresponds to a constrained special case of this framework. Through representative case studies, we demonstrate the practical advantages of APEX. In the small-noise regime, APEX provides a lightweight and efficient measure of sample regularity that aligns with established metrics, while also distinguishing structured from randomly labeled models and revealing semantically coherent prediction transitions. In the large-noise regime, APEX exposes training-induced model-level biases, including a pronounced concentration of predictions on the target class in backdoored models. Overall, our results show that APEX offers an effective perspective for exploring, and understanding neural networks beyond what is accessible from input space alone.",
+        "authors": "Tao Ren, Xiaoyu Luo, Qiongxiu Li",
+        "url": "http://arxiv.org/abs/2602.03586v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03586v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了APEX (Activation Perturbation for EXploration)，一种推理时探测神经网络的范式，通过扰动隐藏激活来揭示中间表示中的结构信息。理论上证明了激活扰动如何从样本依赖行为转向模型依赖行为。APEX提供了一种有效探索和理解神经网络的新视角，超越了仅从输入空间可访问的范围，对于理解AI模型内部机制具有重要理论价值和潜在的诊断应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03584v1",
+        "title": "$V_0$: A Generalist Value Model for Any Policy at State Zero",
+        "summary": "Policy gradient methods rely on a baseline to measure the relative advantage of an action, ensuring the model reinforces behaviors that outperform its current average capability. In the training of Large Language Models (LLMs) using Actor-Critic methods (e.g., PPO), this baseline is typically estimated by a Value Model (Critic) often as large as the policy model itself. However, as the policy continuously evolves, the value model requires expensive, synchronous incremental training to accurately track the shifting capabilities of the policy. To avoid this overhead, Group Relative Policy Optimization (GRPO) eliminates the coupled value model by using the average reward of a group of rollouts as the baseline; yet, this approach necessitates extensive sampling to maintain estimation stability. In this paper, we propose $V_0$, a Generalist Value Model capable of estimating the expected performance of any model on unseen prompts without requiring parameter updates. We reframe value estimation by treating the policy's dynamic capability as an explicit context input; specifically, we leverage a history of instruction-performance pairs to dynamically profile the model, departing from the traditional paradigm that relies on parameter fitting to perceive capability shifts. Focusing on value estimation at State Zero (i.e., the initial prompt, hence $V_0$), our model serves as a critical resource scheduler. During GRPO training, $V_0$ predicts success rates prior to rollout, allowing for efficient sampling budget allocation; during deployment, it functions as a router, dispatching instructions to the most cost-effective and suitable model. Empirical results demonstrate that $V_0$ significantly outperforms heuristic budget allocation and achieves a Pareto-optimal trade-off between performance and cost in LLM routing tasks.",
+        "authors": "Yi-Kai Zhang, Zhiyuan Yao, Hongyan Hao, Yueqing Sun, Qi Gu, Hui Su, Xunliang Cai, De-Chuan Zhan, Han-Jia Ye",
+        "url": "http://arxiv.org/abs/2602.03584v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03584v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了$V_0$，一个通用价值模型，能够估计任何模型在未见提示上的预期性能，而无需参数更新。它将策略的动态能力视为显式上下文输入，利用指令-性能对的历史动态地描述模型。$V_0$作为资源调度器，在GRPO训练中预测成功率以优化采样预算，在部署中作为路由器。这解决了LLM训练中价值模型昂贵且同步训练的瓶颈，具有理论创新和显著的实践效率提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03542v1",
+        "title": "Can Large Language Models Generalize Procedures Across Representations?",
+        "summary": "Large language models (LLMs) are trained and tested extensively on symbolic representations such as code and graphs, yet real-world user tasks are often specified in natural language. To what extent can LLMs generalize across these representations? Here, we approach this question by studying isomorphic tasks involving procedures represented in code, graphs, and natural language (e.g., scheduling steps in planning). We find that training LLMs with popular post-training methods on graphs or code data alone does not reliably generalize to corresponding natural language tasks, while training solely on natural language can lead to inefficient performance gains. To address this gap, we propose a two-stage data curriculum that first trains on symbolic, then natural language data. The curriculum substantially improves model performance across model families and tasks. Remarkably, a 1.5B Qwen model trained by our method can closely match zero-shot GPT-4o in naturalistic planning. Finally, our analysis suggests that successful cross-representation generalization can be interpreted as a form of generative analogy, which our curriculum effectively encourages.",
+        "authors": "Fangru Lin, Valentin Hofmann, Xingchen Wan, Weixing Wang, Zifeng Ding, Anthony G. Cohn, Janet B. Pierrehumbert",
+        "url": "http://arxiv.org/abs/2602.03542v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03542v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探讨了LLM在不同表示（代码、图、自然语言）之间泛化程序的能力。发现单独训练在符号表示上不能可靠泛化到自然语言任务，反之亦然。提出了一个两阶段数据课程，显著提高了模型在跨表示任务上的性能，甚至使小模型能媲美GPT-4o。这解决了LLM跨模态/表示泛化的关键瓶颈，并从生成类比的角度提供了理论解释，具有很强的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.03392v1",
+        "title": "On the Entropy Dynamics in Reinforcement Fine-Tuning of Large Language Models",
+        "summary": "Entropy serves as a critical metric for measuring the diversity of outputs generated by large language models (LLMs), providing valuable insights into their exploration capabilities. While recent studies increasingly focus on monitoring and adjusting entropy to better balance exploration and exploitation in reinforcement fine-tuning (RFT), a principled understanding of entropy dynamics during this process is yet to be thoroughly investigated. In this paper, we establish a theoretical framework for analyzing the entropy dynamics during the RFT process, which begins with a discriminant expression that quantifies entropy change under a single logit update. This foundation enables the derivation of a first-order expression for entropy change, which can be further extended to the update formula of Group Relative Policy Optimization (GRPO). The corollaries and insights drawn from the theoretical analysis inspire the design of entropy control methods, and also offer a unified lens for interpreting various entropy-based methods in existing studies. We provide empirical evidence to support the main conclusions of our analysis and demonstrate the effectiveness of the derived entropy-discriminator clipping methods. This study yields novel insights into RFT training dynamics, providing theoretical support and practical strategies for optimizing the exploration-exploitation balance during LLM fine-tuning.",
+        "authors": "Shumin Wang, Yuexiang Xie, Wenhao Zhang, Yuchang Sun, Yanxi Chen, Yaliang Li, Yanyong Zhang",
+        "url": "http://arxiv.org/abs/2602.03392v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.03392v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文建立了分析LLM强化微调（RFT）过程中熵动态的理论框架，量化了单个logit更新下的熵变化，并将其扩展到GRPO的更新公式。这为理解和优化RFT训练中的探索-利用平衡提供了原理性支持和实用策略。其理论严谨性高，对LLM训练效率和稳定性有深远影响，解决了RFT中熵正则化效果不佳的瓶颈，具有重要的理论创新性。"
+    }
+]

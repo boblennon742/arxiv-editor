@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.04879v1",
+        "title": "Rethinking the Trust Region in LLM Reinforcement Learning",
+        "summary": "Reinforcement learning (RL) has become a cornerstone for fine-tuning Large Language Models (LLMs), with Proximal Policy Optimization (PPO) serving as the de facto standard algorithm. Despite its ubiquity, we argue that the core ratio clipping mechanism in PPO is structurally ill-suited for the large vocabularies inherent to LLMs. PPO constrains policy updates based on the probability ratio of sampled tokens, which serves as a noisy single-sample Monte Carlo estimate of the true policy divergence. This creates a sub-optimal learning dynamic: updates to low-probability tokens are aggressively over-penalized, while potentially catastrophic shifts in high-probability tokens are under-constrained, leading to training inefficiency and instability. To address this, we propose Divergence Proximal Policy Optimization (DPPO), which substitutes heuristic clipping with a more principled constraint based on a direct estimate of policy divergence (e.g., Total Variation or KL). To avoid huge memory footprint, we introduce the efficient Binary and Top-K approximations to capture the essential divergence with negligible overhead. Extensive empirical evaluations demonstrate that DPPO achieves superior training stability and efficiency compared to existing methods, offering a more robust foundation for RL-based LLM fine-tuning.",
+        "authors": "Penghui Qi, Xiangxin Zhou, Zichen Liu, Tianyu Pang, Chao Du, Min Lin, Wee Sun Lee",
+        "url": "http://arxiv.org/abs/2602.04879v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04879v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对LLM强化学习微调中PPO算法的理论缺陷（启发式裁剪不适合LLM大词汇量），提出了基于策略散度（Total Variation或KL）的DPPO算法，并引入高效近似。其理论严谨性高，直接解决了LLM训练的效率和稳定性瓶颈，具有极高的理论创新性和实践影响力，非常符合您对AI前沿算法和架构的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04872v1",
+        "title": "Multi-layer Cross-Attention is Provably Optimal for Multi-modal In-context Learning",
+        "summary": "Recent progress has rapidly advanced our understanding of the mechanisms underlying in-context learning in modern attention-based neural networks. However, existing results focus exclusively on unimodal data; in contrast, the theoretical underpinnings of in-context learning for multi-modal data remain poorly understood. We introduce a mathematically tractable framework for studying multi-modal learning and explore when transformer-like architectures can recover Bayes-optimal performance in-context. To model multi-modal problems, we assume the observed data arises from a latent factor model. Our first result comprises a negative take on expressibility: we prove that single-layer, linear self-attention fails to recover the Bayes-optimal predictor uniformly over the task distribution. To address this limitation, we introduce a novel, linearized cross-attention mechanism, which we study in the regime where both the number of cross-attention layers and the context length are large. We show that this cross-attention mechanism is provably Bayes optimal when optimized using gradient flow. Our results underscore the benefits of depth for in-context learning and establish the provable utility of cross-attention for multi-modal distributions.",
+        "authors": "Nicholas Barnfield, Subhabrata Sen, Pragya Sur",
+        "url": "http://arxiv.org/abs/2602.04872v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04872v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次为多模态In-context Learning提供了数学可处理的理论框架，证明了单层自注意力机制的局限性，并提出了多层线性交叉注意力机制的贝叶斯最优性。其理论深度极高，对理解和设计未来MLLM架构具有基础性指导意义，是纯粹理论创新典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04816v1",
+        "title": "Horizon-LM: A RAM-Centric Architecture for LLM Training",
+        "summary": "The rapid growth of large language models (LLMs) has outpaced the evolution of single-GPU hardware, making model scale increasingly constrained by memory capacity rather than computation. While modern training systems extend GPU memory through distributed parallelism and offloading across CPU and storage tiers, they fundamentally retain a GPU-centric execution paradigm in which GPUs host persistent model replicas and full autograd graphs. As a result, scaling large models remains tightly coupled to multi-GPU clusters, complex distributed runtimes, and unpredictable host memory consumption, creating substantial barriers for node-scale post-training workloads such as instruction tuning, alignment, and domain adaptation. We present Horizon-LM, a memory-centric training system that redefines the roles of CPU and GPU for large-model optimization. Horizon-LM treats host memory as the authoritative parameter store and uses GPUs solely as transient compute engines through a CPU-master, GPU-template execution model. By eliminating persistent GPU-resident modules and autograd graphs, employing explicit recomputation with manual gradient propagation, and introducing a pipelined double-buffered execution engine, Horizon-LM decouples model scale from GPU count and bounds memory usage to the theoretical parameter footprint. On a single H200 GPU with 1.5\\,TB host RAM, Horizon-LM reliably trains models up to 120B parameters. On a standard single A100 machine, Horizon-LM achieves up to 12.2$\\times$ higher training throughput than DeepSpeed ZeRO-3 with CPU offloading while preserving numerical correctness. Across platforms and scales, Horizon-LM sustains high device utilization and predictable memory growth, demonstrating that host memory, not GPU memory, defines the true feasibility boundary for node-scale large-model training.",
+        "authors": "Zhengqing Yuan, Lichao Sun, Yanfang, Ye",
+        "url": "http://arxiv.org/abs/2602.04816v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04816v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种革命性的RAM中心LLM训练架构Horizon-LM，将GPU作为瞬态计算引擎，极大缓解了GPU内存限制，实现了单节点训练超大模型。其架构创新性强，解决了LLM训练的内存和可扩展性瓶颈，具有显著的实践影响力，是您关注的LLM应用瓶颈的优秀解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04774v1",
+        "title": "Theory of Optimal Learning Rate Schedules and Scaling Laws for a Random Feature Model",
+        "summary": "Setting the learning rate for a deep learning model is a critical part of successful training, yet choosing this hyperparameter is often done empirically with trial and error. In this work, we explore a solvable model of optimal learning rate schedules for a powerlaw random feature model trained with stochastic gradient descent (SGD). We consider the optimal schedule $η_T^\\star(t)$ where $t$ is the current iterate and $T$ is the total training horizon. This schedule is computed both numerically and analytically (when possible) using optimal control methods. Our analysis reveals two regimes which we term the easy phase and hard phase. In the easy phase the optimal schedule is a polynomial decay $η_T^\\star(t) \\simeq T^{-ξ} (1-t/T)^δ$ where $ξ$ and $δ$ depend on the properties of the features and task. In the hard phase, the optimal schedule resembles warmup-stable-decay with constant (in $T$) initial learning rate and annealing performed over a vanishing (in $T$) fraction of training steps. We investigate joint optimization of learning rate and batch size, identifying a degenerate optimality condition. Our model also predicts the compute-optimal scaling laws (where model size and training steps are chosen optimally) in both easy and hard regimes. Going beyond SGD, we consider optimal schedules for the momentum $β(t)$, where speedups in the hard phase are possible. We compare our optimal schedule to various benchmarks in our task including (1) optimal constant learning rates $η_T(t) \\sim T^{-ξ}$ (2) optimal power laws $η_T(t) \\sim T^{-ξ} t^{-χ}$, finding that our schedule achieves better rates than either of these. Our theory suggests that learning rate transfer across training horizon depends on the structure of the model and task. We explore these ideas in simple experimental pretraining setups.",
+        "authors": "Blake Bordelon, Francesco Mori",
+        "url": "http://arxiv.org/abs/2602.04774v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04774v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过可解的随机特征模型，深入探讨了最优学习率调度和缩放定律的理论。虽然应用场景不如LLM直接，但其在优化理论和数理统计推导上的严谨性极高，对理解深度学习训练动力学具有基础性贡献，符合您对数理统计和理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04780v1",
+        "title": "Dynamical Regimes of Multimodal Diffusion Models",
+        "summary": "Diffusion based generative models have achieved unprecedented fidelity in synthesizing high dimensional data, yet the theoretical mechanisms governing multimodal generation remain poorly understood. Here, we present a theoretical framework for coupled diffusion models, using coupled Ornstein-Uhlenbeck processes as a tractable model. By using the nonequilibrium statistical physics of dynamical phase transitions, we demonstrate that multimodal generation is governed by a spectral hierarchy of interaction timescales rather than simultaneous resolution. A key prediction is the ``synchronization gap'', a temporal window during the reverse generative process where distinct eigenmodes stabilize at different rates, providing a theoretical explanation for common desynchronization artifacts. We derive analytical conditions for speciation and collapse times under both symmetric and anisotropic coupling regimes, establishing strict bounds for coupling strength to avoid unstable symmetry breaking. We show that the coupling strength acts as a spectral filter that enforces a tunable temporal hierarchy on generation. We support these predictions through controlled experiments with diffusion models trained on MNIST datasets and exact score samplers. These results motivate time dependent coupling schedules that target mode specific timescales, offering a potential alternative to ad hoc guidance tuning.",
+        "authors": "Emil Albrychiewicz, Andrés Franco Valiente, Li-Ching Chen",
+        "url": "http://arxiv.org/abs/2602.04780v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04780v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文建立了耦合扩散模型的理论框架，利用非平衡统计物理学揭示了多模态生成中的动态相变和“同步间隙”现象，并推导了分析条件。其理论严谨性极高，对理解和设计多模态扩散模型具有基础性意义，是前沿算法架构的理论突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04587v1",
+        "title": "VILLAIN at AVerImaTeC: Verifying Image-Text Claims via Multi-Agent Collaboration",
+        "summary": "This paper describes VILLAIN, a multimodal fact-checking system that verifies image-text claims through prompt-based multi-agent collaboration. For the AVerImaTeC shared task, VILLAIN employs vision-language model agents across multiple stages of fact-checking. Textual and visual evidence is retrieved from the knowledge store enriched through additional web collection. To identify key information and address inconsistencies among evidence items, modality-specific and cross-modal agents generate analysis reports. In the subsequent stage, question-answer pairs are produced based on these reports. Finally, the Verdict Prediction agent produces the verification outcome based on the image-text claim and the generated question-answer pairs. Our system ranked first on the leaderboard across all evaluation metrics. The source code is publicly available at https://github.com/ssu-humane/VILLAIN.",
+        "authors": "Jaeyoon Jung, Yejun Yoon, Seunghyun Yoon, Kunwoo Park",
+        "url": "http://arxiv.org/abs/2602.04587v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04587v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了语义自蒸馏（SSD）方法，将LLM的语义不确定性蒸馏到轻量级学生模型中，在生成前预测不确定性。这有效缓解了幻觉问题并提高了效率，理论创新性与实际应用价值兼具，解决了LLM可靠性与数据效率的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04509v1",
+        "title": "Model-Dowser: Data-Free Importance Probing to Mitigate Catastrophic Forgetting in Multimodal Large Language Models",
+        "summary": "Fine-tuning Multimodal Large Language Models (MLLMs) on task-specific data is an effective way to improve performance on downstream applications. However, such adaptation often leads to a degradation in generalization on pretrained tasks, a phenomenon known as Catastrophic Forgetting. Existing methods that aim to mitigate this issue either become ineffective when fine-tuning deeper layers of the language decoder or scale poorly with increasing model size. To address these limitations, we propose Model-Dowser, a novel sparse fine-tuning approach for MLLMs. Model-Dowser measures a principled importance score for each model parameter with respect to pretrained generalization (prior to downstream adaptation) by jointly considering weight magnitudes, input activations, and output sensitivities. During fine-tuning, Model-Dowser selectively preserves high-importance parameters and updates the remaining. Comprehensive experiments on two representative MLLMs, LLaVA and NVILA, demonstrate that Model-Dowser effectively mitigates catastrophic forgetting and consistently outperforms prior methods, while remaining resource-efficient and scalable to multi-billion-parameter models.",
+        "authors": "Hyeontaek Hwang, Nguyen Dinh Son, Daeyoung Kim",
+        "url": "http://arxiv.org/abs/2602.04509v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04509v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Model-Dowser，一种新颖的稀疏微调方法，通过数据无关的重要性探测来缓解MLLM的灾难性遗忘。它基于参数的重要性评分选择性地保留参数，有效解决了MLLM适应性中的关键瓶颈，同时保持资源高效和可扩展性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04595v1",
+        "title": "Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference",
+        "summary": "Large Language Models (LLMs) are powerful but incur high memory and computation costs. Quantization is an effective solution, with INT weights and FP activations being widely adopted to preserve accuracy. Prior works further reduce FP overhead by using block floating point (BFP) activations in linear layers, but fail to extend BFP to attention layers due to severe accuracy degradation, limiting overall efficiency. To address this challenge, we propose Harmonia, an algorithm-hardware co-design framework that enables all-layer BFP activations with a configurable hardware architecture. First, we systematically explore BFP configurations to achieve a better trade-off between accuracy and activation compression across all layers. Second, to reduce KV-cache storage and computation in attention layers, we introduce an asymmetric bit-allocation strategy and computations in attention layers,we introduce an asymmetric bit-allocation strategy combined with a hybrid offline-online outlier smoothing technique. This allow aggressive KV-cache compression from FP16 to 4-bit-mantissa BFP with only 0.3% average accuracy loss. Third, to fully exploit all-layer BFP activations, we design dedicated hardware components, including a reconfigurable PE supporting mixed data formats (BFP-INT and BPF-BFP), a real-time FP16-to-BFP converter, and a tiling-aware dataflow to reduce memory traffic. We evaluate Harmonia on GEMM operations in both linear and attention layers across eight widely used LLMs. Compared with prior works, Harmonia achieves 3.84x (up to 5.05x) higher area efficiency, 2.03x (up to 3.90x) better energy efficiency, and 3.08x (up to 4.62x) speedup on average.",
+        "authors": "Xinyu Wang, Jieyu Li, Yanan Sun, Weifeng He",
+        "url": "http://arxiv.org/abs/2602.04595v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04595v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了算法-硬件协同设计框架Harmonia，通过全层BFP（Block Floating Point）激活和非对称位分配等技术，显著提升了LLM推理的内存和计算效率。其在模型压缩和架构创新方面表现突出，解决了LLM部署的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04541v1",
+        "title": "LycheeDecode: Accelerating Long-Context LLM Inference via Hybrid-Head Sparse Decoding",
+        "summary": "The proliferation of long-context large language models (LLMs) exposes a key bottleneck: the rapidly expanding key-value cache during decoding, which imposes heavy memory and latency costs. While recent approaches attempt to alleviate this by sharing a single set of crucial tokens across layers, such coarse-grained sharing undermines model performance by neglecting the functional diversity of attention heads. To address this, we propose LycheeDecode, an efficient decoding method centered on a fine-grained hybrid-head attention mechanism that employs a hardware-efficient top-k selection strategy. Specifically, the novel HardKuma-based mechanism partitions attention heads into a small subset of retrieval heads that dynamically identify crucial tokens and a majority of sparse heads that reuse them for efficient computation. Through extensive experiments on leading models like Llama3 and Qwen3 across diverse benchmarks for long-context understanding (e.g., LongBench, RULER) and complex reasoning (e.g., AIME24, OlympiadBench), we demonstrate that LycheeDecode achieves generative quality comparable to, and at times surpassing even the full-attention baseline. Crucially, this is accomplished with up to a 2.7x speedup at a 128K context length. By preserving the functional diversity of attention heads, our fine-grained strategy overcomes the performance bottlenecks of existing methods, providing a powerful and validated pathway to both efficient and high-quality long-context LLM inference.",
+        "authors": "Gang Lin, Dongfang Li, Zhuoen Chen, Yukun Shi, Xuhui Chen, Baotian Hu, Min Zhang",
+        "url": "http://arxiv.org/abs/2602.04541v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04541v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对长上下文LLM推理中KV-Cache的内存和延迟瓶颈，提出了LycheeDecode，一种高效的混合头稀疏解码机制。其架构创新性强，通过细粒度注意力分配实现了显著加速和性能保持，是LLM效率提升的重要突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04491v1",
+        "title": "Greedy-Gnorm: A Gradient Matrix Norm-Based Alternative to Attention Entropy for Head Pruning",
+        "summary": "Attention head pruning has emerged as an effective technique for transformer model compression, an increasingly important goal in the era of Green AI. However, existing pruning methods often rely on static importance scores, which fail to capture the evolving role of attention heads during iterative removal. We propose Greedy-Gradient norm (Greedy-Gnorm), a novel head pruning algorithm that dynamically recalculates head importance after each pruning step. Specifically, each head is scored by the elementwise product of the l2-norms of its Q/K/V gradient blocks, as estimated from a hold-out validation set and updated at every greedy iteration. This dynamic approach to scoring mitigates against stale rankings and better reflects gradient-informed importance as pruning progresses. Extensive experiments on BERT, ALBERT, RoBERTa, and XLM-RoBERTa demonstrate that Greedy-Gnorm consistently preserves accuracy under substantial head removal, outperforming attention entropy. By effectively reducing model size while maintaining task performance, Greedy-Gnorm offers a promising step toward more energy-efficient transformer model deployment.",
+        "authors": "Yuxi Guo, Paul Sheridan",
+        "url": "http://arxiv.org/abs/2602.04491v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04491v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于梯度矩阵范数的动态注意力头剪枝算法Greedy-Gnorm，在保持模型性能的同时大幅压缩Transformer模型。其理论创新性体现在动态重要性评分机制，解决了模型压缩的效率瓶颈，符合您对理论创新和模型压缩的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04428v1",
+        "title": "Fine-Grained Activation Steering: Steering Less, Achieving More",
+        "summary": "Activation steering has emerged as a cost-effective paradigm for modifying large language model (LLM) behaviors. Existing methods typically intervene at the block level, steering the bundled activations of selected attention heads, feedforward networks, or residual streams. However, we reveal that block-level activations are inherently heterogeneous, entangling beneficial, irrelevant, and harmful features, thereby rendering block-level steering coarse, inefficient, and intrusive. To investigate the root cause, we decompose block activations into fine-grained atomic unit (AU)-level activations, where each AU-level activation corresponds to a single dimension of the block activation, and each AU denotes a slice of the block weight matrix. Steering an AU-level activation is thus equivalent to steering its associated AU. Our theoretical and empirical analysis show that heterogeneity arises because different AUs or dimensions control distinct token distributions in LLM outputs. Hence, block-level steering inevitably moves helpful and harmful token directions together, which reduces efficiency. Restricting intervention to beneficial AUs yields more precise and effective steering. Building on this insight, we propose AUSteer, a simple and efficient method that operates at a finer granularity of the AU level. AUSteer first identifies discriminative AUs globally by computing activation momenta on contrastive samples. It then assigns adaptive steering strengths tailored to diverse inputs and selected AU activations. Comprehensive experiments on multiple LLMs and tasks show that AUSteer consistently surpasses advanced baselines while steering considerably fewer activations, demonstrating that steering less achieves more.",
+        "authors": "Zijian Feng, Tianjiao Li, Zixiao Zhu, Hanzhang Zhou, Junlang Qian, Li Zhang, Jia Jim Deryl Chua, Lee Onn Mak, Gee Wah Ng, Kezhi Mao",
+        "url": "http://arxiv.org/abs/2602.04428v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04428v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了细粒度激活操纵方法AUSteer，通过将块激活分解为原子单元（AU）级别，并识别判别性AU进行自适应操纵，实现了更精确和高效的LLM行为控制。其理论创新性在于对LLM内部机制的深入理解和精细化控制，避免了纯工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04417v1",
+        "title": "EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL",
+        "summary": "Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to acquire increasingly complex reasoning and agentic behaviors. In this work, we propose two simple techniques to improve policy gradient algorithms for LLMs. First, we replace the fixed anchor policy during RL with an Exponential Moving Average (EMA), similar to a target network in deep Q-learning. Second, we introduce Top-k KL estimator, which allows for flexible interpolation between exact KL and sampled KL. We derive the stability conditions for using EMA anchor; moreover, we show that our Top-k KL estimator yields both unbiased KL values and unbiased gradients at any k, while bringing the benefits of exact KL. When combined with GRPO, the two techniques (EMA-PG) lead to a significant performance boost. On math reasoning, it allows R1-distilled Qwen-1.5B to reach 53.9% on OlympiadBench compared to 50.8% by GRPO. On agentic RL domains, with Qwen-3B base, EMA-PG improves GRPO by an average of 33.3% across 7 datasets of Q&A with search engines, including 29.7% $\\rightarrow$ 44.1% on HotpotQA, 27.4% $\\rightarrow$ 40.1% on 2WikiMultiHopQA. Overall, we show that EMA-PG is a simple, principled, and powerful approach to scaling RL for LLMs. Code: https://github.com/LunjunZhang/ema-pg",
+        "authors": "Lunjun Zhang, Jimmy Ba",
+        "url": "http://arxiv.org/abs/2602.04417v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04417v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了EMA锚点和Top-k KL估计器两种技术，显著提升了LLM强化学习算法的稳定性和性能，尤其在数学推理和智能体RL任务上。其理论严谨性高，直接解决了LLM训练的效率和稳定性瓶颈，是RLHF领域的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04396v1",
+        "title": "LoRDO: Distributed Low-Rank Optimization with Infrequent Communication",
+        "summary": "Distributed training of foundation models via $\\texttt{DDP}$ is limited by interconnect bandwidth. While infrequent communication strategies reduce synchronization frequency, they remain bottlenecked by the memory and communication requirements of optimizer states. Low-rank optimizers can alleviate these constraints; however, in the local-update regime, workers lack access to the full-batch gradients required to compute low-rank projections, which degrades performance. We propose $\\texttt{LoRDO}$, a principled framework unifying low-rank optimization with infrequent synchronization. We first demonstrate that, while global projections based on pseudo-gradients are theoretically superior, they permanently restrict the optimization trajectory to a low-rank subspace. To restore subspace exploration, we introduce a full-rank quasi-hyperbolic update. $\\texttt{LoRDO}$ achieves near-parity with low-rank $\\texttt{DDP}$ in language modeling and downstream tasks at model scales of $125$M--$720$M, while reducing communication by $\\approx 10 \\times$. Finally, we show that $\\texttt{LoRDO}$ improves performance even more in very low-memory settings with small rank/batch size.",
+        "authors": "Andrej Jovanović, Alex Iacob, Mher Safaryan, Ionut-Vlad Modoranu, Lorenzo Sani, William F. Shen, Xinchi Qiu, Dan Alistarh, Nicholas D. Lane",
+        "url": "http://arxiv.org/abs/2602.04396v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04396v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了LoRDO框架，将低秩优化与不频繁通信相结合，通过全秩准双曲更新解决了分布式训练中优化器状态的通信瓶颈。其理论创新性强，显著提升了LLM分布式训练的效率和可扩展性，是您关注的LLM应用瓶颈的优秀解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04355v1",
+        "title": "Can Vision Replace Text in Working Memory? Evidence from Spatial n-Back in Vision-Language Models",
+        "summary": "Working memory is a central component of intelligent behavior, providing a dynamic workspace for maintaining and updating task-relevant information. Recent work has used n-back tasks to probe working-memory-like behavior in large language models, but it is unclear whether the same probe elicits comparable computations when information is carried in a visual rather than textual code in vision-language models. We evaluate Qwen2.5 and Qwen2.5-VL on a controlled spatial n-back task presented as matched text-rendered or image-rendered grids. Across conditions, models show reliably higher accuracy and d' with text than with vision. To interpret these differences at the process level, we use trial-wise log-probability evidence and find that nominal 2/3-back often fails to reflect the instructed lag and instead aligns with a recency-locked comparison. We further show that grid size alters recent-repeat structure in the stimulus stream, thereby changing interference and error patterns. These results motivate computation-sensitive interpretations of multimodal working memory.",
+        "authors": "Sichu Liang, Hongyu Zhu, Wenwen Wang, Deyu Zhou",
+        "url": "http://arxiv.org/abs/2602.04355v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04355v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SparVAR，一个免训练的视觉自回归模型加速框架，通过利用注意力机制的稀疏性，动态预测和构建稀疏注意力模式，显著降低了高分辨率图像生成的计算复杂度。其架构创新性强，解决了生成模型效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04163v1",
+        "title": "BPDQ: Bit-Plane Decomposition Quantization on a Variable Grid for Large Language Models",
+        "summary": "Large language model (LLM) inference is often bounded by memory footprint and memory bandwidth in resource-constrained deployments, making quantization a fundamental technique for efficient serving. While post-training quantization (PTQ) maintains high fidelity at 4-bit, it deteriorates at 2-3 bits. Fundamentally, existing methods enforce a shape-invariant quantization grid (e.g., the fixed uniform intervals of UINT2) for each group, severely restricting the feasible set for error minimization. To address this, we propose Bit-Plane Decomposition Quantization (BPDQ), which constructs a variable quantization grid via bit-planes and scalar coefficients, and iteratively refines them using approximate second-order information while progressively compensating quantization errors to minimize output discrepancy. In the 2-bit regime, BPDQ enables serving Qwen2.5-72B on a single RTX 3090 with 83.85% GSM8K accuracy (vs. 90.83% at 16-bit). Moreover, we provide theoretical analysis showing that the variable grid expands the feasible set, and that the quantization process consistently aligns with the optimization objective in Hessian-induced geometry. Code: github.com/KingdalfGoodman/BPDQ.",
+        "authors": "Junyu Chen, Jungang Li, Jing Xiong, Wenjie Wang, Qingyao Yang, He Xiao, Zhen Li, Taiqiang Wu, Mengzhao Chen, Zhen Peng, Chaofan Tao, Long Shi, Hongxia Yang, Ngai Wong",
+        "url": "http://arxiv.org/abs/2602.04163v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04163v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了BPDQ，一种基于位平面分解的变网格量化方法，通过迭代优化和二阶信息补偿，实现了LLM在2-3比特下的高保真量化。其理论严谨性极高，解决了LLM模型压缩的极限瓶颈，具有极高的实践影响力，是模型压缩领域的重大突破。"
+    }
+]

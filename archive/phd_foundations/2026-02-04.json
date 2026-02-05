@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.04798v1",
+        "title": "Score-Based Change-Point Detection and Region Localization for Spatio-Temporal Point Processes",
+        "summary": "We study sequential change-point detection for spatio-temporal point processes, where actionable detection requires not only identifying when a distributional change occurs but also localizing where it manifests in space. While classical quickest change detection methods provide strong guarantees on detection delay and false-alarm rates, existing approaches for point-process data predominantly focus on temporal changes and do not explicitly infer affected spatial regions. We propose a likelihood-free, score-based detection framework that jointly estimates the change time and the change region in continuous space-time without assuming parametric knowledge of the pre- or post-change dynamics. The method leverages a localized and conditionally weighted Hyvärinen score to quantify event-level deviations from nominal behavior and aggregates these scores using a spatio-temporal CUSUM-type statistic over a prescribed class of spatial regions. Operating sequentially, the procedure outputs both a stopping time and an estimated change region, enabling real-time detection with spatial interpretability. We establish theoretical guarantees on false-alarm control, detection delay, and spatial localization accuracy, and demonstrate the effectiveness of the proposed approach through simulations and real-world spatio-temporal event data.",
+        "authors": "Wenbin Zhou, Liyan Xie, Shixiang Zhu",
+        "url": "http://arxiv.org/abs/2602.04798v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04798v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于分数的时空点过程变化点检测框架，不仅能识别变化发生的时间，还能定位空间区域。它明确强调了“理论保证”、“误报控制”、“检测延迟”和“空间定位精度”，并利用了Hyvärinen分数和CUSUM统计量，这些都表明了其强大的统计学和数学严谨性，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04784v1",
+        "title": "From independent patches to coordinated attention: Controlling information flow in vision transformers",
+        "summary": "We make the information transmitted by attention an explicit, measurable quantity in vision transformers. By inserting variational information bottlenecks on all attention-mediated writes to the residual stream -- without other architectural changes -- we train models with an explicit information cost and obtain a controllable spectrum from independent patch processing to fully expressive global attention. On ImageNet-100, we characterize how classification behavior and information routing evolve across this spectrum, and provide initial insights into how global visual representations emerge from local patch processing by analyzing the first attention heads that transmit information. By biasing learning toward solutions with constrained internal communication, our approach yields models that are more tractable for mechanistic analysis and more amenable to control.",
+        "authors": "Kieran A. Murphy",
+        "url": "http://arxiv.org/abs/2602.04784v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04784v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过在Vision Transformer中引入变分信息瓶颈，将注意力机制传递的信息量化为可测量的量，并训练出具有明确信息成本的模型。这体现了信息论的严谨性，有助于对AI系统进行机制分析和控制，符合您对严谨数学逻辑应用于AI系统的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04752v1",
+        "title": "Decomposing Query-Key Feature Interactions Using Contrastive Covariances",
+        "summary": "Despite the central role of attention heads in Transformers, we lack tools to understand why a model attends to a particular token. To address this, we study the query-key (QK) space -- the bilinear joint embedding space between queries and keys. We present a contrastive covariance method to decompose the QK space into low-rank, human-interpretable components. It is when features in keys and queries align in these low-rank subspaces that high attention scores are produced. We first study our method both analytically and empirically in a simplified setting. We then apply our method to large language models to identify human-interpretable QK subspaces for categorical semantic features and binding features. Finally, we demonstrate how attention scores can be attributed to our identified features.",
+        "authors": "Andrew Lee, Yonatan Belinkov, Fernanda Viégas, Martin Wattenberg",
+        "url": "http://arxiv.org/abs/2602.04752v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04752v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过对比协方差方法分解Transformer中查询-键（QK）特征交互空间，旨在理解模型为何关注特定token。它提到了“分析和实证研究”，并致力于将QK空间分解为“低秩、人类可解释的组件”，这表明了其在理解AI机制方面的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04736v1",
+        "title": "Conditional Counterfactual Mean Embeddings: Doubly Robust Estimation and Learning Rates",
+        "summary": "A complete understanding of heterogeneous treatment effects involves characterizing the full conditional distribution of potential outcomes. To this end, we propose the Conditional Counterfactual Mean Embeddings (CCME), a framework that embeds conditional distributions of counterfactual outcomes into a reproducing kernel Hilbert space (RKHS). Under this framework, we develop a two-stage meta-estimator for CCME that accommodates any RKHS-valued regression in each stage. Based on this meta-estimator, we develop three practical CCME estimators: (1) Ridge Regression estimator, (2) Deep Feature estimator that parameterizes the feature map by a neural network, and (3) Neural-Kernel estimator that performs RKHS-valued regression, with the coefficients parameterized by a neural network. We provide finite-sample convergence rates for all estimators, establishing that they possess the double robustness property. Our experiments demonstrate that our estimators accurately recover distributional features including multimodal structure of conditional counterfactual distributions.",
+        "authors": "Thatchanon Anancharoenkij, Donlapark Ponnoprat",
+        "url": "http://arxiv.org/abs/2602.04736v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04736v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了条件反事实均值嵌入（CCME）框架，用于表征潜在结果的完整条件分布。它明确提到了“双重稳健估计”、“再生核希尔伯特空间（RKHS）”、“有限样本收敛率”和“双重稳健性”，这些都是因果推断和统计学中高度严谨的概念，完美契合您对因果逻辑和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04713v1",
+        "title": "Adaptive Prompt Elicitation for Text-to-Image Generation",
+        "summary": "Aligning text-to-image generation with user intent remains challenging, for users who provide ambiguous inputs and struggle with model idiosyncrasies. We propose Adaptive Prompt Elicitation (APE), a technique that adaptively asks visual queries to help users refine prompts without extensive writing. Our technical contribution is a formulation of interactive intent inference under an information-theoretic framework. APE represents latent intent as interpretable feature requirements using language model priors, adaptively generates visual queries, and compiles elicited requirements into effective prompts. Evaluation on IDEA-Bench and DesignBench shows that APE achieves stronger alignment with improved efficiency. A user study with challenging user-defined tasks demonstrates 19.8% higher alignment without workload overhead. Our work contributes a principled approach to prompting that, for general users, offers an effective and efficient complement to the prevailing prompt-based interaction paradigm with text-to-image models.",
+        "authors": "Xinyi Wen, Lena Hegemann, Xiaofu Jin, Shuai Ma, Antti Oulasvirta",
+        "url": "http://arxiv.org/abs/2602.04713v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04713v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了自适应提示启发（APE），将交互式意图推断置于信息论框架下。信息论是强大的理论基础，论文通过自适应生成视觉查询并整合需求来生成有效提示，体现了严谨的数学方法来解决实际问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04620v1",
+        "title": "QUATRO: Query-Adaptive Trust Region Policy Optimization for LLM Fine-tuning",
+        "summary": "GRPO-style reinforcement learning (RL)-based LLM fine-tuning algorithms have recently gained popularity. Relying on heuristic trust-region approximations, however, they can lead to brittle optimization behavior, as global importance-ratio clipping and group-wise normalization fail to regulate samples whose importance ratios fall outside the clipping range. We propose Query-Adaptive Trust-Region policy Optimization (QUATRO), which directly enforces trust-region constraints through a principled optimization. This yields a clear and interpretable objective that enables explicit control over policy updates and stable, entropy-controlled optimization, with a stabilizer terms arising intrinsically from the exact trust-region formulation. Empirically verified on diverse mathematical reasoning benchmarks, QUATRO shows stable training under increased policy staleness and aggressive learning rates, maintaining well-controlled entropy throughout training.",
+        "authors": "Doyeon Lee, Eunyi Lyou, Hyunsoo Cho, Sookyung Kim, Joonseok Lee, Jaemoo Choi",
+        "url": "http://arxiv.org/abs/2602.04620v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04620v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Query-Adaptive Trust-Region policy Optimization (QUATRO) 算法用于LLM微调。它强调了通过“原则性优化”直接强制执行“信任区域约束”，并指出“稳定器项本质上源于精确的信任区域公式”。这直接体现了优化收敛性和清晰的数学推导，是您会非常感兴趣的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04611v1",
+        "title": "Targeted Synthetic Control Method",
+        "summary": "The synthetic control method (SCM) estimates causal effects in panel data with a single-treated unit by constructing a counterfactual outcome as a weighted combination of untreated control units that matches the pre-treatment trajectory. In this paper, we introduce the targeted synthetic control (TSC) method, a new two-stage estimator that directly estimates the counterfactual outcome. Specifically, our TSC method (1) yields a targeted debiasing estimator, in the sense that the targeted updating refines the initial weights to produce more stable weights; and (2) ensures that the final counterfactual estimation is a convex combination of observed control outcomes to enable direct interpretation of the synthetic control weights. TSC is flexible and can be instantiated with arbitrary machine learning models. Methodologically, TSC starts from an initial set of synthetic-control weights via a one-dimensional targeted update through the weight-tilting submodel, which calibrates the weights to reduce bias of weights estimation arising from pre-treatment fit. Furthermore, TSC avoids key shortcomings of existing methods (e.g., the augmented SCM), which can produce unbounded counterfactual estimates. Across extensive synthetic and real-world experiments, TSC consistently improves estimation accuracy over state-of-the-art SCM baselines.",
+        "authors": "Yuxin Wang, Dennis Frauen, Emil Javurek, Konstantin Hess, Yuchen Ma, Stefan Feuerriegel",
+        "url": "http://arxiv.org/abs/2602.04611v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04611v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了“目标合成控制（TSC）方法”，一个用于估计因果效应的两阶段估计器。它强调了“目标去偏估计器”、“稳定权重”以及通过“权重倾斜子模型”减少偏差，并避免了现有方法的缺陷。这在因果逻辑和统计保证方面具有高度严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04594v1",
+        "title": "Distributed Convoluted Rank Regression for Non-Shareable Data under Non-Additive Losses",
+        "summary": "We study high-dimensional rank regression when data are distributed across multiple machines and the loss is a non-additive U-statistic, as in convoluted rank regression (CRR). Classical communication-efficient surrogate likelihood (CSL) methods crucially rely on the additivity of the empirical loss and therefore break down for CRR, whose global loss couples all sample pairs across machines. We propose a distributed convoluted rank regression (DCRR) framework that constructs a similar surrogate loss and demonstrate its validity under the non-additive losses. We show that this surrogate shares the same population minimizer as the full-data CRR loss and yields estimators that are statistically equivalent to centralized CRR. Building on this, we develop a two-stage sparse DCRR procedure -- an iterative $\\ell_1$-penalized stage followed by a folded-concave refinement -- and establish non-asymptotic error bounds, a distributed strong oracle property, and a DHBIC-type criterion for consistent model selection. A scaling result shows that the number of machines may diverge as $M = o({N/(s^2\\log p)})$ while achieving centralized oracle rates with only $O(\\log N)$ communication rounds. Simulations and a large-scale real data example demonstrate substantial gains over naive divide-and-conquer, particularly under heavy-tailed errors.",
+        "authors": "Wen Zhang, Liping Zhu, Songshan Yang",
+        "url": "http://arxiv.org/abs/2602.04594v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04594v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了非可共享数据下非加性损失的高维秩回归问题，提出了分布式卷积秩回归（DCRR）框架。它建立了“非渐近误差界”、“分布式强预言性质”和“一致模型选择”的理论保证，这些都是统计学中非常严谨的理论结果，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04472v1",
+        "title": "Universality of General Spiked Tensor Models",
+        "summary": "We study the rank-one spiked tensor model in the high-dimensional regime, where the noise entries are independent and identically distributed with zero mean, unit variance, and finite fourth moment.This setting extends the classical Gaussian framework to a substantially broader class of noise distributions.Focusing on asymmetric tensors of order $d$ ($\\ge 3$), we analyze the maximum likelihood estimator of the best rank-one approximation.Under a mild assumption isolating informative critical points of the associated optimization landscape, we show that the empirical spectral distribution of a suitably defined block-wise tensor contraction converges almost surely to a deterministic limit that coincides with the Gaussian case.As a consequence, the asymptotic singular value and the alignments between the estimated and true spike directions admit explicit characterizations identical to those obtained under Gaussian noise. These results establish a universality principle for spiked tensor models, demonstrating that their high-dimensional spectral behavior and statistical limits are robust to non-Gaussian noise.   Our analysis relies on resolvent methods from random matrix theory, cumulant expansions valid under finite moment assumptions, and variance bounds based on Efron-Stein-type arguments. A key challenge in the proof is how to handle the statistical dependence between the signal term and the noise term.",
+        "authors": "Yanjin Xiang, Zhihua Zhang",
+        "url": "http://arxiv.org/abs/2602.04472v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04472v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探讨了高维秩一张量模型在非高斯噪声下的普适性。它利用“随机矩阵理论中的预解式方法”、“累积量展开”和“Efron-Stein型论证的方差界”，建立了高维谱行为和统计极限的普适性原理。这篇论文的理论基础和数学推导非常强大，是纯粹的数理统计研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04408v1",
+        "title": "Separation-Utility Pareto Frontier: An Information-Theoretic Characterization",
+        "summary": "We study the Pareto frontier (optimal trade-off) between utility and separation, a fairness criterion requiring predictive independence from sensitive attributes conditional on the true outcome. Through an information-theoretic lens, we prove a characterization of the utility-separation Pareto frontier, establish its concavity, and thereby prove the increasing marginal cost of separation in terms of utility. In addition, we characterize the conditions under which this trade-off becomes strict, providing a guide for trade-off selection in practice. Based on the theoretical characterization, we develop an empirical regularizer based on conditional mutual information (CMI) between predictions and sensitive attributes given the true outcome. The CMI regularizer is compatible with any deep model trained via gradient-based optimization and serves as a scalar monitor of residual separation violations, offering tractable guarantees during training. Finally, numerical experiments support our theoretical findings: across COMPAS, UCI Adult, UCI Bank, and CelebA, the proposed method substantially reduces separation violations while matching or exceeding the utility of established baseline methods. This study thus offers a provable, stable, and flexible approach to enforcing separation in deep learning.",
+        "authors": "Shizhou Xu",
+        "url": "http://arxiv.org/abs/2602.04408v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04408v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过信息论视角，刻画了效用与分离（一种公平性准则）之间的帕累托前沿。它证明了帕累托前沿的“凹性”，并利用“条件互信息（CMI）”作为经验正则化器，提供“可追踪的保证”。这篇论文在信息论、优化理论和公平性方面提供了强大的理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04398v1",
+        "title": "Bi-directional Bias Attribution: Debiasing Large Language Models without Modifying Prompts",
+        "summary": "Large language models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks. However, their outputs often exhibit social biases, raising fairness concerns. Existing debiasing methods, such as fine-tuning on additional datasets or prompt engineering, face scalability issues or compromise user experience in multi-turn interactions. To address these challenges, we propose a framework for detecting stereotype-inducing words and attributing neuron-level bias in LLMs, without the need for fine-tuning or prompt modification. Our framework first identifies stereotype-inducing adjectives and nouns via comparative analysis across demographic groups. We then attribute biased behavior to specific neurons using two attribution strategies based on integrated gradients. Finally, we mitigate bias by directly intervening on their activations at the projection layer. Experiments on three widely used LLMs demonstrate that our method effectively reduces bias while preserving overall model performance. Code is available at the github link: https://github.com/XMUDeepLIT/Bi-directional-Bias-Attribution.",
+        "authors": "Yujie Lin, Kunquan Li, Yixuan Liao, Xiaoxin Chen, Jinsong Su",
+        "url": "http://arxiv.org/abs/2602.04398v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04398v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究将“表现性预测”嵌入到“统计学习理论”中，证明了在表现性效应下的“泛化界限”。它将自我否定和自我实现的预测铸造为“Wasserstein空间中的min-max和min-min风险泛函”。这篇论文在统计学习理论、优化理论和泛化能力方面提供了深刻的理论见解和严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04244v1",
+        "title": "Training A Foundation Model to Represent Graphs as Vectors",
+        "summary": "This paper aims to train a graph foundation model that is able to represent any graph as a vector preserving structural and semantic information useful for downstream graph-level tasks such as graph classification and graph clustering. To learn the features of graphs from diverse domains while maintaining strong generalization ability to new domains, we propose a multi-graph-based feature alignment method, which constructs weighted graphs using the attributes of all nodes in each dataset and then generates consistent node embeddings. To enhance the consistency of the features from different datasets, we propose a density maximization mean alignment algorithm with guaranteed convergence. The original graphs and generated node embeddings are fed into a graph neural network to achieve discriminative graph representations in contrastive learning. More importantly, to enhance the information preservation from node-level representations to the graph-level representation, we construct a multi-layer reference distribution module without using any pooling operation. We also provide a theoretical generalization bound to support the effectiveness of the proposed model. The experimental results of few-shot graph classification and graph clustering show that our model outperforms strong baselines.",
+        "authors": "Qi Feng, Jicong Fan",
+        "url": "http://arxiv.org/abs/2602.04244v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04244v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文旨在训练一个图基础模型，并提出了一个“密度最大化均值对齐算法”，明确指出其“收敛性保证”和“理论泛化界限”。这直接符合您对优化收敛性和统计保证的偏好，具有很强的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04154v1",
+        "title": "Context Determines Optimal Architecture in Materials Segmentation",
+        "summary": "Segmentation architectures are typically benchmarked on single imaging modalities, obscuring deployment-relevant performance variations: an architecture optimal for one modality may underperform on another. We present a cross-modal evaluation framework for materials image segmentation spanning SEM, AFM, XCT, and optical microscopy. Our evaluation of six encoder-decoder combinations across seven datasets reveals that optimal architectures vary systematically by context: UNet excels for high-contrast 2D imaging while DeepLabv3+ is preferred for the hardest cases. The framework also provides deployment feedback via out-of-distribution detection and counterfactual explanations that reveal which microstructural features drive predictions. Together, the architecture guidance, reliability signals, and interpretability tools address a practical gap in materials characterization, where researchers lack tools to select architectures for their specific imaging setup or assess when models can be trusted on new samples.",
+        "authors": "Mingjian Lu, Pawan K. Tripathi, Mark Shteyn, Debargha Ganguly, Roger H. French, Vipin Chaudhary, Yinghui Wu",
+        "url": "http://arxiv.org/abs/2602.04154v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04154v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从博弈论角度将群体公平性解释为“讨价还价问题”，提出了“最大化相对改进”的公平性准则，并提供了“公理化证明”和“有限样本收敛保证”。这在博弈论、统计学和公平性方面具有高度严谨的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.04125v1",
+        "title": "Attack-Resistant Uniform Fairness for Linear and Smooth Contextual Bandits",
+        "summary": "Modern systems, such as digital platforms and service systems, increasingly rely on contextual bandits for online decision-making; however, their deployment can inadvertently create unfair exposure among arms, undermining long-term platform sustainability and supplier trust. This paper studies the contextual bandit problem under a uniform $(1-δ)$-fairness constraint, and addresses its unique vulnerabilities to strategic manipulation. The fairness constraint ensures that preferential treatment is strictly justified by an arm's actual reward across all contexts and time horizons, using uniformity to prevent statistical loopholes. We develop novel algorithms that achieve (nearly) minimax-optimal regret for both linear and smooth reward functions, while maintaining strong $(1-\\tilde{O}(1/T))$-fairness guarantees, and further characterize the theoretically inherent yet asymptotically marginal \"price of fairness\". However, we reveal that such merit-based fairness becomes uniquely susceptible to signal manipulation. We show that an adversary with a minimal $\\tilde{O}(1)$ budget can not only degrade overall performance as in traditional attacks, but also selectively induce insidious fairness-specific failures while leaving conspicuous regret measures largely unaffected. To counter this, we design robust variants incorporating corruption-adaptive exploration and error-compensated thresholding. Our approach yields the first minimax-optimal regret bounds under $C$-budgeted attack while preserving $(1-\\tilde{O}(1/T))$-fairness. Numerical experiments and a real-world case demonstrate that our algorithms sustain both fairness and efficiency.",
+        "authors": "Qingwen Zhang, Wenjia Wang",
+        "url": "http://arxiv.org/abs/2602.04125v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.04125v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究在“均匀公平性约束”下研究了“上下文强盗问题”，并提出了实现“（近似）极小极大最优遗憾”的算法。它还表征了“公平性的理论固有但渐近边际的代价”，并提供了“在C预算攻击下的极小极大最优遗憾界限”。这篇论文在优化理论、统计保证和鲁棒性方面具有极高的严谨性。"
+    }
+]

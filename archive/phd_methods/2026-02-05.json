@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.06040v1",
+        "title": "SwimBird: Eliciting Switchable Reasoning Mode in Hybrid Autoregressive MLLMs",
+        "summary": "Multimodal Large Language Models (MLLMs) have made remarkable progress in multimodal perception and reasoning by bridging vision and language. However, most existing MLLMs perform reasoning primarily with textual CoT, which limits their effectiveness on vision-intensive tasks. Recent approaches inject a fixed number of continuous hidden states as \"visual thoughts\" into the reasoning process and improve visual performance, but often at the cost of degraded text-based logical reasoning. We argue that the core limitation lies in a rigid, pre-defined reasoning pattern that cannot adaptively choose the most suitable thinking modality for different user queries. We introduce SwimBird, a reasoning-switchable MLLM that dynamically switches among three reasoning modes conditioned on the input: (1) text-only reasoning, (2) vision-only reasoning (continuous hidden states as visual thoughts), and (3) interleaved vision-text reasoning. To enable this capability, we adopt a hybrid autoregressive formulation that unifies next-token prediction for textual thoughts with next-embedding prediction for visual thoughts, and design a systematic reasoning-mode curation strategy to construct SwimBird-SFT-92K, a diverse supervised fine-tuning dataset covering all three reasoning patterns. By enabling flexible, query-adaptive mode selection, SwimBird preserves strong textual logic while substantially improving performance on vision-dense tasks. Experiments across diverse benchmarks covering textual reasoning and challenging visual understanding demonstrate that SwimBird achieves state-of-the-art results and robust gains over prior fixed-pattern multimodal reasoning methods.",
+        "authors": "Jintao Tong, Shilin Yan, Hongwei Xue, Xiaojun Tang, Kunyu Shi, Guannan Zhang, Ruixuan Li, Yixiong Zou",
+        "url": "http://arxiv.org/abs/2602.06040v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.06040v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一种新颖的混合自回归MLLM架构SwimBird，能够根据输入动态切换推理模式（文本、视觉、图文交错），解决了现有MLLM推理模式僵化的问题。其统一文本和视觉“思维”的混合自回归公式具有理论创新性，并显著提升了视觉密集型任务的性能，对LLM应用有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.06030v1",
+        "title": "PhysicsAgentABM: Physics-Guided Generative Agent-Based Modeling",
+        "summary": "Large language model (LLM)-based multi-agent systems enable expressive agent reasoning but are expensive to scale and poorly calibrated for timestep-aligned state-transition simulation, while classical agent-based models (ABMs) offer interpretability but struggle to integrate rich individual-level signals and non-stationary behaviors. We propose PhysicsAgentABM, which shifts inference to behaviorally coherent agent clusters: state-specialized symbolic agents encode mechanistic transition priors, a multimodal neural transition model captures temporal and interaction dynamics, and uncertainty-aware epistemic fusion yields calibrated cluster-level transition distributions. Individual agents then stochastically realize transitions under local constraints, decoupling population inference from entity-level variability. We further introduce ANCHOR, an LLM agent-driven clustering strategy based on cross-contextual behavioral responses and a novel contrastive loss, reducing LLM calls by up to 6-8 times. Experiments across public health, finance, and social sciences show consistent gains in event-time accuracy and calibration over mechanistic, neural, and LLM baselines. By re-architecting generative ABM around population-level inference with uncertainty-aware neuro-symbolic fusion, PhysicsAgentABM establishes a new paradigm for scalable and calibrated simulation with LLMs.",
+        "authors": "Kavana Venkatesh, Yinhan He, Jundong Li, Jiaming Cui",
+        "url": "http://arxiv.org/abs/2602.06030v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.06030v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了PhysicsAgentABM，一个物理引导的生成式Agent-Based Model (ABM) 框架，通过神经符号融合和不确定性感知融合，将推理转移到行为一致的Agent集群。该方法在理论上具有高度严谨性，结合了物理先验、多模态神经网络和不确定性量化，解决了LLM多Agent系统在可扩展性和校准方面的瓶颈，对AI前沿算法和架构有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.06037v1",
+        "title": "Thinking with Geometry: Active Geometry Integration for Spatial Reasoning",
+        "summary": "Recent progress in spatial reasoning with Multimodal Large Language Models (MLLMs) increasingly leverages geometric priors from 3D encoders. However, most existing integration strategies remain passive: geometry is exposed as a global stream and fused in an indiscriminate manner, which often induces semantic-geometry misalignment and redundant signals. We propose GeoThinker, a framework that shifts the paradigm from passive fusion to active perception. Instead of feature mixing, GeoThinker enables the model to selectively retrieve geometric evidence conditioned on its internal reasoning demands. GeoThinker achieves this through Spatial-Grounded Fusion applied at carefully selected VLM layers, where semantic visual priors selectively query and integrate task-relevant geometry via frame-strict cross-attention, further calibrated by Importance Gating that biases per-frame attention toward task-relevant structures. Comprehensive evaluation results show that GeoThinker sets a new state-of-the-art in spatial intelligence, achieving a peak score of 72.6 on the VSI-Bench. Furthermore, GeoThinker demonstrates robust generalization and significantly improved spatial perception across complex downstream scenarios, including embodied referring and autonomous driving. Our results indicate that the ability to actively integrate spatial structures is essential for next-generation spatial intelligence. Code can be found at https://github.com/Li-Hao-yuan/GeoThinker.",
+        "authors": "Haoyuan Li, Qihang Cao, Tao Tang, Kun Xiang, Zihan Guo, Jianhua Han, Hang Xu, Xiaodan Liang",
+        "url": "http://arxiv.org/abs/2602.06037v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.06037v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一种从被动融合转向主动感知的几何集成框架GeoThinker，使MLLM能够根据内部推理需求选择性地检索几何证据。这种范式转变具有高度创新性，通过空间接地融合和重要性门控机制，显著提升了空间推理能力，对AI前沿算法和MLLM应用有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05630v1",
+        "title": "Rewards as Labels: Revisiting RLVR from a Classification Perspective",
+        "summary": "Reinforcement Learning with Verifiable Rewards has recently advanced the capabilities of Large Language Models in complex reasoning tasks by providing explicit rule-based supervision. Among RLVR methods, GRPO and its variants have achieved strong empirical performance. Despite their success, we identify that they suffer from Gradient Misassignment in Positives and Gradient Domination in Negatives, which lead to inefficient and suboptimal policy updates. To address these issues, we propose Rewards as Labels (REAL), a novel framework that revisits verifiable rewards as categorical labels rather than scalar weights, thereby reformulating policy optimization as a classification problem. Building on this, we further introduce anchor logits to enhance policy learning. Our analysis reveals that REAL induces a monotonic and bounded gradient weighting, enabling balanced gradient allocation across rollouts and effectively mitigating the identified mismatches. Extensive experiments on mathematical reasoning benchmarks show that REAL improves training stability and consistently outperforms GRPO and strong variants such as DAPO. On the 1.5B model, REAL improves average Pass@1 over DAPO by 6.7%. These gains further scale to 7B model, REAL continues to outperform DAPO and GSPO by 6.2% and 1.7%, respectively. Notably, even with a vanilla binary cross-entropy, REAL remains stable and exceeds DAPO by 4.5% on average.",
+        "authors": "Zepeng Zhai, Meilin Chen, Jiaxuan Zhao, Junlang Qian, Lei Shen, Yuan Lu",
+        "url": "http://arxiv.org/abs/2602.05630v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05630v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将可验证奖励强化学习（RLVR）重新定义为分类问题，提出了REAL框架，解决了现有GRPO方法中梯度分配不当和负梯度主导的问题。该方法在理论上对策略优化进行了深入分析，具有高度严谨性和创新性，显著提升了LLM在数学推理等任务上的性能和训练稳定性，对LLM应用有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05448v1",
+        "title": "BLITZRANK: Principled Zero-shot Ranking Agents with Tournament Graphs",
+        "summary": "Large language models have emerged as powerful zero-shot rerankers for retrieval-augmented generation, offering strong generalization without task-specific training. However, existing LLM reranking methods either rely on heuristics that fail to fully exploit the information revealed by each ranking decision or are inefficient when they do. We introduce a tournament graph framework that provides a principled foundation for $k$-wise reranking. Our key observation is that each $k$-document comparison reveals a complete tournament of $\\binom{k}{2}$ pairwise preferences. These tournaments are aggregated into a global preference graph, whose transitive closure yields many additional orderings without further model invocations. We formalize when a candidate's rank is certifiably determined and design a query schedule that greedily maximizes information gain towards identifying the top-$m$ items. Our framework also gracefully handles non-transitive preferences - cycles induced by LLM judgments - by collapsing them into equivalence classes that yield principled tiered rankings. Empirically, across 14 benchmarks and 5 LLMs, our method achieves Pareto dominance over existing methods: matching or exceeding accuracy while requiring 25-40% fewer tokens than comparable approaches, and 7$\\times$ fewer than pairwise methods at near-identical quality.",
+        "authors": "Sheshansh Agrawal, Thien Hang Nguyen, Douwe Kiela",
+        "url": "http://arxiv.org/abs/2602.05448v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05448v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了基于锦标赛图的零样本重排序框架BLITZRANK，为检索增强生成（RAG）提供了原则性基础。该框架通过聚合成对偏好并利用传递闭包，在理论上严谨地解决了LLM重排序效率问题，同时显著减少了token消耗，对LLM应用中的数据效率瓶颈有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05400v1",
+        "title": "OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration",
+        "summary": "As high-quality public text approaches exhaustion, a phenomenon known as the Data Wall, pre-training is shifting from more tokens to better tokens. However, existing methods either rely on heuristic static filters that ignore training dynamics, or use dynamic yet optimizer-agnostic criteria based on raw gradients. We propose OPUS (Optimizer-induced Projected Utility Selection), a dynamic data selection framework that defines utility in the optimizer-induced update space. OPUS scores candidates by projecting their effective updates, shaped by modern optimizers, onto a target direction derived from a stable, in-distribution proxy. To ensure scalability, we employ Ghost technique with CountSketch for computational efficiency, and Boltzmann sampling for data diversity, incurring only 4.7\\% additional compute overhead. OPUS achieves remarkable results across diverse corpora, quality tiers, optimizers, and model scales. In pre-training of GPT-2 Large/XL on FineWeb and FineWeb-Edu with 30B tokens, OPUS outperforms industrial-level baselines and even full 200B-token training. Moreover, when combined with industrial-level static filters, OPUS further improves pre-training efficiency, even with lower-quality data. Furthermore, in continued pre-training of Qwen3-8B-Base on SciencePedia, OPUS achieves superior performance using only 0.5B tokens compared to full training with 3B tokens, demonstrating significant data efficiency gains in specialized domains.",
+        "authors": "Shaobo Wang, Xuan Ouyang, Tianyi Xu, Yuzheng Hu, Jialin Liu, Guo Chen, Tianyu Zhang, Junhao Zheng, Kexin Yang, Xingzhang Ren, Dayiheng Liu, Linfeng Zhang",
+        "url": "http://arxiv.org/abs/2602.05400v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05400v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了OPUS动态数据选择框架，在优化器诱导的更新空间中定义数据效用，通过投影有效更新来选择数据。该方法在理论上具有高度严谨性和创新性，解决了LLM预训练中数据质量和效率的瓶颈，显著提升了预训练效率和下游任务性能，对LLM数据效率有高实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05571v1",
+        "title": "EdgeMask-DG*: Learning Domain-Invariant Graph Structures via Adversarial Edge Masking",
+        "summary": "Structural shifts pose a significant challenge for graph neural networks, as graph topology acts as a covariate that can vary across domains. Existing domain generalization methods rely on fixed structural augmentations or training on globally perturbed graphs, mechanisms that do not pinpoint which specific edges encode domain-invariant information. We argue that domain-invariant structural information is not rigidly tied to a single topology but resides in the consensus across multiple graph structures derived from topology and feature similarity. To capture this, we first propose EdgeMask-DG, a novel min-max algorithm where an edge masker learns to find worst-case continuous masks subject to a sparsity constraint, compelling a task GNN to perform effectively under these adversarial structural perturbations. Building upon this, we introduce EdgeMask-DG*, an extension that applies this adversarial masking principle to an enriched graph. This enriched graph combines the original topology with feature-derived edges, allowing the model to discover invariances even when the original topology is noisy or domain-specific. EdgeMask-DG* is the first to systematically combine adaptive adversarial topology search with feature-enriched graphs. We provide a formal justification for our approach from a robust optimization perspective. We demonstrate that EdgeMask-DG* achieves new state-of-the-art performance on diverse graph domain generalization benchmarks, including citation networks, social networks, and temporal graphs. Notably, on the Cora OOD benchmark, EdgeMask-DG* lifts the worst-case domain accuracy to 78.0\\%, a +3.8 pp improvement over the prior state of the art (74.2\\%). The source code for our experiments can be found here: https://anonymous.4open.science/r/TMLR-EAEF/",
+        "authors": "Rishabh Bhattacharya, Naresh Manwani",
+        "url": "http://arxiv.org/abs/2602.05571v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05571v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了EdgeMask-DG*，通过对抗性边缘掩蔽学习域不变图结构，是首个系统结合自适应对抗拓扑搜索和特征增强图的方法。该方法从鲁棒优化角度提供了形式化证明，具有高度理论严谨性和创新性，显著提升了GNN在域泛化任务上的性能，对AI算法和架构有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.06029v1",
+        "title": "Curiosity is Knowledge: Self-Consistent Learning and No-Regret Optimization with Active Inference",
+        "summary": "Active inference (AIF) unifies exploration and exploitation by minimizing the Expected Free Energy (EFE), balancing epistemic value (information gain) and pragmatic value (task performance) through a curiosity coefficient. Yet it has been unclear when this balance yields both coherent learning and efficient decision-making: insufficient curiosity can drive myopic exploitation and prevent uncertainty resolution, while excessive curiosity can induce unnecessary exploration and regret. We establish the first theoretical guarantee for EFE-minimizing agents, showing that a single requirement--sufficient curiosity--simultaneously ensures self-consistent learning (Bayesian posterior consistency) and no-regret optimization (bounded cumulative regret). Our analysis characterizes how this mechanism depends on initial uncertainty, identifiability, and objective alignment, thereby connecting AIF to classical Bayesian experimental design and Bayesian optimization within one theoretical framework. We further translate these theories into practical design guidelines for tuning the epistemic-pragmatic trade-off in hybrid learning-optimization problems, validated through real-world experiments.",
+        "authors": "Yingke Li, Anjali Parashar, Enlu Zhou, Chuchu Fan",
+        "url": "http://arxiv.org/abs/2602.06029v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.06029v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次为最小化预期自由能（EFE）的Active Inference（AIF）Agent提供了理论保证，证明了足够的“好奇心”能同时确保自洽学习和无悔优化。该研究在数理统计和贝叶斯优化领域具有高度理论创新性和严谨性，为理解和设计AI探索-利用策略提供了基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.06021v1",
+        "title": "Diffusion Model's Generalization Can Be Characterized by Inductive Biases toward a Data-Dependent Ridge Manifold",
+        "summary": "When a diffusion model is not memorizing the training data set, how does it generalize exactly? A quantitative understanding of the distribution it generates would be beneficial to, for example, an assessment of the model's performance for downstream applications. We thus explicitly characterize what diffusion model generates, by proposing a log-density ridge manifold and quantifying how the generated data relate to this manifold as inference dynamics progresses. More precisely, inference undergoes a reach-align-slide process centered around the ridge manifold: trajectories first reach a neighborhood of the manifold, then align as being pushed toward or away from the manifold in normal directions, and finally slide along the manifold in tangent directions. Within the scope of this general behavior, different training errors will lead to different normal and tangent motions, which can be quantified, and these detailed motions characterize when inter-mode generations emerge. More detailed understanding of training dynamics will lead to more accurate quantification of the generation inductive bias, and an example of random feature model will be considered, for which we can explicitly illustrate how diffusion model's inductive biases originate as a composition of architectural bias and training accuracy, and how they evolve with the inference dynamics. Experiments on synthetic multimodal distributions and MNIST latent diffusion support the predicted directional effects, in both low- and high-dimensions.",
+        "authors": "Ye He, Yitong Qiu, Molei Tao",
+        "url": "http://arxiv.org/abs/2602.06021v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.06021v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过提出对数密度脊流形并量化生成数据与该流形的关系，明确表征了扩散模型的泛化能力。该研究对扩散模型的生成过程和归纳偏置提供了深刻的理论理解，具有高度创新性和严谨性，对AI前沿算法的理论基础有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05970v1",
+        "title": "Inverse Depth Scaling From Most Layers Being Similar",
+        "summary": "Neural scaling laws relate loss to model size in large language models (LLMs), yet depth and width may contribute to performance differently, requiring more detailed studies. Here, we quantify how depth affects loss via analysis of LLMs and toy residual networks. We find loss scales inversely proportional to depth in LLMs, probably due to functionally similar layers reducing error through ensemble averaging rather than compositional learning or discretizing smooth dynamics. This regime is inefficient yet robust and may arise from the architectural bias of residual networks and target functions incompatible with smooth dynamics. The findings suggest that improving LLM efficiency may require architectural innovations to encourage compositional use of depth.",
+        "authors": "Yizhou Liu, Sara Kangaslahti, Ziming Liu, Jeff Gore",
+        "url": "http://arxiv.org/abs/2602.05970v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05970v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过对LLM和玩具残差网络的分析，量化了深度对损失的影响，发现损失与深度成反比，并归因于功能相似层通过集成平均减少误差。该研究对LLM的扩展定律和架构归纳偏置提供了新颖的理论见解，具有高度创新性和严谨性，对AI架构设计有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05950v1",
+        "title": "Breaking Symmetry Bottlenecks in GNN Readouts",
+        "summary": "Graph neural networks (GNNs) are widely used for learning on structured data, yet their ability to distinguish non-isomorphic graphs is fundamentally limited. These limitations are usually attributed to message passing; in this work we show that an independent bottleneck arises at the readout stage. Using finite-dimensional representation theory, we prove that all linear permutation-invariant readouts, including sum and mean pooling, factor through the Reynolds (group-averaging) operator and therefore project node embeddings onto the fixed subspace of the permutation action, erasing all non-trivial symmetry-aware components regardless of encoder expressivity. This yields both a new expressivity barrier and an interpretable characterization of what global pooling preserves or destroys. To overcome this collapse, we introduce projector-based invariant readouts that decompose node representations into symmetry-aware channels and summarize them with nonlinear invariant statistics, preserving permutation invariance while retaining information provably invisible to averaging. Empirically, swapping only the readout enables fixed encoders to separate WL-hard graph pairs and improves performance across multiple benchmarks, demonstrating that readout design is a decisive and under-appreciated factor in GNN expressivity.",
+        "authors": "Mouad Talhi, Arne Wolf, Anthea Monod",
+        "url": "http://arxiv.org/abs/2602.05950v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05950v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文理论证明了GNN中所有线性置换不变读出都通过雷诺兹算子，从而限制了其区分非同构图的能力，并提出了基于投影仪的不变读出以克服此问题。该研究在有限维表示理论基础上具有高度理论创新性和严谨性，对GNN架构的表达能力提供了根本性改进。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05943v1",
+        "title": "Orthogonal Model Merging",
+        "summary": "Merging finetuned Large Language Models (LLMs) has become increasingly important for integrating diverse capabilities into a single unified model. However, prevailing model merging methods rely on linear arithmetic in Euclidean space, which often destroys the intrinsic geometric properties of pretrained weights, such as hyperspherical energy. To address this, we propose Orthogonal Model Merging (OrthoMerge), a method that performs merging operations on the Riemannian manifold formed by the orthogonal group to preserve the geometric structure of the model's weights. By mapping task-specific orthogonal matrices learned by Orthogonal Finetuning (OFT) to the Lie algebra, OrthoMerge enables a principled yet efficient integration that takes into account both the direction and intensity of adaptations. In addition to directly leveraging orthogonal matrices obtained by OFT, we further extend this approach to general models finetuned with non-OFT methods (i.e., low-rank finetuning, full finetuning) via an Orthogonal-Residual Decoupling strategy. This technique extracts the orthogonal components of expert models by solving the orthogonal Procrustes problem, which are then merged on the manifold of the orthogonal group, while the remaining linear residuals are processed through standard additive merging. Extensive empirical results demonstrate the effectiveness of OrthoMerge in mitigating catastrophic forgetting and maintaining model performance across diverse tasks.",
+        "authors": "Sihan Yang, Kexuan Shi, Weiyang Liu",
+        "url": "http://arxiv.org/abs/2602.05943v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05943v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了正交模型合并（OrthoMerge）方法，在正交群形成的黎曼流形上进行合并操作，以保留预训练权重的几何结构。该方法通过将OFT学习到的正交矩阵映射到李代数，具有高度数学严谨性和理论创新性，有效缓解了灾难性遗忘，对LLM架构的集成和适应性有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05929v1",
+        "title": "KV-CoRE: Benchmarking Data-Dependent Low-Rank Compressibility of KV-Caches in LLMs",
+        "summary": "Large language models rely on kv-caches to avoid redundant computation during autoregressive decoding, but as context length grows, reading and writing the cache can quickly saturate GPU memory bandwidth. Recent work has explored KV-cache compression, yet most approaches neglect the data-dependent nature of kv-caches and their variation across layers. We introduce KV-CoRE KV-cache Compressibility by Rank Evaluation), an SVD-based method for quantifying the data-dependent low-rank compressibility of kv-caches. KV-CoRE computes the optimal low-rank approximation under the Frobenius norm and, being gradient-free and incremental, enables efficient dataset-level, layer-wise evaluation. Using this method, we analyze multiple models and datasets spanning five English domains and sixteen languages, uncovering systematic patterns that link compressibility to model architecture, training data, and language coverage. As part of this analysis, we employ the Normalized Effective Rank as a metric of compressibility and show that it correlates strongly with performance degradation under compression. Our study establishes a principled evaluation framework and the first large-scale benchmark of kv-cache compressibility in LLMs, offering insights for dynamic, data-aware compression and data-centric model development.",
+        "authors": "Jian Chen, Zhuoran Wang, Jiayu Qin, Ming Li, Meng Wang, Changyou Chen, Yin Chen, Qizhen Weng, Yirui Liu",
+        "url": "http://arxiv.org/abs/2602.05929v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05929v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了KV-CoRE，一种基于SVD的方法，用于量化KV-缓存的数据依赖低秩可压缩性，并建立了首个大规模基准。该方法在数学上严谨，提供了梯度无关和增量式评估，对LLM内存和延迟瓶颈有高实践影响力，并为数据感知压缩提供了深刻见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05927v1",
+        "title": "Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences",
+        "summary": "Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers already exhibit strong and systematic structural biases. In particular, untrained models display extreme token preferences: across random input sequences, certain tokens are predicted with probabilities orders of magnitude larger.   We provide a mechanistic explanation for this phenomenon by dissecting the transformer architecture at initialization. We show that extreme token preference arises from a contraction of token representations along a random seed-dependent direction. This contraction is driven by two interacting forces: (i) asymmetric nonlinear activations in MLP sublayers induce global (inter-sequence) representation concentration, and (ii) self-attention further amplifies this effect through local (intra-sequence) aggregation. Together, these mechanisms align hidden representations along a direction determined solely by the random initialization, producing highly non-uniform next-token predictions.   Beyond mechanistic insight, we demonstrate that these initialization-induced biases persist throughout training, forming a stable and intrinsic model identity. Leveraging this property, we introduce SeedPrint, a fingerprinting method that can reliably distinguish models that differ only in their random initialization, even after extensive training and under substantial distribution shift. Finally, we identify a fundamental positional discrepancy inherent to the attention mechanism's intra-sequence contraction that is causally linked to the attention-sink phenomenon. This discovery provides a principled explanation for the emergence of sinks and offers a pathway for their control.",
+        "authors": "Siquan Li, Yao Tong, Haonan Wang, Tianyang Hu",
+        "url": "http://arxiv.org/abs/2602.05927v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05927v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文挑战了Transformer在随机初始化时行为无结构化的假设，揭示了其固有的结构性偏置（极端token偏好），并提供了机制性解释。该研究对Transformer架构的内在工作原理提供了深刻的理论分析，具有高度创新性和严谨性，对AI架构设计有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05892v1",
+        "title": "ContextBench: A Benchmark for Context Retrieval in Coding Agents",
+        "summary": "LLM-based coding agents have shown strong performance on automated issue resolution benchmarks, yet existing evaluations largely focus on final task success, providing limited insight into how agents retrieve and use code context during problem solving. We introduce ContextBench, a process-oriented evaluation of context retrieval in coding agents. ContextBench consists of 1,136 issue-resolution tasks from 66 repositories across eight programming languages, each augmented with human-annotated gold contexts. We further implement an automated evaluation framework that tracks agent trajectories and measures context recall, precision, and efficiency throughout issue resolution. Using ContextBench, we evaluate four frontier LLMs and five coding agents. Our results show that sophisticated agent scaffolding yields only marginal gains in context retrieval (\"The Bitter Lesson\" of coding agents), LLMs consistently favor recall over precision, and substantial gaps exist between explored and utilized context. ContextBench augments existing end-to-end benchmarks with intermediate gold-context metrics that unbox the issue-resolution process. These contexts offer valuable intermediate signals for guiding LLM reasoning in software tasks. Data and code are available at: https://cioutn.github.io/context-bench/.",
+        "authors": "Han Li, Letian Zhu, Bohan Zhang, Rili Feng, Jiaming Wang, Yue Pan, Earl T. Barr, Sarro Federica, Zhaoyang Chu, He Ye",
+        "url": "http://arxiv.org/abs/2602.05892v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05892v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种正则化校准与逐次舍入的后训练量化（PTQ）方法，通过对称和非对称校准之间的插值作为正则化，并推导了简单的逐次舍入过程。该方法在数学上严谨，显著提高了量化模型的困惑度和准确性，对LLM模型压缩和效率瓶颈有高实践影响力。"
+    }
+]

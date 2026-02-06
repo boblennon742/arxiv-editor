@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.05997v1",
+        "title": "Causal Inference on Stopped Random Walks in Online Advertising",
+        "summary": "We consider a causal inference problem frequently encountered in online advertising systems, where a publisher (e.g., Instagram, TikTok) interacts repeatedly with human users and advertisers by sporadically displaying to each user an advertisement selected through an auction. Each treatment corresponds to a parameter value of the advertising mechanism (e.g., auction reserve-price), and we want to estimate through experiments the corresponding long-term treatment effect (e.g., annual advertising revenue). In our setting, the treatment affects not only the instantaneous revenue from showing an ad, but also changes each user's interaction-trajectory, and each advertiser's bidding policy -- as the latter is constrained by a finite budget. In particular, each a treatment may even affect the size of the population, since users interact longer with a tolerable advertising mechanism. We drop the classical i.i.d. assumption and model the experiment measurements (e.g., advertising revenue) as a stopped random walk, and use a budget-splitting experimental design, the Anscombe Theorem, a Wald-like equation, and a Central Limit Theorem to construct confidence intervals for the long-term treatment effect.",
+        "authors": "Jia Yuan Yu",
+        "url": "http://arxiv.org/abs/2602.05997v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05997v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文明确提出了在线广告系统中因果推断的挑战，并利用停止随机游走、Anscombe定理、Wald类方程和中心极限定理等高级统计工具来构建长期处理效应的置信区间。其强大的统计保证和清晰的数学推导，完美契合您对理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05996v1",
+        "title": "Orthogonal Self-Attention",
+        "summary": "Softmax Self-Attention (SSA) is a key component of Transformer architectures. However, when utilised within skipless architectures, which aim to improve representation learning, recent work has highlighted the inherent instability of SSA due to inducing rank collapse and poorly-conditioned Jacobians. In this work, we design a novel attention mechanism: Orthogonal Self-Attention (OSA), which aims to bypass these issues with SSA, in order to allow for (non-causal) Transformers without skip connections and normalisation layers to be more easily trained. In particular, OSA parametrises the attention matrix to be orthogonal via mapping a skew-symmetric matrix, formed from query-key values, through the matrix exponential. We show that this can be practically implemented, by exploiting the low-rank structure of our query-key values, resulting in the computational complexity and memory cost of OSA scaling linearly with sequence length. Furthermore, we derive an initialisation scheme for which we prove ensures that the Jacobian of OSA is well-conditioned.",
+        "authors": "Leo Zhang, James Martens",
+        "url": "http://arxiv.org/abs/2602.05996v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05996v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究针对Transformer中Softmax自注意力机制固有的理论问题（秩坍塌和Jacobian条件差），提出了一种新颖的正交自注意力机制（OSA）。通过将注意力矩阵参数化为正交矩阵，并通过矩阵指数映射实现，并提供了数学证明来确保Jacobian的良好条件性，理论深度和数学严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05950v1",
+        "title": "Breaking Symmetry Bottlenecks in GNN Readouts",
+        "summary": "Graph neural networks (GNNs) are widely used for learning on structured data, yet their ability to distinguish non-isomorphic graphs is fundamentally limited. These limitations are usually attributed to message passing; in this work we show that an independent bottleneck arises at the readout stage. Using finite-dimensional representation theory, we prove that all linear permutation-invariant readouts, including sum and mean pooling, factor through the Reynolds (group-averaging) operator and therefore project node embeddings onto the fixed subspace of the permutation action, erasing all non-trivial symmetry-aware components regardless of encoder expressivity. This yields both a new expressivity barrier and an interpretable characterization of what global pooling preserves or destroys. To overcome this collapse, we introduce projector-based invariant readouts that decompose node representations into symmetry-aware channels and summarize them with nonlinear invariant statistics, preserving permutation invariance while retaining information provably invisible to averaging. Empirically, swapping only the readout enables fixed encoders to separate WL-hard graph pairs and improves performance across multiple benchmarks, demonstrating that readout design is a decisive and under-appreciated factor in GNN expressivity.",
+        "authors": "Mouad Talhi, Arne Wolf, Anthea Monod",
+        "url": "http://arxiv.org/abs/2602.05950v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05950v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文运用有限维表示理论，从根本上揭示了图神经网络（GNN）readout阶段的对称性瓶颈，并提出了基于投影仪的不变readout来克服这一限制。其对GNN表达能力的理论分析和数学证明，展现了深刻的理论洞察力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05887v1",
+        "title": "Escaping Local Minima Provably in Non-convex Matrix Sensing: A Deterministic Framework via Simulated Lifting",
+        "summary": "Low-rank matrix sensing is a fundamental yet challenging nonconvex problem whose optimization landscape typically contains numerous spurious local minima, making it difficult for gradient-based optimizers to converge to the global optimum. Recent work has shown that over-parameterization via tensor lifting can convert such local minima into strict saddle points, an insight that also partially explains why massive scaling can improve generalization and performance in modern machine learning. Motivated by this observation, we propose a Simulated Oracle Direction (SOD) escape mechanism that simulates the landscape and escape direction of the over-parametrized space, without resorting to actually lifting the problem, since that would be computationally intractable. In essence, we designed a mathematical framework to project over-parametrized escape directions onto the original parameter space to guarantee a strict decrease of objective value from existing local minima. To the best of the our knowledge, this represents the first deterministic framework that could escape spurious local minima with guarantee, especially without using random perturbations or heuristic estimates. Numerical experiments demonstrate that our framework reliably escapes local minima and facilitates convergence to global optima, while incurring minimal computational cost when compared to explicit tensor over-parameterization. We believe this framework has non-trivial implications for nonconvex optimization beyond matrix sensing, by showcasing how simulated over-parameterization can be leveraged to tame challenging optimization landscapes.",
+        "authors": "Tianqi Shen, Jinji Yang, Junze He, Kunhan Gao, Ziye Ma",
+        "url": "http://arxiv.org/abs/2602.05887v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05887v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个确定性框架，通过模拟过参数化空间来保证逃离非凸矩阵感知中的局部最小值。论文明确指出这是第一个无需随机扰动或启发式估计就能保证逃离局部最小值的确定性框架，具有显著的优化理论贡献和严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05873v1",
+        "title": "Large-scale Score-based Variational Posterior Inference for Bayesian Deep Neural Networks",
+        "summary": "Bayesian (deep) neural networks (BNN) are often more attractive than the mainstream point-estimate vanilla deep learning in various aspects including uncertainty quantification, robustness to noise, resistance to overfitting, and more. The variational inference (VI) is one of the most widely adopted approximate inference methods. Whereas the ELBO-based variational free energy method is a dominant choice in the literature, in this paper we introduce a score-based alternative for BNN variational inference. Although there have been quite a few score-based variational inference methods proposed in the community, most are not adequate for large-scale BNNs for various computational and technical reasons. We propose a novel scalable VI method where the learning objective combines the score matching loss and the proximal penalty term in iterations, which helps our method avoid the reparametrized sampling, and allows for noisy unbiased mini-batch scores through stochastic gradients. This in turn makes our method scalable to large-scale neural networks including Vision Transformers, and allows for richer variational density families. On several benchmarks including visual recognition and time-series forecasting with large-scale deep networks, we empirically show the effectiveness of our approach.",
+        "authors": "Minyoung Kim",
+        "url": "http://arxiv.org/abs/2602.05873v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05873v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为贝叶斯深度神经网络（BNN）的变分推断引入了一种新颖的可扩展的基于分数的方法。它将分数匹配损失与近端惩罚项结合，避免了重参数化采样，并通过随机梯度实现了无偏小批量分数，为大规模BNN提供了坚实的概率推断理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05846v1",
+        "title": "Optimal scaling laws in learning hierarchical multi-index models",
+        "summary": "In this work, we provide a sharp theory of scaling laws for two-layer neural networks trained on a class of hierarchical multi-index targets, in a genuinely representation-limited regime. We derive exact information-theoretic scaling laws for subspace recovery and prediction error, revealing how the hierarchical features of the target are sequentially learned through a cascade of phase transitions. We further show that these optimal rates are achieved by a simple, target-agnostic spectral estimator, which can be interpreted as the small learning-rate limit of gradient descent on the first-layer weights. Once an adapted representation is identified, the readout can be learned statistically optimally, using an efficient procedure. As a consequence, we provide a unified and rigorous explanation of scaling laws, plateau phenomena, and spectral structure in shallow neural networks trained on such hierarchical targets.",
+        "authors": "Leonardo Defilippis, Florent Krzakala, Bruno Loureiro, Antoine Maillard",
+        "url": "http://arxiv.org/abs/2602.05846v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05846v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究为分层多索引模型学习中的缩放定律提供了精确的理论，揭示了信息论缩放定律以及通过一系列相变学习分层特征的过程。论文进一步证明了这些最优速率可以通过简单的、与目标无关的谱估计器实现，并提供了对浅层神经网络中缩放定律、高原现象和谱结构的统一且严谨的解释，理论深度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05812v1",
+        "title": "Principled Confidence Estimation for Deep Computed Tomography",
+        "summary": "We present a principled framework for confidence estimation in computed tomography (CT) reconstruction. Based on the sequential likelihood mixing framework (Kirschner et al., 2025), we establish confidence regions with theoretical coverage guarantees for deep-learning-based CT reconstructions. We consider a realistic forward model following the Beer-Lambert law, i.e., a log-linear forward model with Poisson noise, closely reflecting clinical and scientific imaging conditions. The framework is general and applies to both classical algorithms and deep learning reconstruction methods, including U-Nets, U-Net ensembles, and generative Diffusion models. Empirically, we demonstrate that deep reconstruction methods yield substantially tighter confidence regions than classical reconstructions, without sacrificing theoretical coverage guarantees. Our approach allows the detection of hallucinations in reconstructed images and provides interpretable visualizations of confidence regions. This establishes deep models not only as powerful estimators, but also as reliable tools for uncertainty-aware medical imaging.",
+        "authors": "Matteo Gätzner, Johannes Kirschner",
+        "url": "http://arxiv.org/abs/2602.05812v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05812v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个原则性的框架，用于计算断层扫描（CT）重建中的置信度估计。基于序列似然混合框架，它为深度学习CT重建建立了具有理论覆盖保证的置信区域，并考虑了Beer-Lambert定律和泊松噪声等实际成像条件，提供了严谨的统计保证和不确定性量化方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05807v1",
+        "title": "SpARCD: A Spectral Graph Framework for Revealing Differential Functional Connectivity in fMRI Data",
+        "summary": "Identifying brain regions that exhibit altered functional connectivity across cognitive or emotional states is a key problem in neuroscience. Existing methods, such as edge-wise testing, seed-based psychophysiological interaction (PPI) analysis, or correlation network comparison, typically suffer from low statistical power, arbitrary thresholding, and limited ability to capture distributed or nonlinear dependence patterns. We propose SpARCD (Spectral Analysis of Revealing Connectivity Differences), a novel statistical framework for detecting differences in brain connectivity between two experimental conditions. SpARCD leverages distance correlation, a dependence measure sensitive to both linear and nonlinear associations, to construct a weighted graph for each condition. It then constructs a differential operator via spectral filtering and uncovers connectivity changes by computing its leading eigenvectors. Inference is achieved via a permutation-based testing scheme that yields interpretable, region-level significance maps. Extensive simulation studies demonstrate that SpARCD achieves superior power relative to conventional edge-wise or univariate approaches, particularly in the presence of complex dependency structures. Application to fMRI data from 113 early PTSD patients performing an emotional face-matching task reveals distinct networks associated with emotional reactivity and regulatory processes. Overall, SpARCD provides a statistically rigorous and computationally efficient framework for comparing high-dimensional connectivity structures, with broad applicability to neuroimaging and other network-based scientific domains.",
+        "authors": "Shira Yoffe, Ziv Ben-Zion, Talma Hendler, Malka Gorfine, Ariel Jaffe",
+        "url": "http://arxiv.org/abs/2602.05807v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05807v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个新颖的统计框架SpARCD，用于检测两种实验条件下的脑连接差异。它利用距离相关性构建加权图，并通过谱滤波和置换检验方案来揭示连接变化，具有统计严谨性和基于图谱理论的强大理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05713v1",
+        "title": "Projected Boosting with Fairness Constraints: Quantifying the Cost of Fair Training Distributions",
+        "summary": "Boosting algorithms enjoy strong theoretical guarantees: when weak learners maintain positive edge, AdaBoost achieves geometric decrease of exponential loss. We study how to incorporate group fairness constraints into boosting while preserving analyzable training dynamics. Our approach, FairBoost, projects the ensemble-induced exponential-weights distribution onto a convex set of distributions satisfying fairness constraints (as a reweighting surrogate), then trains weak learners on this fair distribution. The key theoretical insight is that projecting the training distribution reduces the effective edge of weak learners by a quantity controlled by the KL-divergence of the projection. We prove an exponential-loss bound where the convergence rate depends on weak learner edge minus a \"fairness cost\" term $δ_t = \\sqrt{\\mathrm{KL}(w^t \\| q^t)/2}$. This directly quantifies the accuracy-fairness tradeoff in boosting dynamics. Experiments on standard benchmarks validate the theoretical predictions and demonstrate competitive fairness-accuracy tradeoffs with stable training curves.",
+        "authors": "Amir Asiaee, Kaveh Aryan",
+        "url": "http://arxiv.org/abs/2602.05713v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05713v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了如何在Boosting算法中融入群体公平性约束，同时保持可分析的训练动态。通过将集成诱导的指数权重分布投影到满足公平性约束的凸集上，论文证明了弱学习器有效边缘的减少量与投影的KL散度相关，从而直接量化了Boosting动态中的准确性-公平性权衡，具有坚实的优化理论和公平性逻辑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05707v1",
+        "title": "Fix Representation (Optimally) Before Fairness: Finite-Sample Shrinkage Population Correction and the True Price of Fairness Under Subpopulation Shift",
+        "summary": "Machine learning practitioners frequently observe tension between predictive accuracy and group fairness constraints -- yet sometimes fairness interventions appear to improve accuracy. We show that both phenomena can be artifacts of training data that misrepresents subgroup proportions. Under subpopulation shift (stable within-group distributions, shifted group proportions), we establish: (i) full importance-weighted correction is asymptotically unbiased but finite-sample suboptimal; (ii) the optimal finite-sample correction is a shrinkage reweighting that interpolates between target and training mixtures; (iii) apparent \"fairness helps accuracy\" can arise from comparing fairness methods to an improperly-weighted baseline. We provide an actionable evaluation protocol: fix representation (optimally) before fairness -- compare fairness interventions against a shrinkage-corrected baseline to isolate the true, irreducible price of fairness. Experiments on synthetic and real-world benchmarks (Adult, COMPAS) validate our theoretical predictions and demonstrate that this protocol eliminates spurious tradeoffs, revealing the genuine fairness-utility frontier.",
+        "authors": "Amir Asiaee, Kaveh Aryan",
+        "url": "http://arxiv.org/abs/2602.05707v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05707v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究深入分析了子群体先验概率漂移（GPPS）下公平性与准确性的权衡。它证明了基于错误率的公平性标准在GPPS下结构不变，而接受率标准会漂移，并提供了“漂移鲁棒性不可能”定理。此外，它还展示了目标域风险和公平性指标在没有目标标签的情况下是可识别的，并提供了有限样本保证，理论贡献突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05639v1",
+        "title": "Joint Embedding Variational Bayes",
+        "summary": "We introduce Variational Joint Embedding (VJE), a framework that synthesizes joint embedding and variational inference to enable self-supervised learning of probabilistic representations in a reconstruction-free, non-contrastive setting. Compared to energy-based predictive objectives that optimize pointwise discrepancies, VJE maximizes a symmetric conditional evidence lower bound (ELBO) for a latent-variable model defined directly on encoder embeddings. We instantiate the conditional likelihood with a heavy-tailed Student-$t$ model using a polar decomposition that explicitly decouples directional and radial factors to prevent norm-induced instabilities during training. VJE employs an amortized inference network to parameterize a diagonal Gaussian variational posterior whose feature-wise variances are shared with the likelihood scale to capture anisotropic uncertainty without auxiliary projection heads. Across ImageNet-1K, CIFAR-10/100, and STL-10, VJE achieves performance comparable to standard non-contrastive baselines under linear and k-NN evaluation. We further validate these probabilistic semantics through one-class CIFAR-10 anomaly detection, where likelihood-based scoring under the proposed model outperforms comparable self-supervised baselines.",
+        "authors": "Amin Oji, Paul Fieguth",
+        "url": "http://arxiv.org/abs/2602.05639v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05639v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文综合了联合嵌入和变分推断，提出了一个无重建、非对比的自监督学习框架（VJE）。它通过最大化对称条件证据下界（ELBO）来学习概率表示，并引入了极分解以解耦方向和径向因子，以及参数化对角高斯变分后验来捕获各向异性不确定性，具有深刻的概率建模和理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05533v1",
+        "title": "Conditional Diffusion Guidance under Hard Constraint: A Stochastic Analysis Approach",
+        "summary": "We study conditional generation in diffusion models under hard constraints, where generated samples must satisfy prescribed events with probability one. Such constraints arise naturally in safety-critical applications and in rare-event simulation, where soft or reward-based guidance methods offer no guarantee of constraint satisfaction. Building on a probabilistic interpretation of diffusion models, we develop a principled conditional diffusion guidance framework based on Doob's h-transform, martingale representation and quadratic variation process. Specifically, the resulting guided dynamics augment a pretrained diffusion with an explicit drift correction involving the logarithmic gradient of a conditioning function, without modifying the pretrained score network. Leveraging martingale and quadratic-variation identities, we propose two novel off-policy learning algorithms based on a martingale loss and a martingale-covariation loss to estimate h and its gradient using only trajectories from the pretrained model. We provide non-asymptotic guarantees for the resulting conditional sampler in both total variation and Wasserstein distances, explicitly characterizing the impact of score approximation and guidance estimation errors. Numerical experiments demonstrate the effectiveness of the proposed methods in enforcing hard constraints and generating rare-event samples.",
+        "authors": "Zhengyi Guo, Wenpin Tang, Renyuan Xu",
+        "url": "http://arxiv.org/abs/2602.05533v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05533v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究采用随机分析方法，基于Doob的h-变换、鞅表示和二次变分过程，为扩散模型中的硬约束条件生成开发了一个原则性框架。它提供了总变差和Wasserstein距离的非渐近保证，并明确表征了分数近似和引导估计误差的影响，数学推导极其严谨和深入。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05415v1",
+        "title": "VMF-GOS: Geometry-guided virtual Outlier Synthesis for Long-Tailed OOD Detection",
+        "summary": "Out-of-Distribution (OOD) detection under long-tailed distributions is a highly challenging task because the scarcity of samples in tail classes leads to blurred decision boundaries in the feature space. Current state-of-the-art (sota) methods typically employ Outlier Exposure (OE) strategies, relying on large-scale real external datasets (such as 80 Million Tiny Images) to regularize the feature space. However, this dependence on external data often becomes infeasible in practical deployment due to high data acquisition costs and privacy sensitivity. To this end, we propose a novel data-free framework aimed at completely eliminating reliance on external datasets while maintaining superior detection performance. We introduce a Geometry-guided virtual Outlier Synthesis (GOS) strategy that models statistical properties using the von Mises-Fisher (vMF) distribution on a hypersphere. Specifically, we locate a low-likelihood annulus in the feature space and perform directional sampling of virtual outliers in this region. Simultaneously, we introduce a new Dual-Granularity Semantic Loss (DGS) that utilizes contrastive learning to maximize the distinction between in-distribution (ID) features and these synthesized boundary outliers. Extensive experiments on benchmarks such as CIFAR-LT demonstrate that our method outperforms sota approaches that utilize external real images.",
+        "authors": "Ningkang Peng, Qianfeng Yu, Yuhao Zhang, Yafei Liu, Xiaoqian Peng, Peirong Ma, Yi Chen, Peiheng Li, Yanhui Gu",
+        "url": "http://arxiv.org/abs/2602.05415v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05415v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖的无数据框架VMF-GOS，用于长尾OOD检测。它通过使用von Mises-Fisher (vMF) 分布在超球面上建模统计特性，并进行几何引导的虚拟异常值合成，具有强大的统计建模基础和清晰的几何直观。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05304v1",
+        "title": "A Short and Unified Convergence Analysis of the SAG, SAGA, and IAG Algorithms",
+        "summary": "Stochastic variance-reduced algorithms such as Stochastic Average Gradient (SAG) and SAGA, and their deterministic counterparts like the Incremental Aggregated Gradient (IAG) method, have been extensively studied in large-scale machine learning. Despite their popularity, existing analyses for these algorithms are disparate, relying on different proof techniques tailored to each method. Furthermore, the original proof of SAG is known to be notoriously involved, requiring computer-aided analysis. Focusing on finite-sum optimization with smooth and strongly convex objective functions, our main contribution is to develop a single unified convergence analysis that applies to all three algorithms: SAG, SAGA, and IAG. Our analysis features two key steps: (i) establishing a bound on delays due to stochastic sub-sampling using simple concentration tools, and (ii) carefully designing a novel Lyapunov function that accounts for such delays. The resulting proof is short and modular, providing the first high-probability bounds for SAG and SAGA that can be seamlessly extended to non-convex objectives and Markov sampling. As an immediate byproduct of our new analysis technique, we obtain the best known rates for the IAG algorithm, significantly improving upon prior bounds.",
+        "authors": "Feng Zhu, Robert W. Heath, Aritra Mitra",
+        "url": "http://arxiv.org/abs/2602.05304v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05304v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究为SAG、SAGA和IAG等随机方差减少算法提供了一个统一且简短的收敛性分析。通过利用简单的集中工具和精心设计的新颖Lyapunov函数，论文获得了这些算法的第一个高概率界限和最佳已知速率，对优化理论做出了基础性贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.05174v1",
+        "title": "Total Variation Rates for Riemannian Flow Matching",
+        "summary": "Riemannian flow matching (RFM) extends flow-based generative modeling to data supported on manifolds by learning a time-dependent tangent vector field whose flow-ODE transports a simple base distribution to the data law. We develop a nonasymptotic Total Variation (TV) convergence analysis for RFM samplers that use a learned vector field together with Euler discretization on manifolds. Our key technical ingredient is a differential inequality governing the evolution of TV between two manifold ODE flows, which expresses the time-derivative of TV through the divergence of the vector-field mismatch and the score of the reference flow; controlling these terms requires establishing new bounds that explicitly account for parallel transport and curvature. Under smoothness assumptions on the population flow-matching field and either uniform (compact manifolds) or mean-square (Hadamard manifolds) approximation guarantees for the learned field, we obtain explicit bounds of the form $\\mathrm{TV}\\le C_{\\mathrm{Lip}}\\,h + C_{\\varepsilon}\\,\\varepsilon$ (with an additional higher-order $\\varepsilon^2$ term on compact manifolds), cleanly separating numerical discretization and learning errors. Here, $h$ is the step-size and $\\varepsilon$ is the target accuracy. Instantiations yield \\emph{explicit} polynomial iteration complexities on the hypersphere $S^d$, and on the SPD$(n)$ manifolds under mild moment conditions.",
+        "authors": "Yunrui Guan, Krishnakumar Balasubramanian, Shiqian Ma",
+        "url": "http://arxiv.org/abs/2602.05174v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.05174v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为黎曼流匹配（RFM）采样器开发了非渐近总变差（TV）收敛性分析。其关键技术在于推导了一个控制两个流形ODE流之间TV演变的微分不等式，并显式考虑了并行传输和曲率，获得了数值离散化和学习误差的显式界限，数学严谨性极高，对流形上的生成模型理论理解至关重要。"
+    }
+]

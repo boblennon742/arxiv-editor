@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.09014v1",
+        "title": "ArcFlow: Unleashing 2-Step Text-to-Image Generation via High-Precision Non-Linear Flow Distillation",
+        "summary": "Diffusion models have achieved remarkable generation quality, but they suffer from significant inference cost due to their reliance on multiple sequential denoising steps, motivating recent efforts to distill this inference process into a few-step regime. However, existing distillation methods typically approximate the teacher trajectory by using linear shortcuts, which makes it difficult to match its constantly changing tangent directions as velocities evolve across timesteps, thereby leading to quality degradation. To address this limitation, we propose ArcFlow, a few-step distillation framework that explicitly employs non-linear flow trajectories to approximate pre-trained teacher trajectories. Concretely, ArcFlow parameterizes the velocity field underlying the inference trajectory as a mixture of continuous momentum processes. This enables ArcFlow to capture velocity evolution and extrapolate coherent velocities to form a continuous non-linear trajectory within each denoising step. Importantly, this parameterization admits an analytical integration of this non-linear trajectory, which circumvents numerical discretization errors and results in high-precision approximation of the teacher trajectory. To train this parameterization into a few-step generator, we implement ArcFlow via trajectory distillation on pre-trained teacher models using lightweight adapters. This strategy ensures fast, stable convergence while preserving generative diversity and quality. Built on large-scale models (Qwen-Image-20B and FLUX.1-dev), ArcFlow only fine-tunes on less than 5% of original parameters and achieves a 40x speedup with 2 NFEs over the original multi-step teachers without significant quality degradation. Experiments on benchmarks show the effectiveness of ArcFlow both qualitatively and quantitatively.",
+        "authors": "Zihan Yang, Shuyuan Tu, Licheng Zhang, Qi Dai, Yu-Gang Jiang, Zuxuan Wu",
+        "url": "http://arxiv.org/abs/2602.09014v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.09014v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一种新颖的非线性流蒸馏框架ArcFlow，通过参数化速度场为连续动量过程的混合，并进行解析积分，以高精度近似预训练扩散模型的轨迹。这在理论上具有极高的创新性和严谨性，能将文生图推理步骤大幅减少至2步，实现40倍加速，有效解决了扩散模型推理成本高的实际瓶颈，且不显著降低生成质量。完美契合您对理论创新性和解决实际应用瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08616v1",
+        "title": "Breaking the Grid: Distance-Guided Reinforcement Learning in Large Discrete and Hybrid Action Spaces",
+        "summary": "Reinforcement Learning is increasingly applied to logistics, scheduling, and recommender systems, but standard algorithms struggle with the curse of dimensionality in such large discrete action spaces. Existing algorithms typically rely on restrictive grid-based structures or computationally expensive nearest-neighbor searches, limiting their effectiveness in high-dimensional or irregularly structured domains. We propose Distance-Guided Reinforcement Learning (DGRL), combining Sampled Dynamic Neighborhoods (SDN) and Distance-Based Updates (DBU) to enable efficient RL in spaces with up to 10$^\\text{20}$ actions. Unlike prior methods, SDN leverages a semantic embedding space to perform stochastic volumetric exploration, provably providing full support over a local trust region. Complementing this, DBU transforms policy optimization into a stable regression task, decoupling gradient variance from action space cardinality and guaranteeing monotonic policy improvement. DGRL naturally generalizes to hybrid continuous-discrete action spaces without requiring hierarchical dependencies. We demonstrate performance improvements of up to 66% against state-of-the-art benchmarks across regularly and irregularly structured environments, while simultaneously improving convergence speed and computational complexity.",
+        "authors": "Heiko Hoppe, Fabian Akkerman, Wouter van Heeswijk, Maximilian Schiffer",
+        "url": "http://arxiv.org/abs/2602.08616v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08616v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了Distance-Guided Reinforcement Learning (DGRL) 框架，结合采样动态邻域（SDN）和基于距离的更新（DBU），解决了大型离散和混合动作空间（高达10^20）中强化学习的维度灾难问题。理论上，SDN能提供局部信任区域的完全支持，DBU能保证策略的单调改进。其数学推导严谨，方法具有普适性，对RL在物流、调度、推荐系统等实际应用中的落地具有显著影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08603v1",
+        "title": "OSCAR: Optimization-Steered Agentic Planning for Composed Image Retrieval",
+        "summary": "Composed image retrieval (CIR) requires complex reasoning over heterogeneous visual and textual constraints. Existing approaches largely fall into two paradigms: unified embedding retrieval, which suffers from single-model myopia, and heuristic agentic retrieval, which is limited by suboptimal, trial-and-error orchestration. To this end, we propose OSCAR, an optimization-steered agentic planning framework for composed image retrieval. We are the first to reformulate agentic CIR from a heuristic search process into a principled trajectory optimization problem. Instead of relying on heuristic trial-and-error exploration, OSCAR employs a novel offline-online paradigm. In the offline phase, we model CIR via atomic retrieval selection and composition as a two-stage mixed-integer programming problem, mathematically deriving optimal trajectories that maximize ground-truth coverage for training samples via rigorous boolean set operations. These trajectories are then stored in a golden library to serve as in-context demonstrations for online steering of VLM planner at online inference time. Extensive experiments on three public benchmarks and a private industrial benchmark show that OSCAR consistently outperforms SOTA baselines. Notably, it achieves superior performance using only 10% of training data, demonstrating strong generalization of planning logic rather than dataset-specific memorization.",
+        "authors": "Teng Wang, Rong Shan, Jianghao Lin, Junjie Wu, Tianyi Xu, Jianping Zhang, Wenteng Chen, Changwang Zhang, Zhaoxiang Wang, Weinan Zhang, Jun Wang",
+        "url": "http://arxiv.org/abs/2602.08603v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08603v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "OSCAR框架将组合图像检索（CIR）从启发式搜索重构为原理性轨迹优化问题，通过混合整数规划离线推导最优轨迹。这种将复杂智能体规划问题形式化为严格数学优化问题的思路，理论创新性极高，数学严谨。它显著提升了CIR的性能，并能以更少的数据实现强泛化，解决了多模态LLM在复杂推理和组合编辑方面的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08586v1",
+        "title": "PRISM: A Principled Framework for Multi-Agent Reasoning via Gain Decomposition",
+        "summary": "Multi-agent collaboration has emerged as a promising paradigm for enhancing reasoning capabilities of Large Language Models (LLMs). However, existing approaches remain largely heuristic, lacking principled guidance on what drives performance gains and how to systematically optimize multi-agent reasoning. Specifically, it remains unclear why multi-agent collaboration outperforms single-agent reasoning and which design choices contribute most to these gains, making it difficult to build better systems.   We address this gap by introducing a unified theoretical framework that decomposes multi-agent reasoning gains into three conceptually independent dimensions: Exploration for diverse solution coverage, Information for high-fidelity feedback, and Aggregation for principled consensus. Through this lens, existing methods can be understood as special cases that optimize only subsets of these dimensions. Building upon this decomposition, a novel framework called PRISM (Propose-Review-Integrate Synthesis for Multi-agent Reasoning) is proposed, which jointly maximizes all three dimensions through role-based diversity, execution-grounded feedback with evidence-based cross-evaluation, and iterative synthesis with closed-loop validation. Extensive experiments across mathematical reasoning, code generation, and function calling benchmarks demonstrate that PRISM achieves state-of-the-art performance with superior compute-efficiency compared to methods optimizing partial dimensions. The theoretical framework provides actionable design principles for future multi-agent reasoning systems.",
+        "authors": "Yiming Yang, Zhuoyuan Li, Fanxiang Zeng, Hao Fu, Yue Liu",
+        "url": "http://arxiv.org/abs/2602.08586v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08586v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "PRISM提出了一个统一的理论框架，将多智能体推理的增益分解为探索、信息和聚合三个独立维度，并在此基础上设计了PRISM框架。这种从理论层面解构多智能体协作机制的方法，具有深刻的理论创新性，并为系统化优化多智能体推理提供了原理性指导，解决了现有方法启发式、缺乏理论依据的痛点，实践影响力显著。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08401v1",
+        "title": "On Protecting Agentic Systems' Intellectual Property via Watermarking",
+        "summary": "The evolution of Large Language Models (LLMs) into agentic systems that perform autonomous reasoning and tool use has created significant intellectual property (IP) value. We demonstrate that these systems are highly vulnerable to imitation attacks, where adversaries steal proprietary capabilities by training imitation models on victim outputs. Crucially, existing LLM watermarking techniques fail in this domain because real-world agentic systems often operate as grey boxes, concealing the internal reasoning traces required for verification. This paper presents AGENTWM, the first watermarking framework designed specifically for agentic models. AGENTWM exploits the semantic equivalence of action sequences, injecting watermarks by subtly biasing the distribution of functionally identical tool execution paths. This mechanism allows AGENTWM to embed verifiable signals directly into the visible action trajectory while remaining indistinguishable to users. We develop an automated pipeline to generate robust watermark schemes and a rigorous statistical hypothesis testing procedure for verification. Extensive evaluations across three complex domains demonstrate that AGENTWM achieves high detection accuracy with negligible impact on agent performance. Our results confirm that AGENTWM effectively protects agentic IP against adaptive adversaries, who cannot remove the watermarks without severely degrading the stolen model's utility.",
+        "authors": "Liwen Wang, Zongjie Li, Yuchong Xie, Shuai Wang, Dongdong She, Wei Wang, Juergen Rahmel",
+        "url": "http://arxiv.org/abs/2602.08401v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08401v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "AGENTWM是首个针对智能体模型的水印框架，通过利用动作序列的语义等价性，巧妙地将水印注入到功能相同的工具执行路径中。该方法具有极高的理论创新性，并提供了严谨的统计假设检验程序进行验证。它有效解决了LLM智能体系统知识产权保护的关键瓶颈，对AI安全和商业应用具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08335v1",
+        "title": "Who Deserves the Reward? SHARP: Shapley Credit-based Optimization for Multi-Agent System",
+        "summary": "Integrating Large Language Models (LLMs) with external tools via multi-agent systems offers a promising new paradigm for decomposing and solving complex problems. However, training these systems remains notoriously difficult due to the credit assignment challenge, as it is often unclear which specific functional agent is responsible for the success or failure of decision trajectories. Existing methods typically rely on sparse or globally broadcast rewards, failing to capture individual contributions and leading to inefficient reinforcement learning. To address these limitations, we introduce the Shapley-based Hierarchical Attribution for Reinforcement Policy (SHARP), a novel framework for optimizing multi-agent reinforcement learning via precise credit attribution. SHARP effectively stabilizes training by normalizing agent-specific advantages across trajectory groups, primarily through a decomposed reward mechanism comprising a global broadcast-accuracy reward, a Shapley-based marginal-credit reward for each agent, and a tool-process reward to improve execution efficiency. Extensive experiments across various real-world benchmarks demonstrate that SHARP significantly outperforms recent state-of-the-art baselines, achieving average match improvements of 23.66% and 14.05% over single-agent and multi-agent approaches, respectively.",
+        "authors": "Yanming Li, Xuelin Zhang, WenJie Lu, Ziye Tang, Maodong Wu, Haotian Luo, Tongtong Wu, Zijie Peng, Hongze Mi, Yibo Feng, Naiqiang Tan, Chao Huang, Hong Chen, Li Shen",
+        "url": "http://arxiv.org/abs/2602.08335v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08335v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "SHARP框架通过Shapley值精确归因奖励，解决了多智能体强化学习（MARL）中长期存在的信用分配难题。其分解奖励机制（全局、Shapley边际、工具过程奖励）具有深刻的理论基础和数学严谨性。该方法显著提升了多智能体LLM系统的性能，对复杂问题分解和解决具有重要实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08329v1",
+        "title": "Near-Oracle KV Selection via Pre-hoc Sparsity for Long-Context Inference",
+        "summary": "A core bottleneck in large language model (LLM) inference is the cost of attending over the ever-growing key-value (KV) cache. Although near-oracle top-k KV selection can preserve the quality of dense attention while sharply reducing computation and bandwidth, existing sparse methods generally rely on posterior heuristics, i.e., selectors conditioned on observed attention or proxy scores. Such conditioning introduces posterior bias: it tends to distort true token importance and miss salient tokens, thereby impairing long-range reasoning. To tackle this problem, we propose Pre-hoc Sparsity (PrHS), which selects KV entries before attention scoring and provides explicit accuracy control. Let the attention mass of discarded entries be delta (the dropped mass). Through a marginal-to-mutual-information analysis, we derive an upper bound on the mutual-information loss that depends only on the dropped mass. This relation explains failure modes of posterior heuristics and enables verifiable guarantees by controlling the dropped mass in advance. Within PrHS, we instantiate three orthogonal pre-hoc selectors along the axes of time, depth, and layer. Extensive experiments on LLaMA and Mistral families validate PrHS. Across GSM8K and CoQA, PrHS reduces retrieval overhead by over 90%, achieving 3x higher retrieval sparsity than HShare at matched or better accuracy. It incurs under 1% average degradation on LongBench, lowers attention FLOPs by about 15% versus prior sparse baselines, and yields a 9.9x speedup in attention-operator latency and 2.8x higher throughput on NVIDIA A100-80GB GPUs than the dense baseline.",
+        "authors": "Yifei Gao, Lei Wang, Rong-Cheng Tu, Qixin Zhang, Jun Cheng, Dacheng Tao",
+        "url": "http://arxiv.org/abs/2602.08329v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08329v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了Pre-hoc Sparsity (PrHS) 方法，通过在注意力评分前选择KV条目，并基于边际到互信息分析推导出互信息损失的上界，提供了可验证的稀疏性保证。这在理论上非常严谨和创新，有效解决了LLM长上下文推理中KV缓存的二次计算成本瓶颈，实现了90%以上的检索稀疏度，同时保持了高准确性和显著的推理加速。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08276v1",
+        "title": "Toward Formalizing LLM-Based Agent Designs through Structural Context Modeling and Semantic Dynamics Analysis",
+        "summary": "Current research on large language model (LLM) agents is fragmented: discussions of conceptual frameworks and methodological principles are frequently intertwined with low-level implementation details, causing both readers and authors to lose track amid a proliferation of superficially distinct concepts. We argue that this fragmentation largely stems from the absence of an analyzable, self-consistent formal model that enables implementation-independent characterization and comparison of LLM agents. To address this gap, we propose the \\texttt{Structural Context Model}, a formal model for analyzing and comparing LLM agents from the perspective of context structure. Building upon this foundation, we introduce two complementary components that together span the full lifecycle of LLM agent research and development: (1) a declarative implementation framework; and (2) a sustainable agent engineering workflow, \\texttt{Semantic Dynamics Analysis}. The proposed workflow provides principled insights into agent mechanisms and supports rapid, systematic design iteration. We demonstrate the effectiveness of the complete framework on dynamic variants of the monkey-banana problem, where agents engineered using our approach achieve up to a 32 percentage points improvement in success rate on the most challenging setting.",
+        "authors": "Haoyu Jia, Kento Kawaharazuka, Kei Okada",
+        "url": "http://arxiv.org/abs/2602.08276v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08276v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了“结构化上下文模型”，一个可分析、自洽的LLM智能体形式化模型，并引入了“语义动态分析”工作流。这为LLM智能体设计提供了急需的理论基础和系统化方法，解决了当前研究碎片化的问题。其理论深度和实践影响力俱佳，能显著提升智能体在复杂问题上的成功率。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08868v1",
+        "title": "AnomSeer: Reinforcing Multimodal LLMs to Reason for Time-Series Anomaly Detection",
+        "summary": "Time-series anomaly detection (TSAD) with multimodal large language models (MLLMs) is an emerging area, yet a persistent challenge remains: MLLMs rely on coarse time-series heuristics but struggle with multi-dimensional, detailed reasoning, which is vital for understanding complex time-series data. We present AnomSeer to address this by reinforcing the model to ground its reasoning in precise, structural details of time series, unifying anomaly classification, localization, and explanation. At its core, an expert chain-of-thought trace is generated to provide a verifiable, fine-grained reasoning from classical analyses (e.g., statistical measures, frequency transforms). Building on this, we propose a novel time-series grounded policy optimization (TimerPO) that incorporates two additional components beyond standard reinforcement learning: a time-series grounded advantage based on optimal transport and an orthogonal projection to ensure this auxiliary granular signal does not interfere with the primary detection objective. Across diverse anomaly scenarios, AnomSeer, with Qwen2.5-VL-3B/7B-Instruct, outperforms larger commercial baselines (e.g., GPT-4o) in classification and localization accuracy, particularly on point- and frequency-driven exceptions. Moreover, it produces plausible time-series reasoning traces that support its conclusions.",
+        "authors": "Junru Zhang, Lang Feng, Haoran Shi, Xu Guo, Han Yu, Yabo Dong, Duanqing Xu",
+        "url": "http://arxiv.org/abs/2602.08868v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08868v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "AnomSeer通过强化多模态LLM（MLLM）在时间序列异常检测中的精细推理能力，统一了异常分类、定位和解释。其核心是新颖的TimerPO（时间序列接地策略优化），结合了最优传输和正交投影，具有高度的理论创新性和严谨性。该方法在实践中超越了GPT-4o等大型商业基线，解决了MLLM在处理复杂时间序列数据时缺乏精细推理的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08561v1",
+        "title": "Automating Computational Reproducibility in Social Science: Comparing Prompt-Based and Agent-Based Approaches",
+        "summary": "Reproducing computational research is often assumed to be as simple as rerunning the original code with provided data. In practice, missing packages, fragile file paths, version conflicts, or incomplete logic frequently cause analyses to fail, even when materials are shared. This study investigates whether large language models and AI agents can automate the diagnosis and repair of such failures, making computational results easier to reproduce and verify. We evaluate this using a controlled reproducibility testbed built from five fully reproducible R-based social science studies. Realistic failures were injected, ranging from simple issues to complex missing logic, and two automated repair workflows were tested in clean Docker environments. The first workflow is prompt-based, repeatedly querying language models with structured prompts of varying context, while the second uses agent-based systems that inspect files, modify code, and rerun analyses autonomously. Across prompt-based runs, reproduction success ranged from 31-79 percent, with performance strongly influenced by prompt context and error complexity. Complex cases benefited most from additional context. Agent-based workflows performed substantially better, with success rates of 69-96 percent across all complexity levels. These results suggest that automated workflows, especially agent-based systems, can significantly reduce manual effort and improve reproduction success across diverse error types. Unlike prior benchmarks, our testbed isolates post-publication repair under controlled failure modes, allowing direct comparison of prompt-based and agent-based approaches.",
+        "authors": "Syed Mehtab Hussain Shah, Frank Hopfgartner, Arnim Bleier",
+        "url": "http://arxiv.org/abs/2602.08561v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08561v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文挑战了LLM无状态的普遍假设，提出了“隐式记忆”的概念，即模型通过编码自身输出并在后续输入中恢复信息，形成持久的信息通道。这一发现具有基础性的创新性，并揭示了“时间炸弹”等新型后门攻击，对LLM的安全、基准污染和内部机制理解具有深远影响，解决了LLM行为理解的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08324v1",
+        "title": "Towards Efficient Large Language Reasoning Models via Extreme-Ratio Chain-of-Thought Compression",
+        "summary": "Chain-of-Thought (CoT) reasoning successfully enhances the reasoning capabilities of Large Language Models (LLMs), yet it incurs substantial computational overhead for inference. Existing CoT compression methods often suffer from a critical loss of logical fidelity at high compression ratios, resulting in significant performance degradation. To achieve high-fidelity, fast reasoning, we propose a novel EXTreme-RAtio Chain-of-Thought Compression framework, termed Extra-CoT, which aggressively reduces the token budget while preserving answer accuracy. To generate reliable, high-fidelity supervision, we first train a dedicated semantically-preserved compressor on mathematical CoT data with fine-grained annotations. An LLM is then fine-tuned on these compressed pairs via a mixed-ratio supervised fine-tuning (SFT), teaching it to follow a spectrum of compression budgets and providing a stable initialization for reinforcement learning (RL). We further propose Constrained and Hierarchical Ratio Policy Optimization (CHRPO) to explicitly incentivize question-solving ability under lower budgets by a hierarchical reward. Experiments on three mathematical reasoning benchmarks show the superiority of Extra-CoT. For example, on MATH-500 using Qwen3-1.7B, Extra-CoT achieves over 73\\% token reduction with an accuracy improvement of 0.6\\%, significantly outperforming state-of-the-art (SOTA) methods.",
+        "authors": "Yuntian Tang, Bohan Jia, Wenxuan Huang, Lianyue Zhang, Jiao Xie, Wenxi Li, Wei Li, Jie Hu, Xinghao Chen, Rongrong Ji, Shaohui Lin",
+        "url": "http://arxiv.org/abs/2602.08324v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08324v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "Extra-CoT框架旨在实现极端比例的思维链（CoT）压缩，通过专门的语义保留压缩器和分层奖励的CHRPO（Constrained and Hierarchical Ratio Policy Optimization）进行强化学习。该方法在理论上严谨，有效解决了CoT推理计算开销大的实际瓶颈，在大幅减少token预算的同时，甚至能提升LLM的推理准确性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08804v1",
+        "title": "Root Cause Analysis Method Based on Large Language Models with Residual Connection Structures",
+        "summary": "Root cause localization remain challenging in complex and large-scale microservice architectures. The complex fault propagation among microservices and the high dimensionality of telemetry data, including metrics, logs, and traces, limit the effectiveness of existing root cause analysis (RCA) methods. In this paper, a residual-connection-based RCA method using large language model (LLM), named RC-LLM, is proposed. A residual-like hierarchical fusion structure is designed to integrate multi-source telemetry data, while the contextual reasoning capability of large language models is leveraged to model temporal and cross-microservice causal dependencies. Experimental results on CCF-AIOps microservice datasets demonstrate that RC-LLM achieves strong accuracy and efficiency in root cause analysis.",
+        "authors": "Liming Zhou, Ailing Liu, Hongwei Liu, Min He, Heng Zhang",
+        "url": "http://arxiv.org/abs/2602.08804v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08804v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FRPO（Fine-tuning Robust Policy Optimization）是一个鲁棒的RLHF框架，通过在KL-bounded策略邻域上优化奖励，确保策略在后续微调下的奖励稳定性，从而有效防止LLM的灾难性遗忘。该方法通过max-min公式确保奖励稳定性，理论严谨，且无需额外计算，解决了LLM后训练中安全性和稳定性下降的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08905v1",
+        "title": "Efficient and Stable Reinforcement Learning for Diffusion Language Models",
+        "summary": "Reinforcement Learning (RL) is crucial for unlocking the complex reasoning capabilities of Diffusion-based Large Language Models (dLLMs). However, applying RL to dLLMs faces unique challenges in efficiency and stability. To address these challenges, we propose Spatio-Temporal Pruning (STP), a framework designed to simultaneously improve the efficiency and stability of RL for dLLMs. STP compresses the redundancy in the generative process through: (1) \\textit{spatial pruning}, which constrains the exploration space using static priors; and (2) \\textit{temporal pruning}, which bypasses redundant late-stage refinement steps. Our theoretical analysis demonstrates that STP strictly reduces the variance of the log-likelihood estimation, thereby ensuring more stable policy updates. Extensive experiments demonstrate that STP surpasses state-of-the-art baselines in both efficiency and accuracy. Our code is available at https://github.com/Lolo1222/STP.",
+        "authors": "Jiawei Liu, Xiting Wang, Yuanyuan Zhong, Defu Lian, Yu Yang",
+        "url": "http://arxiv.org/abs/2602.08905v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08905v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "STP（Spatio-Temporal Pruning）框架旨在提高扩散语言模型（dLLM）强化学习的效率和稳定性。通过理论分析，该方法严格降低了对数似然估计的方差，确保了更稳定的策略更新。它通过空间剪枝和时间剪枝压缩生成过程中的冗余，显著提升了dLLM训练的效率和稳定性，解决了前沿dLLM训练中的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08837v1",
+        "title": "AMEM4Rec: Leveraging Cross-User Similarity for Memory Evolution in Agentic LLM Recommenders",
+        "summary": "Agentic systems powered by Large Language Models (LLMs) have shown strong potential in recommender systems but remain hindered by several challenges. Fine-tuning LLMs is parameter-inefficient, and prompt-based agentic reasoning is limited by context length and hallucination risk. Moreover, existing agentic recommendation systems predominantly leverages semantic knowledge while neglecting the collaborative filtering (CF) signals essential for implicit preference modeling. To address these limitations, we propose AMEM4Rec, an agentic LLM-based recommender that learns collaborative signals in an end-to-end manner through cross-user memory evolution. AMEM4Rec stores abstract user behavior patterns from user histories in a global memory pool. Within this pool, memories are linked to similar existing ones and iteratively evolved to reinforce shared cross-user patterns, enabling the system to become aware of CF signals without relying on a pre-trained CF model. Extensive experiments on Amazon and MIND datasets show that AMEM4Rec consistently outperforms state-of-the-art LLM-based recommenders, demonstrating the effectiveness of evolving memory-guided collaborative filtering.",
+        "authors": "Minh-Duc Nguyen, Hai-Dang Kieu, Dung D. Le",
+        "url": "http://arxiv.org/abs/2602.08837v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08837v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Dr. MAS理论上指出了多智能体LLM系统RL训练不稳定的关键原因，并提出了通过智能体级优势归一化来校准梯度尺度、稳定训练的Dr. MAS方法。该方法具有坚实的理论基础和严谨的数学推导，有效解决了多智能体LLM系统RL训练的稳定性问题，并在多智能体数学推理等任务上取得了显著的性能提升和效率优化。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.08376v1",
+        "title": "OJBKQ: Objective-Joint Babai-Klein Quantization",
+        "summary": "Post-training quantization (PTQ) is widely used to compress large language models without retraining. However, many existing weight-only methods rely on heuristic objectives and greedy rounding, thus leading to noticeable degradation under low-bit quantization. In this work, we introduce OJBKQ (Objective-Joint Babai-Klein Quantization with K-Best Sampling), a layer-wise PTQ method that formulates weight quantization as a joint optimization problem over activations and weights. This formulation results in a multiple-right-hand-side box-constrained integer least squares (BILS) problem in each layer, which is NP-hard. For each column of the weight matrix, we apply an extended Babai nearest-plane algorithm and an extended version of Klein's randomized Babai algorithm to find the minimum-residual Babai-Klein point, a sub-optimal solution to the BILS problem. Experimental results on large language models show that OJBKQ achieves lower perplexity at 3-4 bits compared to existing PTQ approaches, while maintaining comparable computational cost.",
+        "authors": "Xinyu Wang, Ziyu Zhao, Peng Lu, Yu Gu, Xiao-Wen Chang",
+        "url": "http://arxiv.org/abs/2602.08376v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.08376v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "OJBKQ（Objective-Joint Babai-Klein Quantization）是一种层级PTQ方法，将权重量化公式化为激活和权重的联合优化问题，并应用扩展的Babai最近平面算法和Klein随机Babai算法。该方法理论严谨，在低比特量化下显著降低了LLM的困惑度，同时保持了可比的计算成本，有效解决了模型压缩中低比特量化导致的性能下降问题。"
+    }
+]

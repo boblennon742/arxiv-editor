@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.10785v1",
+        "title": "A novel approach to trading strategy parameter optimization using double out-of-sample data and walk-forward techniques",
+        "summary": "This study introduces a novel approach to walk-forward optimization by parameterizing the lengths of training and testing windows. We demonstrate that the performance of a trading strategy using the Exponential Moving Average (EMA) evaluated within a walk-forward procedure based on the Robust Sharpe Ratio is highly dependent on the chosen window size. We investigated the strategy on intraday Bitcoin data at six frequencies (1 minute to 60 minutes) using 81 combinations of walk-forward window lengths (1 day to 28 days) over a 19-month training period. The two best-performing parameter sets from the training data were applied to a 21-month out-of-sample testing period to ensure data independence. The strategy was only executed once during the testing period. To further validate the framework, strategy parameters estimated on Bitcoin were applied to Binance Coin and Ethereum. Our results suggest the robustness of our custom approach. In the training period for Bitcoin, all combinations of walk-forward windows outperformed a Buy-and-Hold strategy. During the testing period, the strategy performed similarly to Buy-and-Hold but with lower drawdown and a higher Information Ratio. Similar results were observed for Binance Coin and Ethereum. The real strength was demonstrated when a portfolio combining Buy-and-Hold with our strategies outperformed all individual strategies and Buy-and-Hold alone, achieving the highest overall performance and a 50 percent reduction in drawdown. A conservative fee of 0.1 percent per transaction was included in all calculations. A cost sensitivity analysis was performed as a sanity check, revealing that the strategy's break-even point was around 0.4 percent per transaction. This research highlights the importance of optimizing walk-forward window lengths and emphasizing the value of single-time out-of-sample testing for reliable strategy evaluation.",
+        "authors": "Tomasz Mroziewicz, Robert Ślepaczuk",
+        "url": "http://arxiv.org/abs/2602.10785v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10785v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文高度契合你关于加密货币市场量化因子回测和策略设计的需求。它提出了一种改进的步进优化（walk-forward optimization）方法，通过参数化训练和测试窗口长度，并进行“双重样本外”验证，显著增强了策略参数优化的稳健性。这对于避免因子过拟合、确保策略在真实市场中的表现至关重要。论文在比特币等加密货币上进行了详尽的实证分析，并考虑了交易费用，其结论（如优化窗口长度、单次样本外测试的重要性、以及与买入并持有策略组合的优势）对你的量化策略开发具有直接的实践指导意义。作为统计学硕士，你会欣赏其严谨的实证设计和对实际问题的解决能力。"
+    }
+]

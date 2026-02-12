@@ -1,0 +1,242 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.11132v1",
+        "title": "A New Look at Bayesian Testing",
+        "summary": "We develop a unified framework for Bayesian hypothesis testing through the theory of moderate deviations, providing explicit asymptotic expansions for Bayes risk and optimal test statistics. Our analysis reveals that Bayesian test cutoffs operate on the moderate deviation scale $\\sqrt{\\log n/n}$, in sharp contrast to the sample-size-invariant calibrations of classical testing. This fundamental difference explains the Lindley paradox and establishes the risk-theoretic superiority of Bayesian procedures over fixed-$α$ Neyman-Pearson tests. We extend the seminal Rubin (1965) program to contemporary settings including high-dimensional sparse inference, goodness-of-fit testing, and model selection. The framework unifies several classical results: Jeffreys' $\\sqrt{\\log n}$ threshold, the BIC penalty $(d/2)\\log n$, and the Chernoff-Stein error exponents all emerge naturally from moderate deviation analysis of Bayes risk. Our results provide theoretical foundations for adaptive significance levels and connect Bayesian testing to information theory through gambling-based interpretations.",
+        "authors": "Jyotishka Datta, Nicholas G. Polson, Vadim Sokolov, Daniel Zantedeschi",
+        "url": "http://arxiv.org/abs/2602.11132v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11132v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过适度偏差理论为贝叶斯假设检验提供了一个统一框架，推导了贝叶斯风险和最优检验统计量的渐近展开，并解释了Lindley悖论。其理论严谨性极高，涉及信息论和经典统计结果的统一，完美契合您对强大理论基础和清晰数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11118v1",
+        "title": "A Doubly Robust Machine Learning Approach for Disentangling Treatment Effect Heterogeneity with Functional Outcomes",
+        "summary": "Causal inference is paramount for understanding the effects of interventions, yet extracting personalized insights from increasingly complex data remains a significant challenge for modern machine learning. This is the case, in particular, when considering functional outcomes observed over a continuous domain (e.g., time, or space). Estimation of heterogeneous treatment effects, known as CATE, has emerged as a crucial tool for personalized decision-making, but existing meta-learning frameworks are largely limited to scalar outcomes, failing to provide satisfying results in scientific applications that leverage the rich, continuous information encoded in functional data. Here, we introduce FOCaL (Functional Outcome Causal Learning), a novel, doubly robust meta-learner specifically engineered to estimate a functional heterogeneous treatment effect (F-CATE). FOCaL integrates advanced functional regression techniques for both outcome modeling and functional pseudo-outcome reconstruction, thereby enabling the direct and robust estimation of F-CATE. We provide a rigorous theoretical derivation of FOCaL, demonstrate its performance and robustness compared to existing non-robust functional methods through comprehensive simulation studies, and illustrate its practical utility on diverse real-world functional datasets. FOCaL advances the capabilities of machine intelligence to infer nuanced, individualized causal effects from complex data, paving the way for more precise and trustworthy AI systems in personalized medicine, adaptive policy design, and fundamental scientific discovery.",
+        "authors": "Filippo Salmaso, Lorenzo Testa, Francesca Chiaromonte",
+        "url": "http://arxiv.org/abs/2602.11118v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11118v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了FOCaL，一个新颖的双重鲁棒元学习器，专门用于估计具有函数结果的异质治疗效果（F-CATE）。论文提供了严格的理论推导，强调了因果推断的严谨性，对个性化决策制定具有重要意义，与您对因果逻辑和统计保证的兴趣高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10905v1",
+        "title": "Natural Hypergradient Descent: Algorithm Design, Convergence Analysis, and Parallel Implementation",
+        "summary": "In this work, we propose Natural Hypergradient Descent (NHGD), a new method for solving bilevel optimization problems. To address the computational bottleneck in hypergradient estimation--namely, the need to compute or approximate Hessian inverse--we exploit the statistical structure of the inner optimization problem and use the empirical Fisher information matrix as an asymptotically consistent surrogate for the Hessian. This design enables a parallel optimize-and-approximate framework in which the Hessian-inverse approximation is updated synchronously with the stochastic inner optimization, reusing gradient information at negligible additional cost. Our main theoretical contribution establishes high-probability error bounds and sample complexity guarantees for NHGD that match those of state-of-the-art optimize-then-approximate methods, while significantly reducing computational time overhead. Empirical evaluations on representative bilevel learning tasks further demonstrate the practical advantages of NHGD, highlighting its scalability and effectiveness in large-scale machine learning settings.",
+        "authors": "Deyi Kong, Zaiwei Chen, Shuzhong Zhang, Shancong Mou",
+        "url": "http://arxiv.org/abs/2602.10905v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10905v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了自然超梯度下降（NHGD）算法，用于解决双层优化问题。它通过使用经验Fisher信息矩阵作为Hessian的替代来解决计算瓶颈，并建立了高概率误差界和样本复杂度保证。其算法设计和收敛性分析的严谨性，是您在优化收敛性方面的理想选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10792v1",
+        "title": "Bayesian Signal Component Decomposition via Diffusion-within-Gibbs Sampling",
+        "summary": "In signal processing, the data collected from sensing devices is often a noisy linear superposition of multiple components, and the estimation of components of interest constitutes a crucial pre-processing step. In this work, we develop a Bayesian framework for signal component decomposition, which combines Gibbs sampling with plug-and-play (PnP) diffusion priors to draw component samples from the posterior distribution. Unlike many existing methods, our framework supports incorporating model-driven and data-driven prior knowledge into the diffusion prior in a unified manner. Moreover, the proposed posterior sampler allows component priors to be learned separately and flexibly combined without retraining. Under suitable assumptions, the proposed DiG sampler provably produces samples from the posterior distribution. We also show that DiG can be interpreted as an extension of a class of recently proposed diffusion-based samplers, and that, for suitable classes of sensing operators, DiG better exploits the structure of the measurement model. Numerical experiments demonstrate the superior performance of our method over existing approaches.",
+        "authors": "Yi Zhang, Rui Guo, Yonina C. Eldar",
+        "url": "http://arxiv.org/abs/2602.10792v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10792v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究开发了一个贝叶斯信号分量分解框架，结合了Gibbs采样和即插即用（PnP）扩散先验。论文声称在适当假设下，所提出的采样器能够从后验分布中生成样本，具有强大的统计保证和贝叶斯理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10774v1",
+        "title": "Nonparametric two sample test of spectral densities",
+        "summary": "A novel nonparametric test for the equality of the covariance matrices of two Gaussian stationary processes, possibly of different lengths, is proposed. The test translates to testing the equality of two spectral densities and is shown to be minimax rate-optimal. Test performance is validated in a simulation study, and the practical utility is demonstrated in the analysis of real electroencephalography data. The test is implemented in the R-package sdf.test.",
+        "authors": "Ilaria Nadin, Tatyana Krivobokova, Farida Enikeeva",
+        "url": "http://arxiv.org/abs/2602.10774v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10774v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的非参数检验方法，用于检验两个高斯平稳过程的协方差矩阵（即谱密度）是否相等。该方法被证明是极小极大率最优的，具有明确的统计保证和数学推导，非常符合您对非参数统计理论的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10760v1",
+        "title": "Covariate-Adaptive Randomization in Clinical Trials Without Inflated Variances",
+        "summary": "Covariate adaptive randomization (CAR) procedures are extensively used to reduce the likelihood of covariate imbalances occurring in clinical trials. In literatures, a lot of CAR procedures have been proposed so that the specified covariates are balanced well between treatments. However, the variance of the imbalance of the unspecified covariates may be inflated comparing to the one under the simple randomization. The inflation of the variance causes the usual test of treatment effects being not valid and adjusting the test being not an easy work. In this paper, we propose a new kind covariate adaptive randomization procedures to balance covariates between two treatments with a ratio $ρ:(1-ρ)$. Under this kind of CAR procedures, the convergence rate of the imbalance of the specified covariates is $o(n^{1/2})$, and at the same time the asymptotic variance of the imbalance of any unspecified (observed or unobserved) covariates does not exceed the one under the simple randomization. The ``shift problem'' found by Liu, Hu, and Ma (2025) will not appear under the new CAR procedures.",
+        "authors": "Zhang Li-Xin",
+        "url": "http://arxiv.org/abs/2602.10760v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10760v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种新型的协变量自适应随机化（CAR）程序，用于临床试验，旨在平衡协变量同时不增加未指定协变量的方差。它提供了协变量不平衡的收敛速度和渐近方差的理论保证，对统计设计和因果推断的严谨性有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10680v1",
+        "title": "A solvable high-dimensional model where nonlinear autoencoders learn structure invisible to PCA while test loss misaligns with generalization",
+        "summary": "Many real-world datasets contain hidden structure that cannot be detected by simple linear correlations between input features. For example, latent factors may influence the data in a coordinated way, even though their effect is invisible to covariance-based methods such as PCA. In practice, nonlinear neural networks often succeed in extracting such hidden structure in unsupervised and self-supervised learning. However, constructing a minimal high-dimensional model where this advantage can be rigorously analyzed has remained an open theoretical challenge. We introduce a tractable high-dimensional spiked model with two latent factors: one visible to covariance, and one statistically dependent yet uncorrelated, appearing only in higher-order moments. PCA and linear autoencoders fail to recover the latter, while a minimal nonlinear autoencoder provably extracts both. We analyze both the population risk, and empirical risk minimization. Our model also provides a tractable example where self-supervised test loss is poorly aligned with representation quality: nonlinear autoencoders recover latent structure that linear methods miss, even though their reconstruction loss is higher.",
+        "authors": "Vicente Conde Mendes, Lorenzo Bardone, Cédric Koller, Jorge Medina Moreira, Vittorio Erba, Emanuele Troiani, Lenka Zdeborová",
+        "url": "http://arxiv.org/abs/2602.10680v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10680v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了一个可解的高维模型，理论上证明了非线性自编码器能够学习PCA无法检测到的隐藏结构，并分析了自监督测试损失与泛化能力不一致的现象。这是对深度学习机制进行严格理论分析的典范，完美符合您对AI系统数学逻辑的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10608v1",
+        "title": "Bayesian Inference of Contextual Bandit Policies via Empirical Likelihood",
+        "summary": "Policy inference plays an essential role in the contextual bandit problem. In this paper, we use empirical likelihood to develop a Bayesian inference method for the joint analysis of multiple contextual bandit policies in finite sample regimes. The proposed inference method is robust to small sample sizes and is able to provide accurate uncertainty measurements for policy value evaluation. In addition, it allows for flexible inferences on policy comparison with full uncertainty quantification. We demonstrate the effectiveness of the proposed inference method using Monte Carlo simulations and its application to an adolescent body mass index data set.",
+        "authors": "Jiangrong Ouyang, Mingming Gong, Howard Bondell",
+        "url": "http://arxiv.org/abs/2602.10608v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10608v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了一种基于经验似然的贝叶斯推断方法，用于上下文强盗策略的联合分析。它强调了对小样本量的鲁棒性、准确的不确定性度量和完整的不确定性量化，具有强大的贝叶斯理论基础和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10602v1",
+        "title": "Learning Mixture Density via Natural Gradient Expectation Maximization",
+        "summary": "Mixture density networks are neural networks that produce Gaussian mixtures to represent continuous multimodal conditional densities. Standard training procedures involve maximum likelihood estimation using the negative log-likelihood (NLL) objective, which suffers from slow convergence and mode collapse. In this work, we improve the optimization of mixture density networks by integrating their information geometry. Specifically, we interpret mixture density networks as deep latent-variable models and analyze them through an expectation maximization framework, which reveals surprising theoretical connections to natural gradient descent. We then exploit such connections to derive the natural gradient expectation maximization (nGEM) objective. We show that empirically nGEM achieves up to 10$\\times$ faster convergence while adding almost zerocomputational overhead, and scales well to high-dimensional data where NLL otherwise fails.",
+        "authors": "Yutao Chen, Jasmine Bayrooti, Steven Morad",
+        "url": "http://arxiv.org/abs/2602.10602v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10602v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过整合信息几何学，改进了混合密度网络（MDN）的优化。它将MDN解释为深度潜在变量模型，并通过期望最大化（EM）框架进行分析，揭示了与自然梯度下降的联系，并推导了nGEM目标。这是优化理论和信息几何学的完美结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10595v1",
+        "title": "Roughness-Informed Federated Learning",
+        "summary": "Federated Learning (FL) enables collaborative model training across distributed clients while preserving data privacy, yet faces challenges in non-independent and identically distributed (non-IID) settings due to client drift, which impairs convergence. We propose RI-FedAvg, a novel FL algorithm that mitigates client drift by incorporating a Roughness Index (RI)-based regularization term into the local objective, adaptively penalizing updates based on the fluctuations of local loss landscapes. This paper introduces RI-FedAvg, leveraging the RI to quantify the roughness of high-dimensional loss functions, ensuring robust optimization in heterogeneous settings. We provide a rigorous convergence analysis for non-convex objectives, establishing that RI-FedAvg converges to a stationary point under standard assumptions. Extensive experiments on MNIST, CIFAR-10, and CIFAR-100 demonstrate that RI-FedAvg outperforms state-of-the-art baselines, including FedAvg, FedProx, FedDyn, SCAFFOLD, and DP-FedAvg, achieving higher accuracy and faster convergence in non-IID scenarios. Our results highlight RI-FedAvg's potential to enhance the robustness and efficiency of federated learning in practical, heterogeneous environments.",
+        "authors": "Mohammad Partohaghighi, Roummel Marcia, Bruce J. West, YangQuan Chen",
+        "url": "http://arxiv.org/abs/2602.10595v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10595v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了RI-FedAvg，一种通过引入基于粗糙度指数（RI）的正则化项来缓解客户端漂移的联邦学习算法。它为非凸目标提供了严格的收敛性分析，建立了在标准假设下收敛到平稳点的保证，是优化收敛性研究的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10588v1",
+        "title": "TRACE: Theoretical Risk Attribution under Covariate-shift Effects",
+        "summary": "When a source-trained model $Q$ is replaced by a model $\\tilde{Q}$ trained on shifted data, its performance on the source domain can change unpredictably. To address this, we study the two-model risk change, $ΔR := R_P(\\tilde{Q}) - R_P(Q)$, under covariate shift. We introduce TRACE (Theoretical Risk Attribution under Covariate-shift Effects), a framework that decomposes $|ΔR|$ into an interpretable upper bound. This decomposition disentangles the risk change into four actionable factors: two generalization gaps, a model change penalty, and a covariate shift penalty, transforming the bound into a powerful diagnostic tool for understanding why performance has changed. To make TRACE a fully computable diagnostic, we instantiate each term. The covariate shift penalty is estimated via a model sensitivity factor (from high-quantile input gradients) and a data-shift measure; we use feature-space Optimal Transport (OT) by default and provide a robust alternative using Maximum Mean Discrepancy (MMD). The model change penalty is controlled by the average output distance between the two models on the target sample. Generalization gaps are estimated on held-out data. We validate our framework in an idealized linear regression setting, showing the TRACE bound correctly captures the scaling of the true risk difference with the magnitude of the shift. Across synthetic and vision benchmarks, TRACE diagnostics are valid and maintain a strong monotonic relationship with the true performance degradation. Crucially, we derive a deployment gate score that correlates strongly with $|ΔR|$ and achieves high AUROC/AUPRC for gating decisions, enabling safe, label-efficient model replacement.",
+        "authors": "Hosein Anjidani, S. Yahya S. R. Tehrani, Mohammad Mahdi Mojahedian, Mohammad Hossein Yassaee",
+        "url": "http://arxiv.org/abs/2602.10588v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10588v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了TRACE框架，将协变量偏移下的风险变化分解为可解释的上限，并分解为四个可操作的因素。它提供了理论风险归因和统计保证，对理解模型鲁棒性和安全部署具有深刻见解，是统计学习理论的严谨工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10587v1",
+        "title": "Deep Bootstrap",
+        "summary": "In this work, we propose a novel deep bootstrap framework for nonparametric regression based on conditional diffusion models. Specifically, we construct a conditional diffusion model to learn the distribution of the response variable given the covariates. This model is then used to generate bootstrap samples by pairing the original covariates with newly synthesized responses. We reformulate nonparametric regression as conditional sample mean estimation, which is implemented directly via the learned conditional diffusion model. Unlike traditional bootstrap methods that decouple the estimation of the conditional distribution, sampling, and nonparametric regression, our approach integrates these components into a unified generative framework. With the expressive capacity of diffusion models, our method facilitates both efficient sampling from high-dimensional or multimodal distributions and accurate nonparametric estimation. We establish rigorous theoretical guarantees for the proposed method. In particular, we derive optimal end-to-end convergence rates in the Wasserstein distance between the learned and target conditional distributions. Building on this foundation, we further establish the convergence guarantees of the resulting bootstrap procedure. Numerical studies demonstrate the effectiveness and scalability of our approach for complex regression tasks.",
+        "authors": "Jinyuan Chang, Yuling Jiao, Lican Kang, Junjie Shi",
+        "url": "http://arxiv.org/abs/2602.10587v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10587v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于条件扩散模型的深度自举框架，用于非参数回归。它建立了严格的理论保证，包括Wasserstein距离下的最优端到端收敛速度，以及自举过程的收敛性保证，具有强大的统计保证和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10566v1",
+        "title": "Finite-sample confidence regions for spectral clustering and graph centrality",
+        "summary": "Let a graph be observed through a finite random sampling mechanism. Spectral methods are routinely applied to such graphs, yet their outputs are treated as deterministic objects. This paper develops finite-sample inference for spectral graph procedures.   The primary result constructs explicit confidence regions for latent eigenspaces of graph operators under an explicit sampling model. These regions propagate to confidence regions for spectral clustering assignments and for smooth graph centrality functionals. All bounds are nonasymptotic and depend explicitly on the sample size, noise level, and spectral gap.   The analysis isolates a failure of common practice: asymptotic perturbation arguments are often invoked without a finite-sample spectral gap, leading to invalid uncertainty claims. Under verifiable gap and concentration conditions, the present framework yields coverage guarantees and certified stability regions. Several corollaries address fairness-constrained post-processing and topological summaries derived from spectral embeddings.",
+        "authors": "Chandrasekhar Gokavarapu, Sekhar Babu Gosala, Vamis Pasalapudi, Tarakarama Kapakayala",
+        "url": "http://arxiv.org/abs/2602.10566v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10566v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究为谱图方法开发了有限样本推断，构建了图算子潜在特征空间、谱聚类分配和光滑图中心性泛函的显式置信区域。其非渐近界和覆盖保证，展现了在图论中进行统计推断的极高严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10512v1",
+        "title": "Don't Eliminate Cut: Exponential Separations in LLM-Based Theorem Proving",
+        "summary": "We develop a theoretical analysis of LLM-guided formal theorem proving in interactive proof assistants (e.g., Lean) by modeling tactic proposal as a stochastic policy in a finite-horizon deterministic MDP. To capture modern representation learning, we treat the state and action spaces as general compact metric spaces and assume Lipschitz policies. To explain the gap between worst-case hardness and empirical success, we introduce problem distributions generated by a reference policy $q$, including a latent-variable model in which proofs exhibit reusable cut/lemma/sketch structure represented by a proof DAG. Under a top-$k$ search protocol and Tsybakov-type margin conditions, we derive lower bounds on finite-horizon success probability that decompose into search and learning terms, with learning controlled by sequential Rademacher/covering complexity. Our main separation result shows that when cut elimination expands a DAG of depth $D$ into a cut-free tree of size $Ω(Λ^D)$ while the cut-aware hierarchical process has size $O(λ^D)$ with $λ\\llΛ$, a flat (cut-free) learner provably requires exponentially more data than a cut-aware hierarchical learner. This provides a principled justification for subgoal decomposition in recent agentic theorem provers.",
+        "authors": "Sho Sonoda, Shunta Akiyama, Yuya Uezato",
+        "url": "http://arxiv.org/abs/2602.10512v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10512v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对LLM引导的形式化定理证明进行了理论分析，将策略提案建模为MDP中的随机策略。它推导了有限视野成功概率的下界，并证明了剪枝感知分层学习器比剪枝无关学习器需要指数级更少的数据，为AI推理提供了强大的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10469v1",
+        "title": "Online Generalized-mean Welfare Maximization: Achieving Near-Optimal Regret from Samples",
+        "summary": "We study online fair allocation of $T$ sequentially arriving items among $n$ agents with heterogeneous preferences, with the objective of maximizing generalized-mean welfare, defined as the $p$-mean of agents' time-averaged utilities, with $p\\in (-\\infty, 1)$. We first consider the i.i.d. arrival model and show that the pure greedy algorithm -- which myopically chooses the welfare-maximizing integral allocation -- achieves $\\widetilde{O}(1/T)$ average regret. Importantly, in contrast to prior work, our algorithm does not require distributional knowledge and achieves the optimal regret rate using only the online samples.   We then go beyond i.i.d. arrivals and investigate a nonstationary model with time-varying independent distributions. In the absence of additional data about the distributions, it is known that every online algorithm must suffer $Ω(1)$ average regret. We show that only a single historical sample from each distribution is sufficient to recover the optimal $\\widetilde{O}(1/T)$ average regret rate, even in the face of arbitrary non-stationarity. Our algorithms are based on the re-solving paradigm: they assume that the remaining items will be the ones seen historically in those periods and solve the resulting welfare-maximization problem to determine the decision in every period. Finally, we also account for distribution shifts that may distort the fidelity of historical samples and show that the performance of our re-solving algorithms is robust to such shifts.",
+        "authors": "Zongjun Yang, Rachitesh Kumar, Christian Kroer",
+        "url": "http://arxiv.org/abs/2602.10469v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10469v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探讨了在线公平分配中的广义均值福利最大化问题。它证明了纯贪婪算法在i.i.d.模型下实现了近最优的平均遗憾，并且不需要分布知识，具有强大的优化收敛性理论和清晰的数学结果。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10461v1",
+        "title": "Unlocked Backpropagation using Wave Scattering",
+        "summary": "Both the backpropagation algorithm in machine learning and the maximum principle in optimal control theory are posed as a two-point boundary problem, resulting in a \"forward-backward\" lock. We derive a reformulation of the maximum principle in optimal control theory as a hyperbolic initial value problem by introducing an additional \"optimization time\" dimension. We introduce counter-propagating wave variables with finite propagation speed and recast the optimization problem in terms of scattering relationships between them. This relaxation of the original problem can be interpreted as a physical system that equilibrates and changes its physical properties in order to minimize reflections. We discretize this continuum theory to derive a family of fully unlocked algorithms suitable for training neural networks. Different parameter dynamics, including gradient descent, can be derived by demanding dissipation and minimization of reflections at parameter ports. These results also imply that any physical substrate that supports the scattering and dissipation of waves can be interpreted as solving an optimization problem.",
+        "authors": "Christian Pehle, Jean-Jacques Slotine",
+        "url": "http://arxiv.org/abs/2602.10461v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10461v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个高度新颖的理论框架，通过引入“优化时间”维度和反向传播波变量，将最优控制中的最大原理重新表述为双曲初值问题。它为训练神经网络提供了完全解锁的算法，具有极高的理论深度、创新性和潜在影响力，是您探索AI系统底层数学原理的绝佳选择。"
+    }
+]

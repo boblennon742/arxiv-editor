@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.11149v1",
+        "title": "Data Repetition Beats Data Scaling in Long-CoT Supervised Fine-Tuning",
+        "summary": "Supervised fine-tuning (SFT) on chain-of-thought data is an essential post-training step for reasoning language models. Standard machine learning intuition suggests that training with more unique training samples yields better generalization. Counterintuitively, we show that SFT benefits from repetition: under a fixed update budget, training for more epochs on smaller datasets outperforms single-epoch training on larger datasets. On AIME'24/25 and GPQA benchmarks, Olmo3-7B trained for 128 epochs on 400 samples outperforms the equivalent 1 epoch on 51200 samples by 12-26 percentage points, with no additional catastrophic forgetting. We find that training token accuracy reliably signals when repetition has saturated; improvements from additional epochs plateau at full memorization, a pattern consistent across all settings. These findings provide a practical approach for reasoning SFT, where scaling epochs with token accuracy as a stopping criterion can replace expensive undirected data scaling. We pose the repetition advantage, where full memorization coincides with improved generalization, as a new open problem for the community in understanding the training dynamics of large language models.",
+        "authors": "Dawid J. Kopiczko, Sagar Vaze, Tijmen Blankevoort, Yuki M. Asano",
+        "url": "http://arxiv.org/abs/2602.11149v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11149v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个反直觉但极具实践价值的发现：在长链思维（Long-CoT）的监督微调中，数据重复（在小数据集上训练更多 epoch）比数据扩增（在更大的数据集上训练一个 epoch）效果更好。这一发现挑战了传统的机器学习直觉，揭示了 LLM 训练动态的深层机制，并提出了一个开放性问题。它直接解决了 LLM 应用中的数据效率瓶颈，具有显著的理论洞察和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11137v1",
+        "title": "Weight Decay Improves Language Model Plasticity",
+        "summary": "The prevailing paradigm in large language model (LLM) development is to pretrain a base model, then perform further training to improve performance and model behavior. However, hyperparameter optimization and scaling laws have been studied primarily from the perspective of the base model's validation loss, ignoring downstream adaptability. In this work, we study pretraining from the perspective of model plasticity, that is, the ability of the base model to successfully adapt to downstream tasks through fine-tuning. We focus on the role of weight decay, a key regularization parameter during pretraining. Through systematic experiments, we show that models trained with larger weight decay values are more plastic, meaning they show larger performance gains when fine-tuned on downstream tasks. This phenomenon can lead to counterintuitive trade-offs where base models that perform worse after pretraining can perform better after fine-tuning. Further investigation of weight decay's mechanistic effects on model behavior reveals that it encourages linearly separable representations, regularizes attention matrices, and reduces overfitting on the training data. In conclusion, this work demonstrates the importance of using evaluation metrics beyond cross-entropy loss for hyperparameter optimization and casts light on the multifaceted role of that a single optimization hyperparameter plays in shaping model behavior.",
+        "authors": "Tessa Han, Sebastian Bordt, Hanlin Zhang, Sham Kakade",
+        "url": "http://arxiv.org/abs/2602.11137v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11137v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究从模型可塑性（适应下游任务的能力）的角度重新审视了 LLM 预训练中权重衰减的作用。发现更大的权重衰减值能提高模型可塑性，即使基础模型性能略差。论文深入探讨了权重衰减的机制效应（如线性可分离表示、注意力正则化），为 LLM 超参数优化提供了新的理论视角和实践指导，避免了纯粹的工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11130v1",
+        "title": "From Circuits to Dynamics: Understanding and Stabilizing Failure in 3D Diffusion Transformers",
+        "summary": "Reliable surface completion from sparse point clouds underpins many applications spanning content creation and robotics. While 3D diffusion transformers attain state-of-the-art results on this task, we uncover that they exhibit a catastrophic mode of failure: arbitrarily small on-surface perturbations to the input point cloud can fracture the output into multiple disconnected pieces -- a phenomenon we call Meltdown. Using activation-patching from mechanistic interpretability, we localize Meltdown to a single early denoising cross-attention activation. We find that the singular-value spectrum of this activation provides a scalar proxy: its spectral entropy rises when fragmentation occurs and returns to baseline when patched. Interpreted through diffusion dynamics, we show that this proxy tracks a symmetry-breaking bifurcation of the reverse process. Guided by this insight, we introduce PowerRemap, a test-time control that stabilizes sparse point-cloud conditioning. We demonstrate that Meltdown persists across state-of-the-art architectures (WaLa, Make-a-Shape), datasets (GSO, SimJEB) and denoising strategies (DDPM, DDIM), and that PowerRemap effectively counters this failure with stabilization rates of up to 98.3%. Overall, this work is a case study on how diffusion model behavior can be understood and guided based on mechanistic analysis, linking a circuit-level cross-attention mechanism to diffusion-dynamics accounts of trajectory bifurcations.",
+        "authors": "Maximilian Plattner, Fabian Paischer, Johannes Brandstetter, Arturs Berzins",
+        "url": "http://arxiv.org/abs/2602.11130v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11130v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过机制可解释性（mechanistic interpretability）深入分析了 3D 扩散 Transformer 中的一种灾难性故障模式（Meltdown），并将其定位到特定的交叉注意力激活。它将电路层面的机制与扩散动力学中的分岔现象联系起来，提出了理论上严谨的诊断方法和测试时控制策略 PowerRemap。这种从理论分析到实际问题解决的路径，完美契合了您对理论创新性和解决实际瓶颈的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11089v1",
+        "title": "DataChef: Cooking Up Optimal Data Recipes for LLM Adaptation via Reinforcement Learning",
+        "summary": "In the current landscape of Large Language Models (LLMs), the curation of large-scale, high-quality training data is a primary driver of model performance. A key lever is the \\emph{data recipe}, which comprises a data processing pipeline to transform raw sources into training corpora. Despite the growing use of LLMs to automate individual data processing steps, such as data synthesis and filtering, the overall design of data recipes remains largely manual and labor-intensive, requiring substantial human expertise and iteration. To bridge this gap, we formulate \\emph{end-to-end data recipe generation} for LLM adaptation. Given a target benchmark and a pool of available data sources, a model is required to output a complete data recipe that adapts a base LLM to the target task. We present DataChef-32B, which performs online reinforcement learning using a proxy reward that predicts downstream performance for candidate recipes. Across six held-out tasks, DataChef-32B produces practical recipes that reach comparable downstream performance to those curated by human experts. Notably, the recipe from DataChef-32B adapts Qwen3-1.7B-Base to the math domain, achieving 66.7 on AIME'25 and surpassing Qwen3-1.7B. This work sheds new light on automating LLM training and developing self-evolving AI systems.",
+        "authors": "Yicheng Chen, Zerun Ma, Xinchen Xie, Yining Li, Kai Chen",
+        "url": "http://arxiv.org/abs/2602.11089v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "DataChef 提出了一种新颖的强化学习方法，用于自动化 LLM 适应过程中的数据配方生成。它将数据处理管道的整体设计转化为一个端到端的强化学习问题，通过代理奖励预测下游性能。这种方法显著提高了数据效率，并能让小型 LLM 在特定任务上超越大型模型，是数据中心 AI 和自进化系统领域的重要理论与实践突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11088v1",
+        "title": "Vulnerabilities in Partial TEE-Shielded LLM Inference with Precomputed Noise",
+        "summary": "The deployment of large language models (LLMs) on third-party devices requires new ways to protect model intellectual property. While Trusted Execution Environments (TEEs) offer a promising solution, their performance limits can lead to a critical compromise: using a precomputed, static secret basis to accelerate cryptographic operations. We demonstrate that this mainstream design pattern introduces a classic cryptographic flaw, the reuse of secret keying material, into the system's protocol. We prove its vulnerability with two distinct attacks: First, our attack on a model confidentiality system achieves a full confidentiality break by recovering its secret permutations and model weights. Second, our integrity attack completely bypasses the integrity checks of systems like Soter and TSQP. We demonstrate the practicality of our attacks against state-of-the-art LLMs, recovering a layer's secrets from a LLaMA-3 8B model in about 6 minutes and showing the attack scales to compromise 405B-parameter LLMs across a variety of configurations.",
+        "authors": "Abhishek Saini, Haolin Jiang, Hang Liu",
+        "url": "http://arxiv.org/abs/2602.11088v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11088v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了 TEE 屏蔽的 LLM 推理中存在的关键加密漏洞，即预计算静态秘密基础的重用。它通过两种攻击方式（完全机密性破坏和完整性绕过）严格证明了其脆弱性，并在 LLaMA-3 8B 模型上进行了实际演示。这对于 LLM 的安全部署至关重要，具有高度的理论严谨性和实践影响力，解决了 LLM 应用中的一个严重安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11087v1",
+        "title": "General Flexible $f$-divergence for Challenging Offline RL Datasets with Low Stochasticity and Diverse Behavior Policies",
+        "summary": "Offline RL algorithms aim to improve upon the behavior policy that produces the collected data while constraining the learned policy to be within the support of the dataset. However, practical offline datasets often contain examples with little diversity or limited exploration of the environment, and from multiple behavior policies with diverse expertise levels. Limited exploration can impair the offline RL algorithm's ability to estimate \\textit{Q} or \\textit{V} values, while constraining towards diverse behavior policies can be overly conservative. Such datasets call for a balance between the RL objective and behavior policy constraints. We first identify the connection between $f$-divergence and optimization constraint on the Bellman residual through a more general Linear Programming form for RL and the convex conjugate. Following this, we introduce the general flexible function formulation for the $f$-divergence to incorporate an adaptive constraint on algorithms' learning objectives based on the offline training dataset. Results from experiments on the MuJoCo, Fetch, and AdroitHand environments show the correctness of the proposed LP form and the potential of the flexible $f$-divergence in improving performance for learning from a challenging dataset when applied to a compatible constrained optimization algorithm.",
+        "authors": "Jianxun Wang, Grant C. Forbes, Leonardo Villalobos-Arias, David L. Roberts",
+        "url": "http://arxiv.org/abs/2602.11087v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11087v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入探讨了离线强化学习（Offline RL）中处理低随机性和多样行为策略数据集的挑战。它通过更通用的线性规划形式，建立了 $f$-散度与 Bellman 残差优化约束之间的联系，并引入了通用的灵活 $f$-散度公式来适应性地约束学习目标。这篇论文具有很强的数理统计和理论严谨性，为解决离线 RL 的核心问题提供了新的理论工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11008v1",
+        "title": "ROCKET: Rapid Optimization via Calibration-guided Knapsack Enhanced Truncation for Efficient Model Compression",
+        "summary": "We present ROCKET, a training-free model compression method that achieves state-of-the-art performance in comparison with factorization, structured-sparsification and dynamic compression baselines. Operating under a global compression budget, ROCKET comprises two key innovations: First, it formulates layer-wise compression allocation as a multi-choice knapsack problem, selecting the optimal compression level for each layer to minimize total reconstruction error while adhering to a target model size. Second, it introduces a single-step sparse matrix factorization inspired by dictionary learning: using only a small calibration set, it sparsifies weight coefficients based on activation-weights sensitivity and then updates the dictionary in closed form via least squares bypassing iterative optimization, sparse coding, or backpropagation entirely. ROCKET consistently outperforms existing compression approaches across different model architectures at 20-50\\% compression rates. Notably, it retains over 90\\% of the original model's performance at 30\\% compression without any fine-tuning. Moreover, when applying a light fine-tuning phase, recovery is substantially enhanced: for instance, compressing Qwen3-14B to an 8B-parameter model and healing it with just 30 million tokens yields performance nearly on par with the original Qwen3-8B. The code for ROCKET is at github.com/mts-ai/ROCKET/tree/main.",
+        "authors": "Ammar Ali, Baher Mohammad, Denis Makhov, Dmitriy Shopkhoev, Magauiya Zhussip, Stamatios Lefkimmiatis",
+        "url": "http://arxiv.org/abs/2602.11008v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11008v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "ROCKET 提出了一种无需训练的模型压缩方法，通过将层级压缩分配建模为多选择背包问题，并引入了一种基于字典学习的单步稀疏矩阵分解。其闭式解避免了迭代优化和反向传播，实现了高效且高性能的模型压缩。这篇论文在理论上具有创新性（背包问题、闭式分解），在实践中解决了 LLM 部署中的模型压缩瓶颈，并取得了 SOTA 性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10965v1",
+        "title": "MoEEdit: Efficient and Routing-Stable Knowledge Editing for Mixture-of-Experts LLMs",
+        "summary": "Knowledge editing (KE) enables precise modifications to factual content in large language models (LLMs). Existing KE methods are largely designed for dense architectures, limiting their applicability to the increasingly prevalent sparse Mixture-of-Experts (MoE) models that underpin modern scalable LLMs. Although MoEs offer strong efficiency and capacity scaling, naively adapting dense-model editors is both computationally costly and prone to routing distribution shifts that undermine stability and consistency. To address these challenges, we introduce MoEEdit, the first routing-stable framework for parameter-modifying knowledge editing in MoE LLMs. Our method reparameterizes expert updates via per-expert null-space projections that keep router inputs invariant and thereby suppress routing shifts. The resulting block-structured optimization is solved efficiently with a block coordinate descent (BCD) solver. Experiments show that MoEEdit attains state-of-the-art efficacy and generalization while preserving high specificity and routing stability, with superior compute and memory efficiency. These results establish a robust foundation for scalable, precise knowledge editing in sparse LLMs and underscore the importance of routing-stable interventions.",
+        "authors": "Yupu Gu, Rongzhe Wei, Andy Zhu, Pan Li",
+        "url": "http://arxiv.org/abs/2602.10965v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10965v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "MoEEdit 首次提出了针对 Mixture-of-Experts (MoE) LLM 的路由稳定知识编辑框架。它通过每专家零空间投影（null-space projections）重新参数化专家更新，保持路由器输入不变，从而抑制路由漂移。这种方法在理论上解决了 MoE 模型知识编辑的计算成本和稳定性问题，具有高度的创新性和实践影响力，是 MoE LLM 应用的关键进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10940v1",
+        "title": "FastUSP: A Multi-Level Collaborative Acceleration Framework for Distributed Diffusion Model Inference",
+        "summary": "Large-scale diffusion models such as FLUX (12B parameters) and Stable Diffusion 3 (8B parameters) require multi-GPU parallelism for efficient inference. Unified Sequence Parallelism (USP), which combines Ulysses and Ring attention mechanisms, has emerged as the state-of-the-art approach for distributed attention computation. However, existing USP implementations suffer from significant inefficiencies including excessive kernel launch overhead and suboptimal computation-communication scheduling. In this paper, we propose \\textbf{FastUSP}, a multi-level optimization framework that integrates compile-level optimization (graph compilation with CUDA Graphs and computation-communication reordering), communication-level optimization (FP8 quantized collective communication), and operator-level optimization (pipelined Ring attention with double buffering). We evaluate FastUSP on FLUX (12B) and Qwen-Image models across 2, 4, and 8 NVIDIA RTX 5090 GPUs. On FLUX, FastUSP achieves consistent \\textbf{1.12$\\times$--1.16$\\times$} end-to-end speedup over baseline USP, with compile-level optimization contributing the dominant improvement. On Qwen-Image, FastUSP achieves \\textbf{1.09$\\times$} speedup on 2 GPUs; on 4--8 GPUs, we identify a PyTorch Inductor compatibility limitation with Ring attention that prevents compile optimization, while baseline USP scales to 1.30$\\times$--1.46$\\times$ of 2-GPU performance. We further provide a detailed analysis of the performance characteristics of distributed diffusion inference, revealing that kernel launch overhead -- rather than communication latency -- is the primary bottleneck on modern high-bandwidth GPU interconnects.",
+        "authors": "Guandong Li",
+        "url": "http://arxiv.org/abs/2602.10940v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10940v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文将旋转位置嵌入（RoPE）重新解释为相位调制，并利用经典信号处理理论推导了 RoPE 基参数的理论下界（混叠、直流分量稳定性）和上界（浮点精度）。它定义了一个“金发区”（Goldilocks zone），解释了长上下文 Transformer 的成功与失败。这是对 LLM 核心架构组件的深刻理论分析，具有极高的数理统计严谨性和实践指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10933v1",
+        "title": "CMAD: Cooperative Multi-Agent Diffusion via Stochastic Optimal Control",
+        "summary": "Continuous-time generative models have achieved remarkable success in image restoration and synthesis. However, controlling the composition of multiple pre-trained models remains an open challenge. Current approaches largely treat composition as an algebraic composition of probability densities, such as via products or mixtures of experts. This perspective assumes the target distribution is known explicitly, which is almost never the case. In this work, we propose a different paradigm that formulates compositional generation as a cooperative Stochastic Optimal Control problem. Rather than combining probability densities, we treat pre-trained diffusion models as interacting agents whose diffusion trajectories are jointly steered, via optimal control, toward a shared objective defined on their aggregated output. We validate our framework on conditional MNIST generation and compare it against a naive inference-time DPS-style baseline replacing learned cooperative control with per-step gradient guidance.",
+        "authors": "Riccardo Barbano, Alexander Denker, Zeljko Kereta, Runchang Li, Francisco Vargas",
+        "url": "http://arxiv.org/abs/2602.10933v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10933v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CMAD 提出了一种新颖的范式，将多预训练扩散模型的组合生成问题公式化为合作随机最优控制问题。它将预训练模型视为交互式智能体，通过最优控制共同引导其扩散轨迹。这种方法超越了简单的概率密度代数组合，为控制和组合生成模型提供了强大的理论框架，具有显著的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10917v1",
+        "title": "Near-Constant Strong Violation and Last-Iterate Convergence for Online CMDPs via Decaying Safety Margins",
+        "summary": "We study safe online reinforcement learning in Constrained Markov Decision Processes (CMDPs) under strong regret and violation metrics, which forbid error cancellation over time. Existing primal-dual methods that achieve sublinear strong reward regret inevitably incur growing strong constraint violation or are restricted to average-iterate convergence due to inherent oscillations. To address these limitations, we propose the Flexible safety Domain Optimization via Margin-regularized Exploration (FlexDOME) algorithm, the first to provably achieve near-constant $\\tilde{O}(1)$ strong constraint violation alongside sublinear strong regret and non-asymptotic last-iterate convergence. FlexDOME incorporates time-varying safety margins and regularization terms into the primal-dual framework. Our theoretical analysis relies on a novel term-wise asymptotic dominance strategy, where the safety margin is rigorously scheduled to asymptotically majorize the functional decay rates of the optimization and statistical errors, thereby clamping cumulative violations to a near-constant level. Furthermore, we establish non-asymptotic last-iterate convergence guarantees via a policy-dual Lyapunov argument. Experiments corroborate our theoretical findings.",
+        "authors": "Qian Zuo, Zhiyong Wang, Fengxiang He",
+        "url": "http://arxiv.org/abs/2602.10917v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10917v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在强后悔和强违反度量下研究了约束马尔可夫决策过程（CMDPs）中的安全在线强化学习。它提出了 FlexDOME 算法，首次实现了近乎常数的强约束违反、次线性强后悔和非渐近的最后迭代收敛。其理论分析依赖于新颖的逐项渐近主导策略和策略-对偶 Lyapunov 论证，展现了极高的理论严谨性和创新性，对安全 RL 领域有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10794v1",
+        "title": "Transport, Don't Generate: Deterministic Geometric Flows for Combinatorial Optimization",
+        "summary": "Recent advances in Neural Combinatorial Optimization (NCO) have been dominated by diffusion models that treat the Euclidean Traveling Salesman Problem (TSP) as a stochastic $N \\times N$ heatmap generation task. In this paper, we propose CycFlow, a framework that replaces iterative edge denoising with deterministic point transport. CycFlow learns an instance-conditioned vector field that continuously transports input 2D coordinates to a canonical circular arrangement, where the optimal tour is recovered from this $2N$ dimensional representation via angular sorting. By leveraging data-dependent flow matching, we bypass the quadratic bottleneck of edge scoring in favor of linear coordinate dynamics. This paradigm shift accelerates solving speed by up to three orders of magnitude compared to state-of-the-art diffusion baselines, while maintaining competitive optimality gaps.",
+        "authors": "Benjy Friedmann, Nadav Dym",
+        "url": "http://arxiv.org/abs/2602.10794v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10794v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "CycFlow 提出了一种革命性的方法来解决组合优化问题（如 TSP），它用确定性点传输取代了扩散模型中的迭代边缘去噪。通过学习一个实例条件向量场，将 2D 坐标连续传输到规范的圆形排列。这种范式转变使求解速度提高了三个数量级，同时保持了竞争力。这篇论文具有极高的理论创新性（几何流），并解决了实际应用中的巨大效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10587v1",
+        "title": "Deep Bootstrap",
+        "summary": "In this work, we propose a novel deep bootstrap framework for nonparametric regression based on conditional diffusion models. Specifically, we construct a conditional diffusion model to learn the distribution of the response variable given the covariates. This model is then used to generate bootstrap samples by pairing the original covariates with newly synthesized responses. We reformulate nonparametric regression as conditional sample mean estimation, which is implemented directly via the learned conditional diffusion model. Unlike traditional bootstrap methods that decouple the estimation of the conditional distribution, sampling, and nonparametric regression, our approach integrates these components into a unified generative framework. With the expressive capacity of diffusion models, our method facilitates both efficient sampling from high-dimensional or multimodal distributions and accurate nonparametric estimation. We establish rigorous theoretical guarantees for the proposed method. In particular, we derive optimal end-to-end convergence rates in the Wasserstein distance between the learned and target conditional distributions. Building on this foundation, we further establish the convergence guarantees of the resulting bootstrap procedure. Numerical studies demonstrate the effectiveness and scalability of our approach for complex regression tasks.",
+        "authors": "Jinyuan Chang, Yuling Jiao, Lican Kang, Junjie Shi",
+        "url": "http://arxiv.org/abs/2602.10587v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10587v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于条件扩散模型的新型深度自举（deep bootstrap）框架，用于非参数回归。它将非参数回归重新公式化为条件样本均值估计，并建立了严格的理论保证，包括学习到的条件分布与目标条件分布之间 Wasserstein 距离的最优端到端收敛率。这篇论文在数理统计和生成模型交叉领域具有极高的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10576v1",
+        "title": "LLM-Based Scientific Equation Discovery via Physics-Informed Token-Regularized Policy Optimization",
+        "summary": "Symbolic regression aims to distill mathematical equations from observational data. Recent approaches have successfully leveraged Large Language Models (LLMs) to generate equation hypotheses, capitalizing on their vast pre-trained scientific priors. However, existing frameworks predominantly treat the LLM as a static generator, relying on prompt-level guidance to steer exploration. This paradigm fails to update the model's internal representations based on search feedback, often yielding physically inconsistent or mathematically redundant expressions. In this work, we propose PiT-PO (Physics-informed Token-regularized Policy Optimization), a unified framework that evolves the LLM into an adaptive generator via reinforcement learning. Central to PiT-PO is a dual-constraint mechanism that rigorously enforces hierarchical physical validity while simultaneously applying fine-grained, token-level penalties to suppress redundant structures. Consequently, PiT-PO aligns LLM to produce equations that are both scientifically consistent and structurally parsimonious. Empirically, PiT-PO achieves state-of-the-art performance on standard benchmarks and successfully discovers novel turbulence models for challenging fluid dynamics problems. We also demonstrate that PiT-PO empowers small-scale models to outperform closed-source giants, democratizing access to high-performance scientific discovery.",
+        "authors": "Boxiao Wang, Kai Li, Tianyi Liu, Chen Li, Junzhe Wang, Yifan Zhang, Jian Cheng",
+        "url": "http://arxiv.org/abs/2602.10576v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10576v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PiT-PO 提出了一种统一的强化学习框架，用于 LLM-based 科学方程发现。它通过双重约束机制，严格执行分层物理有效性，并同时施加细粒度的 token 级惩罚来抑制冗余结构。这使得 LLM 能够生成科学上一致且结构简洁的方程，甚至能发现新的湍流模型。这篇论文将 LLM 应用于科学发现，并结合了理论约束，具有显著的理论创新性和巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.10560v1",
+        "title": "When to Memorize and When to Stop: Gated Recurrent Memory for Long-Context Reasoning",
+        "summary": "While reasoning over long context is crucial for various real-world applications, it remains challenging for large language models (LLMs) as they suffer from performance degradation as the context length grows. Recent work MemAgent has tried to tackle this by processing context chunk-by-chunk in an RNN-like loop and updating a textual memory for final answering. However, this naive recurrent memory update faces two crucial drawbacks: (i) memory can quickly explode because it can update indiscriminately, even on evidence-free chunks; and (ii) the loop lacks an exit mechanism, leading to unnecessary computation after even sufficient evidence is collected. To address these issues, we propose GRU-Mem, which incorporates two text-controlled gates for more stable and efficient long-context reasoning. Specifically, in GRU-Mem, the memory only updates when the update gate is open and the recurrent loop will exit immediately once the exit gate is open. To endow the model with such capabilities, we introduce two reward signals $r^{\\text{update}}$ and $r^{\\text{exit}}$ within end-to-end RL, rewarding the correct updating and exiting behaviors respectively. Experiments on various long-context reasoning tasks demonstrate the effectiveness and efficiency of GRU-Mem, which generally outperforms the vanilla MemAgent with up to 400\\% times inference speed acceleration.",
+        "authors": "Leheng Sheng, Yongtao Zhang, Wenchang Ma, Yaorui Shi, Ting Huang, Xiang Wang, An Zhang, Ke Shen, Tat-Seng Chua",
+        "url": "http://arxiv.org/abs/2602.10560v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.10560v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对 LLM 在长上下文推理中性能下降的问题，提出了 GRU-Mem 框架。它引入了两个文本控制的门控机制（更新门和退出门）来实现稳定高效的循环记忆更新，并通过端到端强化学习进行训练。GRU-Mem 实现了高达 400% 的推理速度提升，显著解决了长上下文推理的效率瓶颈，是 LLM 架构和算法上的重要创新。"
+    }
+]

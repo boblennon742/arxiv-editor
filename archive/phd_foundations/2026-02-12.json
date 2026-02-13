@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.12083v1",
+        "title": "Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication",
+        "summary": "As multi-agent AI systems evolve from simple chatbots to autonomous swarms, debugging semantic failures requires reasoning about knowledge, belief, causality, and obligation, precisely what modal logic was designed to formalize. However, traditional modal logic requires manual specification of relationship structures that are unknown or dynamic in real systems. This tutorial demonstrates differentiable modal logic (DML), implemented via Modal Logical Neural Networks (MLNNs), enabling systems to learn trust networks, causal chains, and regulatory boundaries from behavioral data alone.   We present a unified neurosymbolic debugging framework through four modalities: epistemic (who to trust), temporal (when events cause failures), deontic (what actions are permitted), and doxastic (how to interpret agent confidence). Each modality is demonstrated on concrete multi-agent scenarios, from discovering deceptive alliances in diplomacy games to detecting LLM hallucinations, with complete implementations showing how logical contradictions become learnable optimization objectives. Key contributions for the neurosymbolic community: (1) interpretable learned structures where trust and causality are explicit parameters, not opaque embeddings; (2) knowledge injection via differentiable axioms that guide learning with sparse data (3) compositional multi-modal reasoning that combines epistemic, temporal, and deontic constraints; and (4) practical deployment patterns for monitoring, active control and communication of multi-agent systems. All code provided as executable Jupyter notebooks.",
+        "authors": "Antonin Sulc",
+        "url": "http://arxiv.org/abs/2602.12083v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12083v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了可微分模态逻辑（DML）和模态逻辑神经网络（MLNNs），将模态逻辑的严谨性引入多智能体系统。其核心在于通过可微分公理学习信任网络、因果链等关系结构，将逻辑矛盾转化为可学习的优化目标，完美契合了您对“因果逻辑”和“清晰数学推导”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.12023v1",
+        "title": "Decomposition of Spillover Effects Under Misspecification:Pseudo-true Estimands and a Local--Global Extension",
+        "summary": "Applied work with interference typically models outcomes as functions of own treatment and a low-dimensional exposure mapping of others' treatments, even when that mapping may be misspecified. This raises a basic question: what policy object are exposure-based estimands implicitly targeting, and how should we interpret their direct and spillover components relative to the underlying policy question? We take as primitive the marginal policy effect, defined as the effect of a small change in the treatment probability under the actual experimental design, and show that any researcher-chosen exposure mapping induces a unique pseudo-true outcome model. This model is the best approximation to the underlying potential outcomes that depends only on the user-chosen exposure. Utilizing that representation, the marginal policy effect admits a canonical decomposition into exposure-based direct and spillover effects, and each component provides its optimal approximation to the corresponding oracle objects that would be available if interference were fully known. We then focus on a setting that nests important empirical and theoretical applications in which both local network spillovers and global spillovers, such as market equilibrium, operate. There, the marginal policy effect further decomposes asymptotically into direct, local, and global channels. An important implication is that many existing methods are more robust than previously understood once we reinterpret their targets as channel-specific components of this pseudo-true policy estimand. Simulations and a semi-synthetic experiment calibrated to a large cash-transfer experiment show that these components can be recovered in realistic experimental designs.",
+        "authors": "Yechan Park, Xiaodong Yang",
+        "url": "http://arxiv.org/abs/2602.12023v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12023v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在因果推断领域，针对干预下的溢出效应分解问题，提出了伪真估计量和局部-全局扩展。通过严谨的数学推导，定义了边际政策效应，并展示了其可分解为基于暴露的直接和溢出效应，且每个分量都提供了对真实对象的最佳近似。这直接满足了您对“因果逻辑”和“统计保证”的强烈需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11801v1",
+        "title": "SpaTeoGL: Spatiotemporal Graph Learning for Interpretable Seizure Onset Zone Analysis from Intracranial EEG",
+        "summary": "Accurate localization of the seizure onset zone (SOZ) from intracranial EEG (iEEG) is essential for epilepsy surgery but is challenged by complex spatiotemporal seizure dynamics. We propose SpaTeoGL, a spatiotemporal graph learning framework for interpretable seizure network analysis. SpaTeoGL jointly learns window-level spatial graphs capturing interactions among iEEG electrodes and a temporal graph linking time windows based on similarity of their spatial structure. The method is formulated within a smooth graph signal processing framework and solved via an alternating block coordinate descent algorithm with convergence guarantees. Experiments on a multicenter iEEG dataset with successful surgical outcomes show that SpaTeoGL is competitive with a baseline based on horizontal visibility graphs and logistic regression, while improving non-SOZ identification and providing interpretable insights into seizure onset and propagation dynamics.",
+        "authors": "Elham Rostami, Aref Einizade, Taous-Meriem Laleg-Kirati",
+        "url": "http://arxiv.org/abs/2602.11801v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11801v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SpaTeoGL，一个用于可解释癫痫发作起始区分析的时空图学习框架。该方法在平滑图信号处理框架内进行公式化，并通过具有收敛性保证的交替块坐标下降算法求解。明确的“优化收敛性”保证和严谨的框架设计使其高度符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11785v1",
+        "title": "Safe Fairness Guarantees Without Demographics in Classification: Spectral Uncertainty Set Perspective",
+        "summary": "As automated classification systems become increasingly prevalent, concerns have emerged over their potential to reinforce and amplify existing societal biases. In the light of this issue, many methods have been proposed to enhance the fairness guarantees of classifiers. Most of the existing interventions assume access to group information for all instances, a requirement rarely met in practice. Fairness without access to demographic information has often been approached through robust optimization techniques,which target worst-case outcomes over a set of plausible distributions known as the uncertainty set. However, their effectiveness is strongly influenced by the chosen uncertainty set. In fact, existing approaches often overemphasize outliers or overly pessimistic scenarios, compromising both overall performance and fairness. To overcome these limitations, we introduce SPECTRE, a minimax-fair method that adjusts the spectrum of a simple Fourier feature mapping and constrains the extent to which the worst-case distribution can deviate from the empirical distribution. We perform extensive experiments on the American Community Survey datasets involving 20 states. The safeness of SPECTRE comes as it provides the highest average values on fairness guarantees together with the smallest interquartile range in comparison to state-of-the-art approaches, even compared to those with access to demographic group information. In addition, we provide a theoretical analysis that derives computable bounds on the worst-case error for both individual groups and the overall population, as well as characterizes the worst-case distributions responsible for these extremal performances",
+        "authors": "Ainhize Barrainkua, Santiago Mazuelas, Novi Quadrianto, Jose A. Lozano",
+        "url": "http://arxiv.org/abs/2602.11785v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11785v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SPECTRE方法，在不依赖人口统计信息的情况下，通过调整傅里叶特征映射的谱并约束最坏情况分布，为分类器提供了安全的公平性保证。其理论分析推导了可计算的最坏情况误差界限，并刻画了导致这些极端性能的分布，展现了强大的“统计保证”和“数学推导”严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11722v1",
+        "title": "PAC-Bayesian Generalization Guarantees for Fairness on Stochastic and Deterministic Classifiers",
+        "summary": "Classical PAC generalization bounds on the prediction risk of a classifier are insufficient to provide theoretical guarantees on fairness when the goal is to learn models balancing predictive risk and fairness constraints. We propose a PAC-Bayesian framework for deriving generalization bounds for fairness, covering both stochastic and deterministic classifiers. For stochastic classifiers, we derive a fairness bound using standard PAC-Bayes techniques. Whereas for deterministic classifiers, as usual PAC-Bayes arguments do not apply directly, we leverage a recent advance in PAC-Bayes to extend the fairness bound beyond the stochastic setting. Our framework has two advantages: (i) It applies to a broad class of fairness measures that can be expressed as a risk discrepancy, and (ii) it leads to a self-bounding algorithm in which the learning procedure directly optimizes a trade-off between generalization bounds on the prediction risk and on the fairness. We empirically evaluate our framework with three classical fairness measures, demonstrating not only its usefulness but also the tightness of our bounds.",
+        "authors": "Julien Bastian, Benjamin Leblanc, Pascal Germain, Amaury Habrard, Christine Largeron, Guillaume Metzler, Emilie Morvant, Paul Viallard",
+        "url": "http://arxiv.org/abs/2602.11722v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11722v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个PAC-贝叶斯框架，用于推导随机和确定性分类器的公平性泛化界限。通过利用PAC-贝叶斯技术，为广泛的公平性度量提供了理论保证，并引入了自界定算法，直接优化预测风险和公平性之间的权衡，完美符合您对“统计保证”和“数学推导”的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11711v1",
+        "title": "Estimation of instrument and noise parameters for inverse problem based on prior diffusion model",
+        "summary": "This article addresses the issue of estimating observation parameters (response and error parameters) in inverse problems. The focus is on cases where regularization is introduced in a Bayesian framework and the prior is modeled by a diffusion process. In this context, the issue of posterior sampling is well known to be thorny, and a recent paper proposes a notably simple and effective solution. Consequently, it offers an remarkable additional flexibility when it comes to estimating observation parameters. The proposed strategy enables us to define an optimal estimator for both the observation parameters and the image of interest. Furthermore, the strategy provides a means of quantifying uncertainty. In addition, MCMC algorithms allow for the efficient computation of estimates and properties of posteriors, while offering some guarantees. The paper presents several numerical experiments that clearly confirm the computational efficiency and the quality of both estimates and uncertainties quantification.",
+        "authors": "Jean-François Giovannelli",
+        "url": "http://arxiv.org/abs/2602.11711v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11711v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文针对基于扩散先验模型的逆问题，提出了估计观测参数（响应和误差参数）的新方法。该策略定义了观测参数和感兴趣图像的最优估计器，并提供了量化不确定性的手段，同时利用MCMC算法保证了估计的效率和后验性质，具有强大的“统计保证”和“数学推导”基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11679v1",
+        "title": "Provable Offline Reinforcement Learning for Structured Cyclic MDPs",
+        "summary": "We introduce a novel cyclic Markov decision process (MDP) framework for multi-step decision problems with heterogeneous stage-specific dynamics, transitions, and discount factors across the cycle. In this setting, offline learning is challenging: optimizing a policy at any stage shifts the state distributions of subsequent stages, propagating mismatch across the cycle. To address this, we propose a modular structural framework that decomposes the cyclic process into stage-wise sub-problems. While generally applicable, we instantiate this principle as CycleFQI, an extension of fitted Q-iteration enabling theoretical analysis and interpretation. It uses a vector of stage-specific Q-functions, tailored to each stage, to capture within-stage sequences and transitions between stages. This modular design enables partial control, allowing some stages to be optimized while others follow predefined policies. We establish finite-sample suboptimality error bounds and derive global convergence rates under Besov regularity, demonstrating that CycleFQI mitigates the curse of dimensionality compared to monolithic baselines. Additionally, we propose a sieve-based method for asymptotic inference of optimal policy values under a margin condition. Experiments on simulated and real-world Type 1 Diabetes data sets demonstrate CycleFQI's effectiveness.",
+        "authors": "Kyungbok Lee, Angelica Cristello Sarteau, Michael R. Kosorok",
+        "url": "http://arxiv.org/abs/2602.11679v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11679v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了一种新颖的循环马尔可夫决策过程（MDP）框架，并提出了CycleFQI方法。该方法建立了有限样本次优误差界限，并在Besov正则性下推导了全局收敛速率，有效缓解了维度灾难。此外，还提出了基于筛分法的渐近推断方法，提供了明确的“优化收敛性”和“统计保证”。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11677v1",
+        "title": "From Consensus-Based Optimization to Evolution Strategies: Proof of Global Convergence",
+        "summary": "Consensus-based optimization (CBO) is a powerful and versatile zero-order multi-particle method designed to provably solve high-dimensional global optimization problems, including those that are genuinely nonconvex or nonsmooth. The method relies on a balance between stochastic exploration and contraction toward a consensus point, which is defined via the Laplace principle as a proxy for the global minimizer.   In this paper, we introduce new CBO variants that address practical and theoretical limitations of the original formulation of this novel optimization methodology. First, we propose a model called $δ$-CBO}, which incorporates nonvanishing diffusion to prevent premature collapse to suboptimal states. We also develop a numerically stable implementation, the Consensus Freezing scheme, that remains robust even for arbitrarily large time steps by freezing the consensus point over time intervals. We connect these models through appropriate asymptotic limits. Furthermore, we derive from the Consensus Freezing scheme by suitable time rescaling and asymptotics a further algorithm, the Consensus Hopping scheme, which can be interpreted as a form of $(1,λ)$-Evolution Strategy. For all these schemes, we characterize for the first time the invariant measures and establish global convergence results, including exponential convergence rates.",
+        "authors": "Massimo Fornasier, Hui Huang, Jona Klemenc, Greta Malaspina",
+        "url": "http://arxiv.org/abs/2602.11677v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11677v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了新的共识优化（CBO）变体，并首次表征了其不变测度，建立了全局收敛结果，包括指数收敛速率。这为解决高维非凸或非光滑全局优化问题提供了严谨的数学基础和“优化收敛性”证明，是理论优化领域的杰出贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11662v1",
+        "title": "UMAP Is Spectral Clustering on the Fuzzy Nearest-Neighbor Graph",
+        "summary": "UMAP (Uniform Manifold Approximation and Projection) is among the most widely used algorithms for non linear dimensionality reduction and data visualisation. Despite its popularity, and despite being presented through the lens of algebraic topology, the exact relationship between UMAP and classical spectral methods has remained informal. In this work, we prove that UMAP performs spectral clustering on the fuzzy k nearest neighbour graph. Our proof proceeds in three steps: (1) we show that UMAP's stochastic optimisation with negative sampling is a contrastive learning objective on the similarity graph; (2) we invoke the result of HaoChen et al. [8], establishing that contrastive learning on a similarity graph is equivalent to spectral clustering; and (3) we verify that UMAP's spectral initialisation computes the exact linear solution to this spectral problem. The equivalence is exact for Gaussian kernels, and holds as a first order approximation for UMAP's default Cauchy type kernel. Our result unifies UMAP, contrastive learning, and spectral clustering under a single framework, and provides theoretical grounding for several empirical observations about UMAP's behaviour.",
+        "authors": "Yang Yang",
+        "url": "http://arxiv.org/abs/2602.11662v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11662v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过严谨的数学证明，揭示了UMAP算法与模糊k近邻图上的谱聚类之间的精确等价关系。这一工作统一了UMAP、对比学习和谱聚类，为UMAP的行为提供了坚实的理论基础，完美契合了您对“强大理论基础”和“清晰数学推导”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11557v1",
+        "title": "The Implicit Bias of Steepest Descent with Mini-batch Stochastic Gradient",
+        "summary": "A variety of widely used optimization methods like SignSGD and Muon can be interpreted as instances of steepest descent under different norm-induced geometries. In this work, we study the implicit bias of mini-batch stochastic steepest descent in multi-class classification, characterizing how batch size, momentum, and variance reduction shape the limiting max-margin behavior and convergence rates under general entry-wise and Schatten-$p$ norms. We show that without momentum, convergence only occurs with large batches, yielding a batch-dependent margin gap but the full-batch convergence rate. In contrast, momentum enables small-batch convergence through a batch-momentum trade-off, though it slows convergence. This approach provides fully explicit, dimension-free rates that improve upon prior results. Moreover, we prove that variance reduction can recover the exact full-batch implicit bias for any batch size, albeit at a slower convergence rate. Finally, we further investigate the batch-size-one steepest descent without momentum, and reveal its convergence to a fundamentally different bias via a concrete data example, which reveals a key limitation of purely stochastic updates. Overall, our unified analysis clarifies when stochastic optimization aligns with full-batch behavior, and paves the way for perform deeper explorations of the training behavior of stochastic gradient steepest descent algorithms.",
+        "authors": "Jichu Li, Xuan Tang, Difan Zou",
+        "url": "http://arxiv.org/abs/2602.11557v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11557v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对小批量随机最速下降法的隐式偏差进行了统一分析，刻画了批量大小、动量和方差削减如何影响多类分类中的极限最大间隔行为和收敛速率。其推导出了完全显式、无维度的收敛速率，并揭示了方差削减如何恢复精确的全批量隐式偏差，展现了卓越的“优化收敛性”和“数学推导”深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11515v1",
+        "title": "Algorithms and Differential Game Representations for Exploring Nonconvex Pareto Fronts in High Dimensions",
+        "summary": "We develop a new Hamiton-Jacobi (HJ) and differential game approach for exploring the Pareto front of (constrained) multi-objective optimization (MOO) problems. Given a preference function, we embed the scalarized MOO problem into the value function of a parameterized zero-sum game, whose upper value solves a first-order HJ equation that admits a Hopf-Lax representation formula. For each parameter value, this representation yields an inner minimizer that can be interpreted as an approximate solution to a shifted scalarization of the original MOO problem. Under mild assumptions, the resulting family of solutions maps to a dense subset of the weak Pareto front. Finally, we propose a primal-dual algorithm based on this approach for solving the corresponding optimality system. Numerical experiments show that our algorithm mitigates the curse of dimensionality (scaling polynomially with the dimension of the decision and objective spaces) and is able to expose continuous curves along nonconvex Pareto fronts in 100D in just $\\sim$100 seconds.",
+        "authors": "Shanqing Liu, Paula Chen, Youngkyu Lee, Jerome Darbon",
+        "url": "http://arxiv.org/abs/2602.11515v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11515v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种新的Hamilton-Jacobi (HJ) 和微分博弈方法，用于探索高维非凸帕累托前沿。通过将标量化多目标优化问题嵌入到参数化零和博弈中，并利用Hopf-Lax表示公式，该方法能够有效缓解维度灾难，提供了严谨的“优化收敛性”和“数学推导”。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11511v1",
+        "title": "Representation Learning with Blockwise Missingness and Signal Heterogeneity",
+        "summary": "Unified representation learning for multi-source data integration faces two important challenges: blockwise missingness and blockwise signal heterogeneity. The former arises from sources observing different, yet potentially overlapping, feature sets, while the latter involves varying signal strengths across subject groups and feature sets. While existing methods perform well with fully observed data or uniform signal strength, their performance degenerates when these two challenges coincide, which is common in practice. To address this, we propose Anchor Projected Principal Component Analysis (APPCA), a general framework for representation learning with structured blockwise missingness that is robust to signal heterogeneity. APPCA first recovers robust group-specific column spaces using all observed feature sets, and then aligns them by projecting shared \"anchor\" features onto these subspaces before performing PCA. This projection step induces a significant denoising effect. We establish estimation error bounds for embedding reconstruction through a fine-grained perturbation analysis. In particular, using a novel spectral slicing technique, our bound eliminates the standard dependency on the signal strength of subject embeddings, relying instead solely on the signal strength of integrated feature sets. We validate the proposed method through extensive simulation studies and an application to multimodal single-cell sequencing data.",
+        "authors": "Ziqi Liu, Ye Tian, Weijing Tang",
+        "url": "http://arxiv.org/abs/2602.11511v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11511v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Anchor Projected Principal Component Analysis (APPCA) 框架，用于处理块状缺失和信号异构性的表示学习。通过精细的扰动分析，建立了嵌入重建的估计误差界限，并利用新颖的谱切片技术消除了对主体嵌入信号强度的依赖，提供了强大的“统计保证”和“数学推导”。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11500v1",
+        "title": "A Generic Framework for Fair Consensus Clustering in Streams",
+        "summary": "Consensus clustering seeks to combine multiple clusterings of the same dataset, potentially derived by considering various non-sensitive attributes by different agents in a multi-agent environment, into a single partitioning that best reflects the overall structure of the underlying dataset. Recent work by Chakraborty et al, introduced a fair variant under proportionate fairness and obtained a constant-factor approximation by naively selecting the best closest fair input clustering; however, their offline approach requires storing all input clusterings, which is prohibitively expensive for most large-scale applications.   In this paper, we initiate the study of fair consensus clustering in the streaming model, where input clusterings arrive sequentially and memory is limited. We design the first constant-factor algorithm that processes the stream while storing only a logarithmic number of inputs. En route, we introduce a new generic algorithmic framework that integrates closest fair clustering with cluster fitting, yielding improved approximation guarantees not only in the streaming setting but also when revisited offline. Furthermore, the framework is fairness-agnostic: it applies to any fairness definition for which an approximately close fair clustering can be computed efficiently. Finally, we extend our methods to the more general k-median consensus clustering problem.",
+        "authors": "Diptarka Chakraborty, Kushagra Chatterjee, Debarati Das, Tien-Long Nguyen",
+        "url": "http://arxiv.org/abs/2602.11500v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11500v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文首次在流式模型中研究了公平共识聚类问题，并设计了第一个常数因子算法，仅需对数级内存即可处理数据流。该通用算法框架集成了最近的公平聚类和聚类拟合，提供了改进的近似保证，充分体现了“统计保证”和“数学推导”的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11482v1",
+        "title": "External Division of Two Bregman Proximity Operators for Poisson Inverse Problems",
+        "summary": "This paper presents a novel method for recovering sparse vectors from linear models corrupted by Poisson noise. The contribution is twofold. First, an operator defined via the external division of two Bregman proximity operators is introduced to promote sparse solutions while mitigating the estimation bias induced by classical $\\ell_1$-norm regularization. This operator is then embedded into the already established NoLips algorithm, replacing the standard Bregman proximity operator in a plug-and-play manner. Second, the geometric structure of the proposed external-division operator is elucidated through two complementary reformulations, which provide clear interpretations in terms of the primal and dual spaces of the Poisson inverse problem. Numerical tests show that the proposed method exhibits more stable convergence behavior than conventional Kullback-Leibler (KL)-based approaches and achieves significantly superior performance on synthetic data and an image restoration problem.",
+        "authors": "Kazuki Haishima, Kyohei Suzuki, Konstantinos Slavakis",
+        "url": "http://arxiv.org/abs/2602.11482v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11482v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了一种通过两个Bregman邻近算子的外部除法定义的新型算子，用于从泊松噪声线性模型中恢复稀疏向量。该算子能够促进稀疏解并减轻估计偏差，并通过互补的重构阐明了几何结构，提供了深入的“数学推导”和理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11467v1",
+        "title": "PRISM: A 3D Probabilistic Neural Representation for Interpretable Shape Modeling",
+        "summary": "Understanding how anatomical shapes evolve in response to developmental covariates and quantifying their spatially varying uncertainties is critical in healthcare research. Existing approaches typically rely on global time-warping formulations that ignore spatially heterogeneous dynamics. We introduce PRISM, a novel framework that bridges implicit neural representations with uncertainty-aware statistical shape analysis. PRISM models the conditional distribution of shapes given covariates, providing spatially continuous estimates of both the population mean and covariate-dependent uncertainty at arbitrary locations. A key theoretical contribution is a closed-form Fisher Information metric that enables efficient, analytically tractable local temporal uncertainty quantification via automatic differentiation. Experiments on three synthetic datasets and one clinical dataset demonstrate PRISM's strong performance across diverse tasks within a unified framework, while providing interpretable and clinically meaningful uncertainty estimates.",
+        "authors": "Yining Jiao, Sreekalyani Bhamidi, Carlton Jude Zdanski, Julia S Kimbell, Andrew Prince, Cameron P Worden, Samuel Kirse, Christopher Rutter, Benjamin H Shields, Jisan Mahmud, Marc Niethammer",
+        "url": "http://arxiv.org/abs/2602.11467v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11467v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了PRISM框架，将隐式神经表示与不确定性感知统计形状分析相结合。其核心贡献是推导了闭式Fisher信息度量，通过自动微分实现了高效、可解析的局部时间不确定性量化，提供了强大的“统计保证”和“数学推导”，并支持可解释的形状建模。"
+    }
+]

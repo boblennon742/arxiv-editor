@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.12274v1",
+        "title": "Function-Space Decoupled Diffusion for Forward and Inverse Modeling in Carbon Capture and Storage",
+        "summary": "Accurate characterization of subsurface flow is critical for Carbon Capture and Storage (CCS) but remains challenged by the ill-posed nature of inverse problems with sparse observations. We present Fun-DDPS, a generative framework that combines function-space diffusion models with differentiable neural operator surrogates for both forward and inverse modeling. Our approach learns a prior distribution over geological parameters (geomodel) using a single-channel diffusion model, then leverages a Local Neural Operator (LNO) surrogate to provide physics-consistent guidance for cross-field conditioning on the dynamics field. This decoupling allows the diffusion prior to robustly recover missing information in parameter space, while the surrogate provides efficient gradient-based guidance for data assimilation. We demonstrate Fun-DDPS on synthetic CCS modeling datasets, achieving two key results: (1) For forward modeling with only 25% observations, Fun-DDPS achieves 7.7% relative error compared to 86.9% for standard surrogates (an 11x improvement), proving its capability to handle extreme data sparsity where deterministic methods fail. (2) We provide the first rigorous validation of diffusion-based inverse solvers against asymptotically exact Rejection Sampling (RS) posteriors. Both Fun-DDPS and the joint-state baseline (Fun-DPS) achieve Jensen-Shannon divergence less than 0.06 against the ground truth. Crucially, Fun-DDPS produces physically consistent realizations free from the high-frequency artifacts observed in joint-state baselines, achieving this with 4x improved sample efficiency compared to rejection sampling.",
+        "authors": "Xin Ju, Jiachen Yao, Anima Anandkumar, Sally M. Benson, Gege Wen",
+        "url": "http://arxiv.org/abs/2602.12274v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12274v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Fun-DDPS，一个结合函数空间扩散模型和可微分神经算子的生成框架，用于碳捕获与储存（CCS）中的正向和逆向建模。其核心创新在于解耦扩散先验和物理引导，并提供了针对逆向求解器的严格验证，对抗渐近精确的拒绝采样后验。数理统计背景的我非常欣赏其在处理病态逆问题时的理论严谨性（Jensen-Shannon散度验证）和对物理一致性的强调，这超越了纯粹的工程堆砌，具有深刻的理论洞察。解决CCS这一实际瓶颈也使其具有重要影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.12275v1",
+        "title": "On-Policy Context Distillation for Language Models",
+        "summary": "Context distillation enables language models to internalize in-context knowledge into their parameters. In our work, we propose On-Policy Context Distillation (OPCD), a framework that bridges on-policy distillation with context distillation by training a student model on its own generated trajectories while minimizing reverse Kullback-Leibler divergence against a context-conditioned teacher. We demonstrate the effectiveness of OPCD on two important applications: experiential knowledge distillation, where models extract and consolidate transferable knowledge from their historical solution traces, and system prompt distillation, where models internalize beneficial behaviors encoded in optimized prompts. Across mathematical reasoning, text-based games, and domain-specific tasks, OPCD consistently outperforms baseline methods, achieving higher task accuracy while better preserving out-of-distribution capabilities. We further show that OPCD enables effective cross-size distillation, where smaller student models can internalize experiential knowledge from larger teachers.",
+        "authors": "Tianzhu Ye, Li Dong, Xun Wu, Shaohan Huang, Furu Wei",
+        "url": "http://arxiv.org/abs/2602.12275v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12275v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 On-Policy Context Distillation (OPCD)，一个将 on-policy 蒸馏与上下文蒸馏相结合的框架，通过最小化对上下文条件教师模型的反向 Kullback-Leibler 散度来训练学生模型。这种方法在理论上具有创新性，因为它桥接了两个重要的蒸馏范式，并利用了反向KL散度这一严谨的统计度量。它解决了LLM在内部化上下文知识和系统提示方面的实际瓶颈，尤其是在跨尺寸蒸馏方面，对于数据效率和模型压缩有直接的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.12271v1",
+        "title": "MonarchRT: Efficient Attention for Real-Time Video Generation",
+        "summary": "Real-time video generation with Diffusion Transformers is bottlenecked by the quadratic cost of 3D self-attention, especially in real-time regimes that are both few-step and autoregressive, where errors compound across time and each denoising step must carry substantially more information. In this setting, we find that prior sparse-attention approximations break down, despite showing strong results for bidirectional, many-step diffusion. Specifically, we observe that video attention is not reliably sparse, but instead combines pronounced periodic structure driven by spatiotemporal position with dynamic, sparse semantic correspondences and dense mixing, exceeding the representational capacity of even oracle top-k attention. Building on this insight, we propose Monarch-RT, a structured attention parameterization for video diffusion models that factorizes attention using Monarch matrices. Through appropriately aligned block structure and our extended tiled Monarch parameterization, we achieve high expressivity while preserving computational efficiency. We further overcome the overhead of parameterization through finetuning, with custom Triton kernels. We first validate the high efficacy of Monarch-RT over existing sparse baselines designed only for bidirectional models. We further observe that Monarch-RT attains up to 95% attention sparsity with no loss in quality when applied to the state-of-the-art model Self-Forcing, making Monarch-RT a pioneering work on highly-capable sparse attention parameterization for real-time video generation. Our optimized implementation outperforms FlashAttention-2, FlashAttention-3, and FlashAttention-4 kernels on Nvidia RTX 5090, H100, and B200 GPUs respectively, providing kernel speedups in the range of 1.4-11.8X. This enables us, for the first time, to achieve true real-time video generation with Self-Forcing at 16 FPS on a single RTX 5090.",
+        "authors": "Krish Agarwal, Zhuoming Chen, Cheng Luo, Yongqi Chen, Haizhong Zheng, Xun Huang, Atri Rudra, Beidi Chen",
+        "url": "http://arxiv.org/abs/2602.12271v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12271v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MonarchRT 提出了一种结构化注意力参数化方法，通过 Monarch 矩阵分解注意力，以解决实时视频生成中 3D 自注意力的高昂计算成本。其核心洞察在于视频注意力并非可靠稀疏，而是结合了周期性结构、动态语义对应和密集混合。这种对注意力机制的理论性重构（Monarch矩阵）具有创新性，并通过定制 Triton 内核实现了显著的效率提升（1.4-11.8X），直接解决了实时视频生成的计算瓶颈。这不仅是工程优化，更是对 Transformer 架构的理论性改进。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.12096v1",
+        "title": "Multi Graph Search for High-Dimensional Robot Motion Planning",
+        "summary": "Efficient motion planning for high-dimensional robotic systems, such as manipulators and mobile manipulators, is critical for real-time operation and reliable deployment. Although advances in planning algorithms have enhanced scalability to high-dimensional state spaces, these improvements often come at the cost of generating unpredictable, inconsistent motions or requiring excessive computational resources and memory. In this work, we introduce Multi-Graph Search (MGS), a search-based motion planning algorithm that generalizes classical unidirectional and bidirectional search to a multi-graph setting. MGS maintains and incrementally expands multiple implicit graphs over the state space, focusing exploration on high-potential regions while allowing initially disconnected subgraphs to be merged through feasible transitions as the search progresses. We prove that MGS is complete and bounded-suboptimal, and empirically demonstrate its effectiveness on a range of manipulation and mobile manipulation tasks. Demonstrations, benchmarks and code are available at https://multi-graph-search.github.io/.",
+        "authors": "Itamar Mishani, Maxim Likhachev",
+        "url": "http://arxiv.org/abs/2602.12096v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12096v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Multi-Graph Search (MGS) 提出了一种泛化传统单向和双向搜索的多图搜索算法，用于高维机器人运动规划。该方法通过维护和增量扩展多个隐式图，将探索集中在高潜力区域，并允许断开的子图通过可行转换合并。其理论贡献在于证明了 MGS 的完备性和有界次优性，这对于数理统计背景的我来说是严谨性的体现。它解决了高维机器人运动规划的效率和一致性瓶颈，具有重要的实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.12045v1",
+        "title": "Fourier Transformers for Latent Crystallographic Diffusion and Generative Modeling",
+        "summary": "The discovery of new crystalline materials calls for generative models that handle periodic boundary conditions, crystallographic symmetries, and physical constraints, while scaling to large and structurally diverse unit cells. We propose a reciprocal-space generative pipeline that represents crystals through a truncated Fourier transform of the species-resolved unit-cell density, rather than modeling atomic coordinates directly. This representation is periodicity-native, admits simple algebraic actions of space-group symmetries, and naturally supports variable atomic multiplicities during generation, addressing a common limitation of particle-based approaches. Using only nine Fourier basis functions per spatial dimension, our approach reconstructs unit cells containing up to 108 atoms per chemical species. We instantiate this pipeline with a transformer variational autoencoder over complex-valued Fourier coefficients, and a latent diffusion model that generates in the compressed latent space. We evaluate reconstruction and latent diffusion on the LeMaterial benchmark and compare unconditional generation against coordinate-based baselines in the small-cell regime ($\\leq 16$ atoms per unit cell).",
+        "authors": "Jed A. Duersch, Elohan Veillon, Astrid Klipfel, Adlane Sayede, Zied Bouraoui",
+        "url": "http://arxiv.org/abs/2602.12045v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12045v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个倒数空间生成管道，通过截断傅里叶变换表示晶体，用于潜在晶体扩散和生成建模。这种表示方法天然支持周期性边界条件、晶体对称性和可变原子多重性，解决了传统基于原子坐标方法的局限性。其创新性在于将晶体表示从实空间转换到傅里叶空间，并结合变分自编码器和潜在扩散模型。这种方法具有坚实的数学基础（傅里叶变换、对称性代数），并能扩展到大型和结构多样的晶胞，对材料科学的发现有潜在的深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.12039v1",
+        "title": "The Implicit Bias of Logit Regularization",
+        "summary": "Logit regularization, the addition a convex penalty directly in logit space, is widely used in modern classifiers, with label smoothing as a prominent example. While such methods often improve calibration and generalization, their mechanism remains under-explored. In this work, we analyze a general class of such logit regularizers in the context of linear classification, and demonstrate that they induce an implicit bias of logit clustering around finite per-sample targets. For Gaussian data, or whenever logits are sufficiently clustered, we prove that logit clustering drives the weight vector to align exactly with Fisher's Linear Discriminant. To demonstrate the consequences, we study a simple signal-plus-noise model in which this transition has dramatic effects: Logit regularization halves the critical sample complexity and induces grokking in the small-noise limit, while making generalization robust to noise. Our results extend the theoretical understanding of label smoothing and highlight the efficacy of a broader class of logit-regularization methods.",
+        "authors": "Alon Beck, Yohai Bar Sinai, Noam Levi",
+        "url": "http://arxiv.org/abs/2602.12039v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.12039v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入分析了 Logit 正则化（如标签平滑）的隐式偏差，证明它在线性分类中诱导了 logit 聚类。对于高斯数据，Logit 正则化能使权重向量与 Fisher 线性判别器精确对齐，并能将临界样本复杂度减半，在小噪声限制下诱导 grokking。这篇工作具有极高的理论严谨性，通过数学证明揭示了 Logit 正则化背后的机制，深化了我们对模型校准和泛化能力的理解，对AI算法的理论基础有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11965v1",
+        "title": "Manifold-Aware Temporal Domain Generalization for Large Language Models",
+        "summary": "Temporal distribution shifts are pervasive in real-world deployments of Large Language Models (LLMs), where data evolves continuously over time. While Temporal Domain Generalization (TDG) seeks to model such structured evolution, existing approaches characterize model adaptation in the full parameter space. This formulation becomes computationally infeasible for modern LLMs. This paper introduces a geometric reformulation of TDG under parameter-efficient fine-tuning. We establish that the low-dimensional temporal structure underlying model evolution can be preserved under parameter-efficient reparameterization, enabling temporal modeling without operating in the ambient parameter space. Building on this principle, we propose Manifold-aware Temporal LoRA (MaT-LoRA), which constrains temporal updates to a shared low-dimensional manifold within a low-rank adaptation subspace, and models its evolution through a structured temporal core. This reparameterization dramatically reduces temporal modeling complexity while retaining expressive power. Extensive experiments on synthetic and real-world datasets, including scientific documents, news publishers, and review ratings, demonstrate that MaT-LoRA achieves superior temporal generalization performance with practical scalability for LLMs.",
+        "authors": "Yiheng Yao, Zekun Cai, Xinyuan Song, Hiroki Hill Kobayashi, Xuan Song, Ryosuke Shibasaki, Liang Zhao",
+        "url": "http://arxiv.org/abs/2602.11965v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11965v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Manifold-Aware Temporal Domain Generalization (MaT-LoRA) 针对 LLM 在时间分布漂移下的泛化问题，提出了参数高效微调下的几何重构。它证明了模型演化背后的低维时间结构可以在参数高效重参数化下保留，从而在不操作环境参数空间的情况下实现时间建模。这种理论创新性（几何重构、流形约束）和对 LLM 实际部署瓶颈（数据随时间演变）的解决，使其在 Novelty、Rigor 和 Impact 上都表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11910v1",
+        "title": "TADA! Tuning Audio Diffusion Models through Activation Steering",
+        "summary": "Audio diffusion models can synthesize high-fidelity music from text, yet their internal mechanisms for representing high-level concepts remain poorly understood. In this work, we use activation patching to demonstrate that distinct semantic musical concepts, such as the presence of specific instruments, vocals, or genre characteristics, are controlled by a small, shared subset of attention layers in state-of-the-art audio diffusion architectures. Next, we demonstrate that applying Contrastive Activation Addition and Sparse Autoencoders in these layers enables more precise control over the generated audio, indicating a direct benefit of the specialization phenomenon. By steering activations of the identified layers, we can alter specific musical elements with high precision, such as modulating tempo or changing a track's mood.",
+        "authors": "Łukasz Staniszewski, Katarzyna Zaleska, Mateusz Modrzejewski, Kamil Deja",
+        "url": "http://arxiv.org/abs/2602.11910v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11910v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TADA! 论文通过激活修补（activation patching）揭示了音频扩散模型中特定语义音乐概念（如乐器、人声、流派）由一小部分共享注意力层控制。在此基础上，通过在这些层中应用对比激活添加和稀疏自编码器，实现了对生成音频更精确的控制。这种对扩散模型内部机制的理论性分析和利用（激活转向）具有创新性，并能解决音乐生成中的可控性瓶颈，对前沿AI算法的理解和改进有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11863v1",
+        "title": "In-Context Function Learning in Large Language Models",
+        "summary": "Large language models (LLMs) can learn from a few demonstrations provided at inference time. We study this in-context learning phenomenon through the lens of Gaussian Processes (GPs). We build controlled experiments where models observe sequences of multivariate scalar-valued function samples drawn from known GP priors. We evaluate prediction error in relation to the number of demonstrations and compare against two principled references: (i) an empirical GP-regression learner that gives a lower bound on achievable error, and (ii) the expected error of a 1-nearest-neighbor (1-NN) rule, which gives a data-driven upper bound. Across model sizes, we find that LLM learning curves are strongly influenced by the function-generating kernels and approach the GP lower bound as the number of demonstrations increases. We then study the inductive biases of these models using a likelihood-based analysis. We find that LLM predictions are most likely under less smooth GP kernels. Finally, we explore whether post-training can shift these inductive biases and improve sample-efficiency on functions sampled from GPs with smoother kernels. We find that both reinforcement learning and supervised fine-tuning can effectively shift inductive biases in the direction of the training data. Together, our framework quantifies the extent to which LLMs behave like GP learners and provides tools for steering their inductive biases for continuous function learning tasks.",
+        "authors": "Elif Akata, Konstantinos Voudouris, Vincent Fortuin, Eric Schulz",
+        "url": "http://arxiv.org/abs/2602.11863v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11863v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从高斯过程（GPs）的角度研究了大型语言模型（LLMs）的上下文学习现象。通过受控实验，评估了预测误差与演示数量的关系，并与经验GP回归学习器（下界）和1-NN规则（上界）进行比较。其核心贡献在于量化了LLM作为GP学习器的程度，并通过似然分析研究了其归纳偏差。这种将LLM行为与成熟统计模型（GP）进行理论连接和量化分析的方法，具有极高的理论严谨性和创新性，有助于我们理解和指导LLM的连续函数学习能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11786v1",
+        "title": "Evaluating LLM Safety Under Repeated Inference via Accelerated Prompt Stress Testing",
+        "summary": "Traditional benchmarks for large language models (LLMs) primarily assess safety risk through breadth-oriented evaluation across diverse tasks. However, real-world deployment exposes a different class of risk: operational failures arising from repeated inference on identical or near-identical prompts rather than broad task generalization. In high-stakes settings, response consistency and safety under sustained use are critical. We introduce Accelerated Prompt Stress Testing (APST), a depth-oriented evaluation framework inspired by reliability engineering. APST repeatedly samples identical prompts under controlled operational conditions (e.g., decoding temperature) to surface latent failure modes including hallucinations, refusal inconsistency, and unsafe completions. Rather than treating failures as isolated events, APST models them as stochastic outcomes of independent inference events. We formalize safety failures using Bernoulli and binomial models to estimate per-inference failure probabilities, enabling quantitative comparison of reliability across models and decoding configurations. Applying APST to multiple instruction-tuned LLMs evaluated on AIR-BENCH-derived safety prompts, we find that models with similar benchmark-aligned scores can exhibit substantially different empirical failure rates under repeated sampling, particularly as temperature increases. These results demonstrate that shallow, single-sample evaluation can obscure meaningful reliability differences under sustained use. APST complements existing benchmarks by providing a practical framework for evaluating LLM safety and reliability under repeated inference, bridging benchmark alignment and deployment-oriented risk assessment.",
+        "authors": "Keita Broadwater",
+        "url": "http://arxiv.org/abs/2602.11786v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11786v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Accelerated Prompt Stress Testing (APST) 提出了一种深度导向的评估框架，用于评估 LLM 在重复推理下的安全性。它将安全失败建模为独立推理事件的随机结果，并使用伯努利和二项式模型估计每次推理的失败概率。这种从可靠性工程中汲取的理论方法，为 LLM 安全性评估提供了严谨的统计框架，解决了传统基准无法捕捉的实际部署风险（操作失败、一致性问题）。其理论创新性和对 LLM 应用瓶颈（安全性、可靠性）的解决使其成为重要工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11761v1",
+        "title": "MiniCPM-SALA: Hybridizing Sparse and Linear Attention for Efficient Long-Context Modeling",
+        "summary": "The evolution of large language models (LLMs) towards applications with ultra-long contexts faces challenges posed by the high computational and memory costs of the Transformer architecture. While existing sparse and linear attention mechanisms attempt to mitigate these issues, they typically involve a trade-off between memory efficiency and model performance. This paper introduces MiniCPM-SALA, a 9B-parameter hybrid architecture that integrates the high-fidelity long-context modeling of sparse attention (InfLLM-V2) with the global efficiency of linear attention (Lightning Attention). By employing a layer selection algorithm to integrate these mechanisms in a 1:3 ratio and utilizing a hybrid positional encoding (HyPE), the model maintains efficiency and performance for long-context tasks. Furthermore, we introduce a cost-effective continual training framework that transforms pre-trained Transformer-based models into hybrid models, which reduces training costs by approximately 75% compared to training from scratch. Extensive experiments show that MiniCPM-SALA maintains general capabilities comparable to full-attention models while offering improved efficiency. On a single NVIDIA A6000D GPU, the model achieves up to 3.5x the inference speed of the full-attention model at the sequence length of 256K tokens and supports context lengths of up to 1M tokens, a scale where traditional full-attention 8B models fail because of memory constraints.",
+        "authors": "MiniCPM Team, Wenhao An, Yingfa Chen, Yewei Fang, Jiayi Li, Xin Li, Yaohui Li, Yishan Li, Yuxuan Li, Biyuan Lin, Chuan Liu, Hezi Liu, Siyuan Liu, Hongya Lyu, Yinxu Pan, Shixin Ren, Xingyu Shen, Zhou Su, Haojun Sun, Yangang Sun, Zhen Leng Thai, Xin Tian, Rui Wang, Xiaorong Wang, Yudong Wang, Bo Wu, Xiaoyue Xu, Dong Xu, Shuaikang Xue, Jiawei Yang, Bowen Zhang, Jinqian Zhang, Letian Zhang, Shengnan Zhang, Xinyu Zhang, Xinyuan Zhang, Zhu Zhang, Hengyu Zhao, Jiacheng Zhao, Jie Zhou, Zihan Zhou, Shuo Wang, Chaojun Xiao, Xu Han, Zhiyuan Liu, Maosong Sun",
+        "url": "http://arxiv.org/abs/2602.11761v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11761v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MiniCPM-SALA 提出了一种混合稀疏和线性注意力机制的架构，以解决 Transformer 架构在超长上下文处理中的计算和内存瓶颈。通过层选择算法和混合位置编码（HyPE），它在保持性能的同时显著提高了效率（256K tokens下推理速度提升3.5倍，支持1M tokens）。这种对 Transformer 架构的理论性改进（混合注意力机制）和对长上下文处理这一核心瓶颈的解决，使其具有很高的 Novelty、Rigor 和 Impact。其成本效益的持续训练框架也很有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11717v1",
+        "title": "Beyond Parameter Arithmetic: Sparse Complementary Fusion for Distribution-Aware Model Merging",
+        "summary": "Model merging has emerged as a promising paradigm for composing the capabilities of large language models by directly operating in weight space, enabling the integration of specialized models without costly retraining. However, existing merging methods largely rely on parameter-space heuristics, which often introduce severe interference, leading to degraded generalization and unstable generation behaviors such as repetition and incoherent outputs. In this work, we propose Sparse Complementary Fusion with reverse KL (SCF-RKL), a novel model merging framework that explicitly controls functional interference through sparse, distribution-aware updates. Instead of assuming linear additivity in parameter space, SCF-RKL measures the functional divergence between models using reverse Kullback-Leibler divergence and selectively incorporates complementary parameters. This mode-seeking, sparsity-inducing design effectively preserves stable representations while integrating new capabilities. We evaluate SCF-RKL across a wide range of model scales and architectures, covering both reasoning-focused and instruction-tuned models. Extensive experiments on 24 benchmarks spanning advanced reasoning, general reasoning and knowledge, instruction following, and safety demonstrate, vision classification that SCF-RKL consistently outperforms existing model merging methods while maintaining strong generalization and generation stability.",
+        "authors": "Weihong Lin, Lin Sun, Qilong Shi, Aomufei Yuan, Yuxuan Tian, Zhengyang Wang, Guangxiang Zhao, Xiangzheng Zhang, Tong Yang",
+        "url": "http://arxiv.org/abs/2602.11717v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11717v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Sparse Complementary Fusion with reverse KL (SCF-RKL) 提出了一种新的模型合并框架，通过稀疏的、分布感知的更新来显式控制功能干扰。它使用反向 Kullback-Leibler 散度来衡量模型之间的功能差异，并选择性地整合互补参数。这种基于统计距离（RKL散度）的理论方法，解决了现有模型合并方法中常见的干扰和泛化退化问题，对LLM的模型压缩和集成具有重要的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11715v1",
+        "title": "DICE: Diffusion Large Language Models Excel at Generating CUDA Kernels",
+        "summary": "Diffusion large language models (dLLMs) have emerged as a compelling alternative to autoregressive (AR) LLMs, owing to their capacity for parallel token generation. This paradigm is particularly well-suited for code generation, where holistic structural planning and non-sequential refinement are critical. Despite this potential, tailoring dLLMs for CUDA kernel generation remains challenging, obstructed not only by the high specialization but also by the severe lack of high-quality training data. To address these challenges, we construct CuKe, an augmented supervised fine-tuning dataset optimized for high-performance CUDA kernels. On top of it, we propose a bi-phase curated reinforcement learning (BiC-RL) framework consisting of a CUDA kernel infilling stage and an end-to-end CUDA kernel generation stage. Leveraging this training framework, we introduce DICE, a series of diffusion large language models designed for CUDA kernel generation, spanning three parameter scales, 1.7B, 4B, and 8B. Extensive experiments on KernelBench demonstrate that DICE significantly outperforms both autoregressive and diffusion LLMs of comparable scale, establishing a new state-of-the-art for CUDA kernel generation.",
+        "authors": "Haolei Bai, Lingcheng Kong, Xueyi Chen, Jianmian Wang, Zhiqiang Tao, Huan Wang",
+        "url": "http://arxiv.org/abs/2602.11715v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11715v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DICE 探索了扩散大语言模型（dLLMs）在生成 CUDA 内核方面的潜力。它构建了 CuKe 数据集，并提出了一个两阶段的策展强化学习（BiC-RL）框架。其创新性在于将 dLLMs 这一前沿生成范式应用于高度专业化的代码生成领域（CUDA 内核），并设计了专门的训练框架。这解决了高性能计算（HPC）代码生成中的实际瓶颈，并展示了 dLLMs 在非自回归生成方面的理论优势，对AI架构和算法有重要启发。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11679v1",
+        "title": "Provable Offline Reinforcement Learning for Structured Cyclic MDPs",
+        "summary": "We introduce a novel cyclic Markov decision process (MDP) framework for multi-step decision problems with heterogeneous stage-specific dynamics, transitions, and discount factors across the cycle. In this setting, offline learning is challenging: optimizing a policy at any stage shifts the state distributions of subsequent stages, propagating mismatch across the cycle. To address this, we propose a modular structural framework that decomposes the cyclic process into stage-wise sub-problems. While generally applicable, we instantiate this principle as CycleFQI, an extension of fitted Q-iteration enabling theoretical analysis and interpretation. It uses a vector of stage-specific Q-functions, tailored to each stage, to capture within-stage sequences and transitions between stages. This modular design enables partial control, allowing some stages to be optimized while others follow predefined policies. We establish finite-sample suboptimality error bounds and derive global convergence rates under Besov regularity, demonstrating that CycleFQI mitigates the curse of dimensionality compared to monolithic baselines. Additionally, we propose a sieve-based method for asymptotic inference of optimal policy values under a margin condition. Experiments on simulated and real-world Type 1 Diabetes data sets demonstrate CycleFQI's effectiveness.",
+        "authors": "Kyungbok Lee, Angelica Cristello Sarteau, Michael R. Kosorok",
+        "url": "http://arxiv.org/abs/2602.11679v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11679v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个新颖的循环马尔可夫决策过程（MDP）框架，用于具有异构阶段特定动态、转换和折扣因子的多步决策问题。它提出了 CycleFQI，并建立了有限样本次优性误差界限，并在 Besov 正则性下推导了全局收敛率。这种对强化学习理论的深入探索，特别是对循环MDP的严谨数学分析和维数灾难的缓解，具有极高的理论严谨性和创新性，对离线强化学习的理论基础有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.11623v1",
+        "title": "TreeGrad-Ranker: Feature Ranking via $O(L)$-Time Gradients for Decision Trees",
+        "summary": "We revisit the use of probabilistic values, which include the well-known Shapley and Banzhaf values, to rank features for explaining the local predicted values of decision trees. The quality of feature rankings is typically assessed with the insertion and deletion metrics. Empirically, we observe that co-optimizing these two metrics is closely related to a joint optimization that selects a subset of features to maximize the local predicted value while minimizing it for the complement. However, we theoretically show that probabilistic values are generally unreliable for solving this joint optimization. Therefore, we explore deriving feature rankings by directly optimizing the joint objective. As the backbone, we propose TreeGrad, which computes the gradients of the multilinear extension of the joint objective in $O(L)$ time for decision trees with $L$ leaves; these gradients include weighted Banzhaf values. Building upon TreeGrad, we introduce TreeGrad-Ranker, which aggregates the gradients while optimizing the joint objective to produce feature rankings, and TreeGrad-Shap, a numerically stable algorithm for computing Beta Shapley values with integral parameters. In particular, the feature scores computed by TreeGrad-Ranker satisfy all the axioms uniquely characterizing probabilistic values, except for linearity, which itself leads to the established unreliability. Empirically, we demonstrate that the numerical error of Linear TreeShap can be up to $10^{15}$ times larger than that of TreeGrad-Shap when computing the Shapley value. As a by-product, we also develop TreeProb, which generalizes Linear TreeShap to support all probabilistic values. In our experiments, TreeGrad-Ranker performs significantly better on both insertion and deletion metrics. Our code is available at https://github.com/watml/TreeGrad.",
+        "authors": "Weida Li, Yaoliang Yu, Bryan Kian Hsiang Low",
+        "url": "http://arxiv.org/abs/2602.11623v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.11623v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TreeGrad-Ranker 重新审视了使用概率值（如 Shapley 和 Banzhaf 值）来解释决策树的局部预测值。它提出了 TreeGrad，可以在 O(L) 时间内计算决策树多线性扩展的梯度，并在此基础上引入 TreeGrad-Ranker 进行特征排序。该工作具有极高的理论严谨性，通过数学证明揭示了概率值在联合优化中的不可靠性，并提出了更稳定和高效的梯度计算方法。它解决了决策树可解释性中的理论和计算瓶颈，对数理统计和机器学习的交叉领域有重要贡献。"
+    }
+]

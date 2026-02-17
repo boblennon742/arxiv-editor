@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.15028v1",
+        "title": "Long Context, Less Focus: A Scaling Gap in LLMs Revealed through Privacy and Personalization",
+        "summary": "Large language models (LLMs) are increasingly deployed in privacy-critical and personalization-oriented scenarios, yet the role of context length in shaping privacy leakage and personalization effectiveness remains largely unexplored. We introduce a large-scale benchmark, PAPerBench, to systematically study how increasing context length influences both personalization quality and privacy protection in LLMs. The benchmark comprises approximately 29,000 instances with context lengths ranging from 1K to 256K tokens, yielding a total of 377K evaluation questions. It jointly evaluates personalization performance and privacy risks across diverse scenarios, enabling controlled analysis of long-context model behavior. Extensive evaluations across state-of-the-art LLMs reveal consistent performance degradation in both personalization and privacy as context length increases. We further provide a theoretical analysis of attention dilution under context scaling, explaining this behavior as an inherent limitation of soft attention in fixed-capacity Transformers. The empirical and theoretical findings together suggest a general scaling gap in current models -- long context, less focus. We release the benchmark to support reproducible evaluation and future research on scalable privacy and personalization. Code and data are available at https://github.com/SafeRL-Lab/PAPerBench",
+        "authors": "Shangding Gu",
+        "url": "http://arxiv.org/abs/2602.15028v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15028v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文揭示了LLM长上下文处理中的“关注度稀释”问题，并提供了基于Transformer软注意力机制的理论分析，直接解决了LLM应用中隐私和个性化方面的实际瓶颈。其理论严谨性高，对LLM架构的理解具有基础性贡献，且具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15022v1",
+        "title": "Rethinking Diffusion Models with Symmetries through Canonicalization with Applications to Molecular Graph Generation",
+        "summary": "Many generative tasks in chemistry and science involve distributions invariant to group symmetries (e.g., permutation and rotation). A common strategy enforces invariance and equivariance through architectural constraints such as equivariant denoisers and invariant priors. In this paper, we challenge this tradition through the alternative canonicalization perspective: first map each sample to an orbit representative with a canonical pose or order, train an unconstrained (non-equivariant) diffusion or flow model on the canonical slice, and finally recover the invariant distribution by sampling a random symmetry transform at generation time. Building on a formal quotient-space perspective, our work provides a comprehensive theory of canonical diffusion by proving: (i) the correctness, universality and superior expressivity of canonical generative models over invariant targets; (ii) canonicalization accelerates training by removing diffusion score complexity induced by group mixtures and reducing conditional variance in flow matching. We then show that aligned priors and optimal transport act complementarily with canonicalization and further improves training efficiency. We instantiate the framework for molecular graph generation under $S_n \\times SE(3)$ symmetries. By leveraging geometric spectra-based canonicalization and mild positional encodings, canonical diffusion significantly outperforms equivariant baselines in 3D molecule generation tasks, with similar or even less computation. Moreover, with a novel architecture Canon, CanonFlow achieves state-of-the-art performance on the challenging GEOM-DRUG dataset, and the advantage remains large in few-step generation.",
+        "authors": "Cai Zhou, Zijie Chen, Zian Li, Jike Wang, Kaiyi Jiang, Pan Li, Rose Yu, Muhan Zhang, Stephen Bates, Tommi Jaakkola",
+        "url": "http://arxiv.org/abs/2602.15022v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15022v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文通过规范化处理群对称性，提出了生成模型的新范式，挑战了传统方法。它基于形式化的商空间理论，并提供了关于正确性、通用性和表达能力的严谨证明。在3D分子生成任务中显著提升性能并减少计算量，兼具理论创新性与科学应用影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15008v1",
+        "title": "Efficient Sampling with Discrete Diffusion Models: Sharp and Adaptive Guarantees",
+        "summary": "Diffusion models over discrete spaces have recently shown striking empirical success, yet their theoretical foundations remain incomplete. In this paper, we study the sampling efficiency of score-based discrete diffusion models under a continuous-time Markov chain (CTMC) formulation, with a focus on $τ$-leaping-based samplers. We establish sharp convergence guarantees for attaining $\\varepsilon$ accuracy in Kullback-Leibler (KL) divergence for both uniform and masking noising processes. For uniform discrete diffusion, we show that the $τ$-leaping algorithm achieves an iteration complexity of order $\\tilde O(d/\\varepsilon)$, with $d$ the ambient dimension of the target distribution, eliminating linear dependence on the vocabulary size $S$ and improving existing bounds by a factor of $d$; moreover, we establish a matching algorithmic lower bound showing that linear dependence on the ambient dimension is unavoidable in general. For masking discrete diffusion, we introduce a modified $τ$-leaping sampler whose convergence rate is governed by an intrinsic information-theoretic quantity, termed the effective total correlation, which is bounded by $d \\log S$ but can be sublinear or even constant for structured data. As a consequence, the sampler provably adapts to low-dimensional structure without prior knowledge or algorithmic modification, yielding sublinear convergence rates for various practical examples (such as hidden Markov models, image data, and random graphs). Our analysis requires no boundedness or smoothness assumptions on the score estimator beyond control of the score entropy loss.",
+        "authors": "Daniil Dmitriev, Zhihan Huang, Yuting Wei",
+        "url": "http://arxiv.org/abs/2602.15008v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15008v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文对离散扩散模型的采样效率进行了严格的理论分析，为τ-leaping采样器建立了精确的收敛性保证和匹配的算法下界。它解决了扩散模型推理效率的瓶颈，并引入了“有效总相关”这一信息论量，理论深度和实用价值突出，非常符合对理论创新和效率优化的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14928v1",
+        "title": "From Classical to Quantum: Extending Prometheus for Unsupervised Discovery of Phase Transitions in Three Dimensions and Quantum Systems",
+        "summary": "We extend the Prometheus framework for unsupervised phase transition discovery from 2D classical systems to 3D classical and quantum many-body systems, addressing scalability in higher dimensions and generalization to quantum fluctuations. For the 3D Ising model ($L \\leq 32$), the framework detects the critical temperature within 0.01\\% of literature values ($T_c/J = 4.511 \\pm 0.005$) and extracts critical exponents with $\\geq 70\\%$ accuracy ($β= 0.328 \\pm 0.015$, $γ= 1.24 \\pm 0.06$, $ν= 0.632 \\pm 0.025$), correctly identifying the 3D Ising universality class via $χ^2$ comparison ($p = 0.72$) without analytical guidance. For quantum systems, we developed quantum-aware VAE (Q-VAE) architectures using complex-valued wavefunctions and fidelity-based loss. Applied to the transverse field Ising model, we achieve 2\\% accuracy in quantum critical point detection ($h_c/J = 1.00 \\pm 0.02$) and successfully discover ground state magnetization as the order parameter ($r = 0.97$). Notably, for the disordered transverse field Ising model, we detect exotic infinite-randomness criticality characterized by activated dynamical scaling $\\ln ξ\\sim |h - h_c|^{-ψ}$, extracting a tunneling exponent $ψ= 0.48 \\pm 0.08$ consistent with theoretical predictions ($ψ= 0.5$). This demonstrates that unsupervised learning can identify qualitatively different types of critical behavior, not just locate critical points. Our systematic validation across classical thermal transitions ($T = 0$ to $T > 0$) and quantum phase transitions ($T = 0$, varying $h$) establishes that VAE-based discovery generalizes across fundamentally different physical domains, providing robust tools for exploring phase diagrams where analytical solutions are unavailable.",
+        "authors": "Brandon Yee, Wilson Collins, Maximilian Rutkowski",
+        "url": "http://arxiv.org/abs/2602.14928v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14928v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文将无监督相变发现框架Prometheus扩展到3D经典和量子多体系统，并开发了量子感知的VAE架构。它在物理学领域具有极高的理论严谨性，能够准确检测临界点并提取临界指数，为科学发现提供了强大的工具，是AI前沿算法在科学应用中的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14506v1",
+        "title": "Covariance-Aware Transformers for Quadratic Programming and Decision Making",
+        "summary": "We explore the use of transformers for solving quadratic programs and how this capability benefits decision-making problems that involve covariance matrices. We first show that the linear attention mechanism can provably solve unconstrained QPs by tokenizing the matrix variables (e.g.~$A$ of the objective $\\frac{1}{2}x^\\top Ax+b^\\top x$) row-by-row and emulating gradient descent iterations. Furthermore, by incorporating MLPs, a transformer block can solve (i) $\\ell_1$-penalized QPs by emulating iterative soft-thresholding and (ii) $\\ell_1$-constrained QPs when equipped with an additional feedback loop. Our theory motivates us to introduce Time2Decide: a generic method that enhances a time series foundation model (TSFM) by explicitly feeding the covariance matrix between the variates. We empirically find that Time2Decide uniformly outperforms the base TSFM model for the classical portfolio optimization problem that admits an $\\ell_1$-constrained QP formulation. Remarkably, Time2Decide also outperforms the classical \"Predict-then-Optimize (PtO)\" procedure, where we first forecast the returns and then explicitly solve a constrained QP, in suitable settings. Our results demonstrate that transformers benefit from explicit use of second-order statistics, and this can enable them to effectively solve complex decision-making problems, like portfolio construction, in one forward pass.",
+        "authors": "Kutay Tire, Yufan Zhang, Ege Onur Taga, Samet Oymak",
+        "url": "http://arxiv.org/abs/2602.14506v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14506v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文理论上证明了Transformer的线性注意力机制可以通过模拟梯度下降迭代来求解无约束二次规划问题，并提出了Time2Decide方法。它将Transformer应用于优化和决策问题，具有深厚的理论基础和广泛的实际应用潜力，解决了复杂决策问题的计算瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14505v1",
+        "title": "Formally Verifying and Explaining Sepsis Treatment Policies with COOL-MC",
+        "summary": "Safe and interpretable sequential decision-making is critical in healthcare, yet reinforcement learning (RL) policies for sepsis treatment optimization remain opaque and difficult to verify. Standard probabilistic model checkers operate on the full state space, which becomes infeasible for larger MDPs, and cannot explain why a learned policy makes particular decisions. COOL-MC wraps the model checker Storm but adds three key capabilities: it constructs only the reachable state space induced by a trained policy, yielding a smaller discrete-time Markov chain amenable to verification even when full-MDP analysis is intractable; it automatically labels states with clinically meaningful atomic propositions; and it integrates explainability methods with probabilistic computation tree logic (PCTL) queries to reveal which features drive decisions across treatment trajectories. We demonstrate COOL-MC's capabilities on the ICU-Sepsis MDP, a benchmark derived from approximately 17,000 sepsis patient records, which serves as a case study for applying COOL-MC to the formal analysis of sepsis treatment policies. Our analysis establishes hard bounds via full MDP verification, trains a safe RL policy that achieves optimal survival probability, and analyzes its behavior via PCTL verification and explainability on the induced DTMC. This reveals, for instance, that our trained policy relies predominantly on prior dosing history rather than the patient's evolving condition, a weakness that is invisible to standard evaluation but is exposed by COOL-MC's integration of formal verification and explainability. Our results illustrate how COOL-MC could serve as a tool for clinicians to investigate and debug sepsis treatment policies before deployment.",
+        "authors": "Dennis Gross",
+        "url": "http://arxiv.org/abs/2602.14505v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14505v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了COOL-MC框架，用于形式化验证和解释医疗领域（败血症治疗）的强化学习策略。它结合了形式验证和可解释性方法，解决了高风险AI应用中RL策略不透明和难以验证的安全性和可信赖性瓶颈，理论与实践结合紧密。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14474v1",
+        "title": "One Good Source is All You Need: Near-Optimal Regret for Bandits under Heterogeneous Noise",
+        "summary": "We study $K$-armed Multiarmed Bandit (MAB) problem with $M$ heterogeneous data sources, each exhibiting unknown and distinct noise variances $\\{σ_j^2\\}_{j=1}^M$. The learner's objective is standard MAB regret minimization, with the additional complexity of adaptively selecting which data source to query from at each round. We propose Source-Optimistic Adaptive Regret minimization (SOAR), a novel algorithm that quickly prunes high-variance sources using sharp variance-concentration bounds, followed by a `balanced min-max LCB-UCB approach' that seamlessly integrates the parallel tasks of identifying the best arm and the optimal (minimum-variance) data source. Our analysis shows SOAR achieves an instance-dependent regret bound of $\\tilde{O}\\left({σ^*}^2\\sum_{i=2}^K \\frac{\\log T}{Δ_i} + \\sqrt{K \\sum_{j=1}^M σ_j^2}\\right)$, up to preprocessing costs depending only on problem parameters, where ${σ^*}^2 := \\min_j σ_j^2$ is the minimum source variance and $Δ_i$ denotes the suboptimality gap of the $i$-th arm. This result is both surprising as despite lacking prior knowledge of the minimum-variance source among $M$ alternatives, SOAR attains the optimal instance-dependent regret of standard single-source MAB with variance ${σ^*}^2$, while incurring only an small (and unavoidable) additive cost of $\\tilde O(\\sqrt{K \\sum_{j=1}^M σ_j^2})$ towards the optimal (minimum variance) source identification. Our theoretical bounds represent a significant improvement over some proposed baselines, e.g. Uniform UCB or Explore-then-Commit UCB, which could potentially suffer regret scaling with $σ_{\\max}^2$ in place of ${σ^*}^2$-a gap that can be arbitrarily large when $σ_{\\max} \\gg σ^*$. Experiments on multiple synthetic problem instances and the real-world MovieLens\\;25M dataset, demonstrating the superior performance of SOAR over the baselines.",
+        "authors": "Aadirupa Saha, Amith Bhat, Haipeng Luo",
+        "url": "http://arxiv.org/abs/2602.14474v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14474v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文针对异构噪声下的多臂老虎机问题提出了SOAR算法，并给出了近乎最优的遗憾界理论证明。作为统计学博士生，其在理论严谨性（sharp variance-concentration bounds, instance-dependent regret bound）和数据效率优化方面的贡献非常吸引人。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14456v1",
+        "title": "Traceable Latent Variable Discovery Based on Multi-Agent Collaboration",
+        "summary": "Revealing the underlying causal mechanisms in the real world is crucial for scientific and technological progress. Despite notable advances in recent decades, the lack of high-quality data and the reliance of traditional causal discovery algorithms (TCDA) on the assumption of no latent confounders, as well as their tendency to overlook the precise semantics of latent variables, have long been major obstacles to the broader application of causal discovery. To address this issue, we propose a novel causal modeling framework, TLVD, which integrates the metadata-based reasoning capabilities of large language models (LLMs) with the data-driven modeling capabilities of TCDA for inferring latent variables and their semantics. Specifically, we first employ a data-driven approach to construct a causal graph that incorporates latent variables. Then, we employ multi-LLM collaboration for latent variable inference, modeling this process as a game with incomplete information and seeking its Bayesian Nash Equilibrium (BNE) to infer the possible specific latent variables. Finally, to validate the inferred latent variables across multiple real-world web-based data sources, we leverage LLMs for evidence exploration to ensure traceability. We comprehensively evaluate TLVD on three de-identified real patient datasets provided by a hospital and two benchmark datasets. Extensive experimental results confirm the effectiveness and reliability of TLVD, with average improvements of 32.67% in Acc, 62.21% in CAcc, and 26.72% in ECit across the five datasets.",
+        "authors": "Huaming Du, Tao Hu, Yijie Huang, Yu Zhao, Guisong Liu, Tao Gu, Gang Kou, Carl Yang",
+        "url": "http://arxiv.org/abs/2602.14456v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14456v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了TLVD框架，创新性地将LLM的元数据推理能力与传统因果发现算法相结合，用于推断潜在变量及其语义，并将LLM协作建模为不完全信息博弈。这在因果发现领域具有理论创新性和实际应用价值，解决了传统方法的局限性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14419v1",
+        "title": "WavePhaseNet: A DFT-Based Method for Constructing Semantic Conceptual Hierarchy Structures (SCHS)",
+        "summary": "This paper reformulates Transformer/Attention mechanisms in Large Language Models (LLMs) through measure theory and frequency analysis, theoretically demonstrating that hallucination is an inevitable structural limitation. The embedding space functions as a conditional expectation over a σ-algebra, and its failure to be isomorphic to the semantic truth set fundamentally causes logical consistency breakdown. WavePhaseNet Method The authors propose WavePhaseNet, which explicitly constructs a Semantic Conceptual Hierarchy Structure (SCHS) using Discrete Fourier Transform (DFT). By applying DFT along the sequence dimension, semantic information is decomposed into frequency bands: low-frequency components capture global meaning and intent, while high-frequency components represent local syntax and expression. This staged separation enables precise semantic manipulation in diagonalized space. Dimensionality Reduction GPT-4's 24,576-dimensional embedding space exhibits a 1/f spectral structure based on language self-similarity and Zipf's law. Through cumulative energy analysis, the authors derive that approximately 3,000 dimensions constitute the lower bound for \"complete representation.\" This demonstrates that reduction from 24,576 to 3,000 dimensions preserves meaning and intent while enabling rigorous reasoning and suppressing hallucination. Cohomological Consistency Control The reduced embedding space, constructed via cohomological regularization over overlapping local windows, allows defining a graph structure and cochain complex. This quantifies inconsistencies among local inferences as coboundary-based losses. Applying harmonic projection based on Hodge theory positions cohomology as a computable regularization principle for controlling semantic consistency, extracting maximally consistent global representations.",
+        "authors": "Kiyotaka Kasubuchi, Kazuo Fukiya",
+        "url": "http://arxiv.org/abs/2602.14419v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14419v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文从测度论和频率分析角度重新阐释Transformer机制，理论证明了幻觉的结构性限制，并提出了基于DFT和同调一致性控制的WavePhaseNet。它对LLM的底层机制和幻觉问题提供了深刻的理论洞察和解决方案，是极具理论创新性的前沿研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14374v1",
+        "title": "Differentially Private Retrieval-Augmented Generation",
+        "summary": "Retrieval-augmented generation (RAG) is a widely used framework for reducing hallucinations in large language models (LLMs) on domain-specific tasks by retrieving relevant documents from a database to support accurate responses. However, when the database contains sensitive corpora, such as medical records or legal documents, RAG poses serious privacy risks by potentially exposing private information through its outputs. Prior work has demonstrated that one can practically craft adversarial prompts that force an LLM to regurgitate the augmented contexts. A promising direction is to integrate differential privacy (DP), a privacy notion that offers strong formal guarantees, into RAG systems. However, naively applying DP mechanisms into existing systems often leads to significant utility degradation. Particularly for RAG systems, DP can reduce the usefulness of the augmented contexts leading to increase risk of hallucination from the LLMs. Motivated by these challenges, we present DP-KSA, a novel privacy-preserving RAG algorithm that integrates DP using the propose-test-release paradigm. DP-KSA follows from a key observation that most question-answering (QA) queries can be sufficiently answered with a few keywords. Hence, DP-KSA first obtains an ensemble of relevant contexts, each of which will be used to generate a response from an LLM. We utilize these responses to obtain the most frequent keywords in a differentially private manner. Lastly, the keywords are augmented into the prompt for the final output. This approach effectively compresses the semantic space while preserving both utility and privacy. We formally show that DP-KSA provides formal DP guarantees on the generated output with respect to the RAG database. We evaluate DP-KSA on two QA benchmarks using three instruction-tuned LLMs, and our empirical results demonstrate that DP-KSA achieves a strong privacy-utility tradeoff.",
+        "authors": "Tingting Tang, James Flemings, Yongqin Wang, Murali Annavaram",
+        "url": "http://arxiv.org/abs/2602.14374v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14374v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了DP-KSA，一种结合差分隐私的RAG算法，并提供了严格的隐私保证。它解决了LLM在处理敏感数据时的隐私泄露瓶颈，具有极高的理论严谨性和实践影响力，对于LLM在隐私关键领域的应用至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15029v1",
+        "title": "Symmetry in language statistics shapes the geometry of model representations",
+        "summary": "Although learned representations underlie neural networks' success, their fundamental properties remain poorly understood. A striking example is the emergence of simple geometric structures in LLM representations: for example, calendar months organize into a circle, years form a smooth one-dimensional manifold, and cities' latitudes and longitudes can be decoded by a linear probe. We show that the statistics of language exhibit a translation symmetry -- e.g., the co-occurrence probability of two months depends only on the time interval between them -- and we prove that the latter governs the aforementioned geometric structures in high-dimensional word embedding models. Moreover, we find that these structures persist even when the co-occurrence statistics are strongly perturbed (for example, by removing all sentences in which two months appear together) and at moderate embedding dimension. We show that this robustness naturally emerges if the co-occurrence statistics are collectively controlled by an underlying continuous latent variable. We empirically validate this theoretical framework in word embedding models, text embedding models, and large language models.",
+        "authors": "Dhruva Karkada, Daniel J. Korchinski, Andres Nava, Matthieu Wyart, Yasaman Bahri",
+        "url": "http://arxiv.org/abs/2602.15029v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15029v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文揭示了语言统计中的翻译对称性如何塑造LLM表示的几何结构，并提供了严谨的理论证明。它对LLM内部工作机制的理解具有基础性贡献，为未来LLM架构设计提供了重要的理论指导，而非纯粹的工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14896v1",
+        "title": "Algorithmic Simplification of Neural Networks with Mosaic-of-Motifs",
+        "summary": "Large-scale deep learning models are well-suited for compression. Methods like pruning, quantization, and knowledge distillation have been used to achieve massive reductions in the number of model parameters, with marginal performance drops across a variety of architectures and tasks. This raises the central question: \\emph{Why are deep neural networks suited for compression?} In this work, we take up the perspective of algorithmic complexity to explain this behavior. We hypothesize that the parameters of trained models have more structure and, hence, exhibit lower algorithmic complexity compared to the weights at (random) initialization. Furthermore, that model compression methods harness this reduced algorithmic complexity to compress models. Although an unconstrained parameterization of model weights, $\\mathbf{w} \\in \\mathbb{R}^n$, can represent arbitrary weight assignments, the solutions found during training exhibit repeatability and structure, making them algorithmically simpler than a generic program. To this end, we formalize the Kolmogorov complexity of $\\mathbf{w}$ by $\\mathcal{K}(\\mathbf{w})$. We introduce a constrained parameterization $\\widehat{\\mathbf{w}}$, that partitions parameters into blocks of size $s$, and restricts each block to be selected from a set of $k$ reusable motifs, specified by a reuse pattern (or mosaic). The resulting method, $\\textit{Mosaic-of-Motifs}$ (MoMos), yields algorithmically simpler model parameterization compared to unconstrained models. Empirical evidence from multiple experiments shows that the algorithmic complexity of neural networks, measured using approximations to Kolmogorov complexity, can be reduced during training. This results in models that perform comparably with unconstrained models while being algorithmically simpler.",
+        "authors": "Pedram Bakhtiarifard, Tong Chen, Jonathan Wenshøj, Erik B Dam, Raghavendra Selvan",
+        "url": "http://arxiv.org/abs/2602.14896v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14896v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文从算法复杂度的角度（Kolmogorov复杂度）解释了神经网络的可压缩性，并提出了Mosaic-of-Motifs方法。它为模型压缩提供了深厚的理论基础和创新方法，直接解决了模型压缩这一实际应用瓶颈，且具有高度的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14559v1",
+        "title": "Fluid-Agent Reinforcement Learning",
+        "summary": "The primary focus of multi-agent reinforcement learning (MARL) has been to study interactions among a fixed number of agents embedded in an environment. However, in the real world, the number of agents is neither fixed nor known a priori. Moreover, an agent can decide to create other agents (for example, a cell may divide, or a company may spin off a division). In this paper, we propose a framework that allows agents to create other agents; we call this a fluid-agent environment. We present game-theoretic solution concepts for fluid-agent games and empirically evaluate the performance of several MARL algorithms within this framework. Our experiments include fluid variants of established benchmarks such as Predator-Prey and Level-Based Foraging, where agents can dynamically spawn, as well as a new environment we introduce that highlights how fluidity can unlock novel solution strategies beyond those observed in fixed-population settings. We demonstrate that this framework yields agent teams that adjust their size dynamically to match environmental demands.",
+        "authors": "Shishir Sharma, Doina Precup, Theodore J. Perkins",
+        "url": "http://arxiv.org/abs/2602.14559v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14559v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了“流体智能体”环境的强化学习框架，允许智能体动态创建其他智能体，并提出了博弈论解决方案。它扩展了多智能体强化学习的理论边界，解决了固定智能体数量的限制，具有高度的理论创新性和对复杂自适应系统建模的潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14471v1",
+        "title": "Socially-Weighted Alignment: A Game-Theoretic Framework for Multi-Agent LLM Systems",
+        "summary": "Deploying large language model (LLM) agents in shared environments introduces a fundamental tension between individual alignment and collective stability: locally rational decisions can impose negative externalities that degrade system-level performance. We propose Socially-Weighted Alignment (SWA), a game-theoretic framework that modifies inference-time decision making by interpolating between an agent's private objective and an estimate of group welfare via a social weight $λ\\in[0,1]$. In a shared-resource congestion game with $n$ agents and congestion severity $β$, we show that SWA induces a critical threshold $λ^*=(n-β)/(n-1)$ above which agents no longer have marginal incentive to increase demand under overload, yielding a phase transition from persistent congestion to stable operation near capacity. We further provide an inference-time algorithmic instantiation of SWA that does not require parameter updates or multi-agent reinforcement learning, and use a multi-agent simulation to empirically validate the predicted threshold behavior.",
+        "authors": "Furkan Mumcu, Yasin Yilmaz",
+        "url": "http://arxiv.org/abs/2602.14471v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14471v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了社会加权对齐（SWA）的博弈论框架，解决了多智能体LLM系统中个体对齐与集体稳定性之间的矛盾。它具有深厚的理论基础，通过引入社会权重来调节决策，对LLM应用中多智能体协作的稳定性瓶颈提供了理论指导和解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14462v1",
+        "title": "Silent Inconsistency in Data-Parallel Full Fine-Tuning: Diagnosing Worker-Level Optimization Misalignment",
+        "summary": "Data-parallel (DP) training with synchronous all-reduce is a dominant paradigm for full-parameter fine-tuning of large language models (LLMs). While parameter synchronization guarantees numerical equivalence of model weights after each iteration, it does not necessarily imply alignment of worker-level optimization dynamics before gradient aggregation. This paper identifies and studies this latent mismatch, termed \\emph{silent inconsistency}, where cross-worker divergence in losses and gradients can remain invisible under conventional aggregated monitoring signals. We propose a lightweight, model-agnostic diagnostic framework that quantifies worker-level consistency using training signals readily available in standard pipelines. Specifically, we introduce three complementary metrics: loss dispersion, gradient-norm dispersion, and gradient-direction consistency measured by inter-worker cosine similarity. The proposed metrics incur negligible overhead and require no modification to model architecture, synchronization mechanisms, or optimization algorithms. We validate the framework by fully fine-tuning the 1B-parameter \\texttt{openPangu-Embedded-1B-V1.1} model on the \\texttt{tatsu-lab/alpaca} dataset using an 8-NPU DP setup, under controlled perturbations of cross-rank stochasticity. Experimental results show that progressively desynchronized data shuffling and random seeds lead to substantial increases in loss/gradient dispersion and reduced directional alignment, despite smooth globally averaged loss curves. These findings demonstrate that the proposed indicators provide actionable visibility into hidden instability modes in large-scale DP fine-tuning, enabling more reliable diagnosis and configuration assessment.",
+        "authors": "Hong Li, Zhen Zhou, Honggang Zhang, Yuping Luo, Xinyue Wang, Han Gong, Zhiyuan Liu",
+        "url": "http://arxiv.org/abs/2602.14462v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14462v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文识别并研究了数据并行微调中的“静默不一致”问题，提出了轻量级诊断框架。它对大规模模型训练的效率和稳定性瓶颈提供了深刻的洞察和诊断工具，虽然Rigor略低于5，但其对核心AI架构（分布式训练）的理论分析和高实践影响力使其成为优秀选择。"
+    }
+]

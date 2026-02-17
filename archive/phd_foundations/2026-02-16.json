@@ -1,0 +1,257 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.14991v1",
+        "title": "Joint analysis for multivariate longitudinal and event time data with a change point anchored at interval-censored event time",
+        "summary": "Huntington's disease (HD) is an autosomal dominant neurodegenerative disorder characterized by motor dysfunction, psychiatric disturbances, and cognitive decline. The onset of HD is marked by severe motor impairment, which may be predicted by prior cognitive decline and, in turn, exacerbate cognitive deficits. Clinical data, however, are often collected at discrete time points, so the timing of disease onset is subject to interval censoring. To address the challenges posed by such data, we develop a joint model for multivariate longitudinal biomarkers with a change point anchored at an interval-censored event time. The model simultaneously assesses the effects of longitudinal biomarkers on the event time and the changes in biomarker trajectories following the event. We conduct a comprehensive simulation study to demonstrate the finite-sample performance of the proposed method for causal inference. Finally, we apply the method to PREDICT-HD, a multisite observational cohort study of prodromal HD individuals, to ascertain how cognitive impairment and motor dysfunction interact during disease progression.",
+        "authors": "Yue Zhan, Cheng Zheng, Ying Zhang",
+        "url": "http://arxiv.org/abs/2602.14991v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14991v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "专注于统计建模、因果推断和有限样本性能分析，提出了针对区间截尾事件时间的多变量纵向生物标志物联合模型，具有很强的理论严谨性，符合数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14981v1",
+        "title": "Block Empirical Likelihood Inference for Longitudinal Generalized Partially Linear Single-Index Models",
+        "summary": "Generalized partially linear single-index models (GPLSIMs) provide a flexible and interpretable semiparametric framework for longitudinal outcomes by combining a low-dimensional parametric component with a nonparametric index component. For repeated measurements, valid inference is challenging because within-subject correlation induces nuisance parameters and variance estimation can be unstable in semiparametric settings. We propose a profile estimating-equation approach based on spline approximation of the unknown link function and construct a subject-level block empirical likelihood (BEL) for joint inference on the parametric coefficients and the single-index direction. The resulting BEL ratio statistic enjoys a Wilks-type chi-square limit, yielding likelihood-free confidence regions without explicit sandwich variance estimation. We also discuss practical implementation, including constrained optimization for the index parameter, working-correlation choices, and bootstrap-based confidence bands for the nonparametric component. Simulation studies and an application to the epilepsy longitudinal study illustrate the finite-sample performance.",
+        "authors": "Tianni Zhang, Yuyao Wang, Yu Lu, and Mengfei Ran",
+        "url": "http://arxiv.org/abs/2602.14981v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14981v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了针对纵向广义部分线性单指标模型的块经验似然推断方法，涉及Wilks型卡方极限和无似然置信区间，理论统计学基础非常扎实，提供了严谨的数学推导和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14885v1",
+        "title": "Drift-Diffusion Matching: Embedding dynamics in latent manifolds of asymmetric neural networks",
+        "summary": "Recurrent neural networks (RNNs) provide a theoretical framework for understanding computation in biological neural circuits, yet classical results, such as Hopfield's model of associative memory, rely on symmetric connectivity that restricts network dynamics to gradient-like flows. In contrast, biological networks support rich time-dependent behaviour facilitated by their asymmetry. Here we introduce a general framework, which we term drift-diffusion matching, for training continuous-time RNNs to represent arbitrary stochastic dynamical systems within a low-dimensional latent subspace. Allowing asymmetric connectivity, we show that RNNs can faithfully embed the drift and diffusion of a given stochastic differential equation, including nonlinear and nonequilibrium dynamics such as chaotic attractors. As an application, we construct RNN realisations of stochastic systems that transiently explore various attractors through both input-driven switching and autonomous transitions driven by nonequilibrium currents, which we interpret as models of associative and sequential (episodic) memory. To elucidate how these dynamics are encoded in the network, we introduce decompositions of the RNN based on its asymmetric connectivity and its time-irreversibility. Our results extend attractor neural network theory beyond equilibrium, showing that asymmetric neural populations can implement a broad class of dynamical computations within low-dimensional manifolds, unifying ideas from associative memory, nonequilibrium statistical mechanics, and neural computation.",
+        "authors": "Ramón Nartallo-Kaluarachchi, Renaud Lambiotte, Alain Goriely",
+        "url": "http://arxiv.org/abs/2602.14885v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14885v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了“漂移-扩散匹配”的通用框架，用于在非对称RNN的潜在流形中嵌入任意随机动力系统（SDEs），具有深刻的数学和理论神经科学背景，涉及SDEs的漂移和扩散分解，理论创新性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14830v1",
+        "title": "On Convergence Analysis of Network-GIANT: An approximate Hessian-based fully distributed optimization algorithm",
+        "summary": "In this paper, we present a detailed convergence analysis of a recently developed approximate Newton-type fully distributed optimization method for smooth, strongly convex local loss functions, called Network-GIANT, which has been empirically illustrated to show faster linear convergence properties while having the same communication complexity (per iteration) as its first order distributed counterparts. By using consensus based parameter updates, and a local Hessian based descent direction at the individual nodes with gradient tracking, we first explicitly characterize a global linear convergence rate for Network-GIANT, which can be computed as the spectral radius of a $3 \\times 3$ matrix dependent on the Lipschitz continuity ($L$) and strong convexity ($μ$) parameters of the objective functions, and the spectral norm ($σ$) of the underlying undirected graph represented by a doubly stochastic consensus matrix. We provide an explicit bound on the step size parameter $η$, below which this spectral radius is guaranteed to be less than $1$. Furthermore, we derive a mixed linear-quadratic inequality based upper bound for the optimality gap norm, which allows us to conclude that, under small step size values, asymptotically, as the algorithm approaches the global optimum, it achieves a locally linear convergence rate of $1-η(1 -\\fracγμ)$ for Network-GIANT, provided the Hessian approximation error $γ$ (between the harmonic mean of the local Hessians and the global hessian (the arithmetic mean of the local Hessians) is smaller than $μ$. This asymptotically linear convergence rate of $\\approx 1-η$ explains the faster convergence rate of Network-GIANT for the first time. Numerical experiments are carried out with a reduced CovType dataset for binary logistic regression over a variety of graphs to illustrate the above theoretical results.",
+        "authors": "Souvik Das, Luca Schenato, Subhrakanti Dey",
+        "url": "http://arxiv.org/abs/2602.14830v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14830v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "对近似牛顿型分布式优化算法Network-GIANT进行了详细的收敛性分析，包括全局线性收敛率、谱半径和显式步长界限，并推导了渐近线性收敛率，理论严谨性极高，符合优化收敛性偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14757v1",
+        "title": "Solving Inverse Parametrized Problems via Finite Elements and Extreme Learning Networks",
+        "summary": "We develop an interpolation-based reduced-order modeling framework for parameter-dependent partial differential equations arising in control, inverse problems, and uncertainty quantification. The solution is discretized in the physical domain using finite element methods, while the dependence on a finite-dimensional parameter is approximated separately. We establish existence, uniqueness, and regularity of the parametric solution and derive rigorous error estimates that explicitly quantify the interplay between spatial discretization and parameter approximation.   In low-dimensional parameter spaces, classical interpolation schemes yield algebraic convergence rates based on Sobolev regularity in the parameter variable. In higher-dimensional parameter spaces, we replace classical interpolation by extreme learning machine (ELM) surrogates and obtain error bounds under explicit approximation and stability assumptions. The proposed framework is applied to inverse problems in quantitative photoacoustic tomography, where we derive potential and parameter reconstruction error estimates and demonstrate substantial computational savings compared to standard approaches, without sacrificing accuracy.",
+        "authors": "Erik Burman, Mats G. Larson, Karl Larsson, Jonatan Vallin",
+        "url": "http://arxiv.org/abs/2602.14757v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14757v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "结合有限元方法和极限学习机（ELM）代理，为参数依赖的偏微分方程（PDEs）的逆问题提供了严格的误差估计和理论分析，明确量化了空间离散化和参数近似的相互作用，数学推导严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14729v1",
+        "title": "Scale redundancy and soft gauge fixing in positively homogeneous neural networks",
+        "summary": "Neural networks with positively homogeneous activations exhibit an exact continuous reparametrization symmetry: neuron-wise rescalings generate parameter-space orbits along which the input--output function is invariant. We interpret this symmetry as a gauge redundancy and introduce gauge-adapted coordinates that separate invariant and scale-imbalance directions. Inspired by gauge fixing in field theory, we introduce a soft orbit-selection (norm-balancing) functional acting only on redundant scale coordinates. We show analytically that it induces dissipative relaxation of imbalance modes to preserve the realized function. In controlled experiments, this orbit-selection penalty expands the stable learning-rate regime and suppresses scale drift without changing expressivity. These results establish a structural link between gauge-orbit geometry and optimization conditioning, providing a concrete connection between gauge-theoretic concepts and machine learning.",
+        "authors": "Rodrigo Carmo Terin",
+        "url": "http://arxiv.org/abs/2602.14729v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14729v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "将正齐次神经网络中的重参数化对称性解释为规范冗余，引入规范适应坐标和软规范固定，并从分析上证明其能诱导不平衡模式的耗散弛豫，建立了规范轨道几何与优化条件之间的结构联系，理论创新性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14642v1",
+        "title": "GenPANIS: A Latent-Variable Generative Framework for Forward and Inverse PDE Problems in Multiphase Media",
+        "summary": "Inverse problems and inverse design in multiphase media, i.e., recovering or engineering microstructures to achieve target macroscopic responses, require operating on discrete-valued material fields, rendering the problem non-differentiable and incompatible with gradient-based methods. Existing approaches either relax to continuous approximations, compromising physical fidelity, or employ separate heavyweight models for forward and inverse tasks. We propose GenPANIS, a unified generative framework that preserves exact discrete microstructures while enabling gradient-based inference through continuous latent embeddings. The model learns a joint distribution over microstructures and PDE solutions, supporting bidirectional inference (forward prediction and inverse recovery) within a single architecture. The generative formulation enables training with unlabeled data, physics residuals, and minimal labeled pairs. A physics-aware decoder incorporating a differentiable coarse-grained PDE solver preserves governing equation structure, enabling extrapolation to varying boundary conditions and microstructural statistics. A learnable normalizing flow prior captures complex posterior structure for inverse problems. Demonstrated on Darcy flow and Helmholtz equations, GenPANIS maintains accuracy on challenging extrapolative scenarios - including unseen boundary conditions, volume fractions, and microstructural morphologies, with sparse, noisy observations. It outperforms state-of-the-art methods while using 10 - 100 times fewer parameters and providing principled uncertainty quantification.",
+        "authors": "Matthaios Chatzopoulos, Phaedon-Stelios Koutsourelakis",
+        "url": "http://arxiv.org/abs/2602.14642v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14642v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了GenPANIS，一个统一的生成框架来解决多相介质中的正向和逆向PDE问题，通过连续潜在嵌入实现梯度推理，并结合可微分PDE求解器和可学习的归一化流先验，具有强大的数学和统计建模基础，并提供不确定性量化。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14626v1",
+        "title": "Concepts' Information Bottleneck Models",
+        "summary": "Concept Bottleneck Models (CBMs) aim to deliver interpretable predictions by routing decisions through a human-understandable concept layer, yet they often suffer reduced accuracy and concept leakage that undermines faithfulness. We introduce an explicit Information Bottleneck regularizer on the concept layer that penalizes $I(X;C)$ while preserving task-relevant information in $I(C;Y)$, encouraging minimal-sufficient concept representations. We derive two practical variants (a variational objective and an entropy-based surrogate) and integrate them into standard CBM training without architectural changes or additional supervision. Evaluated across six CBM families and three benchmarks, the IB-regularized models consistently outperform their vanilla counterparts. Information-plane analyses further corroborate the intended behavior. These results indicate that enforcing a minimal-sufficient concept bottleneck improves both predictive performance and the reliability of concept-level interventions. The proposed regularizer offers a theoretic-grounded, architecture-agnostic path to more faithful and intervenable CBMs, resolving prior evaluation inconsistencies by aligning training protocols and demonstrating robust gains across model families and datasets.",
+        "authors": "Karim Galliamov, Syed M Ahsan Kazmi, Adil Khan, Adín Ramírez Rivera",
+        "url": "http://arxiv.org/abs/2602.14626v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14626v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了显式的信息瓶颈正则化器来改进概念瓶颈模型（CBMs），通过惩罚I(X;C)同时保留I(C;Y)来鼓励最小充分的概念表示，并推导了变分目标和熵基代理，信息论基础非常扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14606v1",
+        "title": "Towards Selection as Power: Bounding Decision Authority in Autonomous Agents",
+        "summary": "Autonomous agentic systems are increasingly deployed in regulated, high-stakes domains where decisions may be irreversible and institutionally constrained. Existing safety approaches emphasize alignment, interpretability, or action-level filtering. We argue that these mechanisms are necessary but insufficient because they do not directly govern selection power: the authority to determine which options are generated, surfaced, and framed for decision. We propose a governance architecture that separates cognition, selection, and action into distinct domains and models autonomy as a vector of sovereignty. Cognitive autonomy remains unconstrained, while selection and action autonomy are bounded through mechanically enforced primitives operating outside the agent's optimization space. The architecture integrates external candidate generation (CEFL), a governed reducer, commit-reveal entropy isolation, rationale validation, and fail-loud circuit breakers. We evaluate the system across multiple regulated financial scenarios under adversarial stress targeting variance manipulation, threshold gaming, framing skew, ordering effects, and entropy probing. Metrics quantify selection concentration, narrative diversity, governance activation cost, and failure visibility. Results show that mechanical selection governance is implementable, auditable, and prevents deterministic outcome capture while preserving reasoning capacity. Although probabilistic concentration remains, the architecture measurably bounds selection authority relative to conventional scalar pipelines. This work reframes governance as bounded causal power rather than internal intent alignment, offering a foundation for deploying autonomous agents where silent failure is unacceptable.",
+        "authors": "Jose Manuel de la Chica Rodriguez, Juan Manuel Vera Díaz",
+        "url": "http://arxiv.org/abs/2602.14606v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14606v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个新颖的自治代理治理架构，通过机械强制原语限制决策权力，将治理重新定义为有界因果能力。虽然Rigor评分为4，但其创新性（5分）和实践影响力（5分）极高，且理论深度符合对AI系统形式化约束的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14553v1",
+        "title": "Governing AI Forgetting: Auditing for Machine Unlearning Compliance",
+        "summary": "Despite legal mandates for the right to be forgotten, AI operators routinely fail to comply with data deletion requests. While machine unlearning (MU) provides a technical solution to remove personal data's influence from trained models, ensuring compliance remains challenging due to the fundamental gap between MU's technical feasibility and regulatory implementation. In this paper, we introduce the first economic framework for auditing MU compliance, by integrating certified unlearning theory with regulatory enforcement. We first characterize MU's inherent verification uncertainty using a hypothesis-testing interpretation of certified unlearning to derive the auditor's detection capability, and then propose a game-theoretic model to capture the strategic interactions between the auditor and the operator. A key technical challenge arises from MU-specific nonlinearities inherent in the model utility and the detection probability, which create complex strategic couplings that traditional auditing frameworks do not address and that also preclude closed-form solutions. We address this by transforming the complex bivariate nonlinear fixed-point problem into a tractable univariate auxiliary problem, enabling us to decouple the system and establish the equilibrium existence, uniqueness, and structural properties without relying on explicit solutions. Counterintuitively, our analysis reveals that the auditor can optimally reduce the inspection intensity as deletion requests increase, since the operator's weakened unlearning makes non-compliance easier to detect. This is consistent with recent auditing reductions in China despite growing deletion requests. Moreover, we prove that although undisclosed auditing offers informational advantages for the auditor, it paradoxically reduces the regulatory cost-effectiveness relative to disclosed auditing.",
+        "authors": "Qinqi Lin, Ningning Ding, Lingjie Duan, Jianwei Huang",
+        "url": "http://arxiv.org/abs/2602.14553v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14553v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了首个用于审计机器遗忘合规性的经济框架，结合了认证遗忘理论、假设检验和博弈论，并解决了非线性固定点问题以建立均衡的存在性、唯一性和结构性质，理论严谨性极高，对AI治理和隐私具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14505v1",
+        "title": "Formally Verifying and Explaining Sepsis Treatment Policies with COOL-MC",
+        "summary": "Safe and interpretable sequential decision-making is critical in healthcare, yet reinforcement learning (RL) policies for sepsis treatment optimization remain opaque and difficult to verify. Standard probabilistic model checkers operate on the full state space, which becomes infeasible for larger MDPs, and cannot explain why a learned policy makes particular decisions. COOL-MC wraps the model checker Storm but adds three key capabilities: it constructs only the reachable state space induced by a trained policy, yielding a smaller discrete-time Markov chain amenable to verification even when full-MDP analysis is intractable; it automatically labels states with clinically meaningful atomic propositions; and it integrates explainability methods with probabilistic computation tree logic (PCTL) queries to reveal which features drive decisions across treatment trajectories. We demonstrate COOL-MC's capabilities on the ICU-Sepsis MDP, a benchmark derived from approximately 17,000 sepsis patient records, which serves as a case study for applying COOL-MC to the formal analysis of sepsis treatment policies. Our analysis establishes hard bounds via full MDP verification, trains a safe RL policy that achieves optimal survival probability, and analyzes its behavior via PCTL verification and explainability on the induced DTMC. This reveals, for instance, that our trained policy relies predominantly on prior dosing history rather than the patient's evolving condition, a weakness that is invisible to standard evaluation but is exposed by COOL-MC's integration of formal verification and explainability. Our results illustrate how COOL-MC could serve as a tool for clinicians to investigate and debug sepsis treatment policies before deployment.",
+        "authors": "Dennis Gross",
+        "url": "http://arxiv.org/abs/2602.14505v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14505v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "结合形式验证（概率计算树逻辑PCTL、模型检查）和强化学习策略解释，用于高风险医疗场景（如败血症治疗），具有强大的形式化方法和理论计算机科学严谨性，对AI安全至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14486v1",
+        "title": "Revisiting the Platonic Representation Hypothesis: An Aristotelian View",
+        "summary": "The Platonic Representation Hypothesis suggests that representations from neural networks are converging to a common statistical model of reality. We show that the existing metrics used to measure representational similarity are confounded by network scale: increasing model depth or width can systematically inflate representational similarity scores. To correct these effects, we introduce a permutation-based null-calibration framework that transforms any representational similarity metric into a calibrated score with statistical guarantees. We revisit the Platonic Representation Hypothesis with our calibration framework, which reveals a nuanced picture: the apparent convergence reported by global spectral measures largely disappears after calibration, while local neighborhood similarity, but not local distances, retains significant agreement across different modalities. Based on these findings, we propose the Aristotelian Representation Hypothesis: representations in neural networks are converging to shared local neighborhood relationships.",
+        "authors": "Fabian Gröger, Shuo Wen, Maria Brbić",
+        "url": "http://arxiv.org/abs/2602.14486v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14486v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "重新审视了表征学习中的“柏拉图式表征假设”，识别了现有度量的混淆因素，并引入了基于置换的零校准框架和统计保证，具有深刻的统计学和表征学习理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14472v1",
+        "title": "Frequentist Regret Analysis of Gaussian Process Thompson Sampling via Fractional Posteriors",
+        "summary": "We study Gaussian Process Thompson Sampling (GP-TS) for sequential decision-making over compact, continuous action spaces and provide a frequentist regret analysis based on fractional Gaussian process posteriors, without relying on domain discretization as in prior work. We show that the variance inflation commonly assumed in existing analyses of GP-TS can be interpreted as Thompson Sampling with respect to a fractional posterior with tempering parameter $α\\in (0,1)$. We derive a kernel-agnostic regret bound expressed in terms of the information gain parameter $γ_t$ and the posterior contraction rate $ε_t$, and identify conditions on the Gaussian process prior under which $ε_t$ can be controlled. As special cases of our general bound, we recover regret of order $\\tilde{\\mathcal{O}}(T^{\\frac{1}{2}})$ for the squared exponential kernel, $\\tilde{\\mathcal{O}}(T^{\\frac{2ν+3d}{2(2ν+d)}} )$ for the Matérn-$ν$ kernel, and a bound of order $\\tilde{\\mathcal{O}}(T^{\\frac{2ν+3d}{2(2ν+d)}})$ for the rational quadratic kernel. Overall, our analysis provides a unified and discretization-free regret framework for GP-TS that applies broadly across kernel classes.",
+        "authors": "Somjit Roy, Prateek Jaiswal, Anirban Bhattacharya, Debdeep Pati, Bani K. Mallick",
+        "url": "http://arxiv.org/abs/2602.14472v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14472v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "通过分数高斯过程后验，对高斯过程Thompson采样（GP-TS）进行了频率学派的遗憾分析，推导了核无关的遗憾界限，并将其与分数后验的温度参数联系起来，是贝叶斯优化和统计学习理论的重大进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14430v1",
+        "title": "A unified framework for evaluating the robustness of machine-learning interpretability for prospect risking",
+        "summary": "In geophysics, hydrocarbon prospect risking involves assessing the risks associated with hydrocarbon exploration by integrating data from various sources. Machine learning-based classifiers trained on tabular data have been recently used to make faster decisions on these prospects. The lack of transparency in the decision-making processes of such models has led to the emergence of explainable AI (XAI). LIME and SHAP are two such examples of these XAI methods which try to generate explanations of a particular decision by ranking the input features in terms of importance. However, explanations of the same scenario generated by these two different explanation strategies have shown to disagree or be different, particularly for complex data. This is because the definitions of \"importance\" and \"relevance\" differ for different explanation strategies. Thus, grounding these ranked features using theoretically backed causal ideas of necessity and sufficiency can prove to be a more reliable and robust way to improve the trustworthiness of the concerned explanation strategies.We propose a unified framework to generate counterfactuals as well as quantify necessity and sufficiency and use these to perform a robustness evaluation of the explanations provided by LIME and SHAP on high dimensional structured prospect risking data. This robustness test gives us deeper insights into the models capabilities to handle erronous data and which XAI module works best in pair with which model for our dataset for hydorcarbon indication.",
+        "authors": "Prithwijit Chowdhury, Ahmad Mustafa, Mohit Prabhushankar, Ghassan AlRegib",
+        "url": "http://arxiv.org/abs/2602.14430v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14430v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个统一框架，利用反事实和因果概念（必要性和充分性）来评估机器学习可解释性（XAI）的鲁棒性，将XAI的评估建立在理论支持的因果逻辑之上，符合因果逻辑偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14414v1",
+        "title": "The Role of Measured Covariates in Assessing Sensitivity to Unmeasured Confounding",
+        "summary": "Sensitivity analysis is widely used to assess the robustness of causal conclusions in observational studies, yet its interaction with the structure of measured covariates is often overlooked. When latent confounders cannot be directly adjusted for and are instead controlled using proxy variables, strong associations between exposure and measured proxies can amplify sensitivity to residual confounding. We formalize this phenomenon in linear regression settings by showing that a simple ratio involving the exposure model coefficient and residual exposure variance provides an observable measure of this increased sensitivity. Applying our framework to smoking and lung cancer, we document how growing socioeconomic stratification in smoking behavior over time leads to heightened sensitivity to unmeasured confounding in more recent data. These results highlight the importance of multicollinearity when interpreting sensitivity analyses based on proxy adjustment.",
+        "authors": "Abhinandan Dalal, Iris Horng, Yang Feng, Dylan S. Small",
+        "url": "http://arxiv.org/abs/2602.14414v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14414v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "扩展了经典率失真理论，引入了语义距离和复杂性度量（基于最小描述长度和信息瓶颈），并推导了闭式理论结果和基本的三方权衡，信息论基础极其强大，具有清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14440v1",
+        "title": "CAIRO: Decoupling Order from Scale in Regression",
+        "summary": "Standard regression methods typically optimize a single pointwise objective, such as mean squared error, which conflates the learning of ordering with the learning of scale. This coupling renders models vulnerable to outliers and heavy-tailed noise. We propose CAIRO (Calibrate After Initial Rank Ordering), a framework that decouples regression into two distinct stages. In the first stage, we learn a scoring function by minimizing a scale-invariant ranking loss; in the second, we recover the target scale via isotonic regression. We theoretically characterize a class of \"Optimal-in-Rank-Order\" objectives -- including variants of RankNet and Gini covariance -- and prove that they recover the ordering of the true conditional mean under mild assumptions. We further show that subsequent monotone calibration guarantees recovery of the true regression function. Empirically, CAIRO combines the representation learning of neural networks with the robustness of rank-based statistics. It matches the performance of state-of-the-art tree ensembles on tabular benchmarks and significantly outperforms standard regression objectives in regimes with heavy-tailed or heteroskedastic noise.",
+        "authors": "Harri Vanhems, Yue Zhao, Peng Shi, Archer Y. Yang",
+        "url": "http://arxiv.org/abs/2602.14440v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14440v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了CAIRO框架，将回归中的顺序和尺度解耦，通过尺度不变的排序损失和等渗回归实现。理论上刻画了“最优秩序”目标，并证明了在温和假设下真实条件均值和回归函数的恢复，具有强大的统计学和理论机器学习严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.14356v1",
+        "title": "A Generative AI Approach for Reducing Skin Tone Bias in Skin Cancer Classification",
+        "summary": "Skin cancer is one of the most common cancers worldwide and early detection is critical for effective treatment. However, current AI diagnostic tools are often trained on datasets dominated by lighter skin tones, leading to reduced accuracy and fairness for people with darker skin. The International Skin Imaging Collaboration (ISIC) dataset, one of the most widely used benchmarks, contains over 70% light skin images while dark skins fewer than 8%. This imbalance poses a significant barrier to equitable healthcare delivery and highlights the urgent need for methods that address demographic diversity in medical imaging. This paper addresses this challenge of skin tone imbalance in automated skin cancer detection using dermoscopic images. To overcome this, we present a generative augmentation pipeline that fine-tunes a pre-trained Stable Diffusion model using Low-Rank Adaptation (LoRA) on the image dark-skin subset of the ISIC dataset and generates synthetic dermoscopic images conditioned on lesion type and skin tone. In this study, we investigated the utility of these images on two downstream tasks: lesion segmentation and binary classification. For segmentation, models trained on the augmented dataset and evaluated on held-out real images show consistent improvements in IoU, Dice coefficient, and boundary accuracy. These evalutions provides the verification of Generated dataset. For classification, an EfficientNet-B0 model trained on the augmented dataset achieved 92.14% accuracy. This paper demonstrates that synthetic data augmentation with Generative AI integration can substantially reduce bias with increase fairness in conventional dermatological diagnostics and open challenges for future directions.",
+        "authors": "Areez Muhammed Shabu, Mohammad Samar Ansari, Asra Aslam",
+        "url": "http://arxiv.org/abs/2602.14356v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.14356v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了数据增强和泛化学习的信息论框架，构建于互信息界限之上，推导了新的泛化界限，并引入了群直径概念，信息论和统计学习理论基础极其强大，具有清晰的数学推导。"
+    }
+]

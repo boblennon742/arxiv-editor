@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.15503v1",
+        "title": "Approximation Theory for Lipschitz Continuous Transformers",
+        "summary": "Stability and robustness are critical for deploying Transformers in safety-sensitive settings. A principled way to enforce such behavior is to constrain the model's Lipschitz constant. However, approximation-theoretic guarantees for architectures that explicitly preserve Lipschitz continuity have yet to be established. In this work, we bridge this gap by introducing a class of gradient-descent-type in-context Transformers that are Lipschitz-continuous by construction. We realize both MLP and attention blocks as explicit Euler steps of negative gradient flows, ensuring inherent stability without sacrificing expressivity. We prove a universal approximation theorem for this class within a Lipschitz-constrained function space. Crucially, our analysis adopts a measure-theoretic formalism, interpreting Transformers as operators on probability measures, to yield approximation guarantees independent of token count. These results provide a rigorous theoretical foundation for the design of robust, Lipschitz continuous Transformer architectures.",
+        "authors": "Takashi Furuya, Davide Murari, Carola-Bibiane Schönlieb",
+        "url": "http://arxiv.org/abs/2602.15503v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15503v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为Lipschitz连续Transformer建立了近似理论保证，明确提出了“通用近似定理”并采用了“测度论形式主义”来解释Transformer作为概率测度上的算子。其对Lipschitz常数、梯度流和函数空间的严格数学处理，为AI系统的稳定性和鲁棒性提供了坚实的理论基础，与您对“强大的理论基础”和“清晰的数学推导”的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15785v1",
+        "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
+        "summary": "A growing literature uses large language models (LLMs) as synthetic participants to generate cost-effective and nearly instantaneous responses in social science experiments. However, there is limited guidance on when such simulations support valid inference about human behavior. We contrast two strategies for obtaining valid estimates of causal effects and clarify the assumptions under which each is suitable for exploratory versus confirmatory research. Heuristic approaches seek to establish that simulated and observed human behavior are interchangeable through prompt engineering, model fine-tuning, and other repair strategies designed to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic approaches lack the formal statistical guarantees typically required for confirmatory research. In contrast, statistical calibration combines auxiliary human data with statistical adjustments to account for discrepancies between observed and simulated responses. Under explicit assumptions, statistical calibration preserves validity and provides more precise estimates of causal effects at lower cost than experiments that rely solely on human participants. Yet the potential of both approaches depends on how well LLMs approximate the relevant populations. We consider what opportunities are overlooked when researchers focus myopically on substituting LLMs for human participants in a study.",
+        "authors": "Jessica Hullman, David Broska, Huaman Sun, Aaron Shaw",
+        "url": "http://arxiv.org/abs/2602.15785v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15785v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文探讨了LLM模拟作为行为证据的有效性，并明确强调了“形式统计保证”和“因果效应”的有效估计。它提出了“统计校准”方法，并在“明确假设”下提供有效性保证，这直接满足了您对“统计保证”和“因果逻辑”的严格要求，对于理解AI系统在社会科学应用中的推断有效性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15632v1",
+        "title": "Neural-POD: A Plug-and-Play Neural Operator Framework for Infinite-Dimensional Functional Nonlinear Proper Orthogonal Decomposition",
+        "summary": "The rapid development of AI for Science is often hindered by the \"discretization\", where learned representations remain restricted to the specific grids or resolutions used during training. We propose the Neural Proper Orthogonal Decomposition (Neural-POD), a plug-and-play neural operator framework that constructs nonlinear, orthogonal basis functions in infinite-dimensional space using neural networks. Unlike the classical Proper Orthogonal Decomposition (POD), which is limited to linear subspace approximations obtained through singular value decomposition (SVD), Neural-POD formulates basis construction as a sequence of residual minimization problems solved through neural network training. Each basis function is obtained by learning to represent the remaining structure in the data, following a process analogous to Gram--Schmidt orthogonalization. This neural formulation introduces several key advantages over classical POD: it enables optimization in arbitrary norms (e.g., $L^2$, $L^1$), learns mappings between infinite-dimensional function spaces that is resolution-invariant, generalizes effectively to unseen parameter regimes, and inherently captures nonlinear structures in complex spatiotemporal systems. The resulting basis functions are interpretable, reusable, and enabling integration into both reduced order modeling (ROM) and operator learning frameworks such as deep operator learning (DeepONet). We demonstrate the robustness of Neural-POD with different complex spatiotemporal systems, including the Burgers' and Navier-Stokes equations. We further show that Neural-POD serves as a high performance, plug-and-play bridge between classical Galerkin projection and operator learning that enables consistent integration with both projection-based reduced order models and DeepONet frameworks.",
+        "authors": "Changhong Mou, Binghang Lu, Guang Lin",
+        "url": "http://arxiv.org/abs/2602.15632v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15632v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Neural-POD框架，用于在“无限维空间”中构建非线性、正交基函数。它明确提及了“残差最小化”、“Gram-Schmidt正交化”以及在“任意范数下优化”，这些都是高级数学和泛函分析的概念。其旨在解决AI for Science中表示学习的“离散化”问题，提供了分辨率不变的“无限维函数空间”映射，理论深度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15617v1",
+        "title": "DNN-Enabled Multi-User Beamforming for Throughput Maximization under Adjustable Fairness",
+        "summary": "Ensuring user fairness in wireless communications is a fundamental challenge, as balancing the trade-off between fairness and sum rate leads to a non-convex, multi-objective optimization whose complexity grows with network scale. To alleviate this conflict, we propose an optimization-based unsupervised learning approach based on the wireless transformer (WiT) architecture that learns from channel state information (CSI) features. We reformulate the trade-off by combining the sum rate and fairness objectives through a Lagrangian multiplier, which is updated automatically via a dual-ascent algorithm. This mechanism allows for a controllable fairness constraint while simultaneously maximizing the sum rate, effectively realizing a trace on the Pareto front between two conflicting objectives. Our findings show that the proposed approach offers a flexible solution for managing the trade-off optimization under prescribed fairness.",
+        "authors": "Kaifeng Lu, Markus Rupp, Stefan Schwarz",
+        "url": "http://arxiv.org/abs/2602.15617v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15617v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过“拉格朗日乘子”和“对偶上升算法”来解决无线通信中的“非凸、多目标优化”问题，以在吞吐量最大化和可调公平性之间找到“帕累托前沿”。这篇论文的数学推导和优化理论基础非常扎实，直接涉及“优化收敛性”和严谨的数学逻辑，是您会感兴趣的类型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15603v1",
+        "title": "Symbolic recovery of PDEs from measurement data",
+        "summary": "Models based on partial differential equations (PDEs) are powerful for describing a wide range of complex relationships in the natural sciences. Accurately identifying the PDE model, which represents the underlying physical law, is essential for a proper understanding of the problem. This reconstruction typically relies on indirect and noisy measurements of the system's state and, without specifically tailored methods, rarely yields symbolic expressions, thereby hindering interpretability. In this work, we address this issue by considering existing neural network architectures based on rational functions for the symbolic representation of physical laws. These networks leverage the approximation power of rational functions while also benefiting from their flexibility in representing arithmetic operations. Our main contribution is an identifiability result, showing that, in the limit of noiseless, complete measurements, such symbolic networks can uniquely reconstruct the simplest physical law within the PDE model. Specifically, reconstructed laws remain expressible within the symbolic network architecture, with regularization-minimizing parameterizations promoting interpretability and sparsity in case of $L^1$-regularization. In addition, we provide regularity results for symbolic networks. Empirical validation using the ParFam architecture supports these theoretical findings, providing evidence for the practical reconstructibility of physical laws.",
+        "authors": "Erion Morina, Philipp Scholl, Martin Holler",
+        "url": "http://arxiv.org/abs/2602.15603v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15603v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文致力于从测量数据中“符号化恢复偏微分方程（PDEs）”，其核心贡献是提供了“可识别性结果”，证明在理想条件下可以唯一重建最简单的物理定律，并提供了“正则性结果”。这种将严谨数学理论（可识别性、正则性）应用于AI系统以发现物理定律的方法，高度符合您对“强大理论基础”和“清晰数学推导”的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15559v1",
+        "title": "Fixed-Horizon Self-Normalized Inference for Adaptive Experiments via Martingale AIPW/DML with Logged Propensities",
+        "summary": "Adaptive randomized experiments update treatment probabilities as data accrue, but still require an end-of-study interval for the average treatment effect (ATE) at a prespecified horizon. Under adaptive assignment, propensities can keep changing, so the predictable quadratic variation of AIPW/DML score increments may remain random. When no deterministic variance limit exists, Wald statistics normalized by a single long-run variance target can be conditionally miscalibrated given the realized variance regime. We assume no interference, sequential randomization, i.i.d. arrivals, and executed overlap on a prespecified scored set, and we require two auditable pipeline conditions: the platform logs the executed randomization probability for each unit, and the nuisance regressions used to score unit $t$ are constructed predictably from past data only. These conditions make the centered AIPW/DML scores an exact martingale difference sequence. Using self-normalized martingale limit theory, we show that the Studentized statistic, with variance estimated by realized quadratic variation, is asymptotically N(0,1) at the prespecified horizon, even without variance stabilization. Simulations validate the theory and highlight when standard fixed-variance Wald reporting fails.",
+        "authors": "Gabriel Saco",
+        "url": "http://arxiv.org/abs/2602.15559v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15559v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了自适应实验中的统计推断问题，利用“自归一化鞅极限理论”证明了Studentized统计量在预设时间范围内渐近服从N(0,1)分布。它明确提及了“鞅差序列”和“渐近正态性”，提供了严格的“统计保证”，对于因果推断和实验设计具有重要的理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15532v1",
+        "title": "Quantifying construct validity in large language model evaluations",
+        "summary": "The LLM community often reports benchmark results as if they are synonymous with general model capabilities. However, benchmarks can have problems that distort performance, like test set contamination and annotator error. How can we know that a benchmark is a reliable indicator of some capability that we want to measure? This question concerns the construct validity of LLM benchmarks, and it requires separating benchmark results from capabilities when we model and predict LLM performance.   Both social scientists and computer scientists propose formal models - latent factor models and scaling laws - for identifying the capabilities underlying benchmark scores. However, neither technique is satisfactory for construct validity. Latent factor models ignore scaling laws, and as a result, the capabilities they extract often proxy model size. Scaling laws ignore measurement error, and as a result, the capabilities they extract are both uninterpretable and overfit to the observed benchmarks.   This thesis presents the structured capabilities model, the first model to extract interpretable and generalisable capabilities from a large collection of LLM benchmark results. I fit this model and its two alternatives on a large sample of results from the OpenLLM Leaderboard. Structured capabilities outperform latent factor models on parsimonious fit indices, and exhibit better out-of-distribution benchmark prediction than scaling laws. These improvements are possible because neither existing approach separates model scale from capabilities in the appropriate way. Model scale should inform capabilities, as in scaling laws, and these capabilities should inform observed results up to measurement error, as in latent factor models. In combining these two insights, structured capabilities demonstrate better explanatory and predictive power for quantifying construct validity in LLM evaluations.",
+        "authors": "Ryan Othniel Kearns",
+        "url": "http://arxiv.org/abs/2602.15532v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15532v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文关注LLM评估中的“结构效度”量化，提出了结合“潜在因子模型”和“缩放定律”的“结构化能力模型”，并明确讨论了“测量误差”。这是一种将统计学和心理测量学中的严谨概念应用于AI系统评估的典范，对于理解和改进LLM的评估方法具有深远的理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15438v1",
+        "title": "Logit Distance Bounds Representational Similarity",
+        "summary": "For a broad family of discriminative models that includes autoregressive language models, identifiability results imply that if two models induce the same conditional distributions, then their internal representations agree up to an invertible linear transformation. We ask whether an analogous conclusion holds approximately when the distributions are close instead of equal. Building on the observation of Nielsen et al. (2025) that closeness in KL divergence need not imply high linear representational similarity, we study a distributional distance based on logit differences and show that closeness in this distance does yield linear similarity guarantees. Specifically, we define a representational dissimilarity measure based on the models' identifiability class and prove that it is bounded by the logit distance. We further show that, when model probabilities are bounded away from zero, KL divergence upper-bounds logit distance; yet the resulting bound fails to provide nontrivial control in practice. As a consequence, KL-based distillation can match a teacher's predictions while failing to preserve linear representational properties, such as linear-probe recoverability of human-interpretable concepts. In distillation experiments on synthetic and image datasets, logit-distance distillation yields students with higher linear representational similarity and better preservation of the teacher's linearly recoverable concepts.",
+        "authors": "Beatrix M. B. Nielsen, Emanuele Marconato, Luigi Gresele, Andrea Dittadi, Simon Buchholz",
+        "url": "http://arxiv.org/abs/2602.15438v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15438v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探讨了判别模型的“表示相似性”，通过引入基于“logit差异”的分布距离，并证明其可以约束线性相似性。它明确提及了“可识别性结果”和“线性相似性保证”，并提供了理论分析。这种对模型内部表示的数学性质进行深入分析，并提供理论界限的工作，非常符合您对理论严谨性的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15319v1",
+        "title": "Bayesian Inference for Joint Tail Risk in Paired Biomarkers via Archimedean Copulas with Restricted Jeffreys Priors",
+        "summary": "We propose a Bayesian copula-based framework to quantify clinically interpretable joint tail risks from paired continuous biomarkers. After converting each biomarker margin to rank-based pseudo-observations, we model dependence using one-parameter Archimedean copulas and focus on three probability-scale summaries at tail level $α$: the lower-tail joint risk $R_L(θ)=C_θ(α,α)$, the upper-tail joint risk $R_U(θ)=2α-1+C_θ(1-α,1-α)$, and the conditional lower-tail risk $R_C(θ)=R_L(θ)/α$. Uncertainty is quantified via a restricted Jeffreys prior on the copula parameter and grid-based posterior approximation, which induces an exact posterior for each tail-risk functional. In simulations from Clayton and Gumbel copulas across multiple dependence strengths, posterior credible intervals achieve near-nominal coverage for $R_L$, $R_U$, and $R_C$. We then analyze NHANES 2017--2018 fasting glucose (GLU) and HbA1c (GHB) ($n=2887$) at $α=0.05$, obtaining tight posterior credible intervals for both the dependence parameter and induced tail risks. The results reveal markedly elevated extremal co-movement relative to independence; under the Gumbel model, the posterior mean joint upper-tail risk is $R_U(α)=0.0286$, approximately $11.46\\times$ the independence benchmark $α^2=0.0025$. Overall, the proposed approach provides a principled, dependence-aware method for reporting joint and conditional extremal-risk summaries with Bayesian uncertainty quantification in biomedical applications.",
+        "authors": "Agnideep Aich, Md. Monzur Murshed, Sameera Hewage, Ashit Baran Aich",
+        "url": "http://arxiv.org/abs/2602.15319v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15319v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于“贝叶斯推断”和“Archimedean Copulas”的框架，用于量化生物标志物中的联合尾部风险，并使用了“受限Jeffreys先验”和“后验近似”来量化不确定性。这是纯粹的数理统计工作，涉及高级的统计建模和不确定性量化，提供了严谨的“统计保证”和“清晰的数学推导”。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15283v1",
+        "title": "Complex-Valued Unitary Representations as Classification Heads for Improved Uncertainty Quantification in Deep Neural Networks",
+        "summary": "Modern deep neural networks achieve high predictive accuracy but remain poorly calibrated: their confidence scores do not reliably reflect the true probability of correctness. We propose a quantum-inspired classification head architecture that projects backbone features into a complex-valued Hilbert space and evolves them under a learned unitary transformation parameterised via the Cayley map. Through a controlled hybrid experimental design - training a single shared backbone and comparing lightweight interchangeable heads - we isolate the effect of complex-valued unitary representations on calibration. Our ablation study on CIFAR-10 reveals that the unitary magnitude head (complex features evolved under a Cayley unitary, read out via magnitude and softmax) achieves an Expected Calibration Error (ECE) of 0.0146, representing a 2.4x improvement over a standard softmax head (0.0355) and a 3.5x improvement over temperature scaling (0.0510). Surprisingly, replacing the softmax readout with a Born rule measurement layer - the quantum-mechanically motivated approach - degrades calibration to an ECE of 0.0819. On the CIFAR-10H human-uncertainty benchmark, the wave function head achieves the lowest KL-divergence (0.336) to human soft labels among all compared methods, indicating that complex-valued representations better capture the structure of human perceptual ambiguity. We provide theoretical analysis connecting norm-preserving unitary dynamics to calibration through feature-space geometry, report negative results on out-of-distribution detection and sentiment analysis to delineate the method's scope, and discuss practical implications for safety-critical applications. Code is publicly available.",
+        "authors": "Akbar Anbar Jafari, Cagri Ozcinar, Gholamreza Anbarjafari",
+        "url": "http://arxiv.org/abs/2602.15283v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15283v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种量子启发的分类头架构，用于改进深度神经网络的“不确定性量化”和“校准”。它将特征投影到“复值希尔伯特空间”，并通过“酉变换”进行演化，并提供了连接“范数保持酉动力学”与校准的“理论分析”。这种将高级数学概念（希尔伯特空间、酉变换）应用于AI系统并提供理论分析的工作，具有极高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15711v1",
+        "title": "Random Wavelet Features for Graph Kernel Machines",
+        "summary": "Node embeddings map graph vertices into low-dimensional Euclidean spaces while preserving structural information. They are central to tasks such as node classification, link prediction, and signal reconstruction. A key goal is to design node embeddings whose dot products capture meaningful notions of node similarity induced by the graph. Graph kernels offer a principled way to define such similarities, but their direct computation is often prohibitive for large networks. Inspired by random feature methods for kernel approximation in Euclidean spaces, we introduce randomized spectral node embeddings whose dot products estimate a low-rank approximation of any specific graph kernel. We provide theoretical and empirical results showing that our embeddings achieve more accurate kernel approximations than existing methods, particularly for spectrally localized kernels. These results demonstrate the effectiveness of randomized spectral constructions for scalable and principled graph representation learning.",
+        "authors": "Valentin de Bassompierre, Jean-Charles Delvenne, Laurent Jacques",
+        "url": "http://arxiv.org/abs/2602.15711v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15711v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了“随机小波特征”来近似“图核”，并提供了“理论和经验结果”，证明其在图表示学习中的有效性。它明确提及了“图核”、“核近似”和“随机谱嵌入”，这些都涉及严谨的数学和统计理论，对于理解图结构数据具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15679v1",
+        "title": "Safe hypotheses testing with application to order restricted inference",
+        "summary": "Hypothesis tests under order restrictions arise in a wide range of scientific applications. By exploiting inequality constraints, such tests can achieve substantial gains in power and interpretability. However, these gains come at a cost: when the imposed constraints are misspecified, the resulting inferences may be misleading or even invalid, and Type III errors may occur, i.e., the null hypothesis may be rejected when neither the null nor the alternative is true. To address this problem, this paper introduces safe tests. Heuristically, a safe test is a testing procedure that is asymptotically free of Type III errors. The proposed test is accompanied by a certificate of validity, a pre--test that assesses whether the original hypotheses are consistent with the data, thereby ensuring that the null hypothesis is rejected only when warranted, enabling principled inference without risk of systematic error. Although the development in this paper focus on testing problems in order--restricted inference, the underlying ideas are more broadly applicable. The proposed methodology is evaluated through simulation studies and the analysis of well--known illustrative data examples, demonstrating strong protection against Type III errors while maintaining power comparable to standard procedures.",
+        "authors": "Ori Davidov",
+        "url": "http://arxiv.org/abs/2602.15679v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15679v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了“安全检验”（safe tests）来解决“顺序受限推断”中的“第三类错误”问题，并提供了“有效性证书”，确保推断的原则性。它深入探讨了假设检验的统计性质，特别是“渐近无第三类错误”，这对于统计推断的严谨性和可靠性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15635v1",
+        "title": "On inferring cumulative constraints",
+        "summary": "Cumulative constraints are central in scheduling with constraint programming, yet propagation is typically performed per constraint, missing multi-resource interactions and causing severe slowdowns on some benchmarks. I present a preprocessing method for inferring additional cumulative constraints that capture such interactions without search-time probing. This approach interprets cumulative constraints as linear inequalities over occupancy vectors and generates valid inequalities by (i) discovering covers, the sets of tasks that cannot run in parallel, (ii) strengthening the cover inequalities for the discovered sets with lifting, and (iii) injecting the resulting constraints back into the scheduling problem instance. Experiments on standard RCPSP and RCPSP/max test suites show that these inferred constraints improve search performance and tighten objective bounds on favorable instances, while incurring little degradation on unfavorable ones. Additionally, these experiments discover 25 new lower bounds and five new best solutions; eight of the lower bounds are obtained directly from the inferred constraints.",
+        "authors": "Konstantin Sidorov",
+        "url": "http://arxiv.org/abs/2602.15635v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15635v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种预处理方法，通过将累积约束解释为“占用向量上的线性不等式”来推断额外的累积约束，并利用“覆盖不等式”的“加强和提升”来收紧目标界限。这属于运筹学和数学规划领域，其对“有效不等式”和“目标界限”的数学处理非常严谨，与您对“优化收敛性”和“数学推导”的兴趣高度相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15587v1",
+        "title": "Adjusted Scores for Discrete Langevin Algorithms",
+        "summary": "Sampling from discrete distributions is a ubiquitous task in machine learning, recently revisited by the emergence of discrete diffusion models. While Langevin algorithms constitute the state of the art for continuous spaces, discrete versions lack similar theoretical guarantees when the step-size becomes small. In this paper, we address this limitation by interpreting discrete sampling algorithms as discretizations of continuous-time dynamics on the hypercube. In particular, we describe several score functions for discrete algorithms which result in approximations of Glauber dynamics for the correct target distribution. We also compute upper bounds for the contraction of these algorithms, with or without Metropolis adjustment.",
+        "authors": "Armand Gissler, Saeed Saremi, Francis Bach",
+        "url": "http://arxiv.org/abs/2602.15587v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15587v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过将离散采样算法解释为“超立方体上连续时间动力学的离散化”，为离散Langevin算法提供了“理论保证”。它描述了产生Glauber动力学近似的得分函数，并计算了这些算法的“收缩上界”。这种对算法“理论保证”和“收敛性质”的深入数学分析，是您会非常欣赏的严谨工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15586v1",
+        "title": "Uniform error bounds for quantized dynamical models",
+        "summary": "This paper provides statistical guarantees on the accuracy of dynamical models learned from dependent data sequences. Specifically, we develop uniform error bounds that apply to quantized models and imperfect optimization algorithms commonly used in practical contexts for system identification, and in particular hybrid system identification. Two families of bounds are obtained: slow-rate bounds via a block decomposition and fast-rate, variance-adaptive, bounds via a novel spaced-point strategy. The bounds scale with the number of bits required to encode the model and thus translate hardware constraints into interpretable statistical complexities.",
+        "authors": "Abdelkader Metakalard, Fabien Lauer, Kevin Colin, Marion Gilson",
+        "url": "http://arxiv.org/abs/2602.15586v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15586v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为从“依赖数据序列”学习的“量化动态模型”提供了“统计保证”，特别是开发了“均匀误差界限”。它提出了“慢速率界限”和“快速率、方差自适应界限”，并将硬件约束转化为可解释的“统计复杂性”。这种直接提供“统计保证”和“误差界限”的工作，是您寻求的理论严谨性典范。"
+    }
+]

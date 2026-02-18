@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.15823v1",
+        "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+        "summary": "A central challenge in large language model (LLM) editing is capability preservation: methods that successfully change targeted behavior can quietly game the editing proxy and corrupt general capabilities, producing degenerate behaviors reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled second-order editing algorithm that treats capability preservation as an explicit constraint, unifying and generalizing several existing editing approaches. CrispEdit formulates editing as constrained optimization and enforces the constraint by projecting edit updates onto the low-curvature subspace of the capability-loss landscape. At the crux of CrispEdit is expressing capability constraint via Bregman divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even when the base model is not trained to convergence. We make this second-order procedure efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC) and a novel matrix-free projector that exploits Kronecker structure to avoid constructing massive projection matrices. Across standard model-editing benchmarks, CrispEdit achieves high edit success while keeping capability degradation below 1% on average across datasets, significantly improving over prior editors.",
+        "authors": "Zarif Ikram, Arad Firouzkouhi, Stephen Tu, Mahdi Soltanolkotabi, Paria Rashidinejad",
+        "url": "http://arxiv.org/abs/2602.15823v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15823v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了CrispEdit，一种可扩展且有原则的二阶编辑算法，用于LLM编辑中的能力保持。它将编辑公式化为约束优化问题，并通过将更新投影到能力损失景观的低曲率子空间来强制执行约束。方法利用Bregman散度、Gauss-Newton Hessian和K-FAC实现高效性。其强大的理论基础（二阶优化、曲率分析）和解决LLM编辑关键瓶颈（能力退化）的实际影响力，使其非常符合您对理论创新性和解决实际应用瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15730v1",
+        "title": "Causal Effect Estimation with Latent Textual Treatments",
+        "summary": "Understanding the causal effects of text on downstream outcomes is a central task in many applications. Estimating such effects requires researchers to run controlled experiments that systematically vary textual features. While large language models (LLMs) hold promise for generating text, producing and evaluating controlled variation requires more careful attention. In this paper, we present an end-to-end pipeline for the generation and causal estimation of latent textual interventions. Our work first performs hypothesis generation and steering via sparse autoencoders (SAEs), followed by robust causal estimation. Our pipeline addresses both computational and statistical challenges in text-as-treatment experiments. We demonstrate that naive estimation of causal effects suffers from significant bias as text inherently conflates treatment and covariate information. We describe the estimation bias induced in this setting and propose a solution based on covariate residualization. Our empirical results show that our pipeline effectively induces variation in target features and mitigates estimation error, providing a robust foundation for causal effect estimation in text-as-treatment settings.",
+        "authors": "Omri Feldman, Amar Venugopal, Jann Spiess, Amir Feder",
+        "url": "http://arxiv.org/abs/2602.15730v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15730v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个端到端的管道，用于通过稀疏自编码器（SAEs）生成和引导潜在文本干预，然后进行鲁棒的因果效应估计。它特别解决了文本作为处理变量时固有的混淆偏差，并提出了基于协变量残差化的解决方案。其在因果推断领域的严谨统计学方法和对LLM文本生成中偏差的深刻理解，对数理统计背景的您来说具有高度吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15725v1",
+        "title": "Recursive Concept Evolution for Compositional Reasoning in Large Language Models",
+        "summary": "Large language models achieve strong performance on many complex reasoning tasks, yet their accuracy degrades sharply on benchmarks that require compositional reasoning, including ARC-AGI-2, GPQA, MATH, BBH, and HLE. Existing methods improve reasoning by expanding token-level search through chain-of-thought prompting, self-consistency, or reinforcement learning, but they leave the model's latent representation space fixed. When the required abstraction is not already encoded in this space, performance collapses. We propose Recursive Concept Evolution (RCE), a framework that enables pretrained language models to modify their internal representation geometry during inference. RCE introduces dynamically generated low-rank concept subspaces that are spawned when representational inadequacy is detected, selected through a minimum description length criterion, merged when synergistic, and consolidated via constrained optimization to preserve stability. This process allows the model to construct new abstractions rather than recombining existing ones. We integrate RCE with Mistral-7B and evaluate it across compositional reasoning benchmarks. RCE yields 12-18 point gains on ARC-AGI-2, 8-14 point improvements on GPQA and BBH, and consistent reductions in depth-induced error on MATH and HLE.",
+        "authors": "Sarim Chaudhry",
+        "url": "http://arxiv.org/abs/2602.15725v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15725v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了递归概念演化（RCE）框架，使预训练语言模型能够在推理过程中修改其内部表示几何。通过动态生成低秩概念子空间，并利用最小描述长度（MDL）准则进行选择和优化，模型能够构建新的抽象而非仅仅重组现有抽象。这种对LLM内部机制的深刻理论创新和对组合推理瓶颈的显著改进，使其成为必读之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15669v1",
+        "title": "PERSONA: Dynamic and Compositional Inference-Time Personality Control via Activation Vector Algebra",
+        "summary": "Current methods for personality control in Large Language Models rely on static prompting or expensive fine-tuning, failing to capture the dynamic and compositional nature of human traits. We introduce PERSONA, a training-free framework that achieves fine-tuning level performance through direct manipulation of personality vectors in activation space. Our key insight is that personality traits appear as extractable, approximately orthogonal directions in the model's representation space that support algebraic operations. The framework operates through three stages: Persona-Base extracts orthogonal trait vectors via contrastive activation analysis; Persona-Algebra enables precise control through vector arithmetic (scalar multiplication for intensity, addition for composition, subtraction for suppression); and Persona-Flow achieves context-aware adaptation by dynamically composing these vectors during inference. On PersonalityBench, our approach achieves a mean score of 9.60, nearly matching the supervised fine-tuning upper bound of 9.61 without any gradient updates. On our proposed Persona-Evolve benchmark for dynamic personality adaptation, we achieve up to 91% win rates across diverse model families. These results provide evidence that aspects of LLM personality are mathematically tractable, opening new directions for interpretable and efficient behavioral control.",
+        "authors": "Xiachong Feng, Liang Zhao, Weihong Zhong, Yichong Huang, Yuxuan Gu, Lingpeng Kong, Xiaocheng Feng, Bing Qin",
+        "url": "http://arxiv.org/abs/2602.15669v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15669v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PERSONA框架通过激活向量代数实现LLM推理时的动态和组合式个性控制。它发现个性特征在模型的表示空间中表现为可提取的、近似正交的方向，支持代数运算。这种对LLM潜在表示空间的理论洞察和创新的训练无关控制方法，完美契合您对理论创新性和前沿算法架构的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15634v1",
+        "title": "Beyond ReLU: Bifurcation, Oversmoothing, and Topological Priors",
+        "summary": "Graph Neural Networks (GNNs) learn node representations through iterative network-based message-passing. While powerful, deep GNNs suffer from oversmoothing, where node features converge to a homogeneous, non-informative state. We re-frame this problem of representational collapse from a \\emph{bifurcation theory} perspective, characterizing oversmoothing as convergence to a stable ``homogeneous fixed point.'' Our central contribution is the theoretical discovery that this undesired stability can be broken by replacing standard monotone activations (e.g., ReLU) with a class of functions. Using Lyapunov-Schmidt reduction, we analytically prove that this substitution induces a bifurcation that destabilizes the homogeneous state and creates a new pair of stable, non-homogeneous \\emph{patterns} that provably resist oversmoothing. Our theory predicts a precise, nontrivial scaling law for the amplitude of these emergent patterns, which we quantitatively validate in experiments. Finally, we demonstrate the practical utility of our theory by deriving a closed-form, bifurcation-aware initialization and showing its utility in real benchmark experiments.",
+        "authors": "Erkan Turan, Gaspard Abel, Maysam Behmanesh, Emery Pierson, Maks Ovsjanikov",
+        "url": "http://arxiv.org/abs/2602.15634v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15634v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从分岔理论的角度重新审视了GNN中的过平滑问题，并理论证明用特定函数替换单调激活函数可以诱导分岔，从而破坏同质状态并产生稳定的非同质模式。其极高的理论严谨性（Lyapunov-Schmidt约化、解析证明）和对GNN核心瓶颈的根本性解决，使其成为数理统计背景下研究AI算法的绝佳选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15620v1",
+        "title": "STAPO: Stabilizing Reinforcement Learning for LLMs by Silencing Rare Spurious Tokens",
+        "summary": "Reinforcement Learning (RL) has significantly improved large language model reasoning, but existing RL fine-tuning methods rely heavily on heuristic techniques such as entropy regularization and reweighting to maintain stability. In practice, they often experience late-stage performance collapse, leading to degraded reasoning quality and unstable training. We derive that the magnitude of token-wise policy gradients in RL is negatively correlated with token probability and local policy entropy. Building on this result, we prove that training instability is driven by a tiny fraction of tokens, approximately 0.01\\%, which we term \\emph{spurious tokens}. When such tokens appear in correct responses, they contribute little to the reasoning outcome but inherit the full sequence-level reward, leading to abnormally amplified gradient updates. Motivated by this observation, we propose Spurious-Token-Aware Policy Optimization (STAPO) for large-scale model refining, which selectively masks such updates and renormalizes the loss over valid tokens. Across six mathematical reasoning benchmarks using Qwen 1.7B, 8B, and 14B base models, STAPO consistently demonstrates superior entropy stability and achieves an average performance improvement of 7.13\\% over GRPO, 20-Entropy and JustRL.",
+        "authors": "Shiqi Liu, Zeyu He, Guojian Zhan, Letian Tao, Zhilong Zheng, Jiang Wu, Yinuo Wang, Yang Guan, Kehua Sheng, Bo Zhang, Keqiang Li, Jingliang Duan, Shengbo Eben Li",
+        "url": "http://arxiv.org/abs/2602.15620v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15620v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "STAPO通过识别并沉默LLM强化学习训练中由稀有“虚假token”引起的梯度异常放大，从而稳定训练过程。论文通过理论推导证明了训练不稳定性与token概率和局部策略熵的负相关性。这种对LLM训练稳定性的深刻理论分析和提出的创新优化方法，对您研究前沿AI算法和架构具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15532v1",
+        "title": "Quantifying construct validity in large language model evaluations",
+        "summary": "The LLM community often reports benchmark results as if they are synonymous with general model capabilities. However, benchmarks can have problems that distort performance, like test set contamination and annotator error. How can we know that a benchmark is a reliable indicator of some capability that we want to measure? This question concerns the construct validity of LLM benchmarks, and it requires separating benchmark results from capabilities when we model and predict LLM performance.   Both social scientists and computer scientists propose formal models - latent factor models and scaling laws - for identifying the capabilities underlying benchmark scores. However, neither technique is satisfactory for construct validity. Latent factor models ignore scaling laws, and as a result, the capabilities they extract often proxy model size. Scaling laws ignore measurement error, and as a result, the capabilities they extract are both uninterpretable and overfit to the observed benchmarks.   This thesis presents the structured capabilities model, the first model to extract interpretable and generalisable capabilities from a large collection of LLM benchmark results. I fit this model and its two alternatives on a large sample of results from the OpenLLM Leaderboard. Structured capabilities outperform latent factor models on parsimonious fit indices, and exhibit better out-of-distribution benchmark prediction than scaling laws. These improvements are possible because neither existing approach separates model scale from capabilities in the appropriate way. Model scale should inform capabilities, as in scaling laws, and these capabilities should inform observed results up to measurement error, as in latent factor models. In combining these two insights, structured capabilities demonstrate better explanatory and predictive power for quantifying construct validity in LLM evaluations.",
+        "authors": "Ryan Othniel Kearns",
+        "url": "http://arxiv.org/abs/2602.15532v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15532v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了结构化能力模型，旨在量化LLM评估中的结构效度，并解决了现有方法（潜在因子模型和缩放定律）的局限性。它将模型规模与能力分离，并结合了两者的优点。这种对LLM评估方法论的深刻统计学和理论创新，对于理解和改进LLM基准测试的可靠性至关重要，非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15509v1",
+        "title": "Fine-Refine: Iterative Fine-grained Refinement for Mitigating Dialogue Hallucination",
+        "summary": "The tendency for hallucination in current large language models (LLMs) negatively impacts dialogue systems. Such hallucinations produce factually incorrect responses that may mislead users and undermine system trust. Existing refinement methods for dialogue systems typically operate at the response level, overlooking the fact that a single response may contain multiple verifiable or unverifiable facts. To address this gap, we propose Fine-Refine, a fine-grained refinement framework that decomposes responses into atomic units, verifies each unit using external knowledge, assesses fluency via perplexity, and iteratively corrects granular errors. We evaluate factuality across the HybriDialogue and OpendialKG datasets in terms of factual accuracy (fact score) and coverage (Not Enough Information Proportion), and experiments show that Fine-Refine substantially improves factuality, achieving up to a 7.63-point gain in dialogue fact score, with a small trade-off in dialogue quality.",
+        "authors": "Xiangyan Chen, Yujian Gan, Matthew Purver",
+        "url": "http://arxiv.org/abs/2602.15509v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15509v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文识别了联邦GNN全局聚合中的几何失效模式，并提出了GGRS（Global Geometric Reference Structure）框架，通过几何可接受性标准来调节客户端更新。其对GNN参数编码的关系转换的几何理解和提出的理论创新性解决方案，对您研究GNN和联邦学习的理论严谨性具有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15449v1",
+        "title": "TAROT: Test-driven and Capability-adaptive Curriculum Reinforcement Fine-tuning for Code Generation with Large Language Models",
+        "summary": "Large Language Models (LLMs) are changing the coding paradigm, known as vibe coding, yet synthesizing algorithmically sophisticated and robust code still remains a critical challenge. Incentivizing the deep reasoning capabilities of LLMs is essential to overcoming this hurdle. Reinforcement Fine-Tuning (RFT) has emerged as a promising strategy to address this need. However, most existing approaches overlook the heterogeneous difficulty and granularity inherent in test cases, leading to an imbalanced distribution of reward signals and consequently biased gradient updates during training. To address this, we propose Test-driven and cApability-adaptive cuRriculum reinfOrcement fine-Tuning (TAROT). TAROT systematically constructs, for each problem, a four-tier test suite (basic, intermediate, complex, edge), providing a controlled difficulty landscape for curriculum design and evaluation. Crucially, TAROT decouples curriculum progression from raw reward scores, enabling capability-conditioned evaluation and principled selection from a portfolio of curriculum policies rather than incidental test-case difficulty composition. This design fosters stable optimization and more efficient competency acquisition. Extensive experimental results reveal that the optimal curriculum for RFT in code generation is closely tied to a model's inherent capability, with less capable models achieving greater gains with an easy-to-hard progression, whereas more competent models excel under a hard-first curriculum. TAROT provides a reproducible method that adaptively tailors curriculum design to a model's capability, thereby consistently improving the functional correctness and robustness of the generated code. All code and data are released to foster reproducibility and advance community research at https://github.com/deep-diver/TAROT.",
+        "authors": "Chansung Park, Juyong Jiang, Fan Wang, Sayak Paul, Jiasi Shen, Jing Tang, Jianguo Li",
+        "url": "http://arxiv.org/abs/2602.15449v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15449v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了LLM-as-Judge场景下预算约束下的最优查询分配方法，利用多臂老虎机理论和集中不等式动态分配查询。其严谨的理论推导（包括最坏情况下的误差界限）和对LLM评估效率的显著提升，使其在数理统计和LLM应用方面都具有极高价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15396v1",
+        "title": "Efficient Generative Modeling beyond Memoryless Diffusion via Adjoint Schrödinger Bridge Matching",
+        "summary": "Diffusion models often yield highly curved trajectories and noisy score targets due to an uninformative, memoryless forward process that induces independent data-noise coupling. We propose Adjoint Schrödinger Bridge Matching (ASBM), a generative modeling framework that recovers optimal trajectories in high dimensions via two stages. First, we view the Schrödinger Bridge (SB) forward dynamic as a coupling construction problem and learn it through a data-to-energy sampling perspective that transports data to an energy-defined prior. Then, we learn the backward generative dynamic with a simple matching loss supervised by the induced optimal coupling. By operating in a non-memoryless regime, ASBM produces significantly straighter and more efficient sampling paths. Compared to prior works, ASBM scales to high-dimensional data with notably improved stability and efficiency. Extensive experiments on image generation show that ASBM improves fidelity with fewer sampling steps. We further showcase the effectiveness of our optimal trajectory via distillation to a one-step generator.",
+        "authors": "Jeongwoo Shin, Jinhwan Sul, Joonseok Lee, Jaewong Choi, Jaemoo Choi",
+        "url": "http://arxiv.org/abs/2602.15396v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15396v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ASBM（Adjoint Schrödinger Bridge Matching）框架通过两阶段方法恢复高维数据中的最优生成轨迹，超越了无记忆扩散模型。它将Schrödinger Bridge前向动态视为耦合构建问题，并通过数据到能量采样学习，然后用匹配损失学习后向生成动态。其在扩散模型理论上的重大突破和对采样效率的显著提升，对您研究前沿生成算法具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15393v1",
+        "title": "Doubly Stochastic Mean-Shift Clustering",
+        "summary": "Standard Mean-Shift algorithms are notoriously sensitive to the bandwidth hyperparameter, particularly in data-scarce regimes where fixed-scale density estimation leads to fragmentation and spurious modes. In this paper, we propose Doubly Stochastic Mean-Shift (DSMS), a novel extension that introduces randomness not only in the trajectory updates but also in the kernel bandwidth itself. By drawing both the data samples and the radius from a continuous uniform distribution at each iteration, DSMS effectively performs a better exploration of the density landscape. We show that this randomized bandwidth policy acts as an implicit regularization mechanism, and provide convergence theoretical results. Comparative experiments on synthetic Gaussian mixtures reveal that DSMS significantly outperforms standard and stochastic Mean-Shift baselines, exhibiting remarkable stability and preventing over-segmentation in sparse clustering scenarios without other performance degradation.",
+        "authors": "Tom Trigano, Yann Sepulcre, Itshak Lapidot",
+        "url": "http://arxiv.org/abs/2602.15393v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15393v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了双重随机均值漂移（DSMS）聚类算法，通过在轨迹更新和核带宽中引入随机性来解决标准均值漂移对带宽超参数的敏感性。它提供了收敛性理论结果，并在稀疏数据场景中表现出卓越的稳定性。其对经典机器学习算法的理论创新和严谨的数学推导，非常符合您的数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15379v1",
+        "title": "FlashMem: Supporting Modern DNN Workloads on Mobile with GPU Memory Hierarchy Optimizations",
+        "summary": "The increasing size and complexity of modern deep neural networks (DNNs) pose significant challenges for on-device inference on mobile GPUs, with limited memory and computational resources. Existing DNN acceleration frameworks primarily deploy a weight preloading strategy, where all model parameters are loaded into memory before execution on mobile GPUs. We posit that this approach is not adequate for modern DNN workloads that comprise very large model(s) and possibly execution of several distinct models in succession. In this work, we introduce FlashMem, a memory streaming framework designed to efficiently execute large-scale modern DNNs and multi-DNN workloads while minimizing memory consumption and reducing inference latency. Instead of fully preloading weights, FlashMem statically determines model loading schedules and dynamically streams them on demand, leveraging 2.5D texture memory to minimize data transformations and improve execution efficiency. Experimental results on 11 models demonstrate that FlashMem achieves 2.0x to 8.4x memory reduction and 1.7x to 75.0x speedup compared to existing frameworks, enabling efficient execution of large-scale models and multi-DNN support on resource-constrained mobile GPUs.",
+        "authors": "Zhihao Shu, Md Musfiqur Rahman Sanim, Hangyu Zheng, Kunxiong Zhu, Miao Yin, Gagan Agrawal, Wei Niu",
+        "url": "http://arxiv.org/abs/2602.15379v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15379v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FlashMem是一个内存流式框架，通过静态确定模型加载计划和动态按需流式传输，并利用2.5D纹理内存，显著优化了移动GPU上大型DNN工作负载的内存消耗和推理延迟。尽管更偏向系统优化，但其在GPU内存层次结构上的创新性优化方法，解决了DNN部署的关键瓶颈，具有很高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15367v1",
+        "title": "CDRL: A Reinforcement Learning Framework Inspired by Cerebellar Circuits and Dendritic Computational Strategies",
+        "summary": "Reinforcement learning (RL) has achieved notable performance in high-dimensional sequential decision-making tasks, yet remains limited by low sample efficiency, sensitivity to noise, and weak generalization under partial observability. Most existing approaches address these issues primarily through optimization strategies, while the role of architectural priors in shaping representation learning and decision dynamics is less explored. Inspired by structural principles of the cerebellum, we propose a biologically grounded RL architecture that incorporate large expansion, sparse connectivity, sparse activation, and dendritic-level modulation. Experiments on noisy, high-dimensional RL benchmarks show that both the cerebellar architecture and dendritic modulation consistently improve sample efficiency, robustness, and generalization compared to conventional designs. Sensitivity analysis of architectural parameters suggests that cerebellum-inspired structures can offer optimized performance for RL with constrained model parameters. Overall, our work underscores the value of cerebellar structural priors as effective inductive biases for RL.",
+        "authors": "Sibo Zhang, Rui Jing, Liangfu Lv, Jian Zhang, Yunliang Zang",
+        "url": "http://arxiv.org/abs/2602.15367v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15367v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CDRL是一个受小脑回路和树突计算策略启发的生物学基础强化学习架构。它通过整合大扩展、稀疏连接、稀疏激活和树突级调制等结构原则，提高了样本效率、鲁棒性和泛化能力。这种将生物学原理转化为AI算法架构的创新性，对您研究前沿算法和架构具有启发性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15325v1",
+        "title": "AgriWorld:A World Tools Protocol Framework for Verifiable Agricultural Reasoning with Code-Executing LLM Agents",
+        "summary": "Foundation models for agriculture are increasingly trained on massive spatiotemporal data (e.g., multi-spectral remote sensing, soil grids, and field-level management logs) and achieve strong performance on forecasting and monitoring. However, these models lack language-based reasoning and interactive capabilities, limiting their usefulness in real-world agronomic workflows. Meanwhile, large language models (LLMs) excel at interpreting and generating text, but cannot directly reason over high-dimensional, heterogeneous agricultural datasets. We bridge this gap with an agentic framework for agricultural science. It provides a Python execution environment, AgriWorld, exposing unified tools for geospatial queries over field parcels, remote-sensing time-series analytics, crop growth simulation, and task-specific predictors (e.g., yield, stress, and disease risk). On top of this environment, we design a multi-turn LLM agent, Agro-Reflective, that iteratively writes code, observes execution results, and refines its analysis via an execute-observe-refine loop. We introduce AgroBench, with scalable data generation for diverse agricultural QA spanning lookups, forecasting, anomaly detection, and counterfactual \"what-if\" analysis. Experiments outperform text-only and direct tool-use baselines, validating execution-driven reflection for reliable agricultural reasoning.",
+        "authors": "Zhixing Zhang, Jesen Zhang, Hao Liu, Qinhan Lv, Jing Yang, Kaitong Cai, Keze Wang",
+        "url": "http://arxiv.org/abs/2602.15325v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15325v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Obj-Disco框架，能够自动将LLM对齐奖励信号分解为人类可解释的自然语言目标组合。它通过迭代贪婪算法分析训练检查点之间的行为变化，识别并验证候选目标。这种对LLM对齐目标进行逆向工程的理论创新和对AI安全与透明度的巨大实践影响力，使其成为您研究LLM的必读论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.15318v1",
+        "title": "Sparrow: Text-Anchored Window Attention with Visual-Semantic Glimpsing for Speculative Decoding in Video LLMs",
+        "summary": "Although speculative decoding is widely used to accelerate Vision-Language Models (VLMs) inference, it faces severe performance collapse when applied to Video Large Language Models (Vid-LLMs). The draft model typically falls into the trap of attention dilution and negative visual gain due to key-value cache explosion and context window mismatches. We observe a visual semantic internalization phenomenon in Vid-LLMs, indicating that critical visual semantics are implicitly encoded into text hidden states during deep-layer interactions, which renders raw visual inputs structurally redundant during deep inference. To address this, we propose the Sparrow framework, which first utilizes visually-aware text-anchored window attention via hidden state reuse to fully offload visual computation to the target model, and leverages intermediate-layer visual state bridging to train the draft model with semantic-rich intermediate states, thereby filtering out low-level visual noise. Additionally, a multi-token prediction strategy is introduced to bridge the training-inference distribution shift. Experiments show that Sparrow achieves an average speedup of 2.82x even with 25k visual tokens, effectively resolving the performance degradation in long sequences and offering a practical solution for real-time long video tasks.",
+        "authors": "Libo Zhang, Zhaoning Zhang, Wangyang Hong, Peng Qiao, Dongsheng Li",
+        "url": "http://arxiv.org/abs/2602.15318v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.15318v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Sparrow框架解决了视频LLM（Vid-LLMs）中推测解码的性能崩溃问题。它通过视觉感知文本锚定窗口注意力、中间层视觉状态桥接和多token预测策略，显著提高了长序列的解码速度。这种对Vid-LLM架构和效率的创新性改进，直接解决了LLM应用中的关键瓶颈，具有很高的实践价值。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.16709v1",
+        "title": "Knowledge-Embedded Latent Projection for Robust Representation Learning",
+        "summary": "Latent space models are widely used for analyzing high-dimensional discrete data matrices, such as patient-feature matrices in electronic health records (EHRs), by capturing complex dependence structures through low-dimensional embeddings. However, estimation becomes challenging in the imbalanced regime, where one matrix dimension is much larger than the other. In EHR applications, cohort sizes are often limited by disease prevalence or data availability, whereas the feature space remains extremely large due to the breadth of medical coding system. Motivated by the increasing availability of external semantic embeddings, such as pre-trained embeddings of clinical concepts in EHRs, we propose a knowledge-embedded latent projection model that leverages semantic side information to regularize representation learning. Specifically, we model column embeddings as smooth functions of semantic embeddings via a mapping in a reproducing kernel Hilbert space. We develop a computationally efficient two-step estimation procedure that combines semantically guided subspace construction via kernel principal component analysis with scalable projected gradient descent. We establish estimation error bounds that characterize the trade-off between statistical error and approximation error induced by the kernel projection. Furthermore, we provide local convergence guarantees for our non-convex optimization procedure. Extensive simulation studies and a real-world EHR application demonstrate the effectiveness of the proposed method.",
+        "authors": "Weijing Tang, Ming Yuan, Zongqi Xia, Tianxi Cai",
+        "url": "http://arxiv.org/abs/2602.16709v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16709v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在表征学习中利用再生核希尔伯特空间（RKHS）进行正则化，并提供了明确的估计误差界和非凸优化过程的局部收敛性保证。这完美契合了您对“强大的理论基础”和“清晰的数学推导”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16698v1",
+        "title": "Causality is Key for Interpretability Claims to Generalise",
+        "summary": "Interpretability research on large language models (LLMs) has yielded important insights into model behaviour, yet recurring pitfalls persist: findings that do not generalise, and causal interpretations that outrun the evidence. Our position is that causal inference specifies what constitutes a valid mapping from model activations to invariant high-level structures, the data or assumptions needed to achieve it, and the inferences it can support. Specifically, Pearl's causal hierarchy clarifies what an interpretability study can justify. Observations establish associations between model behaviour and internal components. Interventions (e.g., ablations or activation patching) support claims how these edits affect a behavioural metric (\\eg, average change in token probabilities) over a set of prompts. However, counterfactual claims -- i.e., asking what the model output would have been for the same prompt under an unobserved intervention -- remain largely unverifiable without controlled supervision. We show how causal representation learning (CRL) operationalises this hierarchy, specifying which variables are recoverable from activations and under what assumptions. Together, these motivate a diagnostic framework that helps practitioners select methods and evaluations matching claims to evidence such that findings generalise.",
+        "authors": "Shruti Joshi, Aaron Mueller, David Klindt, Wieland Brendel, Patrik Reizinger, Dhanya Sridhar",
+        "url": "http://arxiv.org/abs/2602.16698v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16698v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这是一篇关于LLM可解释性的重要立场论文，它明确地将因果推断（特别是Pearl的因果层级和因果表征学习）应用于验证可解释性主张。其对因果逻辑的强调与您作为数理统计博士生的研究兴趣高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16688v1",
+        "title": "On the Hardness of Approximation of the Fair k-Center Problem",
+        "summary": "In this work, we study the hardness of approximation of the fair $k$-center problem. Here the data points are partitioned into groups and the task is to choose a prescribed number of data points from each group, called centers, while minimizing the maximum distance from any point to its closest center. Although a polynomial-time $3$-approximation is known for this problem in general metrics, it has remained open whether this approximation guarantee is tight or could be further improved, especially since the unconstrained $k$-center problem admits a polynomial-time factor-$2$ approximation. We resolve this open question by proving that, for every $ε>0$, achieving a $(3-ε)$-approximation is NP-hard, assuming $\\text{P} \\neq \\text{NP}$.   Our inapproximability results hold even when only two disjoint groups are present and at least one center must be chosen from each group. Further, it extends to the canonical one-per-group setting with $k$-groups (for arbitrary $k$), where exactly one center must be selected from each group. Consequently, the factor-$3$ barrier for fair $k$-center in general metric spaces is inherent, and existing $3$-approximation algorithms are optimal up to lower-order terms even in these restricted regimes. This result stands in sharp contrast to the $k$-supplier formulation, where both the unconstrained and fair variants admit factor-$3$ approximation in polynomial time.",
+        "authors": "Suhas Thejaswi",
+        "url": "http://arxiv.org/abs/2602.16688v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16688v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过证明公平k-中心问题的(3-ε)-近似是NP-hard，解决了该领域的一个开放问题。这种对算法近似硬度的严格数学证明，直接体现了您对“严谨的数学逻辑”的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16629v1",
+        "title": "Almost Sure Convergence of Differential Temporal Difference Learning for Average Reward Markov Decision Processes",
+        "summary": "The average reward is a fundamental performance metric in reinforcement learning (RL) focusing on the long-run performance of an agent. Differential temporal difference (TD) learning algorithms are a major advance for average reward RL as they provide an efficient online method to learn the value functions associated with the average reward in both on-policy and off-policy settings. However, existing convergence guarantees require a local clock in learning rates tied to state visit counts, which practitioners do not use and does not extend beyond tabular settings. We address this limitation by proving the almost sure convergence of on-policy $n$-step differential TD for any $n$ using standard diminishing learning rates without a local clock. We then derive three sufficient conditions under which off-policy $n$-step differential TD also converges without a local clock. These results strengthen the theoretical foundations of differential TD and bring its convergence analysis closer to practical implementations.",
+        "authors": "Ethan Blaser, Jiuqi Wang, Shangtong Zhang",
+        "url": "http://arxiv.org/abs/2602.16629v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16629v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文为差分时序差分（TD）学习算法提供了几乎必然收敛的理论保证，解决了现有收敛性证明的局限性。这对于强化学习中的优化收敛性研究具有重要意义，符合您对理论基础和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16612v1",
+        "title": "Causal and Compositional Abstraction",
+        "summary": "Abstracting from a low level to a more explanatory high level of description, and ideally while preserving causal structure, is fundamental to scientific practice, to causal inference problems, and to robust, efficient and interpretable AI. We present a general account of abstractions between low and high level models as natural transformations, focusing on the case of causal models. This provides a new formalisation of causal abstraction, unifying several notions in the literature, including constructive causal abstraction, Q-$τ$ consistency, abstractions based on interchange interventions, and `distributed' causal abstractions. Our approach is formalised in terms of category theory, and uses the general notion of a compositional model with a given set of queries and semantics in a monoidal, cd- or Markov category; causal models and their queries such as interventions being special cases. We identify two basic notions of abstraction: downward abstractions mapping queries from high to low level; and upward abstractions, mapping concrete queries such as Do-interventions from low to high. Although usually presented as the latter, we show how common causal abstractions may, more fundamentally, be understood in terms of the former. Our approach also leads us to consider a new stronger notion of `component-level' abstraction, applying to the individual components of a model. In particular, this yields a novel, strengthened form of constructive causal abstraction at the mechanism-level, for which we prove characterisation results. Finally, we show that abstraction can be generalised to further compositional models, including those with a quantum semantics implemented by quantum circuits, and we take first steps in exploring abstractions between quantum compositional circuit models and high-level classical causal models as a means to explainable quantum AI.",
+        "authors": "Robin Lorenz, Sean Tull",
+        "url": "http://arxiv.org/abs/2602.16612v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16612v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于范畴论的通用框架，用于形式化因果模型之间的抽象，统一并扩展了现有概念，甚至涉及量子因果模型。其高度抽象和严谨的数学形式化方法，以及对因果逻辑的深入探讨，是您会非常欣赏的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16568v1",
+        "title": "Separating Oblivious and Adaptive Models of Variable Selection",
+        "summary": "Sparse recovery is among the most well-studied problems in learning theory and high-dimensional statistics. In this work, we investigate the statistical and computational landscapes of sparse recovery with $\\ell_\\infty$ error guarantees. This variant of the problem is motivated by \\emph{variable selection} tasks, where the goal is to estimate the support of a $k$-sparse signal in $\\mathbb{R}^d$. Our main contribution is a provable separation between the \\emph{oblivious} (``for each'') and \\emph{adaptive} (``for all'') models of $\\ell_\\infty$ sparse recovery. We show that under an oblivious model, the optimal $\\ell_\\infty$ error is attainable in near-linear time with $\\approx k\\log d$ samples, whereas in an adaptive model, $\\gtrsim k^2$ samples are necessary for any algorithm to achieve this bound. This establishes a surprising contrast with the standard $\\ell_2$ setting, where $\\approx k \\log d$ samples suffice even for adaptive sparse recovery. We conclude with a preliminary examination of a \\emph{partially-adaptive} model, where we show nontrivial variable selection guarantees are possible with $\\approx k\\log d$ measurements.",
+        "authors": "Ziyun Chen, Jerry Li, Kevin Tian, Yusong Zhu",
+        "url": "http://arxiv.org/abs/2602.16568v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16568v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在稀疏恢复问题中，通过严格证明揭示了遗忘模型和自适应模型在L-infinity误差保证下的样本复杂度差异，达到了minimax最优性。这种对统计学习理论中模型能力的严格区分和证明，是数理统计博士生关注的重点。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16498v1",
+        "title": "Fast and Scalable Analytical Diffusion",
+        "summary": "Analytical diffusion models offer a mathematically transparent path to generative modeling by formulating the denoising score as an empirical-Bayes posterior mean. However, this interpretability comes at a prohibitive cost: the standard formulation necessitates a full-dataset scan at every timestep, scaling linearly with dataset size. In this work, we present the first systematic study addressing this scalability bottleneck. We challenge the prevailing assumption that the entire training data is necessary, uncovering the phenomenon of Posterior Progressive Concentration: the effective golden support of the denoising score is not static but shrinks asymptotically from the global manifold to a local neighborhood as the signal-to-noise ratio increases. Capitalizing on this, we propose Dynamic Time-Aware Golden Subset Diffusion (GoldDiff), a training-free framework that decouples inference complexity from dataset size. Instead of static retrieval, GoldDiff uses a coarse-to-fine mechanism to dynamically pinpoint the ''Golden Subset'' for inference. Theoretically, we derive rigorous bounds guaranteeing that our sparse approximation converges to the exact score. Empirically, GoldDiff achieves a $\\bf 71 \\times$ speedup on AFHQ while matching or achieving even better performance than full-scan baselines. Most notably, we demonstrate the first successful scaling of analytical diffusion to ImageNet-1K, unlocking a scalable, training-free paradigm for large-scale generative modeling.",
+        "authors": "Xinyi Shang, Peng Sun, Jingyu Lin, Zhiqiang Shen",
+        "url": "http://arxiv.org/abs/2602.16498v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16498v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文解决了分析扩散模型的可扩展性瓶颈，并从理论上推导了稀疏近似收敛到精确分数的严格界限。这种将理论保证与实际可扩展性相结合的工作，具有很高的价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16424v1",
+        "title": "Verifiable Semantics for Agent-to-Agent Communication",
+        "summary": "Multiagent AI systems require consistent communication, but we lack methods to verify that agents share the same understanding of the terms used. Natural language is interpretable but vulnerable to semantic drift, while learned protocols are efficient but opaque. We propose a certification protocol based on the stimulus-meaning model, where agents are tested on shared observable events and terms are certified if empirical disagreement falls below a statistical threshold. In this protocol, agents restricting their reasoning to certified terms (\"core-guarded reasoning\") achieve provably bounded disagreement. We also outline mechanisms for detecting drift (recertification) and recovering shared vocabulary (renegotiation). In simulations with varying degrees of semantic divergence, core-guarding reduces disagreement by 72-96%. In a validation with fine-tuned language models, disagreement is reduced by 51%. Our framework provides a first step towards verifiable agent-to-agent communication.",
+        "authors": "Philipp Schoenegger, Matt Carlson, Chris Schneider, Chris Daly",
+        "url": "http://arxiv.org/abs/2602.16424v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16424v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个可验证的协议，用于多智能体系统中的语义一致性，并提供了“可证明的有界分歧”保证。这种将形式化验证和理论保证应用于AI系统通信的工作，非常符合您对严谨逻辑和理论基础的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16328v1",
+        "title": "A general framework for modeling Gaussian process with qualitative and quantitative factors",
+        "summary": "Computer experiments involving both qualitative and quantitative (QQ) factors have attracted increasing attention. Gaussian process (GP) models have proven effective in this context by choosing specialized covariance functions for QQ factors. In this work, we extend the latent variable-based GP approach, which maps qualitative factors into a continuous latent space, by establishing a general framework to apply standard kernel functions to continuous latent variables. This approach provides a novel perspective for interpreting some existing GP models for QQ factors and introduces new covariance structures in some situations. The ordinal structure can be incorporated naturally and seamlessly in this framework. Furthermore, the Bayesian information criterion and leave-one-out cross-validation are employed for model selection and model averaging. The performance of the proposed method is comprehensively studied on several examples.",
+        "authors": "Linsui Deng, C. F. Jeff Wu",
+        "url": "http://arxiv.org/abs/2602.16328v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16328v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个通用的框架，用于处理具有定性和定量因素的高斯过程模型，并提供了新的协方差结构和模型选择方法。这体现了强大的统计建模能力和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16223v1",
+        "title": "Nonparametric estimation of linear multiplier for processes driven by a Hermite process",
+        "summary": "We study the problem of nonparametric estimation of the linear multiplier function $θ(t)$ for processes satisfying stochastic differential equations of the type $$dX_t=θ(t) X_tdt+ εdZ^{q,H}_t, X_0=x_0, 0\\leq t \\leq T$$ where $\\{Z^{q,H}_t, t \\geq 0\\}$ is a Hermite process with known order $q$ and known self-similarity parameter $H \\in (\\frac{1}{2},1).$ We investigate the asymptotic behaviour of the estimator of the unknown function $θ(t)$ as $ε\\rightarrow 0.$",
+        "authors": "B. L. S. Prakasa Rao",
+        "url": "http://arxiv.org/abs/2602.16223v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16223v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了由Hermite过程驱动的随机微分方程中线性乘子函数的非参数估计问题，并分析了估计量的渐近行为。这是高度严谨的数学统计和随机过程理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16283v1",
+        "title": "Orthogonal parametrisations of Extreme-Value distributions",
+        "summary": "Extreme value distributions are routinely employed to assess risks connected to extreme events in a large number of applications. They typically are two- or three- parameter distributions: the inference can be unstable, which is particularly problematic given the fact that often times these distributions are fitted to small samples. Furthermore, the distribution's parameters are generally not directly interpretable and not the key aim of the estimation. We present several orthogonal reparametrisations of the main extreme-value distributions, key in the modelling of rare events. In particular, we apply the theory developed in Cox and Reid (1987) to the Generalised Extreme-Value, Generalised Pareto, and Gumbel distributions. We illustrate the principal advantage of these reparametrisations in a simulation study.",
+        "authors": "Nathan Huet, Ilaria Prosdocimi",
+        "url": "http://arxiv.org/abs/2602.16283v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16283v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文基于Cox和Reid的理论，提出了极值分布的正交参数化，旨在提高推断的稳定性和可解释性。这是统计推断中一个严谨且具有理论深度的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16194v1",
+        "title": "Temporal Panel Selection in Ongoing Citizens' Assemblies",
+        "summary": "Permanent citizens' assemblies are ongoing deliberative bodies composed of randomly selected citizens, organized into panels that rotate over time. Unlike one-off panels, which represent the population in a single snapshot, permanent assemblies enable shifting participation across multiple rounds. This structure offers a powerful framework for ensuring that different groups of individuals are represented over time across successive panels. In particular, it allows smaller groups of individuals that may not warrant representation in every individual panel to be represented across a sequence of them. We formalize this temporal sortition framework by requiring proportional representation both within each individual panel and across the sequence of panels.   Building on the work of Ebadian and Micha (2025), we consider a setting in which the population lies in a metric space, and the goal is to achieve both proportional representation, ensuring that every group of citizens receives adequate representation, and individual fairness, ensuring that each individual has an equal probability of being selected. We extend the notion of representation to a temporal setting by requiring that every initial segment of the panel sequence, viewed as a cumulative whole, proportionally reflects the structure of the population. We present algorithms that provide varying guarantees of proportional representation, both within individual panels and across any sequence of panels, while also maintaining individual fairness over time.",
+        "authors": "Yusuf Hakan Kalayci, Evi Micha",
+        "url": "http://arxiv.org/abs/2602.16194v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16194v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文形式化了公民大会中的时间面板选择问题，并提出了在个体面板和面板序列中都保证比例代表性的算法。这种将公平性概念进行严格数学形式化并提供算法保证的工作，非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16167v1",
+        "title": "Muon with Spectral Guidance: Efficient Optimization for Scientific Machine Learning",
+        "summary": "Physics-informed neural networks and neural operators often suffer from severe optimization difficulties caused by ill-conditioned gradients, multi-scale spectral behavior, and stiffness induced by physical constraints. Recently, the Muon optimizer has shown promise by performing orthogonalized updates in the singular-vector basis of the gradient, thereby improving geometric conditioning. However, its unit-singular-value updates may lead to overly aggressive steps and lack explicit stability guarantees when applied to physics-informed learning. In this work, we propose SpecMuon, a spectral-aware optimizer that integrates Muon's orthogonalized geometry with a mode-wise relaxed scalar auxiliary variable (RSAV) mechanism. By decomposing matrix-valued gradients into singular modes and applying RSAV updates individually along dominant spectral directions, SpecMuon adaptively regulates step sizes according to the global loss energy while preserving Muon's scale-balancing properties. This formulation interprets optimization as a multi-mode gradient flow and enables principled control of stiff spectral components. We establish rigorous theoretical properties of SpecMuon, including a modified energy dissipation law, positivity and boundedness of auxiliary variables, and global convergence with a linear rate under the Polyak-Lojasiewicz condition. Numerical experiments on physics-informed neural networks, DeepONets, and fractional PINN-DeepONets demonstrate that SpecMuon achieves faster convergence and improved stability compared with Adam, AdamW, and the original Muon optimizer on benchmark problems such as the one-dimensional Burgers equation and fractional partial differential equations.",
+        "authors": "Binghang Lu, Jiahao Zhang, Guang Lin",
+        "url": "http://arxiv.org/abs/2602.16167v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16167v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SpecMuon优化器，并建立了其严格的理论性质，包括能量耗散定律、辅助变量的正性和有界性以及全局收敛性。这是优化理论领域一个非常严谨且具有深度的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16146v1",
+        "title": "Uncertainty-Aware Neural Multivariate Geostatistics",
+        "summary": "We propose Deep Neural Coregionalization, a scalable framework for uncertainty-aware multivariate geostatistics. DNC models multivariate spatial effects through spatially varying latent factors and loadings, assigning deep Gaussian process (DGP) priors to both the factors and the entries of the loading matrix. This joint construction learns shared latent spatial structure together with response-specific, location-dependent mixing weights, enabling flexible nonlinear and space-dependent associations within and across variables. A key contribution is a variational formulation that makes the DGP to deep neural network (DNN) correspondence explicit: maximizing the DGP evidence lower bound (ELBO) is equivalent to training DNNs with weight decay and Monte Carlo (MC) dropout. This yields fast mini-batch stochastic optimization without Markov Chain Monte Carlo (MCMC), while providing principled uncertainty quantification through MC-dropout forward passes as approximate posterior draws, producing calibrated credible surfaces for prediction and spatial effect estimation. Across simulations, DNC is competitive with existing spatial factor models, particularly under strong nonstationarity and complex cross-dependence, while delivering substantial computational gains. In a multivariate environmental case study, DNC captures spatially varying cross-variable interactions, produces interpretable maps of multivariate outcomes, and scales uncertainty quantification to large datasets with orders-of-magnitude reductions in runtime.",
+        "authors": "Yeseul Jeon, Aaron Scheffler, Rajarshi Guhaniyogi",
+        "url": "http://arxiv.org/abs/2602.16146v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16146v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了深度神经协同区域化（DNC）框架，并建立了DGP证据下界最大化与DNN训练之间的等价性，从而提供了原则性的不确定性量化。这种将统计模型与深度学习建立严格理论联系的工作，是您会高度重视的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16125v1",
+        "title": "On the Power of Source Screening for Learning Shared Feature Extractors",
+        "summary": "Learning with shared representation is widely recognized as an effective way to separate commonalities from heterogeneity across various heterogeneous sources. Most existing work includes all related data sources via simultaneously training a common feature extractor and source-specific heads. It is well understood that data sources with low relevance or poor quality may hinder representation learning. In this paper, we further dive into the question of which data sources should be learned jointly by focusing on the traditionally deemed ``good'' collection of sources, in which individual sources have similar relevance and qualities with respect to the true underlying common structure. Towards tractability, we focus on the linear setting where sources share a low-dimensional subspace. We find that source screening can play a central role in statistically optimal subspace estimation. We show that, for a broad class of problem instances, training on a carefully selected subset of sources suffices to achieve minimax optimality, even when a substantial portion of data is discarded. We formalize the notion of an informative subpopulation, develop algorithms and practical heuristics for identifying such subsets, and validate their effectiveness through both theoretical analysis and empirical evaluations on synthetic and real-world datasets.",
+        "authors": "Leo, Wang, Connor Mclaughlin, Lili Su",
+        "url": "http://arxiv.org/abs/2602.16125v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16125v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从理论上分析了源筛选在学习共享特征提取器中的作用，证明了在特定条件下，通过精心选择的数据子集可以实现minimax最优性。这种对统计学习理论中数据选择策略的严格分析，符合您对理论基础和统计保证的偏好。"
+    }
+]

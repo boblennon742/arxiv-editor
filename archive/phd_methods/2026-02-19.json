@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.17607v1",
+        "title": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+        "summary": "PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires substantial mathematical expertise and manual tuning. Recent neural network-based approaches improve flexibility but often demand high computational cost and suffer from limited interpretability. We introduce \\texttt{AutoNumerics}, a multi-agent framework that autonomously designs, implements, debugs, and verifies numerical solvers for general PDEs directly from natural language descriptions. Unlike black-box neural solvers, our framework generates transparent solvers grounded in classical numerical analysis. We introduce a coarse-to-fine execution strategy and a residual-based self-verification mechanism. Experiments on 24 canonical and real-world PDE problems demonstrate that \\texttt{AutoNumerics} achieves competitive or superior accuracy compared to existing neural and LLM-based baselines, and correctly selects numerical schemes based on PDE structural properties, suggesting its viability as an accessible paradigm for automated PDE solving.",
+        "authors": "Jianda Du, Youran Sun, Haizhao Yang",
+        "url": "http://arxiv.org/abs/2602.17607v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17607v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于e-value的统计水印框架Anchored E-Watermarking，将最优采样与随时有效推理相结合，解决了现有水印方法在采样分布选择和固定 horizon 假设检验上的局限性。其理论创新性体现在构建了一个用于检测过程的测试超鞅（test supermartingale），以保证随时停止时的Type-I错误率，并推导了最优e-value和最优预期停止时间。这对于LLM生成内容的溯源和管理是一个重要的理论突破，且能显著提高检测效率，解决实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17560v1",
+        "title": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
+        "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \\textit{(i)} the lack of a unified theoretical framework for guiding the design of steering directions, and \\textit{(ii)} an over-reliance on \\textit{one-step steering} that fail to capture complex patterns of activation distributions. In this work, we propose a unified ordinary differential equations (ODEs)-based \\textit{theoretical} framework for activation steering in LLM alignment. We show that conventional activation addition can be interpreted as a first-order approximation to the solution of an ODE. Based on this ODE perspective, identifying a steering direction becomes equivalent to designing a \\textit{barrier function} from control theory. Derived from this framework, we introduce ODESteer, a kind of ODE-based steering guided by barrier functions, which shows \\textit{empirical} advancement in LLM alignment. ODESteer identifies steering directions by defining the barrier function as the log-density ratio between positive and negative activations, and employs it to construct an ODE for \\textit{multi-step and adaptive} steering. Compared to state-of-the-art activation steering methods, ODESteer achieves consistent empirical improvements on diverse LLM alignment benchmarks, a notable $5.7\\%$ improvement over TruthfulQA, $2.5\\%$ over UltraFeedback, and $2.4\\%$ over RealToxicityPrompts. Our work establishes a principled new view of activation steering in LLM alignment by unifying its theoretical foundations via ODEs, and validating it empirically through the proposed ODESteer method.",
+        "authors": "Hongjue Zhao, Haosen Sun, Jiangtao Kong, Xiaochang Li, Qineng Wang, Liwei Jiang, Qi Zhu, Tarek Abdelzaher, Yejin Choi, Manling Li, Huajie Shao",
+        "url": "http://arxiv.org/abs/2602.17560v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17560v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的基于常微分方程（ODE）的LLM激活引导（activation steering）理论框架，将传统的激活加法解释为ODE解的一阶近似。它引入了控制理论中的障碍函数（barrier function）来设计引导方向，并提出了ODESteer方法。这种将LLM内部激活操作提升到统一理论框架的创新性非常高，具有严谨的数学推导基础，并能有效提升LLM的对齐性能，解决LLM应用中的对齐瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17554v1",
+        "title": "A Theoretical Framework for Modular Learning of Robust Generative Models",
+        "summary": "Training large-scale generative models is resource-intensive and relies heavily on heuristic dataset weighting. We address two fundamental questions: Can we train Large Language Models (LLMs) modularly-combining small, domain-specific experts to match monolithic performance-and can we do so robustly for any data mixture, eliminating heuristic tuning? We present a theoretical framework for modular generative modeling where a set of pre-trained experts are combined via a gating mechanism. We define the space of normalized gating functions, $G_{1}$, and formulate the problem as a minimax game to find a single robust gate that minimizes divergence to the worst-case data mixture. We prove the existence of such a robust gate using Kakutani's fixed-point theorem and show that modularity acts as a strong regularizer, with generalization bounds scaling with the lightweight gate's complexity. Furthermore, we prove that this modular approach can theoretically outperform models retrained on aggregate data, with the gap characterized by the Jensen-Shannon Divergence. Finally, we introduce a scalable Stochastic Primal-Dual algorithm and a Structural Distillation method for efficient inference. Empirical results on synthetic and real-world datasets confirm that our modular architecture effectively mitigates gradient conflict and can robustly outperform monolithic baselines.",
+        "authors": "Corinna Cortes, Mehryar Mohri, Yutao Zhong",
+        "url": "http://arxiv.org/abs/2602.17554v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17554v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个用于鲁棒生成模型模块化学习的理论框架，通过门控机制结合领域专家模型。它将问题建模为一个minimax博弈，并使用Kakutani不动点定理证明了鲁棒门控的存在性，同时给出了泛化界。这种模块化方法在理论上可以超越在聚合数据上重新训练的模型，解决了大规模生成模型训练资源密集和启发式数据集加权的实际瓶颈，具有极高的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17486v1",
+        "title": "Linear Convergence in Games with Delayed Feedback via Extra Prediction",
+        "summary": "Feedback delays are inevitable in real-world multi-agent learning. They are known to severely degrade performance, and the convergence rate under delayed feedback is still unclear, even for bilinear games. This paper derives the rate of linear convergence of Weighted Optimistic Gradient Descent-Ascent (WOGDA), which predicts future rewards with extra optimism, in unconstrained bilinear games. To analyze the algorithm, we interpret it as an approximation of the Extra Proximal Point (EPP), which is updated based on farther future rewards than the classical Proximal Point (PP). Our theorems show that standard optimism (predicting the next-step reward) achieves linear convergence to the equilibrium at a rate $\\exp(-Θ(t/m^{5}))$ after $t$ iterations for delay $m$. Moreover, employing extra optimism (predicting farther future reward) tolerates a larger step size and significantly accelerates the rate to $\\exp(-Θ(t/(m^{2}\\log m)))$. Our experiments also show accelerated convergence driven by the extra optimism and are qualitatively consistent with our theorems. In summary, this paper validates that extra optimism is a promising countermeasure against performance degradation caused by feedback delays.",
+        "authors": "Yuma Fujimoto, Kenshi Abe, Kaito Ariu",
+        "url": "http://arxiv.org/abs/2602.17486v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17486v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文推导了在延迟反馈下加权乐观梯度下降-上升（WOGDA）算法在线性博弈中的线性收敛速度。它将WOGDA解释为Extra Proximal Point (EPP) 的近似，并证明了额外乐观（extra optimism）可以显著加速收敛。该研究具有高度的理论严谨性，通过数学分析和实验验证了额外乐观作为对抗反馈延迟的有效方法，解决了多智能体学习中延迟反馈导致的性能下降这一实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17477v1",
+        "title": "Variational Grey-Box Dynamics Matching",
+        "summary": "Deep generative models such as flow matching and diffusion models have shown great potential in learning complex distributions and dynamical systems, but often act as black-boxes, neglecting underlying physics. In contrast, physics-based simulation models described by ODEs/PDEs remain interpretable, but may have missing or unknown terms, unable to fully describe real-world observations. We bridge this gap with a novel grey-box method that integrates incomplete physics models directly into generative models. Our approach learns dynamics from observational trajectories alone, without ground-truth physics parameters, in a simulation-free manner that avoids scalability and stability issues of Neural ODEs. The core of our method lies in modelling a structured variational distribution within the flow matching framework, by using two latent encodings: one to model the missing stochasticity and multi-modal velocity, and a second to encode physics parameters as a latent variable with a physics-informed prior. Furthermore, we present an adaptation of the framework to handle second-order dynamics. Our experiments on representative ODE/PDE problems show that our method performs on par with or superior to fully data-driven approaches and previous grey-box baselines, while preserving the interpretability of the physics model. Our code is available at https://github.com/DMML-Geneva/VGB-DM.",
+        "authors": "Gurjeet Sangra Singh, Frantzeska Lavda, Giangiacomo Mercatali, Alexandros Kalousis",
+        "url": "http://arxiv.org/abs/2602.17477v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17477v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的灰盒方法，将不完整的物理模型直接集成到生成模型（如流匹配）中。它通过建模结构化的变分分布，使用两个潜在编码来捕捉缺失的随机性和物理参数，并能处理二阶动力学。该方法在没有真实物理参数的情况下，仅从观测轨迹学习动力学，同时保持物理模型的可解释性，具有极高的理论创新性和严谨性，解决了科学建模中的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17315v1",
+        "title": "Flickering Multi-Armed Bandits",
+        "summary": "We introduce Flickering Multi-Armed Bandits (FMAB), a new MAB framework where the set of available arms (or actions) can change at each round, and the available set at any time may depend on the agent's previously selected arm. We model this constrained, evolving availability using random graph processes, where arms are nodes and the agent's movement is restricted to its local neighborhood. We analyze this problem under two random graph models: an i.i.d. Erdős--Rényi (ER) process and an Edge-Markovian process. We propose and analyze a two-phase algorithm that employs a lazy random walk for exploration to efficiently identify the optimal arm, followed by a navigation and commitment phase for exploitation. We establish high-probability and expected sublinear regret bounds for both graph settings. We show that the exploration cost of our algorithm is near-optimal by establishing a matching information-theoretic lower bound for this problem class, highlighting the fundamental cost of exploration under local-move constraints. We complement our theoretical guarantees with numerical simulations, including a scenario of a robotic ground vehicle scouting a disaster-affected region.",
+        "authors": "Sourav Chakraborty, Amit Kiran Rege, Claire Monteleoni, Lijun Chen",
+        "url": "http://arxiv.org/abs/2602.17315v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17315v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了Flickering Multi-Armed Bandits (FMAB)，一个全新的MAB框架，其中可用臂集在每一轮都可能变化，并且取决于智能体之前选择的臂。它提出了一个两阶段算法，并建立了高概率和预期次线性遗憾界，同时给出了匹配的信息论下界。该研究在MAB理论上具有极高的创新性和严谨性，为动态环境下的决策问题提供了新的理论工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17196v1",
+        "title": "EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models",
+        "summary": "Multimodal large language models (MLLMs) incur substantial inference cost due to the processing of hundreds of visual tokens per image. Although token pruning has proven effective for accelerating inference, determining when and where to prune remains largely heuristic. Existing approaches typically rely on static, empirically selected layers, which limit interpretability and transferability across models. In this work, we introduce a matrix-entropy perspective and identify an \"Entropy Collapse Layer\" (ECL), where the information content of visual representations exhibits a sharp and consistent drop, which provides a principled criterion for selecting the pruning stage. Building on this observation, we propose EntropyPrune, a novel matrix-entropy-guided token pruning framework that quantifies the information value of individual visual tokens and prunes redundant ones without relying on attention maps. Moreover, to enable efficient computation, we exploit the spectral equivalence of dual Gram matrices, reducing the complexity of entropy computation and yielding up to a 64x theoretical speedup. Extensive experiments on diverse multimodal benchmarks demonstrate that EntropyPrune consistently outperforms state-of-the-art pruning methods in both accuracy and efficiency. On LLaVA-1.5-7B, our method achieves a 68.2% reduction in FLOPs while preserving 96.0% of the original performance. Furthermore, EntropyPrune generalizes effectively to high-resolution and video-based models, highlighting the strong robustness and scalability in practical MLLM acceleration. The code will be publicly available at https://github.com/YahongWang1/EntropyPrune.",
+        "authors": "Yahong Wang, Juncheng Wu, Zhangkai Ni, Chengmei Yang, Yihang Liu, Longzhen Yang, Yuyin Zhou, Ying Wen, Lianghua He",
+        "url": "http://arxiv.org/abs/2602.17196v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17196v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了矩阵熵视角和“熵坍塌层”（ECL）来指导多模态大语言模型（MLLMs）的视觉token剪枝。它量化了单个视觉token的信息价值，并通过利用双Gram矩阵的谱等价性来提高熵计算效率。该方法在理论上具有极高的创新性和严谨性，通过原理性地选择剪枝阶段，实现了显著的FLOPs减少（68.2%）而性能损失极小，有效解决了MLLM模型压缩和计算效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17176v1",
+        "title": "Universal Fine-Grained Symmetry Inference and Enforcement for Rigorous Crystal Structure Prediction",
+        "summary": "Crystal structure prediction (CSP), which aims to predict the three-dimensional atomic arrangement of a crystal from its composition, is central to materials discovery and mechanistic understanding. Existing deep learning models often treat crystallographic symmetry only as a soft heuristic or rely on space group and Wyckoff templates retrieved from known structures, which limits both physical fidelity and the ability to discover genuinely new material structures. In contrast to retrieval-based methods, our approach leverages large language models to encode chemical semantics and directly generate fine-grained Wyckoff patterns from composition, effectively circumventing the limitations inherent to database lookups. Crucially, we incorporate domain knowledge into the generative process through an efficient constrained-optimization search that rigorously enforces algebraic consistency between site multiplicities and atomic stoichiometry. By integrating this symmetry-consistent template into a diffusion backbone, our approach constrains the stochastic generative trajectory to a physically valid geometric manifold. This framework achieves state-of-the-art performance across stability, uniqueness, and novelty (SUN) benchmarks, alongside superior matching performance, thereby establishing a new paradigm for the rigorous exploration of targeted crystallographic space. This framework enables efficient expansion into previously uncharted materials space, eliminating reliance on existing databases or a priori structural knowledge.",
+        "authors": "Shi Yin, Jinming Mu, Xudong Zhu, Lixin He",
+        "url": "http://arxiv.org/abs/2602.17176v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17176v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种通过LLM编码化学语义并直接生成Wyckoff模式的方法，用于严格的晶体结构预测。它通过高效的约束优化搜索来严格执行位点多重性和原子化学计量的代数一致性，并将这种对称性一致的模板集成到扩散模型中。该方法在理论上具有极高的创新性和严谨性，通过将领域知识融入生成过程，解决了现有深度学习模型在物理保真度和发现新材料结构方面的局限性，是AI辅助科学发现的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17155v1",
+        "title": "Powering Up Zeroth-Order Training via Subspace Gradient Orthogonalization",
+        "summary": "Zeroth-order (ZO) optimization provides a gradient-free alternative to first-order (FO) methods by estimating gradients via finite differences of function evaluations, and has recently emerged as a memory-efficient paradigm for fine-tuning large-scale models by avoiding backpropagation. However, ZO optimization has a fundamental tension between accuracy and query efficiency. In this work, we show that ZO optimization can be substantially improved by unifying two complementary principles: (i) a projection-based subspace view that reduces gradient estimation variance by exploiting the intrinsic low-rank structure of model updates, and (ii) Muon-style spectral optimization that applies gradient orthogonalization to extract informative spectral structure from noisy ZO gradients. These findings form a unified framework of subspace gradient orthogonalization, which we instantiate in a new method, ZO-Muon, admitting a natural interpretation as a low-rank Muon optimizer in the ZO setting. Extensive experiments on large language models (LLMs) and vision transformers (ViTs) demonstrate that ZO-Muon significantly accelerates convergence and achieves a win-win improvement in accuracy and query/runtime efficiency. Notably, compared to the popular MeZO baseline, ZO-Muon requires only 24.7% of the queries to reach the same SST-2 performance for LLM fine-tuning, and improves accuracy by 25.1% on ViT-B fine-tuning on CIFAR-100.",
+        "authors": "Yicheng Lang, Changsheng Wang, Yihua Zhang, Mingyi Hong, Zheng Zhang, Wotao Yin, Sijia Liu",
+        "url": "http://arxiv.org/abs/2602.17155v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17155v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过统一基于投影的子空间视图和Muon风格的谱优化，显著改进了零阶（ZO）优化。它引入了ZO-Muon方法，作为ZO设置下的低秩Muon优化器。该研究具有极高的理论创新性和严谨性，通过数学分析解决了ZO优化在准确性和查询效率之间的根本矛盾，显著加速了LLM和ViT的收敛，并提高了准确性和效率，解决了计算效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17115v1",
+        "title": "Semi-Supervised Learning on Graphs using Graph Neural Networks",
+        "summary": "Graph neural networks (GNNs) work remarkably well in semi-supervised node regression, yet a rigorous theory explaining when and why they succeed remains lacking. To address this gap, we study an aggregate-and-readout model that encompasses several common message passing architectures: node features are first propagated over the graph then mapped to responses via a nonlinear function. For least-squares estimation over GNNs with linear graph convolutions and a deep ReLU readout, we prove a sharp non-asymptotic risk bound that separates approximation, stochastic, and optimization errors. The bound makes explicit how performance scales with the fraction of labeled nodes and graph-induced dependence. Approximation guarantees are further derived for graph-smoothing followed by smooth nonlinear readouts, yielding convergence rates that recover classical nonparametric behavior under full supervision while characterizing performance when labels are scarce. Numerical experiments validate our theory, providing a systematic framework for understanding GNN performance and limitations.",
+        "authors": "Juntong Chen, Claire Donnat, Olga Klopp, Johannes Schmidt-Hieber",
+        "url": "http://arxiv.org/abs/2602.17115v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17115v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为图神经网络（GNNs）在半监督节点回归中的成功提供了一个严谨的理论解释。它证明了一个尖锐的非渐近风险界，分离了近似误差、随机误差和优化误差，并为图平滑后的平滑非线性读出导出了收敛速率。该研究具有极高的理论严谨性，为理解GNN的性能和局限性提供了一个系统的框架，对于AI前沿算法的理论基础研究至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17095v1",
+        "title": "FLoRG: Federated Fine-tuning with Low-rank Gram Matrices and Procrustes Alignment",
+        "summary": "Parameter-efficient fine-tuning techniques such as low-rank adaptation (LoRA) enable large language models (LLMs) to adapt to downstream tasks efficiently. Federated learning (FL) further facilitates this process by enabling collaborative fine-tuning across distributed clients without sharing private data. However, the use of two separate low-rank matrices in LoRA for federated fine-tuning introduces two types of challenges. The first challenge arises from the error induced by separately aggregating those two low-rank matrices. The second challenge occurs even when the product of two low-rank matrices is aggregated. The server needs to recover factors via matrix decomposition, which is non-unique and can introduce decomposition drift. To tackle the aforementioned challenges, we propose FLoRG, a federated fine-tuning framework which employs a single low-rank matrix for fine-tuning and aggregates its Gram matrix (i.e., the matrix of inner products of its column vectors), eliminating the aggregation error while also reducing the communication overhead. FLoRG minimizes the decomposition drift by introducing a Procrustes alignment approach which aligns the decomposed matrix between consecutive fine-tuning rounds for consistent updates. We theoretically analyze the convergence of FLoRG and prove that adopting the Procrustes alignment results in a tighter convergence bound. Experimental results across multiple LLM fine-tuning benchmarks demonstrate that FLoRG outperforms five state-of-the-art baseline schemes in the downstream task accuracy and can reduce the communication overhead by up to 2041$\\times$.",
+        "authors": "Chuiyang Meng, Ming Tang, Vincent W. S. Wong",
+        "url": "http://arxiv.org/abs/2602.17095v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17095v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了FLoRG，一个联邦微调框架，通过使用单个低秩矩阵并聚合其Gram矩阵来解决LoRA在联邦学习中的挑战。它引入了Procrustes对齐方法来最小化分解漂移，并理论分析了收敛性，证明了对齐可以带来更紧密的收敛界。该研究具有极高的理论创新性和严谨性，显著优于现有联邦学习方案，并将通信开销降低高达2041倍，解决了模型压缩、数据效率和通信效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17089v1",
+        "title": "Synergizing Transport-Based Generative Models and Latent Geometry for Stochastic Closure Modeling",
+        "summary": "Diffusion models recently developed for generative AI tasks can produce high-quality samples while still maintaining diversity among samples to promote mode coverage, providing a promising path for learning stochastic closure models. Compared to other types of generative AI models, such as GANs and VAEs, the sampling speed is known as a key disadvantage of diffusion models. By systematically comparing transport-based generative models on a numerical example of 2D Kolmogorov flows, we show that flow matching in a lower-dimensional latent space is suited for fast sampling of stochastic closure models, enabling single-step sampling that is up to two orders of magnitude faster than iterative diffusion-based approaches. To control the latent space distortion and thus ensure the physical fidelity of the sampled closure term, we compare the implicit regularization offered by a joint training scheme against two explicit regularizers: metric-preserving (MP) and geometry-aware (GA) constraints. Besides offering a faster sampling speed, both explicitly and implicitly regularized latent spaces inherit the key topological information from the lower-dimensional manifold of the original complex dynamical system, which enables the learning of stochastic closure models without demanding a huge amount of training data.",
+        "authors": "Xinghao Dong, Huchen Yang, Jin-long Wu",
+        "url": "http://arxiv.org/abs/2602.17089v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文系统比较了基于传输的生成模型和潜在几何学在随机闭合建模中的应用。它表明在低维潜在空间中的流匹配可以实现单步采样，比迭代扩散方法快两个数量级，同时通过隐式或显式正则化（度量保持、几何感知）控制潜在空间畸变，确保物理保真度。该研究具有极高的理论创新性和严谨性，解决了科学建模中采样速度和数据效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17063v1",
+        "title": "Sign Lock-In: Randomly Initialized Weight Signs Persist and Bottleneck Sub-Bit Model Compression",
+        "summary": "Sub-bit model compression seeks storage below one bit per weight; as magnitudes are aggressively compressed, the sign bit becomes a fixed-cost bottleneck. Across Transformers, CNNs, and MLPs, learned sign matrices resist low-rank approximation and are spectrally indistinguishable from an i.i.d. Rademacher baseline. Despite this apparent randomness, most weights retain their initialization signs; flips primarily occur via rare near-zero boundary crossings, suggesting that sign-pattern randomness is largely inherited from initialization. We formalize this behavior with sign lock-in theory, a stopping-time analysis of sign flips under SGD noise. Under bounded updates and a rare re-entry condition into a small neighborhood around zero, the number of effective sign flips exhibits a geometric tail. Building on this mechanism, we introduce a gap-based initialization and a lightweight outward-drift regularizer, reducing the effective flip rate to approximately $10^{-3}$ with only about a one-point increase in perplexity.",
+        "authors": "Akira Sakai, Yuma Ichikawa",
+        "url": "http://arxiv.org/abs/2602.17063v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17063v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文识别了“符号锁定”（sign lock-in）作为亚比特模型压缩的瓶颈，并用符号锁定理论（停止时间分析）对其行为进行了形式化。它引入了基于间隙的初始化和轻量级外漂移正则化器，显著降低了有效翻转率。该研究具有极高的理论创新性和严谨性，解决了模型压缩中的一个根本性瓶颈，对模型效率有重大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16966v1",
+        "title": "A Unified Framework for Locality in Scalable MARL",
+        "summary": "Scalable Multi-Agent Reinforcement Learning (MARL) is fundamentally challenged by the curse of dimensionality. A common solution is to exploit locality, which hinges on an Exponential Decay Property (EDP) of the value function. However, existing conditions that guarantee the EDP are often conservative, as they are based on worst-case, environment-only bounds (e.g., supremums over actions) and fail to capture the regularizing effect of the policy itself. In this work, we establish that locality can also be a \\emph{policy-dependent} phenomenon. Our central contribution is a novel decomposition of the policy-induced interdependence matrix, $H^π$, which decouples the environment's sensitivity to state ($E^{\\mathrm{s}}$) and action ($E^{\\mathrm{a}}$) from the policy's sensitivity to state ($Π(π)$). This decomposition reveals that locality can be induced by a smooth policy (small $Π(π)$) even when the environment is strongly action-coupled, exposing a fundamental locality-optimality tradeoff. We use this framework to derive a general spectral condition $ρ(E^{\\mathrm{s}}+E^{\\mathrm{a}}Π(π)) < 1$ for exponential decay, which is strictly tighter than prior norm-based conditions. Finally, we leverage this theory to analyze a provably-sound localized block-coordinate policy improvement framework with guarantees tied directly to this spectral radius.",
+        "authors": "Sourav Chakraborty, Amit Kiran Rege, Claire Monteleoni, Lijun Chen",
+        "url": "http://arxiv.org/abs/2602.16966v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16966v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的框架来理解可扩展多智能体强化学习（MARL）中的局部性。它建立在局部性可以是策略依赖的现象上，并提出了策略诱导互依赖矩阵的新分解。该研究导出了一个严格优于现有范数条件的指数衰减谱条件，具有极高的理论创新性和严谨性，解决了MARL中维度灾难的实际瓶颈。"
+    }
+]

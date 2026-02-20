@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.17592v1",
+        "title": "BMW: Bayesian Model-Assisted Adaptive Phase II Clinical Trial Design for Win Ratio Statistic",
+        "summary": "The win ratio (WR) statistic is increasingly used to evaluate treatment effects based on prioritized composite endpoints, yet existing Bayesian adaptive designs are not directly applicable because the WR is a summary statistic derived from pairwise comparisons and does not correspond to a unique data-generating mechanism. We propose a Bayesian model-assisted adaptive design for randomized phase II clinical trials based on the WR statistic, referred to as the BMW design. The proposed design uses the joint asymptotic distribution of WR test statistics across interim and final analyses to compute posterior probabilities without specifying the underlying outcome distribution. The BMW design allows flexible interim monitoring with early stopping for futility or superiority and is extended to jointly evaluate efficacy and toxicity using a graphical testing procedure that controls the family-wise error rate (FWER). Simulation studies demonstrate that the BMW design maintains valid type I error and FWER control, achieves power comparable to conventional methods, and substantially reduces expected sample size. An R Shiny application is provided to facilitate practical implementation.",
+        "authors": "Di Zhu, Yong Zang",
+        "url": "http://arxiv.org/abs/2602.17592v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17592v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于Win Ratio统计量的贝叶斯模型辅助自适应II期临床试验设计。它利用WR检验统计量在中期和最终分析中的联合渐近分布来计算后验概率，而无需指定底层结果分布。这体现了强大的统计学理论基础和严谨的数学推导，对临床试验设计有重要的实践指导意义，完美符合您对统计保证和严谨数学逻辑的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17568v1",
+        "title": "Be Wary of Your Time Series Preprocessing",
+        "summary": "Normalization and scaling are fundamental preprocessing steps in time series modeling, yet their role in Transformer-based models remains underexplored from a theoretical perspective. In this work, we present the first formal analysis of how different normalization strategies, specifically instance-based and global scaling, impact the expressivity of Transformer-based architectures for time series representation learning. We propose a novel expressivity framework tailored to time series, which quantifies a model's ability to distinguish between similar and dissimilar inputs in the representation space. Using this framework, we derive theoretical bounds for two widely used normalization methods: Standard and Min-Max scaling. Our analysis reveals that the choice of normalization strategy can significantly influence the model's representational capacity, depending on the task and data characteristics. We complement our theory with empirical validation on classification and forecasting benchmarks using multiple Transformer-based models. Our results show that no single normalization method consistently outperforms others, and in some cases, omitting normalization entirely leads to superior performance. These findings highlight the critical role of preprocessing in time series learning and motivate the need for more principled normalization strategies tailored to specific tasks and datasets.",
+        "authors": "Sofiane Ennadir, Tianze Wang, Oleg Smirnov, Sahar Asadi, Lele Cao",
+        "url": "http://arxiv.org/abs/2602.17568v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17568v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究首次从理论角度深入分析了时间序列Transformer模型中不同归一化策略对模型表达能力的影响。它提出了一个新颖的、针对时间序列的表达能力框架，并推导了两种常用归一化方法的理论界限。这篇论文提供了对现代AI系统（Transformer）底层机制的数学洞察，具有很强的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17560v1",
+        "title": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
+        "summary": "Activation steering, or representation engineering, offers a lightweight approach to align large language models (LLMs) by manipulating their internal activations at inference time. However, current methods suffer from two key limitations: \\textit{(i)} the lack of a unified theoretical framework for guiding the design of steering directions, and \\textit{(ii)} an over-reliance on \\textit{one-step steering} that fail to capture complex patterns of activation distributions. In this work, we propose a unified ordinary differential equations (ODEs)-based \\textit{theoretical} framework for activation steering in LLM alignment. We show that conventional activation addition can be interpreted as a first-order approximation to the solution of an ODE. Based on this ODE perspective, identifying a steering direction becomes equivalent to designing a \\textit{barrier function} from control theory. Derived from this framework, we introduce ODESteer, a kind of ODE-based steering guided by barrier functions, which shows \\textit{empirical} advancement in LLM alignment. ODESteer identifies steering directions by defining the barrier function as the log-density ratio between positive and negative activations, and employs it to construct an ODE for \\textit{multi-step and adaptive} steering. Compared to state-of-the-art activation steering methods, ODESteer achieves consistent empirical improvements on diverse LLM alignment benchmarks, a notable $5.7\\%$ improvement over TruthfulQA, $2.5\\%$ over UltraFeedback, and $2.4\\%$ over RealToxicityPrompts. Our work establishes a principled new view of activation steering in LLM alignment by unifying its theoretical foundations via ODEs, and validating it empirically through the proposed ODESteer method.",
+        "authors": "Hongjue Zhao, Haosen Sun, Jiangtao Kong, Xiaochang Li, Qineng Wang, Liwei Jiang, Qi Zhu, Tarek Abdelzaher, Yejin Choi, Manling Li, Huajie Shao",
+        "url": "http://arxiv.org/abs/2602.17560v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17560v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的、基于常微分方程（ODE）的LLM对齐理论框架。它将传统的激活引导解释为ODE解的一阶近似，并从控制理论中引入障碍函数来设计引导方向。这种将LLM内部机制与ODE和控制理论相结合的方法，展现了极高的理论严谨性和数学推导的清晰性，对理解和控制现代AI系统行为具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17554v1",
+        "title": "A Theoretical Framework for Modular Learning of Robust Generative Models",
+        "summary": "Training large-scale generative models is resource-intensive and relies heavily on heuristic dataset weighting. We address two fundamental questions: Can we train Large Language Models (LLMs) modularly-combining small, domain-specific experts to match monolithic performance-and can we do so robustly for any data mixture, eliminating heuristic tuning? We present a theoretical framework for modular generative modeling where a set of pre-trained experts are combined via a gating mechanism. We define the space of normalized gating functions, $G_{1}$, and formulate the problem as a minimax game to find a single robust gate that minimizes divergence to the worst-case data mixture. We prove the existence of such a robust gate using Kakutani's fixed-point theorem and show that modularity acts as a strong regularizer, with generalization bounds scaling with the lightweight gate's complexity. Furthermore, we prove that this modular approach can theoretically outperform models retrained on aggregate data, with the gap characterized by the Jensen-Shannon Divergence. Finally, we introduce a scalable Stochastic Primal-Dual algorithm and a Structural Distillation method for efficient inference. Empirical results on synthetic and real-world datasets confirm that our modular architecture effectively mitigates gradient conflict and can robustly outperform monolithic baselines.",
+        "authors": "Corinna Cortes, Mehryar Mohri, Yutao Zhong",
+        "url": "http://arxiv.org/abs/2602.17554v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17554v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个用于模块化学习鲁棒生成模型的理论框架。它将问题表述为一个极小极大博弈，利用Kakutani不动点定理证明了鲁棒门控的存在性，并推导了泛化界限，用Jensen-Shannon散度表征了模块化方法的优势。其深厚的理论基础、数学证明和对生成模型的潜在影响，使其成为一篇高度推荐的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17543v1",
+        "title": "genriesz: A Python Package for Automatic Debiased Machine Learning with Generalized Riesz Regression",
+        "summary": "Efficient estimation of causal and structural parameters can be automated using the Riesz representation theorem and debiased machine learning (DML). We present genriesz, an open-source Python package that implements automatic DML and generalized Riesz regression, a unified framework for estimating Riesz representers by minimizing empirical Bregman divergences. This framework includes covariate balancing, nearest-neighbor matching, calibrated estimation, and density ratio estimation as special cases. A key design principle of the package is automatic regressor balancing (ARB): given a Bregman generator $g$ and a representer model class, genriesz} automatically constructs a compatible link function so that the generalized Riesz regression estimator satisfies balancing (moment-matching) optimality conditions in a user-chosen basis. The package provides a modulr interface for specifying (i) the target linear functional via a black-box evaluation oracle, (ii) the representer model via basis functions (polynomial, RKHS approximations, random forest leaf encodings, neural embeddings, and a nearest-neighbor catchment basis), and (iii) the Bregman generator, with optional user-supplied derivatives. It returns regression adjustment (RA), Riesz weighting (RW), augmented Riesz weighting (ARW), and TMLE-style estimators with cross-fitting, confidence intervals, and $p$-values. We highlight representative workflows for estimation problems such as the average treatment effect (ATE), ATE on treated (ATT), and average marginal effect estimation. The Python package is available at https://github.com/MasaKat0/genriesz and on PyPI.",
+        "authors": "Masahiro Kato",
+        "url": "http://arxiv.org/abs/2602.17543v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17543v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文介绍了一个Python包，实现了基于Riesz表示定理和去偏机器学习（DML）的自动化因果推断和广义Riesz回归。它通过最小化经验Bregman散度来估计Riesz表示器，并提供了交叉验证、置信区间和p值。其在因果推断和统计学上的严谨理论基础，以及对自动化因果参数估计的巨大实践影响力，使其非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17493v1",
+        "title": "Learning with Boolean threshold functions",
+        "summary": "We develop a method for training neural networks on Boolean data in which the values at all nodes are strictly $\\pm 1$, and the resulting models are typically equivalent to networks whose nonzero weights are also $\\pm 1$. The method replaces loss minimization with a nonconvex constraint formulation. Each node implements a Boolean threshold function (BTF), and training is expressed through a divide-and-concur decomposition into two complementary constraints: one enforces local BTF consistency between inputs, weights, and output; the other imposes architectural concurrence, equating neuron outputs with downstream inputs and enforcing weight equality across training-data instantiations of the network. The reflect-reflect-relax (RRR) projection algorithm is used to reconcile these constraints.   Each BTF constraint includes a lower bound on the margin. When this bound is sufficiently large, the learned representations are provably sparse and equivalent to networks composed of simple logical gates with $\\pm 1$ weights. Across a range of tasks -- including multiplier-circuit discovery, binary autoencoding, logic-network inference, and cellular automata learning -- the method achieves exact solutions or strong generalization in regimes where standard gradient-based methods struggle. These results demonstrate that projection-based constraint satisfaction provides a viable and conceptually distinct foundation for learning in discrete neural systems, with implications for interpretability and efficient inference.",
+        "authors": "Veit Elser, Manish Krishan Lal",
+        "url": "http://arxiv.org/abs/2602.17493v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17493v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种为神经加性模型（NAMs）生成可证明的最小基数解释的算法。它解决了传统神经网络解释方法计算不可行的问题，通过对NAMs的特定算法，实现了对解释的严格保证和计算效率。这在可解释AI领域提供了坚实的理论基础和数学保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17486v1",
+        "title": "Linear Convergence in Games with Delayed Feedback via Extra Prediction",
+        "summary": "Feedback delays are inevitable in real-world multi-agent learning. They are known to severely degrade performance, and the convergence rate under delayed feedback is still unclear, even for bilinear games. This paper derives the rate of linear convergence of Weighted Optimistic Gradient Descent-Ascent (WOGDA), which predicts future rewards with extra optimism, in unconstrained bilinear games. To analyze the algorithm, we interpret it as an approximation of the Extra Proximal Point (EPP), which is updated based on farther future rewards than the classical Proximal Point (PP). Our theorems show that standard optimism (predicting the next-step reward) achieves linear convergence to the equilibrium at a rate $\\exp(-Θ(t/m^{5}))$ after $t$ iterations for delay $m$. Moreover, employing extra optimism (predicting farther future reward) tolerates a larger step size and significantly accelerates the rate to $\\exp(-Θ(t/(m^{2}\\log m)))$. Our experiments also show accelerated convergence driven by the extra optimism and are qualitatively consistent with our theorems. In summary, this paper validates that extra optimism is a promising countermeasure against performance degradation caused by feedback delays.",
+        "authors": "Yuma Fujimoto, Kenshi Abe, Kaito Ariu",
+        "url": "http://arxiv.org/abs/2602.17486v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17486v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了多智能体学习中延迟反馈下的收敛性问题。它推导了加权乐观梯度下降-上升（WOGDA）算法在线性收敛方面的理论速率，并将其解释为Extra Proximal Point的近似。这种对优化算法收敛性的严谨数学分析，对于理解和设计鲁棒的多智能体AI系统至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17423v1",
+        "title": "Convergence Analysis of Two-Layer Neural Networks under Gaussian Input Masking",
+        "summary": "We investigate the convergence guarantee of two-layer neural network training with Gaussian randomly masked inputs. This scenario corresponds to Gaussian dropout at the input level, or noisy input training common in sensor networks, privacy-preserving training, and federated learning, where each user may have access to partial or corrupted features. Using a Neural Tangent Kernel (NTK) analysis, we demonstrate that training a two-layer ReLU network with Gaussian randomly masked inputs achieves linear convergence up to an error region proportional to the mask's variance. A key technical contribution is resolving the randomness within the non-linear activation, a problem of independent interest.",
+        "authors": "Afroditi Kolomvaki, Fangshuo Liao, Evan Dramko, Ziyun Guang, Anastasios Kyrillidis",
+        "url": "http://arxiv.org/abs/2602.17423v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17423v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究利用神经切线核（NTK）分析，证明了在高斯随机掩码输入下两层ReLU网络的线性收敛性，并量化了误差区域。它解决了非线性激活中随机性的关键技术问题。这篇论文对神经网络训练的理论理解有重要贡献，提供了严谨的收敛性保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17375v1",
+        "title": "MDP Planning as Policy Inference",
+        "summary": "We cast episodic Markov decision process (MDP) planning as Bayesian inference over _policies_. A policy is treated as the latent variable and is assigned an unnormalized probability of optimality that is monotone in its expected return, yielding a posterior distribution whose modes coincide with return-maximizing solutions while posterior dispersion represents uncertainty over optimal behavior. To approximate this posterior in discrete domains, we adapt variational sequential Monte Carlo (VSMC) to inference over deterministic policies under stochastic dynamics, introducing a sweep that enforces policy consistency across revisited states and couples transition randomness across particles to avoid confounding from simulator noise. Acting is performed by posterior predictive sampling, which induces a stochastic control policy through a Thompson-sampling interpretation rather than entropy regularization. Across grid worlds, Blackjack, Triangle Tireworld, and Academic Advising, we analyze the structure of inferred policy distributions and compare the resulting behavior to discrete Soft Actor-Critic, highlighting qualitative and statistical differences that arise from policy-level uncertainty.",
+        "authors": "David Tolpin",
+        "url": "http://arxiv.org/abs/2602.17375v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17375v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将情景马尔可夫决策过程（MDP）规划重新定义为策略上的贝叶斯推断问题。它利用变分序贯蒙特卡洛（VSMC）来近似后验分布，并引入了Thompson采样解释。这种对强化学习核心问题的理论重构，为理解和设计更鲁棒的控制策略提供了新的贝叶斯视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17261v1",
+        "title": "Parametric or nonparametric: the FIC approach for stationary time series",
+        "summary": "We seek to narrow the gap between parametric and nonparametric modelling of stationary time series processes. The approach is inspired by recent advances in focused inference and model selection techniques. The paper generalises and extends recent work by developing a new version of the focused information criterion (FIC), directly comparing the performance of parametric time series models with a nonparametric alternative. For a pre-specified focused parameter, for which scrutiny is considered valuable, this is achieved by comparing the mean squared error of the model-based estimators of this quantity. In particular, this yields FIC formulae for covariances or correlations at specified lags, for the probability of reaching a threshold, etc. Suitable weighted average versions, the AFIC, also lead to model selection strategies for finding the best model for the purpose of estimating e.g.~a sequence of correlations.",
+        "authors": "Gudmund Hermansen, Nils Lid Hjort, Martin Jullum",
+        "url": "http://arxiv.org/abs/2602.17261v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17261v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种新的聚焦信息准则（FIC），用于直接比较平稳时间序列的参数和非参数模型性能，基于均方误差进行模型选择。这篇论文在统计学方法论上具有很强的理论严谨性，为时间序列分析中的模型选择提供了原则性的指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17217v1",
+        "title": "Continual learning and refinement of causal models through dynamic predicate invention",
+        "summary": "Efficiently navigating complex environments requires agents to internalize the underlying logic of their world, yet standard world modelling methods often struggle with sample inefficiency, lack of transparency, and poor scalability. We propose a framework for constructing symbolic causal world models entirely online by integrating continuous model learning and repair into the agent's decision loop, by leveraging the power of Meta-Interpretive Learning and predicate invention to find semantically meaningful and reusable abstractions, allowing an agent to construct a hierarchy of disentangled, high-quality concepts from its observations. We demonstrate that our lifted inference approach scales to domains with complex relational dynamics, where propositional methods suffer from combinatorial explosion, while achieving sample-efficiency orders of magnitude higher than the established PPO neural-network-based baseline.",
+        "authors": "Enrique Crespo-Fernandez, Oliver Ray, Telmo de Menezes e Silva Filho, Peter Flach",
+        "url": "http://arxiv.org/abs/2602.17217v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17217v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个在线构建符号因果世界模型的框架，通过Meta-Interpretive Learning和谓词发明来发现语义上有意义的抽象。它强调了学习因果结构的重要性，并利用提升推理（lifted inference）来处理复杂关系动态。这篇论文在因果逻辑和符号AI的理论方面具有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17211v1",
+        "title": "MGD: Moment Guided Diffusion for Maximum Entropy Generation",
+        "summary": "Generating samples from limited information is a fundamental problem across scientific domains. Classical maximum entropy methods provide principled uncertainty quantification from moment constraints but require sampling via MCMC or Langevin dynamics, which typically exhibit exponential slowdown in high dimensions. In contrast, generative models based on diffusion and flow matching efficiently transport noise to data but offer limited theoretical guarantees and can overfit when data is scarce. We introduce Moment Guided Diffusion (MGD), which combines elements of both approaches. Building on the stochastic interpolant framework, MGD samples maximum entropy distributions by solving a stochastic differential equation that guides moments toward prescribed values in finite time, thereby avoiding slow mixing in equilibrium-based methods. We formally obtain, in the large-volatility limit, convergence of MGD to the maximum entropy distribution and derive a tractable estimator of the resulting entropy computed directly from the dynamics. Applications to financial time series, turbulent flows, and cosmological fields using wavelet scattering moments yield estimates of negentropy for high-dimensional multiscale processes.",
+        "authors": "Etienne Lempereur, Nathanaël Cuvelle--Magar, Florentin Coeurdoux, Stéphane Mallat, Eric Vanden-Eijnden",
+        "url": "http://arxiv.org/abs/2602.17211v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17211v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了Moment Guided Diffusion (MGD)，结合了最大熵方法和扩散模型。它通过求解随机微分方程来引导矩向预设值收敛，并正式证明了MGD收敛到最大熵分布，还推导了熵的估计器。这在生成模型和统计物理领域具有深厚的理论贡献，提供了严谨的数学保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17107v1",
+        "title": "Owen-based Semantics and Hierarchy-Aware Explanation (O-Shap)",
+        "summary": "Shapley value-based methods have become foundational in explainable artificial intelligence (XAI), offering theoretically grounded feature attributions through cooperative game theory. However, in practice, particularly in vision tasks, the assumption of feature independence breaks down, as features (i.e., pixels) often exhibit strong spatial and semantic dependencies. To address this, modern SHAP implementations now include the Owen value, a hierarchical generalization of the Shapley value that supports group attributions. While the Owen value preserves the foundations of Shapley values, its effectiveness critically depends on how feature groups are defined. We show that commonly used segmentations (e.g., axis-aligned or SLIC) violate key consistency properties, and propose a new segmentation approach that satisfies the $T$-property to ensure semantic alignment across hierarchy levels. This hierarchy enables computational pruning while improving attribution accuracy and interpretability. Experiments on image and tabular datasets demonstrate that O-Shap outperforms baseline SHAP variants in attribution precision, semantic coherence, and runtime efficiency, especially when structure matters.",
+        "authors": "Xiangyu Zhou, Chenhan Xiao, Yang Weng",
+        "url": "http://arxiv.org/abs/2602.17107v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17107v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究扩展了Shapley值，引入了Owen值进行分层解释，以解决特征独立性假设在视觉任务中的失效问题。它提出了一种满足T-属性的新分割方法，确保了跨层级的语义对齐。这篇论文在可解释AI的理论基础（合作博弈论）上做出了重要贡献，提供了更严谨和准确的解释方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.17041v1",
+        "title": "Reframing Population-Adjusted Indirect Comparisons as a Transportability Problem: An Estimand-Based Perspective and Implications for Health Technology Assessment",
+        "summary": "Population-adjusted indirect comparisons (PAICs) are widely used to synthesize evidence when randomized controlled trials enroll different patient populations and head-to-head comparisons are unavailable. Although PAICs adjust for observed population differences across trials, adjustment alone does not ensure transportability of estimated effects to decision-relevant populations for health technology assessment (HTA). We examine and formalize transportability in PAICs from an estimand-based perspective. We distinguish conditional and marginal treatment effect estimands and show how transportability depends on effect modification, collapsibility, and alignment between the scale of effect modification and the effect measure. Using illustrative examples, we demonstrate that even when effect modifiers are shared across treatments, marginal effects are generally population-dependent for commonly used non-collapsible measures, including hazard ratios and odds ratios. Conversely, collapsible and conditional effects defined on the linear predictor scale exhibit more favorable transportability properties. We further show that pairwise PAIC approaches typically identify effects defined in the comparator population and that applying these estimates to other populations entails an additional, often implicit, transport step requiring further assumptions. This has direct implications for HTA, where PAIC-derived effects are routinely applied within cost-effectiveness and decision models defined for different target populations. Our results clarify when applying PAIC-derived treatment effects to desired target populations is justified, when doing so requires additional assumptions, and when results should instead be interpreted as population-specific rather than decision-relevant, supporting more transparent and principled use of indirect evidence in HTA and related decision-making contexts.",
+        "authors": "Conor Chandler, Jack Ishak",
+        "url": "http://arxiv.org/abs/2602.17041v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.17041v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从估计量（estimand）的角度，将群体调整间接比较（PAICs）重新定义为可迁移性问题。它区分了条件和边际治疗效果估计量，并分析了效应修正、可折叠性等概念。这篇论文对因果推断和统计方法学有严谨的理论贡献，对健康技术评估等领域有直接的实践指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.16984v1",
+        "title": "Fundamental Limits of Black-Box Safety Evaluation: Information-Theoretic and Computational Barriers from Latent Context Conditioning",
+        "summary": "Black-box safety evaluation of AI systems assumes model behavior on test distributions reliably predicts deployment performance. We formalize and challenge this assumption through latent context-conditioned policies -- models whose outputs depend on unobserved internal variables that are rare under evaluation but prevalent under deployment. We establish fundamental limits showing that no black-box evaluator can reliably estimate deployment risk for such models. (1) Passive evaluation: For evaluators sampling i.i.d. from D_eval, we prove minimax lower bounds via Le Cam's method: any estimator incurs expected absolute error >= (5/24)*delta*L approximately 0.208*delta*L, where delta is trigger probability under deployment and L is the loss gap. (2) Adaptive evaluation: Using a hash-based trigger construction and Yao's minimax principle, worst-case error remains >= delta*L/16 even for fully adaptive querying when D_dep is supported over a sufficiently large domain; detection requires Theta(1/epsilon) queries. (3) Computational separation: Under trapdoor one-way function assumptions, deployment environments possessing privileged information can activate unsafe behaviors that any polynomial-time evaluator without the trapdoor cannot distinguish. For white-box probing, estimating deployment risk to accuracy epsilon_R requires O(1/(gamma^2 * epsilon_R^2)) samples, where gamma = alpha_0 + alpha_1 - 1 measures probe quality, and we provide explicit bias correction under probe error. Our results quantify when black-box testing is statistically underdetermined and provide explicit criteria for when additional safeguards -- architectural constraints, training-time guarantees, interpretability, and deployment monitoring -- are mathematically necessary for worst-case safety assurance.",
+        "authors": "Vishal Srivastava",
+        "url": "http://arxiv.org/abs/2602.16984v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.16984v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究建立了黑盒安全评估的根本限制，通过信息论和计算障碍来量化潜在上下文条件策略下的部署风险。它利用Le Cam方法证明了极小极大下界，并讨论了计算分离。这篇论文对AI安全评估的理论基础有深刻见解，提供了信息论和计算复杂性方面的严谨保证，对理解AI系统的局限性至关重要。"
+    }
+]

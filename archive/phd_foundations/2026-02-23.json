@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.20152v1",
+        "title": "Behavior Learning (BL): Learning Hierarchical Optimization Structures from Data",
+        "summary": "Inspired by behavioral science, we propose Behavior Learning (BL), a novel general-purpose machine learning framework that learns interpretable and identifiable optimization structures from data, ranging from single optimization problems to hierarchical compositions. It unifies predictive performance, intrinsic interpretability, and identifiability, with broad applicability to scientific domains involving optimization. BL parameterizes a compositional utility function built from intrinsically interpretable modular blocks, which induces a data distribution for prediction and generation. Each block represents and can be written in symbolic form as a utility maximization problem (UMP), a foundational paradigm in behavioral science and a universal framework of optimization. BL supports architectures ranging from a single UMP to hierarchical compositions, the latter modeling hierarchical optimization structures. Its smooth and monotone variant (IBL) guarantees identifiability. Theoretically, we establish the universal approximation property of BL, and analyze the M-estimation properties of IBL. Empirically, BL demonstrates strong predictive performance, intrinsic interpretability and scalability to high-dimensional data. Code: https://github.com/MoonYLiang/Behavior-Learning ; install via pip install blnetwork.",
+        "authors": "Zhenyao Ma, Yue Liang, Dongxu Li",
+        "url": "http://arxiv.org/abs/2602.20152v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20152v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了行为学习（BL）框架，通过学习可解释和可识别的优化结构来统一预测性能、可解释性和可识别性。理论上建立了BL的通用逼近性质，并分析了IBL的M-估计性质，强调了其强大的理论基础和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20115v1",
+        "title": "Compound decisions and empirical Bayes via Bayesian nonparametrics",
+        "summary": "We study the Gaussian sequence compound decision problem and analyze a Bayesian nonparametric estimator from an empirical Bayes, regret-based perspective. Motivated by sharp results for the classical nonparametric maximum likelihood estimator (NPMLE), we ask whether an analogous guarantee can be obtained using a standard Bayesian nonparametric prior. We show that a Dirichlet-process-based Bayesian procedure achieves near-optimal regret bounds. Our main results are stated in the compound decision framework, where the mean vector is treated as fixed, while we also provide parallel guarantees under a hierarchical model in which the means are drawn from a true unknown prior distribution. The posterior mean Bayes rule is, a fortiori, admissible, whereas we show that the NPMLE plug-in rule is inadmissible.",
+        "authors": "Nikolaos Ignatiadis, Sid Kankanala",
+        "url": "http://arxiv.org/abs/2602.20115v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20115v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "在高斯序列复合决策问题中，通过贝叶斯非参数方法分析了经验贝叶斯估计器，并证明了基于Dirichlet过程的贝叶斯过程能达到近乎最优的遗憾界。论文提供了严格的理论保证，包括可识别性、通用逼近和M-估计性质，非常符合对数理统计理论和严谨数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19964v1",
+        "title": "On the Equivalence of Random Network Distillation, Deep Ensembles, and Bayesian Inference",
+        "summary": "Uncertainty quantification is central to safe and efficient deployments of deep learning models, yet many computationally practical methods lack lacking rigorous theoretical motivation. Random network distillation (RND) is a lightweight technique that measures novelty via prediction errors against a fixed random target. While empirically effective, it has remained unclear what uncertainties RND measures and how its estimates relate to other approaches, e.g. Bayesian inference or deep ensembles. This paper establishes these missing theoretical connections by analyzing RND within the neural tangent kernel framework in the limit of infinite network width. Our analysis reveals two central findings in this limit: (1) The uncertainty signal from RND -- its squared self-predictive error -- is equivalent to the predictive variance of a deep ensemble. (2) By constructing a specific RND target function, we show that the RND error distribution can be made to mirror the centered posterior predictive distribution of Bayesian inference with wide neural networks. Based on this equivalence, we moreover devise a posterior sampling algorithm that generates i.i.d. samples from an exact Bayesian posterior predictive distribution using this modified \\textit{Bayesian RND} model. Collectively, our findings provide a unified theoretical perspective that places RND within the principled frameworks of deep ensembles and Bayesian inference, and offer new avenues for efficient yet theoretically grounded uncertainty quantification methods.",
+        "authors": "Moritz A. Zanger, Yijun Wu, Pascal R. Van der Vaart, Wendelin Böhmer, Matthijs T. J. Spaan",
+        "url": "http://arxiv.org/abs/2602.19964v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19964v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "在无限网络宽度极限下，通过神经切线核框架，建立了随机网络蒸馏（RND）、深度集成和贝叶斯推断在不确定性量化方面的理论等价性。这为现代AI系统中的不确定性量化提供了统一且严谨的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19952v1",
+        "title": "A Bayesian Framework for Post-disruption Travel Time Prediction in Metro Networks",
+        "summary": "Disruptions are an inherent feature of transportation systems, occurring unpredictably and with varying durations. Even after an incident is reported as resolved, disruptions can induce irregular train operations that generate substantial uncertainty in passenger waiting and travel times. Accurately forecasting post-disruption travel times therefore remains a critical challenge for transit operators and passenger information systems. This paper develops a Bayesian spatiotemporal modeling framework for post-disruption train travel times that explicitly captures train interactions, headway imbalance, and non-Gaussian distributional characteristics observed during recovery periods. The proposed model decomposes travel times into delay and journey components and incorporates a moving-average error structure to represent dependence between consecutive trains. Skew-normal and skew-$t$ distributions are employed to flexibly accommodate heteroskedasticity, skewness, and heavy-tailed behavior in post-disruption travel times. The framework is evaluated using high-resolution track-occupancy and disruption log data from the Montréal metro system, covering two lines in both travel directions. Empirical results indicate that post-disruption travel times exhibit pronounced distributional asymmetries that vary with traveled distance, as well as significant error dependence across trains. The proposed models consistently outperform baseline specifications in both point prediction accuracy and uncertainty quantification, with the skew-$t$ model demonstrating the most robust performance for longer journeys. These findings underscore the importance of incorporating both distributional flexibility and error dependence when forecasting post-disruption travel times in urban rail systems.",
+        "authors": "Shayan Nazemi, Aurélie Labbe, Stefan Steiner, Pratheepa Jeganathan, Martin Trépanier, Léo R. Belzile",
+        "url": "http://arxiv.org/abs/2602.19952v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19952v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个贝叶斯时空建模框架，用于预测地铁网络中断后的列车旅行时间。模型明确捕捉了列车交互、车头时距不平衡和非高斯分布特性，并结合了移动平均误差结构和Skew-normal/skew-t分布，展现了强大的统计建模严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19859v1",
+        "title": "Dirichlet Scale Mixture Priors for Bayesian Neural Networks",
+        "summary": "Neural networks are the cornerstone of modern machine learning, yet can be difficult to interpret, give overconfident predictions and are vulnerable to adversarial attacks. Bayesian neural networks (BNNs) provide some alleviation of these limitations, but have problems of their own. The key step of specifying prior distributions in BNNs is no trivial task, yet is often skipped out of convenience. In this work, we propose a new class of prior distributions for BNNs, the Dirichlet scale mixture (DSM) prior, that addresses current limitations in Bayesian neural networks through structured, sparsity-inducing shrinkage. Theoretically, we derive general dependence structures and shrinkage results for DSM priors and show how they manifest under the geometry induced by neural networks. In experiments on simulated and real world data we find that the DSM priors encourages sparse networks through implicit feature selection, show robustness under adversarial attacks and deliver competitive predictive performance with substantially fewer effective parameters. In particular, their advantages appear most pronounced in correlated, moderately small data regimes, and are more amenable to weight pruning. Moreover, by adopting heavy-tailed shrinkage mechanisms, our approach aligns with recent findings that such priors can mitigate the cold posterior effect, offering a principled alternative to the commonly used Gaussian priors.",
+        "authors": "August Arnstad, Leiv Rønneberg, Geir Storvik",
+        "url": "http://arxiv.org/abs/2602.19859v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19859v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种新的贝叶斯神经网络（BNNs）先验分布——Dirichlet尺度混合（DSM）先验，旨在实现结构化、稀疏诱导的收缩。理论上推导了DSM先验的通用依赖结构和收缩结果，并分析了它们在神经网络几何结构下的表现，为BNNs提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19851v1",
+        "title": "Orthogonal Uplift Learning with Permutation-Invariant Representations for Combinatorial Treatments",
+        "summary": "We study uplift estimation for combinatorial treatments. Uplift measures the pure incremental causal effect of an intervention (e.g., sending a coupon or a marketing message) on user behavior, modeled as a conditional individual treatment effect. Many real-world interventions are combinatorial: a treatment is a policy that specifies context-dependent action distributions rather than a single atomic label. Although recent work considers structured treatments, most methods rely on categorical or opaque encodings, limiting robustness and generalization to rare or newly deployed policies. We propose an uplift estimation framework that aligns treatment representation with causal semantics. Each policy is represented by the mixture it induces over contextaction components and embedded via a permutation-invariant aggregation. This representation is integrated into an orthogonalized low-rank uplift model, extending Robinson-style decompositions to learned, vector-valued treatments. We show that the resulting estimator is expressive for policy-induced causal effects, orthogonally robust to nuisance estimation errors, and stable under small policy perturbations. Experiments on large-scale randomized platform data demonstrate improved uplift accuracy and stability in long-tailed policy regimes",
+        "authors": "Xinyan Su, Jiacan Gao, Mingyuan Ma, Xiao Xu, Xinrui Wan, Tianqi Gu, Enyun Yu, Jiecheng Guo, Zhiheng Zhang",
+        "url": "http://arxiv.org/abs/2602.19851v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19851v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个提升估计框架，用于处理组合式干预下的个体因果效应。该框架将治疗表示与因果语义对齐，并整合到正交化的低秩提升模型中。理论上证明了估计器对策略诱导的因果效应具有表达力，对混杂估计误差具有正交鲁棒性，并在策略微扰下保持稳定。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19782v1",
+        "title": "Addressing Instrument-Outcome Confounding in Mendelian Randomization through Representation Learning",
+        "summary": "Mendelian Randomization (MR) is a prominent observational epidemiological research method designed to address unobserved confounding when estimating causal effects. However, core assumptions -- particularly the independence between instruments and unobserved confounders -- are often violated due to population stratification or assortative mating. Leveraging the increasing availability of multi-environment data, we propose a representation learning framework that exploits cross-environment invariance to recover latent exogenous components of genetic instruments. We provide theoretical guarantees for identifying these latent instruments under various mixing mechanisms and demonstrate the effectiveness of our approach through simulations and semi-synthetic experiments using data from the All of Us Research Hub.",
+        "authors": "Shimeng Huang, Matthew Robinson, Francesco Locatello",
+        "url": "http://arxiv.org/abs/2602.19782v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19782v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个表征学习框架，通过利用跨环境不变性来解决孟德尔随机化（MR）中的工具-结果混杂问题。论文提供了在各种混合机制下识别这些潜在工具的理论保证，完美契合了对因果逻辑和理论保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19738v1",
+        "title": "Individualized Causal Effects under Network Interference with Combinatorial Treatments",
+        "summary": "Modern causal decision-making increasingly demands individualized treatment-effect estimation in networks where interventions are high-dimensional, combinatorial vectors. While network interference, effect heterogeneity, and multi-dimensional treatments have been studied separately, their intersection yields an exponentially large intervention space that makes standard identification tools and low-dimensional exposure mappings untenable. We bridge this gap with a unified framework that constructs a \\emph{global potential-outcome emulator} for unit-level inference. Our method combines (1) rooted network configurations to leverage local smoothness, (2) doubly robust orthogonalization to mitigate confounding from network position and covariates, and (3) sparse spectral learning to efficiently estimate response surfaces over the $2^p$-dimensional treatment space. We also decompose networked effects into own-treatment, structural, and interaction components, and provide finite-sample error bounds and asymptotic consistency guarantees. Overall, we show that individualized causal inference remains feasible in high-dimensional networked settings without collapsing the intervention space.",
+        "authors": "Yunping Lu, Haoang Chi, Qirui Hu, Zhiheng Zhang",
+        "url": "http://arxiv.org/abs/2602.19738v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19738v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个统一框架，用于在网络干预下估计个体因果效应，其中干预是高维组合向量。该方法结合了根网络配置、双重鲁棒正交化和稀疏谱学习，并提供了有限样本误差界和渐近一致性保证，展现了极高的因果推断和统计严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19651v1",
+        "title": "Denoising Particle Filters: Learning State Estimation with Single-Step Objectives",
+        "summary": "Learning-based methods commonly treat state estimation in robotics as a sequence modeling problem. While this paradigm can be effective at maximizing end-to-end performance, models are often difficult to interpret and expensive to train, since training requires unrolling sequences of predictions in time. As an alternative to end-to-end trained state estimation, we propose a novel particle filtering algorithm in which models are trained from individual state transitions, fully exploiting the Markov property in robotic systems. In this framework, measurement models are learned implicitly by minimizing a denoising score matching objective. At inference, the learned denoiser is used alongside a (learned) dynamics model to approximately solve the Bayesian filtering equation at each time step, effectively guiding predicted states toward the data manifold informed by measurements. We evaluate the proposed method on challenging robotic state estimation tasks in simulation, demonstrating competitive performance compared to tuned end-to-end trained baselines. Importantly, our method offers the desirable composability of classical filtering algorithms, allowing prior information and external sensor models to be incorporated without retraining.",
+        "authors": "Lennart Röstel, Berthold Bäuml",
+        "url": "http://arxiv.org/abs/2602.19651v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19651v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种新颖的粒子滤波算法，通过最小化去噪分数匹配目标来隐式学习测量模型，并在推理时近似求解贝叶斯滤波方程。该方法利用马尔可夫性质，从单个状态转换中训练模型，具有强大的贝叶斯滤波和状态估计理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19530v1",
+        "title": "ORION: ORthonormal Text Encoding for Universal VLM AdaptatION",
+        "summary": "Vision language models (VLMs) have demonstrated remarkable generalization across diverse tasks, yet their performance remains constrained by the quality and geometry of the textual prototypes used to represent classes. Standard zero shot classifiers, derived from frozen text encoders and handcrafted prompts, may yield correlated or weakly separated embeddings that limit task specific discriminability. We introduce ORION, a text encoder fine tuning framework that improves pretrained VLMs using only class names. Our method optimizes, via low rank adaptation, a novel loss integrating two terms, one promoting pairwise orthogonality between the textual representations of the classes of a given task and the other penalizing deviations from the initial class prototypes. Furthermore, we provide a probabilistic interpretation of our orthogonality penalty, connecting it to the general maximum likelihood estimation (MLE) principle via Huygens theorem. We report extensive experiments on 11 benchmarks and three large VLM backbones, showing that the refined textual embeddings yield powerful replacements for the standard CLIP prototypes. Added as plug and play module on top of various state of the art methods, and across different prediction settings (zero shot, few shot and test time adaptation), ORION improves the performance consistently and significantly.",
+        "authors": "Omprakash Chakraborty, Jose Dolz, Ismail Ben Ayed",
+        "url": "http://arxiv.org/abs/2602.19530v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19530v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了ORION框架，通过优化一个新颖的损失函数来改进预训练的VLM文本编码，该损失函数促进了类文本表示之间的正交性。论文提供了正交性惩罚的概率解释，并将其与通过Huygens定理的最大似然估计原理联系起来，具有清晰的数学推导和理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19528v1",
+        "title": "Beyond Accuracy: A Unified Random Matrix Theory Diagnostic Framework for Crash Classification Models",
+        "summary": "Crash classification models in transportation safety are typically evaluated using accuracy, F1, or AUC, metrics that cannot reveal whether a model is silently overfitting. We introduce a spectral diagnostic framework grounded in Random Matrix Theory (RMT) and Heavy-Tailed Self-Regularization (HTSR) that spans the ML taxonomy: weight matrices for BERT/ALBERT/Qwen2.5, out-of-fold increment matrices for XGBoost/Random Forest, empirical Hessians for Logistic Regression, induced affinity matrices for Decision Trees, and Graph Laplacians for KNN. Evaluating nine model families on two Iowa DOT crash classification tasks (173,512 and 371,062 records respectively), we find that the power-law exponent $α$ provides a structural quality signal: well-regularized models consistently yield $α$ within $[2, 4]$ (mean $2.87 \\pm 0.34$), while overfit variants show $α< 2$ or spectral collapse. We observe a strong rank correlation between $α$ and expert agreement (Spearman $ρ= 0.89$, $p < 0.001$), suggesting spectral quality captures model behaviors aligned with expert reasoning. We propose an $α$-based early stopping criterion and a spectral model selection protocol, and validate both against cross-validated F1 baselines. Sparse Lanczos approximations make the framework scalable to large datasets.",
+        "authors": "Ibne Farabi Shihab, Sanjeda Akter, Anuj Sharma",
+        "url": "http://arxiv.org/abs/2602.19528v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19528v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了一个基于随机矩阵理论（RMT）和重尾自正则化（HTSR）的统一谱诊断框架，用于评估各种ML分类模型。通过幂律指数α提供结构质量信号，并观察到α与专家一致性之间的强相关性，为AI模型诊断提供了严谨的理论工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19498v1",
+        "title": "Softmax is not Enough (for Adaptive Conformal Classification)",
+        "summary": "The merit of Conformal Prediction (CP), as a distribution-free framework for uncertainty quantification, depends on generating prediction sets that are efficient, reflected in small average set sizes, while adaptive, meaning they signal uncertainty by varying in size according to input difficulty. A central limitation for deep conformal classifiers is that the nonconformity scores are derived from softmax outputs, which can be unreliable indicators of how certain the model truly is about a given input, sometimes leading to overconfident misclassifications or undue hesitation. In this work, we argue that this unreliability can be inherited by the prediction sets generated by CP, limiting their capacity for adaptiveness. We propose a new approach that leverages information from the pre-softmax logit space, using the Helmholtz Free Energy as a measure of model uncertainty and sample difficulty. By reweighting nonconformity scores with a monotonic transformation of the energy score of each sample, we improve their sensitivity to input difficulty. Our experiments with four state-of-the-art score functions on multiple datasets and deep architectures show that this energy-based enhancement improves the adaptiveness of the prediction sets, leading to a notable increase in both efficiency and adaptiveness compared to baseline nonconformity scores, without introducing any post-hoc complexity.",
+        "authors": "Navid Akhavan Attar, Hesam Asadollahzadeh, Ling Luo, Uwe Aickelin",
+        "url": "http://arxiv.org/abs/2602.19498v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19498v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了共形预测（CP）中softmax输出作为不确定性指标的局限性，提出利用预softmax logit空间中的亥姆霍兹自由能作为模型不确定性的度量。通过对非一致性分数进行重加权，显著提高了预测集的适应性，为不确定性量化提供了理论上更严谨的方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19414v1",
+        "title": "Federated Causal Representation Learning in State-Space Systems for Decentralized Counterfactual Reasoning",
+        "summary": "Networks of interdependent industrial assets (clients) are tightly coupled through physical processes and control inputs, raising a key question: how would the output of one client change if another client were operated differently? This is difficult to answer because client-specific data are high-dimensional and private, making centralization of raw data infeasible. Each client also maintains proprietary local models that cannot be modified. We propose a federated framework for causal representation learning in state-space systems that captures interdependencies among clients under these constraints. Each client maps high-dimensional observations into low-dimensional latent states that disentangle intrinsic dynamics from control-driven influences. A central server estimates the global state-transition and control structure. This enables decentralized counterfactual reasoning where clients predict how outputs would change under alternative control inputs at others while only exchanging compact latent states. We prove convergence to a centralized oracle and provide privacy guarantees. Our experiments demonstrate scalability, and accurate cross-client counterfactual inference on synthetic and real-world industrial control system datasets.",
+        "authors": "Nazal Mohamed, Ayush Mohanty, Nagi Gebraeel",
+        "url": "http://arxiv.org/abs/2602.19414v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19414v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个联邦框架，用于状态空间系统中的因果表征学习，以实现去中心化的反事实推理。该框架证明了收敛到中心化预言机，并提供了隐私保证，完美结合了因果推断、严谨数学逻辑和现代AI系统（联邦学习）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19406v1",
+        "title": "LEVDA: Latent Ensemble Variational Data Assimilation via Differentiable Dynamics",
+        "summary": "Long-range geophysical forecasts are fundamentally limited by chaotic dynamics and numerical errors. While data assimilation can mitigate these issues, classical variational smoothers require computationally expensive tangent-linear and adjoint models. Conversely, recent efficient latent filtering methods often enforce weak trajectory-level constraints and assume fixed observation grids. To bridge this gap, we propose Latent Ensemble Variational Data Assimilation (LEVDA), an ensemble-space variational smoother that operates in the low-dimensional latent space of a pretrained differentiable neural dynamics surrogate. By performing four-dimensional ensemble-variational (4DEnVar) optimization within an ensemble subspace, LEVDA jointly assimilates states and unknown parameters without the need for adjoint code or auxiliary observation-to-latent encoders. Leveraging the fully differentiable, continuous-in-time-and-space nature of the surrogate, LEVDA naturally accommodates highly irregular sampling at arbitrary spatiotemporal locations. Across three challenging geophysical benchmarks, LEVDA matches or outperforms state-of-the-art latent filtering baselines under severe observational sparsity while providing more reliable uncertainty quantification. Simultaneously, it achieves substantially improved assimilation accuracy and computational efficiency compared to full-state 4DEnVar.",
+        "authors": "Phillip Si, Peng Chen",
+        "url": "http://arxiv.org/abs/2602.19406v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19406v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了LEVDA，一种在预训练可微分神经动力学代理的低维潜在空间中运行的集成空间变分平滑器。该方法通过在集成子空间内执行四维集成变分（4DEnVar）优化，共同同化状态和未知参数，具有强大的数据同化和可微分动力学理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19396v1",
+        "title": "Hiding in Plain Text: Detecting Concealed Jailbreaks via Activation Disentanglement",
+        "summary": "Large language models (LLMs) remain vulnerable to jailbreak prompts that are fluent and semantically coherent, and therefore difficult to detect with standard heuristics. A particularly challenging failure mode occurs when an attacker tries to hide the malicious goal of their request by manipulating its framing to induce compliance. Because these attacks maintain malicious intent through a flexible presentation, defenses that rely on structural artifacts or goal-specific signatures can fail. Motivated by this, we introduce a self-supervised framework for disentangling semantic factor pairs in LLM activations at inference. We instantiate the framework for goal and framing and construct GoalFrameBench, a corpus of prompts with controlled goal and framing variations, which we use to train Representation Disentanglement on Activations (ReDAct) module to extract disentangled representations in a frozen LLM. We then propose FrameShield, an anomaly detector operating on the framing representations, which improves model-agnostic detection across multiple LLM families with minimal computational overhead. Theoretical guarantees for ReDAct and extensive empirical validations show that its disentanglement effectively powers FrameShield. Finally, we use disentanglement as an interpretability probe, revealing distinct profiles for goal and framing signals and positioning semantic disentanglement as a building block for both LLM safety and mechanistic interpretability.",
+        "authors": "Amirhossein Farzam, Majid Behabahani, Mani Malek, Yuriy Nevmyvaka, Guillermo Sapiro",
+        "url": "http://arxiv.org/abs/2602.19396v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19396v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了一个自监督框架，用于在推理时解耦LLM激活中的语义因子对，以检测隐蔽的越狱提示。该框架为ReDAct模块提供了理论保证，并将其作为可解释性探针，揭示了目标和框架信号的独特特征，对LLM安全性和可解释性具有重要理论意义。"
+    }
+]

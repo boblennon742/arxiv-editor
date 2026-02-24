@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.20132v1",
+        "title": "LAD: Learning Advantage Distribution for Reasoning",
+        "summary": "Current reinforcement learning objectives for large-model reasoning primarily focus on maximizing expected rewards. This paradigm can lead to overfitting to dominant reward signals, while neglecting alternative yet valid reasoning trajectories, thereby limiting diversity and exploration. To address this issue, we introduce Learning Advantage Distributions (LAD), a distribution-matching framework that replaces advantage maximization with learning the advantage-induced distribution. By establishing the equivalence between the optimal policy update and an advantage-based target distribution, we derive a practical LAD objective formulated as minimizing an $f$-divergence between the policy-induced and advantage-induced distributions. This yields a gradient update that increases likelihood for high-advantage responses while suppressing over-confident probability growth, preventing collapse without requiring auxiliary entropy regularization. LAD incurs no extra training cost compared to GRPO and scales naturally to LLM post-training. In a controlled bandit setting, LAD faithfully recovers the multimodal advantage distribution, validating the theoretical formulation. Experiments on math and code reasoning tasks across several LLM backbones show that LAD reliably improves both accuracy and generative diversity.",
+        "authors": "Wendi Li, Sharon Li",
+        "url": "http://arxiv.org/abs/2602.20132v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20132v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的强化学习目标——Learning Advantage Distributions (LAD)，通过匹配优势分布而非最大化期望奖励来改进大型语言模型（LLM）的推理能力。它通过建立最优策略更新与基于优势的目标分布之间的等价性，并利用 f-散度推导出目标函数，具有很强的理论严谨性。该方法解决了传统RL在LLM推理中可能导致的过拟合和探索不足问题，提升了生成多样性和准确性，是LLM应用中的一个重要理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20102v1",
+        "title": "BarrierSteer: LLM Safety via Learning Barrier Steering",
+        "summary": "Despite the state-of-the-art performance of large language models (LLMs) across diverse tasks, their susceptibility to adversarial attacks and unsafe content generation remains a major obstacle to deployment, particularly in high-stakes settings. Addressing this challenge requires safety mechanisms that are both practically effective and supported by rigorous theory. We introduce BarrierSteer, a novel framework that formalizes response safety by embedding learned non-linear safety constraints directly into the model's latent representation space. BarrierSteer employs a steering mechanism based on Control Barrier Functions (CBFs) to efficiently detect and prevent unsafe response trajectories during inference with high precision. By enforcing multiple safety constraints through efficient constraint merging, without modifying the underlying LLM parameters, BarrierSteer preserves the model's original capabilities and performance. We provide theoretical results establishing that applying CBFs in latent space offers a principled and computationally efficient approach to enforcing safety. Our experiments across multiple models and datasets show that BarrierSteer substantially reduces adversarial success rates, decreases unsafe generations, and outperforms existing methods.",
+        "authors": "Thanh Q. Tran, Arun Verma, Kiwan Wong, Bryan Kian Hsiang Low, Daniela Rus, Wei Xiao",
+        "url": "http://arxiv.org/abs/2602.20102v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20102v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了 BarrierSteer 框架，通过在模型的潜在表示空间中嵌入学习到的非线性安全约束，利用控制障碍函数（CBFs）来检测和阻止LLM生成不安全内容。其将响应安全问题形式化，并提供了理论结果，证明了在潜在空间应用CBFs是一种原则性且计算高效的安全实施方法。这不仅是LLM安全领域的一个重要理论突破，也直接解决了LLM部署中的关键实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20078v1",
+        "title": "Descent-Guided Policy Gradient for Scalable Cooperative Multi-Agent Learning",
+        "summary": "Scaling cooperative multi-agent reinforcement learning (MARL) is fundamentally limited by cross-agent noise: when agents share a common reward, the actions of all $N$ agents jointly determine each agent's learning signal, so cross-agent noise grows with $N$. In the policy gradient setting, per-agent gradient estimate variance scales as $Θ(N)$, yielding sample complexity $\\mathcal{O}(N/ε)$. We observe that many domains -- cloud computing, transportation, power systems -- have differentiable analytical models that prescribe efficient system states. In this work, we propose Descent-Guided Policy Gradient (DG-PG), a framework that constructs noise-free per-agent guidance gradients from these analytical models, decoupling each agent's gradient from the actions of all others. We prove that DG-PG reduces gradient variance from $Θ(N)$ to $\\mathcal{O}(1)$, preserves the equilibria of the cooperative game, and achieves agent-independent sample complexity $\\mathcal{O}(1/ε)$. On a heterogeneous cloud scheduling task with up to 200 agents, DG-PG converges within 10 episodes at every tested scale -- from $N=5$ to $N=200$ -- directly confirming the predicted scale-invariant complexity, while MAPPO and IPPO fail to converge under identical architectures.",
+        "authors": "Shan Yang, Yang Liu",
+        "url": "http://arxiv.org/abs/2602.20078v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20078v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Descent-Guided Policy Gradient (DG-PG) 框架，通过利用可微分的分析模型构建无噪声的单智能体引导梯度，解决了合作多智能体强化学习（MARL）中跨智能体噪声导致的扩展性瓶颈。作者从理论上证明了DG-PG能将梯度方差从 $Θ(N)$ 降低到 $O(1)$，保持合作博弈的均衡，并实现与智能体数量无关的样本复杂度。这是一个具有深刻理论基础和巨大实践影响力的算法创新，尤其适用于大规模系统优化。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20064v1",
+        "title": "The LLMbda Calculus: AI Agents, Conversations, and Information Flow",
+        "summary": "A conversation with a large language model (LLM) is a sequence of prompts and responses, with each response generated from the preceding conversation. AI agents build such conversations automatically: given an initial human prompt, a planner loop interleaves LLM calls with tool invocations and code execution. This tight coupling creates a new and poorly understood attack surface. A malicious prompt injected into a conversation can compromise later reasoning, trigger dangerous tool calls, or distort final outputs. Despite the centrality of such systems, we currently lack a principled semantic foundation for reasoning about their behaviour and safety. We address this gap by introducing an untyped call-by-value lambda calculus enriched with dynamic information-flow control and a small number of primitives for constructing prompt-response conversations. Our language includes a primitive that invokes an LLM: it serializes a value, sends it to the model as a prompt, and parses the response as a new term. This calculus faithfully represents planner loops and their vulnerabilities, including the mechanisms by which prompt injection alters subsequent computation. The semantics explicitly captures conversations, and so supports reasoning about defenses such as quarantined sub-conversations, isolation of generated code, and information-flow restrictions on what may influence an LLM call. A termination-insensitive noninterference theorem establishes integrity and confidentiality guarantees, demonstrating that a formal calculus can provide rigorous foundations for safe agentic programming.",
+        "authors": "Zac Garby, Andrew D. Gordon, David Sands",
+        "url": "http://arxiv.org/abs/2602.20064v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20064v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了 LLMbda Calculus，一个带有动态信息流控制的非类型化传值 lambda 演算，为AI智能体、对话和信息流提供了一个原则性的语义基础。它明确捕获了对话机制及其漏洞，特别是提示注入如何改变后续计算。通过终止不敏感的非干扰定理，该工作为安全的智能体编程提供了严格的完整性和保密性保证。这对于理解和构建安全的LLM智能体至关重要，具有高度的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19982v1",
+        "title": "A Computationally Efficient Multidimensional Vision Transformer",
+        "summary": "Vision Transformers have achieved state-of-the-art performance in a wide range   of computer vision tasks, but their practical deployment is limited by high   computational and memory costs. In this paper, we introduce a novel tensor-based   framework for Vision Transformers built upon the Tensor Cosine Product   (Cproduct). By exploiting multilinear structures inherent in image data and the   orthogonality of cosine transforms, the proposed approach enables efficient   attention mechanisms and structured feature representations. We develop the   theoretical foundations of the tensor cosine product, analyze its algebraic   properties, and integrate it into a new Cproduct-based Vision Transformer   architecture (TCP-ViT). Numerical experiments on standard classification and   segmentation benchmarks demonstrate that the proposed method achieves a uniform   1/C parameter reduction (where C is the number of channels) while   maintaining competitive accuracy.",
+        "authors": "Alaa El Ichi, Khalide Jbilou",
+        "url": "http://arxiv.org/abs/2602.19982v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19982v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于张量余弦积（Cproduct）的新型张量框架，用于构建计算高效的多维 Vision Transformer (TCP-ViT)。它利用图像数据固有的多线性结构和余弦变换的正交性，实现了高效的注意力机制和结构化的特征表示。作者发展了张量余弦积的理论基础，分析了其代数性质，并证明了参数减少1/C的优势。这在模型压缩和计算效率方面具有显著的理论创新和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19980v1",
+        "title": "Discrete Diffusion Models Exploit Asymmetry to Solve Lookahead Planning Tasks",
+        "summary": "While Autoregressive (AR) Transformer-based Generative Language Models are frequently employed for lookahead tasks, recent research suggests a potential discrepancy in their ability to perform planning tasks that require multi-step lookahead. In this work, we investigate the distinct emergent mechanisms that arise when training AR versus Non-Autoregressive (NAR) models, such as Discrete Diffusion Models (dLLMs), on lookahead tasks. By requiring the models to plan ahead to reach the correct conclusion, we analyze how these two paradigms fundamentally differ in their approach to the problem. We identify a critical asymmetry in planning problems: while forward generation requires complex lookahead at branching junctions, reverse generation is often deterministic. This asymmetry creates an opportunity for NAR models. Through mechanistic analysis of training and inference dynamics, we demonstrate that NAR models learn to solve planning tasks by utilizing future tokens to decode backwards, avoiding the need to learn complex traversal mechanisms entirely. Consequently, we report that both AR and NAR models are able to achieve perfect accuracy on the lookahead task. However, NAR models require exponentially fewer training examples and shallower architectures compared to AR models, which often fail to converge without specific curriculum adjustments.",
+        "authors": "Itamar Trainin, Shauli Ravfogel, Omri Abend, Amir Feder",
+        "url": "http://arxiv.org/abs/2602.19980v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19980v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入研究了离散扩散模型（dLLMs）在解决前瞻规划任务中的独特机制。它发现dLLMs通过利用规划问题中的关键不对称性（逆向生成通常是确定性的）来高效地进行规划，从而避免了学习复杂的遍历机制。这项工作通过机制分析揭示了NAR模型在规划任务中比AR模型更高效的根本原因，提供了对生成模型规划能力的新颖理论洞察，对未来高效规划架构的设计具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19931v1",
+        "title": "Expanding the Role of Diffusion Models for Robust Classifier Training",
+        "summary": "Incorporating diffusion-generated synthetic data into adversarial training (AT) has been shown to substantially improve the training of robust image classifiers. In this work, we extend the role of diffusion models beyond merely generating synthetic data, examining whether their internal representations, which encode meaningful features of the data, can provide additional benefits for robust classifier training. Through systematic experiments, we show that diffusion models offer representations that are both diverse and partially robust, and that explicitly incorporating diffusion representations as an auxiliary learning signal during AT consistently improves robustness across settings. Furthermore, our representation analysis indicates that incorporating diffusion models into AT encourages more disentangled features, while diffusion representations and diffusion-generated synthetic data play complementary roles in shaping representations. Experiments on CIFAR-10, CIFAR-100, and ImageNet validate these findings, demonstrating the effectiveness of jointly leveraging diffusion representations and synthetic data within AT.",
+        "authors": "Pin-Han Huang, Shang-Tse Chen, Hsuan-Tien Lin",
+        "url": "http://arxiv.org/abs/2602.19931v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19931v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文扩展了扩散模型在鲁棒分类器训练中的作用，不仅利用其生成合成数据，更重要的是将其内部表示作为辅助学习信号引入对抗训练。研究表明，扩散模型的表示既多样又部分鲁棒，能促进更解耦的特征学习，从而一致性地提高模型的鲁棒性。这为提高AI模型的可靠性和安全性提供了一个新颖且有理论依据的方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19917v1",
+        "title": "Uncertainty-Aware Rank-One MIMO Q Network Framework for Accelerated Offline Reinforcement Learning",
+        "summary": "Offline reinforcement learning (RL) has garnered significant interest due to its safe and easily scalable paradigm. However, training under this paradigm presents its own challenge: the extrapolation error stemming from out-of-distribution (OOD) data. Existing methodologies have endeavored to address this issue through means like penalizing OOD Q-values or imposing similarity constraints on the learned policy and the behavior policy. Nonetheless, these approaches are often beset by limitations such as being overly conservative in utilizing OOD data, imprecise OOD data characterization, and significant computational overhead. To address these challenges, this paper introduces an Uncertainty-Aware Rank-One Multi-Input Multi-Output (MIMO) Q Network framework. The framework aims to enhance Offline Reinforcement Learning by fully leveraging the potential of OOD data while still ensuring efficiency in the learning process. Specifically, the framework quantifies data uncertainty and harnesses it in the training losses, aiming to train a policy that maximizes the lower confidence bound of the corresponding Q-function. Furthermore, a Rank-One MIMO architecture is introduced to model the uncertainty-aware Q-function, \\TP{offering the same ability for uncertainty quantification as an ensemble of networks but with a cost nearly equivalent to that of a single network}. Consequently, this framework strikes a harmonious balance between precision, speed, and memory efficiency, culminating in improved overall performance. Extensive experimentation on the D4RL benchmark demonstrates that the framework attains state-of-the-art performance while remaining computationally efficient. By incorporating the concept of uncertainty quantification, our framework offers a promising avenue to alleviate extrapolation errors and enhance the efficiency of offline RL.",
+        "authors": "Thanh Nguyen, Tung Luu, Tri Ton, Sungwoong Kim, Chang D. Yoo",
+        "url": "http://arxiv.org/abs/2602.19917v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19917v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个不确定性感知秩一多输入多输出（MIMO）Q网络框架，用于加速离线强化学习。它通过量化数据不确定性并将其融入训练损失，旨在训练一个最大化Q函数下置信边界的策略。特别地，秩一MIMO架构能够以接近单个网络的成本实现与集成网络相当的不确定性量化能力，有效解决了离线RL中的外推误差和计算开销问题，具有显著的理论和架构创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19895v1",
+        "title": "DSDR: Dual-Scale Diversity Regularization for Exploration in LLM Reasoning",
+        "summary": "Reinforcement learning with verifiers (RLVR) is a central paradigm for improving large language model (LLM) reasoning, yet existing methods often suffer from limited exploration. Policies tend to collapse onto a few reasoning patterns and prematurely stop deep exploration, while conventional entropy regularization introduces only local stochasticity and fails to induce meaningful path-level diversity, leading to weak and unstable learning signals in group-based policy optimization. We propose DSDR, a Dual-Scale Diversity Regularization reinforcement learning framework that decomposes diversity in LLM reasoning into global and coupling components. Globally, DSDR promotes diversity among correct reasoning trajectories to explore distinct solution modes. Locally, it applies a length-invariant, token-level entropy regularization restricted to correct trajectories, preventing entropy collapse within each mode while preserving correctness. The two scales are coupled through a global-to-local allocation mechanism that emphasizes local regularization for more distinctive correct trajectories. We provide theoretical support showing that DSDR preserves optimal correctness under bounded regularization, sustains informative learning signals in group-based optimization, and yields a principled global-to-local coupling rule. Experiments on multiple reasoning benchmarks demonstrate consistent improvements in accuracy and pass@k, highlighting the importance of dual-scale diversity for deep exploration in RLVR. Code is available at https://github.com/SUSTechBruce/DSDR.",
+        "authors": "Zhongwei Wan, Yun Shen, Zhihao Dou, Donghao Zhou, Yu Zhang, Xin Wang, Hui Shen, Jing Xiong, Chaofan Tao, Zixuan Zhong, Peizhou Huang, Mi Zhang",
+        "url": "http://arxiv.org/abs/2602.19895v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19895v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 DSDR (Dual-Scale Diversity Regularization) 框架，用于改进LLM推理中基于验证器的强化学习（RLVR）的探索能力。它将多样性分解为全局和耦合组件，并提供了理论支持，证明在有界正则化下能保持最优正确性，并在基于群体的优化中维持信息丰富的学习信号。这种双尺度多样性正则化方法为解决LLM推理中的探索不足问题提供了原则性的解决方案，具有很强的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19600v1",
+        "title": "Manifold-Aligned Generative Transport",
+        "summary": "High-dimensional generative modeling is fundamentally a manifold-learning problem: real data concentrate near a low-dimensional structure embedded in the ambient space. Effective generators must therefore balance support fidelity -- placing probability mass near the data manifold -- with sampling efficiency. Diffusion models often capture near-manifold structure but require many iterative denoising steps and can leak off-support; normalizing flows sample in one pass but are limited by invertibility and dimension preservation. We propose MAGT (Manifold-Aligned Generative Transport), a flow-like generator that learns a one-shot, manifold-aligned transport from a low-dimensional base distribution to the data space. Training is performed at a fixed Gaussian smoothing level, where the score is well-defined and numerically stable. We approximate this fixed-level score using a finite set of latent anchor points with self-normalized importance sampling, yielding a tractable objective. MAGT samples in a single forward pass, concentrates probability near the learned support, and induces an intrinsic density with respect to the manifold volume measure, enabling principled likelihood evaluation for generated samples. We establish finite-sample Wasserstein bounds linking smoothing level and score-approximation accuracy to generative fidelity, and empirically improve fidelity and manifold concentration across synthetic and benchmark datasets while sampling substantially faster than diffusion models.",
+        "authors": "Xinyu Tian, Xiaotong Shen",
+        "url": "http://arxiv.org/abs/2602.19600v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19600v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 MAGT (Manifold-Aligned Generative Transport)，一种流式生成器，学习从低维基础分布到数据空间的一次性、流形对齐传输。它解决了高维生成建模中支持保真度与采样效率的权衡问题，结合了扩散模型和归一化流的优点。通过在固定高斯平滑水平上训练，并建立有限样本Wasserstein界限，该方法在理论上严谨，且在采样速度上显著优于扩散模型，是生成AI效率和质量方面的重大突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19575v1",
+        "title": "ConceptPrism: Concept Disentanglement in Personalized Diffusion Models via Residual Token Optimization",
+        "summary": "Personalized text-to-image generation suffers from concept entanglement, where irrelevant residual information from reference images is captured, leading to a trade-off between concept fidelity and text alignment. Recent disentanglement approaches attempt to solve this utilizing manual guidance, such as linguistic cues or segmentation masks, which limits their applicability and fails to fully articulate the target concept. In this paper, we propose ConceptPrism, a novel framework that automatically disentangles the shared visual concept from image-specific residuals by comparing images within a set. Our method jointly optimizes a target token and image-wise residual tokens using two complementary objectives: a reconstruction loss to ensure fidelity, and a novel exclusion loss that compels residual tokens to discard the shared concept. This process allows the target token to capture the pure concept without direct supervision. Extensive experiments demonstrate that ConceptPrism effectively resolves concept entanglement, achieving a significantly improved trade-off between fidelity and alignment.",
+        "authors": "Minseo Kim, Minchan Kwon, Dongyeun Lee, Yunho Jeon, Junmo Kim",
+        "url": "http://arxiv.org/abs/2602.19575v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19575v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 ConceptPrism，一个新颖的框架，通过残差 token 优化在个性化扩散模型中实现概念解耦。它通过联合优化目标 token 和图像级残差 token，并引入新颖的排除损失，自动将共享视觉概念与图像特定残差分离。该方法解决了概念纠缠问题，在不依赖手动指导的情况下，显著改善了生成图像的保真度和文本对齐，对生成AI的控制和质量具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19542v1",
+        "title": "Vinedresser3D: Agentic Text-guided 3D Editing",
+        "summary": "Text-guided 3D editing aims to modify existing 3D assets using natural-language instructions. Current methods struggle to jointly understand complex prompts, automatically localize edits in 3D, and preserve unedited content. We introduce Vinedresser3D, an agentic framework for high-quality text-guided 3D editing that operates directly in the latent space of a native 3D generative model. Given a 3D asset and an editing prompt, Vinedresser3D uses a multimodal large language model to infer rich descriptions of the original asset, identify the edit region and edit type (addition, modification, deletion), and generate decomposed structural and appearance-level text guidance. The agent then selects an informative view and applies an image editing model to obtain visual guidance. Finally, an inversion-based rectified-flow inpainting pipeline with an interleaved sampling module performs editing in the 3D latent space, enforcing prompt alignment while maintaining 3D coherence and unedited regions. Experiments on diverse 3D edits demonstrate that Vinedresser3D outperforms prior baselines in both automatic metrics and human preference studies, while enabling precise, coherent, and mask-free 3D editing.",
+        "authors": "Yankuan Chi, Xiang Li, Zixuan Huang, James M. Rehg",
+        "url": "http://arxiv.org/abs/2602.19542v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19542v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 Vinedresser3D，一个智能体框架，用于在原生3D生成模型的潜在空间中进行高质量的文本引导3D编辑。它利用多模态大语言模型（MLLM）推断资产描述、识别编辑区域和类型，并生成结构和外观级别的文本指导。结合基于反演的整流流修复管道，该方法实现了精确、连贯且无需掩码的3D编辑。这解决了3D内容创作中的复杂瓶颈，具有高度的创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19519v1",
+        "title": "Ada-RS: Adaptive Rejection Sampling for Selective Thinking",
+        "summary": "Large language models (LLMs) are increasingly being deployed in cost and latency-sensitive settings. While chain-of-thought improves reasoning, it can waste tokens on simple requests. We study selective thinking for tool-using LLMs and introduce Adaptive Rejection Sampling (Ada-RS), an algorithm-agnostic sample filtering framework for learning selective and efficient reasoning. For each given context, Ada-RS scores multiple sampled completions with an adaptive length-penalized reward then applies stochastic rejection sampling to retain only high-reward candidates (or preference pairs) for downstream optimization. We demonstrate how Ada-RS plugs into both preference pair (e.g. DPO) or grouped policy optimization strategies (e.g. DAPO). Using Qwen3-8B with LoRA on a synthetic tool call-oriented e-commerce benchmark, Ada-RS improves the accuracy-efficiency frontier over standard algorithms by reducing average output tokens by up to 80% and reducing thinking rate by up to 95% while maintaining or improving tool call accuracy. These results highlight that training-signal selection is a powerful lever for efficient reasoning in latency-sensitive deployments.",
+        "authors": "Yirou Ge, Yixi Li, Alec Chiu, Shivani Shekhar, Zijie Pan, Avinash Thangali, Yun-Shiuan Chuang, Chaitanya Kulkarni, Uma Kona, Linsey Pang, Prakhar Mehrotra",
+        "url": "http://arxiv.org/abs/2602.19519v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19519v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了 Ada-RS (Adaptive Rejection Sampling)，一个与算法无关的样本过滤框架，用于工具型LLM的选择性思考，以实现高效推理。它通过自适应长度惩罚奖励对多个采样完成进行评分，并应用随机拒绝采样来保留高奖励候选。该方法显著提高了LLM的准确性-效率边界，减少了 token 使用和思考时间，解决了LLM部署中关键的成本和延迟瓶颈，具有很强的理论创新和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19509v1",
+        "title": "Pyramid MoA: A Probabilistic Framework for Cost-Optimized Anytime Inference",
+        "summary": "Large Language Models (LLMs) face a persistent trade-off between inference cost and reasoning capability. While \"Oracle\" models (e.g., Llama-3-70B) achieve state-of-the-art accuracy, they are prohibitively expensive for high-volume deployment. Smaller models (e.g., 8B parameters) are cost-effective but struggle with complex tasks. In this work, we propose \"Pyramid MoA\", a hierarchical Mixture-of-Agents architecture that uses a lightweight Router to dynamically escalate queries only when necessary. By leveraging semantic agreement and confidence calibration among an ensemble of small models, our Router identifies \"hard\" problems with high precision. On the GSM8K benchmark, our system achieves 93.0% accuracy, effectively matching the Oracle baseline (98.0%) while reducing compute costs by 61%. We demonstrate that the system introduces negligible latency overhead (+0.82s) and allows for a tunable trade-off between performance and budget.",
+        "authors": "Arindam Khaled",
+        "url": "http://arxiv.org/abs/2602.19509v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19509v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 Pyramid MoA，一个分层混合智能体架构，用于成本优化的随时推理。它使用轻量级路由器，通过小模型集合的语义一致性和置信度校准，动态地将查询升级到更强大的模型。该框架在保持高准确性的同时显著降低了计算成本，解决了LLM推理中的主要成本和效率瓶颈，具有显著的架构创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.19396v1",
+        "title": "Hiding in Plain Text: Detecting Concealed Jailbreaks via Activation Disentanglement",
+        "summary": "Large language models (LLMs) remain vulnerable to jailbreak prompts that are fluent and semantically coherent, and therefore difficult to detect with standard heuristics. A particularly challenging failure mode occurs when an attacker tries to hide the malicious goal of their request by manipulating its framing to induce compliance. Because these attacks maintain malicious intent through a flexible presentation, defenses that rely on structural artifacts or goal-specific signatures can fail. Motivated by this, we introduce a self-supervised framework for disentangling semantic factor pairs in LLM activations at inference. We instantiate the framework for goal and framing and construct GoalFrameBench, a corpus of prompts with controlled goal and framing variations, which we use to train Representation Disentanglement on Activations (ReDAct) module to extract disentangled representations in a frozen LLM. We then propose FrameShield, an anomaly detector operating on the framing representations, which improves model-agnostic detection across multiple LLM families with minimal computational overhead. Theoretical guarantees for ReDAct and extensive empirical validations show that its disentanglement effectively powers FrameShield. Finally, we use disentanglement as an interpretability probe, revealing distinct profiles for goal and framing signals and positioning semantic disentanglement as a building block for both LLM safety and mechanistic interpretability.",
+        "authors": "Amirhossein Farzam, Majid Behabahani, Mani Malek, Yuriy Nevmyvaka, Guillermo Sapiro",
+        "url": "http://arxiv.org/abs/2602.19396v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.19396v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个自监督框架，通过激活解耦来检测隐蔽的越狱提示。它提出了 ReDAct 模块，用于在冻结的LLM中提取语义因子对（目标和框架）的解耦表示，并基于此构建了 FrameShield 异常检测器。该方法提供了 ReDAct 的理论保证，并显著提高了对隐蔽越狱的检测能力，解决了LLM部署中的一个关键安全瓶颈，同时提供了机制可解释性。"
+    }
+]

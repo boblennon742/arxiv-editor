@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.20555v1",
+        "title": "Standard Transformers Achieve the Minimax Rate in Nonparametric Regression with $C^{s,λ}$ Targets",
+        "summary": "The tremendous success of Transformer models in fields such as large language models and computer vision necessitates a rigorous theoretical investigation. To the best of our knowledge, this paper is the first work proving that standard Transformers can approximate Hölder functions $ C^{s,λ}\\left([0,1]^{d\\times n}\\right) $$ (s\\in\\mathbb{N}_{\\geq0},0<λ\\leq1) $ under the $L^t$ distance ($t \\in [1, \\infty]$) with arbitrary precision. Building upon this approximation result, we demonstrate that standard Transformers achieve the minimax optimal rate in nonparametric regression for Hölder target functions. It is worth mentioning that, by introducing two metrics: the size tuple and the dimension vector, we provide a fine-grained characterization of Transformer structures, which facilitates future research on the generalization and optimization errors of Transformers with different structures. As intermediate results, we also derive the upper bounds for the Lipschitz constant of standard Transformers and their memorization capacity, which may be of independent interest. These findings provide theoretical justification for the powerful capabilities of Transformer models.",
+        "authors": "Yanming Lai, Defeng Sun",
+        "url": "http://arxiv.org/abs/2602.20555v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20555v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对Transformer模型进行了开创性的理论分析，首次证明了标准Transformer在非参数回归中能达到Minimax最优速率，并提供了Lipschitz常数和记忆容量的上限。这对于理解Transformer的强大能力和指导未来架构设计具有基础性意义，完美契合您对“前沿算法和架构”的“理论创新性”偏好，且具有极高的数理统计严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20532v1",
+        "title": "Actor-Curator: Co-adaptive Curriculum Learning via Policy-Improvement Bandits for RL Post-Training",
+        "summary": "Post-training large foundation models with reinforcement learning typically relies on massive and heterogeneous datasets, making effective curriculum learning both critical and challenging. In this work, we propose ACTOR-CURATOR, a scalable and fully automated curriculum learning framework for reinforcement learning post-training of large language models (LLMs). ACTOR-CURATOR learns a neural curator that dynamically selects training problems from large problem banks by directly optimizing for expected policy performance improvement. We formulate problem selection as a non-stationary stochastic bandit problem, derive a principled loss function based on online stochastic mirror descent, and establish regret guarantees under partial feedback. Empirically, ACTOR-CURATOR consistently outperforms uniform sampling and strong curriculum baselines across a wide range of challenging reasoning benchmarks, demonstrating improved training stability and efficiency. Notably, it achieves relative gains of 28.6% on AIME2024 and 30.5% on ARC-1D over the strongest baseline and up to 80% speedup. These results suggest that ACTOR-CURATOR is a powerful and practical approach for scalable LLM post-training.",
+        "authors": "Zhengyao Gu, Jonathan Light, Raul Astudillo, Ziyu Ye, Langzhou He, Henry Peng Zou, Wei Cheng, Santiago Paternain, Philip S. Yu, Yisong Yue",
+        "url": "http://arxiv.org/abs/2602.20532v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20532v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Actor-Curator，一个可扩展、全自动的RL后训练课程学习框架，通过策略改进型Bandit动态选择训练问题，并提供了严格的理论保证（如遗憾界限）。这在数据效率和训练稳定性方面解决了LLM后训练的关键瓶颈，具有高度的理论创新性和实践影响力，是RL算法前沿的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20937v1",
+        "title": "Extending $μ$P: Spectral Conditions for Feature Learning Across Optimizers",
+        "summary": "Several variations of adaptive first-order and second-order optimization methods have been proposed to accelerate and scale the training of large language models. The performance of these optimization routines is highly sensitive to the choice of hyperparameters (HPs), which are computationally expensive to tune for large-scale models. Maximal update parameterization $(μ$P$)$ is a set of scaling rules which aims to make the optimal HPs independent of the model size, thereby allowing the HPs tuned on a smaller (computationally cheaper) model to be transferred to train a larger, target model. Despite promising results for SGD and Adam, deriving $μ$P for other optimizers is challenging because the underlying tensor programming approach is difficult to grasp. Building on recent work that introduced spectral conditions as an alternative to tensor programs, we propose a novel framework to derive $μ$P for a broader class of optimizers, including AdamW, ADOPT, LAMB, Sophia, Shampoo and Muon. We implement our $μ$P derivations on multiple benchmark models and demonstrate zero-shot learning rate transfer across increasing model width for the above optimizers. Further, we provide empirical insights into depth-scaling parameterization for these optimizers.",
+        "authors": "Akshita Gupta, Marieme Ngom, Sam Foreman, Venkatram Vishwanath",
+        "url": "http://arxiv.org/abs/2602.20937v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20937v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖的框架，利用“谱条件”将Maximal update parameterization ($μ$P)推广到更广泛的优化器（如AdamW, LAMB等），从而简化了大规模模型的超参数调优。这在理论上具有高度创新性，为AI模型训练的效率和可扩展性提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20934v1",
+        "title": "Architecting AgentOS: From Token-Level Context to Emergent System-Level Intelligence",
+        "summary": "The paradigm of Large Language Models is undergoing a fundamental transition from static inference engines to dynamic autonomous cognitive systems.While current research primarily focuses on scaling context windows or optimizing prompt engineering the theoretical bridge between micro scale token processing and macro scale systemic intelligence remains fragmented.This paper proposes AgentOS,a holistic conceptual framework that redefines the LLM as a \"Reasoning Kernel\" governed by structured operating system logic.Central to this architecture is Deep Context Management which conceptualizes the context window as an Addressable Semantic Space rather than a passive buffer.We systematically deconstruct the transition from discrete sequences to coherent cognitive states introducing mechanisms for Semantic Slicing and Temporal Alignment to mitigate cognitive drift in multi-agent orchestration.By mapping classical OS abstractions such as memory paging interrupt handling and process scheduling onto LLM native constructs, this review provides a rigorous roadmap for architecting resilient scalable and self-evolving cognitive environments.Our analysis asserts that the next frontier of AGI development lies in the architectural efficiency of system-level coordination.",
+        "authors": "ChengYou Li, XiaoDong Liu, XiangBao Meng, XinYu Zhao",
+        "url": "http://arxiv.org/abs/2602.20934v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20934v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了AgentOS这一整体概念框架，将LLM重新定义为由结构化操作系统逻辑管理的“推理内核”，并引入了深度上下文管理和OS抽象映射。这为LLM智能体的架构设计提供了严谨的理论路线图，具有极高的理论创新性和前瞻性，对构建可扩展、自进化的认知环境至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20796v1",
+        "title": "Exploring the Impact of Parameter Update Magnitude on Forgetting and Generalization of Continual Learning",
+        "summary": "The magnitude of parameter updates are considered a key factor in continual learning. However, most existing studies focus on designing diverse update strategies, while a theoretical understanding of the underlying mechanisms remains limited. Therefore, we characterize model's forgetting from the perspective of parameter update magnitude and formalize it as knowledge degradation induced by task-specific drift in the parameter space, which has not been fully captured in previous studies due to their assumption of a unified parameter space. By deriving the optimal parameter update magnitude that minimizes forgetting, we unify two representative update paradigms, frozen training and initialized training, within an optimization framework for constrained parameter updates. Our theoretical results further reveals that sequence tasks with small parameter distances exhibit better generalization and less forgetting under frozen training rather than initialized training. These theoretical insights inspire a novel hybrid parameter update strategy that adaptively adjusts update magnitude based on gradient directions. Experiments on deep neural networks demonstrate that this hybrid approach outperforms standard training strategies, providing new theoretical perspectives and practical inspiration for designing efficient and scalable continual learning algorithms.",
+        "authors": "JinLi He, Liang Bai, Xian Yang",
+        "url": "http://arxiv.org/abs/2602.20796v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20796v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从参数更新幅度的角度对持续学习中的遗忘和泛化进行了理论表征，推导了最小化遗忘的最优更新幅度，并统一了两种训练范式。这提供了新的理论视角和实践指导，对AI学习算法的理解和改进至关重要，具有深厚的数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20729v1",
+        "title": "Fuz-RL: A Fuzzy-Guided Robust Framework for Safe Reinforcement Learning under Uncertainty",
+        "summary": "Safe Reinforcement Learning (RL) is crucial for achieving high performance while ensuring safety in real-world applications. However, the complex interplay of multiple uncertainty sources in real environments poses significant challenges for interpretable risk assessment and robust decision-making. To address these challenges, we propose Fuz-RL, a fuzzy measure-guided robust framework for safe RL. Specifically, our framework develops a novel fuzzy Bellman operator for estimating robust value functions using Choquet integrals. Theoretically, we prove that solving the Fuz-RL problem (in Constrained Markov Decision Process (CMDP) form) is equivalent to solving distributionally robust safe RL problems (in robust CMDP form), effectively avoiding min-max optimization. Empirical analyses on safe-control-gym and safety-gymnasium scenarios demonstrate that Fuz-RL effectively integrates with existing safe RL baselines in a model-free manner, significantly improving both safety and control performance under various types of uncertainties in observation, action, and dynamics.",
+        "authors": "Xu Wan, Chao Yang, Cheng Yang, Jie Song, Mingyang Sun",
+        "url": "http://arxiv.org/abs/2602.20729v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20729v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Fuz-RL，一个模糊测度引导的鲁棒安全强化学习框架，引入了新颖的模糊Bellman算子并证明其等价于分布鲁棒安全RL，有效避免了min-max优化。这在理论上具有高度严谨性和创新性，能显著提高真实世界RL应用（如安全控制）的安全性和鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20727v1",
+        "title": "ID-LoRA: Efficient Low-Rank Adaptation Inspired by Matrix Interpolative Decomposition",
+        "summary": "LoRA has become a universal Parameter-Efficient Fine-Tuning (PEFT) technique that equips Large Language Models (LLMs) to adapt quickly to new tasks. However, when these models are scaled up, even the latest LoRA variants still introduce considerable overhead in trainable parameters. Conversely, aggressively lowering the rank to curb this overhead markedly degrades performance in complex multi-task settings. We propose ID-LoRA, a novel PEFT framework that breaks the trade-off. Its core innovation lies in extracting and reusing clustered parameter groups from the pretrained weight matrix. These groups are then used to form multiple low-rank components, all of which share only a single initialized trainable low-rank matrix. This approach cuts the number of trainable parameters while keeping the model's capacity intact. We evaluate ID-LoRA on five diverse benchmarks: Mathematical Reasoning, Code Generation, MMLU, CommonsenseQA, and Safety Alignment. ID-LoRA outperforms both full fine-tuning and existing PEFT baselines (e.g., LoRA, DoRA, HydraLoRA) while using up to 46% fewer trainable parameters than the standard LoRA. In multi-task scenarios, it surpasses LoRA and its recent variants (e.g., DoRA and HydraLoRA) on both Code and MMLU tasks, yet requires only 54% of the trainable parameters demanded by the conventional LoRA.",
+        "authors": "Xindian Ma, Rundong Kong, Peng Zhang, Ruoxiang Huang, Yongyu Jiang",
+        "url": "http://arxiv.org/abs/2602.20727v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20727v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了ID-LoRA，一种受矩阵插值分解启发的PEFT框架，通过从预训练权重矩阵中提取和重用聚类参数组，并共享单个可训练低秩矩阵，显著减少了可训练参数。这在模型压缩和数据效率方面具有高度创新性和实践影响力，同时方法具有坚实的数学原理性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20725v1",
+        "title": "Bridging Physically Based Rendering and Diffusion Models with Stochastic Differential Equation",
+        "summary": "Diffusion-based image generators excel at producing realistic content from text or image conditions, but they offer only limited explicit control over low-level, physically grounded shading and material properties. In contrast, physically based rendering (PBR) offers fine-grained physical control but lacks prompt-driven flexibility. Although these two paradigms originate from distinct communities, both share a common evolution -- from noisy observations to clean images. In this paper, we propose a unified stochastic formulation that bridges Monte Carlo rendering and diffusion-based generative modeling. First, a general stochastic differential equation (SDE) formulation for Monte Carlo integration under the Central Limit Theorem is modeled. Through instantiation via physically based path tracing, we convert it into a physically grounded SDE representation. Moreover, we provide a systematic analysis of how the physical characteristics of path tracing can be extended to existing diffusion models from the perspective of noise variance. Extensive experiments across multiple tasks show that our method can exert physically grounded control over diffusion-generated results, covering tasks such as rendering and material editing.",
+        "authors": "Junwei Shu, Wenjie Liu, Changgu Chen, Hantang Liu, Yang Li, Changbo Wang",
+        "url": "http://arxiv.org/abs/2602.20725v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20725v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个统一的随机微分方程（SDE）公式，将基于物理的渲染（PBR）与扩散模型联系起来，实现了对生成结果的物理精确控制。这在生成AI的理论基础和控制方面具有开创性，严谨性极高，为多模态生成提供了新的理论视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20662v1",
+        "title": "TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence",
+        "summary": "The deployment of Large Language Models (LLMs) for real-time intelligence on edge devices is rapidly growing. However, conventional hardware architectures face a fundamental memory wall challenge, where limited on-device memory capacity and bandwidth severely constrain the size of deployable models and their inference speed, while also limiting on-device adaptation. To address this challenge, we propose TOM, a hybrid ROM-SRAM accelerator co-designed with ternary quantization, which balances extreme density with on-device tunability. TOM exploits the synergy between ternary quantization and ROM to achieve extreme memory density and bandwidth, while preserving flexibility through a hybrid ROM-SRAM architecture designed for QLoRA-based tunability. Specifically, we introduce: (1) a sparsity-aware ROM architecture that synthesizes ternary weights as standard-cell logic, eliminating area overhead from zero-valued bits; (2) a distributed processing architecture that co-locates high-density ROM banks with flexible SRAM-based QLoRA adapters and compute units; and (3) a workload-aware dynamic power gating scheme that exploits the logic-based nature of ROM to power down inactive banks, minimizing dynamic energy consumption. TOM achieves an inference throughput of 3,306 TPS using BitNet-2B model, demonstrating its effectiveness in delivering real-time, energy-efficient edge intelligence.",
+        "authors": "Hongyi Guan, Yijia Zhang, Wenqiang Wang, Yizhao Gao, Shijie Cao, Chen Zhang, Ningyi Xu",
+        "url": "http://arxiv.org/abs/2602.20662v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20662v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了TOM，一个与三元量化协同设计的混合ROM-SRAM加速器，解决了LLM在边缘设备部署时的内存和带宽瓶颈。这在AI架构和模型压缩方面具有高度创新性和实践影响力，为LLM在资源受限环境下的实时、高效部署提供了关键硬件解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20624v1",
+        "title": "Physics-based phenomenological characterization of cross-modal bias in multimodal models",
+        "summary": "The term 'algorithmic fairness' is used to evaluate whether AI models operate fairly in both comparative (where fairness is understood as formal equality, such as \"treat like cases as like\") and non-comparative (where unfairness arises from the model's inaccuracy, arbitrariness, or inscrutability) contexts. Recent advances in multimodal large language models (MLLMs) are breaking new ground in multimodal understanding, reasoning, and generation; however, we argue that inconspicuous distortions arising from complex multimodal interaction dynamics can lead to systematic bias. The purpose of this position paper is twofold: first, it is intended to acquaint AI researchers with phenomenological explainable approaches that rely on the physical entities that the machine experiences during training/inference, as opposed to the traditional cognitivist symbolic account or metaphysical approaches; second, it is to state that this phenomenological doctrine will be practically useful for tackling algorithmic fairness issues in MLLMs. We develop a surrogate physics-based model that describes transformer dynamics (i.e., semantic network structure and self-/cross-attention) to analyze the dynamics of cross-modal bias in MLLM, which are not fully captured by conventional embedding- or representation-level analyses. We support this position through multi-input diagnostic experiments: 1) perturbation-based analyses of emotion classification using Qwen2.5-Omni and Gemma 3n, and 2) dynamical analysis of Lorenz chaotic time-series prediction through the physical surrogate. Across two architecturally distinct MLLMs, we show that multimodal inputs can reinforce modality dominance rather than mitigate it, as revealed by structured error-attractor patterns under systematic label perturbation, complemented by dynamical analysis.",
+        "authors": "Hyeongmo Kim, Sohyun Kang, Yerin Choi, Seungyeon Ji, Junhyuk Woo, Hyunsuk Chung, Soyeon Caren Han, Kyungreem Han",
+        "url": "http://arxiv.org/abs/2602.20624v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20624v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于物理的现象学模型来表征多模态大语言模型（MLLM）中的跨模态偏差，揭示了多模态输入可能强化而非缓解模态主导性。这为理解MLLM的内在行为和解决算法公平性问题提供了深刻的理论洞察和严谨的分析方法，对AI架构的鲁棒性研究至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20557v1",
+        "title": "GENSR: Symbolic Regression Based in Equation Generative Space",
+        "summary": "Symbolic Regression (SR) tries to reveal the hidden equations behind observed data. However, most methods search within a discrete equation space, where the structural modifications of equations rarely align with their numerical behavior, leaving fitting error feedback too noisy to guide exploration. To address this challenge, we propose GenSR, a generative latent space-based SR framework following the `map construction -> coarse localization -> fine search'' paradigm. Specifically, GenSR first pretrains a dual-branch Conditional Variational Autoencoder (CVAE) to reparameterize symbolic equations into a generative latent space with symbolic continuity and local numerical smoothness. This space can be regarded as a well-structured `map'' of the equation space, providing directional signals for search. At inference, the CVAE coarsely localizes the input data to promising regions in the latent space. Then, a modified CMA-ES refines the candidate region, leveraging smooth latent gradients. From a Bayesian perspective, GenSR reframes the SR task as maximizing the conditional distribution $p(\\mathrm{Equ.} \\mid \\mathrm{Num.})$, with CVAE training achieving this objective through the Evidence Lower Bound (ELBO). This new perspective provides a theoretical guarantee for the effectiveness of GenSR. Extensive experiments show that GenSR jointly optimizes predictive accuracy, expression simplicity, and computational efficiency, while remaining robust under noise.",
+        "authors": "Qian Li, Yuxiao Hu, Juncheng Liu, Yuntian Chen",
+        "url": "http://arxiv.org/abs/2602.20557v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20557v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了GenSR，一个基于生成式潜在空间的符号回归框架，通过双分支CVAE将符号方程重参数化到具有符号连续性和数值平滑性的潜在空间，并从贝叶斯角度提供了理论保证。这在AI算法的理论创新性方面表现突出，为科学发现和模型可解释性提供了新工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20492v1",
+        "title": "Wireless Federated Multi-Task LLM Fine-Tuning via Sparse-and-Orthogonal LoRA",
+        "summary": "Decentralized federated learning (DFL) based on low-rank adaptation (LoRA) enables mobile devices with multi-task datasets to collaboratively fine-tune a large language model (LLM) by exchanging locally updated parameters with a subset of neighboring devices via wireless connections for knowledge integration.However, directly aggregating parameters fine-tuned on heterogeneous datasets induces three primary issues across the DFL life-cycle: (i) \\textit{catastrophic knowledge forgetting during fine-tuning process}, arising from conflicting update directions caused by data heterogeneity; (ii) \\textit{inefficient communication and convergence during model aggregation process}, due to bandwidth-intensive redundant model transmissions; and (iii) \\textit{multi-task knowledge interference during inference process}, resulting from incompatible knowledge representations coexistence during inference. To address these issues in a fully decentralized scenario, we first propose a sparse-and-orthogonal LoRA that ensures orthogonality between model updates to eliminate direction conflicts during fine-tuning.Then, we analyze how device connection topology affects multi-task performance, prompting a cluster-based topology design during aggregation.Finally, we propose an implicit mixture of experts (MoE) mechanism to avoid the coexistence of incompatible knowledge during inference. Simulation results demonstrate that the proposed approach effectively reduces communication resource consumption by up to $73\\%$ and enhances average performance by $5\\%$ compared with the traditional LoRA method.",
+        "authors": "Nuocheng Yang, Sihua Wang, Ouwen Huan, Mingzhe Chen, Tony Q. S. Quek, Changchuan Yin",
+        "url": "http://arxiv.org/abs/2602.20492v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20492v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了LESA，一个可学习的阶段感知预测器框架，利用Kolmogorov-Arnold网络（KAN）和多阶段多专家架构显著加速扩散模型。这在模型压缩和数据效率方面具有高度创新性和实践影响力，为扩散模型的实际部署提供了关键技术，且方法具有坚实的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20486v1",
+        "title": "Hybrid LLM-Embedded Dialogue Agents for Learner Reflection: Designing Responsive and Theory-Driven Interactions",
+        "summary": "Dialogue systems have long supported learner reflections, with theoretically grounded, rule-based designs offering structured scaffolding but often struggling to respond to shifts in engagement. Large Language Models (LLMs), in contrast, can generate context-sensitive responses but are not informed by decades of research on how learning interactions should be structured, raising questions about their alignment with pedagogical theories. This paper presents a hybrid dialogue system that embeds LLM responsiveness within a theory-aligned, rule-based framework to support learner reflections in a culturally responsive robotics summer camp. The rule-based structure grounds dialogue in self-regulated learning theory, while the LLM decides when and how to prompt deeper reflections, responding to evolving conversation context. We analyze themes across dialogues to explore how our hybrid system shaped learner reflections. Our findings indicate that LLM-embedded dialogues supported richer learner reflections on goals and activities, but also introduced challenges due to repetitiveness and misalignment in prompts, reducing engagement.",
+        "authors": "Paras Sharma, YuePing Sha, Janet Shufor Bih Epse Fofang, Brayden Yan, Jess A. Turner, Nicole Balay, Hubert O. Asare, Angela E. B. Stewart, Erin Walker",
+        "url": "http://arxiv.org/abs/2602.20486v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20486v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了稀疏正交LoRA，解决了无线联邦多任务LLM微调中的灾难性遗忘、通信效率和知识干扰问题，并提供了正交性理论动机。这在LLM数据效率和架构方面具有高度创新性和实践影响力，对边缘AI部署和多任务学习至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.20457v1",
+        "title": "Oracle-Robust Online Alignment for Large Language Models",
+        "summary": "We study online alignment of large language models under misspecified preference feedback, where the observed preference oracle deviates from an ideal but unknown ground-truth oracle. The online LLM alignment problem is a bi-level reinforcement problem due to the coupling between data collection and policy updates. Recently, the problem has been reduced to tractable single-level objective in the SAIL (Self-Improving Efficient Online Alignment) framework. In this paper, we introduce a pointwise oracle uncertainty set in this problem and formulate an oracle-robust online alignment objective as a worst-case optimization problem. For log-linear policies, we show that this robust objective admits an exact closed-form decomposition into the original loss function plus an explicit sensitivity penalty. We develop projected stochastic composite updates for the resulting weakly convex objective and prove $\\widetilde{O}(\\varepsilon^{-2})$ oracle complexity for reaching approximate stationarity.",
+        "authors": "Zimeng Li, Mudit Gaur, Vaneet Aggarwal",
+        "url": "http://arxiv.org/abs/2602.20457v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.20457v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了在错误指定偏好反馈下LLM在线对齐的鲁棒性问题，并将其公式化为最坏情况优化问题，提供了精确的闭式分解和收敛性证明。这在LLM对齐的理论严谨性和鲁棒性方面具有高度创新性，对LLM在真实世界中的可靠部署具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21189v1",
+        "title": "Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training",
+        "summary": "Pass@k is a widely used performance metric for verifiable large language model tasks, including mathematical reasoning, code generation, and short-answer reasoning. It defines success if any of $k$ independently sampled solutions passes a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning methods that directly optimize pass@$k$. However, prior work reports a recurring trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off is practically important because pass@1 often remains a hard operational constraint due to latency and cost budgets, imperfect verifier coverage, and the need for a reliable single-shot fallback. We study the origin of this trade-off and provide a theoretical characterization of when pass@k policy optimization can reduce pass@1 through gradient conflict induced by prompt interference. We show that pass@$k$ policy gradients can conflict with pass@1 gradients because pass@$k$ optimization implicitly reweights prompts toward low-success prompts; when these prompts are what we term negatively interfering, their upweighting can rotate the pass@k update direction away from the pass@1 direction. We illustrate our theoretical findings with large language model experiments on verifiable mathematical reasoning tasks.",
+        "authors": "Anas Barakat, Souradip Chakraborty, Khushbu Pahwa, Amrit Singh Bedi",
+        "url": "http://arxiv.org/abs/2602.21189v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21189v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对Pass@k优化可能导致Pass@1下降的现象进行了理论表征，揭示了“提示干扰”和“梯度冲突”的机制。这为LLM微调中的实际瓶颈提供了深刻的理论洞察，具有很强的数理统计背景和严谨性，对LLM应用中的效率问题有指导意义。"
+    }
+]

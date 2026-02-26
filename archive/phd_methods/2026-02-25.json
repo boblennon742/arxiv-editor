@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.22145v1",
+        "title": "When AI Writes, Whose Voice Remains? Quantifying Cultural Marker Erasure Across World English Varieties in Large Language Models",
+        "summary": "Large Language Models (LLMs) are increasingly used to ``professionalize'' workplace communication, often at the cost of linguistic identity. We introduce \"Cultural Ghosting\", the systematic erasure of linguistic markers unique to non-native English varieties during text processing. Through analysis of 22,350 LLM outputs generated from 1,490 culturally marked texts (Indian, Singaporean,& Nigerian English) processed by five models under three prompt conditions, we quantify this phenomenon using two novel metrics: Identity Erasure Rate (IER) & Semantic Preservation Score (SPS). Across all prompts, we find an overall IER of 10.26%, with model-level variation from 3.5% to 20.5% (5.9x range). Crucially, we identify a Semantic Preservation Paradox: models maintain high semantic similarity (mean SPS = 0.748) while systematically erasing cultural markers. Pragmatic markers (politeness conventions) are 1.9x more vulnerable than lexical markers (71.5% vs. 37.1% erasure). Our experiments demonstrate that explicit cultural-preservation prompts reduce erasure by 29% without sacrificing semantic quality.",
+        "authors": "Satyam Kumar Navneet, Joydeep Chandra, Yong Zhang",
+        "url": "http://arxiv.org/abs/2602.22145v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22145v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究量化了LLM在处理非母语英语文本时对文化语言标记的系统性抹除，提出了“文化幽灵化”现象和新的评估指标。其理论创新在于对LLM行为的社会语言学分析，严谨性体现在量化方法和实验设计上，对LLM应用中的伦理和偏见问题有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22146v1",
+        "title": "Provable Last-Iterate Convergence for Multi-Objective Safe LLM Alignment via Optimistic Primal-Dual",
+        "summary": "Reinforcement Learning from Human Feedback (RLHF) plays a significant role in aligning Large Language Models (LLMs) with human preferences. While RLHF with expected reward constraints can be formulated as a primal-dual optimization problem, standard primal-dual methods only guarantee convergence with a distributional policy where the saddle-point problem is in convex-concave form. Moreover, standard primal-dual methods may exhibit instability or divergence in the last iterate under policy parameterization in practical applications. In this work, we propose a universal primal-dual framework for safe RLHF that unifies a broad class of existing alignment algorithms, including safe-RLHF, one-shot, and multi-shot based methods. Building on this framework, we introduce an optimistic primal-dual (OPD) algorithm that incorporates predictive updates for both primal and dual variables to stabilize saddle-point dynamics. We establish last-iterate convergence guarantees for the proposed method, covering both exact policy optimization in the distributional space and convergence to a neighborhood of the optimal solution whose gap is related to approximation error and bias under parameterized policies. Our analysis reveals that optimism plays a crucial role in mitigating oscillations inherent to constrained alignment objectives, thereby closing a key theoretical gap between constrained RL and practical RLHF.",
+        "authors": "Yining Li, Peizhong Ju, Ness Shroff",
+        "url": "http://arxiv.org/abs/2602.22146v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22146v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了WeaveTime框架，解决了Video-LLM在流式处理中时间感知不足的问题。通过引入时间重建目标和动态焦点缓存，提升了模型对时间顺序的理解和推理能力，对视频LLM的架构创新和实际应用（如实时流媒体分析）具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22157v1",
+        "title": "Dynamic Personality Adaptation in Large Language Models via State Machines",
+        "summary": "The inability of Large Language Models (LLMs) to modulate their personality expression in response to evolving dialogue dynamics hinders their performance in complex, interactive contexts. We propose a model-agnostic framework for dynamic personality simulation that employs state machines to represent latent personality states, where transition probabilities are dynamically adapted to the conversational context. Part of our architecture is a modular pipeline for continuous personality scoring that evaluates dialogues along latent axes while remaining agnostic to the specific personality models, their dimensions, transition mechanisms, or LLMs used. These scores function as dynamic state variables that systematically reconfigure the system prompt, steering behavioral alignment throughout the interaction.We evaluate this framework by operationalizing the Interpersonal Circumplex (IPC) in a medical education setting. Results demonstrate that the system successfully adapts its personality state to user inputs, but also influences user behavior, thereby facilitating de-escalation training. Notably, the scoring pipeline maintains comparable precision even when utilizing lightweight, fine-tuned classifiers instead of large-scale LLMs. This work demonstrates the feasibility of modular, personality-adaptive architectures for education, customer support, and broader human-computer interaction.",
+        "authors": "Leon Pielage, Ole Hätscher, Mitja Back, Bernhard Marschall, Benjamin Risse",
+        "url": "http://arxiv.org/abs/2602.22157v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22157v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个模型无关的框架，通过状态机实现LLM的动态个性适应，并引入了连续个性评分模块。这在LLM行为控制和人机交互领域具有理论创新性，其动态适应机制对LLM在复杂对话场景（如医疗教育、客户支持）中的应用瓶颈提供了新颖的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22142v1",
+        "title": "WeaveTime: Stream from Earlier Frames into Emergent Memory in VideoLLMs",
+        "summary": "Recent advances in Multimodal Large Language Models have greatly improved visual understanding and reasoning, yet their quadratic attention and offline training protocols make them ill-suited for streaming settings where frames arrive sequentially and future observations are inaccessible. We diagnose a core limitation of current Video-LLMs, namely Time-Agnosticism, in which videos are treated as an unordered bag of evidence rather than a causally ordered sequence, yielding two failures in streams: temporal order ambiguity, in which the model cannot follow or reason over the correct chronological order, and past-current focus blindness where it fails to distinguish present observations from accumulated history. We present WeaveTime, a simple, efficient, and model agnostic framework that first teaches order and then uses order. We introduce a lightweight Temporal Reconstruction objective-our Streaming Order Perception enhancement-that instills order aware representations with minimal finetuning and no specialized streaming data. At inference, a Past-Current Dynamic Focus Cache performs uncertainty triggered, coarse-to-fine retrieval, expanding history only when needed. Plugged into exsiting Video-LLM without architectural changes, WeaveTime delivers consistent gains on representative streaming benchmarks, improving accuracy while reducing latency. These results establish WeaveTime as a practical path toward time aware stream Video-LLMs under strict online, time causal constraints. Code and weights will be made publicly available. Project Page: https://zhangyl4.github.io/publications/weavetime/",
+        "authors": "Yulin Zhang, Cheng Shi, Sibei Yang",
+        "url": "http://arxiv.org/abs/2602.22142v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22142v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了WeaveTime框架，解决了Video-LLM在流式处理中时间感知不足的问题。通过引入时间重建目标和动态焦点缓存，提升了模型对时间顺序的理解和推理能力，对视频LLM的架构创新和实际应用（如实时流媒体分析）具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22122v1",
+        "title": "Probing the Geometry of Diffusion Models with the String Method",
+        "summary": "Understanding the geometry of learned distributions is fundamental to improving and interpreting diffusion models, yet systematic tools for exploring their landscape remain limited. Standard latent-space interpolations fail to respect the structure of the learned distribution, often traversing low-density regions. We introduce a framework based on the string method that computes continuous paths between samples by evolving curves under the learned score function. Operating on pretrained models without retraining, our approach interpolates between three regimes: pure generative transport, which yields continuous sample paths; gradient-dominated dynamics, which recover minimum energy paths (MEPs); and finite-temperature string dynamics, which compute principal curves -- self-consistent paths that balance energy and entropy. We demonstrate that the choice of regime matters in practice. For image diffusion models, MEPs contain high-likelihood but unrealistic ''cartoon'' images, confirming prior observations that likelihood maxima appear unrealistic; principal curves instead yield realistic morphing sequences despite lower likelihood. For protein structure prediction, our method computes transition pathways between metastable conformers directly from models trained on static structures, yielding paths with physically plausible intermediates. Together, these results establish the string method as a principled tool for probing the modal structure of diffusion models -- identifying modes, characterizing barriers, and mapping connectivity in complex learned distributions.",
+        "authors": "Elio Moreau, Florentin Coeurdoux, Grégoire Ferre, Eric Vanden-Eijnden",
+        "url": "http://arxiv.org/abs/2602.22122v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22122v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了基于弦方法（string method）的框架来探测扩散模型的几何结构，计算样本间的连续路径。这为理解生成模型的潜在分布景观提供了理论创新工具，具有高度的数学严谨性，对改进和解释扩散模型具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22090v1",
+        "title": "Confidence-Driven Multi-Scale Model Selection for Cost-Efficient Inference",
+        "summary": "Large Language Models (LLMs) have revolutionized inference across diverse natural language tasks, with larger models performing better but at higher computational costs. We propose a confidence-driven strategy that dynamically selects the most suitable model based on confidence estimates. By assessing a model's confidence in handling the task and response accuracy, tasks that are likely to be solved correctly are retained, while more uncertain or complex cases are delegated to a larger model, ensuring reliability while minimizing computation. Specifically, we evaluate a model's likelihood of knowing the correct answer and the probability that its response is accurate. Experiments on the Massive Multitask Language Understanding (MMLU) benchmark show that our approach achieves accuracy comparable to the largest model while reducing computational costs by 20\\% to 40\\%. When applied to GPT-4o API calls, it reduces token usage by approximately 60\\%, further improving cost efficiency. These findings indicate the potential of confidence-based model selection to enhance real-world LLM deployment, particularly in resource-constrained settings such as edge devices and commercial API applications.",
+        "authors": "Bo-Wei Chen, Chung-Chi Chen, An-Zi Yen",
+        "url": "http://arxiv.org/abs/2602.22090v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22090v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种置信度驱动的多尺度模型选择策略，动态选择最合适的LLM以实现成本效益推理。其创新性在于将置信度估计（模型对答案的了解程度和响应准确性）融入动态选择，有效解决了LLM部署中的计算成本瓶颈，具有很高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22072v1",
+        "title": "Understanding Artificial Theory of Mind: Perturbed Tasks and Reasoning in Large Language Models",
+        "summary": "Theory of Mind (ToM) refers to an agent's ability to model the internal states of others. Contributing to the debate whether large language models (LLMs) exhibit genuine ToM capabilities, our study investigates their ToM robustness using perturbations on false-belief tasks and examines the potential of Chain-of-Thought prompting (CoT) to enhance performance and explain the LLM's decision. We introduce a handcrafted, richly annotated ToM dataset, including classic and perturbed false belief tasks, the corresponding spaces of valid reasoning chains for correct task completion, subsequent reasoning faithfulness, task solutions, and propose metrics to evaluate reasoning chain correctness and to what extent final answers are faithful to reasoning traces of the generated CoT. We show a steep drop in ToM capabilities under task perturbation for all evaluated LLMs, questioning the notion of any robust form of ToM being present. While CoT prompting improves the ToM performance overall in a faithful manner, it surprisingly degrades accuracy for some perturbation classes, indicating that selective application is necessary.",
+        "authors": "Christian Nickel, Laura Schrewe, Florian Mai, Lucie Flek",
+        "url": "http://arxiv.org/abs/2602.22072v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22072v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过引入扰动任务和新的评估指标，深入探讨了LLM的“心智理论”（ToM）能力及其鲁棒性。其理论创新在于对LLM认知能力的严谨实证分析，有助于理解LLM的推理机制，对前沿AI算法的局限性有重要启示。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22061v1",
+        "title": "Learning Quantum Data Distribution via Chaotic Quantum Diffusion Model",
+        "summary": "Generative models for quantum data pose significant challenges but hold immense potential in fields such as chemoinformatics and quantum physics. Quantum denoising diffusion probabilistic models (QuDDPMs) enable efficient learning of quantum data distributions by progressively scrambling and denoising quantum states; however, existing implementations typically rely on circuit-based random unitary dynamics that can be costly to realize and sensitive to control imperfections, particularly on analog quantum hardware. We propose the chaotic quantum diffusion model, a framework that generates projected ensembles via chaotic Hamiltonian time evolution, providing a flexible and hardware-compatible diffusion mechanism. Requiring only global, time-independent control, our approach substantially reduces implementation overhead across diverse analog quantum platforms while achieving accuracy comparable to QuDDPMs. This method improves trainability and robustness, broadening the applicability of quantum generative modeling.",
+        "authors": "Quoc Hoan Tran, Koki Chinzei, Yasuhiro Endo, Hirotaka Oshima",
+        "url": "http://arxiv.org/abs/2602.22061v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22061v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 3
+        },
+        "reason_zh": "该论文提出了混沌量子扩散模型，通过混沌哈密顿时间演化生成投影系综，为量子数据生成提供了硬件兼容且鲁棒的扩散机制。这在量子生成模型领域具有显著的理论创新性和数学严谨性，对拓展量子AI的应用范围具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21950v1",
+        "title": "MEDSYN: Benchmarking Multi-EviDence SYNthesis in Complex Clinical Cases for Multimodal Large Language Models",
+        "summary": "Multimodal large language models (MLLMs) have shown great potential in medical applications, yet existing benchmarks inadequately capture real-world clinical complexity. We introduce MEDSYN, a multilingual, multimodal benchmark of highly complex clinical cases with up to 7 distinct visual clinical evidence (CE) types per case. Mirroring clinical workflow, we evaluate 18 MLLMs on differential diagnosis (DDx) generation and final diagnosis (FDx) selection. While top models often match or even outperform human experts on DDx generation, all MLLMs exhibit a much larger DDx--FDx performance gap compared to expert clinicians, indicating a failure mode in synthesis of heterogeneous CE types. Ablations attribute this failure to (i) overreliance on less discriminative textual CE ($\\it{e.g.}$, medical history) and (ii) a cross-modal CE utilization gap. We introduce Evidence Sensitivity to quantify the latter and show that a smaller gap correlates with higher diagnostic accuracy. Finally, we demonstrate how it can be used to guide interventions to improve model performance. We will open-source our benchmark and code.",
+        "authors": "Boqi Chen, Xudong Liu, Jiachuan Peng, Marianne Frey-Marti, Bang Zheng, Kyle Lam, Lin Li, Jianing Qiu",
+        "url": "http://arxiv.org/abs/2602.21950v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21950v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了RABot框架，通过强化学习引导的图增强来解决社交机器人检测中类别不平衡和拓扑噪声问题。其创新性在于结合了邻域感知过采样和RL驱动的边缘过滤，具有理论严谨性，对图神经网络和AI安全应用具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21947v1",
+        "title": "Large Language Models are Algorithmically Blind",
+        "summary": "Large language models (LLMs) demonstrate remarkable breadth of knowledge, yet their ability to reason about computational processes remains poorly understood. Closing this gap matters for practitioners who rely on LLMs to guide algorithm selection and deployment. We address this limitation using causal discovery as a testbed and evaluate eight frontier LLMs against ground truth derived from large-scale algorithm executions and find systematic, near-total failure. Models produce ranges far wider than true confidence intervals yet still fail to contain the true algorithmic mean in the majority of instances; most perform worse than random guessing and the marginal above-random performance of the best model is most consistent with benchmark memorization rather than principled reasoning. We term this failure algorithmic blindness and argue it reflects a fundamental gap between declarative knowledge about algorithms and calibrated procedural prediction.",
+        "authors": "Sohan Venkatesh, Ashish Mahendran Kurapath, Tejas Melkote",
+        "url": "http://arxiv.org/abs/2602.21947v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21947v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过对LLM在因果发现算法推理任务上的评估，揭示了LLM的“算法盲区”，即它们在校准程序性预测方面的根本性缺陷。这为理解LLM的推理能力提供了理论创新视角和严谨的实证分析，对LLM能力边界和安全部署有重要启示。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21765v1",
+        "title": "Generalisation of RLHF under Reward Shift and Clipped KL Regularisation",
+        "summary": "Alignment and adaptation in large language models heavily rely on reinforcement learning from human feedback (RLHF); yet, theoretical understanding of its generalisability remains premature, especially when the learned reward could shift, and the KL control is estimated and clipped. To address this issue, we develop generalisation theory for RLHF that explicitly accounts for (1) \\emph{reward shift}: reward models are trained on preference data from earlier or mixed behaviour policies while RLHF optimises the current policy on its own rollouts; and (2) \\emph{clipped KL regularisation}: the KL regulariser is estimated from sampled log-probability ratios and then clipped for stabilisation, resulting in an error to RLHF. We present generalisation bounds for RLHF, suggesting that the generalisation error stems from a sampling error from prompts and rollouts, a reward shift error, and a KL clipping error. We also discuss special cases of (1) initialising RLHF parameters with a uniform prior over a finite space, and (2) training RLHF by stochastic gradient descent, as an Ornstein-Uhlenbeck process. The theory yields practical implications in (1) optimal KL clipping threshold, and (2) budget allocation in prompts, rollouts, and preference data.",
+        "authors": "Kenton Tang, Yuzhu Chen, Fengxiang He",
+        "url": "http://arxiv.org/abs/2602.21765v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21765v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为RLHF（基于人类反馈的强化学习）的泛化能力建立了理论，尤其考虑了奖励漂移和裁剪KL正则化。其理论创新性极高，数学推导严谨，为LLM对齐提供了关键的理论理解和实践指导，直接解决了LLM应用中的核心瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21750v1",
+        "title": "From Words to Amino Acids: Does the Curse of Depth Persist?",
+        "summary": "Protein language models (PLMs) have become widely adopted as general-purpose models, demonstrating strong performance in protein engineering and de novo design. Like large language models (LLMs), they are typically trained as deep transformers with next-token or masked-token prediction objectives on massive sequence corpora and are scaled by increasing model depth. Recent work on autoregressive LLMs has identified the Curse of Depth: later layers contribute little to the final output predictions. These findings naturally raise the question of whether a similar depth inefficiency also appears in PLMs, where many widely used models are not autoregressive, and some are multimodal, accepting both protein sequence and structure as input. In this work, we present a depth analysis of six popular PLMs across model families and scales, spanning three training objectives, namely autoregressive, masked, and diffusion, and quantify how layer contributions evolve with depth using a unified set of probing- and perturbation-based measurements. Across all models, we observe consistent depth-dependent patterns that extend prior findings on LLMs: later layers depend less on earlier computations and mainly refine the final output distribution, and these effects are increasingly pronounced in deeper models. Taken together, our results suggest that PLMs exhibit a form of depth inefficiency, motivating future work on more depth-efficient architectures and training methods.",
+        "authors": "Aleena Siji, Amir Mohammad Karimi Mamaghan, Ferdinand Kapl, Tobias Höppe, Emmanouil Angelis, Andrea Dittadi, Maurice Brenner, Michael Heinzinger, Karl Henrik Johansson, Kaitlin Maile, Johannes von Oswald, Stefan Bauer",
+        "url": "http://arxiv.org/abs/2602.21750v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21750v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究首次系统性地分析了蛋白质语言模型（PLM）中的“深度诅咒”现象，发现后期层对最终输出贡献甚微。这为理解PLM架构提供了理论创新视角，具有严谨的实证分析，对设计更高效的PLM架构和训练方法具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21743v1",
+        "title": "Enhancing Multi-Modal LLMs Reasoning via Difficulty-Aware Group Normalization",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) and Group Relative Policy Optimization (GRPO) have significantly advanced the reasoning capabilities of large language models. Extending these methods to multimodal settings, however, faces a critical challenge: the instability of std-based normalization, which is easily distorted by extreme samples with nearly positive or negative rewards. Unlike pure-text LLMs, multimodal models are particularly sensitive to such distortions, as both perceptual and reasoning errors influence their responses. To address this, we characterize each sample by its difficulty, defined through perceptual complexity (measured via visual entropy) and reasoning uncertainty (captured by model confidence). Building on this characterization, we propose difficulty-aware group normalization (Durian), which re-groups samples by difficulty levels and shares the std within each group. Our approach preserves GRPO's intra-group distinctions while eliminating sensitivity to extreme cases, yielding significant performance gains across multiple multimodal reasoning benchmarks.",
+        "authors": "Jinghan Li, Junfeng Fang, Jinda Lu, Yuan Wang, Xiaoyan Guo, Tianyu Zhang, Xiang Wang, Xiangnan He",
+        "url": "http://arxiv.org/abs/2602.21743v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21743v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了难度感知分组归一化（Durian），解决了多模态LLM（MLLM）推理中RLVR/GRPO因极端样本导致的训练不稳定性。其创新性在于通过视觉熵和模型置信度量化样本难度并进行分组归一化，对MLLM训练的稳定性和推理能力有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21715v1",
+        "title": "Two-Stage Active Distribution Network Voltage Control via LLM-RL Collaboration: A Hybrid Knowledge-Data-Driven Approach",
+        "summary": "The growing integration of distributed photovoltaics (PVs) into active distribution networks (ADNs) has exacerbated operational challenges, making it imperative to coordinate diverse equipment to mitigate voltage violations and enhance power quality. Although existing data-driven approaches have demonstrated effectiveness in the voltage control problem, they often require extensive trial-and-error exploration and struggle to incorporate heterogeneous information, such as day-ahead forecasts and semantic-based grid codes. Considering the operational scenarios and requirements in real-world ADNs, in this paper, we propose a hybrid knowledge-data-driven approach that leverages dynamic collaboration between a large language model (LLM) agent and a reinforcement learning (RL) agent to achieve two-stage voltage control. In the day-ahead stage, the LLM agent receives coarse region-level forecasts and generates scheduling strategies for on-load tap changer (OLTC) and shunt capacitors (SCs) to regulate the overall voltage profile. Then in the intra-day stage, based on accurate node-level measurements, the RL agent refines terminal voltages by deriving reactive power generation strategies for PV inverters. On top of the LLM-RL collaboration framework, we further propose a self-evolution mechanism for the LLM agent and a pretrain-finetune pipeline for the RL agent, effectively enhancing and coordinating the policies for both agents. The proposed approach not only aligns more closely with practical operational characteristics but also effectively utilizes the inherent knowledge and reasoning capabilities of the LLM agent, significantly improving training efficiency and voltage control performance. Comprehensive comparisons and ablation studies demonstrate the effectiveness of the proposed method.",
+        "authors": "Xu Yang, Chenhui Lin, Xiang Ma, Dong Liu, Ran Zheng, Haotian Liu, Wenchuan Wu",
+        "url": "http://arxiv.org/abs/2602.21715v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21715v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了LLM-RL协作的两阶段主动配电网电压控制混合方法。LLM负责日前调度，RL负责日内精炼，并引入LLM自演化和RL预训练-微调机制。这在多智能体AI和智能电网应用中具有理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21680v1",
+        "title": "Hierarchical Lead Critic based Multi-Agent Reinforcement Learning",
+        "summary": "Cooperative Multi-Agent Reinforcement Learning (MARL) solves complex tasks that require coordination from multiple agents, but is often limited to either local (independent learning) or global (centralized learning) perspectives. In this paper, we introduce a novel sequential training scheme and MARL architecture, which learns from multiple perspectives on different hierarchy levels. We propose the Hierarchical Lead Critic (HLC) - inspired by natural emerging distributions in team structures, where following high-level objectives combines with low-level execution. HLC demonstrates that introducing multiple hierarchies, leveraging local and global perspectives, can lead to improved performance with high sample efficiency and robust policies. Experimental results conducted on cooperative, non-communicative, and partially observable MARL benchmarks demonstrate that HLC outperforms single hierarchy baselines and scales robustly with increasing amounts of agents and difficulty.",
+        "authors": "David Eckel, Henri Meeß",
+        "url": "http://arxiv.org/abs/2602.21680v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21680v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了分层领导评论家（HLC）架构和顺序训练方案，使多智能体强化学习（MARL）能够从多层次视角学习。这在MARL领域具有理论创新性，提高了样本效率和策略鲁棒性，对复杂多智能体系统的设计有重要影响。"
+    }
+]

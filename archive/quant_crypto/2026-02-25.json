@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.22069v1",
+        "title": "Pools as Portfolios: Observed arbitrage efficiency & LVR analysis of dynamic weight AMMs",
+        "summary": "Dynamic-weight AMMs (aka Temporal Function Market Makers, TFMMs) implement algorithmic asset allocation, analogous to index or smart beta funds, by continuously updating pools' weights. A strategy updates target weights over time, and arbitrageurs trade the pool back toward those weights. This creates a sequence of small, predictable mispricings that grow until taken, effectively executing rebalances as a series of Dutch reverse auctions. Prior theoretical and simulation work (Willetts & Harrington, 2024) predicted that this mechanism could outperform CEX-style rebalancing. We test that claim on two live pools on the QuantAMM protocol, one on Ethereum mainnet and one on Base, across two short rebalancing windows six months apart (July 2025 and January 2026). We perform block-level arbitrage analysis, and then measure long term outcomes using Loss-vs-Rebalancing (LVR) and Rebalancing-vs-Rebalancing (RVR) benchmarks. On mainnet, rebalancing becomes markedly more efficient over time (more frequent arbitrage trades with lower value extracted per trade), reaching performance comparable to or better than CEX-based models. On Base, rebalancing persists even when per-trade extraction is near (or below) zero, consistent with routing-driven execution, and achieves efficiencies that meet or exceed standard \"perfect rebalancing\" LVR baselines. These results demonstrate dynamic-weight AMMs as a competitive execution layer for tokenised funds, with superior performance on L2s where routing and lower data costs compress arbitrage spreads.",
+        "authors": "Matthew Willetts, Christian Harrington",
+        "url": "http://arxiv.org/abs/2602.22069v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22069v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文虽然不直接构造量化因子，但它深入探讨了动态权重AMMs（自动做市商）的套利效率和LVR（Loss-vs-Rebalancing）分析。对于构建加密货币市场的量化因子，理解DeFi市场的微观结构（如AMMs的运作机制、套利行为、流动性提供成本）至关重要。这有助于：1) 识别新的数据源和因子灵感（例如，基于LVR或套利活动的因子）；2) 更好地理解现有因子在DeFi环境中的表现；3) 设计和回测在AMMs上执行的交易策略。论文的实证分析和对L2效率的讨论，为理解加密市场提供了宝贵的视角，对策略设计和回测阶段具有间接但重要的指导意义。"
+    }
+]

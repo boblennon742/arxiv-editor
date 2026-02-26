@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.22203v1",
+        "title": "Local Bayesian Regression",
+        "summary": "This paper develops a class of Bayesian non- and semiparametric methods for estimating regression curves and surfaces. The main idea is to model the regression as locally linear, and then place suitable local priors on the local parameters. The method requires the posterior distribution of the local parameters given local data, and this is found via a suitably defined local likelihood function. When the width of the local data window is large the methods reduce to familiar fully parametric Bayesian methods, and when the width is small the estimators are essentially nonparametric. When noninformative reference priors are used the resulting estimators coincide with recently developed well-performing local weighted least squares methods for nonparametric regression.   Each local prior distribution needs in general a centre parameter and a variance parameter. Of particular interest are versions of the scheme that are more or less automatic and objective in the sense that they do not require subjective specifications of prior parameters. We therefore develop empirical Bayes methods to obtain the variance parameter and a hierarchical Bayes method to account for uncertainty in the choice of centre parameter. There are several possible versions of the general programme, and a number of its specialisations are discussed. Some of these are shown to be capable of outperforming standard nonparametric regression methods, particularly in situations with several covariates.",
+        "authors": "Nils Lid Hjort",
+        "url": "http://arxiv.org/abs/2602.22203v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22203v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文开发了一类贝叶斯非参数和半参数方法用于回归曲线估计。它深入探讨了局部先验、局部似然函数、后验分布、经验贝叶斯和分层贝叶斯方法，并讨论了其与现有非参数回归方法的联系。其核心在于严谨的统计学方法论和清晰的数学推导，非常符合您对强大理论基础和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22122v1",
+        "title": "Probing the Geometry of Diffusion Models with the String Method",
+        "summary": "Understanding the geometry of learned distributions is fundamental to improving and interpreting diffusion models, yet systematic tools for exploring their landscape remain limited. Standard latent-space interpolations fail to respect the structure of the learned distribution, often traversing low-density regions. We introduce a framework based on the string method that computes continuous paths between samples by evolving curves under the learned score function. Operating on pretrained models without retraining, our approach interpolates between three regimes: pure generative transport, which yields continuous sample paths; gradient-dominated dynamics, which recover minimum energy paths (MEPs); and finite-temperature string dynamics, which compute principal curves -- self-consistent paths that balance energy and entropy. We demonstrate that the choice of regime matters in practice. For image diffusion models, MEPs contain high-likelihood but unrealistic ''cartoon'' images, confirming prior observations that likelihood maxima appear unrealistic; principal curves instead yield realistic morphing sequences despite lower likelihood. For protein structure prediction, our method computes transition pathways between metastable conformers directly from models trained on static structures, yielding paths with physically plausible intermediates. Together, these results establish the string method as a principled tool for probing the modal structure of diffusion models -- identifying modes, characterizing barriers, and mapping connectivity in complex learned distributions.",
+        "authors": "Elio Moreau, Florentin Coeurdoux, Grégoire Ferre, Eric Vanden-Eijnden",
+        "url": "http://arxiv.org/abs/2602.22122v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22122v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了一个基于弦方法（string method）的框架，用于探测扩散模型学习到的分布的几何结构。它通过演化曲线来计算样本之间的连续路径，并区分了纯生成传输、梯度主导动力学和有限温度弦动力学。对扩散模型几何、分数函数、最小能量路径和主曲线的深入分析，展现了理解现代AI系统数学结构的高度严谨性，与您的研究兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22062v1",
+        "title": "Robust Model Selection for Discovery of Latent Mechanistic Processes",
+        "summary": "When learning interpretable latent structures using model-based approaches, even small deviations from modeling assumptions can lead to inferential results that are not mechanistically meaningful. In this work, we consider latent structures that consist of $K_o$ mechanistic processes, where $K_o$ is unknown. When the model is misspecified, likelihood-based model selection methods can substantially overestimate $K_o$ while more robust nonparametric methods can be overly conservative. Hence, there is a need for approaches that combine the sensitivity of likelihood-based methods with the robustness of nonparametric ones. We formalize this objective in terms of a robust model selection consistency property, which is based on a component-level discrepancy measure that captures the mechanistic structure of the model. We then propose the accumulated cutoff discrepancy criterion (ACDC), which leverages plug-in estimates of component-level discrepancies. To apply ACDC, we develop mechanistically meaningful component-level discrepancies for a general class of latent variable models that includes unsupervised and supervised variants of probabilistic matrix factorization and mixture modeling. We show that ACDC is robustly consistent when applied to unsupervised matrix factorization and mixture models. Numerical results demonstrate that in practice our approach reliably identifies a mechanistically meaningful number of latent processes in numerous illustrative applications, outperforming existing methods.",
+        "authors": "Jiawei Li, Nguyen Nguyen, Meng Lai, Ioannis Ch. Paschalidis, Jonathan H. Huggins",
+        "url": "http://arxiv.org/abs/2602.22062v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22062v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文关注潜在机制过程发现中的鲁棒模型选择问题。它提出了累积截止差异准则（ACDC），并形式化了鲁棒模型选择一致性属性，基于组件级别的差异度量。论文提供了ACDC在无监督矩阵分解和混合模型中鲁棒一致性的理论证明。这种对模型选择的理论严谨性和统计保证，是您所看重的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22021v1",
+        "title": "Budgeted Active Experimentation for Treatment Effect Estimation from Observational and Randomized Data",
+        "summary": "Estimating heterogeneous treatment effects is central to data-driven decision-making, yet industrial applications often face a fundamental tension between limited randomized controlled trial (RCT) budgets and abundant but biased observational data collected under historical targeting policies. Although observational logs offer the advantage of scale, they inherently suffer from severe policyinduced imbalance and overlap violations, rendering standalone estimation unreliable. We propose a budgeted active experimentation framework that iteratively enhances model training for causal effect estimation via active sampling. By leveraging observational priors, we develop an acquisition function targeting uplift estimation uncertainty, overlap deficits, and domain discrepancy to select the most informative units for randomized experiments. We establish finite-sample deviation bounds, asymptotic normality via martingale Central Limit Theorems (CLTs), and minimax lower bounds to prove information-theoretic optimality. Extensive experiments on industrial datasets demonstrate that our approach significantly outperforms standard randomized baselines in cost-constrained settings.",
+        "authors": "Jiacan Gao, Xinyan Su, Mingyuan Ma, Yiyan Huang, Xiao Xu, Xinrui Wan, Tianqi Gu, Enyun Yu, Jiecheng Guo, Zhiheng Zhang",
+        "url": "http://arxiv.org/abs/2602.22021v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22021v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个预算受限的主动实验框架，用于从观测数据和随机数据中估计异质处理效应。它建立了有限样本偏差界、通过鞅中心极限定理（CLT）的渐近正态性，以及极小极大下界，以证明信息论最优性。这篇论文在因果推断领域提供了强大的理论基础和清晰的数学推导，是您研究兴趣的完美匹配。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21998v1",
+        "title": "Design-based theory for causal inference from adaptive experiments",
+        "summary": "Adaptive designs dynamically update treatment probabilities using information accumulated during the experiment. Existing theory for causal inference from adaptive experiments primarily assumes the superpopulation framework with independent and identically distributed units, and may not apply when the distribution of units evolves over time. This paper makes two contributions. First, we extend the literature to the finite-population framework, which allows for possibly nonexchangeable units, and establish the design-based theory for causal inference under general adaptive designs using inverse-propensity-weighted (IPW) and augmented IPW (AIPW) estimators. Our theory accommodates nonexchangeable units, both nonconverging and vanishing treatment probabilities, and nonconverging outcome estimators, thereby justifying inference using AIPW estimators with black-box outcome models that integrate advances from machine learning methods. To alleviate the conservativeness inherent in variance estimation under finite-population inference, we also introduce a covariance estimator for the AIPW estimator that becomes sharp when the residuals from the adaptive regression of potential outcomes on covariates are additive across units. Our framework encompasses widely used adaptive designs, such as multi-armed bandits, covariate-adaptive randomization, and sequential rerandomization, advancing the design-based theory for causal inference in these specific settings. Second, as a methodological contribution, we propose an adaptive covariate adjustment approach for analyzing even nonadaptive designs. The martingale structure induced by adaptive adjustment enables valid inference with black-box outcome estimators that would otherwise require strong assumptions under standard nonadaptive analysis.",
+        "authors": "Xinran Li, Anqi Zhao",
+        "url": "http://arxiv.org/abs/2602.21998v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21998v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为自适应实验中的因果推断建立了基于设计的理论，扩展到有限总体框架和非可交换单元。它利用逆倾向加权（IPW）和增强IPW（AIPW）估计器，并引入了协方差估计器，同时通过鞅结构证明了使用黑盒结果估计器进行有效推断。其对因果逻辑和设计理论的深入探讨，具有极高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21910v1",
+        "title": "The Error of Deep Operator Networks Is the Sum of Its Parts: Branch-Trunk and Mode Error Decompositions",
+        "summary": "Operator learning has the potential to strongly impact scientific computing by learning solution operators for differential equations, potentially accelerating multi-query tasks such as design optimization and uncertainty quantification by orders of magnitude. Despite proven universal approximation properties, deep operator networks (DeepONets) often exhibit limited accuracy and generalization in practice, which hinders their adoption. Understanding these limitations is therefore crucial for further advancing the approach.   This work analyzes performance limitations of the classical DeepONet architecture. It is shown that the approximation error is dominated by the branch network when the internal dimension is sufficiently large, and that the learned trunk basis can often be replaced by classical basis functions without a significant impact on performance.   To investigate this further, a modified DeepONet is constructed in which the trunk network is replaced by the left singular vectors of the training solution matrix. This modification yields several key insights. First, a spectral bias in the branch network is observed, with coefficients of dominant, low-frequency modes learned more effectively. Second, due to singular-value scaling of the branch coefficients, the overall branch error is dominated by modes with intermediate singular values rather than the smallest ones. Third, using a shared branch network for all mode coefficients, as in the standard architecture, improves generalization of small modes compared to a stacked architecture in which coefficients are computed separately. Finally, strong and detrimental coupling between modes in parameter space is identified.",
+        "authors": "Alexander Heinlein, Johannes Taraz",
+        "url": "http://arxiv.org/abs/2602.21910v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21910v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入分析了深度算子网络（DeepONets）的性能限制，并提出了近似误差分解。它揭示了分支网络中的谱偏差、奇异值缩放以及参数空间中模式之间的强耦合。这种对现代AI系统（算子网络）的数学行为和理论限制的严谨分析，提供了重要的理论见解，完全符合您对数学逻辑和理论基础的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21735v1",
+        "title": "SigVLP: Sigmoid Volume-Language Pre-Training for Self-Supervised CT-Volume Adaptive Representation Learning",
+        "summary": "Large-scale, volumetric medical imaging datasets typically aggregate scans from different vendors and devices, resulting in highly variable resolution, slice thicknesses, and numbers of slices per study. Consequently, training representation models usually requires cropping or interpolating along the z-axis to obtain fixed-size blocks, which inevitably causes information loss. We propose a new training approach to overcome this limitation. Instead of absolute position embeddings, we interpret volumes as sequences of 3D chunks and adopt Rotary Position Embeddings, allowing us to treat the z-axis as an unconstrained temporal dimensions. Building on this idea, we introduce a new vision-language model: SigVLP. In SigVLP, we implement Rotary Position Embedding as the positional encoding method, which is applied directly within the attention operation, generating input-conditioned sine and cosine weights on the fly. This design ensures consistent alignment between query and key projections and adapts to any input sizes. To allow for variable input size during training, we sample Computed Tomography volumes in chunks and pair them with localized organ-wise textual observations. Compared to using entire reports for conditioning, chunkwise alignment provides finer-grained supervision, enabling the model to establish stronger correlations between the text and volume representations, thereby improving the precision of text-to-volume alignment. Our models are trained with the Muon optimizer and evaluated on a diverse set of downstream tasks, including zero-shot abnormality and organ classification, segmentation, and retrieval tasks.",
+        "authors": "Jiayi Wang, Hadrien Reynaud, Ibrahim Ethem Hamamci, Sezgin Er, Suprosanna Shit, Bjoern Menze, Bernhard Kainz",
+        "url": "http://arxiv.org/abs/2602.21735v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21735v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了ASIR勇气模型，一个相动态框架，将真相披露形式化为状态转换，并将其应用于人类和AI系统。它通过数学不等式表达了促进力与抑制阈值的关系，并将AI系统中的表观真实性转变解释为受限相空间中相互作用力的几何结果。这种用严谨数学逻辑构建统一理论框架的创新性方法，是您会非常感兴趣的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21721v1",
+        "title": "Private and Robust Contribution Evaluation in Federated Learning",
+        "summary": "Cross-silo federated learning allows multiple organizations to collaboratively train machine learning models without sharing raw data, but client updates can still leak sensitive information through inference attacks. Secure aggregation protects privacy by hiding individual updates, yet it complicates contribution evaluation, which is critical for fair rewards and detecting low-quality or malicious participants. Existing marginal-contribution methods, such as the Shapley value, are incompatible with secure aggregation, and practical alternatives, such as Leave-One-Out, are crude and rely on self-evaluation.   We introduce two marginal-difference contribution scores compatible with secure aggregation. Fair-Private satisfies standard fairness axioms, while Everybody-Else eliminates self-evaluation and provides resistance to manipulation, addressing a largely overlooked vulnerability. We provide theoretical guarantees for fairness, privacy, robustness, and computational efficiency, and evaluate our methods on multiple medical image datasets and CIFAR10 in cross-silo settings. Our scores consistently outperform existing baselines, better approximate Shapley-induced client rankings, and improve downstream model performance as well as misbehavior detection. These results demonstrate that fairness, privacy, robustness, and practical utility can be achieved jointly in federated contribution evaluation, offering a principled solution for real-world cross-silo deployments.",
+        "authors": "Delio Jaramillo Velez, Gergely Biczok, Alexandre Graell i Amat, Johan Ostman, Balazs Pejo",
+        "url": "http://arxiv.org/abs/2602.21721v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21721v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对联邦学习中隐私保护下的贡献评估问题，提出了两种与安全聚合兼容的边际差异贡献分数。论文提供了关于公平性、隐私性、鲁棒性和计算效率的理论保证，并证明了其方法优于现有基线。这种在现代AI系统（联邦学习）中提供明确的统计保证和理论严谨性的工作，是您偏好的核心。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21701v1",
+        "title": "Learning Complex Physical Regimes via Coverage-oriented Uncertainty Quantification: An application to the Critical Heat Flux",
+        "summary": "A central challenge in scientific machine learning (ML) is the correct representation of physical systems governed by multi-regime behaviours. In these scenarios, standard data analysis techniques often fail to capture the nature of the data, as the system's response varies significantly across the state space due to its stochasticity and the different physical regimes. Uncertainty quantification (UQ) should thus not be viewed merely as a safety assessment, but as a support to the learning task itself, guiding the model to internalise the behaviour of the data. We address this by focusing on the Critical Heat Flux (CHF) benchmark and dataset presented by the OECD/NEA Expert Group on Reactor Systems Multi-Physics. This case study represents a test for scientific ML due to the non-linear dependence of CHF on the inputs and the existence of distinct microscopic physical regimes. These regimes exhibit diverse statistical profiles, a complexity that requires UQ techniques to internalise the data behaviour and ensure reliable predictions. In this work, we conduct a comparative analysis of UQ methodologies to determine their impact on physical representation. We contrast post-hoc methods, specifically conformal prediction, against end-to-end coverage-oriented pipelines, including (Bayesian) heteroscedastic regression and quality-driven losses. These approaches treat uncertainty not as a final metric, but as an active component of the optimisation process, modelling the prediction and its behaviour simultaneously. We show that while post-hoc methods ensure statistical calibration, coverage-oriented learning effectively reshapes the model's representation to match the complex physical regimes. The result is a model that delivers not only high predictive accuracy but also a physically consistent uncertainty estimation that adapts dynamically to the intrinsic variability of the CHF.",
+        "authors": "Michele Cazzola, Alberto Ghione, Lucia Sargentini, Julien Nespoulous, Riccardo Finotello",
+        "url": "http://arxiv.org/abs/2602.21701v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21701v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探讨了科学机器学习中多机制行为的复杂物理系统，通过以覆盖为导向的不确定性量化来学习这些系统。它比较了共形预测、贝叶斯异方差回归和质量驱动损失等方法，并强调了统计校准和物理一致性不确定性估计的重要性。这种对不确定性量化理论和统计保证的深入研究，是您所追求的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21663v1",
+        "title": "Estimation, inference and model selection for jump regression models",
+        "summary": "We consider regression models with data of the type $y_i=m(x_i)+\\varepsilon_i$, where the $m(x)$ curve is taken locally constant, with unknown levels and jump points. We investigate the large-sample properties of the minimum least squares estimators, finding in particular that jump point parameters and level parameters are estimated with respectively $n$-rate precision and $\\sqrt{n}$-rate precision, where $n$ is sample size. Bayes solutions are investigated as well and found to be superior. We then construct jump information criteria, respectively AJIC and BJIC, for selecting the right number of jump points from data. This is done by following the line of arguments that lead to the Akaike and Bayesian information criteria AIC and BIC, but which here lead to different formulae due to the different type of large-sample approximations involved.",
+        "authors": "Steffen Grønneberg, Gudmund Hermansen, Nils Lid Hjort",
+        "url": "http://arxiv.org/abs/2602.21663v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21663v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了跳跃回归模型的估计、推断和模型选择。它分析了最小二乘估计器的大样本性质，包括跳跃点参数和水平参数的精度率，并提出了基于大样本近似的跳跃信息准则（AJIC和BJIC）。这篇论文是经典的统计学理论研究，具有非常强大的数学推导和统计学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21588v1",
+        "title": "ABM-UDE: Developing Surrogates for Epidemic Agent-Based Models via Scientific Machine Learning",
+        "summary": "Agent-based epidemic models (ABMs) encode behavioral and policy heterogeneity but are too slow for nightly hospital planning. We develop county-ready surrogates that learn directly from exascale ABM trajectories using Universal Differential Equations (UDEs): mechanistic SEIR-family ODEs with a neural-parameterized contact rate $κ_φ(u,t)$ (no additive residual). Our contributions are threefold: we adapt multiple shooting and an observer-based prediction-error method (PEM) to stabilize identification of neural-augmented epidemiological dynamics across intervention-driven regime shifts; we enforce positivity and mass conservation and show the learned contact-rate parameterization yields a well-posed vector field; and we quantify accuracy, calibration, and compute against ABM ensembles and UDE baselines. On a representative ExaEpi scenario, PEM-UDE reduces mean MSE by 77% relative to single-shooting UDE (3.00 vs. 13.14) and by 20% relative to MS-UDE (3.75). Reliability improves in parallel: empirical coverage of ABM $10$-$90$% and $25$-$75$% bands rises from 0.68/0.43 (UDE) and 0.79/0.55 (MS-UDE) to 0.86/0.61 with PEM-UDE and 0.94/0.69 with MS+PEM-UDE, indicating calibrated uncertainty rather than overconfident fits. Inference runs in seconds on commodity CPUs (20-35 s per $\\sim$90-day forecast), enabling nightly ''what-if'' sweeps on a laptop. Relative to a $\\sim$100 CPU-hour ABM reference run, this yields $\\sim10^{4}\\times$ lower wall-clock per scenario. This closes the realism-cadence gap, supports threshold-aware decision-making (e.g., maintaining ICU occupancy $<75$%), preserves mechanistic interpretability, and enables calibrated, risk-aware scenario planning on standard institutional hardware. Beyond epidemics, the ABM$\\to$UDE recipe provides a portable path to distill agent-based simulators into fast, trustworthy surrogates for other scientific domains.",
+        "authors": "Sharv Murgai, Utkarsh Utkarsh, Kyle C. Nguyen, Alan Edelman, Erin C. S. Acquesta, Christopher Vincent Rackauckas",
+        "url": "http://arxiv.org/abs/2602.21588v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21588v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过科学机器学习，利用通用微分方程（UDEs）为流行病Agent-Based模型（ABMs）开发替代模型。它确保了学习到的接触率参数化产生一个适定向量场，并强制执行了正性和质量守恒。论文量化了准确性、校准和计算效率，并讨论了校准不确定性。这种将严谨数学（ODE、适定性、物理约束）应用于AI系统（UDEs）以实现科学计算目标的方法，与您的兴趣高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21570v1",
+        "title": "Narrowing the Gap: SOS Ranks of $4 \\times 3$ Biquadratic Forms and a Lower Bound of $8$",
+        "summary": "We investigate the maximum sum-of-squares (SOS) rank of biquadratic forms in the critical case of $4 \\times 3$ variables, where the general bounds are currently $7 \\leq \\mathrm{BSR}(4,3) \\leq 11$. By analyzing two important structured subclasses, we obtain exact determinations and improved upper bounds that significantly narrow this gap.   For simple biquadratic forms those containing only distinct terms of the type $x_i^2 y_j^2$ we prove that the maximum achievable SOS rank is exactly 7, a value attained by a form corresponding to a $C_4$-free bipartite graph with the maximum number of edges. This settles the question for simple forms.   For $y$-deficient biquadratic forms a class introduced here that permits cross terms among two of the three $y$-variables while the third appears only in pure square terms we prove an upper bound of $9$ by combining Calderön's theorem on $m\\times 2$ forms with the known value $\\mathrm{BSR}(4,2) = 5$.   Our main result is a constructive proof that $\\mathrm{BSR}(4,3) \\geq 8$. We present an explicit non-simple, non-deficient $4\\times 3$ biquadratic form and prove it requires exactly eight squares, thereby improving the general lower bound. This shows that any form achieving a rank higher than $8$ must possess a more complex algebraic structure, and it reduces the search space for determining the true value of $\\mathrm{BSR}(4,3)$. Connections to Zarankiewicz numbers, extremal graph theory, and classical results on sums of squares are highlighted throughout.",
+        "authors": "Yi Xu, Chunfeng Cui, Liqun Qi",
+        "url": "http://arxiv.org/abs/2602.21570v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21570v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了$4 \times 3$双二次形式的平方和（SOS）秩，通过对结构化子类的分析，获得了精确的确定和改进的上限，并提供了下限为8的建设性证明。虽然不是直接关于AI系统，但其纯粹的数学性质、建设性证明和对代数几何/优化理论的贡献，展现了极高的数学严谨性，非常符合您对严谨数学逻辑的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21508v1",
+        "title": "WaterVIB: Learning Minimal Sufficient Watermark Representations via Variational Information Bottleneck",
+        "summary": "Robust watermarking is critical for intellectual property protection, whereas existing methods face a severe vulnerability against regeneration-based AIGC attacks. We identify that existing methods fail because they entangle the watermark with high-frequency cover texture, which is susceptible to being rewritten during generative purification. To address this, we propose WaterVIB, a theoretically grounded framework that reformulates the encoder as an information sieve via the Variational Information Bottleneck. Instead of overfitting to fragile cover details, our approach forces the model to learn a Minimal Sufficient Statistic of the message. This effectively filters out redundant cover nuances prone to generative shifts, retaining only the essential signal invariant to regeneration. We theoretically prove that optimizing this bottleneck is a necessary condition for robustness against distribution-shifting attacks. Extensive experiments demonstrate that WaterVIB significantly outperforms state-of-the-art methods, achieving superior zero-shot resilience against unknown diffusion-based editing.",
+        "authors": "Haoyuan He, Yu Zheng, Jie Zhou, Jiwen Lu",
+        "url": "http://arxiv.org/abs/2602.21508v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21508v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了WaterVIB，一个通过变分信息瓶颈学习最小充分水印表示的框架，以对抗基于再生的AIGC攻击。它理论上证明了优化此瓶颈是抵抗分布转移攻击的必要条件。这种基于信息论的理论基础和明确的数学证明，为现代AI应用（水印）提供了强大的统计保证和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21467v1",
+        "title": "Geometric Priors for Generalizable World Models via Vector Symbolic Architecture",
+        "summary": "A key challenge in artificial intelligence and neuroscience is understanding how neural systems learn representations that capture the underlying dynamics of the world. Most world models represent the transition function with unstructured neural networks, limiting interpretability, sample efficiency, and generalization to unseen states or action compositions. We address these issues with a generalizable world model grounded in Vector Symbolic Architecture (VSA) principles as geometric priors. Our approach utilizes learnable Fourier Holographic Reduced Representation (FHRR) encoders to map states and actions into a high dimensional complex vector space with learned group structure and models transitions with element-wise complex multiplication. We formalize the framework's group theoretic foundation and show how training such structured representations to be approximately invariant enables strong multi-step composition directly in latent space and generalization performances over various experiments. On a discrete grid world environment, our model achieves 87.5% zero shot accuracy to unseen state-action pairs, obtains 53.6% higher accuracy on 20-timestep horizon rollouts, and demonstrates 4x higher robustness to noise relative to an MLP baseline. These results highlight how training to have latent group structure yields generalizable, data-efficient, and interpretable world models, providing a principled pathway toward structured models for real-world planning and reasoning.",
+        "authors": "William Youngwoo Chung, Calvin Yeung, Hansen Jin Lillemark, Zhuowen Zou, Xiangjian Liu, Mohsen Imani",
+        "url": "http://arxiv.org/abs/2602.21467v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21467v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于向量符号架构（VSA）的通用世界模型，将其群论基础形式化，并展示了通过学习潜在群结构实现泛化。它利用傅里叶全息降维表示（FHRR）编码器，并在高维复向量空间中建模转换。这种将群论和严谨数学逻辑应用于AI系统（世界模型）以实现可解释性和泛化性的方法，具有极高的理论深度和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.21454v1",
+        "title": "When Learning Hurts: Fixed-Pole RNN for Real-Time Online Training",
+        "summary": "Recurrent neural networks (RNNs) can be interpreted as discrete-time state-space models, where the state evolution corresponds to an infinite-impulse-response (IIR) filtering operation governed by both feedforward weights and recurrent poles. While, in principle, all parameters including pole locations can be optimized via backpropagation through time (BPTT), such joint learning incurs substantial computational overhead and is often impractical for applications with limited training data. Echo state networks (ESNs) mitigate this limitation by fixing the recurrent dynamics and training only a linear readout, enabling efficient and stable online adaptation. In this work, we analytically and empirically examine why learning recurrent poles does not provide tangible benefits in data-constrained, real-time learning scenarios. Our analysis shows that pole learning renders the weight optimization problem highly non-convex, requiring significantly more training samples and iterations for gradient-based methods to converge to meaningful solutions. Empirically, we observe that for complex-valued data, gradient descent frequently exhibits prolonged plateaus, and advanced optimizers offer limited improvement. In contrast, fixed-pole architectures induce stable and well-conditioned state representations even with limited training data. Numerical results demonstrate that fixed-pole networks achieve superior performance with lower training complexity, making them more suitable for online real-time tasks.",
+        "authors": "Alexander Morgan, Ummay Sumaya Khan, Lingjia Liu, Lizhong Zheng",
+        "url": "http://arxiv.org/abs/2602.21454v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.21454v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇指南为经验风险最小化（ERM）开发了高概率遗憾界，并以模块化方式呈现。它围绕基本不等式、均匀局部集中界和不动点论证，推导了基于临界半径（通过局部Rademacher复杂度定义）的遗憾界，并讨论了因果推断等应用。作为统计学习理论的基石，其严谨的数学推导和理论基础，是您研究的直接核心。"
+    }
+]

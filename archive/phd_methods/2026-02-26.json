@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.23303v1",
+        "title": "Inferential Mechanics Part 1: Causal Mechanistic Theories of Machine Learning in Chemical Biology with Implications",
+        "summary": "Machine learning techniques are now routinely encountered in research laboratories across the globe. Impressive progress has been made through ML and AI techniques with regards to large data set processing. This progress has increased the ability of the experimenter to digest data and make novel predictions regarding phenomena of interest. However, machine learning predictors generated from data sets taken from the natural sciences are often treated as black boxes which are used broadly and generally without detailed consideration of the causal structure of the data set of interest. Work has been attempted to bring causality into discussions of machine learning models of natural phenomena; however, a firm and unified theoretical treatment is lacking. This series of three papers explores the union of chemical theory, biological theory, probability theory and causality that will correct current causal flaws of machine learning in the natural sciences. This paper, Part 1 of the series, provides the formal framework of the foundational causal structure of phenomena in chemical biology and is extended to machine learning through the novel concept of focus, defined here as the ability of a machine learning algorithm to narrow down to a hidden underpinning mechanism in large data sets. Initial proof of these principles on a family of Akt inhibitors is also provided. The second paper containing Part 2 will provide a formal exploration of chemical similarity, and Part 3 will present extensive experimental evidence of how hidden causal structures weaken all machine learning in chemical biology. This series serves to establish for chemical biology a new kind of mathematical framework for modeling mechanisms in Nature without the need for the tools of reductionism: inferential mechanics.",
+        "authors": "Ilya Balabin, Thomas M. Kaiser",
+        "url": "http://arxiv.org/abs/2602.23303v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23303v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个关于化学生物学中机器学习的因果机制理论的正式框架，引入了“推断力学”和“焦点”等新概念，旨在纠正机器学习在自然科学中存在的因果缺陷。其理论深度和对机器学习基础的重新思考，与您作为数理统计博士生对前沿算法和架构的兴趣高度契合，尤其是在强调理论创新性和严谨性方面。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23229v1",
+        "title": "Large Multimodal Models as General In-Context Classifiers",
+        "summary": "Which multimodal model should we use for classification? Previous studies suggest that the answer lies in CLIP-like contrastive Vision-Language Models (VLMs), due to their remarkable performance in zero-shot classification. In contrast, Large Multimodal Models (LMM) are more suitable for complex tasks. In this work, we argue that this answer overlooks an important capability of LMMs: in-context learning. We benchmark state-of-the-art LMMs on diverse datasets for closed-world classification and find that, although their zero-shot performance is lower than CLIP's, LMMs with a few in-context examples can match or even surpass contrastive VLMs with cache-based adapters, their \"in-context\" equivalent. We extend this analysis to the open-world setting, where the generative nature of LMMs makes them more suitable for the task. In this challenging scenario, LMMs struggle whenever provided with imperfect context information. To address this issue, we propose CIRCLE, a simple training-free method that assigns pseudo-labels to in-context examples, iteratively refining them with the available context itself. Through extensive experiments, we show that CIRCLE establishes a robust baseline for open-world classification, surpassing VLM counterparts and highlighting the potential of LMMs to serve as unified classifiers, and a flexible alternative to specialized models.",
+        "authors": "Marco Garosi, Matteo Farina, Alessandro Conti, Massimiliano Mancini, Elisa Ricci",
+        "url": "http://arxiv.org/abs/2602.23229v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23229v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 InnerQ，一种硬件感知的、免调优的 KV 缓存量化方案，用于大型语言模型的解码。其核心创新在于内维度的组量化，与向量-矩阵乘法对齐，实现缩放因子重用，显著降低内存访问并加速反量化。这直接解决了 LLM 应用中的模型压缩和数据效率瓶颈，且方法具有显著的算法和架构创新性，兼顾了理论与实践。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23197v1",
+        "title": "Fine-Tuning Without Forgetting In-Context Learning: A Theoretical Analysis of Linear Attention Models",
+        "summary": "Transformer-based large language models exhibit in-context learning, enabling adaptation to downstream tasks via few-shot prompting with demonstrations. In practice, such models are often fine-tuned to improve zero-shot performance on downstream tasks, allowing them to solve tasks without examples and thereby reducing inference costs. However, fine-tuning can degrade in-context learning, limiting the performance of fine-tuned models on tasks not seen during fine-tuning. Using linear attention models, we provide a theoretical analysis that characterizes how fine-tuning objectives modify attention parameters and identifies conditions under which this leads to degraded few-shot performance. We show that fine-tuning all attention parameters can harm in-context learning, whereas restricting updates to the value matrix improves zero-shot performance while preserving in-context learning. We further show that incorporating an auxiliary few-shot loss enhances in-context learning primarily on the target task, at the expense of degraded in-context learning ability on tasks not seen during fine-tuning. We empirically validate our theoretical results.",
+        "authors": "Chungpa Lee, Jy-yong Sohn, Kangwook Lee",
+        "url": "http://arxiv.org/abs/2602.23197v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23197v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对线性注意力模型中微调如何影响上下文学习（in-context learning）进行了理论分析，并识别了导致少样本性能下降的条件。它提出限制对值矩阵的更新可以提高零样本性能同时保留上下文学习能力。这种对 LLM 训练机制的深入理论分析，对于理解和优化前沿 AI 架构至关重要，具有高度的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23163v1",
+        "title": "A Decision-Theoretic Formalisation of Steganography With Applications to LLM Monitoring",
+        "summary": "Large language models are beginning to show steganographic capabilities. Such capabilities could allow misaligned models to evade oversight mechanisms. Yet principled methods to detect and quantify such behaviours are lacking. Classical definitions of steganography, and detection methods based on them, require a known reference distribution of non-steganographic signals. For the case of steganographic reasoning in LLMs, knowing such a reference distribution is not feasible; this renders these approaches inapplicable. We propose an alternative, \\textbf{decision-theoretic view of steganography}. Our central insight is that steganography creates an asymmetry in usable information between agents who can and cannot decode the hidden content (present within a steganographic signal), and this otherwise latent asymmetry can be inferred from the agents' observable actions. To formalise this perspective, we introduce generalised $\\mathcal{V}$-information: a utilitarian framework for measuring the amount of usable information within some input. We use this to define the \\textbf{steganographic gap} -- a measure that quantifies steganography by comparing the downstream utility of the steganographic signal to agents that can and cannot decode the hidden content. We empirically validate our formalism, and show that it can be used to detect, quantify, and mitigate steganographic reasoning in LLMs.",
+        "authors": "Usman Anwar, Julianna Piskorz, David D. Baek, David Africa, Jim Weatherall, Max Tegmark, Christian Schroeder de Witt, Mihaela van der Schaar, David Krueger",
+        "url": "http://arxiv.org/abs/2602.23163v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23163v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个决策论视角来形式化隐写术，并将其应用于 LLM 监控，以检测和量化 LLM 的隐写能力。引入了“广义 V-信息”和“隐写差距”来量化信息不对称。这不仅是理论上的重大创新，为 LLM 安全和可控性提供了新的分析工具，也直接解决了 LLM 应用中的关键瓶颈（模型监控和规避检测）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23152v1",
+        "title": "The Trinity of Consistency as a Defining Principle for General World Models",
+        "summary": "The construction of World Models capable of learning, simulating, and reasoning about objective physical laws constitutes a foundational challenge in the pursuit of Artificial General Intelligence. Recent advancements represented by video generation models like Sora have demonstrated the potential of data-driven scaling laws to approximate physical dynamics, while the emerging Unified Multimodal Model (UMM) offers a promising architectural paradigm for integrating perception, language, and reasoning. Despite these advances, the field still lacks a principled theoretical framework that defines the essential properties requisite for a General World Model. In this paper, we propose that a World Model must be grounded in the Trinity of Consistency: Modal Consistency as the semantic interface, Spatial Consistency as the geometric basis, and Temporal Consistency as the causal engine. Through this tripartite lens, we systematically review the evolution of multimodal learning, revealing a trajectory from loosely coupled specialized modules toward unified architectures that enable the synergistic emergence of internal world simulators. To complement this conceptual framework, we introduce CoW-Bench, a benchmark centered on multi-frame reasoning and generation scenarios. CoW-Bench evaluates both video generation models and UMMs under a unified evaluation protocol. Our work establishes a principled pathway toward general world models, clarifying both the limitations of current systems and the architectural requirements for future progress.",
+        "authors": "Jingxuan Wei, Siyuan Li, Yuhang Xu, Zheng Sun, Junjie Jiang, Hexuan Jin, Caijun Jia, Honghao He, Xinglong Xu, Xi bai, Chang Yu, Yumou Liu, Junnan Zhu, Xuanhe Zhou, Jintao Chen, Xiaobin Hu, Shancheng Pang, Bihui Yu, Ran He, Zhen Lei, Stan Z. Li, Conghui He, Shuicheng Yan, Cheng Tan",
+        "url": "http://arxiv.org/abs/2602.23152v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23152v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“一致性三元组”（模态一致性、空间一致性、时间一致性）作为通用世界模型的基本定义原则，为实现通用人工智能（AGI）和统一多模态模型（UMM）提供了理论框架。其对 AI 基础理论的深刻探讨和对未来架构的指导意义，使其成为您研究的绝佳选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23128v1",
+        "title": "Bound to Disagree: Generalization Bounds via Certifiable Surrogates",
+        "summary": "Generalization bounds for deep learning models are typically vacuous, not computable or restricted to specific model classes. In this paper, we tackle these issues by providing new disagreement-based certificates for the gap between the true risk of any two predictors. We then bound the true risk of the predictor of interest via a surrogate model that enjoys tight generalization guarantees, and evaluating our disagreement bound on an unlabeled dataset. We empirically demonstrate the tightness of the obtained certificates and showcase the versatility of the approach by training surrogate models leveraging three different frameworks: sample compression, model compression and PAC-Bayes theory. Importantly, such guarantees are achieved without modifying the target model, nor adapting the training procedure to the generalization framework.",
+        "authors": "Mathieu Bazinet, Valentina Zantedeschi, Pascal Germain",
+        "url": "http://arxiv.org/abs/2602.23128v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23128v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过可验证的替代模型，提出了新的基于分歧的泛化界限，解决了深度学习模型泛化界限通常空泛、不可计算或受限于特定模型类别的问题。其在理论严谨性上表现出色，为理解深度学习模型的泛化能力提供了新的数学工具，对数理统计背景的您非常有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23239v1",
+        "title": "Agency and Architectural Limits: Why Optimization-Based Systems Cannot Be Norm-Responsive",
+        "summary": "AI systems are increasingly deployed in high-stakes contexts -- medical diagnosis, legal research, financial analysis -- under the assumption they can be governed by norms. This paper demonstrates that assumption is formally invalid for optimization-based systems, specifically Large Language Models trained via Reinforcement Learning from Human Feedback (RLHF). We establish that genuine agency requires two necessary and jointly sufficient architectural conditions: the capacity to maintain certain boundaries as non-negotiable constraints rather than tradeable weights (Incommensurability), and a non-inferential mechanism capable of suspending processing when those boundaries are threatened (Apophatic Responsiveness). These conditions apply across all normative domains.   RLHF-based systems are constitutively incompatible with both conditions. The operations that make optimization powerful -- unifying all values on a scalar metric and always selecting the highest-scoring output -- are precisely the operations that preclude normative governance. This incompatibility is not a correctable training bug awaiting a technical fix; it is a formal constraint inherent to what optimization is. Consequently, documented failure modes - sycophancy, hallucination, and unfaithful reasoning - are not accidents but structural manifestations.   Misaligned deployment triggers a second-order risk we term the Convergence Crisis: when humans are forced to verify AI outputs under metric pressure, they degrade from genuine agents into criteria-checking optimizers, eliminating the only component in the system capable of normative accountability. Beyond the incompatibility proof, the paper's primary positive contribution is a substrate-neutral architectural specification defining what any system -- biological, artificial, or institutional -- must satisfy to qualify as an agent rather than a sophisticated instrument.",
+        "authors": "Radha Sarma",
+        "url": "http://arxiv.org/abs/2602.23239v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23239v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从形式上论证了基于优化的 AI 系统（特别是通过 RLHF 训练的 LLM）无法真正实现规范响应，因为它们缺乏“不可通约性”和“无相响应性”这两个代理条件。这是一个对当前 AI 范式（尤其是 RLHF）的深刻理论批判，揭示了其固有的架构限制，对 AI 伦理、对齐和治理具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22988v1",
+        "title": "Residual Koopman Spectral Profiling for Predicting and Preventing Transformer Training Instability",
+        "summary": "Training divergence in transformers wastes compute, yet practitioners discover instability only after expensive runs begin. They therefore need an expected probability of failure for a transformer before training starts. Our study of Residual Koopman Spectral Profiling (RKSP) provides such an estimate. From a single forward pass at initialization, RKSP extracts Koopman spectral features by applying whitened dynamic mode decomposition to layer-wise residual snapshots. Our central diagnostic, the near-unit spectral mass, quantifies the fraction of modes concentrated near the unit circle, which captures instability risk. For predicting divergence across extensive configurations, this estimator achieves an AUROC of 0.995, outperforming the best gradient baseline. We further make this diagnostic actionable through Koopman Spectral Shaping (KSS), which reshapes spectra during training. We empirically validate that our method works in practice: RKSP predicts divergence at initialization, and when RKSP flags high risk, turning on KSS successfully prevents divergence. In the challenging high learning rate regime without normalization layers, KSS reduces the divergence rate from 66.7% to 12.5% and enables learning rates that are 50% to 150% higher. These findings generalize to WikiText-103 language modeling, vision transformers on CIFAR-10, and pretrained language models, including GPT-2 and LLaMA-2 up to 7B, as well as emerging architectures such as MoE, Mamba-style SSMs, and KAN.",
+        "authors": "Bum Jun Kim, Shohei Taniguchi, Makoto Kawano, Yusuke Iwasawa, Yutaka Matsuo",
+        "url": "http://arxiv.org/abs/2602.22988v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22988v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了残差 Koopman 谱分析（RKSP）来预测和防止 Transformer 训练不稳定，通过单次前向传播提取 Koopman 谱特征。它还提出了 Koopman 谱整形（KSS）来主动防止发散。这篇论文在理论上将 Koopman 理论引入 Transformer 稳定性分析，并提供了实际的解决方案，对 LLM 训练效率和稳定性有巨大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22847v1",
+        "title": "Decentralized Ranking Aggregation: Gossip Algorithms for Borda and Copeland Consensus",
+        "summary": "The concept of ranking aggregation plays a central role in preference analysis, and numerous algorithms for calculating median rankings, often originating in social choice theory, have been documented in the literature, offering theoretical guarantees in a centralized setting, i.e., when all the ranking data to be aggregated can be brought together in a single computing unit. For many technologies (e.g. peer-to-peer networks, IoT, multi-agent systems), extending the ability to calculate consensus rankings with guarantees in a decentralized setting, i.e., when preference data is initially distributed across a communicating network, remains a major methodological challenge. Indeed, in recent years, the literature on decentralized computation has mainly focused on computing or optimizing statistics such as arithmetic means using gossip algorithms. The purpose of this article is precisely to study how to achieve reliable consensus on collective rankings using classical rules (e.g. Borda, Copeland) in a decentralized setting, thereby raising new questions, robustness to corrupted nodes, and scalability through reduced communication costs in particular. The approach proposed and analyzed here relies on random gossip communication, allowing autonomous agents to compute global ranking consensus using only local interactions, without coordination or central authority.   We provide rigorous convergence guarantees, including explicit rate bounds, for the Borda and Copeland consensus methods. Beyond these rules, we also provide a decentralized implementation of consensus according to the median rank rule and local Kemenization. Extensive empirical evaluations on various network topologies and real and synthetic ranking datasets demonstrate that our algorithms converge quickly and reliably to the correct ranking aggregation.",
+        "authors": "Anna Van Elst, Kerrian Le Caillec, Igor Colin, Stephan Clémençon",
+        "url": "http://arxiv.org/abs/2602.22847v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22847v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了使用 Gossip 算法进行去中心化排名聚合，并为 Borda 和 Copeland 共识方法提供了严格的收敛性保证，包括明确的速率界限。其在去中心化算法和分布式系统理论方面的严谨数学推导，与您的数理统计背景高度匹配，展现了强大的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22681v1",
+        "title": "Accelerating LLM Pre-Training through Flat-Direction Dynamics Enhancement",
+        "summary": "Pre-training Large Language Models requires immense computational resources, making optimizer efficiency essential. The optimization landscape is highly anisotropic, with loss reduction driven predominantly by progress along flat directions. While matrix-based optimizers such as Muon and SOAP leverage fine-grained curvature information to outperform AdamW, their updates tend toward isotropy -- relatively conservative along flat directions yet potentially aggressive along sharp ones. To address this limitation, we first establish a unified Riemannian Ordinary Differential Equation (ODE) framework that elucidates how common adaptive algorithms operate synergistically: the preconditioner induces a Riemannian geometry that mitigates ill-conditioning, while momentum serves as a Riemannian damping term that promotes convergence. Guided by these insights, we propose LITE, a generalized acceleration strategy that enhances training dynamics by applying larger Hessian damping coefficients and learning rates along flat trajectories. Extensive experiments demonstrate that LITE significantly accelerates both Muon and SOAP across diverse architectures (Dense, MoE), parameter scales (130M--1.3B), datasets (C4, Pile), and learning-rate schedules (cosine, warmup-stable-decay). Theoretical analysis confirms that LITE facilitates faster convergence along flat directions in anisotropic landscapes, providing a principled approach to efficient LLM pre-training. The code is available at https://github.com/SHUCHENZHU/LITE.",
+        "authors": "Shuchen Zhu, Rizhen Hu, Mingze Wang, Mou Sun, Xue Wang, Kun Yuan, Zaiwen Wen",
+        "url": "http://arxiv.org/abs/2602.22681v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22681v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过“平坦方向动力学增强”来加速 LLM 预训练，并建立了一个统一的黎曼常微分方程（ODE）框架来阐明优化器的工作原理。它提出了 LITE 策略，沿平坦轨迹应用更大的 Hessian 阻尼系数和学习率。这篇论文在 LLM 优化理论和算法上具有高度创新性，直接解决了 LLM 训练效率这一核心瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22654v1",
+        "title": "Denoising as Path Planning: Training-Free Acceleration of Diffusion Models with DPCache",
+        "summary": "Diffusion models have demonstrated remarkable success in image and video generation, yet their practical deployment remains hindered by the substantial computational overhead of multi-step iterative sampling. Among acceleration strategies, caching-based methods offer a training-free and effective solution by reusing or predicting features across timesteps. However, existing approaches rely on fixed or locally adaptive schedules without considering the global structure of the denoising trajectory, often leading to error accumulation and visual artifacts. To overcome this limitation, we propose DPCache, a novel training-free acceleration framework that formulates diffusion sampling acceleration as a global path planning problem. DPCache constructs a Path-Aware Cost Tensor from a small calibration set to quantify the path-dependent error of skipping timesteps conditioned on the preceding key timestep. Leveraging this tensor, DPCache employs dynamic programming to select an optimal sequence of key timesteps that minimizes the total path cost while preserving trajectory fidelity. During inference, the model performs full computations only at these key timesteps, while intermediate outputs are efficiently predicted using cached features. Extensive experiments on DiT, FLUX, and HunyuanVideo demonstrate that DPCache achieves strong acceleration with minimal quality loss, outperforming prior acceleration methods by $+$0.031 ImageReward at 4.87$\\times$ speedup and even surpassing the full-step baseline by $+$0.028 ImageReward at 3.54$\\times$ speedup on FLUX, validating the effectiveness of our path-aware global scheduling framework. Code will be released at https://github.com/argsss/DPCache.",
+        "authors": "Bowen Cui, Yuanbin Wang, Huajiang Xu, Biaolong Chen, Aixi Zhang, Hao Jiang, Zhengzheng Jin, Xu Liu, Pipei Huang",
+        "url": "http://arxiv.org/abs/2602.22654v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22654v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 DPCache，一个训练无关的扩散模型加速框架，将去噪过程视为一个全局路径规划问题。它通过构建路径感知成本张量和动态规划来选择最优的关键时间步序列。这种将扩散模型加速问题重新概念化为路径规划的算法创新，对提高扩散模型的推理效率具有显著影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22617v1",
+        "title": "Semantic Tube Prediction: Beating LLM Data Efficiency with JEPA",
+        "summary": "Large Language Models (LLMs) obey consistent scaling laws -- empirical power-law fits that predict how loss decreases with compute, data, and parameters. While predictive, these laws are descriptive rather than prescriptive: they characterize typical training, not optimal training. Surprisingly few works have successfully challenged the data-efficiency bounds implied by these laws -- which is our primary focus. To that end, we introduce the Geodesic Hypothesis, positing that token sequences trace geodesics on a smooth semantic manifold and are therefore locally linear. Building on this principle, we propose a novel Semantic Tube Prediction (STP) task, a JEPA-style regularizer that confines hidden-state trajectories to a tubular neighborhood of the geodesic. STP generalizes JEPA to language without requiring explicit multi-view augmentations. We show this constraint improves signal-to-noise ratio, and consequently preserves diversity by preventing trajectory collisions during inference. Empirically, STP allows LLMs to match baseline accuracy with 16$\\times$ less training data on the NL-RX-SYNTH dataset, directly violating the data term of Chinchilla-style scaling laws and demonstrating that principled geometric priors can surpass brute-force scaling. Code is available at https://github.com/galilai-group/llm-jepa#stp.",
+        "authors": "Hai Huang, Yann LeCun, Randall Balestriero",
+        "url": "http://arxiv.org/abs/2602.22617v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22617v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“测地线假设”和“语义管预测（STP）”任务，作为一种 JEPA 风格的正则化器，旨在提高 LLM 的数据效率，并声称能够以更少的数据打破现有的缩放定律。这种对 LLM 数据效率的理论性挑战和算法创新，对您研究前沿算法和架构，尤其是数据效率瓶颈，具有极高的价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22596v1",
+        "title": "BetterScene: 3D Scene Synthesis with Representation-Aligned Generative Model",
+        "summary": "We present BetterScene, an approach to enhance novel view synthesis (NVS) quality for diverse real-world scenes using extremely sparse, unconstrained photos. BetterScene leverages the production-ready Stable Video Diffusion (SVD) model pretrained on billions of frames as a strong backbone, aiming to mitigate artifacts and recover view-consistent details at inference time. Conventional methods have developed similar diffusion-based solutions to address these challenges of novel view synthesis. Despite significant improvements, these methods typically rely on off-the-shelf pretrained diffusion priors and fine-tune only the UNet module while keeping other components frozen, which still leads to inconsistent details and artifacts even when incorporating geometry-aware regularizations like depth or semantic conditions. To address this, we investigate the latent space of the diffusion model and introduce two components: (1) temporal equivariance regularization and (2) vision foundation model-aligned representation, both applied to the variational autoencoder (VAE) module within the SVD pipeline. BetterScene integrates a feed-forward 3D Gaussian Splatting (3DGS) model to render features as inputs for the SVD enhancer and generate continuous, artifact-free, consistent novel views. We evaluate on the challenging DL3DV-10K dataset and demonstrate superior performance compared to state-of-the-art methods.",
+        "authors": "Yuci Han, Charles Toth, John E. Anderson, William J. Shuart, Alper Yilmaz",
+        "url": "http://arxiv.org/abs/2602.22596v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22596v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文发现 Transformer 会收敛到不变的“算法核心”，即任务性能所需且充分的紧凑子空间。它揭示了跨训练运行和规模都存在的低维不变量，为理解 Transformer 的内部工作机制和机制可解释性提供了基础性理论洞察。这对于深入理解 AI 架构的本质具有里程碑意义。"
+    }
+]

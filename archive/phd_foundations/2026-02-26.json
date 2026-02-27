@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2602.23355v1",
+        "title": "Robust model selection using likelihood as data",
+        "summary": "Model selection is a central task in statistics, but standard methods are not robust in misspecified settings where the true data-generating process (DGP) is not in the set of candidate models. The key limitation is that existing methods -- including information criteria and Bayesian posteriors -- do not quantify uncertainty about how well each candidate model approximates the true DGP. In this paper, we introduce a novel approach to model selection based on modeling the likelihood values themselves. Specifically, given $K$ candidate models and $n$ observations, we view the $n\\times K$ matrix of negative log-likelihood values as a random data matrix and observe that the expectation of each row is equal to the vector of Kullback--Leibler divergences between the $K$ models and the true DGP, up to an additive constant. We use a multivariate normal model to estimate and quantify uncertainty in this expectation, providing calibrated inferences for robust model selection under misspecification. The procedure is easy to compute, interpretable, and comes with theoretical guarantees, including consistency.",
+        "authors": "Jongwoo Choi, Neil A. Spencer, Jeffrey W. Miller",
+        "url": "http://arxiv.org/abs/2602.23355v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23355v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一种新颖的模型选择方法，将似然值本身视为数据，并利用多元正态模型来估计和量化不确定性。它明确强调了在模型错误指定情况下的鲁棒性，并提供了理论保证，包括一致性。其强大的统计理论基础和清晰的数学推导与您的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22678v1",
+        "title": "ViCLIP-OT: The First Foundation Vision-Language Model for Vietnamese Image-Text Retrieval with Optimal Transport",
+        "summary": "Image-text retrieval has become a fundamental component in intelligent multimedia systems; however, most existing vision-language models are optimized for highresource languages and remain suboptimal for low-resource settings such as Vietnamese. This work introduces ViCLIP-OT, a foundation vision-language model specifically designed for Vietnamese image-text retrieval. The proposed framework integrates CLIP-style contrastive learning with a Similarity-Graph Regularized Optimal Transport (SIGROT) loss to enhance global cross-modal consistency and mitigate modality gap issues. Extensive experiments on three Vietnamese benchmarks (UITOpenViIC, KTVIC, and Crossmodal-3600) demonstrate that ViCLIP-OT consistently outperforms CLIP and SigLIP baselines in both in-domain and zero-shot settings. On UIT-OpenViIC, the model achieves an average Recall@K of 67.34%, improving upon CLIP by 5.75 percentage points. In zero-shot evaluation on Crossmodal-3600, ViCLIPOT surpasses CLIP by 11.72 percentage points. Embedding-space analysis further confirms improved alignment and reduced modality gap. The results indicate that integrating SIGROT provides an effective and scalable strategy for cross-modal retrieval in low-resource languages, offering practical implications for intelligent multimedia retrieval systems in Vietnamese and other underrepresented linguistic contexts.",
+        "authors": "Quoc-Khang Tran, Minh-Thien Nguyen, Nguyen-Khang Pham",
+        "url": "http://arxiv.org/abs/2602.22678v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22678v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过统一的黎曼常微分方程（ODE）框架，深入分析了LLM优化器的动力学，并提出了LITE加速策略。它明确指出预处理器引入黎曼几何以缓解病态，动量作为黎曼阻尼项。理论分析证实了其在各向异性景观中沿平坦方向的更快收敛，是优化理论在现代AI系统中的严谨应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22557v1",
+        "title": "CourtGuard: A Model-Agnostic Framework for Zero-Shot Policy Adaptation in LLM Safety",
+        "summary": "Current safety mechanisms for Large Language Models (LLMs) rely heavily on static, fine-tuned classifiers that suffer from adaptation rigidity, the inability to enforce new governance rules without expensive retraining. To address this, we introduce CourtGuard, a retrieval-augmented multi-agent framework that reimagines safety evaluation as Evidentiary Debate. By orchestrating an adversarial debate grounded in external policy documents, CourtGuard achieves state-of-the-art performance across 7 safety benchmarks, outperforming dedicated policy-following baselines without fine-tuning. Beyond standard metrics, we highlight two critical capabilities: (1) Zero-Shot Adaptability, where our framework successfully generalized to an out-of-domain Wikipedia Vandalism task (achieving 90\\% accuracy) by swapping the reference policy; and (2) Automated Data Curation and Auditing, where we leveraged CourtGuard to curate and audit nine novel datasets of sophisticated adversarial attacks. Our results demonstrate that decoupling safety logic from model weights offers a robust, interpretable, and adaptable path for meeting current and future regulatory requirements in AI governance.",
+        "authors": "Umid Suleymanov, Rufiz Bayramov, Suad Gafarli, Seljan Musayeva, Taghi Mammadov, Aynur Akhundlu, Murat Kantarcioglu",
+        "url": "http://arxiv.org/abs/2602.22557v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22557v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个后验、模型无关的阈值优化框架，用于在严格资源限制下平衡预测安全性、效率和算法公平性。它通过参数化的伦理损失函数和有界决策规则，在数学上防止干预量超出可用资源，并分析性地证明了部署阈值的关键属性。其严谨的数学证明和对公平性与资源限制的理论分析非常符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23291v1",
+        "title": "Identifiability of Treatment Effects with Unobserved Spatially Varying Confounders",
+        "summary": "The study of causal effects in the presence of unmeasured spatially varying confounders has garnered increasing attention. However, a general framework for identifiability, which is critical for reliable causal inference from observational data, has yet to be advanced. In this paper, we study a linear model with various parametric model assumptions on the covariance structure between the unmeasured confounder and the exposure of interest. We establish identifiability of the treatment effect for many commonly 20 used spatial models for both discrete and continuous data, under mild conditions on the structure of observation locations and the exposure-confounder association. We also emphasize models or scenarios where identifiability may not hold, under which statistical inference should be conducted with caution.",
+        "authors": "Tommy Tang, Xinran Li, Bo Li",
+        "url": "http://arxiv.org/abs/2602.23291v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23291v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了存在未观测空间变异混杂因素时治疗效果的可识别性，并提出了一个通用的可识别性框架。它在温和条件下为多种常用空间模型建立了治疗效果的可识别性。这是因果推断领域一个基础且严谨的理论贡献，直接解决了观测数据中因果推断的关键挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23143v1",
+        "title": "Dimension Reduction in Multivariate Extremes via Latent Linear Factor Models",
+        "summary": "We propose a new and interpretable class of high-dimensional tail dependence models based on latent linear factor structures. Specifically, extremal dependence of an observable vector is assumed to be driven by a lower-dimensional latent $K$-factor model, where $K \\ll d$, thereby inducing an explicit form of dimension reduction. Geometrically, this is reflected in the support of the associated spectral dependence measure, whose intrinsic dimension is at most $K-1$. The loading structure may additionally exhibit sparsity, meaning that each component is influenced by only a small number of latent factors, which further enhances interpretability and scalability. Under mild structural assumptions, we establish identifiability of the model parameters and provide a constructive recovery procedure based on a margin-free tail pairwise dependence matrix, which also yields practical rank-based estimation methods. The framework combines naturally with marginal tail models and is particularly well suited to high-dimensional settings. We illustrate its applicability in a spatial wind energy application, where the latent factor structure enables tractable estimation of the risk that a large proportion of turbines simultaneously fall below their cut-in wind speed thresholds.",
+        "authors": "Alexis Boulin, Axel Bücher",
+        "url": "http://arxiv.org/abs/2602.23143v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23143v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一类新的高维尾部依赖模型，基于潜在线性因子结构，实现了维度降低。它建立了模型参数的可识别性，并提供了一种基于无边际尾部成对依赖矩阵的构造性恢复过程。这是高维统计学中一个具有强大理论基础的贡献，对风险管理等应用具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23060v1",
+        "title": "RhythmBERT: A Self-Supervised Language Model Based on Latent Representations of ECG Waveforms for Heart Disease Detection",
+        "summary": "Electrocardiogram (ECG) analysis is crucial for diagnosing heart disease, but most self-supervised learning methods treat ECG as a generic time series, overlooking physiologic semantics and rhythm-level structure. Existing contrastive methods utilize augmentations that distort morphology, whereas generative approaches employ fixed-window segmentation, which misaligns cardiac cycles. To address these limitations, we propose RhythmBERT, a generative ECG language model that considers ECG as a language paradigm by encoding P, QRS, and T segments into symbolic tokens via autoencoder-based latent representations. These discrete tokens capture rhythm semantics, while complementary continuous embeddings retain fine-grained morphology, enabling a unified view of waveform structure and rhythm. RhythmBERT is pretrained on approximately 800,000 unlabeled ECG recordings with a masked prediction objective, allowing it to learn contextual representations in a label-efficient manner. Evaluations show that despite using only a single lead, RhythmBERT achieves comparable or superior performance to strong 12-lead baselines. This generalization extends from prevalent conditions such as atrial fibrillation to clinically challenging cases such as subtle ST-T abnormalities and myocardial infarction. Our results suggest that considering ECG as structured language offers a scalable and physiologically aligned pathway for advancing cardiac analysis.",
+        "authors": "Xin Wang, Burcu Ozek, Aruna Mohan, Amirhossein Ravari, Or Zilbershot, Fatemeh Afghah",
+        "url": "http://arxiv.org/abs/2602.23060v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23060v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个具有理论保证的加速在线风险规避策略评估框架，用于部分可观测马尔可夫决策过程（POMDPs）。它推导了关于CVaR（条件风险价值）的新界限，并建立了可解释的集中不等式和收敛性。其严谨的理论框架、概率保证和对优化问题的深入分析，与您的研究方向高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.23013v1",
+        "title": "SubspaceAD: Training-Free Few-Shot Anomaly Detection via Subspace Modeling",
+        "summary": "Detecting visual anomalies in industrial inspection often requires training with only a few normal images per category. Recent few-shot methods achieve strong results employing foundation-model features, but typically rely on memory banks, auxiliary datasets, or multi-modal tuning of vision-language models. We therefore question whether such complexity is necessary given the feature representations of vision foundation models. To answer this question, we introduce SubspaceAD, a training-free method, that operates in two simple stages. First, patch-level features are extracted from a small set of normal images by a frozen DINOv2 backbone. Second, a Principal Component Analysis (PCA) model is fit to these features to estimate the low-dimensional subspace of normal variations. At inference, anomalies are detected via the reconstruction residual with respect to this subspace, producing interpretable and statistically grounded anomaly scores. Despite its simplicity, SubspaceAD achieves state-of-the-art performance across one-shot and few-shot settings without training, prompt tuning, or memory banks. In the one-shot anomaly detection setting, SubspaceAD achieves image-level and pixel-level AUROC of 98.0% and 97.6% on the MVTec-AD dataset, and 93.3% and 98.3% on the VisA dataset, respectively, surpassing prior state-of-the-art results. Code and demo are available at https://github.com/CLendering/SubspaceAD.",
+        "authors": "Camile Lendering, Erkut Akdag, Egor Bondarev",
+        "url": "http://arxiv.org/abs/2602.23013v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.23013v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了有限资源设置下的公平性问题，通过将算法公平性定义与资源分配定义联系起来，并分析了公平性与效用之间的权衡。它证明了强制执行不同公平性定义的代价可以是无界的，并提出了具有有界公平性代价的比例公平性和机会均等变体。这是算法公平性领域一个具有深刻数学分析的理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22975v1",
+        "title": "permApprox: a general framework for accurate permutation p-value approximation",
+        "summary": "Permutation procedures are common practice in hypothesis testing when distributional assumptions about the test statistic are not met or unknown. With only few permutations, empirical p-values lie on a coarse grid and may even be zero when the observed test statistic exceeds all permuted values. Such zero p-values are statistically invalid and hinder multiple testing correction. Parametric tail modeling with the Generalized Pareto Distribution (GPD) has been proposed to address this issue, but existing implementations can again yield zero p-values when the estimated shape parameter is negative and the fitted distribution has a finite upper bound.   We introduce a method for accurate and zero-free p-value approximation in permutation testing, embedded in the permApprox workflow and R package. Building on GPD tail modeling, the method enforces a support constraint during parameter estimation to ensure valid extrapolation beyond the observed statistic, thereby strictly avoiding zero p-values. The workflow further integrates robust parameter estimation, data-driven threshold selection, and principled handling of hybrid p-values that are discrete in the bulk and continuous in the extreme tail.   Extensive simulations using two-sample t-tests and Wilcoxon rank-sum tests show that permApprox produces accurate, robust, and zero-free p-value approximations across a wide range of sample and effect sizes. Applications to single-cell RNA-seq and microbiome data demonstrate its practical utility: permApprox yields smooth and interpretable p-value distributions even with few permutations. By resolving the zero-p-value problem while preserving accuracy and computational efficiency, permApprox enables reliable permutation-based inference in high-dimensional and computationally intensive settings.",
+        "authors": "Stefanie Peschel, Anne-Laure Boulesteix, Erika von Mutius, Christian L. Müller",
+        "url": "http://arxiv.org/abs/2602.22975v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22975v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了用于非平稳高斯过程的正则傅里叶特征，解决了传统谱方法在非平稳情况下概率假设的限制。它直接离散化谱表示，在不要求概率假设的情况下保留谱权重的相关结构，并构建了正半定低秩近似。这是随机过程和核方法领域一个重要的理论进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22882v1",
+        "title": "Fair feature attribution for multi-output prediction: a Shapley-based perspective",
+        "summary": "In this article, we provide an axiomatic characterization of feature attribution for multi-output predictors within the Shapley framework. While SHAP explanations are routinely computed independently for each output coordinate, the theoretical necessity of this practice has remained unclear. By extending the classical Shapley axioms to vector-valued cooperative games, we establish a rigidity theorem showing that any attribution rule satisfying efficiency, symmetry, dummy player, and additivity must necessarily decompose component-wise across outputs. Consequently, any joint-output attribution rule must relax at least one of the classical Shapley axioms. This result identifies a previously unformalized structural constraint in Shapley-based interpretability, clarifying the precise scope of fairness-consistent explanations in multi-output learning. Numerical experiments on a biomedical benchmark illustrate that multi-output models can yield computational savings in training and deployment, while producing SHAP explanations that remain fully consistent with the component-wise structure imposed by the Shapley axioms.",
+        "authors": "Umberto Biccari, Alain Ibáñez de Opakua, José María Mato, Óscar Millet, Roberto Morales, Enrique Zuazua",
+        "url": "http://arxiv.org/abs/2602.22882v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22882v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在Shapley框架内对多输出预测器的特征归因进行了公理化表征。它通过将经典Shapley公理扩展到向量值合作博弈，建立了一个刚性定理，证明任何满足效率、对称性、虚拟玩家和可加性的归因规则都必须在输出之间进行分量分解。这是可解释AI和公平性领域一个具有强大数学基础的理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22702v1",
+        "title": "Knob: A Physics-Inspired Gating Interface for Interpretable and Controllable Neural Dynamics",
+        "summary": "Existing neural network calibration methods often treat calibration as a static, post-hoc optimization task. However, this neglects the dynamic and temporal nature of real-world inference. Moreover, existing methods do not provide an intuitive interface enabling human operators to dynamically adjust model behavior under shifting conditions. In this work, we propose Knob, a framework that connects deep learning with classical control theory by mapping neural gating dynamics to a second-order mechanical system. By establishing correspondences between physical parameters -- damping ratio ($ζ$) and natural frequency ($ω_n$) -- and neural gating, we create a tunable \"safety valve\". The core mechanism employs a logit-level convex fusion, functioning as an input-adaptive temperature scaling. It tends to reduce model confidence particularly when model branches produce conflicting predictions. Furthermore, by imposing second-order dynamics (Knob-ODE), we enable a \\textit{dual-mode} inference: standard i.i.d. processing for static tasks, and state-preserving processing for continuous streams. Our framework allows operators to tune \"stability\" and \"sensitivity\" through familiar physical analogues. This paper presents an exploratory architectural interface; we focus on demonstrating the concept and validating its control-theoretic properties rather than claiming state-of-the-art calibration performance. Experiments on CIFAR-10-C validate the calibration mechanism and demonstrate that, in Continuous Mode, the gate responses are consistent with standard second-order control signatures (step settling and low-pass attenuation), paving the way for predictable human-in-the-loop tuning.",
+        "authors": "Siyu Jiang, Sanshuai Cui, Hui Zeng",
+        "url": "http://arxiv.org/abs/2602.22702v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22702v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Knob框架，通过将神经门控动力学映射到二阶机械系统，将深度学习与经典控制理论联系起来。它建立了物理参数与神经门控之间的对应关系，并验证了其控制理论特性。这种将严谨的控制理论应用于神经网络的设计，以实现可解释和可控的动态，非常符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22601v1",
+        "title": "$φ$-DPO: Fairness Direct Preference Optimization Approach to Continual Learning in Large Multimodal Models",
+        "summary": "Fairness in Continual Learning for Large Multimodal Models (LMMs) is an emerging yet underexplored challenge, particularly in the presence of imbalanced data distributions that can lead to biased model updates and suboptimal performance across tasks. While recent continual learning studies have made progress in addressing catastrophic forgetting, the problem of fairness caused the imbalanced data remains largely underexplored. This paper presents a novel Fairness Direct Preference Optimization (FaiDPO or $φ$-DPO) framework for continual learning in LMMs. In particular, we first propose a new continual learning paradigm based on Direct Preference Optimization (DPO) to mitigate catastrophic forgetting by aligning learning with pairwise preference signals. Then, we identify the limitations of conventional DPO in imbalanced data and present a new $φ$-DPO loss that explicitly addresses distributional biases. We provide a comprehensive theoretical analysis demonstrating that our approach addresses both forgetting and data imbalance. Additionally, to enable $φ$-DPO-based continual learning, we construct pairwise preference annotations for existing benchmarks in the context of continual learning. Extensive experiments and ablation studies show the proposed $φ$-DPO achieves State-of-the-Art performance across multiple benchmarks, outperforming prior continual learning methods of LMMs.",
+        "authors": "Thanh-Dat Truong, Huu-Thien Tran, Jackson Cothren, Bhiksha Raj, Khoa Luu",
+        "url": "http://arxiv.org/abs/2602.22601v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22601v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了$φ$-DPO框架，用于大型多模态模型中持续学习的公平性问题。它引入了一种新的$φ$-DPO损失，明确解决了数据不平衡引起的分布偏差，并提供了全面的理论分析，证明了其能够同时解决遗忘和数据不平衡问题。这是公平性、持续学习和优化理论的交叉领域一个严谨的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22600v1",
+        "title": "Transformers converge to invariant algorithmic cores",
+        "summary": "Large language models exhibit sophisticated capabilities, yet understanding how they work internally remains a central challenge. A fundamental obstacle is that training selects for behavior, not circuitry, so many weight configurations can implement the same function. Which internal structures reflect the computation, and which are accidents of a particular training run? This work extracts algorithmic cores: compact subspaces necessary and sufficient for task performance. Independently trained transformers learn different weights but converge to the same cores. Markov-chain transformers embed 3D cores in nearly orthogonal subspaces yet recover identical transition spectra. Modular-addition transformers discover compact cyclic operators at grokking that later inflate, yielding a predictive model of the memorization-to-generalization transition. GPT-2 language models govern subject-verb agreement through a single axis that, when flipped, inverts grammatical number throughout generation across scales. These results reveal low-dimensional invariants that persist across training runs and scales, suggesting that transformer computations are organized around compact, shared algorithmic structures. Mechanistic interpretability could benefit from targeting such invariants -- the computational essence -- rather than implementation-specific details.",
+        "authors": "Joshua S. Schiffman",
+        "url": "http://arxiv.org/abs/2602.22600v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22600v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过提取“算法核心”（即任务性能所必需和充分的紧凑子空间），揭示了Transformer内部计算的低维不变性。它展示了独立训练的Transformer如何收敛到相同的核心，并识别了数学不变性。这是对AI系统内部机制进行严谨、基础性理解的杰出工作，对可解释性研究具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22590v1",
+        "title": "Beyond Vintage Rotation: Bias-Free Sparse Representation Learning with Oracle Inference",
+        "summary": "Learning low-dimensional latent representations is a central topic in statistics and machine learning, and rotation methods have long been used to obtain sparse and interpretable representations. Despite nearly a century of widespread use across many fields, rigorous guarantees for valid inference for the learned representation remain lacking. In this paper, we identify a surprisingly prevalent phenomenon that suggests a reason for this gap: for a broad class of vintage rotations, the resulting estimators exhibit a non-estimable bias. Because this bias is independent of the data, it fundamentally precludes the development of valid inferential procedures, including the construction of confidence intervals and hypothesis testing. To address this challenge, we propose a novel bias-free rotation method within a general representation learning framework based on latent variables. We establish an oracle inference property for the learned sparse representations: the estimators achieve the same asymptotic variance as in the ideal setting where the latent variables are observed. To bridge the gap between theory and computation, we develop an efficient computational framework and prove that its output estimators retain the same oracle property. Our results provide a rigorous inference procedure for the rotated estimators, yielding statistically valid and interpretable representation learning.",
+        "authors": "Chengyu Cui, Yunxiao Chen, Jing Ouyang, Gongjun Xu",
+        "url": "http://arxiv.org/abs/2602.22590v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22590v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了稀疏可解释表示学习中现有旋转方法存在的不可估计偏差问题。它提出了一种新颖的无偏差旋转方法，并在潜在变量框架下建立了学习稀疏表示的“预言机推断”性质，证明了其估计量达到了与理想设置相同的渐近方差。这是统计表示学习领域一个具有强大理论保证的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22607v1",
+        "title": "LoR-LUT: Learning Compact 3D Lookup Tables via Low-Rank Residuals",
+        "summary": "We present LoR-LUT, a unified low-rank formulation for compact and interpretable 3D lookup table (LUT) generation. Unlike conventional 3D-LUT-based techniques that rely on fusion of basis LUTs, which are usually dense tensors, our unified approach extends the current framework by jointly using residual corrections, which are in fact low-rank tensors, together with a set of basis LUTs. The approach described here improves the existing perceptual quality of an image, which is primarily due to the technique's novel use of residual corrections. At the same time, we achieve the same level of trilinear interpolation complexity, using a significantly smaller number of network, residual corrections, and LUT parameters. The experimental results obtained from LoR-LUT, which is trained on the MIT-Adobe FiveK dataset, reproduce expert-level retouching characteristics with high perceptual fidelity and a sub-megabyte model size. Furthermore, we introduce an interactive visualization tool, termed LoR-LUT Viewer, which transforms an input image into the LUT-adjusted output image, via a number of slidebars that control different parameters. The tool provides an effective way to enhance interpretability and user confidence in the visual results. Overall, our proposed formulation offers a compact, interpretable, and efficient direction for future LUT-based image enhancement and style transfer.",
+        "authors": "Ziqi Zhao, Abhijit Mishra, Shounak Roychowdhury",
+        "url": "http://arxiv.org/abs/2602.22607v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22607v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了pNMF（Persistent Nonnegative Matrix Factorization），一个尺度参数化的NMF问题族，利用持久同调理论识别底层连接结构演变的规范尺度集。它建立了一个耦合NMF公式，具有尺度几何正则化和跨尺度一致性约束，并分析了嵌入的结构特性及其增量的界限，提供了一个具有收敛保证的优化算法。这是矩阵分解、图理论和拓扑数据分析的严谨结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2602.22612v1",
+        "title": "Feasible Fusion: Constrained Joint Estimation under Structural Non-Overlap",
+        "summary": "Causal inference in modern largescale systems faces growing challenges, including highdimensional covariates, multi-valued treatments, massive observational (OBS) data, and limited randomized controlled trial (RCT) samples due to cost constraints. We formalize treatment-induced structural non-overlap and show that, under this regime, commonly used weighted fusion methods provably fail to satisfy randomized identifying restrictions.To address this issue,we propose a constrained joint estimation framework that minimizes observational risk while enforcing causal validity through orthogonal experimental moment conditions. We further show that structural non-overlap creates a feasibility obstruction for moment enforcement in the original covariate space.We also derive a penalized primaldual algorithm that jointly learns representations and predictors, and establish oracle inequalities decomposing error into overlap recovery, moment violation, and statistical terms.Extensive synthetic experiments demonstrate robust performance under varying degrees of nonoverlap. A largescale ridehailing application shows that our method achieves substantial gains over existing baselines, matching the performance of models trained with significantly more RCT data.",
+        "authors": "Yuxi Du, Zhiheng Zhang, Haoxuan Li, Cong Fang, Jixing Xu, Peng Zhen, Jiecheng Guo",
+        "url": "http://arxiv.org/abs/2602.22612v1",
+        "pdf_url": "https://arxiv.org/pdf/2602.22612v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文形式化了治疗引起的结构非重叠问题，并证明了在此机制下，常用的加权融合方法无法满足随机识别限制。它提出了一个约束联合估计框架，通过正交实验矩条件强制执行因果有效性，并推导了惩罚性原始-对偶算法和预言机不等式。这是因果推断和鲁棒估计领域一个具有极高理论严谨性的贡献。"
+    }
+]

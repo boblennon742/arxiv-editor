@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.02146v1",
+        "title": "LongRLVR: Long-Context Reinforcement Learning Requires Verifiable Context Rewards",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced the reasoning capabilities of Large Language Models (LLMs) by optimizing them against factual outcomes. However, this paradigm falters in long-context scenarios, as its reliance on internal parametric knowledge is ill-suited for tasks requiring contextual grounding--the ability to find and reason over externally provided information. We identify a key reason for this failure: a reward based solely on the final answer is too sparse to effectively guide the model for identifying relevant evidence. We formally prove that the outcome-only reward leads to significant vanishing gradients for the context grounding process, rendering learning intractable. To overcome this bottleneck, we introduce LongRLVR to augment the sparse answer reward with a dense and verifiable context reward. This auxiliary signal directly incentivizes the model for selecting the correct grounding information, providing a robust learning gradient that solves the underlying optimization challenge. We validate our method on challenging long-context benchmarks using Qwen and LLaMA models. LongRLVR consistently and significantly outperforms the standard RLVR across all models and benchmarks, e.g., boosting a 14B model's scores on RULER-QA from 73.17 to 88.90 and on LongBench v2 from 39.8 to 46.5. Our work demonstrates that explicitly rewarding the grounding process is a critical and effective strategy for unlocking the full reasoning potential of LLMs in long-context applications. Our code is available at https://github.com/real-absolute-AI/LongRLVR.",
+        "authors": "Guanzheng Chen, Michael Qizhe Shieh, Lidong Bing",
+        "url": "http://arxiv.org/abs/2603.02146v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02146v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文深入分析了长上下文RLVR（可验证奖励强化学习）中上下文接地过程的梯度消失问题，并提供了严谨的理论证明。它提出了一种创新的解决方案——通过引入密集且可验证的上下文奖励来解决这一瓶颈，显著提升了LLM在长上下文任务中的推理能力。其理论深度和对LLM应用瓶颈的解决能力非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02015v1",
+        "title": "CausalWrap: Model-Agnostic Causal Constraint Wrappers for Tabular Synthetic Data",
+        "summary": "Tabular synthetic data generators are typically trained to match observational distributions, which can yield high conventional utility (e.g., column correlations, predictive accuracy) yet poor preservation of structural relations relevant to causal analysis and out-of-distribution (OOD) reasoning. When the downstream use of synthetic data involves causal reasoning -- estimating treatment effects, evaluating policies, or testing mediation pathways -- merely matching the observational distribution is insufficient: structural fidelity and treatment-mechanism preservation become essential. We propose CausalWrap (CW), a model-agnostic wrapper that injects partial causal knowledge (PCK) -- trusted edges, forbidden edges, and qualitative/monotonic constraints -- into any pretrained base generator (GAN, VAE, or diffusion model), without requiring access to its internals. CW learns a lightweight, differentiable post-hoc correction map applied to samples from the base generator, optimized with causal penalty terms under an augmented-Lagrangian schedule. We provide theoretical results connecting penalty-based optimization to constraint satisfaction and relating approximate factorization to joint distributional control. We validate CW on simulated structural causal models (SCMs) with known ground-truth interventions, semi-synthetic causal benchmarks (IHDP and an ACIC-style suite), and a real-world ICU cohort (MIMIC-IV) with expert-elicited partial graphs. CW improves causal fidelity across diverse base generators -- e.g., reducing average treatment effect (ATE) error by up to 63% on ACIC and lifting ATE agreement from 0.00 to 0.38 on the intensive care unit (ICU) cohort -- while largely retaining conventional utility.",
+        "authors": "Amir Asiaee, Zhuohui J. Liang, Chao Yan",
+        "url": "http://arxiv.org/abs/2603.02015v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02015v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "CausalWrap提出了一种模型无关的封装器，能够将因果知识注入到表格合成数据生成器中，以提高其结构保真度。论文不仅提出了新方法，还提供了严谨的理论结果，将基于惩罚的优化与约束满足联系起来。这对于因果分析和OOD（Out-of-Distribution）推理至关重要，解决了合成数据在实际应用中的核心瓶颈，具有很强的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01907v1",
+        "title": "Efficient RLVR Training via Weighted Mutual Information Data Selection",
+        "summary": "Reinforcement learning (RL) plays a central role in improving the reasoning and alignment of large language models, yet its efficiency critically depends on how training data are selected. Existing online selection strategies predominantly rely on difficulty-based heuristics, favouring datapoints with intermediate success rates, implicitly equating difficulty with informativeness and neglecting epistemic uncertainty arising from limited evidence. We introduce InSight, an INformation-guided data SamplInG metHod for RL Training, grounded in a weighted mutual information objective. By modeling data outcomes with Bayesian latent success rates, we show that expected uncertainty reduction decomposes into complementary difficulty- and evidence-dependent components, revealing a fundamental limitation of difficulty-only selection. Leveraging this observation, InSight constructs a stable acquisition score based on the mean belief of datapoints' success rather than noisy sampled outcomes, and naturally extends to multi-rollout settings common in reinforcement learning with verifiable rewards (RLVR). Extensive experiments demonstrate that InSight consistently achieves state-of-the-art performance and improves training efficiency, including a +1.41 average gain on Planning & Mathmatics benchmarks, +1.01 improvement on general reasoning, and up to ~2.2x acceleration, with negligible additional computational overhead.",
+        "authors": "Xinyu Zhou, Boyu Zhu, Haotian Zhang, Huiming Wang, Zhijiang Guo",
+        "url": "http://arxiv.org/abs/2603.01907v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01907v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "InSight提出了一种基于加权互信息目标的RLVR数据选择方法，理论上将不确定性分解为难度和证据依赖的组成部分，揭示了仅基于难度选择的局限性。该方法显著提高了RLVR训练效率（加速高达2.2倍），同时提升了LLM的推理和对齐能力。其理论分析的严谨性和对LLM训练效率瓶颈的解决，使其成为一篇高质量的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01692v1",
+        "title": "Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search",
+        "summary": "LLM-based agents for machine learning engineering (MLE) predominantly rely on tree search, a form of gradient-free optimization that uses scalar validation scores to rank candidates. As LLM reasoning capabilities improve, exhaustive enumeration becomes increasingly inefficient compared to directed updates, analogous to how accurate gradients enable efficient descent over random search. We introduce \\textsc{Gome}, an MLE agent that operationalizes gradient-based optimization. \\textsc{Gome} maps structured diagnostic reasoning to gradient computation, success memory to momentum, and multi-trace execution to distributed optimization. Under a closed-world protocol that isolates architectural effects from external knowledge, \\textsc{Gome} achieves a state-of-the-art 35.1\\% any-medal rate on MLE-Bench with a restricted 12-hour budget on a single V100 GPU. Scaling experiments across 10 models reveal a critical crossover: with weaker models, tree search retains advantages by compensating for unreliable reasoning through exhaustive exploration; as reasoning capability strengthens, gradient-based optimization progressively outperforms, with the gap widening at frontier-tier models. Given the rapid advancement of reasoning-oriented LLMs, this positions gradient-based optimization as an increasingly favorable paradigm. We release our codebase and GPT-5 traces.",
+        "authors": "Yifei Zhang, Xu Yang, Xiao Yang, Bowen Xian, Qizheng Li, Shikai Fang, Jingyuan Li, Jian Wang, Mingrui Xu, Weiqing Liu, Jiang Bian",
+        "url": "http://arxiv.org/abs/2603.01692v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01692v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "Gome提出了一种将诊断推理映射到梯度计算的MLE（机器学习工程）代理，将LLM代理的优化从传统的树搜索转向了梯度优化。这是一个范式上的转变，具有高度的理论创新性。它在资源受限下实现了SOTA性能，解决了LLM代理效率的瓶颈，并且随着LLM推理能力的增强，这种梯度优化方法的优势将愈发明显。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01501v1",
+        "title": "GAC: Stabilizing Asynchronous RL Training for LLMs via Gradient Alignment Control",
+        "summary": "Asynchronous execution is essential for scaling reinforcement learning (RL) to modern large model workloads, including large language models and AI agents, but it can fundamentally alter RL optimization behavior. While prior work on asynchronous RL focuses on training throughput and distributional correction, we show that naively applying asynchrony to policy-gradient updates can induce qualitatively different training dynamics and lead to severe training instability. Through systematic empirical and theoretical analysis, we identify a key signature of this instability: asynchronous training exhibits persistently high cosine similarity between consecutive policy gradients, in contrast to the near-orthogonal updates observed under synchronized training. This stale-aligned gradient effect amplifies correlated updates and increases the risk of overshooting and divergence. Motivated by this observation, we propose GRADIENT ALIGNMENT CONTROL(GAC), a simple dynamics-aware stabilization method that regulates asynchronous RL progress along stale-aligned directions via gradient projection. We establish convergence guarantees under bounded staleness and demonstrate empirically that GAC recovers stable, on-policy training dynamics and matches synchronized baselines even at high staleness.",
+        "authors": "Haofeng Xu, Junwei Su, Yukun Tian, Lansong Diao, Zhengping Qian, Chuan Wu",
+        "url": "http://arxiv.org/abs/2603.01501v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01501v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文通过系统性的理论和实证分析，揭示了异步RL训练中“梯度陈旧对齐效应”导致的训练不稳定性。它提出了GRADIENT ALIGNMENT CONTROL (GAC) 方法，通过梯度投影来稳定异步RL训练，并提供了收敛性保证。这解决了大规模异步RL训练（特别是LLM）中的关键稳定性瓶颈，具有深厚的理论基础和显著的实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02092v1",
+        "title": "Adam Converges Without Any Modification On Update Rules",
+        "summary": "Adam is the default algorithm for training neural networks, including large language models (LLMs). However, \\citet{reddi2019convergence} provided an example that Adam diverges, raising concerns for its deployment in AI model training. We identify a key mismatch between the divergence example and practice: \\citet{reddi2019convergence} pick the problem after picking the hyperparameters of Adam, i.e., $(β_1,β_2)$; while practical applications often fix the problem first and then tune $(β_1,β_2)$. In this work, we prove that Adam converges with proper problem-dependent hyperparameters. First, we prove that Adam converges when $β_2$ is large and $β_1 < \\sqrt{β_2}$. Second, when $β_2$ is small, we point out a region of $(β_1,β_2)$ combinations where Adam can diverge to infinity. Our results indicate a phase transition for Adam from divergence to convergence when changing the $(β_1, β_2)$ combination. To our knowledge, this is the first phase transition in $(β_1,β_2)$ 2D-plane reported in the literature, providing rigorous theoretical guarantees for Adam optimizer. We further point out that the critical boundary $(β_1^*, β_2^*)$ is problem-dependent, and particularly, dependent on batch size. This provides suggestions on how to tune $β_1$ and $β_2$: when Adam does not work well, we suggest tuning up $β_2$ inversely with batch size to surpass the threshold $β_2^*$, and then trying $β_1< \\sqrt{β_2}$. Our suggestions are supported by reports from several empirical studies, which observe improved LLM training performance when applying them.",
+        "authors": "Yushun Zhang, Bingran Li, Congliang Chen, Zhi-Quan Luo, Ruoyu Sun",
+        "url": "http://arxiv.org/abs/2603.02092v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02092v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文挑战了Adam优化器可能发散的普遍认知，通过严谨的理论证明，指出在适当的问题依赖超参数下Adam是收敛的，并首次揭示了其在(β1, β2)二维平面上的相变。这为Adam的超参数调优提供了坚实的理论指导，对于LLM等大型模型的训练稳定性和性能提升具有重要意义，理论创新性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01783v1",
+        "title": "GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation",
+        "summary": "Retrieval-Augmented Generation (RAG) grounds large language models with external evidence, but many implementations rely on pre-built indices that remain static after construction. Related queries therefore repeat similar multi-hop traversal, increasing latency and compute. Motivated by schema-based learning in cognitive neuroscience, we propose GAM-RAG, a training-free framework that accumulates retrieval experience from recurring or related queries and updates retrieval memory over time. GAM-RAG builds a lightweight, relation-free hierarchical index whose links capture potential co-occurrence rather than fixed semantic relations. During inference, successful retrieval episodes provide sentence-level feedback, updating sentence memories so evidence useful for similar reasoning types becomes easier to activate later. To balance stability and adaptability under noisy feedback, we introduce an uncertainty-aware, Kalman-inspired gain rule that jointly updates memory states and perplexity-based uncertainty estimates. It applies fast updates for reliable novel signals and conservative refinement for stable or noisy memories. We provide a theoretical analysis of the update dynamics, and empirically show that GAM-RAG improves average performance by 3.95% over the strongest baseline and by 8.19% with 5-turn memory, while reducing inference cost by 61%. Our code and datasets are available at: https://anonymous.4open.science/r/GAM_RAG-2EF6.",
+        "authors": "Yifan Wang, Mingxuan Jiang, Zhihao Sun, Yixin Cao, Yicun Liu, Keyang Chen, Guangnan Ye, Hongfeng Chai",
+        "url": "http://arxiv.org/abs/2603.01783v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01783v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "GAM-RAG提出了一种训练无关的RAG框架，通过累积检索经验和基于不确定性感知的Kalman启发式增益规则来动态更新检索记忆。论文提供了更新动力学的理论分析，显著提升了RAG性能并降低了推理成本（61%），解决了RAG系统中的延迟和计算瓶颈。其理论创新和对实际LLM应用的效率提升非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01623v1",
+        "title": "Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration",
+        "summary": "Diffusion models have become the dominant tool for high-fidelity image and video generation, yet are critically bottlenecked by their inference speed due to the numerous iterative passes of Diffusion Transformers. To reduce the exhaustive compute, recent works resort to the feature caching and reusing scheme that skips network evaluations at selected diffusion steps by using cached features in previous steps. However, their preliminary design solely relies on local approximation, causing errors to grow rapidly with large skips and leading to degraded sample quality at high speedups. In this work, we propose spectral diffusion feature forecaster (Spectrum), a training-free approach that enables global, long-range feature reuse with tightly controlled error. In particular, we view the latent features of the denoiser as functions over time and approximate them with Chebyshev polynomials. Specifically, we fit the coefficient for each basis via ridge regression, which is then leveraged to forecast features at multiple future diffusion steps. We theoretically reveal that our approach admits more favorable long-horizon behavior and yields an error bound that does not compound with the step size. Extensive experiments on various state-of-the-art image and video diffusion models consistently verify the superiority of our approach. Notably, we achieve up to 4.79$\\times$ speedup on FLUX.1 and 4.67$\\times$ speedup on Wan2.1-14B, while maintaining much higher sample quality compared with the baselines.",
+        "authors": "Jiaqi Han, Juntong Shi, Puheng Li, Haotian Ye, Qiushan Guo, Stefano Ermon",
+        "url": "http://arxiv.org/abs/2603.01623v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01623v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "Spectrum提出了一种训练无关的自适应谱特征预测方法，利用切比雪夫多项式对扩散模型中的潜在特征进行预测，实现了全局、长程的特征复用。论文理论上揭示了其在长时域行为上的优势，并给出了不随步长复合的误差界。该方法显著加速了扩散模型的推理（高达4.79倍），同时保持了高质量，解决了生成模型推理速度的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01574v1",
+        "title": "DualSentinel: A Lightweight Framework for Detecting Targeted Attacks in Black-box LLM via Dual Entropy Lull Pattern",
+        "summary": "Recent intelligent systems integrate powerful Large Language Models (LLMs) through APIs, but their trustworthiness may be critically undermined by targeted attacks like backdoor and prompt injection attacks, which secretly force LLMs to generate specific malicious sequences. Existing defensive approaches for such threats typically rely on high access rights, impose prohibitive costs, and hinder normal inference, rendering them impractical for real-world scenarios. To solve these limitations, we introduce DualSentinel, a lightweight and unified defense framework that can accurately and promptly detect the activation of targeted attacks alongside the LLM generation process. We first identify a characteristic of compromised LLMs, termed Entropy Lull: when a targeted attack successfully hijacks the generation process, the LLM exhibits a distinct period of abnormally low and stable token probability entropy, indicating it is following a fixed path rather than making creative choices. DualSentinel leverages this pattern by developing an innovative dual-check approach. It first employs a magnitude and trend-aware monitoring method to proactively and sensitively flag an entropy lull pattern at runtime. Upon such flagging, it triggers a lightweight yet powerful secondary verification based on task-flipping. An attack is confirmed only if the entropy lull pattern persists across both the original and the flipped task, proving that the LLM's output is coercively controlled. Extensive evaluations show that DualSentinel is both highly effective (superior detection accuracy with near-zero false positives) and remarkably efficient (negligible additional cost), offering a truly practical path toward securing deployed LLMs. The source code can be accessed at https://doi.org/10.5281/zenodo.18479273.",
+        "authors": "Xiaoyi Pang, Xuanyi Hao, Pengyu Liu, Qi Luo, Song Guo, Zhibo Wang",
+        "url": "http://arxiv.org/abs/2603.01574v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01574v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "DualSentinel提出了一种轻量级、统一的防御框架，通过识别LLM生成过程中的“熵平静（Entropy Lull）”模式来检测有针对性的攻击。论文不仅提出了新颖的理论洞察，还设计了双重验证机制，实现了高效且准确的黑盒LLM攻击检测。这为LLM在实际部署中的安全性提供了切实可行的解决方案，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02196v1",
+        "title": "Conformal Policy Control",
+        "summary": "An agent must try new behaviors to explore and improve. In high-stakes environments, an agent that violates safety constraints may cause harm and must be taken offline, curtailing any future interaction. Imitating old behavior is safe, but excessive conservatism discourages exploration. How much behavior change is too much? We show how to use any safe reference policy as a probabilistic regulator for any optimized but untested policy. Conformal calibration on data from the safe policy determines how aggressively the new policy can act, while provably enforcing the user's declared risk tolerance. Unlike conservative optimization methods, we do not assume the user has identified the correct model class nor tuned any hyperparameters. Unlike previous conformal methods, our theory provides finite-sample guarantees even for non-monotonic bounded constraint functions. Our experiments on applications ranging from natural language question answering to biomolecular engineering show that safe exploration is not only possible from the first moment of deployment, but can also improve performance.",
+        "authors": "Drew Prinster, Clara Fannjiang, Ji Won Park, Kyunghyun Cho, Anqi Liu, Suchi Saria, Samuel Stanton",
+        "url": "http://arxiv.org/abs/2603.02196v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02196v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种共形策略控制方法，利用安全参考策略作为概率调节器，为未经测试的优化策略提供可证明的安全保障。它在理论上提供了非单调有界约束函数的有限样本保证，且不依赖于模型类别或超参数调优。这解决了高风险环境中RL探索的安全性瓶颈，具有很强的理论严谨性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02193v1",
+        "title": "Symbol-Equivariant Recurrent Reasoning Models",
+        "summary": "Reasoning problems such as Sudoku and ARC-AGI remain challenging for neural networks. The structured problem solving architecture family of Recurrent Reasoning Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny Recursive Model (TRM), offer a compact alternative to large language models, but currently handle symbol symmetries only implicitly via costly data augmentation. We introduce Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce permutation equivariance at the architectural level through symbol-equivariant layers, guaranteeing identical solutions under symbol or color permutations. SE-RRMs outperform prior RRMs on 9x9 Sudoku and generalize from just training on 9x9 to smaller 4x4 and larger 16x16 and 25x25 instances, to which existing RRMs cannot extrapolate. On ARC-AGI-1 and ARC-AGI-2, SE-RRMs achieve competitive performance with substantially less data augmentation and only 2 million parameters, demonstrating that explicitly encoding symmetry improves the robustness and scalability of neural reasoning. Code is available at https://github.com/ml-jku/SE-RRM.",
+        "authors": "Richard Freinschlag, Timo Bertram, Erich Kobler, Andreas Mayr, Günter Klambauer",
+        "url": "http://arxiv.org/abs/2603.02193v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02193v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SE-RRMs通过在架构层面强制执行符号置换等变性，解决了神经推理模型在处理符号对称性方面的挑战。这种显式编码对称性的方法具有理论创新性，使得模型在Sudoku和ARC-AGI等推理任务上表现出色，并能泛化到更大规模的问题，同时显著减少了参数和数据增强需求，提升了推理的鲁棒性和可扩展性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02005v1",
+        "title": "Mitigating topology biases in Graph Diffusion via Counterfactual Intervention",
+        "summary": "Graph diffusion models have gained significant attention in graph generation tasks, but they often inherit and amplify topology biases from sensitive attributes (e.g. gender, age, region), leading to unfair synthetic graphs. Existing fair graph generation using diffusion models is limited to specific graph-based applications with complete labels or requires simultaneous updates for graph structure and node attributes, making them unsuitable for general usage. To relax these limitations by applying the debiasing method directly on graph topology, we propose Fair Graph Diffusion Model (FairGDiff), a counterfactual-based one-step solution that mitigates topology biases while balancing fairness and utility. In detail, we construct a causal model to capture the relationship between sensitive attributes, biased link formation, and the generated graph structure. By answering the counterfactual question \"Would the graph structure change if the sensitive attribute were different?\", we estimate an unbiased treatment and incorporate it into the diffusion process. FairGDiff integrates counterfactual learning into both forward diffusion and backward denoising, ensuring that the generated graphs are independent of sensitive attributes while preserving structural integrity. Extensive experiments on real-world datasets demonstrate that FairGDiff achieves a superior trade-off between fairness and utility, outperforming existing fair graph generation methods while maintaining scalability.",
+        "authors": "Wendi Wang, Jiaxi Yang, Yongkang Du, Lu Lin",
+        "url": "http://arxiv.org/abs/2603.02005v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02005v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FairGDiff提出了一种基于反事实干预的图扩散模型，用于缓解图生成中的拓扑偏差。通过构建因果模型并将其整合到扩散过程中，该方法在理论上确保了生成图与敏感属性的独立性，同时保持了结构完整性。这在公平AI领域具有重要的理论和实践意义，解决了图生成中的伦理和性能权衡问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01890v1",
+        "title": "Resolving Blind Inverse Problems under Dynamic Range Compression via Structured Forward Operator Modeling",
+        "summary": "Recovering radiometric fidelity from unknown dynamic range compression (UDRC), such as low-light enhancement and HDR reconstruction, is a challenging blind inverse problem, due to the unknown forward model and irreversible information loss introduced by compression. To address this challenge, we first identify monotonicity as the fundamental physical invariant shared across UDRC tasks. Leveraging this insight, we introduce the \\textbf{cascaded monotonic Bernstein} (CaMB) operator to parameterize the unknown forward model. CaMB enforces monotonicity as a hard architectural inductive bias, constraining optimization to physically consistent mappings and enabling robust and stable operator estimation. We further integrate CaMB with a plug-and-play diffusion framework, proposing \\textbf{CaMB-Diff}. Within this framework, the diffusion model serves as a powerful geometric prior for structural and semantic recovery, while CaMB explicitly models and corrects radiometric distortions through a physically grounded forward operator. Extensive experiments on a variety of zero-shot UDRC tasks, including low-light enhancement, low-field MRI enhancement, and HDR reconstruction, demonstrate that CaMB-Diff significantly outperforms state-of-the-art zero-shot baselines in terms of both signal fidelity and physical consistency. Moreover, we empirically validate the effectiveness of the proposed CaMB parameterization in accurately modeling the unknown forward operator.",
+        "authors": "Muyu Liu, Xuanyu Tian, Chenhe Du, Qing Wu, Hongjiang Wei, Yuyao Zhang",
+        "url": "http://arxiv.org/abs/2603.01890v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01890v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过识别单调性作为动态范围压缩任务中的基本物理不变量，提出了级联单调伯恩斯坦（CaMB）算子来参数化未知前向模型。CaMB-Diff将此与即插即用扩散框架结合，实现了盲逆问题的求解。其对物理不变量的理论洞察和梯度无关的求解方法，在低光增强、HDR重建等任务中表现出色，具有很强的创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01776v1",
+        "title": "FreeAct: Freeing Activations for LLM Quantization",
+        "summary": "Quantization is pivotal for mitigating the significant memory and computational overhead of Large Language Models (LLMs). While emerging transformation-based methods have successfully enhanced quantization by projecting feature spaces onto smoother manifolds using orthogonal matrices, they typically enforce a rigid one-to-one transformation constraint. This static approach fails to account for the dynamic patterns inherent in input activations, particularly within diffusion LLMs (dLLMs) and Multimodal LLMs (MLLMs), where varying token types exhibit distinct distributions. To advance this, we propose FreeAct, a novel quantization framework that relaxes the static one-to-one constraint to accommodate dynamic activation disparities. Theoretically, we leverage the rank-deficient nature of activations to derive a solution space that extends beyond simple inverse matrices, enabling the decoupling of activation transformations from weights. Methodologically, FreeAct identifies token-specific dynamics (i.e., vision v.s. text, or masked tokens) and allocates distinct transformation matrices to the activation side, while maintaining a unified, static transformation for the weights. Extensive experiments across dLLMs and MLLMs demonstrate that FreeAct significantly outperforms baselines, up to 5.3% performance improvement, with in-depth analyses. Our code will be publicly released.",
+        "authors": "Xiaohao Liu, Xiaobo Xia, Manyi Zhang, Ji-Fu Li, Xianzhi Yu, Fei Shen, Xiu Su, See-Kiong Ng, Tat-Seng Chua",
+        "url": "http://arxiv.org/abs/2603.01776v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01776v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FreeAct提出了一种新颖的LLM量化框架，通过放宽静态一对一变换约束来适应动态激活差异。理论上，它利用激活的秩亏性质推导了超越简单逆矩阵的解空间，实现了激活变换与权重的解耦。该方法显著提升了dLLMs和MLLMs的量化性能，有效解决了LLM模型压缩和效率的瓶颈，具有扎实的理论基础和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01626v1",
+        "title": "Towards OOD Generalization in Dynamic Graphs via Causal Invariant Learning",
+        "summary": "Although dynamic graph neural networks (DyGNNs) have demonstrated promising capabilities, most existing methods ignore out-of-distribution (OOD) shifts that commonly exist in dynamic graphs. Dynamic graph OOD generalization is non-trivial due to the following challenges: 1) Identifying invariant and variant patterns amid complex graph evolution, 2) Capturing the intrinsic evolution rationale from these patterns, and 3) Ensuring model generalization across diverse OOD shifts despite limited data distribution observations. Although several attempts have been made to tackle these challenges, none has successfully addressed all three simultaneously, and they face various limitations in complex OOD scenarios. To solve these issues, we propose a Dynamic graph Causal Invariant Learning (DyCIL) model for OOD generalization via exploiting invariant spatio-temporal patterns from a causal view. Specifically, we first develop a dynamic causal subgraph generator to identify causal dynamic subgraphs explicitly. Next, we design a causal-aware spatio-temporal attention module to extract the intrinsic evolution rationale behind invariant patterns. Finally, we further introduce an adaptive environment generator to capture the underlying dynamics of distributional shifts. Extensive experiments on both real-world and synthetic dynamic graph datasets demonstrate the superiority of our model over state-of-the-art baselines in handling OOD shifts.",
+        "authors": "Xinxun Zhang, Pengfei Jiao, Mengzhou Gao, Tianpeng Li, Xuan Guo",
+        "url": "http://arxiv.org/abs/2603.01626v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01626v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DyCIL模型通过因果不变学习来解决动态图中的OOD（Out-of-Distribution）泛化问题。它从因果视角识别不变时空模式，设计了因果动态子图生成器和因果感知时空注意力模块，并引入自适应环境生成器。该方法在理论上利用因果关系提升了动态图神经网络的鲁棒性，解决了OOD泛化这一关键挑战，具有很强的理论创新性。"
+    }
+]

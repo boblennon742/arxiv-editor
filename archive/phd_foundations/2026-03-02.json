@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.02174v1",
+        "title": "De-paradox Tree: Breaking Down Simpson's Paradox via A Kernel-Based Partition Algorithm",
+        "summary": "Real-world observational datasets and machine learning have revolutionized data-driven decision-making, yet many models rely on empirical associations that may be misleading due to confounding and subgroup heterogeneity. Simpson's paradox exemplifies this challenge, where aggregated and subgroup-level associations contradict each other, leading to misleading conclusions. Existing methods provide limited support for detecting and interpreting such paradoxical associations, especially for practitioners without deep causal expertise. We introduce De-paradox Tree, an interpretable algorithm designed to uncover hidden subgroup patterns behind paradoxical associations under assumed causal structures involving confounders and effect heterogeneity. It employs novel split criteria and balancing-based procedures to adjust for confounders and homogenize heterogeneous effects through recursive partitioning. Compared to state-of-the-art methods, De-paradox Tree builds simpler, more interpretable trees, selects relevant covariates, and identifies nested opposite effects while ensuring robust estimation of causal effects when causally admissible variables are provided. Our approach addresses the limitations of traditional causal inference and machine learning methods by introducing an interpretable framework that supports non-expert practitioners while explicitly acknowledging causal assumptions and scope limitations, enabling more reliable and informed decision-making in complex observational data environments.",
+        "authors": "Xian Teng, Yu-Ru Lin",
+        "url": "http://arxiv.org/abs/2603.02174v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02174v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文专注于因果推断，通过核函数分区算法解决辛普森悖论，旨在稳健估计因果效应。其“平衡性程序”和“因果效应的稳健估计”表明了对统计严谨性的重视，并提供了可解释的框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02159v1",
+        "title": "Instrumental and Proximal Causal Inference with Gaussian Processes",
+        "summary": "Instrumental variable (IV) and proximal causal learning (Proxy) methods are central frameworks for causal inference in the presence of unobserved confounding. Despite substantial methodological advances, existing approaches rarely provide reliable epistemic uncertainty (EU) quantification. We address this gap through a Deconditional Gaussian Process (DGP) framework for uncertainty-aware causal learning. Our formulation recovers popular kernel estimators as the posterior mean, ensuring predictive precision, while the posterior variance yields principled and well-calibrated EU. Moreover, the probabilistic structure enables systematic model selection via marginal log-likelihood optimization. Empirical results demonstrate strong predictive performance alongside informative EU quantification, evaluated via empirical coverage frequencies and decision-aware accuracy rejection curves. Together, our approach provides a unified, practical solution for causal inference under unobserved confounding with reliable uncertainty.",
+        "authors": "Yuqi Zhang, Krikamol Muandet, Dino Sejdinovic, Edwin Fong, Siu Lun Chau",
+        "url": "http://arxiv.org/abs/2603.02159v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02159v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将高斯过程与工具变量（IV）和近端因果学习（Proxy）结合，用于在未观测混杂下进行因果推断，并特别关注可靠的认知不确定性量化。其“Deconditional Gaussian Process (DGP) 框架”和通过“边际对数似然优化进行系统模型选择”的描述，完美契合了对统计保证和严谨数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02015v1",
+        "title": "CausalWrap: Model-Agnostic Causal Constraint Wrappers for Tabular Synthetic Data",
+        "summary": "Tabular synthetic data generators are typically trained to match observational distributions, which can yield high conventional utility (e.g., column correlations, predictive accuracy) yet poor preservation of structural relations relevant to causal analysis and out-of-distribution (OOD) reasoning. When the downstream use of synthetic data involves causal reasoning -- estimating treatment effects, evaluating policies, or testing mediation pathways -- merely matching the observational distribution is insufficient: structural fidelity and treatment-mechanism preservation become essential. We propose CausalWrap (CW), a model-agnostic wrapper that injects partial causal knowledge (PCK) -- trusted edges, forbidden edges, and qualitative/monotonic constraints -- into any pretrained base generator (GAN, VAE, or diffusion model), without requiring access to its internals. CW learns a lightweight, differentiable post-hoc correction map applied to samples from the base generator, optimized with causal penalty terms under an augmented-Lagrangian schedule. We provide theoretical results connecting penalty-based optimization to constraint satisfaction and relating approximate factorization to joint distributional control. We validate CW on simulated structural causal models (SCMs) with known ground-truth interventions, semi-synthetic causal benchmarks (IHDP and an ACIC-style suite), and a real-world ICU cohort (MIMIC-IV) with expert-elicited partial graphs. CW improves causal fidelity across diverse base generators -- e.g., reducing average treatment effect (ATE) error by up to 63% on ACIC and lifting ATE agreement from 0.00 to 0.38 on the intensive care unit (ICU) cohort -- while largely retaining conventional utility.",
+        "authors": "Amir Asiaee, Zhuohui J. Liang, Chao Yan",
+        "url": "http://arxiv.org/abs/2603.02015v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02015v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对表格合成数据的因果推理，提出了模型无关的因果约束封装器。摘要中明确提到“提供了连接惩罚优化与约束满足的理论结果，并关联近似分解与联合分布控制”，这直接满足了你对“优化收敛性”和“因果逻辑”的偏好，理论基础强大。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02010v1",
+        "title": "Noise-Calibrated Inference from Differentially Private Sufficient Statistics in Exponential Families",
+        "summary": "Many differentially private (DP) data release systems either output DP synthetic data and leave analysts to perform inference as usual, which can lead to severe miscalibration, or output a DP point estimate without a principled way to do uncertainty quantification. This paper develops a clean and tractable middle ground for exponential families: release only DP sufficient statistics, then perform noise-calibrated likelihood-based inference and optional parametric synthetic data generation as post-processing. Our contributions are: (1) a general recipe for approximate-DP release of clipped sufficient statistics under the Gaussian mechanism; (2) asymptotic normality, explicit variance inflation, and valid Wald-style confidence intervals for the plug-in DP MLE; (3) a noise-aware likelihood correction that is first-order equivalent to the plug-in but supports bootstrap-based intervals; and (4) a matching minimax lower bound showing the privacy distortion rate is unavoidable. The resulting theory yields concrete design rules and a practical pipeline for releasing DP synthetic data with principled uncertainty quantification, validated on three exponential families and real census data.",
+        "authors": "Amir Asiaee, Samhita Pal",
+        "url": "http://arxiv.org/abs/2603.02010v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02010v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在差分隐私（DP）设置下，对指数族充分统计量进行噪声校准推断。其贡献包括“渐近正态性、显式方差膨胀和有效的Wald式置信区间”，以及“匹配的最小最大下界”，这些都是对统计保证和理论严谨性的极佳体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02005v1",
+        "title": "Mitigating topology biases in Graph Diffusion via Counterfactual Intervention",
+        "summary": "Graph diffusion models have gained significant attention in graph generation tasks, but they often inherit and amplify topology biases from sensitive attributes (e.g. gender, age, region), leading to unfair synthetic graphs. Existing fair graph generation using diffusion models is limited to specific graph-based applications with complete labels or requires simultaneous updates for graph structure and node attributes, making them unsuitable for general usage. To relax these limitations by applying the debiasing method directly on graph topology, we propose Fair Graph Diffusion Model (FairGDiff), a counterfactual-based one-step solution that mitigates topology biases while balancing fairness and utility. In detail, we construct a causal model to capture the relationship between sensitive attributes, biased link formation, and the generated graph structure. By answering the counterfactual question \"Would the graph structure change if the sensitive attribute were different?\", we estimate an unbiased treatment and incorporate it into the diffusion process. FairGDiff integrates counterfactual learning into both forward diffusion and backward denoising, ensuring that the generated graphs are independent of sensitive attributes while preserving structural integrity. Extensive experiments on real-world datasets demonstrate that FairGDiff achieves a superior trade-off between fairness and utility, outperforming existing fair graph generation methods while maintaining scalability.",
+        "authors": "Wendi Wang, Jiaxi Yang, Yongkang Du, Lu Lin",
+        "url": "http://arxiv.org/abs/2603.02005v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02005v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过反事实干预来缓解图扩散模型中的拓扑偏差，以确保公平性。它构建了一个因果模型来捕捉敏感属性与图结构之间的关系，并利用反事实问题来估计无偏处理，因果逻辑的应用严谨且具有创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01938v1",
+        "title": "Explanation-Guided Adversarial Training for Robust and Interpretable Models",
+        "summary": "Deep neural networks (DNNs) have achieved remarkable performance in many tasks, yet they often behave as opaque black boxes. Explanation-guided learning (EGL) methods steer DNNs using human-provided explanations or supervision on model attributions. These approaches improve interpretability but typically assume benign inputs and incur heavy annotation costs. In contrast, both predictions and saliency maps of DNNs could dramatically alter facing imperceptible perturbations or unseen patterns. Adversarial training (AT) can substantially improve robustness, but it does not guarantee that model decisions rely on semantically meaningful features. In response, we propose Explanation-Guided Adversarial Training (EGAT), a unified framework that integrates the strength of AT and EGL to simultaneously improve prediction performance, robustness, and explanation quality. EGAT generates adversarial examples on the fly while imposing explanation-based constraints on the model. By jointly optimizing classification performance, adversarial robustness, and attributional stability, EGAT is not only more resistant to unexpected cases, including adversarial attacks and out-of-distribution (OOD) scenarios, but also offer human-interpretable justifications for the decisions. We further formalize EGAT within the Probably Approximately Correct learning framework, demonstrating theoretically that it yields more stable predictions under unexpected situations compared to standard AT. Empirical evaluations on OOD benchmark datasets show that EGAT consistently outperforms competitive baselines in both clean accuracy and adversarial accuracy +37% while producing more semantically meaningful explanations, and requiring only a limited increase +16% in training time.",
+        "authors": "Chao Chen, Yanhui Chen, Shanshan Lin, Dongsheng Hong, Shu Wu, Xiangwen Liao, Chuanyi Liu",
+        "url": "http://arxiv.org/abs/2603.01938v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01938v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Explanation-Guided Adversarial Training (EGAT) 框架，旨在同时提高模型的预测性能、鲁棒性和解释质量。更重要的是，它在“可能近似正确（PAC）学习框架”内对EGAT进行了形式化，并“理论证明了其在意外情况下的稳定性”，提供了强大的理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01795v1",
+        "title": "PleaSQLarify: Visual Pragmatic Repair for Natural Language Database Querying",
+        "summary": "Natural language database interfaces broaden data access, yet they remain brittle under input ambiguity. Standard approaches often collapse uncertainty into a single query, offering little support for mismatches between user intent and system interpretation. We reframe this challenge through pragmatic inference: while users economize expressions, systems operate on priors over the action space that may not align with the users'. In this view, pragmatic repair -- incremental clarification through minimal interaction -- is a natural strategy for resolving underspecification. We present \\textsc{PleaSQLarify}, which operationalizes pragmatic repair by structuring interaction around interpretable decision variables that enable efficient clarification. A visual interface complements this by surfacing the action space for exploration, requesting user disambiguation, and making belief updates traceable across turns. In a study with twelve participants, \\textsc{PleaSQLarify} helped users recognize alternative interpretations and efficiently resolve ambiguity. Our findings highlight pragmatic repair as a design principle that fosters effective user control in natural language interfaces.",
+        "authors": "Robin Shing Moon Chan, Rita Sevastjanova, Mennatallah El-Assady",
+        "url": "http://arxiv.org/abs/2603.01795v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01795v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次将相型分布（Phase-Type distribution，一种源于应用概率论的严谨分布）整合到变分自编码器（VAEs）中，以建模重尾数据。其“解析可处理的解码器”和对“尾部行为及极端分位数”的精确捕捉，展现了极高的理论创新性和数学严谨性，完美结合了概率论与深度生成模型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01737v1",
+        "title": "Detection of weak signals under arbitrary noise distributions",
+        "summary": "Detecting weak signals buried in complex, non-Gaussian noise is a fundamental challenge in science and engineering, with applications ranging from radar systems and communications to industrial monitoring and gravitational wave detection. The Rao detector, a key concept in this domain, achieves asymptotically optimal performance as the number of measurements increases, but requires precise knowledge of the data's statistical properties, often relying on simplified noise models. We propose a hybrid framework that combines a lightweight neural network with the Rao detection framework to address this limitation. The neural network, trained on noise-only data, learns the optimal multivariate nonlinearity, transforming noisy data to enhance signal detectability. The newly introduced LRao detector then fully extracts the signal information, achieving asymptotically optimal performance even under challenging noise conditions. Validated on both simulated and real-world magnetic sensor data, our method significantly outperforms conventional approaches. By bridging data-driven techniques with model-based signal processing, it offers a robust and interpretable solution for signal detection across diverse applications.",
+        "authors": "J. Zschetzsche, M. Weimar, O. Lang, S. Schuster, A. Haberl, S. Schertler, B. Lehner, J. Reisinger, M. Huemer, S. Rotter",
+        "url": "http://arxiv.org/abs/2603.01737v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01737v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文结合Rao检测器（一种具有渐近最优性能的统计工具）和轻量级神经网络，实现了在任意非高斯噪声分布下弱信号的检测。其“渐近最优性能”的声明是强大的统计保证，体现了严谨的信号处理理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01690v1",
+        "title": "QIME: Constructing Interpretable Medical Text Embeddings via Ontology-Grounded Questions",
+        "summary": "While dense biomedical embeddings achieve strong performance, their black-box nature limits their utility in clinical decision-making. Recent question-based interpretable embeddings represent text as binary answers to natural-language questions, but these approaches often rely on heuristic or surface-level contrastive signals and overlook specialized domain knowledge. We propose QIME, an ontology-grounded framework for constructing interpretable medical text embeddings in which each dimension corresponds to a clinically meaningful yes/no question. By conditioning on cluster-specific medical concept signatures, QIME generates semantically atomic questions that capture fine-grained distinctions in biomedical text. Furthermore, QIME supports a training-free embedding construction strategy that eliminates per-question classifier training while further improving performance. Experiments across biomedical semantic similarity, clustering, and retrieval benchmarks show that QIME consistently outperforms prior interpretable embedding methods and substantially narrows the gap to strong black-box biomedical encoders, while providing concise and clinically informative explanations.",
+        "authors": "Yixuan Tang, Zhenghong Lin, Yandong Sun, Anthony K. H. Tung",
+        "url": "http://arxiv.org/abs/2603.01690v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01690v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了行列式点过程（DPPs）从离散到连续极限的统计一致性。它提出了“非渐近表征”和“弱相干性”的概念，并描述了其成立的充分条件，提供了极其严谨的统计理论和数学推导，是纯理论研究的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01645v1",
+        "title": "Pointwise Convergence Analysis for Approximations of Optimal Transport Problems with a Target Measure that Has Unbounded Support",
+        "summary": "We consider the Monge problem of optimal transport between a compactly supported source measure and a target probability measure with unbounded support. We consider the convergence of optimal maps and potential functions when the target measure is approximated, with special attention given to a cutoff approximation in which we parametrize the approximation by a ``cutoff\" radius $R$ for the target measure. We study both the convergence of the mapping and potential functions for the forward and inverse problem in many cases such as 1) the radially symmetric case with the cutoff approximation for general cost functions and 2) the non-radially symmetric case with the squared distance cost function. We derive quantitative non-asymptotic pointwise convergence rates in special cases, building on the $L^2$ convergence rates established by Delalande and Mèrigot. These results can be used, for instance, to justify the use of certain types of numerical Monge-Ampère equation solvers in computationally solving the problem.",
+        "authors": "Axel G. R. Turnquist",
+        "url": "http://arxiv.org/abs/2603.01645v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01645v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对具有无界支持的目标测度的最优传输问题进行了逐点收敛分析。它推导了“量化的非渐近逐点收敛速率”，并建立在L2收敛速率的基础上，展现了极高的数学严谨性和对收敛性的深入分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01568v1",
+        "title": "Rate-Distortion Signatures of Generalization and Information Trade-offs",
+        "summary": "Generalization to novel visual conditions remains a central challenge for both human and machine vision, yet standard robustness metrics offer limited insight into how systems trade accuracy for robustness. We introduce a rate-distortion-theoretic framework that treats stimulus-response behavior as an effective communication channel, derives rate-distortion (RD) frontiers from confusion matrices, and summarizes each system with two interpretable geometric signatures - slope ($β$) and curvature ($κ$) - which capture the marginal cost and abruptness of accuracy-robustness trade-offs. Applying this framework to human psychophysics and 18 deep vision models under controlled image perturbations, we compare generalization geometry across model architectures and training regimes. We find that both biological and artificial systems follow a common lossy-compression principle but occupy systematically different regions of RD space. In particular, humans exhibit smoother, more flexible trade-offs, whereas modern deep networks operate in steeper and more brittle regimes even at matched accuracy. Across training regimes, robustness training induces systematic but dissociable shifts in beta/kappa, revealing cases where improved robustness or accuracy does not translate into more human-like generalization geometry. These results demonstrate that RD geometry provides a compact, model-agnostic lens for comparing generalization behavior across systems beyond standard accuracy-based metrics.",
+        "authors": "Leyla Roksan Caglar, Pedro A. M. Mediano, Baihan Lin",
+        "url": "http://arxiv.org/abs/2603.01568v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01568v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个基于率失真理论的框架，用于分析泛化和信息权衡。它将刺激-响应行为视为有效的通信信道，从混淆矩阵中推导出率失真（RD）边界，并用可解释的几何特征总结系统，通过信息论的严谨数学工具来理解AI系统的泛化行为，理论深度和创新性俱佳。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01468v1",
+        "title": "Wild Bootstrap Inference for Non-Negative Matrix Factorization with Random Effects",
+        "summary": "Non-negative matrix factorization (NMF) is widely used for parts-based representations, yet formal inference for covariate effects is rarely available when the basis is learned under non-negativity. We introduce non-negative matrix factorization with random effects (NMF-RE), a mean-structure latent-variable model $Y=X(ΘA+U)+\\mathcal{E}$ that combines covariate-driven scores with unit-specific deviations. Random effects act as a working device for modeling heterogeneity and controlling complexity; we monitor their effective degrees of freedom and enforce a df-based cap to prevent near-saturated fits. Estimation alternates closed-form ridge (BLUP-like) updates for $U$ with multiplicative non-negative updates for $X$ and $Θ$. For inference on $Θ$, we condition on $(\\widehat X,\\widehat U)$ and obtain fast uncertainty quantification via asymptotic linearization, a one-step Newton update, and a multiplier (wild) bootstrap; this avoids repeated constrained re-optimization. Simulations include a targeted stress test showing that, without df control, the random-effects penalty can collapse and inference for $Θ$ becomes degenerate, whereas the df-cap prevents this failure mode. The non-negativity constraint induces sparse, parts-based loadings -- a measurement-side variable selection -- while inference on $Θ$ identifies which covariates affect which components, providing covariate-side selection. Longitudinal, psychometric, spatial-flow, and text examples further illustrate stable, interpretable covariate-effect inference.",
+        "authors": "Kenichi Satoh",
+        "url": "http://arxiv.org/abs/2603.01468v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01468v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为非负矩阵分解（NMF）提供了正式的推断方法，引入了带有随机效应的NMF-RE模型。它利用渐近线性化、一步牛顿更新和乘数（wild）bootstrap进行不确定性量化，解决了NMF推断的挑战，统计推断方法严谨且具有理论支撑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01455v1",
+        "title": "From Verbatim to Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents",
+        "summary": "While multimodal large language models have demonstrated impressive short-term reasoning, they struggle with long-horizon video understanding due to limited context windows and static memory mechanisms that fail to mirror human cognitive efficiency. Existing paradigms typically fall into two extremes: vision-centric methods that incur high latency and redundancy through dense visual accumulation, or text-centric approaches that suffer from detail loss and hallucination via aggressive captioning. To bridge this gap, we propose MM-Mem, a pyramidal multimodal memory architecture grounded in Fuzzy-Trace Theory. MM-Mem structures memory hierarchically into a Sensory Buffer, Episodic Stream, and Symbolic Schema, enabling the progressive distillation of fine-grained perceptual traces (verbatim) into high-level semantic schemas (gist). Furthermore, to govern the dynamic construction of memory, we derive a Semantic Information Bottleneck objective and introduce SIB-GRPO to optimize the trade-off between memory compression and task-relevant information retention. In inference, we design an entropy-driven top-down memory retrieval strategy, which first tries with the abstract Symbolic Schema and progressively \"drills down\" to the Sensory Buffer and Episodic Stream under high uncertainty. Extensive experiments across 4 benchmarks confirm the effectiveness of MM-Mem on both offline and streaming tasks, demonstrating robust generalization and validating the effectiveness of cognition-inspired memory organization. Code is available at https://github.com/EliSpectre/MM-Mem.",
+        "authors": "Niu Lian, Yuting Wang, Hanshu Yao, Jinpeng Wang, Bin Chen, Yaowei Wang, Min Zhang, Shu-Tao Xia",
+        "url": "http://arxiv.org/abs/2603.01455v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01455v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了PhysFormer，一个将物理过程（如偏微分方程）嵌入到生成模型中的框架，以确保物理自洽性。它将物理过程从外部损失函数转移到生成机制本身，为复杂系统的建模提供了严谨的数学逻辑应用，尤其适用于未知或不可观测物理量的情况。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01406v1",
+        "title": "One Operator to Rule Them All? On Boundary-Indexed Operator Families in Neural PDE Solvers",
+        "summary": "Neural PDE solvers are often described as learning solution operators that map problem data to PDE solutions. In this work, we argue that this interpretation is generally incorrect when boundary conditions vary. We show that standard neural operator training implicitly learns a boundary-indexed family of operators, rather than a single boundary-agnostic operator, with the learned mapping fundamentally conditioned on the boundary-condition distribution seen during training. We formalize this perspective by framing operator learning as conditional risk minimization over boundary conditions, which leads to a non-identifiability result outside the support of the training boundary distribution. As a consequence, generalization in forcing terms or resolution does not imply generalization across boundary conditions. We support our theoretical analysis with controlled experiments on the Poisson equation, demonstrating sharp degradation under boundary-condition shifts, cross-distribution failures between distinct boundary ensembles, and convergence to conditional expectations when boundary information is removed. Our results clarify a core limitation of current neural PDE solvers and highlight the need for explicit boundary-aware modeling in the pursuit of foundation models for PDEs.",
+        "authors": "Lennon J. Shikhman",
+        "url": "http://arxiv.org/abs/2603.01406v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01406v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对神经PDE求解器在边界条件变化下的理论限制进行了严谨分析。它通过将算子学习框定为边界条件上的条件风险最小化，得出了一个不可识别性结果，提供了对当前神经PDE求解器核心限制的深刻数学见解，理论基础非常扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01403v1",
+        "title": "Koopman-based Estimation of Lyapunov Functions: Theory on a Reproducing Kernel Hilbert Space",
+        "summary": "Koopman operator provides a general linear description of nonlinear systems, whose estimation from data (via extended dynamic mode decomposition) has been extensively studied. However, the elusiveness between the Koopman spectrum and the stability of equilibrium point poses a challenge to utilizing the Koopman operator for stability analysis, which further hinders the construction of a universal theory of Koopman-based control. In our prior work, we defined the Koopman operator on a reproducing kernel Hilbert space (RKHS) using a linear--radial product kernel, and proved that the Koopman spectrum is confined in the unit disk of the complex plane when the origin is an asymptotically stable equilibrium point. Building on this fundamental spectrum--stability relation, here we consider the problem of Koopman operator-based Lyapunov function estimation with a given decay rate function. The decay rate function and the Lyapunov function are both specified by positive operators on the RKHS and are related by an operator algebraic Lyapunov equation (ALE), whose solution exists uniquely. The error bound of such a Lyapunov function estimate, obtained via kernel extended dynamic mode decomposition (kEDMD), are established based on statistical learning theory and verified by a numerical study.",
+        "authors": "Wentao Tang, Xiuzhen Ye",
+        "url": "http://arxiv.org/abs/2603.01403v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01403v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文是控制理论和动力系统领域的深度理论工作。它基于Koopman算子和再生核希尔伯特空间（RKHS）估计Lyapunov函数，并建立了基于统计学习理论的误差界。其对Koopman谱与平衡点稳定性关系的证明，以及对算子代数Lyapunov方程的求解，展现了极高的理论深度和数学严谨性。"
+    }
+]

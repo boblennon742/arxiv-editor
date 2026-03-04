@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.03281v1",
+        "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
+        "summary": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG as a control applied to the first-order continuous-time generative flow, using the conditional-unconditional discrepancy as an error signal to adjust the velocity field. From this perspective, we summarize vanilla CFG as a proportional controller (P-control) with fixed gain, and typical follow-up variants develop extended control-law designs derived from it. However, existing methods mainly rely on linear control, inherently leading to instability, overshooting, and degraded semantic fidelity especially on large guidance scales. To address this, we introduce Sliding Mode Control CFG (SMC-CFG), which enforces the generative flow toward a rapidly convergent sliding manifold. Specifically, we define an exponential sliding mode surface over the semantic prediction error and introduce a switching control term to establish nonlinear feedback-guided correction. Moreover, we provide a Lyapunov stability analysis to theoretically support finite-time convergence. Experiments across text-to-image generation models including Stable Diffusion 3.5, Flux, and Qwen-Image demonstrate that SMC-CFG outperforms standard CFG in semantic alignment and enhances robustness across a wide range of guidance scales. Project Page: https://hanyang-21.github.io/CFG-Ctrl",
+        "authors": "Hanyang Wang, Yiyang Liu, Jiawei Chi, Fangfu Liu, Ran Xue, Yueqi Duan",
+        "url": "http://arxiv.org/abs/2603.03281v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03281v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从控制理论的角度重新诠释了扩散模型中的核心技术Classifier-Free Guidance (CFG)，并提出了基于滑模控制（SMC-CFG）的非线性反馈修正方法。其理论创新性在于将CFG视为连续时间生成流上的控制问题，并提供了Lyapunov稳定性分析，确保了有限时间收敛。这不仅解决了现有CFG方法在大型引导尺度下可能出现的稳定性、过冲和语义保真度下降问题，而且为扩散模型的理论基础和实际应用（如图像生成）带来了严谨的数学支撑和性能提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03198v1",
+        "title": "ACE-Brain-0: Spatial Intelligence as a Shared Scaffold for Universal Embodiments",
+        "summary": "Universal embodied intelligence demands robust generalization across heterogeneous embodiments, such as autonomous driving, robotics, and unmanned aerial vehicles (UAVs). However, existing embodied brain in training a unified model over diverse embodiments frequently triggers long-tail data, gradient interference, and catastrophic forgetting, making it notoriously difficult to balance universal generalization with domain-specific proficiency. In this report, we introduce ACE-Brain-0, a generalist foundation brain that unifies spatial reasoning, autonomous driving, and embodied manipulation within a single multimodal large language model~(MLLM). Our key insight is that spatial intelligence serves as a universal scaffold across diverse physical embodiments: although vehicles, robots, and UAVs differ drastically in morphology, they share a common need for modeling 3D mental space, making spatial cognition a natural, domain-agnostic foundation for cross-embodiment transfer. Building on this insight, we propose the Scaffold-Specialize-Reconcile~(SSR) paradigm, which first establishes a shared spatial foundation, then cultivates domain-specialized experts, and finally harmonizes them through data-free model merging. Furthermore, we adopt Group Relative Policy Optimization~(GRPO) to strengthen the model's comprehensive capability. Extensive experiments demonstrate that ACE-Brain-0 achieves competitive and even state-of-the-art performance across 24 spatial and embodiment-related benchmarks.",
+        "authors": "Ziyang Gong, Zehang Luo, Anke Tang, Zhe Liu, Shi Fu, Zhi Hou, Ganlin Yang, Weiyun Wang, Xiaofeng Wang, Jianbo Liu, Gen Luo, Haolan Kang, Shuang Luo, Yue Zhou, Yong Luo, Li Shen, Xiaosong Jia, Yao Mu, Xue Yang, Chunxiao Liu, Junchi Yan, Hengshuang Zhao, Dacheng Tao, Xiaogang Wang",
+        "url": "http://arxiv.org/abs/2603.03198v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03198v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对全模态大语言模型（omni LLMs）中普遍存在的跨模态幻觉问题，提出了一种新颖的模态解耦偏好优化（MoD-DPO）框架。通过引入模态感知正则化项和语言先验去偏惩罚，显式地强制模型对不相关模态的扰动保持不变性，并对相关模态的扰动保持敏感性。这在理论上和实践上都为提升LLM的模态接地能力和抗幻觉能力提供了严谨且有效的解决方案，直接解决了LLM在实际应用中的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03106v1",
+        "title": "Multi-Scale Adaptive Neighborhood Awareness Transformer For Graph Fraud Detection",
+        "summary": "Graph fraud detection (GFD) is crucial for identifying fraudulent behavior within graphs, benefiting various domains such as financial networks and social media. Existing methods based on graph neural networks (GNNs) have succeeded considerably due to their effective expressive capacity for graph-structured data. However, the inherent inductive bias of GNNs, including the homogeneity assumption and the limited global modeling ability, hinder the effectiveness of these models. To address these challenges, we propose Multi-scale Neighborhood Awareness Transformer (MANDATE), which alleviates the inherent inductive bias of GNNs. Specifically, we design a multi-scale positional encoding strategy to encode the positional information of various distances from the central node. By incorporating it with the self-attention mechanism, the global modeling ability can be enhanced significantly. Meanwhile, we design different embedding strategies for homophilic and heterophilic connections. This mitigates the homophily distribution differences between benign and fraudulent nodes. Moreover, an embedding fusion strategy is designed for multi-relation graphs, which alleviates the distribution bias caused by different relationships. Experiments on three fraud detection datasets demonstrate the superiority of MANDATE.",
+        "authors": "Jiaqi Lv, Qingfeng Du, Yu Zhang, Yongqi Han, Sheng Li",
+        "url": "http://arxiv.org/abs/2603.03106v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03106v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对LLM代理的探索限制，提出了一种新颖的检索增强策略优化（RAPO）强化学习框架。RAPO通过混合策略代理回滚和检索感知策略优化，显式地扩展了训练过程中的探索空间，并校准了策略梯度估计。这在理论上改进了LLM代理的探索机制，解决了现有方法依赖纯on-policy范式导致探索受限的问题，显著提升了LLM代理在复杂任务上的性能和训练效率。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03024v1",
+        "title": "MA-CoNav: A Master-Slave Multi-Agent Framework with Hierarchical Collaboration and Dual-Level Reflection for Long-Horizon Embodied VLN",
+        "summary": "Vision-Language Navigation (VLN) aims to empower robots with the ability to perform long-horizon navigation in unfamiliar environments based on complex linguistic instructions. Its success critically hinges on establishing an efficient ``language-understanding -- visual-perception -- embodied-execution'' closed loop. Existing methods often suffer from perceptual distortion and decision drift in complex, long-distance tasks due to the cognitive overload of a single agent. Inspired by distributed cognition theory, this paper proposes MA-CoNav, a Multi-Agent Collaborative Navigation framework. This framework adopts a ``Master-Slave'' hierarchical agent collaboration architecture, decoupling and distributing the perception, planning, execution, and memory functions required for navigation tasks to specialized agents. Specifically, the Master Agent is responsible for global orchestration, while the Subordinate Agent group collaborates through a clear division of labor: an Observation Agent generates environment descriptions, a Planning Agent performs task decomposition and dynamic verification, an Execution Agent handles simultaneous mapping and action, and a Memory Agent manages structured experiences. Furthermore, the framework introduces a ``Local-Global'' dual-stage reflection mechanism to dynamically optimize the entire navigation pipeline. Empirical experiments were conducted using a real-world indoor dataset collected by a Limo Pro robot, with no scene-specific fine-tuning performed on the models throughout the process. The results demonstrate that MA-CoNav comprehensively outperforms existing mainstream VLN methods across multiple metrics.",
+        "authors": "Ling Luo, Qianqian Bai",
+        "url": "http://arxiv.org/abs/2603.03024v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03024v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了MA-CoNav，一个受分布式认知理论启发的“主从式”多智能体框架，用于解决长距离具身视觉-语言导航（VLN）中的感知失真和决策漂移问题。通过将导航任务解耦并分配给专门的智能体（观察、规划、执行、记忆），并引入“局部-全局”双阶段反思机制，实现了高效的语言理解、视觉感知和具身执行闭环。这在多智能体系统架构和具身智能领域具有显著的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03002v1",
+        "title": "SpatialText: A Pure-Text Cognitive Benchmark for Spatial Understanding in Large Language Models",
+        "summary": "Genuine spatial reasoning relies on the capacity to construct and manipulate coherent internal spatial representations, often conceptualized as mental models, rather than merely processing surface linguistic associations. While large language models exhibit advanced capabilities across various domains, existing benchmarks fail to isolate this intrinsic spatial cognition from statistical language heuristics. Furthermore, multimodal evaluations frequently conflate genuine spatial reasoning with visual perception. To systematically investigate whether models construct flexible spatial mental models, we introduce SpatialText, a theory-driven diagnostic framework. Rather than functioning simply as a dataset, SpatialText isolates text-based spatial reasoning through a dual-source methodology. It integrates human-annotated descriptions of real 3D indoor environments, which capture natural ambiguities, perspective shifts, and functional relations, with code-generated, logically precise scenes designed to probe formal spatial deduction and epistemic boundaries. Systematic evaluation across state-of-the-art models reveals fundamental representational limitations. Although models demonstrate proficiency in retrieving explicit spatial facts and operating within global, allocentric coordinate systems, they exhibit critical failures in egocentric perspective transformation and local reference frame reasoning. These systematic errors provide strong evidence that current models rely heavily on linguistic co-occurrence heuristics rather than constructing coherent, verifiable internal spatial representations. SpatialText thus serves as a rigorous instrument for diagnosing the cognitive boundaries of artificial spatial intelligence.",
+        "authors": "Peiyao Jiang, Zequn Qin, Xi Li",
+        "url": "http://arxiv.org/abs/2603.03002v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03002v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SpatialText，一个纯文本的认知基准，用于诊断LLM在空间理解方面的能力。它通过整合人类标注的真实3D环境描述和代码生成的逻辑精确场景，系统地探究模型是否构建了灵活的空间心理模型。这项工作不仅提供了理论驱动的诊断框架，揭示了当前LLM在自我中心视角转换和局部参照系推理上的根本性局限，为理解LLM的认知边界提供了严谨的分析工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02951v1",
+        "title": "CGL: Advancing Continual GUI Learning via Reinforcement Fine-Tuning",
+        "summary": "Graphical User Interface (GUI) Agents, benefiting from recent advances in multimodal large language models (MLLM), have achieved significant development. However, due to the frequent updates of GUI applications, adapting to new tasks without forgetting old tasks in GUI continual learning remains an open problem. In this work, we reveal that while Supervised Fine-Tuning (SFT) facilitates fast adaptation, it often triggers knowledge overwriting, whereas Reinforcement Learning (RL) demonstrates an inherent resilience that shields prior interaction logic from erasure. Based on this insight, we propose a \\textbf{C}ontinual \\textbf{G}UI \\textbf{L}earning (CGL) framework that dynamically balances adaptation efficiency and skill retention by enhancing the synergy between SFT and RL. Specifically, we introduce an SFT proportion adjustment mechanism guided by policy entropy to dynamically control the weight allocation between the SFT and RL training phases. To resolve explicit gradient interference, we further develop a specialized gradient surgery strategy. By projecting exploratory SFT gradients onto GRPO-based anchor gradients, our method explicitly clips the components of SFT gradients that conflict with GRPO. On top of that, we establish an AndroidControl-CL benchmark, which divides GUI applications into distinct task groups to effectively simulate and evaluate the performance of continual GUI learning. Experimental results demonstrate the effectiveness of our proposed CGL framework across continual learning scenarios. The benchmark, code, and model will be made publicly available.",
+        "authors": "Zhenquan Yao, Zitong Huang, Yihan Zeng, Jianhua Han, Hang Xu, Chun-Mei Feng, Jianwei Ma, Wangmeng Zuo",
+        "url": "http://arxiv.org/abs/2603.02951v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02951v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了HiLoRA，一个分层低秩适应（LoRA）框架，用于个性化联邦学习。它在根、集群和叶三个层面放置适配器，以捕获全局、子组和客户端特定知识，并通过跨层正交性和级联优化进行训练。该方法在理论上建立了分层泛化分析，解决了现有LoRA方法忽略潜在客户端结构的问题，显著提升了联邦学习在个性化和泛化方面的效率和效果，具有很强的理论严谨性和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02929v1",
+        "title": "TRACE: Task-Adaptive Reasoning and Representation Learning for Universal Multimodal Retrieval",
+        "summary": "Universal Multimodal Retrieval requires unified embedding models capable of interpreting diverse user intents, ranging from simple keywords to complex compositional instructions. While Multimodal Large Language Models (MLLMs) possess strong reasoning capabilities, prevailing adaptations confine them to static encoders, underutilizing their generative potential. This encoder-only paradigm struggles with complex intents that demand logical deduction rather than superficial pattern matching. To address this, we introduce TRACE (Task-adaptive Reasoning And Compressing Embeddings). TRACE unifies generative reasoning with discriminative representation learning. It first generates a structured Chain-of-Thought (CoT) to explicitly reason about the query, and subsequently compresses this reasoning trace into a compact embedding via a dedicated token. To train this framework, we construct M-BEIR-CoT, a large-scale dataset featuring a difficulty-aware routing strategy. Experiments on the M-BEIR benchmark establish TRACE as the new state-of-the-art. Crucially, TRACE demonstrates a learned implicit routing behavior. It autonomously activates reasoning for complex queries while bypassing it for simpler ones, achieving an optimal balance between retrieval accuracy and inference throughput. Furthermore, by internalizing the deductive process, TRACE exhibits remarkable zero-shot transferability to unseen domains and novel constraints.",
+        "authors": "Xiangzhao Hao, Shijie Wang, Tianyu Yang, Tianyue Wang, Haiyun Guo, JinQiao Wang",
+        "url": "http://arxiv.org/abs/2603.02929v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02929v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了TRACE框架，统一了生成式推理和判别式表示学习，以实现通用多模态检索。TRACE首先生成结构化的思维链（CoT）进行显式推理，然后将推理轨迹压缩为紧凑的嵌入。它解决了现有MLLM在复杂查询中未能充分利用其生成能力的问题，并通过学习到的隐式路由行为，在检索准确性和推理吞吐量之间取得平衡，展示了卓越的零样本迁移能力，对LLM应用具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02909v1",
+        "title": "Learning to Generate and Extract: A Multi-Agent Collaboration Framework For Zero-shot Document-level Event Arguments Extraction",
+        "summary": "Document-level event argument extraction (DEAE) is essential for knowledge acquisition, aiming to extract participants of events from documents.In the zero-shot setting, existing methods employ LLMs to generate synthetic data to address the challenge posed by the scarcity of annotated data. However, relying solely on Event-type-only prompts makes it difficult for the generated content to accurately capture the contextual and structural relationships of unseen events. Moreover, ensuring the reliability and usability of synthetic data remains a significant challenge due to the absence of quality evaluation mechanisms. To this end, we introduce a multi-agent collaboration framework for zero-shot document-level event argument extraction (ZS-DEAE), which simulates the human collaborative cognitive process of \"Propose-Evaluate-Revise.\" Specifically, the framework comprises a generation agent and an evaluation agent. The generation agent synthesizes data for unseen events by leveraging knowledge from seen events, while the evaluation agent extracts arguments from the synthetic data and assesses their semantic consistency with the context. The evaluation results are subsequently converted into reward signals, with event structure constraints incorporated into the reward design to enable iterative optimization of both agents via reinforcement learning.In three zero-shot scenarios constructed from the RAMS and WikiEvents datasets, our method achieves improvements both in data generation quality and argument extraction performance, while the generated data also effectively enhances the zero-shot performance of other DEAE models.",
+        "authors": "Guangjun Zhang, Hu Zhang, Yazhou Han, Yue Fan, Yuhang Shao, Ru Li, Hongye Tan",
+        "url": "http://arxiv.org/abs/2603.02909v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02909v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SAE-based Transferability Score (STS)，一种利用稀疏自编码器（SAEs）预测LLM后训练可迁移性的新指标。它通过识别SAE表示中偏移的维度并计算其与下游域的相关性，实现了在微调之前可靠地估计可迁移性。这项工作为LLM的可解释性提供了一个重要工具，解决了理解和指导LLM后训练策略的关键瓶颈，具有很高的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02882v1",
+        "title": "SIGMark: Scalable In-Generation Watermark with Blind Extraction for Video Diffusion",
+        "summary": "Artificial Intelligence Generated Content (AIGC), particularly video generation with diffusion models, has been advanced rapidly. Invisible watermarking is a key technology for protecting AI-generated videos and tracing harmful content, and thus plays a crucial role in AI safety. Beyond post-processing watermarks which inevitably degrade video quality, recent studies have proposed distortion-free in-generation watermarking for video diffusion models. However, existing in-generation approaches are non-blind: they require maintaining all the message-key pairs and performing template-based matching during extraction, which incurs prohibitive computational costs at scale. Moreover, when applied to modern video diffusion models with causal 3D Variational Autoencoders (VAEs), their robustness against temporal disturbance becomes extremely weak. To overcome these challenges, we propose SIGMark, a Scalable In-Generation watermarking framework with blind extraction for video diffusion. To achieve blind-extraction, we propose to generate watermarked initial noise using a Global set of Frame-wise PseudoRandom Coding keys (GF-PRC), reducing the cost of storing large-scale information while preserving noise distribution and diversity for distortion-free watermarking. To enhance robustness, we further design a Segment Group-Ordering module (SGO) tailored to causal 3D VAEs, ensuring robust watermark inversion during extraction under temporal disturbance. Comprehensive experiments on modern diffusion models show that SIGMark achieves very high bit-accuracy during extraction under both temporal and spatial disturbances with minimal overhead, demonstrating its scalability and robustness. Our project is available at https://jeremyzhao1998.github.io/SIGMark-release/.",
+        "authors": "Xinjie Zhu, Zijing Zhao, Hui Jin, Qingxiao Guo, Yilong Ma, Yunhao Wang, Xiaobing Guo, Weifeng Zhang",
+        "url": "http://arxiv.org/abs/2603.02882v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02882v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SIGMark，一个可扩展的视频扩散模型内生成水印框架，支持盲提取。它通过生成带有全局帧级伪随机编码密钥的初始噪声，实现了无失真水印，并设计了分段组排序模块以增强对时间扰动的鲁棒性。这项工作解决了现有水印方法在可扩展性和鲁棒性方面的局限性，为AI生成视频的安全性和内容溯源提供了重要的理论和技术创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02720v1",
+        "title": "TenExp: Mixture-of-Experts-Based Tensor Decomposition Structure Search Framework",
+        "summary": "Recently, tensor decompositions continue to emerge and receive increasing attention. Selecting a suitable tensor decomposition to exactly capture the low-rank structures behind the data is at the heart of the tensor decomposition field, which remains a challenging and relatively under-explored problem. Current tensor decomposition structure search methods are still confined by a fixed factor-interaction family (e.g., tensor contraction) and cannot deliver the mixture of decompositions. To address this problem, we elaborately design a mixture-of-experts-based tensor decomposition structure search framework (termed as TenExp), which allows us to dynamically select and activate suitable tensor decompositions in an unsupervised fashion. This framework enjoys two unique advantages over the state-of-the-art tensor decomposition structure search methods. Firstly, TenExp can provide a suitable single decomposition beyond a fixed factor-interaction family. Secondly, TenExp can deliver a suitable mixture of decompositions beyond a single decomposition. Theoretically, we also provide the approximation error bound of TenExp, which reveals the approximation capability of TenExp. Extensive experiments on both synthetic and realistic datasets demonstrate the superiority of the proposed TenExp compared to the state-of-the-art tensor decomposition-based methods.",
+        "authors": "Ting-Wei Zhou, Xi-Le Zhao, Sheng Liu, Wei-Hao Wu, Yu-Bang Zheng, Deyu Meng",
+        "url": "http://arxiv.org/abs/2603.02720v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02720v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了TenExp，一个基于混合专家（MoE）的张量分解结构搜索框架。它允许动态选择和激活合适的张量分解，超越了固定因子交互家族的限制，并能提供分解的混合。该框架在理论上提供了近似误差界，解决了张量分解领域中选择合适分解的挑战，具有很强的理论严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02691v1",
+        "title": "ReCo-Diff: Residual-Conditioned Deterministic Sampling for Cold Diffusion in Sparse-View CT",
+        "summary": "Cold and generalized diffusion models have recently shown strong potential for sparse-view CT reconstruction by explicitly modeling deterministic degradation processes. However, existing sampling strategies often rely on ad hoc sampling controls or fixed schedules, which remain sensitive to error accumulation and sampling instability. We propose ReCo-Diff, a residual-conditioned diffusion framework that leverages observation residuals through residual-conditioned self-guided sampling. At each sampling step, ReCo-Diff first produces a null (unconditioned) baseline reconstruction and then conditions subsequent predictions on the observation residual between the predicted image and the measured sparse-view input. This residual-driven guidance provides continuous, measurement-aware correction while preserving a deterministic sampling schedule, without requiring heuristic interventions. Experimental results demonstrate that ReCo-Diff consistently outperforms existing cold diffusion sampling baselines, achieving higher reconstruction accuracy, improved stability, and enhanced robustness under severe sparsity.",
+        "authors": "Yong Eun Choi, Hyoung Suk Park, Kiwan Jeon, Hyun-Cheol Park, Sung Ho Kang",
+        "url": "http://arxiv.org/abs/2603.02691v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02691v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Graph-GRPO，一个通过Group Relative Policy Optimization稳定多智能体拓扑学习的新框架。它通过对一组通信图进行采样并基于相对性能计算特定边的优势，有效缓解了任务难度方差带来的奖励噪声并实现了细粒度的信用分配。这项工作在多智能体强化学习领域具有显著的算法创新，解决了LLM多智能体系统通信拓扑优化中的梯度方差和信用分配问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02675v1",
+        "title": "From Shallow to Deep: Pinning Semantic Intent via Causal GRPO",
+        "summary": "Large Language Models remain vulnerable to adversarial prefix attacks (e.g., ``Sure, here is'') despite robust standard safety. We diagnose this vulnerability as Shallow Safety Alignment, stemming from a pathology we term semantic representation decay: as the model generates compliant prefixes, its internal malicious intent signal fades. To address this, we propose Two-Stage Causal-GRPO (TSC-GRPO), a framework designed to achieve intent pinning. First, grounded in causal identifiability theory, we train a causal intent probe to disentangle invariant intent from stylistic perturbations. Second, we internalize this causal awareness into the policy via Group Relative Policy Optimization. By employing a cumulative causal penalty within ``fork-in-the-road'' training scenarios, we force the model to learn that accumulating harmful tokens monotonically decreases reward, enabling robust late-stage refusals. Experiments show that TSC-GRPO significantly outperforms baselines in defending against jailbreak attacks while preserving general utility.",
+        "authors": "Shuyi Zhou, Zeen Song, Wenwen Qiang, Jiyan Sun, Yao Zhou, Yinlong Liu, Wei Ma",
+        "url": "http://arxiv.org/abs/2603.02675v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02675v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Two-Stage Causal-GRPO (TSC-GRPO) 框架，旨在通过因果GRPO实现语义意图锁定，以防御LLM的越狱攻击。它基于因果可识别性理论训练因果意图探测器，并将因果感知内化到策略中，通过累积因果惩罚实现鲁棒的后期拒绝。这项工作在LLM安全和鲁棒性方面具有强大的理论基础和实际影响力，解决了LLM对抗性攻击的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02630v1",
+        "title": "MASPOB: Bandit-Based Prompt Optimization for Multi-Agent Systems with Graph Neural Networks",
+        "summary": "Large Language Models (LLMs) have achieved great success in many real-world applications, especially the one serving as the cognitive backbone of Multi-Agent Systems (MAS) to orchestrate complex workflows in practice. Since many deployment scenarios preclude MAS workflow modifications and its performance is highly sensitive to the input prompts, prompt optimization emerges as a more natural approach to improve its performance. However, real-world prompt optimization for MAS is impeded by three key challenges: (1) the need of sample efficiency due to prohibitive evaluation costs, (2) topology-induced coupling among prompts, and (3) the combinatorial explosion of the search space. To address these challenges, we introduce MASPOB (Multi-Agent System Prompt Optimization via Bandits), a novel sample-efficient framework based on bandits. By leveraging Upper Confidence Bound (UCB) to quantify uncertainty, the bandit framework balances exploration and exploitation, maximizing gains within a strictly limited budget. To handle topology-induced coupling, MASPOB integrates Graph Neural Networks (GNNs) to capture structural priors, learning topology-aware representations of prompt semantics. Furthermore, it employs coordinate ascent to decompose the optimization into univariate sub-problems, reducing search complexity from exponential to linear. Extensive experiments across diverse benchmarks demonstrate that MASPOB achieves state-of-the-art performance, consistently outperforming existing baselines.",
+        "authors": "Zhi Hong, Qian Zhang, Jiahang Sun, Zhiwei Shang, Mingze Kong, Xiangyi Wang, Yao Shu, Zhongxiang Dai",
+        "url": "http://arxiv.org/abs/2603.02630v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02630v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了MASPOB，一个基于Bandit的提示优化框架，用于多智能体系统（MAS）与图神经网络（GNNs）的结合。它通过UCB平衡探索与利用，利用GNN捕获拓扑感知表示，并通过坐标上升分解优化问题。这项工作解决了MAS中提示优化面临的样本效率、拓扑耦合和搜索空间爆炸等挑战，具有强大的理论严谨性和实际影响力，对LLM多智能体系统的效率和鲁棒性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02510v1",
+        "title": "ParEVO: Synthesizing Code for Irregular Data: High-Performance Parallelism through Agentic Evolution",
+        "summary": "The transition from sequential to parallel computing is essential for modern high-performance applications but is hindered by the steep learning curve of concurrent programming. This challenge is magnified for irregular data structures (such as sparse graphs, unbalanced trees, and non-uniform meshes) where static scheduling fails and data dependencies are unpredictable. Current Large Language Models (LLMs) often fail catastrophically on these tasks, generating code plagued by subtle race conditions, deadlocks, and sub-optimal scaling.   We bridge this gap with ParEVO, a framework designed to synthesize high-performance parallel algorithms for irregular data. Our contributions include: (1) The Parlay-Instruct Corpus, a curated dataset of 13,820 tasks synthesized via a \"Critic-Refine\" pipeline that explicitly filters for empirically performant algorithms that effectively utilize Work-Span parallel primitives; (2) specialized DeepSeek, Qwen, and Gemini models fine-tuned to align probabilistic generation with the rigorous semantics of the ParlayLib library; and (3) an Evolutionary Coding Agent (ECA) that improves the \"last mile\" of correctness by iteratively repairing code using feedback from compilers, dynamic race detectors, and performance profilers.   On the ParEval benchmark, ParEVO achieves an average 106x speedup (with a maximum of 1103x) across the suite, and a robust 13.6x speedup specifically on complex irregular graph problems, outperforming state-of-the-art commercial models. Furthermore, our evolutionary approach matches state-of-the-art expert human baselines, achieving up to a 4.1x speedup on specific highly-irregular kernels. Source code and datasets are available at https://github.com/WildAlg/ParEVO.",
+        "authors": "Liu Yang, Zeyu Nie, Andrew Liu, Felix Zou, Deniz Altinbüken, Amir Yazdanbakhsh, Quanquan C. Liu",
+        "url": "http://arxiv.org/abs/2603.02510v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02510v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ParEVO框架，通过智能体进化合成用于不规则数据的高性能并行算法。它构建了Parlay-Instruct语料库，微调了专门的LLM模型，并引入了进化编码智能体（ECA）进行迭代修复。这项工作解决了并行计算中不规则数据处理的瓶颈，以及LLM在生成并行代码时面临的挑战，具有显著的算法和架构创新性，对AI辅助代码生成和高性能计算具有重要实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02504v1",
+        "title": "NeuroProlog: Multi-Task Fine-Tuning for Neurosymbolic Mathematical Reasoning via the Cocktail Effect",
+        "summary": "Large Language Models (LLMs) achieve strong performance on natural language tasks but remain unreliable in mathematical reasoning, frequently generating fluent yet logically inconsistent solutions. We present \\textbf{NeuroProlog}, a neurosymbolic framework that ensures verifiable reasoning by compiling math word problems into executable Prolog programs with formal verification guarantees. We propose a multi-task Cocktail training strategy that jointly optimizes three synergistic objectives in a unified symbolic representation space: (i) mathematical formula-to-rule translation (KB), (ii) natural language-to-program synthesis (SOLVE), and (iii) program-answer alignment. This joint supervision enables positive transfer, where symbolic grounding in formula translation directly improves compositional reasoning capabilities. At inference, we introduce an execution-guided decoding pipeline with fine-grained error taxonomy that enables iterative program repair and quantifies model self-debugging capacity. Comprehensive evaluation on GSM8K across four model scales (3B--32B parameters) demonstrates consistent improvements: cocktail training achieves significant accuracy gains of +5.23\\% (Qwen-32B, $p < 0.01$), +3.43\\% (GPT-OSS-20B, $p < 0.01$), and +5.54\\% (Llama-3B, $p < 0.05$) over single-task baselines.Systematic error analysis reveals scale-dependent learning dynamics: at 32B scale, cocktail training transforms unfixable type errors (12\\% repair rate) into correctable domain errors (96\\% repair rate), achieving 92.7\\% overall correction; at 8B scale, the same training eliminates syntactic errors but introduces semantic failures, revealing a critical capacity threshold for type-safe symbolic reasoning.",
+        "authors": "Pratibha Zunjare, Michael Hsiao",
+        "url": "http://arxiv.org/abs/2603.02504v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02504v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了NeuroProlog，一个神经符号框架，通过将数学问题编译成可执行的Prolog程序，并提供形式化验证保证，以解决LLM在数学推理中逻辑不一致的问题。它引入了多任务“鸡尾酒”训练策略和执行引导解码管道，实现了迭代程序修复。这项工作在理论上和实践上都为提升LLM的数学推理能力和逻辑一致性提供了严谨且有效的解决方案，是LLM应用中的一个关键瓶颈。"
+    }
+]

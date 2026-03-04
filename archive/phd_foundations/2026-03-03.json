@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.03035v1",
+        "title": "Generalized Bayes for Causal Inference",
+        "summary": "Uncertainty quantification is central to many applications of causal machine learning, yet principled Bayesian inference for causal effects remains challenging. Standard Bayesian approaches typically require specifying a probabilistic model for the data-generating process, including high-dimensional nuisance components such as propensity scores and outcome regressions. Standard posteriors are thus vulnerable to strong modeling choices, including complex prior elicitation. In this paper, we propose a generalized Bayesian framework for causal inference. Our framework avoids explicit likelihood modeling; instead, we place priors directly on the causal estimands and update these using an identification-driven loss function, which yields generalized posteriors for causal effects. As a result, our framework turns existing loss-based causal estimators into estimators with full uncertainty quantification. Our framework is flexible and applicable to a broad range of causal estimands (e.g., ATE, CATE). Further, our framework can be applied on top of state-of-the-art causal machine learning pipelines (e.g., Neyman-orthogonal meta-learners). For Neyman-orthogonal losses, we show that the generalized posteriors converge to their oracle counterparts and remain robust to first-stage nuisance estimation error. With calibration, we thus obtain valid frequentist uncertainty even when nuisance estimators converge at slower-than-parametric rates. Empirically, we demonstrate that our proposed framework offers causal effect estimation with calibrated uncertainty across several causal inference settings. To the best of our knowledge, this is the first flexible framework for constructing generalized Bayesian posteriors for causal machine learning.",
+        "authors": "Emil Javurek, Dennis Frauen, Yuxin Wang, Stefan Feuerriegel",
+        "url": "http://arxiv.org/abs/2603.03035v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03035v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个灵活的广义贝叶斯因果推断框架，避免了显式似然建模。它理论上证明了广义后验收敛到其预言对应物，并且对第一阶段的干扰估计误差具有鲁棒性，即使在次参数收敛率下也能获得有效的频率论不确定性。这与您对因果逻辑、统计保证和严谨数学推导的偏好高度契合，是因果机器学习领域的重要理论进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02902v1",
+        "title": "Distributed Dynamic Invariant Causal Prediction in Environmental Time Series",
+        "summary": "The extraction of invariant causal relationships from time series data with environmental attributes is critical for robust decision-making in domains such as climate science and environmental monitoring. However, existing methods either emphasize dynamic causal analysis without leveraging environmental contexts or focus on static invariant causal inference, leaving a gap in distributed temporal settings. In this paper, we propose Distributed Dynamic Invariant Causal Prediction in Time-series (DisDy-ICPT), a novel framework that learns dynamic causal relationships over time while mitigating spatial confounding variables without requiring data communication. We theoretically prove that DisDy-ICPT recovers stable causal predictors within a bounded number of communication rounds under standard sampling assumptions. Empirical evaluations on synthetic benchmarks and environment-segmented real-world datasets show that DisDy-ICPT achieves superior predictive stability and accuracy compared to baseline methods A and B. Our approach offers promising applications in carbon monitoring and weather forecasting. Future work will extend DisDy-ICPT to online learning scenarios.",
+        "authors": "Ziruo Hao, Tao Yang, Xiaofeng Wu, Bo Hu",
+        "url": "http://arxiv.org/abs/2603.02902v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02902v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个新颖的分布式动态不变因果预测框架（DisDy-ICPT），用于环境时间序列分析。它能够在不进行数据通信的情况下学习动态因果关系并缓解空间混杂变量。作者理论上证明了该方法在有界通信轮数内能恢复稳定的因果预测器。这完美符合您对因果逻辑、理论严谨性和数学推导的需求，具有重要的环境科学应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02673v1",
+        "title": "Exact Functional ANOVA Decomposition for Categorical Inputs Models",
+        "summary": "Functional ANOVA offers a principled framework for interpretability by decomposing a model's prediction into main effects and higher-order interactions. For independent features, this decomposition is well-defined, strongly linked with SHAP values, and serves as a cornerstone of additive explainability. However, the lack of an explicit closed-form expression for general dependent distributions has forced practitioners to rely on costly sampling-based approximations. We completely resolve this limitation for categorical inputs. By bridging functional analysis with the extension of discrete Fourier analysis, we derive a closed-form decomposition without any assumption. Our formulation is computationally very efficient. It seamlessly recovers the classical independent case and extends to arbitrary dependence structures, including distributions with non-rectangular support. Furthermore, leveraging the intrinsic link between SHAP and ANOVA under independence, our framework yields a natural generalization of SHAP values for the general categorical setting.",
+        "authors": "Baptiste Ferrere, Nicolas Bousquet, Fabrice Gamboa, Jean-Michel Loubes, Joseph Muré",
+        "url": "http://arxiv.org/abs/2603.02673v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02673v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文彻底解决了分类输入模型在存在依赖分布时函数ANOVA分解的局限性。通过结合泛函分析和离散傅里叶分析，作者推导出了无需任何假设的精确闭式分解。这在可解释性领域是一个重要的理论突破，具有强大的数学基础和广泛的应用潜力，特别是对SHAP值的泛化。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02601v1",
+        "title": "AgentAssay: Token-Efficient Regression Testing for Non-Deterministic AI Agent Workflows",
+        "summary": "Autonomous AI agents are deployed at unprecedented scale, yet no principled methodology exists for   verifying that an agent has not regressed after changes to its prompts, tools, models, or   orchestration logic. We present AgentAssay, the first token-efficient framework for regression   testing non-deterministic AI agent workflows, achieving 78-100% cost reduction while maintaining   rigorous statistical guarantees. Our contributions include: (1) stochastic three-valued verdicts   (PASS/FAIL/INCONCLUSIVE) grounded in hypothesis testing; (2) five-dimensional agent coverage metrics;   (3) agent-specific mutation testing operators; (4) metamorphic relations for agent workflows; (5)   CI/CD deployment gates as statistical decision procedures; (6) behavioral fingerprinting that maps   execution traces to compact vectors, enabling multivariate regression detection; (7) adaptive budget   optimization calibrating trial counts to behavioral variance; and (8) trace-first offline analysis   enabling zero-cost testing on production traces. Experiments across 5 models (GPT-5.2, Claude Sonnet   4.6, Mistral-Large-3, Llama-4-Maverick, Phi-4), 3 scenarios, and 7,605 trials demonstrate that   behavioral fingerprinting achieves 86% detection power where binary testing has 0%, SPRT reduces   trials by 78%, and the full pipeline achieves 100% cost savings through trace-first analysis.   Implementation: 20,000+ lines of Python, 751 tests, 10 framework adapters.",
+        "authors": "Varun Pratap Bhardwaj",
+        "url": "http://arxiv.org/abs/2603.02601v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02601v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了第一个针对非确定性AI代理工作流的token高效回归测试框架AgentAssay。它提供了严格的统计保证，包括基于假设检验的随机三值判决。这在AI代理的验证和安全性方面具有关键实践影响力，并且其统计学基础非常扎实，对现代AI系统的可靠性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02594v1",
+        "title": "Low-Degree Method Fails to Predict Robust Subspace Recovery",
+        "summary": "The low-degree polynomial framework has been highly successful in predicting computational versus statistical gaps for high-dimensional problems in average-case analysis and machine learning. This success has led to the low-degree conjecture, which posits that this method captures the power and limitations of efficient algorithms for a wide class of high-dimensional statistical problems. We identify a natural and basic hypothesis testing problem in $\\mathbb{R}^n$ which is polynomial time solvable, but for which the low-degree polynomial method fails to predict its computational tractability even up to degree $k=n^{Ω(1)}$. Moreover, the low-degree moments match exactly up to degree $k=O(\\sqrt{\\log n/\\log\\log n})$. Our problem is a special case of the well-studied robust subspace recovery problem. The lower bounds suggest that there is no polynomial time algorithm for this problem. In contrast, we give a simple and robust polynomial time algorithm that solves the problem (and noisy variants of it), leveraging anti-concentration properties of the distribution. Our results suggest that the low-degree method and low-degree moments fail to capture algorithms based on anti-concentration, challenging their universality as a predictor of computational barriers.",
+        "authors": "He Jia, Aravindan Vijayaraghavan",
+        "url": "http://arxiv.org/abs/2603.02594v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02594v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文识别了一个多项式时间可解但低度多项式方法无法预测其计算可解性的基本假设检验问题，从而挑战了低度方法的普适性。它具有深刻的理论意义，对计算复杂性和算法设计的基础理解产生了重要影响，尤其对您关注的理论边界和算法能力分析非常有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02806v1",
+        "title": "The Price of Robustness: Stable Classifiers Need Overparameterization",
+        "summary": "The relationship between overparameterization, stability, and generalization remains incompletely understood in the setting of discontinuous classifiers. We address this gap by establishing a generalization bound for finite function classes that improves inversely with class stability, defined as the expected distance to the decision boundary in the input domain (margin). Interpreting class stability as a quantifiable notion of robustness, we derive as a corollary a law of robustness for classification that extends the results of Bubeck and Sellke beyond smoothness assumptions to discontinuous functions. In particular, any interpolating model with $p \\approx n$ parameters on $n$ data points must be unstable, implying that substantial overparameterization is necessary to achieve high stability. We obtain analogous results for parameterized infinite function classes by analyzing a stronger robustness measure derived from the margin in the codomain, which we refer to as the normalized co-stability. Experiments support our theory: stability increases with model size and correlates with test performance, while traditional norm-based measures remain largely uninformative.",
+        "authors": "Jonas von Berg, Adalbert Fono, Massimiliano Datres, Sohir Maskey, Gitta Kutyniok",
+        "url": "http://arxiv.org/abs/2603.02806v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02806v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文建立了分类器泛化界限，并提出了一个鲁棒性定律，将其扩展到不连续函数，证明了高稳定性需要实质性的过参数化。这篇论文提供了关于过参数化、稳定性和泛化之间关系的深刻理论见解，具有严谨的数学推导，对理解深度学习的理论基础很有帮助。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02607v1",
+        "title": "Combinatorial Sparse PCA Beyond the Spiked Identity Model",
+        "summary": "Sparse PCA is one of the most well-studied problems in high-dimensional statistics. In this problem, we are given samples from a distribution with covariance $Σ$, whose top eigenvector $v \\in R^d$ is $s$-sparse. Existing sparse PCA algorithms can be broadly categorized into (1) combinatorial algorithms (e.g., diagonal or elementwise covariance thresholding) and (2) SDP-based algorithms. While combinatorial algorithms are much simpler, they are typically only analyzed under the spiked identity model (where $Σ= I_d + γvv^\\top$ for some $γ> 0$), whereas SDP-based algorithms require no additional assumptions on $Σ$.   We demonstrate explicit counterexample covariances $Σ$ against the success of standard combinatorial algorithms for sparse PCA, when moving beyond the spiked identity model. In light of this discrepancy, we give the first combinatorial method for sparse PCA that provably succeeds for general $Σ$ using $s^2 \\cdot \\mathrm{polylog}(d)$ samples and $d^2 \\cdot \\mathrm{poly}(s, \\log(d))$ time, by providing a global convergence guarantee on a variant of the truncated power method of Yuan and Zhang (2013). We provide a natural generalization of our method to recovering a vector in a sparse leading eigenspace. Finally, we evaluate our method on synthetic and real-world sparse PCA datasets.",
+        "authors": "Syamantak Kumar, Purnamrita Sarkar, Kevin Tian, Peiyuan Zhang",
+        "url": "http://arxiv.org/abs/2603.02607v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02607v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了第一个能够对一般协方差矩阵（超越尖峰单位模型）进行稀疏PCA的组合方法，并提供了全局收敛性保证。这解决了高维统计学中一个长期存在的限制，具有强大的理论基础和数学严谨性，对您在高维数据分析方面的研究有直接价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02562v1",
+        "title": "EdgeFLow: Serverless Federated Learning via Sequential Model Migration in Edge Networks",
+        "summary": "Federated Learning (FL) has emerged as a transformative distributed learning paradigm in the era of Internet of Things (IoT), reconceptualizing data processing methodologies. However, FL systems face significant communication bottlenecks due to inevitable client-server data exchanges and long-distance transmissions. This work presents EdgeFLow, an innovative FL framework that redesigns the system topology by replacing traditional cloud servers with sequential model migration between edge base stations. By conducting model aggregation and propagation exclusively at edge clusters, EdgeFLow eliminates cloud-based transmissions and substantially reduces global communication overhead. We provide rigorous convergence analysis for EdgeFLow under non-convex objectives and non-IID data distributions, extending classical FL convergence theory. Experimental results across various configurations validate the theoretical analysis, demonstrating that EdgeFLow achieves comparable accuracy improvements while significantly reducing communication costs. As a systemic architectural innovation for communication-efficient FL, EdgeFLow establishes a foundational framework for future developments in IoT and edge-network learning systems.",
+        "authors": "Yuchen Shi, Qijun Hou, Pingyi Fan, Khaled B. Letaief",
+        "url": "http://arxiv.org/abs/2603.02562v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02562v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个创新的无服务器联邦学习框架EdgeFLow，通过边缘基站间的模型顺序迁移来解决通信瓶颈。它提供了在非凸目标和非IID数据分布下的严格收敛性分析，扩展了经典的联邦学习收敛理论。这完美符合您对优化收敛性和理论严谨性的偏好，对分布式AI系统有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02495v1",
+        "title": "Revealing Positive and Negative Role Models to Help People Make Good Decisions",
+        "summary": "We consider a setting where agents take action by following their role models in a social network, and study strategies for a social planner to help agents by revealing whether the role models are positive or negative. Specifically, agents observe a local neighborhood of possible role models they can emulate, but do not know their true labels. Revealing a positive label encourages emulation, while revealing a negative one redirects agents toward alternative options. The social planner observes all labels, but operates under a limited disclosure budget that it selectively allocates to maximize social welfare (the expected number of agents who emulate adjacent positive role models). We consider both algorithms and hardness results for welfare maximization, and provide a sample-complexity guarantee when the planner observes a sampled subset of agents. We also consider fairness guarantees when agents belong to different groups. It is a technical challenge that the ability to reveal negative role models breaks submodularity. We thus introduce a proxy welfare function that remains submodular even when revealed targets include negative ones. When each agent has at most a constant number of negative target neighbors, we use this proxy to achieve a constant-factor approximation to the true optimal welfare gain. When agents belong to different groups, we also show that each group's welfare gain is within a constant factor of the optimum achievable if the full budget were allocated to that group. Beyond this basic model, we also propose an intervention model that directly connects high-risk agents to positive role models, and a coverage radius model that expands the visibility of selected positive role models. Lastly, we conduct extensive experiments on four real-world datasets to support our theoretical results and assess the effectiveness of the proposed algorithms.",
+        "authors": "Avrim Blum, Keziah Naggita, Matthew R. Walter, Jingyan Wang",
+        "url": "http://arxiv.org/abs/2603.02495v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02495v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文考虑了社交网络中通过揭示榜样来帮助代理做出决策的新颖问题，并提供了福利最大化的算法和难度结果，以及样本复杂度保证和公平性保证。它引入了一个保持次模性的代理福利函数，并提供了常数因子近似。这篇论文具有强大的理论基础和数学推导，涉及优化和统计保证，对因果推断和社会科学应用有启发。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03188v1",
+        "title": "Scalable Uncertainty Quantification for Black-Box Density-Based Clustering",
+        "summary": "We introduce a novel framework for uncertainty quantification in clustering. By combining the martingale posterior paradigm with density-based clustering, uncertainty in the estimated density is naturally propagated to the clustering structure. The approach scales effectively to high-dimensional and irregularly shaped data by leveraging modern neural density estimators and GPU-friendly parallel computation. We establish frequentist consistency guarantees and validate the methodology on synthetic and real data.",
+        "authors": "Nicola Bariletto, Stephen G. Walker",
+        "url": "http://arxiv.org/abs/2603.03188v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03188v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了一个新颖的聚类不确定性量化框架，将鞅后验范式与基于密度的聚类相结合。它建立了频率论一致性保证，并能有效扩展到高维数据。这与您对统计保证和理论严谨性的偏好高度一致，为黑盒聚类提供了可靠的不确定性估计。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02861v1",
+        "title": "Focused Information Criteria for Semiparametric Linear Hazard Regression",
+        "summary": "The semiparametric linear hazard regression model introduced by McKeague and Sasieni (1994) is an extension of the linear hazard regression model developed by Aalen (1980). Methods of model selection for this type of model are still underdeveloped. In the process of fitting a semiparametric linear hazard regression model one usually starts with a given set of covariates. For each covariate one has at least the following three choices: allow it to have time-varying effect; allow it to have constant effect over time; or exclude it from the model. In this paper we discuss focused information criteria (FIC) to help with this choice. In the spirit of Claeskens and Hjort (2003, 2008), `focused' means that one is interested in one specific quantity, e.g. the probability of survival of a patient with a certain set of covariates up to a given time. The FIC involves estimating the mean squared error of the estimator of the quantity one is interested in, and the chosen model is the one minimising this estimated mean squared error. The focused model selection machinery is extended to allow for weighted versions, leading to a suitable wFIC method that aims at finding models that lead to good estimates of a given list of parameters, such as survival probabilities for a subset of patients or for a specified region of covariate vectors. In addition to developing model selection criteria, methods associated with averaging across the best models are also discussed. We illustrate these methods of model selection in a real data situation.",
+        "authors": "Axel Gandy, Nils Lid Hjort",
+        "url": "http://arxiv.org/abs/2603.02861v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02861v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文讨论了半参数线性风险回归模型的聚焦信息准则（FIC），并扩展了加权版本（wFIC），旨在找到能良好估计特定参数的模型。这篇论文在统计模型选择方面具有严谨的理论基础和数学推导，对生存分析和统计建模有直接应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02622v1",
+        "title": "Implicit Bias in Deep Linear Discriminant Analysis",
+        "summary": "While the Implicit Bias(or Implicit Regularization) of standard loss functions has been studied, the optimization geometry induced by discriminative metric-learning objectives remains largely unexplored.To the best of our knowledge, this paper presents an initial theoretical analysis of the implicit regularization induced by the Deep LDA,a scale invariant objective designed to minimize intraclass variance and maximize interclass distance. By analyzing the gradient flow of the loss on a L-layer diagonal linear network, we prove that under balanced initialization, the network architecture transforms standard additive gradient updates into multiplicative weight updates, which demonstrates an automatic conservation of the (2/L) quasi-norm.",
+        "authors": "Jiawen Li",
+        "url": "http://arxiv.org/abs/2603.02622v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02622v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对深度线性判别分析（Deep LDA）中的隐式正则化进行了初步理论分析，证明了在平衡初始化下，网络架构将标准加性梯度更新转换为乘性权重更新，并自动保持了(2/L)准范数。这篇论文提供了关于深度学习隐式偏差的深刻理论见解和严谨的数学证明，非常符合您对优化收敛性和数学推导的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02509v1",
+        "title": "Semi-partitioned Generalized Method of Moments for Longitudinal Data with Lagged and Feedback Covariates",
+        "summary": "We propose a semi-partitioned Generalized Method of Moments (GMM) framework for analyzing longitudinal data with time-dependent covariates, within a marginal modeling paradigm. This approach addresses limitations of both aggregated and fully partitioned GMM models. Aggregated methods obscure temporal dynamics by assuming constant effects, while fully partitioned approaches offer temporal specificity at the cost of increased model complexity and instability--particularly with moderate sample sizes or deep lag structures. Our method distinguishes immediate from lagged effects by estimating contemporaneous coefficients separately and grouping lagged moment conditions into structured sets, while retaining flexibility in the lag-specific effects. This yields a model that is both statistically efficient and interpretable, capturing essential temporal variation while mitigating variance inflation and convergence challenges associated with full partitioning. The framework accommodates feedback, supports both continuous and binary outcomes, and utilizes the Broyden--Fletcher--Goldfarb--Shanno (BFGS) algorithm for reliable optimization. Through simulations, we demonstrate that the semi-partitioned GMM achieves coverage and competitive efficiency relative to fully partitioned models when the grouped-lag structure approximates the underlying lag pattern. Applications to clinical datasets on knee osteoarthritis and adolescent obesity confirm that the method recovers consistent, interpretable effects and avoids instability associated with finely grained partitioning.",
+        "authors": "Niloofar Ramezani, Jeffrey R. Wilson",
+        "url": "http://arxiv.org/abs/2603.02509v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02509v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个半划分广义矩量法（GMM）框架，用于分析具有滞后和反馈协变量的纵向数据。该方法在统计上高效且可解释，能够捕获时间变异性，同时缓解方差膨胀和收敛挑战。GMM本身就是统计学中的核心方法，该工作对其进行了理论扩展，具有严谨的统计学基础。"
+    }
+]

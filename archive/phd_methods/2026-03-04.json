@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.04257v1",
+        "title": "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory",
+        "summary": "Large language model (LLM) agents are fundamentally bottlenecked by finite context windows on long-horizon tasks. As trajectories grow, retaining tool outputs and intermediate reasoning in-context quickly becomes infeasible: the working context becomes prohibitively long, eventually exceeds the context budget, and makes distant evidence harder to use even when it is still present. Existing solutions typically shorten context through truncation or running summaries, but these methods are fundamentally lossy because they compress or discard past evidence itself. We introduce Memex, an indexed experience memory mechanism that instead compresses context without discarding evidence. Memex maintains a compact working context consisting of concise structured summaries and stable indices, while storing full-fidelity underlying interactions in an external experience database under those indices. The agent can then decide when to dereference an index and recover the exact past evidence needed for the current subgoal. We optimize both write and read behaviors with our reinforcement learning framework MemexRL, using reward shaping tailored to indexed memory usage under a context budget, so the agent learns what to summarize, what to archive, how to index it, and when to retrieve it. This yields a substantially less lossy form of long-horizon memory than summary-only approaches. We further provide a theoretical analysis showing the potential of the Memex loop to preserve decision quality with bounded dereferencing while keeping effective in-context computation bounded as history grows. Empirically, on challenging long-horizon tasks, Memex agent trained with MemexRL improves task success while using a significantly smaller working context.",
+        "authors": "Zhenting Wang, Huancheng Chen, Jiayun Wang, Wei Wei",
+        "url": "http://arxiv.org/abs/2603.04257v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04257v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对LLM Agent在长序列任务中上下文窗口受限的根本瓶颈，提出了Memex索引经验记忆机制，在不丢弃证据的情况下压缩上下文。提供了理论分析证明其在保持决策质量和计算效率方面的潜力，并通过强化学习优化读写行为。具有极高的理论创新性、严谨性和实践影响力，是解决LLM应用瓶颈的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04024v1",
+        "title": "Volumetric Directional Diffusion: Anchoring Uncertainty Quantification in Anatomical Consensus for Ambiguous Medical Image Segmentation",
+        "summary": "Equivocal 3D lesion segmentation exhibits high inter-observer variability. Conventional deterministic models ignore this aleatoric uncertainty, producing over-confident masks that obscure clinical risks. Conversely, while generative methods (e.g., standard diffusion) capture sample diversity, recovering complex topology from pure noise frequently leads to severe structural fractures and out-of-distribution anatomical hallucinations. To resolve this fidelity-diversity trade-off, we propose Volumetric Directional Diffusion (VDD). Unlike standard diffusion models that denoise isotropic Gaussian noise, VDD mathematically anchors the generative trajectory to a deterministic consensus prior. By restricting the generative search space to iteratively predict a 3D boundary residual field, VDD accurately explores the fine-grained geometric variations inherent in expert disagreements without risking topological collapse. Extensive validation on three multi-rater datasets (LIDC-IDRI, KiTS21, and ISBI 2015) demonstrates that VDD achieves state-of-the-art uncertainty quantification (significantly improving GED and CI) while remaining highly competitive in segmentation accuracy against deterministic upper bounds. Ultimately, VDD provides clinicians with anatomically coherent uncertainty maps, enabling safer decision-making and mitigating risks in downstream tasks (e.g., radiotherapy planning or surgical margin assessment).",
+        "authors": "Chao Wu, Kangxian Xie, Mingchen Gao",
+        "url": "http://arxiv.org/abs/2603.04024v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04024v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对医学图像分割中3D病灶分割的不确定性和传统扩散模型拓扑崩溃问题，提出了VDD，一种新颖的体积定向扩散模型。它将生成轨迹数学地锚定到确定性共识先验，解决了保真度-多样性权衡，并提供了解剖学上一致的不确定性图。具有极高的理论创新性、严谨性和实践影响力，对安全关键医疗AI至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03756v1",
+        "title": "MOOSE-Star: Unlocking Tractable Training for Scientific Discovery by Breaking the Complexity Barrier",
+        "summary": "While large language models (LLMs) show promise in scientific discovery, existing research focuses on inference or feedback-driven training, leaving the direct modeling of the generative reasoning process, $P(\\text{hypothesis}|\\text{background})$ ($P(h|b)$), unexplored. We demonstrate that directly training $P(h|b)$ is mathematically intractable due to the combinatorial complexity ($O(N^k)$) inherent in retrieving and composing inspirations from a vast knowledge base. To break this barrier, we introduce MOOSE-Star, a unified framework enabling tractable training and scalable inference. In the best case, MOOSE-Star reduces complexity from exponential to logarithmic ($O(\\log N)$) by (1) training on decomposed subtasks derived from the probabilistic equation of discovery, (2) employing motivation-guided hierarchical search to enable logarithmic retrieval and prune irrelevant subspaces, and (3) utilizing bounded composition for robustness against retrieval noise. To facilitate this, we release TOMATO-Star, a dataset of 108,717 decomposed papers (38,400 GPU hours) for training. Furthermore, we show that while brute-force sampling hits a ''complexity wall,'' MOOSE-Star exhibits continuous test-time scaling.",
+        "authors": "Zonglin Yang, Lidong Bing",
+        "url": "http://arxiv.org/abs/2603.03756v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03756v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM在科学发现中直接训练假设生成（P(h|b)）的组合复杂性导致的数学不可行性，提出了MOOSE-Star框架。通过分解子任务、动机引导的分层搜索和有界组合，将复杂度从指数级降至对数级。具有极高的理论创新性、严谨性和实践影响力，是AI for Science领域的重大突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03741v1",
+        "title": "HALyPO: Heterogeneous-Agent Lyapunov Policy Optimization for Human-Robot Collaboration",
+        "summary": "To improve generalization and resilience in human-robot collaboration (HRC), robots must handle the combinatorial diversity of human behaviors and contexts, motivating multi-agent reinforcement learning (MARL). However, inherent heterogeneity between robots and humans creates a rationality gap (RG) in the learning process-a variational mismatch between decentralized best-response dynamics and centralized cooperative ascent. The resulting learning problem is a general-sum differentiable game, so independent policy-gradient updates can oscillate or diverge without added structure. We propose heterogeneous-agent Lyapunov policy optimization (HALyPO), which establishes formal stability directly in the policy-parameter space by enforcing a per-step Lyapunov decrease condition on a parameter-space disagreement metric. Unlike Lyapunov-based safe RL, which targets state/trajectory constraints in constrained Markov decision processes, HALyPO uses Lyapunov certification to stabilize decentralized policy learning. HALyPO rectifies decentralized gradients via optimal quadratic projections, ensuring monotonic contraction of RG and enabling effective exploration of open-ended interaction spaces. Extensive simulations and real-world humanoid-robot experiments show that this certified stability improves generalization and robustness in collaborative corner cases.",
+        "authors": "Hao Zhang, Yaru Niu, Yikai Wang, Ding Zhao, H. Eric Tseng",
+        "url": "http://arxiv.org/abs/2603.03741v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03741v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对人机协作（HRC）中异构智能体学习的理性差距和不稳定问题，提出了HALyPO，一个新颖的异构智能体Lyapunov策略优化框架。通过在策略参数空间中强制Lyapunov递减条件，建立了形式化稳定性，具有极高的理论创新性、严谨性和实践影响力，对安全有效的HRC至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04378v1",
+        "title": "Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization",
+        "summary": "As Large Language Models (LLMs) transition into autonomous multi-agent ecosystems, robust minimax training becomes essential yet remains prone to instability when highly non-linear policies induce extreme local curvature in the inner maximization. Standard remedies that enforce global Jacobian bounds are overly conservative, suppressing sensitivity in all directions and inducing a large Price of Robustness. We introduce Adversarially-Aligned Jacobian Regularization (AAJR), a trajectory-aligned approach that controls sensitivity strictly along adversarial ascent directions. We prove that AAJR yields a strictly larger admissible policy class than global constraints under mild conditions, implying a weakly smaller approximation gap and reduced nominal performance degradation. Furthermore, we derive step-size conditions under which AAJR controls effective smoothness along optimization trajectories and ensures inner-loop stability. These results provide a structural theory for agentic robustness that decouples minimax stability from global expressivity restrictions.",
+        "authors": "Furkan Mumcu, Yasin Yilmaz",
+        "url": "http://arxiv.org/abs/2603.04378v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04378v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对多智能体LLM系统中鲁棒minimax训练的不稳定性问题，提出了对抗对齐雅可比正则化（AAJR）。理论上证明了其能提供更大的策略空间并减少性能下降，并推导了步长条件以确保稳定性。具有很强的理论创新性和严谨性，直接解决了AI前沿算法的鲁棒性瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04223v1",
+        "title": "Semi-Supervised Generative Learning via Latent Space Distribution Matching",
+        "summary": "We introduce Latent Space Distribution Matching (LSDM), a novel framework for semi-supervised generative modeling of conditional distributions. LSDM operates in two stages: (i) learning a low-dimensional latent space from both paired and unpaired data, and (ii) performing joint distribution matching in this space via the 1-Wasserstein distance, using only paired data. This two-step approach minimizes an upper bound on the 1-Wasserstein distance between joint distributions, reducing reliance on scarce paired samples while enabling fast one-step generation. Theoretically, we establish non-asymptotic error bounds and demonstrate a key benefit of unpaired data: enhanced geometric fidelity in generated outputs. Furthermore, by extending the scope of its two core steps, LSDM provides a coherent statistical perspective that connects to a broad class of latent-space approaches. Notably, Latent Diffusion Models (LDMs) can be viewed as a variant of LSDM, in which joint distribution matching is achieved indirectly via score matching. Consequently, our results also provide theoretical insights into the consistency of LDMs. Empirical evaluations on real-world image tasks, including class-conditional generation and image super-resolution, demonstrate the effectiveness of LSDM in leveraging unpaired data to enhance generation quality.",
+        "authors": "Kwong Yu Chong, Long Feng",
+        "url": "http://arxiv.org/abs/2603.04223v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04223v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了LSDM，一个新颖的半监督生成建模框架，通过潜在空间分布匹配和1-Wasserstein距离最小化，有效利用非配对数据。理论上建立了非渐近误差界，并为LDM的自洽性提供了理论洞察。具有极高的理论创新性和严谨性，解决了生成模型中的数据效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04005v1",
+        "title": "Training-Free Rate-Distortion-Perception Traversal With Diffusion",
+        "summary": "The rate-distortion-perception (RDP) tradeoff characterizes the fundamental limits of lossy compression by jointly considering bitrate, reconstruction fidelity, and perceptual quality. While recent neural compression methods have improved perceptual performance, they typically operate at fixed points on the RDP surface, requiring retraining to target different tradeoffs. In this work, we propose a training-free framework that leverages pre-trained diffusion models to traverse the entire RDP surface. Our approach integrates a reverse channel coding (RCC) module with a novel score-scaled probability flow ODE decoder. We theoretically prove that the proposed diffusion decoder is optimal for the distortion-perception tradeoff under AWGN observations and that the overall framework with the RCC module achieves the optimal RDP function in the Gaussian case. Empirical results across multiple datasets demonstrate the framework's flexibility and effectiveness in navigating the ternary RDP tradeoff using pre-trained diffusion models. Our results establish a practical and theoretically grounded approach to adaptive, perception-aware compression.",
+        "authors": "Yuhan Wang, Suzhi Bi, Ying-Jun Angela Zhang",
+        "url": "http://arxiv.org/abs/2603.04005v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04005v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个新颖的免训练框架，利用预训练扩散模型实现速率-失真-感知（RDP）权衡的遍历。理论上证明了其扩散解码器在失真-感知权衡上的最优性，以及整个框架在高斯情况下的RDP函数最优性。具有极高的理论创新性和严谨性，为自适应、感知感知的压缩提供了理论基础和实践方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03700v1",
+        "title": "Generalization Properties of Score-matching Diffusion Models for Intrinsically Low-dimensional Data",
+        "summary": "Despite the remarkable empirical success of score-based diffusion models, their statistical guarantees remain underdeveloped. Existing analyses often provide pessimistic convergence rates that do not reflect the intrinsic low-dimensional structure common in real data, such as that arising in natural images. In this work, we study the statistical convergence of score-based diffusion models for learning an unknown distribution $μ$ from finitely many samples. Under mild regularity conditions on the forward diffusion process and the data distribution, we derive finite-sample error bounds on the learned generative distribution, measured in the Wasserstein-$p$ distance. Unlike prior results, our guarantees hold for all $p \\ge 1$ and require only a finite-moment assumption on $μ$, without compact-support, manifold, or smooth-density conditions. Specifically, given $n$ i.i.d.\\ samples from $μ$ with finite $q$-th moment and appropriately chosen network architectures, hyperparameters, and discretization schemes, we show that the expected Wasserstein-$p$ error between the learned distribution $\\hatμ$ and $μ$ scales as $\\mathbb{E}\\, \\mathbb{W}_p(\\hatμ,μ) = \\widetilde{O}\\!\\left(n^{-1 / d^\\ast_{p,q}(μ)}\\right),$ where $d^\\ast_{p,q}(μ)$ is the $(p,q)$-Wasserstein dimension of $μ$. Our results demonstrate that diffusion models naturally adapt to the intrinsic geometry of data and mitigate the curse of dimensionality, since the convergence rate depends on $d^\\ast_{p,q}(μ)$ rather than the ambient dimension. Moreover, our theory conceptually bridges the analysis of diffusion models with that of GANs and the sharp minimax rates established in optimal transport. The proposed $(p,q)$-Wasserstein dimension also extends classical Wasserstein dimension notions to distributions with unbounded support, which may be of independent theoretical interest.",
+        "authors": "Saptarshi Chakraborty, Quentin Berthet, Peter L. Bartlett",
+        "url": "http://arxiv.org/abs/2603.03700v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03700v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对分数匹配扩散模型统计保证不足的问题，首次推导了有限样本误差界，并证明了收敛速度依赖于数据的内在低维结构（Wasserstein维度）。引入了新的(p,q)-Wasserstein维度概念，具有极高的理论创新性和严谨性，深化了对扩散模型泛化能力的理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03692v1",
+        "title": "Error as Signal: Stiffness-Aware Diffusion Sampling via Embedded Runge-Kutta Guidance",
+        "summary": "Classifier-Free Guidance (CFG) has established the foundation for guidance mechanisms in diffusion models, showing that well-designed guidance proxies significantly improve conditional generation and sample quality. Autoguidance (AG) has extended this idea, but it relies on an auxiliary network and leaves solver-induced errors unaddressed. In stiff regions, the ODE trajectory changes sharply, where local truncation error (LTE) becomes a critical factor that deteriorates sample quality. Our key observation is that these errors align with the dominant eigenvector, motivating us to leverage the solver-induced error as a guidance signal. We propose Embedded Runge-Kutta Guidance (ERK-Guid), which exploits detected stiffness to reduce LTE and stabilize sampling. We theoretically and empirically analyze stiffness and eigenvector estimators with solver errors to motivate the design of ERK-Guid. Our experiments on both synthetic datasets and the popular benchmark dataset, ImageNet, demonstrate that ERK-Guid consistently outperforms state-of-the-art methods. Code is available at https://github.com/mlvlab/ERK-Guid.",
+        "authors": "Inho Kong, Sojin Lee, Youngjoon Hong, Hyunwoo J. Kim",
+        "url": "http://arxiv.org/abs/2603.03692v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03692v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对扩散模型中求解器引起的局部截断误差导致采样质量下降的问题，提出了ERK-Guid，一种新颖的嵌入式Runge-Kutta引导机制。它利用求解器误差作为引导信号，理论和经验分析了刚度和特征向量估计，显著提升了条件生成和采样质量。具有极高的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03664v1",
+        "title": "Principled Learning-to-Communicate with Quasi-Classical Information Structures",
+        "summary": "Learning-to-communicate (LTC) in partially observable environments has received increasing attention in deep multi-agent reinforcement learning, where the control and communication strategies are jointly learned. Meanwhile, the impact of communication on decision-making has been extensively studied in control theory. In this paper, we seek to formalize and better understand LTC by bridging these two lines of work, through the lens of information structures (ISs). To this end, we formalize LTC in decentralized partially observable Markov decision processes (Dec-POMDPs) under the common-information-based framework from decentralized stochastic control, and classify LTC problems based on the ISs before (additional) information sharing. We first show that non-classical LTCs are computationally intractable in general, and thus focus on quasi-classical (QC) LTCs. We then propose a series of conditions for QC LTCs, under which LTCs preserve the QC IS after information sharing, whereas violating which can cause computational hardness in general. Further, we develop provable planning and learning algorithms for QC LTCs, and establish quasi-polynomial time and sample complexities for several QC LTC examples that satisfy the above conditions. Along the way, we also establish results on the relationship between (strictly) QC IS and the condition of having strategy-independent common-information-based beliefs (SI-CIBs), as well as on solving Dec-POMDPs without computationally intractable oracles but beyond those with SI-CIBs, which may be of independent interest.",
+        "authors": "Xiangyu Liu, Haoyi You, Kaiqing Zhang",
+        "url": "http://arxiv.org/abs/2603.03664v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03664v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "通过信息结构（ISs）的视角，形式化了去中心化部分可观测马尔可夫决策过程（Dec-POMDPs）中的学习通信（LTC）问题。证明了非经典LTC的计算不可行性，并为准经典LTC开发了可证明的规划和学习算法，具有准多项式时间复杂度和样本复杂度。具有极高的理论创新性和严谨性，对多智能体强化学习具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03612v1",
+        "title": "Why Are Linear RNNs More Parallelizable?",
+        "summary": "The community is increasingly exploring linear RNNs (LRNNs) as language models, motivated by their expressive power and parallelizability. While prior work establishes the expressivity benefits of LRNNs over transformers, it is unclear what makes LRNNs -- but not traditional, nonlinear RNNs -- as easy to parallelize in practice as transformers. We answer this question by providing a tight connection between types of RNNs and standard complexity classes. We show that LRNNs can be viewed as log-depth (bounded fan-in) arithmetic circuits, which represents only a slight depth overhead relative to log-depth boolean circuits that transformers admit. Furthermore, we show that nonlinear RNNs can solve $\\mathsf{L}$-complete problems (and even $\\mathsf{P}$-complete ones, under polynomial precision), revealing a fundamental barrier to parallelizing them as efficiently as transformers. Our theory also identifies fine-grained expressivity differences between recent popular LRNN variants: permutation-diagonal LRNNs are $\\mathsf{NC}^1$-complete whereas diagonal-plus-low-rank LRNNs are more expressive ($\\mathsf{PNC}^1$-complete). We provide further insight by associating each type of RNN with a corresponding automata-theoretic model that it can simulate. Together, our results reveal fundamental tradeoffs between nonlinear RNNs and different variants of LRNNs, providing a foundation for designing LLM architectures that achieve an optimal balance between expressivity and parallelism.",
+        "authors": "William Merrill, Hongjian Jiang, Yanhong Li, Ashish Sabharwal",
+        "url": "http://arxiv.org/abs/2603.03612v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03612v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对线性RNN（LRNNs）并行化能力优于非线性RNN的原因，通过将其与标准复杂度类紧密联系，提供了新颖的理论解释。证明了非线性RNN的并行化障碍，并区分了不同LRNN变体的表达能力。具有极高的理论创新性和严谨性，为设计平衡表达能力和并行性的LLM架构奠定了基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03677v1",
+        "title": "MIND: Unified Inquiry and Diagnosis RL with Criteria Grounded Clinical Supports for Psychiatric Consultation",
+        "summary": "Large language models (LLMs) have advanced medical dialogue systems, yet psychiatric consultation poses substantially higher demands due to subjective ambiguity and comorbidity complexity: an agent must continuously extract psychopathological cues from incomplete and inconsistent patient reports in multi-turn interactions and perform rigorous differential diagnostic reasoning. However, existing methods face two fundamental challenges. First, without criteria-grounded clinical supports, they are prone to unsupported clinical assertions when symptoms are atypical or underspecified. Second, in multi-turn interactions, they struggle to mitigate inquiry drift (off-topic or low-yield questioning) and optimize questioning strategies. To address these challenges, we propose MIND, a unified inquiry--diagnosis reinforcement learning framework for psychiatric consultation. Specifically, we build a Criteria-Grounded Psychiatric Reasoning Bank (PRB) that summarizes dialogue context into clinical retrieval states, retrieves semantically similar reference consultations, and distills reusable criteria-grounded clinical supports to guide criteria-aligned inquiry and reasoning. Building on this foundation, MIND enforces explicit clinical reasoning with rubric-based process rewards to provide fine-grained supervision over intermediate decision steps, and incorporates a value-aware trajectory rectification mechanism to jointly improve information acquisition and diagnostic decision-making across turns. Extensive experiments demonstrate that MIND consistently outperforms strong baselines in diagnostic accuracy, empathetic interaction quality, interpretability, and generalization.",
+        "authors": "Guoyi Li, Shihao Xu, Jiatong Ma, Yunyun Han, Jianhua Chen, Yafeng Deng",
+        "url": "http://arxiv.org/abs/2603.03677v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03677v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对精神病会诊中LLM面临的主观模糊性和共病复杂性挑战，提出了MIND，一个统一的问诊-诊断RL框架。通过标准接地精神病推理库、基于评分标准的流程奖励和价值感知轨迹修正机制，显著提升了诊断准确性、共情交互质量和可解释性。具有极高的理论创新性和实践影响力，对高风险医疗AI至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03805v1",
+        "title": "Relational In-Context Learning via Synthetic Pre-training with Structural Prior",
+        "summary": "Relational Databases (RDBs) are the backbone of modern business, yet they lack foundation models comparable to those in text or vision. A key obstacle is that high-quality RDBs are private, scarce and structurally heterogeneous, making internet-scale pre-training infeasible. To overcome this data scarcity, We introduce $\\textbf{RDB-PFN}$, the first relational foundation model trained purely via $\\textbf{synthetic data}$. Inspired by Prior-Data Fitted Networks (PFNs) where synthetic data generated from Structural Causal Models (SCMs) enables reasoning on single tables, we design a $\\textbf{Relational Prior Generator}$ to create an infinite stream of diverse RDBs from scratch. Pre-training on $\\textbf{over 2 million}$ synthetic single-table and relational tasks, RDB-PFN learns to adapt to any new database instantly via genuine $\\textbf{in-context learning}$. Experiments verify RDB-PFN achieves strong few-shot performance on 19 real-world relational prediction tasks, outperforming graph-based and single-table foundation-model baselines (given the same DFS-linearized inputs), while using a lightweight architecture and fast inference. The code is available at https://github.com/MuLabPKU/RDBPFN",
+        "authors": "Yanbo Wang, Jiaxuan You, Chuan Shi, Muhan Zhang",
+        "url": "http://arxiv.org/abs/2603.03805v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03805v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对关系数据库（RDBs）缺乏基础模型且数据稀缺的问题，提出了RDB-PFN，首个纯粹通过合成数据训练的关系基础模型。通过关系先验生成器创建无限流的合成RDB，实现了RDB的上下文学习。具有极高的理论创新性和实践影响力，解决了数据稀缺瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03792v1",
+        "title": "TAP: A Token-Adaptive Predictor Framework for Training-Free Diffusion Acceleration",
+        "summary": "Diffusion models achieve strong generative performance but remain slow at inference due to the need for repeated full-model denoising passes. We present Token-Adaptive Predictor (TAP), a training-free, probe-driven framework that adaptively selects a predictor for each token at every sampling step. TAP uses a single full evaluation of the model's first layer as a low-cost probe to compute proxy losses for a compact family of candidate predictors (instantiated primarily with Taylor expansions of varying order and horizon), then assigns each token the predictor with the smallest proxy error. This per-token \"probe-then-select\" strategy exploits heterogeneous temporal dynamics, requires no additional training, and is compatible with various predictor designs. TAP incurs negligible overhead while enabling large speedups with little or no perceptual quality loss. Extensive experiments across multiple diffusion architectures and generation tasks show that TAP substantially improves the accuracy-efficiency frontier compared to fixed global predictors and caching-only baselines.",
+        "authors": "Haowei Zhu, Tingxuan Huang, Xing Wang, Tianyu Zhao, Jiexi Wang, Weifeng Chen, Xurui Peng, Fangmin Chen, Junhai Yong, Bin Wang",
+        "url": "http://arxiv.org/abs/2603.03792v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03792v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对扩散模型推理速度慢的问题，提出了TAP，一个免训练、探针驱动的token自适应预测器框架。通过在每个采样步骤为每个token自适应选择预测器，实现了显著的加速，同时保持了生成质量。具有极高的理论创新性和实践影响力，解决了扩散模型的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03686v1",
+        "title": "AI4S-SDS: A Neuro-Symbolic Solvent Design System via Sparse MCTS and Differentiable Physics Alignment",
+        "summary": "Automated design of chemical formulations is a cornerstone of materials science, yet it requires navigating a high-dimensional combinatorial space involving discrete compositional choices and continuous geometric constraints. Existing Large Language Model (LLM) agents face significant challenges in this setting, including context window limitations during long-horizon reasoning and path-dependent exploration that may lead to mode collapse. To address these issues, we introduce AI4S-SDS, a closed-loop neuro-symbolic framework that integrates multi-agent collaboration with a tailored Monte Carlo Tree Search (MCTS) engine. We propose a Sparse State Storage mechanism with Dynamic Path Reconstruction, which decouples reasoning history from context length and enables arbitrarily deep exploration under fixed token budgets. To reduce local convergence and improve coverage, we implement a Global--Local Search Strategy: a memory-driven planning module adaptively reconfigures the search root based on historical feedback, while a Sibling-Aware Expansion mechanism promotes orthogonal exploration at the node level. Furthermore, we bridge symbolic reasoning and physical feasibility through a Differentiable Physics Engine, employing a hybrid normalized loss with sparsity-inducing regularization to optimize continuous mixing ratios under thermodynamic constraints. Empirical results show that AI4S-SDS achieves full validity under the adopted HSP-based physical constraints and substantially improves exploration diversity compared to baseline agents. In preliminary lithography experiments, the framework identifies a novel photoresist developer formulation that demonstrates competitive or superior performance relative to a commercial benchmark, highlighting the potential of diversity-driven neuro-symbolic search for scientific discovery.",
+        "authors": "Jiangyu Chen",
+        "url": "http://arxiv.org/abs/2603.03686v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03686v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对化学配方自动化设计中LLM Agent在组合空间中的局限性，提出了AI4S-SDS，一个闭环神经符号框架。通过稀疏状态存储、动态路径重建、全局-局部搜索策略和可微分物理引擎，实现了高维组合空间的有效探索和优化。具有极高的理论创新性和实践影响力，对材料科学发现具有重大意义。"
+    }
+]

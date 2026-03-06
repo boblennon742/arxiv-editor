@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.05500v1",
+        "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
+        "summary": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
+        "authors": "Zeju Qiu, Lixin Liu, Adrian Weller, Han Shi, Weiyang Liu",
+        "url": "http://arxiv.org/abs/2603.05500v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05500v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了POET-X，一个可扩展且内存高效的正交等价训练变体，显著降低了LLM训练的内存消耗和计算开销。其核心在于对现有理论框架（POET）的改进，使其在保持谱不变性等理论优势的同时，解决了LLM训练的实际瓶颈（内存效率），实现了在单张H100 GPU上预训练数十亿参数LLM，具有很强的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05495v1",
+        "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
+        "summary": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
+        "authors": "Khai Nguyen, Petros Ellinas, Anvita Bhagavathula, Priya Donti",
+        "url": "http://arxiv.org/abs/2603.05495v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05495v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种新颖的三阶段框架，通过廉价、不完美的标签进行预训练和自监督学习，以实现高效的摊销优化。其理论分析表明，少量不精确的标签足以将模型置于吸引盆地内，这在数据效率方面具有理论创新性，并能显著降低优化和模拟问题的离线成本，解决实际应用中的数据效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05471v1",
+        "title": "Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval",
+        "summary": "Trustworthiness is a core research challenge for agentic AI systems built on Large Language Models (LLMs). To enhance trust, natural language claims from diverse sources, including human-written text, web content, and model outputs, are commonly checked for factuality by retrieving external knowledge and using an LLM to verify the faithfulness of claims to the retrieved evidence. As a result, such methods are constrained by retrieval errors and external data availability, while leaving the models intrinsic fact-verification capabilities largely unused. We propose the task of fact-checking without retrieval, focusing on the verification of arbitrary natural language claims, independent of their source. To study this setting, we introduce a comprehensive evaluation framework focused on generalization, testing robustness to (i) long-tail knowledge, (ii) variation in claim sources, (iii) multilinguality, and (iv) long-form generation. Across 9 datasets, 18 methods and 3 models, our experiments indicate that logit-based approaches often underperform compared to those that leverage internal model representations. Building on this finding, we introduce INTRA, a method that exploits interactions between internal representations and achieves state-of-the-art performance with strong generalization. More broadly, our work establishes fact-checking without retrieval as a promising research direction that can complement retrieval-based frameworks, improve scalability, and enable the use of such systems as reward signals during training or as components integrated into the generation process.",
+        "authors": "Artem Vazhentsev, Maria Marina, Daniil Moskovskiy, Sergey Pletenev, Mikhail Seleznyov, Mikhail Salnikov, Elena Tutubalina, Vasily Konovalov, Irina Nikishina, Alexander Panchenko, Viktor Moskvoretskii",
+        "url": "http://arxiv.org/abs/2603.05471v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05471v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“无需检索的事实核查”任务，专注于利用LLM的内在事实验证能力。其引入的INTRA方法通过利用内部表示之间的交互实现SOTA性能和泛化能力，这代表了对LLM内在机制的深入探索，具有理论创新性，并直接解决了LLM信任度和幻觉的实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05314v1",
+        "title": "PersianPunc: A Large-Scale Dataset and BERT-Based Approach for Persian Punctuation Restoration",
+        "summary": "Punctuation restoration is essential for improving the readability and downstream utility of automatic speech recognition (ASR) outputs, yet remains underexplored for Persian despite its importance. We introduce PersianPunc, a large-scale, high-quality dataset of 17 million samples for Persian punctuation restoration, constructed through systematic aggregation and filtering of existing textual resources. We formulate punctuation restoration as a token-level sequence labeling task and fine-tune ParsBERT to achieve strong performance. Through comparative evaluation, we demonstrate that while large language models can perform punctuation restoration, they suffer from critical limitations: over-correction tendencies that introduce undesired edits beyond punctuation insertion (particularly problematic for speech-to-text pipelines) and substantially higher computational requirements. Our lightweight BERT-based approach achieves a macro-averaged F1 score of 91.33% on our test set while maintaining efficiency suitable for real-time applications. We make our dataset (https://huggingface.co/datasets/MohammadJRanjbar/persian-punctuation-restoration) and model (https://huggingface.co/MohammadJRanjbar/parsbert-persian-punctuation) publicly available to facilitate future research in Persian NLP and provide a scalable framework applicable to other morphologically rich, low-resource languages.",
+        "authors": "Mohammad Javad Ranjbar Kalahroodi, Heshaam Faili, Azadeh Shakery",
+        "url": "http://arxiv.org/abs/2603.05314v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05314v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MobileFetalCLIP通过提出“选择性排斥知识蒸馏”（Selective Repulsive Knowledge Distillation）方法，解决了在极端容量差距下（如移动设备部署）知识蒸馏的挑战。该方法在理论上分解了对比蒸馏的对角和非对角分量，并使学生模型排斥教师模型的类间混淆，从而在保持甚至超越大型教师模型性能的同时，实现了极高的模型压缩率和部署效率，对资源受限环境下的AI应用具有巨大实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05343v1",
+        "title": "Preserving Continuous Symmetry in Discrete Spaces: Geometric-Aware Quantization for SO(3)-Equivariant GNNs",
+        "summary": "Equivariant Graph Neural Networks (GNNs) are essential for physically consistent molecular simulations but suffer from high computational costs and memory bottlenecks, especially with high-order representations. While low-bit quantization offers a solution, applying it naively to rotation-sensitive features destroys the SO(3)-equivariant structure, leading to significant errors and violations of conservation laws. To address this issue, in this work, we propose a Geometric-Aware Quantization (GAQ) framework that compresses and accelerates equivariant models while rigorously preserving continuous symmetry in discrete spaces. Our approach introduces three key contributions: (1) a Magnitude-Direction Decoupled Quantization (MDDQ) scheme that separates invariant lengths from equivariant orientations to maintain geometric fidelity; (2) a symmetry-aware training strategy that treats scalar and vector features with distinct quantization schedules; and (3) a robust attention normalization mechanism to stabilize gradients in low-bit regimes. Experiments on the rMD17 benchmark demonstrate that our W4A8 models match the accuracy of FP32 baselines (9.31 meV vs. 23.20 meV) while reducing Local Equivariance Error (LEE) by over 30x compared to naive quantization. On consumer hardware, GAQ achieves 2.39x inference speedup and 4x memory reduction, enabling stable, energy-conserving molecular dynamics simulations for nanosecond timescales.",
+        "authors": "Haoyu Zhou, Ping Xue, Hao Zhang, Tianfan Fu",
+        "url": "http://arxiv.org/abs/2603.05343v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05343v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了几何感知量化（GAQ）框架，用于压缩SO(3)等变图神经网络，同时严格保留连续对称性。其核心贡献包括幅度-方向解耦量化（MDDQ）和对称感知训练策略，解决了在离散空间中保持连续对称性的深层理论问题，具有极高的理论严谨性和创新性，并显著提升了等变GNN的计算效率和内存效率，对物理模拟等领域有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05280v1",
+        "title": "Layer by layer, module by module: Choose both for optimal OOD probing of ViT",
+        "summary": "Recent studies have observed that intermediate layers of foundation models often yield more discriminative representations than the final layer. While initially attributed to autoregressive pretraining, this phenomenon has also been identified in models trained via supervised and discriminative self-supervised objectives. In this paper, we conduct a comprehensive study to analyze the behavior of intermediate layers in pretrained vision transformers. Through extensive linear probing experiments across a diverse set of image classification benchmarks, we find that distribution shift between pretraining and downstream data is the primary cause of performance degradation in deeper layers. Furthermore, we perform a fine-grained analysis at the module level. Our findings reveal that standard probing of transformer block outputs is suboptimal; instead, probing the activation within the feedforward network yields the best performance under significant distribution shift, whereas the normalized output of the multi-head self-attention module is optimal when the shift is weak.",
+        "authors": "Ambroise Odonnat, Vasilii Feofanov, Laetitia Chapel, Romain Tavenard, Ievgen Redko",
+        "url": "http://arxiv.org/abs/2603.05280v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05280v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "X-RAY系统通过形式化和校准的探针，深入理解LLM的推理能力，将其建模为可提取结构（如约束交互、推理深度）的函数。这种方法论上的创新，特别是利用形式化工具生成探针和进行结构化分析，为LLM的评估和可解释性提供了极高的理论严谨性，有助于揭示LLM的系统性推理不对称性，对前沿AI算法的理解至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05210v1",
+        "title": "Balancing Coverage and Draft Latency in Vocabulary Trimming for Faster Speculative Decoding",
+        "summary": "Speculative decoding accelerates inference for Large Language Models by using a lightweight draft model to propose candidate tokens that are verified in parallel by a larger target model. Prior work shows that the draft model often dominates speculative decoding latency, since it generates tokens sequentially and incurs high cost from its language modeling head as vocabulary size grows. This exposes a fundamental trade-off in draft model design: larger vocabularies improve token coverage and agreement with the target model, but incur higher draft latency, while smaller vocabularies reduce latency at the risk of missing tokens required for accurate draft generation. We address this trade-off through vocabulary trimming for draft models, motivated by the observation that domain-specific workloads use only a small fraction of the full vocabulary. We cast draft vocabulary selection as a constrained optimization problem that balances token coverage and draft latency. Coverage is computed over assistant responses in the training data, while latency is estimated using architecture-aware FLOPs that capture the cost of the language modeling head as a function of vocabulary size. We optimize a utility function with a Tree-structured Parzen Estimator to efficiently explore the coverage-latency Pareto frontier under a minimum coverage constraint. Experiments show improved speculative decoding throughput while reducing draft vocabularies by up to 97% with high coverage. On domain-specific tasks, we achieve up to 16% latency reduction and 20% throughput improvement, and up to 6.7% throughput gains on diverse out-of-distribution tasks.",
+        "authors": "Ofir Ben Shoham",
+        "url": "http://arxiv.org/abs/2603.05210v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05210v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过词汇修剪来平衡覆盖率和草稿延迟，以加速LLM的推测解码。它将草稿词汇选择建模为一个受限优化问题，并使用Tree-structured Parzen Estimator进行优化。这种将LLM推理效率问题转化为严谨优化问题的思路，具有算法创新性，并带来了显著的延迟和吞吐量提升，解决了LLM服务中的关键性能瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05197v1",
+        "title": "Diffusion LLMs can think EoS-by-EoS",
+        "summary": "Diffusion LLMs have been proposed as an alternative to autoregressive LLMs, excelling especially at complex reasoning tasks with interdependent sub-goals. Curiously, this is particularly true if the generation length, i.e., the number of tokens the model has to output, is set to a much higher value than is required for providing the correct answer to the task, and the model pads its answer with end-of-sequence (EoS) tokens. We hypothesize that diffusion models think EoS-by-EoS, that is, they use the representations of EoS tokens as a hidden scratchpad, which allows them to solve harder reasoning problems. We experiment with the diffusion models LLaDA1.5, LLaDA2.0-mini, and Dream-v0 on the tasks Addition, Entity Tracking, and Sudoku. In a controlled prompting experiment, we confirm that adding EoS tokens improves the LLMs' reasoning capabilities. To further verify whether they serve as space for hidden computations, we patch the hidden states of the EoS tokens with those of a counterfactual generation, which frequently changes the generated output to the counterfactual. The success of the causal intervention underscores that the EoS tokens, which one may expect to be devoid of meaning, carry information on the problem to solve. The behavioral experiments and the causal interventions indicate that diffusion LLMs can indeed think EoS-by-EoS.",
+        "authors": "Sarah Breckner, Sebastian Schuster",
+        "url": "http://arxiv.org/abs/2603.05197v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05197v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个关于Diffusion LLM如何“思考”的开创性假设：它们利用EoS（序列结束）token的表示作为隐藏的草稿空间进行推理。通过受控的提示实验和因果干预，作者验证了这一假设。这提供了对Diffusion LLM内部机制的深层理论洞察，具有极高的创新性和严谨性，对理解前沿生成模型的工作原理至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05188v1",
+        "title": "Escaping the Hydrolysis Trap: An Agentic Workflow for Inverse Design of Durable Photocatalytic Covalent Organic Frameworks",
+        "summary": "Covalent organic frameworks (COFs) are promising photocatalysts for solar hydrogen production, yet the most electronically favorable linkages, imines, hydrolyze rapidly in water, creating a stability--activity trade-off that limits practical deployment. Navigating the combinatorial design space of nodes, linkers, linkages, and functional groups to identify candidates that are simultaneously active and durable remains a formidable challenge. Here we introduce Ara, a large-language-model (LLM) agent that leverages pretrained chemical knowledge, donor--acceptor theory, conjugation effects, and linkage stability hierarchies, to guide the search for photocatalytic COFs satisfying joint band-gap, band-edge, and hydrolytic-stability criteria. Evaluated against random search and Bayesian optimization (BO) over a space consisting of candidates with various nodes, linkers, linkages, and r-groups, screened with a GFN1-xTB fragment pipeline, Ara achieves a 52.7\\% hit rate (11.5$\\times$ random, p = 0.006), finds its first hit at iteration 12 versus 25 for random search, and significantly outperforms BO (p = 0.006). Inspection of the agent's reasoning traces reveals interpretable chemical logic: early convergence on vinylene and beta-ketoenamine linkages for stability, node selection informed by electron-withdrawing character, and systematic R-group optimization to center the band gap at 2.0 eV. Exhaustive evaluation of the full search space uncovers a complementary exploitation--exploration trade-off between the agent and BO, suggesting that hybrid strategies may combine the strengths of both approaches. These results demonstrate that LLM chemical priors can substantially accelerate multi-criteria materials discovery.",
+        "authors": "Iman Peivaste, Nicolas D. Boscher, Ahmed Makradi, Salim Belouettar",
+        "url": "http://arxiv.org/abs/2603.05188v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05188v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了DARE（Distribution-Aware Retrieval Embedding），一个轻量级的检索模型，通过将数据分布信息融入函数表示来改进R包检索，从而更好地对齐LLM代理与R统计生态系统。这种将数据分布作为理论依据融入检索机制的创新，解决了LLM在统计知识和工具检索方面的瓶颈，具有理论创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05167v1",
+        "title": "C2-Faith: Benchmarking LLM Judges for Causal and Coverage Faithfulness in Chain-of-Thought Reasoning",
+        "summary": "Large language models (LLMs) are increasingly used as judges of chain-of-thought (CoT) reasoning, but it remains unclear whether they can reliably assess process faithfulness rather than just answer plausibility. We introduce C2-Faith, a benchmark built from PRM800K that targets two complementary dimensions of faithfulness: causality (does each step logically follow from prior context?) and coverage (are essential intermediate inferences present?). Using controlled perturbations, we create examples with known causal error positions by replacing a single step with an acausal variant, and with controlled coverage deletions at varying deletion rates (scored against reference labels). We evaluate three frontier judges under three tasks: binary causal detection, causal step localization, and coverage scoring. The results show that model rankings depend strongly on task framing, with no single judge dominating all settings; all judges exhibit a substantial gap between detecting an error and localizing it; and coverage judgments are systematically inflated for incomplete reasoning. These findings clarify when LLM judges are dependable and where they fail, and provide practical guidance for selecting judges in process-level evaluation",
+        "authors": "Avni Mittal, Rauno Arike",
+        "url": "http://arxiv.org/abs/2603.05167v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05167v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "VRM（Variational Reward Modeling）框架通过变分推断将高维目标权重和低维语义特征作为潜在变量，显式建模人类偏好判断过程。该方法提供了理论分析，证明其能实现更紧密的泛化误差界。这代表了对LLM对齐中奖励模型设计的一个深层理论创新，解决了奖励模型捕获真实人类偏好的瓶颈，具有极高的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05143v1",
+        "title": "Feature Resemblance: On the Theoretical Understanding of Analogical Reasoning in Transformers",
+        "summary": "Understanding reasoning in large language models is complicated by evaluations that conflate multiple reasoning types. We isolate analogical reasoning (inferring shared properties between entities based on known similarities) and analyze its emergence in transformers. We theoretically prove three key results: (1) Joint training on similarity and attribution premises enables analogical reasoning through aligned representations; (2) Sequential training succeeds only when similarity structure is learned before specific attributes, revealing a necessary curriculum; (3) Two-hop reasoning ($a \\to b, b \\to c \\implies a \\to c$) reduces to analogical reasoning with identity bridges ($b = b$), which must appear explicitly in training data. These results reveal a unified mechanism: transformers encode entities with similar properties into similar representations, enabling property transfer through feature alignment. Experiments with architectures up to 1.5B parameters validate our theory and demonstrate how representational geometry shapes inductive reasoning capabilities.",
+        "authors": "Ruichen Xu, Wenjing Yan, Ying-Jun Angela Zhang",
+        "url": "http://arxiv.org/abs/2603.05143v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05143v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从理论上证明了Transformer中类比推理的出现机制，揭示了通过特征对齐实现属性转移的统一机制。其理论证明了联合训练、顺序训练的必要课程以及两跳推理的本质。这为理解Transformer的推理能力提供了基础性理论洞察，对前沿AI算法的理论创新具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05139v1",
+        "title": "Particle-Guided Diffusion for Gas-Phase Reaction Kinetics",
+        "summary": "Physics-guided sampling with diffusion model priors has shown promise for solving partial differential equation (PDE) governed problems, but applications to chemically meaningful reaction-transport systems remain limited. We apply diffusion-based guided sampling to gas-phase chemical reactions by training on solutions of the advection-reaction-diffusion (ARD) equation across varying parameters. The method generates physically consistent concentration fields and accurately predicts outlet concentrations, including at unseen parameter values, demonstrating the potential of diffusion models for inference in reactive transport.",
+        "authors": "Andrew Millard, Henrik Pedersen",
+        "url": "http://arxiv.org/abs/2603.05139v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05139v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 3
+        },
+        "reason_zh": "该论文将循环图神经网络（GNNs）的计算能力与实数上的算术电路进行表征，并建立了两者表达能力之间的精确对应关系。这是一项纯粹的理论工作，为GNN的计算能力提供了深刻的数学和理论基础，对于数理统计博士生理解前沿AI架构的理论边界具有极高价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05116v1",
+        "title": "FedBCD:Communication-Efficient Accelerated Block Coordinate Gradient Descent for Federated Learning",
+        "summary": "Although Federated Learning has been widely studied in recent years, there are still high overhead expenses in each communication round for large-scale models such as Vision Transformer. To lower the communication complexity, we propose a novel Federated Block Coordinate Gradient Descent (FedBCGD) method for communication efficiency. The proposed method splits model parameters into several blocks, including a shared block and enables uploading a specific parameter block by each client, which can significantly reduce communication overhead. Moreover, we also develop an accelerated FedBCGD algorithm (called FedBCGD+) with client drift control and stochastic variance reduction. To the best of our knowledge, this paper is the first work on parameter block communication for training large-scale deep models. We also provide the convergence analysis for the proposed algorithms. Our theoretical results show that the communication complexities of our algorithms are a factor $1/N$ lower than those of existing methods, where $N$ is the number of parameter blocks, and they enjoy much faster convergence than their counterparts. Empirical results indicate the superiority of the proposed algorithms compared to state-of-the-art algorithms.   The code is available at https://github.com/junkangLiu0/FedBCGD.",
+        "authors": "Junkang Liu, Fanhua Shang, Yuanyuan Liu, Hongying Liu, Yuangang Li, YunXiang Gong",
+        "url": "http://arxiv.org/abs/2603.05116v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05116v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "FedBCD提出了一个通信高效的联邦学习（FL）方法，通过将模型参数拆分为块并允许客户端上传特定块来显著减少通信开销。其加速版本FedBCGD+引入了客户端漂移控制和随机方差缩减，并提供了收敛性分析。这是分布式优化领域的前沿算法创新，具有极高的理论严谨性和实践影响力，解决了FL中通信效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04727v1",
+        "title": "Are Multimodal LLMs Ready for Surveillance? A Reality Check on Zero-Shot Anomaly Detection in the Wild",
+        "summary": "Multimodal large language models (MLLMs) have demonstrated impressive general competence in video understanding, yet their reliability for real-world Video Anomaly Detection (VAD) remains largely unexplored. Unlike conventional pipelines relying on reconstruction or pose-based cues, MLLMs enable a paradigm shift: treating anomaly detection as a language-guided reasoning task. In this work, we systematically evaluate state-of-the-art MLLMs on the ShanghaiTech and CHAD benchmarks by reformulating VAD as a binary classification task under weak temporal supervision. We investigate how prompt specificity and temporal window lengths (1s--3s) influence performance, focusing on the precision--recall trade-off. Our findings reveal a pronounced conservative bias in zero-shot settings; while models exhibit high confidence, they disproportionately favor the 'normal' class, resulting in high precision but a recall collapse that limits practical utility. We demonstrate that class-specific instructions can significantly shift this decision boundary, improving the peak F1-score on ShanghaiTech from 0.09 to 0.64, yet recall remains a critical bottleneck. These results highlight a significant performance gap for MLLMs in noisy environments and provide a foundation for future work in recall-oriented prompting and model calibration for open-world surveillance, which demands complex video understanding and reasoning.",
+        "authors": "Shanle Yao, Armin Danesh Pazho, Narges Rashvand, Hamed Tabkhi",
+        "url": "http://arxiv.org/abs/2603.04727v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04727v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文展示了AI（神经符号系统结合LLM、树搜索和数值反馈）自主解决理论物理学中一个开放问题的能力，推导了引力辐射功率谱的新颖精确解析解。这不仅是AI在科学发现领域的突破性应用，其神经符号系统的设计和推导精确解析解的严谨性，也体现了极高的理论创新性和实践影响力，是前沿AI算法和架构的典范。"
+    }
+]

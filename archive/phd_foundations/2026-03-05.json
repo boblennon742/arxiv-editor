@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.05480v1",
+        "title": "Thermodynamic Response Functions in Singular Bayesian Models",
+        "summary": "Singular statistical models-including mixtures, matrix factorization, and neural networks-violate regular asymptotics due to parameter non-identifiability and degenerate Fisher geometry. Although singular learning theory characterizes marginal likelihood behavior through invariants such as the real log canonical threshold and singular fluctuation, these quantities remain difficult to interpret operationally. At the same time, widely used criteria such as WAIC and WBIC appear disconnected from underlying singular geometry. We show that posterior tempering induces a one-parameter deformation of the posterior distribution whose associated observables generate a hierarchy of thermodynamic response functions. A universal covariance identity links derivatives of tempered expectations to posterior fluctuations, placing WAIC, WBIC, and singular fluctuation within a unified response framework. Within this framework, classical quantities from singular learning theory acquire natural thermodynamic interpretations: RLCT governs the leading free-energy slope, singular fluctuation corresponds to curvature of the tempered free energy, and WAIC measures predictive fluctuation. We formalize an observable algebra that quotients out non-identifiable directions, allowing structurally meaningful order parameters to be constructed in singular models. Across canonical singular examples-including symmetric Gaussian mixtures, reduced-rank regression, and overparameterized neural networks-we empirically demonstrate phase-transition-like behavior under tempering. Order parameters collapse, susceptibilities peak, and complexity measures align with structural reorganization in posterior geometry. Our results suggest that thermodynamic response theory provides a natural organizing framework for interpreting complexity, predictive variability, and structural reorganization in singular Bayesian learning.",
+        "authors": "Sean Plummer",
+        "url": "http://arxiv.org/abs/2603.05480v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05480v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将奇异统计学习理论与热力学响应函数相结合，为理解奇异贝叶斯模型（包括神经网络）中的复杂性、预测变异性和结构重组提供了统一的理论框架。它明确提到了实对数正则阈值 (RLCT)、奇异波动、WAIC 和 WBIC 等概念，并通过通用协方差恒等式建立了它们之间的联系。其深度理论分析和数学推导与您对强大理论基础和严谨数学逻辑的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05340v1",
+        "title": "On the Statistical Optimality of Optimal Decision Trees",
+        "summary": "While globally optimal empirical risk minimization (ERM) decision trees have become computationally feasible and empirically successful, rigorous theoretical guarantees for their statistical performance remain limited. In this work, we develop a comprehensive statistical theory for ERM trees under random design in both high-dimensional regression and classification. We first establish sharp oracle inequalities that bound the excess risk of the ERM estimator relative to the best possible approximation achievable by any tree with at most $L$ leaves, thereby characterizing the interpretability-accuracy trade-off. We derive these results using a novel uniform concentration framework based on empirically localized Rademacher complexity. Furthermore, we derive minimax optimal rates over a novel function class: the piecewise sparse heterogeneous anisotropic Besov (PSHAB) space. This space explicitly captures three key structural features encountered in practice: sparsity, anisotropic smoothness, and spatial heterogeneity. While our main results are established under sub-Gaussianity, we also provide robust guarantees that hold under heavy-tailed noise settings. Together, these findings provide a principled foundation for the optimality of ERM trees and introduce empirical process tools broadly applicable to other highly adaptive, data-driven procedures.",
+        "authors": "Zineng Xu, Subhroshekhar Ghosh, Yan Shuo Tan",
+        "url": "http://arxiv.org/abs/2603.05340v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05340v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为全局最优经验风险最小化 (ERM) 决策树提供了全面的统计理论，包括高维回归和分类场景下的严格理论保证。它建立了尖锐的预言机不等式，并基于经验局部 Rademacher 复杂度提出了新的统一集中框架，还推导了新型函数类上的极小极大最优率。这完全符合您对统计保证、清晰数学推导和强大理论基础的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05306v1",
+        "title": "Maximum of sparsely equicorrelated Gaussian fields and applications",
+        "summary": "We investigate the extreme values of a sparse and equicorrelated Gaussian field on a triangle: the correlations on every vertical or horizontal line are all equal to a parameter $r \\in [0,1/2]$ and are zero everywhere else. This problem is closely linked with various problems in high-dimensional statistics and extreme-value theory. We identify the threshold for $r$ at which the standard Gumbel law breaks down. Our result is based on a subtle application of the Chen-Stein method for Poisson approximation. As applications, we discuss the implication of our results on multiple testing and resolve several questions that were left open in \\cite{heiny2024maximum}, \\cite{tang2022asymptotic} and \\cite{Jiang19}.",
+        "authors": "Johannes Heiny, Tiefeng Jiang, Tuan Pham, Yongcheng Qi",
+        "url": "http://arxiv.org/abs/2603.05306v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05306v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 4
+        },
+        "reason_zh": "这是一篇纯理论统计学论文，研究稀疏等相关高斯场的极值，并将其与高维统计和极值理论中的问题联系起来。它使用 Chen-Stein 方法进行泊松近似，并识别了 Gumbel 定律失效的阈值。其深厚的理论统计学内容和严谨的数学方法是您会非常感兴趣的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05290v1",
+        "title": "X-RAY: Mapping LLM Reasoning Capability via Formalized and Calibrated Probes",
+        "summary": "Large language models (LLMs) achieve promising performance, yet their ability to reason remains poorly understood. Existing evaluations largely emphasize task-level accuracy, often conflating pattern matching with reasoning capability. We present X-RAY, an explainable reasoning analysis system that maps the LLM reasoning capability using calibrated, formally verified probes. We model reasoning capability as a function of extractable \\textit{structure}, operationalized through formal properties such as constraint interaction, reasoning depth, and solution-space geometry. X-Ray generates probes via formal tools with controlled structural variations, enabling precise isolation of incremental structural information through formal calibration and verification. We evaluate state-of-the-art LLMs on problems ranging from junior-level to advanced in mathematics, physics, and chemistry. Our analysis reveals a systematic asymmetry in LLM reasoning: models are relatively robust to constraint refinement, where additional conditions shrink an existing solution space, but degrade sharply under solution-space restructuring, where modifications alter the underlying structural form of the solution manifold. Moreover, calibrated formal probes differentiate models that appear indistinguishable on standard benchmarks and reveal failure modes that are structurally interpretable rather than opaque. Beyond evaluation, our framework is contamination-free and supports the training and testing of reasoning models.",
+        "authors": "Gao Tianxi, Cai Yufan, Yuan Yusi, Dong Jin Song",
+        "url": "http://arxiv.org/abs/2603.05290v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05290v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 X-RAY 系统，通过校准的、经过形式验证的探测器来映射 LLM 的推理能力。它将推理能力建模为可提取结构（如约束交互、推理深度、解空间几何）的函数，并使用形式化工具进行精确隔离和验证。这种对 LLM 推理进行形式化、数学化分析的方法，与您将严谨数学逻辑应用于现代 AI 系统的目标高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05226v1",
+        "title": "Learning Optimal Individualized Decision Rules with Conditional Demographic Parity",
+        "summary": "Individualized decision rules (IDRs) have become increasingly prevalent in societal applications such as personalized marketing, healthcare, and public policy design. However, a critical ethical concern arises from the potential discriminatory effects of IDRs trained on biased data. These algorithms may disproportionately harm individuals from minority subgroups defined by sensitive attributes like gender, race, or language. To address this issue, we propose a novel framework that incorporates demographic parity (DP) and conditional demographic parity (CDP) constraints into the estimation of optimal IDRs. We show that the theoretically optimal IDRs under DP and CDP constraints can be obtained by applying perturbations to the unconstrained optimal IDRs, enabling a computationally efficient solution. Theoretically, we derive convergence rates for both policy value and the fairness constraint term. The effectiveness of our methods is illustrated through comprehensive simulation studies and an empirical application to the Oregon Health Insurance Experiment.",
+        "authors": "Wenhai Cui, Wen Su, Donglin Zeng, Xingqiu Zhao",
+        "url": "http://arxiv.org/abs/2603.05226v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05226v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个新颖的框架，用于学习具有条件人口均等性 (CDP) 约束的最优个体化决策规则 (IDRs)。它理论上证明了在 DP 和 CDP 约束下，最优 IDRs 可以通过对无约束最优 IDRs 进行扰动获得，并推导了策略价值和公平性约束项的收敛速率。这直接满足了您对优化收敛性、统计保证和因果逻辑（通过IDRs的公平性）的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05175v1",
+        "title": "Incentive Aware AI Regulations: A Credal Characterisation",
+        "summary": "While high-stakes ML applications demand strict regulations, strategic ML providers often evade them to lower development costs. To address this challenge, we cast AI regulation as a mechanism design problem under uncertainty and introduce regulation mechanisms: a framework that maps empirical evidence from models to a license for some market share. The providers can select from a set of licenses, effectively forcing them to bet on their model's ability to fulfil regulation. We aim at regulation mechanisms that achieve perfect market outcome, i.e. (a) drive non-compliant providers to self-exclude, and (b) ensure participation from compliant providers. We prove that a mechanism has perfect market outcome if and only if the set of non-compliant distributions forms a credal set, i.e., a closed, convex set of probability measures. This result connects mechanism design and imprecise probability by establishing a duality between regulation mechanisms and the set of non-compliant distributions. We also demonstrate these mechanisms in practice via experiments on regulating use of spurious features for prediction and fairness. Our framework provides new insights at the intersection of mechanism design and imprecise probability, offering a foundation for development of enforceable AI regulations.",
+        "authors": "Anurag Singh, Julian Rodemann, Rajeev Verma, Siu Lun Chau, Krikamol Muandet",
+        "url": "http://arxiv.org/abs/2603.05175v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05175v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将 AI 监管视为不确定性下的机制设计问题，并引入了监管机制框架。它证明了当不合规分布集构成一个 credal set（概率测度的闭凸集）时，机制能实现完美市场结果，从而建立了机制设计与不精确概率之间的对偶性。这种高度理论化、数学化的方法，尤其是在不确定性下的决策理论方面，与您的研究兴趣非常吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05116v1",
+        "title": "FedBCD:Communication-Efficient Accelerated Block Coordinate Gradient Descent for Federated Learning",
+        "summary": "Although Federated Learning has been widely studied in recent years, there are still high overhead expenses in each communication round for large-scale models such as Vision Transformer. To lower the communication complexity, we propose a novel Federated Block Coordinate Gradient Descent (FedBCGD) method for communication efficiency. The proposed method splits model parameters into several blocks, including a shared block and enables uploading a specific parameter block by each client, which can significantly reduce communication overhead. Moreover, we also develop an accelerated FedBCGD algorithm (called FedBCGD+) with client drift control and stochastic variance reduction. To the best of our knowledge, this paper is the first work on parameter block communication for training large-scale deep models. We also provide the convergence analysis for the proposed algorithms. Our theoretical results show that the communication complexities of our algorithms are a factor $1/N$ lower than those of existing methods, where $N$ is the number of parameter blocks, and they enjoy much faster convergence than their counterparts. Empirical results indicate the superiority of the proposed algorithms compared to state-of-the-art algorithms.   The code is available at https://github.com/junkangLiu0/FedBCGD.",
+        "authors": "Junkang Liu, Fanhua Shang, Yuanyuan Liu, Hongying Liu, Yuangang Li, YunXiang Gong",
+        "url": "http://arxiv.org/abs/2603.05116v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05116v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 FedBCD (Federated Block Coordinate Gradient Descent) 方法，用于联邦学习中的通信效率优化。它提供了所提出算法的收敛性分析，并理论证明了其通信复杂度比现有方法低一个因子 1/N，且收敛速度更快。这直接涉及优化收敛性、数学推导和对现代 AI 系统（联邦学习）的严谨分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05002v1",
+        "title": "Non-Euclidean Gradient Descent Operates at the Edge of Stability",
+        "summary": "The Edge of Stability (EoS) is a phenomenon where the sharpness (largest eigenvalue) of the Hessian converges to $2/η$ during training with gradient descent (GD) with a step-size $η$. Despite (apparently) violating classical smoothness assumptions, EoS has been widely observed in deep learning, but its theoretical foundations remain incomplete. We provide an interpretation of EoS through the lens of Directional Smoothness Mishkin et al. [2024]. This interpretation naturally extends to non-Euclidean norms, which we use to define generalized sharpness under an arbitrary norm. Our generalized sharpness measure includes previously studied vanilla GD and preconditioned GD as special cases, as well as methods for which EoS has not been studied, such as $\\ell_{\\infty}$-descent, Block CD, Spectral GD, and Muon without momentum. Through experiments on neural networks, we show that non-Euclidean GD with our generalized sharpness also exhibits progressive sharpening followed by oscillations around or above the threshold $2/η$. Practically, our framework provides a single, geometry-aware spectral measure that works across optimizers.",
+        "authors": "Rustem Islamov, Michael Crawshaw, Jeremy Cohen, Robert Gower",
+        "url": "http://arxiv.org/abs/2603.05002v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05002v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过“方向平滑性”解释了深度学习训练中“稳定性边缘 (Edge of Stability, EoS)”现象，并将其扩展到非欧几里得范数，定义了广义锐度。它提供了对优化动力学的深刻理论理解，并提出了一个统一的、几何感知的谱度量，适用于各种优化器。这与您对优化收敛性和严谨数学逻辑的追求高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04994v1",
+        "title": "Stochastic Optimal Feedforward-Feedback Control for Partially Observable Sensorimotor Systems",
+        "summary": "Robust control of complex engineered and biological systems hinges on the integration of feedforward and feedback mechanisms. This is exemplified in neural motor control, where feedforward muscle co-contraction complements sensory-driven feedback corrections to ensure stable behaviors. However, deriving a general continuous-time framework to determine such optimal control policies for partially observable, stochastic, nonlinear, and high-dimensional systems remains a formidable computational challenge. Here, we introduce a framework that extends neighboring optimal control by enabling the feedforward plan to explicitly account for feedback uncertainties and latencies. Using statistical linearization, we transform the stochastic problem into an approximately equivalent deterministic optimization within a tractable, augmented state space that retains critical nonlinearities, offering both mechanistic interpretability and theoretical guarantees on approximation fidelity. We apply this framework to human neuromechanics, demonstrating that muscle co-contraction emerges as an optimal adaptation to task demands, given the characteristics of our sensorimotor system. Our results provide a computational foundation for neuromotor control and a generalizable tool for the control of nonlinear stochastic systems.",
+        "authors": "Bastien Berret, Frédéric Jean",
+        "url": "http://arxiv.org/abs/2603.04994v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04994v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个通用的连续时间框架，用于部分可观测、随机、非线性、高维系统的随机最优前馈-反馈控制。它利用统计线性化将随机问题转化为近似等效的确定性优化，并提供了近似保真度的理论保证。这种对随机系统最优控制的严谨数学处理和理论保证，是您会非常感兴趣的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04881v1",
+        "title": "Differential Privacy in Two-Layer Networks: How DP-SGD Harms Fairness and Robustness",
+        "summary": "Differentially private learning is essential for training models on sensitive data, but empirical studies consistently show that it can degrade performance, introduce fairness issues like disparate impact, and reduce adversarial robustness. The theoretical underpinnings of these phenomena in modern, non-convex neural networks remain largely unexplored. This paper introduces a unified feature-centric framework to analyze the feature learning dynamics of differentially private stochastic gradient descent (DP-SGD) in two-layer ReLU convolutional neural networks. Our analysis establishes test loss bounds governed by a crucial metric: the feature-to-noise ratio (FNR). We demonstrate that the noise required for privacy leads to suboptimal feature learning, and specifically show that: 1) imbalanced FNRs across classes and subpopulations cause disparate impact; 2) even in the same class, noise has a greater negative impact on semantically long-tailed data; and 3) noise injection exacerbates vulnerability to adversarial attacks. Furthermore, our analysis reveals that the popular paradigm of public pre-training and private fine-tuning does not guarantee improvement, particularly under significant feature distribution shifts between datasets. Experiments on synthetic and real-world data corroborate our theoretical findings.",
+        "authors": "Ruichen Xu, Kexin Chen",
+        "url": "http://arxiv.org/abs/2603.04881v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04881v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为差分隐私随机梯度下降 (DP-SGD) 在两层 ReLU 卷积神经网络中损害公平性和鲁棒性的现象提供了理论基础。它建立了由特征-噪声比 (FNR) 决定的测试损失界限，并分析了次优特征学习、不平衡 FNRs 和对抗性攻击的脆弱性。这篇论文对隐私保护学习的统计特性进行了深入的理论分析，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04843v1",
+        "title": "Policy Optimization of Mixed H2/H-infinity Control: Benign Nonconvexity and Global Optimality",
+        "summary": "Mixed H2/H-infinity control balances performance and robustness by minimizing an H2 cost bound subject to an H-infinity constraint. However, classical Riccati/LMI solutions offer limited insight into the nonconvex optimization landscape and do not readily scale to large-scale or data-driven settings. In this paper, we revisit mixed H2/H-infinity control from a modern policy optimization viewpoint, including the general two-channel and single-channel cases. One central result is that both cases enjoy a benign nonconvex structure: every stationary point is globally optimal. We characterize the H-infinity-constrained feasible set, which is open, path-connected, with boundary given exactly by policies saturating the H-infinity constraint. We also show that the mixed objective is real analytic in the interior with explicit gradient formulas. Our key analysis builds on an Extended Convex Lifting (ECL) framework that bridges nonconvex policy optimization and convex reformulations. The ECL constructions rely on non-strict Riccati inequalities that allow us to characterize global optimality. These insights reveal hidden convexity in mixed H2/H-infinity control and facilitate the design of scalable policy iteration methods in large-scale settings.",
+        "authors": "Chih-Fan Pai, Yuto Watanabe, Yujie Tang, Yang Zheng",
+        "url": "http://arxiv.org/abs/2603.04843v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04843v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从现代策略优化角度重新审视了混合 H2/H-infinity 控制问题，并证明了其具有“良性非凸结构”，即每个驻点都是全局最优的。它通过扩展凸提升 (ECL) 框架和非严格 Riccati 不等式来表征全局最优性。这篇论文在优化和控制理论方面具有深厚的理论贡献和严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04812v1",
+        "title": "Quadratic polarity and polar Fenchel-Young divergences from the canonical Legendre polarity",
+        "summary": "Polarity is a fundamental reciprocal duality of $n$-dimensional projective geometry which associates to points polar hyperplanes, and more generally $k$-dimensional convex bodies to polar $(n-1-k)$-dimensional convex bodies. It is well-known that the Legendre-Fenchel transformation of functions can be interpreted from the polarity viewpoint of their graphs using an extra dimension. In this paper, we first show that generic polarities induced by quadratic polarity functionals can be expressed either as deformed Legendre polarity or as the Legendre polarity of deformed convex bodies, and be efficiently manipulated using linear algebra on $(n+2)\\times (n+2)$ matrices operating on homogeneous coordinates. Second, we define polar divergences using the Legendre polarity and show that they generalize the Fenchel-Young divergence or equivalent Bregman divergence. This polarity study brings new understanding of the core reference duality in information geometry. Last, we show that the total Bregman divergences can be considered as a total polar Fenchel-Young divergence from which we newly exhibit the reference duality using dual polar conformal factors.",
+        "authors": "Frank Nielsen, Basile Plus-Gourdon, Mahito Sugiyama",
+        "url": "http://arxiv.org/abs/2603.04812v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04812v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 4
+        },
+        "reason_zh": "这是一篇纯理论数学论文，深入探讨了二次极性和极性 Fenchel-Young 散度与经典 Legendre 极性之间的关系。它将 Legendre-Fenchel 变换从极性角度进行解释，并定义了推广 Fenchel-Young 散度或 Bregman 散度的极性散度。这篇论文为信息几何中的核心对偶性提供了新的理解，其高度抽象和严谨的数学性质是您会非常欣赏的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04768v1",
+        "title": "Distributional Reinforcement Learning with Information Bottleneck for Uncertainty-Aware DRAM Equalization",
+        "summary": "Equalizer parameter optimization is critical for signal integrity in high-speed memory systems operating at multi-gigabit data rates. However, existing methods suffer from computationally expensive eye diagram evaluation, optimization of expected rather than worst-case performance, and absence of uncertainty quantification for deployment decisions. In this paper, we propose a distributional risk-sensitive reinforcement learning framework integrating Information Bottleneck latent representations with Conditional Value-at-Risk optimization. We introduce rate-distortion optimal signal compression achieving 51 times speedup over eye diagrams while quantifying epistemic uncertainty through Monte Carlo dropout. Distributional reinforcement learning with quantile regression enables explicit worst-case optimization, while PAC-Bayesian regularization certifies generalization bounds. Experimental validation on 2.4 million waveforms from eight memory units demonstrated mean improvements of 37.1\\% and 41.5\\% for 4-tap and 8-tap equalizer configurations with worst-case guarantees of 33.8\\% and 38.2\\%, representing 80.7\\% and 89.1\\% improvements over Q-learning baselines. The framework achieved 62.5\\% high-reliability classification eliminating manual validation for most configurations. These results suggest the proposed framework provides a practical solution for production-scale equalizer optimization with certified worst-case guarantees.",
+        "authors": "Muhammad Usama, Dong Eui Chang",
+        "url": "http://arxiv.org/abs/2603.04768v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04768v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个结合信息瓶颈 (Information Bottleneck) 潜在表示和条件风险价值 (Conditional Value-at-Risk) 优化的分布式风险敏感强化学习框架。它利用 PAC-Bayesian 正则化来证明泛化界限，并提供最坏情况保证。这篇论文在强化学习、信息理论和统计保证方面具有强大的理论基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05318v1",
+        "title": "GALACTIC: Global and Local Agnostic Counterfactuals for Time-series Clustering",
+        "summary": "Time-series clustering is a fundamental tool for pattern discovery, yet existing explainability methods, primarily based on feature attribution or metadata, fail to identify the transitions that move an instance across cluster boundaries. While Counterfactual Explanations (CEs) identify the minimal temporal perturbations required to alter the prediction of a model, they have been mostly confined to supervised settings. This paper introduces GALACTIC, the first unified framework to bridge local and global counterfactual explainability for unsupervised time-series clustering. At instance level (local), GALACTIC generates perturbations via a cluster-aware optimization objective that respects the target and underlying cluster assignments. At cluster level (global), to mitigate cognitive load and enhance interpretability, we formulate a representative CE selection problem. We propose a Minimum Description Length (MDL) objective to extract a non-redundant summary of global explanations that characterize the transitions between clusters. We prove that our MDL objective is supermodular, which allows the corresponding MDL reduction to be framed as a monotone submodular set function. This enables an efficient greedy selection algorithm with provable $(1-1/e)$ approximation guarantees. Extensive experimental evaluation on the UCR Archive demonstrates that GALACTIC produces significantly sparser local CEs and more concise global summaries than state-of-the-art baselines adapted for our problem, offering the first unified approach for interpreting clustered time-series through counterfactuals.",
+        "authors": "Christos Fragkathoulas, Eleni Psaroudaki, Themis Palpanas, Evaggelia Pitoura",
+        "url": "http://arxiv.org/abs/2603.05318v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05318v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 GALACTIC 框架，用于无监督时间序列聚类的局部和全局反事实解释。它将全局解释的代表性选择问题公式化为最小描述长度 (MDL) 目标，并证明其是超模的，从而允许使用具有可证明 (1-1/e) 近似保证的贪婪选择算法。这种对优化问题提供可证明近似保证的严谨性，与您的偏好非常一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04689v1",
+        "title": "Generalizing Fair Top-$k$ Selection: An Integrative Approach",
+        "summary": "Fair top-$k$ selection, which ensures appropriate proportional representation of members from minority or historically disadvantaged groups among the top-$k$ selected candidates, has drawn significant attention. We study the problem of finding a fair (linear) scoring function with multiple protected groups while also minimizing the disparity from a reference scoring function. This generalizes the prior setup, which was restricted to the single-group setting without disparity minimization. Previous studies imply that the number of protected groups may have a limited impact on the runtime efficiency. However, driven by the need for experimental exploration, we find that this implication overlooks a critical issue that may affect the fairness of the outcome. Once this issue is properly considered, our hardness analysis shows that the problem may become computationally intractable even for a two-dimensional dataset and small values of $k$. However, our analysis also reveals a gap in the hardness barrier, enabling us to recover the efficiency for the case of small $k$ when the number of protected groups is sufficiently small. Furthermore, beyond measuring disparity as the \"distance\" between the fair and the reference scoring functions, we introduce an alternative disparity measure$\\unicode{x2014}$utility loss$\\unicode{x2014}$that may yield a more stable scoring function under small weight perturbations. Through careful engineering trade-offs that balance implementation complexity, robustness, and performance, our augmented two-pronged solution demonstrates strong empirical performance on real-world datasets, with experimental observations also informing algorithm design and implementation decisions.",
+        "authors": "Guangya Cai",
+        "url": "http://arxiv.org/abs/2603.04689v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04689v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了公平 Top-k 选择问题，将其推广到多个受保护群体并最小化与参考评分函数的差异。它进行了难度分析，揭示了在特定条件下问题的计算复杂性，并引入了替代的差异度量（效用损失）来评估评分函数的稳定性。这种对公平性算法的数学分析、复杂性理论和度量稳定性研究，符合您对严谨数学逻辑和理论基础的追求。"
+    }
+]

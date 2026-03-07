@@ -1,0 +1,155 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.01309v1",
+        "title": "PAC Guarantees for Reinforcement Learning: Sample Complexity, Coverage, and Structure",
+        "summary": "When data is scarce or mistakes are costly, average-case metrics fall short. What a practitioner needs is a guarantee: with probability at least $1-δ$, the learned policy is $\\varepsilon$-close to optimal after $N$ episodes. This is the PAC promise, and between 2018 and 2025 the RL theory community made striking progress on when such promises can be kept. We survey that progress. Our organizing tool is the Coverage-Structure-Objective (CSO) framework, proposed here, which decomposes nearly every PAC sample complexity result into three factors: coverage (how data were obtained), structure (intrinsic MDP or function-class complexity), and objective (what the learner must deliver). CSO is not a theorem but an interpretive template that identifies bottlenecks and makes cross-setting comparison immediate. The technical core covers tight tabular baselines and the uniform-PAC bridge to regret; structural complexity measures (Bellman rank, witness rank, Bellman-Eluder dimension) governing learnability with function approximation; results for linear, kernel/NTK, and low-rank models; reward-free exploration as upfront coverage investment; and pessimistic offline RL where inherited coverage is the binding constraint. We provide practitioner tools: rate lookup tables indexed by CSO coordinates, Bellman residual diagnostics, coverage estimation with deployment gates, and per-episode policy certificates. A final section catalogs open problems, separating near-term targets from frontier questions where coverage, structure, and computation tangle in ways current theory cannot resolve.",
+        "authors": "Joshua Steier",
+        "url": "http://arxiv.org/abs/2603.01309v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01309v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "全面综述强化学习的PAC理论保证，涵盖样本复杂度、覆盖度与结构，并深入探讨Offline RL，为未来研究指明方向。",
+        "reason_zh": "这篇综述完美契合了您对“Offline RL”和“指引未来的研究方向”的需求。它系统地梳理了PAC-RL的最新进展，引入了CSO框架，并详细讨论了Bellman rank等结构复杂性度量，对理解RL理论机制和未来研究具有极高的实用价值和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.05396v1",
+        "title": "Harnessing Synthetic Data from Generative AI for Statistical Inference",
+        "summary": "The emergence of generative AI models has dramatically expanded the availability and use of synthetic data across scientific, industrial, and policy domains. While these developments open new possibilities for data analysis, they also raise fundamental statistical questions about when synthetic data can be used in a valid, reliable, and principled manner. This paper reviews the current landscape of synthetic data generation and use from a statistical perspective, with the goal of clarifying the assumptions under which synthetic data can meaningfully support downstream discovery, inference, and prediction. We survey major classes of modern generative models, their intended use cases, and the benefits they offer, while also highlighting their limitations and characteristic failure modes. We additionally examine common pitfalls that arise when synthetic data are treated as surrogates for real observations, including biases from model misspecification, attenuated uncertainty, and difficulties in generalization. Building on these insights, we discuss emerging frameworks for the principled use of synthetic data. We conclude with practical recommendations, open problems, and cautions intended to guide both method developers and applied researchers.",
+        "authors": "Ahmad Abdel-Azim, Ruoyu Wang, Xihong Lin",
+        "url": "http://arxiv.org/abs/2603.05396v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.05396v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "从统计学视角审视生成式AI合成数据的应用与挑战，深入探讨其在统计推断中的假设、局限与新兴框架。",
+        "reason_zh": "这是一篇及时且具有深刻统计学洞察的综述，直接关联“LLM理论机制”（作为生成式AI的一种）和“高维统计”（合成数据在复杂模型中的应用）。它澄清了合成数据用于推断的统计学基础和潜在陷阱，对理解AI时代数据分析的范式转变至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.04275v1",
+        "title": "Statistical Inference for Score Decompositions",
+        "summary": "We introduce inference methods for score decompositions, which partition scoring functions for predictive assessment into three interpretable components: miscalibration, discrimination, and uncertainty. Our estimation and inference relies on a linear recalibration of the forecasts, which is applicable to general multi-step ahead point forecasts such as means and quantiles due to its validity for both smooth and non-smooth scoring functions. This approach ensures desirable finite-sample properties, enables asymptotic inference, and establishes a direct connection to the classical Mincer-Zarnowitz regression. The resulting inference framework facilitates tests for equal forecast calibration or discrimination, which yield three key advantages. They enhance the information content of predictive ability tests by decomposing scores, deliver higher statistical power in certain scenarios, and formally connect scoring-function-based evaluation to traditional calibration tests, such as financial backtests. Applications demonstrate the method's utility. We find that for survey inflation forecasts, discrimination abilities can differ significantly even when overall predictive ability does not. In an application to financial risk models, our tests provide deeper insights into the calibration and information content of volatility and Value-at-Risk forecasts. By disentangling forecast accuracy from backtest performance, the method exposes critical shortcomings in current banking regulation.",
+        "authors": "Timo Dimitriadis, Marius Puke",
+        "url": "http://arxiv.org/abs/2603.04275v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.04275v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出并分析了用于预测评估的评分函数分解的统计推断方法，将其分解为校准、区分和不确定性，并提供严谨的渐近推断框架。",
+        "reason_zh": "该论文提供了严谨的统计推断方法，用于分解预测模型的性能，这在“高维统计”和模型评估中具有重要意义。其数学严谨性高，通过连接Mincer-Zarnowitz回归等经典方法，为预测能力测试提供了更深层次的洞察，具有很高的实用性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.03177v1",
+        "title": "Neuro-Symbolic Artificial Intelligence: A Task-Directed Survey in the Black-Box Models Era",
+        "summary": "The integration of symbolic computing with neural networks has intrigued researchers since the first theorizations of Artificial intelligence (AI). The ability of Neuro-Symbolic (NeSy) methods to infer or exploit behavioral schema has been widely considered as one of the possible proxies for human-level intelligence. However, the limited semantic generalizability and the challenges in declining complex domains with pre-defined patterns and rules hinder their practical implementation in real-world scenarios. The unprecedented results achieved by connectionist systems since the last AI breakthrough in 2017 have raised questions about the competitiveness of NeSy solutions, with particular emphasis on the Natural Language Processing and Computer Vision fields. This survey examines task-specific advancements in the NeSy domain to explore how incorporating symbolic systems can enhance explainability and reasoning capabilities. Our findings are meant to serve as a resource for researchers exploring explainable NeSy methodologies for real-life tasks and applications. Reproducibility details and in-depth comments on each surveyed research work are made available at https://github.com/disi-unibo-nlp/task-oriented-neuro-symbolic.git.",
+        "authors": "Giovanni Pio Delvecchio, Lorenzo Molfetta, Gianluca Moro",
+        "url": "http://arxiv.org/abs/2603.03177v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.03177v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述神经符号AI在黑盒模型时代的发展，探讨如何通过结合符号系统增强AI的可解释性和推理能力。",
+        "reason_zh": "这篇综述直接回应了您对“LLM理论机制”中关于可解释性和推理能力的核心挑战。它探讨了神经符号AI作为一种潜在解决方案，为理解和改进LLM的内部工作机制提供了新的视角和研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01896v2",
+        "title": "Agentic Code Reasoning",
+        "summary": "Can LLM agents explore codebases and reason about code semantics without executing the code? We study this capability, which we call agentic code reasoning, and introduce semi-formal reasoning: a structured prompting methodology that requires agents to construct explicit premises, trace execution paths, and derive formal conclusions. Unlike unstructured chain-of-thought, semi-formal reasoning acts as a certificate: the agent cannot skip cases or make unsupported claims. We evaluate across three tasks (patch equivalence verification, fault localization, and code question answering) and show that semi-formal reasoning consistently improves accuracy on all of them. For patch equivalence, accuracy improves from 78% to 88% on curated examples and reaches 93% on real-world agent-generated patches, approaching the reliability needed for execution-free RL reward signals. For code question answering on RubberDuckBench Mohammad et al. (2026), semi-formal reasoning achieves 87% accuracy. For fault localization on Defects4J Just et al. (2014), semi-formal reasoning improves Top-5 accuracy by 5 percentage points over standard reasoning. These results demonstrate that structured agentic reasoning enables meaningful semantic code analysis without execution, opening practical applications in RL training pipelines, code review, and static program analysis.",
+        "authors": "Shubham Ugare, Satish Chandra",
+        "url": "http://arxiv.org/abs/2603.01896v2",
+        "pdf_url": "https://arxiv.org/pdf/2603.01896v2",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "探索LLM代理的代码推理能力，提出半形式化推理方法，通过结构化提示提升代理在代码语义分析上的准确性。",
+        "reason_zh": "这篇论文深入探讨了LLM的“理论机制”，特别是其在复杂任务（如代码推理）中的表现和改进方法。半形式化推理的提出，为提升LLM的逻辑严谨性和可验证性提供了具体路径，对理解LLM的认知能力边界和发展方向具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02459v1",
+        "title": "A survey of sampling discretization of integral and uniform norms",
+        "summary": "This paper surveys recent developments in the sampling discretization of integral and uniform norms for functions in general finite-dimensional spaces. These results generalize the classical Marcinkiewicz-Zygmund inequalities for trigonometric and algebraic polynomials, which play a crucial role in Fourier analysis, interpolation, and approximation theory. We focus on the problem in the broad context of finite-dimensional subspaces, where norms defined by general probability measures are approximated by their discrete counterparts.   The primary emphasis is on results closely related to the authors' recent research. A key objective is to highlight the main ideas and techniques that form the foundation of the proofs in this area. This survey serves as a complement to three recently published survey papers on sampling discretization \\cite{DPTT, KKLT, LMT}.",
+        "authors": "F. Dai, E. Kosov, V. Temlyakov",
+        "url": "http://arxiv.org/abs/2603.02459v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02459v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述有限维空间函数积分和均匀范数采样离散化的最新进展，深入探讨其背后的数学思想和证明技术。",
+        "reason_zh": "这篇综述是一篇关于函数分析和逼近理论的硬核数学资料，完美契合您对“高等概率论”（涉及测度论和泛函分析背景）和“数学严谨性”的要求。它聚焦于经典Marcinkiewicz-Zygmund不等式的推广，是补全博士数学基础的绝佳资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.01975v1",
+        "title": "Density-Matrix Spectral Embeddings for Categorical Data: Operator Structure and Stability",
+        "summary": "We introduce a supervised dimensionality reduction methodology for categorical (and discretized mixed-type) data based on a density-matrix construction induced by class-conditional frequencies. Given a labeled dataset encoded in a one-hot survey space, we assemble a frequency matrix whose columns aggregate feature occurrences within each class, and define a normalized Gram-type operator that satisfies the axioms of a density matrix. The resulting representation admits an intrinsic rank bound controlled by the number of classes, enabling low-dimensional spectral embeddings via dominant eigenmodes.   Classification is performed in the reduced space through class-conditional kernel density estimation and a maximum-likelihood decision rule.   We establish structural invariances, provide complexity estimates, and validate the approach on synthetic benchmarks probing high cardinality, sparsity, noise, and class imbalance.",
+        "authors": "Raquel Bosch-Romeu, Antonio Falcó, osé-Antonio Rodríguez-Gallego",
+        "url": "http://arxiv.org/abs/2603.01975v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.01975v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "介绍基于密度矩阵构建的分类数据谱嵌入方法，深入分析其算子结构和稳定性，实现高维数据的降维。",
+        "reason_zh": "这篇论文在“矩阵分析”和“高维统计”领域提供了严谨的数学方法。它通过密度矩阵和谱分解进行降维，其对算子结构和稳定性的分析具有极高的“数学严谨性”，是理解高维数据处理底层数学原理的优质资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02809v1",
+        "title": "Lattice-based Deep Neural Networks: Regularity and Tailored Regularization",
+        "summary": "This survey article is concerned with the application of lattice rules to Deep Neural Networks (DNNs), lattice rules being a family of quasi-Monte Carlo methods. They have demonstrated effectiveness in various contexts for high-dimensional integration and function approximation. They are extremely easy to implement thanks to their very simple formulation -- all that is required is a good integer generating vector of length matching the dimensionality of the problem. In recent years there has been a burst of research activities on the application and theory of DNNs. We review our recent article on using lattice rules as training points for DNNs with a smooth activation function, where we obtained explicit regularity bounds of the DNNs. By imposing restrictions on the network parameters to match the regularity features of the target function, we prove that DNNs with tailored lattice training points can achieve good theoretical generalization error bounds, with implied constants independent of the input dimension. We also demonstrate numerically that DNNs trained with our tailored regularization perform significantly better than with standard $\\ell_2$ regularization.",
+        "authors": "Alexander Keller, Frances Y. Kuo, Dirk Nuyens, Ian H. Sloan",
+        "url": "http://arxiv.org/abs/2603.02809v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02809v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述将格点规则应用于深度神经网络的研究，重点关注DNN的正则性、理论泛化误差界及其与输入维度的独立性。",
+        "reason_zh": "这篇综述虽然涉及DNN，但其核心是深入探讨DNN的“数学严谨性”和“理论泛化误差界”，特别是与“高维统计”相关的维度独立性。它提供了理解深度学习模型数学基础的硬核资料，而非应用层面，非常适合博士生。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.02946v1",
+        "title": "Fast simulation of Volterra processes using random Fourier features with application to the log-stationary fractional Brownian motion",
+        "summary": "A fast simulation framework for stochastic Volterra processes based on Random Fourier Features (RFF) approximation of the kernel is developed. After recalling the main properties of Volterra processes and reviewing existing numerical simulation methods, an accelerated scheme is introduced that relies on a spectral representation of the kernel. A particular attention is devoted to sampling from the kernel spectral density using Hamiltonian Monte Carlo, whose efficiency and stability bring more convenience than alternative sampling procedures. Quantitative guarantees for the proposed method are established, including moment estimates and strong error bounds. The approach is further compared with the kernel approximation by sum of exponentials (Random Laplace Features) commonly used in the literature, emphasizing the broader generality of the present framework. As a primary application, Volterra processes associated with the Stationary fractional Brownian Motion (S-fBM) kernel are investigated. A spectral density representation is derived in closed form using hypergeometric functions, a condition for positive definiteness is established, and explicit truncation as well as Monte Carlo error bounds are provided for the RFF approximation in this setting. Numerical experiments in dimensions one and two illustrate the accuracy of the kernel approximation, the reliable recovery of model parameters, and the competitiveness of the accelerated simulation scheme in terms of computational efficiency and both weak and strong error performance.",
+        "authors": "Othmane Zarhali, Nicolas Langrené",
+        "url": "http://arxiv.org/abs/2603.02946v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.02946v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "提出基于随机傅里叶特征的Volterra过程快速模拟框架，并提供严格的矩估计和强误差界。",
+        "reason_zh": "这篇论文聚焦于“高等概率论/随机过程”中的Volterra过程模拟，并提供了“数学严谨性”极高的定量保证和误差界。它不仅介绍了先进的模拟方法，更重要的是对其数学性质进行了深入分析，非常适合博士生补全随机过程的数学拼图。"
+    }
+]

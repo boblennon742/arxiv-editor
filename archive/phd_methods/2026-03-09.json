@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.08239v1",
+        "title": "Fibration Policy Optimization",
+        "summary": "Large language models are increasingly trained as heterogeneous systems spanning multiple domains, expert partitions, and agentic pipelines, yet prevalent proximal objectives operate at a single scale and lack a principled mechanism for coupling token-level, trajectory-level, and higher-level hierarchical stability control. To bridge this gap, we derive the Aggregational Policy Censoring Objective (APC-Obj), the first exact unconstrained reformulation of sample-based TV-TRPO, establishing that clipping-based surrogate design and trust-region optimization are dual formulations of the same problem. Building on this foundation, we develop Fiber Bundle Gating (FBG), an algebraic framework that organizes sampled RL data as a fiber bundle and decomposes ratio gating into a base-level gate on trajectory aggregates and a fiber-level gate on per-token residuals, with provable first-order agreement with the true RL objective near on-policy. From APC-Obj and FBG we derive Fibration Policy Optimization (or simply, FiberPO), a concrete objective whose Jacobian is block-diagonal over trajectories, reduces to identity at on-policy, and provides better update direction thus improving token efficiency. The compositional nature of the framework extends beyond the trajectory-token case: fibrations compose algebraically into a Fibration Gating Hierarchy (FGH) that scales the same gating mechanism to arbitrary hierarchical depth without new primitives, as demonstrated by FiberPO-Domain, a four-level instantiation with independent trust-region budgets at the domain, prompt group, trajectory, and token levels. Together, these results connect the trust-region theory, a compositional algebraic structure, and practical multi-scale stability control into a unified framework for LLM policy optimization.",
+        "authors": "Chang Li, Tshihao Tsu, Yaren Zhang, Chao Xue, Xiaodong He",
+        "url": "http://arxiv.org/abs/2603.08239v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08239v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Fibration Policy Optimization，是第一个对TV-TRPO进行精确无约束重构的方法，并引入了Fiber Bundle Gating代数框架，实现了token-level、trajectory-level和更高层级的多尺度稳定性控制。其理论严谨性极高，为LLM策略优化提供了统一的理论框架和实际的多尺度控制机制，对LLM训练算法具有深远影响，完美契合您对前沿算法和理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.07965v1",
+        "title": "Local Constrained Bayesian Optimization",
+        "summary": "Bayesian optimization (BO) for high-dimensional constrained problems remains a significant challenge due to the curse of dimensionality. We propose Local Constrained Bayesian Optimization (LCBO), a novel framework tailored for such settings. Unlike trust-region methods that are prone to premature shrinking when confronting tight or complex constraints, LCBO leverages the differentiable landscape of constraint-penalized surrogates to alternate between rapid local descent and uncertainty-driven exploration. Theoretically, we prove that LCBO achieves a convergence rate for the Karush-Kuhn-Tucker (KKT) residual that depends polynomially on the dimension $d$ for common kernels under mild assumptions, offering a rigorous alternative to global BO where regret bounds typically scale exponentially. Extensive evaluations on high-dimensional benchmarks (up to 100D) demonstrate that LCBO consistently outperforms state-of-the-art baselines.",
+        "authors": "Jing Jingzhe, Fan Zheyi, Szu Hui Ng, Qingpei Hu",
+        "url": "http://arxiv.org/abs/2603.07965v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.07965v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Local Constrained Bayesian Optimization (LCBO) 框架，专为高维约束问题设计。它在理论上证明了KKT残差的收敛速度与维度d呈多项式关系，解决了高维BO的维度灾难问题。其理论严谨性非常高，对统计学和优化算法领域具有重要突破，是数理统计博士生非常值得深入研究的方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08453v1",
+        "title": "LycheeCluster: Efficient Long-Context Inference with Structure-Aware Chunking and Hierarchical KV Indexing",
+        "summary": "The quadratic complexity of the attention mechanism and the substantial memory footprint of the Key-Value (KV) cache present severe computational and memory challenges for Large Language Models (LLMs) processing long contexts. Existing retrieval-based methods often compromise semantic integrity through fixed-size chunking and suffer from inefficient linear scanning. In this paper, we propose LycheeCluster, a novel method for efficient KV cache management. LycheeCluster preserves local semantic coherence via boundary-aware chunking and constructs a recursive hierarchical index rooted in the triangle inequality. This design transforms cache retrieval from a linear scan into a theoretically bounded, logarithmic-time pruning process, while a lazy update strategy supports efficient streaming generation. Experiments demonstrate that LycheeCluster achieves up to a 3.6x end-to-end inference speedup with negligible degradation in model performance, outperforming state-of-the-art KV cache management methods (e.g., Quest, ClusterKV). We will release our code and kernels after publication.",
+        "authors": "Dongfang Li, Zixuan Liu, Gang Lin, Baotian Hu, Min Zhang",
+        "url": "http://arxiv.org/abs/2603.08453v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08453v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LycheeCluster提出了一种高效的KV缓存管理方法，通过结构感知分块和基于三角不等式的递归分层索引，将缓存检索从线性扫描转换为理论上有界的对数时间剪枝。这直接解决了LLM长上下文处理中的二次复杂度瓶颈，实现了高达3.6倍的推理加速，且性能损失可忽略不计，是LLM应用中数据效率和模型架构优化的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08274v1",
+        "title": "How Much Do LLMs Hallucinate in Document Q&A Scenarios? A 172-Billion-Token Study Across Temperatures, Context Lengths, and Hardware Platforms",
+        "summary": "How much do large language models actually hallucinate when answering questions grounded in provided documents? Despite the critical importance of this question for enterprise AI deployments, reliable measurement has been hampered by benchmarks that rely on static datasets vulnerable to contamination, LLM-based judges with documented biases, or evaluation scales too small for statistical confidence. We address this gap using RIKER, a ground-truth-first evaluation methodology that enables deterministic scoring without human annotation. Across 35 open-weight models, three context lengths (32K, 128K, and 200K tokens), four temperature settings, and three hardware platforms (NVIDIA H200, AMD MI300X, and Intel Gaudi 3), we conducted over 172 billion tokens of evaluation - an order of magnitude beyond prior work. Our findings reveal that: (1) even the best-performing models fabricate answers at a non-trivial rate - 1.19% at best at 32K, with top-tier models at 5 - 7% - and fabrication rises steeply with context length, nearly tripling at 128K and exceeding 10% for all models at 200K; (2) model selection dominates all other factors, with overall accuracy spanning a 72-percentage-point range and model family predicting fabrication resistance better than model size; (3) temperature effects are nuanced - T=0.0 yields the best overall accuracy in roughly 60% of cases, but higher temperatures reduce fabrication for the majority of models and dramatically reduce coherence loss (infinite generation loops), which can reach 48x higher rates at T=0.0 versus T=1.0; (4) grounding ability and fabrication resistance are distinct capabilities - models that excel at finding facts may still fabricate facts that do not exist; and (5) results are consistent across hardware platforms, confirming that deployment decisions need not be hardware-dependent.",
+        "authors": "JV Roig",
+        "url": "http://arxiv.org/abs/2603.08274v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08274v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过RIKER方法对LLM在文档问答场景中的幻觉现象进行了大规模、地真值优先的评估。它揭示了幻觉率随上下文长度急剧上升的趋势，并量化了模型选择、温度等因素的影响。其评估方法具有创新性和严谨性，直接解决了LLM在实际应用（尤其是企业部署）中的信任瓶颈，对LLM的可靠性研究至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08065v1",
+        "title": "Deterministic Differentiable Structured Pruning for Large Language Models",
+        "summary": "Structured pruning reduces LLM inference cost by removing low-importance architectural components. This can be viewed as learning a multiplicative gate for each component under an l0 sparsity constraint. Due to the discreteness of the l0 norm, prior work typically adopts stochastic hard-concrete relaxations to enable differentiable optimization; however, this stochasticity can introduce a train--test mismatch when sampled masks are discretized for deployment and restricts masks to a bounded, near-binary range. To address this, we propose Deterministic Differentiable Pruning (DDP), a mask-only optimization method that eliminates stochasticity by directly optimizing a deterministic soft surrogate of the discrete l0 objective. Compared with prior approaches, DDP offers greater expressiveness, reduced train--test mismatch, and faster convergence. We apply our method to several dense and MoE models, including Qwen3-32B and Qwen3-30B-A3B, achieving a performance loss as small as 1% on downstream tasks while outperforming previous methods at 20% sparsity. We further demonstrate end-to-end inference speedups in realistic deployment settings with vLLM.",
+        "authors": "Weiyu Huang, Pengle Zhang, Xiaolu Zhang, Jun Zhou, Jun Zhu, Jianfei Chen",
+        "url": "http://arxiv.org/abs/2603.08065v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08065v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Deterministic Differentiable Pruning (DDP)，一种用于LLM结构化剪枝的方法，通过直接优化离散l0目标的确定性软替代来消除随机性。这在理论上提高了表达能力，减少了训练-测试不匹配，并加速了收敛。它有效解决了LLM模型压缩和推理成本的实际瓶颈，实现了显著的推理加速和参数/FLOPs减少，同时保持了高保真度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08022v1",
+        "title": "Capacity-Aware Mixture Law Enables Efficient LLM Data Optimization",
+        "summary": "A data mixture refers to how different data sources are combined to train large language models, and selecting an effective mixture is crucial for optimal downstream performance. Existing methods either conduct costly searches directly on the target model or rely on mixture scaling laws that fail to extrapolate well to large model sizes. We address these limitations by introducing a compute-efficient pipeline for data mixture scaling. First, we propose CAMEL, a capacity-aware mixture law that models validation loss with the nonlinear interplay between model size and mixture. We also introduce a loss-to-benchmark prediction law that estimates benchmark accuracy from validation loss, enabling end-to-end performance prediction for the target model. Next, we study how to allocate a fixed compute budget across model scales to fit the law and reduce prediction error. Finally, we apply our method to Mixture-of-Experts models with up to 7B-A150M parameters to fit the law, and verify the optimal mixture derived from the law by extrapolating to a 55B-A1.2B target model. Compared to prior methods, we reduces mixture optimization costs by 50\\% and improves downstream benchmark performance by up to 3\\%.",
+        "authors": "Jingwei Li, Xinran Gu, Jingzhao Zhang",
+        "url": "http://arxiv.org/abs/2603.08022v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08022v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了Capacity-Aware Mixture Law (CAMEL) 和loss-to-benchmark预测定律，用于高效的LLM数据混合优化。它建模了模型大小和混合之间的非线性相互作用，并能端到端预测目标模型的性能。该方法将混合优化成本降低了50%，并提升了下游基准性能，为LLM数据效率和训练架构优化提供了理论指导和实际解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08495v1",
+        "title": "Efficient Credal Prediction through Decalibration",
+        "summary": "A reliable representation of uncertainty is essential for the application of modern machine learning methods in safety-critical settings. In this regard, the use of credal sets (i.e., convex sets of probability distributions) has recently been proposed as a suitable approach to representing epistemic uncertainty. However, as with other approaches to epistemic uncertainty, training credal predictors is computationally complex and usually involves (re-)training an ensemble of models. The resulting computational complexity prevents their adoption for complex models such as foundation models and multi-modal systems. To address this problem, we propose an efficient method for credal prediction that is grounded in the notion of relative likelihood and inspired by techniques for the calibration of probabilistic classifiers. For each class label, our method predicts a range of plausible probabilities in the form of an interval. To produce the lower and upper bounds of these intervals, we propose a technique that we refer to as decalibration. Extensive experiments show that our method yields credal sets with strong performance across diverse tasks, including coverage-efficiency evaluation, out-of-distribution detection, and in-context learning. Notably, we demonstrate credal prediction on models such as TabPFN and CLIP -- architectures for which the construction of credal sets was previously infeasible.",
+        "authors": "Paul Hofman, Timo Löhr, Maximilian Muschalik, Yusuf Sale, Eyke Hüllermeier",
+        "url": "http://arxiv.org/abs/2603.08495v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08495v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种高效的Credal Prediction方法，通过“decalibration”技术为每个类别预测一个概率区间，以表示认知不确定性。其方法基于相对似然概念，并能应用于TabPFN和CLIP等复杂模型，解决了Credal Sets构建的计算复杂性瓶颈。这在数理统计和机器学习理论交叉点上具有很高的创新性和严谨性，对安全关键AI应用中的不确定性量化至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08399v1",
+        "title": "A Recipe for Stable Offline Multi-agent Reinforcement Learning",
+        "summary": "Despite remarkable achievements in single-agent offline reinforcement learning (RL), multi-agent RL (MARL) has struggled to adopt this paradigm, largely persisting with on-policy training and self-play from scratch. One reason for this gap comes from the instability of non-linear value decomposition, leading prior works to avoid complex mixing networks in favor of linear value decomposition (e.g., VDN) with value regularization used in single-agent setups. In this work, we analyze the source of instability in non-linear value decomposition within the offline MARL setting. Our observations confirm that they induce value-scale amplification and unstable optimization. To alleviate this, we propose a simple technique, scale-invariant value normalization (SVN), that stabilizes actor-critic training without altering the Bellman fixed point. Empirically, we examine the interaction among key components of offline MARL (e.g., value decomposition, value learning, and policy extraction) and derive a practical recipe that unlocks its full potential.",
+        "authors": "Dongsu Lee, Daehee Lee, Amy Zhang",
+        "url": "http://arxiv.org/abs/2603.08399v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08399v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文分析了离线多智能体强化学习（MARL）中非线性价值分解的不稳定性来源，并提出了Scale-Invariant Value Normalization (SVN) 技术来稳定actor-critic训练，同时不改变Bellman不动点。它为离线MARL提供了稳定的训练方案，解决了RL领域的一个核心问题，对强化学习算法的理论和实践都有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08322v1",
+        "title": "Agentic Neurosymbolic Collaboration for Mathematical Discovery: A Case Study in Combinatorial Design",
+        "summary": "We study mathematical discovery through the lens of neurosymbolic reasoning, where an AI agent powered by a large language model (LLM), coupled with symbolic computation tools, and human strategic direction, jointly produced a new result in combinatorial design theory. The main result of this human-AI collaboration is a tight lower bound on the imbalance of Latin squares for the notoriously difficult case $n \\equiv 1 \\pmod{3}$.   We reconstruct the discovery process from detailed interaction logs spanning multiple sessions over several days and identify the distinct cognitive contributions of each component. The AI agent proved effective at uncovering hidden structure and generating hypotheses. The symbolic component consists of computer algebra, constraint solvers, and simulated annealing, which provides rigorous verification and exhaustive enumeration. Human steering supplied the critical research pivot that transformed a dead end into a productive inquiry. Our analysis reveals that multi-model deliberation among frontier LLMs proved reliable for criticism and error detection but unreliable for constructive claims.   The resulting human-AI mathematical contribution, a tight lower bound of $4n(n{-}1)/9$, is achieved via a novel class of near-perfect permutations. The bound was formally verified in Lean 4. Our experiments show that neurosymbolic systems can indeed produce genuine discoveries in pure mathematics.",
+        "authors": "Hai Xia, Carla P. Gomes, Bart Selman, Stefan Szeider",
+        "url": "http://arxiv.org/abs/2603.08322v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08322v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CORE-Acu提出了一个神经符号框架，用于针灸临床决策支持，结合了结构化思维链（S-CoT）和知识图谱（KG）安全验证。它通过强制明确的因果链和符号否决机制，解决了LLM在医疗领域中推理不可追溯和幻觉的挑战，并引入了Lexicon-Matched Entity-Reweighted Loss。该方法在保证推理可审计性和严格安全合规性方面具有高度理论创新和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08270v1",
+        "title": "SCL-GNN: Towards Generalizable Graph Neural Networks via Spurious Correlation Learning",
+        "summary": "Graph Neural Networks (GNNs) have demonstrated remarkable success across diverse tasks. However, their generalization capability is often hindered by spurious correlations between node features and labels in the graph. Our analysis reveals that GNNs tend to exploit imperceptible statistical correlations in training data, even when such correlations are unreliable for prediction. To address this challenge, we propose the Spurious Correlation Learning Graph Neural Network (SCL-GNN), a novel framework designed to enhance generalization on both Independent and Identically Distributed (IID) and Out-of-Distribution (OOD) graphs. SCL-GNN incorporates a principled spurious correlation learning mechanism, leveraging the Hilbert-Schmidt Independence Criterion (HSIC) to quantify correlations between node representations and class scores. This enables the model to identify and mitigate irrelevant but influential spurious correlations effectively. Additionally, we introduce an efficient bi-level optimization strategy to jointly optimize modules and GNN parameters, preventing overfitting. Extensive experiments on real-world and synthetic datasets demonstrate that SCL-GNN consistently outperforms state-of-the-art baselines under various distribution shifts, highlighting its robustness and generalization capabilities.",
+        "authors": "Yuxiang Zhang, Enyan Dai",
+        "url": "http://arxiv.org/abs/2603.08270v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08270v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SCL-GNN提出了一种通过虚假关联学习来增强图神经网络（GNN）泛化能力的新框架。它利用Hilbert-Schmidt Independence Criterion (HSIC) 量化节点表示和类别分数之间的关联，有效识别并缓解不可靠的虚假关联。该方法在理论上具有严谨性，并显著提升了GNN在IID和OOD图上的泛化能力，对GNN的鲁棒性和理论基础研究很有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08234v1",
+        "title": "The Struggle Between Continuation and Refusal: A Mechanistic Analysis of the Continuation-Triggered Jailbreak in LLMs",
+        "summary": "With the rapid advancement of large language models (LLMs), the safety of LLMs has become a critical concern. Despite significant efforts in safety alignment, current LLMs remain vulnerable to jailbreaking attacks. However, the root causes of such vulnerabilities are still poorly understood, necessitating a rigorous investigation into jailbreak mechanisms across both academic and industrial communities. In this work, we focus on a continuation-triggered jailbreak phenomenon, whereby simply relocating a continuation-triggered instruction suffix can substantially increase jailbreak success rates. To uncover the intrinsic mechanisms of this phenomenon, we conduct a comprehensive mechanistic interpretability analysis at the level of attention heads. Through causal interventions and activation scaling, we show that this jailbreak behavior primarily arises from an inherent competition between the model's intrinsic continuation drive and the safety defenses acquired through alignment training. Furthermore, we perform a detailed behavioral analysis of the identified safety-critical attention heads, revealing notable differences in the functions and behaviors of safety heads across different model architectures. These findings provide a novel mechanistic perspective for understanding and interpreting jailbreak behaviors in LLMs, offering both theoretical insights and practical implications for improving model safety.",
+        "authors": "Yonghong Deng, Zhen Yang, Ping Jian, Xinyue Zhang, Zhongbin Guo, Chengzhi Li",
+        "url": "http://arxiv.org/abs/2603.08234v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08234v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对LLM中“延续触发的越狱”现象进行了深入的机制解释性分析，揭示了模型内在的延续驱动与安全对齐防御之间的竞争。通过因果干预和激活缩放，它提供了理解LLM越狱行为的新视角，具有很强的理论深度和对LLM安全改进的实际指导意义，对理解LLM内部工作机制的博士生非常有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08219v1",
+        "title": "Wiener Chaos Expansion based Neural Operator for Singular Stochastic Partial Differential Equations",
+        "summary": "In this paper, we explore how our recently developed Wiener Chaos Expansion (WCE)-based neural operator (NO) can be applied to singular stochastic partial differential equations, e.g., the dynamic $\\boldsymbolΦ^4_2$ model simulated in the recent works. Unlike the previous WCE-NO which solves SPDEs by simply inserting Wick-Hermite features into the backbone NO model, we leverage feature-wise linear modulation (FiLM) to appropriately capture the dependency between the solution of singular SPDE and its smooth remainder. The resulting WCE-FiLM-NO shows excellent performance on $\\boldsymbolΦ^4_2$, as measured by relative $L_2$ loss, out-of-distribution $L_2$ loss, and autocorrelation score; all without the help of renormalisation factor. In addition, we also show the potential of simulating $\\boldsymbolΦ^4_3$ data, which is more aligned with real scientific practice in statistical quantum field theory. To the best of our knowledge, this is among the first works to develop an efficient data-driven surrogate for the dynamical $\\boldsymbolΦ^4_3$ model.",
+        "authors": "Dai Shi, Luke Thompson, Andi Han, Peiyan Hu, Junbin Gao, José Miguel Hernández-Lobato",
+        "url": "http://arxiv.org/abs/2603.08219v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08219v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文探索了基于Wiener Chaos Expansion (WCE) 的神经算子（NO）在奇异随机偏微分方程（SPDEs）中的应用，特别是动态$\boldsymbolΦ^4_2$模型。它通过FiLM机制捕捉SPDE解与其平滑余项之间的依赖关系，在没有重整化因子的情况下取得了优异性能。其数学和统计推导非常严谨，是数理统计博士生在神经算子和随机过程领域进行前沿研究的优秀参考。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.07972v1",
+        "title": "Adaptive Collaboration with Humans: Metacognitive Policy Optimization for Multi-Agent LLMs with Continual Learning",
+        "summary": "While scaling individual Large Language Models (LLMs) has delivered remarkable progress, the next frontier lies in scaling collaboration through multi-agent systems (MAS). However, purely autonomous MAS remain ''closed-world'' systems, constrained by the static knowledge horizon of pre-trained models. This limitation makes them brittle on tasks requiring knowledge beyond training data, often leading to collective failure under novel challenges. To address this, we propose the Human-In-the-Loop Multi-Agent Collaboration (HILA) framework, a principled paradigm for human--agent collaboration. HILA trains agents to learn a metacognitive policy that governs when to solve problems autonomously and when to defer to a human expert. To operationalize this policy, we introduce Dual-Loop Policy Optimization, which disentangles immediate decision-making from long-term capability growth. The inner loop applies Group Relative Policy Optimization (GRPO) with a cost-aware reward to optimize deferral decisions, while the outer loop implements continual learning, transforming expert feedback into high-quality supervised signals that strengthen the agent's reasoning ability. Experiments on challenging mathematical and problem-solving benchmarks show that HILA, equipped with Dual-Loop Policy Optimization, consistently outperforms advanced MAS, establishing a principled foundation for collaborative and continually improving agentic systems.",
+        "authors": "Wei Yang, Defu Cao, Jiacheng Pang, Muyan Weng, Yan Liu",
+        "url": "http://arxiv.org/abs/2603.07972v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.07972v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "HILA框架提出了人机协作的原则性范式，训练多智能体LLM学习元认知策略，以决定何时自主解决问题，何时求助于人类专家。它引入了Dual-Loop Policy Optimization，解耦了即时决策和长期能力增长。该方法在理论上严谨，并显著提升了多智能体系统的协作能力和持续学习能力，对LLM智能体和人机协作领域具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.07926v1",
+        "title": "IMSE: Intrinsic Mixture of Spectral Experts Fine-tuning for Test-Time Adaptation",
+        "summary": "Test-time adaptation (TTA) has been widely explored to prevent performance degradation when test data differ from the training distribution. However, fully leveraging the rich representations of large pretrained models with minimal parameter updates remains underexplored. In this paper, we propose Intrinsic Mixture of Spectral Experts (IMSE) that leverages the spectral experts inherently embedded in Vision Transformers. We decompose each linear layer via singular value decomposition (SVD) and adapt only the singular values, while keeping the singular vectors fixed. We further identify a key limitation of entropy minimization in TTA: it often induces feature collapse, causing the model to rely on domain-specific features rather than class-discriminative features. To address this, we propose a diversity maximization loss based on expert-input alignment, which encourages diverse utilization of spectral experts during adaptation. In the continual test-time adaptation (CTTA) scenario, beyond preserving pretrained knowledge, it is crucial to retain and reuse knowledge from previously observed domains. We introduce Domain-Aware Spectral Code Retrieval, which estimates input distributions to detect domain shifts, and retrieves adapted singular values for rapid adaptation. Consequently, our method achieves state-of-the-art performance on various distribution-shift benchmarks under the TTA setting. In CTTA and Gradual CTTA, it further improves accuracy by 3.4 percentage points (pp) and 2.4 pp, respectively, while requiring 385 times fewer trainable parameters. Our code is available at https://github.com/baek85/IMSE.",
+        "authors": "Sunghyun Baek, Jaemyung Yu, Seunghee Koh, Minsu Kim, Hyeonseong Jeon, Junmo Kim",
+        "url": "http://arxiv.org/abs/2603.07926v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.07926v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "IMSE提出了一种用于测试时适应（TTA）的内在谱专家混合微调方法，通过奇异值分解（SVD）分解线性层并仅适应奇异值。它解决了TTA中熵最小化导致的特征崩溃问题，并引入了基于专家-输入对齐的多样性最大化损失。该方法在鲁棒性和数据效率方面表现出色，对解决分布偏移下的模型性能退化具有理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.07911v1",
+        "title": "Beyond Heuristic Prompting: A Concept-Guided Bayesian Framework for Zero-Shot Image Recognition",
+        "summary": "Vision-Language Models (VLMs), such as CLIP, have significantly advanced zero-shot image recognition. However, their performance remains limited by suboptimal prompt engineering and poor adaptability to target classes. While recent methods attempt to improve prompts through diverse class descriptions, they often rely on heuristic designs, lack versatility, and are vulnerable to outlier prompts. This paper enhances prompt by incorporating class-specific concepts. By treating concepts as latent variables, we rethink zero-shot image classification from a Bayesian perspective, casting prediction as marginalization over the concept space, where each concept is weighted by a prior and a test-image conditioned likelihood. This formulation underscores the importance of both a well-structured concept proposal distribution and the refinement of concept priors. To construct an expressive and efficient proposal distribution, we introduce a multi-stage concept synthesis pipeline driven by LLMs to generate discriminative and compositional concepts, followed by a Determinantal Point Process to enforce diversity. To mitigate the influence of outlier concepts, we propose a training-free, adaptive soft-trim likelihood, which attenuates their impact in a single forward pass. We further provide robustness guarantees and derive multi-class excess risk bounds for our framework. Extensive experiments demonstrate that our method consistently outperforms state-of-the-art approaches, validating its effectiveness in zero-shot image classification. Our code is available at https://github.com/less-and-less-bugs/CGBC.",
+        "authors": "Hui Liu, Kecheng Chen, Jialiang Wang, Xianming Liu, Wenya Wang, Haoliang Li",
+        "url": "http://arxiv.org/abs/2603.07911v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.07911v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个概念引导的贝叶斯框架，用于零样本图像识别，将预测视为概念空间上的边缘化。它通过LLM驱动的多阶段概念合成和行列式点过程来构建表达性强的概念分布，并引入自适应软修剪似然以减轻异常概念的影响。该框架提供了鲁棒性保证和多类别超额风险界限，在理论上严谨且对零样本学习具有重要突破，非常适合数理统计背景的研究者。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.08682v1",
+        "title": "Structural Causal Bottleneck Models",
+        "summary": "We introduce structural causal bottleneck models (SCBMs), a novel class of structural causal models. At the core of SCBMs lies the assumption that causal effects between high-dimensional variables only depend on low-dimensional summary statistics, or bottlenecks, of the causes. SCBMs provide a flexible framework for task-specific dimension reduction while being estimable via standard, simple learning algorithms in practice. We analyse identifiability in SCBMs, connect them to information bottlenecks in the sense of Tishby & Zaslavsky (2015), and illustrate how to estimate them experimentally. We also demonstrate the benefit of bottlenecks for effect estimation in low-sample transfer learning settings. We argue that SCBMs provide an alternative to existing causal dimension reduction frameworks like causal representation learning or causal abstraction learning.",
+        "authors": "Simon Bing, Jonas Wahl, Jakob Runge",
+        "url": "http://arxiv.org/abs/2603.08682v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08682v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了结构因果瓶颈模型（SCBMs），其核心假设是高维变量间的因果效应仅依赖于低维统计量。论文分析了SCBMs的可识别性，并将其与信息瓶颈理论联系起来，提供了坚实的因果逻辑和理论基础，非常符合您对因果逻辑和数学推导严谨性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08676v1",
+        "title": "Momentum SVGD-EM for Accelerated Maximum Marginal Likelihood Estimation",
+        "summary": "Maximum marginal likelihood estimation (MMLE) can be formulated as the optimization of a free energy functional. From this viewpoint, the Expectation-Maximisation (EM) algorithm admits a natural interpretation as a coordinate descent method over the joint space of model parameters and probability measures. Recently, a significant body of work has adopted this perspective, leading to interacting particle algorithms for MMLE. In this paper, we propose an accelerated version of one such procedure, based on Stein variational gradient descent (SVGD), by introducing Nesterov acceleration in both the parameter updates and in the space of probability measures. The resulting method, termed Momentum SVGD-EM, consistently accelerates convergence in terms of required iterations across various tasks of increasing difficulty, demonstrating effectiveness in both low- and high-dimensional settings.",
+        "authors": "Adam Rozzio, Rafael Athanasiades, O. Deniz Akyildiz",
+        "url": "http://arxiv.org/abs/2603.08676v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08676v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Momentum SVGD-EM，通过引入Nesterov加速来加速最大边际似然估计（MMLE）。它将MMLE视为自由能泛函的优化问题，并从坐标下降法的角度进行解释，涉及Stein变分梯度下降和收敛性分析，理论严谨性高，数学推导清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08607v1",
+        "title": "RESAPLE: An Approximate One-Step Restricted Likelihood Estimator of Spatial Dependence for Exploratory Spatial Analysis",
+        "summary": "Diagnostics such as Moran's index and approximate profile likelihood-based estimators (APLE) for Gaussian spatial autoregressive models are widely used in exploratory data analysis to assess the strength of spatial dependence. Yet, although Moran's index is often applied to regression residuals, and APLE is typically formulated for raw outcomes, neither is explicitly constructed as an estimator of residual spatial dependence after adjustment for large-scale trends and covariates. We propose RESAPLE, a one-step approximate restricted maximum likelihood (REML) estimator of the spatial error model's spatial dependence parameter $ρ$, constructed from REML residuals. Because RESAPLE is a Rayleigh coefficient, it retains the interpretability and diagnostic convenience of exploratory indices, while also providing a computationally inexpensive and accurate estimator of $ρ$ for moderate dependence. We show that for small to medium sample sizes and adequately specified trend models, RESAPLE is a better estimator of, and test statistic for, residual spatial dependence relative to existing alternatives including Moran's index and the APLE across a wide range of practical settings. The theory we develop also yields a diagnostic for spatial weight selection, providing guidance towards resolving a common point of ambiguity in spatial data analysis. We illustrate the method using simulations on both regular and highly irregular lattices with a case study using American Community Survey tract-level data.",
+        "authors": "Aditya Khan, Meredith Franklin",
+        "url": "http://arxiv.org/abs/2603.08607v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08607v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "RESAPLE 提出了一种近似受限最大似然（REML）估计器，用于空间误差模型的空间依赖参数。论文从REML残差构建，并证明了其作为Rayleigh系数的解释性。理论部分涉及渐近理论和诊断工具，对空间数据分析的统计严谨性有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08583v1",
+        "title": "DualFlexKAN: Dual-stage Kolmogorov-Arnold Networks with Independent Function Control",
+        "summary": "Multi-Layer Perceptrons (MLPs) rely on pre-defined, fixed activation functions, imposing a static inductive bias that forces the network to approximate complex topologies solely through increased depth and width. Kolmogorov-Arnold Networks (KANs) address this limitation through edge-centric learnable functions, yet their formulation suffers from quadratic parameter scaling and architectural rigidity that hinders the effective integration of standard regularization techniques. This paper introduces the DualFlexKAN (DFKAN), a flexible architecture featuring a dual-stage mechanism that independently controls pre-linear input transformations and post-linear output activations. This decoupling enables hybrid networks that optimize the trade-off between expressiveness and computational cost. Unlike standard formulations, DFKAN supports diverse basis function families, including orthogonal polynomials, B-splines, and radial basis functions, integrated with configurable regularization strategies that stabilize training dynamics. Comprehensive evaluations across regression benchmarks, physics-informed tasks, and function approximation demonstrate that DFKAN outperforms both MLPs and conventional KANs in accuracy, convergence speed, and gradient fidelity. The proposed hybrid configurations achieve superior performance with one to two orders of magnitude fewer parameters than standard KANs, effectively mitigating the parameter explosion problem while preserving KAN-style expressiveness. DFKAN provides a principled, scalable framework for incorporating adaptive non-linearities, proving particularly advantageous for data-efficient learning and interpretable function discovery in scientific applications.",
+        "authors": "Andrés Ortiz, Nicolás J. Gallego-Molina, Carmen Jiménez-Mesa, Juan M. Górriz, Javier Ramírez",
+        "url": "http://arxiv.org/abs/2603.08583v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08583v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DualFlexKAN 引入了一种灵活的Kolmogorov-Arnold网络架构，通过双阶段机制独立控制输入变换和输出激活。论文深入探讨了函数逼近、正则化策略和梯度保真度，提供了严谨的数学框架和分析，尤其在参数效率和表达能力之间进行了权衡。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08558v1",
+        "title": "Impact of Connectivity on Laplacian Representations in Reinforcement Learning",
+        "summary": "Learning compact state representations in Markov Decision Processes (MDPs) has proven crucial for addressing the curse of dimensionality in large-scale reinforcement learning (RL) problems. Existing principled approaches leverage structural priors on the MDP by constructing state representations as linear combinations of the state-graph Laplacian eigenvectors. When the transition graph is unknown or the state space is prohibitively large, the graph spectral features can be estimated directly via sample trajectories. In this work, we prove an upper bound on the approximation error of linear value function approximation under the learned spectral features. We show how this error scales with the algebraic connectivity of the state-graph, grounding the approximation quality in the topological structure of the MDP. We further bound the error introduced by the eigenvector estimation itself, leading to an end-to-end error decomposition across the representation learning pipeline. Additionally, our expression of the Laplacian operator for the RL setting, although equivalent to existing ones, prevents some common misunderstandings, of which we show some examples from the literature. Our results hold for general (non-uniform) policies without any assumptions on the symmetry of the induced transition kernel. We validate our theoretical findings with numerical simulations on gridworld environments.",
+        "authors": "Tommaso Giorgi, Pierriccardo Olivieri, Keyue Jiang, Laura Toni, Matteo Papini",
+        "url": "http://arxiv.org/abs/2603.08558v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08558v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了强化学习中拉普拉斯表示的连通性影响。它证明了在学习到的谱特征下，线性值函数近似的误差上限，并将其与状态图的代数连通性联系起来。理论分析严谨，涉及MDP的拓扑结构和特征向量估计误差分解，非常符合您对理论基础和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08535v1",
+        "title": "Rethinking Strict Dissipativity for Economic MPC",
+        "summary": "Stability of economic model predictive control can be proven under the assumption that a strict dissipativity condition holds. This assumption has a clear interpretation in terms of the so-called rotated stage cost, which must have its minimum at the optimal steady state. However, contrary to dissipativity, for strict dissipativity the storage function cannot be immediately related to the value function of an optimal control problem formulated with the economic stage cost. We propose the novel concept of two-storage strict dissipativity, which requires two storage functions to satisfy dissipativity and be separated by a positive definite function. This new condition can be immediately related to optimal control by means of value functions and might be easier to verify than strict dissipativity. Furthermore, we prove that two-storage strict dissipativity is sufficient and necessary for asymptotic stability, it is related to strict dissipativity, and also to alternative approaches relying on the so-called cost-to-travel. Finally, we discuss commonly used and new terminal cost designs that guarantee asymptotic stability in the finite-horizon case.",
+        "authors": "Mario Zanon",
+        "url": "http://arxiv.org/abs/2603.08535v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08535v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了“双存储严格耗散性”的新概念，用于经济模型预测控制的稳定性证明。它将新条件与最优控制中的值函数联系起来，并证明了其对渐近稳定性的充分必要性。这篇论文在控制理论和优化收敛性方面具有很高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08518v1",
+        "title": "Breaking the Bias Barrier in Concave Multi-Objective Reinforcement Learning",
+        "summary": "While standard reinforcement learning optimizes a single reward signal, many applications require optimizing a nonlinear utility $f(J_1^π,\\dots,J_M^π)$ over multiple objectives, where each $J_m^π$ denotes the expected discounted return of a distinct reward function. A common approach is concave scalarization, which captures important trade-offs such as fairness and risk sensitivity. However, nonlinear scalarization introduces a fundamental challenge for policy gradient methods: the gradient depends on $\\partial f(J^π)$, while in practice only empirical return estimates $\\hat J$ are available. Because $f$ is nonlinear, the plug-in estimator is biased ($\\mathbb{E}[\\partial f(\\hat J)] \\neq \\partial f(\\mathbb{E}[\\hat J])$), leading to persistent gradient bias that degrades sample complexity.   In this work we identify and overcome this bias barrier in concave-scalarized multi-objective reinforcement learning. We show that existing policy-gradient methods suffer an intrinsic $\\widetilde{\\mathcal{O}}(ε^{-4})$ sample complexity due to this bias. To address this issue, we develop a Natural Policy Gradient (NPG) algorithm equipped with a multi-level Monte Carlo (MLMC) estimator that controls the bias of the scalarization gradient while maintaining low sampling cost. We prove that this approach achieves the optimal $\\widetilde{\\mathcal{O}}(ε^{-2})$ sample complexity for computing an $ε$-optimal policy. Furthermore, we show that when the scalarization function is second-order smooth, the first-order bias cancels automatically, allowing vanilla NPG to achieve the same $\\widetilde{\\mathcal{O}}(ε^{-2})$ rate without MLMC. Our results provide the first optimal sample complexity guarantees for concave multi-objective reinforcement learning under policy-gradient methods.",
+        "authors": "Swetha Ganesh, Vaneet Aggarwal",
+        "url": "http://arxiv.org/abs/2603.08518v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08518v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了凹多目标强化学习中策略梯度方法的梯度偏差问题。它引入了多级蒙特卡洛（MLMC）估计器，并证明了其能达到最优的样本复杂度。论文提供了首个策略梯度方法下凹多目标强化学习的最优样本复杂度保证，理论贡献显著。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08511v1",
+        "title": "Kantorovich Regression Analysis of Random Distributions with Mixed Predictors",
+        "summary": "We study regression problems with distribution-valued responses and mixed distributional and Euclidean predictors. In quadratic cost, the negative gradient of the Kantorovich potential represents, at each source location, the displacement to its matched location under the optimal transport map. By constructing potentials from the Wasserstein barycenter to individual distributions, the proposed Kantorovich regression model approximates the response displacement field as a sum of predictor displacement fields, each adjusted by a functional parameter. Owing to the linear structure, Euclidean predictors can enter as scaling coefficients of $c$-concave parameter potentials. We characterize functional parameter classes ensuring intrinsicness of the model, establish asymptotic theory through uniform convergence of the empirical Wasserstein loss, and derive Gâteaux derivatives leading to first-order optimization algorithms. Real data applications include a mixed-predictor analysis of housing price distributions and an analysis of two-dimensional temperature distributions, demonstrating the flexibility and interpretability of the proposed framework.",
+        "authors": "Kaheon Kim, Changbo Zhu",
+        "url": "http://arxiv.org/abs/2603.08511v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08511v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了带有分布值响应和混合预测变量的回归问题，并提出了Kantorovich回归模型。它通过Wasserstein barycenter构建势函数，并建立了基于经验Wasserstein损失的渐近理论，推导了Gâteaux导数。这在统计学和最优传输理论方面具有很高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08471v1",
+        "title": "Intrinsic Sequentiality in P: Causal Limits of Parallel Computation",
+        "summary": "We study a polynomial-time decision problem in which \\emph{causal execution} is part of the instance specification. Each input describes a depth-$N$ process in which a single non-duplicable token must traverse an ordered sequence of steps, revealing only $O(1)$ bits of routing information at each step. The accept/reject outcome is defined solely by completion of this prescribed execution, rather than by order-free evaluation of the input.   A deterministic Turing machine executes the process in $Θ(N)$ time. Using standard information-theoretic tools - specifically cut-set bounds for relay channels and Fano's inequality - we show that any execution respecting the causal constraints requires $Ω(N)$ units of causal time. Information about the delivery path can advance by at most one hop per unit of causal time, so the process admits no asymptotic parallel speedup.   We further show that no classical $\\mathbf{NC}$ circuit family can implement the process when circuit depth is interpreted as realizable parallel time. This identifies a class of polynomial-time problems with intrinsic causal structure and highlights a gap between logical parallelism and causal executability.",
+        "authors": "Jing-Yuan Wei",
+        "url": "http://arxiv.org/abs/2603.08471v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08471v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了P问题中的内在序列性，即并行计算的因果限制。它使用信息论工具（如cut-set bounds和Fano's inequality）证明了任何遵循因果约束的执行都需要Ω(N)的因果时间。这揭示了逻辑并行性与因果可执行性之间的差距，具有深刻的理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08462v1",
+        "title": "Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck",
+        "summary": "Chain-of-Thought (CoT) prompting improves LLM accuracy on complex tasks but often increases token usage and inference cost. Existing \"Budget Forcing\" methods reducing cost via fine-tuning with heuristic length penalties, suppress both essential reasoning and redundant filler. We recast efficient reasoning as a lossy compression problem under the Information Bottleneck (IB) principle, and identify a key theoretical gap when applying naive IB to transformers: attention violates the Markov property between prompt, reasoning trace, and response. To resolve this issue, we model CoT generation under the Conditional Information Bottleneck (CIB) principle, where the reasoning trace Z acts as a computational bridge that contains only the information about the response Y that is not directly accessible from the prompt X. This yields a general Reinforcement Learning objective: maximize task reward while compressing completions under a prior over reasoning traces, subsuming common heuristics (e.g., length penalties) as special cases (e.g., uniform priors). In contrast to naive token-counting-based approaches, we introduce a semantic prior that measures token cost by surprisal under a language model prior. Empirically, our CIB objective prunes cognitive bloat while preserving fluency and logic, improving accuracy at moderate compression and enabling aggressive compression with minimal accuracy drop.",
+        "authors": "Fabio Valerio Massoli, Andrey Kuzmin, Arash Behboodi",
+        "url": "http://arxiv.org/abs/2603.08462v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08462v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将高效推理重新定义为信息瓶颈（IB）原则下的有损压缩问题，并引入条件信息瓶颈（CIB）来解决Transformer中注意力机制违反马尔可夫性质的问题。它提出了一个通用的强化学习目标，并在信息论框架下进行严谨的数学建模，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08393v1",
+        "title": "Decoupling Distance and Networks: Hybrid Graph Attention-Geostatistical Methods for Spatio-temporal Risk Mapping",
+        "summary": "Accurate spatial prediction and rigorous uncertainty quantification are central to modern spatial epidemiology and environmental risk analysis. We introduce a statistically principled hybrid modelling framework that integrates the nonlinear, attention-based representation learning capabilities of a dynamic Graph Attention Network (GATv2) with a latent Gaussian spatial process from model-based geostatistics (MBG). This framework jointly captures relational dependence encoded in graph structures and continuous spatial dependence governed by physical proximity. We evaluate the proposed model via a controlled simulation study and an applied analysis of malaria prevalence data, comparing its predictive accuracy, calibration, and uncertainty quantification against classical geostatistical models and standalone GATv2 architectures. Our analyses show that GATv2 captures complex nonlinear interactions but fails to account for residual spatial autocorrelation, resulting in miscalibrated predictive distributions. Conversely, geostatistical models provide coherent uncertainty quantification through structured covariance functions yet are constrained by linear predictor assumptions and by their reliance on Euclidean distance to encode spatial structure. By integrating attention mechanisms and nonlinear features with an explicit probabilistic spatial random field, the hybrid model captured the relational dependence, consistently improved predictive accuracy, and provided more realistic uncertainty quantification in both simulation and applied settings. Overall, the findings demonstrate that the hybrid model constitutes a statistically coherent and empirically robust framework for modelling complex spatial and spatio-temporal processes in settings where both distance-based and structure-based dependencies operate.",
+        "authors": "Toba Temitope Bamidele, Ezra Gayawan, Femi Barnabas Adebola, Olatunji Johnson",
+        "url": "http://arxiv.org/abs/2603.08393v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08393v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个混合建模框架，将动态图注意力网络（GATv2）与模型地统计学（MBG）中的潜在高斯空间过程相结合。它旨在同时捕捉图结构中的关系依赖和物理邻近性产生的连续空间依赖，并提供了统计学上严谨的不确定性量化，理论基础扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08332v1",
+        "title": "Detecting Fake Reviewer Groups in Dynamic Networks: An Adaptive Graph Learning Method",
+        "summary": "The proliferation of fake reviews, often produced by organized groups, undermines consumer trust and fair competition on online platforms. These groups employ sophisticated strategies that evade traditional detection methods, particularly in cold-start scenarios involving newly launched products with sparse data. To address this, we propose the \\underline{D}iversity- and \\underline{S}imilarity-aware \\underline{D}ynamic \\underline{G}raph \\underline{A}ttention-enhanced \\underline{G}raph \\underline{C}onvolutional \\underline{N}etwork (DS-DGA-GCN), a new graph learning model for detecting fake reviewer groups. DS-DGA-GCN achieves robust detection since it focuses on the joint relationships among products, reviews, and reviewers by modeling product-review-reviewer networks. DS-DGA-GCN also achieves adaptive detection by integrating a Network Feature Scoring (NFS) system and a new dynamic graph attention mechanism. The NFS system quantifies network attributes, including neighbor diversity, network self-similarity, as a unified feature score. The dynamic graph attention mechanism improves the adaptability and computational efficiency by captures features related to temporal information, node importance, and global network structure. Extensive experiments conducted on two real-world datasets derived from Amazon and Xiaohongshu demonstrate that DS-DGA-GCN significantly outperforms state-of-the-art baselines, achieving accuracies of up to \\textbf{89.8\\% and 88.3\\%}, respectively.",
+        "authors": "Jing Zhang, Ke Huang, Yao Zhang, Bin Guo, Zhiwen Yu",
+        "url": "http://arxiv.org/abs/2603.08332v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08332v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CORE-Acu 提出了一个神经符号框架，通过结构化思维链（S-CoT）和知识图谱安全验证来解决大语言模型在临床决策支持中的黑盒和幻觉问题。它强制执行明确的因果链，并引入符号否决机制来确保安全边界，理论上结合了符号逻辑和深度学习的优势，具有很高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08320v1",
+        "title": "Size-Location Correlation for Set-Valued Processes: Theory, Estimation, and Laws of Large Numbers under $ρ$-Mixing",
+        "summary": "We propose a variational framework for analyzing dependence structures of convex compact random sets based on their support functions. The approach relies on the canonical even--odd decomposition on the unit sphere, which separates size-related and location-related components and induces an exact orthogonality in the sphere $L^2(σ)$ space. This decomposition yields an additive variance--covariance structure that is intrinsic to set-valued data and cannot be recovered from point-based or selection-based representations. Within this framework, we introduce size, location, and total covariance and correlation indices for random sets, together with compatible $ρ$-mixing coefficients for set-valued processes. The resulting dependence measures are geometrically interpretable, invariant under translations, and free of degeneracies that arise for centrally symmetric sets under classical approaches. Weak and strong laws of large numbers are established under weak stationarity, providing asymptotic stability of Minkowski averages in the $L^2(σ)$ support-function norm. The proposed quantities admit natural numerical realizations via directional Monte Carlo and spherical designs. Applications to interval-valued and convex-valued data, including regression with set-valued responses, illustrate how the even--odd decomposition disentangles directional location dependence from size effects beyond what can be captured by finite-dimensional summaries such as the Steiner point.",
+        "authors": "Tuyen Luc Tri",
+        "url": "http://arxiv.org/abs/2603.08320v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08320v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个变分框架，用于分析凸紧随机集的依赖结构，基于其支撑函数和单位球上的偶-奇分解。它引入了随机集的尺寸、位置和总协方差/相关指数，以及兼容的ρ-混合系数，并建立了弱和强大数定律。这在数理统计和随机过程理论方面具有极高的严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.08128v1",
+        "title": "TRIAGE: Type-Routed Interventions via Aleatoric-Epistemic Gated Estimation in Robotic Manipulation and Adaptive Perception -- Don't Treat All Uncertainty the Same",
+        "summary": "Most uncertainty-aware robotic systems collapse prediction uncertainty into a single scalar score and use it to trigger uniform corrective responses. This aggregation obscures whether uncertainty arises from corrupted observations or from mismatch between the learned model and the true system dynamics. As a result, corrective actions may be applied to the wrong component of the closed loop, degrading performance relative to leaving the policy unchanged. We introduce a lightweight post hoc framework that decomposes uncertainty into aleatoric and epistemic components and uses these signals to regulate system responses at inference time. Aleatoric uncertainty is estimated from deviations in the observation distribution using a Mahalanobis density model, while epistemic uncertainty is detected using a noise robust forward dynamics ensemble that isolates model mismatch from measurement corruption. The two signals remain empirically near orthogonal during closed loop execution and enable type specific responses. High aleatoric uncertainty triggers observation recovery, while high epistemic uncertainty moderates control actions. The same signals also regulate adaptive perception by guiding model capacity selection during tracking inference. Experiments demonstrate consistent improvements across both control and perception tasks. In robotic manipulation, the decomposed controller improves task success from 59.4% to 80.4% under compound perturbations and outperforms a combined uncertainty baseline by up to 21.0%. In adaptive tracking inference on MOT17, uncertainty-guided model selection reduces average compute by 58.2% relative to a fixed high capacity detector while preserving detection quality within 0.4%. Code and demo videos are available at https://divake.github.io/uncertainty-decomposition/.",
+        "authors": "Divake Kumar, Sina Tayebati, Devashri Naik, Patrick Poggi, Amanda Sofie Rios, Nilesh Ahuja, Amit Ranjan Trivedi",
+        "url": "http://arxiv.org/abs/2603.08128v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.08128v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TRIAGE 框架将预测不确定性分解为偶然不确定性（aleatoric）和认知不确定性（epistemic）分量，并利用这些信号在推理时调节系统响应。它使用Mahalanobis密度模型估计偶然不确定性，并使用噪声鲁棒前向动力学集成检测认知不确定性，理论上对不确定性量化进行了深入分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.07896v1",
+        "title": "SMGI: A Structural Theory of General Artificial Intelligence",
+        "summary": "We introduce SMGI, a structural theory of general artificial intelligence, and recast the foundational problem of learning from the optimization of hypotheses within fixed environments to the controlled evolution of the learning interface itself. We formalize the Structural Model of General Intelligence (SMGI) via a typed meta-model $θ= (r,\\mathcal H,Π,\\mathcal L,\\mathcal E,\\mathcal M)$ that treats representational maps, hypothesis spaces, structural priors, multi-regime evaluators, and memory operators as explicitly typed, dynamic components. By enforcing a strict mathematical separation between this structural ontology ($θ$) and its induced behavioral semantics ($T_θ$), we define general artificial intelligence as a class of admissible coupled dynamics $(θ, T_θ)$ satisfying four obligations: structural closure under typed transformations, dynamical stability under certified evolution, bounded statistical capacity, and evaluative invariance across regime shifts. We prove a structural generalization bound that links sequential PAC-Bayes analysis and Lyapunov stability, providing sufficient conditions for capacity control and bounded drift under admissible task transformations. Furthermore, we establish a strict structural inclusion theorem demonstrating that classical empirical risk minimization, reinforcement learning, program-prior models (Solomonoff-style), and modern frontier agentic pipelines operate as structurally restricted instances of SMGI.",
+        "authors": "Aomar Osmani",
+        "url": "http://arxiv.org/abs/2603.07896v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.07896v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "SMGI 引入了通用人工智能的结构理论，并通过类型化的元模型形式化了学习接口的受控演化。它定义了通用人工智能的四个义务，并证明了结构泛化界限，将序列PAC-Bayes分析与Lyapunov稳定性联系起来。这篇论文提供了AI基础理论的深刻洞察和严谨的数学框架，完美契合您的研究兴趣。"
+    }
+]

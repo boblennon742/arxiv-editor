@@ -1,0 +1,242 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.09955v1",
+        "title": "From Semantics to Pixels: Coarse-to-Fine Masked Autoencoders for Hierarchical Visual Understanding",
+        "summary": "Self-supervised visual pre-training methods face an inherent tension: contrastive learning (CL) captures global semantics but loses fine-grained detail, while masked image modeling (MIM) preserves local textures but suffers from \"attention drift\" due to semantically-agnostic random masking. We propose C2FMAE, a coarse-to-fine masked autoencoder that resolves this tension by explicitly learning hierarchical visual representations across three data granularities: semantic masks (scene-level), instance masks (object-level), and RGB images (pixel-level). Two synergistic innovations enforce a strict top-down learning principle. First, a cascaded decoder sequentially reconstructs from scene semantics to object instances to pixel details, establishing explicit cross-granularity dependencies that parallel decoders cannot capture. Second, a progressive masking curriculum dynamically shifts the training focus from semantic-guided to instance-guided and finally to random masking, creating a structured learning path from global context to local features. To support this framework, we construct a large-scale multi-granular dataset with high-quality pseudo-labels for all 1.28M ImageNet-1K images. Extensive experiments show that C2FMAE achieves significant performance gains on image classification, object detection, and semantic segmentation, validating the effectiveness of our hierarchical design in learning more robust and generalizable representations.",
+        "authors": "Wenzhao Xiang, Yue Wu, Hongyang Yu, Feng Gao, Fan Yang, Xilin Chen",
+        "url": "http://arxiv.org/abs/2603.09955v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09955v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从矩阵算子范数的角度重新解释了神经网络优化器，并将其行为与网络的Lipschitz结构联系起来。它引入了平均归一化算子范数，实现了层间可组合性，并提供了与宽度无关的平滑度界限，甚至恢复了μP缩放作为特例。论文还提出了MOGA优化器，并提供了宽度无关的平滑度保证。这篇论文的数学推导严谨，理论基础强大，直接将严谨的数学逻辑应用于AI系统优化，非常符合您的研究偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09786v1",
+        "title": "Quantifying the Necessity of Chain of Thought through Opaque Serial Depth",
+        "summary": "Large language models (LLMs) tend to externalize their reasoning in their chain of thought, making the chain of thought a good target for monitoring. This is partially an inherent feature of the Transformer architecture: sufficiently long serial cognition must pass through the chain of thought (Korbak et al., 2025). We formalize this argument through the notion of opaque serial depth, given by the length of the longest computation that can be done without the use of interpretable intermediate steps like chain of thought. Given this formalization, we compute numeric upper bounds on the opaque serial depth of Gemma 3 models, as well as asymptotic results for additional architectures beyond standard LLMs. We also open-source an automated method that can calculate upper bounds on the opaque serial depth of arbitrary neural networks, and use it to demonstrate that Mixture-of-Experts models likely have lower depth than dense models. Overall, our results suggest that opaque serial depth is a useful tool for understanding the potential for models to do significant reasoning that is not externalized.",
+        "authors": "Jonah Brown-Cohen, David Lindner, Rohin Shah",
+        "url": "http://arxiv.org/abs/2603.09786v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09786v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过引入“不透明串行深度”的概念，形式化了对思维链必要性的量化。它计算了Gemma 3模型的数值上限，并为其他架构提供了渐近结果，还开源了一个自动计算任意神经网络不透明串行深度上限的方法。这体现了对LLM计算机制的深刻理论分析，具有强大的数学逻辑和推导严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09742v1",
+        "title": "Upper Generalization Bounds for Neural Oscillators",
+        "summary": "Neural oscillators that originate from the second-order ordinary differential equations (ODEs) have shown competitive performance in learning mappings between dynamic loads and responses of complex nonlinear structural systems. Despite this empirical success, theoretically quantifying the generalization capacities of their neural network architectures remains undeveloped. In this study, the neural oscillator consisting of a second-order ODE followed by a multilayer perceptron (MLP) is considered. Its upper probably approximately correct (PAC) generalization bound for approximating causal and uniformly continuous operators between continuous temporal function spaces and that for approximating the uniformly asymptotically incrementally stable second-order dynamical systems are derived by leveraging the Rademacher complexity framework. The theoretical results show that the estimation errors grow polynomially with respect to both the MLP size and the time length, thereby avoiding the curse of parametric complexity. Furthermore, the derived error bounds demonstrate that constraining the Lipschitz constants of the MLPs via loss function regularization can improve the generalization ability of the neural oscillator. A numerical study considering a Bouc-Wen nonlinear system under stochastic seismic excitation validates the theoretically predicted power laws of the estimation errors with respect to the sample size and time length, and confirms the effectiveness of constraining MLPs' matrix and vector norms in enhancing the performance of the neural oscillator under limited training data.",
+        "authors": "Zifeng Huang, Konstantin M. Zuev, Yong Xia, Michael Beer",
+        "url": "http://arxiv.org/abs/2603.09742v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09742v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对基于二阶常微分方程的神经振荡器，首次从理论上量化了其泛化能力。它利用Rademacher复杂度框架推导了PAC泛化上界，并证明了估计误差与MLP大小和时间长度呈多项式增长，避免了参数复杂性诅咒。同时，它还指出限制MLP的Lipschitz常数可以提高泛化能力。这篇论文提供了严谨的统计保证和清晰的数学推导，是数理统计在神经网络理论方面应用的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09697v1",
+        "title": "Mousse: Rectifying the Geometry of Muon with Curvature-Aware Preconditioning",
+        "summary": "Recent advances in spectral optimization, notably Muon, have demonstrated that constraining update steps to the Stiefel manifold can significantly accelerate training and improve generalization. However, Muon implicitly assumes an isotropic optimization landscape, enforcing a uniform spectral update norm across all eigen-directions. We argue that this \"egalitarian\" constraint is suboptimal for Deep Neural Networks, where the curvature spectrum is known to be highly heavy-tailed and ill-conditioned. In such landscapes, Muon risks amplifying instabilities in high-curvature directions while limiting necessary progress in flat directions. In this work, we propose \\textbf{Mousse} (\\textbf{M}uon \\textbf{O}ptimization \\textbf{U}tilizing \\textbf{S}hampoo's \\textbf{S}tructural \\textbf{E}stimation), a novel optimizer that reconciles the structural stability of spectral methods with the geometric adaptivity of second-order preconditioning. Instead of applying Newton-Schulz orthogonalization directly to the momentum matrix, Mousse operates in a whitened coordinate system induced by Kronecker-factored statistics (derived from Shampoo). Mathematically, we formulate Mousse as the solution to a spectral steepest descent problem constrained by an anisotropic trust region, where the optimal update is derived via the polar decomposition of the whitened gradient. Empirical results across language models ranging from 160M to 800M parameters demonstrate that Mousse consistently outperforms Muon, achieving around $\\sim$12\\% reduction in training steps with negligible computational overhead.",
+        "authors": "Yechen Zhang, Shuhao Xing, Junhao Huang, Kai Lv, Yunhua Zhou, Xipeng Qiu, Qipeng Guo, Kai Chen",
+        "url": "http://arxiv.org/abs/2603.09697v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09697v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Mousse优化器，通过曲率感知预处理来修正Muon优化器的几何结构。它将Mousse公式化为受各向异性信任区域约束的谱最速下降问题，并通过白化梯度的极分解推导出最优更新。论文深入探讨了优化景观、曲率谱、Stiefel流形等数学概念，提供了强大的理论基础和严谨的数学推导，对深度神经网络的优化收敛性有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09680v1",
+        "title": "Murmurations: a case study in AI-assisted mathematics",
+        "summary": "We report the emergence of a striking new phenomenon in arithmetic, which we call murmurations. First observed experimentally through averages over large arithmetic datasets, murmurations can be detected and analyzed using standard interpretability tools from machine learning, including principal component weightings, saliency curves, and convolutional filters. Although discovered computationally, they constitute a genuinely new and intriguing phenomenon in arithmetic that can be formulated and investigated using established tools of number theory. In particular, murmurations encode subtle information about Frobenius traces and naturally belong to the framework of arithmetic statistics. More precisely, murmurations connect to central themes surrounding the conjecture of Birch and Swinnerton-Dyer and perspectives from random matrix theory. In this paper, we present an overview of murmurations, contextualizing them within number theory and AI.",
+        "authors": "Yang-Hui He, Kyu-Hwan Lee, Thomas Oliver, Alexey Pozdnyakov",
+        "url": "http://arxiv.org/abs/2603.09680v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09680v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文报告了一个通过AI辅助数学发现的算术新现象——“murmurations”。它将这一现象与数论、算术统计、Frobenius迹、Birch和Swinnerton-Dyer猜想以及随机矩阵理论联系起来。这不仅展示了AI在科学发现中的潜力，更重要的是，它将AI发现的现象置于深厚的数学理论框架下进行分析和解释，非常符合您对严谨数学逻辑和理论基础的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09583v1",
+        "title": "Nonparametric Variational Differential Privacy via Embedding Parameter Clipping",
+        "summary": "The nonparametric variational information bottleneck (NVIB) provides the foundation for nonparametric variational differential privacy (NVDP), a framework for building privacy-preserving language models. However, the learned latent representations can drift into regions with high information content, leading to poor privacy guarantees, but also low utility due to numerical instability during training. In this work, we introduce a principled parameter clipping strategy to directly address this issue. Our method is mathematically derived from the objective of minimizing the Rényi Divergence (RD) upper bound, yielding specific, theoretically grounded constraints on the posterior mean, variance, and mixture weight parameters. We apply our technique to an NVIB based model and empirically compare it against an unconstrained baseline. Our findings demonstrate that the clipped model consistently achieves tighter RD bounds, implying stronger privacy, while simultaneously attaining higher performance on several downstream tasks. This work presents a simple yet effective method for improving the privacy-utility trade-off in variational models, making them more robust and practical.",
+        "authors": "Dina El Zein, Shashi Kumar, James Henderson",
+        "url": "http://arxiv.org/abs/2603.09583v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09583v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于嵌入参数裁剪的非参数变分差分隐私（NVDP）方法。该方法从最小化Rényi散度（RD）上界的目标数学推导而来，为后验均值、方差和混合权重参数提供了理论基础的约束。它在保证更强隐私的同时，提高了下游任务的性能。这篇论文在差分隐私理论方面做出了严谨的数学贡献，并将其应用于语言模型，兼具理论深度和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09546v1",
+        "title": "ADMM-based Bilevel Descent Aggregation Algorithm for Sparse Hyperparameter Selection",
+        "summary": "It is widely acknowledged that hyperparameter selection plays a critical role in the effectiveness of sparse optimization problems. The bilevel optimization provides a robust framework for addressing this issue, but these existing methods depend heavily on the lower-level singleton (LLS) assumption, which greatly limits their practical applicabilities. To tackle this technical challenge, this paper focus on a particular type of nonsmooth convex sparse optimization problem and presents a new bilevel optimization framework. This framework effectively integrates the alternating direction method of multipliers (ADMM) with a bilevel descent aggregation (BDA) algorithm. Specifically, it employs ADMM to efficiently address the lower-level problem and uses BDA to explore the hyperparameter space, thereby integrating both the upper and lower-level problems. It is important to emphasize that a key contribution of this paper lies in the presentation of a novel convergence analysis. The analysis illustrates that the proposed ADMM-BDA algorithm achieves global convergence under significantly relaxed conditions, thereby departing from the LLS assumption that are often required in the literature. We conduct a series of numerical experiments utilizing synthetic and real-world data, and do performance comparisions against some state-of-the-art algorithms. The results indicates that ADMM-BDA exhibits superior effectiveness and robustness for solving bilevel programming problems, especially when the lower-level problem is an elastic-net penalized statistics problem.",
+        "authors": "Yunhai Xiao, Anqi Liu, Peili Li, Yanyun Ding",
+        "url": "http://arxiv.org/abs/2603.09546v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09546v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于ADMM的双层下降聚合算法（ADMM-BDA），用于稀疏超参数选择。它解决了现有方法对下层单例（LLS）假设的依赖，并提供了新颖的收敛性分析，证明了在显著放松的条件下算法的全局收敛性。这篇论文在优化理论方面有强大的理论贡献，特别是对双层优化问题的收敛性分析，非常符合您对优化收敛性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09504v1",
+        "title": "Uniform Lorden-type bounds for overshoot moments for standard exponential families: small drift and an exponential correction",
+        "summary": "We study the overshoot \\(R_b=S_{τ(b)}-b\\) of a random walk with independent identically distributed increments from a standardised one-parameter exponential family, with primary emphasis on the small-drift regime \\(θ\\downarrow0\\). Unlike the classical renewal-process setting with nonnegative increments, we allow sign-changing increments and assume only a positive drift \\(μ_θ>0\\). For each \\(k\\in\\mathbb N\\) we obtain Lorden-type moment bounds, uniform in the barrier \\(b\\), for \\(\\E_θ[R_b^k]\\) with an explicit remainder term decaying exponentially in \\(b\\). The proof reduces the problem to the renewal process of strict ascending ladder heights and combines a simple bound for the limiting overshoot moments with a uniform exponential estimate for the rate of convergence of the distribution functions of \\(R_b\\) to the limiting random variable \\(R_\\infty\\) as \\(b\\to\\infty\\), uniformly in \\(θ\\in[0,θ^\\ast]\\). As a consequence, the classical constant \\((k+2)/(k+1)\\) arising in residual-life bounds improves to \\(C_k=1\\) for sufficiently large \\(b\\) at fixed \\(θ\\), and also uniformly over all \\(b\\ge0\\) in the small-drift regime. Counterexamples are provided showing that the stronger inequality with \\(kμ_θ\\) in the denominator cannot hold uniformly in \\((b,θ)\\). Finally, the exponential CDF estimate is interpreted in terms of optimal transport: we obtain exponential convergence in the metric \\(W_1\\), a quantile coupling with \\(\\E|\\widetilde R_b-\\widetilde R_\\infty|=O(e^{-rb})\\), error bounds for Lipschitz functionals and a total-variation bound for smoothed distributions.",
+        "authors": "El'mira Yu. Kalimulina, Mark Ya. Kelbert",
+        "url": "http://arxiv.org/abs/2603.09504v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09504v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文是纯粹的概率论和随机过程研究，推导了标准指数族随机游走超调矩的Lorden型一致界限，并给出了指数修正项。它涉及更新过程、W1距离的最优传输等概念，提供了极其严谨的数学推导和理论保证。虽然直接应用于AI系统不明显，但作为数理统计博士生，这种深厚的理论工作对您理解随机过程和统计保证至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09453v1",
+        "title": "Variational Routing: A Scalable Bayesian Framework for Calibrated Mixture-of-Experts Transformers",
+        "summary": "Foundation models are increasingly being deployed in contexts where understanding the uncertainty of their outputs is critical to ensuring responsible deployment. While Bayesian methods offer a principled approach to uncertainty quantification, their computational overhead renders their use impractical for training or inference at foundation model scale. State-of-the-art models achieve parameter counts in the trillions through carefully engineered sparsity including Mixture-of-Experts (MoE) layers. In this work, we demonstrate calibrated uncertainty at scale by introducing Variational Mixture-of-Experts Routing (VMoER), a structured Bayesian approach for modelling uncertainty in MoE layers. VMoER confines Bayesian inference to the expert-selection stage which is typically done by a deterministic routing network. We instantiate VMoER using two inference strategies: amortised variational inference over routing logits and inferring a temperature parameter for stochastic expert selection. Across tested foundation models, VMoER improves routing stability under noise by 38\\%, reduces calibration error by 94\\%, and increases out-of-distribution AUROC by 12\\%, while incurring less than 1\\% additional FLOPs. These results suggest VMoER offers a scalable path toward robust and uncertainty-aware foundation models.",
+        "authors": "Albus Yizhuo Li, Matthew Wicker",
+        "url": "http://arxiv.org/abs/2603.09453v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09453v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了变分MoE路由（VMoER），一个可扩展的贝叶斯框架，用于校准混合专家（MoE）Transformer的输出不确定性。它将贝叶斯推断限制在专家选择阶段，并使用摊销变分推断和随机专家选择的温度参数推断。这为基础模型的不确定性量化提供了原则性的贝叶斯方法，具有强大的统计理论基础和对现代AI系统（Transformer）的直接应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09411v1",
+        "title": "RiO-DETR: DETR for Real-time Oriented Object Detection",
+        "summary": "We present RiO-DETR: DETR for Real-time Oriented Object Detection, the first real-time oriented detection transformer to the best of our knowledge. Adapting DETR to oriented bounding boxes (OBBs) poses three challenges: semantics-dependent orientation, angle periodicity that breaks standard Euclidean refinement, and an enlarged search space that slows convergence. RiO-DETR resolves these issues with task-native designs while preserving real-time efficiency. First, we propose Content-Driven Angle Estimation by decoupling angle from positional queries, together with Rotation-Rectified Orthogonal Attention to capture complementary cues for reliable orientation. Second, Decoupled Periodic Refinement combines bounded coarse-to-fine updates with a Shortest-Path Periodic Loss for stable learning across angular seams. Third, Oriented Dense O2O injects angular diversity into dense supervision to speed up angle convergence at no extra cost. Extensive experiments on DOTA-1.0, DIOR-R, and FAIR-1M-2.0 demonstrate RiO-DETR establishes a new speed--accuracy trade-off for real-time oriented detection. Code will be made publicly available.",
+        "authors": "Zhangchi Hu, Yifan Zhao, Yansong Peng, Wenzhang Sun, Xiangchen Yin, Jie Chen, Peixi Wu, Hebei Li, Xinghao Wang, Dongsheng Jiang, Xiaoyan Sun",
+        "url": "http://arxiv.org/abs/2603.09411v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09411v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个非参数加权（NW）方法，用于上下文多臂赌博机设置中的离策略评估（OPE）。它解决了逆概率加权（IPW）的高方差问题，通过非参数模型构建权重，实现了低偏差和显著降低的方差。它还引入了模型辅助非参数加权（MNW）方法。这篇论文在统计估计理论方面做出了重要贡献，对因果推断和强化学习中的OPE问题提供了严谨的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09367v1",
+        "title": "M3GCLR: Multi-View Mini-Max Infinite Skeleton-Data Game Contrastive Learning For Skeleton-Based Action Recognition",
+        "summary": "In recent years, contrastive learning has drawn significant attention as an effective approach to reducing reliance on labeled data. However, existing methods for self-supervised skeleton-based action recognition still face three major limitations: insufficient modeling of view discrepancies, lack of effective adversarial mechanisms, and uncontrollable augmentation perturbations. To tackle these issues, we propose the Multi-view Mini-Max infinite skeleton-data Game Contrastive Learning for skeleton-based action Recognition (M3GCLR), a game-theoretic contrastive framework. First, we establish the Infinite Skeleton-data Game (ISG) model and the ISG equilibrium theorem, and further provide a rigorous proof, enabling mini-max optimization based on multi-view mutual information. Then, we generate normal-extreme data pairs through multi-view rotation augmentation and adopt temporally averaged input as a neutral anchor to achieve structural alignment, thereby explicitly characterizing perturbation strength. Next, leveraging the proposed equilibrium theorem, we construct a strongly adversarial mini-max skeleton-data game to encourage the model to mine richer action-discriminative information. Finally, we introduce the dual-loss equilibrium optimizer to optimize the game equilibrium, allowing the learning process to maximize action-relevant information while minimizing encoding redundancy, and we prove the equivalence between the proposed optimizer and the ISG model. Extensive Experiments show that M3GCLR achieves three-stream 82.1%, 85.8% accuracy on NTU RGB+D 60 (X-Sub, X-View) and 72.3%, 75.0% accuracy on NTU RGB+D 120 (X-Sub, X-Set). On PKU-MMD Part I and II, it attains 89.1%, 45.2% in three-stream respectively, all results matching or outperforming state-of-the-art performance. Ablation studies confirm the effectiveness of each component.",
+        "authors": "Yanshan Li, Ke Ma, Miaomiao Wei, Linhui Dai",
+        "url": "http://arxiv.org/abs/2603.09367v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09367v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了M3GCLR，一个基于博弈论的对比学习框架，用于骨架动作识别。它建立了无限骨架数据博弈（ISG）模型和ISG均衡定理，并提供了严格的证明，实现了基于多视图互信息的min-max优化。论文还证明了所提出的优化器与ISG模型的等价性。这篇论文在博弈论和优化理论方面具有强大的理论基础和严谨的数学推导，并将其应用于现代AI系统（对比学习）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09359v1",
+        "title": "Evidential Perfusion Physics-Informed Neural Networks with Residual Uncertainty Quantification",
+        "summary": "Physics-informed neural networks (PINNs) have shown promise in addressing the ill-posed deconvolution problem in computed tomography perfusion (CTP) imaging for acute ischemic stroke assessment. However, existing PINN-based approaches remain deterministic and do not quantify uncertainty associated with violations of physics constraints, limiting reliability assessment. We propose Evidential Perfusion Physics-Informed Neural Networks (EPPINN), a framework that integrates evidential deep learning with physics-informed modeling to enable uncertainty-aware perfusion parameter estimation. EPPINN models arterial input, tissue concentration, and perfusion parameters using coordinate-based networks, and places a Normal--Inverse--Gamma distribution over the physics residual to characterize voxel-wise aleatoric and epistemic uncertainty in physics consistency without requiring Bayesian sampling or ensemble inference. The framework further incorporates physiologically constrained parameterization and stabilization strategies to promote robust per-case optimization. We evaluate EPPINN on digital phantom data, the ISLES 2018 benchmark, and a clinical cohort. On the evaluated datasets, EPPINN achieves lower normalized mean absolute error than classical deconvolution and PINN baselines, particularly under sparse temporal sampling and low signal-to-noise conditions, while providing conservative uncertainty estimates with high empirical coverage. On clinical data, EPPINN attains the highest voxel-level and case-level infarct-core detection sensitivity. These results suggest that evidential physics-informed learning can improve both accuracy and reliability of CTP analysis for time-critical stroke assessment.",
+        "authors": "Junhyeok Lee, Minseo Choi, Han Jang, Young Hun Jeon, Heeseong Eum, Joon Jang, Chul-Ho Sohn, Kyu Sung Choi",
+        "url": "http://arxiv.org/abs/2603.09359v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09359v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了EPPINN，一个将证据深度学习与物理信息神经网络（PINN）相结合的框架，用于不确定性感知的灌注参数估计。它通过在物理残差上放置Normal-Inverse-Gamma分布来量化体素级的偶然性和认知不确定性。这篇论文在物理信息AI和不确定性量化方面提供了严谨的统计和物理学理论基础，非常符合您将严谨数学逻辑应用于AI系统的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09306v1",
+        "title": "Contrastive Bayesian Inference for Unnormalized Models",
+        "summary": "Unnormalized (or energy-based) models provide a flexible framework for capturing the characteristics of data with complex dependency structures. However, the application of standard Bayesian inference methods has been severely limited because the parameter-dependent normalizing constant is either analytically intractable or computationally prohibitive to evaluate. A promising approach is score-based generalized Bayesian inference, which avoids evaluating the normalizing constant by replacing the likelihood with a scoring rule. However, this approach requires careful tuning of the likelihood information, and it may fail to yield valid inference without appropriate control. To overcome this difficulty, we propose a fully Bayesian framework for inference on unnormalized models that does not require such tuning. We build on noise contrastive estimation, which recasts inference as a binary classification problem between observed and noise samples, and treat the normalizing constant as an additional unknown parameter within the resulting likelihood. For exponential families, the classification likelihood becomes conditionally Gaussian via Pólya-Gamma data augmentation, leading to a simple Gibbs sampler. We demonstrate the proposed approach through two models: time-varying density models for temporal point process data and sparse torus graph models for multivariate circular data. Through simulation studies and real-data analyses, the proposed method provides accurate point estimation and enables principled uncertainty quantification.",
+        "authors": "Naruki Sonobe, Shonosuke Sugasawa, Daichi Mochihashi, Takeru Matsuda",
+        "url": "http://arxiv.org/abs/2603.09306v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09306v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个用于非归一化模型的全贝叶斯推断框架，解决了参数依赖的归一化常数难以处理的问题。它基于噪声对比估计，并将归一化常数视为额外的未知参数，对于指数族模型，通过Pólya-Gamma数据增强，分类似然变为条件高斯，从而实现简单的Gibbs采样器。这篇论文在贝叶斯推断方法论上做出了严谨的理论贡献，具有强大的统计学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09257v1",
+        "title": "Transductive Generalization via Optimal Transport and Its Application to Graph Node Classification",
+        "summary": "Many existing transductive bounds rely on classical complexity measures that are computationally intractable and often misaligned with empirical behavior. In this work, we establish new representation-based generalization bounds in a distribution-free transductive setting, where learned representations are dependent, and test features are accessible during training. We derive global and class-wise bounds via optimal transport, expressed in terms of Wasserstein distances between encoded feature distributions. We demonstrate that our bounds are efficiently computable and strongly correlate with empirical generalization in graph node classification, improving upon classical complexity measures. Additionally, our analysis reveals how the GNN aggregation process transforms the representation distributions, inducing a trade-off between intra-class concentration and inter-class separation. This yields depth-dependent characterizations that capture the non-monotonic relationship between depth and generalization error observed in practice. The code is available at https://github.com/ml-postech/Transductive-OT-Gen-Bound.",
+        "authors": "MoonJeong Park, Seungbeom Lee, Kyungmin Kim, Jaeseung Heo, Seunghyuk Cho, Shouheng Li, Sangdon Park, Dongwoo Kim",
+        "url": "http://arxiv.org/abs/2603.09257v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09257v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文建立了在无分布转导设置下，基于表示的新泛化界限。它通过最优传输和Wasserstein距离来表达这些界限，并证明了它们的可计算性以及与经验泛化的强相关性。论文还分析了GNN聚合过程如何转换表示分布，揭示了类内集中度与类间分离度之间的权衡。这篇论文为图神经网络的泛化理论提供了严谨的统计学习理论基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09213v1",
+        "title": "Geometry-Aware Metric Learning for Cross-Lingual Few-Shot Sign Language Recognition on Static Hand Keypoints",
+        "summary": "Sign language recognition (SLR) systems typically require large labeled corpora for each language, yet the majority of the world's 300+ sign languages lack sufficient annotated data. Cross-lingual few-shot transfer, pretraining on a data-rich source language and adapting with only a handful of target-language examples, offers a scalable alternative, but conventional coordinate-based keypoint representations are susceptible to domain shift arising from differences in camera viewpoint, hand scale, and recording conditions. This shift is particularly detrimental in the few-shot regime, where class prototypes estimated from only K examples are highly sensitive to extrinsic variance. We propose a geometry-aware metric-learning framework centered on a compact 20-dimensional inter-joint angle descriptor derived from MediaPipe static hand keypoints. These angles are invariant to SO(3) rotation, translation, and isotropic scaling, eliminating the dominant sources of cross-dataset shift and yielding tighter, more stable class prototypes. Evaluated on four fingerspelling alphabets spanning typologically diverse sign languages, ASL, LIBRAS, Arabic Sign Language, and Thai Sign Language, the proposed angle features improve over normalized-coordinate baselines by up to 25 percentage points within-domain and enable frozen cross-lingual transfer that frequently exceeds within-domain accuracy, using a lightweight MLP encoder with about 10^5 parameters. These findings demonstrate that invariant hand-geometry descriptors provide a portable and effective foundation for cross-lingual few-shot SLR in low-resource settings.",
+        "authors": "Chayanin Chamachot, Kanokphan Lertniponphan",
+        "url": "http://arxiv.org/abs/2603.09213v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09213v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个几何感知的度量学习框架，用于跨语言少样本手语识别。它使用20维的关节间角度描述符，这些角度对SO(3)旋转、平移和各向同性缩放具有不变性，从而消除了跨数据集域偏移的主要来源。这种基于几何不变量的表示方法具有强大的数学基础和理论严谨性，能够有效解决少样本学习中的域偏移问题，并应用于AI视觉系统。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09208v1",
+        "title": "Strategically Robust Multi-Agent Reinforcement Learning with Linear Function Approximation",
+        "summary": "Provably efficient and robust equilibrium computation in general-sum Markov games remains a core challenge in multi-agent reinforcement learning. Nash equilibrium is computationally intractable in general and brittle due to equilibrium multiplicity and sensitivity to approximation error. We study Risk-Sensitive Quantal Response Equilibrium (RQRE), which yields a unique, smooth solution under bounded rationality and risk sensitivity. We propose \\texttt{RQRE-OVI}, an optimistic value iteration algorithm for computing RQRE with linear function approximation in large or continuous state spaces. Through finite-sample regret analysis, we establish convergence and explicitly characterize how sample complexity scales with rationality and risk-sensitivity parameters. The regret bounds reveal a quantitative tradeoff: increasing rationality tightens regret, while risk sensitivity induces regularization that enhances stability and robustness. This exposes a Pareto frontier between expected performance and robustness, with Nash recovered in the limit of perfect rationality and risk neutrality. We further show that the RQRE policy map is Lipschitz continuous in estimated payoffs, unlike Nash, and RQRE admits a distributionally robust optimization interpretation. Empirically, we demonstrate that \\texttt{RQRE-OVI} achieves competitive performance under self-play while producing substantially more robust behavior under cross-play compared to Nash-based approaches. These results suggest \\texttt{RQRE-OVI} offers a principled, scalable, and tunable path for equilibrium learning with improved robustness and generalization.",
+        "authors": "Jake Gonzales, Max Horwitz, Eric Mazumdar, Lillian J. Ratliff",
+        "url": "http://arxiv.org/abs/2603.09208v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09208v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了在一般和马尔可夫博弈中可证明高效且鲁棒的均衡计算。它研究了风险敏感量化响应均衡（RQRE），并提出了RQRE-OVI算法，通过有限样本后悔分析建立了收敛性，并明确表征了样本复杂度的缩放。论文还证明了RQRE策略映射在估计收益中是Lipschitz连续的，并具有分布鲁棒优化解释。这篇论文在多智能体强化学习和博弈论方面提供了极其严谨的理论基础和数学推导。"
+    }
+]

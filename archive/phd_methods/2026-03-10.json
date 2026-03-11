@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.09758v1",
+        "title": "Beyond Fine-Tuning: Robust Food Entity Linking under Ontology Drift with FoodOntoRAG",
+        "summary": "Standardizing food terms from product labels and menus into ontology concepts is a prerequisite for trustworthy dietary assessment and safety reporting. The dominant approach to Named Entity Linking (NEL) in the food and nutrition domains fine-tunes Large Language Models (LLMs) on task-specific corpora. Although effective, fine-tuning incurs substantial computational cost, ties models to a particular ontology snapshot (i.e., version), and degrades under ontology drift. This paper presents FoodOntoRAG, a model- and ontology-agnostic pipeline that performs few-shot NEL by retrieving candidate entities from domain ontologies and conditioning an LLM on structured evidence (food labels, synonyms, definitions, and relations). A hybrid lexical--semantic retriever enumerates candidates; a selector agent chooses a best match with rationale; a separate scorer agent calibrates confidence; and, when confidence falls below a threshold, a synonym generator agent proposes reformulations to re-enter the loop. The pipeline approaches state-of-the-art accuracy while revealing gaps and inconsistencies in existing annotations. The design avoids fine-tuning, improves robustness to ontology evolution, and yields interpretable decisions through grounded justifications.",
+        "authors": "Jan Drole, Ana Gjorgjevikj, Barbara Korouši'c Seljak, Tome Eftimov",
+        "url": "http://arxiv.org/abs/2603.09758v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09758v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对大型语言模型（LLM）的推理机制进行了纯理论分析，形式化了“不透明串行深度”的概念并计算了其上界。这直接契合了数理统计博士生对AI算法和架构深层理解的需求，具有极高的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09723v1",
+        "title": "RbtAct: Rebuttal as Supervision for Actionable Review Feedback Generation",
+        "summary": "Large language models (LLMs) are increasingly used across the scientific workflow, including to draft peer-review reports. However, many AI-generated reviews are superficial and insufficiently actionable, leaving authors without concrete, implementable guidance and motivating the gap this work addresses. We propose RbtAct, which targets actionable review feedback generation and places existing peer review rebuttal at the center of learning. Rebuttals show which reviewer comments led to concrete revisions or specific plans, and which were only defended. Building on this insight, we leverage rebuttal as implicit supervision to directly optimize a feedback generator for actionability. To support this objective, we propose a new task called perspective-conditioned segment-level review feedback generation, in which the model is required to produce a single focused comment based on the complete paper and a specified perspective such as experiments and writing. We also build a large dataset named RMR-75K that maps review segments to the rebuttal segments that address them, with perspective labels and impact categories that order author uptake. We then train the Llama-3.1-8B-Instruct model with supervised fine-tuning on review segments followed by preference optimization using rebuttal derived pairs. Experiments with human experts and LLM-as-a-judge show consistent gains in actionability and specificity over strong baselines while maintaining grounding and relevance.",
+        "authors": "Sihong Wu, Yiling Ma, Yilun Zhao, Tiansheng Hu, Owen Jiang, Manasi Patwardhan, Arman Cohan",
+        "url": "http://arxiv.org/abs/2603.09723v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09723v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对联邦学习中非独立同分布（non-IID）数据和信息损失的瓶颈，该论文提出了多原型引导的联邦知识蒸馏（MP-FedKD）方法，包含新颖的条件层次聚类（CHAC）和原型对齐方案，以及创新的LEMGP损失函数。其理论严谨性高，对数据效率和AI架构的实践影响力显著。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09418v1",
+        "title": "CIGPose: Causal Intervention Graph Neural Network for Whole-Body Pose Estimation",
+        "summary": "State-of-the-art whole-body pose estimators often lack robustness, producing anatomically implausible predictions in challenging scenes. We posit this failure stems from spurious correlations learned from visual context, a problem we formalize using a Structural Causal Model (SCM). The SCM identifies visual context as a confounder that creates a non-causal backdoor path, corrupting the model's reasoning. We introduce the Causal Intervention Graph Pose (CIGPose) framework to address this by approximating the true causal effect between visual evidence and pose. The core of CIGPose is a novel Causal Intervention Module: it first identifies confounded keypoint representations via predictive uncertainty and then replaces them with learned, context-invariant canonical embeddings. These deconfounded embeddings are processed by a hierarchical graph neural network that reasons over the human skeleton at both local and global semantic levels to enforce anatomical plausibility. Extensive experiments show CIGPose achieves a new state-of-the-art on COCO-WholeBody. Notably, our CIGPose-x model achieves 67.0\\% AP, surpassing prior methods that rely on extra training data. With the additional UBody dataset, CIGPose-x is further boosted to 67.5\\% AP, demonstrating superior robustness and data efficiency. The codes and models are publicly available at https://github.com/53mins/CIGPose.",
+        "authors": "Bohao Li, Zhicheng Cao, Huixian Li, Yangming Guo",
+        "url": "http://arxiv.org/abs/2603.09418v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09418v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将结构化因果模型（SCM）引入图神经网络（GNN）进行全身姿态估计，通过因果干预模块解决由虚假相关性导致的解剖学不合理预测。其方法具有极强的理论创新性和严谨性，是AI算法前沿与因果推断结合的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09378v1",
+        "title": "SPAARS: Safer RL Policy Alignment through Abstract Exploration and Refined Exploitation of Action Space",
+        "summary": "Offline-to-online reinforcement learning (RL) offers a promising paradigm for robotics by pre-training policies on safe, offline demonstrations and fine-tuning them via online interaction. However, a fundamental challenge remains: how to safely explore online without deviating from the behavioral support of the offline data? While recent methods leverage conditional variational autoencoders (CVAEs) to bound exploration within a latent space, they inherently suffer from an exploitation gap -- a performance ceiling imposed by the decoder's reconstruction loss. We introduce SPAARS, a curriculum learning framework that initially constrains exploration to the low-dimensional latent manifold for sample-efficient, safe behavioral improvement, then seamlessly transfers control to the raw action space, bypassing the decoder bottleneck. SPAARS has two instantiations: the CVAE-based variant requires only unordered (s,a) pairs and no trajectory segmentation; SPAARS-SUPE pairs SPAARS with OPAL temporal skill pretraining for stronger exploration structure at the cost of requiring trajectory chunks. We prove an upper bound on the exploitation gap using the Performance Difference Lemma, establish that latent-space policy gradients achieve provable variance reduction over raw-space exploration, and show that concurrent behavioral cloning during the latent phase directly controls curriculum transition stability. Empirically, SPAARS-SUPE achieves 0.825 normalized return on kitchen-mixed-v0 versus 0.75 for SUPE, with 5x better sample efficiency; standalone SPAARS achieves 92.7 and 102.9 normalized return on hopper-medium-v2 and walker2d-medium-v2 respectively, surpassing IQL baselines of 66.3 and 78.3 respectively, confirming the utility of the unordered-pair CVAE instantiation.",
+        "authors": "Swaminathan S K, Aritra Hazra",
+        "url": "http://arxiv.org/abs/2603.09378v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09378v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对离线到在线强化学习（RL）中安全探索和利用的挑战，该论文提出了SPAARS课程学习框架，通过理论证明（如exploitation gap上界和方差减少）保证了其安全性和样本效率。该工作兼具理论深度和实际应用价值，尤其在机器人领域具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09344v1",
+        "title": "Robust Regularized Policy Iteration under Transition Uncertainty",
+        "summary": "Offline reinforcement learning (RL) enables data-efficient and safe policy learning without online exploration, but its performance often degrades under distribution shift. The learned policy may visit out-of-distribution state-action pairs where value estimates and learned dynamics are unreliable. To address policy-induced extrapolation and transition uncertainty in a unified framework, we formulate offline RL as robust policy optimization, treating the transition kernel as a decision variable within an uncertainty set and optimizing the policy against the worst-case dynamics. We propose Robust Regularized Policy Iteration (RRPI), which replaces the intractable max-min bilevel objective with a tractable KL-regularized surrogate and derives an efficient policy iteration procedure based on a robust regularized Bellman operator. We provide theoretical guarantees by showing that the proposed operator is a $γ$-contraction and that iteratively updating the surrogate yields monotonic improvement of the original robust objective with convergence. Experiments on D4RL benchmarks demonstrate that RRPI achieves strong average performance, outperforming recent baselines including percentile-based methods such as PMDB on the majority of environments while remaining competitive on the rest. Moreover, RRPI exhibits robust behavior. The learned $Q$-values decrease in regions with higher epistemic uncertainty, suggesting that the resulting policy avoids unreliable out-of-distribution actions under transition uncertainty.",
+        "authors": "Hongqiang Lin, Zhenghui Fu, Weihao Tang, Pengfei Wang, Yiding Sun, Qixian Huang, Dongxu Zhang",
+        "url": "http://arxiv.org/abs/2603.09344v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09344v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将离线强化学习（RL）公式化为在转换不确定性下的鲁棒策略优化问题，并提出了鲁棒正则化策略迭代（RRPI）算法。论文提供了严格的理论收敛性证明和对贝尔曼算子的分析，数学严谨性极高，解决了分布偏移和外推问题，对RL理论有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09297v1",
+        "title": "TA-Mem: Tool-Augmented Autonomous Memory Retrieval for LLM in Long-Term Conversational QA",
+        "summary": "Large Language Model (LLM) has exhibited strong reasoning ability in text-based contexts across various domains, yet the limitation of context window poses challenges for the model on long-range inference tasks and necessitates a memory storage system. While many current storage approaches have been proposed with episodic notes and graph representations of memory, retrieval methods still primarily rely on predefined workflows or static similarity top-k over embeddings. To address this inflexibility, we introduced a novel tool-augmented autonomous memory retrieval framework (TA-Mem), which contains: (1) a memory extraction LLM agent which is prompted to adaptively chuck an input into sub-context based on semantic correlation, and extract information into structured notes, (2) a multi-indexed memory database designed for different types of query methods including both key-based lookup and similarity-based retrieval, (3) a tool-augmented memory retrieval agent which explores the memory autonomously by selecting appropriate tools provided by the database based on the user input, and decides whether to proceed to the next iteration or finalizing the response after reasoning on the fetched memories. The TA-Mem is evaluated on the LoCoMo dataset, achieving significant performance improvements over existing baseline approaches. In addition, an analysis of tool use across different question types also demonstrates the adaptivity of the proposed method.",
+        "authors": "Mengwei Yuan, Jianan Liu, Jing Yang, Xianyou Li, Weiran Yan, Yichao Wu, Penghao Liang",
+        "url": "http://arxiv.org/abs/2603.09297v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09297v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过分析大型语言模型（LLM）激活空间的内在几何结构，挑战了线性表示假设，并提出了基于多项式核PCA的非线性转向方法“Curveball Steering”。这为理解和控制LLM内部机制提供了重要的理论创新和严谨的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09206v1",
+        "title": "MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data",
+        "summary": "Self-evolving has emerged as a key paradigm for improving foundational models such as Large Language Models (LLMs) and Vision Language Models (VLMs) with minimal human intervention. While recent approaches have demonstrated that LLM agents can self-evolve from scratch with little to no data, VLMs introduce an additional visual modality that typically requires at least some seed data, such as images, to bootstrap the self-evolution process. In this work, we present Multi-model Multimodal Zero (MM-Zero), the first RL-based framework to achieve zero-data self-evolution for VLM reasoning. Moving beyond prior dual-role (Proposer and Solver) setups, MM-Zero introduces a multi-role self-evolving training framework comprising three specialized roles: a Proposer that generates abstract visual concepts and formulates questions; a Coder that translates these concepts into executable code (e.g., Python, SVG) to render visual images; and a Solver that performs multimodal reasoning over the generated visual content. All three roles are initialized from the same base model and trained using Group Relative Policy Optimization (GRPO), with carefully designed reward mechanisms that integrate execution feedback, visual verification, and difficulty balancing. Our experiments show that MM-Zero improves VLM reasoning performance across a wide range of multimodal benchmarks. MM-Zero establishes a scalable path toward self-evolving multi-model systems for multimodal models, extending the frontier of self-improvement beyond the conventional two-model paradigm.",
+        "authors": "Zongxia Li, Hongyang Du, Chengsong Huang, Xiyang Wu, Lantao Yu, Yicheng He, Jing Xie, Xiaomin Wu, Zhichao Liu, Jiarui Zhang, Fuxiao Liu",
+        "url": "http://arxiv.org/abs/2603.09206v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09206v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了多智能体强化学习中纳什均衡的计算复杂性和脆弱性，提出了基于线性函数逼近的乐观价值迭代算法RQRE-OVI，用于计算风险敏感量化响应均衡（RQRE）。论文提供了有限样本遗憾分析和收敛性证明，具有极高的理论严谨性和对多智能体AI架构的指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09065v1",
+        "title": "Learning Adaptive LLM Decoding",
+        "summary": "Decoding from large language models (LLMs) typically relies on fixed sampling hyperparameters (e.g., temperature, top-p), despite substantial variation in task difficulty and uncertainty across prompts and individual decoding steps. We propose to learn adaptive decoding policies that dynamically select sampling strategies at inference time, conditioned on available compute resources. Rather than fine-tuning the language model itself, we introduce lightweight decoding adapters trained with reinforcement learning and verifiable terminal rewards (e.g. correctness on math and coding tasks). At the sequence level, we frame decoding as a contextual bandit problem: a policy selects a decoding strategy (e.g. greedy, top-k, min-p) for each prompt, conditioned on the prompt embedding and a parallel sampling budget. At the token level, we model decoding as a partially observable Markov decision process (POMDP), where a policy selects sampling actions at each token step based on internal model features and the remaining token budget. Experiments on the MATH and CodeContests benchmarks show that the learned adapters improve the accuracy-budget tradeoff: on MATH, the token-level adapter improves Pass@1 accuracy by up to 10.2% over the best static baseline under a fixed token budget, while the sequence-level adapter yields 2-3% gains under fixed parallel sampling. Ablation analyses support the contribution of both sequence- and token-level adaptation.",
+        "authors": "Chloe H. Su, Zhe Ye, Samuel Tenka, Aidan Yang, Soonho Kong, Udaya Ghai",
+        "url": "http://arxiv.org/abs/2603.09065v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09065v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将大型语言模型（LLM）的解码问题形式化为强化学习问题（上下文bandit和部分可观察马尔可夫决策过程），学习动态选择采样策略的自适应解码策略。这具有很强的理论创新性，并能显著提升LLM的效率和准确性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09715v1",
+        "title": "Does the Question Really Matter? Training-Free Data Selection for Vision-Language SFT",
+        "summary": "Visual instruction tuning is crucial for improving vision-language large models (VLLMs). However, many samples can be solved via linguistic patterns or common-sense shortcuts, without genuine cross-modal reasoning, limiting the effectiveness of multimodal learning. Prior data selection methods often rely on costly proxy model training and focus on difficulty or diversity, failing to capture a sample's true contribution to vision-language joint reasoning. In this paper, we propose CVS, a training-free data selection method based on the insight that, for high-quality multimodal samples, introducing the question should substantially alter the model's assessment of answer validity given an image. CVS leverages a frozen VLLM as an evaluator and measures the discrepancy in answer validity with and without conditioning on the question, enabling the identification of samples that require vision-language joint reasoning while filtering semantic-conflict noise. Experiments on Vision-Flan and The Cauldron show that CVS achieves solid performance across datasets. On Vision-Flan, CVS outperforms full-data training by 3.5% and 4.8% using only 10% and 15% of the data, respectively, and remains robust on the highly heterogeneous Cauldron dataset. Moreover, CVS reduces computational cost by 17.3% and 44.4% compared to COINCIDE and XMAS.",
+        "authors": "Peng Sun, Huawen Shen, Yi Ban, Tianfan Fu, Yanbo Wang, Yuqiang Li",
+        "url": "http://arxiv.org/abs/2603.09715v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09715v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了AutoAgent，一个自进化的多智能体框架，通过演化认知和弹性记忆编排解决智能体在开放环境中适应性差、上下文利用效率低的问题。其创新性极高，对LLM应用（智能体）的适应性和长期推理能力具有巨大影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09624v1",
+        "title": "Decoder-Free Distillation for Quantized Image Restoration",
+        "summary": "Quantization-Aware Training (QAT), combined with Knowledge Distillation (KD), holds immense promise for compressing models for edge deployment. However, joint optimization for precision-sensitive image restoration (IR) to recover visual quality from degraded images remains largely underexplored. Directly adapting QAT-KD to low-level vision reveals three critical bottlenecks: teacher-student capacity mismatch, spatial error amplification during decoder distillation, and an optimization \"tug-of-war\" between reconstruction and distillation losses caused by quantization noise. To tackle these, we introduce Quantization-aware Distilled Restoration (QDR), a framework for edge-deployed IR. QDR eliminates capacity mismatch via FP32 self-distillation and prevents error amplification through Decoder-Free Distillation (DFD), which corrects quantization errors strictly at the network bottleneck. To stabilize the optimization tug-of-war, we propose a Learnable Magnitude Reweighting (LMR) that dynamically balances competing gradients. Finally, we design an Edge-Friendly Model (EFM) featuring a lightweight Learnable Degradation Gating (LDG) to dynamically modulate spatial degradation localization. Extensive experiments across four IR tasks demonstrate that our Int8 model recovers 96.5% of FP32 performance, achieves 442 frames per second (FPS) on an NVIDIA Jetson Orin, and boosts downstream object detection by 16.3 mAP",
+        "authors": "S. M. A. Sharif, Abdur Rehman, Seongwan Kim, Jaeho Lee",
+        "url": "http://arxiv.org/abs/2603.09624v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09624v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对边缘部署模型压缩的挑战，该论文提出了量化感知蒸馏修复（QDR）框架，通过无解码器蒸馏和可学习幅度重加权解决量化感知训练中的瓶颈。其创新性高，对模型压缩和边缘设备效率提升具有显著实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09574v1",
+        "title": "SCDP: Learning Humanoid Locomotion from Partial Observations via Mixed-Observation Distillation",
+        "summary": "Distilling humanoid locomotion control from offline datasets into deployable policies remains a challenge, as existing methods rely on privileged full-body states that require complex and often unreliable state estimation. We present Sensor-Conditioned Diffusion Policies (SCDP) that enables humanoid locomotion using only onboard sensors, eliminating the need for explicit state estimation. SCDP decouples sensing from supervision through mixed-observation training: diffusion model conditions on sensor histories while being supervised to predict privileged future state-action trajectories, enforcing the model to infer the motion dynamics under partial observability. We further develop restricted denoising, context distribution alignment, and context-aware attention masking to encourage implicit state estimation within the model and to prevent train-deploy mismatch. We validate SCDP on velocity-commanded locomotion and motion reference tracking tasks. In simulation, SCDP achieves near-perfect success on velocity control (99-100%) and 93% tracking success in AMASS test set, performing comparable to privileged baselines while using only onboard sensors. Finally, we deploy the trained policy on a real G1 humanoid at 50 Hz, demonstrating robust real robot locomotion without external sensing or state estimation.",
+        "authors": "Milo Carroll, Tianhu Peng, Lingfan Bao, Chengxu Zhou, Zhibin Li",
+        "url": "http://arxiv.org/abs/2603.09574v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09574v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了BinaryAttention，一种用于视觉和扩散Transformer的1比特QK注意力机制。通过理论论证和位操作显著降低计算成本，同时保持高精度。这在模型压缩和效率提升方面具有突破性贡献，非常符合对前沿算法和架构的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09195v1",
+        "title": "$P^2$GNN: Two Prototype Sets to boost GNN Performance",
+        "summary": "Message Passing Graph Neural Networks (MP-GNNs) have garnered attention for addressing various industry challenges, such as user recommendation and fraud detection. However, they face two major hurdles: (1) heavy reliance on local context, often lacking information about the global context or graph-level features, and (2) assumption of strong homophily among connected nodes, struggling with noisy local neighborhoods. To tackle these, we introduce $P^2$GNN, a plug-and-play technique leveraging prototypes to optimize message passing, enhancing the performance of the base GNN model. Our approach views the prototypes in two ways: (1) as universally accessible neighbors for all nodes, enriching global context, and (2) aligning messages to clustered prototypes, offering a denoising effect. We demonstrate the extensibility of our proposed method to all message-passing GNNs and conduct extensive experiments across 18 datasets, including proprietary e-commerce datasets and open-source datasets, on node recommendation and node classification tasks. Results show that $P^2$GNN outperforms production models in e-commerce and achieves the top average rank on open-source datasets, establishing it as a leading approach. Qualitative analysis supports the value of global context and noise mitigation in the local neighborhood in enhancing performance.",
+        "authors": "Arihant Jain, Gundeep Arora, Anoop Saladi, Chaosheng Dong",
+        "url": "http://arxiv.org/abs/2603.09195v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09195v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了RAISE框架，从理论上阐述了逻辑推理如何作为一种机制途径，使AI系统获得逐步深入的态势感知能力。这对于AI安全这一前沿领域具有深刻的理论洞察和警示作用，影响力巨大。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09161v1",
+        "title": "Wrong Code, Right Structure: Learning Netlist Representations from Imperfect LLM-Generated RTL",
+        "summary": "Learning effective netlist representations is fundamentally constrained by the scarcity of labeled datasets, as real designs are protected by Intellectual Property (IP) and costly to annotate. Existing work therefore focuses on small-scale circuits with clean labels, limiting scalability to realistic designs. Meanwhile, Large Language Models (LLMs) can generate Register-Transfer-Level (RTL) at scale, but their functional incorrectness has hindered their use in circuit analysis. In this work, we make a key observation: even when LLM-Generated RTL is functionally imperfect, the synthesized netlists still preserve structural patterns that are strongly indicative of the intended functionality. Building on this insight, we propose a cost-effective data augmentation and training framework that systematically exploits imperfect LLM-Generated RTL as training data for netlist representation learning, forming an end-to-end pipeline from automated code generation to downstream tasks. We conduct evaluations on circuit functional understanding tasks, including sub-circuit boundary identification and component classification, across benchmarks of increasing scales, extending the task scope from operator-level to IP-level. The evaluations demonstrate that models trained on our noisy synthetic corpus generalize well to real-world netlists, matching or even surpassing methods trained on scarce high-quality data and effectively breaking the data bottleneck in circuit representation learning.",
+        "authors": "Siyang Cai, Cangyuan Li, Yinhe Han, Ying Wang",
+        "url": "http://arxiv.org/abs/2603.09161v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09161v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SAGE，首个直接处理原始点云而无需预训练3D编码器的端到端3D多模态大语言模型（MLLM）。通过轻量级3D tokenizer将点云视为“外语”，具有极高的创新性，解决了3D理解的语义错位和计算开销瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.09104v1",
+        "title": "Training-free Motion Factorization for Compositional Video Generation",
+        "summary": "Compositional video generation aims to synthesize multiple instances with diverse appearance and motion, which is widely applicable in real-world scenarios. However, current approaches mainly focus on binding semantics, neglecting to understand diverse motion categories specified in prompts. In this paper, we propose a motion factorization framework that decomposes complex motion into three primary categories: motionlessness, rigid motion, and non-rigid motion. Specifically, our framework follows a planning before generation paradigm. (1) During planning, we reason about motion laws on the motion graph to obtain frame-wise changes in the shape and position of each instance. This alleviates semantic ambiguities in the user prompt by organizing it into a structured representation of instances and their interactions. (2) During generation, we modulate the synthesis of distinct motion categories in a disentangled manner. Conditioned on the motion cues, guidance branches stabilize appearance in motionless regions, preserve rigid-body geometry, and regularize local non-rigid deformations. Crucially, our two modules are model-agnostic, which can be seamlessly incorporated into various diffusion model architectures. Extensive experiments demonstrate that our framework achieves impressive performance in motion synthesis on real-world benchmarks. Our code will be released soon.",
+        "authors": "Zixuan Wang, Ziqin Zhou, Feng Chen, Duo Peng, Yixin Hu, Changsheng Li, Yinjie Lei",
+        "url": "http://arxiv.org/abs/2603.09104v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.09104v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了VIVID-Med框架，利用冻结的大语言模型（LLM）作为结构化语义教师预训练医疗视觉Transformer（ViT）。这解决了医疗图像分析中复杂语义关系、模型部署和数据效率的瓶颈，创新性和实践影响力都极高，是医疗AI领域的重要进展。"
+    }
+]

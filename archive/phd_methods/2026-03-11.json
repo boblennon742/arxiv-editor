@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.10444v1",
+        "title": "The Curse and Blessing of Mean Bias in FP4-Quantized LLM Training",
+        "summary": "Large language models trained on natural language exhibit pronounced anisotropy: a small number of directions concentrate disproportionate energy, while the remaining dimensions form a broad semantic tail. In low-bit training regimes, this geometry becomes numerically unstable. Because blockwise quantization scales are determined by extreme elementwise magnitudes, dominant directions stretch the dynamic range, compressing long-tail semantic variation into narrow numerical bins. We show that this instability is primarily driven by a coherent rank-one mean bias, which constitutes the dominant component of spectral anisotropy in LLM representations. This mean component emerges systematically across layers and training stages and accounts for the majority of extreme activation magnitudes, making it the principal driver of dynamic-range inflation under low precision. Crucially, because the dominant instability is rank-one, it can be eliminated through a simple source-level mean-subtraction operation. This bias-centric conditioning recovers most of the stability benefits of SVD-based spectral methods while requiring only reduction operations and standard quantization kernels. Empirical results on FP4 (W4A4G4) training show that mean removal substantially narrows the loss gap to BF16 and restores downstream performance, providing a hardware-efficient path to stable low-bit LLM training.",
+        "authors": "Hengjie Cao, Zhendong Huang, Mengyi Chen, Yifeng Yang, Fanqi Yu, Ruijun Huang, Fang Dong, Xin Zhang, Jixian Zhou, Anrui Chen, Mingzhi Dong, Yujiang Wang, Jinlong Hou, Qin Lv, Yuan Cheng, Tun Lu, Fan Yang, Li Shang",
+        "url": "http://arxiv.org/abs/2603.10444v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10444v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了低精度LLM训练中普遍存在的秩一均值偏差，并从理论上解释了其如何导致动态范围膨胀和数值不稳定。它提出了一种简单而有效的源级均值减法来消除这种偏差，从而显著提升了FP4量化训练的稳定性和性能。其理论分析严谨，解决了LLM压缩和效率的关键瓶颈，非常符合您对理论创新性和实际应用价值的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10379v1",
+        "title": "Optimal Expert-Attention Allocation in Mixture-of-Experts: A Scalable Law for Dynamic Model Design",
+        "summary": "This paper presents a novel extension of neural scaling laws to Mixture-of-Experts (MoE) models, focusing on the optimal allocation of compute between expert and attention sub-layers. As MoE architectures have emerged as an efficient method for scaling model capacity without proportionally increasing computation, determining the optimal expert-attention compute ratio becomes critical. We define the ratio $r$ as the fraction of total FLOPs per token dedicated to the expert layers versus the attention layers, and explore how this ratio interacts with the overall compute budget and model sparsity. Through extensive experiments with GPT-style MoE Transformers, we empirically find that the optimal ratio $r^*$ follows a power-law relationship with total compute and varies with sparsity. Our analysis leads to an explicit formula for $r^*$, enabling precise control over the expert-attention compute allocation. We generalize the Chinchilla scaling law by incorporating this architectural parameter, providing a new framework for tuning MoE models beyond size and data. Our findings offer practical guidelines for designing efficient MoE models, optimizing performance while respecting fixed compute budgets.",
+        "authors": "Junzhuo Li, Peijie Jiang, Changxin Tian, Jia Liu, Zhiqiang Zhang, Xuming Hu",
+        "url": "http://arxiv.org/abs/2603.10379v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10379v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究将神经缩放定律扩展到MoE模型，专注于专家层和注意力子层之间的计算分配优化。它提出了一个关于最优计算比率的幂律关系，并给出了明确的公式，泛化了Chinchilla缩放定律。这篇论文在AI架构设计方面具有高度的理论创新性和实践影响力，为MoE模型的效率和性能优化提供了坚实的理论指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11021v1",
+        "title": "Leech Lattice Vector Quantization for Efficient LLM Compression",
+        "summary": "Scalar quantization of large language models (LLMs) is fundamentally limited by information-theoretic bounds. While vector quantization (VQ) overcomes these limits by encoding blocks of parameters jointly, practical implementations must avoid the need for expensive lookup mechanisms or other explicit codebook storage. Lattice approaches address this through highly structured and dense packing. This paper explores the Leech lattice, which, with its optimal sphere packing and kissing configurations at 24 dimensions, is the highest dimensional lattice known with such optimal properties. To make the Leech lattice usable for LLM quantization, we extend an existing search algorithm based on the extended Golay code construction, to i) support indexing, enabling conversion to and from bitstrings without materializing the codebook, ii) allow angular search over union of Leech lattice shells, iii) propose fully-parallelisable dequantization kernel. Together this yields a practical algorithm, namely Leech Lattice Vector Quantization (LLVQ). LLVQ delivers state-of-the-art LLM quantization performance, outperforming recent methods such as Quip\\#, QTIP, and PVQ. These results highlight the importance of high-dimensional lattices for scalable, theoretically grounded model compression.",
+        "authors": "Tycho F. A. van der Ouderaa, Mart van Baalen, Paul Whatmough, Markus Nagel",
+        "url": "http://arxiv.org/abs/2603.11021v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11021v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探索了利用Leech Lattice进行LLM向量量化，以克服标量量化的信息理论限制。它扩展了现有的搜索算法，实现了无码本索引、角度搜索和并行反量化，从而提出了LLVQ算法。该方法在LLM压缩方面达到了SOTA性能，其基于高维格点的理论基础和对实际效率瓶颈的解决，使其成为一篇极具价值的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10991v1",
+        "title": "ForwardFlow: Simulation only statistical inference using deep learning",
+        "summary": "Deep learning models are being used for the analysis of parametric statistical models based on simulation-only frameworks. Bayesian models using normalizing flows simulate data from a prior distribution and are composed of two deep neural networks: a summary network that learns a sufficient statistic for the parameter and a normalizing flow that conditional on the summary network can approximate the posterior distribution. Here, we explore frequentist models that are based on a single summary network. During training, input of the network is a simulated data set based on a parameter and the loss function minimizes the mean-square error between learned summary and parameter. The network thereby solves the inverse problem of parameter estimation. We propose a branched network structure that contains collapsing layers that reduce a data set to summary statistics that are further mapped through fully connected layers to approximate the parameter estimate. We motivate our choice of network structure by theoretical considerations.   In simulations we demonstrate three desirable properties of parameter estimates: finite sample exactness, robustness to data contamination, and algorithm approximation. These properties are achieved offering the the network varying sample size, contaminated data, and data needing algorithmic reconstruction during the training phase. In our simulations an EM-algorithm for genetic data is automatically approximated by the network.   Simulation only approaches seem to offer practical advantages in complex modeling tasks where the simpler data simulation part is left to the researcher and the more complex problem of solving the inverse problem is left to the neural network. Challenging future work includes offering pre-trained models that can be used in a wide variety of applications.",
+        "authors": "Stefan Böhringer",
+        "url": "http://arxiv.org/abs/2603.10991v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10991v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于深度学习的仅模拟统计推断的频率派模型，通过单摘要网络解决参数估计的逆问题。其分支网络结构设计有理论考量，并在模拟中展示了有限样本精确性、数据污染鲁棒性和算法近似等优良特性。这对于复杂建模任务中解决逆问题具有重要意义，理论严谨性高，且方法新颖。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10913v1",
+        "title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
+        "summary": "LLM-based text embedders typically encode the semantic content of their input. However, embedding tasks require mapping diverse inputs to similar outputs. Typically, this input-output is addressed by training embedding models with paired data using contrastive learning. In this work, we propose a novel self-supervised approach, LLM2Vec-Gen, which adopts a different paradigm: rather than encoding the input, we learn to represent the model's potential response. Specifically, we add trainable special tokens to the LLM's vocabulary, append them to input, and optimize them to represent the LLM's response in a fixed-length sequence. Training is guided by the LLM's own completion for the query, along with an unsupervised embedding teacher that provides distillation targets. This formulation helps to bridge the input-output gap and transfers LLM capabilities such as safety alignment and reasoning to embedding tasks. Crucially, the LLM backbone remains frozen and training requires only unlabeled queries. LLM2Vec-Gen achieves state-of-the-art self-supervised performance on the Massive Text Embedding Benchmark (MTEB), improving by 9.3% over the best unsupervised embedding teacher. We also observe up to 43.2% reduction in harmful content retrieval and 29.3% improvement in reasoning capabilities for embedding tasks. Finally, the learned embeddings are interpretable and can be decoded into text to reveal their semantic content.",
+        "authors": "Parishad BehnamGhader, Vaibhav Adlakha, Fabian David Schmidt, Nicolas Chapados, Marius Mosbach, Siva Reddy",
+        "url": "http://arxiv.org/abs/2603.10913v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10913v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LLM2Vec-Gen提出了一种新颖的自监督方法，通过学习表示LLM的潜在响应来生成嵌入，而非直接编码输入。它通过可训练的特殊token和LLM自身的补全进行蒸馏，在MTEB上取得了SOTA性能，并显著提升了安全性与推理能力。这种范式创新性强，且在数据效率和LLM应用方面具有高影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10893v1",
+        "title": "S2D: Sparse to Dense Lifting for 3D Reconstruction with Minimal Inputs",
+        "summary": "Explicit 3D representations have already become an essential medium for 3D simulation and understanding. However, the most commonly used point cloud and 3D Gaussian Splatting (3DGS) each suffer from non-photorealistic rendering and significant degradation under sparse inputs. In this paper, we introduce Sparse to Dense lifting (S2D), a novel pipeline that bridges the two representations and achieves high-quality 3DGS reconstruction with minimal inputs. Specifically, the S2D lifting is two-fold. We first present an efficient one-step diffusion model that lifts sparse point cloud for high-fidelity image artifact fixing. Meanwhile, to reconstruct 3D consistent scenes, we also design a corresponding reconstruction strategy with random sample drop and weighted gradient for robust model fitting from sparse input views to dense novel views. Extensive experiments show that S2D achieves the best consistency in generating novel view guidance and first-tier sparse view reconstruction quality under different input sparsity. By reconstructing stable scenes with the least possible captures among existing methods, S2D enables minimal input requirements for 3DGS applications.",
+        "authors": "Yuzhou Ji, Qijian Tian, He Zhu, Xiaoqi Jiang, Guangzhi Cao, Lizhuang Ma, Yuan Xie, Xin Tan",
+        "url": "http://arxiv.org/abs/2603.10893v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10893v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LookaheadKV提出了一种轻量级的KV缓存逐出框架，通过参数高效模块预测重要性分数，无需昂贵的草稿生成即可实现对未来响应的“预见”。它显著降低了LLM长上下文推理的成本，将逐出成本降低了14.5倍，并加速了首个token的生成时间。该方法创新性高，直接解决了LLM应用中的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10689v1",
+        "title": "Contract And Conquer: How to Provably Compute Adversarial Examples for a Black-Box Model?",
+        "summary": "Black-box adversarial attacks are widely used as tools to test the robustness of deep neural networks against malicious perturbations of input data aimed at a specific change in the output of the model. Such methods, although they remain empirically effective, usually do not guarantee that an adversarial example can be found for a particular model. In this paper, we propose Contract And Conquer (CAC), an approach to provably compute adversarial examples for neural networks in a black-box manner. The method is based on knowledge distillation of a black-box model on an expanding distillation dataset and precise contraction of the adversarial example search space. CAC is supported by the transferability guarantee: we prove that the method yields an adversarial example for the black-box model within a fixed number of algorithm iterations. Experimentally, we demonstrate that the proposed approach outperforms existing state-of-the-art black-box attack methods on ImageNet dataset for different target models, including vision transformers.",
+        "authors": "Anna Chistyakova, Mikhail Pautov",
+        "url": "http://arxiv.org/abs/2603.10689v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10689v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Contract And Conquer (CAC) 提出了一种可证明地为黑盒模型计算对抗性样本的方法。它基于知识蒸馏和对抗性样本搜索空间的精确收缩，并提供了可转移性保证。这篇论文在理论上具有高度严谨性，解决了黑盒对抗性攻击中缺乏保证的根本问题，对于模型鲁棒性测试具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10573v1",
+        "title": "Implicit Statistical Inference in Transformers: Approximating Likelihood-Ratio Tests In-Context",
+        "summary": "In-context learning (ICL) allows Transformers to adapt to novel tasks without weight updates, yet the underlying algorithms remain poorly understood. We adopt a statistical decision-theoretic perspective by investigating simple binary hypothesis testing, where the optimal policy is determined by the likelihood-ratio test. Notably, this setup provides a mathematically rigorous setting for mechanistic interpretability where the target algorithmic ground truth is known. By training Transformers on tasks requiring distinct geometries (linear shifted means vs. nonlinear variance estimation), we demonstrate that the models approximate the Bayes-optimal sufficient statistics from context up to some monotonic transformation, matching the performance of an ideal oracle estimator in nonlinear regimes. Leveraging this analytical ground truth, mechanistic analysis via logit lens and circuit alignment suggests that the model does not rely on a fixed kernel smoothing heuristic. Instead, it appears to adapt the point at which decisions become linearly decodable: exhibiting patterns consistent with a voting-style ensemble for linear tasks while utilizing a deeper sequential computation for nonlinear tasks. These findings suggest that ICL emerges from the construction of task-adaptive statistical estimators rather than simple similarity matching.",
+        "authors": "Faris Chaudhry, Siddhant Gadkari",
+        "url": "http://arxiv.org/abs/2603.10573v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10573v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从统计决策理论角度，深入探讨了Transformer模型中上下文学习（ICL）的内在算法。它通过研究二元假设检验，揭示了模型如何近似贝叶斯最优充分统计量，并利用机械可解释性分析其决策机制。这篇论文具有极高的理论严谨性和创新性，有助于从根本上理解Transformer的工作原理。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10396v1",
+        "title": "Verbalizing LLM's Higher-order Uncertainty via Imprecise Probabilities",
+        "summary": "Despite the growing demand for eliciting uncertainty from large language models (LLMs), empirical evidence suggests that LLM behavior is not always adequately captured by the elicitation techniques developed under the classical probabilistic uncertainty framework. This mismatch leads to systematic failure modes, particularly in settings that involve ambiguous question-answering, in-context learning, and self-reflection. To address this, we propose novel prompt-based uncertainty elicitation techniques grounded in \\emph{imprecise probabilities}, a principled framework for repesenting and eliciting higher-order uncertainty. Here, first-order uncertainty captures uncertainty over possible responses to a prompt, while second-order uncertainty (uncertainty about uncertainty) quantifies indeterminacy in the underlying probability model itself. We introduce general-purpose prompting and post-processing procedures to directly elicit and quantify both orders of uncertainty, and demonstrate their effectiveness across diverse settings. Our approach enables more faithful uncertainty reporting from LLMs, improving credibility and supporting downstream decision-making.",
+        "authors": "Anita Yang, Krikamol Muandet, Michele Caprio, Siu Lun Chau, Masaki Adachi",
+        "url": "http://arxiv.org/abs/2603.10396v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10396v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了基于“不精确概率”的LLM高阶不确定性启发技术，旨在更忠实地量化LLM的一阶和二阶不确定性。这解决了LLM在模糊问答等场景中不确定性量化不足的根本问题。其理论框架严谨，创新性强，对于提升LLM的可信度和下游决策支持至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10395v1",
+        "title": "Graph-GRPO: Training Graph Flow Models with Reinforcement Learning",
+        "summary": "Graph generation is a fundamental task with broad applications, such as drug discovery. Recently, discrete flow matching-based graph generation, \\aka, graph flow model (GFM), has emerged due to its superior performance and flexible sampling. However, effectively aligning GFMs with complex human preferences or task-specific objectives remains a significant challenge. In this paper, we propose Graph-GRPO, an online reinforcement learning (RL) framework for training GFMs under verifiable rewards. Our method makes two key contributions: (1) We derive an analytical expression for the transition probability of GFMs, replacing the Monte Carlo sampling and enabling fully differentiable rollouts for RL training; (2) We propose a refinement strategy that randomly perturbs specific nodes and edges in a graph, and regenerates them, allowing for localized exploration and self-improvement of generation quality. Extensive experiments on both synthetic and real datasets demonstrate the effectiveness of Graph-GRPO. With only 50 denoising steps, our method achieves 95.0\\% and 97.5\\% Valid-Unique-Novelty scores on the planar and tree datasets, respectively. Moreover, Graph-GRPO achieves state-of-the-art performance on the molecular optimization tasks, outperforming graph-based and fragment-based RL methods as well as classic genetic algorithms.",
+        "authors": "Baoheng Zhu, Deyu Bo, Delvin Ce Zhang, Xiao Wang",
+        "url": "http://arxiv.org/abs/2603.10395v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10395v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Graph-GRPO提出了一个在线强化学习框架，用于在可验证奖励下训练图流模型（GFM）。它推导了GFM的转移概率的解析表达式，实现了完全可微分的RL训练，并提出了局部探索的细化策略。这篇论文在图生成领域具有高度的理论创新性和严谨性，尤其在分子优化等实际应用中展现了SOTA性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10382v1",
+        "title": "Gimbal Regression: Orientation-Adaptive Local Linear Regression under Spatial Heterogeneity",
+        "summary": "Local regression is widely used to explore spatial heterogeneity, but anisotropic or effectively low-dimensional neighborhoods can produce ill-conditioned local solves, causing coefficient variation driven by numerical artifacts rather than substantive structure. Such instability is often hidden when estimation relies on implicit tuning or optimization without exposing local diagnostics.   This paper proposes Gimbal Regression (GR), a deterministic, geometry-aware local regression framework for stable and auditable estimation. GR constructs directional weights from neighborhood geometry using explicit orientation objects and deterministic safeguards, and computes local coefficients by a closed-form solve. Theoretical results are stated conditional on the realized neighborhood configuration, under which the estimator is a deterministic linear operator with finite-perturbation stability bounds. Simulations and empirical examples demonstrate predictable computation, transparent diagnostics, and improved numerical stability relative to common local regression baselines.",
+        "authors": "Yuichiro Otani",
+        "url": "http://arxiv.org/abs/2603.10382v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10382v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Gimbal Regression (GR) 提出了一种确定性、几何感知的局部线性回归框架，用于在空间异质性下进行稳定且可审计的估计。它通过显式方向对象构建方向权重，并提供了有限扰动稳定性界限的理论结果。这篇论文在数理统计和回归分析领域具有极高的理论严谨性和创新性，解决了局部回归中的数值稳定性问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10357v1",
+        "title": "Utility Function is All You Need: LLM-based Congestion Control",
+        "summary": "Congestion is a critical and challenging problem in communication networks. Congestion control protocols allow network applications to tune their sending rate in a way that optimizes their performance and the network utilization. In the common distributed setting, the applications cannot collaborate with each other directly but instead obtain similar estimations about the state of the network using latency and loss measurements. These measurements can be fed into analytical functions, referred to by utility functions, whose gradients help each and all distributed senders to converge to a desired state.   The above process becomes extremely complicated when each application has different optimization goals and requirements. Crafting these utilization functions has been a research subject for over a decade, with small incremental changes requiring rigorous mathematical analysis as well as real-world experiments.   In this work, we present GenCC, a framework leveraging the code generation capabilities of large language models (LLMs) coupled with realistic network testbed, to design congestion control utility functions. Using GenCC, we analyze the impact of different guidance strategies on the performance of the generated protocols, considering application-specific requirements and network capacity.   Our results show that LLMs, guided by either a generative code evolution strategy or mathematical chain-of-thought (CoT), can obtain close to optimal results, improving state-of-the-art congestion control protocols by 37%-142%, depending on the scenario.",
+        "authors": "Neta Rozen-Schiff, Liron Schiff, Stefan Schmid",
+        "url": "http://arxiv.org/abs/2603.10357v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10357v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GenCC框架利用LLM的代码生成能力来设计拥塞控制效用函数，为网络协议设计提供了一种新颖的范式。它通过生成式代码演化或数学思维链指导LLM，在不同场景下将SOTA拥塞控制协议的性能提升了37%-142%。该方法创新性极强，直接解决了网络效率的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10330v1",
+        "title": "PC-Diffuser: Path-Consistent Capsule CBF Safety Filtering for Diffusion-Based Trajectory Planner",
+        "summary": "Autonomous driving in complex traffic requires planners that generalize beyond hand-crafted rules, motivating data-driven approaches that learn behavior from expert demonstrations. Diffusion-based trajectory planners have recently shown strong closed-loop performance by iteratively denoising a full-horizon plan, but they remain difficult to certify and can fail catastrophically in rare or out-of-distribution scenarios. To address this challenge, we present PC-Diffuser, a safety augmentation framework that embeds a certifiable, path-consistent barrier-function structure directly into the denoising loop of diffusion planning. The key idea is to make safety an intrinsic part of trajectory generation rather than a post-hoc fix: we enforce forward invariance along the rollout while preserving the diffusion model's intended path geometry. Specifically, PC-Diffuser (i) evaluates collision risk using a capsule-distance barrier function that better reflects vehicle geometry and reduces unnecessary conservativeness, (ii) converts denoised waypoints into dynamically feasible motion under a kinematic bicycle model, and (iii) applies a path-consistent safety filter that eliminates residual constraint violations without geometric distortion, so the corrected plan remains close to the learned distribution. By injecting these safety-consistent corrections at every denoising step and feeding the refined trajectory back into the diffusion process, PC-Diffuser enables iterative, context-aware safeguarding instead of post-hoc repair...",
+        "authors": "Eugene Ku, Yiwei Lyu",
+        "url": "http://arxiv.org/abs/2603.10330v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10330v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "PC-Diffuser是一个安全增强框架，将可认证、路径一致的障碍函数结构嵌入到扩散模型轨迹规划器的去噪循环中。它通过胶囊距离障碍函数、运动学自行车模型和路径一致安全滤波器，使安全性成为轨迹生成的内在部分。这篇论文将控制理论与扩散模型深度结合，具有极高的理论严谨性和创新性，解决了自动驾驶中的安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10992v1",
+        "title": "Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches",
+        "summary": "Accelerating the explorations of stationary points on potential energy surfaces building local surrogates spans decades of effort. Done correctly, surrogates reduce required evaluations by an order of magnitude while preserving the accuracy of the underlying theory. We present a unified Bayesian Optimization view of minimization, single point saddle searches, and double ended saddle searches through a unified six-step surrogate loop, differing only in the inner optimization target and acquisition criterion. The framework uses Gaussian process regression with derivative observations, inverse-distance kernels, and active learning. The Optimal Transport GP extensions of farthest point sampling with Earth mover's distance, MAP regularization via variance barrier and oscillation detection, and adaptive trust radius form concrete extensions of the same basic methodology, improving accuracy and efficiency. We also demonstrate random Fourier features decouple hyperparameter training from predictions enabling favorable scaling for high-dimensional systems. Accompanying pedagogical Rust code demonstrates that all applications use the exact same Bayesian optimization loop, bridging the gap between theoretical formulation and practical execution.",
+        "authors": "Rohit Goswami",
+        "url": "http://arxiv.org/abs/2603.10992v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10992v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的贝叶斯优化框架，用于加速势能面上的驻点搜索，通过高斯过程回归与导数观测、逆距离核和主动学习等技术，将最小化、单点鞍点搜索和双端鞍点搜索统一起来。其理论公式严谨，能够将所需评估次数减少一个数量级，对于科学计算和优化问题具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.10863v1",
+        "title": "Beyond Sequential Distance: Inter-Modal Distance Invariant Position Encoding",
+        "summary": "Despite the remarkable capabilities of Multimodal Large Language Models (MLLMs), they still suffer from visual fading in long-context scenarios. Specifically, the attention to visual tokens diminishes as the text sequence lengthens, leading to text generation detached from visual constraints. We attribute this degradation to the inherent inductive bias of Multimodal RoPE, which penalizes inter-modal attention as the distance between visual and text tokens increases. To address this, we propose inter-modal Distance Invariant Position Encoding (DIPE), a simple but effective mechanism that disentangles position encoding based on modality interactions. DIPE retains the natural relative positioning for intra-modal interactions to preserve local structure, while enforcing an anchored perceptual proximity for inter-modal interactions. This strategy effectively mitigates the inter-modal distance-based penalty, ensuring that visual signals remain perceptually consistent regardless of the context length. Experimental results demonstrate that by integrating DIPE with Multimodal RoPE, the model maintains stable visual grounding in long-context scenarios, significantly alleviating visual fading while preserving performance on standard short-context benchmarks. Code is available at https://github.com/lchen1019/DIPE.",
+        "authors": "Lin Chen, Bolin Ni, Qi Yang, Zili Wang, Kun Ding, Ying Wang, Houwen Peng, Shiming Xiang",
+        "url": "http://arxiv.org/abs/2603.10863v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.10863v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DIPE（Inter-modal Distance Invariant Position Encoding）提出了一种新颖的机制，通过解耦模态交互来解决多模态大语言模型（MLLM）在长上下文场景中的视觉衰减问题。它在保留模态内局部结构的同时，强制执行模态间锚定感知邻近性。该方法具有很强的理论创新性，有效缓解了视觉衰减，提升了MLLM的鲁棒性。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.12232v1",
+        "title": "Incremental Neural Network Verification via Learned Conflicts",
+        "summary": "Neural network verification is often used as a core component within larger analysis procedures, which generate sequences of closely related verification queries over the same network. In existing neural network verifiers, each query is typically solved independently, and information learned during previous runs is discarded, leading to repeated exploration of the same infeasible regions of the search space. In this work, we aim to expedite verification by reducing this redundancy. We propose an incremental verification technique that reuses learned conflicts across related verification queries. The technique can be added on top of any branch-and-bound-based neural network verifier. During verification, the verifier records conflicts corresponding to learned infeasible combinations of activation phases, and retains them across runs. We formalize a refinement relation between verification queries and show that conflicts learned for a query remain valid under refinement, enabling sound conflict inheritance. Inherited conflicts are handled using a SAT solver to perform consistency checks and propagation, allowing infeasible subproblems to be detected and pruned early during search. We implement the proposed technique in the Marabou verifier and evaluate it on three verification tasks: local robustness radius determination, verification with input splitting, and minimal sufficient feature set extraction. Our experiments show that incremental conflict reuse reduces verification effort and yields speedups of up to $1.9\\times$ over a non-incremental baseline.",
+        "authors": "Raya Elsaleh, Liam Davis, Haoze Wu, Guy Katz",
+        "url": "http://arxiv.org/abs/2603.12232v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12232v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了基于Wasserstein梯度流的批量贝叶斯最优实验设计新方法，通过概率提升和熵正则化来优化效用函数。其理论严谨性极高，涉及概率测度空间、Gibbs分布、Wasserstein梯度流等高级数学统计概念，非常符合您对理论创新和严谨性的要求，同时解决了BOED中高维非凸优化的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.12037v1",
+        "title": "Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference",
+        "summary": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators. In this work, we address this gap by analyzing the frequentist consistency of PFN-based estimators for the average treatment effect (ATE). (1) We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency. (2) As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size). (3) Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs. In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC. In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty and (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.",
+        "authors": "Valentyn Melnychuk, Vahid Balazadeh, Stefan Feuerriegel, Rahul G. Krishnan",
+        "url": "http://arxiv.org/abs/2603.12037v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12037v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究分析了基于PFN的因果推断估计器的频率学一致性，并提出了基于一步后验校正（OSPC）的补救措施，以恢复一致性并获得半参数Bernstein-von Mises定理。这篇论文在因果推断领域具有极高的理论严谨性和创新性，直接解决了PFN在不确定性量化方面的核心问题，对AI的可靠性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11928v1",
+        "title": "AS-Bridge: A Bidirectional Generative Framework Bridging Next-Generation Astronomical Surveys",
+        "summary": "The upcoming decade of observational cosmology will be shaped by large sky surveys, such as the ground-based LSST at the Vera C. Rubin Observatory and the space-based Euclid mission. While they promise an unprecedented view of the Universe across depth, resolution, and wavelength, their differences in observational modality, sky coverage, point-spread function, and scanning cadence make joint analysis beneficial, but also challenging. To facilitate joint analysis, we introduce A(stronomical)S(urvey)-Bridge, a bidirectional generative model that translates between ground- and space-based observations. AS-Bridge learns a diffusion model that employs a stochastic Brownian Bridge process between the LSST and Euclid observations. The two surveys have overlapping sky regions, where we can explicitly model the conditional probabilistic distribution between them. We show that this formulation enables new scientific capabilities beyond single-survey analysis, including faithful probabilistic predictions of missing survey observations and inter-survey detection of rare events. These results establish the feasibility of inter-survey generative modeling. AS-Bridge is therefore well-positioned to serve as a complementary component of future LSST-Euclid joint data pipelines, enhancing the scientific return once data from both surveys become available. Data and code are available at \\href{https://github.com/ZHANG7DC/AS-Bridge}{https://github.com/ZHANG7DC/AS-Bridge}.",
+        "authors": "Dichang Zhang, Yixuan Shao, Simon Birrer, Dimitris Samaras",
+        "url": "http://arxiv.org/abs/2603.11928v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11928v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "AS-Bridge提出了一个双向生成模型，利用随机布朗桥扩散过程在不同天文观测数据之间进行转换。其核心在于将随机过程理论（布朗桥）应用于生成模型，具有极高的理论创新性和严谨性，为跨模态数据整合和科学发现提供了新范式。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11784v1",
+        "title": "Language Generation with Replay: A Learning-Theoretic View of Model Collapse",
+        "summary": "As scaling laws push the training of frontier large language models (LLMs) toward ever-growing data requirements, training pipelines are approaching a regime where much of the publicly available online text may be consumed. At the same time, widespread LLM usage increases the volume of machine-generated content on the web; together, these trends raise the likelihood of generated text re-entering future training corpora, increasing the associated risk of performance degradation often called model collapse. In practice, model developers address this concern through data cleaning, watermarking, synthetic-data policies, or, in some cases, blissful ignorance. However, the problem of model collapse in generative models has not been examined from a learning-theoretic perspective: we study it through the theoretical lens of the language generation in the limit framework, introducing a replay adversary that augments the example stream with the generator's own past outputs. Our main contribution is a fine-grained learning-theoretic characterization of when replay fundamentally limits generation: while replay is benign for the strongest notion of uniform generation, it provably creates separations for the weaker notions of non-uniform generation and generation in the limit. Interestingly, our positive results mirror heuristics widely used in practice, such as data cleaning, watermarking, and output filtering, while our separations show when these ideas can fail.",
+        "authors": "Giorgio Racca, Michal Valko, Amartya Sanyal",
+        "url": "http://arxiv.org/abs/2603.11784v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11784v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从学习理论角度审视了生成模型中的“模型崩溃”现象，引入了重放对抗者，并对重放何时从根本上限制生成进行了细致的理论表征。它提供了对生成模型动态的深刻理解，具有极高的理论严谨性和创新性，直接关系到LLM训练的数据效率和稳定性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11682v1",
+        "title": "Entropy-Preserving Reinforcement Learning",
+        "summary": "Policy gradient algorithms have driven many recent advancements in language model reasoning. An appealing property is their ability to learn from exploration on their own trajectories, a process crucial for fostering diverse and creative solutions. As we show in this paper, many policy gradient algorithms naturally reduce the entropy -- and thus the diversity of explored trajectories -- as part of training, yielding a policy increasingly limited in its ability to explore. In this paper, we argue that entropy should be actively monitored and controlled throughout training. We formally analyze the contributions of leading policy gradient objectives on entropy dynamics, identify empirical factors (such as numerical precision) that significantly impact entropy behavior, and propose explicit mechanisms for entropy control. These include REPO, a family of algorithms that modify the advantage function to regulate entropy, and ADAPO, an adaptive asymmetric clipping approach. Models trained with our entropy-preserving methods maintain diversity throughout training, yielding final policies that are more performant and retain their trainability for sequential learning in new environments.",
+        "authors": "Aleksei Petrenko, Ben Lipkin, Kevin Chen, Erik Wijmans, Marco Cusumano-Towner, Raja Giryes, Philipp Krähenbühl",
+        "url": "http://arxiv.org/abs/2603.11682v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11682v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究形式化分析了策略梯度算法中的熵动态，并提出了REPO和ADAPO等显式熵控制机制。这在强化学习理论上具有极高的严谨性和创新性，解决了探索多样性受限的根本问题，对于训练更具创造性和可塑性的LLM智能体至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11597v1",
+        "title": "Performance Evaluation of Open-Source Large Language Models for Assisting Pathology Report Writing in Japanese",
+        "summary": "The performance of large language models (LLMs) for supporting pathology report writing in Japanese remains unexplored. We evaluated seven open-source LLMs from three perspectives: (A) generation and information extraction of pathology diagnosis text following predefined formats, (B) correction of typographical errors in Japanese pathology reports, and (C) subjective evaluation of model-generated explanatory text by pathologists and clinicians. Thinking models and medical-specialized models showed advantages in structured reporting tasks that required reasoning and in typo correction. In contrast, preferences for explanatory outputs varied substantially across raters. Although the utility of LLMs differed by task, our findings suggest that open-source LLMs can be useful for assisting Japanese pathology report writing in limited but clinically relevant scenarios.",
+        "authors": "Masataka Kawai, Singo Sakashita, Shumpei Ishikawa, Shogo Watanabe, Anna Matsuoka, Mikio Sakurai, Yasuto Fujimoto, Yoshiyuki Takahara, Atsushi Ohara, Hirohiko Miyake, Genichiro Ishii",
+        "url": "http://arxiv.org/abs/2603.11597v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11597v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "H-EARS统一了基于势能的奖励整形和能量感知动作正则化，并建立了包括功能独立性、收敛加速、收敛保证和近似势能误差界在内的理论基础。这篇论文在强化学习理论方面具有极高的严谨性和创新性，将轻量级物理先验融入无模型RL，提升了连续控制的效率和稳定性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11583v1",
+        "title": "UtilityMax Prompting: A Formal Framework for Multi-Objective Large Language Model Optimization",
+        "summary": "The success of a Large Language Model (LLM) task depends heavily on its prompt. Most use-cases specify prompts using natural language, which is inherently ambiguous when multiple objectives must be simultaneously satisfied. In this paper we introduce UtilityMax Prompting, a framework that specifies tasks using formal mathematical language. We reconstruct the task as an influence diagram in which the LLM's answer is the sole decision variable. A utility function is defined over the conditional probability distributions within the diagram, and the LLM is instructed to find the answer that maximises expected utility. This constrains the LLM to reason explicitly about each component of the objective, directing its output toward a precise optimization target rather than a subjective natural language interpretation. We validate our approach on the MovieLens 1M dataset across three frontier models (Claude Sonnet 4.6, GPT-5.4, and Gemini 2.5 Pro), demonstrating consistent improvements in precision and Normalized Discounted Cumulative Gain (NDCG) over natural language baselines in a multi-objective movie recommendation task.",
+        "authors": "Ofir Marom",
+        "url": "http://arxiv.org/abs/2603.11583v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11583v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "UtilityMax Prompting提出了一个形式化框架，使用数学语言（影响图、效用函数）来指定LLM任务，以最大化预期效用。这在LLM控制和提示工程方面具有极高的理论严谨性和创新性，解决了多目标任务中自然语言提示的模糊性问题，使得LLM输出更精确地对齐优化目标。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11446v1",
+        "title": "LLM-Assisted Causal Structure Disambiguation and Factor Extraction for Legal Judgment Prediction",
+        "summary": "Mainstream methods for Legal Judgment Prediction (LJP) based on Pre-trained Language Models (PLMs) heavily rely on the statistical correlation between case facts and judgment results. This paradigm lacks explicit modeling of legal constituent elements and underlying causal logic, making models prone to learning spurious correlations and suffering from poor robustness. While introducing causal inference can mitigate this issue, existing causal LJP methods face two critical bottlenecks in real-world legal texts: inaccurate legal factor extraction with severe noise, and significant uncertainty in causal structure discovery due to Markov equivalence under sparse features. To address these challenges, we propose an enhanced causal inference framework that integrates Large Language Model (LLM) priors with statistical causal discovery. First, we design a coarse-to-fine hybrid extraction mechanism combining statistical sampling and LLM semantic reasoning to accurately identify and purify standard legal constituent elements. Second, to resolve structural uncertainty, we introduce an LLM-assisted causal structure disambiguation mechanism. By utilizing the LLM as a constrained prior knowledge base, we conduct probabilistic evaluation and pruning on ambiguous causal directions to generate legally compliant candidate causal graphs. Finally, a causal-aware judgment prediction model is constructed by explicitly constraining text attention intensity via the generated causal graphs. Extensive experiments on multiple benchmark datasets, including LEVEN , QA, and CAIL, demonstrate that our proposed method significantly outperforms state-of-the-art baselines in both predictive accuracy and robustness, particularly in distinguishing confusing charges.",
+        "authors": "Yuzhi Liang, Lixiang Ma, Xinrong Zhu",
+        "url": "http://arxiv.org/abs/2603.11446v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11446v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个增强的因果推断框架，将LLM先验与统计因果发现相结合，用于法律判决预测。其核心在于LLM辅助的因果结构消歧和基于因果图的注意力约束，具有极高的理论严谨性和创新性，解决了因果LJP中的噪声和结构不确定性问题，提升了模型的鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.12250v1",
+        "title": "DVD: Deterministic Video Depth Estimation with Generative Priors",
+        "summary": "Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to deterministically adapt pre-trained video diffusion models into single-pass depth regressors. Specifically, DVD features three core designs: (i) repurposing the diffusion timestep as a structural anchor to balance global stability with high-frequency details; (ii) latent manifold rectification (LMR) to mitigate regression-induced over-smoothing, enforcing differential constraints to restore sharp boundaries and coherent motion; and (iii) global affine coherence, an inherent property bounding inter-window divergence, which enables seamless long-video inference without requiring complex temporal alignment. Extensive experiments demonstrate that DVD achieves state-of-the-art zero-shot performance across benchmarks. Furthermore, DVD successfully unlocks the profound geometric priors implicit in video foundation models using 163x less task-specific data than leading baselines. Notably, we fully release our pipeline, providing the whole training suite for SOTA video depth estimation to benefit the open-source community.",
+        "authors": "Hongfei Zhang, Harold Haodong Chen, Chenfei Liao, Jing He, Zixin Zhang, Haodong Li, Yihao Liang, Kanghao Chen, Bin Ren, Xu Zheng, Shuai Yang, Kun Zhou, Yinchuan Li, Nicu Sebe, Ying-Cong Chen",
+        "url": "http://arxiv.org/abs/2603.12250v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12250v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DVD是首个将预训练视频扩散模型确定性地转化为单通道深度回归器的框架。它通过重新利用扩散时间步作为结构锚、潜在流形校正和全局仿射一致性等核心设计，解决了生成模型随机性和判别模型数据需求之间的矛盾，在数据效率和模型应用方面具有突出贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.12149v1",
+        "title": "Linking Perception, Confidence and Accuracy in MLLMs",
+        "summary": "Recent advances in Multi-modal Large Language Models (MLLMs) have predominantly focused on enhancing visual perception to improve accuracy. However, a critical question remains unexplored: Do models know when they do not know? Through a probing experiment, we reveal a severe confidence miscalibration problem in MLLMs. To address this, we propose Confidence-Driven Reinforcement Learning (CDRL), which uses original-noise image pairs and a novel confidence-based reward to enhance perceptual sensitivity and robustly calibrate the model's confidence. Beyond training benefits, calibrated confidence enables more effective test-time scaling as a free lunch. We further propose Confidence-Aware Test-Time Scaling (CA-TTS), which dynamically coordinates Self-Consistency, Self-Reflection, and Visual Self-Check modules guided by confidence signals. An Expert Model acts in multiple roles (e.g., Planner, Critic, Voter) to schedule these modules and provide external verification. Our integrated framework establishes new state-of-the-art results with consistent 8.8% gains across four benchmarks. More ablation studies demonstrate the effectiveness of each module and scaling superiority.",
+        "authors": "Yuetian Du, Yucheng Wang, Rongyu Zhang, Zhijie Xu, Boyu Yang, Ming Kong, Jie Liu, Qiang Zhu",
+        "url": "http://arxiv.org/abs/2603.12149v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12149v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了MLLM中严重的置信度校准问题，并提出了置信度驱动的强化学习（CDRL）和置信度感知测试时缩放（CA-TTS）框架。它通过新颖的置信度奖励和动态协调模块，显著提升了MLLM的感知敏感性和可靠性，直接解决了MLLM在实际应用中的信任和效果瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.12109v1",
+        "title": "On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents",
+        "summary": "Reinforcement learning (RL) with outcome-based rewards has achieved significant success in training large language model (LLM) agents for complex reasoning tasks. However, in active reasoning where agents need to strategically ask questions to acquire task-relevant information, we find that LLM agents trained with RL often suffer from information self-locking: the agent ceases to ask informative questions and struggles to internalize already-obtained information. To understand the phenomenon, we decompose active reasoning into two core capabilities: Action Selection (AS), which determines the observation stream through queries, and Belief Tracking (BT), which updates the agent's belief based on collected evidence. We show that deficient AS and BT capabilities will limit the information exploration during RL training. Furthermore, insufficient exploration in turn hinders the improvement of AS and BT, creating a feedback loop that locks the agent in a low-information regime. To resolve the issue, we propose a simple yet effective approach that reallocates the learning signal by injecting easy- to-obtain directional critiques to help the agent escape self-locking. Extensive experiments with 7 datasets show that our approach significantly mitigates the information self-locking, bringing up to 60% improvements.",
+        "authors": "Deyu Zou, Yongqiang Chen, Fan Feng, Mufei Li, Pan Li, Yu Gong, James Cheng",
+        "url": "http://arxiv.org/abs/2603.12109v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12109v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究识别并分析了LLM智能体在主动推理RL中存在的“信息自锁”现象，并提出了通过注入定向批判信号来解决的有效方法。它对LLM智能体行为的深层机制进行了理论分析，并提供了实用的算法干预，对LLM应用中的推理效率和探索能力有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11873v1",
+        "title": "AdaFuse: Accelerating Dynamic Adapter Inference via Token-Level Pre-Gating and Fused Kernel Optimization",
+        "summary": "The integration of dynamic, sparse structures like Mixture-of-Experts (MoE) with parameter-efficient adapters (e.g., LoRA) is a powerful technique for enhancing Large Language Models (LLMs). However, this architectural enhancement comes at a steep cost: despite minimal increases in computational load, the inference latency often skyrockets, leading to decoding speeds slowing by over 2.5 times. Through a fine-grained performance analysis, we pinpoint the primary bottleneck not in the computation itself, but in the severe overhead from fragmented, sequential CUDA kernel launches required for conventional dynamic routing. To address this challenge, we introduce AdaFuse, a framework built on a tight co-design between the algorithm and the underlying hardware system to enable efficient dynamic adapter execution. Departing from conventional layer-wise or block-wise routing, AdaFuse employs a token-level pre-gating strategy, which makes a single, global routing decision for all adapter layers before a token is processed. This \"decide-once, apply-everywhere\" approach effectively staticizes the execution path for each token, creating an opportunity for holistic optimization. We capitalize on this by developing a custom CUDA kernel that performs a fused switching operation, merging the parameters of all selected LoRA adapters into the backbone model in a single, efficient pass. Experimental results on popular open-source LLMs show that AdaFuse achieves accuracy on par with state-of-the-art dynamic adapters while drastically cutting decoding latency by a factor of over 2.4x, thereby bridging the gap between model capability and inference efficiency.",
+        "authors": "Qiyang Li, Rui Kong, Yuchen Li, Hengyi Cai, Shuaiqiang Wang, Linghe Kong, Guihai Chen, Dawei Yin",
+        "url": "http://arxiv.org/abs/2603.11873v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11873v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "AdaFuse提出了一个算法与硬件协同设计框架，通过token级预门控和融合内核优化来加速动态适配器（如MoE与LoRA）推理。它解决了LLM推理中因CUDA内核启动碎片化导致的延迟瓶颈，在模型压缩和效率方面具有显著的理论和实践创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11808v1",
+        "title": "Automating Skill Acquisition through Large-Scale Mining of Open-Source Agentic Repositories: A Framework for Multi-Agent Procedural Knowledge Extraction",
+        "summary": "The transition from monolithic large language models (LLMs) to modular, skill-equipped agents represents a fundamental architectural shift in artificial intelligence deployment. While general-purpose models demonstrate remarkable breadth in declarative knowledge, their utility in autonomous workflows is frequently constrained by insufficient specialized procedural expertise. This report investigates a systematic framework for automated acquisition of high-quality agent skills through mining of open-source repositories on platforms such as GitHub. We focus on the extraction of visualization and educational capabilities from state-of-the-art systems including TheoremExplainAgent and Code2Video, both utilizing the Manim mathematical animation engine. The framework encompasses repository structural analysis, semantic skill identification through dense retrieval, and translation to the standardized SKILL.md format. We demonstrate that systematic extraction from agentic repositories, combined with rigorous security governance and multi-dimensional evaluation metrics, enables scalable acquisition of procedural knowledge that augments LLM capabilities without requiring model retraining. Our analysis reveals that agent-generated educational content can achieve 40\\% gains in knowledge transfer efficiency while maintaining pedagogical quality comparable to human-crafted tutorials.",
+        "authors": "Shuzhen Bi, Mengsong Wu, Hao Hao, Keqian Li, Wentao Liu, Siyu Song, Hongbo Zhao, Aimin Zhou",
+        "url": "http://arxiv.org/abs/2603.11808v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11808v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RADAR是一个完全自主、闭环的机器人数据生成引擎，通过语义规划和自主因果环境重置，解决了现代机器人学习中物理交互数据获取的成本和可扩展性瓶颈。其多模块管道设计和“同时前向-反向规划”机制具有显著的算法和系统级创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11798v1",
+        "title": "DocSage: An Information Structuring Agent for Multi-Doc Multi-Entity Question Answering",
+        "summary": "Multi-document Multi-entity Question Answering inherently demands models to track implicit logic between multiple entities across scattered documents. However, existing Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) frameworks suffer from critical limitations: standard RAG's vector similarity-based coarse-grained retrieval often omits critical facts, graph-based RAG fails to efficiently integrate fragmented complex relationship networks, and both lack schema awareness, leading to inadequate cross-document evidence chain construction and inaccurate entity relationship deduction. To address these challenges, we propose DocSage, an end-to-end agentic framework that integrates dynamic schema discovery, structured information extraction, and schema-aware relational reasoning with error guarantees. DocSage operates through three core modules: (1) A schema discovery module dynamically infers query-specific minimal joinable schemas to capture essential entities and relationships; (2) An extraction module transforms unstructured text into semantically coherent relational tables, enhanced by error-aware correction mechanisms to reduce extraction errors; (3) A reasoning module performs multi-hop relational reasoning over structured tables, leveraging schema awareness to efficiently align cross-document entities and aggregate evidence. This agentic design offers three key advantages: precise fact localization via SQL-powered indexing, natural support for cross-document entity joins through relational tables, and mitigated LLM attention diffusion via structured representation. Evaluations on two MDMEQA benchmarks demonstrate that DocSage significantly outperforms state-of-the-art long-context LLMs and RAG systems, achieving more than 27% accuracy improvements respectively.",
+        "authors": "Teng Lin, Yizhang Zhu, Zhengxuan Zhang, Yuyu Luo, Nan Tang",
+        "url": "http://arxiv.org/abs/2603.11798v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11798v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DocSage是一个端到端的智能体框架，用于多文档多实体问答（MDMEQA）。它集成了动态模式发现、结构化信息提取和模式感知关系推理，解决了现有RAG系统在处理复杂关系网络和跨文档证据链方面的核心瓶颈，对LLM应用有巨大实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11746v1",
+        "title": "SoulX-LiveAct: Towards Hour-Scale Real-Time Human Animation with Neighbor Forcing and ConvKV Memory",
+        "summary": "Autoregressive (AR) diffusion models offer a promising framework for sequential generation tasks such as video synthesis by combining diffusion modeling with causal inference. Although they support streaming generation, existing AR diffusion methods struggle to scale efficiently. In this paper, we identify two key challenges in hour-scale real-time human animation. First, most forcing strategies propagate sample-level representations with mismatched diffusion states, causing inconsistent learning signals and unstable convergence. Second, historical representations grow unbounded and lack structure, preventing effective reuse of cached states and severely limiting inference efficiency. To address these challenges, we propose Neighbor Forcing, a diffusion-step-consistent AR formulation that propagates temporally adjacent frames as latent neighbors under the same noise condition. This design provides a distribution-aligned and stable learning signal while preserving drifting throughout the AR chain. Building upon this, we introduce a structured ConvKV memory mechanism that compresses the keys and values in causal attention into a fixed-length representation, enabling constant-memory inference and truly infinite video generation without relying on short-term motion-frame memory. Extensive experiments demonstrate that our approach significantly improves training convergence, hour-scale generation quality, and inference efficiency compared to existing AR diffusion methods. Numerically, LiveAct enables hour-scale real-time human animation and supports 20 FPS real-time streaming inference on as few as two NVIDIA H100 or H200 GPUs. Quantitative results demonstrate that our method attains state-of-the-art performance in lip-sync accuracy, human animation quality, and emotional expressiveness, with the lowest inference cost.",
+        "authors": "Dingcheng Zhen, Xu Zheng, Ruixin Zhang, Zhiqi Jiang, Yichao Yan, Ming Tao, Shunshun Yin",
+        "url": "http://arxiv.org/abs/2603.11746v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11746v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SoulX-LiveAct提出了一个自回归扩散模型，通过Neighbor Forcing和结构化ConvKV内存实现小时级实时人体动画。它解决了现有AR扩散模型在效率和可扩展性方面的瓶颈，其扩散步长一致的AR公式和固定长度的KV内存机制具有显著的架构和算法创新。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.12060v1",
+        "title": "Chemical Reaction Networks Learn Better than Spiking Neural Networks",
+        "summary": "We mathematically prove that chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers. Our proof uses the deterministic mass-action kinetics formulation of chemical reaction networks. Specifically, we prove that a certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers. We provide analytical regret bounds for the global behavior of the network and analyze its asymptotic behavior and Vapnik-Chervonenkis dimension. In a numerical experiment, we confirm the learning capacity of the proposed chemical reaction network for classifying handwritten digits in pixel images, and we show that it solves the task more accurately and efficiently than a spiking neural network with hidden layers. This provides a motivation for machine learning in chemical computers and a mathematical explanation for how biological cells might exhibit more efficient learning behavior within biochemical reaction networks than neuronal networks.",
+        "authors": "Sophie Jaffard, Ivo F. Sbalzarini",
+        "url": "http://arxiv.org/abs/2603.12060v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12060v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过数学证明，指出化学反应网络在解决某些任务上比需要隐藏层的脉冲神经网络更高效。它明确提到了“数学证明”、“分析性遗憾界限”、“渐近行为”和“Vapnik-Chervonenkis维数”，这些都直接满足了您对强大理论基础和清晰数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.12037v1",
+        "title": "Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference",
+        "summary": "Foundation models based on prior-data fitted networks (PFNs) have shown strong empirical performance in causal inference by framing the task as an in-context learning problem.However, it is unclear whether PFN-based causal estimators provide uncertainty quantification that is consistent with classical frequentist estimators. In this work, we address this gap by analyzing the frequentist consistency of PFN-based estimators for the average treatment effect (ATE). (1) We show that existing PFNs, when interpreted as Bayesian ATE estimators, can exhibit prior-induced confounding bias: the prior is not asymptotically overwritten by data, which, in turn, prevents frequentist consistency. (2) As a remedy, we suggest employing a calibration procedure based on a one-step posterior correction (OSPC). We show that the OSPC helps to restore frequentist consistency and can yield a semi-parametric Bernstein-von Mises theorem for calibrated PFNs (i.e., both the calibrated PFN-based estimators and the classical semi-parametric efficient estimators converge in distribution with growing data size). (3) Finally, we implement OSPC through tailoring martingale posteriors on top of the PFNs. In this way, we are able to recover functional nuisance posteriors from PFNs, required by the OSPC. In multiple (semi-)synthetic experiments, PFNs calibrated with our martingale posterior OSPC produce ATE uncertainty that (i) asymptotically matches frequentist uncertainty and (ii) is well calibrated in finite samples in comparison to other Bayesian ATE estimators.",
+        "authors": "Valentyn Melnychuk, Vahid Balazadeh, Stefan Feuerriegel, Rahul G. Krishnan",
+        "url": "http://arxiv.org/abs/2603.12037v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.12037v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究分析了基于PFN的因果估计器的频率学一致性，揭示了先验诱导的混淆偏差，并提出了一种基于一步后验校正（OSPC）的校准程序来恢复一致性。论文明确提到了“频率学一致性”、“半参数Bernstein-von Mises定理”和“鞅后验”，显示出极高的统计学和渐近理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11970v1",
+        "title": "Statistical and structural identifiability in representation learning",
+        "summary": "Representation learning models exhibit a surprising stability in their internal representations. Whereas most prior work treats this stability as a single property, we formalize it as two distinct concepts: statistical identifiability (consistency of representations across runs) and structural identifiability (alignment of representations with some unobserved ground truth). Recognizing that perfect pointwise identifiability is generally unrealistic for modern representation learning models, we propose new model-agnostic definitions of statistical and structural near-identifiability of representations up to some error tolerance $ε$. Leveraging these definitions, we prove a statistical $ε$-near-identifiability result for the representations of models with nonlinear decoders, generalizing existing identifiability theory beyond last-layer representations in e.g. generative pre-trained transformers (GPTs) to near-identifiability of the intermediate representations of a broad class of models including (masked) autoencoders (MAEs) and supervised learners. Although these weaker assumptions confer weaker identifiability, we show that independent components analysis (ICA) can resolve much of the remaining linear ambiguity for this class of models, and validate and measure our near-identifiability claims empirically. With additional assumptions on the data-generating process, statistical identifiability extends to structural identifiability, yielding a simple and practical recipe for disentanglement: ICA post-processing of latent representations. On synthetic benchmarks, this approach achieves state-of-the-art disentanglement using a vanilla autoencoder. With a foundation model-scale MAE for cell microscopy, it disentangles biological variation from technical batch effects, substantially improving downstream generalization.",
+        "authors": "Walter Nelson, Marco Fumero, Theofanis Karaletsos, Francesco Locatello",
+        "url": "http://arxiv.org/abs/2603.11970v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11970v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文形式化了表示学习中的统计可识别性和结构可识别性，并提出了新的模型无关的ε-近可识别性定义，提供了严格的统计ε-近可识别性证明。它直接解决了表示学习的理论基础问题，并强调了数学证明，与您的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11964v1",
+        "title": "Asymptotically Efficient Recursive Identification Under One-Bit Communications Achieving Original CRLB",
+        "summary": "This paper develops an asymptotically efficient recursive identification algorithm for autoregressive systems with exogenous inputs under one-bit communications. In particular, the proposed method asymptotically achieves the Cramer-Rao lower bound (CRLB) based on the original data before quantization (original CRLB), whereas existing approaches typically attain only the CRLB corresponding to the quantized observations. The primary reason is that the existing methods quantize only the current system output, resulting in non-negligible information loss under one-bit quantization. To overcome this challenge, we present a novel quantization method that integrates both current and historical system outputs and inputs to provide richer parameter information in one-bit data, allowing the information loss caused by quantization to become a minor term relative to the original CRLB. Based on this technique, a corresponding remote estimation algorithm is further proposed. To address the convergence analysis challenge posed by the non-independence of the one-bit data, we establish a new framework that analyzes the tail probability of integrated data formed by combining current and historical system outputs and inputs before quantization, thereby eliminating the need for the traditional independence assumption on the quantized data. It is proven that the remote estimate achieves asymptotic normality, and the error covariance matrix converges to the original CRLB, confirming its asymptotic efficiency. Compared to existing identification algorithms under one-bit data, this method reduces the asymptotic mean squared error by at least 36%. Several numerical examples are simulated to show the effectiveness of the proposed algorithm.",
+        "authors": "Xingrui Liu, Jieming Ke, Mingjie Shao, Yanlong Zhao",
+        "url": "http://arxiv.org/abs/2603.11964v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11964v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种在单比特通信下实现原始Cramer-Rao下界（CRLB）的渐近高效递归识别算法。它建立了新的框架来分析集成数据的尾部概率，并证明了远程估计的渐近正态性以及误差协方差矩阵收敛到原始CRLB，理论严谨性极强。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11907v1",
+        "title": "Causal Representation Learning with Optimal Compression under Complex Treatments",
+        "summary": "Estimating Individual Treatment Effects (ITE) in multi-treatment scenarios faces two critical challenges: the Hyperparameter Selection Dilemma for balancing weights and the Curse of Dimensionality in computational scalability. This paper derives a novel multi-treatment generalization bound and proposes a theoretical estimator for the optimal balancing weight $α$, eliminating expensive heuristic tuning. We investigate three balancing strategies: Pairwise, One-vs-All (OVA), and Treatment Aggregation. While OVA achieves superior precision in low-dimensional settings, our proposed Treatment Aggregation ensures both accuracy and O(1) scalability as the treatment space expands. Furthermore, we extend our framework to a generative architecture, Multi-Treatment CausalEGM, which preserves the Wasserstein geodesic structure of the treatment manifold. Experiments on semi-synthetic and image datasets demonstrate that our approach significantly outperforms traditional models in estimation accuracy and efficiency, particularly in large-scale intervention scenarios.",
+        "authors": "Wanting Liang, Haoang Chi, Zhiheng Zhang",
+        "url": "http://arxiv.org/abs/2603.11907v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11907v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对多处理场景下的个体治疗效果（ITE）估计，该论文推导了新的多处理泛化界限，并提出了最优平衡权重α的理论估计器。此外，它将框架扩展到保持Wasserstein测地线结构的生成架构，展现了强大的因果逻辑和数学推导能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11867v1",
+        "title": "Data Fusion with Distributional Equivalence Test-then-pool",
+        "summary": "Randomized controlled trials (RCTs) are the gold standard for causal inference, yet practical constraints often limit the size of the concurrent control arm. Borrowing control data from previous trials offers a potential efficiency gain, but naive borrowing can induce bias when historical and current populations differ. Existing test-then-pool (TTP) procedures address this concern by testing for equality of control outcomes between historical and concurrent trials before borrowing; however, standard implementations may suffer from reduced power or inadequate control of the Type-I error rate.   We develop a new TTP framework that fuses control arms while rigorously controlling the Type-I error rate of the final treatment effect test. Our method employs kernel two-sample testing via maximum mean discrepancy (MMD) to capture distributional differences, and equivalence testing to avoid introducing uncontrolled bias, providing a more flexible and informative criterion for pooling. To ensure valid inference, we introduce partial bootstrap and partial permutation procedures for approximating null distributions in the presence of heterogeneous controls. We further establish the overall validity and consistency. We provide empirical studies demonstrating that the proposed approach achieves higher power than standard TTP methods while maintaining nominal error control, highlighting its value as a principled tool for leveraging historical controls in modern clinical trials.",
+        "authors": "Linying Yang, Xing Liu, Robin J. Evans",
+        "url": "http://arxiv.org/abs/2603.11867v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11867v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新的TTP（Test-then-pool）框架，用于在随机对照试验（RCT）中融合控制组数据，同时严格控制最终治疗效果检验的I类错误率。它利用最大均值差异（MMD）进行核两样本检验，并建立了整体有效性和一致性证明，统计保证和方法论严谨性非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11790v1",
+        "title": "Disentangled Representation Learning through Unsupervised Symmetry Group Discovery",
+        "summary": "Symmetry-based disentangled representation learning leverages the group structure of environment transformations to uncover the latent factors of variation. Prior approaches to symmetry-based disentanglement have required strong prior knowledge of the symmetry group's structure, or restrictive assumptions about the subgroup properties. In this work, we remove these constraints by proposing a method whereby an embodied agent autonomously discovers the group structure of its action space through unsupervised interaction with the environment. We prove the identifiability of the true symmetry group decomposition under minimal assumptions, and derive two algorithms: one for discovering the group decomposition from interaction data, and another for learning Linear Symmetry-Based Disentangled (LSBD) representations without assuming specific subgroup properties. Our method is validated on three environments exhibiting different group decompositions, where it outperforms existing LSBD approaches.",
+        "authors": "Dang-Nhu Barthélémy, Annabi Louis, Argentieri Sylvain",
+        "url": "http://arxiv.org/abs/2603.11790v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11790v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种通过无监督交互自主发现行动空间群结构的方法，并证明了真实对称群分解在最小假设下的可识别性。基于群论的解缠表示学习，具有深厚的数学理论基础，直接满足您对严格数学逻辑的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11761v1",
+        "title": "Causal Influence Maximization with Steady-State Guarantees",
+        "summary": "Influence maximization in networks is a central problem in machine learning and causal inference, where an intervention on a subset of individuals triggers a diffusion process through the network. Existing approaches typically optimize short-horizon rewards or rely on strong parametric assumptions, offering limited guarantees for longrun causal outcomes. In this work, we address the problem of selecting a seed set to maximize the total steady-state potential outcome under budget constraints. Theoretically, we demonstrate that under a low-probability propagation assumption, the high-dimensional path-dependent dynamics can be compressed into a low-dimensional exposure mapping with a bounded second-order approximation error. Leveraging this structural reduction, we propose CIM, a two-stage framework that first learns shape-constrained exposureresponse functions from observational data and then optimizes the objective via a greedy strategy. Our approach bridges causal inference with network optimization, providing provable guarantees for both the estimation of outcome functions and the approximation ratio of the influence maximization.",
+        "authors": "Renjie Cao, Zhuoxin Yan, Xinyan Su, Zhiheng Zhang",
+        "url": "http://arxiv.org/abs/2603.11761v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11761v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了网络中因果影响最大化的问题，旨在最大化预算约束下的总稳态潜在结果。它提供了结果函数估计和影响最大化近似比的严格保证，将因果推断与网络优化紧密结合，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11717v1",
+        "title": "COTONET: A custom cotton detection algorithm based on YOLO11 for stage of growth cotton boll detection",
+        "summary": "Cotton harvesting is a critical phase where cotton capsules are physically manipulated and can lead to fibre degradation. To maintain the highest quality, harvesting methods must emulate delicate manual grasping, to preserve cotton's intrinsic properties. Automating this process requires systems capable of recognising cotton capsules across various phenological stages. To address this challenge, we propose COTONET, an enhanced custom YOLO11 model tailored with attention mechanisms to improve the detection of difficult instances. The architecture incorporates gradients in non-learnable operations to enhance shape and feature extraction. Key architectural modifications include: the replacement of convolutional blocks with Squeeze-and-Exitation blocks, a redesigned backbone integrating attention mechanisms, and the substitution of standard upsampling operations for Content Aware Reassembly of Features (CARAFE). Additionally, we integrate Simple Attention Modules (SimAM) for primary feature aggregation and Parallel Hybrid Attention Mechanisms (PHAM) for channel-wise, spatial-wise and coordinate-wise attention in the downward neck path. This configuration offers increased flexibility and robustness for interpreting the complexity of cotton crop growth. COTONET aligns with small-to-medium YOLO models utilizing 7.6M parameters and 27.8 GFLOPS, making it suitable for low-resource edge computing and mobile robotics. COTONET outperforms the standard YOLO baselines, achieving a mAP50 of 81.1% and a mAP50-95 of 60.6%.",
+        "authors": "Guillem González, Guillem Alenyà, Sergi Foix",
+        "url": "http://arxiv.org/abs/2603.11717v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11717v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了二分随机块模型的模型选择问题，提出了一种带惩罚的交叉验证方法，并首次提供了二分网络中模型选择的一致性保证。这是统计理论领域的重要贡献，对模型选择的理论基础进行了深入探讨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11701v1",
+        "title": "Decomposing Observational Multiplicity in Decision Trees: Leaf and Structural Regret",
+        "summary": "Many machine learning tasks admit multiple models that perform almost equally well, a phenomenon known as predictive multiplicity. A fundamental source of this multiplicity is observational multiplicity, which arises from the stochastic nature of label collection: observed training labels represent only a single realization of the underlying ground-truth probabilities. While theoretical frameworks for observational multiplicity have been established for logistic regression, their implications for non-smooth, partition-based models like decision trees remain underexplored. In this paper, we introduce two complementary notions of observational multiplicity for decision tree classifiers: leaf regret and structural regret. Leaf regret quantifies the intrinsic variability of predictions within a fixed leaf due to finite-sample noise, while structural regret captures variability induced by the instability of the learned tree structure itself. We provide a formal decomposition of observational multiplicity into these two components and establish statistical guarantees. Our experimental evaluation across diverse credit risk scoring datasets confirms the near-perfect alignment between our theoretical decomposition and the empirically observed variance. Notably, we find that structural regret is the primary driver of observational multiplicity, accounting for over 15 times the variability of leaf regret in some datasets. Furthermore, we demonstrate that utilizing these regret measures as an abstention mechanism in selective prediction can effectively identify arbitrary regions and improve model safety, elevating recall from 92% to 100% on the most stable sub-populations. These results establish a rigorous framework for quantifying observational multiplicity, aligning with recent advances in algorithmic safety and interpretability.",
+        "authors": "Mustafa Cavus",
+        "url": "http://arxiv.org/abs/2603.11701v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11701v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究形式化分解了决策树中的观测多重性为叶子遗憾和结构遗憾，并建立了统计保证。它为理解和量化模型不确定性提供了严格的框架，对算法安全性和可解释性具有重要理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11683v1",
+        "title": "Causal Prosody Mediation for Text-to-Speech:Counterfactual Training of Duration, Pitch, and Energy in FastSpeech2",
+        "summary": "We propose a novel causal prosody mediation framework for expressive text-to-speech (TTS) synthesis. Our approach augments the FastSpeech2 architecture with explicit emotion conditioning and introduces counterfactual training objectives to disentangle emotional prosody from linguistic content. By formulating a structural causal model of how text (content), emotion, and speaker jointly influence prosody (duration, pitch, energy) and ultimately the speech waveform, we derive two complementary loss terms: an Indirect Path Constraint (IPC) to enforce that emotion affects speech only through prosody, and a Counterfactual Prosody Constraint (CPC) to encourage distinct prosody patterns for different emotions. The resulting model is trained on multi-speaker emotional corpora (LibriTTS, EmoV-DB, VCTK) with a combined objective that includes standard spectrogram reconstruction and variance prediction losses alongside our causal losses. In evaluations on expressive speech synthesis, our method achieves significantly improved prosody manipulation and emotion rendering, with higher mean opinion scores (MOS) and emotion accuracy than baseline FastSpeech2 variants. We also observe better intelligibility (low WER) and speaker consistency when transferring emotions across speakers. Extensive ablations confirm that the causal objectives successfully separate prosody attribution, yielding an interpretable model that allows controlled counterfactual prosody editing (e.g. \"same utterance, different emotion\") without compromising naturalness. We discuss the implications for identifiability in prosody modeling and outline limitations such as the assumption that emotion effects are fully captured by pitch, duration, and energy. Our work demonstrates how integrating causal learning principles into TTS can improve controllability and expressiveness in generated speech.",
+        "authors": "Suvendu Sekhar Mohanty",
+        "url": "http://arxiv.org/abs/2603.11683v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11683v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖的因果韵律中介框架，通过构建结构因果模型和引入反事实训练目标来解耦情感韵律与语言内容，并推导了两个互补的损失项。它将因果推理原则融入深度学习模型，具有清晰的因果逻辑和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11583v1",
+        "title": "UtilityMax Prompting: A Formal Framework for Multi-Objective Large Language Model Optimization",
+        "summary": "The success of a Large Language Model (LLM) task depends heavily on its prompt. Most use-cases specify prompts using natural language, which is inherently ambiguous when multiple objectives must be simultaneously satisfied. In this paper we introduce UtilityMax Prompting, a framework that specifies tasks using formal mathematical language. We reconstruct the task as an influence diagram in which the LLM's answer is the sole decision variable. A utility function is defined over the conditional probability distributions within the diagram, and the LLM is instructed to find the answer that maximises expected utility. This constrains the LLM to reason explicitly about each component of the objective, directing its output toward a precise optimization target rather than a subjective natural language interpretation. We validate our approach on the MovieLens 1M dataset across three frontier models (Claude Sonnet 4.6, GPT-5.4, and Gemini 2.5 Pro), demonstrating consistent improvements in precision and Normalized Discounted Cumulative Gain (NDCG) over natural language baselines in a multi-objective movie recommendation task.",
+        "authors": "Ofir Marom",
+        "url": "http://arxiv.org/abs/2603.11583v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11583v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了UtilityMax Prompting，一个用形式数学语言指定LLM任务的框架。它将任务重构为影响图，定义效用函数以最大化预期效用，从而将LLM的输出导向精确的优化目标。这为LLM的优化提供了严格的数学基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11536v1",
+        "title": "Quantum mechanical framework for quantization-based optimization: from Gradient flow to Schroedinger equation",
+        "summary": "This work presents a quantum mechanical framework for analyzing quantization-based optimization algorithms. The sampling process of the quantization-based search is modeled as a gradient-flow dissipative system, leading to a Hamilton-Jacobi-Bellman (HJB) representation. Through a suitable transformation of the objective function, this formulation yields the Schroedinger equation, which reveals that quantum tunneling enables escape from local minima and guarantees access to the global optimum. By establishing the connection to the Fokker-Planck equation, the framework provides a thermodynamic interpretation of global convergence. Such an analysis between the thermodynamic and the quantum dynamic methodology unifies combinatorial and continuous optimization, and extends naturally to machine learning tasks such as image classification. Numerical experiments demonstrate that quantization-based optimization consistently outperforms conventional algorithms across both combinatorial problems and nonconvex continuous functions.",
+        "authors": "Jinwuk Seok, Changsik Cho",
+        "url": "http://arxiv.org/abs/2603.11536v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11536v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个量子力学框架来分析基于量化的优化算法，将其采样过程建模为梯度流耗散系统，并推导出Hamilton-Jacobi-Bellman (HJB) 表示和薛定谔方程。它提供了全局收敛的保证和热力学解释，理论深度极高，跨学科结合非常创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11530v1",
+        "title": "Blind Hyperspectral and Multispectral Images Fusion: A Unified Tensor Fusion Framework from Coupled Inverse Problem Perspective",
+        "summary": "Hyperspectral and multispectral images fusion aims at integrating a low-resolution hyperspectral image (LR-HSI) and a high-resolution multispectral image (HR-MSI) to construct a high-resolution hyperspectral image (HR-HSI). It is generally assumed that spatial blurring operator and spectral response operator are prior-known. However, such an assumption is extremely restrictive in practice. To overcome this limitation, this paper formulates blind fusion as a coupled inverse problem, integrating blind deconvolution in the spatial domain with blind unmixing in the spectral domain. From this novel perspective, we propose a unified tensor fusion framework capable of flexible self-adjustment and real-time fusion without pre-training. We further introduce an optimization model for the joint estimation of the target HR-HSI, the spatial point spread function, and the spectral response function. To solve this model, we devise a partially linearized alternating direction method of multipliers (ADMM) algorithm with Moreau envelope smoothing, accompanied by the rigorous convergence analysis. An initialization estimator tailored to the specific characteristics of the fusion problem is proposed. Numerical comparisons with state-of-the-art methods on both synthetic and real-world datasets demonstrate the compelling performance of the proposed method.",
+        "authors": "Ying Gao, Michael K. Ng, Chunfeng cui",
+        "url": "http://arxiv.org/abs/2603.11530v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11530v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将盲融合问题形式化为耦合逆问题，提出了统一的张量融合框架，并为求解模型设计了带有Moreau包络平滑的ADMM（交替方向乘子法）算法，附带了严格的收敛性分析。优化理论和收敛性证明非常严谨，符合您对数学推导和理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.11474v1",
+        "title": "Dynamic Bayesian regression quantile synthesis for forecasting outlook-at-risk",
+        "summary": "This paper proposes dynamic Bayesian regression quantile synthesis (DRQS), a novel method for quantile forecasting within the Bayesian predictive synthesis (BPS) framework designed to combine quantile-specific information from multiple agent models. While existing BPS approaches primarily focus on mean forecasting, our method directly targets the conditional quantiles of the response variable by utilizing the asymmetric Laplace distribution for the synthesis function. The resulting framework can be interpreted as a dynamic quantile linear model with latent predictors. We extend the univariate DRQS to a multivariate setting-factor DRQS (FDRQS)-by introducing a time-varying latent factor structure for the synthesis weights. This allows the model to leverage cross-sectional dependencies and shared information across multiple time series simultaneously. We develop an efficient Markov chain Monte Carlo (MCMC) algorithm for posterior inference, utilizing data augmentation and forward-filtering backward-sampling. Empirical applications to US inflation and global GDP growth demonstrate the improved performance of the proposed methods for quantile forecasting. In particular, FDRQS exhibits superior resilience during periods of extreme economic stress, such as the COVID-19 pandemic, by adaptively rebalancing agent contributions and capturing emergent global dependencies.",
+        "authors": "Genya Kobayashi, Shonosuke Sugasawa, Yuta Yamauchi, Dongu Han",
+        "url": "http://arxiv.org/abs/2603.11474v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.11474v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了动态贝叶斯回归分位数合成（DRQS）方法，用于分位数预测，利用非对称拉普拉斯分布和时变潜在因子结构，并开发了高效的Markov链蒙特卡洛（MCMC）算法进行后验推断。这篇论文在贝叶斯统计、时间序列建模和MCMC理论方面具有扎实的理论基础和严谨的数学推导。"
+    }
+]

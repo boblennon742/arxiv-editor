@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.15511v1",
+        "title": "Some general results on risk budgeting portfolios",
+        "summary": "Given a reference risk measure, the risk budgeting is the portfolio where each asset contributes a predetermined amount to the total risk. We propose a novel approach, alternative to the ones proposed in the literature, for the calculation of the risk budgeting portfolio. This different perspective on the problem has several interesting consequences. For the calculation of the portfolio, we define a Cauchy sequence within the simplex of R^n, whose limit corresponds to the risk budgeting portfolio. This construction allows for the straightforward implementation of an efficient algorithm, avoiding the need to solve auxiliary, equivalent optimization problems, which may be computationally challenging and hard to interpret in the decision theory context. We compare our algorithm with the standard optimization-based methods proposed in the literature. From a theoretical point of view, starting from the Cauchy sequence, we define a function for which the risk budgeting portfolio is a fixed point. Therefore, sufficient conditions for the existence and uniqueness of the fixed point can be used. The methodology is developed for general risk measures and implemented in detail in the case of standard deviation.",
+        "authors": "Claudia Fassino, Pierpaolo Uberti",
+        "url": "http://arxiv.org/abs/2603.15511v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15511v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了计算风险预算投资组合的新方法，通过构建柯西序列来确定投资组合，并提供了固定点存在性和唯一性的充分条件。这直接体现了强大的数学理论基础和严谨的数学推导，与数理统计博士生的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15336v1",
+        "title": "Active Seriation: Efficient Ordering Recovery with Statistical Guarantees",
+        "summary": "Active seriation aims at recovering an unknown ordering of $n$ items by adaptively querying pairwise similarities. The observations are noisy measurements of entries of an underlying $n$ x $n$ permuted Robinson matrix, whose permutation encodes the latent ordering. The framework allows the algorithm to start with partial information on the latent ordering, including seriation from scratch as a special case. We propose an active seriation algorithm that provably recovers the latent ordering with high probability. Under a uniform separation condition on the similarity matrix, optimal performance guarantees are established, both in terms of the probability of error and the number of observations required for successful recovery.",
+        "authors": "James Cheshire, Yann Issartel",
+        "url": "http://arxiv.org/abs/2603.15336v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15336v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种主动排序算法，能够以高概率可证明地恢复潜在排序，并建立了最优性能保证。这种“可证明的恢复”和“最优性能保证”正是统计学中理论严谨性的核心体现，非常符合对统计保证和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15321v1",
+        "title": "CASHomon Sets: Efficient Rashomon Sets Across Multiple Model Classes and their Hyperparameters",
+        "summary": "Rashomon sets are model sets within one model class that perform nearly as well as a reference model from the same model class. They reveal the existence of alternative well-performing models, which may support different interpretations. This enables selecting models that match domain knowledge, hidden constraints, or user preferences. However, efficient construction methods currently exist for only a few model classes. Applied machine learning usually searches many model classes, and the best class is unknown beforehand. We therefore study Rashomon sets in the combined algorithm selection and hyperparameter optimization (CASH) setting and call them CASHomon sets. We propose TruVaRImp, a model-based active learning algorithm for level set estimation with an implicit threshold, and provide convergence guarantees. On synthetic and real-world datasets, TruVaRImp reliably identifies CASHomon sets members and matches or outperforms naive sampling, Bayesian optimization, classical and implicit level set estimation methods, and other baselines. Our analyses of predictive multiplicity and feature-importance variability across model classes question the common practice of interpreting data through a single model class.",
+        "authors": "Fiona Katharina Ewald, Martin Binder, Matthias Feurer, Bernd Bischl, Giuseppe Casalicchio",
+        "url": "http://arxiv.org/abs/2603.15321v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15321v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了CASH设置下的Rashomon集，并提出了具有收敛性保证的主动学习算法TruVaRImp。收敛性保证是优化理论和统计学习理论的重要组成部分，模型多重性和可解释性也是当前AI系统的重要研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15248v1",
+        "title": "Mechanistic Foundations of Goal-Directed Control",
+        "summary": "Mechanistic interpretability has transformed the analysis of transformer circuits by decomposing model behavior into competing algorithms, identifying phase transitions during training, and deriving closed-form predictions for when and why strategies shift. However, this program has remained largely confined to sequence-prediction architectures, leaving embodied control systems without comparable mechanistic accounts. Here we extend this framework to sensorimotor-cognitive development, using infant motor learning as a model system. We show that foundational inductive biases give rise to causal control circuits, with learned gating mechanisms converging toward theoretically motivated uncertainty thresholds. The resulting dynamics reveal a clean phase transition in the arbitration gate whose commitment behavior is well described by a closed-form exponential moving-average surrogate. We identify context window k as the critical parameter governing circuit formation: below a minimum threshold (k$\\leq$4) the arbitration mechanism cannot form; above it (k$\\geq$8), gate confidence scales asymptotically as log k. A two-dimensional phase diagram further reveals task-demand-dependent route arbitration consistent with the prediction that prospective execution becomes advantageous only when prediction error remains within the task tolerance window. Together, these results provide a mechanistic account of how reactive and prospective control strategies emerge and compete during learning. More broadly, this work sharpens mechanistic accounts of cognitive development and provides principled guidance for the design of interpretable embodied agents.",
+        "authors": "Alma Lago",
+        "url": "http://arxiv.org/abs/2603.15248v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15248v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将机制可解释性扩展到具身控制系统，揭示了因果控制电路、理论驱动的不确定性阈值以及相变动态。其“理论驱动的不确定性阈值”和“因果控制电路”的发现，以及对认知发展和可解释具身智能体设计的指导，展现了深刻的理论洞察和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15182v1",
+        "title": "Sequential Transport for Causal Mediation Analysis",
+        "summary": "We propose sequential transport (ST), a distributional framework for mediation analysis that combines optimal transport (OT) with a mediator directed acyclic graph (DAG). Instead of relying on cross-world counterfactual assumptions, ST constructs unit-level mediator counterfactuals by minimally transporting each mediator, either marginally or conditionally, toward its distribution under an alternative treatment while preserving the causal dependencies encoded by the DAG. For numerical mediators, ST uses monotone (conditional) OT maps based on conditional CDF/quantile estimators; for categorical mediators, it extends naturally via simplex-based transport. We establish consistency of the estimated transport maps and of the induced unit-level decompositions into mutatis mutandis direct and indirect effects under standard regularity and support conditions. When the treatment is randomized or ignorable (possibly conditional on covariates), these decompositions admit a causal interpretation; otherwise, they provide a principled distributional attribution of differences between groups aligned with the mediator structure. Gaussian examples show that ST recovers classical mediation formulas, while additional simulations confirm good performance in nonlinear and mixed-type settings. An application to the COMPAS dataset illustrates how ST yields deterministic, DAG-consistent counterfactual mediators and a fine-grained mediator-level attribution of disparities.",
+        "authors": "Agathe Fernandes-Machado, Iryna Voitsitska, Arthur Charpentier, Ewen Gallic",
+        "url": "http://arxiv.org/abs/2603.15182v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15182v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了结合最优传输和中介DAG的因果中介分析框架，构建了单元级中介反事实，并建立了估计传输映射和分解的一致性。这篇论文在因果逻辑、统计保证和数学推导方面都达到了极高的水准，是数理统计博士生非常理想的阅读材料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15079v1",
+        "title": "Interpretable Classification of Time Series Using Euler Characteristic Surfaces",
+        "summary": "Persistent homology (PH) -- the conventional method in topological data analysis -- is computationally expensive, requires further vectorization of its signatures before machine learning (ML) can be applied, and captures information along only the spatial axis. For time series data, we propose Euler Characteristic Surfaces (ECS) as an alternative topological signature based on the Euler characteristic ($χ$) -- a fundamental topological invariant. The ECS provides a computationally efficient, spatiotemporal, and inherently discretized feature representation that can serve as direct input to ML models. We prove a stability theorem guaranteeing that the ECS remains stable under small perturbations of the input time series. We first demonstrate that ECS effectively captures the nontrivial topological differences between the limit cycle and the strange attractor in the Rössler system. We then develop an ECS-based classification framework and apply it to five benchmark biomedical datasets (four ECG, one EEG) from the UCR/UEA archive. On $\\textit{ECG5000}$, our single-feature ECS classifier achieves $98\\%$ accuracy with $O(n+R\\cdot T)$ complexity, compared to $62\\%$ reported by a recent PH-based method. An AdaBoost extension raises accuracy to $98.6\\%$, matching the best deep learning results while retaining full interpretability. Strong results are also obtained on $\\textit{TwoLeadECG}$ ($94.1\\%$) and $\\textit{Epilepsy2}$ ($92.6\\%$).",
+        "authors": "Salam Rabindrajit Luwang, Sushovan Majhi, Vishal Mandal, Atish J. Mitra, Md. Nurujjaman, Buddha Nath Sharma",
+        "url": "http://arxiv.org/abs/2603.15079v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15079v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了基于欧拉示性曲面（ECS）的时间序列拓扑特征，并证明了其稳定性定理。欧拉示性是基本的拓扑不变量，稳定性定理提供了坚实的理论基础，同时实现了高效且可解释的分类，非常符合对理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15057v1",
+        "title": "Analyzing Error Sources in Global Feature Effect Estimation",
+        "summary": "Global feature effects such as PD and ALE plots are widely used to interpret black-box models. However, they are only estimates of true underlying effects, and their reliability depends on multiple sources of error. Despite the popularity of global feature effects, these error sources are largely unexplored. In particular, the practically relevant question of whether to use training or holdout data to estimate feature effects remains unanswered. We address this gap by providing a systematic, estimator-level analysis that disentangles sources of bias and variance for PD and ALE. To this end, we derive a mean-squared-error decomposition that separates model bias, estimation bias, model variance, and estimation variance, and analyze their dependence on model characteristics, data selection, and sample size. We validate our theoretical findings through an extensive simulation study across multiple data-generating processes, learners, estimation strategies (training data, validation data, and cross-validation), and sample sizes. Our results reveal that, while using holdout data is theoretically the cleanest, potential biases arising from the training data are empirically negligible and dominated by the impact of the usually higher sample size. The estimation variance depends on both the presence of interactions and the sample size, with ALE being particularly sensitive to the latter. Cross-validation-based estimation is a promising approach that reduces the model variance component, particularly for overfitting models. Our analysis provides a principled explanation of the sources of error in feature effect estimates and offers concrete guidance on choosing estimation strategies when interpreting machine learning models.",
+        "authors": "Timo Heiß, Coco Bögel, Bernd Bischl, Giuseppe Casalicchio",
+        "url": "http://arxiv.org/abs/2603.15057v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15057v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对全局特征效应估计中的误差来源进行了系统分析，推导了均方误差分解，并分离了偏差和方差分量。这是统计学中对估计量性质进行深入分析的典型工作，提供了对黑盒模型解释的理论基础和实践指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14944v1",
+        "title": "Ultra-Early Prediction of Tipping Points: Integrating Dynamical Measures with Reservoir Computing",
+        "summary": "Complex dynamical systems-such as climate, ecosystems, and economics-can undergo catastrophic and potentially irreversible regime changes, often triggered by environmental parameter drift and stochastic disturbances. These critical thresholds, known as tipping points, pose a prediction problem of both theoretical and practical significance, yet remain largely unresolved. To address this, we articulate a model-free framework that integrates the measures characterizing the stability and sensitivity of dynamical systems with the reservoir computing (RC), a lightweight machine learning technique, using only observational time series data. The framework consists of two stages. The first stage involves using RC to robustly learn local complex dynamics from observational data segmented into windows. The second stage focuses on accurately detecting early warning signals of tipping points by analyzing the learned autonomous RC dynamics through dynamical measures, including the dominant eigenvalue of the Jacobian matrix, the maximum Floquet multiplier, and the maximum Lyapunov exponent. Furthermore, when these dynamical measures exhibit trend-like patterns, their extrapolation enables ultra-early prediction of tipping points significantly prior to the occurrence of critical transitions. We conduct a rigorous theoretical analysis of the proposed method and perform extensive numerical evaluations on a series of representative synthetic systems and eight real-world datasets, as well as quantitatively predict the tipping time of the Atlantic Meridional Overturning Circulation system. Experimental results demonstrate that our framework exhibits advantages over the baselines in comprehensive evaluations, particularly in terms of dynamical interpretability, prediction stability and robustness, and ultra-early prediction capability.",
+        "authors": "Xin Li, Qunxi Zhu, Chengli Zhao, Bolin Zhao, Xue Zhang, Xiaojun Duan, Wei Lin",
+        "url": "http://arxiv.org/abs/2603.14944v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14944v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个用于临界点超早期预测的无模型框架，将动力系统理论中的动态度量（如雅可比矩阵主特征值、Floquet乘子、Lyapunov指数）与储层计算相结合，并提供了严谨的理论分析。这篇论文将严谨的数学理论应用于复杂系统预测，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14918v1",
+        "title": "Bayesian Inference for Missing Physics",
+        "summary": "Model-based approaches for (bio)process systems often suffer from incomplete knowledge of the underlying physical, chemical, or biological laws. Universal differential equations, which embed neural networks within differential equations, have emerged as powerful tools to learn this missing physics from experimental data. However, neural networks are inherently opaque, motivating their post-processing via symbolic regression to obtain interpretable mathematical expressions. Genetic algorithm-based symbolic regression is a popular approach for this post-processing step, but provides only point estimates and cannot quantify the confidence we should place in a discovered equation. We address this limitation by applying Bayesian symbolic regression, which uses Reversible Jump Markov Chain Monte Carlo to sample from the posterior distribution over symbolic expression trees. This approach naturally quantifies uncertainty in the recovered model structure. We demonstrate the methodology on a Lotka-Volterra predator-prey system and then show how a well-designed experiment leads to lower uncertainty in a fed-batch bioreactor case study.",
+        "authors": "Arno Strouwen",
+        "url": "http://arxiv.org/abs/2603.14918v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14918v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将贝叶斯符号回归（使用可逆跳马尔可夫链蒙特卡洛）应用于学习通用微分方程中缺失的物理定律，并量化了模型结构的不确定性。贝叶斯推断、MCMC方法和不确定性量化是数理统计的核心，与您的研究兴趣高度相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14773v1",
+        "title": "HO-SFL: Hybrid-Order Split Federated Learning with Backprop-Free Clients and Dimension-Free Aggregation",
+        "summary": "Fine-tuning large models on edge devices is severely hindered by the memory-intensive backpropagation (BP) in standard frameworks like federated learning and split learning. While substituting BP with zeroth-order optimization can significantly reduce memory footprints, it typically suffers from prohibitively degraded convergence speed. To resolve this dilemma, we propose Hybrid-Order Split Federated Learning (HO-SFL). By reformulating the split learning process within a Lagrangian framework, HO-SFL decouples the optimization landscape: The server performs precise first-order updates (i.e., BP), whereas clients conduct memory-efficient zeroth-order optimization. This hybrid design not only eliminates the need for client-side BP but also enables dimension-free model aggregation, drastically lowering communication costs. Crucially, we provide a theoretical convergence analysis, demonstrating that HO-SFL mitigates the dimension-dependent convergence slowdown of zeroth-order optimization, achieving a convergence rate comparable to first-order methods. Extensive experiments on tasks across vision and language modalities validate that HO-SFL achieves convergence speeds comparable to first-order baselines while significantly reducing communication costs and client memory footprints.",
+        "authors": "Qiyuan Chen, Xian Wu, Yi Wang, Xianhao Chen",
+        "url": "http://arxiv.org/abs/2603.14773v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14773v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了混合阶分层联邦学习框架HO-SFL，通过解耦优化过程，使客户端无需反向传播。更重要的是，它提供了理论收敛性分析，证明了其收敛速度可与一阶方法媲美。这直接满足了对优化收敛性和理论基础的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14768v1",
+        "title": "Understanding the geometry of deep learning with decision boundary volume",
+        "summary": "For classification tasks, the performance of a deep neural network is determined by the structure of its decision boundary, whose geometry directly affects essential properties of the model, including accuracy and robustness. Motivated by a classical tube formula due to Weyl, we introduce a method to measure the decision boundary of a neural network through local surface volumes, providing a theoretically justifiable and efficient measure enabling a geometric interpretation of the effectiveness of the model applicable to the high dimensional feature spaces considered in deep learning.   A smaller surface volume is expected to correspond to lower model complexity and better generalisation. We verify, on a number of image processing tasks with convolutional architectures that decision boundary volume is inversely proportional to classification accuracy. Meanwhile, the relationship between local surface volume and generalisation for fully connected architecture is observed to be less stable between tasks. Therefore, for network architectures suited to a particular data structure, we demonstrate that smoother decision boundaries lead to better performance, as our intuition would suggest.",
+        "authors": "Matthew Burfitt, Jacek Brodzki, Pawel Dłotko",
+        "url": "http://arxiv.org/abs/2603.14768v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14768v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了一种通过局部表面体积测量神经网络决策边界的方法，其灵感来源于Weyl的管状公式，并提供了理论上合理的度量。这篇论文将深厚的几何理论应用于深度学习的理解，具有极高的数学严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14752v1",
+        "title": "Prior- and likelihood-free probabilistic inference with finite-sample calibration guarantees",
+        "summary": "Motivated by parametric models for which the likelihood is analytically unavailable, numerically unstable, or prohibitively expensive to compute or optimize, we develop a prior- and likelihood-free framework for fully probabilistic (Bayesian-like) uncertainty quantification with finite-sample calibration guarantees. Our method, a type of inferential model, produces data-dependent degrees of belief about claims concerning the unknown parameter while controlling the frequency with which high belief is assigned to false claims, even in finite-sample settings. Our procedure is general in that it requires only the ability to simulate from the model. We first rank candidate parameter values according to how well data simulated from the model agree with the observed data, and then rescale these rankings in a way that yields the desired finite-sample calibration guarantees. The key idea is to employ a permutation-invariant function, such as a depth function, to rank parameter values. We show that such a choice yields closed-form calibration rescaling calculations, making the procedure computationally simple. We illustrate our method's broad appeal with four examples, including differential privacy and Ising models. An analysis of the spatial configuration of 2025 measles outbreaks in the U.S. showcases our method's practical advantages.",
+        "authors": "Leonardo Cella, Emily C. Hector",
+        "url": "http://arxiv.org/abs/2603.14752v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14752v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文开发了一种无先验和无似然的概率推断框架，提供了有限样本校准保证。这种方法在似然函数难以处理的情况下，提供了贝叶斯式不确定性量化的严格统计保证，是数理统计领域非常前沿和重要的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14676v1",
+        "title": "Scalable Text-Embedding-informed Cognitive Diagnosis of Large Language Models",
+        "summary": "Large language models (LLMs) have achieved remarkable performance on diverse benchmarks, yet existing evaluation practices largely rely on coarse summary metrics that obscure underlying reasoning abilities. In this work, we propose novel methodologies to adapt cognitive diagnosis models (CDMs) in psychometrics to LLM evaluation, enabling fine-grained diagnosis via multidimensional discrete capability profiles and interpretable characterizations of LLM strengths and weaknesses. First, to enable CDM-based evaluation at benchmark scale (more than 1000 items), we propose a scalable method that jointly estimates LLM mastery profiles and the item-attribute Q-matrix, addressing key challenges posed by high-dimensional latent attributes (K > 20), large item pools, and the prohibitive computational cost of existing marginal maximum likelihood-based estimation. Second, we incorporate item-level textual information to construct AI-embedding-informed priors for the Q-matrix, stabilizing high-dimensional estimation while reducing reliance on costly human specification. We develop an efficient stochastic-approximation algorithm to jointly estimate LLM mastery profiles and the Q-matrix that balances data fit with text-embedding-informed priors. Simulation studies demonstrate accurate parameter recovery. An application to the MATH Level 5 benchmark illustrates the practical utility of our method for LLM evaluation and uncovers useful insights into LLMs' fine-grained capabilities.",
+        "authors": "Jia Liu, Zhiyu Xu, Yuqi Gu",
+        "url": "http://arxiv.org/abs/2603.14676v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14676v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将心理测量学中的认知诊断模型应用于LLM评估，提出了可扩展的方法来联合估计LLM掌握度配置文件和Q矩阵，并结合了AI嵌入信息先验。其统计建模、高效随机近似算法和参数恢复的理论分析，都体现了强大的理论基础和数学推导。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.15619v1",
+        "title": "Mixture-of-Depths Attention",
+        "summary": "Scaling depth is a key driver for large language models (LLMs). Yet, as LLMs become deeper, they often suffer from signal degradation: informative features formed in shallow layers are gradually diluted by repeated residual updates, making them harder to recover in deeper layers. We introduce mixture-of-depths attention (MoDA), a mechanism that allows each attention head to attend to sequence KV pairs at the current layer and depth KV pairs from preceding layers. We further describe a hardware-efficient algorithm for MoDA that resolves non-contiguous memory-access patterns, achieving 97.3% of FlashAttention-2's efficiency at a sequence length of 64K. Experiments on 1.5B-parameter models demonstrate that MoDA consistently outperforms strong baselines. Notably, it improves average perplexity by 0.2 across 10 validation benchmarks and increases average performance by 2.11% on 10 downstream tasks, with a negligible 3.7% FLOPs computational overhead. We also find that combining MoDA with post-norm yields better performance than using it with pre-norm. These results suggest that MoDA is a promising primitive for depth scaling. Code is released at https://github.com/hustvl/MoDA .",
+        "authors": "Lianghui Zhu, Yuxin Fang, Bencheng Liao, Shijie Wang, Tianheng Cheng, Zilong Huang, Chen Chen, Lai Wei, Yutao Zeng, Ya Wang, Yi Lin, Yu Li, Xinggang Wang",
+        "url": "http://arxiv.org/abs/2603.15619v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15619v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Mixture-of-Depths Attention (MoDA) 机制，允许注意力头关注当前层和前几层的 KV 对，以解决深度 LLM 中的信号衰减问题。它直接针对 LLM 架构和深度扩展的瓶颈，方法具有理论创新性，且硬件效率高，对 LLM 的实际应用效率有显著提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15617v1",
+        "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
+        "summary": "Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of sophisticated mathematical and scientific reasoning, but whether they can perform novel research is still widely debated and underexplored. We introduce HorizonMath, a benchmark of over 100 predominantly unsolved problems spanning 8 domains in computational and applied mathematics, paired with an open-source evaluation framework for automated verification. Our benchmark targets a class of problems where discovery is hard, requiring meaningful mathematical insight, but verification is computationally efficient and simple. Because these solutions are unknown, HorizonMath is immune to data contamination, and most state-of-the-art models score near 0%. Existing research-level benchmarks instead rely on formal proof verification or manual review, both of which are expensive to scale. Using this platform, we find two problems for which GPT 5.4 Pro proposes solutions that improve on the best-known published results, representing potential novel contributions (pending expert review). We release HorizonMath as an open challenge and a growing community resource, where correct solutions to problems in the unsolved problem classes could constitute novel results in the mathematical literature.",
+        "authors": "Erik Y. Wang, Sumeet Motwani, James V. Roggeveen, Eliot Hodges, Dulhan Jayalath, Charles London, Kalyan Ramakrishnan, Flaviu Cipcigan, Philip Torr, Alessandro Abate",
+        "url": "http://arxiv.org/abs/2603.15617v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15617v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "HorizonMath 提出了一个针对未解决数学问题的基准，并结合了自动化验证。它关注 AI 在数学发现方面的能力，而非仅仅是推理。这种对 AI 根本性研究能力的探索，以及基准设计本身的创新性，使其高度符合您对前沿算法和理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15614v1",
+        "title": "Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion",
+        "summary": "Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains a key bottleneck that limits practical customizability for content creation. For AI video creators, three forms of control are crucial: (i) scene composition, (ii) multi-view consistent subject customization, and (iii) camera-pose or object-motion adjustment. Existing methods typically handle these dimensions in isolation, with limited support for multi-view subject synthesis and identity preservation under arbitrary pose changes. This lack of a unified architecture makes it difficult to support versatile, jointly controllable video. We introduce Tri-Prompting, a unified framework and two-stage training paradigm that integrates scene composition, multi-view subject consistency, and motion control. Our approach leverages a dual-condition motion module driven by 3D tracking points for background scenes and downsampled RGB cues for foreground subjects. To ensure a balance between controllability and visual realism, we further propose an inference ControlNet scale schedule. Tri-Prompting supports novel workflows, including 3D-aware subject insertion into any scenes and manipulation of existing subjects in an image. Experimental results demonstrate that Tri-Prompting significantly outperforms specialized baselines such as Phantom and DaS in multi-view subject identity, 3D consistency, and motion accuracy.",
+        "authors": "Zhenghong Zhou, Xiaohang Zhan, Zhiqin Chen, Soo Ye Kim, Nanxuan Zhao, Haitian Zheng, Qing Liu, He Zhang, Zhe Lin, Yuqian Zhou, Jiebo Luo",
+        "url": "http://arxiv.org/abs/2603.15614v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15614v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入探讨了 LLM 中道德冷漠的机制起源，并提出通过稀疏自编码器和原型理论来修复这种内部未对齐的表示。它对 LLM 内部机制的深刻分析和理论创新性，以及对 AI 安全和对齐的实际影响力，使其成为必读之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15590v1",
+        "title": "Effective Distillation to Hybrid xLSTM Architectures",
+        "summary": "There have been numerous attempts to distill quadratic attention-based large language models (LLMs) into sub-quadratic linearized architectures. However, despite extensive research, such distilled models often fail to match the performance of their teacher LLMs on various downstream tasks. We set out the goal of lossless distillation, which we define in terms of tolerance-corrected Win-and-Tie rates between student and teacher on sets of tasks. To this end, we introduce an effective distillation pipeline for xLSTM-based students. We propose an additional merging stage, where individually linearized experts are combined into a single model. We show the effectiveness of this pipeline by distilling base and instruction-tuned models from the Llama, Qwen, and Olmo families. In many settings, our xLSTM-based students recover most of the teacher's performance, and even exceed it on some downstream tasks. Our contributions are an important step towards more energy-efficient and cost-effective replacements for transformer-based LLMs.",
+        "authors": "Lukas Hauzenberger, Niklas Schmidinger, Thomas Schmied, Anamaria-Roberta Hartl, David Stap, Pieter-Jan Hoedt, Maximilian Beck, Sebastian Böck, Günter Klambauer, Sepp Hochreiter",
+        "url": "http://arxiv.org/abs/2603.15590v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15590v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种有效的蒸馏管道，用于将二次注意力 LLM 蒸馏到亚二次的 xLSTM 架构中，并定义了“无损蒸馏”。它直接解决了 LLM 模型压缩和效率的实际瓶颈，同时在架构和蒸馏方法上具有创新性，对能源效率和成本效益的 LLM 替代方案至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15589v1",
+        "title": "LEXI: Lossless Exponent Coding for Efficient Inter-Chiplet Communication in Hybrid LLMs",
+        "summary": "Data movement overheads increase the inference latency of state-of-the-art large language models (LLMs). These models commonly use the bfloat16 (BF16) format for stable training. Floating-point standards allocate eight bits to the exponent, but our profiling reveals that exponent streams exhibit fewer than 3 bits Shannon entropy, indicating high inherent compressibility. To exploit this potential, we propose LEXI, a novel lossless exponent compression scheme based on Huffman coding. LEXI compresses activations and caches on the fly while storing compressed weights for just-in-time decompression near compute, without sacrificing system throughput and model accuracy. The codecs at the ingress and egress ports of network-on-chip routers sustain the maximum link bandwidth via multi-lane LUT decoders, incurring only 0.09 percent area and energy overheads with GF 22 nm technology. LEXI reduces inter-chiplet communication and end-to-end inference latencies by 33-45 percent and 30-35 percent on modern Jamba, Zamba, and Qwen LLMs implemented on a homogeneous chiplet architecture.",
+        "authors": "Miao Sun, Alish Kanani, Kaushik Shroff, Umit Ogras",
+        "url": "http://arxiv.org/abs/2603.15589v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15589v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LEXI 提出了一种新颖的无损指数压缩方案，用于 LLM 中的 bfloat16 格式，以提高芯片间通信效率。虽然涉及硬件层面，但其核心是针对数值数据流的压缩算法创新，解决了 LLM 部署中的关键性能瓶颈，具有很强的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15530v1",
+        "title": "DUET: Disaggregated Hybrid Mamba-Transformer LLMs with Prefill and Decode-Specific Packages",
+        "summary": "Large language models operate in distinct compute-bound prefill followed by memory bandwidth-bound decode phases. Hybrid Mamba-Transformer models inherit this asymmetry while adding state space model (SSM) recurrences and element-wise operations that map poorly to matmul-centric accelerators. This mismatch causes performance bottlenecks, showing that a homogeneous architecture cannot satisfy all requirements. We introduce DUET, a disaggregated accelerator that assigns prefill and decode phases to specialized packages. The Prefill package utilizes systolic array chiplets with off-package memory for efficient large matrix multiplications and long-sequence SSMs. The Decode package utilizes vector-unit arrays with high-bandwidth in-package memory to accelerate token-by-token SSM and vector-matrix multiplications. Both architectures are runtime-configurable to support hybrid models with mixed Mamba and attention layers. Evaluations on Nemotron-H-56B, Zamba2-7B, and Llama3-8B across four workloads show that DUET achieves 4x faster time to first token, 1.4x higher throughput, and 1.5x lower time between tokens over the B200 GPU.",
+        "authors": "Alish Kanani, Sangwan Lee, Han Lyu, Jiahao Lin, Jaehyun Park, Umit Y. Ogras",
+        "url": "http://arxiv.org/abs/2603.15530v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15530v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DUET 提出了一种针对混合 Mamba-Transformer LLM 的分离式加速器架构，为预填充和解码阶段分配专用封装。这种针对 LLM 架构特性进行硬件优化的方法，解决了计算不对称导致的性能瓶颈，对 LLM 的高效部署具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15527v1",
+        "title": "Are Dilemmas and Conflicts in LLM Alignment Solvable? A View from Priority Graph",
+        "summary": "As Large Language Models (LLMs) become more powerful and autonomous, they increasingly face conflicts and dilemmas in many scenarios. We first summarize and taxonomize these diverse conflicts. Then, we model the LLM's preferences to make different choices as a priority graph, where instructions and values are nodes, and the edges represent context-specific priorities determined by the model's output distribution. This graph reveals that a unified stable LLM alignment is very challenging, because the graph is neither static nor necessarily consistent in different contexts. Besides, it also reveals a potential vulnerability: priority hacking, where adversaries can craft deceptive contexts to manipulate the graph and bypass safety alignments. To counter this, we propose a runtime verification mechanism, enabling LLMs to query external sources to ground their context and resist manipulation. While this approach enhances robustness, we also acknowledge that many ethical and value dilemmas are philosophically irreducible, posing a long-term, open challenge for the future of AI alignment.",
+        "authors": "Zhenheng Tang, Xiang Liu, Qian Wang, Eunsol Choi, Bo Li, Xiaowen Chu",
+        "url": "http://arxiv.org/abs/2603.15527v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15527v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文通过“优先级图”模型分析了 LLM 对齐中的冲突和困境，并提出了“优先级劫持”漏洞和运行时验证机制。它对 LLM 对齐的理论基础进行了深入探讨，并提出了新颖的防御机制，具有很高的理论创新性和对 AI 安全的潜在影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15518v1",
+        "title": "Beyond the Covariance Trap: Unlocking Generalization in Same-Subject Knowledge Editing for Large Language Models",
+        "summary": "While locate-then-edit knowledge editing efficiently updates knowledge encoded within Large Language Models (LLMs), a critical generalization failure mode emerges in the practical same-subject knowledge editing scenario: models fail to recall the updated knowledge when following user instructions, despite successfully recalling it in the original edited form. This paper identifies the geometric root of this generalization collapse as a fundamental conflict where the inner activation drifts induced by prompt variations exceed the model's geometric tolerance for generalization after editing. We attribute this instability to a dual pathology: (1) The joint optimization with orthogonal gradients collapses solutions into sharp minima with narrow stability, and (2) the standard covariance constraint paradoxically acts as a Covariance Trap that amplifies input perturbations. To resolve this, we introduce RoSE (Robust Same-subject Editing), which employs Isotropic Geometric Alignment to minimize representational deviation and Hierarchical Knowledge Integration to smooth the optimization landscape. Extensive experiments demonstrate that RoSE significantly improves instruction-following capabilities, laying the foundation for robust interactive parametric memory of LLM agents.",
+        "authors": "Xiyu Liu, Qingyi Si, Zhengxiao Liu, Chenxu Yang, Naibin Gu, Zheng Lin",
+        "url": "http://arxiv.org/abs/2603.15518v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15518v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文识别了知识编辑中泛化崩溃的“协方差陷阱”几何根源，并提出了 RoSE 框架。它对 LLM 内部表示和泛化机制进行了深入分析，具有强大的理论严谨性和创新性，解决了 LLM 知识编辑中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15421v1",
+        "title": "CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents",
+        "summary": "Large language model agents heavily rely on external memory to support knowledge reuse and complex reasoning tasks. Yet most memory systems store experiences in a single global retrieval pool which can gradually dilute or corrupt stored knowledge. This problem is especially pronounced for small language models (SLMs), which are highly vulnerable to irrelevant context. We introduce CLAG, a CLustering-based AGentic memory framework where an SLM agent actively organizes memory by clustering. CLAG employs an SLM-driven router to assign incoming memories to semantically coherent clusters and autonomously generates cluster-specific profiles, including topic summaries and descriptive tags, to establish each cluster as a self-contained functional unit. By performing localized evolution within these structured neighborhoods, CLAG effectively reduces cross-topic interference and enhances internal memory density. During retrieval, the framework utilizes a two-stage process that first filters relevant clusters via their profiles, thereby excluding distractors and reducing the search space. Experiments on multiple QA datasets with three SLM backbones show that CLAG consistently improves answer quality and robustness over prior memory systems for agents, remaining lightweight and efficient.",
+        "authors": "Taeyun Roh, Wonjune Jang, Junha Jung, Jaewoo Kang",
+        "url": "http://arxiv.org/abs/2603.15421v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15421v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CLAG 提出了一种基于聚类的智能体记忆框架，其中 SLM 智能体通过聚类主动组织记忆。它解决了 SLM 智能体外部记忆中知识稀释和上下文无关性问题，通过新颖的记忆组织算法提升了 SLM 的性能和鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15370v1",
+        "title": "Trajectory-Diversity-Driven Robust Vision-and-Language Navigation",
+        "summary": "Vision-and-Language Navigation (VLN) requires agents to navigate photo-realistic environments following natural language instructions. Current methods predominantly rely on imitation learning, which suffers from limited generalization and poor robustness to execution perturbations. We present NavGRPO, a reinforcement learning framework that learns goal-directed navigation policies through Group Relative Policy Optimization. By exploring diverse trajectories and optimizing via within-group performance comparisons, our method enables agents to distinguish effective strategies beyond expert paths without requiring additional value networks. Built on ScaleVLN, NavGRPO achieves superior robustness on R2R and REVERIE benchmarks with +3.0% and +1.71% SPL improvements in unseen environments. Under extreme early-stage perturbations, we demonstrate +14.89% SPL gain over the baseline, confirming that goal-directed RL training builds substantially more robust navigation policies. Code and models will be released.",
+        "authors": "Jiangyang Li, Cong Wan, SongLin Dong, Chenhao Ding, Qiang Wang, Zhiheng Ma, Yihong Gong",
+        "url": "http://arxiv.org/abs/2603.15370v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15370v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "BIGMAS 提出了一个受大脑启发的图多智能体系统，用于 LLM 推理，灵感来源于人类认知中的全局工作空间理论。这种新颖的多智能体架构设计，解决了 LLM 复杂多步推理的根本性挑战，并显著提高了推理性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15365v1",
+        "title": "A PPO-Based Bitrate Allocation Conditional Diffusion Model for Remote Sensing Image Compression",
+        "summary": "Existing remote sensing image compression methods still explore to balance high compression efficiency with the preservation of fine details and task-relevant information. Meanwhile, high-resolution drone imagery offers valuable structural details for urban monitoring and disaster assessment, but large-area datasets can easily reach hundreds of gigabytes, creating significant challenges for storage and long-term management. In this paper, we propose a PPO-based bitrate allocation Conditional Diffusion Compression (PCDC) framework. PCDC integrates a conditional diffusion decoder with a PPO-based block-wise bitrate allocation strategy to achieve high compression ratios while maintaining strong perceptual performance. We also release a high-resolution drone image dataset with richer structural details at a consistent low altitude over residential neighborhoods in coastal urban areas. Experimental results show compression ratios of 19.3x on DIV2K and 21.2x on the drone image dataset. Moreover, downstream object detection experiments demonstrate that the reconstructed images preserve task-relevant information with negligible performance loss.",
+        "authors": "Yuming Han, Jooho Kim, Anish Shakya",
+        "url": "http://arxiv.org/abs/2603.15365v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15365v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了伪朗之万 (pL) 动力学，用于高效地对使用小批量训练的前馈神经网络进行玻尔兹曼采样。它在统计物理和机器学习交叉领域做出了深刻的理论贡献，提供了一种可扩展的神经网络解空间探索工具，具有很强的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15245v1",
+        "title": "Practicing with Language Models Cultivates Human Empathic Communication",
+        "summary": "Empathy is central to human connection, yet people often struggle to express it effectively. In blinded evaluations, large language models (LLMs) generate responses that are often judged more empathic than human-written ones. Yet when a response is attributed to AI, recipients feel less heard and validated than when comparable responses are attributed to a human. To probe and address this gap in empathic communication skill, we built Lend an Ear, an experimental conversation platform in which participants are asked to offer empathic support to an LLM role-playing personal and workplace troubles. From 33,938 messages spanning 2,904 text-based conversations between 968 participants and their LLM conversational partners, we derive a data-driven taxonomy of idiomatic empathic expressions in naturalistic dialogue. Based on a pre-registered randomized experiment, we present evidence that a brief LLM coaching intervention offering personalized feedback on how to effectively communicate empathy significantly boosts alignment of participants' communication patterns with normative empathic communication patterns relative to both a control group and a group that received video-based but non-personalized feedback. Moreover, we find evidence for a silent empathy effect that people feel empathy but systematically fail to express it. Nonetheless, participants reliably identify responses aligned with normative empathic communication criteria as more expressive of empathy. Together, these results advance the scientific understanding of how empathy is expressed and valued and demonstrate a scalable, AI-based intervention for scaffolding and cultivating it.",
+        "authors": "Aakriti Kumar, Nalin Poungpeth, Diyi Yang, Bruce Lambert, Matthew Groh",
+        "url": "http://arxiv.org/abs/2603.15245v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15245v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SAGE 提出了一个多智能体自进化框架，用于 LLM 推理，通过挑战者、规划者、解决者和评论者四个智能体的协同进化，解决了对大量人工标注数据的依赖。它在 LLM 推理能力和数据效率方面具有高影响力，且框架设计具有创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15238v1",
+        "title": "Why the Valuable Capabilities of LLMs Are Precisely the Unexplainable Ones",
+        "summary": "This paper proposes and argues for a counterintuitive thesis: the truly valuable capabilities of large language models (LLMs) reside precisely in the part that cannot be fully captured by human-readable discrete rules. The core argument is a proof by contradiction via expert system equivalence: if the full capabilities of an LLM could be described by a complete set of human-readable rules, then that rule set would be functionally equivalent to an expert system; but expert systems have been historically and empirically demonstrated to be strictly weaker than LLMs; therefore, a contradiction arises -- the capabilities of LLMs that exceed those of expert systems are exactly the capabilities that cannot be rule-encoded. This thesis is further supported by the Chinese philosophical concept of Wu (sudden insight through practice), the historical failure of expert systems, and a structural mismatch between human cognitive tools and complex systems. The paper discusses implications for interpretability research, AI safety, and scientific epistemology.",
+        "authors": "Quan Cheng",
+        "url": "http://arxiv.org/abs/2603.15238v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15238v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个反直觉的论点：LLM 真正有价值的能力恰恰是那些无法完全用人类可读规则捕捉的部分。它通过专家系统等价性进行反证，并结合哲学思想，对 LLM 可解释性研究和 AI 安全提出了根本性挑战，具有极高的理论深度和影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.15183v1",
+        "title": "Token Coherence: Adapting MESI Cache Protocols to Minimize Synchronization Overhead in Multi-Agent LLM Systems",
+        "summary": "Multi-agent LLM orchestration incurs synchronization costs scaling as O(n x S x |D|) in agents, steps, and artifact size under naive broadcast -- a regime I term broadcast-induced triply-multiplicative overhead. I argue this pathology is a structural residue of full-state rebroadcast, not an inherent property of multi-agent coordination.   The central claim: synchronization cost explosion in LLM multi-agent systems maps with formal precision onto the cache coherence problem in shared-memory multiprocessors, and MESI-protocol invalidation transfers to artifact synchronization under minimal structural modification.   I construct the Artifact Coherence System (ACS) and prove the Token Coherence Theorem: lazy invalidation attenuates cost by at least S/(n + W(d_i)) when S > n + W(d_i), converting O(n x S x |D|) to O((n + W) x |D|). A TLA+-verified protocol enforces single-writer safety, monotonic versioning, and bounded staleness across ~2,400 explored states.   Simulation across four workload configurations yields token savings of 95.0% +/- 1.3% at V=0.05, 92.3% +/- 1.4% at V=0.10, 88.3% +/- 1.5% at V=0.25, and 84.2% +/- 1.3% at V=0.50 -- each exceeding the theorem's conservative lower bounds. Savings of ~81% persist at V=0.9, contrary to the predicted collapse threshold.   Contributions: (1) formal MESI-to-artifact state mapping; (2) Token Coherence Theorem as savings lower bound; (3) TLA+-verified protocol with three proven invariants; (4) characterization of conditional artifact access semantics resolving the always-read objection; (5) reference Python implementation integrating with LangGraph, CrewAI, and AutoGen via thin adapter layers.",
+        "authors": "Vladyslav Parakhin",
+        "url": "http://arxiv.org/abs/2603.15183v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.15183v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将多智能体 LLM 系统中的同步开销问题，与共享内存多处理器中的缓存一致性问题（MESI 协议）进行了形式化映射。它提出了 Artifact Coherence System (ACS) 和 Token Coherence Theorem，具有强大的理论严谨性和对多智能体 LLM 系统可扩展性的关键实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.14838v1",
+        "title": "The Impact of Ideological Discourses in RAG: A Case Study with COVID-19 Treatments",
+        "summary": "This paper studies the impact of retrieved ideological texts on the outputs of large language models (LLMs). While interest in understanding ideology in LLMs has recently increased, little attention has been given to this issue in the context of Retrieval-Augmented Generation (RAG). To fill this gap, we design an external knowledge source based on ideological loaded texts about COVID-19 treatments. Our corpus is based on 1,117 academic articles representing discourses about controversial and endorsed treatments for the disease. We propose a corpus linguistics framework, based on Lexical Multidimensional Analysis (LMDA), to identify the ideologies within the corpus. LLMs are tasked to answer questions derived from three identified ideological dimensions, and two types of contextual prompts are adopted: the first comprises the user question and ideological texts; and the second contains the question, ideological texts, and LMDA descriptions. Ideological alignment between reference ideological texts and LLMs' responses is assessed using cosine similarity for lexical and semantic representations. Results demonstrate that LLMs' responses based on ideological retrieved texts are more aligned with the ideology encountered in the external knowledge, with the enhanced prompt further influencing LLMs' outputs. Our findings highlight the importance of identifying ideological discourses within the RAG framework in order to mitigate not just unintended ideological bias, but also the risks of malicious manipulation of such models.",
+        "authors": "Elmira Salari, Maria Claudia Nunes Delfino, Hazem Amamou, José Victor de Souza, Shruti Kshirsagar, Alan Davoust, Anderson Avila",
+        "url": "http://arxiv.org/abs/2603.14838v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.14838v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文揭示了消息传递图神经网络 (MP-GNN) 在表达能力上的一个根本性限制，证明了其只能在所有图上诱导多项式数量的等价类。这项工作具有极高的数学严谨性和理论创新性，对 GNN 架构的未来设计具有深远影响。"
+    }
+]

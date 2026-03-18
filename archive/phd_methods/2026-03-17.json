@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.16870v1",
+        "title": "Demystifing Video Reasoning",
+        "summary": "Recent advances in video generation have revealed an unexpected phenomenon: diffusion-based video models exhibit non-trivial reasoning capabilities. Prior work attributes this to a Chain-of-Frames (CoF) mechanism, where reasoning is assumed to unfold sequentially across video frames. In this work, we challenge this assumption and uncover a fundamentally different mechanism. We show that reasoning in video models instead primarily emerges along the diffusion denoising steps. Through qualitative analysis and targeted probing experiments, we find that models explore multiple candidate solutions in early denoising steps and progressively converge to a final answer, a process we term Chain-of-Steps (CoS). Beyond this core mechanism, we identify several emergent reasoning behaviors critical to model performance: (1) working memory, enabling persistent reference; (2) self-correction and enhancement, allowing recovery from incorrect intermediate solutions; and (3) perception before action, where early steps establish semantic grounding and later steps perform structured manipulation. During a diffusion step, we further uncover self-evolved functional specialization within Diffusion Transformers, where early layers encode dense perceptual structure, middle layers execute reasoning, and later layers consolidate latent representations. Motivated by these insights, we present a simple training-free strategy as a proof-of-concept, demonstrating how reasoning can be improved by ensembling latent trajectories from identical models with different random seeds. Overall, our work provides a systematic understanding of how reasoning emerges in video generation models, offering a foundation to guide future research in better exploiting the inherent reasoning dynamics of video models as a new substrate for intelligence.",
+        "authors": "Ruisi Wang, Zhongang Cai, Fanyi Pu, Junxiang Xu, Wanqi Yin, Maijunxian Wang, Ran Ji, Chenyang Gu, Bo Li, Ziqi Huang, Hokin Deng, Dahua Lin, Ziwei Liu, Lei Yang",
+        "url": "http://arxiv.org/abs/2603.16870v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16870v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文挑战了视频推理的传统CoF机制，提出了CoS（Chain-of-Steps）新机制，并揭示了扩散模型中推理的涌现行为和功能专业化。它深入探讨了AI模型内部的运作原理，具有很强的理论创新性和对未来算法设计的指导意义，逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16842v1",
+        "title": "Stochastic Resetting Accelerates Policy Convergence in Reinforcement Learning",
+        "summary": "Stochastic resetting, where a dynamical process is intermittently returned to a fixed reference state, has emerged as a powerful mechanism for optimizing first-passage properties. Existing theory largely treats static, non-learning processes. Here we ask how stochastic resetting interacts with reinforcement learning, where the underlying dynamics adapt through experience. In tabular grid environments, we find that resetting accelerates policy convergence even when it does not reduce the search time of a purely diffusive agent, indicating a novel mechanism beyond classical first-passage optimization. In a continuous control task with neural-network-based value approximation, we show that random resetting improves deep reinforcement learning when exploration is difficult and rewards are sparse. Unlike temporal discounting, resetting preserves the optimal policy while accelerating convergence by truncating long, uninformative trajectories to enhance value propagation. Our results establish stochastic resetting as a simple, tunable mechanism for accelerating learning, translating a canonical phenomenon of statistical mechanics into an optimization principle for reinforcement learning.",
+        "authors": "Jello Zhou, Vudtiwat Ngampruetikorn, David J. Schwab",
+        "url": "http://arxiv.org/abs/2603.16842v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16842v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将统计力学中的随机重置（Stochastic Resetting）机制引入强化学习，发现它能加速策略收敛，并揭示了超越经典第一通过时间优化的新机制。这种跨学科的理论应用具有极高的创新性和严谨性，为RL优化提供了新的视角和可调机制。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16761v1",
+        "title": "SOMP: Scalable Gradient Inversion for Large Language Models via Subspace-Guided Orthogonal Matching Pursuit",
+        "summary": "Gradient inversion attacks reveal that private training text can be reconstructed from shared gradients, posing a privacy risk to large language models (LLMs). While prior methods perform well in small-batch settings, scaling to larger batch sizes and longer sequences remains challenging due to severe signal mixing, high computational cost, and degraded fidelity. We present SOMP (Subspace-Guided Orthogonal Matching Pursuit), a scalable gradient inversion framework that casts text recovery from aggregated gradients as a sparse signal recovery problem. Our key insight is that aggregated transformer gradients retain exploitable head-wise geometric structure together with sample-level sparsity. SOMP leverages these properties to progressively narrow the search space and disentangle mixed signals without exhaustive search. Experiments across multiple LLM families, model scales, and five languages show that SOMP consistently outperforms prior methods in the aggregated-gradient regime.For long sequences at batch size B=16, SOMP achieves substantially higher reconstruction fidelity than strong baselines, while remaining computationally competitive. Even under extreme aggregation (up to B=128), SOMP still recovers meaningful text, suggesting that privacy leakage can persist in regimes where prior attacks become much less effective.",
+        "authors": "Yibo Li, Qiongxiu Li",
+        "url": "http://arxiv.org/abs/2603.16761v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16761v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SOMP框架，将LLM的梯度反演攻击转化为稀疏信号恢复问题，利用Transformer梯度中的几何结构和样本稀疏性。这在理论上具有很强的创新性和严谨性，解决了LLM隐私泄露在更大批次和更长序列下的实际瓶颈，具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16660v1",
+        "title": "Can Linguistically Related Languages Guide LLM Translation in Low-Resource Settings?",
+        "summary": "Large Language Models (LLMs) have achieved strong performance across many downstream tasks, yet their effectiveness in extremely low-resource machine translation remains limited. Standard adaptation techniques typically rely on large-scale parallel data or extensive fine-tuning, which are infeasible for the long tail of underrepresented languages. In this work, we investigate a more constrained question: in data-scarce settings, to what extent can linguistically similar pivot languages and few-shot demonstrations provide useful guidance for on-the-fly adaptation in LLMs? We study a data-efficient experimental setup that combines linguistically related pivot languages with few-shot in-context examples, without any parameter updates, and evaluate translation behavior under controlled conditions. Our analysis shows that while pivot-based prompting can yield improvements in certain configurations, particularly in settings where the target language is less well represented in the model's vocabulary, the gains are often modest and sensitive to few shot example construction. For closely related or better represented varieties, we observe diminishing or inconsistent gains. Our findings provide empirical guidance on how and when inference-time prompting and pivot-based examples can be used as a lightweight alternative to fine-tuning in low-resource translation settings.",
+        "authors": "Aishwarya Ramasethu, Niyathi Allu, Rohin Garg, Harshwardhan Fartale, Dun Li Chan",
+        "url": "http://arxiv.org/abs/2603.16660v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16660v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了自感知马尔可夫模型用于离散推理，通过学习自身输出的马尔可夫转移核，实现了令牌的重掩码和错误纠正，并采用训练停止准则自适应计算。理论创新性高，解决了离散扩散模型在推理中无法自我纠错和计算固定的核心问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16586v1",
+        "title": "Runtime Governance for AI Agents: Policies on Paths",
+        "summary": "AI agents -- systems that plan, reason, and act using large language models -- produce non-deterministic, path-dependent behavior that cannot be fully governed at design time, where with governed we mean striking the right balance between as high as possible successful task completion rate and the legal, data-breach, reputational and other costs associated with running agents. We argue that the execution path is the central object for effective runtime governance and formalize compliance policies as deterministic functions mapping agent identity, partial path, proposed next action, and organizational state to a policy violation probability. We show that prompt-level instructions (and \"system prompts\"), and static access control are special cases of this framework: the former shape the distribution over paths without actually evaluating them; the latter evaluates deterministic policies that ignore the path (i.e., these can only account for a specific subset of all possible paths). In our view, runtime evaluation is the general case, and it is necessary for any path-dependent policy. We develop the formal framework for analyzing AI agent governance, present concrete policy examples (inspired by the AI act), discuss a reference implementation, and identify open problems including risk calibration and the limits of enforced compliance.",
+        "authors": "Maurits Kaptein, Vassilis-Javed Khan, Andriy Podstavnychy",
+        "url": "http://arxiv.org/abs/2603.16586v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16586v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文形式化了AI代理的运行时治理，将合规策略定义为路径相关的确定性函数。它强调执行路径在有效运行时治理中的核心作用，为AI代理的安全性和可靠性提供了严谨的理论框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16586v1",
+        "title": "Runtime Governance for AI Agents: Policies on Paths",
+        "summary": "AI agents -- systems that plan, reason, and act using large language models -- produce non-deterministic, path-dependent behavior that cannot be fully governed at design time, where with governed we mean striking the right balance between as high as possible successful task completion rate and the legal, data-breach, reputational and other costs associated with running agents. We argue that the execution path is the central object for effective runtime governance and formalize compliance policies as deterministic functions mapping agent identity, partial path, proposed next action, and organizational state to a policy violation probability. We show that prompt-level instructions (and \"system prompts\"), and static access control are special cases of this framework: the former shape the distribution over paths without actually evaluating them; the latter evaluates deterministic policies that ignore the path (i.e., these can only account for a specific subset of all possible paths). In our view, runtime evaluation is the general case, and it is necessary for any path-dependent policy. We develop the formal framework for analyzing AI agent governance, present concrete policy examples (inspired by the AI act), discuss a reference implementation, and identify open problems including risk calibration and the limits of enforced compliance.",
+        "authors": "Maurits Kaptein, Vassilis-Javed Khan, Andriy Podstavnychy",
+        "url": "http://arxiv.org/abs/2603.16586v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16586v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "BATQuant提出了针对MXFP4量化的新方法，通过限制变换与MXFP粒度对齐并放宽正交约束来优化分布整形。它对量化中的异常值传播和双峰激活分布问题有深刻的理论洞察，解决了LLM模型压缩中的关键性能瓶颈，效果显著。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16553v1",
+        "title": "EmoLLM: Appraisal-Grounded Cognitive-Emotional Co-Reasoning in Large Language Models",
+        "summary": "Large language models (LLMs) demonstrate strong cognitive intelligence (IQ), yet many real-world interactions also require emotional intelligence (EQ) to produce responses that are both factually reliable and emotionally appropriate. In settings such as emotional support, technical assistance, and consultation, effective dialogue depends on how situations are appraised with respect to the user's needs, goals, and coping capacity. Inspired by appraisal theory, we propose EmoLLM, an appraisal-grounded framework for IQ/EQ co-reasoning in dialogue. EmoLLM uses an explicit Appraisal Reasoning Graph (ARG) to structure intermediate reasoning over contextual facts, inferred user needs, appraisal dimensions, emotional states, and response strategies before generating a reply. We train EmoLLM in a multi-turn role-play environment with reinforcement learning, where reverse-perspective reasoning provides reward signals based on predicted user-side consequences of responses. Across diverse dialogue settings, EmoLLM improves emotional state outcomes and response quality over strong baselines while preserving strong factual reliability.",
+        "authors": "Yifei Zhang, Mingyang Li, Henry Gao, Liang Zhao",
+        "url": "http://arxiv.org/abs/2603.16553v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16553v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "EmoLLM提出了一个基于评估理论的IQ/EQ协同推理框架，通过显式评估推理图和逆向视角强化学习来生成情感适宜的响应。理论基础扎实，解决了LLM在情感智能（EQ）方面的实际应用瓶颈，具有高度的创新性和影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16459v1",
+        "title": "DynHD: Hallucination Detection for Diffusion Large Language Models via Denoising Dynamics Deviation Learning",
+        "summary": "Diffusion large language models (D-LLMs) have emerged as a promising alternative to auto-regressive models due to their iterative refinement capabilities. However, hallucinations remain a critical issue that hinders their reliability. To detect hallucination responses from model outputs, token-level uncertainty (e.g., entropy) has been widely used as an effective signal to indicate potential factual errors. Nevertheless, the fixed-length generation paradigm of D-LLMs implies that tokens contribute unevenly to hallucination detection, with only a small subset providing meaningful signals. Moreover, the evolution trend of uncertainty throughout the diffusion process can also provide important signals, highlighting the necessity of modeling its denoising dynamics for hallucination detection. In this paper, we propose DynHD that bridge these gaps from both spatial (token sequence) and temporal (denoising dynamics) perspectives. To address the information density imbalance across tokens, we propose a semantic-aware evidence construction module that extracts hallucination-indicative signals by filtering out non-informative tokens and emphasizing semantically meaningful ones. To model denoising dynamics for hallucination detection, we introduce a reference evidence generator that learns the expected evolution trajectory of uncertainty evidence, along with a deviation-based hallucination detector that makes predictions by measuring the discrepancy between the observed and reference trajectories. Extensive experiments demonstrate that DynHD consistently outperforms state-of-the-art baselines while achieving higher efficiency across multiple benchmarks and backbone models.",
+        "authors": "Yanyu Qian, Yue Tan, Yixin Liu, Wang Yu, Shirui Pan",
+        "url": "http://arxiv.org/abs/2603.16459v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16459v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DynHD通过去噪动态偏差学习来检测扩散大语言模型（D-LLMs）中的幻觉，从时空角度建模不确定性演变。该方法理论严谨，解决了LLM幻觉这一关键瓶颈，且效率更高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16423v1",
+        "title": "SF-Mamba: Rethinking State Space Model for Vision",
+        "summary": "The realm of Mamba for vision has been advanced in recent years to strike for the alternatives of Vision Transformers (ViTs) that suffer from the quadratic complexity. While the recurrent scanning mechanism of Mamba offers computational efficiency, it inherently limits non-causal interactions between image patches. Prior works have attempted to address this limitation through various multi-scan strategies; however, these approaches suffer from inefficiencies due to suboptimal scan designs and frequent data rearrangement. Moreover, Mamba exhibits relatively slow computational speed under short token lengths, commonly used in visual tasks. In pursuit of a truly efficient vision encoder, we rethink the scan operation for vision and the computational efficiency of Mamba. To this end, we propose SF-Mamba, a novel visual Mamba with two key proposals: auxiliary patch swapping for encoding bidirectional information flow under an unidirectional scan and batch folding with periodic state reset for advanced GPU parallelism. Extensive experiments on image classification, object detection, and instance and semantic segmentation consistently demonstrate that our proposed SF-Mamba significantly outperforms state-of-the-art baselines while improving throughput across different model sizes. We will release the source code after publication.",
+        "authors": "Masakazu Yoshimura, Teruaki Hayashi, Yuki Hoshino, Wei-Yao Wang, Takeshi Ohashi",
+        "url": "http://arxiv.org/abs/2603.16423v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16423v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SF-Mamba重新思考了视觉Mamba的扫描操作和计算效率，通过辅助补丁交换和批折叠与周期性状态重置，实现了双向信息流和GPU并行化。该论文在AI架构上具有极高的创新性和严谨性，解决了Vision Mamba的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16417v1",
+        "title": "Via Negativa for AI Alignment: Why Negative Constraints Are Structurally Superior to Positive Preferences",
+        "summary": "Recent empirical results have demonstrated that training large language models (LLMs) with negative-only feedback can match or exceed standard reinforcement learning from human feedback (RLHF). Negative Sample Reinforcement achieves parity with PPO on mathematical reasoning; Distributional Dispreference Optimization trains effectively using only dispreferred samples; and Constitutional AI outperforms pure RLHF on harmlessness benchmarks. Yet no unified theoretical account explains why negative signals are so effective. This paper proposes such an account: positive preferences and negative constraints are structurally asymmetric. Positive preferences (\"which is better\") encode continuously coupled, context-dependent human values that cannot be exhaustively specified -- leading models to learn surface correlates such as agreement with the user (sycophancy). Negative constraints (\"what is wrong\") encode discrete, finite, independently verifiable prohibitions that can converge to a stable boundary. This asymmetry -- rooted in Popper's falsification logic and the epistemology of negative knowledge -- explains both the sycophancy failure of preference-based RLHF and the surprising effectiveness of negative-signal methods. We argue that alignment research should shift its center of gravity from \"learning what humans prefer\" to \"learning what humans reject,\" and offer testable predictions for this framework.",
+        "authors": "Quan Cheng",
+        "url": "http://arxiv.org/abs/2603.16417v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16417v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个统一的理论解释，阐明了负面约束在AI对齐中优于正面偏好的结构不对称性，并根植于波普尔的证伪逻辑。其理论洞察深刻，对AI对齐研究具有根本性指导意义，逻辑清晰且影响力巨大。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16325v1",
+        "title": "A Human-Centred Architecture for Large Language Models-Cognitive Assistants in Manufacturing within Quality Management Systems",
+        "summary": "Large Language Models-Cognitive Assistants (LLM-CAs) can enhance Quality Management Systems (QMS) in manufacturing, fostering continuous process improvement and knowledge management. However, there is no human-centred software architecture focused on QMS that enables the integration of LLM-CAs into manufacturing in the current literature. This study addresses this gap by designing a component-based architecture considering requirement analysis and software development process. Validation was conducted via iterative expert focus groups. The proposed architecture ensures flexibility, scalability, modularity, and work augmentation within QMS. Moreover, it paves the way for its operationalization with industrial partners, showcasing its potential for advancing manufacturing processes.",
+        "authors": "Marcos Galdino, Johanna Grahl, Tobias Hamann, Anas Abdelrazeq, Ingrid Isenhardt",
+        "url": "http://arxiv.org/abs/2603.16325v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16325v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个统一的框架，将事件序列建模、因果发现和LLM推理结合起来，用于高维离散事件流。其理论和算法创新性高，解决了工业诊断中高维事件序列的预测、发现和推理难题，具有很高的研究价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16281v1",
+        "title": "Laya: A LeJEPA Approach to EEG via Latent Prediction over Reconstruction",
+        "summary": "Electroencephalography (EEG) is a widely used tool for studying brain function, with applications in clinical neuroscience, diagnosis, and brain-computer interfaces (BCIs). Recent EEG foundation models trained on large unlabeled corpora aim to learn transferable representations, but their effectiveness remains unclear; reported improvements over smaller task-specific models are often modest, sensitive to downstream adaptation and fine-tuning strategies, and limited under linear probing. We hypothesize that one contributing factor is the reliance on signal reconstruction as the primary self-supervised learning (SSL) objective, which biases representations toward high-variance artifacts rather than task-relevant neural structure. To address this limitation, we explore an SSL paradigm based on Joint Embedding Predictive Architectures (JEPA), which learn by predicting latent representations instead of reconstructing raw signals. While earlier JEPA-style methods often rely on additional heuristics to ensure training stability, recent advances such as LeJEPA provide a more principled and stable formulation. We introduce Laya, the first EEG foundation model based on LeJEPA. Across a range of EEG benchmarks, Laya demonstrates improved performance under linear probing compared to reconstruction-based baselines, suggesting that latent predictive objectives offer a promising direction for learning transferable, high-level EEG representations.",
+        "authors": "Saarang Panchavati, Uddhav Panchavati, Corey Arnold, William Speier",
+        "url": "http://arxiv.org/abs/2603.16281v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16281v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Laya是第一个基于LeJEPA的EEG基础模型，通过预测潜在表征而非重建原始信号进行自监督学习。这种自监督学习范式具有很强的理论创新性，为EEG学习可迁移、高层次表征提供了新方向，解决了传统SSL的局限性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16219v1",
+        "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+        "summary": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+        "authors": "Hang Lv, Sheng Liang, Hao Wang, Yongyue Zhang, Hongchao Gu, Wei Guo, Defu Lian, Yong Liu, Enhong Chen",
+        "url": "http://arxiv.org/abs/2603.16219v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16219v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SpecSteer提出了一个非对称协同推理框架，通过贝叶斯知识融合和推测解码的分布式对齐协议，协同本地上下文和云端推理。该方法在理论上具有很强的创新性和严谨性，解决了LLM个性化生成中的隐私和效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16210v1",
+        "title": "MOSAIC: Composable Safety Alignment with Modular Control Tokens",
+        "summary": "Safety alignment in large language models (LLMs) is commonly implemented as a single static policy embedded in model parameters. However, real-world deployments often require context-dependent safety rules that vary across users, regions, and applications. Existing approaches struggle to provide such conditional control: parameter-level alignment entangles safety behaviors with general capabilities, while prompt-based methods rely on natural language instructions that provide weak enforcement. We propose MOSAIC, a modular framework that enables compositional safety alignment through learnable control tokens optimized over a frozen backbone model. Each token represents a safety constraint and can be flexibly activated and composed at inference time. To train compositional tokens efficiently, we introduce order-based task sampling and a distribution-level alignment objective that mitigates over-refusal. Experiments show that MOSAIC achieves strong defense performance with substantially lower over-refusal while preserving model utility.",
+        "authors": "Jingyu Peng, Hongyu Chen, Jiancheng Dong, Maolin Wang, Wenxi Li, Yuchen Li, Kai Zhang, Xiangyu Zhao",
+        "url": "http://arxiv.org/abs/2603.16210v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16210v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MOSAIC提出了一个模块化框架，通过可学习的控制令牌实现组合式安全对齐，并引入基于顺序的任务采样和分布级对齐目标。该方法在LLM安全对齐方面具有极高的创新性和严谨性，解决了上下文相关安全规则的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16152v1",
+        "title": "HIPO: Instruction Hierarchy via Constrained Reinforcement Learning",
+        "summary": "Hierarchical Instruction Following (HIF) refers to the problem of prompting large language models with a priority-ordered stack of instructions. Standard methods like RLHF and DPO typically fail in this problem since they mainly optimize for a single objective, failing to explicitly enforce system prompt compliance. Meanwhile, supervised fine-tuning relies on mimicking filtered, compliant data, which fails to establish the priority asymmetry at the algorithmic level. In this paper, we introduce \\textsc{HIPO}, a novel alignment framework that formulates HIF as a Constrained Markov Decision Process. \\textsc{HIPO} elevates system prompts from mere input context to strict algorithmic boundaries. Using a primal-dual safe reinforcement learning approach, the algorithm dynamically enforces system prompt compliance as an explicit constraint, maximizing user utility strictly within this feasible region. Extensive evaluations across diverse model architectures (e.g., Qwen, Phi, Llama) demonstrate that \\textsc{HIPO} significantly improves both system compliance and user utility. Furthermore, mechanistic analysis reveals that this constrained optimization autonomously drives the model to shift its attention toward long-range system tokens, providing a principled foundation for reliable LLM deployment in complex workflows.",
+        "authors": "Keru Chen, Jun Luo, Sen Lin, Yingbin Liang, Alvaro Velasquez, Nathaniel Bastian, Shaofeng Zou",
+        "url": "http://arxiv.org/abs/2603.16152v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16152v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HIPO将分层指令遵循（HIF）公式化为约束马尔可夫决策过程，并采用原始-对偶安全强化学习方法。该框架在理论上具有极高的创新性和严谨性，解决了LLM对齐和分层指令遵循的实际瓶颈，显著提高了系统合规性和用户效用。"
+    }
+]

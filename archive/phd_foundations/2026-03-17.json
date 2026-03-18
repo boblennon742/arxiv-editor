@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.16854v1",
+        "title": "Spatial Causal Tensor Completion for Multiple Exposures and Outcomes: An Application to the Health Effects of PFAS Pollution",
+        "summary": "Per- and polyfluoroalkyl substances (PFAS) are typically encountered as mixtures of distinct chemicals with distinct effects on multiple health outcomes. Estimating joint causal effects using spatially-dependent observed data is challenging. We propose a spatial causal tensor completion framework that jointly models multiple exposures and outcomes within a low-rank tensor structure, while adjusting for observed confounders and latent spatial confounders. This method combines a low-rank tensor representation to pool information across exposures and outcomes with a spectral adjustment step that incorporates graph-Laplacian eigenvectors to approximate unmeasured spatial confounders, implemented via a projected-gradient descent algorithm. This framework enables causal inference in the presence of unmeasured spatial confounding and pervasive missingness of potential outcomes. We establish theoretical guarantees for the estimator and evaluate its finite-sample performance through extensive simulations. In an application to national PFAS monitoring data, our approach yields more conservative and credible causal relationships between PFOA and PFOS exposure and 13 chronic disease outcomes compared with existing alternatives.",
+        "authors": "Xiaodan Zhou, Brian J Reich, Shu Yang",
+        "url": "http://arxiv.org/abs/2603.16854v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16854v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个空间因果张量补全框架，用于处理多暴露和多结果的因果推断问题，特别是在存在未测量空间混杂和潜在结果缺失的情况下。其核心是低秩张量表示和谱调整，并通过投影梯度下降实现。论文明确强调了**理论保证**和对估计器有限样本性能的评估，这与用户对**强大的理论基础（如因果逻辑、统计保证）和清晰的数学推导**的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16829v1",
+        "title": "Conditional Distributional Treatment Effects: Doubly Robust Estimation and Testing",
+        "summary": "Beyond conditional average treatment effects, treatments may impact the entire outcome distribution in covariate-dependent ways, for example, by altering the variance or tail risks for specific subpopulations. We propose a novel estimand to capture such conditional distributional treatment effects, and develop a doubly robust estimator that is minimax optimal in the local asymptotic sense. Using this, we develop a test for the global homogeneity of conditional potential outcome distributions that accommodates discrepancies beyond the maximum mean discrepancy (MMD), has provably valid type 1 error, and is consistent against fixed alternatives -- the first test, to our knowledge, with such guarantees in this setting. Furthermore, we derive exact closed-form expressions for two natural discrepancies (including the MMD), and provide a computationally efficient, permutation-free algorithm for our test.",
+        "authors": "Saksham Jain, Alex Luedtke",
+        "url": "http://arxiv.org/abs/2603.16829v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16829v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了条件分布处理效应（CDTE）的新估计量，并开发了一种**双重鲁棒估计器**，在局部渐近意义上达到**极小极大最优**。它还提出了一个具有**可证明的I型错误率有效性**和对固定替代方案一致性的检验方法。这些特性，特别是对统计保证和渐近性质的强调，与用户对**统计保证和严谨数学推导**的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16817v1",
+        "title": "Is Conformal Factuality for RAG-based LLMs Robust? Novel Metrics and Systematic Insights",
+        "summary": "Large language models (LLMs) frequently hallucinate, limiting their reliability in knowledge-intensive applications. Retrieval-augmented generation (RAG) and conformal factuality have emerged as potential ways to address this limitation. While RAG aims to ground responses in retrieved evidence, it provides no statistical guarantee that the final output is correct. Conformal factuality filtering offers distribution-free statistical reliability by scoring and filtering atomic claims using a threshold calibrated on held-out data, however, the informativeness of the final output is not guaranteed. We systematically analyze the reliability and usefulness of conformal factuality for RAG-based LLMs across generation, scoring, calibration, robustness, and efficiency. We propose novel informativeness-aware metrics that better reflect task utility under conformal filtering. Across three benchmarks and multiple model families, we find that (i) conformal filtering suffers from low usefulness at high factuality levels due to vacuous outputs, (ii) conformal factuality guarantee is not robust to distribution shifts and distractors, highlighting the limitation that requires calibration data to closely match deployment conditions, and (iii) lightweight entailment-based verifiers match or outperform LLM-based model confidence scorers while requiring over $100\\times$ fewer FLOPs. Overall, our results expose factuality-informativeness trade-offs and fragility of conformal filtering framework under distribution shifts and distractors, highlighting the need for new approaches for reliability with robustness and usefulness as key metrics, and provide actionable guidance for building RAG pipelines that are both reliable and computationally efficient.",
+        "authors": "Yi Chen, Daiwei Chen, Sukrut Madhav Chikodikar, Caitlyn Heqi Yin, Ramya Korlakai Vinayak",
+        "url": "http://arxiv.org/abs/2603.16817v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16817v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文系统性地分析了基于RAG的LLM的共形事实性（conformal factuality）的鲁棒性，并提出了新的信息量感知指标。共形预测本身具有**统计保证**，该论文通过深入分析其在分布偏移和干扰下的局限性，揭示了其理论边界和实际应用中的挑战。这与用户对**统计保证和理论严谨性**的关注点相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16757v1",
+        "title": "pADAM: A Plug-and-Play All-in-One Diffusion Architecture for Multi-Physics Learning",
+        "summary": "Generalizing across disparate physical laws remains a fundamental challenge for artificial intelligence in science. Existing deep-learning solvers are largely confined to single-equation settings, limiting transfer across physical regimes and inference tasks. Here we introduce pADAM, a unified generative framework that learns a shared probabilistic prior across heterogeneous partial differential equation families. Through a learned joint distribution of system states and, where applicable, physical parameters, pADAM supports forward prediction and inverse inference within a single architecture without retraining. Across benchmarks ranging from scalar diffusion to nonlinear Navier--Stokes equations, pADAM achieves accurate inference even under sparse observations. Combined with conformal prediction, it also provides reliable uncertainty quantification with coverage guarantees. In addition, pADAM performs probabilistic model selection from only two sparse snapshots, identifying governing laws through its learned generative representation. These results highlight the potential of generative multi-physics modeling for unified and uncertainty-aware scientific inference.",
+        "authors": "Amirhossein Mollaali, Bongseok Kim, Christian Moya, Guang Lin",
+        "url": "http://arxiv.org/abs/2603.16757v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16757v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了pADAM，一个统一的生成框架，通过学习异构偏微分方程族的共享概率先验，实现多物理场学习。它支持前向预测和逆向推断，并提供**具有覆盖保证的可靠不确定性量化**。这种对概率建模和统计保证的强调与用户的偏好相符。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16728v1",
+        "title": "The Cost of Reasoning: Chain-of-Thought Induces Overconfidence in Vision-Language Models",
+        "summary": "Vision-language models (VLMs) are increasingly deployed in high-stakes settings where reliable uncertainty quantification (UQ) is as important as predictive accuracy. Extended reasoning via chain-of-thought (CoT) prompting or reasoning-trained models has become ubiquitous in modern VLM pipelines, yet its effect on UQ reliability remains poorly understood. We show that reasoning consistently degrades the quality of most uncertainty estimates, even when it improves task accuracy. We identify implicit answer conditioning as the primary mechanism: as reasoning traces converge on a conclusion before the final answer is generated, token probabilities increasingly reflect consistency with the model's own reasoning trace rather than uncertainty about correctness. In effect, the model becomes overconfident in its answer. In contrast, agreement-based consistency remains robust and often improves under reasoning, making it a practical choice for uncertainty estimation in reasoning-enabled VLMs.",
+        "authors": "Robert Welch, Emir Konuk, Kevin Smith",
+        "url": "http://arxiv.org/abs/2603.16728v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16728v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文深入探讨了思维链（CoT）推理如何影响视觉语言模型（VLM）的**不确定性量化（UQ）**可靠性，并揭示了导致模型过度自信的机制。它提出了基于一致性的替代方案。对不确定性估计的统计性质的分析与用户对**统计保证和理论严谨性**的兴趣相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16470v1",
+        "title": "Multi-Agent Reinforcement Learning Counteracts Delayed CSI in Multi-Satellite Systems",
+        "summary": "The integration of satellite communication networks with next-generation (NG) technologies is a promising approach towards global connectivity. However, the quality of services is highly dependant on the availability of accurate channel state information (CSI). Channel estimation in satellite communications is challenging due to the high propagation delay between terrestrial users and satellites, which results in outdated CSI observations on the satellite side. In this paper, we study the downlink transmission of multiple satellites acting as distributed base stations (BS) to mobile terrestrial users. We propose a multi-agent reinforcement learning (MARL) algorithm which aims for maximising the sum-rate of the users, while coping with the outdated CSI. We design a novel bi-level optimisation, procedure themes as dual stage proximal policy optimisation (DS-PPO), for tackling the problem of large continuous action spaces as well as of independent and non-identically distributed (non-IID) environments in MARL. Specifically, the first stage of DS-PPO maximises the sum-rate for an individual satellite and the second stage maximises the sum-rate when all the satellites cooperate to form a distributed multi-antenna BS. Our numerical results demonstrate the robustness of DS-PPO to CSI imperfections as well as the sum-rate improvement attached by the use of DS-PPO. In addition, we provide the convergence analysis for the DS-PPO along with the computational complexity.",
+        "authors": "Marios Aristodemou, Yasaman Omid, Sangarapillai Lambotharan, Mahsa Derakhshan, Lajos Hanzo",
+        "url": "http://arxiv.org/abs/2603.16470v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16470v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个多智能体强化学习（MARL）算法DS-PPO，用于解决多卫星系统中信道状态信息（CSI）延迟问题。它设计了新颖的双层优化过程，并提供了**收敛性分析和计算复杂度**，这与用户对**优化收敛性**的偏好相符。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16535v1",
+        "title": "SympFormer: Accelerated attention blocks via Inertial Dynamics on Density Manifolds",
+        "summary": "Transformers owe much of their empirical success in natural language processing to the self-attention blocks. Recent perspectives interpret attention blocks as interacting particle systems, whose mean-field limits correspond to gradient flows of interaction energy functionals on probability density spaces equipped with Wasserstein-$2$-type metrics. We extend this viewpoint by introducing accelerated attention blocks derived from inertial Nesterov-type dynamics on density spaces. In our proposed architecture, tokens carry both spatial (feature) and velocity variables. The time discretization and the approximation of accelerated density dynamics yield Hamiltonian momentum attention blocks, which constitute the proposed accelerated attention architectures. In particular, for linear self-attention, we show that the attention blocks approximate a Stein variational gradient flow, using a bilinear kernel, of a potential energy. In this setting, we prove that elliptically contoured probability distributions are preserved by the accelerated attention blocks. We present implementable particle-based algorithms and demonstrate that the proposed accelerated attention blocks converge faster than the classical attention blocks while preserving the number of oracle calls.",
+        "authors": "Viktor Stein, Wuchen Li, Gabriele Steidl",
+        "url": "http://arxiv.org/abs/2603.16535v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16535v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从理论上将自注意力块解释为相互作用粒子系统，并从密度流形上的惯性Nesterov型动力学推导出加速注意力块。它涉及**Wasserstein-2度量、梯度流、Stein变分梯度流**等高级数学概念，并证明了椭圆轮廓概率分布的保持性以及更快的收敛性。这与用户对**严谨的数学逻辑、强大的理论基础（如优化收敛性）和清晰的数学推导**的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16481v1",
+        "title": "Optimal uncertainty bounds for multivariate kernel regression under bounded noise: A Gaussian process-based dual function",
+        "summary": "Non-conservative uncertainty bounds are essential for making reliable predictions about latent functions from noisy data--and thus, a key enabler for safe learning-based control. In this domain, kernel methods such as Gaussian process regression are established techniques, thanks to their inherent uncertainty quantification mechanism. Still, existing bounds either pose strong assumptions on the underlying noise distribution, are conservative, do not scale well in the multi-output case, or are difficult to integrate into downstream tasks. This paper addresses these limitations by presenting a tight, distribution-free bound for multi-output kernel-based estimates. It is obtained through an unconstrained, duality-based formulation, which shares the same structure of classic Gaussian process confidence bounds and can thus be straightforwardly integrated into downstream optimization pipelines. We show that the proposed bound generalizes many existing results and illustrate its application using an example inspired by quadrotor dynamics learning.",
+        "authors": "Amon Lahr, Anna Scampicchio, Johannes Köhler, Melanie N. Zeilinger",
+        "url": "http://arxiv.org/abs/2603.16481v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16481v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了多元核回归在有界噪声下的**最优不确定性界限**，通过基于高斯过程的对偶函数实现。它旨在提供**紧密且无分布假设的界限**，并强调了其**理论严谨性**（对偶公式、泛化现有结果）。这与用户对**统计保证和严谨数学推导**的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16440v1",
+        "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+        "summary": "Large language model compression has made substantial progress through pruning, quantization, and low-rank decomposition, yet a fundamental limitation persists across all existing methods: compression budgets are allocated without any representation of what individual model components functionally encode. We term this the capability-blind compression problem and argue it is a root cause of two well-documented failures -- the insensitivity of perplexity-based evaluation to reasoning capability loss, and the abrupt phase transitions in model performance recently characterized by Ma et al. (2026). We propose Capability-Guided Compression (CGC), a framework that addresses this by using Sparse Autoencoder (SAE)-derived capability density maps to allocate differential compression budgets across transformer components. Capability density is a formally defined scalar measure combining the feature breadth, activation entropy, and cross-input consistency of a component's SAE feature activation distribution. We prove theoretically that components with higher capability density exhibit lower structural redundancy and reach their individual phase transition points at lower compression ratios, providing the first pre-compression mechanism for component-level phase transition prediction. Experiments on GPT-2 Medium confirm that capability density is statistically independent of Wanda importance scores (Spearman rho = -0.054, n = 384 heads), establishing it as a genuinely novel compression signal orthogonal to all existing importance metrics. We report a negative result on PPL-based compression comparison and provide a principled diagnosis identifying GPT-2 Medium as an insufficient test bed for the full CGC hypothesis. The theoretical framework, density formalism, and orthogonality finding constitute a foundation for capability-aware compression research.",
+        "authors": "Rishaank Gupta",
+        "url": "http://arxiv.org/abs/2603.16440v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16440v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了能力引导压缩（CGC）框架，通过稀疏自编码器（SAE）导出的能力密度图来分配压缩预算。论文明确指出**理论证明**了高能力密度组件的结构冗余度更低，并能预测其相变点。这种对**理论基础、数学推导和统计分析**的强调与用户的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16400v1",
+        "title": "A nonparametric approach to understand multivariate quantile dynamics in financial time series",
+        "summary": "Over the last decade, nonparametric methods have gained increasing attention for modeling complex data structures due to their flexibility and minimal structural assumptions. In this paper, we study a general multivariate nonparametric regression framework that encompasses a broad class of parametric models commonly used in financial econometrics. Both the response and the covariate processes are allowed to be multivariate with fixed finite dimensions, and the framework accommodates temporal dependence, thereby introducing additional modeling and theoretical hurdles. To address these challenges, we adopt a functional dependence structure which permits flexible dynamic behavior while maintaining tractable asymptotic analysis. Within this setting, we establish strong and weak convergence results for the estimators of the conditional mean and volatility functions. In addition, we investigate conditional geometric quantiles in the multivariate time series context and prove their consistency under mild regularity conditions. The finite sample performance is examined through comprehensive simulation studies, and the methodology is illustrated by modeling the stock returns of Maersk and Lockheed Martin as a nonparametric function of a geopolitical risk index.",
+        "authors": "Kunal Rai, Archi Roy, Itai Dattner, Soudeep Deb",
+        "url": "http://arxiv.org/abs/2603.16400v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16400v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个**非参数方法**来理解金融时间序列中的多元分位数动态。它明确强调了**函数依赖结构、可处理的渐近分析、估计量的强弱收敛结果以及在温和正则条件下条件几何分位数的一致性**。这与用户对**强大的理论基础（如统计保证、优化收敛性）和清晰的数学推导**的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16377v1",
+        "title": "Age Predictors Through the Lens of Generalization, Bias Mitigation, and Interpretability: Reflections on Causal Implications",
+        "summary": "Chronological age predictors often fail to achieve out-of-distribution (OOD) gen- eralization due to exogenous attributes such as race, gender, or tissue. Learning an invariant representation with respect to those attributes is therefore essential to improve OOD generalization and prevent overly optimistic results. In predic- tive settings, these attributes motivate bias mitigation; in causal analyses, they appear as confounders; and when protected, their suppression leads to fairness. We coherently explore these concepts with theoretical rigor and discuss the scope of an interpretable neural network model based on adversarial representation learning. Using publicly available mouse transcriptomic datasets, we illustrate the behavior of this model relative to conventional machine learning models. We observe that the outcome of this model is consistent with the predictive results of a published study demonstrating the effects of Elamipretide on mouse skeletal and cardiac muscle. We conclude by discussing the limitations of deriving causal interpretation from such purely predictive models.",
+        "authors": "Debdas Paul, Elisa Ferrari, Irene Gravili, Alessandro Cellerino",
+        "url": "http://arxiv.org/abs/2603.16377v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16377v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从泛化、偏见缓解和可解释性的角度探讨了年龄预测器，并**反思了因果含义**。它强调了**理论严谨性**，讨论了混杂因素以及从纯预测模型中推导因果解释的局限性。这种对**因果逻辑和理论边界**的深刻理解与用户的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16088v1",
+        "title": "RecBundle: A Next-Generation Geometric Paradigm for Explainable Recommender Systems",
+        "summary": "Recommender systems are inherently dynamic feedback loops where prolonged local interactions accumulate into macroscopic structural degradation such as information cocoons. Existing representation learning paradigms are universally constrained by the assumption of a single flat space, forcing topologically grounded user associations and semantically driven historical interactions to be fitted within the same vector space. This excessive coupling of heterogeneous information renders it impossible for researchers to mechanistically distinguish and identify the sources of systemic bias. To overcome this theoretical bottleneck, we introduce Fiber Bundle from modern differential geometry and propose a novel geometric analysis paradigm for recommender systems. This theory naturally decouples the system space into two hierarchical layers: the base manifold formed by user interaction networks, and the fibers attached to individual user nodes that carry their dynamic preferences. Building upon this, we construct RecBundle, a framework oriented toward next-generation recommender systems that formalizes user collaboration as geometric connection and parallel transport on the base manifold, while mapping content evolution to holonomy transformations on fibers. From this foundation, we identify future application directions encompassing quantitative mechanisms for information cocoons and evolutionary bias, geometric meta-theory for adaptive recommendation, and novel inference architectures integrating large language models (LLMs). Empirical analysis on real-world MovieLens and Amazon Beauty datasets validates the effectiveness of this geometric framework.",
+        "authors": "Hui Wang, Tianzhu Hu, Mingming Li, Xi Zhou, Chun Gan, Jiao Dai, Jizhong Han, Songlin Hu, Tao Guo",
+        "url": "http://arxiv.org/abs/2603.16088v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16088v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了**现代微分几何中的纤维丛理论**，为推荐系统提出了一个**新颖的几何分析范式**。它将系统空间解耦为基流形和纤维，并用**几何连接、平行传输和完整群变换**来形式化用户协作和内容演化。这种对**严谨数学逻辑和强大理论基础**的强调，特别是应用高级几何理论来解决推荐系统中的根本问题，与用户的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16078v1",
+        "title": "Volumetrically Consistent Implicit Atlas Learning via Neural Diffeomorphic Flow for Placenta MRI",
+        "summary": "Establishing dense volumetric correspondences across anatomical shapes is essential for group-level analysis but remains challenging for implicit neural representations. Most existing implicit registration methods rely on supervision near the zero-level set and thus capture only surface correspondences, leaving interior deformations under-constrained. We introduce a volumetrically consistent implicit model that couples reconstruction of signed distance functions (SDFs) with neural diffeomorphic flow to learn a shared canonical template of the placenta. Volumetric regularization, including Jacobian-determinant and biharmonic penalties, suppresses local folding and promotes globally coherent deformations. In the motivating application to placenta MRI, our formulation jointly reconstructs individual placentas, aligns them to a population-derived implicit template, and enables voxel-wise intensity mapping in a unified canonical space. Experiments on in-vivo placenta MRI scans demonstrate improved geometric fidelity and volumetric alignment over surface-based implicit baseline methods, yielding anatomically interpretable and topologically consistent flattening suitable for group analysis.",
+        "authors": "Athena Taymourtash, S. Mazdak Abulnaga, Esra Abaci Turk, P. Ellen Grant, Polina Golland",
+        "url": "http://arxiv.org/abs/2603.16078v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16078v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个**体积一致的隐式模型**，通过**神经微分同胚流**学习胎盘的共享规范模板。它采用了**体积正则化（包括雅可比行列式和双调和惩罚）**来确保全局一致的变形。这种对**微分几何、拓扑学和优化理论**的严谨应用，以实现几何保真度和体积对齐，与用户对**严谨数学逻辑和强大理论基础**的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16067v1",
+        "title": "Attribution Upsampling should Redistribute, Not Interpolate",
+        "summary": "Attribution methods in explainable AI rely on upsampling techniques that were designed for natural images, not saliency maps. Standard bilinear and bicubic interpolation systematically corrupts attribution signals through aliasing, ringing, and boundary bleeding, producing spurious high-importance regions that misrepresent model reasoning. We identify that the core issue is treating attribution upsampling as an interpolation problem that operates in isolation from the model's reasoning, rather than a mass redistribution problem where model-derived semantic boundaries must govern how importance flows. We present Universal Semantic-Aware Upsampling (USU), a principled method that reformulates upsampling through ratio-form mass redistribution operators, provably preserving attribution mass and relative importance ordering. Extending the axiomatic tradition of feature attribution to upsampling, we formalize four desiderata for faithful upsampling and prove that interpolation structurally violates three of them. These same three force any redistribution operator into a ratio form; the fourth selects the unique potential within this family, yielding USU. Controlled experiments on models with known attribution priors verify USU's formal guarantees; evaluation across ImageNet, CIFAR-10, and CUB-200 confirms consistent faithfulness improvements and qualitatively superior, semantically coherent explanations.",
+        "authors": "Vincenzo Buono, Peyman Sheikholharam Mashhadi, Mahmoud Rahat, Prayag Tiwari, Stefan Byttner",
+        "url": "http://arxiv.org/abs/2603.16067v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16067v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文批判了现有归因上采样方法的缺陷，并提出了Universal Semantic-Aware Upsampling (USU)。它将上采样重新定义为质量再分配问题，并**可证明地保留了归因质量和相对重要性排序**。论文扩展了特征归因的**公理化传统**，形式化了忠实上采样的四个期望，并证明了插值方法违反了其中三个。这种对**理论基础、数学推导和统计保证**的严谨追求与用户的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.16056v1",
+        "title": "Population Annealing as a Discrete-Time Schrödinger Bridge",
+        "summary": "We present a theoretical framework that reinterprets Population Annealing (PA) through the lens of the discrete-time Schrödinger Bridge (SB) problem. We demonstrate that the heuristic reweighting step in PA is derived by analytically solving the Schrödinger system without iterative computation via instantaneous projection. In addition, we identify the thermodynamic work as the optimal control potential that solves the global variational problem on path space. This perspective unifies non-equilibrium thermodynamics with the geometric framework of optimal transport, interpreting the Jarzynski equality as a consistency condition within the Donsker-Varadhan variational principle, and elucidates the thermodynamic optimality of PA.",
+        "authors": "Masayuki Ohzeki",
+        "url": "http://arxiv.org/abs/2603.16056v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.16056v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将**群体退火（Population Annealing）**重新解释为**离散时间薛定谔桥（Schrödinger Bridge）问题**。它将启发式重加权步骤与**解析求解薛定谔系统**联系起来，并将**热力学功解释为路径空间上的全局变分问题的最优控制势**。这种将非平衡热力学与**最优传输的几何框架**统一起来的深刻理论工作，以及对**变分原理和数学推导**的强调，与用户对**严谨数学逻辑和强大理论基础**的偏好高度契合。"
+    }
+]

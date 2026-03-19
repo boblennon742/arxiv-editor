@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.17948v1",
+        "title": "VideoAtlas: Navigating Long-Form Video in Logarithmic Compute",
+        "summary": "Extending language models to video introduces two challenges: representation, where existing methods rely on lossy approximations, and long-context, where caption- or agent-based pipelines collapse video into text and lose visual fidelity. To overcome this, we introduce \\textbf{VideoAtlas}, a task-agnostic environment to represent video as a hierarchical grid that is simultaneously lossless, navigable, scalable, caption- and preprocessing-free. An overview of the video is available at a glance, and any region can be recursively zoomed into, with the same visual representation used uniformly for the video, intermediate investigations, and the agent's memory, eliminating lossy text conversion end-to-end. This hierarchical structure ensures access depth grows only logarithmically with video length. For long-context, Recursive Language Models (RLMs) recently offered a powerful solution for long text, but extending them to visual domain requires a structured environment to recurse into, which \\textbf{VideoAtlas} provides. \\textbf{VideoAtlas} as a Markov Decision Process unlocks Video-RLM: a parallel Master-Worker architecture where a Master coordinates global exploration while Workers concurrently drill into assigned regions to accumulate lossless visual evidence. We demonstrate three key findings: (1)~logarithmic compute growth with video duration, further amplified by a 30-60\\% multimodal cache hit rate arising from the grid's structural reuse. (2)~environment budgeting, where bounding the maximum exploration depth provides a principled compute-accuracy hyperparameter. (3)~emergent adaptive compute allocation that scales with question granularity. When scaling from 1-hour to 10-hour benchmarks, Video-RLM remains the most duration-robust method with minimal accuracy degradation, demonstrating that structured environment navigation is a viable and scalable paradigm for video understanding.",
+        "authors": "Mohamed Eltahir, Ali Habibullah, Yazan Alshoibi, Lama Ayash, Tanveer Hussain, Naeemullah Khan",
+        "url": "http://arxiv.org/abs/2603.17948v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17948v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了 VideoAtlas，一个将视频表示为分层网格的框架，实现了对长视频的对数级计算理解，解决了长上下文视频处理的重大瓶颈。其引入的 Video-RLM（Master-Worker 架构）和对数计算增长的理论分析，以及将视频理解建模为马尔可夫决策过程，都体现了极强的理论创新性和严谨性，非常符合您对前沿算法和架构、理论创新性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17917v1",
+        "title": "Only relative ranks matter in weight-clustered large language models",
+        "summary": "Large language models (LLMs) contain billions of parameters, yet many exact values are not essential. We show that what matters most is the relative rank of weights-whether one connection is stronger or weaker than another-rather than precise magnitudes. To reduce the number of unique weight values, we apply weight clustering to pretrained models, replacing every weight matrix with K shared values from K-means. For Llama 3.1-8B-Instruct and SmolLM2-135M, reducing each matrix to only 16-64 distinct values preserves strong accuracy without retraining, providing a simple, training-free method to compress LLMs on disk. Optionally fine-tuning only the cluster means (centroids) recovers 30-40 percent of the remaining accuracy gap at minimal cost. We then systematically randomize cluster means while keeping assignments fixed. Scrambling the relative ranks of the clusters degrades quality sharply-perplexity can increase by orders of magnitude-even when global statistics such as mean and variance are preserved. In contrast, rank-preserving randomizations cause almost no loss at mid and late layers. On the other hand, when many layers are perturbed simultaneously, progressive layer-by-layer replacement reveals that scale drift-not rank distortion-is the dominant collapse mechanism; however, an affine correction w' = aw + b with a > 0 (which preserves both rank order and overall weight distribution) can substantially delay this drift. This rank-based perspective offers a new lens on model compression and robustness.",
+        "authors": "Borja Aizpurua, Sukhbinder Singh, Román Orús",
+        "url": "http://arxiv.org/abs/2603.17917v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17917v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文揭示了 LLM 权重中相对排序的重要性远超精确数值，并提出了基于权重聚类的训练无关压缩方法。这种对 LLM 内部机制的深刻洞察和理论分析（如秩随机化、尺度漂移、仿射校正），为模型压缩和鲁棒性提供了全新的视角，具有高度的理论创新性和实际应用价值，对数理统计博士生而言极具吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17823v1",
+        "title": "Discovering Decoupled Functional Modules in Large Language Models",
+        "summary": "Understanding the internal functional organization of Large Language Models (LLMs) is crucial for improving their trustworthiness and performance. However, how LLMs organize different functions into modules remains highly unexplored. To bridge this gap, we formulate a functional module discovery problem and propose an Unsupervised LLM Cross-layer MOdule Discovery (ULCMOD) framework that simultaneously disentangles the large set of neurons in the entire LLM into modules while discovering the topics of input samples related to these modules. Our framework introduces a novel objective function and an efficient Iterative Decoupling (IterD) algorithm. Extensive experiments show that our method discovers high-quality, disentangled modules that capture more meaningful semantic information and achieve superior performance in various downstream tasks. Moreover, our qualitative analysis reveals that the discovered modules show semantic coherence, correspond to interpretable specializations, and a clear spatial and hierarchical organization within the LLM. Our work provides a novel tool for interpreting the functional modules of LLMs, filling a critical blank in LLM's interpretability research.",
+        "authors": "Yanke Yu, Jin Li, Ying Sun, Ping Li, Zhefeng Wang, Yi Zheng",
+        "url": "http://arxiv.org/abs/2603.17823v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17823v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了 ULCMOD 框架，用于无监督地发现 LLM 中解耦的功能模块，并同时发现与这些模块相关的主题。其新颖的目标函数和高效的 IterD 算法，以及对 LLM 内部功能组织的深入解释，为 LLM 的可信度和性能提升提供了关键工具，是理论创新性和解决可解释性瓶颈的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17775v1",
+        "title": "CoVerRL: Breaking the Consensus Trap in Label-Free Reasoning via Generator-Verifier Co-Evolution",
+        "summary": "Label-free reinforcement learning enables large language models to improve reasoning capabilities without ground-truth supervision, typically by treating majority-voted answers as pseudo-labels. However, we identify a critical failure mode: as training maximizes self-consistency, output diversity collapses, causing the model to confidently reinforce systematic errors that evade detection. We term this the consensus trap. To escape it, we propose CoVerRL, a framework where a single model alternates between generator and verifier roles, with each capability bootstrapping the other. Majority voting provides noisy but informative supervision for training the verifier, while the improving verifier progressively filters self-consistent errors from pseudo-labels. This co-evolution creates a virtuous cycle that maintains high reward accuracy throughout training. Experiments across Qwen and Llama model families demonstrate that CoVerRL outperforms label-free baselines by 4.7-5.9\\% on mathematical reasoning benchmarks. Moreover, self-verification accuracy improves from around 55\\% to over 85\\%, confirming that both capabilities genuinely co-evolve.",
+        "authors": "Teng Pan, Yuchen Yan, Zixuan Wang, Ruiqing Zhang, Gaiyang Han, Wanqi Zhang, Weiming Lu, Jun Xiao, Yongliang Shen",
+        "url": "http://arxiv.org/abs/2603.17775v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17775v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "CoVerRL 框架通过生成器-验证器协同进化，解决了无标签强化学习中 LLM 推理的“共识陷阱”问题。这种新颖的 RL 框架在理论上严谨地利用多数投票作为噪声监督，并通过验证器过滤错误，形成良性循环，显著提升了 LLM 的推理能力和可靠性，完美契合您对理论创新性和解决 LLM 应用瓶颈的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17613v1",
+        "title": "VeriAgent: A Tool-Integrated Multi-Agent System with Evolving Memory for PPA-Aware RTL Code Generation",
+        "summary": "LLMs have recently demonstrated strong capabilities in automatic RTL code generation, achieving high syntactic and functional correctness. However, most methods focus on functional correctness while overlooking critical physical design objectives, including Power, Performance, and Area. In this work, we propose a PPA-aware, tool-integrated multi-agent framework for high-quality verilog code generation. Our framework explicitly incorporates EDA tools into a closed-loop workflow composed of a \\textit{Programmer Agent}, a \\textit{Correctness Agent}, and a \\textit{PPA Agent}, enabling joint optimization of functional correctness and physical metrics. To support continuous improvement without model retraining, we introduce an \\textit{Evolved Memory Mechanism} that externalizes optimization experience into structured memory nodes. A dedicated memory manager dynamically maintains the memory pool and allows the system to refine strategies based on historical execution trajectories. Extensive experiments demonstrate that our approach achieves strong functional correctness while delivering significant improvements in PPA metrics. By integrating tool-driven feedback with structured and evolvable memory, our framework transforms RTL generation from one-shot reasoning into a continual, feedback-driven optimization process, providing a scalable pathway for deploying LLMs in real-world hardware design flows.",
+        "authors": "Yaoxiang Wang, Qi Shi, ShangZhan Li, Qingguo Hu, Xinyu Yin, Bo Guo, Xu Han, Maosong Sun, Jinsong Su",
+        "url": "http://arxiv.org/abs/2603.17613v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17613v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文结合线性探测和可解释性技术（如稀疏自编码器和激活修补），深入分析了 LLM 如何编码语义关系。其揭示的层级关系中的方向不对称性，以及对稀疏特征与探测级因果证据的关联，提供了对 LLM 内部工作机制的深刻理解，是数理统计博士生在 AI 架构理论创新方面的绝佳选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17504v1",
+        "title": "Inducing Epistemological Humility in Large Language Models: A Targeted SFT Approach to Reducing Hallucination",
+        "summary": "Large language models (LLMs) often hallucinate, producing fluent but false information, partly because supervised fine-tuning (SFT) implicitly rewards always responding. We introduce $\\textit{HypoTermInstruct}$, an SFT dataset (31,487 responses for 11,151 questions) designed to teach models epistemological humility-the ability to recognize the limits of their own knowledge and admit uncertainty. This is achieved through questions about non-existent \"hypothetical\" terms. We also release $\\textit{HypoTermQA-Enhanced}$, a benchmark for hallucination tendency strengthened through multiple validations. We conducted 800 controlled LoRA SFT runs across $\\textit{Llama3.1-8B}$ and $\\textit{Gemma3-4B}$ (base and instruct), testing 100 fine-tuning configurations with paired controls. Our results demonstrate that replacing generic instruction data with $\\textit{HypoTermInstruct}$ significantly improves the HypoTerm Score (median increases of 0.19% to 25.91%) and FactScore (+0.39% to +0.86%), while maintaining stable performance on MMLU (minimal decreases of 0.26% to 0.35%). Our work demonstrates that targeted, high-quality SFT data teaching meta-cognitive skills can effectively reduce hallucination without preference/RL pipelines, providing mechanistic insights and a practical path toward more reliable AI systems.",
+        "authors": "Cem Uluoglakci, Tugba Taskaya Temizel",
+        "url": "http://arxiv.org/abs/2603.17504v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17504v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "XBridge 提出了一种组合式编码器-LLM-解码器架构，将多语言理解和生成任务卸载给外部预训练翻译模型，同时保留 LLM 作为英语核心。其引入的轻量级跨模型映射层和基于最优传输的对齐目标，解决了模型间表示不匹配的问题，实现了多语言性能的显著提升，且无需重新训练 LLM，具有高度的理论创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17445v1",
+        "title": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution",
+        "summary": "When a multi-agent system produces an incorrect or harmful answer, who is accountable if execution logs and agent identifiers are unavailable? Multi-agent language systems increasingly rely on structured interactions such as delegation and iterative refinement, yet the final output often obscures the underlying interaction topology and agent contributions. We introduce IET (Implicit Execution Tracing), a metadata-independent framework that enables token-level attribution directly from generated text and a simple mechanism for interaction topology reconstruction. During generation, agent-specific keyed signals are embedded into the token distribution, transforming the text into a self-describing execution trace detectable only with a secret key. At detection time, a transition-aware scoring method identifies agent handover points and reconstructs the interaction graph. Experiments show that IET recovers agent segments and coordination structure with high accuracy while preserving generation quality, enabling privacy-preserving auditing for multi-agent language systems.",
+        "authors": "Yi Nian, Haosen Cao, Shenzhe Zhu, Henry Peng Zou, Qingqing Luan, Yue Zhao",
+        "url": "http://arxiv.org/abs/2603.17445v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17445v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "TRiMS 引入了理论度量 MSL（最小充分长度）来表征推理链压缩，并提出了一个基于 GRPO 算法的 RL 框架，结合 MSL 估计和动态批处理聚合。这篇论文在理论上严谨地定义了推理链压缩的下限，并实现了 80% 以上的 CoT token 削减，同时提升了准确性，极大地提高了 LLM 推理的效率，是理论创新和解决数据效率瓶颈的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17426v1",
+        "title": "SHIFT: Motion Alignment in Video Diffusion Models with Adversarial Hybrid Fine-Tuning",
+        "summary": "Image-conditioned Video diffusion models achieve impressive visual realism but often suffer from weakened motion fidelity, e.g., reduced motion dynamics or degraded long-term temporal coherence, especially after fine-tuning. We study the problem of motion alignment in video diffusion models post-training. To address this, we introduce pixel-motion rewards based on pixel flux dynamics, capturing both instantaneous and long-term motion consistency. We further propose Smooth Hybrid Fine-tuning (SHIFT), a scalable reward-driven fine-tuning framework for video diffusion models. SHIFT fuses the normal supervised fine-tuning and advantage weighted fine-tuning into a unified framework. Benefiting from novel adversarial advantages, SHIFT improves convergence speed and mitigates reward hacking. Experiments show that our approach efficiently resolves dynamic-degree collapse in modern video diffusion models supervised fine-tuning.",
+        "authors": "Xi Ye, Wenjia Yang, Yangyang Xu, Xiaoyang Liu, Duo Su, Mengfei Xia, Jun Zhu",
+        "url": "http://arxiv.org/abs/2603.17426v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17426v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "ZipServ 提出了一种硬件感知的无损压缩框架，用于高效的 LLM 推理。其引入的 TCA-TBE（Tensor-Core-Aware Triple Bitmap Encoding）和融合的解压缩-GEMM (ZipGEMM) 内核，解决了 GPU 架构中的内存和带宽瓶颈，实现了模型尺寸缩小和推理速度显著提升。这是结合理论创新（新编码格式）和硬件架构优化的典范，对解决 LLM 压缩和效率瓶颈具有巨大价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17310v1",
+        "title": "InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning",
+        "summary": "Large Language Models (LLMs) with extended reasoning capabilities often generate verbose and redundant reasoning traces, incurring unnecessary computational cost. While existing reinforcement learning approaches address this by optimizing final response length, they neglect the quality of intermediate reasoning steps, leaving models vulnerable to reward hacking. We argue that verbosity is not merely a length problem, but a symptom of poor intermediate reasoning quality. To investigate this, we conduct an empirical study tracking the conditional entropy of the answer distribution across reasoning steps. We find that high-quality reasoning traces exhibit two consistent properties: low uncertainty convergence and monotonic progress. These findings suggest that high-quality reasoning traces are informationally dense, that is, each step contributes meaningful entropy reduction relative to the total reasoning length. Motivated by this, we propose InfoDensity, a reward framework for RL training that combines an AUC-based reward and a monotonicity reward as a unified measure of reasoning quality, weighted by a length scaling term that favors achieving equivalent quality more concisely. Experiments on mathematical reasoning benchmarks demonstrate that InfoDensity matches or surpasses state-of-the-art baselines in accuracy while significantly reducing token usage, achieving a strong accuracy-efficiency trade-off.",
+        "authors": "Chengwei Wei, Jung-jae Kim, Longyin Zhang, Shengkai Chen, Nancy F. Chen",
+        "url": "http://arxiv.org/abs/2603.17310v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17310v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "PIER 框架提出了物理信息离线强化学习，从物理校准环境中学习燃料效率高、风险意识强的航线策略。其关键创新在于预测无关性（forecast-independent）和解耦的后验安全防护罩，显著减少了航运的碳排放和灾难性燃料浪费。这篇论文在 RL 算法、物理建模和实际应用（环境/安全）方面都达到了极高的理论严谨性和影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17309v1",
+        "title": "ReLMXEL: Adaptive RL-Based Memory Controller with Explainable Energy and Latency Optimization",
+        "summary": "Reducing latency and energy consumption is critical to improving the efficiency of memory systems in modern computing. This work introduces ReLMXEL (Reinforcement Learning for Memory Controller with Explainable Energy and Latency Optimization), a explainable multi-agent online reinforcement learning framework that dynamically optimizes memory controller parameters using reward decomposition. ReLMXEL operates within the memory controller, leveraging detailed memory behavior metrics to guide decision-making. Experimental evaluations across diverse workloads demonstrate consistent performance gains over baseline configurations, with refinements driven by workload-specific memory access behaviour. By incorporating explainability into the learning process, ReLMXEL not only enhances performance but also increases the transparency of control decisions, paving the way for more accountable and adaptive memory system designs.",
+        "authors": "Panuganti Chirag Sai, Gandholi Sarat, R. Raghunatha Sarma, Venkata Kalyan Tavva, Naveen M",
+        "url": "http://arxiv.org/abs/2603.17309v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17309v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "InfoDensity 提出了一个 RL 奖励框架，通过结合基于 AUC 的奖励和单调性奖励，并根据长度缩放，来促进 LLM 生成信息密集的推理轨迹。其基于条件熵的实证研究揭示了高质量推理的特性，并提供了严谨的奖励设计。这解决了 LLM 推理冗余和计算成本过高的问题，是理论创新和解决数据效率瓶颈的又一力作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17902v1",
+        "title": "Differential Privacy in Generative AI Agents: Analysis and Optimal Tradeoffs",
+        "summary": "Large language models (LLMs) and AI agents are increasingly integrated into enterprise systems to access internal databases and generate context-aware responses. While such integration improves productivity and decision support, the model outputs may inadvertently reveal sensitive information. Although many prior efforts focus on protecting the privacy of user prompts, relatively few studies consider privacy risks from the enterprise data perspective. Hence, this paper develops a probabilistic framework for analyzing privacy leakage in AI agents based on differential privacy. We model response generation as a stochastic mechanism that maps prompts and datasets to distributions over token sequences. Within this framework, we introduce token-level and message-level differential privacy and derive privacy bounds that relate privacy leakage to generation parameters such as temperature and message length. We further formulate a privacy-utility design problem that characterizes optimal temperature selection.",
+        "authors": "Ya-Ting Yang, Quanyan Zhu",
+        "url": "http://arxiv.org/abs/2603.17902v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17902v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为生成式 AI 代理的隐私泄露问题开发了一个基于差分隐私的概率框架。它引入了 token 级和消息级差分隐私，并推导了隐私边界，表征了生成参数与隐私泄露之间的关系，并提出了最优温度选择的隐私-效用设计问题。这在理论上非常严谨，为 AI 代理的隐私保护提供了坚实的数理统计基础和实际指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17834v1",
+        "title": "Generative Control as Optimization: Time Unconditional Flow Matching for Adaptive and Robust Robotic Control",
+        "summary": "Diffusion models and flow matching have become a cornerstone of robotic imitation learning, yet they suffer from a structural inefficiency where inference is often bound to a fixed integration schedule that is agnostic to state complexity. This paradigm forces the policy to expend the same computational budget on trivial motions as it does on complex tasks. We introduce Generative Control as Optimization (GeCO), a time-unconditional framework that transforms action synthesis from trajectory integration into iterative optimization. GeCO learns a stationary velocity field in the action-sequence space where expert behaviors form stable attractors. Consequently, test-time inference becomes an adaptive process that allocates computation based on convergence--exiting early for simple states while refining longer for difficult ones. Furthermore, this stationary geometry yields an intrinsic, training-free safety signal, as the field norm at the optimized action serves as a robust out-of-distribution (OOD) detector, remaining low for in-distribution states while significantly increasing for anomalies. We validate GeCO on standard simulation benchmarks and demonstrate seamless scaling to pi0-series Vision-Language-Action (VLA) models. As a plug-and-play replacement for standard flow-matching heads, GeCO improves success rates and efficiency with an optimization-native mechanism for safe deployment. Video and code can be found at https://hrh6666.github.io/GeCO/",
+        "authors": "Zunzhe Zhang, Runhan Huang, Yicheng Liu, Shaoting Zhu, Linzhan Mou, Hang Zhao",
+        "url": "http://arxiv.org/abs/2603.17834v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17834v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GeCO 框架将动作合成从轨迹积分转化为迭代优化，学习一个在动作序列空间中的平稳速度场，使专家行为形成稳定吸引子。这种时间无关的流匹配方法，不仅提高了机器人模仿学习的成功率和效率，还提供了一个内在的、训练无关的 OOD 检测器。其理论优雅性和对效率/安全瓶颈的解决，使其成为极具吸引力的研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17750v1",
+        "title": "Towards Infinitely Long Neural Simulations: Self-Refining Neural Surrogate Models for Dynamical Systems",
+        "summary": "Recent advances in autoregressive neural surrogate models have enabled orders-of-magnitude speedups in simulating dynamical systems. However, autoregressive models are generally prone to distribution drift: compounding errors in autoregressive rollouts that severely degrade generation quality over long time horizons. Existing work attempts to address this issue by implicitly leveraging the inherent trade-off between short-time accuracy and long-time consistency through hyperparameter tuning. In this work, we introduce a unifying mathematical framework that makes this tradeoff explicit, formalizing and generalizing hyperparameter-based strategies in existing approaches. Within this framework, we propose a robust, hyperparameter-free model implemented as a conditional diffusion model that balances short-time fidelity with long-time consistency by construction. Our model, Self-refining Neural Surrogate model (SNS), can be implemented as a standalone model that refines its own autoregressive outputs or as a complementary model to existing neural surrogates to ensure long-time consistency. We also demonstrate the numerical feasibility of SNS through high-fidelity simulations of complex dynamical systems over arbitrarily long time horizons.",
+        "authors": "Qi Liu, Laure Zanna, Joan Bruna",
+        "url": "http://arxiv.org/abs/2603.17750v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17750v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SNS（自精炼神经替代模型）提出了一个统一的数学框架，通过条件扩散模型平衡短期精度和长期一致性，解决了自回归神经替代模型在长时间尺度上分布漂移的问题。这篇论文在理论上严谨地形式化了权衡，并实现了复杂动力系统的高保真、无限长模拟，是数理统计和 AI 算法结合解决实际瓶颈的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17685v1",
+        "title": "Flow Matching Policy with Entropy Regularization",
+        "summary": "Diffusion-based policies have gained significant popularity in Reinforcement Learning (RL) due to their ability to represent complex, non-Gaussian distributions. Stochastic Differential Equation (SDE)-based diffusion policies often rely on indirect entropy control due to the intractability of the exact entropy, while also suffering from computationally prohibitive policy gradients through the iterative denoising chain. To overcome these issues, we propose Flow Matching Policy with Entropy Regularization (FMER), an Ordinary Differential Equation (ODE)-based online RL framework. FMER parameterizes the policy via flow matching and samples actions along a straight probability path, motivated by optimal transport. FMER leverages the model's generative nature to construct an advantage-weighted target velocity field from a candidate set, steering policy updates toward high-value regions. By deriving a tractable entropy objective, FMER enables principled maximum-entropy optimization for enhanced exploration. Experiments on sparse multi-goal FrankaKitchen benchmarks demonstrate that FMER outperforms state-of-the-art methods, while remaining competitive on standard MuJoco benchmarks. Moreover, FMER reduces training time by 7x compared to heavy diffusion baselines (QVPO) and 10-15% relative to efficient variants.",
+        "authors": "Ting Gao, Stavros Orfanoudakis, Nan Lin, Elvin Isufi, Winnie Daamen, Serge Hoogendoorn",
+        "url": "http://arxiv.org/abs/2603.17685v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17685v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FMER 提出了一个基于 ODE 的在线强化学习框架，通过流匹配参数化策略，并推导了一个可处理的熵目标，实现了最大熵优化以增强探索。这解决了 SDE-based 扩散策略在熵控制和策略梯度计算上的挑战，显著提高了 RL 的样本效率和训练速度，具有很高的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.17378v1",
+        "title": "Efficient Exploration at Scale",
+        "summary": "We develop an online learning algorithm that dramatically improves the data efficiency of reinforcement learning from human feedback (RLHF). Our algorithm incrementally updates reward and language models as choice data is received. The reward model is fit to the choice data, while the language model is updated by a variation of reinforce, with reinforcement signals provided by the reward model. Several features enable the efficiency gains: a small affirmative nudge added to each reinforcement signal, an epistemic neural network that models reward uncertainty, and information-directed exploration. With Gemma large language models (LLMs), our algorithm matches the performance of offline RLHF trained on 200K labels using fewer than 20K labels, representing more than a 10x gain in data efficiency. Extrapolating from our results, we expect our algorithm trained on 1M labels to match offline RLHF trained on 1B labels. This represents a 1,000x gain. To our knowledge, these are the first results to demonstrate that such large improvements are possible.",
+        "authors": "Seyed Mohammad Asghari, Chris Chute, Vikranth Dwaracherla, Xiuyuan Lu, Mehdi Jafarnia, Victor Minden, Zheng Wen, Benjamin Van Roy",
+        "url": "http://arxiv.org/abs/2603.17378v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.17378v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从代数拓扑学角度，证明了局部一致的因果机制在因果图存在非平凡同调时无法产生全局一致的反事实。它将结构因果模型形式化为 Wasserstein 空间上的胞腔层，并引入了 Entropic Wasserstein Causal Sheaf Laplacian。其在理论上的深度和严谨性（代数拓扑、层论、最优传输）为生成式因果模型提供了基础性理解，是您作为数理统计博士生不可多得的理论创新之作。"
+    }
+]

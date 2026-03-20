@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.19165v1",
+        "title": "Rigorous Error Certification for Neural PDE Solvers: From Empirical Residuals to Solution Guarantees",
+        "summary": "Uncertainty quantification for partial differential equations is traditionally grounded in discretization theory, where solution error is controlled via mesh/grid refinement. Physics-informed neural networks fundamentally depart from this paradigm: they approximate solutions by minimizing residual losses at collocation points, introducing new sources of error arising from optimization, sampling, representation, and overfitting. As a result, the generalization error in the solution space remains an open problem.   Our main theoretical contribution establishes generalization bounds that connect residual control to solution-space error. We prove that when neural approximations lie in a compact subset of the solution space, vanishing residual error guarantees convergence to the true solution. We derive deterministic and probabilistic convergence results and provide certified generalization bounds translating residual, boundary, and initial errors into explicit solution error guarantees.",
+        "authors": "Amartya Mukherjee, Maxwell Fitzsimmons, David C. Del Rey Fernández, Jun Liu",
+        "url": "http://arxiv.org/abs/2603.19165v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19165v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为神经PDE求解器提供了严格的误差认证和泛化界限，涉及确定性和概率收敛结果。其数学推导严谨，对AI系统中的不确定性量化和理论保证有重要贡献，完美契合您对强大理论基础的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18938v1",
+        "title": "Kernel Single-Index Bandits: Estimation, Inference, and Learning",
+        "summary": "We study contextual bandits with finitely many actions in which the reward of each arm follows a single-index model with an arm-specific index parameter and an unknown nonparametric link function. We consider a regime in which arms correspond to stable decision options and covariates evolve adaptively under the bandit policy. This setting creates significant statistical challenges: the sampling distribution depends on the allocation rule, observations are dependent over time, and inverse-propensity weighting induces variance inflation. We propose a kernelized $\\varepsilon$-greedy algorithm that combines Stein-based estimation of the index parameters with inverse-propensity-weighted kernel ridge regression for the reward functions. This approach enables flexible semiparametric learning while retaining interpretability. Our analysis develops new tools for inference with adaptively collected data. We establish asymptotic normality for the single-index estimator under adaptive sampling, yielding valid confidence regions, and derive a directional functional central limit theorem for the RKHS estimator, which provides asymptotically valid pointwise confidence intervals. The analysis relies on concentration bounds for inverse-weighted Gram matrices together with martingale central limit theorems. We further obtain finite-time regret guarantees, including $\\tilde{O}(\\sqrt{T})$ rates under common-link Lipschitz conditions, showing that semiparametric structure can be exploited without sacrificing statistical efficiency. These results provide a unified framework for simultaneous learning and inference in single-index contextual bandits.",
+        "authors": "Sakshi Arya, Satarupa Bhattacharjee, Bharath K. Sriperumbudur",
+        "url": "http://arxiv.org/abs/2603.18938v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18938v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对上下文强盗问题提出了核化单指标模型，并提供了渐近正态性、函数中心极限定理、集中不等式和有限时间遗憾界限等严格的统计理论保证。其深度统计分析和推导是您会非常感兴趣的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18579v1",
+        "title": "ICE: Intervention-Consistent Explanation Evaluation with Statistical Grounding for LLMs",
+        "summary": "Evaluating whether explanations faithfully reflect a model's reasoning remains an open problem. Existing benchmarks use single interventions without statistical testing, making it impossible to distinguish genuine faithfulness from chance-level performance. We introduce ICE (Intervention-Consistent Explanation), a framework that compares explanations against matched random baselines via randomization tests under multiple intervention operators, yielding win rates with confidence intervals. Evaluating 7 LLMs across 4 English tasks, 6 non-English languages, and 2 attribution methods, we find that faithfulness is operator-dependent: operator gaps reach up to 44 percentage points, with deletion typically inflating estimates on short text but the pattern reversing on long text, suggesting that faithfulness should be interpreted comparatively across intervention operators rather than as a single score. Randomized baselines reveal anti-faithfulness in one-third of configurations, and faithfulness shows zero correlation with human plausibility (|r| < 0.04). Multilingual evaluation reveals dramatic model-language interactions not explained by tokenization alone. We release the ICE framework and ICEBench benchmark.",
+        "authors": "Abhinaba Basu, Pavan Chakraborty",
+        "url": "http://arxiv.org/abs/2603.18579v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18579v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个基于随机化检验和置信区间的严格统计框架来评估LLM解释的忠实性。其强大的统计基础和清晰的推导，以及对AI可解释性评估的严谨性，使其成为必读之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18551v1",
+        "title": "Learning Decision-Sufficient Representations for Linear Optimization",
+        "summary": "We study how to construct compressed datasets that suffice to recover optimal decisions in linear programs with an unknown cost vector $c$ lying in a prior set $\\mathcal{C}$. Recent work by Bennouna et al. provides an exact geometric characterization of sufficient decision datasets (SDDs) via an intrinsic decision-relevant dimension $d^\\star$. However, their algorithm for constructing minimum-size SDDs requires solving mixed-integer programs. In this paper, we establish hardness results showing that computing $d^\\star$ is NP-hard and deciding whether a dataset is globally sufficient is coNP-hard, thereby resolving a recent open problem posed by Bennouna et al. To address this worst-case intractability, we introduce pointwise sufficiency, a relaxation that requires sufficiency for an individual cost vector. Under nondegeneracy, we provide a polynomial-time cutting-plane algorithm for constructing pointwise-sufficient decision datasets. In a data-driven regime with i.i.d.\\ costs, we further propose a cumulative algorithm that aggregates decision-relevant directions across samples, yielding a stable compression scheme of size at most $d^\\star$. This leads to a distribution-free PAC guarantee: with high probability over the training sample, the pointwise sufficiency failure probability on a fresh draw is at most $\\tilde{O}(d^\\star/n)$, and this rate is tight up to logarithmic factors. Finally, we apply decision-sufficient representations to contextual linear optimization, obtaining compressed predictors with generalization bounds scaling as $\\tilde{O}(\\sqrt{d^\\star/n})$ rather than $\\tilde{O}(\\sqrt{d/n})$, where $d$ is the ambient cost dimension.",
+        "authors": "Yuhan Ye, Saurabh Amin, Asuman Ozdauglar",
+        "url": "http://arxiv.org/abs/2603.18551v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18551v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了线性优化中决策充分表示的学习问题，提供了NP-hard/coNP-hard的复杂性结果，并推导了分布无关的PAC保证和紧致收敛率。其在数学优化和统计学习理论方面的深度理论贡献非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18493v1",
+        "title": "FILT3R: Latent State Adaptive Kalman Filter for Streaming 3D Reconstruction",
+        "summary": "Streaming 3D reconstruction maintains a persistent latent state that is updated online from incoming frames, enabling constant-memory inference. A key failure mode is the state update rule: aggressive overwrites forget useful history, while conservative updates fail to track new evidence, and both behaviors become unstable beyond the training horizon. To address this challenge, we propose FILT3R, a training-free latent filtering layer that casts recurrent state updates as stochastic state estimation in token space. FILT3R maintains a per-token variance and computes a Kalman-style gain that adaptively balances memory retention against new observations. Process noise -- governing how much the latent state is expected to change between frames -- is estimated online from EMA-normalized temporal drift of candidate tokens. Using extensive experiments, we demonstrate that FILT3R yields an interpretable, plug-in update rule that generalizes common overwrite and gating policies as special cases. Specifically, we show that gains shrink in stable regimes as uncertainty contracts with accumulated evidence, and rise when genuine scene change increases process uncertainty, improving long-horizon stability for depth, pose, and 3D reconstruction, compared to the existing methods. Code will be released at https://github.com/jinotter3/FILT3R.",
+        "authors": "Seonghyun Jin, Jong Chul Ye",
+        "url": "http://arxiv.org/abs/2603.18493v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18493v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将循环状态更新建模为令牌空间中的随机状态估计，引入了卡尔曼滤波原理，自适应平衡记忆和新观测。其严谨的随机过程和控制理论基础，以及对3D重建稳定性的数学分析，非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18404v1",
+        "title": "Multi-Domain Causal Empirical Bayes Under Linear Mixing",
+        "summary": "Causal representation learning (CRL) aims to learn low-dimensional causal latent variables from high-dimensional observations. While identifiability has been extensively studied for CRL, estimation has been less explored. In this paper, we explore the use of empirical Bayes (EB) to estimate causal representations. In particular, we consider the problem of learning from data from multiple domains, where differences between domains are modeled by interventions in a shared underlying causal model. Multi-domain CRL naturally poses a simultaneous inference problem that EB is designed to tackle. Here, we propose an EB $f$-modeling algorithm that improves the quality of learned causal variables by exploiting invariant structure within and across domains. Specifically, we consider a linear measurement model and interventional priors arising from a shared acyclic SCM. When the graph and intervention targets are known, we develop an EM-style algorithm based on causally structured score matching. We further discuss EB $\\rmg$-modeling in the context of existing CRL approaches. In experiments on synthetic data, our proposed method achieves more accurate estimation than other methods for CRL.",
+        "authors": "Bohan Wu, Julius von Kügelgen, David M. Blei",
+        "url": "http://arxiv.org/abs/2603.18404v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18404v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究针对多域因果表示学习提出了经验贝叶斯框架，利用不变结构和因果图进行估计。它涉及因果推断、统计估计和EM算法，理论基础扎实，对理解AI系统中的因果逻辑至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19160v1",
+        "title": "PPI is the Difference Estimator: Recognizing the Survey Sampling Roots of Prediction-Powered Inference",
+        "summary": "Prediction-powered inference (PPI) is a rapidly growing framework for combining machine learning predictions with a small set of gold-standard labels to conduct valid statistical inference. In this article, I argue that the core estimators underlying PPI are equivalent to well-established estimators from the survey sampling literature dating back to the 1970s. Specifically, the PPI estimator for a population mean is algebraically equivalent to the difference estimator of Cassel et al. (1976), and PPI plus corresponds to the generalized regression (GREG) estimator of Sarndal et al. (2003). Recognizing this equivalence, I consider what part of PPI is inherited from a long-standing literature in statistics, what part is genuinely new, and where inferential claims require care. After introducing the two frameworks and establishing their equivalence, I break down where PPI diverges from model-assisted estimation, including differences in the mode of inference, the role of the unlabeled data pool, and the consequences of differential prediction error for subgroup estimands such as the average treatment effect. I then identify what each framework offers the other: PPI researchers can draw on the survey sampling literature's well-developed theory of calibration, optimal allocation, and design-based diagnostics, while survey sampling researchers can benefit from PPI's extensions to non-standard estimands and its accessible software ecosystem. The article closes with a call for integration between these two communities, motivated by the growing use of large language models as measurement instruments in applied research.",
+        "authors": "Reagan Mozer",
+        "url": "http://arxiv.org/abs/2603.19160v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19160v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将现代预测驱动推断（PPI）与经典调查抽样理论（差分估计器、GREG估计器）联系起来，深入分析了其统计等价性和推断有效性。它提供了强大的统计学洞察，有助于您理解现代AI方法的理论根源。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19186v1",
+        "title": "Improving RCT-Based Treatment Effect Estimation Under Covariate Mismatch via Calibrated Alignment",
+        "summary": "Randomized controlled trials (RCTs) are the gold standard for estimating heterogeneous treatment effects, yet they are often underpowered for detecting effect heterogeneity. Large observational studies (OS) can supplement RCTs for conditional average treatment effect (CATE) estimation, but a key barrier is covariate mismatch: the two sources measure different, only partially overlapping, covariates. We propose CALM (Calibrated ALignment under covariate Mismatch), which bypasses imputation by learning embeddings that map each source's features into a common representation space. OS outcome models are transferred to the RCT embedding space and calibrated using trial data, preserving causal identification from randomization. Finite-sample risk bounds decompose into alignment error, outcome-model complexity, and calibration complexity terms, identifying when embedding alignment outperforms imputation. Under the calibration-based linear variant, the framework provides protection against negative transfer; the neural variant can be vulnerable under severe distributional shift. Under sparse linear models, the embedding approach strictly generalizes imputation. Simulations across 51 settings confirm that (i) calibration-based methods are equivalent for linear CATEs, and (ii) the neural embedding variant wins all 22 nonlinear-regime settings with large margins.",
+        "authors": "Amir Asiaee, Samhita Pal",
+        "url": "http://arxiv.org/abs/2603.19186v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19186v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了在协变量不匹配下估计异质治疗效果的方法，通过学习嵌入和校准，提供了有限样本风险界限，并保护了随机化带来的因果识别。其理论严谨性，尤其是在因果推断领域的贡献，非常值得关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18653v1",
+        "title": "Robust Discrete Pricing Optimization via Multiple-Choice Knapsack Reductions",
+        "summary": "We study a discrete portfolio pricing problem that selects one price per product from a finite menu under margin and fairness constraints. To account for demand uncertainty, we incorporate a budgeted robust formulation that controls conservatism while remaining computationally tractable. By reducing the problem to a Multiple-Choice Knapsack Problem (MCKP), we identify structural properties of the LP relaxation, in particular upper-hull filtering and greedy filling over hull segments, that yield an exact solution method for the LP relaxation of the fixed-parameter subproblems. For the resulting fixed-parameter subproblems, we show that the integrality gap is bounded additively by a single-item hull jump, and that the corresponding relative gap decays as O(1/n) under standard boundedness and linear-growth assumptions. Numerical experiments on synthetic portfolios and a stylized retail case study with economically calibrated parameters are consistent with these bounds and indicate that robust margin protection can be achieved with less than 1 percent nominal revenue loss on the instances tested.",
+        "authors": "Zi Yuan Eric Shao",
+        "url": "http://arxiv.org/abs/2603.18653v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18653v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究针对离散定价问题提出了预算鲁棒优化框架，通过归约到多选背包问题，分析了LP松弛的结构性质，并推导了积分间隙界限和收敛率。其在数学优化理论方面的扎实基础和清晰推导是您会欣赏的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19198v1",
+        "title": "The Exponentially Weighted Signature",
+        "summary": "The signature is a canonical representation of a multidimensional path over an interval. However, it treats all historical information uniformly, offering no intrinsic mechanism for contextualising the relevance of the past. To address this, we introduce the Exponentially Weighted Signature (EWS), generalising the Exponentially Fading Memory (EFM) signature from diagonal to general bounded linear operators. These operators enable cross-channel coupling at the level of temporal weighting together with richer memory dynamics including oscillatory, growth, and regime-dependent behaviour, while preserving the algebraic strengths of the classical signature. We show that the EWS is the unique solution to a linear controlled differential equation on the tensor algebra, and that it generalises both state-space models and the Laplace and Fourier transforms of the path. The group-like structure of the EWS enables efficient computation and makes the framework amenable to gradient-based learning, with the full semigroup action parametrised by and learned through its generator. We use this framework to empirically demonstrate the expressivity gap between the EWS and both the signature and EFM on two SDE-based regression tasks.",
+        "authors": "Alexandre Bloch, Samuel N. Cohen, Terry Lyons, Joël Mouterde, Benjamin Walker",
+        "url": "http://arxiv.org/abs/2603.19198v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19198v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "这篇论文泛化了经典签名理论，引入指数加权签名，是张量代数上线性受控微分方程的唯一解，并泛化了状态空间模型、拉普拉斯和傅里叶变换。其深厚的数学理论基础和对时间序列表示的创新视角非常吸引人。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18761v1",
+        "title": "NeuroGame Transformer: Gibbs-Inspired Attention Driven by Game Theory and Statistical Physics",
+        "summary": "Standard attention mechanisms in transformers are limited by their pairwise formulation, which hinders the modeling of higher-order dependencies among tokens. We introduce the NeuroGame Transformer (NGT) to overcome this by reconceptualizing attention through a dual perspective: tokens are treated simultaneously as players in a cooperative game and as interacting spins in a statistical physics system. Token importance is quantified using two complementary game-theoretic concepts -- Shapley values for global, permutation-based attribution and Banzhaf indices for local, coalition-level influence. These are combined via a learnable gating parameter to form an external magnetic field, while pairwise interaction potentials capture synergistic relationships. The system's energy follows an Ising Hamiltonian, with attention weights emerging as marginal probabilities under the Gibbs distribution, efficiently computed via mean-field equations. To ensure scalability despite the exponential coalition space, we develop importance-weighted Monte Carlo estimators with Gibbs-distributed weights. This approach avoids explicit exponential factors, ensuring numerical stability for long sequences. We provide theoretical convergence guarantees and characterize the fairness-sensitivity trade-off governed by the interpolation parameter. Experimental results demonstrate that the NeuroGame Transformer achieves strong performance across SNLI, and MNLI-matched, outperforming some major efficient transformer baselines. On SNLI, it attains a test accuracy of 86.4\\% (with a peak validation accuracy of 86.6\\%), surpassing ALBERT-Base and remaining highly competitive with RoBERTa-Base. Code is available at https://github.com/dbouchaffra/NeuroGame-Transformer.",
+        "authors": "Djamel Bouchaffra, Fayçal Ykhlef, Hanene Azzag, Mustapha Lebbah, Bilal Faye",
+        "url": "http://arxiv.org/abs/2603.18761v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18761v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "论文将Transformer注意力机制重新概念化为合作博弈和统计物理系统，利用Shapley值、Banzhaf指数、Ising哈密顿量和Gibbs分布，并提供了理论收敛性保证。其跨学科的理论深度和严谨性非常高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18490v1",
+        "title": "The minimax optimal convergence rate of posterior density in the weighted orthogonal polynomials",
+        "summary": "We investigate Bayesian nonparametric density estimation via orthogonal polynomial expansions in weighted Sobolev spaces. A core challenge is establishing minimax optimal posterior convergence rates, especially for densities on unbounded domains without a strictly positive lower bound. For densities bounded away from zero, we give sufficient conditions under which the framework of \\cite{shen2001} applies directly. For densities lacking a positive lower bound, the equivalence between Hellinger and weighted $L_2$-norm distance fails, invalidating the original theory. We propose a novel shifting method that lifts the true density $g_0$ to a sequence of proxy densities $g_{0,n}$. We prove a modified convergence theorem applicable to these shifted densities, preserving the optimal rate. We also construct a Gaussian sieve prior that achieves the minimax rate $\\varepsilon_n=n^{-p/(2p+1)}$ for any integer $p\\geq1$. Numerical results confirm that our estimator approximates the true density well and validates the theoretical convergence rate.",
+        "authors": "Yiqi Luo, Xue Luo",
+        "url": "http://arxiv.org/abs/2603.18490v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18490v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "该研究深入探讨了贝叶斯非参数密度估计的后验收敛率，提出了新颖的移位方法，并严格证明了在加权正交多项式下达到minimax最优收敛率。这是一篇纯粹的数理统计理论工作，高度符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18367v1",
+        "title": "Stabilization of highly nonlinear hybrid stochastic differential delay equations by periodically intermittent feedback controls based on discrete-time observations with asynchronous switching",
+        "summary": "In this paper, we will investigate the moment exponential stabilization of highly nonlinear hybrid stochastic differential delay equations. A periodically intermittent controller based on discrete time state observations with asynchronous switching is designed. The upper bound of observation period as well as the lower bound of the control width are all obtained. Firstly, the finiteness and boundedness of the $p$-th moment of the solution are established under a generalized Khasminskii-type condition. Then reasonable conditions of control function, drift and diffusion coefficients are presented. Then exponential stability as well as the convergence rate of controlled system are proved. Finally, an example is presented to interpret the conclusion, which also indicates that the proportion of control interval has positive relation to the convergence rate.",
+        "authors": "Guangqiang Lan, Fansai Meng",
+        "url": "http://arxiv.org/abs/2603.18367v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18367v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "这篇论文针对高度非线性混合随机微分时滞方程的矩指数稳定性问题，设计了间歇反馈控制器，并严格证明了其稳定性及收敛速度。其深厚的随机过程和控制理论基础，以及详细的数学证明，是您会非常欣赏的。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18893v1",
+        "title": "Quantitative Introspection in Language Models: Tracking Internal States Across Conversation",
+        "summary": "Tracking the internal states of large language models across conversations is important for safety, interpretability, and model welfare, yet current methods are limited. Linear probes and other white-box methods compress high-dimensional representations imperfectly and are harder to apply with increasing model size. Taking inspiration from human psychology, where numeric self-report is a widely used tool for tracking internal states, we ask whether LLMs' own numeric self-reports can track probe-defined emotive states over time. We study four concept pairs (wellbeing, interest, focus, and impulsivity) in 40 ten-turn conversations, operationalizing introspection as the causal informational coupling between a model's self-report and a concept-matched probe-defined internal state. We find that greedy-decoded self-reports collapse outputs to few uninformative values, but introspective capacity can be unmasked by calculating logit-based self-reports. This metric tracks interpretable internal states (Spearman $ρ= 0.40$-$0.76$; isotonic $R^2 = 0.12$-$0.54$ in LLaMA-3.2-3B-Instruct), follows how those states change over time, and activation steering confirms the coupling is causal. Furthermore, we find that introspection is present at turn 1 but evolves through conversation, and can be selectively improved by steering along one concept to boost introspection for another ($ΔR^2$ up to $0.30$). Crucially, these phenomena scale with model size in some cases, approaching $R^2 \\approx 0.93$ in LLaMA-3.1-8B-Instruct, and partially replicate in other model families. Together, these results position numeric self-report as a viable, complementary tool for tracking internal emotive states in conversational AI systems.",
+        "authors": "Nicolas Martorell",
+        "url": "http://arxiv.org/abs/2603.18893v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18893v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了量化LLM内部状态的自报告方法，通过因果信息耦合和激活引导，深入分析了LLM内部机制。虽然是实证研究，但其对LLM内部因果机制的探索具有很强的理论严谨性和方法论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.18523v1",
+        "title": "Counting Circuits: Mechanistic Interpretability of Visual Reasoning in Large Vision-Language Models",
+        "summary": "Counting serves as a simple but powerful test of a Large Vision-Language Model's (LVLM's) reasoning; it forces the model to identify each individual object and then add them all up. In this study, we investigate how LVLMs implement counting using controlled synthetic and real-world benchmarks, combined with mechanistic analyses. Our results show that LVLMs display a human-like counting behavior, with precise performance on small numerosities and noisy estimation for larger quantities. We introduce two novel interpretability methods, Visual Activation Patching and HeadLens, and use them to uncover a structured \"counting circuit\" that is largely shared across a variety of visual reasoning tasks. Building on these insights, we propose a lightweight intervention strategy that exploits simple and abundantly available synthetic images to fine-tune arbitrary pretrained LVLMs exclusively on counting. Despite the narrow scope of this fine-tuning, the intervention not only enhances counting accuracy on in-distribution synthetic data, but also yields an average improvement of +8.36% on out-of-distribution counting benchmarks and an average gain of +1.54% on complex, general visual reasoning tasks for Qwen2.5-VL. These findings highlight the central, influential role of counting in visual reasoning and suggest a potential pathway for improving overall visual reasoning capabilities through targeted enhancement of counting mechanisms.",
+        "authors": "Liwei Che, Zhiyu Xue, Yihao Quan, Benlin Liu, Zeru Shi, Michelle Hurst, Jacob Feldman, Ruixiang Tang, Ranjay Krishna, Vladimir Pavlovic",
+        "url": "http://arxiv.org/abs/2603.18523v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18523v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过引入新颖的可解释性方法，深入揭示了LVLM内部的“计数电路”结构。它对理解AI系统内部的推理机制提供了因果和结构化的解释，具有很强的机制解释严谨性，对AI系统的内部逻辑理解有重要价值。"
+    }
+]

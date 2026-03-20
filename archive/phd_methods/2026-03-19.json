@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.18891v1",
+        "title": "PromptHub: Enhancing Multi-Prompt Visual In-Context Learning with Locality-Aware Fusion, Concentration and Alignment",
+        "summary": "Visual In-Context Learning (VICL) aims to complete vision tasks by imitating pixel demonstrations. Recent work pioneered prompt fusion that combines the advantages of various demonstrations, which shows a promising way to extend VICL. Unfortunately, the patch-wise fusion framework and model-agnostic supervision hinder the exploitation of informative cues, thereby limiting performance gains. To overcome this deficiency, we introduce PromptHub, a framework that holistically strengthens multi-prompting through locality-aware fusion, concentration and alignment. PromptHub exploits spatial priors to capture richer contextual information, employs complementary concentration, alignment, and prediction objectives to mutually guide training, and incorporates data augmentation to further reinforce supervision. Extensive experiments on three fundamental vision tasks demonstrate the superiority of PromptHub. Moreover, we validate its universality, transferability, and robustness across out-of-distribution settings, and various retrieval scenarios. This work establishes a reliable locality-aware paradigm for prompt fusion, moving beyond prior patch-wise approaches. Code is available at https://github.com/luotc-why/ICLR26-PromptHub.",
+        "authors": "Tianci Luo, Jinpeng Wang, Shiyu Qin, Niu Lian, Yan Feng, Bin Chen, Chun Yuan, Shu-Tao Xia",
+        "url": "http://arxiv.org/abs/2603.18891v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.18891v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了PromptHub框架，通过局部感知融合、集中和对齐来增强多提示视觉上下文学习（VICL）。它超越了传统的逐块融合方法，通过空间先验和互补目标来捕获更丰富的上下文信息，从而在多个视觉任务上实现了卓越的性能。这对于提升视觉LLM的效率和泛化能力具有理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19222v1",
+        "title": "Spectrally-Guided Diffusion Noise Schedules",
+        "summary": "Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral properties. By deriving theoretical bounds on the efficacy of minimum and maximum noise levels, we design ``tight'' noise schedules that eliminate redundant steps. During inference, we propose to conditionally sample such noise schedules. Experiments show that our noise schedules improve generative quality of single-stage pixel diffusion models, particularly in the low-step regime.",
+        "authors": "Carlos Esteves, Ameesh Makadia",
+        "url": "http://arxiv.org/abs/2603.19222v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19222v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种基于图像光谱特性设计每实例噪声调度的方法，以优化去噪扩散模型。通过推导最小和最大噪声水平的理论界限，它能够设计出更紧凑的噪声调度，消除冗余步骤，从而在低步数采样下显著提高生成质量。这体现了扩散模型理论的创新性和对数据效率的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19218v1",
+        "title": "Rethinking Vector Field Learning for Generative Segmentation",
+        "summary": "Taming diffusion models for generative segmentation has attracted increasing attention. While existing approaches primarily focus on architectural tweaks or training heuristics, there remains a limited understanding of the intrinsic mismatch between continuous flow matching objectives and discrete perception tasks. In this work, we revisit diffusion segmentation from the perspective of vector field learning. We identify two key limitations of the commonly used flow matching objective: gradient vanishing and trajectory traversing, which result in slow convergence and poor class separation. To tackle these issues, we propose a principled vector field reshaping strategy that augments the learned velocity field with a detached distance-aware correction term. This correction introduces both attractive and repulsive interactions, enhancing gradient magnitudes near centroids while preserving the original diffusion training framework. Furthermore, we design a computationally efficient, quasi-random category encoding scheme inspired by Kronecker sequences, which integrates seamlessly with an end-to-end pixel neural field framework for pixel-level semantic alignment. Extensive experiments consistently demonstrate significant improvements over vanilla flow matching approaches, substantially narrowing the performance gap between generative segmentation and strong discriminative specialists.",
+        "authors": "Chaoyang Wang, Yaobo Liang, Boci Peng, Fan Duan, Jingdong Wang, Yunhai Tong",
+        "url": "http://arxiv.org/abs/2603.19218v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19218v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从向量场学习的角度重新审视了生成式分割中的扩散模型，并提出了一个原则性的向量场重塑策略。通过引入距离感知校正项和高效的类别编码方案，解决了梯度消失和轨迹遍历等问题，显著提升了生成式分割的收敛速度和类别分离效果。这在理论上深化了对扩散模型机制的理解，并解决了实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19209v1",
+        "title": "Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders",
+        "summary": "Large vision--language models (VLMs) often use a frozen vision backbone, whose image features are mapped into a large language model through a lightweight connector. While transformer-based encoders are the standard visual backbone, we ask whether state space model (SSM) vision backbones can be a strong alternative. We systematically evaluate SSM vision backbones for VLMs in a controlled setting. Under matched ImageNet-1K initialization, the SSM backbone achieves the strongest overall performance across both VQA and grounding/localization. We further adapt both SSM and ViT-family backbones with detection or segmentation training and find that dense-task tuning generally improves performance across families; after this adaptation, the SSM backbone remains competitive while operating at a substantially smaller model scale. We further observe that (i) higher ImageNet accuracy or larger backbones do not reliably translate into better VLM performance, and (ii) some visual backbones are unstable in localization. Based on these findings, we propose stabilization strategies that improve robustness for both backbone families and highlight SSM backbones as a strong alternative to transformer-based vision encoders in VLMs.",
+        "authors": "Shang-Jui Ray Kuo, Paola Cascante-Bonilla",
+        "url": "http://arxiv.org/abs/2603.19209v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19209v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究系统评估了状态空间模型（SSM）作为视觉-语言模型（VLM）的视觉编码器，并发现SSM在VQA和定位任务上表现出色，且模型规模更小。这挑战了Transformer作为视觉骨干的标准范式，为开发更高效、更小规模的VLM提供了理论和实证依据，直接解决了模型压缩和效率问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19191v1",
+        "title": "OS-Themis: A Scalable Critic Framework for Generalist GUI Rewards",
+        "summary": "Reinforcement Learning (RL) has the potential to improve the robustness of GUI agents in stochastic environments, yet training is highly sensitive to the quality of the reward function. Existing reward approaches struggle to achieve both scalability and performance. To address this, we propose OS-Themis, a scalable and accurate multi-agent critic framework. Unlike a single judge, OS-Themis decomposes trajectories into verifiable milestones to isolate critical evidence for decision making and employs a review mechanism to strictly audit the evidence chain before making the final verdict. To facilitate evaluation, we further introduce OmniGUIRewardBench (OGRBench), a holistic cross-platform benchmark for GUI outcome rewards, where all evaluated models achieve their best performance under OS-Themis. Extensive experiments on AndroidWorld show that OS-Themis yields a 10.3% improvement when used to support online RL training, and a 6.9% gain when used for trajectory validation and filtering in the self-training loop, highlighting its potential to drive agent evolution.",
+        "authors": "Zehao Li, Zhenyu Wu, Yibo Zhao, Bowen Yang, Jingjing Xie, Zhaoyang Liu, Zhoumianze Liu, Kaiming Jin, Jianze Liang, Zonglin Li, Feng Wu, Bowen Zhou, Zun Wang, Zichen Ding",
+        "url": "http://arxiv.org/abs/2603.19191v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19191v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "OS-Themis是一个可扩展的多智能体评论框架，用于通用GUI奖励。它通过将轨迹分解为可验证的里程碑并采用审查机制，解决了现有奖励方法在可扩展性和性能上的不足。这对于强化学习在复杂GUI环境中的应用至关重要，提升了训练效率和智能体的鲁棒性，具有很强的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19185v1",
+        "title": "MIDST Challenge at SaTML 2025: Membership Inference over Diffusion-models-based Synthetic Tabular data",
+        "summary": "Synthetic data is often perceived as a silver-bullet solution to data anonymization and privacy-preserving data publishing. Drawn from generative models like diffusion models, synthetic data is expected to preserve the statistical properties of the original dataset while remaining resilient to privacy attacks. Recent developments of diffusion models have been effective on a wide range of data types, but their privacy resilience, particularly for tabular formats, remains largely unexplored. MIDST challenge sought a quantitative evaluation of the privacy gain of synthetic tabular data generated by diffusion models, with a specific focus on its resistance to membership inference attacks (MIAs). Given the heterogeneity and complexity of tabular data, multiple target models were explored for MIAs, including diffusion models for single tables of mixed data types and multi-relational tables with interconnected constraints. MIDST inspired the development of novel black-box and white-box MIAs tailored to these target diffusion models as a key outcome, enabling a comprehensive evaluation of their privacy efficacy. The MIDST GitHub repository is available at https://github.com/VectorInstitute/MIDST",
+        "authors": "Masoumeh Shafieinejad, Xi He, Mahshid Alinoori, John Jewell, Sana Ayromlou, Wei Pang, Veronica Chatrath, Garui Sharma, Deval Pandya",
+        "url": "http://arxiv.org/abs/2603.19185v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19185v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "MIDST挑战赛关注扩散模型生成的合成表格数据的隐私弹性，特别是针对成员推理攻击。虽然是基准测试，但它提出了一个重要且未充分探索的问题：扩散模型在表格数据隐私保护方面的有效性。这对于AI的信任和隐私保护至关重要，为未来的理论创新提供了方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19182v1",
+        "title": "Box Maze: A Process-Control Architecture for Reliable LLM Reasoning",
+        "summary": "Large language models (LLMs) demonstrate strong generative capabilities but remain vulnerable to hallucination and unreliable reasoning under adversarial prompting. Existing safety approaches -- such as reinforcement learning from human feedback (RLHF) and output filtering -- primarily operate at the behavioral level and may lack explicit architectural mechanisms for enforcing reasoning process integrity.   This paper proposes the Box Maze framework, a conceptual process-control architecture that decomposes LLM reasoning into three explicit layers: memory grounding, structured inference, and boundary enforcement. We introduce preliminary simulation-based evaluation involving progressive boundary erosion scenarios across multiple heterogeneous LLM systems (DeepSeek-V3, Doubao, Qwen). Results from n=50 adversarial scenarios suggest that explicit cognitive control layers may improve consistency in boundary maintenance, with architectural constraints reducing boundary failure rates from approximately 40% (baseline RLHF) to below 1% under adversarial conditions.   While current validation is simulation-based, these preliminary results indicate that process-level control may offer a promising direction for improving reliability in large language model reasoning.",
+        "authors": "Zou Qiang",
+        "url": "http://arxiv.org/abs/2603.19182v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19182v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Box Maze框架提出了一种概念性的过程控制架构，将LLM推理分解为记忆基础、结构化推理和边界强制三个明确层，以提高LLM推理的可靠性。它通过显式认知控制层显著降低了对抗条件下的边界失败率，为解决LLM幻觉和不可靠推理提供了理论创新性的架构思路。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19166v1",
+        "title": "Meanings and Measurements: Multi-Agent Probabilistic Grounding for Vision-Language Navigation",
+        "summary": "Robots collaborating with humans must convert natural language goals into actionable, physically grounded decisions. For example, executing a command such as \"go two meters to the right of the fridge\" requires grounding semantic references, spatial relations, and metric constraints within a 3D scene. While recent vision language models (VLMs) demonstrate strong semantic grounding capabilities, they are not explicitly designed to reason about metric constraints in physically defined spaces. In this work, we empirically demonstrate that state-of-the-art VLM-based grounding approaches struggle with complex metric-semantic language queries. To address this limitation, we propose MAPG (Multi-Agent Probabilistic Grounding), an agentic framework that decomposes language queries into structured subcomponents and queries a VLM to ground each component. MAPG then probabilistically composes these grounded outputs to produce metrically consistent, actionable decisions in 3D space. We evaluate MAPG on the HM-EQA benchmark and show consistent performance improvements over strong baselines. Furthermore, we introduce a new benchmark, MAPG-Bench, specifically designed to evaluate metric-semantic goal grounding, addressing a gap in existing language grounding evaluations. We also present a real-world robot demonstration showing that MAPG transfers beyond simulation when a structured scene representation is available.",
+        "authors": "Swagat Padhan, Lakshya Jain, Bhavya Minesh Shah, Omkar Patil, Thao Nguyen, Nakul Gopalan",
+        "url": "http://arxiv.org/abs/2603.19166v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19166v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MAPG（Multi-Agent Probabilistic Grounding）是一个智能体框架，通过分解语言查询并概率性地组合VLM的输出，解决了VLM在物理空间中进行度量约束推理的局限性。它在理论上将语义和度量约束结合，并在实际机器人导航任务中表现出显著改进，具有很强的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19152v1",
+        "title": "VEPO: Variable Entropy Policy Optimization for Low-Resource Language Foundation Models",
+        "summary": "Large language models frequently exhibit suboptimal performance on low resource languages, primarily due to inefficient subword segmentation and systemic training data imbalances. In this paper, we propose Variable Entropy Policy Optimization (VEPO), which leverages Reinforcement Learning with Verifiable Rewards to incorporate deterministic structural constraints into the policy alignment process. This framework ensures prescribed sequence length, robust format consistency, and rigorous linguistic well formedness, all enforced during training. Central to our approach is a variable entropy mechanism that enables the model to dynamically calibrate the equilibrium between literal fidelity and semantic naturalness by modulating the exploration exploitation manifold. By integrating entropy tempered advantage estimation with asymmetric clipping, VEPO sustains robust exploration while mitigating policy collapse. Empirical evaluations across 90 FLORES-200, COMET-22, chrF directions demonstrate that VEPO yields substantial improvements in both tokenization efficiency and translation quality, bridging the performance gap for underrepresented languages.",
+        "authors": "Chonghan Liu, Yimin Du, Qi An, Xin He, Cunqi Zhai, Fei Tan, Weijia Lin, Xiaochun Gong, Yongchao Deng, Shousheng Jia, Xiangzheng Zhang",
+        "url": "http://arxiv.org/abs/2603.19152v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19152v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "VEPO（Variable Entropy Policy Optimization）利用强化学习和可验证奖励，将确定性结构约束融入策略对齐过程，以解决低资源语言LLM的性能问题。其可变熵机制和不对称裁剪的优势估计，在理论上平衡了字面忠实度和语义自然度，显著提高了低资源语言的效率和翻译质量。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19146v1",
+        "title": "D5P4: Partition Determinantal Point Process for Diversity in Parallel Discrete Diffusion Decoding",
+        "summary": "Discrete diffusion models are promising alternatives to autoregressive approaches for text generation, yet their decoding methods remain under-studied. Standard decoding methods for autoregressive models, such as beam search, do not directly apply to iterative denoising, and existing diffusion decoding techniques provide limited control over in-batch diversity. To bridge this gap, we introduce a generalized beam-search framework for discrete diffusion that generates candidates in parallel and supports modular beam-selection objectives. As a diversity-focused instantiation, we propose D5P4, which formulates the selection step as MAP inference over a Determinantal Point Process. Leveraging a scalable greedy solver, D5P4 maintains multi-GPU compatibility and enables an explicit trade-off between model probability and target diversity with near-zero compute overhead. Experiments on free-form generation and question answering demonstrate that D5P4 improves diversity over strong baselines while maintaining competitive generation quality.",
+        "authors": "Jonathan Lys, Vincent Gripon, Bastien Pasdeloup, Axel Marmoret, Lukas Mauch, Fabien Cardinaux, Ghouthi Boukli Hacene",
+        "url": "http://arxiv.org/abs/2603.19146v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19146v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "D5P4引入了一个广义的束搜索框架，用于离散扩散模型的并行解码，通过将选择步骤公式化为行列式点过程（DPP）上的MAP推理，实现了对批内多样性的精确控制。这在理论上为扩散模型的解码提供了新的视角，并在实践中以近乎零的计算开销提升了生成多样性和质量。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19138v1",
+        "title": "Implicit Patterns in LLM-Based Binary Analysis",
+        "summary": "Binary vulnerability analysis is increasingly performed by LLM-based agents in an iterative, multi-pass manner, with the model as the core decision-maker. However, how such systems organize exploration over hundreds of reasoning steps remains poorly understood, due to limited context windows and implicit token-level behaviors. We present the first large-scale, trace-level study showing that multi-pass LLM reasoning gives rise to structured, token-level implicit patterns. Analyzing 521 binaries with 99,563 reasoning steps, we identify four dominant patterns: early pruning, path-dependent lock-in, targeted backtracking, and knowledge-guided prioritization that emerge implicitly from reasoning traces. These token-level implicit patterns serve as an abstraction of LLM reasoning: instead of explicit control-flow or predefined heuristics, exploration is organized through implicit decisions regulating path selection, commitment, and revision. Our analysis shows these patterns form a stable, structured system with distinct temporal roles and measurable characteristics. Our results provide the first systematic characterization of LLM-driven binary analysis and a foundation for more reliable analysis systems.",
+        "authors": "Qiang Li, XiangRui Zhang, Haining Wang",
+        "url": "http://arxiv.org/abs/2603.19138v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19138v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 2,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究首次大规模、追踪级别地揭示了LLM在多遍二进制分析中产生的结构化、token级别的隐式模式。虽然不是提出新算法，但它深入理解了LLM的推理机制，识别出早期剪枝、路径依赖锁定等模式，为更可靠的LLM分析系统奠定了基础，具有重要的理论分析价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19137v1",
+        "title": "GSMem: 3D Gaussian Splatting as Persistent Spatial Memory for Zero-Shot Embodied Exploration and Reasoning",
+        "summary": "Effective embodied exploration requires agents to accumulate and retain spatial knowledge over time. However, existing scene representations, such as discrete scene graphs or static view-based snapshots, lack \\textit{post-hoc re-observability}. If an initial observation misses a target, the resulting memory omission is often irrecoverable. To bridge this gap, we propose \\textbf{GSMem}, a zero-shot embodied exploration and reasoning framework built upon 3D Gaussian Splatting (3DGS). By explicitly parameterizing continuous geometry and dense appearance, 3DGS serves as a persistent spatial memory that endows the agent with \\textit{Spatial Recollection}: the ability to render photorealistic novel views from optimal, previously unoccupied viewpoints. To operationalize this, GSMem employs a retrieval mechanism that simultaneously leverages parallel object-level scene graphs and semantic-level language fields. This complementary design robustly localizes target regions, enabling the agent to ``hallucinate'' optimal views for high-fidelity Vision-Language Model (VLM) reasoning. Furthermore, we introduce a hybrid exploration strategy that combines VLM-driven semantic scoring with a 3DGS-based coverage objective, balancing task-aware exploration with geometric coverage. Extensive experiments on embodied question answering and lifelong navigation demonstrate the robustness and effectiveness of our framework",
+        "authors": "Yiren Lu, Yi Du, Disheng Liu, Yunlai Zhou, Chen Wang, Yu Yin",
+        "url": "http://arxiv.org/abs/2603.19137v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19137v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过MultiTempBench基准测试，深入探讨了LLM时间推理能力受tokenization或时间表示的影响。它引入了多语言日期碎片化比率（mDFR）和几何探测分析，揭示了tokenization质量是低资源语言中的瓶颈。这为理解LLM的内部机制和改进其推理能力提供了严谨的理论分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19131v1",
+        "title": "From Inference Efficiency to Embodied Efficiency: Revisiting Efficiency Metrics for Vision-Language-Action Models",
+        "summary": "Vision-Language-Action (VLA) models have recently enabled embodied agents to perform increasingly complex tasks by jointly reasoning over visual, linguistic, and motor modalities. However, we find that the prevailing notion of ``efficiency'' in current VLA research, characterized by parameters, FLOPs, or token decoding throughput, does not reflect actual performance on robotic platforms. In real-world execution, efficiency is determined by system-level embodied behaviors such as task completion time, trajectory smoothness, cumulative joint rotation, and motion energy. Through controlled studies across model compression, token sparsification, and action sequence compression, we make several observations that challenge common assumptions. (1) Methods that reduce computation under conventional metrics often increase end-to-end execution cost or degrade motion quality, despite maintaining task success rates. (2) System-level embodied efficiency metrics reveal performance differences in the learned action policies that remain hidden under conventional evaluations. (3) Common adaptation methods such as in-context prompting or supervised fine-tuning show only mild and metric-specific improvements in embodied efficiency. While these methods can reduce targeted embodied-efficiency metrics such as jerk or action rate, the resulting gains may come with trade-offs in other metrics, such as longer completion time. Taken together, our results suggest that conventional inference efficiency metrics can overlook important aspects of embodied execution. Incorporating embodied efficiency provides a more complete view of policy behavior and practical performance, enabling fairer and more comprehensive comparisons of VLA models.",
+        "authors": "Zhuofan Li, Hongkun Yang, Zhenyang Chen, Yangxuan Chen, Yingyan, Lin, Chaojian Li",
+        "url": "http://arxiv.org/abs/2603.19131v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19131v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文重新审视了VLA模型（Vision-Language-Action models）的效率指标，提出了“具身效率”的概念，挑战了传统推理效率指标的局限性。通过受控研究，揭示了传统效率方法可能增加实际执行成本或降低运动质量，为VLA模型的评估和设计提供了更全面、更符合实际应用的理论框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.19127v1",
+        "title": "On Optimizing Multimodal Jailbreaks for Spoken Language Models",
+        "summary": "As Spoken Language Models (SLMs) integrate speech and text modalities, they inherit the safety vulnerabilities of their LLM backbone and an expanded attack surface. SLMs have been previously shown to be susceptible to jailbreaking, where adversarial prompts induce harmful responses. Yet existing attacks largely remain unimodal, optimizing either text or audio in isolation. We explore gradient-based multimodal jailbreaks by introducing JAMA (Joint Audio-text Multimodal Attack), a joint multimodal optimization framework combining Greedy Coordinate Gradient (GCG) for text and Projected Gradient Descent (PGD) for audio, to simultaneously perturb both modalities. Evaluations across four state-of-the-art SLMs and four audio types demonstrate that JAMA surpasses unimodal jailbreak rate by 1.5x to 10x. We analyze the operational dynamics of this joint attack and show that a sequential approximation method makes it 4x to 6x faster. Our findings suggest that unimodal safety is insufficient for robust SLMs. The code and data are available at https://repos.lsv.uni-saarland.de/akrishnan/multimodal-jailbreak-slm",
+        "authors": "Aravind Krishnan, Karolina Stańczak, Dietrich Klakow",
+        "url": "http://arxiv.org/abs/2603.19127v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.19127v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了JAMA（Joint Audio-text Multimodal Attack），一个联合多模态优化框架，用于对语音语言模型（SLMs）进行多模态越狱攻击。通过同时扰动文本和音频模态，显著提高了越狱成功率。这揭示了SLM在多模态攻击下的安全漏洞，对LLM应用的安全性和鲁棒性研究具有重要意义。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.22283v1",
+        "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+        "summary": "Latent diffusion models (LDMs) enable high-fidelity synthesis by operating in learned latent spaces. However, training state-of-the-art LDMs requires complex staging: a tokenizer must be trained first, before the diffusion model can be trained in the frozen latent space. We propose UNITE - an autoencoder architecture for unified tokenization and latent diffusion. UNITE consists of a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing. Our key insight is that tokenization and generation can be viewed as the same latent inference problem under different conditioning regimes: tokenization infers latents from fully observed images, whereas generation infers them from noise together with text or class conditioning. Motivated by this, we introduce a single-stage training procedure that jointly optimizes both tasks via two forward passes through the same Generative Encoder. The shared parameters enable gradients to jointly shape the latent space, encouraging a \"common latent language\". Across image and molecule modalities, UNITE achieves near state of the art performance without adversarial losses or pretrained encoders (e.g., DINO), reaching FID 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256. We further analyze the Generative Encoder through the lenses of representation alignment and compression. These results show that single stage joint training of tokenization & generation from scratch is feasible.",
+        "authors": "Shivam Duggal, Xingjian Bai, Zongze Wu, Richard Zhang, Eli Shechtman, Antonio Torralba, Phillip Isola, William T. Freeman",
+        "url": "http://arxiv.org/abs/2603.22283v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22283v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了UNITE架构，通过权重共享实现统一的tokenization和latent diffusion的端到端训练。其核心洞察是将tokenization和生成视为同一潜在推理问题在不同条件下的表现，这在理论上具有创新性。它解决了现有LDM训练中复杂的两阶段问题，显著提高了训练效率，且性能接近SOTA，完美契合了对AI前沿算法和数据效率瓶颈的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22273v1",
+        "title": "Decoupling Exploration and Policy Optimization: Uncertainty Guided Tree Search for Hard Exploration",
+        "summary": "The process of discovery requires active exploration -- the act of collecting new and informative data. However, efficient autonomous exploration remains a major unsolved problem. The dominant paradigm addresses this challenge by using Reinforcement Learning (RL) to train agents with intrinsic motivation, maximizing a composite objective of extrinsic and intrinsic rewards. We suggest that this approach incurs unnecessary overhead: while policy optimization is necessary for precise task execution, employing such machinery solely to expand state coverage may be inefficient. In this paper, we propose a new paradigm that explicitly separates exploration from exploitation and bypasses RL during the exploration phase. Our method uses a tree-search strategy inspired by the Go-With-The-Winner algorithm, paired with a measure of epistemic uncertainty to systematically drive exploration. By removing the overhead of policy optimization, our approach explores an order of magnitude more efficiently than standard intrinsic motivation baselines on hard Atari benchmarks. Further, we demonstrate that the discovered trajectories can be distilled into deployable policies using existing supervised backward learning algorithms, achieving state-of-the-art scores by a wide margin on Montezuma's Revenge, Pitfall!, and Venture without relying on domain-specific knowledge. Finally, we demonstrate the generality of our framework in high-dimensional continuous action spaces by solving the MuJoCo Adroit dexterous manipulation and AntMaze tasks in a sparse-reward setting, directly from image observations and without expert demonstrations or offline datasets. To the best of our knowledge, this has not been achieved before.",
+        "authors": "Zakaria Mhammedi, James Cohan",
+        "url": "http://arxiv.org/abs/2603.22273v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22273v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一种全新的范式，将强化学习中的探索与策略优化解耦，通过不依赖RL的不确定性引导树搜索进行高效探索。这种方法在理论上具有高度创新性，解决了RL中长期存在的探索效率低下问题。实验证明其在硬探索基准上效率提升一个数量级，并在稀疏奖励设置下达到SOTA，对AI算法的实际应用瓶颈（如数据效率和探索成本）有显著影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22248v1",
+        "title": "Confidence-Based Decoding is Provably Efficient for Diffusion Language Models",
+        "summary": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) models for language modeling, allowing flexible generation order and parallel generation of multiple tokens. However, this flexibility introduces a challenge absent in AR models: the \\emph{decoding strategy} -- which determines the order and number of tokens generated at each iteration -- critically affects sampling efficiency. Among decoding strategies explored in practice, confidence-based methods, which adaptively select which and how many tokens to unmask based on prediction confidence, have shown strong empirical performance. Despite this success, our theoretical understanding of confidence-based decoding remains limited.   In this work, we develop the first theoretical analysis framework for confidence-based decoding in DLMs. We focus on an entropy sum-based strategy that continues unmasking tokens within each iteration until the cumulative entropy exceeds a threshold, and show that it achieves $\\varepsilon$-accurate sampling in KL divergence with an expected number of iterations $\\widetilde O(H(X_0)/\\varepsilon)$, where $H(X_0)$ denotes the entropy of the target data distribution. Notably, this strategy yields substantial sampling acceleration when the data distribution has low entropy relative to the sequence length, while automatically adapting to the intrinsic complexity of data without requiring prior knowledge or hyperparameter tuning. Overall, our results provide a theoretical foundation for confidence-based decoding and may inform the design of more efficient decoding strategies for DLMs.",
+        "authors": "Changxiao Cai, Gen Li",
+        "url": "http://arxiv.org/abs/2603.22248v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22248v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为扩散语言模型（DLMs）中的置信度解码策略提供了首个理论分析框架，并证明了其在KL散度下实现ε-精确采样的效率。其严格的数学/统计推导和“可证明高效”的结论，高度符合数理统计博士生对理论严谨性的偏好。它解决了DLMs中解码策略对采样效率的关键影响，为LLM应用中的效率提升提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22035v1",
+        "title": "Future-Interactions-Aware Trajectory Prediction via Braid Theory",
+        "summary": "To safely operate, an autonomous vehicle must know the future behavior of a potentially high number of interacting agents around it, a task often posed as multi-agent trajectory prediction. Many previous attempts to model social interactions and solve the joint prediction task either add extensive computational requirements or rely on heuristics to label multi-agent behavior types. Braid theory, in contrast, provides a powerful exact descriptor of multi-agent behavior by projecting future trajectories into braids that express how trajectories cross with each other over time; a braid then corresponds to a specific mode of coordination between the multiple agents in the future. In past work, braids have been used lightly to reason about interacting agents and restrict the attention window of predicted agents. We show that leveraging more fully the expressivity of the braid representation and using it to condition the trajectories themselves leads to even further gains in joint prediction performance, with negligible added complexity either in training or at inference time. We do so by proposing a novel auxiliary task, braid prediction, done in parallel with the trajectory prediction task. By classifying edges between agents into their correct crossing types in the braid representation, the braid prediction task is able to imbue the model with improved social awareness, which is reflected in joint predictions that more closely adhere to the actual multi-agent behavior. This simple auxiliary task allowed us to obtain significant improvements in joint metrics on three separate datasets. We show how the braid prediction task infuses the model with future intention awareness, leading to more accurate joint predictions. Code is available at github.com/caiocj1/traj-pred-braid-theory.",
+        "authors": "Caio Azevedo, Stefano Sabatini, Sascha Hornauer, Fabien Moutarde",
+        "url": "http://arxiv.org/abs/2603.22035v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22035v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文创造性地将辫子理论（Braid Theory）应用于多智能体轨迹预测，通过辫子预测辅助任务来捕捉未来交互信息。辫子理论作为一种强大的多智能体行为精确描述符，为轨迹预测提供了坚实的理论基础，具有极高的理论创新性。它以可忽略的额外复杂性显著提升了联合预测性能，解决了自动驾驶等实际应用中的多智能体协调瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22161v1",
+        "title": "Causal Evidence that Language Models use Confidence to Drive Behavior",
+        "summary": "Metacognition -- the ability to assess one's own cognitive performance -- is documented across species, with internal confidence estimates serving as a key signal for adaptive behavior. While confidence can be extracted from Large Language Model (LLM) outputs, whether models actively use these signals to regulate behavior remains a fundamental question. We investigate this through a four-phase abstention paradigm.Phase 1 established internal confidence estimates in the absence of an abstention option. Phase 2 revealed that LLMs apply implicit thresholds to these estimates when deciding to answer or abstain. Confidence emerged as the dominant predictor of behavior, with effect sizes an order of magnitude larger than knowledge retrieval accessibility (RAG scores) or surface-level semantic features. Phase 3 provided causal evidence through activation steering: manipulating internal confidence signals correspondingly shifted abstention rates. Finally, Phase 4 demonstrated that models can systematically vary abstention policies based on instructed thresholds.Our findings indicate that abstention arises from the joint operation of internal confidence representations and threshold-based policies, mirroring the two-stage metacognitive control found in biological systems. This capacity is essential as LLMs transition into autonomous agents that must recognize their own uncertainty to decide when to act or seek help.",
+        "authors": "Dharshan Kumaran, Nathaniel Daw, Simon Osindero, Petar Velickovic, Viorica Patraucean",
+        "url": "http://arxiv.org/abs/2603.22161v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22161v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究通过四阶段的弃权范式，提供了语言模型主动利用内部置信度信号来调节行为的因果证据，并成功通过激活引导进行干预。这在LLM的元认知能力研究上具有开创性，理论严谨性高，对理解LLM如何决策以及构建更可靠的自主智能体至关重要，符合对AI前沿算法和理论创新的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21872v1",
+        "title": "Manifold-Aware Exploration for Reinforcement Learning in Video Generation",
+        "summary": "Group Relative Policy Optimization (GRPO) methods for video generation like FlowGRPO remain far less reliable than their counterparts for language models and images. This gap arises because video generation has a complex solution space, and the ODE-to-SDE conversion used for exploration can inject excess noise, lowering rollout quality and making reward estimates less reliable, which destabilizes post-training alignment. To address this problem, we view the pre-trained model as defining a valid video data manifold and formulate the core problem as constraining exploration within the vicinity of this manifold, ensuring that rollout quality is preserved and reward estimates remain reliable. We propose SAGE-GRPO (Stable Alignment via Exploration), which applies constraints at both micro and macro levels. At the micro level, we derive a precise manifold-aware SDE with a logarithmic curvature correction and introduce a gradient norm equalizer to stabilize sampling and updates across timesteps. At the macro level, we use a dual trust region with a periodic moving anchor and stepwise constraints so that the trust region tracks checkpoints that are closer to the manifold and limits long-horizon drift. We evaluate SAGE-GRPO on HunyuanVideo1.5 using the original VideoAlign as the reward model and observe consistent gains over previous methods in VQ, MQ, TA, and visual metrics (CLIPScore, PickScore), demonstrating superior performance in both reward maximization and overall video quality. The code and visual gallery are available at https://dungeonmassster.github.io/SAGE-GRPO-Page/.",
+        "authors": "Mingzhe Zheng, Weijie Kong, Yue Wu, Dengyang Jiang, Yue Ma, Xuanhua He, Bin Lin, Kaixiong Gong, Zhao Zhong, Liefeng Bo, Qifeng Chen, Harry Yang",
+        "url": "http://arxiv.org/abs/2603.21872v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21872v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SAGE-GRPO，通过在微观和宏观层面施加约束，将视频生成RL中的探索限制在预训练模型的有效视频数据流形附近。其理论创新在于推导了精确的流形感知SDE和对数曲率校正，并引入了梯度范数均衡器和双信任区域。这解决了视频生成中复杂的解空间和探索噪声问题，显著提升了视频质量，展现了深厚的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21745v1",
+        "title": "The Presupposition Problem in Representation Genesis",
+        "summary": "Large language models are the first systems to achieve high cognitive performance without clearly undergoing representation genesis: the transition from a non-representing physical system to one whose states guide behavior in a content-sensitive way. Prior cognitive systems had already made this transition before we could examine it, and philosophy of mind treated genesis as a background condition rather than an explanatory target. LLMs provide a case that does not clearly involve this transition, making the genesis question newly urgent: if genesis did not occur, which cognitive capacities are affected, and why? We currently lack the conceptual resources to answer this. The reason, this paper argues, is structural. Major frameworks in philosophy of mind, including the Language of Thought hypothesis, teleosemantics, predictive processing, enactivism, and genetic phenomenology, share a common feature when applied to the genesis question: at some explanatory step, each deploys concepts whose explanatory purchase depends on the system already being organized as a representer. This pattern, which we call the Representation Presupposition structure, generates systematic explanatory deferral. Attempts to explain the first acquisition of content-manipulable representation within the existing categorical vocabulary import resources from the representational side of the transition itself. We call this the Representation Regress. The paper offers a conceptual diagnosis rather than a new theory, establishing the structure of the problem and deriving two minimum adequacy conditions for any account that avoids this pattern. LLMs make the absence of such a theory consequential rather than merely theoretical.",
+        "authors": "Yiling Wu",
+        "url": "http://arxiv.org/abs/2603.21745v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21745v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从哲学角度深入探讨了LLM中“表征生成”的预设问题，诊断了现有心智哲学框架在解释LLM表征能力时存在的结构性问题，并提出了“表征回归”的概念。其理论深度和对AI基础理论的批判性思考，对于理解LLM的认知能力边界至关重要，高度契合数理统计博士生对理论创新和基础研究的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21708v1",
+        "title": "Compensating Visual Insufficiency with Stratified Language Guidance for Long-Tail Class Incremental Learning",
+        "summary": "Long-tail class incremental learning (LT CIL) remains highly challenging because the scarcity of samples in tail classes not only hampers their learning but also exacerbates catastrophic forgetting under continuously evolving and imbalanced data distributions. To tackle these issues, we exploit the informativeness and scalability of language knowledge. Specifically, we analyze the LT CIL data distribution to guide large language models (LLMs) in generating a stratified language tree that hierarchically organizes semantic information from coarse to fine grained granularity. Building upon this structure, we introduce stratified adaptive language guidance, which leverages learnable weights to merge multi-scale semantic representations, thereby enabling dynamic supervisory adjustment for tail classes and alleviating the impact of data imbalance. Furthermore, we introduce stratified alignment language guidance, which exploits the structural stability of the language tree to constrain optimization and reinforce semantic visual alignment, thereby alleviating catastrophic forgetting. Extensive experiments on multiple benchmarks demonstrate that our method achieves state of the art performance.",
+        "authors": "Xi Wang, Xu Yang, Donghao Sun, Cheng Deng",
+        "url": "http://arxiv.org/abs/2603.21708v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21708v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文挑战了多样性感知多臂老虎机中UCB探索项的必要性，并提供了理论洞察，解释了在特定结构条件下，多样性感知目标如何通过偏好内部混合来诱导隐式探索，从而实现次线性遗憾保证。这种对经典MAB理论的重新审视和严谨的数学推导，具有很高的理论创新性，对生成模型选择的效率优化有直接指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21698v1",
+        "title": "A Blueprint for Self-Evolving Coding Agents in Vehicle Aerodynamic Drag Prediction",
+        "summary": "High-fidelity vehicle drag evaluation is constrained less by solver runtime than by workflow friction: geometry cleanup, meshing retries, queue contention, and reproducibility failures across teams. We present a contract-centric blueprint for self-evolving coding agents that discover executable surrogate pipelines for predicting drag coefficient $C_d$ under industrial constraints. The method formulates surrogate discovery as constrained optimization over programs, not static model instances, and combines Famou-Agent-style evaluator feedback with population-based island evolution, structured mutations (data, model, loss, and split policies), and multi-objective selection balancing ranking quality, stability, and cost. A hard evaluation contract enforces leakage prevention, deterministic replay, multi-seed robustness, and resource budgets before any candidate is admitted. Across eight anonymized evolutionary operators, the best system reaches a Combined Score of 0.9335 with sign-accuracy 0.9180, while trajectory and ablation analyses show that adaptive sampling and island migration are primary drivers of convergence quality. The deployment model is explicitly ``screen-and-escalate'': surrogates provide high-throughput ranking for design exploration, but low-confidence or out-of-distribution cases are automatically escalated to high-fidelity CFD. The resulting contribution is an auditable, reusable workflow for accelerating aerodynamic design iteration while preserving decision-grade reliability, governance traceability, and safety boundaries.",
+        "authors": "Jinhui Ren, Huaiming Li, Yabin Liu, Tao Li, Zhaokun Liu, Yujia Liang, Zengle Ge, Chufan Wu, Xiaomin Yuan, Danyu Liu, Annan Li, Jianmin Wu",
+        "url": "http://arxiv.org/abs/2603.21698v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21698v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了CatRAG Debiasing框架，通过范畴论结构引导的结构性去偏与检索增强生成相结合，有效抑制LLM中的偏见。其理论创新在于利用范畴论的结构保持投影来抑制偏见方向，同时保留任务相关语义，具有极高的理论严谨性。它在多个基准上将偏见分数降至接近零，显著提升了LLM的公平性和信任度，解决了LLM应用中的关键伦理瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21565v1",
+        "title": "Rethinking SAR ATR: A Target-Aware Frequency-Spatial Enhancement Framework with Noise-Resilient Knowledge Guidance",
+        "summary": "Synthetic aperture radar automatic target recognition (SAR ATR) is of considerable importance in marine navigation and disaster monitoring. However, the coherent speckle noise inherent in SAR imagery often obscures salient target features, leading to degraded recognition accuracy and limited model generalization. To address this issue, this paper proposes a target-aware frequency-spatial enhancement framework with noise-resilient knowledge guidance (FSCE) for SAR target recognition. The proposed framework incorporates a frequency-spatial shallow feature adaptive enhancement (DSAF) module, which processes shallow features through spatial multi-scale convolution and frequency-domain wavelet convolution. In addition, a teacher-student learning paradigm combined with an online knowledge distillation method (KD) is employed to guide the student network to focus more effectively on target regions, thereby enhancing its robustness to high-noise backgrounds. Through the collaborative optimization of attention transfer and noise-resilient representation learning, the proposed approach significantly improves the stability of target recognition under noisy conditions. Based on the FSCE framework, two network architectures with different performance emphases are developed: lightweight DSAFNet-M and high-precision DSAFNet-L. Extensive experiments are conducted on the MSTAR, FUSARShip and OpenSARShip datasets. The results show that DSAFNet-L achieves competitive or superior performance compared with various methods on three datasets; DSAFNet-M significantly reduces the model complexity while maintaining comparable accuracy. These results indicate that the proposed FSCE framework exhibits strong cross-model generalization.",
+        "authors": "Yansong Lin, Zihan Cheng, Jielei Wang, Guoming Lua, Zongyong Cui",
+        "url": "http://arxiv.org/abs/2603.21565v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21565v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究从信息论角度分析了LLM隐写术的成本，推导了基于Kolmogorov复杂度的严格下界，并提出了基于困惑度比率的检测代理。其严谨的理论推导和对柯尔莫哥洛夫复杂度的应用，高度符合数理统计博士生对理论严谨性的要求。它为LLM隐蔽通道的检测提供了坚实的理论基础，对AI安全和对齐监控具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21584v1",
+        "title": "SSAM: Singular Subspace Alignment for Merging Multimodal Large Language Models",
+        "summary": "Multimodal large language models (MLLMs) achieve strong performance by jointly processing inputs from multiple modalities, such as vision, audio, and language. However, building such models or extending them to new modalities often requires large paired datasets and substantial computational resources. Since many pretrained MLLMs (e.g., vision-language or audio-language) are publicly available, we ask whether we can merge them into a single MLLM that can handle multiple modalities? Merging MLLMs with different input modalities remains challenging, partly because of differences in the learned representations and interference between their parameter spaces. To address these challenges, we propose Singular Subspace Alignment and Merging (SSAM), a training-free model merging framework that unifies independently trained specialist MLLMs into a single model capable of handling any combination of input modalities. SSAM maintains modality-specific parameter updates separately and identifies a shared low-rank subspace for language-related parameter updates, aligns them within this subspace, and merges them to preserve complementary knowledge while minimizing parameter interference. Without using any multimodal training data, SSAM achieves state-of-the-art performance across four datasets, surpassing prior training-free merging methods and even jointly trained multimodal models. These results demonstrate that aligning models in parameter space provides a scalable and resource-efficient alternative to conventional joint multimodal training.",
+        "authors": "Md Kaykobad Reza, Ameya Patil, Edward Ayrapetian, M. Salman Asif",
+        "url": "http://arxiv.org/abs/2603.21584v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21584v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SSAM提出了一种训练无关的多模态大语言模型（MLLM）合并框架，通过奇异子空间对齐来统一独立训练的专家MLLM。其创新性在于在参数空间中识别并对齐语言相关的低秩子空间，从而在不使用任何多模态训练数据的情况下实现SOTA性能。这极大地解决了构建或扩展MLLM所需的巨大计算资源和数据集瓶颈，是模型压缩和数据效率的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21977v1",
+        "title": "BOOST-RPF: Boosted Sequential Trees for Radial Power Flow",
+        "summary": "Accurate power flow analysis is critical for modern distribution systems, yet classical solvers face scalability issues, and current machine learning models often struggle with generalization. We introduce BOOST-RPF, a novel method that reformulates voltage prediction from a global graph regression task into a sequential path-based learning problem. By decomposing radial networks into root-to-leaf paths, we leverage gradient-boosted decision trees (XGBoost) to model local voltage-drop regularities. We evaluate three architectural variants: Absolute Voltage, Parent Residual, and Physics-Informed Residual. This approach aligns the model architecture with the recursive physics of power flow, ensuring size-agnostic application and superior out-of-distribution robustness. Benchmarked against the Kerber Dorfnetz grid and the ENGAGE suite, BOOST-RPF achieves state-of-the-art results with its Parent Residual variant which consistently outperforms both analytical and neural baselines in standard accuracy and generalization tasks. While global Multi-Layer Perceptrons (MLPs) and Graph Neural Networks (GNNs) often suffer from performance degradation under topological shifts, BOOST-RPF maintains high precision across unseen feeders. Furthermore, the framework displays linear $O(N)$ computational scaling and significantly increased sample efficiency through per-edge supervision, offering a scalable and generalizable alternative for real-time distribution system operator (DSO) applications.",
+        "authors": "Ehimare Okoyomon, Christoph Goebel",
+        "url": "http://arxiv.org/abs/2603.21977v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21977v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "BOOST-RPF通过将电压预测重构为基于路径的序列学习问题，并利用梯度提升决策树来建模局部电压下降规律。这种将物理学递归特性融入模型架构的创新方法，确保了模型对网络规模的无关性和出色的域外鲁棒性。它解决了传统电力流分析的可扩展性和泛化性问题，实现了SOTA性能和线性计算复杂度，对实际应用具有显著影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22125v1",
+        "title": "DA-VAE: Plug-in Latent Compression for Diffusion via Detail Alignment",
+        "summary": "Reducing token count is crucial for efficient training and inference of latent diffusion models, especially at high resolution. A common strategy is to build high-compression image tokenizers with more channels per token. However, when trained only for reconstruction, high-dimensional latent spaces often lose meaningful structure, making diffusion training harder. Existing methods address this with extra objectives such as semantic alignment or selective dropout, but usually require costly diffusion retraining. Pretrained diffusion models, however, already exhibit a structured, lower-dimensional latent space; thus, a simpler idea is to expand the latent dimensionality while preserving this structure. We therefore propose \\textbf{D}etail-\\textbf{A}ligned VAE, which increases the compression ratio of a pretrained VAE with only lightweight adaptation of the pretrained diffusion backbone. DA-VAE uses an explicit latent layout: the first $C$ channels come directly from the pretrained VAE at a base resolution, while an additional $D$ channels encode higher-resolution details. A simple detail-alignment mechanism encourages the expanded latent space to retain the structure of the original one. With a warm-start fine-tuning strategy, our method enables $1024 \\times 1024$ image generation with Stable Diffusion 3.5 using only $32 \\times 32$ tokens, $4\\times$ fewer than the original model, within 5 H100-days. It further unlocks $2048 \\times 2048$ generation with SD3.5, achieving a $6\\times$ speedup while preserving image quality. We also validate the method and its design choices quantitatively on ImageNet.",
+        "authors": "Xin Cai, Zhiyuan You, Zhoutong Zhang, Tianfan Xue",
+        "url": "http://arxiv.org/abs/2603.22125v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22125v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DA-VAE提出了一种即插即用的潜在压缩方法，通过显式潜在布局和细节对齐机制，在轻量级适应预训练扩散模型骨干的情况下，显著提高了VAE的压缩比。它解决了潜在扩散模型训练和推理中高分辨率图像的token数量过多的瓶颈，实现了4-6倍的加速，同时保持了图像质量，是模型压缩和数据效率的优秀案例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21725v1",
+        "title": "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning",
+        "summary": "Fine-tuning large language models (LLMs) with backpropagation achieves high performance but incurs substantial memory overhead, limiting scalability on resource-constrained hardware. Zeroth-order (ZO) optimization provides a memory-efficient alternative by relying solely on forward passes, yet it typically suffers from slow or unstable convergence due to high-variance gradient estimates. Sparse ZO updates partially address this issue by perturbing only a subset of parameters, but their effectiveness hinges on selecting informative parameters, which is challenging in ZO optimization because each query yields only scalar feedback. We propose \\textbf{Adaptive Curvature-Guided Sparse Zeroth-Order Optimization (CurvZO)}, which tracks curvature signals online from scalar ZO feedback and leverages these signals to construct a parameter-wise sampling distribution for selecting coordinates at each update, reducing the variance of the sparse ZO gradient estimator. Moreover, CurvZO dynamically adapts the perturbation budget to the evolving curvature signal distribution, yielding sparse ZO updates that remain both focused and sufficiently exploratory. Extensive experiments on OPT and Llama across diverse NLP tasks show that CurvZO consistently improves fine-tuning performance and reduces training time over ZO baselines. It improves accuracy by up to 4.4 points and achieves up to a $2\\times$ speedup, while preserving memory efficiency.",
+        "authors": "Shuo Wang, Ziyu Chen, Ming Tang",
+        "url": "http://arxiv.org/abs/2603.21725v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21725v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CurvZO提出了一种自适应曲率引导的稀疏零阶优化方法，通过在线跟踪曲率信号来构建参数采样分布，并动态调整扰动预算。其理论创新在于解决了零阶优化梯度估计方差大、收敛慢的问题，同时保持了内存效率。它在LLM微调中提高了精度并实现了2倍加速，对LLM训练效率和资源受限部署具有重大实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.21690v1",
+        "title": "AI Token Futures Market: Commoditization of Compute and Derivatives Contract Design",
+        "summary": "As large language models (LLMs) and vision-language-action models (VLAs) become widely deployed, the tokens consumed by AI inference are evolving into a new type of commodity. This paper systematically analyzes the commodity attributes of tokens, arguing for their transition from intelligent service outputs to compute infrastructure raw materials, and draws comparisons with established commodities such as electricity, carbon emission allowances, and bandwidth. Building on the historical experience of electricity futures markets and the theory of commodity financialization, we propose a complete design for standardized token futures contracts, including the definition of a Standard Inference Token (SIT), contract specifications, settlement mechanisms, margin systems, and market-maker regimes. By constructing a mean-reverting jump-diffusion stochastic process model and conducting Monte Carlo simulations, we evaluate the hedging efficiency of the proposed futures contracts for application-layer enterprises. Simulation results show that, under an application-layer demand explosion scenario, token futures can reduce enterprise compute cost volatility by 62%-78%. We also explore the feasibility of GPU compute futures and discuss the regulatory framework for token futures markets, providing a theoretical foundation and practical roadmap for the financialization of compute resources.",
+        "authors": "Yicai Xing",
+        "url": "http://arxiv.org/abs/2603.21690v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.21690v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文系统分析了AI token的商品属性，并提出了标准化token期货合约的完整设计，包括构建均值回归跳跃扩散随机过程模型进行蒙特卡洛模拟。其理论严谨性体现在对金融理论和随机过程的运用，创新性在于将AI计算资源视为可金融化的商品。它解决了应用层企业计算成本波动性问题，具有巨大的经济和实践影响力，为LLM应用提供了全新的基础设施视角。"
+    }
+]

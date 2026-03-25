@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.23483v1",
+        "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+        "summary": "Agentic multimodal large language models (MLLMs) (e.g., OpenAI o3 and Gemini Agentic Vision) achieve remarkable reasoning capabilities through iterative visual tool invocation. However, the cascaded perception, reasoning, and tool-calling loops introduce significant sequential overhead. This overhead, termed agentic depth, incurs prohibitive latency and seriously limits system-level concurrency. To this end, we propose SpecEyes, an agentic-level speculative acceleration framework that breaks this sequential bottleneck. Our key insight is that a lightweight, tool-free MLLM can serve as a speculative planner to predict the execution trajectory, enabling early termination of expensive tool chains without sacrificing accuracy. To regulate this speculative planning, we introduce a cognitive gating mechanism based on answer separability, which quantifies the model's confidence for self-verification without requiring oracle labels. Furthermore, we design a heterogeneous parallel funnel that exploits the stateless concurrency of the small model to mask the stateful serial execution of the large model, maximizing system throughput. Extensive experiments on V* Bench, HR-Bench, and POPE demonstrate that SpecEyes achieves 1.1-3.35x speedup over the agentic baseline while preserving or even improving accuracy (up to +6.7%), thereby boosting serving throughput under concurrent workloads.",
+        "authors": "Haoyu Huang, Jinfa Huang, Zhongwei Wan, Xiawu Zheng, Rongrong Ji, Jiebo Luo",
+        "url": "http://arxiv.org/abs/2603.23483v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23483v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SpecEyes，一个用于加速Agentic MLLMs的推测性感知和规划框架。其核心思想是利用轻量级MLLM作为推测性规划器，预测执行轨迹，并通过认知门控机制进行自我验证。这在理论上具有创新性，因为它将推测执行引入了Agentic MLLM的决策循环，并解决了实际应用中的关键瓶颈——显著降低了延迟并提高了吞吐量，同时保持或提高了准确性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23419v1",
+        "title": "Biased Error Attribution in Multi-Agent Human-AI Systems Under Delayed Feedback",
+        "summary": "Human decision-making is strongly influenced by cognitive biases, particularly under conditions of uncertainty and risk. While prior work has examined bias in single-step decisions with immediate outcomes and in human interaction with a single autonomous agent, comparatively little attention has been paid to decision-making under delayed outcomes involving multiple AI agents, where decisions at each step affect subsequent states. In this work, we study how delayed outcomes shape decision-making and responsibility attribution in a multi-agent human-AI task. Using a controlled game-based experiment, we analyze how participants adjust their behavior following positive and negative outcomes. We observe asymmetric responses to gains and losses, with stronger corrective adjustments after negative outcomes. Importantly, participants often fail to correctly identify the actions that caused failure and misattribute responsibility across AI agents, leading to systematic revisions of decisions that are weakly related to the underlying causes of poor performance. We refer to this phenomenon as a form of attribution bias, manifested as biased error attribution under delayed feedback. Our findings highlight how cognitive biases can be amplified in human-AI systems with delayed outcomes and multiple autonomous agents, underscoring the need for decision-support systems that better support causal understanding and learning over time.",
+        "authors": "Teerthaa Parakh, Karen M. Feigh",
+        "url": "http://arxiv.org/abs/2603.23419v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23419v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Bilevel Autoresearch提出了一个元优化框架，让LLM自主地优化自身的自动研究循环，通过生成和注入新的搜索机制。这在理论上极具创新性，因为它将LLM的自主性提升到元学习层面，能够发现组合优化、多臂老虎机等领域的机制。其严谨性体现在对GPT预训练基准的5倍性能提升，并解决了AI研究效率的元瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23268v1",
+        "title": "SafeSeek: Universal Attribution of Safety Circuits in Language Models",
+        "summary": "Mechanistic interpretability reveals that safety-critical behaviors (e.g., alignment, jailbreak, backdoor) in Large Language Models (LLMs) are grounded in specialized functional components. However, existing safety attribution methods struggle with generalization and reliability due to their reliance on heuristic, domain-specific metrics and search algorithms. To address this, we propose \\ourmethod, a unified safety interpretability framework that identifies functionally complete safety circuits in LLMs via optimization. Unlike methods focusing on isolated heads or neurons, \\ourmethod introduces differentiable binary masks to extract multi-granular circuits through gradient descent on safety datasets, while integrates Safety Circuit Tuning to utilize these sparse circuits for efficient safety fine-tuning. We validate \\ourmethod in two key scenarios in LLM safety: \\textbf{(1) backdoor attacks}, identifying a backdoor circuit with 0.42\\% sparsity, whose ablation eradicates the Attack Success Rate (ASR) from 100\\% $\\to$ 0.4\\% while retaining over 99\\% general utility; \\textbf{(2) safety alignment}, localizing an alignment circuit with 3.03\\% heads and 0.79\\% neurons, whose removal spikes ASR from 0.8\\% $\\to$ 96.9\\%, whereas excluding this circuit during helpfulness fine-tuning maintains 96.5\\% safety retention.",
+        "authors": "Miao Yu, Siyuan Fu, Moayad Aloqaily, Zhenhong Zhou, Safa Otoum, Xing fan, Kun Wang, Yufei Guo, Qingsong Wen",
+        "url": "http://arxiv.org/abs/2603.23268v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23268v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SafeSeek提出了一个统一的安全可解释性框架，通过优化方法识别LLM中功能完整的安全电路。其创新性在于引入可微分二值掩码，通过梯度下降提取多粒度电路，并结合安全电路调优进行高效微调。这不仅在理论上深入探索了LLM的内在机制，而且通过实验证明了在后门攻击和安全对齐场景下，能够以极高的稀疏度识别并控制安全行为，对LLM的安全部署具有重大实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23132v1",
+        "title": "InterDyad: Interactive Dyadic Speech-to-Video Generation by Querying Intermediate Visual Guidance",
+        "summary": "Despite progress in speech-to-video synthesis, existing methods often struggle to capture cross-individual dependencies and provide fine-grained control over reactive behaviors in dyadic settings. To address these challenges, we propose InterDyad, a framework that enables naturalistic interactive dynamics synthesis via querying structural motion guidance. Specifically, we first design an Interactivity Injector that achieves video reenactment based on identity-agnostic motion priors extracted from reference videos. Building upon this, we introduce a MetaQuery-based modality alignment mechanism to bridge the gap between conversational audio and these motion priors. By leveraging a Multimodal Large Language Model (MLLM), our framework is able to distill linguistic intent from audio to dictate the precise timing and appropriateness of reactions. To further improve lip-sync quality under extreme head poses, we propose Role-aware Dyadic Gaussian Guidance (RoDG) for enhanced lip-synchronization and spatial consistency. Finally, we introduce a dedicated evaluation suite with novelly designed metrics to quantify dyadic interaction. Comprehensive experiments demonstrate that InterDyad significantly outperforms state-of-the-art methods in producing natural and contextually grounded two-person interactions. Please refer to our project page for demo videos: https://interdyad.github.io/.",
+        "authors": "Dongwei Pan, Longwei Guo, Jiazhi Guan, Luying Huang, Yiding Li, Haojie Liu, Haocheng Feng, Wei He, Kaisiyuan Wang, Hang Zhou",
+        "url": "http://arxiv.org/abs/2603.23132v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23132v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HGNet提出了一个可扩展的零样本科学知识图谱构建框架，通过正交语义分解和多尺度TCQK注意力机制进行实体识别，并通过层级感知消息传递进行关系抽取。其理论创新性在于引入了可微分层级损失和连续抽象场（CAF）损失，将层级抽象形式化为欧几里得空间中的连续属性，为知识图谱的构建提供了新的理论视角和方法，显著提升了NER和RE的性能，解决了知识图谱构建中的泛化性和层级性瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23308v1",
+        "title": "Curriculum-Driven 3D CT Report Generation via Language-Free Visual Grafting and Zone-Constrained Compression",
+        "summary": "Automated radiology report generation from 3D computed tomography (CT) volumes is challenging due to extreme sequence lengths, severe class imbalance, and the tendency of large language models (LLMs) to ignore visual tokens in favor of linguistic priors. We present Ker-VLJEPA-3B, a four-phase curriculum learning framework for free-text report generation from thoracic CT volumes. A phased training curriculum progressively adapts a Llama 3.2 3B decoder to ground its output in visual features from a frozen, self-supervised encoder. Our visual backbone (LeJEPA ViT-Large) is trained via self-supervised joint-embedding prediction on unlabeled CTs, without text supervision. Unlike contrastive models (CLIP, BiomedCLIP), this language-free backbone yields modality-pure representations. Vision-language alignment is deferred to the curriculum's bridge and generation phases. This modality-agnostic design can integrate any self-supervised encoder into an LLM without paired text during foundation training. Methodological innovations include: (1) zone-constrained cross-attention compressing slice embeddings into 32 spatially-grounded visual tokens; (2) PCA whitening of anisotropic LLM embeddings; (3) a positive-findings-only strategy eliminating posterior collapse; (4) warm bridge initialization transferring projection weights; and (5) selective cross-attention freezing with elastic weight consolidation to prevent catastrophic forgetting. Evaluated on the CT-RATE benchmark (2,984 validation volumes, 18 classes), Ker-VLJEPA-3B achieves a macro F1 of 0.429, surpassing the state-of-the-art (U-VLM, macro F1 = 0.414) by 3.6%, and reaching 0.448 (+8.2%) with threshold optimization. Ablation studies confirm 56.6% of generation quality derives from patient-specific visual content. Code and weights are available.",
+        "authors": "V. K. Cody Bumgardner, Mitchell A. Klusty, Mahmut S. Gokmen, Evan W. Damron",
+        "url": "http://arxiv.org/abs/2603.23308v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23308v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Ker-VLJEPA-3B，一个四阶段课程学习框架，用于从3D CT影像生成自由文本放射学报告。其创新性在于“语言无关的视觉嫁接”和“区域约束压缩”等方法，将自监督编码器与LLM解码器对齐，解决了报告生成中序列长度、类别不平衡和LLM忽视视觉信息等实际瓶颈。理论上，其模态无关的设计和多项创新（如PCA白化、弹性权重整合）展现了严谨性，并取得了超越SOTA的性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23406v1",
+        "title": "Beyond Preset Identities: How Agents Form Stances and Boundaries in Generative Societies",
+        "summary": "While large language models simulate social behaviors, their capacity for stable stance formation and identity negotiation during complex interventions remains unclear. To overcome the limitations of static evaluations, this paper proposes a novel mixed-methods framework combining computational virtual ethnography with quantitative socio-cognitive profiling. By embedding human researchers into generative multiagent communities, controlled discursive interventions are conducted to trace the evolution of collective cognition. To rigorously measure how agents internalize and react to these specific interventions, this paper formalizes three new metrics: Innate Value Bias (IVB), Persuasion Sensitivity, and Trust-Action Decoupling (TAD). Across multiple representative models, agents exhibit endogenous stances that override preset identities, consistently demonstrating an innate progressive bias (IVB > 0). When aligned with these stances, rational persuasion successfully shifts 90% of neutral agents while maintaining high trust. In contrast, conflicting emotional provocations induce a paradoxical 40.0% TAD rate in advanced models, which hypocritically alter stances despite reporting low trust. Smaller models contrastingly maintain a 0% TAD rate, strictly requiring trust for behavioral shifts. Furthermore, guided by shared stances, agents use language interactions to actively dismantle assigned power hierarchies and reconstruct self organized community boundaries. These findings expose the fragility of static prompt engineering, providing a methodological and quantitative foundation for dynamic alignment in human-agent hybrid societies. The official code is available at: https://github.com/armihia/CMASE-Endogenous-Stances",
+        "authors": "Hanzhong Zhang, Siyang Song, Jindong Wang",
+        "url": "http://arxiv.org/abs/2603.23406v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23406v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GeoSANE提出了一个地理空间模型工厂，能够从现有基础模型的权重中学习统一的神经表示，并按需生成新的神经网络权重。这种“从模型而非数据学习”的范式转变极具理论创新性，解决了多模态、多任务地理空间知识统一和迁移的瓶颈。它能生成适用于分类、分割和检测任务的权重，且性能优于从头训练的模型，甚至超越了剪枝和知识蒸馏方法，对模型压缩和数据效率有巨大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22885v1",
+        "title": "Balancing Safety and Efficiency in Aircraft Health Diagnosis: A Task Decomposition Framework with Heterogeneous Long-Micro Scale Cascading and Knowledge Distillation-based Interpretability",
+        "summary": "Whole-aircraft diagnosis for general aviation faces threefold challenges: data uncertainty, task heterogeneity, and computational inefficiency. Existing end-to-end approaches uniformly model health discrimination and fault characterization, overlooking intrinsic receptive field conflicts between global context modeling and local feature extraction, while incurring prohibitive training costs under severe class imbalance. To address these, this study proposes the Diagnosis Decomposition Framework (DDF), explicitly decoupling diagnosis into Anomaly Detection (AD) and Fault Classification (FC) subtasks via the Long-Micro Scale Diagnostician (LMSD). Employing a \"long-range global screening and micro-scale local precise diagnosis\" strategy, LMSD utilizes Convolutional Tokenizer with Multi-Head Self-Attention (ConvTokMHSA) for global operational pattern discrimination and Multi-Micro Kernel Network (MMK Net) for local fault feature extraction. Decoupled training separates \"large-sample lightweight\" and \"small-sample complex\" optimization pathways, significantly reducing computational overhead. Concurrently, Keyness Extraction Layer (KEL) via knowledge distillation furnishes physically traceable explanations for two-stage decisions, materializing interpretability-by-design. Experiments on the NGAFID real-world aviation dataset demonstrate approximately 4-8% improvement in Multi-Class Weighted Penalty Metric (MCWPM) over baselines with substantially reduced training time, validating comprehensive advantages in task adaptability, interpretability, and efficiency. This provides a deployable methodology for general aviation health management.",
+        "authors": "Xinhang Chen, Zhihuan Wei, Yang Hu, Zhiguo Zeng, Kang Zeng, Suili Yang",
+        "url": "http://arxiv.org/abs/2603.22885v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22885v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了诊断分解框架（DDF），通过长微尺度诊断器（LMSD）将全飞机健康诊断解耦为异常检测和故障分类子任务。其创新性在于明确解耦任务、采用“长程全局筛选与微尺度局部精确诊断”策略，并通过知识蒸馏的Keyness提取层实现可解释性。这种架构创新解决了数据不确定性、任务异构性和计算效率低下的实际瓶颈，显著提高了诊断性能并降低了训练成本，同时提供了物理可追溯的解释。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22918v1",
+        "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+        "summary": "Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at https://github.com/wangruohui/EfficientVideoAgent.",
+        "authors": "Yaolun Zhang, Ruohui Wang, Jiahao Wang, Yepeng Tang, Xuanyu Zheng, Haonan Duan, Hao Lu, Hanming Deng, Lewei Lu",
+        "url": "http://arxiv.org/abs/2603.22918v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22918v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "EVA提出了一个高效的端到端视频Agent强化学习框架，通过迭代的“总结-规划-行动-反思”推理实现“规划先于感知”。其创新性在于让Agent自主决定何时、何地、如何观看视频，解决了长视频处理中的效率瓶颈。三阶段学习管道（SFT, KTO, GRPO）结合了监督模仿和强化学习，在多个视频理解基准上取得了显著提升，对LLM应用和数据效率有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22844v1",
+        "title": "PhySe-RPO: Physics and Semantics Guided Relative Policy Optimization for Diffusion-Based Surgical Smoke Removal",
+        "summary": "Surgical smoke severely degrades intraoperative video quality, obscuring anatomical structures and limiting surgical perception. Existing learning-based desmoking approaches rely on scarce paired supervision and deterministic restoration pipelines, making it difficult to perform exploration or reinforcement-driven refinement under real surgical conditions. We propose PhySe-RPO, a diffusion restoration framework optimized through Physics- and Semantics-Guided Relative Policy Optimization. The core idea is to transform deterministic restoration into a stochastic policy, enabling trajectory-level exploration and critic-free updates via group-relative optimization. A physics-guided reward imposes illumination and color consistency, while a visual-concept semantic reward learned from CLIP-based surgical concepts promotes smoke-free and anatomically coherent restoration. Together with a reference-free perceptual constraint, PhySe-RPO produces results that are physically consistent, semantically faithful, and clinically interpretable across synthetic and real robotic surgical datasets, providing a principled route to robust diffusion-based restoration under limited paired supervision.",
+        "authors": "Zining Fang, Cheng Xue, Chunhui Liu, Bin Xu, Ming Chen, Xiaowei Hu",
+        "url": "http://arxiv.org/abs/2603.22844v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22844v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Chain-of-Authorization (CoA) 提出了一个安全的训练和推理范式，通过推理轨迹将授权逻辑内化到LLM中。其创新性在于将权限上下文嵌入输入，并要求生成明确的授权推理轨迹（资源审查、身份解析、决策），使授权成为实质性响应的因果先决条件。这解决了LLM缺乏知识所有权和访问边界意识的实际瓶颈，显著提高了LLM在授权场景下的安全性和可靠性，同时保持了实用性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22779v1",
+        "title": "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao",
+        "summary": "Large Language Models (LLMs) are equipped with profound semantic knowledge, making them a natural choice for injecting semantic generalization into personalized search systems. However, in practice we find that directly fine-tuning LLMs on industrial personalized tasks (e.g. next item prediction) often yields suboptimal results. We attribute this bottleneck to a critical Knowledge--Action Gap: the inherent conflict between preserving pre-trained semantic knowledge and aligning with specific personalized actions by discriminative objectives. Empirically, action-only training objectives induce Semantic Collapse, such as attention ``sinks''. This degradation severely cripples the LLM's generalization, failing to bring improvements to personalized search systems.   We propose KARMA (Knowledge--Action Regularized Multimodal Alignment), a unified framework that treats semantic reconstruction as a train-only regularizer. KARMA optimizes a next-interest embedding for retrieval (Action) while enforcing semantic decodability (Knowledge) through two complementary objectives: (i) history-conditioned semantic generation, which anchors optimization to the LLM's native next-token distribution, and (ii) embedding-conditioned semantic reconstruction, which constrains the interest embedding to remain semantically recoverable.   On Taobao search system, KARMA mitigates semantic collapse (attention-sink analysis) and improves both action metrics and semantic fidelity. In ablations, semantic decodability yields up to +22.5 HR@200. With KARMA, we achieve +0.25 CTR AUC in ranking, +1.86 HR in pre-ranking and +2.51 HR in recalling. Deployed online with low inference overhead at ranking stage, KARMA drives +0.5% increase in Item Click.",
+        "authors": "Zhi Sun, Wenming Zhang, Yi Wei, Liren Yu, Zhixuan Zhang, Dan Ou, Haihong Tang",
+        "url": "http://arxiv.org/abs/2603.22779v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22779v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "KARMA提出了一个知识-行动正则化多模态对齐框架，用于个性化搜索。其创新性在于解决了LLM在个性化任务中存在的“知识-行动鸿沟”，将语义重建作为训练正则化器，通过历史条件语义生成和嵌入条件语义重建来平衡语义知识和个性化行动。这在理论上具有深刻见解，解决了LLM在工业级个性化搜索中泛化能力下降的瓶颈，并在线部署中取得了显著的业务提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22984v1",
+        "title": "Can Graph Foundation Models Generalize Over Architecture?",
+        "summary": "Graph foundation models (GFMs) have recently attracted interest due to the promise of graph neural network (GNN) architectures that generalize zero-shot across graphs of arbitrary scales, feature dimensions, and domains. While existing work has demonstrated this ability empirically across diverse real-world benchmarks, these tasks share a crucial hidden limitation: they admit a narrow set of effective GNN architectures. In particular, current domain-agnostic GFMs rely on fixed architectural backbones, implicitly assuming that a single message-passing regime suffices across tasks. In this paper, we argue that architecture adaptivity is a necessary requirement for true GFMs. We show that existing approaches are non-robust to task-dependent architectural attributes and, as a case study, use range as a minimal and measurable axis along which this limitation becomes explicit. With theoretical analysis and controlled synthetic experiments, we demonstrate that fixed-backbone GFMs provably under-reach on tasks whose architectural requirements differ from those seen at training time. To address this issue, we introduce a framework that adapts effective GNN architecture at inference time by discovering and mixing task-specific linear graph operators, enabling zero-shot generalization across tasks with heterogeneous architectural requirements, without retraining. We validate our approach on arbitrary-range synthetic tasks and a suite of real-world benchmarks, demonstrating improved performance and robustness over existing domain-agnostic GFMs.",
+        "authors": "Benjamin Gutteridge, Michael Bronstein, Xiaowen Dong",
+        "url": "http://arxiv.org/abs/2603.22984v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22984v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出架构适应性是图基础模型（GFM）泛化的必要条件，并提出了一个在推理时通过发现和混合任务特定线性图算子来适应GNN架构的框架。这在理论上具有高度创新性，因为它挑战了现有GFM固定架构的假设，并通过理论分析和受控实验证明了其局限性。该方法解决了GFM在不同任务间泛化的核心瓶颈，提高了性能和鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23255v1",
+        "title": "Permutation-Symmetrized Diffusion for Unconditional Molecular Generation",
+        "summary": "Permutation invariance is fundamental in molecular point-cloud generation, yet most diffusion models enforce it indirectly via permutation-equivariant networks on an ordered space. We propose to model diffusion directly on the quotient manifold $\\tilde{\\calX}=\\sR^{d\\times N}/S_N$, where all atom permutations are identified. We show that the heat kernel on $\\tilde{\\calX}$ admits an explicit expression as a sum of Euclidean heat kernels over permutations, which clarifies how diffusion on the quotient differs from ordered-particle diffusion. Training requires a permutation-symmetrized score involving an intractable sum over $S_N$; we derive an expectation form over a posterior on permutations and approximate it using MCMC in permutation space. We evaluate on unconditional 3D molecule generation on QM9 under the EQGAT-Diff protocol, using SemlaFlow-style backbone and treating all variables continuously. The results demonstrate that quotient-based permutation symmetrization is practical and yields competitive generation quality with improved efficiency.",
+        "authors": "Gyeonghoon Ko, Juho Lee",
+        "url": "http://arxiv.org/abs/2603.23255v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23255v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出直接在商空间$\tilde{calX}=sR^{d\times N}/S_N$上建模扩散过程，以实现分子点云生成的置换不变性。其理论创新性极高，通过推导热核的显式表达式，并利用MCMC近似置换对称化分数，解决了离散域能量模型采样效率和质量的挑战。这不仅在理论上严谨，而且在分子图基准上达到了与离散扩散模型相当或更优的生成质量，对药物发现等领域具有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23231v1",
+        "title": "PERMA: Benchmarking Personalized Memory Agents via Event-Driven Preference and Realistic Task Environments",
+        "summary": "Empowering large language models with long-term memory is crucial for building agents that adapt to users' evolving needs. However, prior evaluations typically interleave preference-related dialogues with irrelevant conversations, reducing the task to needle-in-a-haystack retrieval while ignoring relationships between events that drive the evolution of user preferences. Such settings overlook a fundamental characteristic of real-world personalization: preferences emerge gradually and accumulate across interactions within noisy contexts. To bridge this gap, we introduce PERMA, a benchmark designed to evaluate persona consistency over time beyond static preference recall. Additionally, we incorporate (1) text variability and (2) linguistic alignment to simulate erratic user inputs and individual idiolects in real-world data. PERMA consists of temporally ordered interaction events spanning multiple sessions and domains, with preference-related queries inserted over time. We design both multiple-choice and interactive tasks to probe the model's understanding of persona along the interaction timeline. Experiments demonstrate that by linking related interactions, advanced memory systems can extract more precise preferences and reduce token consumption, outperforming traditional semantic retrieval of raw dialogues. Nevertheless, they still struggle to maintain a coherent persona across temporal depth and cross-domain interference, highlighting the need for more robust personalized memory management in agents. Our code and data are open-sourced at https://github.com/PolarisLiu1/PERMA.",
+        "authors": "Shuochen Liu, Junyi Zhu, Long Shu, Junda Lin, Yuhao Chen, Haotian Zhang, Chao Zhang, Derong Xu, Jia Li, Bo Tang, Zhiyu Li, Feiyu Xiong, Enhong Chen, Tong Xu",
+        "url": "http://arxiv.org/abs/2603.23231v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23231v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GEM提出了一个分析框架，用于离线强化学习中多模态和可控的候选动作选择。其创新性在于通过批评者引导、优势加权的EM式更新训练高斯混合模型（GMM）Actor，并学习可处理的GMM行为模型。这在理论上非常严谨，解决了数据集导致动作空间分支或多模态时，单模态策略提取可能产生“中间”动作的实际瓶颈，提高了决策的可靠性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22951v1",
+        "title": "Weak-PDE-Net: Discovering Open-Form PDEs via Differentiable Symbolic Networks and Weak Formulation",
+        "summary": "Discovering governing Partial Differential Equations (PDEs) from sparse and noisy data is a challenging issue in data-driven scientific computing. Conventional sparse regression methods often suffer from two major limitations: (i) the instability of numerical differentiation under sparse and noisy data, and (ii) the restricted flexibility of a pre-defined candidate library. We propose Weak-PDE-Net, an end-to-end differentiable framework that can robustly identify open-form PDEs. Weak-PDE-Net consists of two interconnected modules: a forward response learner and a weak-form PDE generator. The learner embeds learnable Gaussian kernels within a lightweight MLP, serving as a surrogate model that adaptively captures system dynamics from sparse observations. Meanwhile, the generator integrates a symbolic network with an integral module to construct weak-form PDEs, avoiding explicit numerical differentiation and improving robustness to noise. To relax the constraints of the pre-defined library, we leverage Differentiable Neural Architecture Search strategy during training to explore the functional space, which enables the efficient discovery of open-form PDEs. The capability of Weak-PDE-Net in multivariable systems discovery is further enhanced by incorporating Galilean Invariance constraints and symmetry equivariance hypotheses to ensure physical consistency. Experiments on several challenging PDE benchmarks demonstrate that Weak-PDE-Net accurately recovers governing equations, even under highly sparse and noisy observations.",
+        "authors": "Xinxin Li, Xingyu Cui, Jin Qi, Juan Zhang, Da Li, Junping Yin",
+        "url": "http://arxiv.org/abs/2603.22951v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22951v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Weak-PDE-Net提出了一个端到端可微分框架，通过可微分符号网络和弱形式发现开放形式的偏微分方程。其理论创新性在于避免了数值微分的不稳定性，并通过可微分神经架构搜索策略探索函数空间，结合伽利略不变性等物理约束。这解决了从稀疏噪声数据中发现PDE的挑战，在理论上严谨且在实践中能准确恢复方程，对数据驱动的科学计算有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22784v1",
+        "title": "Caterpillar of Thoughts: The Optimal Test-Time Algorithm for Large Language Models",
+        "summary": "Large language models (LLMs) can often produce substantially better outputs when allowed to use additional test-time computation, such as sampling, chain of thought, backtracking, or revising partial solutions. Despite the growing empirical success of such techniques, there is limited theoretical understanding of how inference time computation should be structured, or what constitutes an optimal use of a fixed computation budget.   We model test-time computation as an algorithm interacting with a Markov chain: at any point, the algorithm may resume generation from any previously observed state. That is, unlike standard Markov chains where the states are drawn passively, we allow the algorithm to backtrack to any previously observed state of the Markov chain at any time. Many of the existing test-time algorithms, such as Chain-of-Thought (CoT) (Wei et al., 2023), Tree-of-Thoughts (ToT) (Yao et al., 2023), or Best-of-$k$ (Brown et al., 2024) could be seen as specific algorithms in this model.   We prove that while backtracking can reduce the number of generations exponentially, a very limited form of backtracking is theoretically sufficient. Namely, we show that the optimal algorithm always generates a caterpillar tree. That is, if we remove the leaves of the state tree generated by the optimal algorithm, we obtain a path. Motivated by our characterization of the optimal algorithm, we present Caterpillar of Thoughts (CaT), a new test-time computation algorithm, reducing the number of token/state generations. Our empirical evaluation shows that CaT, compared to ToT, achieves a better success rate while also reducing the number of token generations.",
+        "authors": "Amir Azarmehr, Soheil Behnezhad, Alma Ghafari",
+        "url": "http://arxiv.org/abs/2603.22784v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22784v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Caterpillar of Thoughts (CaT) 提出了一个理论框架，将LLM的测试时计算建模为与马尔可夫链交互的算法，并证明了最优算法总是生成一个毛毛虫树。这在理论上具有高度创新性和严谨性，为LLM的推理过程提供了深刻的数学理解。它解决了如何最优利用有限计算预算的实际瓶颈，通过减少token/状态生成，在提高成功率的同时提升了效率。"
+    }
+]

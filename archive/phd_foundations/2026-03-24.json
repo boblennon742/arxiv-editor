@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.23449v1",
+        "title": "Asymptotics of Nonparametric Estimation under general non-monotone MAR missingness: A Bayesian Approach",
+        "summary": "Missing values are ubiquitous in (data) science, with potential detrimental consequences for any statistical analysis. As a consequence, a wealth of methods and theoretical results have been developed in recent years. Still, many questions remain open, in particular in the case of general non-monotone missing at random (MAR). In this work, we extend nonparametric Bayesian theory to this MAR setting. We introduce a general theorem of posterior contraction under MAR and an additional mild positivity condition. Using this result, we are able to show that, despite the missing values, the density of the uncontaminated data can be estimated with the minimax posterior contraction rate up to log factors. To the best of our knowledge, this is the first nonparametric result showing that the uncontaminated distribution can be consistently estimated under Rubin's MAR definition. As a consequence, we obtain an algorithm that takes data contaminated with missing values and returns a sample from a provably consistent estimate of the uncontaminated distribution.",
+        "authors": "Badr-Eddine Chérief-Abdellatif, Jeffrey Näf",
+        "url": "http://arxiv.org/abs/2603.23449v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23449v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在非参数贝叶斯理论方面做出了重要贡献，首次证明了在Rubin's MAR定义下，无污染数据密度可以以minimax后验收缩率被一致估计。其理论基础强大，数学推导严谨，直接符合您对统计保证和清晰数学推导的要求，并提供了一个具有理论保证的算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23361v1",
+        "title": "Central Dogma Transformer III: Interpretable AI Across DNA, RNA, and Protein",
+        "summary": "Biological AI models increasingly predict complex cellular responses, yet their learned representations remain disconnected from the molecular processes they aim to capture. We present CDT-III, which extends mechanism-oriented AI across the full central dogma: DNA, RNA, and protein. Its two-stage Virtual Cell Embedder architecture mirrors the spatial compartmentalization of the cell: VCE-N models transcription in the nucleus and VCE-C models translation in the cytosol. On five held-out genes, CDT-III achieves per-gene RNA r=0.843 and protein r=0.969. Adding protein prediction improves RNA performance (r=0.804 to 0.843), demonstrating that downstream tasks regularize upstream representations. Protein supervision sharpens DNA-level interpretability, increasing CTCF enrichment by 30%. Applied to in silico CD52 knockdown approximating Alemtuzumab, the model predicts 29/29 protein changes correctly and rediscovers 5 of 7 known clinical side effects without clinical data. Gradient-based side effect profiling requires only unperturbed baseline data (r=0.939), enabling screening of all 2,361 genes without new experiments.",
+        "authors": "Nobuyuki Ota",
+        "url": "http://arxiv.org/abs/2603.23361v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23361v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究深入探讨了互补约束数学规划 (MPCCs) 的B-平稳性，提出了分段M-平稳性概念并证明了其等价性，同时分析了相关算法的收敛性。它专注于优化理论的深层问题，具有极高的数学严谨性，是纯理论优化领域的优秀论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23309v1",
+        "title": "Tail-Calibrated Estimation of Extreme Quantile Treatment Effects",
+        "summary": "Extreme quantile treatment effects (eQTEs) measure the causal impact of a treatment on the tails of an outcome distribution and are central for studying rare, high-impact events. Standard QTE methods often fail in extreme regimes due to data sparsity, while existing eQTE methods rely on restrictive tail assumptions or on interior-quantile theory. We propose the Tail-Calibrated Inverse Estimating Equation (TIEE) framework, which combines information across quantile levels and anchors the tail using extreme value models within a unified estimating equation approach. We establish asymptotic properties of the resulting estimator and evaluate its performance through simulation under different tail behaviours and model misspecifications. An application to extreme precipitation in the Austrian Alps illustrates how TIEE enables observational causal attribution for very rare events under anthropogenic warming. More broadly, the proposed framework establishes a new foundation for causal inference on rare, high-impact outcomes, with relevance across environmental risk, economics, and public health.",
+        "authors": "Mengran Li, Daniela Castro-Camilo",
+        "url": "http://arxiv.org/abs/2603.23309v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23309v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Tail-Calibrated Inverse Estimating Equation (TIEE) 框架，用于估计极端分位数处理效应，结合了分位数信息和极值模型，并建立了渐近性质。这在因果推断和极值统计方面具有强大的理论基础和严谨的数学推导，对研究稀有高影响事件的因果效应至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23302v1",
+        "title": "A Theory of Nonparametric Covariance Function Estimation for Discretely Observed Data",
+        "summary": "We study nonparametric covariance function estimation for functional data observed with noise at discrete locations on a $d$-dimensional domain. Estimating the covariance function from discretely observed data is a challenging nonparametric problem, particularly in multidimensional settings, since the covariance function is defined on a product domain and thus suffers from the curse of dimensionality. This motivates the use of adaptive estimators, such as deep learning estimators. However, existing theoretical results are largely limited to estimators with explicit analytic representations, and the properties of general learning-based estimators remain poorly understood. We establish an oracle inequality for a broad class of learning-based estimators that applies to both sparse and dense observation regimes in a unified manner, and derive convergence rates for deep learning estimators over several classes of covariance functions. The resulting rates suggest that structural adaptation can mitigate the curse of dimensionality, similarly to classical nonparametric regression. We further compare the convergence rates of learning-based estimators with several existing procedures. For a one-dimensional smoothness class, deep learning estimators are suboptimal, whereas local linear smoothing estimators achieve a faster rate. For a structured function class, however, deep learning estimators attain the minimax rate up to polylogarithmic factors, whereas local linear smoothing estimators are suboptimal. These results reveal a distinctive adaptivity-variance trade-off in covariance function estimation.",
+        "authors": "Yoshikazu Terada, Atsutomo Yara",
+        "url": "http://arxiv.org/abs/2603.23302v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23302v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为离散观测数据下的非参数协方差函数估计建立了严格的理论框架，包括学习型估计器的Oracle不等式和深度学习估计器的收敛速率，并分析了维度灾难和适应性-方差权衡。其理论深度和数学严谨性极高，完美契合您对非参数理论和收敛性分析的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23140v1",
+        "title": "DAK-UCB: Diversity-Aware Prompt Routing for LLMs and Generative Models",
+        "summary": "The expansion of generative AI and LLM services underscores the growing need for adaptive mechanisms to select an appropriate available model to respond to a user's prompts. Recent works have proposed offline and online learning formulations to identify the optimal generative AI model for an input prompt, based solely on maximizing prompt-based fidelity evaluation scores, e.g., CLIP-Score in text-to-image generation. However, such fidelity-based selection methods overlook the diversity of generated outputs, and hence, they can fail to address potential diversity shortcomings in the generated responses. In this paper, we introduce the Diversity-Aware Kernelized Upper Confidence Bound (DAK-UCB) method as a contextual bandit algorithm for the online selection of generative models with diversity considerations. The proposed DAK-UCB method incorporates both fidelity and diversity-related metrics into the selection process. We design this framework based on prompt-aware diversity score functions that decompose to a two-sample-based expectation over prompt-output pairs in the previous generation rounds. Specifically, we illustrate the application of our framework using joint kernel distance and kernel entropy measures. Our experimental results demonstrate the effectiveness of DAK-UCB in promoting diversity-aware model selection while maintaining fidelity in the generations for a sequence of prompts. The code is available at https://github.com/Donya-Jafari/DAK-UCB.",
+        "authors": "Donya Jafari, Farzan Farnia",
+        "url": "http://arxiv.org/abs/2603.23140v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23140v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了DAK-UCB上下文多臂老虎机算法，用于LLM和生成模型的在线选择，同时考虑了生成内容的保真度和多样性，并结合了核距离和核熵等理论工具。在强化学习和生成模型领域具有坚实的理论基础，是理论与现代AI系统结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23085v1",
+        "title": "MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical Vision-Language Models",
+        "summary": "Vision-Language Models (VLMs) have enabled interpretable medical diagnosis by integrating visual perception with linguistic reasoning. Yet, existing medical chain-of-thought (CoT) models lack explicit mechanisms to represent and enforce causal reasoning, leaving them vulnerable to spurious correlations and limiting their clinical reliability. We pinpoint three core challenges in medical CoT reasoning: how to adaptively trigger causal correction, construct high-quality causal-spurious contrastive samples, and maintain causal consistency across reasoning trajectories. To address these challenges, we propose MedCausalX, an end-to-end framework explicitly models causal reasoning chains in medical VLMs. We first introduce the CRMed dataset providing fine-grained anatomical annotations, structured causal reasoning chains, and counterfactual variants that guide the learning of causal relationships beyond superficial correlations. Building upon CRMed, MedCausalX employs a two-stage adaptive reflection architecture equipped with $\\langle$causal$\\rangle$ and $\\langle$verify$\\rangle$ tokens, enabling the model to autonomously determine when and how to perform causal analysis and verification. Finally, a trajectory-level causal correction objective optimized through error-attributed reinforcement learning refines the reasoning chain, allowing the model to distinguish genuine causal dependencies from shortcut associations. Extensive experiments on multiple benchmarks show that MedCausalX consistently outperforms state-of-the-art methods, improving diagnostic consistency by +5.4 points, reducing hallucination by over 10 points, and attaining top spatial grounding IoU, thereby setting a new standard for causally grounded medical reasoning.",
+        "authors": "Jianxin Lin, Chunzheng Zhu, Peter J. Kneuertz, Yunfei Bai, Yuan Xue",
+        "url": "http://arxiv.org/abs/2603.23085v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23085v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MedCausalX框架通过自适应因果推理和自反思机制，增强医疗VLM的信任度，明确建模因果推理链，并利用强化学习进行轨迹级因果校正。在因果推断和AI可信性方面具有重要理论和实践意义，对现代AI系统的安全性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23072v1",
+        "title": "Generalization Bounds for Physics-Informed Neural Networks for the Incompressible Navier-Stokes Equations",
+        "summary": "This work establishes rigorous first-of-its-kind upper bounds on the generalization error for the method of approximating solutions to the (d+1)-dimensional incompressible Navier-Stokes equations by training depth-2 neural networks trained via the unsupervised Physics-Informed Neural Network (PINN) framework. This is achieved by bounding the Rademacher complexity of the PINN risk. For appropriately weight bounded net classes our derived generalization bounds do not explicitly depend on the network width and our framework characterizes the generalization gap in terms of the fluid's kinematic viscosity and loss regularization parameters. In particular, the resulting sample complexity bounds are dimension-independent. Our generalization bounds suggest using novel activation functions for solving fluid dynamics. We provide empirical validation of the suggested activation functions and the corresponding bounds on a PINN setup solving the Taylor-Green vortex benchmark.",
+        "authors": "Sebastien Andre-Sloan, Dibyakanti Kumar, Alejandro F Frangi, Anirbit Mukherjee",
+        "url": "http://arxiv.org/abs/2603.23072v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23072v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究首次为不可压缩Navier-Stokes方程的物理信息神经网络 (PINN) 建立了严格的泛化误差上界，通过Rademacher复杂度分析，提供了维度无关的样本复杂度界限。理论严谨，对物理驱动的AI系统有深远影响，是泛化理论的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23042v1",
+        "title": "Minimizing Material Waste in Additive Manufacturing through Online Reel Assignment",
+        "summary": "We study a variant of the online bin packing problem that arises in filament-based 3D printing systems operating in make-to-order settings, where only a limited number of filament reels of finite capacity can be handled at once. Components are assigned to reels upon arrival and insufficient reels are discarded to be replaced with new ones, resulting in material waste. To minimize the long-run average discarded filament through an online assignment policy, we formulate this problem as an infinite-horizon average-cost Markov Decision Process and analyze the structure of policies under stochastic, sequential demand. We first show that under a random allocation policy, the system decomposes into a collection of identical single-reel processes, allowing us to derive a closed-form expression for the average waste and enabling a tractable baseline analysis. Building on this decomposition, we construct a theoretically grounded index policy that assigns each reel a score reflecting the marginal cost of assignment and prove that it constitutes a one-step policy improvement over random allocation. We embed the index-based structure within a Deep Reinforcement Learning framework using approximate policy iteration. The resulting method achieves near-optimal performance across a range of simulated and real-world scenarios. Our results demonstrate that Reinforcement Learning policy significantly reduces material waste while maintaining real-time feasibility and interpretability.",
+        "authors": "Ilayda Celenk, Willem van Jaarsveld, Ivo J. B. F. Adan, Alp Akcay",
+        "url": "http://arxiv.org/abs/2603.23042v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23042v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "通过混合阶动力系统研究了可分离非光滑凸优化的加速算法，并建立了新算法的非遍历收敛性质和强收敛到最小范数解的理论。在优化理论和算法收敛性分析方面具有极高的数学严谨性，是纯理论优化领域的优秀论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23037v1",
+        "title": "YOLOv10 with Kolmogorov-Arnold networks and vision-language foundation models for interpretable object detection and trustworthy multimodal AI in computer vision perception",
+        "summary": "The interpretable object detection capabilities of a novel Kolmogorov-Arnold network framework are examined here. The approach refers to a key limitation in computer vision for autonomous vehicles perception, and beyond. These systems offer limited transparency regarding the reliability of their confidence scores in visually degraded or ambiguous scenes. To address this limitation, a Kolmogorov-Arnold network is employed as an interpretable post-hoc surrogate to model the trustworthiness of the You Only Look Once (Yolov10) detections using seven geometric and semantic features. The additive spline-based structure of the Kolmogorov-Arnold network enables direct visualisation of each feature's influence. This produces smooth and transparent functional mappings that reveal when the model's confidence is well supported and when it is unreliable. Experiments on both Common Objects in Context (COCO), and images from the University of Bath campus demonstrate that the framework accurately identifies low-trust predictions under blur, occlusion, or low texture. This provides actionable insights for filtering, review, or downstream risk mitigation. Furthermore, a bootstrapped language-image (BLIP) foundation model generates descriptive captions of each scene. This tool enables a lightweight multimodal interface without affecting the interpretability layer. The resulting system delivers interpretable object detection with trustworthy confidence estimates. It offers a powerful tool for transparent and practical perception component for autonomous and multimodal artificial intelligence applications.",
+        "authors": "Marios Impraimakis, Daniel Vazquez, Feiyu Zhou",
+        "url": "http://arxiv.org/abs/2603.23037v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23037v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "结合YOLOv10和Kolmogorov-Arnold网络 (KANs) 实现了可解释的目标检测，利用KAN的理论特性提供透明的信任度评估。在可信AI和多模态感知方面具有强大的理论支撑和实际应用价值，是您关注的“严谨数学逻辑应用于现代AI系统”的绝佳案例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22990v1",
+        "title": "A Top-Down Scale Approach for Multiscale Geographically and Temporally Weighted Regression",
+        "summary": "This paper proposes tds mgtwr, a multiscale geographically and temporally weighted regression (MGTWR) model with covariate-specific spatial and temporal scales. The approach combines a separable spatio-temporal kernel with a Top-Down Scale (TDS) calibration scheme, where spatial and temporal bandwidths are selected for each covariate through a coordinate-wise search over ordered grids guided by the corrected Akaike Information Criterion (AICc). By avoiding unconstrained multidimensional optimization, this strategy extends to the spatio-temporal setting the stabilizing properties of TDS calibration scheme Geniaux (2026). The multiscale backfitting procedure combines the Top-Down Scale calibration scheme with an adaptive, importance-driven update schedule that prioritizes covariates according to their current scale-normalized contribution to the fitted signal, thereby limiting the number of local recalibrations required and accelerating convergence while maintaining estimator fidelity. We also introduce a generic prediction method for MGWR and MGTWR based on kernel sharpening. Monte Carlo experiments show that modeling both space and time improves coefficient recovery and predictive accuracy relative to purely spatial multiscale models when temporal variation is present and sufficiently supported by the data. Gains increase with sample size and signal-to-noise ratio. Two empirical applications illustrate the method under contrasting regimes. For Beet Yellows severity, a plant epidemiology and pest management problem, multiscale spatial modeling is essential, while spatio-temporal extensions yield additional gains when temporal information is rich. In modeling house prices, MGTWR consistently outperforms spatial local and STVC models. In both cases, predictive performance rivals flexible machine-learning benchmarks while preserving interpretable spatio-temporal scales.",
+        "authors": "Ghislain Geniaux, César Martinez, Samuel Soubeyrand",
+        "url": "http://arxiv.org/abs/2603.22990v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22990v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种多尺度地理和时间加权回归 (MGTWR) 模型，具有协变量特定的时空尺度，并结合了自上而下尺度 (TDS) 校准方案。在统计建模和空间统计学方面具有高度的理论严谨性和创新性，对理解复杂时空数据模式有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22954v1",
+        "title": "Privacy-Preserving EHR Data Transformation via Geometric Operators: A Human-AI Co-Design Technical Report",
+        "summary": "Electronic health records (EHRs) and other real-world clinical data are essential for clinical research, medical artificial intelligence, and life science, but their sharing is severely limited by privacy, governance, and interoperability constraints. These barriers create persistent data silos that hinder multi-center studies, large-scale model development, and broader biomedical discovery. Existing privacy-preserving approaches, including multi-party computation and related cryptographic techniques, provide strong protection but often introduce substantial computational overhead, reducing the efficiency of large-scale machine learning and foundation-model training. In addition, many such methods make data usable for restricted computation while leaving them effectively invisible to clinicians and researchers, limiting their value in workflows that still require direct inspection, exploratory analysis, and human interpretation. We propose a real-world-data transformation framework for privacy-preserving sharing of structured clinical records. Instead of converting data into opaque representations, our approach constructs transformed numeric views that preserve medical semantics and major statistical properties while, under a clearly specified threat model, provably breaking direct linkage between those views and protected patient-level attributes. Through collaboration between computer scientists and the AI agent \\textbf{SciencePal}, acting as a constrained tool inventor under human guidance, we design three transformation operators that are non-reversible within this threat model, together with an additional mixing strategy for high-risk scenarios, supported by theoretical analysis and empirical evaluation under reconstruction, record linkage, membership inference, and attribute inference attacks.",
+        "authors": "Maolin Wang, Beining Bao, Gan Yuan, Hongyu Chen, Bingkun Zhao, Baoshuo Kan, Jiming Xu, Qi Shi, Yinggong Zhao, Yao Wang, Wei Ying Ma, Jun Yan",
+        "url": "http://arxiv.org/abs/2603.22954v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22954v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了通过几何算子进行隐私保护的EHR数据转换框架，在明确的威胁模型下，理论上证明了其不可逆性并打破了直接链接。在隐私保护和医疗AI数据共享方面具有强大的理论基础和实际应用价值，对AI系统的伦理和安全至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22914v1",
+        "title": "Nonparametric regression with dependent censoring or competing risks",
+        "summary": "Single-index models or time-to-event models are frequently applied in empirical research. These models are non-identifiable in presence of unknown (dependent) censoring or competing risks and do not give informative results in empirical analysis unless rather strong, non-testable restrictions hold. Little is known, whether the known robustness properties of the single-index model carry over to models with dependent censoring or competing risks. This paper shows that the ratio of partial covariate effects on the margins is identifiable in nonparametric models with unknown dependent censoring or nonparametric competing risks models with nonparametric dependence structure, provided an exclusion restriction holds. Commonly used (semi)parametric models for the margin and independent censoring, such as Cox proportional hazards, accelerated failure time or proportional odds models, can be used to obtain relative covariate effects despite their misspecified censoring mechanism. Several nonparametric estimators for the general model are introduced and their numerical properties are studied.",
+        "authors": "Jia-Han Shih, Simon M. S. Lo, Ralf A. Wilke",
+        "url": "http://arxiv.org/abs/2603.22914v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22914v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了非参数回归中依赖性审查或竞争风险下的可识别性问题，证明了部分协变量效应比率的可识别性，并引入了多种非参数估计器。在非参数统计和生存分析领域具有深厚的理论贡献，对处理复杂数据缺失模式的统计分析非常重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22821v1",
+        "title": "Cross-Slice Knowledge Transfer via Masked Multi-Modal Heterogeneous Graph Contrastive Learning for Spatial Gene Expression Inference",
+        "summary": "While spatial transcriptomics (ST) has advanced our understanding of gene expression in tissue context, its high experimental cost limits its large-scale application. Predicting ST from pathology images is a promising, cost-effective alternative, but existing methods struggle to capture complex cross-slide spatial relationships. To address the challenge, we propose SpaHGC, a multi-modal heterogeneous graph-based model that captures both intra-slice and inter-slice spot-spot relationships from histology images. It integrates local spatial context within the target slide and cross-slide similarities computed from image embeddings extracted by a pathology foundation model. These embeddings enable inter-slice knowledge transfer, and SpaHGC further incorporates Masked Graph Contrastive Learning to enhance feature representation and transfer spatial gene expression knowledge from reference to target slides, enabling it to model complex spatial dependencies and significantly improve prediction accuracy. We conducted comprehensive benchmarking on seven matched histology-ST datasets from different platforms, tissues, and cancer subtypes. The results demonstrate that SpaHGC significantly outperforms the existing nine state-of-the-art methods across all evaluation metrics. Additionally, the predictions are significantly enriched in multiple cancer-related pathways, thereby highlighting its strong biological relevance and application potential.",
+        "authors": "Zhiceng Shi, Changmiao Wang, Jun Wan, Wenwen Min",
+        "url": "http://arxiv.org/abs/2603.22821v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22821v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对极度稀疏非均匀多层网络的社区检测问题，提出了MARS-CD方法，并首次建立了其理论保证，包括弱和强一致性。在图论和统计网络分析方面具有强大的理论贡献，对理解复杂网络结构提供了严谨的数学工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22739v1",
+        "title": "A variational geometric framework for multi-objective level set topology optimization",
+        "summary": "This paper proposes a variational framework for multi-objective level set topology optimization. The approach interprets the level set function as a generalized coordinate of a fictitious material and derives its equation of motion from Hamilton's principle, resulting in a damped wave equation governing the optimization process. The objective functionals are combined using a weighted sum formulation. An analysis of the underlying system structure reveals a geometric interpretation of the problem, shifting the perspective beyond conventional approaches based on purely discrete approximations of the Pareto frontier. Under suitable regularity assumptions, the set of stationary solutions forms a structured subset in objective space, in which the Pareto frontier is locally embedded and the weighting factors act as intrinsic coordinates. This perspective motivates the introduction of a dynamic evolution of the weights, leading to a coupled dynamical system for the level set function and the weighting parameters that enables adaptive exploration of the objective landscape. Numerical results demonstrate that the proposed framework provides a stable and uniform approximation of the Pareto frontier and scales to higher-dimensional objective spaces.",
+        "authors": "Jan Oellerich, Takayuki Yamada",
+        "url": "http://arxiv.org/abs/2603.22739v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22739v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了多目标水平集拓扑优化的变分几何框架，从Hamilton原理推导运动方程，揭示了几何解释，并引入了权重的动态演化。在变分法、优化理论和几何分析方面具有极高的数学严谨性，是纯理论优化领域的优秀论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22675v1",
+        "title": "Vision-based Deep Learning Analysis of Unordered Biomedical Tabular Datasets via Optimal Spatial Cartography",
+        "summary": "Tabular data are central to biomedical research, from liquid biopsy and bulk and single-cell transcriptomics to electronic health records and phenotypic profiling. Unlike images or sequences, however, tabular datasets lack intrinsic spatial organization: features are treated as unordered dimensions, and their relationships must be inferred implicitly by the model. This limits the ability of vision architectures to exploit local structure and higher-order feature interactions in non-spatial biomedical data. Here we introduce Dynamic Feature Mapping (Dynomap), an end-to-end deep learning framework that learns a task-optimized spatial topology of features directly from data. Dynomap jointly optimizes feature placement and prediction through a fully differentiable rendering mechanism, without relying on heuristics, predefined groupings, or external priors. By transforming high-dimensional tabular vectors into learned feature maps, Dynomap enables vision-based models to operate effectively on unordered biomedical inputs. Across multiple clinical and biological datasets, Dynomap consistently outperformed classical machine learning, modern deep tabular models, and existing vector-to-image approaches. In liquid biopsy data, Dynomap organized clinically relevant gene signatures into coherent spatial patterns and improved multiclass cancer subtype prediction accuracy by up to 18%. In a Parkinson disease voice dataset, it clustered disease-associated acoustic descriptors and improved accuracy by up to 8%. Similar gains and interpretable feature organization were observed in additional biomedical datasets. These results establish Dynomap as a general strategy for bridging tabular and vision-based deep learning and for uncovering structured, clinically relevant patterns in high-dimensional biomedical data.",
+        "authors": "Sakib Mostafa, Tarik Massoud, Maximilian Diehn, Lei Xing, Md Tauhidul Islam",
+        "url": "http://arxiv.org/abs/2603.22675v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22675v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了PopResume数据集和基于路径特定效应 (PSE) 的因果公平性评估框架，用于LLM/VLM简历筛选器。在因果推断、公平性AI和统计学方面具有强大的理论基础和重要的社会影响力，完美契合您对因果逻辑和现代AI系统应用的偏好。"
+    }
+]

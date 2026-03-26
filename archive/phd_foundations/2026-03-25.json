@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.24489v1",
+        "title": "Model Predictive Path Integral Control as Preconditioned Gradient Descent",
+        "summary": "Model Predictive Path Integral (MPPI) control is a popular sampling-based method for trajectory optimization in nonlinear and nonconvex settings, yet its optimization structure remains only partially understood. We develop a variational, optimization-theoretic interpretation of MPPI by lifting constrained trajectory optimization to a KL-regularized problem over distributions and reducing it to a negative log-partition (free-energy) objective over a tractable sampling family. For a general parametric family, this yields a preconditioned gradient method on the distribution parameters and a natural multi-step extension of MPPI. For the fixed-covariance Gaussian family, we show that classical MPPI is recovered exactly as a preconditioned gradient descent step with unit step size. This interpretation enables a direct convergence analysis: under bounded feasible sets, we derive an explicit upper bound on the smoothness constant and a simple sufficient condition guaranteeing descent of exact MPPI. Numerical experiments support the theory and illustrate the effect of key hyperparameters on performance.",
+        "authors": "Mahyar Fazlyab, Sina Sharifi, Jiarui Wang",
+        "url": "http://arxiv.org/abs/2603.24489v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24489v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为模型预测路径积分控制（MPPI）提供了变分和优化理论解释，将其归结为KL正则化问题和预处理梯度下降。它进行了直接的收敛性分析，并推导了平滑常数的显式上界和保证下降的充分条件。这与您对优化收敛性和清晰数学推导的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24475v1",
+        "title": "Conformalized Transfer Learning for Li-ion Battery State of Health Forecasting under Manufacturing and Usage Variability",
+        "summary": "Accurate forecasting of state-of-health (SOH) is essential for ensuring safe and reliable operation of lithium-ion cells. However, existing models calibrated on laboratory tests at specific conditions often fail to generalize to new cells that differ due to small manufacturing variations or operate under different conditions. To address this challenge, an uncertainty-aware transfer learning framework is proposed, combining a Long Short-Term Memory (LSTM) model with domain adaptation via Maximum Mean Discrepancy (MMD) and uncertainty quantification through Conformal Prediction (CP). The LSTM model is trained on a virtual battery dataset designed to capture real-world variability in electrode manufacturing and operating conditions. MMD aligns latent feature distributions between simulated and target domains to mitigate domain shift, while CP provides calibrated, distribution-free prediction intervals. This framework improves both the generalization and trustworthiness of SOH forecasts across heterogeneous cells.",
+        "authors": "Samuel Filgueira da Silva, Mehmet Fatih Ozkan, Faissal El Idrissi, Marcello Canova",
+        "url": "http://arxiv.org/abs/2603.24475v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24475v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文在统计哲学层面探讨了e-值作为统计证据的度量，并将其与贝叶斯因子、似然比和p-值进行严格比较。它强调了e-值在结合研究、处理复合假设、提供长期错误率以及作为投注者财富解释方面的优点。这是一篇纯粹的统计理论基础论文，非常适合数理统计博士生。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24434v1",
+        "title": "The Gait Signature of Frailty: Transfer Learning based Deep Gait Models for Scalable Frailty Assessment",
+        "summary": "Frailty is a condition in aging medicine characterized by diminished physiological reserve and increased vulnerability to stressors. However, frailty assessment remains subjective, heterogeneous, and difficult to scale in clinical practice. Gait is a sensitive marker of biological aging, capturing multisystem decline before overt disability. Yet the application of modern computer vision to gait-based frailty assessment has been limited by small, imbalanced datasets and a lack of clinically representative benchmarks. In this work, we introduce a publicly available silhouette-based frailty gait dataset collected in a clinically realistic setting, spanning the full frailty spectrum and including older adults who use walking aids. Using this dataset, we evaluate how pretrained gait recognition models can be adapted for frailty classification under limited data conditions. We study both convolutional and hybrid attention-based architectures and show that predictive performance depends primarily on how pretrained representations are transferred rather than architectural complexity alone. Across models, selectively freezing low-level gait representations while allowing higher-level features to adapt yields more stable and generalizable performance than either full fine-tuning or rigid freezing. Conservative handling of class imbalance further improves training stability, and combining complementary learning objectives enhances discrimination between clinically adjacent frailty states. Interpretability analyses reveal consistent model attention to lower-limb and pelvic regions, aligning with established biomechanical correlates of frailty. Together, these findings establish gait-based representation learning as a scalable, non-invasive, and interpretable framework for frailty assessment and support the integration of modern biometric modeling approaches into aging research and clinical practice.",
+        "authors": "Laura McDaniel, Basudha Pal, Crystal Szczesny, Yuxiang Guo, Ryan Roemmich, Peter Abadir, Rama Chellappa",
+        "url": "http://arxiv.org/abs/2603.24434v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24434v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种用于上下文回归的简单上下文神经网络（SCtxtNN），并从数学上证明了其架构足以使用标准神经网络组件表示上下文线性回归模型。它关注模型效率、可解释性和数学上的表示能力，符合您对神经网络理论基础和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24388v1",
+        "title": "Causal Transfer in Medical Image Analysis",
+        "summary": "Medical imaging models frequently fail when deployed across hospitals, scanners, populations, or imaging protocols due to domain shift, limiting their clinical reliability. While transfer learning and domain adaptation address such shifts statistically, they often rely on spurious correlations that break under changing conditions. On the other hand, causal inference provides a principled way to identify invariant mechanisms that remain stable across environments. This survey introduces and systematises Causal Transfer Learning (CTL) for medical image analysis. This paradigm integrates causal reasoning with cross-domain representation learning to enable robust and generalisable clinical AI. We frame domain shift as a causal problem and analyse how structural causal models, invariant risk minimisation, and counterfactual reasoning can be embedded within transfer learning pipelines. We studied spanning classification, segmentation, reconstruction, anomaly detection, and multimodal imaging, and organised them by task, shift type, and causal assumption. A unified taxonomy is proposed that connects causal frameworks and transfer mechanisms. We further summarise datasets, benchmarks, and empirical gains, highlighting when and why causal transfer outperforms correlation-based domain adaptation. Finally, we discuss how CTL supports fairness, robustness, and trustworthy deployment in multi-institutional and federated settings, and outline open challenges and research directions for clinically reliable medical imaging AI.",
+        "authors": "Mohammed M. Abdelsamea, Daniel Tweneboah Anyimadu, Tasneem Selim, Saif Alzubi, Lei Zhang, Ahmed Karam Eldaly, Xujiong Ye",
+        "url": "http://arxiv.org/abs/2603.24388v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24388v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文系统研究了联邦差分隐私下公平性感知分类的联合影响，提出了FDP-Fair和CDP-Fair算法，并建立了关于隐私、公平性和超额风险控制的理论保证。它还解构了私有公平性感知超额风险的来源。这完美结合了严谨的数学逻辑（差分隐私、公平性理论）与现代AI系统（联邦学习）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24327v1",
+        "title": "Le MuMo JEPA: Multi-Modal Self-Supervised Representation Learning with Learnable Fusion Tokens",
+        "summary": "Self-supervised learning has emerged as a powerful paradigm for learning visual representations without manual annotations, yet most methods still operate on a single modality and therefore miss the complementary structure available from heterogeneous sensors. We present Le MuMo JEPA, a self-supervised framework that learns unified representations from RGB images and aligned companion modalities. In our driving experiments, the second modality is camera-aligned LiDAR depth; we also evaluate RGB-thermal training and transfer on the Teledyne FLIR ADAS benchmark. Our approach extends LeJEPA to the multi-modal setting by learning fusion tokens that act as a latent bottleneck between modality-specific patch stems inside a shared transformer. Our default model employs a pruned fusion strategy: after an initial cross-modal attention layer, modality-specific tokens are dropped, forcing cross-modal information into the shared fusion-token grid as an efficient latent bottleneck before Sketched Isotropic Gaussian Regularization (SIGReg) is applied to the joint multimodal CLS embedding. On Waymo, Le MuMo JEPA gives the strongest performance-efficiency trade-off on downstream patch probes among the from-scratch multimodal baselines, improving CenterNet detection and dense depth while remaining competitive on segmentation. Under from-scratch training on nuScenes, Le MuMo JEPA remains the strongest model, and it also gives the best FLIR results, especially after Waymo-initialized fine-tuning. It also retains the best overall accuracy-efficiency balance in our study at substantially lower compute, memory, and estimated training time.",
+        "authors": "Ciem Cornelissen, Sam Leroux, Pieter Simoens",
+        "url": "http://arxiv.org/abs/2603.24327v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24327v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了CGRL框架，通过构建因果图、采用后门调整来阻断非因果路径，并从理论上推导了改进图神经网络（GNN）域外泛化能力的下界。这是将因果逻辑应用于现代AI系统（GNN）以解决泛化问题的典范，具有强大的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24276v1",
+        "title": "Rethinking Individual Risk and Aggregation in Survival Analysis: A Latent Mechanism Framework",
+        "summary": "Survival analysis provides a well-established framework for modeling time-to-event data, with hazard and survival functions formally defined as population-level quantities. In applied work, however, these quantities are often interpreted as representing individual-level risk, despite the absence of a clear generative account linking individual risk mechanisms to observed survival data. This paper develops a latent hazard framework that makes this relationship explicit by modeling event times as arising from unobserved, individual-specific hazard mechanisms and viewing population-level survival quantities as aggregates over heterogeneous mechanisms. Within this framework, we show that individual hazard trajectories are not identifiable from survival data under partial information. More generally, the conditional distribution of latent hazard mechanisms given covariates is structurally non-identifiable, even when population-level survival functions are fully known. This non-identifiability arises from the aggregation inherent in survival data and persists independently of model flexibility or estimation strategy. Finally, we show that classical survival models can be systematically reinterpreted according to how they handle this unresolved conditional mechanism distribution. This paper provides a unified framework for understanding heterogeneity, identifiability, and interpretation in survival analysis, and clarifies how population-level survival models should be interpreted when individual risk mechanisms are only partially observed, thereby establishing explicit information constraints for principled modeling and inference.",
+        "authors": "Xijia Liu",
+        "url": "http://arxiv.org/abs/2603.24276v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24276v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个潜在风险框架，重新思考了生存分析中个体风险和聚合的关系。它严格证明了在部分信息下个体风险轨迹的不可识别性，并澄清了总体生存模型在个体风险机制部分观测时的解释。这是对生存分析这一核心统计领域的基础性理论贡献，非常适合数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24105v1",
+        "title": "Causality-Driven Disentangled Representation Learning in Multiplex Graphs",
+        "summary": "Learning representations from multiplex graphs, i.e., multi-layer networks where nodes interact through multiple relation types, is challenging due to the entanglement of shared (common) and layer-specific (private) information, which limits generalization and interpretability. In this work, we introduce a causal inference-based framework that disentangles common and private components in a self-supervised manner. CaDeM jointly (i) aligns shared embeddings across layers, (ii) enforces private embeddings to capture layer-specific signals, and (iii) applies backdoor adjustment to ensure that the common embeddings capture only global information while being separated from the private representations. Experiments on synthetic and real-world datasets demonstrate consistent improvements over existing baselines, highlighting the effectiveness of our approach for robust and interpretable multiplex graph representation learning.",
+        "authors": "Saba Nasiri, Selin Aviyente, Dorina Thanou",
+        "url": "http://arxiv.org/abs/2603.24105v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24105v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个基于因果推断的框架CaDeM，以自监督方式解耦多层图中的共享和层特定信息。它通过后门调整确保公共嵌入仅捕获全局信息并与私有表示分离。这是将因果逻辑应用于现代AI系统（图表示学习）的又一优秀范例，具有强大的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24057v1",
+        "title": "Beyond Semantic Priors: Mitigating Optimization Collapse for Generalizable Visual Forensics",
+        "summary": "While Vision-Language Models (VLMs) like CLIP have emerged as a dominant paradigm for generalizable deepfake detection, a representational disconnect remains: their semantic-centric pre-training is ill-suited for capturing non-semantic artifacts inherent to hyper-realistic synthesis. In this work, we identify a failure mode termed Optimization Collapse, where detectors trained with Sharpness-Aware Minimization (SAM) degenerate to random guessing on non-semantic forgeries once the perturbation radius exceeds a narrow threshold. To theoretically formalize this collapse, we propose the Critical Optimization Radius (COR) to quantify the geometric stability of the optimization landscape, and leverage the Gradient Signal-to-Noise Ratio (GSNR) to measure generalization potential. We establish a theorem proving that COR increases monotonically with GSNR, thereby revealing that the geometric instability of SAM optimization originates from degraded intrinsic generalization potential. This result identifies the layer-wise attenuation of GSNR as the root cause of Optimization Collapse in detecting non-semantic forgeries. Although naively reducing perturbation radius yields stable convergence under SAM, it merely treats the symptom without mitigating the intrinsic generalization degradation, necessitating enhanced gradient fidelity. Building on this insight, we propose the Contrastive Regional Injection Transformer (CoRIT), which integrates a computationally efficient Contrastive Gradient Proxy (CGP) with three training-free strategies: Region Refinement Mask to suppress CGP variance, Regional Signal Injection to preserve CGP magnitude, and Hierarchical Representation Integration to attain more generalizable representations. Extensive experiments demonstrate that CoRIT mitigates optimization collapse and achieves state-of-the-art generalization across cross-domain and universal forgery benchmarks.",
+        "authors": "Jipeng Liu, Haichao Shi, Siyu Xing, Rong Yin, Xiao-Yu Zhang",
+        "url": "http://arxiv.org/abs/2603.24057v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24057v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文识别了深度伪造检测中的“优化崩溃”现象，并提出了临界优化半径（COR）和梯度信噪比（GSNR）来对其进行理论形式化，并建立了一个定理证明COR与GSNR单调递增。这是对深度学习优化动态的深刻理论分析，具有正式的数学证明，非常符合您对优化收敛性理论的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24037v1",
+        "title": "A^3: Towards Advertising Aesthetic Assessment",
+        "summary": "Advertising images significantly impact commercial conversion rates and brand equity, yet current evaluation methods rely on subjective judgments, lacking scalability, standardized criteria, and interpretability. To address these challenges, we present A^3 (Advertising Aesthetic Assessment), a comprehensive framework encompassing four components: a paradigm (A^3-Law), a dataset (A^3-Dataset), a multimodal large language model (A^3-Align), and a benchmark (A^3-Bench). Central to A^3 is a theory-driven paradigm, A^3-Law, comprising three hierarchical stages: (1) Perceptual Attention, evaluating perceptual image signals for their ability to attract attention; (2) Formal Interest, assessing formal composition of image color and spatial layout in evoking interest; and (3) Desire Impact, measuring desire evocation from images and their persuasive impact. Building on A^3-Law, we construct A^3-Dataset with 120K instruction-response pairs from 30K advertising images, each richly annotated with multi-dimensional labels and Chain-of-Thought (CoT) rationales. We further develop A^3-Align, trained under A^3-Law with CoT-guided learning on A^3-Dataset. Extensive experiments on A^3-Bench demonstrate that A^3-Align achieves superior alignment with A^3-Law compared to existing models, and this alignment generalizes well to quality advertisement selection and prescriptive advertisement critique, indicating its potential for broader deployment. Dataset, code, and models can be found at: https://github.com/euleryuan/A3-Align.",
+        "authors": "Kaiyuan Ji, Yixuan Gao, Lu Sun, Yushuo Zheng, Zijian Chen, Jianbo Zhang, Xiangyang Zhu, Yuan Tian, Zicheng Zhang, Guangtao Zhai",
+        "url": "http://arxiv.org/abs/2603.24037v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24037v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了DeepIn，一个自可解释神经网络框架，能够自适应地识别和学习保持标准DNN表达能力所需的最小表示。它实现了适应学习到的最小维度的最优非渐近误差率，并开发了针对所选变量和学习表示的假设检验程序，将深度表示学习与形式统计推断相结合。这是将统计严谨性直接嵌入深度学习架构的优秀工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23977v1",
+        "title": "Kirchhoff-Inspired Neural Networks for Evolving High-Order Perception",
+        "summary": "Deep learning architectures are fundamentally inspired by neuroscience, particularly the structure of the brain's sensory pathways, and have achieved remarkable success in learning informative data representations. Although these architectures mimic the communication mechanisms of biological neurons, their strategies for information encoding and transmission are fundamentally distinct. Biological systems depend on dynamic fluctuations in membrane potential; by contrast, conventional deep networks optimize weights and biases by adjusting the strengths of inter-neural connections, lacking a systematic mechanism to jointly characterize the interplay among signal intensity, coupling structure, and state evolution. To tackle this limitation, we propose the Kirchhoff-Inspired Neural Network (KINN), a state-variable-based network architecture constructed based on Kirchhoff's current law. KINN derives numerically stable state updates from fundamental ordinary differential equations, enabling the explicit decoupling and encoding of higher-order evolutionary components within a single layer while preserving physical consistency, interpretability, and end-to-end trainability. Extensive experiments on partial differential equation (PDE) solving and ImageNet image classification validate that KINN outperforms state-of-the-art existing methods.",
+        "authors": "Tongfei Chen, Jingying Yang, Linlin Yang, Jinhu Lü, David Doermann, Chunyu Xie, Long He, Tian Wang, Juan Zhang, Guodong Guo, Baochang Zhang",
+        "url": "http://arxiv.org/abs/2603.23977v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23977v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Kirchhoff启发式神经网络（KINN），一个基于基尔霍夫电流定律构建的状态变量网络架构。它从基本常微分方程推导出数值稳定的状态更新，实现了高阶演化分量的显式解耦和编码，同时保持物理一致性和可解释性。这是将物理定律和数学模型（ODE）严谨地融入神经网络设计的杰出工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23963v1",
+        "title": "An Exponential-Polynomial Divergence-based Robust Information Criterion for Linear Panel Data Models and Neural Networks",
+        "summary": "Model selection is a cornerstone of statistical inference, where information criteria are widely employed to balance model fit and complexity. However, classical likelihood-based criteria are often highly sensitive to contamination, outliers, and model misspecification. In this paper, we develop a robust alternative based on the Exponential-Polynomial Divergence, a flexible extension of existing divergence measures that enhances adaptability to diverse data irregularities. The proposed Exponential-Polynomial Divergence Information Criterion preserves the objective of approximating the discrepancy between the true model and candidate models while incorporating robustness against anomalous observations. Its theoretical properties are established, and robustness is examined through influence function analysis, demonstrating controlled sensitivity to extreme data points. For practical implementation, a data-driven tuning parameter selection strategy based on generalized score matching is employed, ensuring improved computational stability and efficiency. The effectiveness of the proposed method is demonstrated through extensive simulation studies under varying contamination levels, as well as real data applications involving linear mixed-effects panel data models and neural network-based prediction tasks. The results consistently show improved stability and reliability compared to classical likelihood and density power divergence-based information criteria. The proposed framework thus provides a practical and unified approach for model selection in complex and contaminated data settings.",
+        "authors": "Udita Goswami, Shuvashree Mondal",
+        "url": "http://arxiv.org/abs/2603.23963v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23963v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文基于指数多项式散度开发了一种鲁棒信息准则，用于线性面板数据模型和神经网络的模型选择。它建立了理论性质，并通过影响函数分析检验了鲁棒性，并提出了数据驱动的调优参数选择策略。这是对鲁棒统计推断和模型选择的基础性理论贡献，且适用于神经网络，非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23896v1",
+        "title": "MMTIT-Bench: A Multilingual and Multi-Scenario Benchmark with Cognition-Perception-Reasoning Guided Text-Image Machine Translation",
+        "summary": "End-to-end text-image machine translation (TIMT), which directly translates textual content in images across languages, is crucial for real-world multilingual scene understanding. Despite advances in vision-language large models (VLLMs), robustness across diverse visual scenes and low-resource languages remains underexplored due to limited evaluation resources. We present MMTIT-Bench, a human-verified multilingual and multi-scenario benchmark with 1,400 images spanning fourteen non-English and non-Chinese languages and diverse settings such as documents, scenes, and web images, enabling rigorous assessment of end-to-end TIMT. Beyond benchmarking, we study how reasoning-oriented data design improves translation. Although recent VLLMs have begun to incorporate long Chain-of-Thought (CoT) reasoning, effective thinking paradigms for TIMT are still immature: existing designs either cascade parsing and translation in a sequential manner or focus on language-only reasoning, overlooking the visual cognition central to VLLMs. We propose Cognition-Perception-Reasoning for Translation (CPR-Trans), a data paradigm that integrates scene cognition, text perception, and translation reasoning within a unified reasoning process. Using a VLLM-driven data generation pipeline, CPR-Trans provides structured, interpretable supervision that aligns perception with reasoning. Experiments on 3B and 7B models show consistent gains in accuracy and interpretability. We will release MMTIT-Bench to promote the multilingual and multi-scenario TIMT research upon acceptance.",
+        "authors": "Gengluo Li, Chengquan Zhang, Yupu Liang, Huawen Shen, Yaping Zhang, Pengyuan Lyu, Weinong Wang, Xingyu Wan, Gangyan Zeng, Han Hu, Can Ma, Yu Zhou",
+        "url": "http://arxiv.org/abs/2603.23896v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23896v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文为统计学家提供了共形预测（Conformal Prediction）的核心思想和方法综述。共形预测是一个快速发展的框架，以其分布无关、模型无关以及提供精确有限样本保证的特性而闻名，对于现代AI系统中的不确定性量化至关重要。作为一篇教学性概述，它能帮助您快速掌握这一严谨的统计框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23854v1",
+        "title": "Symbolic--KAN: Kolmogorov-Arnold Networks with Discrete Symbolic Structure for Interpretable Learning",
+        "summary": "Symbolic discovery of governing equations is a long-standing goal in scientific machine learning, yet a fundamental trade-off persists between interpretability and scalable learning. Classical symbolic regression methods yield explicit analytic expressions but rely on combinatorial search, whereas neural networks scale efficiently with data and dimensionality but produce opaque representations. In this work, we introduce Symbolic Kolmogorov-Arnold Networks (Symbolic-KANs), a neural architecture that bridges this gap by embedding discrete symbolic structure directly within a trainable deep network. Symbolic-KANs represent multivariate functions as compositions of learned univariate primitives applied to learned scalar projections, guided by a library of analytic primitives, hierarchical gating, and symbolic regularization that progressively sharpens continuous mixtures into one-hot selections. After gated training and discretization, each active unit selects a single primitive and projection direction, yielding compact closed-form expressions without post-hoc symbolic fitting. Symbolic-KANs further act as scalable primitive discovery mechanisms, identifying the most relevant analytic components that can subsequently inform candidate libraries for sparse equation-learning methods. We demonstrate that Symbolic-KAN reliably recovers correct primitive terms and governing structures in data-driven regression and inverse dynamical systems. Moreover, the framework extends to forward and inverse physics-informed learning of partial differential equations, producing accurate solutions directly from governing constraints while constructing compact symbolic representations whose selected primitives reflect the true analytical structure of the underlying equations. These results position Symbolic-KAN as a step toward scalable, interpretable, and mechanistically grounded learning of governing laws.",
+        "authors": "Salah A Faroughi, Farinaz Mostajeran, Amirhossein Arzani, Shirko Faroughi",
+        "url": "http://arxiv.org/abs/2603.23854v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23854v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了符号Kolmogorov-Arnold网络（Symbolic-KANs），将离散符号结构直接嵌入到可训练的深度网络中。它旨在生成紧凑的闭式表达式，并作为可扩展的基元发现机制，识别最相关的解析组件。KANs本身具有强大的理论基础，这篇论文进一步提升了其可解释性和符号逻辑能力，是理论与AI结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23835v1",
+        "title": "Beyond Consistency: Inference for the Relative risk functional in Deep Nonparametric Cox Models",
+        "summary": "There remain theoretical gaps in deep neural network estimators for the nonparametric Cox proportional hazards model. In particular, it is unclear how gradient-based optimization error propagates to population risk under partial likelihood, how pointwise bias can be controlled to permit valid inference, and how ensemble-based uncertainty quantification behaves under realistic variance decay regimes. We develop an asymptotic distribution theory for deep Cox estimators that addresses these issues. First, we establish nonasymptotic oracle inequalities for general trained networks that link in-sample optimization error to population risk without requiring the exact empirical risk optimizer. We then construct a structured neural parameterization that achieves infinity-norm approximation rates compatible with the oracle bound, yielding control of the pointwise bias. Under these conditions and using the Hajek--Hoeffding projection, we prove pointwise and multivariate asymptotic normality for subsampled ensemble estimators. We derive a range of subsample sizes that balances bias correction with the requirement that the Hajek--Hoeffding projection remain dominant. This range accommodates decay conditions on the single-overlap covariance, which measures how strongly a single shared observation influences the estimator, and is weaker than those imposed in the subsampling literature. An infinitesimal jackknife representation provides analytic covariance estimation and valid Wald-type inference for relative risk contrasts such as log-hazard ratios. Finally, we illustrate the finite-sample implications of the theory through simulations and a real data application.",
+        "authors": "Sattwik Ghosal, Xuran Meng, Yi Li",
+        "url": "http://arxiv.org/abs/2603.23835v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23835v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为深度非参数Cox模型中的相对风险泛函推断开发了渐近分布理论。它建立了非渐近预言不等式，证明了子样本集成估计器的点态和多元渐近正态性，并推导了分析协方差估计和有效的Wald型推断。这是对深度学习在生存分析中应用的高度理论和统计严谨性贡献，提供了关键的统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24421v1",
+        "title": "E-values as statistical evidence: A comparison to Bayes factors, likelihoods, and p-values",
+        "summary": "A recurring debate in the philosophy of statistics concerns what, exactly, should count as a measure of evidence for or against a given hypothesis. P-values, likelihood ratios, and Bayes factors all have their defenders. In this paper we add two additional candidates to this list: the e-value and its sequential analogue, the e-process. E-values enjoy several desirable properties as measures of evidence: they combine naturally across studies, handle composite hypotheses, provide long-run error rates, and admit a useful interpretation as the wealth accrued by a bettor in a game against the null distribution. E-processes additionally handle optional stopping and optional continuation. This work examines the extent to which e-values and e-processes satisfy the evidential desiderata of different statistical traditions, concluding that they combine attractive features of p-values, likelihood ratios, and Bayes factors, and merit serious consideration as interpretable and intuitive measures of statistical evidence.",
+        "authors": "Ben Chugg, Aaditya Ramdas, Peter Grünwald",
+        "url": "http://arxiv.org/abs/2603.24421v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24421v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个概率框架，利用神经ODE和基于最大均值差异（MMD）的分布匹配准则，对时间序列数据的连续时间分布演变进行建模。MMD和神经ODE都具有坚实的理论基础，该方法在数字健康领域（如糖尿病监测）的应用展现了其解释性、计算效率和对细微时间分布变化的敏感性。这完美结合了概率建模、连续时间动态和现代AI技术。"
+    }
+]

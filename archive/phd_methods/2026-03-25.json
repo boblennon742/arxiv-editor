@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.24594v1",
+        "title": "Polynomial Speedup in Diffusion Models with the Multilevel Euler-Maruyama Method",
+        "summary": "We introduce the Multilevel Euler-Maruyama (ML-EM) method compute solutions of SDEs and ODEs using a range of approximators $f^1,\\dots,f^k$ to the drift $f$ with increasing accuracy and computational cost, only requiring a few evaluations of the most accurate $f^k$ and many evaluations of the less costly $f^1,\\dots,f^{k-1}$. If the drift lies in the so-called Harder than Monte Carlo (HTMC) regime, i.e. it requires $ε^{-γ}$ compute to be $ε$-approximated for some $γ>2$, then ML-EM $ε$-approximates the solution of the SDE with $ε^{-γ}$ compute, improving over the traditional EM rate of $ε^{-γ-1}$. In other terms it allows us to solve the SDE at the same cost as a single evaluation of the drift. In the context of diffusion models, the different levels $f^{1},\\dots,f^{k}$ are obtained by training UNets of increasing sizes, and ML-EM allows us to perform sampling with the equivalent of a single evaluation of the largest UNet. Our numerical experiments confirm our theory: we obtain up to fourfold speedups for image generation on the CelebA dataset downscaled to 64x64, where we measure a $γ\\approx2.5$. Given that this is a polynomial speedup, we expect even stronger speedups in practical applications which involve orders of magnitude larger networks.",
+        "authors": "Arthur Jacot",
+        "url": "http://arxiv.org/abs/2603.24594v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24594v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种多级Euler-Maruyama (ML-EM) 方法，用于扩散模型中的SDE和ODE求解，实现了多项式级别的加速。它在理论上证明了计算效率的提升（从$ε^{-γ-1}$到$ε^{-γ}$），并解决了扩散模型采样速度慢的实际瓶颈。方法具有扎实的数理统计基础和显著的实际应用价值，完美契合您对理论创新性和解决实际瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24579v1",
+        "title": "MARCH: Multi-Agent Reinforced Self-Check for LLM Hallucination",
+        "summary": "Hallucination remains a critical bottleneck for large language models (LLMs), undermining their reliability in real-world applications, especially in Retrieval-Augmented Generation (RAG) systems. While existing hallucination detection methods employ LLM-as-a-judge to verify LLM outputs against retrieved evidence, they suffer from inherent confirmation bias, where the verifier inadvertently reproduces the errors of the original generation. To address this, we introduce Multi-Agent Reinforced Self-Check for Hallucination (MARCH), a framework that enforces rigorous factual alignment by leveraging deliberate information asymmetry. MARCH orchestrates a collaborative pipeline of three specialized agents: a Solver, a Proposer, and a Checker. The Solver generates an initial RAG response, which the Proposer decomposes into claim-level verifiable atomic propositions. Crucially, the Checker validates these propositions against retrieved evidence in isolation, deprived of the Solver's original output. This well-crafted information asymmetry scheme breaks the cycle of self-confirmation bias. By training this pipeline with multi-agent reinforcement learning (MARL), we enable the agents to co-evolve and optimize factual adherence. Extensive experiments across hallucination benchmarks demonstrate that MARCH substantially reduces hallucination rates. Notably, an 8B-parameter LLM equipped with MARCH achieves performance competitive with powerful closed-source models. MARCH paves a scalable path for factual self-improvement of LLMs through co-evolution. The code is at https://github.com/Qwen-Applications/MARCH.",
+        "authors": "Zhuo Li, Yupeng Zhang, Pengyu Cheng, Jiajun Song, Mengyu Zhou, Hao Li, Shujie Hu, Yu Qin, Erchao Zhao, Xiaoxi Jiang, Guanjun Jiang",
+        "url": "http://arxiv.org/abs/2603.24579v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24579v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MARCH框架通过多智能体强化学习（MARL）和精心设计的信息不对称机制，有效解决了大型语言模型（LLM）幻觉这一关键瓶颈。它打破了传统验证方法的自我确认偏差，实现了事实对齐的自我改进。这种多智能体、基于RL的理论创新方法，对LLM的可靠性具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24533v1",
+        "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+        "summary": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
+        "authors": "Zichuan Lin, Feiyu Liu, Yijun Yang, Jiafei Lyu, Yiming Gao, Yicheng Liu, Zhicong Lu, Yangbin Yu, Mingyu Yang, Junyou Li, Deheng Ye, Jie Jiang",
+        "url": "http://arxiv.org/abs/2603.24533v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24533v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "UI-Voyager是一个两阶段的自进化GUI智能体，通过拒绝微调（Rejection Fine-Tuning, RFT）和组相对自蒸馏（Group Relative Self-Distillation, GRSD）机制，解决了稀疏奖励下长周期GUI任务中学习效率低下和归因模糊的问题。其方法论具有理论创新性，且在无需昂贵人工标注的情况下实现了卓越性能，对数据效率和模型自适应性有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24484v1",
+        "title": "Video-Only ToM: Enhancing Theory of Mind in Multimodal Large Language Models",
+        "summary": "As large language models (LLMs) continue to advance, there is increasing interest in their ability to infer human mental states and demonstrate a human-like Theory of Mind (ToM). Most existing ToM evaluations, however, are centered on text-based inputs, while scenarios relying solely on visual information receive far less attention. This leaves a gap, since real-world human-AI interaction typically requires multimodal understanding. In addition, many current methods regard the model as a black box and rarely probe how its internal attention behaves in multiple-choice question answering (QA). The impact of LLM hallucinations on such tasks is also underexplored from an interpretability perspective. To address these issues, we introduce VisionToM, a vision-oriented intervention framework designed to strengthen task-aware reasoning. The core idea is to compute intervention vectors that align visual representations with the correct semantic targets, thereby steering the model's attention through different layers of visual features. This guidance reduces the model's reliance on spurious linguistic priors, leading to more reliable multimodal language model (MLLM) outputs and better QA performance. Experiments on the EgoToM benchmark-an egocentric, real-world video dataset for ToM with three multiple-choice QA settings-demonstrate that our method substantially improves the ToM abilities of MLLMs. Furthermore, results on an additional open-ended generation task show that VisionToM enables MLLMs to produce free-form explanations that more accurately capture agents' mental states, pushing machine-human collaboration toward greater alignment.",
+        "authors": "Siqi Liu, Xinyang Li, Bochao Zou, Junbao Zhuo, Huimin Ma, Jiansheng Chen",
+        "url": "http://arxiv.org/abs/2603.24484v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24484v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个多智能体框架，结合领域专家智能体、两阶段验证和S-Score加权融合，显著提高了医学多项选择问答中LLM的不确定性校准和判别能力。它将理论严谨性（不确定性校准）与实际应用（临床AI的可靠性）紧密结合，为安全关键型AI应用提供了实用的置信度信号。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24465v1",
+        "title": "Mechanic: Sorrifier-Driven Formal Decomposition Workflow for Automated Theorem Proving",
+        "summary": "Recent advances in large language models (LLMs) and LLM-based agents have substantially improved the capabilities of automated theorem proving. However, for problems requiring complex mathematical reasoning, current systems rarely succeed on the first try and must repeatedly modify their proof strategies. Existing approaches for handling failed attempts typically either discard the entire proof and regenerate it from scratch or iteratively fix errors within the proof. The former is inefficient, as it may abandon mostly correct reasoning due to localized errors, while the latter, although preserving prior progress, leads to progressively longer contexts which progressively degrades the model's ability to attend to the remaining unresolved subproblems. To address this dilemma, we propose Mechanic, a novel agent system that employs a sorry-driven formal decomposition strategy. By leveraging the sorry placeholder in Lean to precisely isolate unresolved subgoals while preserving the surrounding verified proof structure, Mechanic extracts each failed subproblem into a clean, self-contained context and resolves it independently. This avoids both the waste of full regeneration and the excessive context length induced by repeated repairs. Experimental results on challenging mathematical competition benchmarks, including IMO 2025 and Putnam 2025, demonstrate that our agent achieves significant advantages in proving efficiency.",
+        "authors": "Ruichen Qiu, Yichuan Cao, Junqi Liu, Dakai Guo, Xiao-Shan Gao, Lihong Zhi, Ruyong Feng",
+        "url": "http://arxiv.org/abs/2603.24465v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24465v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Mechanic是一个新颖的智能体系统，采用“sorry-driven”形式化分解策略来解决自动化定理证明中的复杂数学推理问题。它利用Lean语言的占位符精确隔离未解决的子目标，避免了重复修复导致的上下文过长问题，显著提高了证明效率。该方法在理论创新性、严谨性和解决实际瓶颈方面表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24382v1",
+        "title": "MolEvolve: LLM-Guided Evolutionary Search for Interpretable Molecular Optimization",
+        "summary": "Despite deep learning's success in chemistry, its impact is hindered by a lack of interpretability and an inability to resolve activity cliffs, where minor structural nuances trigger drastic property shifts. Current representation learning, bound by the similarity principle, often fails to capture these structural-activity discontinuities. To address this, we introduce MolEvolve, an evolutionary framework that reformulates molecular discovery as an autonomous, look-ahead planning problem. Unlike traditional methods that depend on human-engineered features or rigid prior knowledge, MolEvolve leverages a Large Language Model (LLM) to actively explore and evolve a library of executable chemical symbolic operations. By utilizing the LLM to cold start and an Monte Carlo Tree Search (MCTS) engine for test-time planning with external tools (e.g. RDKit), the system self-discovers optimal trajectories autonomously. This process evolves transparent reasoning chains that translate complex structural transformations into actionable, human-readable chemical insights. Experimental results demonstrate that MolEvolve's autonomous search not only evolves transparent, human-readable chemical insights, but also outperforms baselines in both property prediction and molecule optimization tasks.",
+        "authors": "Xiangsen Chen, Ruilong Wu, Yanyan Lan, Ting Ma, Yang Liu",
+        "url": "http://arxiv.org/abs/2603.24382v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24382v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MolEvolve是一个LLM引导的进化搜索框架，将分子发现重新定义为自主的、前瞻性规划问题。它利用LLM探索化学符号操作，并结合MCTS进行规划，从而发现可解释的化学见解。该方法在理论上具有高度创新性，解决了化学领域可解释性和活性悬崖的瓶颈，具有巨大的科学发现潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24389v1",
+        "title": "When AI Meets Early Childhood Education: Large Language Models as Assessment Teammates in Chinese Preschools",
+        "summary": "High-quality teacher-child interaction (TCI) is fundamental to early childhood development, yet traditional expert-based assessment faces a critical scalability challenge. In large systems like China's-serving 36 million children across 250,000+ kindergartens-the cost and time requirements of manual observation make continuous quality monitoring infeasible, relegating assessment to infrequent episodic audits that limit timely intervention and improvement tracking.   In this paper, we investigate whether AI can serve as a scalable assessment teammate by extracting structured quality indicators and validating their alignment with human expert judgments.   Our contributions include: (1) TEPE-TCI-370h (Tracing Effective Preschool Education), the first large-scale dataset of naturalistic teacher-child interactions in Chinese preschools (370 hours, 105 classrooms) with standardized ECQRS-EC and SSTEW annotations; (2) We develop Interaction2Eval, a specialized LLM-based framework addressing domain-specific challenges-child speech recognition, Mandarin homophone disambiguation, and rubric-based reasoning-achieving up to 88% agreement; (3) Deployment validation across 43 classrooms demonstrating an 18x efficiency gain in the assessment workflow, highlighting its potential for shifting from annual expert audits to monthly AI-assisted monitoring with targeted human oversight. This work not only demonstrates the technical feasibility of scalable, AI-augmented quality assessment but also lays the foundation for a new paradigm in early childhood education-one where continuous, inclusive, AI-assisted evaluation becomes the engine of systemic improvement and equitable growth.",
+        "authors": "Xingming Li, Runke Huang, Yanan Bao, Yuye Jin, Yuru Jiao, Qingyong Hu",
+        "url": "http://arxiv.org/abs/2603.24389v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24389v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文系统研究了联邦学习中差分隐私和公平性对分类的联合影响，并提出了FDP-Fair和CDP-Fair算法。它建立了隐私、公平性和超额风险控制的理论保证，并解耦了私有公平感知超额风险的来源。该工作在数理统计和AI伦理方面具有高度严谨性和重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24304v1",
+        "title": "CGRL: Causal-Guided Representation Learning for Graph Out-of-Distribution Generalization",
+        "summary": "Graph Neural Networks (GNNs) have achieved impressive performance in graph-related tasks. However, they suffer from poor generalization on out-of-distribution (OOD) data, as they tend to learn spurious correlations. Such correlations present a phenomenon that GNNs fail to stably learn the mutual information between prediction representations and ground-truth labels under OOD settings. To address these challenges, we formulate a causal graph starting from the essence of node classification, adopt backdoor adjustment to block non-causal paths, and theoretically derive a lower bound for improving OOD generalization of GNNs. To materialize these insights, we further propose a novel approach integrating causal representation learning and a loss replacement strategy. The former captures node-level causal invariance and reconstructs graph posterior distribution. The latter introduces asymptotic losses of the same order to replace the original losses. Extensive experiments demonstrate the superiority of our method in OOD generalization and effectively alleviating the phenomenon of unstable mutual information learning.",
+        "authors": "Bowen Lu, Liangqiang Yang, Teng Li",
+        "url": "http://arxiv.org/abs/2603.24304v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24304v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CGRL（Causal-Guided Representation Learning）提出了一种因果引导的表示学习方法，用于图OOD（Out-of-Distribution）泛化。它构建了节点分类的因果图，采用后门调整来阻断非因果路径，并从理论上推导了改进OOD泛化能力的下界。该方法具有极高的理论创新性和严谨性，解决了GNN在OOD数据上泛化能力差的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24241v1",
+        "title": "C-STEP: Continuous Space-Time Empowerment for Physics-informed Safe Reinforcement Learning of Mobile Agents",
+        "summary": "Safe navigation in complex environments remains a central challenge for reinforcement learning (RL) in robotics. This paper introduces Continuous Space-Time Empowerment for Physics-informed (C-STEP) safe RL, a novel measure of agent-centric safety tailored to deterministic, continuous domains. This measure can be used to design physics-informed intrinsic rewards by augmenting positive navigation reward functions. The reward incorporates the agents internal states (e.g., initial velocity) and forward dynamics to differentiate safe from risky behavior. By integrating C-STEP with navigation rewards, we obtain an intrinsic reward function that jointly optimizes task completion and collision avoidance. Numerical results demonstrate fewer collisions, reduced proximity to obstacles, and only marginal increases in travel time. Overall, C-STEP offers an interpretable, physics-informed approach to reward shaping in RL, contributing to safety for agentic mobile robotic systems.",
+        "authors": "Guihlerme Daubt, Adrian Redder",
+        "url": "http://arxiv.org/abs/2603.24241v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24241v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "C-STEP引入了一种新颖的、以智能体为中心的安全度量，用于移动智能体的物理信息安全强化学习，并设计了物理信息的内在奖励函数。该方法在理论上具有高度创新性，将智能体的内部状态和前向动力学整合到奖励设计中，显著减少了碰撞，对机器人系统的安全导航至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24203v1",
+        "title": "Invisible Threats from Model Context Protocol: Generating Stealthy Injection Payload via Tree-based Adaptive Search",
+        "summary": "Recent advances in the Model Context Protocol (MCP) have enabled large language models (LLMs) to invoke external tools with unprecedented ease. This creates a new class of powerful and tool augmented agents. Unfortunately, this capability also introduces an under explored attack surface, specifically the malicious manipulation of tool responses. Existing techniques for indirect prompt injection that target MCP suffer from high deployment costs, weak semantic coherence, or heavy white box requirements. Furthermore, they are often easily detected by recently proposed defenses. In this paper, we propose Tree structured Injection for Payloads (TIP), a novel black-box attack which generates natural payloads to reliably seize control of MCP enabled agents even under defense. Technically, We cast payload generation as a tree structured search problem and guide the search with an attacker LLM operating under our proposed coarse-to-fine optimization framework. To stabilize learning and avoid local optima, we introduce a path-aware feedback mechanism that surfaces only high quality historical trajectories to the attacker model. The framework is further hardened against defensive transformations by explicitly conditioning the search on observable defense signals and dynamically reallocating the exploration budget. Extensive experiments on four mainstream LLMs show that TIP attains over 95% attack success in undefended settings while requiring an order of magnitude fewer queries than prior adaptive attacks. Against four representative defense approaches, TIP preserves more than 50% effectiveness and significantly outperforms the state-of-the-art attacks. By implementing the attack on real world MCP systems, our results expose an invisible but practical threat vector in MCP deployments. We also discuss potential mitigation approaches to address this critical security gap.",
+        "authors": "Yulin Shen, Xudong Pan, Geng Hong, Min Yang",
+        "url": "http://arxiv.org/abs/2603.24203v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24203v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "TIP（Tree structured Injection for Payloads）提出了一种新颖的黑盒攻击方法，通过树形自适应搜索生成隐蔽的注入载荷，以控制启用MCP（Model Context Protocol）的LLM智能体。该方法在算法设计上具有创新性，暴露了LLM部署中的关键安全漏洞，具有重要的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24166v1",
+        "title": "Heuristic-inspired Reasoning Priors Facilitate Data-Efficient Referring Object Detection",
+        "summary": "Most referring object detection (ROD) models, especially the modern grounding detectors, are designed for data-rich conditions, yet many practical deployments, such as robotics, augmented reality, and other specialized domains, would face severe label scarcity. In such regimes, end-to-end grounding detectors need to learn spatial and semantic structure from scratch, wasting precious samples. We ask a simple question: Can explicit reasoning priors help models learn more efficiently when data is scarce? To explore this, we first introduce a Data-efficient Referring Object Detection (De-ROD) task, which is a benchmark protocol for measuring ROD performance in low-data and few-shot settings. We then propose the HeROD (Heuristic-inspired ROD), a lightweight, model-agnostic framework that injects explicit, heuristic-inspired spatial and semantic reasoning priors, which are interpretable signals derived based on the referring phrase, into 3 stages of a modern DETR-style pipeline: proposal ranking, prediction fusion, and Hungarian matching. By biasing both training and inference toward plausible candidates, these priors promise to improve label efficiency and convergence performance. On RefCOCO, RefCOCO+, and RefCOCOg, HeROD consistently outperforms strong grounding baselines in scarce-label regimes. More broadly, our results suggest that integrating simple, interpretable reasoning priors provides a practical and extensible path toward better data-efficient vision-language understanding.",
+        "authors": "Xu Zhang, Zhe Chen, Jing Zhang, Dacheng Tao",
+        "url": "http://arxiv.org/abs/2603.24166v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24166v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RefReward-SR提出了一种低分辨率（LR）参考感知的奖励模型，用于偏好对齐的超分辨率（SR）。它利用多模态大语言模型（MLLM）进行推理感知的评估，并构建了大规模LR条件偏好数据集。该方法在理论上具有创新性，解决了生成式SR与人类感知对齐的关键瓶颈，对提高图像生成质量有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24124v1",
+        "title": "The Alignment Tax: Response Homogenization in Aligned LLMs and Its Implications for Uncertainty Estimation",
+        "summary": "RLHF-aligned language models exhibit response homogenization: on TruthfulQA (n=790), 40-79% of questions produce a single semantic cluster across 10 i.i.d. samples. On affected questions, sampling-based uncertainty methods have zero discriminative power (AUROC=0.500), while free token entropy retains signal (0.603). This alignment tax is task-dependent: on GSM8K (n=500), token entropy achieves 0.724 (Cohen's d=0.81).   A base-vs-instruct ablation confirms the causal role of alignment: the base model shows 1.0% single-cluster rate vs. 28.5% for the instruct model (p < 10^{-6}). A training stage ablation (Base 0.0% -> SFT 1.5% -> DPO 4.0% SCR) localizes the cause to DPO, not SFT. Cross-family replication on four model families reveals alignment tax severity varies by family and scale. We validate across 22 experiments, 5 benchmarks, 4 model families, and 3 model scales (3B-14B), with Jaccard, embedding, and NLI-based baselines at three DeBERTa scales (all ~0.51 AUROC). Cross-embedder validation with two independent embedding families rules out coupling bias. Cross-dataset validation on WebQuestions (58.0% SCR) confirms generalization beyond TruthfulQA. The central finding -- response homogenization -- is implementation-independent and label-free. Motivated by this diagnosis, we explore a cheapest-first cascade (UCBD) over orthogonal uncertainty signals. Selective prediction raises GSM8K accuracy from 84.4% to 93.2% at 50% coverage; weakly dependent boundaries (|r| <= 0.12) enable 57% cost savings.",
+        "authors": "Mingyi Liu",
+        "url": "http://arxiv.org/abs/2603.24124v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24124v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了RLHF对齐的LLM中存在的“响应同质化”现象，并分析了其对不确定性估计的影响。通过严格的实证研究和消融实验，确认了对齐（特别是DPO）是导致这一现象的因果因素。该工作在理论上具有高度创新性和严谨性，揭示了LLM的一个基本问题，对LLM的可靠性和不确定性量化具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24101v1",
+        "title": "KCLNet: Electrically Equivalence-Oriented Graph Representation Learning for Analog Circuits",
+        "summary": "Digital circuits representation learning has made remarkable progress in the electronic design automation domain, effectively supporting critical tasks such as testability analysis and logic reasoning. However, representation learning for analog circuits remains challenging due to their continuous electrical characteristics compared to the discrete states of digital circuits. This paper presents a direct current (DC) electrically equivalent-oriented analog representation learning framework, named \\textbf{KCLNet}. It comprises an asynchronous graph neural network structure with electrically-simulated message passing and a representation learning method inspired by Kirchhoff's Current Law (KCL). This method maintains the orderliness of the circuit embedding space by enforcing the equality of the sum of outgoing and incoming current embeddings at each depth, which significantly enhances the generalization ability of circuit embeddings. KCLNet offers a novel and effective solution for analog circuit representation learning with electrical constraints preserved. Experimental results demonstrate that our method achieves significant performance in a variety of downstream tasks, e.g., analog circuit classification, subcircuit detection, and circuit edit distance prediction.",
+        "authors": "Peng Xu, Yapeng Li, Tinghuan Chen, Tsung-Yi Ho, Bei Yu",
+        "url": "http://arxiv.org/abs/2603.24101v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24101v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "KCLNet提出了一个面向直流电等效的模拟电路图表示学习框架。它采用异步图神经网络和受基尔霍夫电流定律（KCL）启发的表示学习方法，在理论上保证了电路嵌入空间的有序性。该方法将物理定律与GNN设计相结合，具有极高的理论创新性和严谨性，解决了模拟电路表示学习的挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23994v1",
+        "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+        "summary": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the \"right\" learning evidence to provide at each update? We investigate three factors that affect most applications: the starting artifact, the credit horizon for execution traces, and batching trials and errors into learning evidence. Through case studies in MLAgentBench, Atari, and BigBench Extra Hard, we find that these design decisions can determine whether generative optimization succeeds, yet they are rarely made explicit in prior work. Different starting artifacts determine which solutions are reachable in MLAgentBench, truncated traces can still improve Atari agents, and larger minibatches do not monotonically improve generalization on BBEH. We conclude that the lack of a simple, universal way to set up learning loops across domains is a major hurdle for productionization and adoption. We provide practical guidance for making these choices.",
+        "authors": "Allen Nie, Xavier Daull, Zhiyi Kuang, Abhinav Akkiraju, Anish Chaudhuri, Max Piasevoli, Ryan Rong, YuCheng Yuan, Prerit Choudhary, Shannon Xiao, Rasool Fakoor, Adith Swaminathan, Ching-An Cheng",
+        "url": "http://arxiv.org/abs/2603.23994v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23994v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SDZE（Stochastic Dimension-free Zeroth-Order Estimator）提出了一种随机无维度零阶估计器，用于高维高阶物理信息神经网络（PINNs）。它通过CRNS和隐式无矩阵子空间投影解决了空间导数复杂度和内存开销的瓶颈。该方法在理论上具有高度创新性和严谨性，显著提升了PINNs的训练效率和可扩展性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23989v1",
+        "title": "CoCR-RAG: Enhancing Retrieval-Augmented Generation in Web Q&A via Concept-oriented Context Reconstruction",
+        "summary": "Retrieval-augmented generation (RAG) has shown promising results in enhancing Q&A by incorporating information from the web and other external sources. However, the supporting documents retrieved from the heterogeneous web often originate from multiple sources with diverse writing styles, varying formats, and inconsistent granularity. Fusing such multi-source documents into a coherent and knowledge-intensive context remains a significant challenge, as the presence of irrelevant and redundant information can compromise the factual consistency of the inferred answers. This paper proposes the Concept-oriented Context Reconstruction RAG (CoCR-RAG), a framework that addresses the multi-source information fusion problem in RAG through linguistically grounded concept-level integration. Specifically, we introduce a concept distillation algorithm that extracts essential concepts from Abstract Meaning Representation (AMR), a stable semantic representation that structures the meaning of texts as logical graphs. The distilled concepts from multiple retrieved documents are then fused and reconstructed into a unified, information-intensive context by Large Language Models, which supplement only the necessary sentence elements to highlight the core knowledge. Experiments on the PopQA and EntityQuestions datasets demonstrate that CoCR-RAG significantly outperforms existing context-reconstruction methods across these Web Q&A benchmarks. Furthermore, CoCR-RAG shows robustness across various backbone LLMs, establishing itself as a flexible, plug-and-play component adaptable to different RAG frameworks.",
+        "authors": "Kaize Shi, Xueyao Sun, Qika Lin, Firoj Alam, Qing Li, Xiaohui Tao, Guandong Xu",
+        "url": "http://arxiv.org/abs/2603.23989v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23989v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ES-LLMS（Ensemble of Specialized LLMS）架构通过将决策与措辞分离，实现了可解释的自适应辅导。它采用确定性规则编排器协调专业智能体，并结合可解释的贝叶斯知识追踪学生模型。该架构在理论上具有创新性，解决了LLM作为黑盒的问题，显著提高了教学质量、效率和可控性。"
+    }
+]

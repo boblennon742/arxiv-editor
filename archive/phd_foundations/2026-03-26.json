@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.25668v1",
+        "title": "A generalized Bayesian approach to multiple changepoint analysis",
+        "summary": "We introduce a generalized Bayesian method for multiple changepoint analysis with a loss function inspired by multinomial logistic regression. The method does not require a specification of the data-generating process and avoids restrictive assumptions on the nature of changepoints. From the joint posterior distribution, we can make simultaneous inference on the locations of changepoints and the coefficients of a multinomial logistic regression model for distinguishing data across homogeneous segments. The multinomial logistic regression coefficients provide a familiar means of interpreting potentially complex changes. To select the number of changepoints, we leverage posterior summaries that measure whether the multinomial logistic classifier can distinguish data from either side of a potential changepoint. To simulate from the generalized posterior distribution, we present a Gibbs sampler based on Pólya-Gamma data augmentation. We assess the accuracy and flexibility of our method through simulation studies featuring different types of changes and demonstrate its interpretability through applications to financial network data and topological data derived from nanoparticle videos.",
+        "authors": "Yuhui Wang, Andrew M. Thomas, Michael Jauch",
+        "url": "http://arxiv.org/abs/2603.25668v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25668v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种广义贝叶斯方法用于多变点分析，明确提及了基于多项式逻辑回归损失函数、联合后验分布、Pólya-Gamma数据增强的Gibbs采样器，并评估了变点位置和回归系数的推断。其对理论严谨性和统计推导的强调与您的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25529v1",
+        "title": "Sensitivity Analysis for Instrumental Variables Under Joint Relaxations of Monotonicity and Independence",
+        "summary": "In this paper I develop a breakdown frontier approach to assess the sensitivity of Local Average Treatment Effects (LATE) estimates to violations of monotonicity and independence of the instrument. I parametrize violations of independence using the concept of $c$-dependence from Masten & Poirier (2018) and allow for the share of defiers to be greater than zero but smaller than the share of compliers. I derive identified sets for the LATE and the Average Treatment Effect (ATE) in which the bounds are functions of these two sensitivity parameters. Using these bounds, I derive the breakdown frontier for the LATE, which is the weakest set of assumptions such that a conclusion regarding the LATE holds. I derive consistent sample analogue estimators for the breakdown frontiers and provide a valid bootstrap procedure for inference. Monte Carlo simulations show the desirable finite-sample properties of the estimators and an empirical application shows that the conclusions regarding the effect of family size on unemployment from Angrist & Evans (1998) are highly sensitive to violations of independence and monotonicity.",
+        "authors": "Pedro Picchetti",
+        "url": "http://arxiv.org/abs/2603.25529v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25529v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在工具变量法下，针对单调性和独立性假设的联合放宽，开发了一种敏感性分析的击穿边界方法。它参数化了独立性违规，推导了LATE和ATE的识别集，并提供了渐近有效的样本估计器和bootstrap推断程序。这显示了强大的因果推断理论和统计学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25370v1",
+        "title": "A Distribution-to-Distribution Neural Probabilistic Forecasting Framework for Dynamical Systems",
+        "summary": "Probabilistic forecasting provides a principled framework for uncertainty quantification in dynamical systems by representing predictions as probability distributions rather than deterministic trajectories. However, existing forecasting approaches, whether physics-based or neural-network-based, remain fundamentally trajectory-oriented: predictive distributions are usually accessed through ensembles or sampling, rather than evolved directly as dynamical objects. A distribution-to-distribution (D2D) neural probabilistic forecasting framework is developed to operate directly on predictive distributions. The framework introduces a distributional encoding and decoding structure around a replaceable neural forecasting module, using kernel mean embeddings to represent input distributions and mixture density networks to parameterise output predictive distributions. This design enables recursive propagation of predictive uncertainty within a unified end-to-end neural architecture, with model training and evaluation carried out directly in terms of probabilistic forecast skill. The framework is demonstrated on the Lorenz63 chaotic dynamical system. Results show that the D2D model captures nontrivial distributional evolution under nonlinear dynamics, produces skillful probabilistic forecasts without explicit ensemble simulation, and remains competitive with, and in some cases outperforms, a simplified perfect model benchmark. These findings point to a new paradigm for probabilistic forecasting, in which predictive distributions are learned and evolved directly rather than reconstructed indirectly through ensemble-based uncertainty propagation.",
+        "authors": "Tianlin Yang, Hailiang Du, Louis Aslett",
+        "url": "http://arxiv.org/abs/2603.25370v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25370v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖的“分布到分布”（D2D）神经概率预测框架，用于动力系统中的不确定性量化。它通过核均值嵌入表示输入分布，并使用混合密度网络参数化输出预测分布，实现了预测不确定性的递归传播。这是一个在概率预测和不确定性量化方面具有强大理论贡献的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25342v1",
+        "title": "From Intent to Evidence: A Categorical Approach for Structural Evaluation of Deep Research Agents",
+        "summary": "Although deep research agents (DRAs) have emerged as a promising paradigm for complex information synthesis, their evaluation remains constrained by ad hoc empirical benchmarks. These heuristic approaches do not rigorously model agent behavior or adequately stress-test long-horizon synthesis and ambiguity resolution. To bridge this gap, we formalize DRA behavior through the lens of category theory, modeling deep research workflow as a composition of structure-preserving maps (functors). Grounded in this theoretical framework, we introduce a novel mechanism-aware benchmark with 296 questions designed to stress-test agents along four interpretable axes: traversing sequential connectivity chains, verifying intersections within V-structure pullbacks, imposing topological ordering on retrieved substructures, and performing ontological falsification via the Yoneda Probe. Our rigorous evaluation of 11 leading models establishes a persistently low baseline, with the state-of-the-art achieving only a 19.9\\% average accuracy, exposing the difficulty of formal structural stress-testing. Furthermore, our findings reveal a stark dichotomy in the current AI capabilities. While advanced deep research pipelines successfully redefine dynamic topological re-ordering and exhibit robust ontological verification -- matching pure reasoning models in falsifying hallucinated premises -- they almost universally collapse on multi-hop structural synthesis. Crucially, massive performance variance across tasks exposes a lingering reliance on brittle heuristics rather than a systemic understanding. Ultimately, this work demonstrates that while top-tier autonomous agents can now organically unify search and reasoning, achieving a generalized mastery over complex structural information remains a formidable open challenge.\\footnote{Our implementation will be available at https://github.com/tzq1999/CDR.",
+        "authors": "Shuoling Liu, Zhiquan Tan, Kun Yi, Hui Wu, Yihan Li, Jiangpeng Yan, Liyuan Chen, Kai Chen, Qiang Yang",
+        "url": "http://arxiv.org/abs/2603.25342v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25342v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过范畴论的视角（将深度研究工作流建模为结构保持映射/函子）来形式化深度研究代理的行为，并引入了一个机制感知的基准进行结构化评估。这种将范畴论应用于AI代理评估的理论方法非常新颖且严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25293v1",
+        "title": "DAGverse: Building Document-Grounded Semantic DAGs from Scientific Papers",
+        "summary": "Directed Acyclic Graphs (DAGs) are widely used to represent structured knowledge in scientific and technical domains. However, datasets for real-world DAGs remain scarce because constructing them typically requires expert interpretation of domain documents. We study Doc2SemDAG construction: recovering a preferred semantic DAG from a document together with the cited evidence and context that explain it. This problem is challenging because a document may admit multiple plausible abstractions, the intended structure is often implicit, and the supporting evidence is scattered across prose, equations, captions, and figures. To address these challenges, we leverage scientific papers containing explicit DAG figures as a natural source of supervision. In this setting, the DAG figure provides the DAG structure, while the accompanying text provides context and explanation. We introduce DAGverse, a framework for constructing document-grounded semantic DAGs from online scientific papers. Its core component, DAGverse-Pipeline, is a semi-automatic system designed to produce high-precision semantic DAG examples through figure classification, graph reconstruction, semantic grounding, and validation. As a case study, we test the framework for causal DAGs and release DAGverse-1, a dataset of 108 expert-validated semantic DAGs with graph-level, node-level, and edge-level evidence. Experiments show that DAGverse-Pipeline outperforms existing Vision-Language Models on DAG classification and annotation. DAGverse provides a foundation for document-grounded DAG benchmarks and opens new directions for studying structured reasoning grounded in real-world evidence.",
+        "authors": "Shu Wan, Saketh Vishnubhatla, Iskander Kushbay, Tom Heffernan, Aaron Belikoff, Raha Moraffah, Huan Liu",
+        "url": "http://arxiv.org/abs/2603.25293v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25293v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在概率抽象解释框架中引入了两种新颖的近似方法：分布近似和聚类近似，作为神经网络分析的抽象域。它详细阐述了这些方法在理论上的工作原理以及相应的抽象变换器，展现了形式化方法在神经网络分析中的深刻应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25266v1",
+        "title": "Probabilistic Abstract Interpretation on Neural Networks via Grids Approximation",
+        "summary": "Probabilistic abstract interpretation is a theory used to extract particular properties of a computer program when it is infeasible to test every single inputs. In this paper we apply the theory on neural networks for the same purpose: to analyse density distribution flow of all possible inputs of a neural network when a network has uncountably many or countable but infinitely many inputs. We show how this theoretical framework works in neural networks and then discuss different abstract domains and corresponding Moore-Penrose pseudo-inverses together with abstract transformers used in the framework. We also present experimental examples to show how this framework helps to analyse real world problems.",
+        "authors": "Zhuofan Zhang, Herbert Wiklicky",
+        "url": "http://arxiv.org/abs/2603.25266v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25266v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将概率抽象解释理论应用于神经网络，以分析所有可能输入的密度分布流。它详细讨论了理论框架、不同的抽象域、Moore-Penrose伪逆以及抽象变换器。这与您对形式化方法和理论严谨性的追求高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25224v1",
+        "title": "Fair regression under localized demographic parity constraints",
+        "summary": "Demographic parity (DP) is a widely used group fairness criterion requiring predictive distributions to be invariant across sensitive groups. While natural in classification, full distributional DP is often overly restrictive in regression and can lead to substantial accuracy loss. We propose a relaxation of DP tailored to regression, enforcing parity only at a finite set of quantile levels and/or score thresholds. Concretely, we introduce a novel (${\\ell}$, Z)-fair predictor, which imposes groupwise CDF constraints of the form F f |S=s (z m ) = ${\\ell}$ m for prescribed pairs (${\\ell}$ m , z m ). For this setting, we derive closed-form characterizations of the optimal fair discretized predictor via a Lagrangian dual formulation and quantify the discretization cost, showing that the risk gap to the continuous optimum vanishes as the grid is refined. We further develop a model-agnostic post-processing algorithm based on two samples (labeled for learning a base regressor and unlabeled for calibration), and establish finite-sample guarantees on constraint violation and excess penalized risk. In addition, we introduce two alternative frameworks where we match group and marginal CDF values at selected score thresholds. In both settings, we provide closed-form solutions for the optimal fair discretized predictor. Experiments on synthetic and real datasets illustrate an interpretable fairness-accuracy trade-off, enabling targeted corrections at decision-relevant quantiles or thresholds while preserving predictive performance.",
+        "authors": "Arthur Charpentier, Christophe Denis, Romuald Elie, Mohamed Hebiri, François HU",
+        "url": "http://arxiv.org/abs/2603.25224v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25224v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种针对回归任务的局部人口统计学平等的放松方法，通过拉格朗日对偶公式推导了最优公平离散预测器的闭式表征，并量化了离散化成本，给出了有限样本约束违规和超额惩罚风险的保证。这是算法公平性领域中具有强大理论基础的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25114v1",
+        "title": "Task-Dependent Weighted Average Energy Controllability Score for Network Intervention",
+        "summary": "Controllability scores provide principled information on where intervention should be applied in large-scale network systems when explicit control design is difficult. Two representative controllability scores are the volumetric controllability score (VCS) and the average energy controllability score (AECS). While both are important, the standard AECS treats all state-transition directions uniformly. In this paper, we propose the weighted average energy controllability score (W-AECS), a task-dependent extension of AECS that incorporates a prescribed transition of interest through a weighting matrix. We show that the proposed formulation admits a control-theoretic interpretation via expected minimum-energy steering, and establish strict convexity and generic uniqueness. These results support the interpretation of W-AECS as a well-defined node-wise task-dependent intervention score. We also illustrate the proposed method on a structural brain-network dataset, where transition-dependent weighting reshapes the scoring pattern, yielding a VCS-like preference among the highest-ranked regions while preserving an overall structure distinct from both standard AECS and VCS.",
+        "authors": "Kazuhiro Sato",
+        "url": "http://arxiv.org/abs/2603.25114v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25114v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了加权平均能量可控性分数（W-AECS），作为平均能量可控性分数（AECS）的任务依赖扩展。它通过期望最小能量转向提供了控制理论解释，并建立了严格凸性和泛型唯一性，为网络干预提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25103v1",
+        "title": "Layer-Specific Lipschitz Modulation for Fault-Tolerant Multimodal Representation Learning",
+        "summary": "Modern multimodal systems deployed in industrial and safety-critical environments must remain reliable under partial sensor failures, signal degradation, or cross-modal inconsistencies. This work introduces a mathematically grounded framework for fault-tolerant multimodal representation learning that unifies self-supervised anomaly detection and error correction within a single architecture. Building upon a theoretical analysis of perturbation propagation, we derive Lipschitz- and Jacobian-based criteria that determine whether a neural operator amplifies or attenuates localized faults. Guided by this theory, we propose a two-stage self-supervised training scheme: pre-training a multimodal convolutional autoencoder on clean data to preserve localized anomaly signals in the latent space, and expanding it with a learnable compute block composed of dense layers for correction and contrastive objectives for anomaly identification. Furthermore, we introduce layer-specific Lipschitz modulation and gradient clipping as principled mechanisms to control sensitivity across detection and correction modules. Experimental results on multimodal fault datasets demonstrate that the proposed approach improves both anomaly detection accuracy and reconstruction under sensor corruption. Overall, this framework bridges the gap between analytical robustness guarantees and practical fault-tolerant multimodal learning.",
+        "authors": "Diyar Altinses, Andreas Schwung",
+        "url": "http://arxiv.org/abs/2603.25103v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25103v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个具有数学基础的容错多模态表示学习框架，通过推导基于Lipschitz和Jacobian的准则来分析扰动传播，并引入层特定的Lipschitz调制作为控制敏感度的机制。其对理论分析和数学保证的强调非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25017v1",
+        "title": "Discrete Causal Representation Learning",
+        "summary": "Causal representation learning seeks to uncover causal relationships among high-level latent variables from low-level, entangled, and noisy observations. Existing approaches often either rely on deep neural networks, which lack interpretability and formal guarantees, or impose restrictive assumptions like linearity, continuous-only observations, and strong structural priors. These limitations particularly challenge applications with a large number of discrete latent variables and mixed-type observations. To address these challenges, we propose discrete causal representation learning (DCRL), a generative framework that models a directed acyclic graph among discrete latent variables, along with a sparse bipartite graph linking latent and observed layers. This design accommodates continuous, count, and binary responses through flexible measurement models while maintaining interpretability. Under mild conditions, we prove that both the bipartite measurement graph and the latent causal graph are identifiable from the observed data distribution alone. We further propose a three-stage estimate-resample-discovery pipeline: penalized estimation of the generative model parameters, resampling of latent configurations from the fitted model, and score-based causal discovery on the resampled latents. We establish the consistency of this procedure, ensuring reliable recovery of the latent causal structure. Empirical studies on educational assessment and synthetic image data demonstrate that DCRL recovers sparse and interpretable latent causal structures.",
+        "authors": "Wenjin Zhang, Yixin Wang, Yuqi Gu",
+        "url": "http://arxiv.org/abs/2603.25017v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25017v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了离散因果表示学习（DCRL），一个生成式框架，用于从低级、纠缠和嘈杂的观测中发现高级离散潜在变量之间的因果关系。它证明了测量图和潜在因果图的可识别性，并建立了三阶段估计过程的一致性。这是因果表示学习领域的重要理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25010v1",
+        "title": "Bayesian Propensity Score-Augmented Latent Factor Models for Causal Inference with Time-Series Cross-Sectional Data",
+        "summary": "We propose a Bayesian propensity score-augmented latent factor model for causal inference with time-series cross-sectional data. The framework explicitly models the treatment assignment mechanism by incorporating latent factor loadings, while the outcome model flexibly incorporates the propensity score, for example through stratification. Relative to existing approaches, the proposed method provides greater flexibility and captures additional heterogeneity across propensity-score strata, enabling more credible comparisons between treated and control units within each stratum. For estimation and inference, we adopt an approximate Bayesian procedure to address the model feedback problem common in Bayesian propensity score analysis. We demonstrate the performance of the proposed method through Monte Carlo simulations and an empirical application examining the effect of political connections on firm value.",
+        "authors": "Licheng Liu",
+        "url": "http://arxiv.org/abs/2603.25010v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25010v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种贝叶斯倾向得分增强的潜在因子模型，用于时间序列横截面数据的因果推断。该框架明确建模了处理分配机制，并灵活地结合了倾向得分，同时采用近似贝叶斯程序解决模型反馈问题。具有强大的贝叶斯统计和因果推断理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24965v1",
+        "title": "Self-Corrected Image Generation with Explainable Latent Rewards",
+        "summary": "Despite significant progress in text-to-image generation, aligning outputs with complex prompts remains challenging, particularly for fine-grained semantics and spatial relations. This difficulty stems from the feed-forward nature of generation, which requires anticipating alignment without fully understanding the output. In contrast, evaluating generated images is more tractable. Motivated by this asymmetry, we propose xLARD, a self-correcting framework that uses multimodal large language models to guide generation through Explainable LAtent RewarDs. xLARD introduces a lightweight corrector that refines latent representations based on structured feedback from model-generated references. A key component is a differentiable mapping from latent edits to interpretable reward signals, enabling continuous latent-level guidance from non-differentiable image-level evaluations. This mechanism allows the model to understand, assess, and correct itself during generation. Experiments across diverse generation and editing tasks show that xLARD improves semantic alignment and visual fidelity while maintaining generative priors. Code is available at https://yinyiluo.github.io/xLARD/.",
+        "authors": "Yinyi Luo, Hrishikesh Gokhale, Marios Savvides, Jindong Wang, Shengfeng He",
+        "url": "http://arxiv.org/abs/2603.24965v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24965v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了在存在减员的随机对照试验中，针对“总是报告者”处理效应的随机化推断。它提出了一个最坏情况随机化检验，并证明了其在尖锐零假设下的有限样本有效性和在弱零假设下的渐近有效性，使用了学生化统计量。这是统计推断和因果分析中非常严谨的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24904v1",
+        "title": "On the Foundations of Trustworthy Artificial Intelligence",
+        "summary": "We prove that platform-deterministic inference is necessary and sufficient for   trustworthy AI. We formalize this as the Determinism Thesis and introduce trust   entropy to quantify the cost of non-determinism, proving that verification failure   probability equals 1 - 2^{-H_T} exactly. We prove a Determinism-Verification   Collapse: verification under determinism requires O(1) hash comparison; without it,   the verifier faces an intractable membership problem. IEEE 754 floating-point   arithmetic fundamentally violates the determinism requirement. We resolve this by   constructing a pure integer inference engine that achieves bitwise identical output   across ARM and x86. In 82 cross-architecture tests on models up to 6.7B parameters,   we observe zero hash mismatches. Four geographically distributed nodes produce   identical outputs, verified by 356 on-chain attestation transactions. Every major   trust property of AI systems (fairness, robustness, privacy, safety, alignment)   presupposes platform determinism. Our system, 99,000 lines of Rust deployed across   three continents, establishes that AI trust is a question of arithmetic.",
+        "authors": "TJ Dunham",
+        "url": "http://arxiv.org/abs/2603.24904v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24904v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文证明了平台确定性推理对于可信赖AI是必要且充分的，将其形式化为确定性论题并引入信任熵。它证明了确定性-验证崩溃，并构建了一个纯整数推理引擎，实现了跨架构的位级相同输出。这是一项具有开创性的、极其严谨的AI基础理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25035v1",
+        "title": "Mechanistically Interpreting Compression in Vision-Language Models",
+        "summary": "Compressed vision-language models (VLMs) are widely used to reduce memory and compute costs, making them a suitable choice for real-world deployment. However, compressing these models raises concerns about whether internal computations and safety behaviors are preserved. In this work, we use causal circuit analysis and crosscoder-based feature comparisons to examine how pruning and quantization fundamentally change the internals across representative VLMs. We observe that pruning generally keeps circuit structure intact but rotates and attenuates internal features, while quantization modifies the circuits at a higher level yet leaves the surviving features better aligned. Leveraging this insight, we also introduce VLMSafe-420, a novel benchmark that pairs harmful inputs with matched benign counterfactuals across various safety categories. Our findings show that pruning causes a sharp drop in genuine refusal behavior, suggesting that the choice of compression has safety implications.",
+        "authors": "Veeraraju Elluru, Arth Singh, Roberto Aguero, Ajay Agarwal, Debojyoti Das, Hreetam Paul",
+        "url": "http://arxiv.org/abs/2603.25035v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25035v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了收敛网络干扰下的处理效应估计问题，通过将Lovász和Szegedy开创的图极限框架扩展到因果推断领域，并证明了中心极限定理。这是对因果推断和网络分析理论的强大贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.25107v1",
+        "title": "Label What Matters: Modality-Balanced and Difficulty-Aware Multimodal Active Learning",
+        "summary": "Multimodal learning integrates complementary information from different modalities such as image, text, and audio to improve model performance, but its success relies on large-scale labeled data, which is costly to obtain. Active learning (AL) mitigates this challenge by selectively annotating informative samples. In multimodal settings, many approaches implicitly assume that modality importance is stable across rounds and keep selection rules fixed at the fusion stage, which leaves them insensitive to the dynamic nature of multimodal learning, where the relative value of modalities and the difficulty of instances shift as training proceeds. To address this issue, we propose RL-MBA, a reinforcement-learning framework for modality-balanced, difficulty-aware multimodal active learning. RL-MBA models sample selection as a Markov Decision Process, where the policy adapts to modality contributions, uncertainty, and diversity, and the reward encourages accuracy gains and balance. Two key components drive this adaptability: (1) Adaptive Modality Contribution Balancing (AMCB), which dynamically adjusts modality weights via reinforcement feedback, and (2) Evidential Fusion for DifficultyAware Policy Adjustment (EFDA), which estimates sample difficulty via uncertainty-based evidential fusion to prioritize informative samples. Experiments on Food101, KineticsSound, and VGGSound demonstrate that RL-MBA consistently outperforms strong baselines, improving both classification accuracy and modality fairness under limited labeling budgets.",
+        "authors": "Yuqiao Zeng, Xu Wang, Tengfei Liang, Yiqing Hao, Yi Jin, Hui Yu",
+        "url": "http://arxiv.org/abs/2603.25107v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.25107v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个基于Type-2信号检测理论的评估框架，用于分解LLM的信心（Type-1敏感性）和其对自身知识的了解程度（Type-2元认知敏感性），使用了meta-d'和M-ratio。它提供了对LLM元认知能力深刻的、统计学基础的理解，非常符合您的统计学背景。"
+    }
+]

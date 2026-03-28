@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.24857v1",
+        "title": "AI Security in the Foundation Model Era: A Comprehensive Survey from a Unified Perspective",
+        "summary": "As machine learning (ML) systems expand in both scale and functionality, the security landscape has become increasingly complex, with a proliferation of attacks and defenses. However, existing studies largely treat these threats in isolation, lacking a coherent framework to expose their shared principles and interdependencies. This fragmented view hinders systematic understanding and limits the design of comprehensive defenses. Crucially, the two foundational assets of ML -- \\textbf{data} and \\textbf{models} -- are no longer independent; vulnerabilities in one directly compromise the other. The absence of a holistic framework leaves open questions about how these bidirectional risks propagate across the ML pipeline. To address this critical gap, we propose a \\emph{unified closed-loop threat taxonomy} that explicitly frames model-data interactions along four directional axes. Our framework offers a principled lens for analyzing and defending foundation models. The resulting four classes of security threats represent distinct but interrelated categories of attacks: (1) Data$\\rightarrow$Data (D$\\rightarrow$D): including \\emph{data decryption attacks and watermark removal attacks}; (2) Data$\\rightarrow$Model (D$\\rightarrow$M): including \\emph{poisoning, harmful fine-tuning attacks, and jailbreak attacks}; (3) Model$\\rightarrow$Data (M$\\rightarrow$D): including \\emph{model inversion, membership inference attacks, and training data extraction attacks}; (4) Model$\\rightarrow$Model (M$\\rightarrow$M): including \\emph{model extraction attacks}. Our unified framework elucidates the underlying connections among these security threats and establishes a foundation for developing scalable, transferable, and cross-modal security strategies, particularly within the landscape of foundation models.",
+        "authors": "Zhenyi Wang, Siyu Luan",
+        "url": "http://arxiv.org/abs/2603.24857v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24857v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "统一视角下基础模型时代AI安全威胁与防御的全面综述，指引LLM安全研究方向。",
+        "reason_zh": "这篇综述为基础模型时代的AI安全提供了一个统一的闭环威胁分类框架，详细分析了数据与模型间的双向风险传播。对于关注LLM理论机制和安全性的博士生而言，它提供了宏观且深入的视角，能有效指导未来在LLM安全领域的防御策略和研究方向，具有极高的实用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24402v2",
+        "title": "AI-Supervisor: Autonomous AI Research Supervision via a Persistent Research World Model",
+        "summary": "Existing automated research systems operate as stateless, linear pipelines -- generating outputs without maintaining any persistent understanding of the research landscape they navigate. They process papers sequentially, propose ideas without structured gap analysis, and lack mechanisms for agents to verify, challenge, or refine each other's findings. We present \\textbf{AI-Supervisor}, a multi-agent orchestration framework where specialized agents provide end-to-end AI research supervision driven by human interests -- from literature review through gap discovery, method development, evaluation, and paper writing -- through autonomous exploration and self-correcting updates of research knowledge. Unlike sequential pipelines, AI-Supervisor maintains a continuously evolving \\emph{Research World Model}, implemented as a Knowledge Graph, that captures methods, benchmarks, known limitations, and unexplored gaps, serving as shared memory across all agents and enabling agents to explore and build upon a structured understanding of the research landscape. The framework introduces three architectural contributions: (1) \\emph{structured gap discovery} that decomposes methods into core modules, validates their performance across benchmarks, and maps the specific gaps each module creates; (2) \\emph{self-correcting discovery loops} that probe why modules succeed on certain problems and fail on others, whether benchmarks carry hidden biases, and whether evaluation protocols remain adequate for emerging challenges; and (3) \\emph{self-improving development loops} governed by cross-domain mechanism search that iteratively targets failing modules by finding solutions from other scientific fields. All agents operate under a \\emph{consensus mechanism} where independent findings are corroborated before being committed to the Research World Model.",
+        "authors": "Yunbo Long",
+        "url": "http://arxiv.org/abs/2603.24402v2",
+        "pdf_url": "https://arxiv.org/pdf/2603.24402v2",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出通过持久化研究世界模型实现LLM驱动的自主AI研究监督框架，探索AI研究自动化前沿。",
+        "reason_zh": "该框架通过多智能体协作和知识图谱构建“研究世界模型”，实现了从文献综述到方法开发、评估和论文撰写的全流程自主AI研究监督。其结构化发现、自我纠正和自我改进机制，为LLM理论机制和AI代理的未来研究提供了创新范式和深刻启示，极具前瞻性和研究指引性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23961v1",
+        "title": "GRMLR: Knowledge-Enhanced Small-Data Learning for Deep-Sea Cold Seep Stage Inference",
+        "summary": "Deep-sea cold seep stage assessment has traditionally relied on costly, high-risk manned submersible operations and visual surveys of macrofauna. Although microbial communities provide a promising and more cost-effective alternative, reliable inference remains challenging because the available deep-sea dataset is extremely small ($n = 13$) relative to the microbial feature dimension ($p = 26$), making purely data-driven models highly prone to overfitting. To address this, we propose a knowledge-enhanced classification framework that incorporates an ecological knowledge graph as a structural prior. By fusing macro-microbe coupling and microbial co-occurrence patterns, the framework internalizes established ecological logic into a \\underline{\\textbf{G}}raph-\\underline{\\textbf{R}}egularized \\underline{\\textbf{M}}ultinomial \\underline{\\textbf{L}}ogistic \\underline{\\textbf{R}}egression (GRMLR) model, effectively constraining the feature space through a manifold penalty to ensure biologically consistent classification. Importantly, the framework removes the need for macrofauna observations at inference time: macro-microbe associations are used only to guide training, whereas prediction relies solely on microbial abundance profiles. Experimental results demonstrate that our approach significantly outperforms standard baselines, highlighting its potential as a robust and scalable framework for deep-sea ecological assessment.",
+        "authors": "Chenxu Zhou, Zelin Liu, Rui Cai, Houlin Gong, Yikang Yu, Jia Zeng, Yanru Pei, Liang Zhang, Weishu Zhao, Xiaofeng Gao",
+        "url": "http://arxiv.org/abs/2603.23961v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23961v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "对强化学习环境进行大规模数据驱动的实证研究，揭示RL与LLM/基础代理的融合趋势与认知机制。",
+        "reason_zh": "这项研究通过大规模数据分析，系统地揭示了强化学习环境的演变，特别是其向“语义先验”生态系统（LLM主导）和“领域特定泛化”生态系统的分化。它为理解Offline RL、LLM理论机制以及跨任务协同和零样本泛化提供了数据验证的路线图和深刻洞察，对相关领域研究有重要启发。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22869v1",
+        "title": "Chain-of-Authorization: Internalizing Authorization into Large Language Models via Reasoning Trajectories",
+        "summary": "Large Language Models (LLMs) have become core cognitive components in modern artificial intelligence (AI) systems, combining internal knowledge with external context to perform complex tasks. However, LLMs typically treat all accessible data indiscriminately, lacking inherent awareness of knowledge ownership and access boundaries. This deficiency heightens risks of sensitive data leakage and adversarial manipulation, potentially enabling unauthorized system access and severe security crises. Existing protection strategies rely on rigid, uniform defense that prevent dynamic authorization. Structural isolation methods faces scalability bottlenecks, while prompt guidance methods struggle with fine-grained permissions distinctions. Here, we propose the Chain-of-Authorization (CoA) framework, a secure training and reasoning paradigm that internalizes authorization logic into LLMs' core capabilities. Unlike passive external defneses, CoA restructures the model's information flow: it embeds permission context at input and requires generating explicit authorization reasoning trajectory that includes resource review, identity resolution, and decision-making stages before final response. Through supervised fine-tuning on data covering various authorization status, CoA integrates policy execution with task responses, making authorization a causal prerequisite for substantive responses. Extensive evaluations show that CoA not only maintains comparable utility in authorized scenarios but also overcomes the cognitive confusion when permissions mismatches. It exhibits high rejection rates against various unauthorized and adversarial access. This mechanism leverages LLMs' reasoning capability to perform dynamic authorization, using natural language understanding as a proactive security mechanism for deploying reliable LLMs in modern AI systems.",
+        "authors": "Yang Li, Yule Liu, Xinlei He, Youjian Zhao, Qi Li, Ke Xu",
+        "url": "http://arxiv.org/abs/2603.22869v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22869v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出通过推理轨迹将授权逻辑内化到LLM中，提升LLM在现代AI系统中的安全性和可靠性。",
+        "reason_zh": "该框架通过在LLM的训练和推理过程中嵌入权限上下文，并要求生成明确的授权推理轨迹，从而将授权逻辑内化到模型核心能力中。这对于理解LLM的理论机制、提升其在复杂系统中的安全性和可靠性，以及探索LLM的“认知”边界具有开创性意义和深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22363v1",
+        "title": "Early Discoveries of Algorithmist I: Promise of Provable Algorithm Synthesis at Scale",
+        "summary": "Designing algorithms with provable guarantees that also work well in practice remains difficult, requiring both mathematical reasoning and careful implementation. Existing approaches that bridge worst-case theory and empirical performance, such as beyond-worst-case analysis and data-driven algorithm selection, typically assume prior distributional knowledge or restrict attention to a fixed pool of algorithms. Recent progress in LLMs suggests a new possibility: provable algorithm synthesis on the fly. To study this, we built Algorithmist, an autonomous researcher agent on top of GitHub Copilot that runs a multi-agent research-and-review loop, with separate stages for idea generation, algorithm and proof development, proof-guided implementation, and review of proofs, code, and their alignment. We evaluate Algorithmist on research-level tasks in private data analysis and clustering. When asked to design practical methods that jointly satisfy privacy, approximation, and interpretability requirements, it produced provably sound and empirically effective algorithms, together with research-style writeups and audited implementations. It also found improved algorithms in some settings, explained principled barriers in others, and uncovered a subtle proof bug in prior published work. More broadly, our results suggest a new paradigm in which LLM systems generate research-paper-quality algorithmic artifacts tailored to each dataset and deployment setting. They also point to a proof-first code-synthesis paradigm, in which code is developed alongside a structured natural-language proof intermediate representation and kept aligned with it throughout synthesis.",
+        "authors": "Janardhan Kulkarni",
+        "url": "http://arxiv.org/abs/2603.22363v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22363v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "探索LLM代理在可证明算法合成方面的潜力，实现理论严谨性与实践有效性的结合。",
+        "reason_zh": "这篇论文介绍了Algorithmist，一个能够自主生成具有可证明保证的算法的AI研究代理。它提出了一种“证明优先”的代码合成范式，将数学推理与实际实现紧密结合。对于数理统计博士生而言，这不仅是LLM理论机制的前沿探索，也为未来算法设计和验证提供了深刻的启发和研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24074v1",
+        "title": "QuatIca: Advanced Numerical Linear Algebra and Optimization for Quaternionic Matrices in Python",
+        "summary": "Quaternion-valued representations provide a convenient way to model coupled multi-channel signals (e.g., RGB imagery, polarization data, vector fields, and multi-detector time series). Yet practical and numerically reliable software support remains far less mature than those based on the real/complex setting. Here, we present QuatIca, an open-source Python library for quaternion numerical linear algebra and optimization, designed for both research prototyping and reproducible experimentation. QuatIca provides core quaternion matrix operations and norms; dense decompositions and reductions (QR, LU, Q-SVD, eigendecomposition, Hessenberg/tridiagonal reduction, Cholesky decomposition, and Schur helpers); iterative solvers including quaternion GMRES (with preconditioning) and Newton-Schulz pseudoinverse schemes; and domain-focused routines for signal and image processing such as quaternion Tikhonov restoration. The library also includes OptiQ, which solves quaternion Hermitian semidefinite programs using log-det barrier Newton methods with $μ$-continuation. We highlight design choices that preserve quaternion structure, and we provide end-to-end demonstrations including quaternion image deblurring, Lorenz-attractor filtering, and quaternion image completion. QuatIca is distributed via PyPI and accompanied by open-source development on GitHub and continuously deployed documentation with runnable tutorials.",
+        "authors": "Valentin Leplat, Salman Ahmadi-Asl, Junjun Pan, Henni Ouerdane, Michael Ng",
+        "url": "http://arxiv.org/abs/2603.24074v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24074v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提供用于四元数矩阵的高级数值线性代数和优化开源库，支持复杂多通道信号建模。",
+        "reason_zh": "尽管是针对四元数，但其核心是数值线性代数和优化，与用户需求中的“矩阵分析”和“凸优化”高度相关。论文强调了数值可靠性、密分解、迭代求解器和凸优化方法，并提供了实际演示，对于博士生深入理解高级数值计算和优化原理，并能实际操作，是极具价值的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.23923v1",
+        "title": "Elements of Conformal Prediction for Statisticians",
+        "summary": "Predictive inference is a fundamental task in statistics, traditionally addressed using parametric assumptions about the data distribution and detailed analyses of how models learn from data. In recent years, conformal prediction has emerged as a rapidly growing alternative framework that is particularly well suited to modern applications involving high-dimensional data and complex machine learning models. Its appeal stems from being both distribution-free -- relying mainly on symmetry assumptions such as exchangeability -- and model-agnostic, treating the learning algorithm as a black box. Even under such limited assumptions, conformal prediction provides exact finite-sample guarantees, though these are typically of a marginal nature that requires careful interpretation. This paper explains the core ideas of conformal prediction and reviews selected methods. Rather than offering an exhaustive survey, it aims to provide a clear conceptual entry point and a pedagogical overview of the field.",
+        "authors": "Matteo Sesia, Stefano Favaro",
+        "url": "http://arxiv.org/abs/2603.23923v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.23923v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "针对统计学家对共形预测核心思想和方法的教学性概述，提供分布无关、模型无关的预测推断框架。",
+        "reason_zh": "共形预测是现代统计推断的重要前沿，具有严格的有限样本保证。这篇论文明确指出其目标是提供“清晰的概念切入点和教学性概述”，强调其分布无关和模型无关的特性。对于数理统计博士生系统学习其核心思想、数学严谨性和应用潜力，是补全预测推断知识体系的理想资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24613v1",
+        "title": "Persistence-based topological optimization: a survey",
+        "summary": "Computational topology provides a tool, persistent homology, to extract quantitative descriptors from structured objects (images, graphs, point clouds, etc). These descriptors can then be involved in optimization problems, typically as a way to incorporate topological priors or to regularize machine learning models. This is usually achieved by minimizing adequate, topologically-informed losses based on these descriptors, which, in turn, naturally raises theoretical and practical questions about the possibility of optimizing such loss functions using gradient-based algorithms. This has been an active research field in the topological data analysis community over the last decade, and various techniques have been developed to enable optimization of persistence-based loss functions with gradient descent schemes. This survey presents the current state of this field, covering its theoretical foundations, the algorithmic aspects, and showcasing practical uses in several applications. It includes a detailed introduction to persistence theory and, as such, aims at being accessible to mathematicians and data scientists newcomers to the field. It is accompanied by an open-source library which implements the different approaches covered in this survey, providing a convenient playground for researchers to get familiar with the field.",
+        "authors": "Mathieu Carriere, Yuichi Ike, Théo Lacombe, Naoki Nishikawa",
+        "url": "http://arxiv.org/abs/2603.24613v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24613v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "拓扑优化与持久同调的综述，详细介绍了持久性理论及其在优化中的应用。",
+        "reason_zh": "拓扑数据分析是数学与数据科学交叉的前沿领域，该综述提供了“详细的持久性理论介绍”，并强调了其数学严谨性、算法实现和实际应用。论文明确指出“旨在让数学家和数据科学家新手都能理解”，是数理统计博士生深入学习计算拓扑学和其在优化中严谨应用的绝佳资源，能有效拓展数学工具箱。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.22558v1",
+        "title": "Maximum Entropy Relaxation of Multi-Way Cardinality Constraints for Synthetic Population Generation",
+        "summary": "Generating synthetic populations from aggregate statistics is a core component of microsimulation, agent-based modeling, policy analysis, and privacy-preserving data release. Beyond classical census marginals, many applications require matching heterogeneous unary, binary, and ternary constraints derived from surveys, expert knowledge, or automatically extracted descriptions. Constructing populations that satisfy such multi-way constraints simultaneously poses a significant computational challenge. We consider populations where each individual is described by categorical attributes and the target is a collection of global frequency constraints over attribute combinations. Exact formulations scale poorly as the number and arity of constraints increase, especially when the constraints are numerous and overlapping. Grounded in methods from statistical physics, we propose a maximum-entropy relaxation of this problem. Multi-way cardinality constraints are matched in expectation rather than exactly, yielding an exponential-family distribution over complete population assignments and a convex optimization problem over Lagrange multipliers. We evaluate the approach on NPORS-derived scaling benchmarks with 4 to 40 attributes and compare it primarily against generalized raking. The results show that MaxEnt becomes increasingly advantageous as the number of attributes and ternary interactions grows, while raking remains competitive on smaller, lower-arity instances.",
+        "authors": "François Pachet, Jean-Daniel Zucker",
+        "url": "http://arxiv.org/abs/2603.22558v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.22558v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "基于最大熵松弛方法解决合成人口生成中的多维基数约束问题，涉及凸优化和统计物理。",
+        "reason_zh": "该论文将统计物理中的最大熵原理应用于合成人口生成中的多维基数约束问题，将其转化为一个凸优化问题。它提供了严谨的数学推导和理论分析，明确提及“凸优化”和“统计物理”基础，对于数理统计博士生理解最大熵原理、凸优化及其在复杂系统建模中的应用具有极高的学习价值，是补全高级统计物理和优化基础的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.24999v1",
+        "title": "Efficient Detection of Bad Benchmark Items with Novel Scalability Coefficients",
+        "summary": "The validity of assessments, from large-scale AI benchmarks to human classrooms, depends on the quality of individual items, yet modern evaluation instruments often contain thousands of items with minimal psychometric vetting. We introduce a new family of nonparametric scalability coefficients based on interitem isotonic regression for efficiently detecting globally bad items (e.g., miskeyed, ambiguously worded, or construct-misaligned). The central contribution is the signed isotonic $R^2$, which measures the maximal proportion of variance in one item explainable by a monotone function of another while preserving the direction of association via Kendall's $τ$. Aggregating these pairwise coefficients yields item-level scores that sharply separate problematic items from acceptable ones without assuming linearity or committing to a parametric item response model. We show that the signed isotonic $R^2$ is extremal among monotone predictors (it extracts the strongest possible monotone signal between any two items) and show that this optimality property translates directly into practical screening power. Across three AI benchmark datasets (HS Math, GSM8K, MMLU) and two human assessment datasets, the signed isotonic $R^2$ consistently achieves top-tier AUC for ranking bad items above good ones, outperforming or matching a comprehensive battery of classical test theory, item response theory, and dimensionality-based diagnostics. Crucially, the method remains robust under the small-n/large-p conditions typical of AI evaluation, requires only bivariate monotone fits computable in seconds, and handles mixed item types (binary, ordinal, continuous) without modification. It is a lightweight, model-agnostic filter that can materially reduce the reviewer effort needed to find flawed items in modern large-scale evaluation regimes.",
+        "authors": "Michael Hardy, Joshua Gilbert, Benjamin Domingue",
+        "url": "http://arxiv.org/abs/2603.24999v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.24999v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "引入基于等渗回归的新型非参数可伸缩性系数，高效检测基准测试中的问题项。",
+        "reason_zh": "虽然标题听起来偏应用，但其核心贡献在于提出了一系列基于“等渗回归”的新型非参数可伸缩性系数，具有极强的数学和统计严谨性。论文通过Kendall's τ和单调函数解释方差，并与经典测试理论和IRT诊断进行比较。对于数理统计博士生而言，这提供了一个理解和学习高级非参数统计方法、统计量理论性质及其在实际评估中严谨应用的优秀案例，有助于补全博士阶段的统计学方法论拼图。"
+    }
+]

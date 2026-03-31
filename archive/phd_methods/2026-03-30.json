@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.28444v1",
+        "title": "Entropic Claim Resolution: Uncertainty-Driven Evidence Selection for RAG",
+        "summary": "Current Retrieval-Augmented Generation (RAG) systems predominantly rely on relevance-based dense retrieval, sequentially fetching documents to maximize semantic similarity with the query. However, in knowledge-intensive and real-world scenarios characterized by conflicting evidence or fundamental query ambiguity, relevance alone is insufficient for resolving epistemic uncertainty. We introduce Entropic Claim Resolution (ECR), a novel inference-time algorithm that reframes RAG reasoning as entropy minimization over competing semantic answer hypotheses. Unlike action-driven agentic frameworks (e.g., ReAct) or fixed-pipeline RAG architectures, ECR sequentially selects atomic evidence claims by maximizing Expected Entropy Reduction (EER), a decision-theoretic criterion for the value of information. The process dynamically terminates when the system reaches a mathematically defined state of epistemic sufficiency (H <= epsilon, subject to epistemic coherence). We integrate ECR into a production-grade multi-strategy retrieval pipeline (CSGR++) and analyze its theoretical properties. Our framework provides a rigorous foundation for uncertainty-aware evidence selection, shifting the paradigm from retrieving what is most relevant to retrieving what is most discriminative.",
+        "authors": "Davide Di Gioia",
+        "url": "http://arxiv.org/abs/2603.28444v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28444v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "理论创新性极强，将RAG推理重构为熵最小化问题，通过最大化预期熵减（EER）来序列选择证据，解决了RAG在冲突证据和查询歧义下的可靠性瓶颈。该方法具有坚实的决策理论基础和数学定义，对LLM应用中的知识密集型场景具有重大实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28386v1",
+        "title": "COvolve: Adversarial Co-Evolution of Large-Language-Model-Generated Policies and Environments via Two-Player Zero-Sum Game",
+        "summary": "A central challenge in building continually improving agents is that training environments are typically static or manually constructed. This restricts continual learning and generalization beyond the training distribution. We address this with COvolve, a co-evolutionary framework that leverages large language models (LLMs) to generate both environments and agent policies, expressed as executable Python code. We model the interaction between environment and policy designers as a two-player zero-sum game, ensuring adversarial co-evolution in which environments expose policy weaknesses and policies adapt in response. This process induces an automated curriculum in which environments and policies co-evolve toward increasing complexity. To guarantee robustness and prevent forgetting as the curriculum progresses, we compute the mixed-strategy Nash equilibrium (MSNE) of the zero-sum game, thereby yielding a meta-policy. This MSNE meta-policy ensures that the agent does not forget to solve previously seen environments while learning to solve previously unseen ones. Experiments in urban driving, symbolic maze-solving, and geometric navigation showcase that COvolve produces progressively more complex environments. Our results demonstrate the potential of LLM-driven co-evolution to achieve open-ended learning without predefined task distributions or manual intervention.",
+        "authors": "Alkis Sygkounas, Rishi Hazra, Andreas Persson, Pedro Zuidberg Dos Martires, Amy Loutfi",
+        "url": "http://arxiv.org/abs/2603.28386v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28386v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "高度新颖的协同进化框架，利用LLM生成可执行的策略和环境，通过二人零和博弈实现对抗性协同进化，并计算混合策略纳什均衡以确保鲁棒性。这解决了持续学习和泛化 beyond 训练分布的根本瓶颈，对AI Agent的开放式学习和前沿算法架构有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28197v1",
+        "title": "EpiPersona: Persona Projection and Episode Coupling for Pluralistic Preference Modeling",
+        "summary": "Pluralistic alignment is essential for adapting large language models (LLMs) to the diverse preferences of individuals and minority groups. However, existing approaches often mix stable personal traits with episode-specific factors, limiting their ability to generalize across episodes. To address this challenge, we introduce EpiPersona, a framework for explicit persona-episode coupling. EpiPersona first projects noisy preference feedback into a low-dimensional persona space, where similar personas are aggregated into shared discrete codes. This process separates enduring personal characteristics from situational signals without relying on predefined preference dimensions. The inferred persona representation is then coupled with the current episode, enabling episode-aware preference prediction. Extensive experiments show that EpiPersona consistently outperforms the baselines. It achieves notable performance gains in hard episodic-shift scenarios, while remaining effective with sparse preference data.",
+        "authors": "Yujie Zhang, Weikang Yuan, Zhuoren Jiang, Pengwei Yan",
+        "url": "http://arxiv.org/abs/2603.28197v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28197v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "针对LLM推理中的RLVR问题，提出基于token级别熵调节的策略优化（ERPO），通过熵感知门控、桶式隐式归一化和结果锚定优势合成，解决了现有方法信息异质性不足和熵坍塌问题。该方法理论严谨，显著提升了大型推理模型的准确性和路径简洁性，对LLM推理优化具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28126v1",
+        "title": "SVGS: Single-View to 3D Object Editing via Gaussian Splatting",
+        "summary": "Text-driven 3D scene editing has attracted considerable interest due to its convenience and user-friendliness. However, methods that rely on implicit 3D representations, such as Neural Radiance Fields (NeRF), while effective in rendering complex scenes, are hindered by slow processing speeds and limited control over specific regions of the scene. Moreover, existing approaches, including Instruct-NeRF2NeRF and GaussianEditor, which utilize multi-view editing strategies, frequently produce inconsistent results across different views when executing text instructions. This inconsistency can adversely affect the overall performance of the model, complicating the task of balancing the consistency of editing results with editing efficiency. To address these challenges, we propose a novel method termed Single-View to 3D Object Editing via Gaussian Splatting (SVGS), which is a single-view text-driven editing technique based on 3D Gaussian Splatting (3DGS). Specifically, in response to text instructions, we introduce a single-view editing strategy grounded in multi-view diffusion models, which reconstructs 3D scenes by leveraging only those views that yield consistent editing results. Additionally, we employ sparse 3D Gaussian Splatting as the 3D representation, which significantly enhances editing efficiency. We conducted a comparative analysis of SVGS against existing baseline methods across various scene settings, and the results indicate that SVGS outperforms its counterparts in both editing capability and processing speed, representing a significant advancement in 3D editing technology. For further details, please visit our project page at: https://amateurc.github.io/svgs.github.io.",
+        "authors": "Pengcheng Xue, Yan Tian, Qiutao Song, Ziyi Wang, Linyang He, Weiping Ding, Mahmoud Hassaballah, Karen Egiazarian, Wei-Fa Yang, Leszek Rutkowski",
+        "url": "http://arxiv.org/abs/2603.28126v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28126v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出ORACAL框架，一个鲁棒且可解释的多模态图学习框架，通过整合控制流、数据流和调用图，并结合RAG和LLM进行因果图增强，解决了智能合约漏洞检测中的鲁棒性、可解释性和深层语义理解瓶颈。该方法理论和实践结合紧密，对区块链安全和图神经网络应用有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28082v1",
+        "title": "LogiStory: A Logic-Aware Framework for Multi-Image Story Visualization",
+        "summary": "Generating coherent and communicative visual sequences, such as image sequences and videos, remains a significant challenge for current multimodal systems. Despite advances in visual quality and the integration of world knowledge, existing models still struggle to maintain logical flow, often resulting in disjointed actions, fragmented narratives, and unclear storylines. We attribute these issues to the lack of attention to visual logic, a critical yet underexplored dimension of visual sequence generation that we define as the perceptual and causal coherence among characters, actions, and scenes over time. To bridge this gap, we propose a logic-aware multi-image story visualization framework, LogiStory. The framework is built around the central innovation of explicitly modeling visual logic in story visualization. To realize this idea, we design a multi-agent system that grounds roles, extracts causal chains, and verifies story-level consistency, transforming narrative coherence from an implicit byproduct of image generation into an explicit modeling objective. This design effectively bridges structured story planning with visual generation, enhancing both narrative clarity and visual quality in story visualization. Furthermore, to evaluate the generation capacity, we construct LogicTale, a benchmark comprising richly annotated stories, emphasizing causal reasoning, and visual logic interpretability. We establish comprehensive automatic and human evaluation protocols designed to measure both visual logic and perceptual quality. Experiments demonstrate that our approach significantly improves the narrative logic of generated visual stories. This work provides a foundational step towards modeling and enforcing visual logic in general image sequence and video generation tasks.",
+        "authors": "Chutian Meng, Fan Ma, Chi Zhang, Jiaxu Miao, Yi Yang, Yueting Zhuang",
+        "url": "http://arxiv.org/abs/2603.28082v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28082v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出SLOW框架，一个理论驱动的AI辅导系统，通过显式分离学习者状态推理和教学行动选择，整合因果证据解析、模糊认知诊断和前瞻性情感推理，解决了LLM辅导中的适应性和可解释性瓶颈。该方法理论严谨，对AI教育和认知适应性研究具有广阔的应用前景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28057v1",
+        "title": "Physics-Embedded Feature Learning for AI in Medical Imaging",
+        "summary": "Deep learning (DL) models have achieved strong performance in an intelligence healthcare setting, yet most existing approaches operate as black boxes and ignore the physical processes that govern tumor growth, limiting interpretability, robustness, and clinical trust. To address this limitation, we propose PhysNet, a physics-embedded DL framework that integrates tumor growth dynamics directly into the feature learning process of a convolutional neural network (CNN). Unlike conventional physics-informed methods that impose physical constraints only at the output level, PhysNet embeds a reaction diffusion model of tumor growth within intermediate feature representations of a ResNet backbone. The architecture jointly performs multi-class tumor classification while learning a latent tumor density field, its temporal evolution, and biologically meaningful physical parameters, including tumor diffusion and growth rates, through end-to-end training. This design is necessary because purely data-driven models, even when highly accurate or ensemble-based, cannot guarantee physically consistent predictions or provide insight into tumor behavior. Experimental results on a large brain MRI dataset demonstrate that PhysNet outperforms multiple state-of-the-art DL baselines, including MobileNetV2, VGG16, VGG19, and ensemble models, achieving superior classification accuracy and F1-score. In addition to improved performance, PhysNet produces interpretable latent representations and learned bio-physical parameters that align with established medical knowledge, highlighting physics-embedded representation learning as a practical pathway toward more trustworthy and clinically meaningful medical AI systems.",
+        "authors": "Pulock Das, Al Amin, Kamrul Hasan, Rohan Thompson, Azubike D. Okpalaeze, Liang Hong",
+        "url": "http://arxiv.org/abs/2603.28057v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28057v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出PhysNet，一个物理嵌入的深度学习框架，将肿瘤生长动力学模型（反应扩散模型）直接整合到CNN的中间特征学习过程中，实现了多类别肿瘤分类的同时学习生物物理参数。这解决了医学AI可解释性、鲁棒性和临床信任度瓶颈，理论创新性强，对AI for Science和医疗AI有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28049v1",
+        "title": "Drift-AR: Single-Step Visual Autoregressive Generation via Anti-Symmetric Drifting",
+        "summary": "Autoregressive (AR)-Diffusion hybrid paradigms combine AR's structured semantic modeling with diffusion's high-fidelity synthesis, yet suffer from a dual speed bottleneck: the sequential AR stage and the iterative multi-step denoising of the diffusion vision decode stage. Existing methods address each in isolation without a unified principle design. We observe that the per-position \\emph{prediction entropy} of continuous-space AR models naturally encodes spatially varying generation uncertainty, which simultaneously governing draft prediction quality in the AR stage and reflecting the corrective effort required by vision decoding stage, which is not fully explored before. Since entropy is inherently tied to both bottlenecks, it serves as a natural unifying signal for joint acceleration. In this work, we propose \\textbf{Drift-AR}, which leverages entropy signal to accelerate both stages: 1) for AR acceleration, we introduce Entropy-Informed Speculative Decoding that align draft--target entropy distributions via a causal-normalized entropy loss, resolving the entropy mismatch that causes excessive draft rejection; 2) for visual decoder acceleration, we reinterpret entropy as the \\emph{physical variance} of the initial state for an anti-symmetric drifting field -- high-entropy positions activate stronger drift toward the data manifold while low-entropy positions yield vanishing drift -- enabling single-step (1-NFE) decoding without iterative denoising or distillation. Moreover, both stages share the same entropy signal, which is computed once with no extra cost. Experiments on MAR, TransDiff, and NextStep-1 demonstrate 3.8--5.5$\\times$ speedup with genuine 1-NFE decoding, matching or surpassing original quality. Code will be available at https://github.com/aSleepyTree/Drift-AR.",
+        "authors": "Zhen Zou, Xiaoxiao Ma, Mingde Yao, Jie Huang, LinJiang Huang, Feng Zhao",
+        "url": "http://arxiv.org/abs/2603.28049v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28049v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出Drift-AR，一个统一框架，利用每位置预测熵加速AR-Diffusion混合模型的两个阶段，通过熵信息推测解码和反对称漂移场实现单步（1-NFE）视觉生成。这解决了生成模型速度和效率的瓶颈，理论创新性强，对前沿生成算法有重要推动。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28006v1",
+        "title": "FedDES: Graph-Based Dynamic Ensemble Selection for Personalized Federated Learning",
+        "summary": "Statistical heterogeneity in Federated Learning (FL) often leads to negative transfer, where a single global model fails to serve diverse client distributions. Personalized federated learning (pFL) aims to address this by tailoring models to individual clients. However, under most existing pFL approaches, clients integrate peer client contributions uniformly, which ignores the reality that not all peers are likely to be equally beneficial. Additionally, the potential for personalization at the instance level remains largely unexplored, even though the reliability of different peer models often varies across individual samples within the same client.   We introduce FedDES (Federated Dynamic Ensemble Selection), a decentralized pFL framework that achieves instance-level personalization through dynamic ensemble selection. Central to our approach is a Graph Neural Network (GNN) meta-learner trained on a heterogeneous graph modeling interactions between data samples and candidate classifiers. For each test query, the GNN dynamically selects and weights peer client models, forming an ensemble of the most competent classifiers while effectively suppressing contributions from those that are irrelevant or potentially harmful for performance. Experiments on CIFAR-10 and real-world ICU healthcare data demonstrate that FedDES outperforms state-of-the-art pFL baselines in non-IID settings, offering robust protection against negative transfer.",
+        "authors": "Brianna Mueller, W. Nick Street",
+        "url": "http://arxiv.org/abs/2603.28006v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28006v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出GEAKG（Generative Executable Algorithm Knowledge Graphs），一类新型知识图谱，其节点存储可执行操作符，边编码学习到的组合模式，通过遍历生成解决方案。该框架是生成式、可执行且可迁移的，解决了AI中程序性知识表示和迁移的根本瓶颈，理论创新性极高，对AI架构有重要启示。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.27914v1",
+        "title": "ITQ3_S: High-Fidelity 3-bit LLM Inference via Interleaved Ternary Quantization with Rotation-Domain Smoothing",
+        "summary": "We present \\textbf{ITQ3\\_S} (Interleaved Ternary Quantization -- Specialized), a novel 3-bit weight quantization format for large language models (LLMs) that integrates \\textbf{TurboQuant (TQ)}, a rotation-domain adaptive quantization strategy based on the Fast Walsh-Hadamard Transform (FWHT). Conventional 3-bit quantization methods suffer from catastrophic precision loss caused by heavy-tailed weight distributions and inter-channel outliers. ITQ3\\_S addresses this fundamental limitation by pre-rotating the weight space via FWHT prior to quantization, effectively spreading outlier energy across the entire vector and inducing a near-Gaussian distribution amenable to uniform ternary coding.   Critically, we derive a mathematically rigorous dequantization procedure that inverts the FWHT exactly using a 256-point Inverse Walsh-Hadamard Transform fused into the CUDA shared-memory loading stage, ensuring zero-error round-trip fidelity between offline quantization and online inference. We prove that for any weight vector $\\mathbf{w} \\in \\mathbb{R}^{256}$ processed by our pipeline, the reconstruction satisfies $\\|\\hat{\\mathbf{w}} - \\mathbf{w}\\|_2 \\leq ε_q$, where $ε_q$ is determined solely by the ternary quantization grid and is strictly smaller than any uniform 3-bit baseline under equal bit-budget constraints.   Empirically, on the NVIDIA RTX 5090 (Blackwell architecture), ITQ3\\_S achieves perplexity competitive with FP16 baselines while delivering throughput exceeding 1.5$\\times$ that of 4-bit alternatives, owing to optimized DP4A and Tensor Core scheduling in the interleaved memory layout. Our results establish ITQ3\\_S as a practical, mathematically grounded solution for high-fidelity LLM deployment on consumer-grade hardware.",
+        "authors": "Edward J. Yoon",
+        "url": "http://arxiv.org/abs/2603.27914v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.27914v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "提出ITQ3_S，一种高保真3比特LLM量化格式，通过快速Walsh-Hadamard变换（FWHT）进行旋转域平滑，并设计了严格的反量化过程。这解决了LLM模型压缩中的精度损失和效率瓶颈，理论严谨，对LLM架构和部署有直接影响，尤其在消费级硬件上实现显著吞吐量提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28732v1",
+        "title": "Pandora: Articulated 3D Scene Graphs from Egocentric Vision",
+        "summary": "Robotic mapping systems typically approach building metric-semantic scene representations from the robot's own sensors and cameras. However, these \"first person\" maps inherit the robot's own limitations due to its embodiment or skillset, which may leave many aspects of the environment unexplored. For example, the robot might not be able to open drawers or access wall cabinets. In this sense, the map representation is not as complete, and requires a more capable robot to fill in the gaps. We narrow these blind spots in current methods by leveraging egocentric data captured as a human naturally explores a scene wearing Project Aria glasses, giving a way to directly transfer knowledge about articulation from the human to any deployable robot. We demonstrate that, by using simple heuristics, we can leverage egocentric data to recover models of articulate object parts, with quality comparable to those of state-of-the-art methods based on other input modalities. We also show how to integrate these models into 3D scene graph representations, leading to a better understanding of object dynamics and object-container relationships. We finally demonstrate that these articulated 3D scene graphs enhance a robot's ability to perform mobile manipulation tasks, showcasing an application where a Boston Dynamics Spot is tasked with retrieving concealed target items, given only the 3D scene graph as input.",
+        "authors": "Alan Yu, Yun Chang, Christopher Xie, Luca Carlone",
+        "url": "http://arxiv.org/abs/2603.28732v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28732v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出HyperP框架，在Frobenius-sphere约束和Muon优化器下，实现了LLM学习率在模型宽度、深度、训练token和MoE粒度上的可迁移缩放。该工作证明了权重衰减在Frobenius球上的无操作性，并提出了SqrtGate MoE门控机制，解决了LLM训练稳定性、计算效率和MoE扩展性瓶颈。理论严谨，对LLM前沿算法和架构有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28142v1",
+        "title": "RecycleLoRA: Rank-Revealing QR-Based Dual-LoRA Subspace Adaptation for Domain Generalized Semantic Segmentation",
+        "summary": "Domain Generalized Semantic Segmentation (DGSS) aims to maintain robust performance across unseen target domains. Vision Foundation Models (VFMs) offer rich multi-domain knowledge that can enhance generalization. However, strategies for actively exploiting the rich subspace structures within VFMs remain under-explored, with many existing methods focusing primarily on preserving pre-trained knowledge. Furthermore, their LoRA components often suffer from limited representational diversity and inefficient parameter utilization. We propose RecycleLoRA, which addresses both challenges by employing Rank-Revealing QR Decomposition (RRQR) to systematically exploit VFM's subspace structures and enhance LoRA's representational richness. Our main adapter leverages minor subspace directions identified by RRQR to learn diverse and independent features, achieving competitive performance even when used alone. We further introduce a sub adapter that carefully refines major directions with minimal adjustments, providing complementary improvements to the main adapter's strong baseline performance. This design enables the dual adapters to learn distinct representations without requiring additional regularization losses. Our systematic exploitation of pre-trained subspace structures through RRQR-based initialization leads to superior domain generalization performance. RecycleLoRA achieves state-of-the-art performance on both synthetic-to-real generalization and real-to-real generalization tasks without complex architectures or additional inference latency.",
+        "authors": "Chanseul Cho, Seokju Yun, Jeaseong Jeon, Seungjae Moon, Youngmin Ro",
+        "url": "http://arxiv.org/abs/2603.28142v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28142v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出RecycleLoRA，利用秩揭示QR分解（RRQR）系统性地利用VFM（Vision Foundation Models）的子空间结构，增强LoRA的表示丰富性，解决了领域泛化语义分割中的鲁棒性和参数效率瓶颈。该方法理论创新性强，对模型压缩和前沿算法有重要意义，且无需复杂架构或额外推理延迟。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.27996v1",
+        "title": "From Independent to Correlated Diffusion: Generalized Generative Modeling with Probabilistic Computers",
+        "summary": "Diffusion models have emerged as a powerful framework for generative tasks in deep learning. They decompose generative modeling into two computational primitives: deterministic neural-network evaluation and stochastic sampling. Current implementations usually place most computation in the neural network, but diffusion as a framework allows a broader range of choices for the stochastic transition kernel. Here, we generalize the stochastic sampling component by replacing independent noise injection with Markov chain Monte Carlo (MCMC) dynamics that incorporate known interaction structure. Standard independent diffusion is recovered as a special case when couplings are set to zero. By explicitly incorporating Ising couplings into the diffusion dynamics, the noising and denoising processes exploit spatial correlations representative of the target system. The resulting framework maps naturally onto probabilistic computers (p-computers) built from probabilistic bits (p-bits), which provide orders-of-magnitude advantages in sampling throughput and energy efficiency over GPUs. We demonstrate the approach on equilibrium states of the 2D ferromagnetic Ising model and the 3D Edwards-Anderson spin glass, showing that correlated diffusion produces samples in closer agreement with MCMC reference distributions than independent diffusion. More broadly, the framework shows that p-computers can enable new classes of diffusion algorithms that exploit structured probabilistic sampling for generative modeling.",
+        "authors": "Nihal Sanjay Singh, Mazdak Mohseni-Rajaee, Shaila Niazi, Kerem Y. Camsari",
+        "url": "http://arxiv.org/abs/2603.27996v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.27996v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出广义生成模型，通过将扩散模型的独立噪声注入替换为包含已知交互结构的马尔可夫链蒙特卡洛（MCMC）动力学，并将其映射到概率计算机（p-computers）。这解决了生成模型效率和结构利用的根本瓶颈，理论创新性极高，对AI架构和专用硬件有潜在颠覆性影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.27987v1",
+        "title": "Beyond Dataset Distillation: Lossless Dataset Concentration via Diffusion-Assisted Distribution Alignment",
+        "summary": "The high cost and accessibility problem associated with large datasets hinder the development of large-scale visual recognition systems. Dataset Distillation addresses these problems by synthesizing compact surrogate datasets for efficient training, storage, transfer, and privacy preservation. The existing state-of-the-art diffusion-based dataset distillation methods face three issues: lack of theoretical justification, poor efficiency in scaling to high data volumes, and failure in data-free scenarios. To address these issues, we establish a theoretical framework that justifies the use of diffusion models by proving the equivalence between dataset distillation and distribution matching, and reveals an inherent efficiency limit in the dataset distillation paradigm. We then propose a Dataset Concentration (DsCo) framework that uses a diffusion-based Noise-Optimization (NOpt) method to synthesize a small yet representative set of samples, and optionally augments the synthetic data via \"Doping\", which mixes selected samples from the original dataset with the synthetic samples to overcome the efficiency limit of dataset distillation. DsCo is applicable in both data-accessible and data-free scenarios, achieving SOTA performances for low data volumes, and it extends well to high data volumes, where it nearly reduces the dataset size by half with no performance degradation.",
+        "authors": "Tongfei Liu, Yufan Liu, Bing Li, Weiming Hu",
+        "url": "http://arxiv.org/abs/2603.27987v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.27987v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "建立了数据集蒸馏（DD）与分布匹配之间的理论等价性，并提出DsCo框架，利用扩散模型进行无损数据集浓缩。该方法通过Noise-Optimization和可选的“Doping”策略，解决了数据效率和可扩展性瓶颈，理论严谨，对数据效率和模型训练有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28361v1",
+        "title": "Deep Research of Deep Research: From Transformer to Agent, From AI to AI for Science",
+        "summary": "With the advancement of large language models (LLMs) in their knowledge base and reasoning capabilities, their interactive modalities have evolved from pure text to multimodality and further to agentic tool use. Consequently, their applications have broadened from question answering to AI assistants and now to general-purpose agents. Deep research (DR) represents a prototypical vertical application for general-purpose agents, which represents an ideal approach for intelligent information processing and assisting humans in discovering and solving problems, with the goal of reaching or even surpassing the level of top human scientists. This paper provides a deep research of deep research. We articulate a clear and precise definition of deep research and unify perspectives from industry's deep research and academia's AI for Science (AI4S) within a developmental framework. We position LLMs and Stable Diffusion as the twin pillars of generative AI, and lay out a roadmap evolving from the Transformer to agents. We examine the progress of AI4S across various disciplines. We identify the predominant paradigms of human-AI interaction and prevailing system architectures, and discuss the major challenges and fundamental research issues that remain. AI supports scientific innovation, and science also can contribute to AI growth (Science for AI, S4AI). We hope this paper can help bridge the gap between the AI and AI4S communities.",
+        "authors": "Yipeng Yu",
+        "url": "http://arxiv.org/abs/2603.28361v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28361v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "提出“双向连贯性悖论”和“认知三角”模型，挑战了对LLM理解的传统假设，认为LLM的成功行动和正确解释可能不协变。这为评估AI认知代理提供了更细致的框架，理论创新性极高，对LLM可解释性和对齐至关重要，具有深刻的哲学和认知科学意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.28346v1",
+        "title": "Machine Learning-Assisted High-Dimensional Matrix Estimation",
+        "summary": "Efficient estimation of high-dimensional matrices-including covariance and precision matrices-is a cornerstone of modern multivariate statistics. Most existing studies have focused primarily on the theoretical properties of the estimators (e.g., consistency and sparsity), while largely overlooking the computational challenges inherent in high-dimensional settings. Motivated by recent advances in learning-based optimization method-which integrate data-driven structures with classical optimization algorithms-we explore high-dimensional matrix estimation assisted by machine learning. Specifically, for the optimization problem of high-dimensional matrix estimation, we first present a solution procedure based on the Linearized Alternating Direction Method of Multipliers (LADMM). We then introduce learnable parameters and model the proximal operators in the iterative scheme with neural networks, thereby improving estimation accuracy and accelerating convergence. Theoretically, we first prove the convergence of LADMM, and then establish the convergence, convergence rate, and monotonicity of its reparameterized counterpart; importantly, we show that the reparameterized LADMM enjoys a faster convergence rate. Notably, the proposed reparameterization theory and methodology are applicable to the estimation of both high-dimensional covariance and precision matrices. We validate the effectiveness of our method by comparing it with several classical optimization algorithms across different structures and dimensions of high-dimensional matrices.",
+        "authors": "Wan Tian, Hui Yang, Zhouhui Lian, Lingyue Zhang, Yijie Peng",
+        "url": "http://arxiv.org/abs/2603.28346v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.28346v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出ML辅助的高维矩阵估计方法，通过神经网络重参数化LADMM的近端算子，并从理论上证明了其更快的收敛速度。这解决了高维统计中协方差和精度矩阵估计的计算效率和精度瓶颈，数理统计背景强，理论严谨，对优化算法和统计推断有重要贡献。"
+    }
+]

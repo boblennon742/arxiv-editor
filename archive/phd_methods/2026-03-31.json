@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.30031v1",
+        "title": "The Triadic Cognitive Architecture: Bounding Autonomous Action via Spatio-Temporal and Epistemic Friction",
+        "summary": "Current autonomous AI agents, driven primarily by Large Language Models (LLMs), operate in a state of cognitive weightlessness: they process information without an intrinsic sense of network topology, temporal pacing, or epistemic limits. Consequently, heuristic agentic loops (e.g., ReAct) can exhibit failure modes in interactive environments, including excessive tool use under congestion, prolonged deliberation under time decay, and brittle behavior under ambiguous evidence. In this paper, we propose the Triadic Cognitive Architecture (TCA), a unified mathematical framework that grounds machine reasoning in continuous-time physics. By synthesizing nonlinear filtering theory, Riemannian routing geometry, and optimal control, we formally define the concept of Cognitive Friction. We map the agent's deliberation process to a coupled stochastic control problem where information acquisition is path-dependent and physically constrained. Rather than relying on arbitrary heuristic stop-tokens, the TCA uses an HJB-motivated stopping boundary and instantiates a rollout-based approximation of belief-dependent value-of-information with a net-utility halting condition. Through empirical validation in a simulated Emergency Medical Diagnostic Grid (EMDG), we demonstrate that while greedy baselines over-deliberate under latency and congestion costs, the triadic policy reduces time-to-action while improving patient viability without degrading diagnostic accuracy in this environment.",
+        "authors": "Davide Di Gioia",
+        "url": "http://arxiv.org/abs/2603.30031v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.30031v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了三元认知架构（TCA），一个将机器推理根植于连续时间物理的统一数学框架，并形式化定义了“认知摩擦”概念。它通过整合非线性滤波理论、黎曼路由几何和最优控制，为LLM代理在交互环境中的失败模式提供了理论上的解决方案。其理论创新性极高，且能有效解决LLM代理在时间、空间和认知限制下的实际应用瓶颈，完美契合您对理论创新性和解决实际问题的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29768v1",
+        "title": "Big2Small: A Unifying Neural Network Framework for Model Compression",
+        "summary": "With the development of foundational models, model compression has become a critical requirement. Various model compression approaches have been proposed such as low-rank decomposition, pruning, quantization, ergodic dynamic systems, and knowledge distillation, which are based on different heuristics. To elevate the field from fragmentation to a principled discipline, we construct a unifying mathematical framework for model compression grounded in measure theory. We further demonstrate that each model compression technique is mathematically equivalent to a neural network subject to a regularization. Building upon this mathematical and structural equivalence, we propose an experimentally-verified data-free model compression framework, termed \\textit{Big2Small}, which translates Implicit Neural Representations (INRs) from data domain to the domain of network parameters. \\textit{Big2Small} trains compact INRs to encode the weights of larger models and reconstruct the weights during inference. To enhance reconstruction fidelity, we introduce Outlier-Aware Preprocessing to handle extreme weight values and a Frequency-Aware Loss function to preserve high-frequency details. Experiments on image classification and segmentation demonstrate that \\textit{Big2Small} achieves competitive accuracy and compression ratios compared to state-of-the-art baselines.",
+        "authors": "Jing-Xiao Liao, Haoran Wang, Tao Li, Daoming Lyu, Yi Zhang, Chengjun Cai, Feng-Lei Fan",
+        "url": "http://arxiv.org/abs/2603.29768v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29768v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于测度论的统一模型压缩数学框架Big2Small，并证明了现有压缩技术在数学上等同于带正则化的神经网络。这种从基础理论层面统一模型压缩方法的视角极具创新性，且其提出的数据无关框架能有效解决大模型的压缩和部署瓶颈，具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29541v1",
+        "title": "Can LLM Agents Identify Spoken Dialects like a Linguist?",
+        "summary": "Due to the scarcity of labeled dialectal speech, audio dialect classification is a challenging task for most languages, including Swiss German. In this work, we explore the ability of large language models (LLMs) as agents in understanding the dialects and whether they can show comparable performance to models such as HuBERT in dialect classification. In addition, we provide an LLM baseline and a human linguist one. Our approach uses phonetic transcriptions produced by ASR systems and combines them with linguistic resources such as dialect feature maps, vowel history, and rules. Our findings indicate that, when linguistic information is provided, the LLM predictions improve. The human baseline shows that automatically generated transcriptions can be beneficial for such classifications, but also presents opportunities for improvement.",
+        "authors": "Tobias Bystrich, Lukas Hamm, Maria Hassan, Lea Fischbach, Lucie Flek, Akbar Karimi",
+        "url": "http://arxiv.org/abs/2603.29541v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29541v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FlowPIE框架将文献探索和想法生成视为共同演化的过程，通过受GFlowNets启发的流引导蒙特卡洛树搜索（MCTS）来扩展文献轨迹，并结合LLM生成式奖励模型进行测试时想法演化。其理论基础深厚，将GFlowNets和进化算法应用于科学想法生成，极具创新性，能有效解决AI驱动研究中想法同质化和发散性不足的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29467v1",
+        "title": "M-MiniGPT4: Multilingual VLLM Alignment via Translated Data",
+        "summary": "This paper presents a Multilingual Vision Large Language Model, named M-MiniGPT4. Our model exhibits strong vision-language understanding (VLU) capabilities across 11 languages. We utilize a mixture of native multilingual and translated data to push the multilingual VLU performance of the MiniGPT4 architecture. In addition, we propose a multilingual alignment training stage that uses parallel text corpora to further enhance the multilingual capabilities of our model. M-MiniGPT4 achieves 36% accuracy on the multilingual MMMU benchmark, outperforming state-of-the-art models in the same weight class, including foundation models released after the majority of this work was completed. We open-source our models, code, and translated datasets to facilitate future research in low-resource and multilingual settings.",
+        "authors": "Seung Hun Han, Youssef Mohamed, Mohamed Elhoseiny",
+        "url": "http://arxiv.org/abs/2603.29467v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29467v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过一阶泰勒展开和参数协方差的各向同性假设，提出了一种轻量级的、基于梯度范数的不确定性量化方法。它从单一前向-后向传播中即可获得认知不确定性和偶然不确定性，解决了大型语言模型不确定性量化计算成本高昂的实际瓶颈，同时具有坚实的数学推导基础，理论创新性和实践影响力兼备。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29376v1",
+        "title": "Assessing Multimodal Chronic Wound Embeddings with Expert Triplet Agreement",
+        "summary": "Recessive dystrophic epidermolysis bullosa (RDEB) is a rare genetic skin disorder for which clinicians greatly benefit from finding similar cases using images and clinical text. However, off-the-shelf foundation models do not reliably capture clinically meaningful features for this heterogeneous, long-tail disease, and structured measurement of agreement with experts is challenging. To address these gaps, we propose evaluating embedding spaces with expert ordinal comparisons (triplet judgments), which are fast to collect and encode implicit clinical similarity knowledge. We further introduce TriDerm, a multimodal framework that learns interpretable wound representations from small cohorts by integrating wound imagery, boundary masks, and expert reports. On the vision side, TriDerm adapts visual foundation models to RDEB using wound-level attention pooling and non-contrastive representation learning. For text, we prompt large language models with comparison queries and recover medically meaningful representations via soft ordinal embeddings (SOE). We show that visual and textual modalities capture complementary aspects of wound phenotype, and that fusing both modalities yields 73.5% agreement with experts, outperforming the best off-the-shelf single-modality foundation model by over 5.6 percentage points. We make the expert annotation tool, model code and representative dataset samples publicly available.",
+        "authors": "Fabian Kabus, Julia Hindel, Jelena Bratulić, Meropi Karakioulaki, Ayush Gupta, Cristina Has, Thomas Brox, Abhinav Valada, Harald Binder",
+        "url": "http://arxiv.org/abs/2603.29376v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29376v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SC-FSGL是一个受因果关系启发的联邦学习框架，通过表示层干预将可转移的因果知识与客户端特定噪声解耦，解决了动态时空图联邦学习中的异质性、虚假表示纠缠和负迁移问题。其理论严谨性体现在因果分离模块和因果码本的设计上，能够显著提升联邦图学习的泛化性能，对数据隐私和效率有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29292v1",
+        "title": "Self-Improving Code Generation via Semantic Entropy and Behavioral Consensus",
+        "summary": "Improving the code generation capabilities of large language models (LLMs) typically relies on supervised fine-tuning or preference optimization, both of which require costly external resources such as powerful teacher models or reliable test units. However, in real-world scenarios, it is much harder to obtain reference solutions and test oracles than problem descriptions and test inputs. In this paper, we tackle a challenging yet realistic question: Can a code language model improve itself without access to a superior teacher and a test oracle? To answer this, we propose ConSelf, a self-improving approach built upon two key ideas. First, we introduce code semantic entropy, a novel metric that measures problem-level uncertainty by assessing the functional diversity of program behaviors, enabling a curriculum construction with the most learnable problems. Second, we present consensus-driven direct preference optimization (Con-DPO), a preference-based fine-tuning method that weights each preference pair by its behavioral consensus, thereby mitigating the impact of noisy self-generated supervision. Experiments on various benchmarks and backbone LLMs demonstrate that ConSelf significantly outperforms baselines, validating the effectiveness of semantic entropy-based curriculum construction and consensus-driven optimization in improving code generation without external supervision.",
+        "authors": "Huan Zhang, Wei Cheng, Wei Hu",
+        "url": "http://arxiv.org/abs/2603.29292v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29292v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ConSelf提出了一种无需教师模型和测试预言机即可自我改进的代码生成方法，引入了“代码语义熵”这一新颖指标来衡量问题级不确定性，并提出了“共识驱动的直接偏好优化”（Con-DPO）。这在理论上具有高度创新性，解决了LLM代码生成对外部资源依赖的实际瓶颈，显著提升了代码生成性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29090v1",
+        "title": "HCLSM: Hierarchical Causal Latent State Machines for Object-Centric World Modeling",
+        "summary": "World models that predict future states from video remain limited by flat latent representations that entangle objects, ignore causal structure, and collapse temporal dynamics into a single scale. We present HCLSM, a world model architecture that operates on three interconnected principles: object-centric decomposition via slot attention with spatial broadcast decoding, hierarchical temporal dynamics through a three-level engine combining selective state space models for continuous physics, sparse transformers for discrete events, and compressed transformers for abstract goals, and causal structure learning through graph neural network interaction patterns. HCLSM introduces a two-stage training protocol where spatial reconstruction forces slot specialization before dynamics prediction begins. We train a 68M-parameter model on the PushT robotic manipulation benchmark from the Open X-Embodiment dataset, achieving 0.008 MSE next-state prediction loss with emerging spatial decomposition (SBD loss: 0.0075) and learned event boundaries. A custom Triton kernel for the SSM scan delivers 38x speedup over sequential PyTorch. The full system spans 8,478 lines of Python across 51 modules with 171 unit tests. Code: https://github.com/rightnow-ai/hclsm",
+        "authors": "Jaber Jaber, Osama Jaber",
+        "url": "http://arxiv.org/abs/2603.29090v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29090v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HCLSM是一个基于对象中心分解、分层时间动力学和因果结构学习的世界模型架构。它结合了槽注意力、状态空间模型、稀疏Transformer和图神经网络，以解决现有世界模型表示扁平、对象纠缠和时间动态单一尺度的局限性。其架构设计和理论深度极具创新性，对构建更强大的世界模型具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29960v1",
+        "title": "NeuroBRIDGE: Behavior-Conditioned Koopman Dynamics with Riemannian Alignment for Early Substance Use Initiation Prediction from Longitudinal Functional Connectome",
+        "summary": "Early identification of adolescents at risk for substance use initiation (SUI) is vital yet difficult, as most predictors treat connectivity as static or cross-sectional and miss how brain networks change over time and with behavior. We proposed NeuroBRIDGE (Behavior conditioned RIemannian Koopman Dynamics on lonGitudinal connEctomes), a novel graph neural network-based framework that aligns longitudinal functional connectome in a Riemannian tangent space and couples dual-time attention with behavioral-conditioned Koopman dynamics to capture temporal change. Evaluated on ABCD, NeuroBRIDGE improved future SUI prediction over relevant baselines while offering interpretable insights into neural pathways, refining our understanding of neurodevelopmental risk and informing targeted prevention.",
+        "authors": "Badhan Mazumder, Sir-Lord Wiafe, Vince D. Calhoun, Dong Hye Ye",
+        "url": "http://arxiv.org/abs/2603.29960v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29960v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "NeuroBRIDGE是一个新颖的图神经网络框架，通过黎曼切空间对纵向功能连接组进行对齐，并结合行为条件化的Koopman动力学和双时间注意力来捕捉时间变化。其在Koopman动力学和黎曼几何上的理论严谨性突出，为早期物质使用预测提供了可解释的神经通路洞察，解决了医学预测的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29756v1",
+        "title": "One-for-All: A Lightweight Stabilized and Parameter-Efficient Pre-trained LLM for Time Series Forecasting",
+        "summary": "We address the challenge of adapting pre-trained Large Language Models (LLMs) for multivariate time-series analysis, where their deployment is often hindered by prohibitive computational and memory demands. Our solution, One-for-All, introduces Gaussian Rank-Stabilized Low-Rank Adapters (rsLoRA) to enable parameter-efficient fine-tuning of frozen LLMs. While inspired by LoRA, rsLoRA introduces a mathematically grounded rank-stabilization mechanism that enables provable gradient stability at low ranks a novel contribution absent in prior PEFT methods. Our framework injects trainable rank decomposition matrices (rank 16) into positional embeddings and output layers, while keeping self-attention weights fixed. This design reduces trainable parameters by 6.8$\\times$ (vs. TimesNet), 21$\\times$ (vs. GPT4TS), and 11.8$\\times$ (vs. TIME-LLM), while achieving a 168-1,776$\\times$ smaller memory footprint (2.2MiB vs. 340MiB-4.18GiB in SOTA models). Rigorous evaluation across six time-series tasks demonstrates that One-for-All achieves state-of-the-art efficiency-accuracy trade-offs: 5.5$\\times$ higher parameter efficiency (MSE=5.50) than TimesNet and 21$\\times$ better than GPT4TS, while matching their forecasting accuracy (MSE=0.33). The framework's stability is validated through consistent performance across diverse horizons (96-720 steps) and datasets (ETT, Weather, M3, M4), with 98.3% fewer parameters than conventional transformers. These advances enable deployment on edge devices for healthcare, finance, and environmental monitoring without compromising performance.",
+        "authors": "Prasanjit Dey, Soumyabrata Dev, Bianca Schoen-Phelan",
+        "url": "http://arxiv.org/abs/2603.29756v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29756v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "One-for-All引入了高斯秩稳定低秩适配器（rsLoRA），为冻结LLM在时间序列预测中的参数高效微调提供了可证明的梯度稳定性。其数学严谨性极高，能大幅减少可训练参数和内存占用，实现SOTA的效率-准确性权衡，解决了LLM在边缘设备部署的计算和内存瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29632v1",
+        "title": "An Empirical Study of Multi-Agent Collaboration for Automated Research",
+        "summary": "As AI agents evolve, the community is rapidly shifting from single Large Language Models (LLMs) to Multi-Agent Systems (MAS) to overcome cognitive bottlenecks in automated research. However, the optimal multi-agent coordination framework for these autonomous agents remains largely unexplored. In this paper, we present a systematic empirical study investigating the comparative efficacy of distinct multi-agent structures for automated machine learning optimization. Utilizing a rigorously controlled, execution-based testbed equipped with Git worktree isolation and explicit global memory, we benchmark a single-agent baseline against two multi-agent paradigms: a subagent architecture (parallel exploration with post-hoc consolidation) and an agent team architecture (experts with pre-execution handoffs). By evaluating these systems under strictly fixed computational time budgets, our findings reveal a fundamental trade-off between operational stability and theoretical deliberation. The subagent mode functions as a highly resilient, high-throughput search engine optimal for broad, shallow optimizations under strict time constraints. Conversely, the agent team topology exhibits higher operational fragility due to multi-author code generation but achieves the deep theoretical alignment necessary for complex architectural refactoring given extended compute budgets. These empirical insights provide actionable guidelines for designing future autoresearch systems, advocating for dynamically routed architectures that adapt their collaborative structures to real-time task complexity.",
+        "authors": "Yang Shen, Zhenyi Yi, Ziyi Zhao, Lijun Sun, Dongyang Li, Chin-Teng Lin, Yuhui Shi",
+        "url": "http://arxiv.org/abs/2603.29632v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29632v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ASI-Evolve是一个AI加速AI的代理框架，通过学习-设计-实验-分析循环，实现了AI驱动的数据、架构和学习算法发现。其在神经网络架构设计、预训练数据策展和强化学习算法设计方面取得了显著突破，具有极高的创新性和实践影响力，直接解决了AI研发自身的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29497v1",
+        "title": "Distilling Human-Aligned Privacy Sensitivity Assessment from Large Language Models",
+        "summary": "Accurate privacy evaluation of textual data remains a critical challenge in privacy-preserving natural language processing. Recent work has shown that large language models (LLMs) can serve as reliable privacy evaluators, achieving strong agreement with human judgments; however, their computational cost and impracticality for processing sensitive data at scale limit real-world deployment. We address this gap by distilling the privacy assessment capabilities of Mistral Large 3 (675B) into lightweight encoder models with as few as 150M parameters. Leveraging a large-scale dataset of privacy-annotated texts spanning 10 diverse domains, we train efficient classifiers that preserve strong agreement with human annotations while dramatically reducing computational requirements. We validate our approach on human-annotated test data and demonstrate its practical utility as an evaluation metric for de-identification systems.",
+        "authors": "Gabriel Loiseau, Damien Sileo, Damien Riquet, Maxime Meyer, Marc Tommasi",
+        "url": "http://arxiv.org/abs/2603.29497v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29497v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PRoSFI提出了一种新颖的奖励方法，通过结构化形式化中间步骤并由形式化证明器验证，来提高LLM推理的可靠性。这种将形式化验证引入强化学习以生成可信推理链的方法，在理论上具有很高的严谨性，并能有效解决LLM推理不可靠的实际瓶颈，提升模型的可信度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29426v1",
+        "title": "Multi-AUV Cooperative Target Tracking Based on Supervised Diffusion-Aided Multi-Agent Reinforcement Learning",
+        "summary": "In recent years, advances in underwater networking and multi-agent reinforcement learning (MARL) have significantly expanded multi-autonomous underwater vehicle (AUV) applications in marine exploration and target tracking. However, current MARL-driven cooperative tracking faces three critical challenges: 1) non-stationarity in decentralized coordination, where local policy updates destabilize teammates' observation spaces, preventing convergence; 2) sparse-reward exploration inefficiency from limited underwater visibility and constrained sensor ranges, causing high-variance learning; and 3) water disturbance fragility combined with handcrafted reward dependency that degrades real-world robustness under unmodeled hydrodynamic conditions. To address these challenges, this paper proposes a hierarchical MARL architecture comprising four layers: global training scheduling, multi-agent coordination, local decision-making, and real-time execution. This architecture optimizes task allocation and inter-AUV coordination through hierarchical decomposition. Building on this foundation, we propose the Supervised Diffusion-Aided MARL (SDA-MARL) algorithm featuring three innovations: 1) a dual-decision architecture with segregated experience pools mitigating nonstationarity through structured experience replay; 2) a supervised learning mechanism guiding the diffusion model's reverse denoising process to generate high-fidelity training samples that accelerate convergence; and 3) disturbance-robust policy learning incorporating behavioral cloning loss to guide the Deep Deterministic Policy Gradient network update using high-quality replay actions, eliminating handcrafted reward dependency. The tracking algorithm based on SDA-MARL proposed in this paper achieves superior precision compared to state-of-the-art methods in comprehensive underwater simulations.",
+        "authors": "Jiaao Ma, Chuan Lin, Guangjie Han, Shengchao Zhu, Zhenyu Wang, Chen An",
+        "url": "http://arxiv.org/abs/2603.29426v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29426v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SDA-MARL提出了一种分层多智能体强化学习（MARL）架构，通过双决策架构、扩散模型辅助的监督学习机制和鲁棒策略学习，解决了多AUV协同目标跟踪中的非平稳性、稀疏奖励和水下干扰脆弱性等挑战。其理论创新性强，结合了MARL和扩散模型，具有很高的严谨性，并在水下仿真中实现了卓越的精度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29268v1",
+        "title": "From Physics to Surrogate Intelligence: A Unified Electro-Thermo-Optimization Framework for TSV Networks",
+        "summary": "High-density through-substrate vias (TSVs) enable 2.5D/3D heterogeneous integration but introduce significant signal-integrity and thermal-reliability challenges due to electrical coupling, insertion loss, and self-heating. Conventional full-wave finite-element method (FEM) simulations provide high accuracy but become computationally prohibitive for large design-space exploration. This work presents a scalable electro-thermal modeling and optimization framework that combines physics-informed analytical modeling, graph neural network (GNN) surrogates, and full-wave sign-off validation. A multi-conductor analytical model computes broadband S-parameters and effective anisotropic thermal conductivities of TSV arrays, achieving $5\\%-10\\%$ relative Frobenius error (RFE) across array sizes up to $15x15$. A physics-informed GNN surrogate (TSV-PhGNN), trained on analytical data and fine-tuned with HFSS simulations, generalizes to larger arrays with RFE below $2\\%$ and nearly constant variance. The surrogate is integrated into a multi-objective Pareto optimization framework targeting reflection coefficient, insertion loss, worst-case crosstalk (NEXT/FEXT), and effective thermal conductivity. Millions of TSV configurations can be explored within minutes, enabling exhaustive layout and geometric optimization that would be infeasible using FEM alone. Final designs are validated with Ansys HFSS and Mechanical, showing strong agreement. The proposed framework enables rapid electro-thermal co-design of TSV arrays while reducing per-design evaluation time by more than six orders of magnitude.",
+        "authors": "Mohamed Gharib, Leonid Popryho, Inna Partin-Vaisband",
+        "url": "http://arxiv.org/abs/2603.29268v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29268v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该框架结合了物理信息分析建模、图神经网络（GNN）代理和全波验证，实现了TSV网络的电热建模与优化。其物理信息GNN代理（TSV-PhGNN）在理论上具有严谨性，能够将设计空间探索时间缩短六个数量级以上，极大地解决了高密度集成设计中的计算瓶颈，具有巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29871v1",
+        "title": "ShapE-GRPO: Shapley-Enhanced Reward Allocation for Multi-Candidate LLM Training",
+        "summary": "In user-agent interaction scenarios such as recommendation, brainstorming, and code suggestion, Large Language Models (LLMs) often generate sets of candidate recommendations where the objective is to maximize the collective utility of the entire set rather than individual candidates independently. However, existing reinforcement learning post-training paradigms, such as Group Relative Policy Optimization (GRPO), typically assign the same set-level scalar reward to every candidate in the set. This leads to noisy training signals where poor candidates free-ride on the high reward produced by a single strong peer, resulting in suboptimal exploration. To address this, we propose Shapley-Enhanced GRPO (ShapE-GRPO). By leveraging the permutation-invariant nature of set-level utility, we derive a Shapley-enhanced formulation from cooperative game theory to decompose set-level rewards into granular, candidate-specific signals. We show that our formulation preserves the fundamental axioms of the Shapley value while remaining computationally efficient with polynomial-time complexity. Empirically, ShapE-GRPO consistently outperforms standard GRPO across diverse datasets with accelerated convergence during training.",
+        "authors": "Rui Ai, Yu Pan, David Simchi-Levi, Chonghuan Wang",
+        "url": "http://arxiv.org/abs/2603.29871v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29871v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "ShapE-GRPO利用合作博弈论中的Shapley值，将集合级奖励分解为细粒度的、针对候选的信号，用于多候选LLM训练。这种理论创新性地解决了现有强化学习后训练范式中奖励信号噪声大、探索次优的问题，加速了LLM训练的收敛，具有很强的理论严谨性和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29735v1",
+        "title": "Spontaneous Functional Differentiation in Large Language Models: A Brain-Like Intelligence Economy",
+        "summary": "The evolution of intelligence in artificial systems provides a unique opportunity to identify universal computational principles. Here we show that large language models spontaneously develop synergistic cores where information integration exceeds individual parts remarkably similar to the human brain. Using Integrated Information Decomposition across multiple architectures we find that middle layers exhibit synergistic processing while early and late layers rely on redundancy. This organization is dynamic and emerges as a physical phase transition as task difficulty increases. Crucially ablating synergistic components causes catastrophic performance loss confirming their role as the physical entity of abstract reasoning and bridging artificial and biological intelligence.",
+        "authors": "Junjie Zhang, Zhen Shen, Gang Xiong, Xisong Dong",
+        "url": "http://arxiv.org/abs/2603.29735v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29735v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了大型语言模型中自发的功能分化，发现LLM会自发形成协同核心，其信息整合能力远超单个部分，与人脑结构惊人相似。通过集成信息分解（Integrated Information Decomposition）这一理论框架，它为理解LLM的内部机制和抽象推理能力提供了新视角，具有很高的理论创新性，有助于AI架构的未来发展。"
+    }
+]

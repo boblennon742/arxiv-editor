@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.29763v1",
+        "title": "Option Pricing on Automated Market Maker Tokens",
+        "summary": "We derive the stochastic price process for tokens whose sole price discovery mechanism is a constant-product automated market maker (AMM). When the net flow into the pool follows a diffusion, the token price follows a constant elasticity of variance (CEV) process, nesting Black-Scholes as the limiting case of infinite liquidity. We obtain closed-form European option prices and introduce liquidity-adjusted Greeks. The CEV structure generates a leverage effect -- volatility rises as price falls -- whose normalized implied volatility skew depends only on the pool's weighting parameter, not on pool depth: Black-Scholes underprices 20%-out-of-the-money puts by roughly 6% in implied volatility terms at every pool depth, while the absolute pricing discrepancy vanishes as pools deepen. Empirically, after controlling for pool depth and flow volatility, realized return variance across 90 Bittensor subnets exhibits a strongly negative price elasticity, decisively rejecting geometric Brownian motion and consistent with the CEV prediction. A complementary delta-hedged backtest across 82 subnets confirms near-identical hedging errors at the money, consistent with the prediction that pricing differences are concentrated in the wings.",
+        "authors": "Philip Z. Maymin",
+        "url": "http://arxiv.org/abs/2603.29763v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29763v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为自动化做市商（AMM）代币推导了一个新颖的随机价格过程（CEV模型），并在此基础上进行了期权定价。虽然直接关注期权定价，但其对AMM代币价格动态的深入理解（如流动性如何影响波动率、杠杆效应）对于构建加密货币市场的量化因子具有重要启发性。你可以利用其提出的CEV模型参数、流动性调整的希腊字母，或者Black-Scholes模型与实际观察到的期权价格之间的偏差来设计反映市场微观结构和流动性特征的因子。论文的理论严谨性（数学推导和实证验证）以及回测方法也为因子构建和策略验证提供了高质量的参考。对于统计学硕士而言，其深度和严谨性将非常有价值。"
+    }
+]

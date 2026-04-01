@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2603.29805v1",
+        "title": "From Density Matrices to Phase Transitions in Deep Learning: Spectral Early Warnings and Interpretability",
+        "summary": "A key problem in the modern study of AI is predicting and understanding emergent capabilities in models during training. Inspired by methods for studying reactions in quantum chemistry, we present the ``2-datapoint reduced density matrix\". We show that this object provides a computationally efficient, unified observable of phase transitions during training. By tracking the eigenvalue statistics of the 2RDM over a sliding window, we derive two complementary signals: the spectral heat capacity, which we prove provides early warning of second-order phase transitions via critical slowing down, and the participation ratio, which reveals the dimensionality of the underlying reorganization. Remarkably, the top eigenvectors of the 2RDM are directly interpretable making it straightforward to study the nature of the transitions. We validate across four settings distinct settings: deep linear networks, induction head formation, grokking, and emergent misalignment. We then discuss directions for future work using the 2RDM.",
+        "authors": "Max Hennick, Guillaume Corlouer",
+        "url": "http://arxiv.org/abs/2603.29805v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29805v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了量子化学中的2-datapoint reduced density matrix (2RDM)概念来分析深度学习训练过程中的相变，并提供了谱热容和参与率等可解释信号。它明确证明了2RDM可以提供二阶相变的早期预警，具有高度的理论创新性和数学严谨性，对理解AI系统的涌现能力至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29654v1",
+        "title": "Concept frustration: Aligning human concepts and machine representations",
+        "summary": "Aligning human-interpretable concepts with the internal representations learned by modern machine learning systems remains a central challenge for interpretable AI. We introduce a geometric framework for comparing supervised human concepts with unsupervised intermediate representations extracted from foundation model embeddings. Motivated by the role of conceptual leaps in scientific discovery, we formalise the notion of concept frustration: a contradiction that arises when an unobserved concept induces relationships between known concepts that cannot be made consistent within an existing ontology. We develop task-aligned similarity measures that detect concept frustration between supervised concept-based models and unsupervised representations derived from foundation models, and show that the phenomenon is detectable in task-aligned geometry while conventional Euclidean comparisons fail. Under a linear-Gaussian generative model we derive a closed-form expression for Bayes-optimal concept-based classifier accuracy, decomposing predictive signal into known-known, known-unknown and unknown-unknown contributions and identifying analytically where frustration affects performance. Experiments on synthetic data and real language and vision tasks demonstrate that frustration can be detected in foundation model representations and that incorporating a frustrating concept into an interpretable model reorganises the geometry of learned concept representations, to better align human and machine reasoning. These results suggest a principled framework for diagnosing incomplete concept ontologies and aligning human and machine conceptual reasoning, with implications for the development and validation of safe interpretable AI for high-risk applications.",
+        "authors": "Enrico Parisini, Christopher J. Soelistyo, Ahab Isaac, Alessandro Barp, Christopher R. S. Banerji",
+        "url": "http://arxiv.org/abs/2603.29654v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29654v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个几何框架来形式化“概念挫折”现象，旨在对齐人类可解释概念与机器内部表示。它推导了贝叶斯最优概念分类器准确度的闭式表达式，并分解了预测信号的贡献。其理论深度、形式化程度和数学推导非常符合您对理论基础和清晰数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29264v1",
+        "title": "Lie Generator Networks for Nonlinear Partial Differential Equations",
+        "summary": "Linear dynamical systems are fully characterized by their eigenspectra, accessible directly from the generator of the dynamics. For nonlinear systems governed by partial differential equations, no equivalent theory exists. We introduce Lie Generator Network--Koopman (LGN-KM), a neural operator that lifts nonlinear dynamics into a linear latent space and learns the continuous-time Koopman generator ($L_k$) through a decomposition $L_k = S - D_k$, where $S$ is skew-symmetric representing conservative inter-modal coupling, and $D_k$ is a positive-definite diagonal encoding modal dissipation. This architectural decomposition enforces stability and enables interpretability through direct spectral access to the learned dynamics. On two-dimensional Navier--Stokes turbulence, the generator recovers the known dissipation scaling and a complete multi-branch dispersion relation from trajectory data alone with no physics supervision. Independently trained models at different flow regimes recover matched gauge-invariant spectral structure, exposing a gauge freedom in the Koopman lifting. Because the generator is provably stable, it enables guaranteed long-horizon stability, continuous-time evaluation at arbitrary time, and physics-informed cross-viscosity model transfer.",
+        "authors": "Shafayeth Jamil, Rehan Kapadia",
+        "url": "http://arxiv.org/abs/2603.29264v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29264v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了Lie Generator Network-Koopman (LGN-KM)，一个将非线性动力学提升到线性潜在空间的神经算子。它通过分解Koopman生成器来强制执行稳定性和可解释性，并声称该生成器是“可证明稳定的”，能够恢复已知的物理定律。在动力系统和Koopman理论方面展现了极高的数学严谨性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29110v1",
+        "title": "Optimal Data Integration and Adaptive Sampling for Efficient Treatment Effect Estimation",
+        "summary": "This study addresses the challenge of estimating average treatment effects (ATEs) for advertising campaigns in online marketplaces where complete randomized experimentation is infeasible. We propose two key innovations: (1) a shrinkage estimator that optimally combines observational and experimental data without assuming smooth treatment effects across campaigns, and (2) a Bayesian adaptive experimental design framework that efficiently selects campaigns for randomized evaluation that minimizes cumulative risk. Our shrinkage estimator achieves lower risk compared to existing methods by balancing bias-variance tradeoffs, while our adaptive design significantly reduces the costs of campaign randomization. We establish theoretical guarantees including asymptotic normality and regret bounds. In an application to Amazon Ads data analyzing 2,583 campaigns, our approach achieves equivalent estimation precision while requiring only half of the randomized experiments needed by random sampling, the standard method widely used in practice today. The proposed method serves as a practical solution for marketplace platforms to efficiently measure advertising effectiveness while managing experimentation costs.",
+        "authors": "Yen-Chun Liu, Alexander Volfovsky, German Schnaidt, Cristobal Garib, Eric Laber",
+        "url": "http://arxiv.org/abs/2603.29110v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29110v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个收缩估计器和贝叶斯自适应实验设计框架，用于在在线市场中高效估计平均治疗效果（ATEs）。它建立了包括渐近正态性和遗憾界在内的理论保证。这篇论文在统计保证、因果逻辑和数学推导方面表现出色，同时具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29946v1",
+        "title": "Real-Time Explanations for Tabular Foundation Models",
+        "summary": "Interpretability is central for scientific machine learning, as understanding \\emph{why} models make predictions enables hypothesis generation and validation. While tabular foundation models show strong performance, existing explanation methods like SHAP are computationally expensive, limiting interactive exploration. We introduce ShapPFN, a foundation model that integrates Shapley value regression directly into its architecture, producing both predictions and explanations in a single forward pass. On standard benchmarks, ShapPFN achieves competitive performance while producing high-fidelity explanations ($R^2$=0.96, cosine=0.99) over 1000\\times faster than KernelSHAP (0.06s vs 610s). Our code is available at https://github.com/kunumi/ShapPFN",
+        "authors": "Luan Borges Teodoro Reis Sena, Francisco Galuppo Azevedo",
+        "url": "http://arxiv.org/abs/2603.29946v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29946v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出ShapPFN，将Shapley值回归直接集成到模型架构中，以实现表格基础模型的实时解释。Shapley值具有坚实的博弈论基础，该工作将其高效地工程化，解决了现有解释方法计算成本高昂的问题，具有重要的理论应用和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29755v1",
+        "title": "CausalPulse: An Industrial-Grade Neurosymbolic Multi-Agent Copilot for Causal Diagnostics in Smart Manufacturing",
+        "summary": "Modern manufacturing environments demand real-time, trustworthy, and interpretable root-cause insights to sustain productivity and quality. Traditional analytics pipelines often treat anomaly detection, causal inference, and root-cause analysis as isolated stages, limiting scalability and explainability. In this work, we present CausalPulse, an industry-grade multi-agent copilot that automates causal diagnostics in smart manufacturing. It unifies anomaly detection, causal discovery, and reasoning through a neurosymbolic architecture built on standardized agentic protocols. CausalPulse is being deployed in a Robert Bosch manufacturing plant, integrating seamlessly with existing monitoring workflows and supporting real-time operation at production scale. Evaluations on both public (Future Factories) and proprietary (Planar Sensor Element) datasets show high reliability, achieving overall success rates of 98.0% and 98.73%. Per-criterion success rates reached 98.75% for planning and tool use, 97.3% for self-reflection, and 99.2% for collaboration. Runtime experiments report end-to-end latency of 50-60s per diagnostic workflow with near-linear scalability (R^2=0.97), confirming real-time readiness. Comparison with existing industrial copilots highlights distinct advantages in modularity, extensibility, and deployment maturity. These results demonstrate how CausalPulse's modular, human-in-the-loop design enables reliable, interpretable, and production-ready automation for next-generation manufacturing.",
+        "authors": "Chathurangi Shyalika, Utkarshani Jaimini, Cory Henson, Amit Sheth",
+        "url": "http://arxiv.org/abs/2603.29755v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29755v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CausalPulse是一个工业级的神经符号多智能体系统，它统一了智能制造中的异常检测、因果发现和推理。其“因果发现”和“因果推理”部分具有强大的理论基础，并且该系统已在实际工业环境中部署，展现了巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.30002v1",
+        "title": "Tracking Equivalent Mechanistic Interpretations Across Neural Networks",
+        "summary": "Mechanistic interpretability (MI) is an emerging framework for interpreting neural networks. Given a task and model, MI aims to discover a succinct algorithmic process, an interpretation, that explains the model's decision process on that task. However, MI is difficult to scale and generalize. This stems in part from two key challenges: there is no precise notion of a valid interpretation; and, generating interpretations is often an ad hoc process. In this paper, we address these challenges by defining and studying the problem of interpretive equivalence: determining whether two different models share a common interpretation, without requiring an explicit description of what that interpretation is. At the core of our approach, we propose and formalize the principle that two interpretations of a model are equivalent if all of their possible implementations are also equivalent. We develop an algorithm to estimate interpretive equivalence and case study its use on Transformer-based models. To analyze our algorithm, we introduce necessary and sufficient conditions for interpretive equivalence based on models' representation similarity. We provide guarantees that simultaneously relate a model's algorithmic interpretations, circuits, and representations. Our framework lays a foundation for the development of more rigorous evaluation methods of MI and automated, generalizable interpretation discovery methods.",
+        "authors": "Alan Sun, Mariya Toneva",
+        "url": "http://arxiv.org/abs/2603.30002v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.30002v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文定义并研究了“解释等价性”问题，旨在确定两个不同模型是否共享共同的解释。它提出了一个核心原则和算法，并提供了基于模型表示相似性的必要和充分条件，以及关于算法解释、电路和表示之间关系的理论保证。这为机制可解释性（MI）的严格评估奠定了基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29818v1",
+        "title": "Loss Gap Parity for Fairness in Heterogeneous Federated Learning",
+        "summary": "While clients may join federated learning to improve performance on data they rarely observe locally, they often remain self-interested, expecting the global model to perform well on their own data. This motivates an objective that ensures all clients achieve a similar loss gap -the difference in performance between the global model and the best model they could train using only their local data-. To this end, we propose EAGLE, a novel federated learning algorithm that explicitly regularizes the global model to minimize disparities in loss gaps across clients. Our approach is particularly effective in heterogeneous settings, where the optimal local models of the clients may be misaligned. Unlike existing methods that encourage loss parity, potentially degrading performance for many clients, EAGLE targets fairness in relative improvements. We provide theoretical convergence guarantees for EAGLE under non-convex loss functions, and characterize how its iterates perform relative to the standard federated learning objective using a novel heterogeneity measure. Empirically, we demonstrate that EAGLE reduces the disparity in loss gaps among clients by prioritizing those furthest from their local optimal loss, while maintaining competitive utility in both convex and non-convex cases compared to strong baselines.",
+        "authors": "Brahim Erraji, Michaël Perrot, Aurélien Bellet",
+        "url": "http://arxiv.org/abs/2603.29818v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29818v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了EAGLE算法，通过显式正则化全局模型来最小化异构联邦学习中客户端之间的损失差距差异。它提供了在非凸损失函数下的理论收敛保证，并使用新颖的异质性度量来表征其迭代性能，理论严谨性高，对联邦学习的公平性研究具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29532v1",
+        "title": "Learning Surrogate LPV State-Space Models with Uncertainty Quantification",
+        "summary": "The Linear Parameter-Varying (LPV) framework enables the construction of surrogate models of complex nonlinear and high-dimensional systems, facilitating efficient stability and performance analysis together with controller design. Despite significant advances in data-driven LPV modelling, existing approaches do not quantify the uncertainty of the obtained LPV models. Consequently, assessing model reliability for analysis and control or detecting operation outside the training regime requires extensive validation and user expertise. This paper proposes a Bayesian approach for the joint estimation of LPV state-space models together with their scheduling, providing a characterization of model uncertainty and confidence bounds on the predicted model response directly from input-output data. Both aleatoric uncertainty due to measurement noise and epistemic uncertainty arising from limited training data and structural bias are considered. The resulting model preserves the LPV structure required for controller synthesis while enabling computationally efficient simulation and uncertainty propagation. The approach is demonstrated on the surrogate modelling of a two-dimensional nonlinear interconnection of mass-spring-damper systems.",
+        "authors": "E. Javier Olucha, Valentin Preda, Amritam Das, Roland Tóth",
+        "url": "http://arxiv.org/abs/2603.29532v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29532v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种贝叶斯方法，用于线性参数时变（LPV）状态空间模型及其调度的联合估计，提供了模型不确定性和预测响应的置信区间。它明确区分了偶然不确定性和认知不确定性，在统计学和不确定性量化方面具有非常高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29499v1",
+        "title": "Model Predictive Path Integral PID Control for Learning-Based Path Following",
+        "summary": "Classical proportional--integral--derivative (PID) control is widely employed in industrial applications; however, achieving higher performance often motivates the adoption of model predictive control (MPC). Although gradient-based methods are the standard for real-time optimization, sampling-based approaches have recently gained attention. In particular, model predictive path integral (MPPI) control enables gradient-free optimization and accommodates non-differentiable models and objective functions. However, directly sampling control input sequences may yield discontinuous inputs and increase the optimization dimensionality in proportion to the prediction horizon. This study proposes MPPI--PID control, which applies MPPI to optimize PID gains at each control step, thereby replacing direct high-dimensional input-sequence optimization with low-dimensional gain-space optimization. This formulation enhances sample efficiency and yields smoother inputs via the PID structure. We also provide theoretical insights, including an information-theoretic interpretation that unifies MPPI and MPPI--PID, an analysis of the effect of optimization dimensionality on sample efficiency, and a characterization of input continuity induced by the PID structure. The proposed method is evaluated on the learning-based path following of a mini forklift using a residual-learning dynamics model that integrates a physical model with a neural network. System identification is performed with real driving data. Numerical path-following experiments demonstrate that MPPI--PID improves tracking performance compared with fixed-gain PID and achieves performance comparable to conventional MPPI while significantly reducing input increments. Furthermore, the proposed method maintains favorable performance even with substantially fewer samples, demonstrating its improved sample efficiency.",
+        "authors": "Teruki Kato, Koshi Oishi, Seigo Ito",
+        "url": "http://arxiv.org/abs/2603.29499v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29499v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了MPPI-PID控制方法，将模型预测路径积分（MPPI）与PID控制相结合。它提供了理论见解，包括统一MPPI和MPPI-PID的信息论解释、优化维度对样本效率的影响分析以及输入连续性的表征。在控制理论方面具有深入的数学推导和分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29466v1",
+        "title": "An Isotropic Approach to Efficient Uncertainty Quantification with Gradient Norms",
+        "summary": "Existing methods for quantifying predictive uncertainty in neural networks are either computationally intractable for large language models or require access to training data that is typically unavailable. We derive a lightweight alternative through two approximations: a first-order Taylor expansion that expresses uncertainty in terms of the gradient of the prediction and the parameter covariance, and an isotropy assumption on the parameter covariance. Together, these yield epistemic uncertainty as the squared gradient norm and aleatoric uncertainty as the Bernoulli variance of the point prediction, from a single forward-backward pass through an unmodified pretrained model. We justify the isotropy assumption by showing that covariance estimates built from non-training data introduce structured distortions that isotropic covariance avoids, and that theoretical results on the spectral properties of large networks support the approximation at scale. Validation against reference Markov Chain Monte Carlo estimates on synthetic problems shows strong correspondence that improves with model size. We then use the estimates to investigate when each uncertainty type carries useful signal for predicting answer correctness in question answering with large language models, revealing a benchmark-dependent divergence: the combined estimate achieves the highest mean AUROC on TruthfulQA, where questions involve genuine conflict between plausible answers, but falls to near chance on TriviaQA's factual recall, suggesting that parameter-level uncertainty captures a fundamentally different signal than self-assessment methods.",
+        "authors": "Nils Grünefeld, Jes Frellsen, Christian Hardmeier",
+        "url": "http://arxiv.org/abs/2603.29466v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29466v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过一阶泰勒展开和参数协方差的各向同性假设，推导了一种轻量级的不确定性量化方法。它将认知不确定性表示为梯度范数平方，并将偶然不确定性表示为点预测的伯努利方差，并提供了来自大型网络谱性质的理论支持。数学推导和理论基础非常扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29384v1",
+        "title": "Causality-inspired Federated Learning for Dynamic Spatio-Temporal Graphs",
+        "summary": "Federated Graph Learning (FGL) has emerged as a powerful paradigm for decentralized training of graph neural networks while preserving data privacy. However, existing FGL methods are predominantly designed for static graphs and rely on parameter averaging or distribution alignment, which implicitly assume that all features are equally transferable across clients, overlooking both the spatial and temporal heterogeneity and the presence of client-specific knowledge in real-world graphs. In this work, we identify that such assumptions create a vicious cycle of spurious representation entanglement, client-specific interference, and negative transfer, degrading generalization performance in Federated Learning over Dynamic Spatio-Temporal Graphs (FSTG). To address this issue, we propose a novel causality-inspired framework named SC-FSGL, which explicitly decouples transferable causal knowledge from client-specific noise through representation-level interventions. Specifically, we introduce a Conditional Separation Module that simulates soft interventions through client conditioned masks, enabling the disentanglement of invariant spatio-temporal causal factors from spurious signals and mitigating representation entanglement caused by client heterogeneity. In addition, we propose a Causal Codebook that clusters causal prototypes and aligns local representations via contrastive learning, promoting cross-client consistency and facilitating knowledge sharing across diverse spatio-temporal patterns. Experiments on five diverse heterogeneity Spatio-Temporal Graph (STG) datasets show that SC-FSGL outperforms state-of-the-art methods.",
+        "authors": "Yuxuan Liu, Wenchao Xu, Haozhao Wang, Zhiming He, Zhaofeng Shi, Chongyang Xu, Peichao Wang, Boyuan Zhang",
+        "url": "http://arxiv.org/abs/2603.29384v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29384v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个受因果关系启发的框架SC-FSGL，用于动态时空图上的联邦图学习。它通过表示层干预将可转移的因果知识与客户端特定噪声解耦，明确解决了因果逻辑和理论基础问题，对理解和构建更鲁棒的联邦学习系统具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29354v1",
+        "title": "ARC: Alignment-based RPM Estimation with Curvature-adaptive Tracking",
+        "summary": "Tacho-less rotational speed estimation is critical for vibration-based prognostics and health management (PHM) of rotating machinery, yet traditional methods--such as time-domain periodicity, cepstrum, and harmonic comb matching--struggle under noise, non-stationarity, and inharmonic interference. Probabilistic tracking offers a principled way to fuse multiple estimators, but a major challenge is that heterogeneous estimators produce evidence on incompatible axes and scales. We address this with ARC (Alignment-based RPM Estimation with Curvature-adaptive Tracking) by unifying the observation representation. Each estimator outputs a one-dimensional evidence curve on its native axis, which is mapped onto a shared RPM grid and converted into a comparable grid-based log-likelihood via robust standardization and a Gibbs-form energy shaping. Standard recursive filtering with fixed-variance motion priors can fail under multi-modal or ambiguous evidence. To overcome this, ARC introduces a curvature-informed, state-dependent motion prior, where the transition variance is derived from the local discrete Hessian of the previous log-posterior. This design enforces smooth tracking around confident modes while preserving competing hypotheses, such as octave alternatives. Experiments on synthetic stress tests and real vibration-table data demonstrate stable, physically plausible trajectories with interpretable uncertainty, and ablations confirm that these gains arise from uncertainty-aware temporal propagation rather than per-frame peak selection or ad hoc rules.",
+        "authors": "Weiheng Hua, Changyu Hao",
+        "url": "http://arxiv.org/abs/2603.29354v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29354v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ARC方法，用于转速估计，通过统一观测表示和引入基于局部离散Hessian的曲率自适应状态相关运动先验。这涉及概率建模和从Hessian推导先验的数学过程，展现了很强的数学严谨性，并能提供可解释的不确定性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2603.29168v1",
+        "title": "Linear models for causal inference under network interference",
+        "summary": "In causal inference, interference occurs when the treatment of one unit may affect the outcomes of other units. The goal of this work is to serve as a guide to the use of linear outcome modeling for estimating causal effects in settings where interference may pose a challenge to identification and estimation, such as spatial and network data. We demonstrate that, under a linear model, causal effects of binary and continuous treatments can be identified in terms of regression coefficients under totally and partially known interference structures. Our work constructs unbiased and consistent point and variance estimators for these effects under one or more possible fixed or random interference networks. A chief advantage is that this approach can be implemented using standard linear regression software, and is easily augmented with random effects and heteroscedastic or autocorrelation consistent standard errors. Numerical experiments and an example data analysis demonstrate the efficacy of this approach in eliminating interference bias.",
+        "authors": "Eric Tong, Salvador V. Balkus",
+        "url": "http://arxiv.org/abs/2603.29168v1",
+        "pdf_url": "https://arxiv.org/pdf/2603.29168v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探讨了网络干预下因果推断的线性模型，证明了在已知或部分已知干预结构下，因果效应可以通过回归系数识别。它构建了无偏、一致的点估计和方差估计器，并提供了理论保证。其因果逻辑和统计保证非常符合您对理论严谨性的要求。"
+    }
+]

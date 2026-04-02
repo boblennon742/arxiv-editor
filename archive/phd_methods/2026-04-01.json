@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.01170v1",
+        "title": "Online Reasoning Calibration: Test-Time Training Enables Generalizable Conformal LLM Reasoning",
+        "summary": "While test-time scaling has enabled large language models to solve highly difficult tasks, state-of-the-art results come at exorbitant compute costs. These inefficiencies can be attributed to the miscalibration of post-trained language models, and the lack of calibration in popular sampling techniques. Here, we present Online Reasoning Calibration (ORCA), a framework for calibrating the sampling process that draws upon conformal prediction and test-time training. Specifically, we introduce a meta-learning procedure that updates the calibration module for each input. This allows us to provide valid confidence estimates under distributional shift, e.g. in thought patterns that occur across different stages of reasoning, or in prompt distributions between model development and deployment. ORCA not only provides theoretical guarantees on conformal risks, but also empirically shows higher efficiency and generalization across different reasoning tasks. At risk level $δ=0.1$, ORCA improves Qwen2.5-32B efficiency on in-distribution tasks with savings up to 47.5% with supervised labels and 40.7% with self-consistency labels. Under zero-shot out-of-domain settings, it improves MATH-500 savings from 24.8% of the static calibration baseline to 67.0% while maintaining a low empirical error rate, and the same trend holds across model families and downstream benchmarks. Our code is publicly available at https://github.com/wzekai99/ORCA.",
+        "authors": "Cai Zhou, Zekai Wang, Menghua Wu, Qianyu Julie Zhu, Flora C. Shi, Chenyu Wang, Ashia Wilson, Tommi Jaakkola, Stephen Bates",
+        "url": "http://arxiv.org/abs/2604.01170v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.01170v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Online Reasoning Calibration (ORCA) 框架，结合了共形预测（conformal prediction）和测试时训练（test-time training）来校准 LLM 的推理采样过程。它不仅提供了共形风险的理论保证，还显著提高了 LLM 在分布偏移下的效率和泛化能力。作为数理统计博士生，您会欣赏其严格的理论基础（共形预测）和对 LLM 实际应用瓶颈（计算成本、泛化性）的解决。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.01152v1",
+        "title": "Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning",
+        "summary": "We present Brainstacks, a modular architecture for continual multi-domain fine-tuning of large language models that packages domain expertise as frozen adapter stacks composing additively on a shared frozen base at inference. Five interlocking components: (1) MoE-LoRA with Shazeer-style noisy top-2 routing across all seven transformer projections under QLoRA 4-bit quantization with rsLoRA scaling; (2) an inner loop performing residual boosting by freezing trained stacks and adding new ones; (3) an outer loop training sequential domain-specific stacks with curriculum-ordered dependencies; (4) null-space projection via randomized SVD constraining new stacks to subspaces orthogonal to prior directions, achieving zero forgetting in isolation; (5) an outcome-based sigmoid meta-router trained on empirically discovered domain-combination targets that selectively weights stacks, enabling cross-domain composition. Two boundary experiments: (6) PSN pretraining on a randomly initialized model; (7) per-domain RL (DPO/GRPO) validating compatibility with post-SFT alignment. Validated on TinyLlama-1.1B (4 domains, 9 stacks) and Gemma 3 12B IT (5 domains, 10 stacks), MoE-LoRA achieves 2.5x faster convergence than parameter-matched single LoRA, residual boosting breaks through the single-stack ceiling, and the routed system recovers generation quality destroyed by ungated stack accumulation. The central finding: the outcome-based router discovers that domain stacks encode transferable cognitive primitives (instruction-following clarity, numerical reasoning, procedural logic, chain-of-thought structure) rather than domain-specific knowledge, with medical prompts routing to chat+math stacks in 97% of cases despite zero medical data in those stacks.",
+        "authors": "Mohammad R. Abu Ayyash",
+        "url": "http://arxiv.org/abs/2604.01152v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.01152v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Brainstacks 提出了一种模块化架构，通过冻结的 MoE-LoRA 堆栈实现 LLM 的持续多领域微调。其核心创新包括零遗忘的空空间投影（null-space projection）和发现可迁移认知原语的元路由器。这篇论文在架构创新、理论严谨性（如SVD约束）和解决持续学习这一实际瓶颈方面表现卓越，非常符合您对前沿算法和架构的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.01007v1",
+        "title": "OmniMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory",
+        "summary": "AI agents increasingly operate over extended time horizons, yet their ability to retain, organize, and recall multimodal experiences remains a critical bottleneck. Building effective lifelong memory requires navigating a vast design space spanning architecture, retrieval strategies, prompt engineering, and data pipelines; this space is too large and interconnected for manual exploration or traditional AutoML to explore effectively. We deploy an autonomous research pipeline to discover OmniMem, a unified multimodal memory framework for lifelong AI agents. Starting from a naïve baseline (F1=0.117 on LoCoMo), the pipeline autonomously executes ${\\sim}50$ experiments across two benchmarks, diagnosing failure modes, proposing architectural modifications, and repairing data pipeline bugs, all without human intervention in the inner loop. The resulting system achieves state-of-the-art on both benchmarks, improving F1 by +411% on LoCoMo (0.117$\\to$0.598) and +214% on Mem-Gallery (0.254$\\to$0.797) relative to the initial configurations. Critically, the most impactful discoveries are not hyperparameter adjustments: bug fixes (+175%), architectural changes (+44%), and prompt engineering (+188\\% on specific categories) each individually exceed the cumulative contribution of all hyperparameter tuning, demonstrating capabilities fundamentally beyond the reach of traditional AutoML. We provide a taxonomy of six discovery types and identify four properties that make multimodal memory particularly suited for autoresearch, offering guidance for applying autonomous research pipelines to other AI system domains. Code is available at this https://github.com/aiming-lab/OmniMem.",
+        "authors": "Jiaqi Liu, Zipeng Ling, Shi Qiu, Yanqing Liu, Siwei Han, Peng Xia, Haoqin Tu, Zeyu Zheng, Cihang Xie, Charles Fleming, Mingyu Ding, Huaxiu Yao",
+        "url": "http://arxiv.org/abs/2604.01007v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.01007v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "OmniMem 提出了一种由自主研究（autoresearch）发现的统一多模态记忆框架，用于终身 AI 智能体。它通过自动化实验诊断故障、修改架构和修复数据管道错误，显著提升了智能体在长期多模态记忆方面的能力。这种元学习（meta-learning）和自主发现架构的方法具有极高的创新性，解决了智能体长期记忆的关键瓶颈，且其研究方法本身就具有理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.01000v1",
+        "title": "EmbedPart: Embedding-Driven Graph Partitioning for Scalable Graph Neural Network Training",
+        "summary": "Graph Neural Networks (GNNs) are widely used for learning on graph-structured data, but scaling GNN training to massive graphs remains challenging. To enable scalable distributed training, graphs are divided into smaller partitions that are distributed across multiple machines such that inter-machine communication is minimized and computational load is balanced. In practice, existing partitioning approaches face a fundamental trade-off between partitioning overhead and partitioning quality. We propose EmbedPart, an embedding-driven partitioning approach that achieves both speed and quality. Instead of operating directly on irregular graph structures, EmbedPart leverages node embeddings produced during the actual GNN training workload and clusters these dense embeddings to derive a partitioning. EmbedPart achieves more than 100x speedup over Metis while maintaining competitive partitioning quality and accelerating distributed GNN training. Moreover, EmbedPart naturally supports graph updates and fast repartitioning, and can be applied to graph reordering to improve data locality and accelerate single-machine GNN training. By shifting partitioning from irregular graph structures to dense embeddings, EmbedPart enables scalable and high-quality graph data optimization.",
+        "authors": "Nikolai Merkel, Ruben Mayer, Volker Markl, Hans-Arno Jacobsen",
+        "url": "http://arxiv.org/abs/2604.01000v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.01000v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文基于信息瓶颈理论，提出了一个证据驱动的关键帧采样框架，用于 MLLM 的长视频理解。它将关键帧选择公式化为最大化条件互信息，并推导出可行的优化目标。其强大的理论基础（信息论）和对 MLLM 长上下文理解这一实际瓶颈（数据效率、计算成本）的有效解决，使其成为一篇非常值得阅读的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00997v1",
+        "title": "Uncertainty-Aware Variational Reward Factorization via Probabilistic Preference Bases for LLM Personalization",
+        "summary": "Reward factorization personalizes large language models (LLMs) by decomposing rewards into shared basis functions and user-specific weights. Yet, existing methods estimate user weights from scarce data in isolation and as deterministic points, leading to inaccurate and unreliable inference. We introduce Variational Reward Factorization (VRF), an uncertainty-aware framework that represents each user's preferences as a variational distribution in a shared preference space. VRF infers user distributions via a variational encoder, derives weights through Wasserstein distance matching with shared probabilistic bases, and downweights uncertain estimates through a variance-attenuated loss. On three benchmarks, VRF outperforms all baselines across seen and unseen users, few-shot scenarios, and varying uncertainty levels, with gains extending to downstream alignment.",
+        "authors": "Gyuseok Lee, Wonbin Kweon, Zhenrui Yue, SeongKu Kang, Jiawei Han, Dong Wang",
+        "url": "http://arxiv.org/abs/2604.00997v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00997v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "VRF 引入了一个不确定性感知的变分奖励分解框架，通过变分分布和 Wasserstein 距离匹配来表示用户偏好，实现 LLM 的个性化。这种将统计学中的变分推断和距离度量应用于 LLM 奖励建模的方法，具有高度的理论创新性和严谨性，同时解决了数据稀缺下 LLM 个性化推理不准确和不可靠的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00918v1",
+        "title": "Generalization Bounds for Spectral GNNs via Fourier Domain Analysis",
+        "summary": "Spectral graph neural networks learn graph filters, but their behavior with increasing depth and polynomial order is not well understood. We analyze these models in the graph Fourier domain, where each layer becomes an element-wise frequency update, separating the fixed spectrum from trainable parameters and making depth and order explicit. In this setting, we show that Gaussian complexity is invariant under the Graph Fourier Transform, which allows us to derive data-dependent, depth, and order-aware generalization bounds together with stability estimates. In the linear case, our bounds are tighter, and on real graphs, the data-dependent term correlates with the generalization gap across polynomial bases, highlighting practical choices that avoid frequency amplification across layers.",
+        "authors": "Vahan A. Martirosyan, Daniele Malitesta, Hugues Talbot, Jhony H. Giraldo, Fragkiskos D. Malliaros",
+        "url": "http://arxiv.org/abs/2604.00918v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00918v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过傅里叶域分析，为谱图神经网络（GNNs）推导了数据依赖、深度和阶数感知的泛化界限。它在理论上深入理解了 GNNs 的行为，并提供了稳定性估计。其纯粹的理论严谨性（高斯复杂度、傅里叶变换）和对 GNN 这一重要 AI 架构的泛化能力分析，非常符合您作为数理统计博士生的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00835v1",
+        "title": "Agentic Tool Use in Large Language Models",
+        "summary": "Large language models are increasingly being deployed as autonomous agents yet their real world effectiveness depends on reliable tools for information retrieval, computation and external action. Existing studies remain fragmented across tasks, tool types, and training settings, lacking a unified view of how tool-use methods differ and evolve. This paper organizes the literature into three paradigms: prompting as plug-and-play, supervised tool learning and reward-driven tool policy learning, analyzes their methods, strengths and failure modes, reviews the evaluation landscape and highlights key challenges, aiming to address this fragmentation and provide a more structured evolutionary view of agentic tool use.",
+        "authors": "Jinchao Hu, Meizhi Zhong, Kehai Chen, Xuefeng Bai, Min Zhang",
+        "url": "http://arxiv.org/abs/2604.00835v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00835v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "PIRL 提出了一个强化学习框架，用最大化迭代间的累积策略改进来替代传统的代理奖励最大化，并证明了其与最终任务性能的对齐。PIPO 则通过回顾性验证实现闭环优化。这篇论文在强化学习理论上具有显著创新，提供了严格的理论分析，并解决了 LLM 后训练中策略优化的稳定性和性能瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00821v1",
+        "title": "Optimal Brain Decomposition for Accurate LLM Low-Rank Approximation",
+        "summary": "Low-rank decomposition has emerged as an important problem in Large Language Model (LLM) fine-tuning and inference. Through Singular Value Decomposition (SVD), the weight matrix can be factorized into low-rank spaces optimally. Previously, a common practice was to decompose the weight in the activation-whitened space, and then achieve satisfying results. In this work, we propose Optimal Brain Decomposition LLM (OBD-LLM), which studies the decomposition problem in the model space by utilizing second-order Hessian information. Through a rigorous Kronecker-factorization of the Hessian, we show that the decomposition needs to consider both input and output information of the layer, and achieves much better decomposition results compared to input only method. Our loss-aware decomposition method involves a bi-directional whitening on the weight matrix. As a result, OBD-LLM is a closed-form solution for the optimal decomposition of weights in the language model. Remarkably, we achieve ~20-40\\% better results than previous state-of-the-art decomposition methods, the SVD-LLM.",
+        "authors": "Yuhang Li, Donghyun Lee, Ruokai Yin, Priyadarshini Panda",
+        "url": "http://arxiv.org/abs/2604.00821v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00821v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "OBD-LLM 提出了一种利用二阶 Hessian 信息在模型空间进行最优低秩分解的方法，通过对 Hessian 的 Kronecker 分解，实现了权重矩阵的双向白化。这为 LLM 模型压缩提供了严格的理论基础和闭式解，显著优于现有方法，完美契合您对模型压缩和理论创新性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00722v1",
+        "title": "LangMARL: Natural Language Multi-Agent Reinforcement Learning",
+        "summary": "Large language model (LLM) agents struggle to autonomously evolve coordination strategies in dynamic environments, largely because coarse global outcomes obscure the causal signals needed for local policy refinement. We identify this bottleneck as a multi-agent credit assignment problem, which has long been studied in classical multi-agent reinforcement learning (MARL) but remains underaddressed in LLM-based systems. Building on this observation, we propose LangMARL, a framework that brings credit assignment and policy gradient evolution from cooperative MARL into the language space. LangMARL introduces agent-level language credit assignment, pioneers gradient evolution in language space for policy improvement, and summarizes task-relevant causal relations from replayed trajectories to provide dense feedback and improve convergence under sparse rewards. Extensive experiments across diverse cooperative multi-agent tasks demonstrate improved sample efficiency, interpretability, and strong generalization.",
+        "authors": "Huaiyuan Yao, Longchao Da, Xiaoou Liu, Charles Fleming, Tianlong Chen, Hua Wei",
+        "url": "http://arxiv.org/abs/2604.00722v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00722v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "LangMARL 将多智能体信用分配和策略梯度演化引入语言空间，提出了智能体级别的语言信用分配和语言空间中的梯度演化。它通过从回放轨迹中总结任务相关的因果关系，解决了稀疏奖励下的收敛问题。这篇论文在多智能体强化学习（MARL）理论和 LLM 智能体协调方面具有显著创新，解决了复杂环境下的信用分配瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00717v1",
+        "title": "GRASP: Gradient Realignment via Active Shared Perception for Multi-Agent Collaborative Optimization",
+        "summary": "Non-stationarity arises from concurrent policy updates and leads to persistent environmental fluctuations. Existing approaches like Centralized Training with Decentralized Execution (CTDE) and sequential update schemes mitigate this issue. However, since the perception of the policies of other agents remains dependent on sampling environmental interaction data, the agent essentially operates in a passive perception state. This inevitably triggers equilibrium oscillations and significantly slows the convergence speed of the system. To address this issue, we propose Gradient Realignment via Active Shared Perception (GRASP), a novel framework that defines generalized Bellman equilibrium as a stable objective for policy evolution. The core mechanism of GRASP involves utilizing the independent gradients of agents to derive a defined consensus gradient, enabling agents to actively perceive policy updates and optimize team collaboration. Theoretically, we leverage the Kakutani Fixed-Point Theorem to prove that the consensus direction $u^*$ guarantees the existence and attainability of this equilibrium. Extensive experiments on StarCraft II Multi-Agent Challenge (SMAC) and Google Research Football (GRF) demonstrate the scalability and promising performance of the framework.",
+        "authors": "Sihan Zhou, Tiantian He, Yifan Lu, Yaqing Hou, Yew-Soon Ong",
+        "url": "http://arxiv.org/abs/2604.00717v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00717v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GRASP 提出了一个通过主动共享感知进行梯度重对齐的框架，将广义 Bellman 平衡定义为策略演化的稳定目标。它利用智能体的独立梯度推导共识梯度，并使用 Kakutani 不动点定理证明了平衡的存在性和可达性。这篇论文在 MARL 理论上具有高度创新和严谨性，解决了非平稳性问题并显著加速了收敛速度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00626v1",
+        "title": "A Survey of On-Policy Distillation for Large Language Models",
+        "summary": "Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains \\textit{off-policy}: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of \\textit{exposure bias}, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses this by letting the student generate its own trajectories and receive teacher feedback on these self-generated outputs, grounding distillation in the theory of interactive imitation learning. Despite rapid growth spanning divergence minimization, reward-guided learning, and self-play, the OPD literature remains fragmented with no unified treatment. This survey provides the first comprehensive overview of OPD for LLMs. We introduce a unified $f$-divergence framework over on-policy samples and organize the landscape along three orthogonal dimensions: \\emph{feedback signal} (logit-based, outcome-based, or self-play), \\emph{teacher access} (white-box, black-box, or teacher-free), and \\emph{loss granularity} (token-level, sequence-level, or hybrid). We systematically analyze representative methods, examine industrial deployments, and identify open problems including distillation scaling laws, uncertainty-aware feedback, and agent-level distillation.",
+        "authors": "Mingyang Song, Mao Zheng",
+        "url": "http://arxiv.org/abs/2604.00626v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00626v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Streaming Model Cascades 的两种自适应级联算法，用于语义 SQL 的流式、分区执行。SUPG-IT 扩展了 SUPG 统计框架，提供了迭代阈值细化和联合精度-召回保证；GAMCAL 则使用广义加性模型进行校准。其强大的统计学理论基础和对分布式系统中 LLM 推理成本瓶颈的解决，使其成为一篇优秀论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00599v1",
+        "title": "Predicting Dynamics of Ultra-Large Complex Systems by Inferring Governing Equations",
+        "summary": "Predicting the behavior of ultra-large complex systems, from climate to biological and technological networks, is a central unsolved challenge. Existing approaches face a fundamental trade-off: equation discovery methods provide interpretability but fail to scale, while neural networks scale but operate as black boxes and often lose reliability over long times. Here, we introduce the Sparse Identification Graph Neural Network, a framework that overcome this divide by allowing to infer the governing equations of large networked systems from data. By defining symbolic discovery as edge-level information, SIGN decouples the scalability of sparse identification from network size, enabling efficient equation discovery even in large systems. SIGN allows to study networks with over 100,000 nodes while remaining robust to noise, sparse sampling, and missing data. Across diverse benchmark systems, including coupled chaotic oscillators, neural dynamics, and epidemic spreading, it recovers governing equations with high precision and sustains accurate long-term predictions. Applied to a data set of time series of temperature measurements in 71,987 sea surface positions, SIGN identifies a compact predictive network model and captures large-scale sea surface temperature conditions up to two years in advance. By enabling equation discovery at previously inaccessible scales, SIGN opens a path toward interpretable and reliable prediction of real-world complex systems.",
+        "authors": "Qi Shao, Duxin Chen, Jiawen Chen, Yujie Zeng, Athen Ma, Wenwu Yu, Vito Latora, Wei Lin",
+        "url": "http://arxiv.org/abs/2604.00599v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00599v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SIGN 提出了一个稀疏识别图神经网络框架，通过将符号发现定义为边级信息，实现了从数据中推断超大型复杂系统控制方程的能力。它解决了方程发现的可伸缩性和可解释性瓶颈，并在预测真实世界复杂系统方面表现出色。这种结合 GNNs 和符号 AI 的方法具有高度创新性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00553v1",
+        "title": "Scenario theory for multi-criteria data-driven decision making",
+        "summary": "The scenario approach provides a powerful data-driven framework for designing solutions under uncertainty with rigorous probabilistic robustness guarantees. Existing theory, however, primarily addresses assessing robustness with respect to a single appropriateness criterion for the solution based on a dataset, whereas many practical applications - including multi-agent decision problems - require the simultaneous consideration of multiple criteria and the assessment of their robustness based on multiple datasets, one per criterion. This paper develops a general scenario theory for multi-criteria data-driven decision making. A central innovation lies in the collective treatment of the risks associated with violations of individual criteria, which yields substantially more accurate robustness certificates than those derived from a naive application of standard results. In turn, this approach enables a sharper quantification of the robustness level with which all criteria are simultaneously satisfied. The proposed framework applies broadly to multi-criteria data-driven decision problems, providing a principled, scalable, and theoretically grounded methodology for design under uncertainty.",
+        "authors": "Simone Garatti, Lucrezia Manieri, Alessandro Falsone, Algo Carè, Marco C. Campi, Maria Prandini",
+        "url": "http://arxiv.org/abs/2604.00553v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00553v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个本体约束的神经推理架构，用于企业智能体系统中的领域接地 AI 智能体。它引入了三层本体框架和非对称神经符号耦合概念，解决了企业 LLM 在幻觉、领域漂移和合规性方面的瓶颈。其在神经符号 AI 架构和理论创新方面的贡献非常突出，且具有重要的实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00419v1",
+        "title": "G-Drift MIA: Membership Inference via Gradient-Induced Feature Drift in LLMs",
+        "summary": "Large language models (LLMs) are trained on massive web-scale corpora, raising growing concerns about privacy and copyright. Membership inference attacks (MIAs) aim to determine whether a given example was used during training. Existing LLM MIAs largely rely on output probabilities or loss values and often perform only marginally better than random guessing when members and non-members are drawn from the same distribution. We introduce G-Drift MIA, a white-box membership inference method based on gradient-induced feature drift. Given a candidate (x,y), we apply a single targeted gradient-ascent step that increases its loss and measure the resulting changes in internal representations, including logits, hidden-layer activations, and projections onto fixed feature directions, before and after the update. These drift signals are used to train a lightweight logistic classifier that effectively separates members from non-members. Across multiple transformer-based LLMs and datasets derived from realistic MIA benchmarks, G-Drift substantially outperforms confidence-based, perplexity-based, and reference-based attacks. We further show that memorized training samples systematically exhibit smaller and more structured feature drift than non-members, providing a mechanistic link between gradient geometry, representation stability, and memorization. In general, our results demonstrate that small, controlled gradient interventions offer a practical tool for auditing the membership of training-data and assessing privacy risks in LLMs.",
+        "authors": "Ravi Ranjan, Utkarsh Grover, Xiaomin Lin, Agoritsa Polyzou",
+        "url": "http://arxiv.org/abs/2604.00419v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00419v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 G-Drift MIA，一种基于梯度诱导特征漂移的白盒成员推断攻击方法。它通过单次梯度上升步骤测量内部表示的变化，并揭示了记忆化训练样本的特征漂移更小、更结构化。这种从梯度几何和表示稳定性角度进行隐私审计的方法，具有深刻的理论洞察和实际影响力，解决了 LLM 隐私风险的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00372v1",
+        "title": "Dynamic Graph Neural Network with Adaptive Features Selection for RGB-D Based Indoor Scene Recognition",
+        "summary": "Multi-modality of color and depth, i.e., RGB-D, is of great importance in recent research of indoor scene recognition. In this kind of data representation, depth map is able to describe the 3D structure of scenes and geometric relations among objects. Previous works showed that local features of both modalities are vital for promotion of recognition accuracy. However, the problem of adaptive selection and effective exploitation on these key local features remains open in this field. In this paper, a dynamic graph model is proposed with adaptive node selection mechanism to solve the above problem. In this model, a dynamic graph is built up to model the relations among objects and scene, and a method of adaptive node selection is proposed to take key local features from both modalities of RGB and depth for graph modeling. After that, these nodes are grouped by three different levels, representing near or far relations among objects. Moreover, the graph model is updated dynamically according to attention weights. Finally, the updated and optimized features of RGB and depth modalities are fused together for indoor scene recognition. Experiments are performed on public datasets including SUN RGB-D and NYU Depth v2. Extensive results demonstrate that our method has superior performance when comparing to state-of-the-arts methods, and show that the proposed method is able to exploit crucial local features from both modalities of RGB and depth.",
+        "authors": "Qiong Liu, Ruofei Xiong, Xingzhen Chen, Muyao Peng, You Yang",
+        "url": "http://arxiv.org/abs/2604.00372v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00372v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对扩散语言模型（dLLMs）中的质量-探索困境进行了统一解释，并提出了一个独立 Metropolis-Hastings 采样器来平衡质量和探索。它通过理论分析证明了低置信度重掩码对序列分布熵的约束。这种对前沿生成模型（扩散 LLM）的理论分析和采样算法创新，完美契合您对前沿算法和理论创新性的偏好。"
+    }
+]

@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.01215v1",
+        "title": "The Recipe Matters More Than the Kitchen:Mathematical Foundations of the AI Weather Prediction Pipeline",
+        "summary": "AI weather prediction has advanced rapidly, yet no unified mathematical framework explains what determines forecast skill. Existing theory addresses specific architectural choices rather than the learning pipeline as a whole, while operational evidence from 2023-2026 demonstrates that training methodology, loss function design, and data diversity matter at least as much as architecture selection. This paper makes two interleaved contributions. Theoretically, we construct a framework rooted in approximation theory on the sphere, dynamical systems theory, information theory, and statistical learning theory that treats the complete learning pipeline (architecture, loss function, training strategy, data distribution) rather than architecture alone. We establish a Learning Pipeline Error Decomposition showing that estimation error (loss- and data-dependent) dominates approximation error (architecture-dependent) at current scales. We develop a Loss Function Spectral Theory formalizing MSE-induced spectral blurring in spherical harmonic coordinates, and derive Out-of-Distribution Extrapolation Bounds proving that data-driven models systematically underestimate record-breaking extremes with bias growing linearly in record exceedance. Empirically, we validate these predictions via inference across ten architecturally diverse AI weather models using NVIDIA Earth2Studio with ERA5 initial conditions, evaluating six metrics across 30 initialization dates spanning all seasons. Results confirm universal spectral energy loss at high wavenumbers for MSE-trained models, rising Error Consensus Ratios showing that the majority of forecast error is shared across architectures, and linear negative bias during extreme events. A Holistic Model Assessment Score provides unified multi-dimensional evaluation, and a prescriptive framework enables mathematical evaluation of proposed pipelines before training.",
+        "authors": "Piyush Garg, Diana R. Gergel, Andrew E. Shao, Galen J. Yacalis",
+        "url": "http://arxiv.org/abs/2604.01215v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.01215v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文构建了一个统一的AI天气预测数学框架，根植于逼近论、动力系统理论、信息论和统计学习理论。它提出了学习管道误差分解、损失函数谱理论和OOD外推界限，并提供了严谨的数学推导和理论保证，非常符合您对强大理论基础和清晰数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.01117v1",
+        "title": "Reconsidering Dependency Networks from an Information Geometry Perspective",
+        "summary": "Dependency networks (Heckerman et al., 2000) provide a flexible framework for modeling complex systems with many variables by combining independently learned local conditional distributions through pseudo-Gibbs sampling. Despite their computational advantages over Bayesian and Markov networks, the theoretical foundations of dependency networks remain incomplete, primarily because their model distributions -- defined as stationary distributions of pseudo-Gibbs sampling -- lack closed-form expressions. This paper develops an information-geometric analysis of pseudo-Gibbs sampling, interpreting each sampling step as an m-projection onto a full conditional manifold. Building on this interpretation, we introduce the full conditional divergence and derive an upper bound that characterizes the location of the stationary distribution in the space of probability distributions. We then reformulate both structure and parameter learning as optimization problems that decompose into independent subproblems for each node, and prove that the learned model distribution converges to the true underlying distribution as the number of training samples grows to infinity. Experiments confirm that the proposed upper bound is tight in practice.",
+        "authors": "Kazuya Takabatake, Shotaro Akaho",
+        "url": "http://arxiv.org/abs/2604.01117v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.01117v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从信息几何角度重新审视了依赖网络，通过m-投影解释伪Gibbs采样，引入了全条件散度并推导了上界，并证明了学习模型分布的收敛性。这提供了对现有模型深刻的理论基础和严谨的数学分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00987v1",
+        "title": "Bridging Structured Knowledge and Data: A Unified Framework with Finance Applications",
+        "summary": "We develop Structured-Knowledge-Informed Neural Networks (SKINNs), a unified estimation framework that embeds theoretical, simulated, previously learned, or cross-domain insights as differentiable constraints within flexible neural function approximation. SKINNs jointly estimate neural network parameters and economically meaningful structural parameters in a single optimization problem, enforcing theoretical consistency not only on observed data but over a broader input domain through collocation, and therefore nesting approaches such as functional GMM, Bayesian updating, transfer learning, PINNs, and surrogate modeling. SKINNs define a class of M-estimators that are consistent and asymptotically normal with root-N convergence, sandwich covariance, and recovery of pseudo-true parameters under misspecification. We establish identification of structural parameters under joint flexibility, derive generalization and target-risk bounds under distributional shift in a convex proxy, and provide a restricted-optimal characterization of the weighting parameter that governs the bias-variance tradeoff. In an illustrative financial application to option pricing, SKINNs improve out-of-sample valuation and hedging performance, particularly at longer horizons and during high-volatility regimes, while recovering economically interpretable structural parameters with improved stability relative to conventional calibration. More broadly, SKINNs provide a general econometric framework for combining model-based reasoning with high-dimensional, data-driven estimation.",
+        "authors": "Yi Cao, Zexun Chen, Lin William Cong, Heqing Shi",
+        "url": "http://arxiv.org/abs/2604.00987v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00987v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SKINNs框架将理论知识嵌入神经网络作为可微分约束，并证明了其M-估计量的一致性、渐近正态性、root-N收敛性，并推导了泛化和目标风险界限。其严谨的统计保证和数学推导使其成为高度推荐的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00938v1",
+        "title": "WARP: Guaranteed Inner-Layer Repair of NLP Transformers",
+        "summary": "Transformer-based NLP models remain vulnerable to adversarial perturbations, yet existing repair methods face a fundamental trade-off: gradient-based approaches offer flexibility but lack verifiability and often overfit; methods that do provide repair guarantees are restricted to the final layer or small networks, significantly limiting the parameter search space available for repair. We present WARP (Weight-Adjusted Repair with Provability), a constraint-based repair framework that extends repair beyond the last layer of Transformer models. WARP formulates repair as a convex quadratic program derived from a first-order linearization of the logit gap, enabling tractable optimization over a high-dimensional parameter space. Under the condition that the first-order approximation holds, this formulation induces three per-sample guarantees: (i) a positive margin constraint ensuring correct classification on repaired inputs, (ii) preservation constraints over a designated remain set, and (iii) a certified robustness radius derived from Lipschitz continuity. To ensure feasibility across varying model architectures, we introduce a sensitivity-based preprocessing step that conditions the optimization landscape accordingly. We further show that the iterative optimization procedure converges to solutions satisfying all repair constraints under mild assumptions. Empirical evaluation on encoder-only Transformers with varying layer architectures validates that these guarantees hold in practice while improving robustness to adversarial inputs. Our results demonstrate that guaranteed, generalizable Transformer repair is achievable through principled constraint-based optimization.",
+        "authors": "Hsin-Ling Hsu, Min-Yu Chen, Nai-Chia Chen, Yan-Ru Chen, Yi-Ling Chang, Fang Yu",
+        "url": "http://arxiv.org/abs/2604.00938v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00938v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "WARP提出了一个基于约束的Transformer内部层修复框架，提供了正裕度、保留约束和基于Lipschitz连续性的认证鲁棒性半径等每样本保证，并证明了迭代优化过程的收敛性。这体现了强大的理论严谨性和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00918v1",
+        "title": "Generalization Bounds for Spectral GNNs via Fourier Domain Analysis",
+        "summary": "Spectral graph neural networks learn graph filters, but their behavior with increasing depth and polynomial order is not well understood. We analyze these models in the graph Fourier domain, where each layer becomes an element-wise frequency update, separating the fixed spectrum from trainable parameters and making depth and order explicit. In this setting, we show that Gaussian complexity is invariant under the Graph Fourier Transform, which allows us to derive data-dependent, depth, and order-aware generalization bounds together with stability estimates. In the linear case, our bounds are tighter, and on real graphs, the data-dependent term correlates with the generalization gap across polynomial bases, highlighting practical choices that avoid frequency amplification across layers.",
+        "authors": "Vahan A. Martirosyan, Daniele Malitesta, Hugues Talbot, Jhony H. Giraldo, Fragkiskos D. Malliaros",
+        "url": "http://arxiv.org/abs/2604.00918v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00918v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过傅里叶域分析谱图神经网络，推导了数据依赖、深度和阶数感知的泛化界限以及稳定性估计。其对GNN理论泛化能力的深入数学分析和严谨的界限推导非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00915v1",
+        "title": "Orthogonal Learner for Estimating Heterogeneous Long-Term Treatment Effects",
+        "summary": "Estimation of heterogeneous long-term treatment effects (HLTEs) is widely used for personalized decision-making in marketing, economics, and medicine, where short-term randomized experiments are often combined with long-term observational data. However, HLTE estimation is challenging due to limited overlap in treatment or in observing long-term outcomes for certain subpopulations, which can lead to unstable HLTE estimates with large finite-sample variance. To address this challenge, we introduce the LT-O-learners (Long-Term Orthogonal Learners), a set of novel orthogonal learners for HLTE estimation. The learners are designed for the canonical HLTE setting that combines a short-term randomized dataset $\\mathcal{D}_1$ with a long-term historical dataset $\\mathcal{D}_2$. The key idea of our LT-O-Learners is to retarget the learning objective by introducing custom overlap weights that downweight samples with low overlap in treatment or in long-term observation. We show that the retargeted loss is equivalent to the weighted oracle loss and satisfies Neyman-orthogonality, which means our learners are robust to errors in the nuisance estimation. We further provide a general error bound for the LT-O-Learners and give the conditions under which quasi-oracle rate can be achieved. Finally, our LT-O-learners are model-agnostic and can thus be instantiated with arbitrary machine learning models. We conduct empirical evaluations on synthetic and semi-synthetic benchmarks to confirm the theoretical properties of our LT-O-Learners, especially the robustness in low-overlap settings. To the best of our knowledge, ours are the first orthogonal learners for HLTE estimation that are robust to low overlap that is common in long-term outcomes.",
+        "authors": "Haorui Ma, Dennis Frauen, Valentyn Melnychuk, Stefan Feuerriegel",
+        "url": "http://arxiv.org/abs/2604.00915v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00915v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了LT-O-learners，一种用于异质长期治疗效果估计的正交学习器。它满足Neyman正交性，对混杂估计误差具有鲁棒性，并提供了通用误差界限和准预言机速率条件。这是因果推断领域具有强大统计保证的理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00811v1",
+        "title": "Deconfounding Scores and Representation Learning for Causal Effect Estimation with Weak Overlap",
+        "summary": "Overlap, also known as positivity, is a key condition for causal treatment effect estimation. Many popular estimators suffer from high variance and become brittle when features differ strongly across treatment groups. This is especially challenging in high dimensions: the curse of dimensionality can make overlap implausible. To address this, we propose a class of feature representations called deconfounding scores, which preserve both identification and the target of estimation; the classical propensity and prognostic scores are two special cases. We characterize the problem of finding a representation with better overlap as minimizing an overlap divergence under a deconfounding score constraint. We then derive closed-form expressions for a class of deconfounding scores under a broad family of generalized linear models with Gaussian features and show that prognostic scores are overlap-optimal within this class. We conduct extensive experiments to assess this behavior empirically.",
+        "authors": "Oscar Clivio, Alexander D'Amour, Alexander Franks, David Bruns-Smith, Chris Holmes, Avi Feller",
+        "url": "http://arxiv.org/abs/2604.00811v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00811v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了去混杂分数，用于在弱重叠情况下进行因果效应估计。它将问题表述为最小化重叠散度，并推导了闭式表达式，证明了预言分数在此类中的最优性。这展示了因果推断中严谨的数学建模和理论分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00544v1",
+        "title": "Estimating causal effects of continuous-time dynamic treatments with unmeasured confounders",
+        "summary": "Modern medical research demands specialized causal inference methods evaluating complex continuous-time dynamic treatment regimens using observational data. For instance, obtaining the causal effects of intravenous administration, a continuous process involving dynamic adjustments of the treatment dose, can guide clinicians on drug use. However, the existing causal inference frameworks in longitudinal studies typically assume that time advances in discrete time steps. Therefore, this paper proposes a new methodology to estimate the causal effects of continuous-time dynamic treatments in the presence of unmeasured confounding. Unmeasured confounding is incorporated into estimating continuous-time Marginal Structural Models from a Bayesian perspective. Simulation demonstrates that compared to existing methods, the proposed approach can provide approximately unbiased estimates for target causal parameters across three degrees of confounding. The proposed method is applied to analyze the causal relationship between the intravenous oxytocin administration process and postpartum hemorrhage, leading to meaningful results that may guide clinicians in using oxytocin.",
+        "authors": "Haiyan Zhu, Yingchun Zhou",
+        "url": "http://arxiv.org/abs/2604.00544v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00544v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种新的方法来估计存在未测量混杂因素的连续时间动态治疗的因果效应，从贝叶斯角度处理未测量混杂，并声称提供近似无偏估计。其在复杂因果推断设置中的理论贡献和方法严谨性非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00531v1",
+        "title": "Learning Shared Representations for Multi-Task Linear Bandits",
+        "summary": "Multi-task representation learning is an approach that learns shared latent representations across related tasks, facilitating knowledge transfer and improving sample efficiency. This paper introduces a novel approach to multi-task representation learning in linear bandits. We consider a setting with T concurrent linear bandit tasks, each with feature dimension d, that share a common latent representation of dimension r \\ll min{d,T}$, capturing their underlying relatedness. We propose a new Optimism in the Face of Uncertainty Linear (OFUL) algorithm that leverages shared low-rank representations to enhance decision-making in a sample-efficient manner. Our algorithm first collects data through an exploration phase, estimates the shared model via spectral initialization, and then conducts OFUL based learning over a newly constructed confidence set. We provide theoretical guarantees for the confidence set and prove that the unknown reward vectors lie within the confidence set with high probability. We derive cumulative regret bounds and show that the proposed approach achieves \\tilde{O}(\\sqrt{drNT}), a significant improvement over solving the T tasks independently, resulting in a regret of \\tilde{O}(dT\\sqrt{N}). We performed numerical simulations to validate the performance of our algorithm for different problem sizes.",
+        "authors": "Jiabin Lin, Shana Moothedath",
+        "url": "http://arxiv.org/abs/2604.00531v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00531v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种多任务线性bandit学习的新方法，利用共享低秩表示，并提供了置信集的理论保证和累积遗憾界限，显示出显著的样本效率提升。其对学习算法的理论分析和界限推导符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00505v1",
+        "title": "Towards Initialization-dependent and Non-vacuous Generalization Bounds for Overparameterized Shallow Neural Networks",
+        "summary": "Overparameterized neural networks often show a benign overfitting property in the sense of achieving excellent generalization behavior despite the number of parameters exceeding the number of training examples. A promising direction to explain benign overfitting is to relate generalization to the norm of distance from initialization, motivated by the empirical observations that this distance is often significantly smaller than the norm itself. However, the existing initialization-dependent complexity analyses cannot fully exploit the power of initialization since the associated bounds depend on the spectral norm of the initialization matrix, which can scale as a square-root function of the width and are therefore not effective for overparameterized models. In this paper, we develop the first \\emph{fully} initialization-dependent complexity bounds for shallow neural networks with general Lipschitz activation functions, which enjoys a logarithmic dependency on the width. Our bounds depend on the path-norm of the distance from initialization, which are derived by introducing a new peeling technique to handle the challenge along with the initialization-dependent constraint. We also develop a lower bound tight up to a constant factor. Finally, we conduct empirical comparisons and show that our generalization analysis implies non-vacuous bounds for overparameterized networks.",
+        "authors": "Yunwen Lei, Yufeng Xie",
+        "url": "http://arxiv.org/abs/2604.00505v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00505v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为过参数化浅层神经网络开发了第一个完全依赖于初始化且非空泛的泛化界限，具有对宽度的对数依赖性，并引入了新的剥离技术。这是对深度学习泛化理论的重大贡献，具有严谨的数学推导和理论界限。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00433v1",
+        "title": "Internal State-Based Policy Gradient Methods for Partially Observable Markov Potential Games",
+        "summary": "This letter studies multi-agent reinforcement learning in partially observable Markov potential games. Solving this problem is challenging due to partial observability, decentralized information, and the curse of dimensionality. First, to address the first two challenges, we leverage the common information framework, which allows agents to act based on both shared and local information. Second, to ensure tractability, we study an internal state that compresses accumulated information, preventing it from growing unboundedly over time. We then implement an internal state-based natural policy gradient method to find Nash equilibria of the Markov potential game. Our main contribution is to establish a non-asymptotic convergence bound for this method. Our theoretical bound decomposes into two interpretable components: a statistical error term that also arises in standard Markov potential games, and an approximation error capturing the use of finite-state controllers. Finally, simulations across multiple partially observable environments demonstrate that the proposed method using finite-state controllers achieves consistent improvements in performance compared to the setting where only the current observation is used.",
+        "authors": "Wonseok Yang, Thinh T. Doan",
+        "url": "http://arxiv.org/abs/2604.00433v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00433v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了部分可观测马尔可夫势博弈中的多智能体强化学习，提出了一种基于内部状态的自然策略梯度方法，并建立了非渐近收敛界限，将其分解为统计误差项和逼近误差项。这提供了RL领域严谨的理论分析和收敛性保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00410v1",
+        "title": "Differentially Private One-Shot Federated Inference for Linear Mixed Models via Lossless Likelihood Reconstruction",
+        "summary": "One-shot federated learning enables multi-site inference with minimal communication. However, sharing summary statistics can still leak sensitive individual-level information when sites have only a small number of patients. In particular, shared cross-product summaries can reveal patient-level covariate patterns under discrete covariates. Motivated by this concern, this study proposes a differentially private one-shot federated inference framework for linear mixed models with a random-intercept working covariance. The method reconstructs the pooled likelihood from site-level summary statistics and applies a Gaussian mechanism to perturb these summaries, ensuring a site-level differential privacy. Cluster-robust variance estimators are developed that are computed directly from the privatized summaries. Robust variance provides valid uncertainty quantification even under covariance mis-specification. Under a multi-site asymptotic regime, the consistency and asymptotic normality of the proposed estimator are established and the leading-order statistical cost of privacy is characterized. Simulation studies show that moderate privacy noise substantially reduces reconstruction risk while maintaining competitive estimation accuracy as the number of sites increases. However, very strong privacy settings can lead to unstable standard errors when the number of sites is limited. An application using multi-site COVID-19 testing data demonstrates that meaningful privacy protection can be achieved with a modest loss of efficiency.",
+        "authors": "Keisuke Hanada, Toshio Shimokawa, Kazushi Maruo",
+        "url": "http://arxiv.org/abs/2604.00410v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00410v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个用于线性混合模型的差分隐私一次性联邦推断框架，通过无损似然重构实现，并建立了估计量的一致性和渐近正态性，以及隐私的统计成本。其对差分隐私和统计推断的理论严谨性非常高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.00390v1",
+        "title": "Causal Inference for Unobservable Multivariate Outcomes, with Applications to Brain Effective Connectivity",
+        "summary": "Evaluating the causal effect of an intervention on multivariate outcomes is challenging when the outcomes are interdependent and derived rather than directly observed. Effective connectivity, which summarizes the directional neural communication between brain regions, is one such derived relational outcome. Estimating how external interventions affect effective connectivity introduces two layers of causal inference problems: identifying directional relationships among brain regions from high-dimensional neuroimaging time series and estimating the causal effect of the intervention on these derived relationships. Each layer introduces distinct biases. The first arises from within-outcome dependencies unrelated to the intervention; to address this, we propose a sample-splitting method for estimating meaningful, and potentially causally informative, effective connectivity measures. The second arises from confounding between the intervention and the derived outcomes; to address this, we apply inverse probability weighting methods and incorporate multiple testing when causal effects on multiple components of the outcomes are of interest. We demonstrate, through theoretical results and simulations, that the proposed methods are asymptotically valid under certain conditions with effective type-I and familywise error control. Finally, we apply the proposed methods to examine the causal effect of amyloid on effective connectivity using the resting-state fMRI data from the Alzheimer's Disease Neuroimaging Initiative database.",
+        "authors": "Haiyue Song, Ani Eloyan, Youjin Lee",
+        "url": "http://arxiv.org/abs/2604.00390v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.00390v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了不可观测多元结果的因果推断问题，提出了样本分割和逆概率加权方法，并提供了渐近有效性以及I型和家族错误率控制的理论结果。这是因果推断领域具有强大理论基础和统计保证的贡献。"
+    }
+]

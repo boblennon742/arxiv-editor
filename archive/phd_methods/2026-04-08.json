@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.06543v1",
+        "title": "The Illusion of Stochasticity in LLMs",
+        "summary": "In this work, we demonstrate that reliable stochastic sampling is a fundamental yet unfulfilled requirement for Large Language Models (LLMs) operating as agents. Agentic systems are frequently required to sample from distributions, often inferred from observed data, a process which needs to be emulated by the LLM. This leads to a distinct failure point: while standard RL agents rely on external sampling mechanisms, LLMs fail to map their internal probability estimates to their stochastic outputs. Through rigorous empirical analysis across multiple model families, model sizes, prompting styles, and distributions, we demonstrate the extent of this failure. Crucially, we show that while powerful frontier models can convert provided random seeds to target distributions, their ability to sample directly from specific distributions is fundamentally flawed.",
+        "authors": "Xiangming Gu, Soham De, Michalis Titsias, Larisa Markeeva, Petar Veličković, Razvan Pascanu",
+        "url": "http://arxiv.org/abs/2604.06543v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06543v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了LLM作为智能体在可靠随机采样方面存在根本性缺陷，即LLM无法将其内部概率估计准确映射到随机输出。这是一个对LLM智能体能力和行为的深刻理论洞察，具有极高的创新性和严谨性，对设计可靠的智能体系统至关重要，直接触及AI前沿算法的底层机制瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07213v1",
+        "title": "Diffusion Processes on Implicit Manifolds",
+        "summary": "High-dimensional data are often modeled as lying near a low-dimensional manifold. We study how to construct diffusion processes on this data manifold in the implicit setting. That is, using only point cloud samples and without access to charts, projections, or other geometric primitives. Our main contribution is a data-driven SDE that captures intrinsic diffusion on the underlying manifold while being defined in ambient space. The construction relies on estimating the diffusion's infinitesimal generator and its carré-du-champ (CDC) from a proximity graph built from the data. The generator and CDC together encode the local stochastic and geometric structure of the intended diffusion. We show that, as the number of samples grows, the induced process converges in law on the space of probability paths to its smooth manifold counterpart. We call this construction Implicit Manifold-valued Diffusions (IMDs), and furthermore present a numerical simulation procedure using Euler-Maruyama integration. This gives a rigorous basis for practical implementations of diffusion dynamics on data manifolds, and opens new directions for manifold-aware sampling, exploration, and generative modeling.",
+        "authors": "Victor Kawasaki-Borruat, Clara Grotehans, Pierre Vandergheynst, Adam Gosztolai",
+        "url": "http://arxiv.org/abs/2604.07213v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07213v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Implicit Manifold-valued Diffusions (IMDs)，一种在隐式流形上构建扩散过程的数据驱动SDE。它仅通过点云样本，无需图表或投影，就能捕捉数据流形的内在扩散。这为流形感知采样、探索和生成建模提供了严格的数学基础，是扩散模型理论的重大创新，严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07165v1",
+        "title": "Reason in Chains, Learn in Trees: Self-Rectification and Grafting for Multi-turn Agent Policy Optimization",
+        "summary": "Reinforcement learning for Large Language Model agents is often hindered by sparse rewards in multi-step reasoning tasks. Existing approaches like Group Relative Policy Optimization treat sampled trajectories as independent chains, assigning uniform credit to all steps in each chain and ignoring the existence of critical steps that may disproportionally impact reasoning outcome. In this paper, we propose T-STAR(Tree-structured Self-Taught Agent Rectification), a framework that recovers the latent correlated reward structure across seemingly independent trajectories. Specifically, we consolidate trajectories into a unified Cognitive Tree by identifying and merging functionally similar steps/nodes. It enables an Introspective Valuation mechanism that back-propagates trajectory-level rewards through the tree to obtain a new notion of variance-reduced relative advantage at step-level. Using the Cognitive Tree, we also develop In-Context Thought Grafting to synthesize corrective reasoning by contrasting successful and failed branches at critical divergence points/steps. Our proposed Surgical Policy Optimization then capitalizes on the rich policy gradient information concentrated at these critical points/steps through a Bradley-Terry type of surgical loss. Extensive experiments across embodied, interactive, reasoning, and planning benchmarks demonstrate that T-STAR achieves consistent improvements over strong baselines, with gains most pronounced on tasks requiring extended reasoning chains.",
+        "authors": "Yu Li, Sizhe Tang, Tian Lan",
+        "url": "http://arxiv.org/abs/2604.07165v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07165v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了T-STAR框架，通过将轨迹整合到“认知树”中，解决了LLM智能体在多步推理任务中稀疏奖励的问题。它引入了内省估值、上下文思维嫁接和外科策略优化等新机制，显著提升了LLM智能体在复杂推理任务上的性能，具有深厚的理论创新和严谨的算法设计。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07096v1",
+        "title": "Are Stochastic Multi-objective Bandits Harder than Single-objective Bandits?",
+        "summary": "Multi-objective bandits have attracted increasing attention because of their broad applicability and mathematical elegance, where the reward of each arm is a multi-dimensional vector rather than a scalar. This naturally introduces Pareto order relations and Pareto regret. A long-standing question in this area is whether performance is fundamentally harder to optimize because of this added complexity. A recent surprising result shows that, in the adversarial setting, Pareto regret is no larger than classical regret; however, in the stochastic setting, where the regret notion is different, the picture remains unclear. In fact, existing work suggests that Pareto regret in the stochastic case increases with the dimensionality. This controversial yet subtle phenomenon motivates our central question: \\emph{are multi-objective bandits actually harder than single-objective ones?} We answer this question in full by showing that, in the stochastic setting, Pareto regret is in fact governed by the maximum sub-optimality gap \\(g^\\dagger\\), and hence by the minimum marginal regret of order \\(Ω(\\frac{K\\log T}{g^\\dagger})\\). We further develop a new algorithm that achieves Pareto regret of order \\(O(\\frac{K\\log T}{g^\\dagger})\\), and is therefore optimal. The algorithm leverages a nested two-layer uncertainty quantification over both arms and objectives through upper and lower confidence bound estimators. It combines a top-two racing strategy for arm selection with an uncertainty-greedy rule for dimension selection. Together, these components balance exploration and exploitation across the two layers. We also conduct comprehensive numerical experiments to validate the proposed algorithm, showing the desired regret guarantee and significant gains over benchmark methods.",
+        "authors": "Changkun Guan, Mengfan Xu",
+        "url": "http://arxiv.org/abs/2604.07096v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07096v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文回答了多目标强盗问题是否比单目标更难的根本性理论问题，并通过严格的数学推导证明了Pareto遗憾受最大次优差距控制，并提出了一个最优算法。这在强化学习/强盗理论领域具有极高的理论创新性和严谨性，对理解多目标决策优化具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07000v1",
+        "title": "IQ-LUT: interpolated and quantized LUT for efficient image super-resolution",
+        "summary": "Lookup table (LUT) methods demonstrate considerable potential in accelerating image super-resolution inference. However, pursuing higher image quality through larger receptive fields and bit-depth triggers exponential growth in the LUT's index space, creating a storage bottleneck that limits deployment on resource-constrained devices. We introduce IQ-LUT, which achieves a reduction in LUT size while simultaneously enhancing super-resolution quality. First, we integrate interpolation and quantization into the single-input, multiple-output ECNN, which dramatically reduces the index space and thereby the overall LUT size. Second, the integration of residual learning mitigates the dependence on LUT bit-depth, which facilitates training stability and prioritizes the reconstruction of fine-grained details for superior visual quality. Finally, guided by knowledge distillation, our non-uniform quantization process optimizes the quantization levels, thereby reducing storage while also compensating for quantization loss. Extensive benchmarking demonstrates our approach substantially reduces storage costs (by up to 50x compared to ECNN) while achieving superior super-resolution quality.",
+        "authors": "Yuxuan Zhang, Zhikai Dong, Xinning Chai, Xiangyun Zhou, Yi Xu, Zhengxue Cheng, Li Song",
+        "url": "http://arxiv.org/abs/2604.07000v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07000v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个通用的数学框架，通过“联合欧几里得镜像”在低维空间中表示LLM的响应分布，以理解其参数行为。它提供了参数恢复的估计过程并证明了其渐近性质。这为LLM的黑盒行为分析提供了新颖的数学视角和严谨的理论工具，符合数理统计博士生对理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06912v1",
+        "title": "Q-Zoom: Query-Aware Adaptive Perception for Efficient Multimodal Large Language Models",
+        "summary": "MLLMs require high-resolution visual inputs for fine-grained tasks like document understanding and dense scene perception. However, current global resolution scaling paradigms indiscriminately flood the quadratic self-attention mechanism with visually redundant tokens, severely bottlenecking inference throughput while ignoring spatial sparsity and query intent. To overcome this, we propose Q-Zoom, a query-aware adaptive high-resolution perception framework that operates in an efficient coarse-to-fine manner. First, a lightweight Dynamic Gating Network safely bypasses high-resolution processing when coarse global features suffice. Second, for queries demanding fine-grained perception, a Self-Distilled Region Proposal Network (SD-RPN) precisely localizes the task-relevant Region-of-Interest (RoI) directly from intermediate feature spaces. To optimize these modules efficiently, the gating network uses a consistency-aware generation strategy to derive deterministic routing labels, while the SD-RPN employs a fully self-supervised distillation paradigm. A continuous spatio-temporal alignment scheme and targeted fine-tuning then seamlessly fuse the dense local RoI with the coarse global layout. Extensive experiments demonstrate that Q-Zoom establishes a dominant Pareto frontier. Using Qwen2.5-VL-7B as a primary testbed, Q-Zoom accelerates inference by 2.52 times on Document & OCR benchmarks and 4.39 times in High-Resolution scenarios while matching the baseline's peak accuracy. Furthermore, when configured for maximum perceptual fidelity, Q-Zoom surpasses the baseline's peak performance by 1.1% and 8.1% on these respective benchmarks. These robust improvements transfer seamlessly to Qwen3-VL, LLaVA, and emerging RL-based thinking-with-image models. Project page is available at https://yuhengsss.github.io/Q-Zoom/.",
+        "authors": "Yuheng Shi, Xiaohuan Pei, Linfeng Wen, Minjing Dong, Chang Xu",
+        "url": "http://arxiv.org/abs/2604.06912v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06912v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个等变多智能体强化学习框架，用于多模态车-基础设施系统，通过自监督学习和图神经网络利用旋转对称性。它在理论上严谨地结合了等变性、多模态感知和去中心化控制，是MARL算法和架构的重大创新，解决了复杂物理系统中部分可观测性下的资源优化问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06799v1",
+        "title": "Beyond Accuracy: Diagnosing Algebraic Reasoning Failures in LLMs Across Nine Complexity Dimensions",
+        "summary": "Algebraic reasoning remains one of the most informative stress tests for large language models, yet current benchmarks provide no mechanism for attributing failure to a specific cause. When a model fails an algebraic problem, a single accuracy score cannot reveal whether the expression was too deeply nested, the operator too uncommon, the intermediate state count too high, or the dependency chain too long. Prior work has studied individual failure modes in isolation, but no framework has varied each complexity factor independently under strict experimental control. No prior system has offered automatic generation and verification of problems of increasing complexity to track model progress over time. We introduce a nine-dimension algebraic complexity framework in which each factor is varied independently while all others are held fixed, with problem generation and verification handled by a parametric pipeline requiring no human annotation. Each dimension is grounded in a documented LLM failure mode and captures a structurally distinct aspect of algebraic difficulty, including expression nesting depth, simultaneous intermediate result count, sub-expression complexity, operator hardness, and dependent reasoning chain length. We evaluated seven instruction-tuned models spanning 8B to 235B parameters across all nine dimensions and find that working memory is the dominant scale-invariant bottleneck. Every model collapses between 20 and 30 parallel branches regardless of parameter count, pointing to a hard architectural constraint rather than a solvable capacity limitation. Our analysis further identifies a minimal yet diagnostically sufficient subset of five dimensions that together span the full space of documented algebraic failure modes, providing a complete complexity profile of a model's algebraic reasoning capacity.",
+        "authors": "Parth Patil, Dhruv Kumar, Yash Sinha, Murari Mandal",
+        "url": "http://arxiv.org/abs/2604.06799v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06799v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个九维代数推理复杂性框架，用于诊断LLM的推理失败，并发现“工作记忆”是主要的尺度不变瓶颈。它通过严格的实验控制和自动生成验证，深入分析了LLM的架构限制，对理解LLM的推理能力和瓶颈具有极高的理论价值和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06779v1",
+        "title": "FVD: Inference-Time Alignment of Diffusion Models via Fleming-Viot Resampling",
+        "summary": "We introduce Fleming-Viot Diffusion (FVD), an inference-time alignment method that resolves the diversity collapse commonly observed in Sequential Monte Carlo (SMC) based diffusion samplers. Existing SMC-based diffusion samplers often rely on multinomial resampling or closely related resampling schemes, which can still reduce diversity and lead to lineage collapse under strong selection pressure. Inspired by Fleming-Viot population dynamics, FVD replaces multinomial resampling with a specialized birth-death mechanism designed for diffusion alignment. To handle cases where rewards are only approximately available and naive rebirth would collapse deterministic trajectories, FVD integrates independent reward-based survival decisions with stochastic rebirth noise. This yields flexible population dynamics that preserve broader trajectory support while effectively exploring reward-tilted distributions, all without requiring value function approximation or costly rollouts. FVD is fully parallelizable and scales efficiently with inference compute. Empirically, it achieves substantial gains across settings: on DrawBench it outperforms prior methods by 7% in ImageReward, while on class-conditional tasks it improves FID by roughly 14-20% over strong baselines and is up to 66 times faster than value-based approaches.",
+        "authors": "Shivanshu Shekhar, Sagnik Mukherjee, Jia Yi Zhang, Tong Zhang",
+        "url": "http://arxiv.org/abs/2604.06779v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06779v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了Fleming-Viot扩散（FVD），一种在推理时对扩散模型进行对齐的方法，解决了SMC采样器中常见的多样性崩溃问题。它用专门的“生灭机制”取代了多项式重采样，并在理论上保证了在保持多样性的同时有效探索奖励倾斜分布，是扩散模型算法的重大理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06777v1",
+        "title": "Walk the Talk: Bridging the Reasoning-Action Gap for Thinking with Images via Multimodal Agentic Policy Optimization",
+        "summary": "Recent advancements in Multimodal Large Language Models (MLLMs) have incentivized models to ``think with images'' by actively invoking visual tools during multi-turn reasoning. The common Reinforcement Learning (RL) practice of relying on outcome-based rewards ignores the fact that textual plausibility often masks executive failure, meaning that models may exhibit intuitive textual reasoning while executing imprecise or irrelevant visual actions within their agentic reasoning trajectories. This reasoning-action discrepancy introduces noise that accumulates throughout the multi-turn reasoning process, severely degrading the model's multimodal reasoning capabilities and potentially leading to training collapse. In this paper, we introduce Multimodal Agentic Policy Optimization (MAPO), bridging the gap between textual reasoning and visual actions generated by models within their Multimodal Chain-of-Thought (MCoT). Specifically, MAPO mandates the model to generate explicit textual descriptions for the visual content obtained via tool usage. We then employ a novel advantage estimation that couples the semantic alignment between these descriptions and the actual observations with the task reward. Theoretical findings are provided to justify the rationale behind MAPO, which inherently reduces the variance of gradients, and extensive experiments demonstrate that our method achieves superior performance across multiple visual reasoning benchmarks.",
+        "authors": "Wenhao Yang, Yu Xia, Jinlong Huang, Shiyin Lu, Qing-Guo Chen, Zhao Xu, Weihua Luo, Kaifu Zhang, Yuchen Zhou, Xiaobo Xia, Yuanyu Wan, Lijun Zhang, Tat-Seng Chua",
+        "url": "http://arxiv.org/abs/2604.06777v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06777v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了多模态智能体策略优化（MAPO），通过强制MLLM为视觉内容生成显式文本描述，并将其语义对齐与任务奖励结合进行优势估计，弥合了MLLM中推理与行动之间的差距。它提供了梯度方差减少的理论依据，是MLLM智能体和RL算法的重大创新，解决了多模态推理中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06767v1",
+        "title": "Geometric Properties of the Voronoi Tessellation in Latent Semantic Manifolds of Large Language Models",
+        "summary": "Language models operate on discrete tokens but compute in continuous vector spaces, inducing a Voronoi tessellation over the representation manifold. We study this tessellation empirically on Qwen3.5-4B-Base, making two contributions. First, using float32 margin recomputation to resolve bfloat16 quantization artifacts, we validate Mabrok's (2026) linear scaling law of the expressibility gap with $R^2$ = 0.9997 - the strongest confirmation to date - and identify a mid-layer geometric ambiguity regime where margin geometry is anti-correlated with cross-entropy (layers 24-28, $ρ$ = -0.29) before crystallizing into alignment at the final layer ($ρ$ = 0.836).   Second, we show that the Voronoi tessellation of a converged model is reshapable through margin refinement procedures (MRP): short post-hoc optimization runs that widen token-decision margins without retraining. We compare direct margin maximization against Fisher information distance maximization across a dose-response sweep. Both methods find the same ceiling of ~16,300 correctable positions per 256K evaluated, but differ critically in collateral damage. Margin maximization damage escalates with intervention strength until corrections are overwhelmed. Fisher damage remains constant at ~5,300 positions across the validated range ($λ$ = 0.15-0.6), achieving +28% median margin improvement at $λ$ = 0.6 with invariant downstream benchmarks - a geometric reorganization that compresses the expressibility gap while preserving its scaling law. However, frequency and token-class audits reveal that gains concentrate in high-frequency structural tokens (84% of net corrections at $λ$ = 0.6), with content and entity-like contributions shrinking at higher $λ$. Fisher MRP is therefore a viable geometric polishing tool whose practical ceiling is set not by aggregate damage but by the uniformity of token-level benefit.",
+        "authors": "Marshall Brett",
+        "url": "http://arxiv.org/abs/2604.06767v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06767v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文实证研究了LLM潜在语义流形中的Voronoi镶嵌，验证了线性缩放定律，并提出了“边距细化程序”来重塑镶嵌。它深入探讨了LLM表示空间的几何特性，并提供了通过Fisher信息距离最大化进行几何优化的方法。这在LLM理论理解上具有极高的创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06620v1",
+        "title": "PD-SOVNet: A Physics-Driven Second-Order Vibration Operator Network for Estimating Wheel Polygonal Roughness from Axle-Box Vibrations",
+        "summary": "Quantitative estimation of wheel polygonal roughness from axle-box vibration signals is a challenging yet practically relevant problem for rail-vehicle condition monitoring. Existing studies have largely focused on detection, identification, or severity classification, while continuous regression of multi-order roughness spectra remains less explored, especially under real operational data and unseen-wheel conditions. To address this problem, this paper presents PD-SOVNet, a physics-guided gray-box framework that combines shared second-order vibration kernels, a $4\\times4$ MIMO coupling module, an adaptive physical correction branch, and a Mamba-based temporal branch for estimating the 1st--40th-order wheel roughness spectrum from axle-box vibrations. The proposed design embeds modal-response priors into the model while retaining data-driven flexibility for sample-dependent correction and residual temporal dynamics. Experiments on three real-world datasets, including operational data and real fault data, show that the proposed method provides competitive prediction accuracy and relatively stable cross-wheel performance under the current data protocol, with its most noticeable advantage observed on the more challenging Dataset III. Noise injection experiments further indicate that the Mamba temporal branch helps mitigate performance degradation under perturbed inputs. These results suggest that structured physical priors can be beneficial for stabilizing roughness regression in practical rail-vehicle monitoring scenarios, although further validation under broader operating conditions and stricter comparison protocols is still needed.",
+        "authors": "Xiancheng Wang, Lin Wang, Rui Wang, Zhibo Zhang, Minghang Zhao, Xiaoheng Zhang, Zhongyue Tan, Kaitai Mao",
+        "url": "http://arxiv.org/abs/2604.06620v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06620v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇综述论文深入分析了David Blackwell的统计学定理（Rao-Blackwell、Approachability、Informativeness）对现代AI和机器学习的直接影响。它将基础统计理论与前沿AI（如RLHF、LLM对齐）联系起来，提供了统一的理论框架，对数理统计背景的您来说，是理解AI理论根基的绝佳选择，且清晰度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06610v1",
+        "title": "TwinLoop: Simulation-in-the-Loop Digital Twins for Online Multi-Agent Reinforcement Learning",
+        "summary": "Decentralised online learning enables runtime adaptation in cyber-physical multi-agent systems, but when operating conditions change, learned policies often require substantial trial-and-error interaction before recovering performance. To address this, we propose TwinLoop, a simulation-in-the-loop digital twin framework for online multi-agent reinforcement learning. When a context shift occurs, the digital twin is triggered to reconstruct the current system state, initialise from the latest agent policies, and perform accelerated policy improvement with simulation what-if analysis before synchronising updated parameters back to the agents in the physical system. We evaluate TwinLoop in a vehicular edge computing task-offloading scenario with changing workload and infrastructure conditions. The results suggest that digital twins can improve post-shift adaptation efficiency and reduce reliance on costly online trial-and-error.",
+        "authors": "Nan Zhang, Zishuo Wang, Shuyu Huang, Georgios Diamantopoulos, Nikos Tziritas, Panagiotis Oikonomou, Georgios Theodoropoulos",
+        "url": "http://arxiv.org/abs/2604.06610v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06610v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种MERA启发的张量网络自编码器，用于对撞机射流中的异常检测。它利用多尺度张量网络架构进行分层压缩和解缠层，为异常检测提供了一种新颖的归纳偏置。这种量子启发式的架构创新具有极高的理论深度和严谨性，是AI前沿算法和架构的优秀代表。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06906v1",
+        "title": "The AI Skills Shift: Mapping Skill Obsolescence, Emergence, and Transition Pathways in the LLM Era",
+        "summary": "As Large Language Models reshape the global labor market, policymakers and workers need empirical data on which occupational skills may be most susceptible to automation. We present the Skill Automation Feasibility Index (SAFI), benchmarking four frontier LLMs -- LLaMA 3.3 70B, Mistral Large, Qwen 2.5 72B, and Gemini 2.5 Flash -- across 263 text-based tasks spanning all 35 skills in the U.S. Department of Labor's O*NET taxonomy (1,052 total model calls, 0% failure rate). Cross-referencing with real-world AI adoption data from the Anthropic Economic Index (756 occupations, 17,998 tasks), we propose an AI Impact Matrix -- an interpretive framework that positions skills along four quadrants: High Displacement Risk, Upskilling Required, AI-Augmented, and Lower Displacement Risk. Key findings: (1) Mathematics (SAFI: 73.2) and Programming (71.8) receive the highest automation feasibility scores; Active Listening (42.2) and Reading Comprehension (45.5) receive the lowest; (2) a \"capability-demand inversion\" where skills most demanded in AI-exposed jobs are those LLMs perform least well at in our benchmark; (3) 78.7% of observed AI interactions are augmentation, not automation; (4) all four models converge to similar skill profiles (3.6-point spread), suggesting that text-based automation feasibility may be more skill-dependent than model-dependent. SAFI measures LLM performance on text-based representations of skills, not full occupational execution. All data, code, and model responses are open-sourced.",
+        "authors": "Rudra Jadhav, Janhavi Danve",
+        "url": "http://arxiv.org/abs/2604.06906v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06906v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Q-Zoom，一个查询感知的自适应高分辨率感知框架，解决了MLLM在处理高分辨率输入时的推理吞吐量瓶颈。它通过动态门控网络和自蒸馏区域提议网络实现高效的粗到细处理，显著加速推理并提升性能，是MLLM架构和效率方面的重大创新，解决了实际应用中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06627v1",
+        "title": "DiffuMask: Diffusion Language Model for Token-level Prompt Pruning",
+        "summary": "In-Context Learning and Chain-of-Thought prompting improve reasoning in large language models (LLMs). These typically come at the cost of longer, more expensive prompts that may contain redundant information. Prompt compression based on pruning offers a practical solution, yet existing methods rely on sequential token removal which is computationally intensive. We present DiffuMask, a diffusion-based framework integrating hierarchical shot-level and token-level pruning signals, that enables rapid and parallel prompt pruning via iterative mask prediction. DiffuMask substantially accelerates the compression process via masking multiple tokens in each denoising step. It offers tunable control over retained content, preserving essential reasoning context and achieving up to 80\\% prompt length reduction. Meanwhile, it maintains or improves accuracy across in-domain, out-of-domain, and cross-model settings. Our results show that DiffuMask provides a generalizable and controllable framework for prompt compression, facilitating faster and more reliable in-context reasoning in LLMs.",
+        "authors": "Caleb Zheng, Jyotika Singh, Fang Tu, Weiyi Sun, Sujeeth Bharadwaj, Yassine Benajiba, Sujith Ravi, Eli Shlizerman, Dan Roth",
+        "url": "http://arxiv.org/abs/2604.06627v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06627v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了DiffuMask，一个基于扩散模型的框架，用于token级别的提示词剪枝。它通过迭代掩码预测实现快速并行剪枝，显著减少提示词长度（高达80%）同时保持或提高准确性。这是一种高效的LLM模型压缩和数据效率方法，具有高度创新性，直接解决了LLM推理成本高昂的实际瓶颈。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.07328v1",
+        "title": "How to sketch a learning algorithm",
+        "summary": "How does the choice of training data influence an AI model? This question is of central importance to interpretability, privacy, and basic science. At its core is the data deletion problem: after a reasonable amount of precomputation, quickly predict how the model would behave in a given situation if a given subset of training data had been excluded from the learning algorithm.   We present a data deletion scheme capable of predicting model outputs with vanishing error $\\varepsilon$ in the deep learning setting. Our precomputation and prediction algorithms are only $\\mathrm{poly}(1/\\varepsilon)$ factors slower than regular training and inference, respectively. The storage requirements are those of $\\mathrm{poly}(1/\\varepsilon)$ models.   Our proof is based on an assumption that we call \"stability.\" In contrast to the assumptions made by prior work, stability appears to be fully compatible with learning powerful AI models. In support of this, we show that stability is satisfied in a minimal set of experiments with microgpt. Our code is available at https://github.com/SamSpo1/microgpt-sketch.   At a technical level, our work is based on a new method for locally sketching an arithmetic circuit by computing higher-order derivatives in random complex directions. Forward-mode automatic differentiation allows cheap computation of these derivatives.",
+        "authors": "Sam Gunn",
+        "url": "http://arxiv.org/abs/2604.07328v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07328v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了深度学习背景下的数据删除方案，并提供了严格的理论保证，包括“消失误差 $\\varepsilon$”和“$\\\\mathrm{poly}(1/\\\\varepsilon)$”的计算复杂度。其证明基于“稳定性”假设和通过计算随机复方向高阶导数来局部速写算术电路的新方法，具有强大的数学推导和理论基础，非常符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07267v1",
+        "title": "The Theory and Practice of Highly Scalable Gaussian Process Regression with Nearest Neighbours",
+        "summary": "Gaussian process ($GP$) regression is a widely used non-parametric modeling tool, but its cubic complexity in the training size limits its use on massive data sets. A practical remedy is to predict using only the nearest neighbours of each test point, as in Nearest Neighbour Gaussian Process ($NNGP$) regression for geospatial problems and the related scalable $GPnn$ method for more general machine-learning applications. Despite their strong empirical performance, the large-$n$ theory of $NNGP/GPnn$ remains incomplete. We develop a theoretical framework for $NNGP$ and $GPnn$ regression. Under mild regularity assumptions, we derive almost sure pointwise limits for three key predictive criteria: mean squared error ($MSE$), calibration coefficient ($CAL$), and negative log-likelihood ($NLL$). We then study the $L_2$-risk, prove universal consistency, and show that the risk attains Stone's minimax rate $n^{-2α/(2p+d)}$, where $α$ and $p$ capture regularity of the regression problem. We also prove uniform convergence of $MSE$ over compact hyper-parameter sets and show that its derivatives with respect to lengthscale, kernel scale, and noise variance vanish asymptotically, with explicit rates. This explains the observed robustness of $GPnn$ to hyper-parameter tuning. These results provide a rigorous statistical foundation for $NNGP/GPnn$ as a highly scalable and principled alternative to full $GP$ models.",
+        "authors": "Robert Allison, Tomasz Maciazek, Anthony Stephenson",
+        "url": "http://arxiv.org/abs/2604.07267v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07267v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为可扩展高斯过程回归（NNGP/GPnn）建立了严谨的理论框架。它推导了均方误差（MSE）、校准系数（CAL）和负对数似然（NLL）的几乎必然逐点极限，证明了普遍一致性，并展示了风险达到Stone的极小极大率。此外，还证明了MSE在紧凑超参数集上的均匀收敛性及其导数渐近消失，为可扩展GP模型提供了坚实的统计基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07191v1",
+        "title": "Mixture Proportion Estimation and Weakly-supervised Kernel Test for Conditional Independence",
+        "summary": "Mixture proportion estimation (MPE) aims to estimate class priors from unlabeled data. This task is a critical component in weakly supervised learning, such as PU learning, learning with label noise, and domain adaptation. Existing MPE methods rely on the \\textit{irreducibility} assumption or its variant for identifiability. In this paper, we propose novel assumptions based on conditional independence (CI) given the class label, which ensure identifiability even when irreducibility does not hold. We develop method of moments estimators under these assumptions and analyze their asymptotic properties. Furthermore, we present weakly-supervised kernel tests to validate the CI assumptions, which are of independent interest in applications such as causal discovery and fairness evaluation. Empirically, we demonstrate the improved performance of our estimators compared with existing methods and that our tests successfully control both type I and type II errors.\\label{key}",
+        "authors": "Yushi Hirose, Akito Narahara, Takafumi Kanamori",
+        "url": "http://arxiv.org/abs/2604.07191v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07191v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了基于条件独立性（CI）的新假设，解决了混合比例估计（MPE）中的可识别性问题，即使在传统假设不成立时也能确保识别。论文开发了矩量法估计器并分析了其渐近性质，并提出了弱监督核检验来验证CI假设，对因果发现和公平性评估具有重要意义。其理论严谨性和统计推导非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07135v1",
+        "title": "Private Federated Learning for High-dimensional Time Series",
+        "summary": "In the era of big data, leveraging information from multiple clients while preserving data privacy has emerged as a critical challenge in modern statistical modeling and forecasting. This paper introduces a privacy-preserving federated learning framework for high-dimensional vector autoregressive models, where each client's dynamics are characterized by a common low-rank structure augmented with sparse client-specific deviations. We develop a two-stage estimation procedure that integrates differentially private representation learning for the shared component with local personalization for client-specific adjustments, enabling effective information pooling under selective privacy constraints. Non-asymptotic error bounds are established for both the single-client and federated estimators to characterize the inherent privacy-utility trade-off, and consistency of a ridge-type rank selection criterion is proved. Simulation studies demonstrate that federation substantially improves estimation accuracy when local sample sizes are limited. Two empirical applications to analyzing electricity-economy linkages across U.S. states and conducting multi-task macroeconomic forecasting across countries, highlight the superior predictive accuracy of the proposed method over existing single-client benchmarks.",
+        "authors": "Kejun Chen, Qianqian Zhu",
+        "url": "http://arxiv.org/abs/2604.07135v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07135v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为高维时间序列的隐私保护联邦学习框架提供了理论支持。它提出了一个两阶段估计过程，结合了差分隐私表示学习和局部个性化调整。论文建立了单客户端和联邦估计器的非渐近误差界，以表征固有的隐私-效用权衡，并证明了岭型秩选择准则的一致性。其对统计保证和隐私理论的结合非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07096v1",
+        "title": "Are Stochastic Multi-objective Bandits Harder than Single-objective Bandits?",
+        "summary": "Multi-objective bandits have attracted increasing attention because of their broad applicability and mathematical elegance, where the reward of each arm is a multi-dimensional vector rather than a scalar. This naturally introduces Pareto order relations and Pareto regret. A long-standing question in this area is whether performance is fundamentally harder to optimize because of this added complexity. A recent surprising result shows that, in the adversarial setting, Pareto regret is no larger than classical regret; however, in the stochastic setting, where the regret notion is different, the picture remains unclear. In fact, existing work suggests that Pareto regret in the stochastic case increases with the dimensionality. This controversial yet subtle phenomenon motivates our central question: \\emph{are multi-objective bandits actually harder than single-objective ones?} We answer this question in full by showing that, in the stochastic setting, Pareto regret is in fact governed by the maximum sub-optimality gap \\(g^\\dagger\\), and hence by the minimum marginal regret of order \\(Ω(\\frac{K\\log T}{g^\\dagger})\\). We further develop a new algorithm that achieves Pareto regret of order \\(O(\\frac{K\\log T}{g^\\dagger})\\), and is therefore optimal. The algorithm leverages a nested two-layer uncertainty quantification over both arms and objectives through upper and lower confidence bound estimators. It combines a top-two racing strategy for arm selection with an uncertainty-greedy rule for dimension selection. Together, these components balance exploration and exploitation across the two layers. We also conduct comprehensive numerical experiments to validate the proposed algorithm, showing the desired regret guarantee and significant gains over benchmark methods.",
+        "authors": "Changkun Guan, Mengfan Xu",
+        "url": "http://arxiv.org/abs/2604.07096v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07096v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文回答了多目标强盗问题是否比单目标问题更难的长期疑问。它证明了随机设置下的帕累托遗憾实际上由最大次优性差距 (g^dagger) 决定，并提出了一个达到最优帕累托遗憾 (O(\frac{Klog T}{g^dagger})) 的新算法。该算法利用嵌套的两层不确定性量化（UCB）和探索-利用策略，具有非常强的理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.07009v1",
+        "title": "CAFP: A Post-Processing Framework for Group Fairness via Counterfactual Model Averaging",
+        "summary": "Ensuring fairness in machine learning predictions is a critical challenge, especially when models are deployed in sensitive domains such as credit scoring, healthcare, and criminal justice. While many fairness interventions rely on data preprocessing or algorithmic constraints during training, these approaches often require full control over the model architecture and access to protected attribute information, which may not be feasible in real-world systems. In this paper, we propose Counterfactual Averaging for Fair Predictions (CAFP), a model-agnostic post-processing method that mitigates unfair influence from protected attributes without retraining or modifying the original classifier. CAFP operates by generating counterfactual versions of each input in which the sensitive attribute is flipped, and then averaging the model's predictions across factual and counterfactual instances. We provide a theoretical analysis of CAFP, showing that it eliminates direct dependence on the protected attribute, reduces mutual information between predictions and sensitive attributes, and provably bounds the distortion introduced relative to the original model. Under mild assumptions, we further show that CAFP achieves perfect demographic parity and reduces the equalized odds gap by at least half the average counterfactual bias.",
+        "authors": "Irina Arévalo, Marcos Oliva",
+        "url": "http://arxiv.org/abs/2604.07009v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.07009v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了CAFP，一个模型无关的后处理框架，通过反事实模型平均来解决群体公平性问题。它提供了严格的理论分析，表明该方法消除了对受保护属性的直接依赖，减少了预测与敏感属性之间的互信息，并可证明地限制了引入的失真。在温和假设下，它能实现完美的群体平等并至少将均衡赔率差距减少一半，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06914v1",
+        "title": "Equivariant Multi-agent Reinforcement Learning for Multimodal Vehicle-to-Infrastructure Systems",
+        "summary": "In this paper, we study a vehicle-to-infrastructure (V2I) system where distributed base stations (BSs) acting as road-side units (RSUs) collect multimodal (wireless and visual) data from moving vehicles. We consider a decentralized rate maximization problem, where each RSU relies on its local observations to optimize its resources, while all RSUs must collaborate to guarantee favorable network performance. We recast this problem as a distributed multi-agent reinforcement learning (MARL) problem, by incorporating rotation symmetries in terms of vehicles' locations. To exploit these symmetries, we propose a novel self-supervised learning framework where each BS agent aligns the latent features of its multimodal observation to extract the positions of the vehicles in its local region. Equipped with this sensing data at each RSU, we train an equivariant policy network using a graph neural network (GNN) with message passing layers, such that each agent computes its policy locally, while all agents coordinate their policies via a signaling scheme that overcomes partial observability and guarantees the equivariance of the global policy. We present numerical results carried out in a simulation environment, where ray-tracing and computer graphics are used to collect wireless and visual data. Results show the generalizability of our self-supervised and multimodal sensing approach, achieving more than two-fold accuracy gains over baselines, and the efficiency of our equivariant MARL training, attaining more than 50% performance gains over standard approaches.",
+        "authors": "Charbel Bou Chaaya, Mehdi Bennis",
+        "url": "http://arxiv.org/abs/2604.06914v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06914v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了多模态车-基础设施系统中的等变多智能体强化学习。它通过引入车辆位置的旋转对称性，提出了一个自监督学习框架，并训练了一个使用图神经网络的等变策略网络，确保了全局策略的等变性。对对称性和等变性的数学处理，使其在理论严谨性方面表现出色，非常适合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06893v1",
+        "title": "Energy-Regularized Spatial Masking: A Novel Approach to Enhancing Robustness and Interpretability in Vision Models",
+        "summary": "Deep convolutional neural networks achieve remarkable performance by exhaustively processing dense spatial feature maps, yet this brute-force strategy introduces significant computational redundancy and encourages reliance on spurious background correlations. As a result, modern vision models remain brittle and difficult to interpret. We propose Energy-Regularized Spatial Masking (ERSM), a novel framework that reformulates feature selection as a differentiable energy minimization problem. By embedding a lightweight Energy-Mask Layer inside standard convolutional backbones, each visual token is assigned a scalar energy composed of two competing forces: an intrinsic Unary importance cost and a Pairwise spatial coherence penalty. Unlike prior pruning methods that enforce rigid sparsity budgets or rely on heuristic importance scores, ERSM allows the network to autonomously discover an optimal information-density equilibrium tailored to each input. We validate ERSM on convolutional architectures and demonstrate that it produces emergent sparsity, improved robustness to structured occlusion, and highly interpretable spatial masks, while preserving classification accuracy. Furthermore, we show that the learned energy ranking significantly outperforms magnitude-based pruning in deletion-based robustness tests, revealing ERSM as an intrinsic denoising mechanism that isolates semantic object regions without pixel-level supervision.",
+        "authors": "Tom Devynck Bilal Faye Djamel Bouchaffra Nadjib Lazaar Hanane Azzag Mustapha Lebbah",
+        "url": "http://arxiv.org/abs/2604.06893v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06893v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了能量正则化空间掩码（ERSM）框架，将特征选择重新表述为可微分的能量最小化问题。通过在卷积骨干网络中嵌入轻量级能量掩码层，为每个视觉token分配由一元重要性成本和成对空间相干性惩罚组成的标量能量。这种基于优化和能量函数的数学建模方法，提供了强大的理论基础和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06774v1",
+        "title": "Sparse-Aware Neural Networks for Nonlinear Functionals: Mitigating the Exponential Dependence on Dimension",
+        "summary": "Deep neural networks have emerged as powerful tools for learning operators defined over infinite-dimensional function spaces. However, existing theories frequently encounter difficulties related to dimensionality and limited interpretability. This work investigates how sparsity can help address these challenges in functional learning, a central ingredient in operator learning. We propose a framework that employs convolutional architectures to extract sparse features from a finite number of samples, together with deep fully connected networks to effectively approximate nonlinear functionals. Using universal discretization methods, we show that sparse approximators enable stable recovery from discrete samples. In addition, both the deterministic and the random sampling schemes are sufficient for our analysis. These findings lead to improved approximation rates and reduced sample sizes in various function spaces, including those with fast frequency decay and mixed smoothness. They also provide new theoretical insights into how sparsity can alleviate the curse of dimensionality in functional learning.",
+        "authors": "Jianfei Li, Shuo Huang, Han Feng, Ding-Xuan Zhou, Gitta Kutyniok",
+        "url": "http://arxiv.org/abs/2604.06774v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06774v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了稀疏感知神经网络在非线性泛函学习中的应用，旨在缓解维度上的指数依赖。它提出了一个框架，利用卷积架构提取稀疏特征，并结合深度全连接网络近似非线性泛函。论文提供了新的理论见解，说明稀疏性如何缓解泛函学习中的维度诅咒，并证明了改进的近似率和减少的样本量，理论深度和数学推导非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06638v1",
+        "title": "RPM-Net Reciprocal Point MLP Network for Unknown Network Security Threat Detection",
+        "summary": "Effective detection of unknown network security threats in multi-class imbalanced environments is critical for maintaining cyberspace security. Current methods focus on learning class representations but face challenges with unknown threat detection, class imbalance, and lack of interpretability, limiting their practical use. To address this, we propose RPM-Net, a novel framework that introduces reciprocal point mechanism to learn \"non-class\" representations for each known attack category, coupled with adversarial margin constraints that provide geometric interpretability for unknown threat detection. RPM-Net++ further enhances performance through Fisher discriminant regularization. Experimental results show that RPM-Net achieves superior performance across multiple metrics including F1-score, AUROC, and AUPR-OUT, significantly outperforming existing methods and offering practical value for real-world network security applications. Our code is available at:https://github.com/chiachen-chang/RPM-Net",
+        "authors": "Jiachen Zhang, Yueming Lu, Fan Feng, Zhanfeng Wang, Shengli Pan, Daoqi Han",
+        "url": "http://arxiv.org/abs/2604.06638v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06638v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了RPM-Net，一个用于未知网络安全威胁检测的互惠点MLP网络。它引入了互惠点机制来学习已知类别的“非类别”表示，并结合对抗性边际约束提供几何可解释性。RPM-Net++通过Fisher判别正则化进一步增强性能。其基于几何和优化理论的数学建模，提供了强大的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06559v1",
+        "title": "ExplainFuzz: Explainable and Constraint-Conditioned Test Generation with Probabilistic Circuits",
+        "summary": "Understanding and explaining the structure of generated test inputs is essential for effective software testing and debugging. Existing approaches--including grammar-based fuzzers, probabilistic Context-Free Grammars (pCFGs), and Large Language Models (LLMs)--suffer from critical limitations. They frequently produce ill-formed inputs that fail to reflect realistic data distributions, struggle to capture context-sensitive probabilistic dependencies, and lack explainability. We introduce ExplainFuzz, a test generation framework that leverages Probabilistic Circuits (PCs) to learn and query structured distributions over grammar-based test inputs interpretably and controllably. Starting from a Context-Free Grammar (CFG), ExplainFuzz compiles a grammar-aware PC and trains it on existing inputs. New inputs are then generated via sampling. ExplainFuzz utilizes the conditioning capability of PCs to incorporate test-specific constraints (e.g., a query must have GROUP BY), enabling constrained probabilistic sampling to generate inputs satisfying grammar and user-provided constraints.   Our results show that ExplainFuzz improves the coherence and realism of generated inputs, achieving significant perplexity reduction compared to pCFGs, grammar-unaware PCs, and LLMs. By leveraging its native conditioning capability, ExplainFuzz significantly enhances the diversity of inputs that satisfy a user-provided constraint. Compared to grammar-aware mutational fuzzing, ExplainFuzz increases bug-triggering rates from 35% to 63% in SQL and from 10% to 100% in XML. These results demonstrate the power of a learned input distribution over mutational fuzzing, which is often limited to exploring the local neighborhood of seed inputs. These capabilities highlight the potential of PCs to serve as a foundation for grammar-aware, controllable test generation that captures context-sensitive, probabilistic dependencies.",
+        "authors": "Annaëlle Baiget, Jaron Maene, Seongmin Lee, Benjie Wang, Guy Van den Broeck, Miryung Kim",
+        "url": "http://arxiv.org/abs/2604.06559v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06559v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文介绍了ExplainFuzz，一个利用概率电路（PCs）进行可解释和约束条件测试生成的框架。它通过学习和查询基于语法的测试输入的结构化分布，并利用PCs的条件化能力来整合测试特定约束。概率电路本身具有强大的理论基础，论文展示了其在捕获上下文敏感概率依赖性方面的能力，具有高度的数学和概率建模严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06958v1",
+        "title": "ELC: Evidential Lifelong Classifier for Uncertainty Aware Radar Pulse Classification",
+        "summary": "Reliable radar pulse classification is essential in Electromagnetic Warfare for situational awareness and decision support. Deep Neural Networks have shown strong performance in radar pulse and RF emitter recognition; however, on their own they struggle to efficiently learn new pulses and lack mechanisms for expressing predictive confidence. This paper integrates Uncertainty Quantification with Lifelong Learning to address both challenges. The proposed approach is an Evidential Lifelong Classifier (ELC), which models epistemic uncertainty using evidence theory. ELC is evaluated against a Bayesian Lifelong Classifier (BLC), which quantifies uncertainty through Shannon entropy. Both integrate Learn-Prune-Share to enable continual learning of new pulses and uncertainty-based selective prediction to reject unreliable predictions. ELC and BLC are evaluated on 2 synthetic radar and 3 RF fingerprinting datasets. Selective prediction based on evidential uncertainty improves recall by up to 46% at -20 dB SNR on synthetic radar pulse datasets, highlighting its effectiveness at identifying unreliable predictions in low-SNR conditions compared to BLC. These findings demonstrate that evidential uncertainty offers a strong correlation between confidence and correctness, improving the trustworthiness of ELC by allowing it to express ignorance.",
+        "authors": "Mohamed Rabie, Chinthana Panagamuwa, Konstantinos G. Kyriakopoulos",
+        "url": "http://arxiv.org/abs/2604.06958v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06958v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将不确定性量化与终身学习相结合，用于雷达脉冲分类。它提出了证据终身分类器（ELC），使用证据理论对认知不确定性进行建模，并与使用香农熵的贝叶斯终身分类器进行比较。其对不确定性量化（UQ）的理论方法（证据理论和香农熵）具有良好的统计严谨性，并应用于关键的实际问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06816v1",
+        "title": "Enhanced Self-Supervised Multi-Image Super-Resolution for Camera Array Images",
+        "summary": "Conventional multi-image super-resolution (MISR) methods, such as burst and video SR, rely on sequential frames from a single camera. Consequently, they suffer from complex image degradation and severe occlusion, increasing the difficulty of accurate image restoration. In contrast, multi-aperture camera-array imaging captures spatially distributed views with sampling offsets forming a stable disk-like distribution, which enhances the non-redundancy of observed data. Existing MISR algorithms fail to fully exploit these unique properties. Supervised MISR methods tend to overfit the degradation patterns in training data, and current self-supervised learning (SSL) techniques struggle to recover fine-grained details. To address these issues, this paper thoroughly investigates the strengths, limitations and applicability boundaries of multi-image-to-single-image (Multi-to-Single) and multi-image-to-multi-image (Multi-to-Multi) SSL methods. We propose the Multi-to-Single-Guided Multi-to-Multi SSL framework that combines the advantages of Multi-to-Single and Multi-to-Multi to generate visually appealing and high-fidelity images rich in texture details. The Multi-to-Single-Guided Multi-to-Multi SSL framework provides a new paradigm for integrating deep neural network with classical physics-based variational methods. To enhance the ability of MISR network to recover high-frequency details from aliased artifacts, this paper proposes a novel camera-array SR network called dual Transformer suitable for SSL. Experiments on synthetic and real-world datasets demonstrate the superiority of the proposed method.",
+        "authors": "Yating Chen, Feng Huang, Xianyu Wu, Jing Wu, Ying Shen",
+        "url": "http://arxiv.org/abs/2604.06816v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06816v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Multi-to-Single-Guided Multi-to-Multi SSL框架，用于相机阵列图像的增强自监督多图像超分辨率。它将深度神经网络与经典的基于物理的变分方法相结合，并提出了一个新的双Transformer网络。其结合物理模型和深度学习的建模方法，具有扎实的数学和算法严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06728v1",
+        "title": "URMF: Uncertainty-aware Robust Multimodal Fusion for Multimodal Sarcasm Detection",
+        "summary": "Multimodal sarcasm detection (MSD) aims to identify sarcastic intent from semantic incongruity between text and image. Although recent methods have improved MSD through cross-modal interaction and incongruity reasoning, they often assume that all modalities are equally reliable. In real-world social media, however, textual content may be ambiguous and visual content may be weakly relevant or even irrelevant, causing deterministic fusion to introduce noisy evidence and weaken robust reasoning. To address this issue, we propose Uncertainty-aware Robust Multimodal Fusion (URMF), a unified framework that explicitly models modality reliability during interaction and fusion. URMF first employs multi-head cross-attention to inject visual evidence into textual representations, followed by multi-head self-attention in the fused semantic space to enhance incongruity-aware reasoning. It then performs unified unimodal aleatoric uncertainty modeling over text, image, and interaction-aware latent representations by parameterizing each modality as a learnable Gaussian posterior. The estimated uncertainty is further used to dynamically regulate modality contributions during fusion, suppressing unreliable modalities and yielding a more robust joint representation. In addition, we design a joint training objective integrating task supervision, modality prior regularization, cross-modal distribution alignment, and uncertainty-driven self-sampling contrastive learning. Experiments on public MSD benchmarks show that URMF consistently outperforms strong unimodal, multimodal, and MLLM-based baselines, demonstrating the effectiveness of uncertainty-aware fusion for improving both accuracy and robustness.",
+        "authors": "Zhenyu Wang, Weichen Cheng, Weijia Li, Junjie Mou, Zongyou Zhao, Guoying Zhang",
+        "url": "http://arxiv.org/abs/2604.06728v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06728v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了URMF，一个不确定性感知鲁棒多模态融合框架，用于多模态讽刺检测。它通过统一的单模态任意不确定性建模（将每种模态参数化为可学习的高斯后验）来显式地建模模态可靠性，并利用不确定性动态调节模态贡献。这种基于概率建模和不确定性量化的方法，具有良好的统计严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.06672v1",
+        "title": "Rhythm-consistent semi-Markov simulation of tourist mobility rhythms with probabilistic event-to-POI assignment: Hakone, Japan",
+        "summary": "Understanding the timing and sequencing of activity participation in tourist mobility is central to travel behavior research, yet GPS trajectories are noisy, irregularly sampled, and only weakly linked to activity locations, which limits interpretation and scenario analysis. We address this by mapping each stay event to candidate points of interest (POIs) probabilistically, using explicit prior-likelihood weighting that yields a normalized compatibility distribution rather than hard matching. Using one month of high-density tourist trajectories in Hakone, Japan (November 2021), we construct semantic stay-event sequences based on observed place-category labels (MID10) and describe mobility rhythms through hour-by-category profiles, category transitions, and expected dwell patterns. Building on these rhythm signatures, we develop a rhythm-consistent semi-Markov simulator that generates synthetic stay-event sequences with time-conditioned transitions and category-dependent dwell behavior. In the observed data, hour-by-category summaries are computed by probability-weighted aggregation over soft labels; in simulation, each event is generated with a discrete category and a sampled dwell duration, enabling like-for-like comparison after aggregation. We further conduct counterfactual POI-inventory scenarios to quantify how hypothetical POI configuration changes shift stay intensity across time, categories, and space, particularly around hubs and main corridors. Observed-simulated comparisons show close agreement in temporal profiles and category distributions, indicating that probabilistic labeling and rhythm-consistent simulation preserve key mobility structure while providing an interpretable basis for transport-geography scenario evaluation.",
+        "authors": "Jianhao Shi, Tomio Miwa, Wanglin Yan",
+        "url": "http://arxiv.org/abs/2604.06672v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.06672v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过概率事件-POI分配，提出了一个节奏一致的半马尔可夫模拟器，用于模拟旅游者出行节奏。它利用先验-似然加权进行概率分配，并构建了具有时间条件转换和类别依赖停留行为的半马尔可夫模拟器。其基于概率建模和半马尔可夫过程的统计方法，具有良好的理论严谨性。"
+    }
+]

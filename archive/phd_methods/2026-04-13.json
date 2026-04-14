@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.11802v1",
+        "title": "Psychological Concept Neurons: Can Neural Control Bias Probing and Shift Generation in LLMs?",
+        "summary": "Using psychological constructs such as the Big Five, large language models (LLMs) can imitate specific personality profiles and predict a user's personality. While LLMs can exhibit behaviors consistent with these constructs, it remains unclear where and how they are represented inside the model and how they relate to behavioral outputs. To address this gap, we focus on questionnaire-operationalized Big Five concepts, analyze the formation and localization of their internal representations, and use interventions to examine how these representations relate to behavioral outputs. In our experiment, we first use probing to examine where Big Five information emerges across model depth. We then identify neurons that respond selectively to each Big Five concept and test whether enhancing or suppressing their activations can bias latent representations and label generation in intended directions. We find that Big Five information becomes rapidly decodable in early layers and remains detectable through the final layers, while concept-selective neurons are most prevalent in mid layers and exhibit limited overlap across domains. Interventions on these neurons consistently shift probe readouts toward targeted concepts, with targeted success rates exceeding 0.8 for some concepts, indicating that the model's internal separation of Big Five personality traits can be causally steered. At the label-generation level, the same interventions often bias generated label distributions in the intended directions, but the effects are weaker, more concept-dependent, and often accompanied by cross-trait spillover, indicating that comparable control over generated labels is difficult even with interventions on a large fraction of concept-selective neurons. Overall, our findings reveal a gap between representational control and behavioral control in LLMs.",
+        "authors": "Yuto Harada, Hiro Taiyo Hamada",
+        "url": "http://arxiv.org/abs/2604.11802v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11802v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文通过因果干预和探测，深入分析了LLM内部心理概念（如大五人格）的形成、定位及其与行为输出的关系。其机制分析方法具有理论创新性，揭示了表征控制与行为控制之间的差距，对理解和控制LLM行为具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11791v1",
+        "title": "A Mechanistic Analysis of Looped Reasoning Language Models",
+        "summary": "Reasoning has become a central capability in large language models. Recent research has shown that reasoning performance can be improved by looping an LLM's layers in the latent dimension, resulting in looped reasoning language models. Despite promising results, few works have investigated how their internal dynamics differ from those of standard feedforward models. In this paper, we conduct a mechanistic analysis of the latent states in looped language models, focusing in particular on how the stages of inference observed in feedforward models compare to those observed in looped ones. To this end, we analyze cyclic recurrence and show that for many of the studied models each layer in the cycle converges to a distinct fixed point; consequently, the recurrent block follows a consistent cyclic trajectory in the latent space. We provide evidence that as these fixed points are reached, attention-head behavior stabilizes, leading to constant behavior across recurrences. Empirically, we discover that recurrent blocks learn stages of inference that closely mirror those of feedforward models, repeating these stages in depth with each iteration. We study how recurrent block size, input injection, and normalization influence the emergence and stability of these cyclic fixed points. We believe these findings help translate mechanistic insights into practical guidance for architectural design.",
+        "authors": "Hugh Blayney, Álvaro Arroyo, Johan Obando-Ceron, Pablo Samuel Castro, Aaron Courville, Michael M. Bronstein, Xiaowen Dong",
+        "url": "http://arxiv.org/abs/2604.11791v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11791v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对循环推理语言模型进行了机制分析，揭示了其内部状态的循环收敛和推理阶段的重复模式。这不仅提供了对前沿LLM架构的理论洞察，也为优化模型设计提供了指导，符合对AI前沿算法和架构的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11748v1",
+        "title": "LangFlow: Continuous Diffusion Rivals Discrete in Language Modeling",
+        "summary": "Continuous diffusion models have achieved strong performance across domains such as images. However, in language modeling, prior continuous diffusion language models (DLMs) lag behind discrete counterparts. In this work, we close this gap with LangFlow, the first continuous DLM to rival discrete diffusion. Our approach connects embedding-space DLMs to Flow Matching via Bregman divergence and introduces three key innovations: (1) a novel ODE-based NLL bound for principled evaluation of continuous flow-based language models; (2) an information-uniform principle for noise scheduling, motivating a learnable scheduler based on a Gumbel distribution; and (3) an improved training protocol incorporating self-conditioning, which enhances both likelihood and sample quality.LangFlow achieves strong performance across benchmarks, reaching a perplexity (PPL) of 30.0 on LM1B and 24.6 on OpenWebText. It matches top discrete DLMs at comparable scale and surpasses autoregressive baselines in zero-shot transfer across multiple benchmarks. LangFlow provides clear evidence that continuous diffusion is a competitive and promising paradigm for language modeling.   https://github.com/nealchen2003/LangFlow",
+        "authors": "Yuxin Chen, Chumeng Liang, Hangke Sui, Ruihan Guo, Chaoran Cheng, Jiaxuan You, Ge Liu",
+        "url": "http://arxiv.org/abs/2604.11748v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11748v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了LangFlow，首次证明了连续扩散模型在语言建模中能与离散模型匹敌。其核心创新包括基于Bregman散度的ODE-based NLL界限和信息均匀噪声调度，展现了强大的理论创新性，为AI前沿算法开辟了新方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11663v1",
+        "title": "Why Do Large Language Models Generate Harmful Content?",
+        "summary": "Large Language Models (LLMs) have been shown to generate harmful content. However, the underlying causes of such behavior remain under explored. We propose a causal mediation analysis-based approach to identify the causal factors responsible for harmful generation. Our method performs a multi-granular analysis across model layers, modules (MLP and attention blocks), and individual neurons. Extensive experiments on state-of-the-art LLMs indicate that harmful generation arises in the later layers of the model, results primarily from failures in MLP blocks rather than attention blocks, and is associated with neurons that act as a gating mechanism for harmful generation. The results indicate that the early layers in the model are used for a contextual understanding of harmfulness in a prompt, which is then propagated through the model, to generate harmfulness in the late layers, as well as a signal indicating harmfulness through MLP blocks. This is then further propagated to the last layer of the model, specifically to a sparse set of neurons, which receives the signal and determines the generation of harmful content accordingly.",
+        "authors": "Rajesh Ganguli, Raha Moraffah",
+        "url": "http://arxiv.org/abs/2604.11663v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11663v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究通过因果中介分析，深入探究了LLM生成有害内容的根本原因，并进行了多粒度的机制分析。这不仅具有理论创新性，为LLM安全性和对齐提供了关键洞察，也直接解决了LLM应用中的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11611v1",
+        "title": "Utilizing and Calibrating Hindsight Process Rewards via Reinforcement with Mutual Information Self-Evaluation",
+        "summary": "To overcome the sparse reward challenge in reinforcement learning (RL) for agents based on large language models (LLMs), we propose Mutual Information Self-Evaluation (MISE), an RL paradigm that utilizes hindsight generative self-evaluation as dense reward signals while simultaneously calibrating them against the environmental feedbacks. Empirically, MISE enables an agent to learn autonomously from dense internal rewards supplementing sparse extrinsic signals. Theoretically, our work provides the first formal foundation for the paradigm of generative self-rewarding. We prove that utilizing hindsight self-evaluation rewards is equivalent to minimizing an objective that combines mutual information with a KL divergence term between the policy and a proxy reward policy. This theoretical insight then informs and justifies our calibration step, which actively aligns these rewards with the optimal policy. Extensive experiments show that MISE outperforms strong baselines, enabling open-source LLMs about 7B parameters to achieve performance comparable to GPT-4o on validation without expert supervision.",
+        "authors": "Jiashu Yao, Heyan Huang, Zeming Liu, Yuhang Guo",
+        "url": "http://arxiv.org/abs/2604.11611v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11611v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了MISE框架，为生成式自奖励范式提供了首个形式化理论基础，并证明其与互信息和KL散度目标函数的关联。这在LLM强化学习领域具有显著的理论创新性，解决了稀疏奖励的实际瓶颈，并提高了模型自主学习能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11470v1",
+        "title": "Degradation-Aware and Structure-Preserving Diffusion for Real-World Image Super-Resolution",
+        "summary": "Real-world image super-resolution is particularly challenging for diffusion models because real degradations are complex, heterogeneous, and rarely modeled explicitly. We propose a degradation-aware and structure-preserving diffusion framework for real-world SR. Specifically, we introduce Degradation-aware Token Injection, which encodes lightweight degradation statistics from low-resolution inputs and fuses them with semantic conditioning features, enabling explicit degradation-aware restoration. We further propose Spatially Asymmetric Noise Injection, which modulates diffusion noise with local edge strength to better preserve structural regions during training. Both modules are lightweight add-ons to the adopted diffusion SR framework, requiring only minor modifications to the conditioning pipeline. Experiments on DIV2K and RealSR show that our method delivers competitive no-reference perceptual quality and visually more realistic restoration results than recent baselines, while maintaining a favorable perception--distortion trade-off. Ablations confirm the effectiveness of each module and their complementary gains when combined. The code and model are publicly available at https://github.com/jiyang0315/DASP-SR.git.",
+        "authors": "Yang Ji, Zonghao Chen, Zhihao Xue, Junqin Hu",
+        "url": "http://arxiv.org/abs/2604.11470v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11470v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了D2MoE，通过难度感知的动态MoE机制，实现了图神经网络中节点级专家资源的自适应分配。这种方法在理论上优化了计算资源利用，解决了GNN在处理异质图和大规模图时的效率瓶颈，具有算法创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11465v1",
+        "title": "Three Roles, One Model: Role Orchestration at Inference Time to Close the Performance Gap Between Small and Large Agents",
+        "summary": "Large language model (LLM) agents show promise on realistic tool-use tasks, but deploying capable agents on modest hardware remains challenging. We study whether inference-time scaffolding alone, without any additional training compute, can improve the performance of a small model in complex multi-step environments. Operating on a single 24\\,GB GPU, we evaluate Qwen3-8B under both full-precision (FP16, 12K context) and 4-bit quantized (AWQ, 32K context) configurations. Without any intervention, the raw model achieves just 5.4\\% (FP16) and 3.0\\% (AWQ) task goal completion. Guided by a systematic failure mode analysis, we introduce a three-tier inference scaffolding pipeline that deploys the same frozen model in three distinct roles: (1) a summarization model that preserves critical artifacts (tokens, credentials, API responses) while compressing dialogue history; (2) the main agent model that reasons over the compressed context; and (3) an isolated correction model that reviews and revises the agent's code output without access to conversation history, breaking repetitive failure loops. Applied to the same unmodified model, this scaffolding yields 8.9\\% (FP16) and 5.9\\% (AWQ) task goal completion, roughly doubling performance in both settings, with particularly strong gains on difficulty-1 tasks (15.8\\%$\\to$26.3\\% FP16; 5.3\\%$\\to$14.0\\% AWQ). On full-precision inference, our scaffolded 8B model surpasses DeepSeek-Coder 33B Instruct (7.1\\%) from the original AppWorld evaluation, demonstrating that structured inference-time interventions can make small models competitive with systems 4$\\times$ their size. We formalize the approach as a scaffolded policy over a frozen base model, three invocations of the same weights with different conditioning, drawing connections to test-time compute scaling and action-space shaping in reinforcement learning.",
+        "authors": "S. Aaron McClendon, Jorge Gallego-Feliciano, Stavros Zervoudakis, Antonios Saravanos",
+        "url": "http://arxiv.org/abs/2604.11465v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11465v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了一种创新的推理时脚手架方法，通过让单个小模型扮演多角色来显著提升其在复杂任务上的性能。这在不增加训练成本的情况下，有效解决了小模型与大模型之间的性能差距和部署效率瓶颈，具有很强的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11446v1",
+        "title": "Low-rank Optimization Trajectories Modeling for LLM RLVR Acceleration",
+        "summary": "Recently, scaling reinforcement learning with verifiable rewards (RLVR) for large language models (LLMs) has emerged as an effective training paradigm for significantly improving model capabilities, which requires guiding the model to perform extensive exploration and learning, leading to substantial computational overhead and becoming a key challenge. To reduce the number of training steps, Prior work performs linear extrapolation of model parameters. However, the dynamics of model parameter updates during RLVR training remain insufficiently understood. To further investigate the evolution of LLMs during RLVR training, we conduct empirical experiments and find that the rank-1 subspace of the model does not evolve linearly, and its dominance over the original parameters is further amplified during LoRA training. Based on the above insights, we propose the \\textbf{N}onlinear \\textbf{Ext}rapolation of low-rank trajectories (\\textbf{NExt}), a novel framework that models and extrapolates low-rank parameter trajectories in a nonlinear manner. Concretely, we first train the model using LoRA and extract the rank-1 subspace of parameter differences at multiple training steps, which is then used for the subsequent nonlinear extrapolation. Afterward, we utilized the extracted rank-1 subspace to train a predictor, which can model the trajectory of parameter updates during RLVR, and then perform the predict-extend process to extrapolate model parameters, achieving the acceleration of RLVR. To further study and understand NExt, we conduct comprehensive experiments that demonstrate the effectiveness and robustness of the method. Our method reduces computational overhead by approximately 37.5\\% while remaining compatible with a wide range of RLVR algorithms and tasks. We release our code in https://github.com/RUCAIBox/NExt.",
+        "authors": "Zhipeng Chen, Tao Qian, Wayne Xin Zhao, Ji-Rong Wen",
+        "url": "http://arxiv.org/abs/2604.11446v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11446v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过建模和非线性外推LLM在RLVR训练中的低秩参数轨迹，提出了NExt框架以加速训练。这种方法基于对模型动态的深入理解，具有算法创新性，并有效解决了LLM强化学习的计算效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11403v1",
+        "title": "One Scale at a Time: Scale-Autoregressive Modeling for Fluid Flow Distributions",
+        "summary": "Analyzing unsteady fluid flows often requires access to the full distribution of possible temporal states, yet conventional PDE solvers are computationally prohibitive and learned time-stepping surrogates quickly accumulate error over long rollouts. Generative models avoid compounding error by sampling states independently, but diffusion and flow-matching methods, while accurate, are limited by the cost of many evaluations over the entire mesh. We introduce scale-autoregressive modeling (SAR) for sampling flows on unstructured meshes hierarchically from coarse to fine: it first generates a low-resolution field, then refines it by progressively sampling higher resolutions conditioned on coarser predictions. This coarse-to-fine factorization improves efficiency by concentrating computation at coarser scales, where uncertainty is greatest, while requiring fewer steps at finer scales. Across unsteady-flow benchmarks of varying complexity, SAR attains substantially lower distributional error and higher per-sample accuracy than state-of-the-art diffusion models based on multi-scale GNNs, while matching or surpassing a flow-matching Transolver (a linear-time transformer) yet running 2-7x faster than this depending on the task. Overall, SAR provides a practical tool for fast and accurate estimation of statistical flow quantities (e.g., turbulent kinetic energy and two-point correlations) in real-world settings.",
+        "authors": "Mario Lino, Nils Thuerey",
+        "url": "http://arxiv.org/abs/2604.11403v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11403v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了尺度自回归建模（SAR），通过分层、粗到细的方式生成流体流动分布，显著提高了效率和准确性。这是一种新颖的生成建模范式，解决了传统PDE求解器计算成本高昂的实际瓶颈，具有理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11311v1",
+        "title": "Learning Discrete Diffusion of Graphs via Free-Energy Gradient Flows",
+        "summary": "Diffusion-based models on continuous spaces have seen substantial recent progress through the mathematical framework of gradient flows, leveraging the Wasserstein-2 (${W}_2$) metric via the Jordan-Kinderlehrer-Otto (JKO) scheme. Despite the increasing popularity of diffusion models on discrete spaces using continuous-time Markov chains, a parallel theoretical framework based on gradient flows has remained elusive due to intrinsic challenges in translating the ${W}_2$ distance directly into these settings. In this work, we propose the first computational approach addressing these challenges, leveraging an appropriate metric $W_K$ on the simplex of probability distributions, which enables us to interpret widely used discrete diffusion paths, such as the discrete heat equation, as gradient flows of specific free-energy functionals. Through this theoretical insight, we introduce a novel methodology for learning diffusion dynamics over discrete spaces, which recovers the underlying functional directly by leveraging first-order optimality conditions for the JKO scheme. The resulting method optimizes a simple quadratic loss, trains extremely fast, does not require individual sample trajectories, and only needs a numerical preprocessing computing $W_K$-geodesics. We validate our method through extensive numerical experiments on synthetic data, showing that we can recover the underlying functional for a variety of graph classes.",
+        "authors": "Dario Rancati, Jan Maas, Francesco Locatello",
+        "url": "http://arxiv.org/abs/2604.11311v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11311v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次将离散图扩散模型与自由能梯度流的数学框架相结合，解决了在离散空间上应用Wasserstein-2距离的理论挑战。其深厚的数学和理论严谨性，为图机器学习和离散生成模型提供了重要的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11275v1",
+        "title": "Sheaf Diffusion with Adaptive Local Structure for Spatio-Temporal Forecasting",
+        "summary": "Spatio-temporal systems often exhibit highly heterogeneous and non-intuitive responses to localized disruptions, limiting the effectiveness of conventional message passing approaches in modeling higher-order interactions under local heterogeneity. This paper reformulates spatio-temporal forecasting as the problem of learning information flow over locally structured spaces, rather than propagating globally aligned node representations. We introduce a spatio-temporal sheaf diffusion graph neural network (ST-Sheaf GNN) that embeds graph topology into sheaf-theoretic vector spaces connected by learned linear restriction maps. Unlike prior work that relies on static or globally shared transformations, our model learns dynamic restriction maps that evolve over time and adapt to local spatio-temporal patterns to enable substantially more expressive interactions. By explicitly modeling latent local structure, the proposed framework efficiently mitigates the oversmoothing phenomenon in deep GNN architectures. We evaluate our framework on a diverse set of real-world spatio-temporal forecasting benchmarks spanning multiple domains. Experimental results demonstrate state-of-the-art performance, highlighting the effectiveness of sheaf-theoretic topological representations as a powerful foundation for spatio-temporal graph learning. The code is available at: https://anonymous.4open.science/r/ST-SheafGNN-6523/.",
+        "authors": "Abeer Mostafa, Raneen Younis, Zahra Ahmadi",
+        "url": "http://arxiv.org/abs/2604.11275v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11275v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了ST-Sheaf GNN，通过sheaf理论和自适应局部结构建模，解决了时空系统中异构和高阶交互的挑战。其将图拓扑嵌入sheaf-theoretic空间的方法具有高度理论创新性，并有效提升了时空预测的性能，符合对前沿算法和架构的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11129v1",
+        "title": "DeCoVec: Building Decoding Space based Task Vector for Large Language Models via In-Context Learning",
+        "summary": "Task vectors, representing directions in model or activation spaces that encode task-specific behaviors, have emerged as a promising tool for steering large language models (LLMs). However, existing approaches typically require fine-tuning or invasive manipulation of internal states, limiting their flexibility and scalability. We propose \\textsc{DeCoVec} (Decoding Space based Task Vector), a training-free and non-invasive framework that constructs task vectors directly in the \\textit{decoding space} by leveraging in-context learning (ICL). Specifically, \\textsc{DeCoVec} captures the task essence as the difference between the output logit distributions of few-shot and zero-shot prompts, then steers generation by injecting this vector into the decoding process. Experiments across seven LLMs (0.5B--9B) on TruthfulQA, Math-500, and AQUA-RAT show that \\textsc{DeCoVec} consistently outperforms standard few-shot baselines, with gains up to +5.50 average accuracy. Further analysis demonstrates that \\textsc{DeCoVec} effectively suppresses generation degeneration and logical flaws while exhibiting strong robustness to demonstration ordering, all without incurring additional input token costs. Our method offers a training-free and non-invasive solution for LLM steering without requiring weight updates or auxiliary models.",
+        "authors": "Feiyang Li, Yile Wang",
+        "url": "http://arxiv.org/abs/2604.11129v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11129v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了DeCoVec，一种训练无关、非侵入式的LLM转向框架，通过在解码空间构建任务向量来引导生成。这种利用In-Context Learning进行模型控制的方法具有显著的理论创新性，并有效提升了LLM的推理准确性和鲁棒性，解决了LLM控制的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11112v1",
+        "title": "Quantum-Gated Task-interaction Knowledge Distillation for Pre-trained Model-based Class-Incremental Learning",
+        "summary": "Class-incremental learning (CIL) aims to continuously accumulate knowledge from a stream of tasks and construct a unified classifier over all seen classes. Although pretrained models (PTMs) have shown promising performance in CIL, they still struggle with the entanglement of multi-task subspaces, leading to catastrophic forgetting when task routing parameters are poorly calibrated or task-level representations are rigidly fixed. To address this issue, we propose a novel Quantum-Gated Task-interaction Knowledge Distillation (QKD) framework that leverages quantum gating to guide inter-task knowledge transfer. Specifically, we introduce a quantum-gated task modulation gating mechanism to model the relational dependencies among task embedding, dynamically capturing the sample-to-task relevance for both joint training and inference across streaming tasks. Guided by the quantum gating outputs, we perform task-interaction knowledge distillation guided by these task-embedding-level correlation weights from old to new adapters, enabling the model to bridge the representation gaps between independent task subspaces. Extensive experiments demonstrate that QKD effectively mitigates forgetting and achieves state-of-the-art performance.",
+        "authors": "Linjie Li, Huiyu Xiao, Jiarui Cao, Zhenyu Wu, Yang Ji",
+        "url": "http://arxiv.org/abs/2604.11112v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11112v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Min-$k$采样，一种创新的LLM解码策略，通过分析logit分布的局部形状实现动态截断，并形式化证明了其温度不变性。这在理论上解决了现有采样方法对温度参数敏感的瓶颈，显著提升了LLM生成文本的质量和鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11080v1",
+        "title": "ReSpinQuant: Efficient Layer-Wise LLM Quantization via Subspace Residual Rotation Approximation",
+        "summary": "Rotation-based Post-Training Quantization (PTQ) has emerged as a promising solution for mitigating activation outliers in the quantization of Large Language Models (LLMs). Global rotation methods achieve inference efficiency by fusing activation rotations into attention and FFN blocks, but suffer from limited expressivity as they are constrained to use a single learnable rotation matrix across all layers. To tackle this, layer-wise transformation methods emerged, achieving superior accuracy through localized adaptation. However, layer-wise methods cannot fuse activation rotation matrices into weights, requiring online computations and causing significant overhead. In this paper, we propose ReSpinQuant, a quantization framework that resolves such overhead by leveraging offline activation rotation fusion and matching basis using efficient residual subspace rotation. This design reconciles the high expressivity of layer-wise adaptation with only negligible inference overhead. Extensive experiments on W4A4 and W3A3 quantization demonstrate that ReSpinQuant achieves state-of-the-art performance, outperforming global rotation methods and matching the accuracy of computationally expensive layer-wise methods with minimal overhead.",
+        "authors": "Suyoung Kim, Sunghyun Wee, Hyeonjin Kim, Kyomin Hwang, Hyunho Lee, Nojun Kwak",
+        "url": "http://arxiv.org/abs/2604.11080v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11080v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "本文提出了ReSpinQuant，一种高效的LLM量化框架，通过残差子空间旋转近似实现了层级量化的激活旋转融合。这在理论上解决了现有量化方法的开销问题，显著提升了模型压缩的效率和准确性，对LLM在边缘设备上的部署具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.11056v1",
+        "title": "Rethinking Token-Level Credit Assignment in RLVR: A Polarity-Entropy Analysis",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has substantially improved the reasoning ability of Large Language Models (LLMs). However, its sparse outcome-based rewards pose a fundamental credit assignment problem. We analyze this problem through the joint lens of reward polarity and token entropy. Our diagnostic tool, the Four Quadrant Decomposition, isolates token updates by polarity and entropy, and controlled ablations show that reasoning improvements concentrate in the high-entropy quadrants. To justify this observation theoretically, we adapt Conditional Mutual Information to the autoregressive RLVR setting and prove that the credit a token can carry is upper-bounded by its entropy. This view yields testable predictions that reasoning gains arise primarily from high-entropy tokens, with unique roles for positive and negative updates. A gradient analysis of GRPO further reveals how uniform reward broadcast dilutes signal at high-entropy positions while over-crediting deterministic tokens. Grounded in these insights, we propose Entropy-Aware Policy Optimization (EAPO) that modulates token-level learning signals accordingly. Extensive experiments demonstrate that EAPO outperforms strong baselines across two model families.",
+        "authors": "Yuhang He, Haodong Wu, Siyi Liu, Hongyu Ge, Hange Zhou, Keyi Wu, Zhuo Zheng, Qihong Lin, Zixin Zhong, Yongqi Zhang",
+        "url": "http://arxiv.org/abs/2604.11056v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.11056v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过极性-熵分析重新审视了RLVR中的token级信用分配问题，并提出了熵感知策略优化（EAPO）。其理论分析揭示了高熵token在推理增益中的关键作用，为LLM强化学习的信用分配提供了深刻的理论创新和实用的优化策略。"
+    }
+]

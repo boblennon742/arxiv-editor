@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.12977v1",
+        "title": "On causal inference with marked point process data",
+        "summary": "We define dynamic treatment regimes and associated potential outcomes for data described by marked point processes (MPPs). These definitions motivate MPP analogues of the commonly used consistency, exchangeability, and positivity conditions that are sufficient for identifying effects in MPP data structures. The conditions are formulated based on martingale theory, which allows us to derive explicit identifying assumptions for data described by stochastic processes. The definitions and conditions align with well-established discrete-time results in important special cases. Thus, this work bridges the large literatures on survival (event history) analysis with counting processes in continuous time and causal inference with variables in discrete-time. After formulating a set of identification conditions, we derive and characterize marginal g-formulas. The g-formulas are generally different from those studied in related works, though they coincide in important special cases. We relate our findings to previous work on causal inference with (counting) processes, the classical survival literature, and the discrete-time causal inference literature.",
+        "authors": "Pål Christie Ryalen, Mats Julius Stensrud, Kjetil Røysland",
+        "url": "http://arxiv.org/abs/2604.12977v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12977v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在因果推断领域，利用鞅理论为标记点过程数据定义动态治疗方案和潜在结果，并推导识别条件和g-公式。其严谨的数学推导和对因果逻辑的深入探讨，完美契合了对理论基础和数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12951v1",
+        "title": "The Verification Tax: Fundamental Limits of AI Auditing in the Rare-Error Regime",
+        "summary": "The most cited calibration result in deep learning -- post-temperature-scaling ECE of 0.012 on CIFAR-100 (Guo et al., 2017) -- is below the statistical noise floor. We prove this is not a failure of the experiment but a law: the minimax rate for estimating calibration error with model error rate epsilon is Theta((Lepsilon/m)^{1/3}), and no estimator can beat it. This \"verification tax\" implies that as AI models improve, verifying their calibration becomes fundamentally harder -- with the same exponent in opposite directions. We establish four results that contradict standard evaluation practice: (1) self-evaluation without labels provides exactly zero information about calibration, bounded by a constant independent of compute; (2) a sharp phase transition at mepsilon approx 1 below which miscalibration is undetectable; (3) active querying eliminates the Lipschitz constant, collapsing estimation to detection; (4) verification cost grows exponentially with pipeline depth at rate L^K. We validate across five benchmarks (MMLU, TruthfulQA, ARC-Challenge, HellaSwag, WinoGrande; ~27,000 items) with 6 LLMs from 5 families (8B-405B parameters, 27 benchmark-model pairs with logprob-based confidence), 95% bootstrap CIs, and permutation tests. Self-evaluation non-significance holds in 80% of pairs. Across frontier models, 23% of pairwise comparisons are indistinguishable from noise, implying that credible calibration claims must report verification floors and prioritize active querying once gains approach benchmark resolution.",
+        "authors": "Jason Z Wang",
+        "url": "http://arxiv.org/abs/2604.12951v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12951v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从统计学角度探讨了AI模型校准的根本性限制，提出了“验证税”的概念，并推导了估计校准误差的极小极大率。其对AI系统评估的理论基础和统计保证的深入分析，具有极高的理论严谨性和实践指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12882v1",
+        "title": "A Causal Framework for Evaluating Jointly Longitudinal Outcomes and Surrogate Markers: A State-Space Approach",
+        "summary": "Surrogate markers offer the potential to reduce the burden of data collection by replacing costly or invasive primary outcomes with more accessible measurements, provided that they can faithfully indicate the effectiveness of a treatment. However, appropriate evaluation of a surrogate is particularly complex in longitudinal studies, where both outcomes and surrogates can evolve dynamically over time and interest lies not only in the treatment effect at one time, but rather treatment effects that may vary along the entire trajectory. In this paper, we develop a statistical framework for surrogate evaluation when both the surrogate and primary outcome are measured over time. Specifically, within the potential outcomes framework, we propose a formal causal definition of the proportion of the treatment effect on the longitudinal primary outcome that is explained by the treatment effect on the longitudinal surrogate. For estimation, we leverage state-space models, together with the Kalman filter and smoother, enabling efficient estimation of treatment effects under realistic conditions of temporal evolution and patient-level variability. We introduce a nonparametric bootstrap strategy for state-space models, a temporal homogeneity test, and demonstrate the finite-sample performance of our proposed methods via a simulation study and application to a diabetes clinical trial.",
+        "authors": "Silvaneo V. dos Santos, Layla Parast",
+        "url": "http://arxiv.org/abs/2604.12882v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12882v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个评估纵向结果和替代标志物的因果框架，利用潜在结果框架和状态空间模型，并结合卡尔曼滤波和非参数Bootstrap进行估计。其对因果逻辑、统计建模和不确定性量化的严谨处理，符合对理论基础和数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12817v1",
+        "title": "Understanding and Improving Continuous Adversarial Training for LLMs via In-context Learning Theory",
+        "summary": "Adversarial training (AT) is an effective defense for large language models (LLMs) against jailbreak attacks, but performing AT on LLMs is costly. To improve the efficiency of AT for LLMs, recent studies propose continuous AT (CAT) that searches for adversarial inputs within the continuous embedding space of LLMs during AT. While CAT has achieved empirical success, its underlying mechanism, i.e., why adversarial perturbations in the embedding space can help LLMs defend against jailbreak prompts synthesized in the input token space, remains unknown. This paper presents the first theoretical analysis of CAT on LLMs based on in-context learning (ICL) theory. For linear transformers trained with adversarial examples from the embedding space on in-context linear regression tasks, we prove a robust generalization bound that has a negative correlation with the perturbation radius in the embedding space. This clearly explains why CAT can defend against jailbreak prompts from the LLM's token space. Further, the robust bound shows that the robustness of an adversarially trained LLM is closely related to the singular values of its embedding matrix. Based on this, we propose to improve LLM CAT by introducing an additional regularization term, which depends on singular values of the LLM's embedding matrix, into the objective function of CAT. Experiments on real-world LLMs demonstrate that our method can help LLMs achieve a better jailbreak robustness-utility tradeoff. The code is available at https://github.com/fshp971/continuous-adv-icl.",
+        "authors": "Shaopeng Fu, Di Wang",
+        "url": "http://arxiv.org/abs/2604.12817v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12817v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文首次对LLM的连续对抗训练（CAT）进行了理论分析，基于上下文学习理论推导了鲁棒泛化界限，并将其与嵌入矩阵的奇异值关联。这提供了对现代AI系统（LLMs）鲁棒性的强大理论基础和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12811v1",
+        "title": "Algorithmic Analysis of Dense Associative Memory: Finite-Size Guarantees and Adversarial Robustness",
+        "summary": "Dense Associative Memory (DAM) generalizes Hopfield networks through higher-order interactions and achieves storage capacity that scales as $O(N^{n-1})$ under suitable pattern separation conditions. Existing dynamical analyses primarily study the thermodynamic limit $N\\to\\infty$ with randomly sampled patterns and therefore do not provide finite-size guarantees or explicit convergence rates.   We develop an algorithmic analysis of DAM retrieval dynamics that yields finite-$N$ guarantees under explicit, verifiable pattern conditions. Under a separation assumption and a bounded-interference condition at high loading, we prove geometric convergence of asynchronous retrieval dynamics, which implies $O(\\log N)$ convergence time once the trajectory enters the basin of attraction. We further establish adversarial robustness bounds expressed through an explicit margin condition that quantifies the number of corrupted bits tolerable per sweep, and derive capacity guarantees that scale as $Θ(N^{n-1})$ up to polylogarithmic factors in the worst case, while recovering the classical $Θ(N^{n-1})$ scaling for random pattern ensembles. Finally, we show that DAM retrieval dynamics admit a potential-game interpretation that ensures convergence to pure Nash equilibria under asynchronous updates.   Complete proofs are provided in the appendices, together with preliminary experiments that illustrate the predicted convergence, robustness, and capacity scaling behavior.",
+        "authors": "Madhava Gaikwad",
+        "url": "http://arxiv.org/abs/2604.12811v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12811v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对稠密联想记忆（DAM）的检索动力学进行了算法分析，提供了有限尺寸保证、几何收敛性和对抗鲁棒性界限，并解释了其潜在博弈。这体现了对AI系统深层机制的严谨数学分析和理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12802v1",
+        "title": "Fundamental Limits and Optimal Methods for Sharp Analytical Causal Bounds in Instrumental Variable Models",
+        "summary": "Bounding causal effects analytically, rather than numerically, is appealing for its interpretability and conceptual clarity. Existing sharp methods rely on optimization-based approaches such as the Balke-Pearl framework, whose computational complexity grows rapidly. An alternative line of work derives bounds heuristically using probability laws and generic inequalities, and some recent papers have claimed or conjectured that this approach can yield sharp analytical bounds with substantially lower complexity. In this paper, we show that this perceived advantage is illusory. In particular, in a discrete instrumental variable setting, we show that any sharp analytical bound for the average treatment effect must be expressible as a maximum (minimum) over a collection of linear terms whose cardinality grows exponentially in the number of values taken by the outcome. In parallel, we show that the number of instrumental variable inequalities itself also grows exponentially. Consequently, bounds and inequalities expressed using only polynomially many such terms cannot be sharp. As a constructive complement, the paper is accompanied by codes implemented in python and R to derive sharp analytical bounds and sharp inequalities with optimal efficiency, matching the lower bounds proven in this paper. These codes are available online.",
+        "authors": "Arefe Boushehrian, Mohammad Reza Badri, Sina Akbari, Negar Kiyavash",
+        "url": "http://arxiv.org/abs/2604.12802v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12802v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文揭示了工具变量模型中尖锐分析因果界限的根本限制，并将其重新表述为受限条件最优传输问题，推导出闭式界限和基于DML的估计方法。其对因果推断理论的深入探索和严谨的数学推导，是极佳的选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12563v1",
+        "title": "Latent community paths in VAR-type models via dynamic directed spectral co-clustering",
+        "summary": "This paper proposes a dynamic network framework for uncovering latent community paths in high-dimensional VAR-type models. By embedding a degree-corrected stochastic co-blockmodel (ScBM) into the transition matrices of VAR-type systems, we separate sending and receiving roles at the node level and summarize complex directional dependence in an interpretable low-dimensional form. Our method integrates directed spectral co-clustering with eigenvector smoothing to track how directional groups split, merge, or persist over time. This framework accommodates both periodic VAR (PVAR) models for cyclical seasonal evolution and generalized VHAR models for structural transitions across ordered dependence horizons. We establish non-asymptotic misclassification bounds for both procedures and provide supporting evidence through Monte Carlo experiments. Applications to U.S.\\ nonfarm payrolls distinguish a recurrent business-centered core from more mobile, seasonally sensitive sectors. In global stock volatilities, the results reveal a compact U.S.-centered long-horizon block, a Europe-heavy developed core, and a more dynamic short-horizon reallocation of peripheral and bridge markets.",
+        "authors": "Younghoon Kim, Changryong Baek",
+        "url": "http://arxiv.org/abs/2604.12563v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12563v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个动态网络框架，通过动态有向谱协同聚类来揭示VAR型模型中的潜在社区路径，并建立了非渐近误分类界限。其在时间序列和网络分析中的统计建模和理论保证，符合对严谨数学逻辑的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12573v1",
+        "title": "IDEA: An Interpretable and Editable Decision-Making Framework for LLMs via Verbal-to-Numeric Calibration",
+        "summary": "Large Language Models are increasingly deployed for decision-making, yet their adoption in high-stakes domains remains limited by miscalibrated probabilities, unfaithful explanations, and inability to incorporate expert knowledge precisely. We propose IDEA, a framework that extracts LLM decision knowledge into an interpretable parametric model over semantically meaningful factors. Through joint learning of verbal-to-numerical mappings and decision parameters via EM, correlated sampling that preserves factor dependencies, and direct parameter editing with mathematical guarantees, IDEA produces calibrated probabilities while enabling quantitative human-AI collaboration. Experiments across five datasets show IDEA with Qwen-3-32B (78.6%) outperforms DeepSeek R1 (68.1%) and GPT-5.2 (77.9%), achieving perfect factor exclusion and exact calibration -- precision unattainable through prompting alone. The implementation is publicly available at https://github.com/leonbig/IDEA.",
+        "authors": "Yanji He, Yuxin Jiang, Yiwen Wu, Bo Huang, Jiaheng Wei, Wei Wang",
+        "url": "http://arxiv.org/abs/2604.12573v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12573v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个可解释、可编辑的LLM决策框架，通过EM算法联合学习语言到数值的映射和决策参数，并提供数学保证以实现校准概率。这为LLM的决策过程提供了强大的理论基础、数学严谨性和可解释性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12431v1",
+        "title": "VeriX-Anon: A Multi-Layered Framework for Mathematically Verifiable Outsourced Target-Driven Data Anonymization",
+        "summary": "Organisations increasingly outsource privacy-sensitive data transformations to cloud providers, yet no practical mechanism lets the data owner verify that the contracted algorithm was faithfully executed. VeriX-Anon is a multi-layered verification framework for outsourced Target-Driven k-anonymization combining three orthogonal mechanisms: deterministic verification via Merkle-style hashing of an Authenticated Decision Tree, probabilistic verification via Boundary Sentinels near the Random Forest decision boundary and exact-duplicate Twins with cryptographic identifiers, and utility-based verification via Explainable AI fingerprinting that compares SHAP value distributions before and after anonymization using the Wasserstein distance. Evaluated on three cross-domain datasets against Lazy (drops 5 percent of records), Dumb (random splitting, fake hash), and Approximate (random splitting, valid hash) adversaries, VeriX-Anon correctly detected deviations in 11 of 12 scenarios. No single layer achieved this alone. The XAI layer was the only mechanism that caught the Approximate adversary, succeeding on Adult and Bank but failing on the severely imbalanced Diabetes dataset where class imbalance suppresses the SHAP signal, confirming the need for adaptive thresholding. An 11-point k-sweep showed Target-Driven anonymization preserves significantly more utility than Blind anonymization (Wilcoxon $p = 0.000977$, Cohen's $d = 1.96$, mean F1 gap $+0.1574$). Client-side verification completes under one second at one million rows. The threat model covers three empirically evaluated profiles and one theoretical profile (Informed Attacker) aware of trap embedding but unable to defeat the cryptographic salt. Sentinel evasion probability ranges from near-zero for balanced datasets to 0.52 for imbalanced ones, a limitation the twin layer compensates for in every tested scenario.",
+        "authors": "Miit Daga, Swarna Priya Ramu",
+        "url": "http://arxiv.org/abs/2604.12431v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12431v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个多层框架，用于数学上可验证的外部目标驱动数据匿名化，结合了确定性验证、概率验证和基于XAI的效用验证（使用Wasserstein距离）。其对隐私保护的数学严谨性和多层验证机制的设计，具有很强的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12337v1",
+        "title": "Identifying and Mitigating Gender Cues in Academic Recommendation Letters: An Interpretability Case Study",
+        "summary": "Letters of recommendation (LoRs) can carry patterns of implicitly gendered language that can inadvertently influence downstream decisions, e.g. in hiring and admissions. In this work, we investigate the extent to which Transformer-based encoder models as well as Large Language Models (LLMs) can infer the gender of applicants in academic LoRs submitted to an U.S. medical-residency program after explicit identifiers like names and pronouns are de-gendered. While using three models (DistilBERT, RoBERTa, and Llama 2) to classify the gender of anonymized and de-gendered LoRs, significant gender leakage was observed as evident from up to 68% classification accuracy. Text interpretation methods, like TF-IDF and SHAP, demonstrate that certain linguistic patterns are strong proxies for gender, e.g. \"emotional'' and \"humanitarian'' are commonly associated with LoRs from female applicants. As an experiment in creating truly gender-neutral LoRs, these implicit gender cues were remove resulting in a drop of up to 5.5% accuracy and 2.7% macro $F_1$ score on re-training the classifiers. However, applicant gender prediction still remains better than chance. In this case study, our findings highlight that 1) LoRs contain gender-identifying cues that are hard to remove and may activate bias in decision-making and 2) while our technical framework may be a concrete step toward fairer academic and professional evaluations, future work is needed to interrogate the role that gender plays in LoR review. Taken together, our findings motivate upstream auditing of evaluative text in real-world academic letters of recommendation as a necessary complement to model-level fairness interventions.",
+        "authors": "Charlotte S. Alexander, Shane Storks, Souradip Pal, Sayak Chakrabarty, Arushi Sharma, Mlen-Too Wesley, Bailey Russo",
+        "url": "http://arxiv.org/abs/2604.12337v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12337v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对有限马尔可夫链的加性平均核进行了深入的理论分析，推导了到平稳态距离的最小化目标（Frobenius范数和KL散度），并给出了Cheeger型泛函和几何衰减率。这是纯粹的、高水平的概率论和统计物理学研究，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12334v1",
+        "title": "On additive averaging kernels for finite Markov chains",
+        "summary": "We study additive mixtures of Markov kernels of the form $A_α= αP + (1-α)G$, where $α\\in [0,1]$, $P$ is a baseline sampler and $G$ is a Gibbs kernel induced by a partition of the state space. We first motivate the study of $A_α$, which can be interpreted as the projection of a lifted Markov chain. We then consider the minimisation of distance to stationarity under two objectives: the squared Frobenius norm and the Kullback-Leibler (KL) divergence. For the Frobenius objective, we derive explicit trace formulas and identify a Cheeger-type functional that characterises optimal two-block partitions. This yields a structured combinatorial optimisation problem admitting a difference-of-submodular decomposition, enabling efficient approximation via majorisation-minimisation. We also obtain geometric decay rates governed by the absolute spectral gap of $P$. For the KL divergence, we establish convexity-based bounds showing that the divergence of $A_α$ is controlled by those of both $P$ and $G$, thereby reducing partition selection to the Gibbs component. Numerical experiments on the Curie-Weiss model demonstrate that suitable choice of both the partition and the parameter $α$ can significantly accelerate convergence in total variation distance. We observe a consistent trade-off between local exploration and global averaging, with intermediate values of $α$ achieving the best performance across regimes.",
+        "authors": "Ryan J. Y. Lim, Michael C. H. Choi",
+        "url": "http://arxiv.org/abs/2604.12334v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12334v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对有限马尔可夫链的加性平均核进行了深入的理论分析，推导了到平稳态距离的最小化目标（Frobenius范数和KL散度），并给出了Cheeger型泛函和几何衰减率。这是纯粹的、高水平的概率论和统计物理学研究，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12288v1",
+        "title": "Fine-tuning Factor Augmented Neural Lasso for Heterogeneous Environments",
+        "summary": "Fine-tuning is a widely used strategy for adapting pre-trained models to new tasks, yet its methodology and theoretical properties in high-dimensional nonparametric settings with variable selection have not yet been developed. This paper introduces the fine-tuning factor augmented neural Lasso (FAN-Lasso), a transfer learning framework for high-dimensional nonparametric regression with variable selection that simultaneously handles covariate and posterior shifts. We use a low-rank factor structure to manage high-dimensional dependent covariates and propose a novel residual fine-tuning decomposition in which the target function is expressed as a transformation of a frozen source function and other variables to achieve transfer learning and nonparametric variable selection. This augmented feature from the source predictor allows for the transfer of knowledge to the target domain and reduces model complexity there. We derive minimax-optimal excess risk bounds for the fine-tuning FAN-Lasso, characterizing the precise conditions, in terms of relative sample sizes and function complexities, under which fine-tuning yields statistical acceleration over single-task learning. The proposed framework also provides a theoretical perspective on parameter-efficient fine-tuning methods. Extensive numerical experiments across diverse covariate- and posterior-shift scenarios demonstrate that the fine-tuning FAN-Lasso consistently outperforms standard baselines and achieves near-oracle performance even under severe target sample size constraints, empirically validating the derived rates.",
+        "authors": "Jinhang Chai, Jianqing Fan, Cheng Gao, Qishuo Yin",
+        "url": "http://arxiv.org/abs/2604.12288v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12288v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个用于高维非参数回归和变量选择的微调因子增强神经Lasso框架，并推导了极小极大最优的超额风险界限，精确刻画了微调带来统计加速的条件。这为现代AI模型（如神经网络）的微调提供了强大的理论基础和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12263v1",
+        "title": "Partial Identification of Policy-Relevant Treatment Effects with Instrumental Variables via Optimal Transport",
+        "summary": "Policy-Relevant Treatment Effects (PRTEs) are generally not point-identified under standard instrumental variable (IV) assumptions when the instrument generates limited support in treatment propensity. Existing approaches typically optimize over marginal treatment response functions subject to moment restrictions and can discard identifying distributional information. We show that PRTE partial identification in the generalized Roy model can instead be formulated as a Constrained Conditional Optimal Transport (CCOT) problem. The resulting multidimensional CCOT problem reduces analytically to separable one-dimensional OT problems with product costs, yielding sharp closed-form bounds and avoiding direct solution of the original high-dimensional CCOT problem. We also develop estimation and inference procedures for these bounds: for discrete instruments, a Double Machine Learning (DML) approach based on Neyman-orthogonal scores that accommodates high-dimensional covariates while achieving the parametric $\\sqrt{n}$ rate and asymptotic normality; for continuous instruments, we explicitly characterize the corresponding nonparametric convergence rates. The framework accommodates covariates, discrete and continuous instruments, and extensions to general treatment settings. In simulations and a bed-net subsidy application, the resulting bounds are substantially tighter than existing moment-relaxation methods.",
+        "authors": "Jiyuan Tan, Jose Blanchet, Vasilis Syrgkanis",
+        "url": "http://arxiv.org/abs/2604.12263v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12263v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将工具变量模型中政策相关治疗效果的部分识别问题重新表述为受限条件最优传输问题，推导出尖锐的闭式界限，并开发了基于DML的估计和推断程序，实现了渐近正态性和最优收敛率。其在因果推断和最优传输理论上的结合，具有极高的理论深度和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12191v1",
+        "title": "Beyond Scores: Diagnostic LLM Evaluation via Fine-Grained Abilities",
+        "summary": "Current evaluations of large language models aggregate performance across diverse tasks into single scores. This obscures fine-grained ability variation, limiting targeted model improvement and ability-guided selection for specific tasks. Motivated by this gap, we propose a cognitive diagnostic framework that estimates model abilities across multiple fine-grained dimensions. For mathematics, we construct a 35-dimensional ability taxonomy grounded in cognitive theory and domain knowledge. The framework employs multidimensional Item Response Theory with an item-ability association matrix to estimate fine-grained ability levels, which in turn enable prediction of performance on unseen items (questions of benchmark). Evaluated on 41 models, our approach demonstrates strong criterion validity, consistent ability estimates across benchmarks, and accurate prediction of unseen items with AUC ranging from 0.80 to 0.89 within benchmarks and from 0.77 to 0.86 across benchmarks, substantially exceeding trivial baselines. The framework generalizes across scientific domains, producing consistent diagnostic performance in physics (27 dimensions), chemistry (58 dimensions), and computer science (12 dimensions). This work establishes a principled framework for fine-grained assessment of abilities, with potential applications in targeted training, ability-guided model selection, and ability-aware benchmark design.",
+        "authors": "Xu Zhang, Xudong Gong, Jiacheng Qin, Qiang Wang, JiaQi Liao, Zhe Wang, Dawei Feng, Bo Ding",
+        "url": "http://arxiv.org/abs/2604.12191v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12191v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于多维项目反应理论（IRT）的认知诊断框架，用于LLM的细粒度能力评估，提供了强大的准则效度、一致的能力估计和准确的预测。这为现代AI系统（LLMs）的评估提供了严谨的统计学理论基础。"
+    }
+]

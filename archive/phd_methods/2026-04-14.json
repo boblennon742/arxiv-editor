@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.13030v1",
+        "title": "Generative Refinement Networks for Visual Synthesis",
+        "summary": "While diffusion models dominate the field of visual generation, they are computationally inefficient, applying a uniform computational effort regardless of different complexity. In contrast, autoregressive (AR) models are inherently complexity-aware, as evidenced by their variable likelihoods, but are often hindered by lossy discrete tokenization and error accumulation. In this work, we introduce Generative Refinement Networks (GRN), a next-generation visual synthesis paradigm to address these issues. At its core, GRN addresses the discrete tokenization bottleneck through a theoretically near-lossless Hierarchical Binary Quantization (HBQ), achieving a reconstruction quality comparable to continuous counterparts. Built upon HBQ's latent space, GRN fundamentally upgrades AR generation with a global refinement mechanism that progressively perfects and corrects artworks -- like a human artist painting. Besides, GRN integrates an entropy-guided sampling strategy, enabling complexity-aware, adaptive-step generation without compromising visual quality. On the ImageNet benchmark, GRN establishes new records in image reconstruction (0.56 rFID) and class-conditional image generation (1.81 gFID). We also scale GRN to more challenging text-to-image and text-to-video generation, delivering superior performance on an equivalent scale. We release all models and code to foster further research on GRN.",
+        "authors": "Jian Han, Jinlai Liu, Jiahuan Wang, Bingyue Peng, Zehuan Yuan",
+        "url": "http://arxiv.org/abs/2604.13030v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13030v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Generative Refinement Networks (GRN)这一新一代视觉合成范式，旨在解决扩散模型计算效率低下和自回归模型离散token化及误差累积的问题。其核心创新在于理论上接近无损的分层二值量化(HBQ)和全局细化机制，并结合熵引导采样实现复杂度感知生成。这完美契合您对AI前沿算法和架构的关注，以及对解决数据效率和理论创新性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13010v1",
+        "title": "Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline On-Policy Distillation",
+        "summary": "On-policy distillation (OPD) has emerged as an efficient post-training paradigm for large language models. However, standard OPD requires a live teacher inference server throughout training, resulting in substantial infrastructure overhead. In this work, we investigate whether on-policy distillation can be performed offline. A natural approach is to precompute teacher log-probabilities once over SFT rollouts and reuse them during training. In practice, however, this offline variant fails to reliably match the performance of standard OPD. To understand this discrepancy, we identify a previously overlooked condition that is critical for any OPD pipeline, which we term teacher consistency. This condition requires that the same teacher model be used for both supervised fine-tuning and OPD. We show that violating teacher consistency introduces an irreducible gradient bias, causing both offline and online OPD to converge to a suboptimal fixed point regardless of training duration. Building on this insight, we propose Lightning OPD, an offline on-policy distillation framework that enforces teacher consistency by precomputing teacher log-probabilities over SFT rollouts. This design eliminates the need for a live teacher server entirely. We further show that, under teacher consistency, Lightning OPD shares the same optimum as standard OPD, with bounded gradient discrepancy and an implicit regularization effect that helps prevent policy drift. Extensive experiments on mathematical reasoning and code generation demonstrate that Lightning OPD achieves state-of-the-art performance with significantly improved efficiency. Starting from an SFT-initialized Qwen3-8B-Base model, Lightning OPD reaches 69.9% on AIME 2024 in just 30 GPU hours, achieving a 4.0x speedup over standard OPD and substantially lowering the barrier to entry for academic research on LLM post-training.",
+        "authors": "Yecheng Wu, Song Han, Hai Cai",
+        "url": "http://arxiv.org/abs/2604.13010v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13010v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Lightning OPD，一种高效的离线策略蒸馏框架，用于大型推理模型的后训练。它识别并解决了现有策略蒸馏（OPD）中被忽视的“教师一致性”条件，通过理论分析揭示了梯度偏差，并在此基础上设计了无需实时教师服务器的离线方案。这直接解决了LLM应用中的效率瓶颈，并具有扎实的理论创新性，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13006v1",
+        "title": "One Token Away from Collapse: The Fragility of Instruction-Tuned Helpfulness",
+        "summary": "Instruction-tuned large language models produce helpful, structured responses, but how robust is this helpfulness when trivially constrained? We show that simple lexical constraints (banning a single punctuation character or common word) cause instruction-tuned LLMs to collapse their responses, losing 14--48% of comprehensiveness in pairwise evaluation across three open-weight model families and one closed-weight model (GPT-4o-mini). The baseline response is preferred in 77--100% of 1,920 pairwise comparisons judged by GPT-4o-mini and GPT-4o. Notably, GPT-4o-mini suffers 31% comprehensiveness loss (99% baseline win rate), demonstrating that the fragility extends to commercially deployed closed-weight models, contrary to prior findings on format-level constraints. Through mechanistic analysis, we identify this as a planning failure: two-pass generation (free generation followed by constrained rewriting) recovers 59--96% of response length, and linear probes on prompt representations predict response length with $R^2 = 0.51$--$0.93$ before generation begins, with $R^2$ tracking collapse severity across models. The same probes yield negative $R^2$ on base models, confirming that instruction tuning creates the representational structure encoding the collapse decision. Crucially, base models show no systematic collapse under identical constraints, with effects that are small, noisy, and bidirectional, demonstrating that instruction tuning creates this fragility by coupling task competence to narrow surface-form templates. The effect replicates on MT-Bench across all eight task categories. We further show that standard independent LLM-as-judge evaluation detects only a 3.5% average quality drop where pairwise evaluation reveals 23%, exposing a methodological blind spot in how constrained generation is assessed.",
+        "authors": "Erfan Baghaei Potraghloo, Seyedarmin Azizi, Souvik Kundu, Massoud Pedram",
+        "url": "http://arxiv.org/abs/2604.13006v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13006v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文深入探讨了指令微调LLM在简单词汇约束下表现出的脆弱性，即“崩溃”现象。通过机制分析，它将问题归因于规划失败和指令微调导致的表征结构变化。这种对LLM内在机制的理论洞察和对模型鲁棒性瓶颈的揭示，具有高度的创新性和影响力，对理解LLM行为至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12999v1",
+        "title": "Agentic Discovery with Active Hypothesis Exploration for Visual Recognition",
+        "summary": "We introduce HypoExplore, an agentic framework that formulates neural architecture discovery for visual recognition as a hypothesis-driven scientific inquiry. Given a human-specified high-level research direction, HypoExplore ideates, implements, evaluates, and improves neural architectures through evolutionary branching. New hypotheses are created using a large language model by selecting a parent hypothesis to build upon, guided by a dual strategy that balances exploiting validated principles with resolving uncertain ones. Our proposed framework maintains a Trajectory Tree that records the lineage of all proposed architectures, and a Hypothesis Memory Bank that actively tracks confidence scores acquired through experimental evidence. After each experiment, multiple feedback agents analyze the results from different perspectives and consolidate their findings into hypothesis confidence updates. Our framework is tested on discovering lightweight vision architectures on CIFAR-10, with the best achieving 94.11% accuracy evolved from a root node baseline that starts at 18.91%, and generalizes to CIFAR-100 and Tiny-ImageNet. We further demonstrate applicability to a specialized domain by conducting independent architecture discovery runs on MedMNIST, which yield a state-of-the-art performance. We show that hypothesis confidence scores grow increasingly predictive as evidence accumulates, and that the learned principles transfer across independent evolutionary lineages, suggesting that HypoExplore not only discovers stronger architectures, but can help build a genuine understanding of the design space.",
+        "authors": "Jaywon Koo, Jefferson Hernandez, Ruozhen He, Hanjie Chen, Chen Wei, Vicente Ordonez",
+        "url": "http://arxiv.org/abs/2604.12999v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12999v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了HypoExplore，一个将视觉识别的神经架构发现（NAS）公式化为假设驱动的科学探究的智能体框架。它利用LLM进行假设生成、评估和改进，并通过轨迹树和假设记忆库跟踪进化过程。这种将LLM与进化算法结合进行架构发现的创新方法，体现了前沿算法和架构的结合，具有很高的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12992v1",
+        "title": "Causal Diffusion Models for Counterfactual Outcome Distributions in Longitudinal Data",
+        "summary": "Predicting counterfactual outcomes in longitudinal data, where sequential treatment decisions heavily depend on evolving patient states, is critical yet notoriously challenging due to complex time-dependent confounding and inadequate uncertainty quantification in existing methods. We introduce the Causal Diffusion Model (CDM), the first denoising diffusion probabilistic approach explicitly designed to generate full probabilistic distributions of counterfactual outcomes under sequential interventions. CDM employs a novel residual denoising architecture with relational self-attention, capturing intricate temporal dependencies and multimodal outcome trajectories without requiring explicit adjustments (e.g., inverse-probability weighting or adversarial balancing) for confounding. In rigorous evaluation on a pharmacokinetic-pharmacodynamic tumor-growth simulator widely adopted in prior work, CDM consistently outperforms state-of-the-art longitudinal causal inference methods, achieving a 15-30% relative improvement in distributional accuracy (1-Wasserstein distance) while maintaining competitive or superior point-estimate accuracy (RMSE) under high-confounding regimes. By unifying uncertainty quantification and robust counterfactual prediction in complex, sequentially confounded settings, without tailored deconfounding, CDM offers a flexible, high-impact tool for decision support in medicine, policy evaluation, and other longitudinal domains.",
+        "authors": "Farbod Alinezhad, Jianfei Cao, Gary J. Young, Brady Post",
+        "url": "http://arxiv.org/abs/2604.12992v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12992v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Causal Diffusion Model (CDM)，这是第一个专门为纵向数据中序列干预下的反事实结果分布生成而设计的去噪扩散概率方法。它通过新颖的残差去噪架构和关系自注意力捕捉复杂时间依赖性，并在不进行显式混杂调整的情况下实现不确定性量化。这在因果推断领域具有高度的理论严谨性和创新性，并能解决医学、政策评估等领域的实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12898v1",
+        "title": "BEAM: Bi-level Memory-adaptive Algorithmic Evolution for LLM-Powered Heuristic Design",
+        "summary": "Large Language Model-based Hyper Heuristic (LHH) has recently emerged as an efficient way for automatic heuristic design. However, most existing LHHs just perform well in optimizing a single function within a pre-defined solver. Their single-layer evolution makes them not effective enough to write a competent complete solver. While some variants incorporate hyperparameter tuning or attempt to generate complex code through iterative local modifications, they still lack a high-level algorithmic modeling, leading to limited exploration efficiency. To address this, we reformulate heuristic design as a Bi-level Optimization problem and propose \\textbf{BEAM} (Bi-level Memory-adaptive Algorithmic Evolution). BEAM's exterior layer evolves high-level algorithmic structures with function placeholders through genetic algorithm (GA), while the interior layer realizes these placeholders via Monte Carlo Tree Search (MCTS). We further introduce an Adaptive Memory module to facilitate complex code generation. To support the evaluation for complex code generation, we point out the limitations of starting LHHs from scratch or from code templates and introduce a Knowledge Augmentation (KA) Pipeline. Experimental results on several optimization problems demonstrate that BEAM significantly outperforms existing LHHs, notably reducing the optimality gap by 37.84\\% on aggregate in CVRP hybrid algorithm design. BEAM also designs a heuristic that outperforms SOTA Maximum Independent Set (MIS) solver KaMIS.",
+        "authors": "Chuyang Xiang, Yichen Wei, Jiale Ma, Handing Wang, Junchi Yan",
+        "url": "http://arxiv.org/abs/2604.12898v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12898v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了BEAM，一个双层记忆自适应算法进化框架，用于LLM驱动的启发式设计。它将启发式设计重构为双层优化问题，通过遗传算法进化高层结构，并通过蒙特卡洛树搜索实现细节。这种结合LLM、双层优化和传统搜索算法的创新方法，在自动启发式设计中展现了强大的理论创新性，并解决了复杂优化问题的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12875v1",
+        "title": "AISafetyBenchExplorer: A Metric-Aware Catalogue of AI Safety Benchmarks Reveals Fragmented Measurement and Weak Benchmark Governance",
+        "summary": "The rapid expansion of large language model (LLM) safety evaluation has produced a substantial benchmark ecosystem, but not a correspondingly coherent measurement ecosystem. We present AISafetyBenchExplorer, a structured catalogue of 195 AI safety benchmarks released between 2018 and 2026, organized through a multi-sheet schema that records benchmark-level metadata, metric-level definitions, benchmark-paper metadata, and repository activity. This design enables meta-analysis not only of what benchmarks exist, but also of how safety is operationalized, aggregated, and judged across the literature. Using the updated catalogue, we identify a central structural problem: benchmark proliferation has outpaced measurement standardization. The current landscape is dominated by medium-complexity benchmarks (94/195), while only 7 benchmarks occupy the Popular tier. The workbook further reports strong concentration around English-only evaluation (165/195), evaluation-only resources (170/195), stale GitHub repositories (137/195), stale Hugging Face datasets (96/195), and heavy reliance on arXiv preprints among benchmarks with known venue metadata. At the metric level, the catalogue shows that familiar labels such as accuracy, F1 score, safety score, and aggregate benchmark scores often conceal materially different judges, aggregation rules, and threat models. We argue that the field's main failure mode is fragmentation rather than scarcity. Researchers now have many benchmark artifacts, but they often lack a shared measurement language, a principled basis for benchmark selection, and durable stewardship norms for post publication maintenance. AISafetyBenchExplorer addresses this gap by providing a traceable benchmark catalogue, a controlled metadata schema, and a complexity taxonomy that together support more rigorous benchmark discovery, comparison, and meta-evaluation.",
+        "authors": "Abiodun A. Solanke",
+        "url": "http://arxiv.org/abs/2604.12875v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12875v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次对LLM的连续对抗训练（CAT）进行了理论分析，基于上下文学习（ICL）理论，证明了鲁棒泛化界限与嵌入空间扰动半径的负相关性，并提出了基于嵌入矩阵奇异值的正则化项来改进CAT。这种从理论层面深入理解并改进LLM鲁棒性的工作，具有极高的理论严谨性和创新性，直接解决了LLM安全性的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12820v1",
+        "title": "RePAIR: Interactive Machine Unlearning through Prompt-Aware Model Repair",
+        "summary": "Large language models (LLMs) inherently absorb harmful knowledge, misinformation, and personal data during pretraining on large-scale web corpora, with no native mechanism for selective removal. While machine unlearning offers a principled solution, existing approaches are provider-centric, requiring retraining pipelines, curated retain datasets, and direct intervention by model service providers (MSPs), thereby excluding end users from controlling their own data. We introduce Interactive Machine Unlearning (IMU), a new paradigm in which users can instruct LLMs to forget targeted knowledge through natural language at inference time. To realize IMU, we propose RePAIR, a prompt-aware model repair framework comprising (i) a watchdog model for unlearning intent detection, (ii) a surgeon model for generating repair procedures, and (iii) a patient model whose parameters are updated autonomously. At the core of RePAIR, we develop Steering Through Activation Manipulation with PseudoInverse (STAMP), a training-free, single-sample unlearning method that redirects MLP activations toward a refusal subspace via closed-form pseudoinverse updates. Its low-rank variant reduces computational complexity from O(d^3) to O(r^3 + r^2 * d), enabling efficient on-device unlearning with up to ~3x speedup over training-based baselines. Extensive experiments across harmful knowledge suppression, misinformation correction, and personal data erasure demonstrate that RePAIR achieves near-zero forget scores (Acc_f = 0.00, F-RL = 0.00) while preserving model utility (Acc_r up to 84.47, R-RL up to 0.88), outperforming six state-of-the-art baselines. These results establish RePAIR as an effective and practical framework for user-driven model editing, advancing transparent and on-device control over learned knowledge, with potential extensions to multimodal foundation models.",
+        "authors": "Jagadeesh Rachapudi, Pranav Singh, Ritali Vatsi, Praful Hambarde, Amit Shukla",
+        "url": "http://arxiv.org/abs/2604.12820v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12820v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了RePAIR框架，实现了交互式机器遗忘（IMU），允许用户在推理时通过自然语言指令使LLM遗忘特定知识。其核心是STAMP方法，一种无需训练、单样本的遗忘方法，通过闭式伪逆更新重定向MLP激活。这为LLM的隐私保护和用户控制提供了理论创新性强且高效的解决方案，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12780v1",
+        "title": "Efficient Adversarial Training via Criticality-Aware Fine-Tuning",
+        "summary": "Vision Transformer (ViT) models have achieved remarkable performance across various vision tasks, with scalability being a key advantage when applied to large datasets. This scalability enables ViT models to exhibit strong generalization capabilities. However, as the number of parameters increases, the robustness of ViT models to adversarial examples does not scale proportionally. Adversarial training (AT), one of the most effective methods for enhancing robustness, typically requires fine-tuning the entire model, leading to prohibitively high computational costs, especially for large ViT architectures. In this paper, we aim to robustly fine-tune only a small subset of parameters to achieve robustness comparable to standard AT. To accomplish this, we introduce Criticality-Aware Adversarial Training (CAAT), a novel method that adaptively allocates resources to the most robustness-critical parameters, fine-tuning only selected modules. Specifically, CAAT efficiently identifies parameters that contribute most to adversarial robustness. It then leverages parameter-efficient fine-tuning (PEFT) to robustly adjust weight matrices where the number of critical parameters exceeds a predefined threshold. CAAT exhibits favorable generalization when scaled to larger vision transformer architectures, potentially paving the way for adversarial training at scale, e.g, compared with plain adversarial training, CAAT incurs only a 4.3% decrease in adversarial robustness while tuning approximately 6% of its parameters. Extensive experiments on three widely used adversarial learning datasets demonstrate that CAAT outperforms state-of-the-art lightweight AT methods with fewer trainable parameters.",
+        "authors": "Wenyun Li, Zheng Zhang, Dongmei Jiang, Yaowei Wang, Xiangyuan Lan",
+        "url": "http://arxiv.org/abs/2604.12780v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12780v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了OSC，一种硬件高效的W4A4量化框架，通过在通道维度分离异常值来实现LLM的高吞吐量部署。它基于对异常值空间分布的系统性研究，提出了双路径计算和结构化子张量提取。这种对模型压缩和硬件效率的深度优化，具有很强的理论创新性（异常值分离机制）和实际影响力（1.78倍加速），非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12736v1",
+        "title": "Token-Level Policy Optimization: Linking Group-Level Rewards to Token-Level Aggregation via Sequence-Level Likelihood",
+        "summary": "Group Relative Policy Optimization (GRPO) has significantly advanced the reasoning ability of large language models (LLMs), particularly in their mathemat ical reasoning performance. However, GRPO and related entropy regularization methods still struggle with token-level sparse-rewards, which is an inherent chal lenge in chain-of-thought (CoT) reasoning. These approaches often rely on undifferen tiated token-level entropy regularization, which easily leads to entropy collapse or model degradation under sparse token rewards. In this work, we propose TEPO, a novel token-level framework that (1) leverages sequence-level likelihood to link group-level rewards with individual tokens via token-level aggregation, and (2) introduces a token-level KL-Divergence mask constraint that targets tokens with positive advantages and decreasing entropy to mitigate abrupt policy updates. Experiments demonstrate that TEPO not only achieves state-of-the-art performance on mathematical reasoning benchmarks but also markedly enhances training stability, reducing convergence time by 50% compared with GRPO/DAPO.",
+        "authors": "Xingyu Lin, Yilin Wen, Du Su, Jinchang Hou, En Wang, Wenbin Liu, Chenfu Bao, Zhonghou Lv",
+        "url": "http://arxiv.org/abs/2604.12736v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12736v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了TEPO，一种新颖的token级策略优化框架，通过序列级似然将组级奖励与token级聚合联系起来，并引入token级KL散度掩码约束。这解决了LLM链式思考（CoT）推理中稀疏奖励和熵正则化的问题，显著提高了数学推理性能和训练稳定性，是RL算法在LLM中应用的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12579v1",
+        "title": "EEG-Based Multimodal Learning via Hyperbolic Mixture-of-Curvature Experts",
+        "summary": "Electroencephalography (EEG)-based multimodal learning integrates brain signals with complementary modalities to improve mental state assessment, providing great clinical potential. The effectiveness of such paradigms largely depends on the representation learning on heterogeneous modalities. For EEG-based paradigms, one promising approach is to leverage their hierarchical structures, as recent studies have shown that both EEG and associated modalities (e.g., facial expressions) exhibit hierarchical structures reflecting complex cognitive processes. However, Euclidean embeddings struggle to represent these hierarchical structures due to their flat geometry, while hyperbolic spaces, with their exponential growth property, are naturally suited for them. In this work, we propose EEG-MoCE, a novel hyperbolic mixture-of-curvature experts framework designed for multimodal neurotechnology. EEG-MoCE assigns each modality to an expert in a learnable-curvature hyperbolic space, enabling adaptive modeling of its intrinsic geometry. A curvature-aware fusion strategy then dynamically weights experts, emphasizing modalities with richer hierarchical information. Extensive experiments on benchmark datasets demonstrate that EEG-MoCE achieves state-of-the-art performance, including emotion recognition, sleep staging, and cognitive assessment.",
+        "authors": "Runhe Zhou, Shanglin Li, Guanxiang Huang, Xinliang Zhou, Qibin Zhao, Motoaki Kawanabe, Yi Ding, Cuntai Guan",
+        "url": "http://arxiv.org/abs/2604.12579v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12579v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了EEG-MoCE，一种新颖的双曲混合曲率专家框架，用于基于EEG的多模态学习。它将每种模态分配给一个可学习曲率的双曲空间中的专家，并采用曲率感知融合策略。这种利用双曲几何特性来建模分层结构的方法，在理论严谨性和算法创新性上都非常突出，对多模态学习具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12543v1",
+        "title": "A Two-Stage LLM Framework for Accessible and Verified XAI Explanations",
+        "summary": "Large Language Models (LLMs) are increasingly used to translate the technical outputs of eXplainable Artificial Intelligence (XAI) methods into accessible natural-language explanations. However, existing approaches often lack guarantees of accuracy, faithfulness, and completeness. At the same time, current efforts to evaluate such narratives remain largely subjective or confined to post-hoc scoring, offering no safeguards to prevent flawed explanations from reaching end-users. To address these limitations, this paper proposes a Two-Stage LLM Meta-Verification Framework that consists of (i) an Explainer LLM that converts raw XAI outputs into natural-language narratives, (ii) a Verifier LLM that assesses them in terms of faithfulness, coherence, completeness, and hallucination risk, and (iii) an iterative refeed mechanism that uses the Verifier's feedback to refine and improve them. Experiments across five XAI techniques and datasets, using three families of open-weight LLMs, show that verification is crucial for filtering unreliable explanations while improving linguistic accessibility compared with raw XAI outputs. In addition, the analysis of the Entropy Production Rate (EPR) during the refinement process indicates that the Verifier's feedback progressively guides the Explainer toward more stable and coherent reasoning. Overall, the proposed framework provides an efficient pathway toward more trustworthy and democratized XAI systems.",
+        "authors": "Georgios Mermigkis, Dimitris Metaxakis, Marios Tyrovolas, Argiris Sofotasios, Nikolaos Avgeris, Panagiotis Hadjidoukas, Chrysostomos Stylios",
+        "url": "http://arxiv.org/abs/2604.12543v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12543v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了IDEA，一个可解释和可编辑的LLM决策框架，通过语言到数字的校准。它将LLM决策知识提取到可解释的参数模型中，并通过EM算法联合学习语言到数字的映射，并提供数学保证的参数编辑。这解决了LLM决策的校准、可解释性和专家知识整合的实际瓶颈，具有极高的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12452v1",
+        "title": "Latent-Condensed Transformer for Efficient Long Context Modeling",
+        "summary": "Large language models (LLMs) face significant challenges in processing long contexts due to the linear growth of the key-value (KV) cache and quadratic complexity of self-attention. Existing approaches address these bottlenecks separately: Multi-head Latent Attention (MLA) reduces the KV cache by projecting tokens into a low-dimensional latent space, while sparse attention reduces computation. However, sparse methods cannot operate natively on MLA's compressed latent structure, missing opportunities for joint optimization. In this paper, we propose Latent-Condensed Attention (LCA), which directly condenses context within MLA's latent space, where the representation is disentangled into semantic latent vectors and positional keys. LCA separately aggregates semantic vectors via query-aware pooling and preserves positional keys via anchor selection. This approach jointly reduces both computational cost and KV cache without adding parameters. Beyond MLA, LCA's design is architecture-agnostic and readily extends to other attention mechanisms such as GQA. Theoretically, we prove a length-independent error bound. Experiments show LCA achieves up to 2.5$\\times$ prefilling speedup and 90% KV cache reduction at 128K context while maintaining competitive performance.",
+        "authors": "Zeng You, Yaofo Chen, Qiuwu Chen, Ying Sun, Shuhai Zhang, Yingjian Li, Yaowei Wang, Mingkui Tan",
+        "url": "http://arxiv.org/abs/2604.12452v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12452v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Latent-Condensed Attention (LCA)，一种用于高效长上下文建模的潜在凝聚Transformer。它直接在MLA的潜在空间中凝聚上下文，通过查询感知池化聚合语义向量，并通过锚点选择保留位置键。该方法联合减少了计算成本和KV缓存，并提供了长度无关的误差界限，在理论严谨性和解决LLM长上下文瓶颈方面表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12437v1",
+        "title": "A Hybrid Architecture for Benign-Malignant Classification of Mammography ROIs",
+        "summary": "Accurate characterization of suspicious breast lesions in mammography is important for early diagnosis and treatment planning. While Convolutional Neural Networks (CNNs) are effective at extracting local visual patterns, they are less suited to modeling long-range dependencies. Vision Transformers (ViTs) address this limitation through self-attention, but their quadratic computational cost can be prohibitive. This paper presents a hybrid architecture that combines EfficientNetV2-M for local feature extraction with Vision Mamba, a State Space Model (SSM), for efficient global context modeling. The proposed model performs binary classification of abnormality-centered mammography regions of interest (ROIs) from the CBIS-DDSM dataset into benign and malignant classes. By combining a strong CNN backbone with a linear-complexity sequence model, the approach achieves strong lesion-level classification performance in an ROI-based setting.",
+        "authors": "Mohammed Asad, Mohit Bajpai, Sudhir Singh, Rahul Katarya",
+        "url": "http://arxiv.org/abs/2604.12437v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12437v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从贝叶斯角度研究了上下文学习（ICL）中延迟泛化（grokking）的认识不确定性作用。它发现当模型grokking时，认识不确定性急剧下降，并提供了简化的贝叶斯线性模型的理论支持，将grokking时间与不确定性动态和底层谱机制联系起来。这篇论文在理论严谨性和对ICL基础机制的深入理解方面具有极高的价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.12359v1",
+        "title": "Compiling Activation Steering into Weights via Null-Space Constraints for Stealthy Backdoors",
+        "summary": "Safety-aligned large language models (LLMs) are increasingly deployed in real-world pipelines, yet this deployment also enlarges the supply-chain attack surface: adversaries can distribute backdoored checkpoints that behave normally under standard evaluation but jailbreak when a hidden trigger is present. Recent post-hoc weight-editing methods offer an efficient approach to injecting such backdoors by directly modifying model weights to map a trigger to an attacker-specified response. However, existing methods typically optimize a token-level mapping that forces an affirmative prefix (e.g., ``Sure''), which does not guarantee sustained harmful output -- the model may begin with apparent agreement yet revert to safety-aligned refusal within a few decoding steps. We address this reliability gap by shifting the backdoor objective from surface tokens to internal representations. We extract a steering vector that captures the difference between compliant and refusal behaviors, and compile it into a persistent weight modification that activates only when the trigger is present. To preserve stealthiness and benign utility, we impose a null-space constraint so that the injected edit remains dormant on clean inputs. The method is efficient, requiring only a small set of examples and admitting a closed-form solution. Across multiple safety-aligned LLMs and jailbreak benchmarks, our method achieves high triggered attack success while maintaining non-triggered safety and general utility.",
+        "authors": "Rui Yin, Tianxu Han, Naen Xu, Changjiang Li, Ping He, Chunyi Zhou, Jun Wang, Zhihui Fu, Tianyu Du, Jinbao Li, Shouling Ji",
+        "url": "http://arxiv.org/abs/2604.12359v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.12359v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种通过零空间约束将激活引导编译到权重中的方法，用于隐蔽后门攻击安全对齐的LLM。它将后门目标从表面token转移到内部表示，提取引导向量并编译为持久性权重修改，同时施加零空间约束以保持隐蔽性。该方法在理论上具有严谨性（零空间约束），并解决了LLM安全性这一实际瓶颈，具有高度的创新性。"
+    }
+]

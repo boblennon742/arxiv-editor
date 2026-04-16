@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.14035v1",
+        "title": "First-See-Then-Design: A Multi-Stakeholder View for Optimal Performance-Fairness Trade-Offs",
+        "summary": "Fairness in algorithmic decision-making is often defined in the predictive space, where predictive performance - used as a proxy for decision-maker (DM) utility - is traded off against prediction-based fairness notions, such as demographic parity or equality of opportunity. This perspective, however, ignores how predictions translate into decisions and ultimately into utilities and welfare for both DM and decision subjects (DS), as well as their allocation across social-salient groups.   In this paper, we propose a multi-stakeholder framework for fair algorithmic decision-making grounded in welfare economics and distributive justice, explicitly modeling the utilities of both the DM and DS, and defining fairness via a social planner's utility that captures inequalities in DS utilities across groups under different justice-based fairness notions (e.g., Egalitarian, Rawlsian). We formulate fair decision-making as a post-hoc multi-objective optimization problem, characterizing the achievable performance-fairness trade-offs in the two-dimensional utility space of DM utility and the social planner's utility, under different decision policy classes (deterministic vs. stochastic, shared vs. group-specific). Using the proposed framework, we then identify conditions (in terms of the stakeholders' utilities) under which stochastic policies are more optimal than deterministic ones, and empirically demonstrate that simple stochastic policies can yield superior performance-fairness trade-offs by leveraging outcome uncertainty. Overall, we advocate a shift from prediction-centric fairness to a transparent, justice-based, multi-stakeholder approach that supports the collaborative design of decision-making policies.",
+        "authors": "Kavya Gupta, Nektarios Kalampalikis, Christoph Heitz, Isabel Valera",
+        "url": "http://arxiv.org/abs/2604.14035v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.14035v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个基于福利经济学和分配正义的多方利益相关者框架，用于公平的算法决策。它明确建模了决策者和决策主体效用，并通过社会规划者的效用定义了公平性。论文通过多目标优化问题表征了性能-公平权衡，并识别了随机策略优于确定性策略的条件。其严谨的理论基础（福利经济学、分配正义、多目标优化）和对因果逻辑的关注与您的偏好高度契合，尤其是在将严谨的数学逻辑应用于现代AI系统中的公平性问题上。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13992v1",
+        "title": "Physics-Informed Neural Networks for Methane Sorption: Cross-Gas Transfer Learning, Ensemble Collapse Under Physics Constraints, and Monte Carlo Dropout Uncertainty Quantification",
+        "summary": "Accurate methane sorption prediction across heterogeneous coal ranks requires models that combine thermodynamic consistency, efficient knowledge transfer across data-scarce geological systems, and calibrated uncertainty estimates, capabilities that are rarely addressed together in existing frameworks. We present a physics-informed transfer learning framework that adapts a hydrogen sorption PINN to methane sorption prediction via Elastic Weight Consolidation, coal-specific feature engineering, and a three-phase curriculum that progressively balances transfer preservation with thermodynamic fine-tuning. Trained on 993 equilibrium measurements from 114 independent coal experiments spanning lignite to anthracite, the framework achieves R2 = 0.932 on held-out coal samples, a 227% improvement over pressure-only classical isotherms, while hydrogen pre-training delivers 18.9% lower RMSE and 19.4% faster convergence than random initialization. Five Bayesian uncertainty quantification approaches reveal a systematic divergence in performance across physics-constrained architectures. Monte Carlo Dropout achieves well-calibrated uncertainty at minimal overhead, while deep ensembles, regardless of architectural diversity or initialization strategy, exhibit performance degradation because shared physics constraints narrow the admissible solution manifold. SHAP and ALE analyses confirm that learned representations remain physically interpretable and aligned with established coal sorption mechanisms: moisture-volatile interactions are most influential, pressure-temperature coupling captures thermodynamic co-dependence, and features exhibit non-monotonic effects. These results identify Monte Carlo Dropout as the best-performing UQ method in this physics-constrained transfer learning framework, and demonstrate cross-gas transfer learning as a data-efficient strategy for geological material modeling.",
+        "authors": "Mohammad Nooraiepour, Zezhang Song, Wei Li, Sarah Perez",
+        "url": "http://arxiv.org/abs/2604.13992v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13992v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将物理信息神经网络（PINN）与热力学一致性、跨气体迁移学习和贝叶斯不确定性量化相结合。它不仅提出了一个有效的预测框架，还深入分析了物理约束下集成模型性能下降的机制，并比较了不确定性量化方法。其对物理约束、不确定性量化和理论机制的探讨，完美体现了将严谨数学逻辑应用于现代AI系统的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13991v1",
+        "title": "Adaptive Conformal Prediction for Improving Factuality of Generations by Large Language Models",
+        "summary": "Large language models (LLMs) are prone to generating factually incorrect outputs. Recent work has applied conformal prediction to provide uncertainty estimates and statistical guarantees for the factuality of LLM generations. However, existing approaches are typically not prompt-adaptive, limiting their ability to capture input-dependent variability. As a result, they may filter out too few items (leading to over-coverage) or too many (under-coverage) for a given task or prompt. We propose an adaptive conformal prediction approach that extends conformal score transformation methods to LLMs, with applications to long-form generation and multiple-choice question answering. This enables prompt-dependent calibration, retaining marginal coverage guarantees while improving conditional coverage. In addition, the approach naturally supports selective prediction, allowing unreliable claims or answer choices to be filtered out in downstream applications. We evaluate our approach on multiple white-box models across diverse domains and show that it significantly outperforms existing baselines in terms of conditional coverage.",
+        "authors": "Aleksandr Rubashevskii, Dzianis Piatrashyn, Preslav Nakov, Maxim Panov",
+        "url": "http://arxiv.org/abs/2604.13991v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13991v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将共形预测（Conformal Prediction）这一具有强大统计保证的框架应用于大型语言模型（LLM）的生成事实性评估。它提出了自适应共形预测方法，在保持边际覆盖率保证的同时，提高了条件覆盖率，并支持选择性预测。共形预测的统计严谨性与LLM这一现代AI系统的结合，以及对统计保证的明确强调，使其成为高度推荐的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13973v1",
+        "title": "Improving Treatment Effect Estimation in Trials through Adaptive Borrowing of External Controls",
+        "summary": "Randomized controlled trials (RCTs) often suffer from limited inferential efficiency in estimating treatment effects due to their small sample sizes. In recent years, incorporating external controls (ECs) has gained increasing attention as an effective way to augment small RCTs and thereby enhance estimation efficiency. However, ECs are not always comparable to RCTs, and direct borrowing without careful evaluation can introduce substantial bias and, paradoxically, undermine the accuracy of treatment effect estimation. In this paper, we propose a novel adaptive influence-based sample borrowing framework to improve average treatment effect (ATE) estimation in RCTs. The framework quantifies the ``comparability'' of each sample in ECs using influence functions and identifies the optimal subset of ECs that minimizes the mean squared error of the ATE estimator. The proposed framework is assumption-lean regarding the distribution of ECs and is robust to outliers, making it broadly applicable across diverse settings. Moreover, we develop an outcome calibration method to improve the data utilization efficiency of ECs, further strengthening the adaptive influence-based sample-borrowing framework. We demonstrate the effectiveness of the proposed method using both simulated and real-world datasets.",
+        "authors": "Qinwei Yang, Jingyi Li, Peng Wu, Shu Yang",
+        "url": "http://arxiv.org/abs/2604.13973v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13973v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个新颖的自适应影响力函数（influence function）样本借用框架，用于改进随机对照试验（RCT）中的平均治疗效果（ATE）估计。它通过影响力函数量化外部对照样本的可比性，并优化子集以最小化ATE估计器的均方误差。其对因果推断、影响力函数和MSE最小化的严谨统计方法论，以及对假设的精简和对异常值的鲁棒性，都符合您对强大理论基础和清晰数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13944v1",
+        "title": "High-Dimensional Data Analysis for Elliptically Symmetric Distributions",
+        "summary": "High-dimensional data arise routinely in modern statistics, econometrics, finance, genomics, and machine learning. While a large body of existing methodology is developed under Gaussian or light-tailed assumptions, many real data sets exhibit heavy tails, heterogeneity, and departures from classical covariance-based models. This book provides a systematic treatment of high-dimensional data analysis under elliptically symmetric distributions, with an emphasis on robust inference based on spatial signs, spatial ranks, multivariate Kendall's tau matrices, and related shape-based methods.The book covers the basic theory of elliptical symmetry, high-dimensional location inference, estimation and testing for covariance and precision matrices, sphericity and proportionality testing, high-dimensional alpha testing in factor pricing models, change-point analysis, white-noise and independence testing, high-dimensional discriminant analysis, and dimension reduction through principal component analysis and factor models. Throughout, we review classical low-dimensional and high-dimensional benchmark methods and then develop robust alternatives tailored to elliptical models. Particular attention is paid to the interplay between sum-type, max-type, and adaptive procedures, as well as to the role of scatter, shape, and rank-based dependence measures in heavy-tailed settings. This book is intended as a unified overview of robust high-dimensional methods under elliptical symmetry and as a synthesis of the author's recent research contributions in this area. It is written for researchers and graduate students in statistics, econometrics, and related fields who are interested in modern high-dimensional inference beyond the Gaussian paradigm.",
+        "authors": "Long Feng",
+        "url": "http://arxiv.org/abs/2604.13944v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13944v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文是一本关于高维数据分析的系统性著作，专注于椭圆对称分布下的稳健推断。它涵盖了高维位置推断、协方差和精度矩阵的估计与检验、降维等多个核心统计学主题，并强调了基于空间符号、空间秩和多元Kendall's tau矩阵的方法。其作为纯理论统计学著作，提供了极其严谨的数学和统计推导，是您作为数理统计博士生不可多得的参考资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13890v1",
+        "title": "Sandpile Economics: Theory, Identification, and Evidence",
+        "summary": "Why do capitalist economies recurrently generate crises whose severity is disproportionate to the size of the triggering shock? This paper proposes a structural answer grounded in the evolutionary geometry of production networks. As economies evolve through specialization, integration, and competitive selection, their inter-sectoral linkages drift toward configurations of increasing geometric fragility, eventually crossing a threshold beyond which small disturbances generate disproportionately large cascades.   We introduce Sandpile Economics, a formal framework that interprets macroeconomic instability as an emergent property of disequilibrium production networks. The key state variable is the Forman--Ricci curvature of the input--output graph, capturing local substitution possibilities when supply chains are disrupted. We show that when curvature falls below an endogenous threshold, the distribution of cascade sizes follows a power law with tail index $α\\in (1,2)$, implying a regime of unbounded amplification.   The underlying mechanism is evolutionary: specialization reduces input substitutability, pushing the economy toward criticality, while crisis episodes induce endogenous network reconfiguration and path dependence. These dynamics are inherently non-ergodic and cannot be captured by representative-agent frameworks.   Empirically, using global input--output data, we document that production networks operate in persistently negative curvature regimes and that curvature robustly predicts medium-run output dynamics. A one-standard-deviation increase in curvature is associated with higher cumulative growth over three-year horizons, and curvature systematically outperforms standard network metrics in explaining cross-country differences in resilience.",
+        "authors": "Diego Vallarino",
+        "url": "http://arxiv.org/abs/2604.13890v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13890v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了“沙堆经济学”这一形式化框架，将宏观经济不稳定性解释为生产网络演化的涌现特性。它引入了Forman-Ricci曲率来捕捉供应链中断时的替代可能性，并证明了在特定条件下，级联规模分布遵循幂律。其将复杂的数学概念（如Ricci曲率、幂律）应用于经济学这一复杂系统，构建了严谨的理论框架，展现了强大的数学逻辑应用能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13871v1",
+        "title": "Hardware-Efficient Neuro-Symbolic Networks with the Exp-Minus-Log Operator",
+        "summary": "Deep neural networks (DNNs) deliver state-of-the-art accuracy on regression and classification tasks, yet two structural deficits persistently obstruct their deployment in safety-critical, resource-constrained settings: (i) opacity of the learned function, which precludes formal verification, and (ii) reliance on heterogeneous, library-bound activation functions that inflate latency and silicon area on edge hardware. The recently introduced Exp-Minus-Log (EML) Sheffer operator, eml(x, y) = exp(x) - ln(y), was shown by Odrzywolek (2026) to be sufficient - together with the constant 1 - to express every standard elementary function as a binary tree of identical nodes. We propose to embed EML primitives inside conventional DNN architectures, yielding a hybrid DNN-EML model in which the trunk learns distributed representations and the head is a depth-bounded, weight-sparse EML tree whose snapped weights collapse to closed-form symbolic sub-expressions. We derive the forward equations, prove computational-cost bounds, analyse inference and training acceleration relative to multilayer perceptrons (MLPs) and physics-informed neural networks (PINNs), and quantify the trade-offs for FPGA/analog deployment. We argue that the DNN-EML pairing closes a literature gap: prior neuro-symbolic and equation-learner approaches (EQL, KAN, AI-Feynman) work with heterogeneous primitive sets and do not exploit a single hardware-realisable Sheffer element. A balanced assessment shows that EML is unlikely to accelerate training, and on commodity CPU/GPU it is also unlikely to accelerate inference; however, on a custom EML cell (FPGA logic block or analog circuit) the asymptotic latency advantage can reach an order of magnitude with simultaneous gain in interpretability and formal-verification tractability.",
+        "authors": "Eymen Ipek",
+        "url": "http://arxiv.org/abs/2604.13871v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13871v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于Exp-Minus-Log (EML) Sheffer算子的硬件高效神经符号网络。它证明了EML算子足以表达所有标准基本函数，并推导了前向方程、计算成本界限，并分析了其在FPGA/模拟部署中的潜在优势。其对新数学算子的理论性质（如普适性、计算复杂度）的严谨数学推导，以及在神经符号AI系统中的应用潜力，与您的研究兴趣高度吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13705v1",
+        "title": "Beyond Arrow's Impossibility: Fairness as an Emergent Property of Multi-Agent Collaboration",
+        "summary": "Fairness in language models is typically studied as a property of a single, centrally optimized model. As large language models become increasingly agentic, we propose that fairness emerges through interaction and exchange. We study this via a controlled hospital triage framework in which two agents negotiate over three structured debate rounds. One agent is aligned to a specific ethical framework via retrieval-augmented generation (RAG), while the other is either unaligned or adversarially prompted to favor demographic groups over clinical need. We find that alignment systematically shapes negotiation strategies and allocation patterns, and that neither agent's allocation is ethically adequate in isolation, yet their joint final allocation can satisfy fairness criteria that neither would have reached alone. Aligned agents partially moderate bias through contestation rather than override, acting as corrective patches that restore access for marginalized groups without fully converting a biased counterpart. We further observe that even explicitly aligned agents exhibit intrinsic biases toward certain frameworks, consistent with known left-leaning tendencies in LLMs. We connect these limits to Arrow's Impossibility Theorem: no aggregation mechanism can simultaneously satisfy all desiderata of collective rationality, and multi-agent deliberation navigates rather than resolves this constraint. Our results reposition fairness as an emergent, procedural property of decentralized agent interaction, and the system rather than the individual agent as the appropriate unit of evaluation.",
+        "authors": "Sayan Kumar Chaki, Antoine Gourru, Julien Velcin",
+        "url": "http://arxiv.org/abs/2604.13705v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13705v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过多智能体协作的视角重新审视了语言模型中的公平性问题，并将其与阿罗不可能定理（Arrow's Impossibility Theorem）联系起来。它将公平性视为去中心化智能体交互的涌现属性，而非单一模型的中心优化结果。其对社会选择理论中核心定理的引用和应用，以及对多智能体AI系统中公平性这一复杂概念的理论化，展现了强大的因果逻辑和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13610v1",
+        "title": "What Are We Really Measuring? Rethinking Dataset Bias in Web-Scale Natural Image Collections via Unsupervised Semantic Clustering",
+        "summary": "In computer vision, a prevailing method for quantifying dataset bias is to train a model to distinguish between datasets. High classification accuracy is then interpreted as evidence of meaningful semantic differences. This approach assumes that standard image augmentations successfully suppress low-level, non-semantic cues, and that any remaining performance must therefore reflect true semantic divergence. We demonstrate that this fundamental assumption is flawed within the domain of large-scale natural image collections. High classification accuracy is often driven by resolution-based artifacts, which are structural fingerprints arising from native image resolution distributions and interpolation effects during resizing. These artifacts form robust, dataset-specific signatures that persist despite conventional image corruptions. Through controlled experiments, we show that models achieve strong dataset classification even on non-semantic, procedurally generated images, proving their reliance on superficial cues. To address this issue, we revisit this decades-old idea of dataset separability, but not with supervised classification. Instead, we introduce an unsupervised approach that measures true semantic separability. Our framework directly assesses semantic similarity by clustering semantically-rich features from foundational vision models, deliberately bypassing supervised classification on dataset labels. When applied to major web-scale datasets, the primary focus of this work, the high separability reported by supervised methods largely vanishes, with clustering accuracy dropping to near-chance levels. This reveals that conventional classification-based evaluation systematically overstates semantic bias by an overwhelming margin.",
+        "authors": "Amir Hossein Saleknia, Mohammad Sabokrou",
+        "url": "http://arxiv.org/abs/2604.13610v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13610v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文对计算机视觉中量化数据集偏差的传统方法进行了批判性反思，指出其可能被分辨率伪影而非语义差异所驱动。它提出了一种无监督语义聚类方法来更准确地衡量语义可分离性。虽然不是纯粹的数学推导，但其对现有方法论的严谨批判、对测量偏差的深入分析以及提出更具统计合理性的评估框架，体现了强大的理论严谨性和批判性思维。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13563v1",
+        "title": "Covariance-Informed Subspace: an Adaptive Gradient-Free Input Dimension Reduction Method for Bayesian Inference",
+        "summary": "This paper addresses the challenge of dimension reduction (DR) in Bayesian inference of high-resolution two-or three-dimensional fields, where a priori parametrizations require a large number of terms. The underlying idea is common to state-of-the-art methods in which the parameter space is decomposed into two subspaces, one informed by the likelihood and one constrained by the prior. DR techniques generally use gradient information from the log-likelihood to derive the corresponding subspaces. However, the gradient may be unavailable or expensive to compute accurately, for instance in the case of simulation-based inference. Inspired by approaches based on likelihood-informed subspaces, we develop a new DR method tailored for settings where gradient computation is not feasible. More specifically, we propose a gradient-free indicator for determining whether a direction is informed by the data. This indicator is derived from the posterior-to-prior covariance ratio introduced in Spantini et al. (2015). We show that, in the linear Gaussian case, this indicator combined with an approximate likelihood leads to a better posterior approximation. The method is then extended to nonlinear cases, and strategies to approximate the posterior covariance are detailed. We demonstrate the effectiveness of this DR through two high-dimensional inference problems arising from groundwater and atmospheric applications.",
+        "authors": "Nadège Polette, Olivier Le Maître, Pierre Sochala, Alexandrine Gesret",
+        "url": "http://arxiv.org/abs/2604.13563v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13563v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种用于贝叶斯推断的自适应无梯度输入降维方法。该方法基于后验-先验协方差比率，并提供了在线性高斯情况下的理论证明，以及向非线性情况的扩展策略。其对贝叶斯推断、降维、协方差分析等核心统计学概念的深入探讨和数学推导，使其成为一篇高度相关的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13546v1",
+        "title": "Learning Inference Concurrency in DynamicGate MLP Structural and Mathematical Justification",
+        "summary": "Conventional neural networks strictly separate learning and inference because if parameters are updated during inference, outputs become unstable and even the inference function itself is not well defined [1, 2, 3]. This paper shows that DynamicGate MLP structurally permits learning inference concurrency [4, 5]. The key idea is to separate routing (gating) parameters from representation (prediction) parameters, so that the gate can be adapted online while inference stability is preserved, or weights can be selectively updated only within the inactive subspace [4, 5, 6, 7]. We mathematically formalize sufficient conditions for concurrency and show that even under asynchronous or partial updates, the inference output at each time step can always be interpreted as a forward computation of a valid model snapshot [8, 9, 10]. This suggests that DynamicGate MLP can serve as a practical foundation for online adaptive and on device learning systems [11, 12].",
+        "authors": "Yongil Choi",
+        "url": "http://arxiv.org/abs/2604.13546v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13546v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从结构和数学上论证了DynamicGate MLP允许学习推理并发性，这与传统神经网络的学习与推理分离范式不同。它数学形式化了并发性的充分条件，并证明了即使在异步或部分更新下，推理输出仍可被解释为有效模型快照的前向计算。其对神经网络核心机制的数学严谨性分析和理论证明，与您将严谨数学逻辑应用于现代AI系统的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13414v1",
+        "title": "Minimax Optimality and Spectral Routing for Majority-Vote Ensembles under Markov Dependence",
+        "summary": "Majority-vote ensembles achieve variance reduction by averaging over diverse, approximately independent base learners. When training data exhibits Markov dependence, as in time-series forecasting, reinforcement learning (RL) replay buffers, and spatial grids, this classical guarantee degrades in ways that existing theory does not fully quantify. We provide a minimax characterization of this phenomenon for discrete classification in a fixed-dimensional Markov setting, together with an adaptive algorithm that matches the rate on a graph-regular subclass. We first establish an information-theoretic lower bound for stationary, reversible, geometrically ergodic chains in fixed ambient dimension, showing that no measurable estimator can achieve excess classification risk better than $Ω(\\sqrt{\\Tmix/n})$. We then prove that, on the AR(1) witness subclass underlying the lower-bound construction, dependence-agnostic uniform bagging is provably suboptimal with excess risk bounded below by $Ω(\\Tmix/\\sqrt{n})$, exhibiting a $\\sqrt{\\Tmix}$ algorithmic gap. Finally, we propose \\emph{adaptive spectral routing}, which partitions the training data via the empirical Fiedler eigenvector of a dependency graph and achieves the minimax rate $\\mathcal{O}(\\sqrt{\\Tmix/n})$ up to a lower-order geometric cut term on a graph-regular subclass, without knowledge of $\\Tmix$. Experiments on synthetic Markov chains, 2D spatial grids, the 128-dataset UCR archive, and Atari DQN ensembles validate the theoretical predictions. Consequences for deep RL target variance, scalability via Nyström approximation, and bounded non-stationarity are developed as supporting material in the appendix.",
+        "authors": "Ibne Farabi Shihab, Sanjeda Akter, Anuj Sharma",
+        "url": "http://arxiv.org/abs/2604.13414v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13414v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对马尔可夫依赖下多数投票集成学习的性能进行了极小极大（minimax）刻画，并建立了信息论下界。它证明了现有方法的次优性，并提出了一种自适应谱路由算法，能够达到极小极大率。其对极小极大最优性、信息论、马尔可夫链等概念的深入数学分析和理论证明，是数理统计和理论机器学习领域的典范，与您的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13410v1",
+        "title": "Estimating Continuous Treatment Effects with Two-Stage Kernel Ridge Regression",
+        "summary": "We study the problem of estimating the effect function for a continuous treatment, which maps each treatment value to a population-averaged outcome. A central challenge in this setting is confounding: treatment assignment often depends on covariates, creating selection bias that makes direct regression of the response on treatment unreliable. To address this issue, we propose a two-stage kernel ridge regression method. In the first stage, we learn a model for the response as a function of both treatment and covariates; in the second stage, we use this model to construct pseudo-outcomes that correct for distribution shift, and then fit a second model to estimate the treatment effect. Although the response varies with both treatment and covariates, the induced effect function obtained by averaging over covariates is typically much simpler, and our estimator adapts to this structure. Furthermore, we introduce a fully data-driven model selection procedure that achieves provable adaptivity to both the unknown degree of overlap and the regularity (eigenvalue decay) of the underlying kernel.",
+        "authors": "Seok-Jin Kim, Kaizheng Wang",
+        "url": "http://arxiv.org/abs/2604.13410v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13410v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了连续治疗效果函数估计问题，提出了两阶段核岭回归方法来解决混杂和选择偏差。它构建了校正分布偏移的伪结果，并引入了数据驱动的模型选择过程，实现了对未知重叠度和核函数正则性的可证明自适应性。其对因果推断、统计估计和可证明自适应性的严谨数学推导，是统计学核心理论的体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13406v1",
+        "title": "Leveraging machine learning to estimate individualized treatment effects in cluster-randomized trials",
+        "summary": "Cluster-randomized trials (CRTs) are widely used to evaluate interventions delivered at the clinic, practice, or community level. Although standard analyses typically target average treatment effects, such summaries mask potentially meaningful variation in treatment response across individuals and clusters. This work addresses the estimation of conditional average treatment effects (CATEs) for continuous outcomes in two-arm parallel CRTs by defining causal estimands that incorporate both individual- and cluster-level baseline covariates while marginalizing over unobserved cluster heterogeneity. To estimate these quantities, we develop a unified framework based on mixed-effects machine learning, integrating and extending a range of existing approaches, including Bayesian additive regression trees with random effects, multilevel Bayesian causal forests, mixed-effects random forests, several mixed-effects gradient boosting procedures, and generalized additive mixed models, while incorporating cluster-specific random intercepts to account for within-cluster dependence. We evaluate these methods across diverse simulation scenarios and demonstrate their use in the Task Shifting and Blood Pressure Control in Ghana CRT, which investigates strategies for improving hypertension management. Drawing on these investigations, we provide practical guidance for applying mixed-effects machine learning to quantify treatment-effect heterogeneity in CRTs, together with reproducible code that enables investigators to implement all methods within a coherent workflow.",
+        "authors": "Changjun Li, Xi Fang, Michael O. Harhay, Andrew B. Forbes, F. Perry Wilson, Guangyu Tong, Fan Li",
+        "url": "http://arxiv.org/abs/2604.13406v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13406v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对聚类随机对照试验（CRTs）中的个体化治疗效果（CATEs）估计问题，提出了一个基于混合效应机器学习的统一框架。它定义了新的因果可估计量，并整合和扩展了多种现有方法以处理聚类内部依赖性。其对因果推断、统计保证和混合效应模型的严谨处理，以及在实际临床试验中的应用，与您对因果逻辑和统计保证的追求高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.13398v1",
+        "title": "From Prediction to Justification: Aligning Sentiment Reasoning with Human Rationale via Reinforcement Learning",
+        "summary": "While Aspect-based Sentiment Analysis (ABSA) systems have achieved high accuracy in identifying sentiment polarities, they often operate as \"black boxes,\" lacking the explicit reasoning capabilities characteristic of human affective cognition. Humans do not merely categorize sentiment; they construct causal explanations for their judgments. To bridge this gap, we propose ABSA-R1, a large language model framework designed to mimic this ``reason-before-predict\" cognitive process. By leveraging reinforcement learning (RL), ABSA-R1 learns to articulate the why behind the what, generating natural language justifications that ground its sentiment predictions. We introduce a Cognition-Aligned Reward Model (formerly sentiment-aware reward model) that enforces consistency between the generated reasoning path and the final emotional label. Furthermore, inspired by metacognitive monitoring, we implement a performance-driven rejection sampling strategy that selectively targets hard cases where the model's internal reasoning is uncertain or inconsistent. Experimental results on four benchmarks demonstrate that equipping models with this explicit reasoning capability not only enhances interpretability but also yields superior performance in sentiment classification and triplet extraction compared to non-reasoning baselines.",
+        "authors": "Shihao Zhang, Ziwei Wang, Jie Zhou, Yulan Wu, Qin Chen, Zhikai Lei, Liyang Yu, Liang Dou, Liang He",
+        "url": "http://arxiv.org/abs/2604.13398v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.13398v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "论文提出了一个新颖的方法，利用共形预测（Conformal Prediction）为大型推理模型（LRM）的推理-答案结构提供具有统计保证的不确定性量化。它还开发了一个基于Shapley值的解释框架，能够识别可证明充分的训练样本子集及其关键推理步骤以保留保证。其对共形预测这一统计学工具的深入应用、对统计保证的强调以及对AI模型可解释性的理论化，使其成为与您研究方向完美契合的论文。"
+    }
+]

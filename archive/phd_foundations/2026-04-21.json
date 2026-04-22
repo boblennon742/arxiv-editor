@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.19740v1",
+        "title": "Generalization at the Edge of Stability",
+        "summary": "Training modern neural networks often relies on large learning rates, operating at the edge of stability, where the optimization dynamics exhibit oscillatory and chaotic behavior. Empirically, this regime often yields improved generalization performance, yet the underlying mechanism remains poorly understood. In this work, we represent stochastic optimizers as random dynamical systems, which often converge to a fractal attractor set (rather than a point) with a smaller intrinsic dimension. Building on this connection and inspired by Lyapunov dimension theory, we introduce a novel notion of dimension, coined the `sharpness dimension', and prove a generalization bound based on this dimension. Our results show that generalization in the chaotic regime depends on the complete Hessian spectrum and the structure of its partial determinants, highlighting a complexity that cannot be captured by the trace or spectral norm considered in prior work. Experiments across various MLPs and transformers validate our theory while also providing new insights into the recently observed phenomenon of grokking.",
+        "authors": "Mario Tuci, Caner Korkmaz, Umut Şimşekli, Tolga Birdal",
+        "url": "http://arxiv.org/abs/2604.19740v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19740v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“sharpness dimension”并基于此证明了泛化界限，深入探讨了优化动力学在稳定性边缘的混沌行为与泛化性能之间的机制。其理论基础强大，涉及Lyapunov维度理论、Hessian谱和偏行列式，具有严谨的数学推导和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19560v1",
+        "title": "Separating Geometry from Probability in the Analysis of Generalization",
+        "summary": "The goal of machine learning is to find models that minimize prediction error on data that has not yet been seen. Its operational paradigm assumes access to a dataset $S$ and articulates a scheme for evaluating how well a given model performs on an arbitrary sample. The sample can be $S$ (in which case we speak of ``in-sample'' performance) or some entirely new $S'$ (in which case we speak of ``out-of-sample'' performance). Traditional analysis of generalization assumes that both in- and out-of-sample data are i.i.d.\\ draws from an infinite population. However, these probabilistic assumptions cannot be verified even in principle. This paper presents an alternative view of generalization through the lens of sensitivity analysis of solutions of optimization problems to perturbations in the problem data. Under this framework, generalization bounds are obtained by purely deterministic means and take the form of variational principles that relate in-sample and out-of-sample evaluations through an error term that quantifies how close out-of-sample data are to in-sample data. Statistical assumptions can then be used \\textit{ex post} to characterize the situations when this error term is small (either on average or with high probability).",
+        "authors": "Maxim Raginsky, Benjamin Recht",
+        "url": "http://arxiv.org/abs/2604.19560v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19560v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种通过优化问题对数据扰动的敏感性分析来理解泛化能力的新视角，以纯粹确定性的方式推导泛化界限，并将统计假设作为事后解释。这种将几何与概率分离的分析方法，理论基础极其严谨，符合您对数学逻辑和清晰推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19493v1",
+        "title": "A Nonparametric Goodness-of-Fit Test for High-Dimensional Generalized Gaussian Distributions via Nearest-Neighbor Graphs",
+        "summary": "The multivariate generalised Gaussian distribution (MGGD) is commonly used to model high-dimensional vectors with non-Gaussian radial behaviour, ranging from sharp-peaked to heavy-tailed profiles. However, because many classical multivariate tests are based on covariance inversion or high-dimensional density estimation, formal goodness-of-fit assessment for MGGD models remains challenging in modern regimes where the dimension is comparable to or exceeds the sample size. We introduce an affine-invariant, fully non-parametric goodness-of-fit procedure based on the nearest neighbour (NN) graph topology and the adapted zero principle. Following robust standardisation, we construct an independent reference sample from the adapted standardised MGGD and measure, on the combined NN graph, the cross-edge count to assess how well the observed and reference point clouds exhibit the mixture behaviour anticipated by the model. Calibration performed using a refitted parametric bootstrap accounts for nuisance-parameter uncertainty, thus ensuring reliable size under a composite specification. In this paper, we establish asymptotic validity under high-dimensional scaling and demonstrate consistency with respect to fixed elliptical departures, providing a geometric interpretation based on radial concentration and shell separation. Our simulation studies across a broad spectrum of dimensions and tail shapes reveal accurate Type I error control and robust power relative to heavy- and light-tailed alternatives, thus improving upon energy-distance benchmarks and normality-oriented graphical tests in contexts where MGGD modelling is most applicable.",
+        "authors": "Mehmet Sıddık Çadırcı, Yener Ünal",
+        "url": "http://arxiv.org/abs/2604.19493v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19493v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于最近邻图拓扑和零原理的非参数高维广义高斯分布拟合优度检验方法。它建立了在高维尺度下的渐近有效性和对固定椭圆偏离的一致性，并提供了几何解释，具有扎实的统计理论和数学保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19431v1",
+        "title": "Counting Worlds Branching Time Semantics for post-hoc Bias Mitigation in generative AI",
+        "summary": "Generative AI systems are known to amplify biases present in their training data. While several inference-time mitigation strategies have been proposed, they remain largely empirical and lack formal guarantees. In this paper we introduce CTLF, a branching-time logic designed to reason about bias in series of generative AI outputs. CTLF adopts a counting worlds semantics where each world represents a possible output at a given step in the generation process and introduces modal operators that allow us to verify whether the current output series respects an intended probability distribution over a protected attribute, to predict the likelihood of remaining within acceptable bounds as new outputs are generated, and to determine how many outputs are needed to remove in order to restore fairness. We illustrate the framework on a toy example of biased image generation, showing how CTLF formulas can express concrete fairness properties at different points in the output series.",
+        "authors": "Alessandro G. Buda, Giuseppe Primiero, Leonardo Ceragioli, Melissa Antonelli",
+        "url": "http://arxiv.org/abs/2604.19431v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19431v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了一种分支时间逻辑CTLF，用于对生成式AI输出序列中的偏差进行形式化推理。它采用“计数世界语义”并提供形式化保证，其理论严谨性极高，是形式逻辑应用于AI公平性的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19381v1",
+        "title": "Sharp recovery and landscape guarantees for the nonconvex matrix LASSO",
+        "summary": "Low-rank matrix recovery can be solved to statistical optimality by convex matrix optimization under the classical assumption of restricted isometry property (RIP). However, for large problems, the convex formulation is commonly replaced by a smooth rank-constrained factored nonconvex problem for which algorithmic theory typically only guarantees convergence to second-order critical points. In this paper, we develop a sharp and statistically optimal theory for second-order critical points of the factored nonconvex matrix LASSO (nuclear-norm--regularized least-squares estimator) under RIP with particular emphasis on the overparametrized regime where the search rank $r$ exceeds the ground-truth rank $r_*$. Our recovery error bounds reveal the precise role of nuclear norm regularization, interpolating between the classical convex rate and known rates for the unregularized nonconvex problem. Complementing this positive result, we give examples showing that, contrary to popular belief, rank overparametrization does not always improve the optimization landscape even under RIP. This negative result raises questions about the fundamental statistical recovery capability of rank-constrained nonconvex approaches in comparison to convex approaches which have worse computational scaling. All of our results generalize to arbitrary convex functions with nuclear-norm regularization under restricted strong convexity and smoothness. In particular, we give sharp conditions under which second-order critical points of the nonconvex problem either (1) approximately recover low-rank approximate minima of the convex problem or (2) exactly recover a low-rank global optimum if one exists.",
+        "authors": "Andrew D. McRae, Richard Y. Zhang",
+        "url": "http://arxiv.org/abs/2604.19381v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19381v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对非凸矩阵LASSO问题，在受限等距性质（RIP）下，特别是过参数化情况下，发展了关于二阶临界点的精确且统计最优的理论。它提供了恢复误差界限和优化景观分析，数学推导清晰严谨，是优化收敛性研究的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19350v1",
+        "title": "Attend what matters: Leveraging vision foundational models for breast cancer classification using mammograms",
+        "summary": "Vision Transformers $(\\texttt{ViT})$ have become the architecture of choice for many computer vision tasks, yet their performance in computer-aided diagnostics remains limited. Focusing on breast cancer detection from mammograms, we identify two main causes for this shortfall. First, medical images are high-resolution with small abnormalities, leading to an excessive number of tokens and making it difficult for the softmax-based attention to localize and attend to relevant regions. Second, medical image classification is inherently fine-grained, with low inter-class and high intra-class variability, where standard cross-entropy training is insufficient. To overcome these challenges, we propose a framework with three key components: (1) Region of interest $(\\texttt{RoI})$ based token reduction using an object detection model to guide attention; (2) contrastive learning between selected $\\texttt{RoI}$ to enhance fine-grained discrimination through hard-negative based training; and (3) a $\\texttt{DINOv2}$ pretrained $\\texttt{ViT}$ that captures localization-aware, fine-grained features instead of global $\\texttt{CLIP}$ representations. Experiments on public mammography datasets demonstrate that our method achieves superior performance over existing baselines, establishing its effectiveness and potential clinical utility for large-scale breast cancer screening. Our code is available for reproducibility here: https://aih-iitd.github.io/publications/attend-what-matters",
+        "authors": "Samyak Sanghvi, Piyush Miglani, Sarvesh Shashikumar, Kaustubh R Borgavi, Veenu Singla, Chetan Arora",
+        "url": "http://arxiv.org/abs/2604.19350v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19350v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文探讨了随机干预在寻找最优治疗分布以最大化预期潜在结果方面的应用，旨在提供一种新颖的治疗效果总结。其核心概念如“随机干预”和“预期潜在结果”表明了强大的因果推断和统计学理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19212v1",
+        "title": "The Logical Expressiveness of Topological Neural Networks",
+        "summary": "Graph neural networks (GNNs) are the standard for learning on graphs, yet they have limited expressive power, often expressed in terms of the Weisfeiler-Leman (WL) hierarchy or within the framework of first-order logic. In this context, topological neural networks (TNNs) have recently emerged as a promising alternative for graph representation learning. By incorporating higher-order relational structures into message-passing schemes, TNNs offer higher representational power than traditional GNNs. However, a fundamental question remains open: what is the logical expressiveness of TNNs? Answering this allows us to characterize precisely which binary classifiers TNNs can represent. In this paper, we address this question by analyzing isomorphism tests derived from the underlying mechanisms of general TNNs. We introduce and investigate the power of higher-order variants of WL-based tests for combinatorial complexes, called $k$-CCWL test. In addition, we introduce the topological counting logic (TC$_k$), an extension of standard counting logic featuring a novel pairwise counting quantifier $ \\exists^{N}(x_i,x_j)\\, \\varphi(x_i,x_j), $ which explicitly quantifies pairs $(x_i, x_j)$ satisfying property $\\varphi$. We rigorously prove the exact equivalence: $ \\text{k-CCWL} \\equiv \\text{TC}_{k{+}2} \\equiv \\text{Topological }(k{+}2)\\text{-pebble game}.$ These results establish a logical expressiveness theory for TNNs.",
+        "authors": "Amirreza Akbari, Amauri H. Souza, Vikas Garg",
+        "url": "http://arxiv.org/abs/2604.19212v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19212v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入分析了拓扑神经网络（TNNs）的逻辑表达能力，引入并研究了高阶WL测试和拓扑计数逻辑，并严格证明了它们之间的精确等价性。这为TNNs建立了坚实的理论基础，是您关注的“严谨的数学逻辑”的完美体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19186v1",
+        "title": "Inductive Subgraphs as Shortcuts: Causal Disentanglement for Heterophilic Graph Learning",
+        "summary": "Heterophily is a prevalent property of real-world graphs and is well known to impair the performance of homophilic Graph Neural Networks (GNNs). Prior work has attempted to adapt GNNs to heterophilic graphs through non-local neighbor extension or architecture refinement. However, the fundamental reasons behind misclassifications remain poorly understood. In this work, we take a novel perspective by examining recurring inductive subgraphs, empirically and theoretically showing that they act as spurious shortcuts that mislead GNNs and reinforce non-causal correlations in heterophilic graphs. To address this, we adopt a causal inference perspective to analyze and correct the biased learning behavior induced by shortcut inductive subgraphs. We propose a debiased causal graph that explicitly blocks confounding and spillover paths responsible for these shortcuts. Guided by this causal graph, we introduce Causal Disentangled GNN (CD-GNN), a principled framework that disentangles spurious inductive subgraphs from true causal subgraphs by explicitly blocking non-causal paths. By focusing on genuine causal signals, CD-GNN substantially improves the robustness and accuracy of node classification in heterophilic graphs. Extensive experiments on real-world datasets not only validate our theoretical findings but also demonstrate that our proposed CD-GNN outperforms state-of-the-art heterophily-aware baselines.",
+        "authors": "Xiangmeng Wang, Qian Li, Haiyang Xia, Hao Miao, Qing Li, Guandong Xu",
+        "url": "http://arxiv.org/abs/2604.19186v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19186v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文采用因果推断视角，分析并纠正异质图神经网络中归纳子图作为虚假捷径导致的偏差学习行为。它提出了去偏因果图和因果解耦GNN，通过明确阻断非因果路径，具有强大的因果逻辑和理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19165v1",
+        "title": "Analytical Extraction of Conditional Sobol' Indices via Basis Decomposition of Polynomial Chaos Expansions",
+        "summary": "In uncertainty quantification, evaluating sensitivity measures under specific conditions (i.e., conditional Sobol' indices) is essential for systems with parameterized responses, such as spatial fields or varying operating conditions. Traditional approaches often rely on point-wise modeling, which is computationally expensive and may lack consistency across the parameter space. This paper demonstrates that for a pre-trained global Polynomial Chaos Expansion (PCE) model, the analytical conditional Sobol' indices are inherently embedded within its basis functions. By leveraging the tensor-product property of PCE bases, we reformulate the global expansion into a set of analytical coefficient fields that depend on the conditioning variables. Based on the preservation of orthogonality under conditional probability measures, we derive closed-form expressions for conditional variances and Sobol' indices. This framework bypasses the need for repetitive modeling or additional sampling, transforming conditional sensitivity analysis into a purely algebraic post-processing step. Numerical benchmarks indicate that the proposed method ensures physical coherence and offers superior numerical robustness and computational efficiency compared to conventional point-wise approaches.",
+        "authors": "Shijie Zhong, Jiangfeng Fu",
+        "url": "http://arxiv.org/abs/2604.19165v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19165v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文证明了条件Sobol'指数内嵌于多项式混沌展开（PCE）的基函数中，并推导了条件方差和Sobol'指数的闭式表达式。它将条件敏感性分析转化为纯代数后处理步骤，具有严谨的数学推导和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19150v1",
+        "title": "The General Formulation of Loss-Based Priors for Parameter Spaces",
+        "summary": "Loss-based priors assign probability mass to parameter values according to the inferential loss incurred when they are excluded from the parameter space, and provide a general solution for discrete parameters. Extending this idea to continuous settings is challenging, as the exclusion of a single point induces no loss. We propose a neighbourhood-exclusion framework in which inferential loss is defined by removing a local region around each parameter value. Under standard regularity conditions, this yields a class of prior distributions driven by the local geometry of the Kullback--Leibler divergence. In one dimension, the resulting prior coincides with Jeffreys' prior, while in higher dimensions it leads to a family of priors indexed by the geometry of the exclusion region. The proposed formulation provides a unified extension of loss-based priors and offers a geometric interpretation of objective prior construction beyond isotropic settings.",
+        "authors": "Cristiano Villa",
+        "url": "http://arxiv.org/abs/2604.19150v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19150v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个用于连续参数空间的基于损失的先验的“邻域排除框架”，其先验分布由Kullback-Leibler散度的局部几何驱动，并与Jeffreys先验相关联。它提供了客观先验构造的几何解释，理论严谨且具有深刻的数学洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19066v1",
+        "title": "Age-Dependent Heterogeneity in the Association Between Physical Activity and Mental Distress: A Causal Machine Learning Analysis of 3.2 Million U.S. Adults",
+        "summary": "Physical activity (PA) is widely recognized as protective against mental distress, yet whether this benefit varies systematically across population subgroups remains poorly understood. Using pooled data from ten consecutive annual waves of the U.S. Behavioral Risk Factor Surveillance System (2015-2024; n = 3,242,218), we investigate heterogeneity in the association between leisure-time PA and frequent mental distress (FMD, >=14 days/month) across age groups. Survey-weighted logistic regression reveals a striking age gradient: the adjusted odds ratio for PA ranges from 0.89 among young adults (18-24) to 0.50 among adults aged 55-64, with the protective association strengthening monotonically with age. Temporal analysis across all ten years shows that the young-adult PA effect has been eroding over the past decade, with the 18-24 OR reaching 1.01 (null) in both 2018 and 2024 -- paralleling the deepening youth mental health crisis. Causal Forest via Double Machine Learning independently identifies age as the dominant driver of treatment effect heterogeneity (feature importance = 0.39, 2.5x the next predictor). E-value sensitivity analysis, propensity score overlap checks, placebo tests, and imputation comparisons confirm the robustness of the findings. These results suggest that the well-documented exercise--mental health link may not generalize to the youngest adult population, whose distress appears increasingly driven by stressors that PA alone cannot mitigate.",
+        "authors": "Yuan Shan",
+        "url": "http://arxiv.org/abs/2604.19066v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19066v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了基于双层优化的半监督元加性模型（S$^2$MAM），用于鲁棒估计和变量选择，并提供了计算收敛性和统计泛化界限的理论保证。这篇论文具有强大的统计保证和清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.19072v1",
+        "title": "S2MAM: Semi-supervised Meta Additive Model for Robust Estimation and Variable Selection",
+        "summary": "Semi-supervised learning with manifold regularization is a classical framework for jointly learning from both labeled and unlabeled data, where the key requirement is that the support of the unknown marginal distribution has the geometric structure of a Riemannian manifold. Typically, the Laplace-Beltrami operator-based manifold regularization can be approximated empirically by the Laplacian regularization associated with the entire training data and its corresponding graph Laplacian matrix. However, the graph Laplacian matrix depends heavily on the prespecified similarity metric and may lead to inappropriate penalties when dealing with redundant or noisy input variables. To address the above issues, this paper proposes a new \\textit{Semi-Supervised Meta Additive Model (S$^2$MAM) based on a bilevel optimization scheme that automatically identifies informative variables, updates the similarity matrix, and simultaneously achieves interpretable predictions. Theoretical guarantees are provided for S$^2$MAM, including the computing convergence and the statistical generalization bound. Experimental assessments across 4 synthetic and 12 real-world datasets, with varying levels and categories of corruption, validate the robustness and interpretability of the proposed approach.",
+        "authors": "Xuelin Zhang, Hong Chen, Yingjie Wang, Tieliang Gong, Bin Gu",
+        "url": "http://arxiv.org/abs/2604.19072v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.19072v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文利用因果机器学习方法（Causal Forest, Double Machine Learning）分析体育活动与心理困扰之间关联的年龄依赖异质性，并进行了E-value敏感性分析、倾向得分重叠检查等严格的鲁棒性验证。其因果逻辑和统计分析非常严谨，是因果推断在实际问题中应用的优秀案例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.18982v1",
+        "title": "SAVOIR: Learning Social Savoir-Faire via Shapley-based Reward Attribution",
+        "summary": "Social intelligence, the ability to navigate complex interpersonal interactions, presents a fundamental challenge for language agents. Training such agents via reinforcement learning requires solving the credit assignment problem: determining how individual utterances contribute to multi-turn dialogue outcomes. Existing approaches directly employ language models to distribute episode-level rewards, yielding attributions that are retrospective and lack theoretical grounding. We propose SAVOIR (ShApley Value fOr SocIal RL), a novel principled framework grounded in cooperative game theory. Our approach combines two complementary principles: expected utility shifts evaluation from retrospective attribution to prospective valuation, capturing an utterance's strategic potential for enabling favorable future trajectories; Shapley values ensure fair credit distribution with axiomatic guarantees of efficiency, symmetry, and marginality. Experiments on the SOTOPIA benchmark demonstrate that SAVOIR achieves new state-of-the-art performance across all evaluation settings, with our 7B model matching or exceeding proprietary models including GPT-4o and Claude-3.5-Sonnet. Notably, even large reasoning models consistently underperform, suggesting social intelligence requires qualitatively different capabilities than analytical reasoning.",
+        "authors": "Xiachong Feng, Yi Jiang, Xiaocheng Feng, Deyi Yin, Libo Qin, Yangfan Ye, Lei Huang, Weitao Ma, Yuxuan Gu, Chonghan Qin, Bing Qin, Lingpeng Kong",
+        "url": "http://arxiv.org/abs/2604.18982v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.18982v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了基于Shapley值的奖励归因框架SAVOIR，用于语言代理的社会智能学习。它结合预期效用转移和Shapley值，并提供效率、对称性和边际性的公理保证，具有强大的博弈论和数学理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.18972v1",
+        "title": "Beyond Bellman: High-Order Generator Regression for Continuous-Time Policy Evaluation",
+        "summary": "We study finite-horizon continuous-time policy evaluation from discrete closed-loop trajectories under time-inhomogeneous dynamics. The target value surface solves a backward parabolic equation, but the Bellman baseline obtained from one-step recursion is only first-order in the grid width. We estimate the time-dependent generator from multi-step transitions using moment-matching coefficients that cancel lower-order truncation terms, and combine the resulting surrogate with backward regression. The main theory gives an end-to-end decomposition into generator misspecification, projection error, pooling bias, finite-sample error, and start-up error, together with a decision-frequency regime map explaining when higher-order gains should be visible. Across calibration studies, four-scale benchmarks, feature and start-up ablations, and gain-mismatch stress tests, the second-order estimator consistently improves on the Bellman baseline and remains stable in the regime where the theory predicts visible gains. These results position high-order generator regression as an interpretable continuous-time policy-evaluation method with a clear operating region.",
+        "authors": "Yaowei Zheng, Richong Zhang, Shenxi Wu, Shirui Bian, Haosong Zhang, Li Zeng, Xingjian Ma, Yichi Zhang",
+        "url": "http://arxiv.org/abs/2604.18972v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.18972v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了连续时间策略评估问题，通过矩匹配系数估计时间依赖生成器以消除低阶截断项，并提供了端到端分解和决策频率区域图。这篇论文具有严谨的数学推导和理论分析，是强化学习理论的深入探索。"
+    }
+]

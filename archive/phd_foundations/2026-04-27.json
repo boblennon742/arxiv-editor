@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.24017v1",
+        "title": "Neyman Jackknife: Design-Based Variance Estimation for Causal Inference under Interference",
+        "summary": "We propose a framework, the Neyman Jackknife, for conservative variance estimation in finite-population causal inference under interference. Our approach provides a general, flexible blueprint that enables conservative variance estimation whenever we are able to recompute our target estimator with some treatment assignments omitted. In classical settings, our approach recovers estimators closely related to the Neyman estimator under SUTVA and the Newey-West HAC variance estimator for time series. Numerical experiments suggest that our general-purpose framework yields variance estimators that can match or even surpass the performance of baselines that were purpose-built for specific applications.",
+        "authors": "Bryan Park, Stefan Wager",
+        "url": "http://arxiv.org/abs/2604.24017v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24017v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了Neyman Jackknife框架，用于在干扰下进行有限总体因果推断中的保守方差估计。它明确提及了U-统计量和影响函数等严谨的统计学工具，并能恢复与Neyman估计器和Newey-West HAC方差估计器密切相关的估计量。这与您对统计保证和因果逻辑的偏好高度契合，具有强大的理论基础和清晰的数学推导潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24356v1",
+        "title": "Primitive Recursion without Composition: Dynamical Characterizations, from Neural Networks to Polynomial ODEs",
+        "summary": "What do recurrent neural networks, polynomial ODEs, and discrete polynomial maps each bring to computation, and what do they lack? All three operate over the continuum--real-valued states evolved by real-valued dynamics--even when the target functions are discrete. We study them through primitive recursion.   We prove that primitive recursion admits equivalent characterizations in all three frameworks: bounded iteration of a fixed recurrent ReLU network, robust computation by a fixed polynomial ODE, and iteration of a fixed polynomial map with an externally supplied step-size parameter. In each, the time bound is itself primitive recursive, composition emerges from the dynamics rather than as a closure rule, and inputs are raw integer vectors. Every primitive recursive function is first compiled into bounded iteration of a single threshold-affine normal form, then interpreted as a ReLU computation and as a polynomial ODE.   The equivalences expose a structural asymmetry: no fixed polynomial map can round uniformly to the nearest integer or realize exact phase selection--operations polynomial ODEs perform robustly via continuous-time flow. Each formalism compensates for a limitation the others lack: the ReLU gate provides exact branching, continuous time provides autonomous rounding and control, and the step-size parameter recovers both at the cost of discretization precision. This opens dynamical characterizations of subrecursive hierarchies and complexity classes by restricting time bounds, polynomial degrees, or discretization resources within one framework.   More broadly, these models do not compute by composing subroutines: they shape the trajectory of a dynamical system through clocks, phase selectors, and error correction built into the dynamics. This differs structurally from symbolic programming, and our theorem gives a precise framework to study the difference.",
+        "authors": "Olivier Bournez",
+        "url": "http://arxiv.org/abs/2604.24356v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24356v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了原始递归、循环ReLU网络、多项式ODE和离散多项式映射之间的数学等价性，揭示了计算的动力学特性。其在理论计算机科学和数学上的深度，以及对计算与动力系统之间关系的严谨刻画，非常符合您对强大理论基础和清晰数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.23944v1",
+        "title": "Sliced-Regularized Optimal Transport",
+        "summary": "We propose a new regularized optimal transport (OT) formulation, termed sliced-regularized optimal transport (SROT). Unlike entropic OT (EOT), which regularizes the transport plan toward an independent coupling, SROT regularizes it toward a smoothened sliced OT (SOT) plan. To the best of our knowledge, SROT is the first approach to leverage a version of SOT plan as a reference to improve classical OT. We provide a formal definition of SROT, derive its dual formulation, and provide a post-Bayesian interpretation of SROT. We then develop a Sinkhorn-style algorithm for efficient computation, retaining the same scalability advantages as EOT. By incorporating a scalable SOT plan as a prior, SROT yields more accurate approximations of the exact OT plan than EOT under the same level of regularization. Moreover, the resulting transport plan improves upon the reference SOT plan itself. We further introduce the corresponding OT divergence induced by SROT, named SROT divergence, and analyze its topological and computational properties. Finally, we validate our approach through experiments on synthetic datasets and color transfer tasks, demonstrating that SROT is better than both EOT and SOT in approximating exact OT. Additional experiments on gradient flows further highlight the advantages of SROT divergence.",
+        "authors": "Khai Nguyen",
+        "url": "http://arxiv.org/abs/2604.23944v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.23944v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种新的正则化最优传输（OT）公式——切片正则化最优传输（SROT），并进行了形式定义、对偶公式推导、后贝叶斯解释、Sinkhorn风格算法开发以及拓扑和计算性质分析。这在优化理论和统计学中是高度数学化和理论严谨的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24076v1",
+        "title": "An Information-Geometric Framework for Stability Analysis of Large Language Models under Entropic Stress",
+        "summary": "As large language models (LLMs) are increasingly deployed in high-stakes and operational settings, evaluation strategies based solely on aggregate accuracy are often insucient to characterize system reliability. This study proposes a thermodynamic inspired modeling framework for analyzing the stability of LLM outputs under conditions of uncertainty and perturbation. The framework introduces a composite stability score that integrates task utility, entropy as a measure of external uncertainty, and two internal structural proxies: internal integration and aligned reective capacity. Rather than interpreting these quantities as physical variables, the formulation is intended as an interpretable abstraction that captures how internal structure may modulate the impact of disorder on model behavior. Using the IST-20 benchmarking protocol and associated metadata, we analyze 80 modelscenario observations across four contemporary LLMs. The proposed formulation consistently yields higher stability scores than a reduced utilityentropy baseline, with a mean improvement of 0.0299 (95% CI: 0.02470.0351). The observed gain is more pronounced under higher entropy conditions, suggesting that the framework captures a form of nonlinear attenuation of uncertainty. We do not claim a fundamental physical law or a complete theory of machine ethics. Instead, the contribution of this work is a compact and interpretable modeling perspective that connects uncertainty, performance, and internal structure within a unied evaluation lens. The framework is intended to complement existing benchmarking approaches and to support ongoing discussions in AI safety, reliability, and governance.",
+        "authors": "Hikmat Karimov, Rahid Zahid Alekberli",
+        "url": "http://arxiv.org/abs/2604.24076v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24076v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个受热力学启发的、基于信息几何的框架，用于分析大型语言模型在熵压力下的稳定性。它整合了任务效用、熵和内部结构代理，其信息论和几何学的理论基础非常扎实，提供了理解LLM行为的新视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24001v1",
+        "title": "CT-FineBench: A Diagnostic Fidelity Benchmark for Fine-Grained Evaluation of CT Report Generation",
+        "summary": "The evaluation of generated reports remains a critical challenge in Computed Tomography (CT) report generation, due to the large volume of text, the diversity and complexity of findings, and the presence of fine-grained, disease-oriented attributes. Conventional evaluation metrics offer only coarse measures of lexical overlap or entity matching and fail to reflect the granular diagnostic accuracy required for clinical use. To address this gap, we propose CT-FineBench, a benchmark built from CT-RATE and Merlin to evaluate the fine-grained factual consistency of CT reports, constructed from CT-RATE and Merlin. Our benchmark is constructed through a meticulous, Question-Answering (QA) based process: first, we identify and structure key, finding-specific clinical attributes (like location, size, margin). Second, we systematically transform these attributes into a QA dataset, where questions probe for specific clinical details grounded in gold-standard reports. The evaluation protocol for CT-FineBench involves using this QA dataset to query a machine-generated report and scoring the correctness of the answers. This allows for a comprehensive, interpretable, and clinically-relevant assessment, moving beyond superficial lexical overlap to pinpoint specific clinical errors. Experiments show that CT-FineBench correlates better with expert clinical assessment and is substantially more sensitive to fine-grained factual errors than prior metrics.",
+        "authors": "Ruifeng Yuan, Wanxing Chang, Weiwei Cao, Bowen Shi, Zhongyu Wei, Ling Zhang, Jianpeng Zhang",
+        "url": "http://arxiv.org/abs/2604.24001v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24001v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了联邦学习算法FedSLoP，并提供了详细的非凸收敛性分析，明确给出了收敛到一阶驻点的速率。这在优化收敛性方面具有很强的理论严谨性，并且结合了随机梯度下降和奇异值分解，符合您对优化收敛性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24154v1",
+        "title": "Progressive Approximation in Deep Residual Networks: Theory and Validation",
+        "summary": "The Universal Approximation Theorem (UAT) guarantees universal function approximation but does not explain how residual models distribute approximation across layers. We reframe residual networks as a layer-wise approximation process that builds an approximation trajectory from input to target, and prove the existence of progressive trajectories where error decreases monotonically with depth. It reveals that residual networks can implement structured, step-by-step refinement rather than end-to-end (E2E) black-box mapping. Building on this, we propose Layer-wise Progressive Approximation (LPA), a theoretically grounded training principle that explicitly aligns each layer with its residual target to realize such trajectories. LPA is architecture-agnostic: we observe progressive behavior in residual FNNs, ResNets, and Transformers across tasks including complex surface fitting, image classification, and NLP with LLMs for generation and classification. Crucially, this enables ``train once, use $N$ models\": a single network yields useful predictions at every depth, supporting efficient shallow inference without retraining. Our work unifies approximation theory with practical deep learning, providing a new lens on representation learning and a flexible framework for multi-depth deployment. The source code will be released unpon acceptance at https://(open\\_upon\\_acceptance).",
+        "authors": "Wei Wang, Xiao-Yong Wei, Qing Li",
+        "url": "http://arxiv.org/abs/2604.24154v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24154v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将深度残差网络重新定义为分层逼近过程，并证明了渐进轨迹的存在性，提出了理论上扎实的训练原则。它与通用逼近定理相关联，提供了对残差网络工作机制的深刻理论理解，符合您对理论基础和数学推导的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24032v1",
+        "title": "On Cluster Randomized Trials with the Desirability of Outcome Ranking (DOOR) Endpoints",
+        "summary": "Cluster randomized trials are widely used when individual randomization is logistically infeasible or when correlations between observations cannot be ignored, especially in fields such as ophthalmology, infectious disease, vaccine research, and sociology. The desirability of outcome ranking (DOOR) framework evaluates patient-centric benefit-risk using an ordinal outcome and a Wilcoxon-Mann-Whitney statistic-based approach to compare outcome distributions between interventions. We propose a suite of new methods to extend DOOR to cluster trials based on properties of U-statistics and influence functions to estimate within-cluster and between-cluster treatment effects. These approaches can be applied in different scenarios, including mixtures of clusters with two treatment groups and clusters with only one group, and both small and large numbers of clusters. Simulations demonstrate that the proposed methods perform well under various scenarios regarding the number of clusters and cluster sizes. As an illustration, we apply the proposed methods to a cluster randomized crossover trial comparing delayed cord clamping and umbilical cord milking for newborns.",
+        "authors": "Wangying Shao, Toshimitsu Hamasaki, Scott Evans, Guoqing Diao",
+        "url": "http://arxiv.org/abs/2604.24032v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24032v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将DOOR框架扩展到聚类随机试验，利用U-统计量和影响函数来估计聚类内部和聚类之间的治疗效果。这是一个在统计方法学上非常严谨的工作，提供了处理复杂试验设计中因果效应的新工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24534v1",
+        "title": "Robust linear regression under latent group heterogeneity",
+        "summary": "Uncertainty is ubiquitous in real-world data, and the assumptions underlying classical linear regression models are often violated in practice. Inspired by the theory of sublinear expectation, we consider a linear regression model where the random intercept term has mean uncertainty and the error term has variance uncertainty. We develop a novel two-step approach, named Expectation-Maximization with Moving Block (EMMB), to estimate the model parameters. The proposed method requires no prior knowledge of group structures or change points. Theoretical properties of the estimators are established under mild regularity conditions. Simulation studies and a real-data application to PM2.5 concentration modeling in Beijing demonstrate the superiority of the proposed method: it captures substantial intercept heterogeneity overlooked by ordinary least squares and yields more accurate and interpretable estimates.",
+        "authors": "Xifeng Li, Shuzhen Yang",
+        "url": "http://arxiv.org/abs/2604.24534v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24534v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于次线性期望理论的鲁棒线性回归模型，用于处理潜在群体异质性下的均值和方差不确定性，并建立了估计器的理论性质。这与统计保证和数学推导的要求高度一致，提供了处理不确定性数据的新方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24498v1",
+        "title": "Self-Supervised Representation Learning via Hyperspherical Density Shaping",
+        "summary": "Modern self-supervised representation learning methods often relies on empirical heuristics that are not theoretically grounded. In this study we propose HyDeS, a theoretically grounded method based on multi-view mutual information maximization within an hyperspherical space using Shannon differential entropy with a non-parametric von Mises-Fisher density estimator.   We show that HyDeS bias the trained model towards focusing on foreground features of the images and perform well on segmentation tasks such as VOC PASCAL, while it lags in fine-grained classification. We provide a detailed analysis of the induced latent space geometry and learning dynamics, that can be used for designing other theoretically grounded self-supervised learning methods.",
+        "authors": "Esteban Rodríguez-Betancourt, Edgar Casasola-Murillo",
+        "url": "http://arxiv.org/abs/2604.24498v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24498v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了HyDeS，一个理论上扎实的自监督学习方法，基于多视图互信息最大化、超球面空间、香农微分熵和非参数von Mises-Fisher密度估计器。其信息论和统计建模的严谨性突出，对表示学习的理论基础进行了深入探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24672v1",
+        "title": "A Functorial Formulation of Neighborhood Aggregating Deep Learning",
+        "summary": "We provide a mathematical interpretation of convolutional (or message passing) neural networks by using presheaves and copresheaves of the set of continuous functions over a topological space. Based on this interpretation, we formulate a theoretical heuristic which elaborates a number of empirical limitations of these neural networks by using obstructions on such sets of continuous functions over a topological space to be sheaves or copresheaves.",
+        "authors": "Sun Woo Park, Yun Young Choi, U Jin Choi, Youngho Woo",
+        "url": "http://arxiv.org/abs/2604.24672v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24672v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 2,
+            "Clarity": 3
+        },
+        "reason_zh": "这篇论文利用预层和共预层对卷积神经网络（或消息传递神经网络）进行了数学解释，并提出了理论启发式方法。其抽象代数和拓扑学的数学基础非常深厚，为理解神经网络提供了独特的理论视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24549v1",
+        "title": "GradMAP: Gradient-Based Multi-Agent Proximal Learning for Grid-Edge Flexibility",
+        "summary": "Coordinating large populations of grid-edge devices requires learning methods that remain fully decentralised in deployment while still respecting three-phase AC distribution-network physics. This paper proposes gradient-based multi-agent proximal learning (GradMAP) to address this challenge. GradMAP trains independent neural-network policies for each agent without any parameter sharing, and each agent uses only its own local observation for online decision-making without communication. During offline training, GradMAP embeds a differentiable three-phase AC power-flow model in a primal-dual learning loop and uses implicit differentiation to propagate exact network-constraint violations to update the policy parameters. To speed up training, GradMAP reuses expensive environment gradients through a proximal surrogate within a trust region defined in the more direct policy-output (action) space, instead of the probability distribution space used in other works, such as PPO. In case studies with 1,000 agents managing batteries, heat pumps, and controllable generators on the IEEE 123-bus feeder, GradMAP learns decentralised policies that minimise three-phase AC load-flow constraint violations within 15 minutes of training on a single workstation-class NVIDIA RTX PRO 5000 Blackwell 48GB GPU. This is a 3--5x training speed-up over gradient-based self-supervised learning benchmarks and substantially better training efficiency than multi-agent reinforcement-learning benchmarks. In out-of-sample tests, GradMAP also delivers among the lowest operating cost and constraint violations.",
+        "authors": "Yihong Zhou, Hongtai Zeng, Thomas Morstyn",
+        "url": "http://arxiv.org/abs/2604.24549v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24549v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了基于梯度的多智能体近端学习（GradMAP）方法，结合了可微分的三相交流潮流模型、原始-对偶学习循环和隐式微分。在优化和控制方面具有很强的数学严谨性，提供了在复杂物理约束下实现去中心化学习的理论框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24533v1",
+        "title": "Hierarchical Causal Uplift Modeling in Overlapping Customer Journeys",
+        "summary": "Digital travel platforms often operate multiple marketing journeys simultaneously, resulting in overlapping user exposures that bias the standard A/B lift estimation. Because traditional lift experiments assume treatment isolation, the observed lifts reflect only marginal effects and may substantially underestimate the total incremental impact of each journey.   This work introduces a Hierarchical Causal Lift Model that decomposes pure and global effects under journey overlap. Each journey is modeled as a multiplicative causal factor, and the interaction terms capture potential synergies or cannibalizations. The model is estimated through a Monte Carlo framework that incorporates uncertainty in overlap proportions, observed lifts, and single-journey effects. Regularized non-linear least squares are complemented with Monte Carlo simulation to quantify parameter uncertainty and assess the robustness of the solution.   Applied to an active user base of approximately three million users, the model reveals positive but modest synergies between journeys and shows that pure lifts are significantly larger than those observed experimentally. The predicted global lift closely matches the experimentally measured value, demonstrating the ability of the model to recover incremental effects in an interpretable manner.",
+        "authors": "Jorge Pellegrini",
+        "url": "http://arxiv.org/abs/2604.24533v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24533v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作引入了分层因果提升模型，用于在重叠客户旅程中分解纯粹和全局效应，并使用蒙特卡洛框架和正则化非线性最小二乘法进行估计。其在因果推断和统计建模方面的严谨性，以及对复杂交互效应的量化，非常符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24356v1",
+        "title": "Primitive Recursion without Composition: Dynamical Characterizations, from Neural Networks to Polynomial ODEs",
+        "summary": "What do recurrent neural networks, polynomial ODEs, and discrete polynomial maps each bring to computation, and what do they lack? All three operate over the continuum--real-valued states evolved by real-valued dynamics--even when the target functions are discrete. We study them through primitive recursion.   We prove that primitive recursion admits equivalent characterizations in all three frameworks: bounded iteration of a fixed recurrent ReLU network, robust computation by a fixed polynomial ODE, and iteration of a fixed polynomial map with an externally supplied step-size parameter. In each, the time bound is itself primitive recursive, composition emerges from the dynamics rather than as a closure rule, and inputs are raw integer vectors. Every primitive recursive function is first compiled into bounded iteration of a single threshold-affine normal form, then interpreted as a ReLU computation and as a polynomial ODE.   The equivalences expose a structural asymmetry: no fixed polynomial map can round uniformly to the nearest integer or realize exact phase selection--operations polynomial ODEs perform robustly via continuous-time flow. Each formalism compensates for a limitation the others lack: the ReLU gate provides exact branching, continuous time provides autonomous rounding and control, and the step-size parameter recovers both at the cost of discretization precision. This opens dynamical characterizations of subrecursive hierarchies and complexity classes by restricting time bounds, polynomial degrees, or discretization resources within one framework.   More broadly, these models do not compute by composing subroutines: they shape the trajectory of a dynamical system through clocks, phase selectors, and error correction built into the dynamics. This differs structurally from symbolic programming, and our theorem gives a precise framework to study the difference.",
+        "authors": "Olivier Bournez",
+        "url": "http://arxiv.org/abs/2604.24356v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24356v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于里程碑的框架，用于表征免疫疗法试验中随时间变化的治疗效果，通过里程碑生存概率和tau-based摘要来总结治疗差异。这是一个具有临床意义的统计方法学工作，能够处理非比例风险下的异质性和时变治疗效果。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24079v1",
+        "title": "The Pragmatic Persona: Discovering LLM Persona through Bridging Inference",
+        "summary": "Large Language Models (LLMs) reveal inherent and distinctive personas through dialogue. However, most existing persona discovery approaches rely on surface-level lexical or stylistic cues, treating dialogue as a flat sequence of tokens and failing to capture the deeper discourse-level structures that sustain persona consistency. To address this limitation, we propose a novel analytical framework that interprets LLM dialogue through bridging inference -- implicit conceptual relations that connect utterances via shared world knowledge and discourse coherence. By modeling these relations as structured knowledge graphs, our approach captures latent semantic links that govern how LLMs organize meaning across turns, enabling persona discovery at the level of discourse coherence rather than surface realizations. Experimental results across multiple reasoning backbones and target LLMs, ranging from small-scale models to 80B-parameter systems, demonstrate that bridging-inference graphs yield significantly stronger semantic coherence and more stable persona identification than frequency or style-based baselines. These results show that persona traits are consistently encoded in the structural organization of discourse rather than isolated lexical patterns. This work presents a systematic framework for probing, extracting, and visualizing latent LLM personas through the lens of Cognitive Discourse Theory, bridging computational linguistics, cognitive semantics, and persona reasoning in large language models. Codes are available at https://github.com/JiSoo-Yang/Persona_Bridging.git",
+        "authors": "Jisoo Yang, Jongwon Ryu, Minuk Ma, Trung X. Pham, Junyeong Kim",
+        "url": "http://arxiv.org/abs/2604.24079v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24079v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了联邦学习算法Fed-DLoRA，并进行了收敛性分析，涉及随机梯度下降和奇异值分解。在优化理论和通信效率方面有理论贡献，为资源受限环境下的分布式学习提供了严谨的分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.24662v1",
+        "title": "Information bottleneck for learning the phase space of dynamics from high-dimensional experimental data",
+        "summary": "Identifying the dynamical state variables of a system from high-dimensional observations is a central problem across physical sciences. The challenge is that the state variables are not directly observable and must be inferred from raw high-dimensional data without supervision. Here we introduce DySIB (Dynamical Symmetric Information Bottleneck) as a method to learn low-dimensional representations of time-series data by maximizing predictive mutual information between past and future observation windows while penalizing representation complexity. This objective operates entirely in latent space and avoids reconstruction of the observations. We apply DySIB to an experimental video dataset of a physical pendulum, where the underlying state space is known. The method, with hyperparameters of the learning architecture set self-consistently by the data, recovers a two-dimensional representation that matches the dimensionality, topology, and geometry of the pendulum phase space, with the learned coordinates aligning smoothly with the canonical angle and angular velocity. These results demonstrate, on a well-characterized experimental system, that predictive information in latent space can be used to recover interpretable dynamical coordinates directly from high-dimensional data.",
+        "authors": "K. Michael Martini, Eslam Abdelaleem, Paarth Gulati, Ilya Nemenman",
+        "url": "http://arxiv.org/abs/2604.24662v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.24662v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了DySIB方法，通过最大化过去和未来观测窗口之间的预测互信息来学习低维表示，并惩罚表示复杂性。它基于信息瓶颈原理，具有强大的信息论基础，旨在从高维数据中恢复可解释的动力学坐标。"
+    }
+]

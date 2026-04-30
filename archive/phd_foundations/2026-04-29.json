@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.26836v1",
+        "title": "Uncertainty-Aware Predictive Safety Filters for Probabilistic Neural Network Dynamics",
+        "summary": "Predictive safety filters (PSFs) leverage model predictive control to enforce constraint satisfaction during deep reinforcement learning (RL) exploration, yet their reliance on first-principles models or Gaussian processes limits scalability and broader applicability. Meanwhile, model-based RL (MBRL) methods routinely employ probabilistic ensemble (PE) neural networks to capture complex, high-dimensional dynamics from data with minimal prior knowledge. However, existing attempts to integrate PEs into PSFs lack rigorous uncertainty quantification. We introduce the Uncertainty-Aware Predictive Safety Filter (UPSi), a PSF that provides rigorous safety predictions using PE dynamics models by formulating future outcomes as reachable sets. UPSi introduces an explicit certainty constraint that prevents model exploitation and integrates seamlessly into common MBRL frameworks. We evaluate UPSi within Dyna-style MBRL on standard safe RL benchmarks and report substantial improvements in exploration safety over prior neural network PSFs while maintaining performance on par with standard MBRL. UPSi bridges the gap between the scalability and generality of modern MBRL and the safety guarantees of predictive safety filters.",
+        "authors": "Bernd Frauenknecht, Lukas Kesper, Daniel Mayfrank, Henrik Hose, Sebastian Trimpe",
+        "url": "http://arxiv.org/abs/2604.26836v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26836v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了不确定性感知预测安全滤波器（UPSi），通过可达集（reachable sets）为概率神经网络动力学提供严格的安全预测。其核心在于对不确定性进行严格量化，并引入显式确定性约束，完美契合了您对“统计保证”和“严谨数学逻辑”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26820v1",
+        "title": "Bridge: Basis-Driven Causal Inference Marries VFMs for Domain Generalization",
+        "summary": "Detectors often suffer from degraded performance, primarily due to the distributional gap between the source and target domains. This issue is especially evident in single-source domains with limited data, as models tend to rely on confounders (e.g., illumination, co-occurrence, and style) from the source domain, leading to spurious correlations that hinder generalization. To this end, this paper proposes a novel Basis-driven framework for domain generalization, namely \\textbf{\\textit{Bridge}}, that incorporates causal inference into object detection. By learning the low-rank bases for front-door adjustment, \\textbf{\\textit{Bridge}} blocks confounders' effects to mitigate spurious correlations, while simultaneously refining representations by filtering redundant and task-irrelevant components. \\textbf{\\textit{Bridge}} can be seamlessly integrated with both discriminative (e.g., DINOv2/3, SAM) and generative (e.g., Stable Diffusion) Vision Foundation Models (VFMs). Extensive experiments across multiple domain generalization object detection datasets, i.e., Cross-Camera, Adverse Weather, Real-to-Artistic, Diverse Weather Datasets, and Diverse Weather DroneVehicle (our newly augmented real-world UAV-based benchmark), underscore the superiority of our proposed method over previous state-of-the-art approaches. The project page is available at: https://mingbohong.github.io/Bridge/.",
+        "authors": "Mingbo Hong, Feng Liu, Caroline Gevaert, George Vosselman, Hao Cheng",
+        "url": "http://arxiv.org/abs/2604.26820v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26820v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将因果推断（特别是通过低秩基的“前门调整”）引入目标检测，以缓解混淆变量导致的虚假相关性，从而提高域泛化能力。这直接满足了您对“因果逻辑”和“强大的理论基础”的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26765v1",
+        "title": "CARhy: Comprehensive Analyses of Circadian Rhythms in Transcriptomic Experiments with Multiple Conditions",
+        "summary": "Circadian rhythms are endogenous oscillations that regulate various physiological processes and their disruption has been linked to many diseases, making it important to determine how gene-expression rhythms are altered across genotypes, treatments, or environmental exposures. Existing approaches for circadian transcriptomic analysis are often limited to pairwise comparisons or to a single aspect of rhythmic behavior, making them inadequate for comprehensive inference in multi-condition experimental designs. We propose CARhy (Comprehensive Analysis of Rhythmicity), a unified statistical framework for transcriptomic data collected under more than two conditions. Based on first-harmonic Fourier regression, CARhy provides formal tests for the presence of rhythmicity and for differences across conditions in rhythmicity, amplitude, phase, and baseline level. By allowing condition-specific variances and accommodating unbalanced designs, the framework remains reliable under heteroscedastic noise and realistic sampling constraints. Simulations show that CARhy controls type I error and false discovery rates well while achieving higher power than existing approaches in challenging settings. In mouse liver transcriptomic data, CARhy offers an interpretable and practical tool for characterizing how circadian rhythms differ across multiple experimental conditions. CARhy is implemented as an R package and is publicly available at: https://github.com/DrHuang123/Comprehensive-Analyses-of-Circadian-Rhythms-CARhy.git.",
+        "authors": "Weiyi Huang, Jerome S. Menet, Samiran Sinha",
+        "url": "http://arxiv.org/abs/2604.26765v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26765v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个统一的统计框架CARhy，用于转录组数据中昼夜节律的综合分析。它基于一阶傅里叶回归，提供节律性、振幅、相位和基线水平差异的正式统计检验，并能良好控制I类错误和错误发现率，是统计学理论在生物信息学中严谨应用的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26744v1",
+        "title": "A Sufficient-Statistic Reduction of the Information Bottleneck to a Low-Dimensional Problem",
+        "summary": "We show that if the conditional distribution p(C | T) factors through a sufficient statistic φ(T), then the Information Bottleneck (IB) problem for (T, C) is exactly equivalent to the IB problem for (φ(T), C). The reduction is loss-free: it preserves the full IB curve, the Lagrangian optimum at every trade-off parameter \\b{eta}, and the optimal representations up to pullback through φ. As a result, the computational complexity of solving the IB problem is governed by the dimension of the sufficient statistic rather than the ambient dimension of the source. This identifies an exact structural condition under which the generic IB problem becomes tractable, and gives a formal bridge between the discrete and linear-Gaussian regimes. We then show that the classical Gaussian IB solution of Chechik, Globerson, Tishby and Weiss is an immediate corollary of this reduction, and we state a nonlinear-Gaussian generalisation. A small numerical example illustrates the practical consequence: when a low-dimensional sufficient statistic is available, the exact IB curve can be computed on the reduced problem at a cost determined by the statistic rather than by the ambient source dimension.",
+        "authors": "Joss Armstrong",
+        "url": "http://arxiv.org/abs/2604.26744v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26744v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这是一篇理论性极强的论文，证明了在条件分布通过充分统计量分解时，信息瓶颈（IB）问题可以无损地简化为低维问题。这一发现揭示了IB问题的精确结构条件，并提供了离散和线性高斯机制之间的形式化桥梁，具有深刻的数学推导和理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26735v1",
+        "title": "Quasar-Convex Optimization: Fundamental Properties and High-Order Proximal-Point Methods",
+        "summary": "We study the optimization of (strongly) quasar-convex functions, a class that arises naturally in many machine learning and data science applications due to its favorable properties. The fundamental properties of this class are first developed, including its stability under standard calculus operations, growth conditions, and the absence of spurious critical points, which together imply a benign global geometry with no saddle points. Motivated by these properties, a class of proximal-point algorithms (HiPPA) with high-order regularization of order $p>1$ is introduced. Conditions are identified under which the iterates converge globally to minimizers, and a unified convergence analysis is provided with explicit rates and iteration complexity bounds under appropriate regularity assumptions. The results reveal a sharp transition in behavior with respect to the order $p$: for $p\\in(1,2)$, the method achieves local linear convergence with complexity $\\mathcal{O}(\\log(\\varepsilon^{-1}))$ when initialized sufficiently close to a minimizer; for $p=2$, it attains global linear convergence with the same complexity; and for $p>2$, it exhibits superlinear convergence with complexity $\\mathcal{O}(\\log\\log(\\varepsilon^{-1}))$, where $\\varepsilon>0$ denotes the target accuracy. The theory is complemented with preliminary numerical experiments on selected machine learning problems, which illustrate the effectiveness of the proposed methods and are consistent with the theoretical findings.",
+        "authors": "Masoud Ahookhosh, Jose M. M. de Brito, Alireza Kabgani, Felipe Lara, Jinyun Yuan",
+        "url": "http://arxiv.org/abs/2604.26735v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26735v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "论文深入研究了（强）类星凸函数的优化问题，发展了其基本性质，包括稳定性、增长条件以及无虚假临界点等。同时，引入了高阶近端点算法并提供了统一的收敛性分析，包括明确的收敛速度和迭代复杂度界限，完美符合您对“优化收敛性”和“清晰数学推导”的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26729v1",
+        "title": "Flexible semiparametric modeling with application to Causal Inference",
+        "summary": "This paper proposes a flexible new framework for constructing Neyman-orthogonal scores in semiparametric models involving infinite-dimensional nuisance parameters. While locally estimation is vital for integrating machine learning into econometrics, deriving orthogonal scores for complex models remains a major challenge. We provide explicit construction strategies for broad classes of settings. The proposed framework ensures asymptotic normality of target parameter estimators in a way that does not depend on the method used to construct the nuisance parameter estimators, provided they are $o_p(n^{-\\1/4})$-consistent. We apply the proposed methodology to causal inference with a binary instrumental variable, developing a novel, robust estimator for treatment effects. Numerical studies demonstrate that our approach significantly outperforms naive alternatives in finite samples. An empirical application to the Oregon Health Insurance Experiment illustrates the framework's utility in providing robust causal evidence.",
+        "authors": "Kun Ren, Wen Su, Li Liu, Ian W. McKeague, Xingqiu Zhao",
+        "url": "http://arxiv.org/abs/2604.26729v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26729v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "论文提出了一个灵活的半参数模型框架，用于构建Neyman-正交得分，解决了将机器学习集成到计量经济学中的挑战。它确保了目标参数估计量的渐近正态性，并将其应用于二元工具变量的因果推断，提供了新颖且稳健的估计量，是统计学和因果推断理论的杰出结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26673v1",
+        "title": "Laplace Approximation for Bayesian Tensor Network Kernel Machines",
+        "summary": "Uncertainty estimation is essential for robust decision-making in the presence of ambiguous or out-of-distribution inputs. Gaussian Processes (GPs) are classical kernel-based models that offer principled uncertainty quantification and perform well on small- to medium-scale datasets. Alternatively, formulating the weight space learning problem under tensor network assumptions yields scalable tensor network kernel machines. However, these assumptions break Gaussianity, complicating standard probabilistic inference. This raises a fundamental question: how can tensor network kernel machines provide principled uncertainty estimates? We propose a novel Bayesian Tensor Network Kernel Machine (LA-TNKM) that employs a (linearized) Laplace approximation for Bayesian inference. A comprehensive set of numerical experiments shows that the proposed method consistently matches or surpasses Gaussian Processes and Bayesian Neural Networks (BNNs) across diverse UCI regression benchmarks, highlighting both its effectiveness and practical relevance.",
+        "authors": "Albert Saiapin, Kim Batselier",
+        "url": "http://arxiv.org/abs/2604.26673v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26673v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种新颖的贝叶斯张量网络核机器（LA-TNKM），通过（线性化）拉普拉斯近似进行贝叶斯推断，以提供张量网络核机器的原则性不确定性估计。这直接契合了您对“统计保证”和“贝叶斯推断”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26516v1",
+        "title": "Lyapunov-Guided Self-Alignment: Test-Time Adaptation for Offline Safe Reinforcement Learning",
+        "summary": "Offline reinforcement learning (RL) agents often fail when deployed, as the gap between training datasets and real environments leads to unsafe behavior. To address this, we present SAS (Self-Alignment for Safety), a transformer-based framework that enables test-time adaptation in offline safe RL without retraining. In SAS, the main mechanism is self-alignment: at test time, the pretrained agent generates several imagined trajectories and selects those satisfying the Lyapunov condition. These feasible segments are then recycled as in-context prompts, allowing the agent to realign its behavior toward safety while avoiding parameter updates. In effect, SAS turns Lyapunov-guided imagination into control-invariant prompts, and its transformer architecture admits a hierarchical RL interpretation where prompting functions as Bayesian inference over latent skills. Across Safety Gymnasium and MuJoCo benchmarks, SAS consistently reduces cost and failure while maintaining or improving return.",
+        "authors": "Seungyub Han, Hyungjin Kim, Jungwoo Lee",
+        "url": "http://arxiv.org/abs/2604.26516v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26516v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SAS框架，通过利用Lyapunov条件进行测试时自适应，实现离线安全强化学习。Lyapunov条件是控制理论中提供稳定性和安全保证的强大数学工具，结合贝叶斯推断的解释，使其在理论严谨性上表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26446v1",
+        "title": "Near-Optimal Cryptographic Hardness of Learning With Homogeneous Halfspaces Under Gaussian Marginals",
+        "summary": "We study three problems that involve identifying homogeneous halfspaces under Gaussian distributions: agnostic learning, one-sided reliable learning, and fairness auditing. In each of these problems, we are given labeled examples $(\\mathbf{x}, \\mathrm{y})$ drawn from an unknown distribution on $\\mathbb{R}^d\\times\\{-1, +1\\}$, whose marginal distribution on $\\mathbf{x}$ is standard Gaussian and on $\\mathrm{y}$ is arbitrary. The goal of each problem is to output a homogeneous halfspace that approaches the best-fitting homogeneous halfspace in terms of its corresponding loss measure. We prove near-optimal computational hardness results for these problems under the widely believed hardness assumption of the Learning With Errors (LWE) problem. Prior hardness results for these problems were mostly established for general halfspaces; our findings extend some of these hardness results to homogeneous halfspaces. Remarkably, our lower bound strictly generalizes over prior works and narrows the gap between the upper and lower bounds for agnostically learning homogeneous halfspaces under Gaussian marginals.",
+        "authors": "Jizhou Huang, Brendan Juba",
+        "url": "http://arxiv.org/abs/2604.26446v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26446v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "论文在LWE假设下，为高斯边缘分布下的同质半空间学习问题（包括不可知学习、单侧可靠学习和公平性审计）提供了接近最优的密码学硬度结果。这是一个纯理论贡献，具有严谨的数学证明，直接满足了您对“强大的理论基础”和“清晰数学推导”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26410v1",
+        "title": "Longitudinal Outcomes Truncated by Death: Causal Estimands and Bayesian Estimators",
+        "summary": "Defining a causal estimand for a longitudinal outcome truncated by death is challenging, because the outcome may be undefined at the end of follow-up. Although a range of estimands and several estimators have been proposed, guidance on the underlying causal assumptions and on the contexts in which each estimand is most appropriate remains limited.   We propose a framework to clarify the challenges of defining causal estimands in a longitudinal setting with censoring due to death. Within this framework, we review existing estimands and make explicit the assumptions required for their identification and estimation. We develop Bayesian estimators for each estimand and compare their behavior in a simulation study. Finally, we illustrate the proposed approach using data from a randomized controlled trial in amyotrophic lateral sclerosis.   We show that the main difficulty arises from the lack of a natural notion of ordering and distance for outcomes truncated by death. This leads to an inherently multifactorial problem. In this context, the stratified average causal effect, combined with restricted mean survival time, provides a more complete characterisation of treatment effects.",
+        "authors": "Juliette Ortholand, Young Lee, Marie-Abele C Bind",
+        "url": "http://arxiv.org/abs/2604.26410v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26410v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "论文提出了一个框架来阐明死亡截断纵向结果的因果估计量定义挑战，并回顾了现有估计量及其识别和估计所需的假设。同时，开发了针对每个估计量的贝叶斯估计量，为因果推断和统计建模提供了深刻的理论见解和实用工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26301v1",
+        "title": "Cheeger--Hodge Contrastive Learning for Structurally Robust Graph Representation Learning",
+        "summary": "Graph Contrastive Learning (GCL) has emerged as a prominent framework for unsupervised graph representation learning. However, relying on augmentation design alone to define the invariances learned by GCL can be brittle under structural perturbations. To address this issue, we propose Cheeger--Hodge Contrastive Learning (CHCL), a framework that aligns a perturbation-stable Cheeger--Hodge joint signature across augmented views for robust graph representation learning. The proposed signature combines a Cheeger-inspired connectivity signature derived from the algebraic connectivity \\(λ_2\\) with the low-frequency spectrum of the 1-Hodge Laplacian, thereby capturing both global connectivity and higher-order structural information. By aligning encoder representations with the proposed Cheeger--Hodge joint signature across augmented views, CHCL learns graph embeddings that are robust to local structural perturbations. Extensive experiments on standard benchmarks, transfer settings demonstrate that CHCL consistently improves performance, robustness, and generalization.",
+        "authors": "Mengyang Zhao, Longlong Li, Cunquan Qu",
+        "url": "http://arxiv.org/abs/2604.26301v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26301v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Cheeger-Hodge对比学习（CHCL）框架，通过结合Cheeger连接性签名（源自代数连通性λ2）和1-Hodge拉普拉斯算子的低频谱，来学习对结构扰动鲁棒的图表示。这充分利用了图谱理论的强大数学工具，具有高度的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26268v1",
+        "title": "The Difference Between \"Replicable\" and \"Not replicable\" is not Itself Scientifically Replicable",
+        "summary": "Replication studies estimate the replicability rate of scientific results by aggregating binary verdicts of experiments. Exact replications are rarely attainable, so most replication sequences are non-exact. Experiments differ in ways that matter and do not share a single data-generating process. We formalize two statistical interpretations of non-exactness. In a shared latent rate (benchmark) model, experiments are exchangeable and depend on a common random replicability rate. In a conditionally independent rates (operational) model, each experiment has its own replicability rate drawn from a population distribution. Under the benchmark model, even small variability among replicability rates induces an irreducible variance floor on the estimated mean replicability rate that no amount of replication can eliminate. Under the operational model, the degree of non-exactness is not identifiable from standard replication data, because one binary verdict per experiment carries no information about between-experiment heterogeneity. Researchers cannot tell which precision regime they are in or whether high- and low-replicability sequences can be distinguished in principle. The usual data structure cannot support reliable demarcation between \"replicable\" and \"not replicable\" results and systematically understates uncertainty, making high- and low-replicability sequences appear discriminable when they are not. We show how common sources of heterogeneity amplify these problems and demonstrate practical consequences in a reanalysis of Many Labs 4. Aggregating replicability rates across heterogeneous literatures produces averages that conflate incommensurable regimes and lack a stable interpretation. Replicability rate is not a reliable demarcation criterion. The replication crisis, if there is one, cannot be established by the methods used to declare it.",
+        "authors": "Berna Devezer, Erkan O. Buzbas",
+        "url": "http://arxiv.org/abs/2604.26268v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26268v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文从统计学角度对科学研究的可复制性概念进行了深刻的批判性分析，形式化了非精确复制的两种统计解释，并揭示了现有方法系统性低估不确定性的问题。其严谨的统计论证对科学方法论具有深远影响，完美契合了您对“统计保证”和“强大的理论基础”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26188v1",
+        "title": "Efficient and Interpretable Transformer for Counterfactual Fairness",
+        "summary": "The growing reliance of machine learning models in high-stakes, highly regulated domains such as finance and insurance has created a growing tension between predictive performance, interpretability, and regulatory fairness requirements. In these settings, models are expected not only to deliver reliable predictions but also to provide transparent decision rationales and comply with strict fairness requirements. Attention-based transformers offer powerful mechanisms for modeling complex data relationships as demonstrated in various language tasks, yet their attention mechanisms alone do not ensure counterfactually fair predictions, even when combined with fairness-aware techniques. To address these limitations, we propose the Feature Correlation Transformer (FCorrTransformer), an attention-light architecture tailored for tabular data. In this design, the attention matrix admits a direct statistical interpretation as pairwise feature dependencies, enhancing both interpretability and efficiency. Leveraging this structure, we introduce Counterfactual Attention Regularization (CAR), a framework that enforces group-invariant fair representations of sensitive features at the attention level, promoting counterfactually fair predictions without relying on explicit causal assumptions. Empirical evaluations on imbalanced classification and regression benchmarks demonstrate that FCorrTransformer combined with CAR achieves strong counterfactual fairness while maintaining competitive predictive performance and substantially reducing model complexity compared with standard transformer-based baselines. Overall, this work bridges a critical gap between fairness theory and machine learning models, offering a practical framework for responsible AI in regulatory-sensitive domains.",
+        "authors": "Panyi Dong, Zhiyu Quan",
+        "url": "http://arxiv.org/abs/2604.26188v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26188v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了FCorrTransformer，一种针对表格数据的轻量级Transformer架构，其注意力矩阵具有直接的统计解释。更重要的是，引入了反事实注意力正则化（CAR）框架，在不依赖显式因果假设的情况下，强制实现敏感特征的组不变公平表示，促进反事实公平预测，完美结合了统计解释、因果逻辑和理论严谨性。"
+    }
+]

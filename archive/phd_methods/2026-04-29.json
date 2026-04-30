@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.26951v1",
+        "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+        "summary": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
+        "authors": "Gongbo Zhang, Wen Wang, Ye Tian, Li Yuan",
+        "url": "http://arxiv.org/abs/2604.26951v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26951v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了扩散大语言模型（dLLM）模型压缩和跨架构知识迁移的实际瓶颈。提出了TIDE框架，包含TIDAL、CompDemo和Reverse CALM三个理论创新的模块，实现了从大模型到小模型的有效蒸馏，并在代码生成等任务上取得显著提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26866v1",
+        "title": "MoRFI: Monotonic Sparse Autoencoder Feature Identification",
+        "summary": "Large language models (LLMs) acquire most of their factual knowledge during the pre-training stage, through next token prediction. Subsequent stages of post-training often introduce new facts outwith the parametric knowledge, giving rise to hallucinations. While it has been demonstrated that supervised fine-tuning (SFT) on new knowledge may exacerbate the problem, the underlying mechanisms are still poorly understood. We conduct a controlled fine-tuning experiment, focusing on closed-book QA, and find latent directions that causally contribute to hallucinations. Specifically, we fine-tune Llama 3.1 8B, Gemma 2 9B and Mistral 7B v03 on seven distinct single QA datasets, controlling for the percentage of new knowledge and number of training epochs. By measuring performance on the test set, we validate that incrementally introducing new knowledge increases hallucinations, with the effect being more pronounced with prolonged training. We leverage pre-trained sparse autoencoders (SAEs) to analyze residual stream activations across various checkpoints for each model and propose Monotonic Relationship Feature Identification (MoRFI) for capturing causally relevant latents. MoRFI filters SAE features that respond monotonically to controlled fine-tuning data mixtures of a target property. Our findings show that exposure to unknown facts disrupts the model's ability to retrieve stored knowledge along a set of directions in the residual stream. Our pipeline reliably discovers them across distinct models, recovering knowledge through single-latent interventions.",
+        "authors": "Dimitris Dimakopoulos, Shay B. Cohen, Ioannis Konstas",
+        "url": "http://arxiv.org/abs/2604.26866v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26866v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM幻觉问题，通过稀疏自编码器（SAE）分析残差流激活，并提出了MoRFI方法来识别因果相关的潜在特征。该方法具有理论创新性，能够通过单潜在干预恢复知识，对提高LLM可靠性有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26836v1",
+        "title": "Uncertainty-Aware Predictive Safety Filters for Probabilistic Neural Network Dynamics",
+        "summary": "Predictive safety filters (PSFs) leverage model predictive control to enforce constraint satisfaction during deep reinforcement learning (RL) exploration, yet their reliance on first-principles models or Gaussian processes limits scalability and broader applicability. Meanwhile, model-based RL (MBRL) methods routinely employ probabilistic ensemble (PE) neural networks to capture complex, high-dimensional dynamics from data with minimal prior knowledge. However, existing attempts to integrate PEs into PSFs lack rigorous uncertainty quantification. We introduce the Uncertainty-Aware Predictive Safety Filter (UPSi), a PSF that provides rigorous safety predictions using PE dynamics models by formulating future outcomes as reachable sets. UPSi introduces an explicit certainty constraint that prevents model exploitation and integrates seamlessly into common MBRL frameworks. We evaluate UPSi within Dyna-style MBRL on standard safe RL benchmarks and report substantial improvements in exploration safety over prior neural network PSFs while maintaining performance on par with standard MBRL. UPSi bridges the gap between the scalability and generality of modern MBRL and the safety guarantees of predictive safety filters.",
+        "authors": "Bernd Frauenknecht, Lukas Kesper, Daniel Mayfrank, Henrik Hose, Sebastian Trimpe",
+        "url": "http://arxiv.org/abs/2604.26836v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26836v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对模型预测安全滤波器（PSF）在深度强化学习（RL）中可扩展性受限的瓶颈，提出了不确定性感知预测安全滤波器（UPSi）。该方法通过可达集（reachable sets）对概率集成（PE）神经网络动力学进行严格的不确定性量化，显著提高了探索安全性，具有理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26841v1",
+        "title": "Language Diffusion Models are Associative Memories Capable of Retrieving Unseen Data",
+        "summary": "When do language diffusion models memorize their training data, and how to quantitatively assess their true generative regime? We address these questions by showing that Uniform-based Discrete Diffusion Models (UDDMs) fundamentally behave as Associative Memories (AMs) $\\textit{with emergent creative capabilities}$. The core idea of an AM is to reliably recover stored data points as $\\textit{memories}$ by establishing distinct basins of attraction around them. Historically, models like Hopfield networks use an explicit energy function to guarantee these stable attractors. We broaden this perspective by leveraging the observation that energy is not strictly necessary, as basins of attraction can also be formed via conditional likelihood maximization. By evaluating token recovery of $\\textit{training}$ and $\\textit{test}$ examples, we identify in UDDMs a sharp memorization-to-generalization transition governed by the size of the training dataset: as it increases, basins around training examples shrink and basins around unseen test examples expand, until both later converge to the same level. Crucially, we can detect this transition using only the conditional entropy of predicted token sequences: memorization is characterized by vanishing conditional entropy, while in the generalization regime the conditional entropy of most tokens remains finite. Thus, conditional entropy offers a practical probe for the memorization-to-generalization transition in deployed models.",
+        "authors": "Bao Pham, Mohammed J. Zaki, Luca Ambrogioni, Dmitry Krotov, Matteo Negri",
+        "url": "http://arxiv.org/abs/2604.26841v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26841v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了语言扩散模型（UDDMs）作为联想记忆（AMs）的根本性新视角，并揭示了其涌现的创造能力。通过条件熵量化了记忆到泛化的转变，具有极高的理论创新性和严谨性，对理解和评估生成模型有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26768v1",
+        "title": "Decoupling Knowledge and Task Subspaces for Composable Parametric Retrieval Augmented Generation",
+        "summary": "Parametric Retrieval-Augmented Generation (PRAG) encodes external documents into lightweight parameter modules that can be retrieved and merged at inference time, offering a promising alternative to in-context retrieval augmentation. Despite its potential, many PRAG implementations train document adapters with task-supervised objectives, which may cause each adapter to encode both document-specific facts and reusable task-solving behavior. This entanglement may make adapter composition less reliable: when multiple adapters are merged at inference time, their overlapping task behaviors can accumulate together with document-specific updates, potentially making the merged adapter less stable and less focused on the intended document knowledge. To examine this issue, we explore Orthogonal Subspace Decomposition (OSD), an adapter-training setup that separates reusable task behavior from document-specific knowledge adapters. Concretely, we first train a Task LoRA to capture reusable task behavior, and then train document LoRAs to encode document-specific knowledge in a orthogonal subspace. This setup provides a controlled way to examine how orthogonalizing task and document LoRA updates affects adapter composition in multi-document PRAG. Experiments across multiple knowledge-intensive tasks and model scales suggest that this orthogonalization strategy can improve compositional robustness in parametric RAG, especially when multiple document adapters are merged.",
+        "authors": "Weihang Su, Hanwen Zhang, Qingyao Ai, Yiqun Liu",
+        "url": "http://arxiv.org/abs/2604.26768v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26768v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对参数化检索增强生成（PRAG）中适配器组合的可靠性问题，提出了正交子空间分解（OSD）方法，将任务行为与文档知识解耦。该方法具有理论创新性，能提高多文档PRAG的组合鲁棒性，对LLM应用的可靠性有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26762v1",
+        "title": "Exploring the Potential of Probabilistic Transformer for Time Series Modeling: A Report on the ST-PT Framework",
+        "summary": "The Probabilistic Transformer (PT) establishes that the Transformer's self-attention plus its feed-forward block is mathematically equivalent to Mean-Field Variational Inference (MFVI) on a Conditional Random Field (CRF). Under this equivalence the Transformer ceases to be a black-box neural network and becomes a programmable factor graph: graph topology, factor potentials, and the message-passing schedule are all explicit and inspectable primitives that can be engineered. PT was originally developed for natural language and in this report we investigate its potential for time series. We first lift PT into the Spatial-Temporal Probabilistic Transformer (ST-PT) to repair PT's missing channel axis and weak per-step semantics, and adopt ST-PT as a shared cornerstone backbone. We then identify three distinct properties that PT/ST-PT offers as a factor-graph model and derive three Research Questions, one per property, that probe how each property can be exploited in time series: RQ1. The graph topology and potentials are direct programmable primitives. Can this be used to inject symbolic time-series priors into ST-PT through structural graph modifications, especially under data scarcity and noise? RQ2. The CRF's factor matrices are the operator's potentials. Can an external condition program these factor matrices on a per-sample basis, so that conditional generation becomes structural rather than feature-level modulation of a fixed one? RQ3. Each MFVI iteration is a Bayesian posterior update on the factor graph. Can this turn the latent transition of latent-space AutoRegressive (AR) forecasting from an opaque MLP into a principled posterior update, and can a CRF teacher distill its latents into the AR student to counter cumulative error? We give one empirical study per question. Together, these three studies position ST-PT as a programmable framework for time-series modeling.",
+        "authors": "Zhangzhi Xiong, Haoyi Wu, You Wu, Shuqi Gu, Kan Ren, Kewei Tu",
+        "url": "http://arxiv.org/abs/2604.26762v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26762v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "将概率Transformer（PT）提升为时空概率Transformer（ST-PT），并将其数学等价于CRF上的MFVI，为时间序列建模提供了可编程框架。该工作具有极高的理论创新性和严谨性，通过结构化图修改、条件生成和原理性后验更新等方式，解决了时间序列建模中的多个瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26649v1",
+        "title": "When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models",
+        "summary": "Large reasoning models such as DeepSeek-R1 and OpenAI o1 generate extended chains of thought spanning thousands of tokens, yet their integration with retrieval-augmented generation (RAG) remains fundamentally misaligned. Current RAG systems optimize for providing context before reasoning begins, while reasoning models require evidence injection during multi-step inference chains. We introduce ReaLM-Retrieve, a reasoning-aware retrieval framework that addresses this mismatch through three key innovations: (1) a step-level uncertainty detector that identifies knowledge gaps at reasoning-step granularity rather than token or sentence level; (2) a retrieval intervention policy that learns when external evidence maximally benefits ongoing reasoning; and (3) an efficiency-optimized integration mechanism that reduces per-retrieval overhead by 3.2x compared to naive integration. Experiments on MuSiQue, HotpotQA, and 2WikiMultiHopQA demonstrate that ReaLM-Retrieve achieves on average 10.1% absolute improvement in answer F1 over standard RAG (range: 9.0-11.8% across the three benchmarks) while reducing retrieval calls by 47% compared to fixed-interval approaches like IRCoT (all improvements significant at p<0.01, paired bootstrap). On the challenging MuSiQue benchmark requiring 2-4 hop reasoning, our method achieves 71.2% F1 with an average of only 1.8 retrieval calls per question. Analysis shows that ReaLM-Retrieve also improves retrieval quality itself, achieving 81.3% Recall@5 with consistently higher precision and MRR than fixed-interval baselines on supporting evidence, establishing new state-of-the-art efficiency-accuracy trade-offs for reasoning-intensive retrieval tasks.",
+        "authors": "Dongxin Guo, Jikun Wu, Siu Ming Yiu",
+        "url": "http://arxiv.org/abs/2604.26649v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26649v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了RAG与多步推理模型之间根本性错位的问题，提出了ReaLM-Retrieve框架。其步级不确定性检测、检索干预策略和效率优化集成机制具有极高的理论创新性，显著提升了推理密集型任务的F1分数并降低了检索成本，解决了LLM推理的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26561v1",
+        "title": "Preserving Disagreement: Architectural Heterogeneity and Coherence Validation in Multi-Agent Policy Simulation",
+        "summary": "Multi-agent deliberation systems using large language models (LLMs) are increasingly proposed for policy simulation, yet they suffer from artificial consensus: evaluator agents converge on the same option regardless of their assigned value perspectives. We present the AI Council, a three-phase deliberation framework, and conduct 120 deliberations across two policy scenarios to test two interventions. First, architectural heterogeneity (assigning a different 7-9B parameter model to each value perspective) significantly reduces first-choice concentration compared to a homogeneous baseline (child welfare: 70.9% to 46.1%, p < 0.001, r = 0.58; housing: 46.0% to 22.9%, p < 0.001, r = 0.50). This contrasts with accuracy-oriented multi-agent debate, where heterogeneity does not reduce convergence, suggesting model diversity operates differently when no objectively correct answer exists. Second, coherence validation (using a frontier model to assess whether each evaluator's reasoning is grounded in its assigned values) reveals a fidelity-diversity tradeoff: on a scenario with a dominant option, it further reduces concentration (46.1% to 40.8%, p = 0.004), but on a scenario with genuinely competitive options, it increases concentration (22.9% to 26.6%, p = 0.96) by amplifying high-coherence evaluators who cluster on one option. This tradeoff may be a general property of multi-agent systems employing quality weighting. We report negative results from three failed Delphi designs, demonstrate that 8B models exhibit binary rather than graded responses to counter-arguments, and propose the trustworthy tension rate as a diagnostic measure of small-model deliberation capabilities.",
+        "authors": "Ariel Sela",
+        "url": "http://arxiv.org/abs/2604.26561v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26561v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对多代理LLM审议中“人工共识”的瓶颈，提出了架构异构性和一致性验证作为干预措施。该研究揭示了保真度-多样性权衡，并引入了“可信张力率”作为诊断指标，具有理论创新性，对提高多代理LLM系统的真实性和可靠性有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26553v1",
+        "title": "TLPO: Token-Level Policy Optimization for Mitigating Language Confusion in Large Language Models",
+        "summary": "Large language models (LLMs) demonstrate strong multilingual capabilities, yet often fail to consistently generate responses in the intended language, exhibiting a phenomenon known as language confusion. Prior mitigation approaches based on sequence-level fine-tuning, such as DPO, ORPO, and GRPO, operate at the level of entire responses and can lead to unintended degradation of general model capabilities, motivating the need for more fine-grained alternatives. To address this, we introduce Token-Level Policy Optimization (TLPO), a fine-tuning framework designed to mitigate language confusion through localized, token-level updates. TLPO identifies error-prone positions, explores alternative candidate tokens, and updates the policy using a tailored objective to suppress error-inducing outputs at a granular level. This selective intervention enables effective mitigation of language confusion without compromising the model's general abilities. Experiments on multiple multilingual LLMs across diverse languages demonstrate that TLPO significantly outperforms baselines in improving language consistency while preserving downstream task accuracy.",
+        "authors": "Jinho Choo, JunSeung Lee, Jimyeong Kim, Yeeho Song, S. K. Hong, Yeong-Dae Kwon",
+        "url": "http://arxiv.org/abs/2604.26553v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26553v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM语言混淆问题，提出了Token-Level Policy Optimization (TLPO) 框架，通过局部、token级别的更新来缓解混淆。该方法具有理论创新性，避免了对模型通用能力的损害，显著提高了多语言LLM的语言一致性，解决了实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26522v1",
+        "title": "AGEL-Comp: A Neuro-Symbolic Framework for Compositional Generalization in Interactive Agents",
+        "summary": "Large Language Model (LLM)-based agents exhibit systemic failures in compositional generalization, limiting their robustness in interactive environments. This work introduces AGEL-Comp, a neuro-symbolic AI agent architecture designed to address this challenge by grounding actions of the agent. AGEL-Comp integrates three core innovations: (1) a dynamic Causal Program Graph (CPG) as a world model, representing procedural and causal knowledge as a directed hypergraph; (2) an Inductive Logic Programming (ILP) engine that synthesizes new Horn clauses from experiential feedback, grounding symbolic knowledge through interaction; and (3) a hybrid reasoning core where an LLM proposes a set of candidate sub-goals that are verified for logical consistency by a Neural Theorem Prover (NTP). Together, these components operationalize a deduction--abduction learning cycle: enabling the agent to deduce plans and abductively expand its symbolic world model, while a neural adaptation phase keeps its reasoning engine aligned with new knowledge. We propose an evaluation protocol within the \\texttt{Retro Quest} simulation environment to probe for compositional generalization scenarios to evaluate our AGEL agent. Our findings clearly indicate the better performance of our AGEL model over pure LLM-based models. Our framework presents a principled path toward agents that build an explicit, interpretable, and compositionally structured understanding of their world.",
+        "authors": "Mahnoor Shahid, Hannes Rothe",
+        "url": "http://arxiv.org/abs/2604.26522v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26522v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了AGEL-Comp，一个神经符号AI代理架构，旨在解决交互式代理中组合泛化失败的瓶颈。该框架集成了动态因果程序图、归纳逻辑编程引擎和混合推理核心，具有极高的理论创新性和严谨性，对构建鲁棒、可解释的LLM代理有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26516v1",
+        "title": "Lyapunov-Guided Self-Alignment: Test-Time Adaptation for Offline Safe Reinforcement Learning",
+        "summary": "Offline reinforcement learning (RL) agents often fail when deployed, as the gap between training datasets and real environments leads to unsafe behavior. To address this, we present SAS (Self-Alignment for Safety), a transformer-based framework that enables test-time adaptation in offline safe RL without retraining. In SAS, the main mechanism is self-alignment: at test time, the pretrained agent generates several imagined trajectories and selects those satisfying the Lyapunov condition. These feasible segments are then recycled as in-context prompts, allowing the agent to realign its behavior toward safety while avoiding parameter updates. In effect, SAS turns Lyapunov-guided imagination into control-invariant prompts, and its transformer architecture admits a hierarchical RL interpretation where prompting functions as Bayesian inference over latent skills. Across Safety Gymnasium and MuJoCo benchmarks, SAS consistently reduces cost and failure while maintaining or improving return.",
+        "authors": "Seungyub Han, Hyungjin Kim, Jungwoo Lee",
+        "url": "http://arxiv.org/abs/2604.26516v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26516v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了SAS（Self-Alignment for Safety），一个基于Transformer的框架，通过Lyapunov条件指导的自对齐机制，实现了离线安全强化学习（RL）的测试时适应。该方法具有理论创新性，在不重新训练的情况下显著提高了探索安全性，解决了离线RL代理部署中的安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26503v1",
+        "title": "Delta Score Matters! Spatial Adaptive Multi Guidance in Diffusion Models",
+        "summary": "Diffusion models have achieved remarkable success in synthesizing complex static and temporal visuals, a breakthrough largely driven by Classifier-Free Guidance (CFG). However, despite its pivotal role in aligning generated content with textual prompts, standard CFG relies on a globally uniform scalar. This homogeneous amplification traps models in a well-documented \"detail-artifact dilemma\": low guidance scales fail to inject intricate semantics, while high scales inevitably cause structural degradation, color over-saturation, and temporal inconsistencies in videos. In this paper, we expose the physical root of this flaw through the lens of differential geometry. By analyzing Tweedie's Formula, we reveal that CFG intrinsically performs a tangential linear extrapolation. Because the natural data manifold is highly curved, this uniform linear step introduces a severe orthogonal deviation. To keep the generation trajectory safely bounded, we formulate a theoretical upper bound for spatial and adaptive guidance. Based on these geometric insights, we propose Spatial Adaptive Multi Guidance (SAMG), a training-free and virtually zero-cost sampling algorithm. SAMG dynamically computes point-wise conditional guidance energy, applying a conservative minimum scale to high-energy boundary regions to preserve delicate micro-textures, while deploying an aggressive maximum scale in low-energy regions to maximize semantic injection. Extensive experiments across diverse image (SD 1.5, SDXL, SD3.5 Medium) and video (CogVideoX, ModelScope) architectures demonstrate that SAMG effectively resolves the detail-artifact dilemma, achieving superior semantic alignment, structural integrity, and temporal smoothness without any computational overhead.",
+        "authors": "Haosen Li, Wenshuo Chen, Lei Wang, Shaofeng Liang, Bowen Tian, Soning Lai, Yutao Yue",
+        "url": "http://arxiv.org/abs/2604.26503v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26503v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "通过微分几何和Tweedie公式揭示了CFG在扩散模型中“细节-伪影困境”的物理根源，并提出了基于理论上界的空间自适应多重引导（SAMG）算法。该方法具有极高的理论创新性和严谨性，以零成本解决了扩散模型生成质量的瓶颈，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26378v1",
+        "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+        "summary": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+        "authors": "Zhe Ding, Su Pan, Duowei Pan",
+        "url": "http://arxiv.org/abs/2604.26378v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26378v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM量化中混合精度方法忽略权重和激活共同作用的瓶颈，提出了CoQuant联合权重-激活子空间投影方法。该方法通过理论建模输出误差并推导出加权PCA解决方案，具有极高的理论创新性和严谨性，显著提升了LLM量化性能，对模型压缩和推理效率有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26355v1",
+        "title": "Shorthand for Thought: Compressing LLM Reasoning via Entropy-Guided Supertokens",
+        "summary": "Reasoning in Large Language Models incurs significant inference-time compute, yet the token-level information structure of reasoning traces remains underexplored. We observe that reasoning tokens split into two functional types: low-entropy \\textit{structural} tokens (recurring phrases that scaffold the reasoning process) and higher-entropy \\textit{organic} tokens (problem-specific content that drives toward a solution). This asymmetry motivates a simple, model-agnostic compression pipeline: apply cross-word BPE merges on a model's own reasoning traces to derive \\textit{supertokens} that capture frequent structural patterns, then teach the model to adopt them via supervised fine-tuning. Across three model families and five mathematical reasoning benchmarks, our approach shortens reasoning traces by 8.1\\% on average with no statistically significant accuracy loss on any model--benchmark pair. Beyond compression, supertokens act as interpretable reasoning-move annotations (backtracking, verification, strategy shifts), exposing the model's high-level strategy at a glance. Analyzing transitions between structural categories reveals systematic differences between correct and incorrect traces: correct traces show productive recovery (backtracking followed by strategy shifts and verification), while incorrect traces are dominated by confusion cycles (repeated hedging and unresolved contradictions). These diagnostic signals suggest applications in reward shaping and early stopping for RL-based reasoning training.",
+        "authors": "Zhenyu Zhao, Sander Land, Dan Bikel, Waseem Alshikh",
+        "url": "http://arxiv.org/abs/2604.26355v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26355v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "观察到LLM推理token分为结构性低熵和有机性高熵两类，并提出了通过熵引导的超token（supertokens）压缩LLM推理的创新方法。该方法具有理论创新性，显著压缩了推理痕迹而无精度损失，解决了LLM推理计算瓶颈，并提供了可解释的诊断信号，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.26326v1",
+        "title": "Addressing Performance Saturation for LLM RL via Precise Entropy Curve Control",
+        "summary": "Reinforcement learning (RL) has unlocked complex reasoning abilities in large language models (LLMs). However, most RL algorithms suffer from performance saturation, preventing further gains as RL training scales. This problem can be characterized by the collapse of entropy, a key diagnostic for exploration in RL. Existing attempts have tried to prevent entropy collapse through regularization or clipping, but their resulting entropy curves often exhibit instability in the long term, which hinders performance gains. In this paper, we introduce Entrocraft, a simple rejection-sampling approach that realizes any user-customized entropy schedule by biasing the advantage distributions. Entrocraft requires no objective regularization and is advantage-estimator-agnostic. Theoretically, we relate per-step entropy change to the advantage distribution under minimal assumptions, which explains the behavior of existing RL and entropy-preserving methods. Entrocraft also enables a systematic study of entropy schedules, where we find that linear annealing, which starts high and decays to a slightly lower target, performs best. Empirically, Entrocraft addresses performance saturation, significantly improving generalization, output diversity, and long-term training. It enables a 4B model to outperform an 8B baseline, sustains improvement for up to 4x longer before plateauing, and raises pass@K by 50% over the baseline.",
+        "authors": "Bolian Li, Yifan Wang, Yi Ding, Anamika Lochab, Ananth Grama, Ruqi Zhang",
+        "url": "http://arxiv.org/abs/2604.26326v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.26326v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "诊断了LLM强化学习（RL）中性能饱和的关键特征——熵崩溃，并提出了Entrocraft，一个通过拒绝采样实现精确熵曲线控制的创新方法。该方法具有极高的理论创新性和严谨性，显著提升了LLM RL的泛化能力和长期训练效果，解决了LLM RL的实际瓶颈。"
+    }
+]

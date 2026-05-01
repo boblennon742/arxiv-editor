@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.27934v1",
+        "title": "MM-StanceDet: Retrieval-Augmented Multi-modal Multi-agent Stance Detection",
+        "summary": "Multimodal Stance Detection (MSD) is crucial for understanding public discourse, yet effectively fusing text and image, especially with conflicting signals, remains challenging. Existing methods often face difficulties with contextual grounding, cross-modal interpretation ambiguity, and single-pass reasoning fragility. To address these, we propose Retrieval-Augmented Multi-modal Multi-agent Stance Detection (MM-StanceDet), a novel multi-agent framework integrating Retrieval Augmentation for contextual grounding, specialized Multimodal Analysis agents for nuanced interpretation, a Reasoning-Enhanced Debate stage for exploring perspectives, and Self-Reflection for robust adjudication. Extensive experiments on five datasets demonstrate MM-StanceDet significantly outperforms state-of-the-art baselines, validating the efficacy of its multi-agent architecture and structured reasoning stages in addressing complex multimodal stance challenges.",
+        "authors": "Weihai Lu, Zhejun Zhao, Yanshu Li, Huan He",
+        "url": "http://arxiv.org/abs/2604.27934v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27934v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“博弈论自由能原理”，统一了贝叶斯推理、博弈论和热力学，为理解集体智能提供了基础性理论框架。其严谨的数学推导和对多智能体系统协同行为的预测，对 AI 基础理论研究具有极高价值，尤其适合数理统计背景的博士生。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27810v1",
+        "title": "Hyper-Dimensional Fingerprints as Molecular Representations",
+        "summary": "Computational molecular representations underpin virtual screening, property prediction, and materials discovery. Conventional fingerprints are efficient and deterministic but lose structural information through hash-based compression, particularly at low dimensionalities. Learned representations from graph neural networks recover this expressiveness but require task-specific training and substantial computational resources. Here we introduce hyperdimensional fingerprints (HDF), which replace the learned transformations of message-passing neural networks with algebraic operations on high-dimensional vectors, producing deterministic molecular representations without any training. Across diverse property prediction benchmarks, HDF outperforms conventional fingerprints in the majority of tasks while exhibiting greater consistency across datasets and models. Crucially, HDF embeddings preserve molecular similarity faithfully: at 32 dimensions, distances in HDF space achieve a 0.9 Pearson correlation with graph edit distance, compared to 0.55 for Morgan fingerprints at equivalent size. This structural fidelity persists at low dimensions where hash-based methods degrade, allowing simple nearest-neighbor regression to remain predictive with as few as 64 components. We further demonstrate the practical impact in Bayesian molecular optimization, where HDF-based surrogate models achieve substantially improved sample efficiency in regimes where Morgan fingerprints perform comparably to random search. HDF thus provides a general-purpose, training-free alternative to conventional molecular fingerprints, suggesting that the information loss long accepted as inherent to fixed-length fingerprints is a limitation of the hash-based encoding scheme rather than the fingerprint paradigm itself.",
+        "authors": "Jonas Teufel, Luca Torresi, André Eberhard, Pascal Friederich",
+        "url": "http://arxiv.org/abs/2604.27810v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27810v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了“超维度指纹”（HDF）作为一种新颖的分子表示方法，通过高维向量的代数运算取代了图神经网络的复杂学习过程，实现了无需训练的确定性表示。其理论严谨性体现在对分子相似性保持的证明上，且在实际应用中显著提升了虚拟筛选和材料发现的效率，具有重要的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27443v1",
+        "title": "ABC: Any-Subset Autoregression via Non-Markovian Diffusion Bridges in Continuous Time and Space",
+        "summary": "Generating continuous-time, continuous-space stochastic processes (e.g., videos, weather forecasts) conditioned on partial observations (e.g., first and last frames) is a fundamental challenge. Existing approaches, (e.g., diffusion models), suffer from key limitations: (1) noise-to-data evolution fails to capture structural similarity between states close in physical time and has unstable integration in low-step regimes; (2) random noise injected is insensitive to the physical process's time elapsed, resulting in incorrect dynamics; (3) they overlook conditioning on arbitrary subsets of states (e.g., irregularly sampled timesteps, future observations). We propose ABC: Any-Subset Autoregressive Models via Non-Markovian Diffusion Bridges in Continuous Time and Space. Crucially, we model the process with one continual SDE whose time variable and intermediate states track the real time and process states. This has provable advantages: (1) the starting point for generating future states is the already-close previous state, rather than uninformative noise; (2) random noise injection scales with physical time elapsed, encouraging physically plausible dynamics with similar time-adjacent states. We derive SDE dynamics via changes-of-measure on path space, yielding another advantage: (3) path-dependent conditioning on arbitrary subsets of the state history and/or future. To learn these dynamics, we derive a path- and time-dependent extension of denoising score matching. Our experiments show ABC's superiority to competing methods on multiple domains, including video generation and weather forecasting.",
+        "authors": "Gabe Guo, Thanawat Sornwanee, Lutong Hao, Elon Litman, Stefano Ermon, Jose Blanchet",
+        "url": "http://arxiv.org/abs/2604.27443v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27443v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 ABC 模型，通过非马尔可夫扩散桥在连续时间与空间中实现任意子集自回归，解决了现有扩散模型在处理连续过程中的关键限制。其核心在于将物理时间与过程状态关联的连续 SDE 建模，并提供了严谨的理论推导，对生成模型和物理模拟领域是重要的理论突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27401v1",
+        "title": "Perturbation Probing: A Two-Pass-per-Prompt Diagnostic for FFN Behavioral Circuits in Aligned LLMs",
+        "summary": "Perturbation probing generates task-specific causal hypotheses for FFN neurons in large language models using two forward passes per prompt and no backpropagation, followed by a one-time intervention sweep of about 150 passes amortized across all identified neurons. Across eight behavioral circuits, 13 models, and four architecture families, we identify two circuit structures that organize LLM behavior. Opposition circuits appear when RLHF suppresses a pre-training tendency. In safety refusal, about 50 neurons, or 0.014 percent of all neurons, control the refusal template; ablating them changes 80 percent of response formats on 520 AdvBench prompts while producing near-zero harmful compliance, 3 of 520 cases, all with disclaimers. Routing circuits appear for pre-training behaviors distributed through attention. For language selection, residual-stream direction injection switches English to Chinese output on 99.1 percent of 580 benchmark prompts in the 3 of 19 tested models that satisfy three observed conditions: bilingual training, FFN-to-skip signal ratio between 0.3 and 1.1, and linear representability. The same intervention fails on the other 16 models and on math, code, and factual circuits, defining the limits of directional steering. The FFN-to-skip signal ratio, computed from the same two forward passes, distinguishes the two structures and predicts the appropriate intervention. Circuit topology varies by architecture, from Qwen's concentrated FFN bottleneck to Gemma's normalization-shielded circuit. In Qwen3.5-2B, ablating 20 neurons eliminates multi-turn sycophantic capitulation, while amplifying 10 related neurons improves factual correction from 52 percent to 88 percent on 200 TruthfulQA prompts. These results show that perturbation probing offers mechanistic insight into RLHF-organized behavior and a practical toolkit for precision template-layer editing.",
+        "authors": "Hongliang Liu, Tung-Ling Li, Yuhao Wu",
+        "url": "http://arxiv.org/abs/2604.27401v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27401v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“扰动探测”方法，通过两次前向传播诊断对齐 LLM 中 FFN 行为回路，揭示了 RLHF 组织行为的深层机制。其理论创新性在于通过因果假设和干预，提供了对 LLM 内部工作原理的机械性理解，对 LLM 可解释性、安全性和精确行为编辑具有极高价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27358v1",
+        "title": "Safe Bilevel Delegation (SBD): A Formal Framework for Runtime Delegation Safety in Multi-Agent Systems",
+        "summary": "As large language model (LLM) agents are deployed in high-stakes environments, the question of how safely to delegate subtasks to specialized sub-agents becomes critical. Existing work addresses multi-agent architecture selection at design time or provides broad empirical guidelines, but neither provides a runtime mechanism that dynamically adjusts the safety-efficiency trade-off as task context changes during execution.   We propose Safe Bilevel Delegation (SBD), a formal framework for runtime delegation safety in hierarchical multi-agent systems. SBD formulates task delegation as a bilevel optimization problem: an outer meta-weight network phi learns context-dependent safety-efficiency weights lambda(s) in [0,1]; an inner loop optimizes the delegation policy pi subject to a probabilistic safety constraint P(safe) >= 1-delta. The continuous delegation degree alpha in [0, 1] controls how much decision authority is transferred to each sub-agent, interpolating smoothly between full human override (alpha=0) and fully autonomous execution (alpha=1).   We establish three theoretical results: (1) Safety Monotonicity--higher outer safety weight produces a weakly safer inner policy; (2) Inner Policy Convergence--projected gradient descent on the inner problem converges linearly under standard smoothness assumptions; (3) an Accountability Propagation bound that distributes responsibility across multi-hop delegation chains with a provable per-agent ceiling. We instantiate SBD in three high-stakes domains--medical AI (MIMIC-III), financial risk control (S and P 500), and educational agent supervision (ASSISTments)--specifying datasets, safety constraint sets, baselines, and evaluation protocols. This manuscript presents the formal framework and theoretical results in full; empirical validation following the protocols described herein is planned and will be reported in a forthcoming revision.",
+        "authors": "Yuan Sun",
+        "url": "http://arxiv.org/abs/2604.27358v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27358v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 SBD（安全双层委托）框架，为多智能体系统中的运行时委托安全提供了形式化理论。它将任务委托建模为双层优化问题，并给出了严格的理论结果，包括安全性单调性、内部策略收敛性和问责传播界限，对高风险场景下多智能体系统的安全部署具有奠基性意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.28144v1",
+        "title": "Global Optimality for Constrained Exploration via Penalty Regularization",
+        "summary": "Efficient exploration is a central problem in reinforcement learning and is often formalized as maximizing the entropy of the state-action occupancy measure. While unconstrained maximum-entropy exploration is relatively well understood, real-world exploration is often constrained by safety, resource, or imitation requirements. This constrained setting is particularly challenging because entropy maximization lacks additive structure, rendering Bellman-equation-based methods inapplicable. Moreover, scalable approaches require policy parameterization, inducing non-convexity in both the objective and the constraints. To our knowledge, the only prior model-free policy-gradient approach for this setting under general policy parameterization is due to Ying et al. (2025). Unfortunately, their guarantees are limited to weak regret and ergodic averages, which do not imply that the final output is a single deployable policy that is near-optimal and nearly feasible. In this work we take a different approach to this problem, and propose Policy Gradient Penalty (PGP) method, a single-loop policy-space method that enforces general convex occupancy-measure constraints via quadratic-penalty regularization. PGP constructs pseudo-rewards that yield gradient estimates of the penalized objective, subsequently exploiting the classical Policy Gradient Theorem. We further establish the regularity of the penalized objective, providing the smoothness properties needed to justify the convergence of PGP. Leveraging hidden convexity and strong duality, we then establish global last-iterate convergence guarantees, attaining an $ε$-optimal constrained entropy value with $ε$ bounded constraint violation despite policy-induced non-convexity. We validate PGP through ablations on a grid-world benchmark and further demonstrate scalability on two challenging continuous-control tasks.",
+        "authors": "Florian Wolf, Ilyas Fatkhullin, Niao He",
+        "url": "http://arxiv.org/abs/2604.28144v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.28144v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对强化学习中受限探索问题，提出了 Policy Gradient Penalty (PGP) 方法，通过二次惩罚正则化强制执行凸占用度量约束。其主要贡献在于建立了全局最终迭代收敛性保证，为在安全、资源等约束下进行高效探索提供了严谨的理论基础和可扩展的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27996v1",
+        "title": "Exploring Interaction Paradigms for LLM Agents in Scientific Visualization",
+        "summary": "This paper examines how different types of large language model (LLM) agents perform on scientific visualization (SciVis) tasks, where users generate visualization workflows from natural-language instructions. We compare three primary interaction paradigms, including domain-specific agents with structured tool use, computer-use agents, and general-purpose coding agents, by evaluating eight representative agents across 15 benchmark tasks and measuring visualization quality, efficiency, robustness, and computational cost. We further analyze interaction modalities, including code scripts and model context protocol (MCP) or API calls for structured tool use, as well as command-line interfaces (CLI) and graphical user interfaces (GUI) for more general interaction, while additionally studying the effect of persistent memory in selected agents. The results reveal clear tradeoffs across paradigms and modalities. General-purpose coding agents achieve the highest task success rates but are computationally expensive, while domain-specific agents are more efficient and stable but less flexible. Computer-use agents perform well on individual steps but struggle with longer multi-step workflows, indicating that long-horizon planning is their primary limitation. Across both CLI- and GUI-based settings, persistent memory improves performance over repeated trials, although its benefits depend on the underlying interaction mode and the quality of feedback. These findings suggest that no single approach is sufficient, and future SciVis systems should combine structured tool use, interactive capabilities, and adaptive memory mechanisms to balance performance, robustness, and flexibility.",
+        "authors": "Jackson Vonderhorst, Kuangshi Ai, Haichao Miao, Shusen Liu, Chaoli Wang",
+        "url": "http://arxiv.org/abs/2604.27996v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27996v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将经典非参数统计方法（如核平滑）引入到 LLM 强化学习中，用于价值函数估计和策略优化，以解决资源受限下低方差梯度估计的挑战。其理论和数值结果表明，该方法在计算和统计效率上均表现出色，为 LLM 推理的策略学习提供了新的统计学视角和高效方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27786v1",
+        "title": "On the Expressive Power of GNNs to Solve Linear SDPs",
+        "summary": "Semidefinite programs (SDPs) are a powerful framework for convex optimization and for constructing strong relaxations of hard combinatorial problems. However, solving large SDPs can be computationally expensive, motivating the use of machine learning models as fast computational surrogates. Graph neural networks (GNNs) are a natural candidate in this setting due to their sparsity-awareness and ability to model variable-constraint interactions. In this work, we study what expressive power is sufficient to recover optimal SDP solutions. We first prove negative results showing that standard GNN architectures fail on recovering linear SDP solutions. We then identify a more expressive architecture that captures the key structure of SDPs and can, in particular, emulate the updates of a standard first-order solver. Empirically, on both synthetic and \\textsc{SdpLib} benchmarks of various classes of SDPs, this more expressive architecture achieves consistently lower prediction error and objective gap than theoretically weaker baselines. Finally, using the learned high-quality predictions to warm-start the first-order solver yields practical speedups of up to 80%.",
+        "authors": "Chendi Qian, Christopher Morris",
+        "url": "http://arxiv.org/abs/2604.27786v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27786v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了 GNN 解决线性 SDPs 的表达能力，不仅证明了标准 GNN 架构的局限性，还提出了一种更具表达力的架构，能够模拟标准一阶求解器的更新。这在理论上揭示了 GNN 在优化问题上的能力边界，并为构建更高效的计算替代模型提供了方向，具有重要的理论和应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27733v1",
+        "title": "Mind the Gap: Structure-Aware Consistency in Preference Learning",
+        "summary": "Preference learning has become the foundation of aligning Large Language Models (LLMs) with human intent. Popular methods, such as Direct Preference Optimization (DPO), minimize surrogate losses as proxies for the intractable pairwise ranking loss. However, we demonstrate that for the equicontinuous hypothesis sets typical of neural networks, these standard surrogates are theoretically inconsistent, yielding vacuous generalization guarantees. To resolve this, we formulate LLM alignment within a margin-shifted ranking framework. We derive rigorous $H$-consistency bounds that depend on enforcing a separation margin $γ$. Crucially, we extend this to Structure-Aware $H$-consistency, introducing a novel objective (SA-DPO) that adapts the margin based on the semantic distance between responses to handle synonyms and hard pairs. Finally, we analyze the trade-off between consistency and model limitations via the Margin-Capacity Profile, proving that heavy-tailed surrogates (such as the Polynomial Hinge family) offer superior consistency guarantees for capacity-bounded models compared to the standard logistic loss used in DPO.",
+        "authors": "Mehryar Mohri, Yutao Zhong",
+        "url": "http://arxiv.org/abs/2604.27733v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27733v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了 LLM 偏好学习中标准替代损失的理论不一致性，并提出了结构感知 H-一致性框架和 SA-DPO 目标函数。其严谨的理论推导和对边际-容量曲线的分析，为 LLM 对齐提供了更坚实的统计学习理论基础，解决了 DPO 等方法在泛化性上的潜在问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27691v1",
+        "title": "When Agents Evolve, Institutions Follow",
+        "summary": "Across millennia, complex societies have faced the same coordination problem of how to organize collective action among cognitively bounded and informationally incomplete individuals. Different civilizations developed different political institutions to answer the same basic questions of who proposes, who reviews, who executes, and how errors are corrected. We argue that multi-agent systems built on large language models face the same challenge. Their central problem is not only individual intelligence, but collective organization. Historical institutions therefore provide a structured design space for multi-agent architectures, making key trade-offs between efficiency and error correction, centralization and distribution, and specialization and redundancy empirically testable. We translate seven historical political institutions, spanning four canonical governance patterns, into executable multi-agent architectures and evaluate them under identical conditions across three large language models and two benchmarks. We find that governance topology strongly shapes collective performance. Within a single model, the gap between the best and worst institution exceeds 57 percentage points, while the optimal architecture shifts systematically with model capability and task characteristics. These results suggest that collective intelligence will not advance through a single optimal organizational form, but through governance mechanisms that can be reselected and reconfigured as tasks and capabilities evolve. More broadly, this points to a transition from \\textbf{self-evolving agents} to the \\textbf{self-evolving multi-agent system}. The code is available on \\href{https://github.com/cf3i/SocialSystemArena}{GitHub}.",
+        "authors": "Chao Fei, Hongcheng Guo, Yanghua Xiao",
+        "url": "http://arxiv.org/abs/2604.27691v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27691v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将历史政治制度作为多智能体系统架构的设计空间，提出“当智能体演化，制度亦随之”的理念。它将四种典型治理模式转化为可执行的多智能体架构，并实证评估了治理拓扑对集体性能的影响。这为多智能体系统的组织和演化提供了深刻的理论视角和设计指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.28192v1",
+        "title": "LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models",
+        "summary": "Vision-Language-Action (VLA) models have increasingly incorporated reasoning mechanisms for complex robotic manipulation. However, existing approaches share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and discretization, or utilizing more expressive continuous latent reasoning, they are predominantly confined to static imitation learning that limits adaptability and generalization. While online reinforcement learning (RL) has been introduced to VLAs to enable trial-and-error exploration, current methods exclusively optimize the vanilla action space, bypassing the underlying physical reasoning process. In this paper, we present \\textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm. Specifically, we propose \\textbf{Latent-to-Action Policy Optimization (LAPO)}, a novel RL algorithm that jointly optimizes the latent reasoning process and the action generation. By bridging reasoning and control, LAPO improves the representation of physical world modeling and enhances robustness in interactive environments. Furthermore, an \\textbf{adaptive latent CoT mechanism} is introduced to allow the policy to dynamically adjust its reasoning horizon based on environment complexity. Extensive experiments show that LaST-R1 achieves a near-perfect 99.8\\% average success rate on the LIBERO benchmark with only one-shot supervised warm-up, significantly improving convergence speed and performance over prior state-of-the-art methods. In real-world deployments, LAPO post-training yields up to a 44\\% improvement over the initial warm-up policy across four complex tasks, including both single-arm and dual-arm settings. Finally, LaST-R1 demonstrates strong generalization across simulated and real-world environments.",
+        "authors": "Hao Chen, Jiaming Liu, Zhonghao Yan, Nuowei Han, Renrui Zhang, Chenyang Gu, Jialin Gao, Ziyu Guo, Siyuan Qian, Yinxi Wang, Peng Jia, Chi-Wing Fu, Shanghang Zhang, Pheng-Ann Heng",
+        "url": "http://arxiv.org/abs/2604.28192v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.28192v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 LaST-R1 框架，通过自适应物理潜在推理强化 VLA 模型中的动作，并引入了新颖的 Latent-to-Action Policy Optimization (LAPO) 算法。它解决了现有 VLA 模型在适应性和泛化性上的局限，通过桥接推理与控制，显著提升了复杂机器人操作的成功率和鲁棒性，具有很高的实际应用价值和算法创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27872v1",
+        "title": "Modeling Clinical Concern Trajectories in Language Model Agents",
+        "summary": "Large language model (LLM) agents deployed in clinical settings often exhibit abrupt, threshold-driven behavior, offering little visibility into accumulating risk prior to escalation. In real-world care, however, clinicians act on gradually rising concern rather than instantaneous triggers. We study whether explicit state dynamics can expose such pre-escalation signals without delegating clinical authority to the agent. We introduce a lightweight agent architecture in which a memoryless clinical risk encoder is integrated over time using first- and second-order dynamics to produce a continuous escalation pressure signal. Across synthetic ward scenarios, stateless agents exhibit sharp escalation cliffs, while second-order dynamics produce smooth, anticipatory concern trajectories despite similar escalation timing. These trajectories surface sustained unease prior to escalation, enabling human-in-the-loop monitoring and more informed intervention. Our results suggest that explicit state dynamics can make LLM agents more clinically legible by revealing how long concern has been rising, not just when thresholds are crossed.",
+        "authors": "Sukesh Subaharan, Venkatesan VS, Murugadasan P, Sivakumar D, Gautham N, Ganeshkumar M",
+        "url": "http://arxiv.org/abs/2604.27872v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27872v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 TwinGate，一种有状态的双编码器防御框架，通过非对称对比学习（ACL）有效应对 LLM 的分解式越狱攻击。其创新性在于解决了匿名流量下追踪历史上下文的难题，并在理论上设计了轻量级且高效的防御机制，对 LLM 安全性具有关键的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27844v1",
+        "title": "ZipCCL: Efficient Lossless Data Compression of Communication Collectives for Accelerating LLM Training",
+        "summary": "Communication has emerged as a critical bottleneck in the distributed training of large language models (LLMs). While numerous approaches have been proposed to reduce communication overhead, the potential of lossless compression has remained largely underexplored since compression and decompression typically consume larger overheads than the benefits of reduced communication traffic. We observe that the communication data, including activations, gradients and parameters, during training often follows a near-Gaussian distribution, which is a key feature for data compression. Thus, we introduce ZipCCL, a lossless compressed communication library of collectives for LLM training. ZipCCL is equipped with our novel techniques: (1) theoretically grounded exponent coding that exploits the Gaussian distribution of LLM tensors to accelerate compression without expensive online statistics, (2) GPU-optimized compression and decompression kernels that carefully design memory access patterns and pipeline using communication-aware data layout, and (3) adaptive communication strategies that dynamically switch collective operations based on workload patterns and system characteristics. Evaluated on a 64-GPU cluster using both mixture-of-experts and dense transformer models, ZipCCL reduces communication time by up to 1.35$\\times$ and achieves end-to-end training speedups of up to 1.18$\\times$ without any impact on model quality.",
+        "authors": "Wenxiang Lin, Xinglin Pan, Ruibo Fan, Shaohuai Shi, Xiaowen Chu",
+        "url": "http://arxiv.org/abs/2604.27844v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27844v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文介绍了 ZipCCL，一个用于加速 LLM 训练的无损压缩通信库。它利用 LLM 张量的近高斯分布特性，提出了理论上基于指数编码的加速压缩技术，并结合 GPU 优化内核和自适应通信策略。该方法显著提升了 LLM 分布式训练效率，且不影响模型质量，解决了 LLM 训练中的关键通信瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27396v1",
+        "title": "VitaLLM: A Versatile, Ultra-Compact Ternary LLM Accelerator with Dependency-Aware Scheduling",
+        "summary": "Deploying Large Language Models (LLMs) on resource-constrained edge devices faces critical bottlenecks in memory bandwidth and power consumption. While ternary quantization (e.g., BitNet b1.58) significantly reduces model size, its direct deployment on general-purpose hardware is hindered by workload imbalance, bandwidth-bound decoding, and strict data dependencies. To address these challenges, we propose \\textbf{VitaLLM}, a hardware-software co-designed accelerator tailored for efficient ternary LLM inference. We introduce a heterogeneous \\textbf{Dual-Core Compute Strategy} that synergizes specialized TINT-Cores for massive ternary projections with a unified BoothFlex-Core for mixed-precision attention, ensuring high utilization across both compute-bound prefill and bandwidth-bound decode stages. Furthermore, we develop a \\textbf{Leading One Prediction (LOP)} mechanism to prune redundant Key-Value (KV) cache fetches and a \\textbf{Dependency-Aware Scheduling} framework to hide the latency of nonlinear operations. Implemented in TSMC 16nm technology, VitaLLM achieves a decoding throughput of 70.70 tokens/s within an ultra-compact area of 0.223 mm$^2$ and a power consumption of 65.97 mW. The design delivers a superior Figure of Merit (FOM) of 17.4 TOPS/mm$^2$/W, significantly outperforming state-of-the-art accelerators. Finally, we explore an extended bit-serial design (BoothFlex-BS) to demonstrate the architecture's adaptability for precision-agile inference.",
+        "authors": "Zi-Wei Lin, Tian-Sheuan Chang",
+        "url": "http://arxiv.org/abs/2604.27396v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27396v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 VitaLLM，一款软硬件协同设计的超紧凑三元 LLM 加速器，专为边缘设备上的高效推理而优化。其创新点在于异构双核计算策略、前导一预测（LOP）机制和依赖感知调度框架，有效解决了三元量化 LLM 在部署中的内存带宽和功耗瓶颈，具有极高的工程创新和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27389v1",
+        "title": "COHERENCE: Benchmarking Fine-Grained Image-Text Alignment in Interleaved Multimodal Contexts",
+        "summary": "In recent years, Multimodal Large Language Models (MLLMs) have achieved remarkable progress on a wide range of multimodal benchmarks. Despite these advances, most existing benchmarks mainly focus on single-image or multi-image comprehension. In real-world scenarios such as document reading, information is often presented as interleaved multimodel contexts. This requires MLLMs not only to recognize the content of individual images, but also to identify relevant textual and visual evidence, establish fine-grained alignments between them, and reason over these aligned signals in interleaved contexts based on contextual evidence.However, there is still a lack of systematic benchmarks for quantifying the fine-grained understanding ability of MLLMs in interleaved image-text contexts. To fill this gap, we propose COHERENCE, a benchmark designed to evaluate the ability of MLLMs to recover fine-grained image-text correspondences in interleaved multimodal contexts. COHERENCE covers interleaved image-text content from four representative domains and contains 6,161 high-quality questions. Moreover, we perform a six-type error analysis, enabling fine-grained attribution of failures in interleaved image-text understanding to the specific capabilities missing in current MLLMs.",
+        "authors": "Bingli Wang, Huanze Tang, Haijun Lv, Zhishan Lin, Lixin Gu, Lei Feng, Qipeng Guo, Kai Chen",
+        "url": "http://arxiv.org/abs/2604.27389v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27389v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 MiniCPM-o 4.5，一个实现实时全双工全模态交互的 MLLM。其核心创新是 Omni-Flow 统一流式框架，将传统轮流交互转变为时间对齐的全双工过程，使模型能同时感知和响应，并展现主动行为。这代表了 MLLM 交互范式的根本性转变，对实现类人多模态交互具有里程碑意义。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2604.27292v1",
+        "title": "The Two Boundaries: Why Behavioral AI Governance Fails Structurally",
+        "summary": "Every system that performs effects has two boundaries: what it can do (expressiveness) and what governance covers (governance). In nearly all deployed AI systems, these boundaries are defined independently, creating three regions: governed capabilities (the only useful region), ungoverned capabilities (risk), and governance policies that address non-existent capabilities (theater). Two of the three regions are failure modes. We focus on the governance of effects: actions that AI systems perform in the world (API calls, database writes, tool invocations). This is distinct from the governance of model outputs (content quality, bias, fairness), which operates at a different level and requires different mechanisms. We present a formal framework for analyzing this structural gap. Rice's theorem (1953) proves the gap is undecidable in the general case for any Turing-complete architecture that attempts to govern effects behaviorally: no algorithm can decide non-trivial semantic properties of arbitrary programs, including the property \"this program's effects comply with the governance policy.\" We define coterminous governance: a system property where the expressivenessboundary equals the governance boundary. We show that coterminous governance requires an architectural decision (separatingcomputation from effect) rather than a governance layer added after the fact. We show that structural governance under this separation subsumes separate governance infrastructure: governance checks become part of the execution pipeline rather than a second system running alongside it. We propose coterminous governance as the testable criterion for any AI governance system: either the two boundaries are provably identical, or risk and theater are structurally inevitable. Proofs are mechanized in Coq (454 theorems, 36 modules, 0 admitted).",
+        "authors": "Alan L. McCann",
+        "url": "http://arxiv.org/abs/2604.27292v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27292v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了行为AI治理结构性失败的正式框架，通过Rice定理证明了不可判定性，并引入了“同界治理”概念。其核心是形式逻辑和数学证明，且通过Coq进行了机械化验证，完美符合对“强大的理论基础”和“清晰的数学推导”的要求，对AI系统的安全性和可靠性具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27289v1",
+        "title": "Mechanized Foundations of Structural Governance: Machine-Checked Proofs for Governed Intelligence",
+        "summary": "We present five results in the theory of structural governance for cognitive workflow systems. Three are mechanized in Coq 8.19 using the Interaction Trees library with parameterized coinduction; two are proved on paper with explicit reductions. The Coinductive Safety Predicate (gov_safe) is a coinductive property that captures governance safety for infinite program behaviors, indexed by a boolean permission flag that is provably false for ungoverned I/O and true for governed interpretations (mechanized). The Governance Invariance Theorem establishes that governance is uniform across the meta-recursive tower: governance at level n+1 reduces to governance at level n by definitional equality of the type (mechanized). The Sufficiency Theorem proves that four atomic primitives (code, reason, memory, call) are expressively complete for any discrete intelligent system, formalized as compositional closure of a Kleisli category (mechanized). The Alternating Normal Form provides a canonical decomposition of any machine into alternating code and effect layers, with a confluent rewriting system (paper proof). The Necessity Theorem proves via explicit reduction to Rice's theorem that an architecturally opaque component (the reason primitive) is mathematically necessary for problems requiring semantic judgment (paper proof). A sixth contribution connects the abstract model to the deployed runtime: the Verified Interpreter Specification formalizes the BEAM runtime's trust, capability, and hash chain logic in Coq, then tests the running system against this specification using property-based testing with over 70,000 randomly generated directive sequences and zero disagreements. The mechanization comprises approximately 12,000 lines across 36 modules with 454 theorems and zero admitted lemmas.",
+        "authors": "Alan L. McCann",
+        "url": "http://arxiv.org/abs/2604.27289v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27289v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提供了认知工作流系统结构化治理的机械化理论基础，包括Coq中验证的五项关键理论结果（如Coinductive Safety Predicate, Governance Invariance Theorem）。这是对AI系统底层逻辑和安全性的极致数学严谨性探索，直接满足了对形式化证明和数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27282v1",
+        "title": "The Likelihood Ratio Wall: Structural Limits on Accurate Risk Assessment for Rare Violence",
+        "summary": "Pretrial risk assessment tools are used on over one million U.S. defendants each year, yet their use for predicting rare violent re-offense faces a basic statistical barrier. We derive a universal precision bound -- the Likelihood Ratio Wall -- showing that when violent re-arrest rates are low (2-5%), achieving even a 50% hit rate among people labeled \"high risk\" (positive predictive value, or PPV) would require tools far more discriminative than current instruments appear to be. For rare outcomes, a tool can have respectable-looking performance metrics and still be wrong most of the time it flags someone as \"high risk for violence.\" We show that post-hoc score recalibration cannot solve this problem because it does not improve the tool's underlying ability to separate true positives from false positives. We further prove a Surveillance Ceiling: when over-policing inflates recorded \"risk factors\" among those who would not re-offend, the maximum achievable precision is structurally lower for over-policed groups, even at equal offense rates. We translate these results into the Number Needed to Detain (how many people must be detained to prevent one violent offense), and propose that risk reports should communicate this uncertainty explicitly. Our findings suggest that for rare violent outcomes, debates about fairness metrics alone are incomplete: under current data regimes, the available features may not support high-confidence individualized detention decisions.",
+        "authors": "Marco Pollanen",
+        "url": "http://arxiv.org/abs/2604.27282v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27282v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "导出了预测稀有暴力事件的“似然比墙”和“监控上限”等通用精度界限，揭示了风险评估工具的结构性统计限制。这篇论文在统计理论和数学推导方面极其严谨，直接提供了统计保证，并对刑事司法和算法公平性有深刻的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27442v1",
+        "title": "The Bernstein-von Mises theorem for Bayesian one-pass online learning",
+        "summary": "Bayesian online learning provides a coherent framework for sequential inference. However, its theoretical understanding remains limited, particularly in the one-pass setting. Existing theoretical guarantees typically require the mini-batch sample size to diverge, a condition that fails in the one-pass regime. In this paper, we propose a new Bayesian online learning algorithm tailored to the one-pass setting, which incorporates a warm-start phase to ensure stable sequential updates. For this algorithm, we show that the sequentially updated posterior attains the optimal convergence rate. Building on this, we establish an online analogue of the Bernstein-von Mises theorem, which guarantees valid uncertainty quantification without diverging mini-batch sample sizes. Our analysis is based on a novel theoretical framework that differs fundamentally from existing approaches in the online learning literature. Numerical experiments on generalized linear models show that the proposed method matches the performance of the batch estimator while outperforming existing online procedures.",
+        "authors": "Jeyong Lee, Junhyeok Choi, Dongguen Kim, Minwoo Chae",
+        "url": "http://arxiv.org/abs/2604.27442v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27442v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了针对单次在线学习的新贝叶斯算法，并建立了Bernstein-von Mises定理的在线模拟，保证了不确定性量化的有效性。这篇论文在贝叶斯统计、收敛性分析和理论框架构建方面具有极高的严谨性，是纯粹的统计理论贡献，非常符合偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27394v1",
+        "title": "Bayesian X-Learner: Calibrated Posterior Inference for Heterogeneous Treatment Effects under Heavy-Tailed Outcomes",
+        "summary": "Conditional Average Treatment Effect (CATE) estimation in practice demands three properties simultaneously: heterogeneous effects $τ(x)$, calibrated uncertainty over them, and robustness to the heavy tails that contaminate real outcome data. Meta-learners (Künzel et al., 2019) give (i); causal forests and BART give (i)-(ii) with Gaussian-tail assumptions; no widely used tool gives all three. We present Bayesian X-Learner, an X-Learner built on cross-fitted doubly robust pseudo-outcomes (Kennedy, 2020) with a full MCMC posterior over $τ(x)$ via a Welsch redescending pseudo-likelihood. On Hill's IHDP benchmark the default configuration attains mean $\\sqrt{\\varepsilon_{\\mathrm{PEHE}}} = 0.56$ on 5 replications (lowest mean; differences from S-/T-/X-learners, full-config Causal BART, and a causal forest baseline are not significant at $α=0.05$, and rank ordering is unstable at 10 replications -- IHDP comparisons are competitive rather than dominant). On contaminated \"whale\" DGPs with up to 20-25% tail density, a one-flag extension (contamination_severity) that selects a Huber-$δ$ nuisance loss per Huber's minimax-$δ$ relation recovers RMSE $\\approx 0.13$ with tight credible intervals (single-cross-fit 30-seed coverage 83% [Wilson 66%, 93%] at 20% density; modular-Bayes pooling with Bayesian-bootstrap nuisance draws restores nominal 95% coverage).",
+        "authors": "Eichi Uehara",
+        "url": "http://arxiv.org/abs/2604.27394v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27394v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了贝叶斯X-学习器，用于异质处理效应的校准后验推断，特别针对重尾结果数据。它结合了因果推断、贝叶斯统计和鲁棒统计，具有强大的理论基础和数学推导，对实际应用中的可靠因果推断至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27305v1",
+        "title": "Inference on Generalized Latent Variable Models with High-Dimensional Responses and Covariates",
+        "summary": "Regression models with both high-dimensional responses and covariates have attracted growing attention. Standard multivariate regression models become inadequate when the response variables depend not only on observed covariates but also on latent variables that capture key unobserved characteristics. To draw statistical inferences on covariate effects while accounting for latent variables, we consider a high-dimensional generalized latent variable model that accommodates mixed-type responses and allows for flexible dependence between covariates and latent variables, which is more suitable for many real-world applications than existing methods that either rely on a linear regression form or restricted assumptions on the dependence between covariates and latent variables. We develop an alternating algorithm that iteratively updates the regression parameters and the latent variables, transforming an intractable nonconvex problem into a sequence of tractable convex subproblems. Theoretically, we provide algorithmic guarantees by establishing statistical consistency of the resulting estimator and deriving an error bound for it. Further, building on this estimator, we construct a debiased estimator for the covariate effect and establish its asymptotic normality. The effectiveness of the proposed method is demonstrated through an application to evaluating the fairness of the Programme for International Student Assessment (PISA).",
+        "authors": "Jing Ouyang, Chengyu Cui, Yunxiao Chen, Kean Ming Tan, Gongjun Xu",
+        "url": "http://arxiv.org/abs/2604.27305v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27305v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了高维广义潜在变量模型，用于混合类型响应和协变量的统计推断，并提供了算法保证、统计一致性、误差界限和渐近正态性。这篇论文在统计推断和优化收敛性方面表现出极高的严谨性，是扎实的数理统计工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27967v1",
+        "title": "Differentiable latent structure discovery for interpretable forecasting in clinical time series",
+        "summary": "Background: Timely, uncertainty-aware forecasting from irregular electronic health records (EHR) can support critical-care decisions, yet most approaches either impute to a grid or sacrifice interpretability. We introduce StructGP, a continuous-time multi-task Gaussian process that couples process convolutions with differentiable structure learning to uncover a sparse, ordered directed acyclic graph (DAG) of inter-variable dependencies while preserving principled uncertainty. We further propose LP-StructGP, which augments StructGP with latent pathways-shared, temporally shifted trajectories inferred via subject-specific coupling filters and a softmax gating mechanism-to capture cross-patient progression patterns. Both models are trained under sparsity and acyclicity constraints (augmented Lagrangian, Adam) using scalable low-rank updates. Results: In simulations, the approach reliably recovers ground-truth graphs (Structural Hamming Distance approaching 0 as cohorts grow) and pathway assignments (high Adjusted Rand Index). On a MIMIC-IV septic shock cohort (n=1,008; norepinephrine, creatinine, mean arterial pressure), StructGP improves short-horizon (6 h) forecasting over independent-task baselines (average RMSE 0.68 [95%CI: 0.63--0.74] vs. 0.88 [0.83-0.94]) and, with 15 additional inputs, markedly outperforms unstructured kernels (0.63 [0.58-0.69] vs. 3.02 [2.85-3.18]) with superior calibration (coverage 0.96 vs. 0.84). On the PhysioNet Challenge (12k patients, 41 variables), StructGP attains competitive accuracy (MAE 3.72e-2) relative to a state-of-the-art graph neural model while maintaining calibrated uncertainty. Conclusion: These results show that structured process convolutions with latent pathways deliver interpretable, scalable, and well-calibrated forecasting for irregular clinical time series.",
+        "authors": "Ivan Lerner, Jean Feydy, Alexandre Kalimouttou, Anita Burgun, Francis Bach",
+        "url": "http://arxiv.org/abs/2604.27967v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27967v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了StructGP，一个连续时间多任务高斯过程，结合可微分结构学习来发现变量间依赖关系，同时保留了原则性的不确定性量化。其在统计建模、优化（增广拉格朗日）和不确定性量化方面的严谨性非常突出，且应用于临床时间序列，具有高影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27743v1",
+        "title": "Why Self-Supervised Encoders Want to Be Normal",
+        "summary": "We develop a geometric and information-theoretic framework for encoder-decoder learning built on the Information Bottleneck (IB) principle. Recasting IB as a rate-distortion problem with Kullback-Leibler (KL) divergence as distortion, we show that the optimal representation at any distortion level is a soft clustering of the \\emph{predictive manifold} $\\mathcal{M}=\\{p(Y|x):x\\in\\mathcal{X}\\}$ inside the probability simplex, admitting a linear decoder in the canonical parameterization.   We derive a chain of exact transformations, from flat Dirichlet to exponential to isotropic Gaussian, connecting the maximum entropy prior on the simplex to Euclidean space, with quantified entropy overhead at each step, and show that Sketched Isotropic Gaussian Regularization (SIGReg) implements a Gaussian relaxation of this principle whose overhead affects rate accounting but not achievable prediction. This relaxation provides a principled distributional regularizer for learning with limited or no supervision.   Using the Conditional Entropy Bottleneck (CEB) decomposition, we derive concrete encoder losses for supervised and semi-supervised settings, estimated via minibatch marginals without variational bounds. In the self-supervised setting, the CEB conditional rate is replaced by a view-prediction proxy. SIGReg serves as the distributional regularizer for both the semi-supervised and self-supervised settings.   Experiments on toy problems and FashionMNIST confirm the predicted rate-distortion trade-offs and show that the non-parametric estimator is competitive with the standard variational approach.",
+        "authors": "Yuval Domb",
+        "url": "http://arxiv.org/abs/2604.27743v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27743v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "基于信息瓶颈原理，为编码器-解码器学习开发了几何和信息论框架，并推导了精确的变换和正则化器。这篇论文提供了对自监督学习底层机制的深刻理论理解和数学推导，是理论基础非常强的研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27529v1",
+        "title": "Adjoint Inversion Reveals Holographic Superposition and Destructive Interference in CNN Classifiers",
+        "summary": "A foundational assumption in CNN interpretability -- that deep encoders suppress background pixels while classifiers merely select from a cleaned feature pool (the Spatial Funnel Hypothesis) -- remains untested due to spatial hallucinations in existing visualization tools. We address this by introducing a hallucination-free inversion framework built on magnitude-phase decoupling and Local Adjoint Correctors. Our method mathematically guarantees that the spatial gradient support of every reconstruction stems strictly from genuinely active channels.   Using this framework as a geometric probe, we uncover the first pixel-level evidence of strong superposition in vision encoders. We show that per-channel inversions are uniformly holographic: positive and negative weight reconstructions are visually and energetically indistinguishable. However, their algebraic sum sharply concentrates on the foreground. This proves classification operates via destructive interference -- classifier weights cancel a shared background direction in pixel space and constructively assemble class-discriminative residuals, directly falsifying the Spatial Funnel Hypothesis.   This interference model identifies the volume of the admissible interference subspace as the geometric quantity governing channel requirements. We prove this volume is dual to the GAP covariance determinant, yielding a covariance-volume channel selection algorithm with a $(1-1/e)$ approximation guarantee. This algorithm mathematically reveals out-of-distribution (OOD) failure as a measurable collapse of the covariance volume essential for interference-based classification. Our framework extends seamlessly to attention-based heads without retraining.",
+        "authors": "Kaixiang Shu",
+        "url": "http://arxiv.org/abs/2604.27529v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27529v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了无幻觉反演框架，数学上保证了CNN解释性，揭示了全息叠加和破坏性干涉现象，并提供了具有近似保证的通道选择算法。这篇论文在数学严谨性、几何分析和理论保证方面表现卓越，对理解CNN的内部工作机制具有基础性贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27447v1",
+        "title": "Sampler-Robust Optimization under Generative Models",
+        "summary": "Modern stochastic optimization pipelines increasingly rely on learned generative models to represent uncertainty, while downstream decisions are evaluated almost entirely through Monte Carlo scenarios. This shifts the operational object of uncertainty from an explicit probability law to the sampler induced by the learned generator. Reliability therefore depends on two errors: sampler misspecification and finite-simulation error. We propose Sampler-Robust Optimization (SRO), which optimizes decisions against the worst-case sampler induced by perturbing the learned generator. This sampler-first formulation aligns with simulation-based decision pipelines and admits a sharpness-aware interpretation: it favors decisions whose performance is stable under generator perturbations, rather than merely under the nominal sampler. Under a coverage assumption, we show that the empirical worst-case objective provides a high-probability upper certificate for the true population objective, with finite-simulation error partially absorbed by the robustification used to guard against sampler misspecification. The framework accommodates generative models with or without explicit densities and admits efficient minimax procedures. Portfolio-optimization experiments show that SRO produces more stable decisions and improves out-of-sample performance under distribution shift.",
+        "authors": "Ziwei Zhang, Jonathan Yu-Meng Li",
+        "url": "http://arxiv.org/abs/2604.27447v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27447v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了采样器鲁棒优化（SRO），针对生成模型下的随机优化问题，优化最坏情况下的采样器扰动，并提供了高概率上限证明和高效的minimax过程。这篇论文在优化理论和统计保证方面非常严谨，直接解决了AI系统中的鲁棒性问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27355v1",
+        "title": "Over-Approximating Minimizer Sets of Constrained Convex Programs with Parametric Uncertainty via Reachability Analysis",
+        "summary": "We study the set of solutions to a parameterized, strongly convex optimization problem whose cost depends on uncertain, bounded parameters. We compute a certified outer approximation of the corresponding set of optimizers, using convergence properties of the projected gradient descent (PGD) algorithm for convex programs. Concretely, by treating the cost parameter as constant but unknown, we interpret the PGD iterates as an uncertain dynamical system and analyze its forward reachable sets. Since PGD converges exponentially to the unique optimizer for each fixed parameter, these reachable sets provide outer approximations of the optimizer set, with an explicit error bound that decays exponentially with the iteration count. We apply system-level synthesis (SLS) on the PGD dynamics to optimize the step-size sequence and obtain reachable-set over-approximations. Our method outperforms existing baselines in over-approximating, with low conservativeness, the minimizer sets of convex programs with uncertain costs and high-dimensional decision variables.",
+        "authors": "Brendan Gould, Chih-Yuan Chiu, Antoine P. Leeman, Kyriakos G. Vamvoudakis, Samuel Coogan, Glen Chou",
+        "url": "http://arxiv.org/abs/2604.27355v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27355v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "通过可达性分析，计算了带参数不确定性的约束凸规划的最小化器集合的认证外近似，利用了PGD算法的收敛性并提供了显式误差界限。这篇论文在优化理论、控制理论和数学推导方面具有极高严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.28110v1",
+        "title": "A Scaled Gradient Modified Non-monotone Line Search Method for Constrained Optimization Problems",
+        "summary": "In this paper, we propose a scaled gradient modified non-monotone line search method for solving constrained minimization problems, and explore several specific properties of this method, namely, its convergence analysis. We discuss the linear convergence rate of the sequence generated by the proposed algorithm to a solution of the constrained minimization problem where the objective function is strongly quasiconvex. We consider numerical examples of large-scale fractional programming and quadratic programming for the function of pseudo convex and strongly quasiconvex and compare the performance of the proposed algorithm with the existing ones for these examples.",
+        "authors": "Qamrul Hasan Ansari, Feeroz Babu, D. R. Sahu, Jen Chih Yao",
+        "url": "http://arxiv.org/abs/2604.28110v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.28110v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种用于约束最小化问题的缩放梯度修正非单调线搜索方法，并详细分析了其收敛性，包括强拟凸目标函数的线性收敛率。这是纯粹的优化算法理论贡献，非常符合对“优化收敛性”和“清晰的数学推导”的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.28030v1",
+        "title": "MIFair: A Mutual-Information Framework for Intersectionality and Multiclass Fairness",
+        "summary": "Fairness in machine learning remains challenging due to its ethical complexity, the absence of a universal definition, and the need for context-specific bias metrics. Existing methods still struggle with intersectionality, multiclass settings, and limited flexibility and generality. To address these gaps, we introduce MIFair, a unified framework for bias assessment and mitigation based on mutual information. MIFair provides a flexible metric template and an in-processing mitigation method inspired by the Prejudice Remover, defining group fairness as statistical independence between prediction-derived variables and sensitive attributes. We further strengthen its information-theoretic foundation by establishing equivalences with widely used fairness notions such as independence and separation. MIFair naturally supports intersectionality, complex subgroup structures, and multiclass classification and employs regularization-based training to reduce bias according to the selected metric. Its key advantage is its versatility: it consolidates diverse fairness requirements into a single coherent framework, enabling consistent benchmarking and simplifying practical use. Experiments on real-world tabular and image datasets show that MIFair effectively reduces bias, including previously unaddressed multi-attribute scenarios, while maintaining strong predictive performance across the evaluated settings.",
+        "authors": "Jeanne Monnier, Thomas George, Frédéric Guyard, Christèle Tarnec, Marios Kountouris",
+        "url": "http://arxiv.org/abs/2604.28030v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.28030v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了MIFair，一个基于互信息的统一框架，用于交叉性和多类别公平性评估与缓解。其信息论基础和与现有公平性概念的等价性证明，体现了强大的理论严谨性，对AI伦理和公平性研究具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27741v1",
+        "title": "Differential Subgroup Discovery: Characterizing Where Two Populations Differ, and Why",
+        "summary": "We study the problem of understanding where two populations differ within a feature space, which we formalize in the concept of a differential subgroup: a subset of individuals from both populations who, despite sharing similar characteristics, exhibit exceptional differences in a target outcome. Differential subgroups reveal the regions of the feature space where population-level gaps are most pronounced and can help practitioners identify the covariate combinations that are structurally responsible for these differences, e.g.~in clinical analysis, model diagnostics, or treatment-effect studies. We introduce a general optimization objective for discovering differential subgroups and establish conditions under which the resulting subgroups admit a causal interpretation of population differences. We propose DiffSub, a gradient-based approach that discovers interpretable differential subgroups in tabular data. Across synthetic benchmarks, medical case studies, model-error analyses, and treatment-effect settings, DiffSub identifies informative subgroups that reveal where population differences arise and why.",
+        "authors": "Sascha Xu, Jilles Vreeken",
+        "url": "http://arxiv.org/abs/2604.27741v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27741v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "形式化了“差异子群”概念，并提出了发现它们的通用优化目标，同时建立了子群具有因果解释的条件。这篇论文在因果逻辑和优化方面具有强大的理论基础，对理解AI模型诊断和治疗效果研究中的群体差异至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2604.27297v1",
+        "title": "Machine Collective Intelligence for Explainable Scientific Discovery",
+        "summary": "Deriving governing equations from empirical observations is a longstanding challenge in science. Although artificial intelligence (AI) has demonstrated substantial capabilities in function approximation, the discovery of explainable and extrapolatable equations remains a fundamental limitation of modern AI, posing a central bottleneck for AI-driven scientific discovery. Here, we present machine collective intelligence, a unified paradigm that integrates two fundamental yet distinct traditions in computational intelligence--symbolism and metaheuristics--to enable autonomous and evolutionary discovery of governing equations. It orchestrates multiple reasoning agents to evolve their symbolic hypotheses through coordinated generation, evaluation, critique, and consolidation, enabling scientific discovery beyond single-agent inference. Across scientific systems governed by deterministic, stochastic, or previously uncharacterized dynamics, machine collective intelligence autonomously recovered the underlying governing equations without relying on hand-crafted domain knowledge. Furthermore, the resulting equations reduced extrapolation error by up to six orders of magnitude relative to deep neural networks, while condensing 0.5-1 million model parameters into just 5-40 interpretable parameters. This study marks an important shift in AI toward the autonomous discovery of principled scientific equations.",
+        "authors": "Gyoung S. Na, Chanyoung Park",
+        "url": "http://arxiv.org/abs/2604.27297v1",
+        "pdf_url": "https://arxiv.org/pdf/2604.27297v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了“机器集体智能”范式，整合符号主义和元启发式算法，自主发现可解释和可外推的科学控制方程。这篇论文在科学发现的理论基础和逻辑严谨性方面达到了极高水平，是AI系统应用数学逻辑的典范。"
+    }
+]

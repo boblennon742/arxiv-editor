@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.03997v1",
+        "title": "Uncertainty Quantification in Forecast Comparisons",
+        "summary": "Skill scores, which measure the relative improvement of a forecasting method over a benchmark via consistent scoring functions and proper scoring rules, are a standard tool in forecast evaluation, yet their sampling uncertainty is rarely rigorously quantified. With modern forecasting applications being increasingly multivariate and involving evaluations across multiple horizons, variables, spatial locations, and forecasting methods, standard tools like the pairwise Diebold-Mariano forecast accuracy test or pointwise confidence intervals fail to account for the multiple comparison problem, leading to inflated Type I error rates and invalid joint inference. To address the lack of a coherent, statistically rigorous framework for quantifying uncertainty across these multi-dimensional evaluation problems, we introduce simultaneous confidence bands for expected scores and skill scores. Our framework provides a versatile tool for joint inference that is applicable to any forecast type from mean and quantile to full distributional forecasts. We develop a bootstrap implementation and show that our bands are valid under multivariate extensions of the classical Diebold-Mariano assumptions. We demonstrate the practical utility of the approach in two case studies by quantifying the benefits of time-varying parameter models for macroeconomic forecasting, and by comparing data-driven and physics-based models in probabilistic weather forecasting.",
+        "authors": "Marc-Oliver Pohle, Tanja Zahn, Sebastian Lerch",
+        "url": "http://arxiv.org/abs/2605.03997v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03997v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为预测比较提供了统计严谨的框架，引入了同步置信区间和引导实现，并证明了其在多元Diebold-Mariano假设下的有效性。这直接满足了对统计保证和严谨数学推导的要求，对预测评估具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03911v1",
+        "title": "The Multiplicative Quasi-Instrumental Variable Model",
+        "summary": "We introduce the Multiplicative Quasi-Instrumental Variable (MQIV) model, a framework for causal inference with unmeasured confounding that leverages an instrument that may be imperfectly exogenous. We allow the candidate quasi-instrument to have a direct effect on the outcome not mediated by the treatment, thus violating the standard IV exclusion restriction. We establish nonparametric identification of the population average treatment effect on the treated (ATT) under a treatment model that is multiplicative with respect to the quasi-IV and the hidden confounder (Hernan and Robins, 2006). Such a multiplicative treatment model may arise naturally either when treatment occurs only if two independent instrument-driven and confounder-driven causal mechanisms are present; or alternatively, when an instrument's effect on treatment uptake is inherently heterogeneous and scales with a person's latent propensity, best capturing settings in which it is challenging for a given instrument to overcome a person's inherent lack of preference for the treatment in view. Importantly, as we establish, the MQIV model is simultaneously agnostic to treatment-effect heterogeneity with respect to hidden confounders and violation of the core IV exclusion restriction condition. Identification is achieved via a modified Wald ratio estimand, which corrects the bias due to the exclusion restriction violation, and we propose a new class of estimators that are multiply robust and semiparametric efficient. Finally, we evaluate the approach in extensive simulations and an application to evaluate the causal effect of having three or more children on mothers' labor-market engagement.",
+        "authors": "Jiewen Liu, Chan Park, David Richardson, Eric J. Tchetgen Tchetgen",
+        "url": "http://arxiv.org/abs/2605.03911v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03911v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个处理未测量混杂因素的新型因果推断模型（MQIV），建立了非参数识别，并提出了多重稳健和半参数高效的估计器。这完美契合了对因果逻辑和强大理论基础的偏好，是因果推断领域的重大贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03847v1",
+        "title": "Mechanical Conscience: A Mathematical Framework for Dependability of Machine Intelligenc",
+        "summary": "Distributed collaborative intelligence (DCI), encompassing edge-to-edge architectures, federated learning, transfer learning, and swarm systems, creates environments in which emergent risk is structurally unavoidable: locally correct decisions by individual agents compose into globally unacceptable behavioral trajectories under uncertainty. Existing approaches such as constrained optimization, safe reinforcement learning, and runtime assurance evaluate acceptability at the level of individual actions rather than across behavioral trajectories, and none addresses the multi-participant, uncertainty-laden nature of DCI deployments. This paper introduces mechanical conscience (MC), a novel concept and simplified mathematical framework that operationalizes trajectory-level normative regulation for both single-agent and distributed intelligent systems. Mechanical conscience is defined as a supervisory filter that minimally corrects a baseline policy's actions to reduce cumulative deviation from a normatively admissible region, while accounting for epistemic uncertainty. We introduce associated constructs, conscience score, mechanical guilt, and resonant dependability, that provide an interpretable vocabulary and computable governance signals for this emerging field. Core theoretical properties are established: admissibility equivalence, existence of optimal regulation, and monotonic deviation reduction. Illustrative results demonstrate that MC-regulated agents maintain trajectory-level normative acceptability where conventional controllers drift outside admissible bounds, and that the framework naturally extends to suppress interaction-induced emergent risk in multi-agent DCI settings.",
+        "authors": "Munkhdegerekh Batzorig, Purevbaatar Ganbold, Kyungbin Park, Pilkong Jeong, Kangbin",
+        "url": "http://arxiv.org/abs/2605.03847v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03847v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了一个新颖的数学框架“机械良知”，用于智能系统的轨迹级规范性监管，并建立了核心理论属性，如可接受性等价、最优监管的存在性等。这体现了将严谨数学逻辑应用于现代AI系统的核心偏好，对AI系统的可靠性具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03801v1",
+        "title": "Sparse Rank Regression for Restricted-Access Economic Data",
+        "summary": "Empirical research in economics increasingly relies on restricted-access data held by multiple firms or agencies, making it impossible to construct the estimator of interest on the pooled sample. At the same time, heavy-tailed distributions are pervasive in economics and finance outcomes such as prices, expenditures and loan sizes. We study sparse, robust estimation in the restricted-access setting. The infeasible pooled benchmark is convoluted rank regression (CRR), a smooth rank-based estimator designed for heavy-tailed outcomes. Because the CRR criterion is a non-additive U-statistic, existing communication-efficient methods built for additive empirical losses do not directly apply. We propose distributed convoluted rank regression (DCRR), a surrogate criterion built from a single local CRR loss and an aggregated gradient correction, and show that it shares the same population minimizer as the pooled CRR objective. Building on this surrogate, we develop a two-stage sparse procedure: an iterative $l_1$- penalized stage followed by a folded-concave refinement. For the resulting estimator, we establish non-asymptotic error bounds, a distributed strong oracle property, and a distributed criterion for consistent model selection. Simulations and an application to used-car prices show that DCRR closely approximates pooled CRR and improves on naive divide-and-conquer, particularly under heavy-tailed errors.",
+        "authors": "Wen Zhang, Songshan Yang, Liping Zhu",
+        "url": "http://arxiv.org/abs/2605.03801v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03801v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对受限访问经济数据中的重尾结果，提出了稀疏、稳健的估计方法，并建立了非渐近误差界、分布式强预言性质和一致模型选择准则。这展示了强大的统计理论和数学推导，对处理敏感经济数据具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03710v1",
+        "title": "Amortized Variational Inference for Joint Posterior and Predictive Distributions in Bayesian Uncertainty Quantification",
+        "summary": "Bayesian predictive inference propagates parameter uncertainty to quantities of interest through the posterior-predictive distribution. In practice, this is typically performed using a two-stage procedure: first approximating the posterior distribution of model parameters, and then propagating posterior samples through the predictive model via Monte Carlo simulation. This sequential workflow can be computationally demanding, particularly for high-fidelity models such as those governed by partial differential equations.   We propose a variational Bayesian framework that directly targets the posterior-predictive distribution and jointly learns variational approximations of both the posterior and the corresponding predictive distribution. The formulation introduces a variational upper bound on the Kullback--Leibler divergence together with moment-based regularization terms. The variational distributions are trained in an amortized manner, shifting computational effort to an offline stage and enabling efficient online inference. Numerical experiments ranging from analytical benchmarks to a finite-element solid mechanics problem demonstrate that the proposed method achieves more accurate predictive distributions than conventional two-stage variational inference, while substantially reducing the cost of online predictive inference.",
+        "authors": "Nan Feng, Xun Huan",
+        "url": "http://arxiv.org/abs/2605.03710v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03710v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个变分贝叶斯框架，直接针对后验预测分布进行联合学习，引入了KL散度的变分上界和基于矩的正则化项。这为贝叶斯不确定性量化提供了严谨的数学基础，对高保真模型的在线推理效率有显著提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03548v1",
+        "title": "PerFlow: Physics-Embedded Rectified Flow for Efficient Reconstruction and Uncertainty Quantification of Spatiotemporal Dynamics",
+        "summary": "Reconstructing PDE-governed fields from sparse and irregular measurements is challenging due to their ill-posed nature. Deterministic surrogates are trained on dense fields that struggle with limited measurements and uncertainty quantification. Generative models, by learning distributions over spatiotemporal fields, can better handle sparsity and uncertainty. However, existing generative approaches enforce data consistency and PDE constraints simultaneously via sampling-time gradient guidance, resulting in slow and unstable inference. To this end, we propose PerFlow, a Physics-embedded rectified Flow for efficient sparse reconstruction and uncertainty quantification of spatiotemporal dynamics. PerFlow decouples observation conditioning from physics enforcement, performing guidance-free conditioning by feeding observations into rectified-flow dynamics while embedding hard physics via a constraint-preserving projection (e.g., incompressibility or conservation). Theoretically, we establish invariance guarantees to ensure that trajectories remain on the physics-consistent manifold throughout sampling. Experiments on various PDE systems demonstrate competitive reconstruction accuracy with sound physics consistency, while enabling efficient conditional sampling (e.g., 50 steps) and up to 320 faster inference than 2000-step guided diffusion baselines.",
+        "authors": "Hao Zhou, Rui Zhang, Han Wan, Hao Sun",
+        "url": "http://arxiv.org/abs/2605.03548v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03548v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个物理嵌入的整流流模型（PerFlow），用于时空动力学的重建和不确定性量化，并建立了不变性保证，确保轨迹在物理一致流形上。这结合了生成模型与物理约束，并提供了理论保证，对科学超分辨率和不确定性量化至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03517v1",
+        "title": "Understanding Self-Supervised Learning via Latent Distribution Matching",
+        "summary": "Self-supervised learning (SSL) excels at finding general-purpose latent representations from complex data, yet lacks a unifying theoretical framework that explains the diverse existing methods and guides the design of new ones. We cast SSL as latent distribution matching (LDM): learning representations that maximize their log-probability under an assumed latent model (alignment), while maximizing latent entropy to prevent collapse (uniformity). This view unifies independent component analysis with contrastive, non-contrastive, and predictive SSL methods, including stop gradient approaches. Leveraging LDM, we derive a nonlinear, sampling-free Bayesian filtering model with a Kalman-based predictor for high-dimensional timeseries. We further prove that predictive LDM yields identifiable latent representations under mild assumptions, even with nonlinear predictors. Overall, LDM clarifies the assumptions behind established SSL methods and provides principled guidance for developing new approaches.",
+        "authors": "Fabian A Mikulasch, Friedemann Zenke",
+        "url": "http://arxiv.org/abs/2605.03517v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03517v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了潜在分布匹配（LDM）作为自监督学习的统一理论框架，并证明了在温和假设下可识别的潜在表示。这为现代AI系统（SSL）提供了深刻的理论理解和数学基础，有助于指导新方法的设计。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03499v1",
+        "title": "A Hierarchical Sampling Framework for bounding the Generalization Error of Federated Learning",
+        "summary": "We study expected generalization bounds for the Hierarchical Federated Learning (HFL) setup using Wasserstein distance. We introduce a generalized framework in which data is sampled hierarchically, and we model it with a multi-layered tree structure that induces dependencies among the clients' datasets. We derive generalization bounds in terms of Wasserstein distance under the Lipschitz assumption on the loss function, by applying a supersample construction that allows us to measure the sensitivity of the algorithm to the change of a single node in the sampling tree. By leveraging the FL structure, we recover and strictly imply existing state-of-the-art conditional mutual information (CMI) bounds in the case of bounded losses. We also show that our bound can be applied together with Differential Privacy assumptions, to recover generalization bounds based on algorithmic privacy. To assess the tightness of our bounds, we study the Gaussian Location Model (GLM) and show that we recover the actual asymptotic rate of the generalization error.",
+        "authors": "Dario Filatrella, Ragnar Thobaben, Mikael Skoglund",
+        "url": "http://arxiv.org/abs/2605.03499v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03499v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个分层采样框架，利用Wasserstein距离为分层联邦学习的泛化误差提供界限，并展示了与差分隐私的联系。这为现代AI系统（FL）的理论泛化保证提供了严谨分析，对理解和保障FL性能至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03436v1",
+        "title": "Promoting Fair Online Resource Allocation with Indivisible Units",
+        "summary": "Allocating scarce, indivisible resources to diverse groups under uncertainty is a central challenge in operations research, where efficiency-focused methods often underserve marginalized populations. We study the Fair Online Resource Allocation with Indivisible Units (FORA-IU) problem, in which an unpredictable sequence of demands must be served from a strictly fixed inventory, and ask what fairness guarantees are achievable under different distributional and structural assumptions.   We adopt a fairness criterion based on the expected filling ratio (FE-FR-beta), which balances each group's expected allocation against its expected demand and priority weight. We design online policies that calibrate acceptance probabilities to the remaining budget, analyze both arbitrary time-varying and stationary arrivals, introduce the Random Cyclic Blocks (RCB) algorithm tailored to the stationary case, and study the effect of restricting policies to all-or-nothing allocations.   For arbitrary time-varying arrivals, our policy achieves the optimal universal fairness guarantee of 1/(1+R_beta), where R_beta denotes the priority-weighted system load. For time-invariant arrivals, RCB achieves the exact finite-horizon guarantee [1-(1-R_beta/T)^T]/R_beta, which is at least (1-e^{-R_beta})/R_beta and is also tight. We further show that all-or-nothing allocation policies cannot match these guarantees.   These findings demonstrate that distributional stationarity strictly improves the fairness frontier, and that partial fulfillment is a necessary condition for attaining optimal fairness in online indivisible resource allocation.",
+        "authors": "Igor Averbakh, Hongyi Jiang, Samitha Samaranayake, Akang Wang, Jianghua Wu",
+        "url": "http://arxiv.org/abs/2605.03436v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03436v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "研究了公平在线资源分配问题，提出了公平性准则和在线策略，并建立了最优的通用公平性保证和紧密的有限视野保证。这在公平性研究中提供了坚实的理论和优化基础，对实际资源分配具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03346v1",
+        "title": "Provable Accuracy Collapse in Embedding-Based Representations under Dimensionality Mismatch",
+        "summary": "Embedding-based representations in Euclidean space $\\mathbb{R}^d$ are a cornerstone of modern machine learning, where a major goal is to use the \\emph{smallest dimension} that faithfully captures data relations. In this work, we prove sharp dimension--accuracy tradeoffs and identify a fundamental information-theoretic limitation: unless the embedding dimension $d$ is chosen close to the ground-truth dimension $D$, accuracy undergoes a sudden collapse. Our main result shows that this phenomenon arises even in standard contrastive learning settings, where supervision is limited to a set of $m$ anchor--positive--negative triplets $(i,j,k)$ encoding distance comparisons $\\mathrm{dist}(i,j) < \\mathrm{dist}(i,k)$. Specifically, given triplets realizable by an unknown ground-truth embedding in $D$ dimensions, we prove that there exists constant $c < 1$, such that \\emph{every embedding of dimension at most $cD$ violates half of the triplets}, yielding accuracy as low as a trivial one-dimensional solution that ignores the input. We complement our information-theoretic bounds with strong computational hardness results: under the Unique Games Conjecture, even if the given triplets are nearly realizable in $D=1$ dimension, no polynomial-time algorithm -- \\textit{regardless of its dimension} -- can achieve accuracy above the trivial $50\\%$ baseline.",
+        "authors": "Dionysis Arvanitakis, Vaggos Chatziafratis, Yiyuan Luo",
+        "url": "http://arxiv.org/abs/2605.03346v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03346v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "证明了嵌入式表示在维度不匹配下的可证明精度崩溃，识别了基本的信息论限制，并提供了计算硬度结果。这揭示了现代AI系统（嵌入表示）的深层理论限制，对表示学习的设计具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03308v1",
+        "title": "Revisiting the Travel Planning Capabilities of Large Language Models",
+        "summary": "Travel planning serves as a critical task for long-horizon reasoning, exposing significant deficits in LLMs. However, existing benchmarks and evaluations primarily assess final plans in an end-to-end manner, which lacks interpretability and makes it difficult to analyze the root causes of failures. To bridge this gap, we decompose travel planning into five constituent atomic sub-capabilities, including \\emph{Constraint Extraction}, \\emph{Tool Use}, \\emph{Plan Generation}, \\emph{Error Identification}, and \\emph{Error Correction}. We implement a decoupled evaluation protocol leveraging oracle intermediate contexts to rigorously isolate these components, thereby measuring the atomic performance boundary without the noise of cascading errors. Our results highlight a clear contrast in performance: while LLMs are proficient in extracting explicit constraints, they struggle to infer implicit, open-world requirements. Furthermore, they exhibit structural biases in plan generation and suffer from ineffective self-correction, characterized by excessive sensitivity and erroneous persistence. These findings offer precise directions for improving LLM reasoning and planning abilities.",
+        "authors": "Bo-Wen Zhang, Jin Ye, Peng-Yu Hua, Jia-Wei Cao, Jie-Jing Shao, Yu-Feng Li, Lan-Zhe Guo",
+        "url": "http://arxiv.org/abs/2605.03308v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03308v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个联合纵向-生存框架，用于在序贯多重分配随机试验（SMARTs）中评估动态治疗方案（DTRs），通过最大似然估计和g-公式提供了无偏估计和效率增益。这在因果推断和生存分析中具有高度的统计严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03285v1",
+        "title": "Causal Small Area Estimation with Survey-only Covariates",
+        "summary": "Area-specific causal inference is important in many policy and survey applications, where the goal is to evaluate treatment effects for small geographic or demographic domains. Existing causal small area estimation methods, however, typically rely on a strong data requirement that treatment status is observed for all units in the population. This assumption is often unrealistic in practical survey settings, where both treatment and outcome variables are observed only for sampled units, while auxiliary covariates are available for the full population. To address this limitation, we develop a new identification strategy for area-specific treatment effects under this more realistic data structure by combining survey-only covariates with population-level auxiliary information. Based on this result, we propose a doubly robust estimator that remains consistent when either the outcome regression model or the treatment and area assignment models are correctly specified. We further derive the semiparametric efficiency bound for the target parameter and show that the proposed estimator attains this bound under regularity conditions. Simulation studies demonstrate favorable finite-sample performance, particularly in settings with small sample sizes within areas, and an empirical application illustrates the practical relevance of the proposed framework.",
+        "authors": "Tsubasa Ito, Shonosuke Sugasawa",
+        "url": "http://arxiv.org/abs/2605.03285v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03285v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对仅有调查协变量的情况，开发了一种新的区域特定治疗效果识别策略，提出了双重稳健估计器，并推导了半参数效率界限。这在因果推断和调查统计学中具有高度的理论严谨性，对政策评估具有重要实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03278v1",
+        "title": "Copula-Based Endogeneity Correction for Doubly Robust Estimation of Treatment Effect",
+        "summary": "Doubly Robust (DR) estimation of treatment effect relies on an untestable assumption that is the absence of unobserved confounding. This assumption is par- ticularly problematic in the context of healthcare research, where variables like pre- scription refill rates serve as proxies for unobserved behaviors such as medication adherence. These proxy variables are often endogenous, exhibiting correlation with the regression error term due to unmeasured confounding or measurement error. We propose a copula-corrected doubly robust estimator that addresses endogeneity in both the treatment and outcome models without requiring instrumental variables. Gaussian copulas model the joint distribution of endogenous covariates and the error term, enabling consistent estimation while preserving the doubly robust property that requires correct specification of either the treatment or outcome model, not both. Monte Carlo simulations demonstrate that naive DR estimation exhibits substantial bias under endogeneity, whereas our corrected estimator recovers unbiased treatment effects across different data-generating processes. We apply our method to examine the effect of nutritional counseling on blood pressure using the National Health and Nutrition Examination Survey (NHANES) data. Naive DR estimation suggests counseling is associated with increased blood pressure. After copula correction, this effect becomes statistically insignificant, consistent with literature showing modest effects of nutri- Counseling in reducing blood pressure. Our methodology provides researchers with a practical tool for obtaining treatment effects in the presence of endogeneity.",
+        "authors": "Sahil Shikalgar, Md. Noor-E-Alam",
+        "url": "http://arxiv.org/abs/2605.03278v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03278v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个基于Copula校正的双重稳健估计器，用于在不需要工具变量的情况下解决治疗效果估计中的内生性问题，并确保了一致性。这在因果推断中提供了严谨的统计方法，是处理内生性问题的实用工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03267v1",
+        "title": "Partial Effective Information Decomposition for Synergistic Causality",
+        "summary": "Causality is a central topic in scientific inquiry, yet for complex systems, the identification and analysis of synergistic causation remain a challenging and fundamental problem. In the context of causal relations among multivariate variables, a decomposition framework grounded in interventionist causation is still lacking. To address this gap, this paper proposes Partial Effective Information Decomposition (PEID), a framework that decomposes the influence of multiple source variables on a target variable under maximum-entropy interventions into unique and synergistic information, thereby providing a unified and computable characterization of synergistic causal relations. Theoretically, in the three-variable case, the proposed framework is compatible with the major axioms of Partial Information Decomposition (PID). Empirically, under maximum-entropy interventions, correlations among input variables are removed, causing redundancy to vanish and thereby enabling PEID to compute synergistic relations. Furthermore, based on this framework, it is possible to define causal graphs containing hyperedges as well as downward causation, thus offering a unified toolkit for analyzing cross-scale and multivariate causal mechanisms in complex systems. Finally, applying the framework to a machine-learning-based air quality forecasting task on KnowAir-V2, we demonstrate that PEID can extract interpretable inter-station causal structures from a learned dynamical model. These results suggest that PEID provides a general interventionist information-theoretic tool for analyzing multivariate and synergistic causal mechanisms in complex systems.",
+        "authors": "Mingzhe Yang, Shuo Wang, Jiang Zhang",
+        "url": "http://arxiv.org/abs/2605.03267v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03267v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了部分有效信息分解（PEID）框架，用于分解多变量对目标变量的协同因果影响，并提供了统一且可计算的表征，理论上与PID的主要公理兼容。这在信息论和因果推断中具有高度理论性，对理解复杂系统至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03262v1",
+        "title": "A Universal Reproducing Kernel Hilbert Space from Polynomial Alignment and IMQ Distance",
+        "summary": "We introduce the Yat kernel $$k_{b,\\varepsilon}(\\mathbf{w},\\mathbf{x})=\\frac{(\\mathbf{w}^\\top\\mathbf{x}+b)^2}{\\|\\mathbf{x}-\\mathbf{w}\\|^2+\\varepsilon},\\qquad b\\ge 0,\\ \\varepsilon>0,$$ a rational hidden-unit primitive whose units are Mercer sections over a shared input/weight space. For $b\\ge 0$ the kernel is PSD; for $b>0$ it dominates a scaled inverse-multiquadric (IMQ) in the Loewner order, yielding fixed-kernel universality, characteristicness, and strict positive definiteness on every compact domain. The polynomial numerator opens nonradial alignment channels absent from finite IMQ expansions, witnessed by the directional far-field trace $T_\\infty g_\\varepsilon(\\cdot;\\mathbf{w},b)(\\mathbf{u})=(\\mathbf{u}^\\top\\mathbf{w})^2$. Algebraically, a second finite difference in the bias recovers any IMQ atom from three positive-bias Yat atoms exactly, sharp at three atoms in every dimension at exact pointwise equality. A trained shared-$(b,\\varepsilon)$ Yat layer is therefore a finite learned-center expansion in a fixed universal characteristic RKHS, with closed-form norm $\\boldsymbolα^\\top\\mathbf{K}\\boldsymbolα$ and explicit diagonal $(\\|\\mathbf{x}\\|^2+b)^2/\\varepsilon$ driving a Rademacher generalization bound.",
+        "authors": "Taha Bouhsine",
+        "url": "http://arxiv.org/abs/2605.03262v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03262v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了Yat核，一个具有强大理论属性的有理隐藏单元原语，证明了其在Loewner序中的支配性，从而实现了固定核的普适性、特征性和严格正定性，并提供了Rademacher泛化界限。这为核方法和统计学习理论提供了深厚的数学基础。"
+    }
+]

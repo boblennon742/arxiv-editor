@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.03408v1",
+        "title": "Discovering Reinforcement Learning Interfaces with Large Language Models",
+        "summary": "Reinforcement learning systems rely on environment interfaces that specify observations and reward functions, yet constructing these interfaces for new tasks often requires substantial manual effort. While recent work has automated reward design using large language models (LLMs), these approaches assume fixed observations and do not address the broader challenge of synthesizing complete task interfaces. We study RL task interface discovery from raw simulator state, where both observation mappings and reward functions must be generated. We propose LIMEN (Code available at https://github.com/Lossfunk/LIMEN), a LLM guided evolutionary framework that produces candidate interfaces as executable programs and iteratively refines them using policy training feedback. Across novel discrete gridworld tasks and continuous control domains spanning locomotion and manipulation, joint evolution of observations and rewards discovers effective interfaces given only a trajectory-level success metric, while optimizing either component alone fails on at least one domain. These results demonstrate that automatic construction of RL interfaces from raw state can substantially reduce manual engineering and that observation and reward components often benefit from co-design, as single-component optimization fails catastrophically on at least one domain in our evaluation suite.",
+        "authors": "Akshat Singh Jaswal, Ashish Baghel, Paras Chopra",
+        "url": "http://arxiv.org/abs/2605.03408v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03408v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了UFCOD框架，通过信息几何分析扩散轨迹实现少样本跨域OOD检测。其核心在于将扩散噪声预测视为分数函数，并提取路径能量和动态能量作为离散Sobolev范数，捕捉样本与扩散过程的交互。其“一次训练，随处部署”的范式在样本效率上实现了约500倍的提升，解决了OOD检测中数据效率和跨域泛化的关键瓶颈。理论严谨性极高，创新性突破，且具有巨大的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03258v1",
+        "title": "The Right Answer, the Wrong Direction: Why Transformers Fail at Counting and How to Fix It",
+        "summary": "Large language models often fail at simple counting tasks, even when the items to count are explicitly present in the prompt. We investigate whether this failure occurs because transformers do not represent counts internally, or because they cannot convert those representations into the correct output tokens.   Across three model families, Pythia, Qwen3, and Mistral, ranging from 0.4B to 14B parameters, we find strong evidence for the second explanation. Linear probes recover the correct count from intermediate layers with near-perfect accuracy ($R^2>0.99$), showing that the information is present. However, the internal directions that encode counts are nearly orthogonal to the output-head rows for digit tokens ($|\\cos|\\leq0.032$). In other words, the model stores the count in a form that the digit logits do not naturally read out.   We localize this failure with two interventions. Updating only the digit rows of the output head (36,864 parameters) substantially improves constrained next-token digit prediction (60.7 to 100.0% across four tasks), but it does not fix autoregressive generation. By contrast, a small LoRA intervention on attention Q/V weights (7.67M parameters) improves upstream routing and achieves 83.1% +/- 7.2% in true greedy autoregressive generation. Logit-lens measurements confirm the mechanism: the correct digit's vocabulary rank drops from 55,980 to 1, a 50,000x improvement. Additional norm, logit-lens, and cross-task analyses show that the bottleneck generalizes across character counting, addition, and list length, while remaining absent from broader multi-step reasoning benchmarks, including MMLU, GSM8K, and DROP.   These results identify counting failure as a geometric readout bottleneck rather than a failure of internal representation: the model knows the count but the output pathway is geometrically misaligned with the tokens needed to express it.",
+        "authors": "Gabriel Garcia",
+        "url": "http://arxiv.org/abs/2605.03258v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03258v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文深入探讨了Transformer模型在计数任务上失败的原因，并提出了“几何读出瓶颈”这一突破性见解。通过线性探针证明模型内部存在正确计数表示，但这些表示与输出层数字token的几何方向不一致。论文提出了参数高效的修复方案，对理解LLM内部机制及其架构限制具有极高的理论价值和实践指导意义，逻辑清晰，深入浅出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03847v1",
+        "title": "Mechanical Conscience: A Mathematical Framework for Dependability of Machine Intelligenc",
+        "summary": "Distributed collaborative intelligence (DCI), encompassing edge-to-edge architectures, federated learning, transfer learning, and swarm systems, creates environments in which emergent risk is structurally unavoidable: locally correct decisions by individual agents compose into globally unacceptable behavioral trajectories under uncertainty. Existing approaches such as constrained optimization, safe reinforcement learning, and runtime assurance evaluate acceptability at the level of individual actions rather than across behavioral trajectories, and none addresses the multi-participant, uncertainty-laden nature of DCI deployments. This paper introduces mechanical conscience (MC), a novel concept and simplified mathematical framework that operationalizes trajectory-level normative regulation for both single-agent and distributed intelligent systems. Mechanical conscience is defined as a supervisory filter that minimally corrects a baseline policy's actions to reduce cumulative deviation from a normatively admissible region, while accounting for epistemic uncertainty. We introduce associated constructs, conscience score, mechanical guilt, and resonant dependability, that provide an interpretable vocabulary and computable governance signals for this emerging field. Core theoretical properties are established: admissibility equivalence, existence of optimal regulation, and monotonic deviation reduction. Illustrative results demonstrate that MC-regulated agents maintain trajectory-level normative acceptability where conventional controllers drift outside admissible bounds, and that the framework naturally extends to suppress interaction-induced emergent risk in multi-agent DCI settings.",
+        "authors": "Munkhdegerekh Batzorig, Purevbaatar Ganbold, Kyungbin Park, Pilkong Jeong, Kangbin",
+        "url": "http://arxiv.org/abs/2605.03847v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03847v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了“机械良知”（Mechanical Conscience, MC）这一新颖概念和数学框架，用于分布式协作智能（DCI）中轨迹层面的规范性调节。它解决了多智能体系统中局部正确决策可能导致全局不可接受行为的根本性风险。该框架具有坚实的理论基础，提出了可计算的治理信号，对AI系统的可靠性和安全性具有开创性的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03373v1",
+        "title": "Learning Dynamics of Zeroth-Order Optimization: A Kernel Perspective",
+        "summary": "Classical optimization theory establishes that zeroth-order (ZO) algorithms suffer from a dimension-dependent slowdown, with convergence rates typically scaling with the model dimension compared to first-order methods. However, in contrast to these theoretical expectations, a growing body of recent work demonstrates the successful application of ZO methods to fine-tuning Large Language Models (LLMs) with billions of parameters. To explain this paradox, we derive the one-step learning dynamics of ZO SGD, where the empirical Neural Tangent Kernel (eNTK) naturally emerges as the key term governing the learning behavior. Inspection of the eNTK produced by ZO SGD reveals that each element corresponds to the inner product of neural tangent vectors projected onto a random low-dimensional subspace. Thus, by invoking the Johnson-Lindenstrauss Lemma, our analysis shows that the fidelity of the ZO eNTK is governed primarily by the number of perturbations. Crucially, the approximation error depends on the model output size rather than the massive parameter dimension. This dimension-free property provides a theoretical justification for the scalability of ZO methods to LLMs finetuning tasks. We believe that this kernel-based framework offers a novel perspective for understanding ZO methods within the context of learning dynamics.",
+        "authors": "Zhe Li, Bicheng Ying, Zidong Liu, Haibo Yang",
+        "url": "http://arxiv.org/abs/2605.03373v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03373v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从核函数角度深入分析了零阶优化（ZO）的学习动态，解释了ZO方法在LLM微调中成功应用与传统理论预测（维度依赖性）之间的矛盾。它证明了ZO经验神经切线核（eNTK）的保真度主要由扰动次数而非参数维度决定，揭示了ZO方法可扩展性的维度无关特性。这为LLM训练的计算效率瓶颈提供了深刻的理论解释和指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04013v1",
+        "title": "Conditional Diffusion Sampling",
+        "summary": "Sampling from unnormalized multimodal distributions with limited density evaluations remains a fundamental challenge in machine learning and natural sciences. Successful approaches construct a bridge between a tractable reference and the target distribution. Parallel Tempering (PT) serves as the gold standard, while recent diffusion-based approaches offer a continuous alternative at the cost of neural training. In this work, we introduce Conditional Diffusion Sampling (CDS), a framework that combines these two paradigms. To this end, we derive Conditional Interpolants, a class of stochastic processes whose transport dynamics are governed by an exact, closed-form stochastic differential equation (SDE), requiring no neural approximation. Although these dynamics require sampling from a non-trivial initialization distribution, we show both theoretically and empirically that the cost of this initialization diminishes for sufficiently short diffusion times. CDS leverages this by a two-stage procedure: (1) PT is used to efficiently sample the initial distribution, and then (2) samples are transported via the transport SDE. This combination couples the robust global exploration of PT with efficient local transport. Experiments suggest that CDS has the potential to achieve a superior trade-off between sample quality and density evaluation cost compared to state-of-the-art samplers.",
+        "authors": "Francisco M. Castro-Macías, Pablo Morales-Álvarez, Saifuddin Syed, Daniel Hernández-Lobato, Rafael Molina, José Miguel Hernández-Lobato",
+        "url": "http://arxiv.org/abs/2605.04013v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04013v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了条件扩散采样（CDS）框架，将并行退火与扩散模型相结合，用于从非归一化多模态分布中采样。它推导了条件插值（Conditional Interpolants）的精确、闭式随机微分方程（SDE），无需神经网络近似。这在理论上具有高度严谨性，并有望在样本质量和密度评估成本之间实现更优的权衡，解决机器学习和自然科学中采样的基本挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03984v1",
+        "title": "Flow Sampling: Learning to Sample from Unnormalized Densities via Denoising Conditional Processes",
+        "summary": "Sampling from unnormalized densities is analogous to the generative modeling problem, but the target distribution is defined by a known energy function instead of data samples. Because evaluating the energy function is often costly, a primary challenge is to learn an efficient sampler. We introduce Flow Sampling, a framework built on diffusion models and flow matching for the data-free setting. Our training objective is conditioned on a noise sample and regresses onto a denoising diffusion drift constructed from the energy function. In contrast, diffusion models' objective is conditioned on a data sample and regresses onto a noising diffusion drift. We utilize the interpolant process to minimize the number of energy function evaluations during training, resulting in an efficient and scalable method for sampling unnormalized densities. Furthermore, our formulation naturally extends to Riemannian manifolds, enabling diffusion-based sampling in geometries beyond Euclidean space. We derive a closed-form formula for the conditional drift on constant curvature manifolds, including hyperspheres and hyperbolic spaces. We evaluate Flow Sampling on synthetic energy benchmarks, small peptides, large-scale amortized molecular conformer generation, and distributions supported on the sphere, demonstrating strong empirical performance.",
+        "authors": "Aaron Havens, Brian Karrer, Neta Shaul",
+        "url": "http://arxiv.org/abs/2605.03984v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03984v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Flow Sampling是一个数据无关的框架，利用扩散模型和流匹配从非归一化密度中采样。它将训练目标设定为基于能量函数构建的去噪扩散漂移，并自然地扩展到黎曼流形，推导出常曲率流形上的条件漂移闭式公式。这在理论上非常严谨，为分子构象生成等科学应用提供了高效可扩展的采样方法，解决了计算成本高的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03869v1",
+        "title": "On Adaptivity in Zeroth-Order Optimization",
+        "summary": "We investigate the effectiveness of adaptive zeroth-order (ZO) optimization for memory-constrained fine-tuning of large language models (LLMs). Contrary to prior claims, we show that adaptive ZO methods such as ZO-Adam offer no convergence advantage over well-tuned ZO-SGD, while incurring significant memory overhead. Our analysis reveals that in high dimensions, ZO gradients lack coordinate-wise heterogeneity, rendering adaptive mechanisms memory inefficient. Leveraging this insight, we propose MEAZO, a memory-efficient adaptive ZO optimizer that tracks only a single scalar for global step size adaptation. We support our method with theoretical convergence guarantees under standard assumptions. Experiments across multiple LLM families and tasks demonstrate that MEAZO matches ZO-Adam's performance with the memory footprint of ZO-SGD. Additional experiments on synthetic quadratic problems and LLM fine-tuning further demonstrate MEAZO's enhanced robustness to step size choices, particularly in grouped or block-structured optimization settings.",
+        "authors": "Hassan Dbouk, Nidham Gazagnadou, Matthias Reisser, Christos Louizos",
+        "url": "http://arxiv.org/abs/2605.03869v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03869v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对零阶优化中的自适应性提出了质疑，并提出了MEAZO，一个内存高效的自适应零阶优化器，仅跟踪一个标量进行全局步长自适应。它通过分析高维ZO梯度缺乏坐标级异质性，揭示了自适应机制的内存效率低下问题。该方法具有坚实的理论收敛性保证，解决了LLM微调中自适应ZO方法的内存开销瓶颈，使其更具实用性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03769v1",
+        "title": "Nora: Normalized Orthogonal Row Alignment for Scalable Matrix Optimizer",
+        "summary": "Matrix-based optimizers have demonstrated immense potential in training Large Language Models (LLMs), however, designing an ideal optimizer remains a formidable challenge. A superior optimizer must satisfy three core desiderata: efficiency, achieving Muon-like preconditioning to accelerate optimization; stability, strictly adhering to the scale-invariance inherent in neural networks; and speed, minimizing computational overhead. While existing methods address these aspects to varying degrees, they often fail to unify them, either incurring prohibitive computational costs like Muon, or allowing radial jitters that compromise stability like RMNP. To bridge this gap, we propose Nora, an optimizer that rigorously satisfies all three requirements. Nora achieves training stability by explicitly stabilizing weight norms and angular velocities through row-wise momentum projection onto the orthogonal complement of the weights. Simultaneously, by leveraging the block-diagonal dominance of the Transformer Hessian, Nora effectively approximates structured preconditioning while maintaining an optimal computational complexity of $\\mathcal{O}(mn)$. Furthermore, we prove that Nora is a scalable optimizer and establish its corresponding scaling theorems. With a streamlined implementation requiring only two lines of code, our preliminary experiments validate Nora as an efficient and highly promising optimizer for large-scale training.",
+        "authors": "Jinghui Yuan, Jiaxuan Zou, Shuo Wang, Yong Liu, Feiping Nie",
+        "url": "http://arxiv.org/abs/2605.03769v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03769v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Nora是一种可扩展的矩阵优化器，它通过行级动量投影到权重的正交补空间，严格地稳定了权重范数和角速度，从而实现了LLM训练的效率、稳定性和速度。论文证明了Nora的可扩展性并建立了相应的缩放定理。其数学严谨性高，解决了LLM训练中的计算成本和稳定性瓶颈，具有重要的理论创新和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03723v1",
+        "title": "Segmenting Human-LLM Co-authored Text via Change Point Detection",
+        "summary": "The rise of large language models (LLMs) has created an urgent need to distinguish between human-written and LLM-generated text to ensure authenticity and societal trust. Existing detectors typically provide a binary classification for an entire passage; however, this is insufficient for human--LLM co-authored text, where the objective is to localize specific segments authored by humans or LLMs. To bridge this gap, we propose algorithms to segment text into human- and LLM-authored pieces. Our key observation is that such a segmentation task is conceptually similar to classical change point detection in time-series analysis. Leveraging this analogy, we adapt change point detection to LLM-generated text detection, develop a weighted algorithm and a generalized algorithm to accommodate heterogeneous detection score variability, and establish the minimax optimality of our procedure. Empirically, we demonstrate the strong performance of our approach against a wide range of existing baselines.",
+        "authors": "Mengchu Li, Jin Zhu, Jinglai Li, Chengchun Shi",
+        "url": "http://arxiv.org/abs/2605.03723v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03723v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将经典的时间序列变化点检测方法应用于人类-LLM合著文本的分割，以定位人类或LLM生成的部分。它提出了加权和广义算法，并建立了其极小极大最优性。该方法具有强大的理论保证，解决了LLM应用中区分人机文本的实际瓶颈，对确保内容真实性和社会信任至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03712v1",
+        "title": "Tempered Guided Diffusion",
+        "summary": "Training-free conditional diffusion provides a flexible alternative to task-specific conditional model training, but existing samplers often allocate computation inefficiently: independent guided trajectories can vary widely in quality, and additional function evaluations along a single trajectory may not recover from poor early decisions. We propose Tempered Guided Diffusion (TGD), an annealed sequential Monte Carlo framework for training-free conditional sampling with diffusion priors. TGD targets tempered posterior distributions over the clean signal, using noisy diffusion states only as auxiliary variables for proposing reconstructions and propagating particles. Particles are reweighted by incremental likelihood ratios, resampled, and propagated across noise levels, concentrating computation on trajectories plausible under both the prior and observation. Under idealized exact-reconstruction assumptions, full TGD yields a consistent particle approximation to the posterior as the number of particles grows. For expensive reconstruction tasks, Accelerated TGD (A-TGD) retains early particle exploration but prunes to a single high-likelihood trajectory partway through sampling. Experiments on a controlled two-dimensional inverse problem and image inverse problems show improved posterior approximation and favorable wall-clock speed-quality tradeoffs over independent multi-trajectory baselines.",
+        "authors": "Andreas Makris, Paul Fearnhead, Chris Nemeth",
+        "url": "http://arxiv.org/abs/2605.03712v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03712v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TGD是一个退火序列蒙特卡洛框架，用于基于扩散先验的免训练条件采样。它将噪声扩散状态作为辅助变量，通过增量似然比重新加权粒子，并将粒子传播到不同噪声水平，从而将计算集中在更合理的轨迹上。该方法在理论上提供了对后验的一致粒子近似，解决了免训练条件扩散中计算分配效率低下的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03497v1",
+        "title": "GRIFDIR: Graph Resolution-Invariant FEM Diffusion Models in Function Spaces over Irregular Domains",
+        "summary": "Score-based diffusion models in infinite-dimensional function spaces provide a mathematically principled framework for modelling function-valued data, offering key advantages such as resolution invariance and the ability to handle irregular discretisations. However, practical implementations have struggled to fully realise these benefits. Existing backbones like Fourier neural operators are often biased towards regular grids and fail to generalise to complex domain topologies. We propose a novel architecture for function-space diffusion models that represents generalised graph convolutional kernels as finite element functions, enabling the model to naturally handle unstructured meshes and complex geometries. We demonstrate the efficacy of our network architecture through a series of unconditional and conditional sampling experiments across diverse geometries, including non-convex and multiply-connected domains. Our results show that the proposed method maintains resolution invariance and achieves high fidelity in capturing functional distributions on non-trivial geometries.",
+        "authors": "James Rowbottom, Elizabeth L. Baker, Nick Huang, Ben Adcock, Carola-Bibiane Schönlieb, Alexander Denker",
+        "url": "http://arxiv.org/abs/2605.03497v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03497v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GRIFDIR提出了一种新颖的函数空间扩散模型架构，将广义图卷积核表示为有限元函数，使其能够自然处理非结构化网格和复杂几何体。这解决了函数值数据建模中分辨率不变性和处理不规则离散化的基本问题，具有高度的数学严谨性和在科学超分辨率等领域的实际应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03573v1",
+        "title": "Stochastic Schrödinger Diffusion Models for Pure-State Ensemble Generation",
+        "summary": "In quantum machine learning (QML), classical data are often encoded as quantum pure states and processed directly as quantum representations, motivating representation-level generative modeling that samples new quantum states from an underlying pure-state ensemble rather than re-preparing them from perturbed classical inputs. However, extending \\emph{score-based} diffusion models with well-defined reverse-time samplers to quantum pure-state ensembles remains challenging, due to the non-Euclidean geometry of the complex projective space $\\mathbb{CP}^{d-1}$ and the intractability of transition densities. We propose \\emph{Stochastic Schrödinger Diffusion Models} (SSDMs), an intrinsic score-based generative framework on $\\mathbb{CP}^{d-1}$ endowed with the Fubini--Study (FS) metric. SSDMs formulate a forward Riemannian diffusion with a stochastic Schrödinger equation (SSE) realization, and derive reverse-time dynamics driven by the Riemannian score $\\nabla_{\\mathrm{FS}} \\log p_t$. To enable training without analytic transition densities, we introduce a local-time objective based on a local Euclidean Ornstein--Uhlenbeck approximation in FS normal coordinates, yielding an analytic teacher score mapped back to the manifold. Experiments show that SSDMs faithfully capture target pure-state ensemble statistics, including observable moments, overlap-kernel MMD, and entanglement measures, and that SSDM-generated quantum representations improve downstream QML generalization via representation-level data augmentation.",
+        "authors": "Jian Xu, Wei Chen. Chao Li, Jingyuan Zheng, Delu Zeng, John Paisley, Qibin Zhao",
+        "url": "http://arxiv.org/abs/2605.03573v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03573v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了随机薛定谔扩散模型（SSDMs），一个在复射影空间上基于Fubini-Study度量的内在分数生成框架，用于纯态集成生成。它解决了在非欧几里得几何中扩展分数扩散模型到量子纯态集成的挑战，并推导了逆时动力学。尽管应用领域是量子机器学习，但其在理论和算法上的创新性极高，是AI前沿算法的体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03308v1",
+        "title": "Revisiting the Travel Planning Capabilities of Large Language Models",
+        "summary": "Travel planning serves as a critical task for long-horizon reasoning, exposing significant deficits in LLMs. However, existing benchmarks and evaluations primarily assess final plans in an end-to-end manner, which lacks interpretability and makes it difficult to analyze the root causes of failures. To bridge this gap, we decompose travel planning into five constituent atomic sub-capabilities, including \\emph{Constraint Extraction}, \\emph{Tool Use}, \\emph{Plan Generation}, \\emph{Error Identification}, and \\emph{Error Correction}. We implement a decoupled evaluation protocol leveraging oracle intermediate contexts to rigorously isolate these components, thereby measuring the atomic performance boundary without the noise of cascading errors. Our results highlight a clear contrast in performance: while LLMs are proficient in extracting explicit constraints, they struggle to infer implicit, open-world requirements. Furthermore, they exhibit structural biases in plan generation and suffer from ineffective self-correction, characterized by excessive sensitivity and erroneous persistence. These findings offer precise directions for improving LLM reasoning and planning abilities.",
+        "authors": "Bo-Wen Zhang, Jin Ye, Peng-Yu Hua, Jia-Wei Cao, Jie-Jing Shao, Yu-Feng Li, Lan-Zhe Guo",
+        "url": "http://arxiv.org/abs/2605.03308v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03308v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出将协调视为LLM多智能体系统中的一个可配置架构层，与智能体逻辑和信息访问分离。它通过在预测市场上进行信息控制设计来实例化这一概念，并使用Brier分数的Murphy分解来分析配置特征。这解决了多智能体系统高失败率的瓶颈，提供了原则性的架构推理方法，对提高LLM多智能体系统的可靠性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03317v1",
+        "title": "AHPA: Adaptive Hierarchical Prior Alignment for Diffusion Transformers",
+        "summary": "Representation alignment has recently emerged as an effective paradigm for accelerating Diffusion Transformer training. Despite their success, existing alignment methods typically impose a fixed supervision target or a fixed alignment granularity throughout the entire denoising trajectory, whether the guidance is provided by external vision encoders, internal self-representations, or VAE-derived features. We argue that such timestep-agnostic alignment is suboptimal because the useful granularity of representation supervision changes systematically with the signal-to-noise ratio. In high-noise regimes, diffusion models benefit more from coarse semantic and layout-level anchoring, whereas in low-noise regimes, the training signal should emphasize spatially detailed and structurally faithful refinement. This non-stationary alignment behavior creates a representational mismatch for static single-level supervisors. To address this issue, we propose Adaptive Hierarchical Prior Alignment (AHPA), a lightweight alignment framework that exploits the hierarchical representations naturally embedded in the frozen VAE encoder. Instead of using only a single compressed latent as the alignment target, AHPA extracts multi-level VAE features that provide complementary priors ranging from local geometry and spatial topology to coarse semantic layout. A timestep-conditioned Dynamic Router adaptively selects and weights these hierarchical priors along the denoising trajectory, thereby synchronizing the alignment granularity with the model's evolving training needs. Extensive experiments show that AHPA improves convergence and generation quality over baselines and incurs no additional inference cost while avoiding external encoder supervision during training.",
+        "authors": "Ruibin Min, Yexin Liu, Aimin Pan, Changsheng Lu, Jiafei Wu, Kelu Yao, Xiaogang Xu, Harry Yang",
+        "url": "http://arxiv.org/abs/2605.03317v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03317v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "AHPA是一个轻量级的扩散Transformer对齐框架，它利用冻结VAE编码器中自然嵌入的层次表示，并通过时间步条件动态路由器自适应地选择和加权这些层次先验。这解决了现有对齐方法固定监督目标或粒度次优的问题，提高了扩散Transformer的收敛性和生成质量，且不增加推理成本，对模型效率和质量有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.03387v1",
+        "title": "From prompting to evidence-based translation: A RAG+prompt system for Japanese-Chinese translation and its pedagogical potential",
+        "summary": "Large language models perform well on high-resource pairs but are less reliable for Japanese-Chinese sentences containing noun-modifying clause constructions (NMCCs). This study evaluates a retrieval-augmented generation RAG+Prompt translation system that integrates linguistic analysis, embedding-based retrieval, prompt construction, and LLM generation without modifying the base model. The analysis module outputs A1 (inner vs. outer NMCC) and A2 (risk predictions: lexical choice/NMCC handling/word order/style/register); top-k = 5 similar Ja-Zh examples (L2 distance) and A1/A2 are inserted into an enhanced prompt. Using GPT-4o and a 66-sentence test set, we compare six knowledge-base sizes (0/100/200/500/1,000/2,000). Macro-averaged sentence-level BLEU (1-4-gram with brevity penalty; cased; Chinese at the character level) is the sole metric. Mean BLEU increases from 24.28 at 0 (RAG disabled) to 29.96 at 2,000 (+5.68; +23.4%). The upward trend holds across sizes, with larger knowledge bases yielding higher scores. We conclude that the RAG+Prompt translation system improves Ja-Zh translation of sentences containing NMCCs in an interpretable and auditable manner. Limitations include one base model, one metric, and reliance on published texts and commercial APIs; future work will broaden genres, language pairs, and evaluation metrics.",
+        "authors": "Wenshi Gu",
+        "url": "http://arxiv.org/abs/2605.03387v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.03387v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "PODiff是一个结构化的条件生成框架，在固定、方差有序的本征正交分解（POD）系数空间中执行扩散，用于科学超分辨率。它利用POD模式的正交性来施加可解释的、方差有序的潜在几何。这解决了高维空间场概率超分辨率的计算瓶颈，实现了高效的集成生成，并以更低的计算成本提供可靠的不确定性估计。"
+    }
+]

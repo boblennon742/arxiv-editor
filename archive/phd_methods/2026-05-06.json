@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.05125v1",
+        "title": "Joint Treatment Effect Estimation from Incomplete Healthcare Data: Temporal Causal Normalizing Flows with LLM-driven Evolutionary MNAR Imputation",
+        "summary": "Target trial emulation (TTE) enables causal questions to be studied with observational data when randomized controlled trials (RCTs) are infeasible. Yet treatment-effect methods often address causal estimation, missingness, and temporal structure separately, limiting their robustness in electronic health records (EHRs), where time-varying confounding and missing-not-at-random (MNAR) biomarkers can reach 50%--80%. We propose a two-stage pipeline for treatment effect estimation from incomplete longitudinal EHRs. First, CausalFlow-T, a directed acyclic graph (DAG)-constrained normalizing flow with long short-term memory (LSTM)-encoded patient history, performs exact invertible counterfactual inference, avoiding approximation errors from variational inference and separating confounding through explicit causal structure. Ablations on four synthetic and one semi-synthetic benchmark with known counterfactuals show that DAG constraints and exact inference address distinct failure modes: neither compensates for the other. Second, because CausalFlow-T requires completed inputs, we introduce an LLM-driven evolutionary imputer that proposes executable imputation operators rather than individual entries, and evaluate it with three large language model (LLM) backends, including two open-source models. Across 30%--80% MNAR missingness, this imputer achieves the best pooled rank over biomarker and causal metrics, leading in point-wise accuracy and temporal extrapolation while preserving average treatment effect (ATE) recovery as statistical baselines degrade. On Swiss primary-care EHRs from adults with type 2 diabetes initiating a GLP-1 receptor agonist or SGLT-2 inhibitor, the pipeline estimates a per-protocol weight-loss difference of -0.98 kg [95% CI -1.01, -0.96] favoring GLP-1 receptor agonists, consistent with randomized evidence and obtained from realistically incomplete real-world EHRs.",
+        "authors": "Olivia Jullian Parra, Sara Zoccheddu, David Catalan Cerezo, Tom Forzy, Franziska Ulrich, William Sutcliffe, Jakob Martin Burgstaller, Oliver Senn, Patrick Owen, Nicola Serra",
+        "url": "http://arxiv.org/abs/2605.05125v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05125v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个两阶段的管道，用于从不完整的纵向EHR数据中进行联合治疗效果估计。其核心创新在于CausalFlow-T（一个DAG约束的归一化流，用于精确可逆的反事实推理）和LLM驱动的进化式MNAR归因器。它在因果推断、缺失数据处理和时间序列建模方面具有极高的理论严谨性和创新性，直接解决了医疗健康领域一个关键的实际应用瓶颈，非常符合您对前沿算法和实际应用瓶颈的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04595v1",
+        "title": "A Queueing-Theoretic Framework for Stability Analysis of LLM Inference with KV Cache Memory Constraints",
+        "summary": "The rapid adoption of large language models (LLMs) has created significant challenges for efficient inference at scale. Unlike traditional workloads, LLM inference is constrained by both computation and the memory overhead of key-value (KV) caching, which accelerates decoding but quickly exhausts GPU memory. In this paper, we introduce the first queueing-theoretic framework that explicitly incorporates both computation and GPU memory constraints into the analysis of LLM inference. Based on this framework, we derive rigorous stability and instability conditions that determine whether an LLM inference service can sustain incoming demand without unbounded queue growth. This result offers a powerful tool for system deployment, potentially addressing the core challenge of GPU provisioning. By combining an estimated request arrival rate with our derived stable service rate, operators can calculate the necessary cluster size to avoid both costly over-purchasing and performance-violating under-provisioning. We further validate our theoretical predictions through extensive experiments in real GPU production environments. Our results show that the predicted stability conditions are highly accurate, with deviations typically within 10%.",
+        "authors": "Chengyi Nie, Nian Si, Zijie Zhou",
+        "url": "http://arxiv.org/abs/2605.04595v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04595v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次提出了一个排队论框架，明确将计算和GPU KV缓存内存限制纳入LLM推理分析。它推导出了严格的稳定性和不稳定性条件，为LLM推理服务的部署和GPU资源配置提供了强大的理论工具。这篇论文在理论严谨性上表现卓越，直接解决了LLM大规模推理的效率瓶颈，对AI架构优化具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04543v1",
+        "title": "UniVer: A Unified Perspective for Multi-step and Multi-draft Speculative Decoding",
+        "summary": "Speculative decoding accelerates Large Language Models via draft-then-verify, where verification can be framed as an Optimal Transport (OT) problem. Existing approaches typically handle multi-draft and multi-step aspects in isolation, applying either flat OT to single-step drafts or per-token rejection sampling to tree-structured candidates. This separation leaves the joint regime (where multi-step dependencies meet multi-draft branching) poorly optimized, as local verification rules fail to exploit the coupling between horizontal and vertical dimensions of candidate trees. In this paper, we propose a unified perspective that casts tree-based verification as a conditional OT problem. Our key insight is that vertical dependencies can be abstracted through prefix acceptance probabilities, which act as dynamic scaling factors to actively guide horizontal draft selection. Based on this principle, we introduce UniVer, a verification algorithm that jointly optimizes across tree levels by composing local optimal transport plans under prefix constraints. We prove that UniVer remains lossless and achieves the optimal acceptance rate under the proposed conditional framework. Extensive experiments across different tasks and models demonstrate that UniVer improves acceptance length by 4.2% to 8.5% over standard recursive rejection sampling without replacement, while maintaining exact distributional alignment with the target model.",
+        "authors": "Yepeng Weng, Qiao Hu, Takehisa Yairi",
+        "url": "http://arxiv.org/abs/2605.04543v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04543v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的视角，将基于树的验证视为条件最优传输（OT）问题，用于多步和多草稿的推测解码。其核心算法UniVer在理论上被证明是无损的，并能实现最优接受率。它在理论上对LLM加速技术进行了深入探索，解决了推测解码中多步依赖与多草稿分支结合的优化难题，具有极高的理论创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.05091v1",
+        "title": "Think-Aloud Reshapes Automated Cognitive Model Discovery Beyond Behavior",
+        "summary": "Computational cognitive models discovered using large language models have so far relied solely on behavioral data. However, it is well-known that models produced from the behavioral trajectory alone are typically under-determined. In this work, we explore the use of Think Aloud traces as an additional form of data constraint during automated model discovery. When applied to the domain of risky decision-making, we find that the models discovered with think-aloud achieve significantly improved predictive performance on held-out data. Additionally, we find that the discovered models belong to different structural classes than those discovered from behavior alone for the majority of participants (69.4\\%), specifically, it shifts from Explicit comparator towards Integrated utility. These results suggest that process-level language data not only improve model fit, but also systematically reshape the structure of the discovered cognitive models, enabling the identification of mechanisms that are not recoverable from behavior alone.",
+        "authors": "Hanbo Xie, Akshay K. Jagadish, Lan Pan, Robert C. Wilson",
+        "url": "http://arxiv.org/abs/2605.05091v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05091v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个统一框架，研究多臂老虎机和强化学习中的遗憾分布，并首次证实了Lattimore & Szepesvári (2020) 的一个猜想。它推导了通用的与间隙无关和与间隙相关的遗憾分布界限，实现了期望性能、尾部风险和实例相关行为之间的最优权衡。这篇论文在数理统计和强化学习理论方面具有极高的创新性和严谨性，是您作为统计学博士生会非常感兴趣的基础性研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.05080v1",
+        "title": "The Pinocchio Dimension: Phenomenality of Experience as the Primary Axis of LLM Psychometric Differences",
+        "summary": "We administer 45 validated psychometric questionnaires to 50 large language models (LLMs) to identify the dimensions along which LLMs differ psychometrically. Using Supervised Semantic Differential (SSD), we find that the primary axis of between-model variance separates items describing phenomenally rich experience, including embodied sensation, felt affect, inner speech, imagery, and empathy, from items describing stimulus-driven behavioral reactivity ($R^2_{adj}=.037$, $p<.0001$). To test this hypothesis at the item level, we introduce the Pinocchio score ($π_i$), the ratio of inter-model response variance under neutral prompting to that under a human-simulation prompt, as an annotation-free measure of each item's experiential demand. $π_i$ predicts condition-induced shifts in primary factor loading magnitudes ($ρ=-.215$, $p<.0001$, $n=1292$--$1310$ items), confirming that between-model divergence on experiential items is structured rather than noisy. Applying PCA to per-model EFA scores across all questionnaires reveals one dominant dimension, the Pinocchio Axis ($Π$): the degree to which a model presents itself as a locus of phenomenal experience rather than a system of behavioral responses. This axis captures 47.1% of cross-questionnaire between-model variance in primary factor scores and converges with item-level Pinocchio scores ($r=.864$). Marked within-provider divergence across closely related model variants is consistent with post-training fine-tuning as a key contributor, supporting the interpretation that $Π$ reflects a training-shaped self-representational tendency governing how a model treats experiential language as self-applicable. The dominant axis of between-model psychometric variation is therefore not a conventional personality trait but a self-representational stance toward one's own nature as an experiencer.",
+        "authors": "Hubert Plisiecki, Sabina Siudaj, Kacper Dudzic, Anna Sterna, Maciej Gorski, Karolina Drozdz, Marcin Moskalewicz",
+        "url": "http://arxiv.org/abs/2605.05080v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05080v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文通过对50个LLM进行45项心理测量问卷调查，识别出LLM心理测量差异的主要维度，并提出了“匹诺曹维度”。它引入了匹诺曹分数（π_i）作为衡量项目体验需求的无标注指标。这项研究在理解LLM内部表征和“经验现象性”方面具有高度的创新性，为AI对齐和安全性提供了新的基础性视角，且行文清晰引人入胜。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04893v1",
+        "title": "Self-Attention as Transport: Limits of Symmetric Spectral Diagnostics",
+        "summary": "Large language models hallucinate in predictable ways: attention routing fails by over-concentrating on a narrow set of positions, or by spreading so diffusely that relevance is diluted, and the shape of the failure carries diagnostic signal. A widely used family of spectral methods analyzes the symmetric component of the degree-normalized attention operator, which governs transport capacity; we prove that every transpose-invariant spectral diagnostic of this operator is structurally orientation-blind (it cannot distinguish an operator from its transpose, and therefore cannot detect information-flow direction), with a quantitative converse establishing the asymmetry coefficient $G$ as the unique control parameter for direction.   Pairing this with a closed-form bipartite-Cheeger landscape for canonical causal architectures, we show that uniform causal attention satisfies an $n$-independent floor $φ\\ge 1/5$ with worst cut at $t^\\ast/n \\approx 0.32$, while window attention pierces the floor as $O(w/n)$; failure modes are shape-different, not just value-different. The resulting two-axis diagnostic ($φ$ for capacity, $G$ for direction) yields a falsifiable polarity prediction: bottleneck- and diffuse-dominated benchmarks should exhibit opposite polarity. Under length-controlled evaluation, transport features retain interpretable signal (LC-AUROC from 0.62 to 0.84) on tested models up to 8B parameters, with polarity reversing as predicted between HaluEval and MedHallu.",
+        "authors": "Dominik Dahlem, Diego Maniloff, Mac Misiura",
+        "url": "http://arxiv.org/abs/2605.04893v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04893v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文证明了度归一化注意力算子的转置不变谱诊断在结构上是方向盲的，并确立了不对称系数G作为信息流方向的唯一控制参数。它深化了对LLM中注意力机制的理解，为诊断注意力路由失败（如幻觉）提供了原理性工具。其高度的理论严谨性和对LLM架构内部机制的洞察，非常符合您对前沿算法和架构的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04759v1",
+        "title": "Gyan: An Explainable Neuro-Symbolic Language Model",
+        "summary": "Transformer based pre-trained large language models have become ubiquitous. There is increasing evidence to suggest that even with large scale pre-training, these models do not capture complete compositional context and certainly not, the full human analogous context. Besides, by the very nature of the architecture, these models hallucinate, are difficult to maintain, are not easily interpretable and require enormous compute resources for training and inference. Here, we describe Gyan, an explainable language model based on a novel non-transformer architecture, without any of these limitations. Gyan achieves SOTA performance on 3 widely cited data sets and superior performance on two proprietary data sets. The novel architecture decouples the language model from knowledge acquisition and representation. The model draws on rhetorical structure theory, semantic role theory and knowledge-based computational linguistics. Gyan's meaning representation structure captures the complete compositional context and attempts to mimic humans by expanding the context to a 'world model'. AI model adoption critically depends on trust and transparency especially in mission critical use cases. Collectively, our results demonstrate that it is possible to create models which are trustable and reliable for mission critical tasks. We believe our work has tremendous potential for guiding the development of transparent and trusted architectures for language models.",
+        "authors": "Venkat Srinivasan, Vishaal Jatav, Anushka Chandrababu, Geetika Sharma",
+        "url": "http://arxiv.org/abs/2605.04759v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04759v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Gyan提出了一个基于新型非Transformer架构的可解释语言模型，将语言模型与知识获取和表示解耦，并借鉴了修辞结构理论和语义角色理论。它旨在解决Transformer模型幻觉、难以维护和解释性差的问题。这项工作在架构创新和可解释性方面具有突破性，对构建可信赖的AI模型具有重要意义，避免了纯粹的工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04651v1",
+        "title": "FAAST: Forward-Only Associative Learning via Closed-Form Fast Weights for Test-Time Supervised Adaptation",
+        "summary": "Adapting pretrained models typically involves a trade-off between the high training costs of backpropagation and the heavy inference overhead of memory-based or in-context learning. We propose FAAST, a forward-only associative adaptation method that analytically compiles labeled examples into fast weights in a single pass. By eliminating memory or context dependence, FAAST achieves constant-time inference and decouples task adaptation from pretrained representation. Across image classification and language modeling benchmarks, FAAST matches or exceeds backprop-based adaptation while reducing adaptation time by over 90\\% and is competitive to memory/context-based adaptation while saving memory usage by up to 95\\%. These results demonstrate FAAST as a highly efficient, scalable solution for supervised task adaptation, particularly for resource-constrained models. We release the code and models at https://github.com/baoguangsheng/faast.",
+        "authors": "Guangsheng Bao, Hongbo Zhang, Han Cui, Yanbin Zhao, Yue Zhang",
+        "url": "http://arxiv.org/abs/2605.04651v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04651v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FAAST提出了一种前向关联适应方法，通过闭式快速权重将带标签的示例分析性地编译成快速权重，实现单次通过的测试时监督适应。它消除了对内存或上下文的依赖，实现了恒定时间推理，并显著降低了适应成本和内存使用。这项工作在数据效率和模型适应性方面具有高度创新性，解决了资源受限模型的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04638v1",
+        "title": "Gradients with Respect to Semantics Preserving Embeddings Tell the Uncertainty of Large Language Models",
+        "summary": "Uncertainty quantification (UQ) is an important technique for ensuring the trustworthiness of LLMs, given their tendency to hallucinate. Existing state-of-the-art UQ approaches for free-form generation rely heavily on sampling, which incurs high computational cost and variance. In this work, we propose the first gradient-based UQ method for free-form generation, SemGrad, which is sampling-free and computationally efficient. Unlike prior gradient-based methods developed for classification tasks that operates in parameter space, we propose to consider gradients in semantic space. Our method builds on the key intuition that a confident LLM should maintain stable output distributions under semantically equivalent input perturbations. We interpret the stability as the gradients in semantic space and introduce a Semantic Preservation Score (SPS) to identify embeddings that best capture semantics, with respect to which gradients are computed. We further propose HybridGrad, which combines the strengths of SemGrad and parameter gradients. Experiments demonstrate that both of our methods provide efficient and effective uncertainty estimates, achieving superior performance than state-of-the-art methods, particularly in settings with multiple valid responses.",
+        "authors": "Mingda Li, Rundong Lv, Xinyu Li, Weinan Zhang, Ting Liu",
+        "url": "http://arxiv.org/abs/2605.04638v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04638v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SemGrad是首个基于梯度的自由形式生成不确定性量化（UQ）方法，无需采样且计算高效。它通过语义空间中的梯度来衡量LLM在语义等效输入扰动下的输出分布稳定性，并引入了语义保持分数（SPS）。该方法解决了现有UQ方法计算成本高和方差大的问题，为LLM的可靠性提供了高效且有效的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04542v1",
+        "title": "Power Distribution Bridges Sampling, Self-Reward RL, and Self-Distillation",
+        "summary": "Recent analyses question whether reinforcement learning (RL) is responsible for strong reasoning in large language models (LLMs). At the same time, distillation and inference-time sampling, including power sampling, have emerged as effective ways to improve LLM performance. However, the relationship among RL, distillation, and sampling remains unclear. In this study, we focus on the power distribution, the target distribution of power sampling, and show that the power distribution bridges sampling, self-reward KL-regularized RL, and self-distillation. From the sampling perspective, we show that inexpensive local approximations cannot reproduce sequence-level power without information about possible suffixes. From the RL perspective, the power distribution is the closed-form optimizer of KL-regularized RL when the model's sequence-level log-probabilities are used as the reward. This identification leads to power self-distillation, an offline distillation surrogate that shares the same target distribution and amortizes the cost of power sampling into supervised training on teacher samples. We further show that power self-distillation can achieve self-reward sharpening, while improvement in a downstream true reward is governed by the covariance between true reward and self-reward under the power distribution. Experiments on reasoning tasks support our analysis: power sampling raises self-reward, true-reward gains depend on alignment with self-reward, and power self-distillation can match or exceed the performance of power sampling at much lower inference cost.",
+        "authors": "Akiyoshi Tomihari, Issei Sato",
+        "url": "http://arxiv.org/abs/2605.04542v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04542v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究揭示了“功率分布”如何连接采样、自奖励KL正则化强化学习和自蒸馏，并引入了功率自蒸馏。它从理论上证明了功率分布是KL正则化RL的闭式优化器。这项工作在理论上统一了LLM性能改进的多种技术，提供了原理性理解和一种高效的离线蒸馏替代方案，对LLM训练范式具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04477v1",
+        "title": "Data-dependent Exploration for Online Reinforcement Learning from Human Feedback",
+        "summary": "Online reinforcement learning from human feedback (RLHF) has emerged as a promising paradigm for aligning large language models (LLMs) by continuously collecting new preference feedback during training. A foundational challenge in this setting is exploration, which requires algorithms that enable the LLMs to generate informative comparisons that improve sample-efficiency in online RLHF. Existing exploration strategies often derive bonuses via on-policy expectations, which are difficult to estimate reliably from the limited historical preference data available during training; as a result, the policy can prematurely down-weight under-explored regions that may contain high-value behaviors. In this paper, we propose data-dependent exploration for preference optimization (DEPO), a simple and scalable method that leverages historical data to construct an extra uncertainty bonus for high-uncertainty regions, encouraging exploration toward potentially high-value data. Theoretically, we provide a data-dependent regret bound for the proposed algorithm, showing that it adapts to the hardness of the learning task itself and can be tighter than worst-case bounds in practice. Empirically, the proposed method consistently outperforms strong baselines across benchmarks, demonstrating improved sample efficiency.",
+        "authors": "Zhen-Yu Zhang, Yuting Tang, Jiandong Zhang, Lanjihong Ma, Masashi Sugiyama",
+        "url": "http://arxiv.org/abs/2605.04477v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04477v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DEPO（数据依赖探索的偏好优化）提出了一种简单且可扩展的方法，利用历史数据为高不确定性区域构建额外的探索奖励，以提高在线RLHF的样本效率。该算法提供了数据依赖的遗憾界限，理论严谨性高，并能适应学习任务的难度。它解决了在线RLHF中的探索挑战，对LLM对齐至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04468v1",
+        "title": "Stabilizing LLM Supervised Fine-Tuning via Explicit Distributional Control",
+        "summary": "Post-training large language models (LLMs) often suffers from catastrophic forgetting, where improvements on a target objective degrade previously acquired capabilities. Recent evidence suggests that this phenomenon is primarily driven by excessive distributional drift during optimization. Motivated by this perspective, we propose Anchored Learning, a simple framework that explicitly controls distributional updates during offline fine-tuning via a dynamically evolving moving anchor. Instead of matching a fixed reference distribution, the anchor interpolates between the current model and a frozen reference to construct an intermediate target that the model distills toward, transforming global fine-tuning into a sequence of local trust-region updates in distribution space. Theoretically, we prove this anchor-based update admits a linear KL-divergence upper bound per iteration, ensuring a stable transition between model distributions. Extensive experiments on iGSM, MedCalc, and IFEval show that Anchored Learning consistently lies on the Pareto frontier of gain-stability trade-offs, achieving near-optimal performance improvements while substantially reducing degradation compared to strong baselines. For example, while standard SFT suffers from over 53% performance degradation on iGSM and MedCalc, Anchored Learning slashes this drop to under 5% while maintaining near-optimal gains (e.g., 75.2% on iGSM).",
+        "authors": "Xinyu Wang, Changzhi Sun, Yuanbin Wu, Xiaoling Wang",
+        "url": "http://arxiv.org/abs/2605.04468v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04468v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Anchored Learning是一个通过动态演化移动锚点来显式控制离线微调期间分布更新的框架，将全局微调转化为分布空间中的局部信任区域更新。它理论上证明了这种更新方式可以保证稳定的模型分布转换，有效解决了LLM微调中灾难性遗忘和分布漂移的问题，在保持性能的同时显著提高了稳定性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04418v1",
+        "title": "Demystifying Manifold Constraints in LLM Pre-training",
+        "summary": "The empirical success of large language model (LLM) pre-training relies heavily on heuristic stabilization techniques, such as explicit normalization layers and weight decay. While recent constrained optimization approaches that explicitly restrict weights may improve numerical stability and performance, the mechanism and motivation for adding constraints still remain elusive. This paper systematically demystifies the role of explicit manifold constraints in LLM pre-training. By introducing the Msign-Aligned Constrained Riemannian Optimizer (MACRO)-a provably convergent, single-loop optimization framework-our study disentangles weight regularization heuristics from interacting mechanisms like RMS normalization and decoupled weight decay. Theoretical analyses and comprehensive empirical evaluations reveal that manifold constraints independently bound forward activation scales and enforce stable rotational equilibrium, thereby subsuming the roles of these heuristic mechanisms. Evaluations on large-scale LLM architectures demonstrate that MACRO achieves highly competitive performance while rigorously preserving the theoretical guarantees of exact Riemannian optimization.",
+        "authors": "Kang An, Jiaxiang Li, Donald Goldfarb, Shiqian Ma",
+        "url": "http://arxiv.org/abs/2605.04418v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04418v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文系统地揭示了LLM预训练中显式流形约束的作用，并引入了MACRO（Msign-Aligned Constrained Riemannian Optimizer）。它通过理论分析和实证评估，证明流形约束独立地限制了前向激活尺度并强制执行稳定的旋转平衡，从而取代了启发式机制的作用。这项工作对LLM预训练的稳定性机制提供了深刻的理论理解，有助于指导更具原则性的优化方法。"
+    }
+]

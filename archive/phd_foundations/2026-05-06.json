@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.05051v1",
+        "title": "Impossibility of Distribution-Free Predictive Inference for Individual Treatment Effects",
+        "summary": "Uncertainty quantification for individual treatment effects (ITEs) is a daunting challenge in causal inference. Motivated by recent advances in conformal prediction, several works aim to construct distribution-free prediction sets for ITEs with desired coverage under standard assumptions such as strong ignorability and overlap. In this paper, we show that such goals are fundamentally unattainable in the presence of continuous covariates. Specifically, we establish finite-sample and asymptotic impossibility results demonstrating that any distribution-free prediction set achieving desired coverage for ITEs must be trivial, in the sense that it has infinite expected length. Our analysis relies on a connection between ITE inference and the hardness of conditional independence testing, and highlights the intrinsic limitations imposed by the missing data nature of causal inference. These results provide a new perspective on existing methods, clarifying that their apparent success necessarily relies on additional structural assumptions beyond standard causal assumptions.",
+        "authors": "Chongguang Tao, Zheng Zhou, Yuhong Yang",
+        "url": "http://arxiv.org/abs/2605.05051v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05051v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了因果推断中个体治疗效果 (ITEs) 预测的“不可能结果”，明确指出在连续协变量存在下，任何达到期望覆盖率的无分布预测集都必须是平凡的。其“有限样本和渐近不可能结果”以及与“条件独立性检验难度”的联系，完美契合您对强大理论基础和清晰数学推导的需求，尤其是在因果逻辑方面。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.05029v1",
+        "title": "The Predictive-Causal Gap: An Impossibility Theorem and Large-Scale Neural Evidence",
+        "summary": "We report a systematic failure mode in predictive representation learning. Across 2695 neural network configurations trained to predict linear-Gaussian dynamics, the optimal encoder tracks the environment rather than the system it is meant to model. The mean causal fidelity -- the fraction of encoder sensitivity allocated to system degrees of freedom -- is 0.49, and only 2.5% of configurations exceed 0.70. The failure intensifies with dimension: at N=100, the optimal encoder becomes causally blind (fidelity ~10^{-8}) while achieving 92% lower prediction error than the causal representation. We prove this is not an optimization artifact but a structural property of the predictive objective: when environment modes are slower or less noisy than system modes, every minimizer of the population risk encodes the former. The set of dynamics exhibiting this predictive-causal gap is open and of positive measure in parameter space. In a nonlinear Duffing-GRU sweep, unconstrained predictors learn environment-dominant representations in 55% of tasks (95% CI 41--68%) versus 24% under operational grounding (p=2.3e-3); the median out-of-distribution MSE inflation under environment shift is 1.82x versus 1.00x. Operational grounding -- restricting the loss to system observables -- partially suppresses the gap, but causal fidelity is never recovered without an explicit system-environment boundary. The results identify the predictive-causal gap as a structural limit of learning, with implications for self-supervised representation learning, world models, and the scaling paradigm.",
+        "authors": "Kejun Liu",
+        "url": "http://arxiv.org/abs/2605.05029v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05029v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文揭示了预测性表示学习中的“预测-因果鸿沟”，并通过“不可能定理”证明了当环境模式比系统模式更慢或更不嘈杂时，预测性目标会倾向于编码环境而非系统。这不仅是一个深刻的理论发现，对自监督学习和世界模型具有深远影响，其严谨的数学证明（结构性属性、正测度）与您的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04536v1",
+        "title": "Transversality and Geometric Regularisation in Distributional Statistical Models",
+        "summary": "The distributional statistical framework replaces classical probability densities by distribution-kernel pairs $(T, \\varphi)$, where $T$ is a tempered distribution and $\\varphi$ is a rapidly decaying kernel. We develop the thesis that the kernel acts as a geometric regulariser, placing parametric statistical models in generic (transversal) position relative to degeneracy loci encoding non-identifiability, singular information, moment indeterminacy, and representation failure.   Using the transversality theorems of Whitney, Thom, and Mather, we prove a finite-dimensional weak transversality theorem: for a generic kernel in any sufficiently rich family, the kernel-induced feature map avoids degeneracy strata of sufficiently high codimension. We establish verifiable conditions -- formulated as rank conditions on the Jacobian of the joint feature map -- under which the transversality hypothesis can be checked, and verify them for location families, the log-normal, Stein discrepancies, and graphical models.   The present results apply to parametric models; extensions to semiparametric and nonparametric settings are discussed. The degeneracy classification includes representation degeneracy (Type 0) for models without closed-form densities and higher-order instabilities (Type IV) in non-chordal graphical models. Identifiability, robustness, moment determinacy, Fisher information regularity, Stein discrepancy, inferential separation, and the Behrens-Fisher problem all admit a unified geometric interpretation as transversality conditions on the feature map. This paper serves as a geometric companion to a series of papers developing the distributional framework.",
+        "authors": "R. Labouriau",
+        "url": "http://arxiv.org/abs/2605.04536v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04536v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了“分布统计框架”，并论证了核函数作为“几何正则化器”的作用，将参数统计模型置于与退化轨迹（非可识别性、奇异信息等）相关的通用（横向）位置。它运用了 Whitney、Thom 和 Mather 的横向性定理，并提供了统一的几何解释，是高度抽象且理论严谨的数学统计学研究，与您对严谨数学逻辑的追求完美契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04406v1",
+        "title": "Beyond Rigid Geometries: The Spline-Pullback Metric for Universal Diffeomorphic SPD Representation Learning",
+        "summary": "The integration of Symmetric Positive Definite (SPD) matrices into deep learning has historically relied on fixed algebraic Riemannian metrics. Analogous to hand-crafted features in classical machine learning, these static formulations impose rigid geometries limiting network expressivity and adaptability. Recent attempts to parameterize these geometries often violate the axioms of primary matrix functions through unconstrained powers or rank-dependent scaling, inviting spatial folding, loss of global surjectivity, and gradient collapse at spectral singularities. In this paper, we introduce the Spline-Pullback Metric (SPM), instantiated as Spectral-SPM and Cholesky-SPM, marking a paradigm shift from static metric selection to universal geometric approximation. By parameterizing the global diffeomorphism via a rank-invariant, monotonically constrained B-spline, SPM acts as a dense universal approximator for strictly increasing $C^1$ diffeomorphisms and theoretically subsumes existing pullback metrics while enabling localized non-linear spectral modelling. Topologically, SPM provides a globally bijective pullback geometry precluding rank-swapping discontinuities and gradient instabilities. Empirically, SPM achieves a state-of-the-art performance across 3 datasets utilizing Linear Probes, SPDNets, and deep Riemannian ResNets.",
+        "authors": "Tushar Das, Subrata Dutta, Sarmistha Neogy, Koushlendra Kumar Singh",
+        "url": "http://arxiv.org/abs/2605.04406v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04406v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“样条回拉度量（Spline-Pullback Metric, SPM）”用于通用微分同胚 SPD 矩阵表示学习，超越了传统的固定黎曼几何。它深入探讨了黎曼几何、微分同胚、B 样条和普遍逼近理论，解决了现有方法中的秩交换不连续性和梯度不稳定性问题。其在几何深度学习领域的深厚理论基础和数学推导，使其成为您的理想选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04893v1",
+        "title": "Self-Attention as Transport: Limits of Symmetric Spectral Diagnostics",
+        "summary": "Large language models hallucinate in predictable ways: attention routing fails by over-concentrating on a narrow set of positions, or by spreading so diffusely that relevance is diluted, and the shape of the failure carries diagnostic signal. A widely used family of spectral methods analyzes the symmetric component of the degree-normalized attention operator, which governs transport capacity; we prove that every transpose-invariant spectral diagnostic of this operator is structurally orientation-blind (it cannot distinguish an operator from its transpose, and therefore cannot detect information-flow direction), with a quantitative converse establishing the asymmetry coefficient $G$ as the unique control parameter for direction.   Pairing this with a closed-form bipartite-Cheeger landscape for canonical causal architectures, we show that uniform causal attention satisfies an $n$-independent floor $φ\\ge 1/5$ with worst cut at $t^\\ast/n \\approx 0.32$, while window attention pierces the floor as $O(w/n)$; failure modes are shape-different, not just value-different. The resulting two-axis diagnostic ($φ$ for capacity, $G$ for direction) yields a falsifiable polarity prediction: bottleneck- and diffuse-dominated benchmarks should exhibit opposite polarity. Under length-controlled evaluation, transport features retain interpretable signal (LC-AUROC from 0.62 to 0.84) on tested models up to 8B parameters, with polarity reversing as predicted between HaluEval and MedHallu.",
+        "authors": "Dominik Dahlem, Diego Maniloff, Mac Misiura",
+        "url": "http://arxiv.org/abs/2605.04893v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04893v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从“传输”的角度对大型语言模型（LLMs）的自注意力机制进行了深入的理论分析。它证明了对称谱诊断的“结构性方向盲性”，并引入了“不对称系数 G”作为方向的唯一控制参数。其利用“二分 Cheeger 景观”进行分析，并提出可证伪的极性预测，展现了对现代 AI 系统内部机制的强大理论洞察和严谨数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.05125v1",
+        "title": "Joint Treatment Effect Estimation from Incomplete Healthcare Data: Temporal Causal Normalizing Flows with LLM-driven Evolutionary MNAR Imputation",
+        "summary": "Target trial emulation (TTE) enables causal questions to be studied with observational data when randomized controlled trials (RCTs) are infeasible. Yet treatment-effect methods often address causal estimation, missingness, and temporal structure separately, limiting their robustness in electronic health records (EHRs), where time-varying confounding and missing-not-at-random (MNAR) biomarkers can reach 50%--80%. We propose a two-stage pipeline for treatment effect estimation from incomplete longitudinal EHRs. First, CausalFlow-T, a directed acyclic graph (DAG)-constrained normalizing flow with long short-term memory (LSTM)-encoded patient history, performs exact invertible counterfactual inference, avoiding approximation errors from variational inference and separating confounding through explicit causal structure. Ablations on four synthetic and one semi-synthetic benchmark with known counterfactuals show that DAG constraints and exact inference address distinct failure modes: neither compensates for the other. Second, because CausalFlow-T requires completed inputs, we introduce an LLM-driven evolutionary imputer that proposes executable imputation operators rather than individual entries, and evaluate it with three large language model (LLM) backends, including two open-source models. Across 30%--80% MNAR missingness, this imputer achieves the best pooled rank over biomarker and causal metrics, leading in point-wise accuracy and temporal extrapolation while preserving average treatment effect (ATE) recovery as statistical baselines degrade. On Swiss primary-care EHRs from adults with type 2 diabetes initiating a GLP-1 receptor agonist or SGLT-2 inhibitor, the pipeline estimates a per-protocol weight-loss difference of -0.98 kg [95% CI -1.01, -0.96] favoring GLP-1 receptor agonists, consistent with randomized evidence and obtained from realistically incomplete real-world EHRs.",
+        "authors": "Olivia Jullian Parra, Sara Zoccheddu, David Catalan Cerezo, Tom Forzy, Franziska Ulrich, William Sutcliffe, Jakob Martin Burgstaller, Oliver Senn, Patrick Owen, Nicola Serra",
+        "url": "http://arxiv.org/abs/2605.05125v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05125v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个两阶段的因果推断流程，用于从不完整纵向 EHR 数据中估计治疗效果。其核心是“DAG 约束的归一化流”和“精确可逆反事实推断”，避免了近似误差并明确分离了混杂因素。对因果结构和反事实推理的严格处理，以及对 MNAR 缺失数据的考量，使其在因果逻辑和统计严谨性方面表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04957v1",
+        "title": "Delving into Non-Exchangeability for Conformal Prediction in Graph-Structured Multivariate Time Series",
+        "summary": "Point forecasting for graph-structured multivariate time series is a fundamental problem, but rigorous uncertainty quantification for such predictions is still underexplored. Conformal prediction (CP) offers uncertainty estimation with a solid coverage guarantee under the exchangeability assumption, which requires the joint data distribution to be unchanged under permutation. However, in graph-structured time series, inherent cross-node coupling can violate the exchangeability condition, making direct application of CP unreliable. Inspired by the spectral graph theory, such coupling resides in global trends and can be characterized by the low-frequency components, while high-frequency components are nearly exchangeable. Therefore, we propose a novel concept named Spectral Graph Conditional Exchangeability (SGCE), which conditions exchangeable high-frequency components on low-frequency ones to preserve global trends and enable effective CP in the spectral domain. Based on SGCE, we further propose Spectral Conformal prediction via wAveLEt transform (SCALE). SCALE uses graph wavelets to decompose low/high-frequency components and conformalizes high-frequency residuals via adaptive gating over a low-frequency embedding. Experimental results on real-world traffic datasets show that SCALE not only achieves valid coverage but also consistently improves the coverage-efficiency trade-off over the state-of-the-art CP methods.",
+        "authors": "Ruichao Guo, Xingyao Han, Luo Wenshui, Zhe Liu, Chen Gong, Hesheng Wang",
+        "url": "http://arxiv.org/abs/2605.04957v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04957v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了图结构多元时间序列中共形预测（CP）的非可交换性问题。它基于“谱图理论”提出了“谱图条件可交换性（SGCE）”概念，并提供了“渐近覆盖率和近最优宽度”的理论保证。这种对 CP 核心假设的深入理论探讨和基于谱图理论的数学解决方案，与您对统计保证和严谨数学推导的偏好高度吻合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04671v1",
+        "title": "ITBoost: Information-Theoretic Trust for Robust Boosting",
+        "summary": "Gradient boosting remains a strong and widely used method for tabular data learning, but its performance often degrades when training labels are noisy. This behavior is largely related to the way boosting algorithms emphasize samples with large gradients, without explicitly accounting for whether such errors originate from informative hard cases or from unreliable labels. We address this issue by reconsidering how sample reliability is evaluated during boosting. Instead of relying on instantaneous error, we examine the evolution of each sample's residuals across iterations. Based on this insight, we propose Information-Theoretic Trust Boosting (ITBoost), which uses the Minimum Description Length principle to measure the complexity of residual trajectories. Samples whose residual patterns fluctuate in an irregular manner are treated as less trustworthy and are down-weighted during learning. Theoretically, we derive a tighter generalization bound for ITBoost under label noise. Empirical results on various tabular benchmarks indicate that ITBoost provides improved robustness in noisy environments over leading boosting and deep tabular models, while retaining best average performance on clean data.",
+        "authors": "Ye Su, Longlong Zhao, Diego Garcia-Gil, Jipeng Guo, Gangchun Zhang, Jinxin Chen, Jinsong Chen",
+        "url": "http://arxiv.org/abs/2605.04671v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04671v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过引入“信息论信任提升（ITBoost）”来解决梯度提升在标签噪声下的鲁棒性问题，其核心思想是利用“最小描述长度原理”衡量残差轨迹的复杂性。更重要的是，它“推导出了在标签噪声下 ITBoost 更紧的泛化界限”，这直接体现了统计学习理论的严谨性和数学推导的清晰性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04457v1",
+        "title": "Penalized KLIC Model Selection for the Generalized Method of Moments in Longitudinal Data with Time-Dependent Covariates",
+        "summary": "Model selection plays an important role in longitudinal data analysis, especially when models are estimated using the generalized method of moments (GMM) in the presence of time-dependent covariates. In this setting, the number of valid moment conditions can grow quickly and may lead to over-parameterized models. The Kullback--Leibler Information Criterion (KLIC) has been proposed as a model-selection tool for this framework; however, the original KLIC criterion may favor overly complex models when the number of parameters or valid moment conditions increases. To address this limitation, this study proposes two penalized versions of KLIC that incorporate penalties based on both the number of model parameters and the number of valid moment conditions. The proposed criteria are referred to as the Moment--Parameter Product Penalty KLIC (MPPP--KLIC) and the Logarithmic Penalty KLIC (LP--KLIC). These criteria provide a theoretically motivated mechanism for balancing model fit and model complexity in GMM-based longitudinal models. Through an extensive simulation study involving both binary and continuous response settings, the proposed criteria are shown to improve the ability of KLIC to distinguish among competing models and to reduce the selection of over-parameterized models. The performance of the proposed methods is further illustrated using the Filipino Child Morbidity dataset, a longitudinal study of child health in the Philippines. The results show that the proposed penalized criteria provide stable and interpretable model rankings and consistently identify age as the most important predictor of child morbidity. Overall, the proposed penalized KLIC criteria offer practical and theoretically grounded tools for model selection in GMM-based longitudinal data analysis with time-dependent covariates.",
+        "authors": "Hasan Mahmud, Muia Mathias Nthiani, Hamadou Mous-Abou, Ramezani Niloofar",
+        "url": "http://arxiv.org/abs/2605.04457v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04457v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为纵向数据中广义矩方法（GMM）的模型选择提出了“惩罚版 KLIC”，并提供了“平衡模型拟合和模型复杂度的理论动机机制”。这是对统计理论（模型选择准则）的直接贡献，具有明确的数学动机和严谨性，对您在统计推断和信息论方面的兴趣非常有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04691v1",
+        "title": "Uncertainty Quantification Methods for Optimal Excitation Design in Parameter Identification",
+        "summary": "Parameter identification is crucial in virtual engineering processes, yet determining appropriate system excitations for identifying specific parameters remains challenging. In practice, extensive experimental programs often fail to generate data with sufficient information content for reliable parameter estimation. This work presents a systematic approach for deriving optimal excitations by maximizing the global sensitivity of target parameters across the space of possible excitation functions. To address the computational challenge of sensitivity evaluation during optimization, we develop two complementary approaches based on uncertainty quantification (UQ) methods. For systems with known mathematical structure, we present an intrusive polynomial chaos expansion (PCE) method that constructs deterministic surrogate models, enabling rapid sensitivity computation. For black-box models where intrusive approaches are not feasible, we introduce a novel non-intrusive method based on optimal transport theory, specifically using Wasserstein distances to quantify sensitivity measures without requiring knowledge of internal system dynamics. Both methods significantly reduce computational costs, making optimal excitation design practical for complex engineering systems. We demonstrate the effectiveness of both approaches on vehicle dynamics models, showing substantial improvements in parameter identification capability. The benefit for parameter identification is further validated experimentally on a test vehicle and compared to the state of the art.",
+        "authors": "Kevin Schmidt, Nicola Henkelmann, Christoph Mark, Johannes von Keler",
+        "url": "http://arxiv.org/abs/2605.04691v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04691v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了两种基于不确定性量化（UQ）方法的最优激励设计方法，用于参数识别。其中，“基于最优传输理论（特别是 Wasserstein 距离）的新型非侵入式方法”尤其引人注目。PCE 和最优传输都是高度严谨的数学/统计领域，其将这些理论应用于参数识别和敏感性度量，展现了强大的理论基础和数学应用能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04425v1",
+        "title": "Joint Semantic Token Selection and Prompt Optimization for Interpretable Prompt Learning",
+        "summary": "Vision-language models such as CLIP achieve strong visual-textual alignment, but often suffer from overfitting and limited interpretability when adapted through continuous prompt learning. While discrete prompt optimization improves interpretability, it usually depends on large external models, leading to high computational costs and limited scalability. In this paper, we propose Interpretable Prompt Learning (IPL), a hybrid framework that alternates between discrete semantic token selection and continuous prompt optimization. Specifically, IPL formulates semantic token selection as an approximate submodular optimization problem, encouraging tokens that are both human-understandable and semantically diverse. It further adopts an alternating optimization strategy to integrate discrete token selection with continuous prompt tuning, improving interpretability while preserving adaptability to downstream tasks. Our framework is plug-and-play, allowing seamless integration with existing prompt learning methods. Extensive experiments on multiple benchmarks show that IPL consistently improves both interpretability and accuracy across five representative prompt learning methods, providing an effective and scalable extension to existing frameworks.",
+        "authors": "Yating Wang, Yaqi Zhao, Yongshun Gong, Yilong Yin, Haoliang Sun",
+        "url": "http://arxiv.org/abs/2605.04425v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04425v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“几何感知神经优化器（GANO）”用于形状优化和反演，是一个端到端可微分的框架。它明确指出“我们进一步证明去噪诱导了一种隐式 Jacobian 正则化，减少了解码器敏感性，从而产生受控变形”。这种对优化过程及其几何属性的理论分析和数学证明，使其成为一个高度严谨的研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04594v1",
+        "title": "HeterSEED: Semantics-Structure Decoupling for Heterogeneous Graph Learning under Heterophily",
+        "summary": "Many real-world heterogeneous graphs exhibit pronounced heterophily, where connected nodes often have dissimilar labels or play different semantic roles. In such settings, standard heterogeneous graph neural networks that aggregate messages along metapaths or meta-relations primarily based on feature similarity can propagate misleading information, since feature similarity may be misaligned with underlying relational semantics. In this paper, we propose HeterSEED, a semantics-structure decoupling framework for heterogeneous graph learning under heterophily. HeterSEED decouples representation learning into a heterogeneous semantic channel that captures type- and relation-aware local semantics and a structure-aware heterophily channel that separates homophilic and heterophilic neighborhoods via pseudo-label-guided partitioning and aggregates them using metapath-based structural weights. A node-level adaptive fusion mechanism then combines the two channels to produce context-dependent node representations. Theoretically, we establish that, on heterogeneous graphs under heterophily, HeterSEED is strictly more expressive than standard heterogeneous graph neural networks that rely primarily on feature similarity and provably reduces the prediction bias introduced by heterophilic neighbors. Experiments on five real-world heterogeneous graphs, including two large-scale networks at the million-node and hundred-million-edge scale, demonstrate that HeterSEED consistently outperforms representative heterogeneous graph neural networks and recent heterophily-aware baselines, especially in strongly heterophilic regimes.",
+        "authors": "Xinyi Li, Ming Li, Lu Bai, Lixin Cui, Feilong Cao, Ke Lv, Yunliang Jiang, Pietro Liò",
+        "url": "http://arxiv.org/abs/2605.04594v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04594v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了异质图在异配性（heterophily）下的学习问题，提出了“语义-结构解耦框架（HeterSEED）”。它理论上证明了 HeterSEED 比标准异质图神经网络“严格更具表达力”，并且“可证明地减少了异配邻居引入的预测偏差”。这种对图神经网络表达力和偏差的理论分析和数学证明，与您的研究兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04589v1",
+        "title": "Multiscale Euclidean Network Trajectories: Second-Moment Geometry, Attribution, and Change Points",
+        "summary": "A central challenge in dynamic network analysis is to represent temporal evolution in a way that is both geometrically meaningful and statistically identifiable. One approach embeds a sequence of network snapshots as trajectories in a Euclidean space and relates these trajectories to node embeddings. In multilayer and unfolded spectral constructions, however, node embeddings and their underlying latent positions are identifiable only up to general linear transformations. Although this ambiguity preserves edge probabilities, it can distort geometry and invalidate distance based temporal comparisons at both the trajectory and node-levels.   We develop Multiscale Euclidean Network Trajectories (MENT), a framework for multiscale temporal trajectories based on second-moment geometry. By imposing an isotropic normalization on the anchor latent positions, we reduce the relevant ambiguity to orthogonal transformations and prevent distortion of the second-moment geometry. In this canonical representation, we define a trace variation distance and mode-wise variation distances along orthogonal directions, and use multidimensional scaling to obtain low-dimensional trajectories of time points at both global and mode-wise levels. The resulting trajectories support interpretation and inference. They admit mode-wise decompositions, support attribution of global and mode-wise temporal changes to nodes, and enable change point detection through 1D trajectories. We prove consistency of the proposed unfolded spectral embedding and of the induced temporal trajectories. Experiments on two synthetic and two real dynamic networks illustrate stable and interpretable recovery of temporal structure and show strong performance against existing change point detection baselines.",
+        "authors": "Haruka Ezoe, Ryohei Hisano",
+        "url": "http://arxiv.org/abs/2605.04589v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04589v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“多尺度欧几里得网络轨迹（MENT）”框架，用于动态网络分析中的时间演化表示。它基于“二阶矩几何”，解决了可识别性问题，并明确指出“我们证明了所提出的展开谱嵌入和由此产生的时间轨迹的一致性”。这种对网络理论和统计学中几何结构和一致性证明的关注，使其具有极高的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.05118v1",
+        "title": "On the Wasserstein Gradient Flow Interpretation of Drifting Models",
+        "summary": "Recently, Deng et al. (2026) proposed Generative Modeling via Drifting (GMD), a novel framework for generative tasks. This note presents an analysis of GMD through the lens of Wasserstein Gradient Flows (WGF), i.e., the path of steepest descent for a functional in the space of probability measures, equipped with the geometry of optimal transport. Unlike previous WGF-based contributions, GMD can be thought of as directly targeting a fixed point of a specific WGF flow. We demonstrate three main results: first, that one algorithm proposed by Deng et al. (2026) corresponds to finding the limiting point of a WGF on the KL divergence, with Parzen smoothing on the densities. Second, that the algorithm actually implemented by Deng et al. (2026) corresponds to a different procedure, which bears some resemblance to the fixed point of a WGF on the Sinkhorn divergence, but lacks certain desirable properties of the latter. Third, the same same idea can be extended to the limiting point of other WGFs, including the Maximum Mean Discrepancy (MMD), the sliced Wasserstein distance, and GAN critic functions.",
+        "authors": "Arthur Gretton, Li Kevin Wenliang, Alexandre Galashov, James Thornton, Valentin De Bortoli, Arnaud Doucet",
+        "url": "http://arxiv.org/abs/2605.05118v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.05118v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过 Wasserstein 梯度流（WGF）的视角，对漂移生成模型（GMD）进行了深入分析。它将 GMD 解释为 KL 散度 WGF 的固定点，并探讨了 Sinkhorn 散度、MMD 等其他 WGF 的扩展。这种对生成模型背后数学机制的纯理论分析，涉及最优传输和各种散度，是您寻求的严谨数学推导的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.04608v1",
+        "title": "SensingAgents: A Multi-Agent Collaborative Framework for Robust IMU Activity Recognition",
+        "summary": "Human Activity Recognition (HAR) using Inertial Measurement Unit (IMU) sensors is a cornerstone of mobile health, smart environments, and human-computer interaction. However, current deep learning-based HAR models often struggle with heavy reliance on labeled data, position-specific ambiguity, and a lack of transparent reasoning. Inspired by the advanced agents framework, which emulates a collaborative agent using Large Language Models (LLMs), we propose SensingAgents, a novel multi-agent system for robust IMU activity recognition. SensingAgents organizes LLM-powered agents into specialized roles: a group of Analyst Agents for position-specific sensor analysis (arm, wrist, belt, pocket), a pair of Advocate Agents that resolves sensor conflicts through dynamic and static dialectical debates, and a Decision Agent that ensures reliability under sensor drift or failure. Evaluation on the Shoaib dataset demonstrates that SensingAgents significantly outperforms state-of-the-art single-agent and multi-agent LLM models, achieving an accuracy of 79.5% in a zero setting--29% higher than existing agent models and 9.4% higher than deep learning baselines--particularly in complex scenarios where multi-sensor data is conflicting or noisy. Our work highlights the potential of multi-agent collaborative reasoning for advancing the robustness and interpretability of ubiquitous sensing systems.",
+        "authors": "Naiyu Zheng, Tianlong Yu, Haochen Yin, Xiaoyi Fan, Xiping Hu, Zhimeng Yin",
+        "url": "http://arxiv.org/abs/2605.04608v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.04608v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了第一个基于语义空间的梯度不确定性量化（UQ）方法 SemGrad，用于 LLMs 的自由形式生成，具有无采样和计算效率高的特点。其核心思想是将语义等效输入扰动下的稳定输出分布解释为语义空间中的梯度，并引入“语义保留分数”。这种对 UQ 理论的创新性数学方法，从参数空间转向语义空间，具有很强的理论价值。"
+    }
+]

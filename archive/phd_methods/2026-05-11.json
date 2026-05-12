@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.10917v1",
+        "title": "Optimal and Scalable MAPF via Multi-Marginal Optimal Transport and Schrödinger Bridges",
+        "summary": "We consider anonymous multi-agent path finding (MAPF) where a set of robots is tasked to travel to a set of targets on a finite, connected graph. We show that MAPF can be cast as a special class of multi-marginal optimal transport (MMOT) problems with an underlying Markovian structure, under which the exponentially large MMOT collapses to a linear program (LP) polynomial in size. Focusing on the anonymous setting, we establish conditions under which the corresponding LP is feasible, totally unimodular, and consequently, yields min-cost, integral $(\\{0,1\\})$ transports that do not overlap in both space and time. To adapt the approach to large-scale problems, we cast the MAPF-MMOT in a probabilistic framework via Schrödinger bridges. Under standard assumptions, we show that the Schrödinger bridge formulation reduces to an entropic regularization of the corresponding MMOT that admits an iterative Sinkhorn-type solution. The Schrödinger bridge, being a probabilistic framework, provides a shadow (fractional) transport that we use as a template to solve a reduced LP and demonstrate that it results in near-optimal, integral transports at a significant reduction in complexity. Extensive experiments highlight the optimality and scalability of the proposed approaches.",
+        "authors": "Usman A. Khan, Joseph W. Durham",
+        "url": "http://arxiv.org/abs/2605.10917v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10917v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将多智能体路径规划问题（MAPF）创新性地转化为多边际最优传输（MMOT）问题，并利用薛定谔桥（Schrödinger Bridges）解决大规模问题。其理论严谨性极高，涉及最优传输和随机过程，与数理统计背景高度契合，且能解决实际应用中的可扩展性瓶颈，是理论与实践结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10909v1",
+        "title": "Revisiting Policy Gradients for Restricted Policy Classes: Escaping Myopic Local Optima with $k$-step Policy Gradients",
+        "summary": "This work revisits standard policy gradient methods used on restricted policy classes, which are known to get stuck in suboptimal critical points. We identify an important cause for this phenomenon to be that the policy gradient is itself fundamentally myopic, i.e. it only improves the policy based on the one-step $Q$-function. In this work, we propose a generalized $k$-step policy gradient method that couples the randomness within a $k$-step time window and can escape the myopic local optima in MDPs with restricted policy classes. We show this new method is theoretically guaranteed to converge to a solution that is exponentially close in performance to the optimal deterministic policy with respect to $k$. Further, we show projected gradient descent and mirror descent with this $k$-step policy gradient can achieve this exponential guarantee in $O(\\frac{1}{T})$ iterations, despite only assuming smoothness and differentiability of the value function. This will provide near optimal solutions to previously elusive applications like state aggregation and partially observable cooperative multi-agent settings. Moreover, our bounds avoid the ubiquitous distribution mismatch factors $||d_μ^{π^*} / d_μ^π||_\\infty$ and $||d_μ^{π^*} / μ||_\\infty$ enabling the $k$-step policy gradient method to escape suboptimal critical points that emerge from poor exploration in fully observable settings.",
+        "authors": "Alex DeWeese, Guannan Qu",
+        "url": "http://arxiv.org/abs/2605.10909v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10909v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对受限策略类中的策略梯度方法易陷入局部最优的问题，提出了广义的 $k$-step 策略梯度方法。论文提供了严格的理论保证，包括收敛性、与最优策略的指数级接近以及避免了常见的分布不匹配问题。这是强化学习理论的重大创新，对理解和改进AI算法的理论基础具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10830v1",
+        "title": "Predicting 3D structure by latent posterior sampling",
+        "summary": "The remarkable achievements of both generative models of 2D images and neural field representations for 3D scenes present a compelling opportunity to integrate the strengths of both approaches. In this work, we propose a methodology that combines a NeRF-based representation of 3D scenes with probabilistic modeling and reasoning using diffusion models. We view 3D reconstruction as a perception problem with inherent uncertainty that can thereby benefit from probabilistic inference methods. The core idea is to represent the 3D scene as a stochastic latent variable for which we can learn a prior and use it to perform posterior inference given a set of observations. We formulate posterior sampling using the score-based inference method of diffusion models in conjunction with a likelihood term computed from a reconstruction model that includes volumetric rendering. We train the model using a two-stage process: first we train the reconstruction model while auto-decoding the latent representations for a dataset of 3D scenes, and then we train the prior over the latents using a diffusion model. By using the model to generate samples from the posterior we demonstrate that various 3D reconstruction tasks can be performed, differing by the type of observation used as inputs. We showcase reconstruction from single-view, multi-view, noisy images, sparse pixels, and sparse depth data. These observations vary in the amount of information they provide for the scene and we show that our method can model the varying levels of inherent uncertainty associated with each task. Our experiments illustrate that this approach yields a comprehensive method capable of accurately predicting 3D structure from diverse types of observations.",
+        "authors": "Azmi Haider, Dan Rosenbaum",
+        "url": "http://arxiv.org/abs/2605.10830v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10830v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "创新性地将3D重建视为一个具有内在不确定性的感知问题，结合NeRF和扩散模型，通过学习潜在变量的先验并进行基于分数的后验推断来预测3D结构。该方法在概率建模和扩散理论上具有深厚的理论基础，解决了从多样观测中准确预测3D结构的实际瓶颈，是前沿生成模型与概率推断的结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10805v1",
+        "title": "Reasoning Is Not Free: Robust Adaptive Cost-Efficient Routing for LLM-as-a-Judge",
+        "summary": "Reasoning-capable large language models (LLMs) have recently been adopted as automated judges, but their benefits and costs in LLM-as-a-Judge settings remain unclear. Through controlled comparisons between reasoning and non-reasoning judges, we show that explicit reasoning substantially improves judgment accuracy on tasks requiring structured verification (e.g., math and coding), while offering limited or even negative gains on simpler evaluations and incurring significantly higher computational cost. These findings motivate that reasoning should be used selectively rather than universally, with awareness of possible distribution shift. We propose a Robust Adaptive Cost-Efficient Routing (RACER), which dynamically selects between reasoning and non-reasoning judges under a fixed budget by formulating routing as a constrained distributionally robust optimization problem. RACER explicitly accounts for distribution shift via a KL-divergence uncertainty set, admits an efficient primal--dual algorithm, and enjoys theoretical guarantees including uniqueness of the optimal policy and linear convergence. Extensive experiments show that RACER achieves superior accuracy--cost trade-offs under distribution shift.",
+        "authors": "Wenbo Zhang, Lijinghua Zhang, Liner Xiang, Hengrui Cai",
+        "url": "http://arxiv.org/abs/2605.10805v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10805v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM作为判断器时推理成本高昂的问题，提出了鲁棒自适应成本效益路由（RACER）框架。该框架将路由问题建模为受约束的分布鲁棒优化，并提供了理论保证（如最优策略的唯一性和线性收敛）。它在LLM应用中解决了效率瓶颈，同时具有极高的理论严谨性和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10795v1",
+        "title": "Factual recall in linear associative memories: sharp asymptotics and mechanistic insights",
+        "summary": "Large language models demonstrate remarkable ability in factual recall, yet the fundamental limits of storing and retrieving input--output associations with neural networks remain unclear. We study these limits in a minimal setting: a linear associative memory that maps $p$ input embeddings in $\\mathbb{R}^d$ to their corresponding~$d$-dimensional targets via a single layer, requiring each mapped input to be well separated from all other targets. Unlike in supervised classification, this strict separation induces~$p$ constraints per association and produces strong correlations between constraints that make a direct characterisation of the storage capacity difficult. Here, we provide a precise characterisation of this capacity in the following way. We first introduce a decoupled model in which each input has its own independent set of competing outputs, and provide numerical and analytical evidence that this decoupled model is equivalent to the original model in terms of storage capacity, spectra of the learnt weights, and storage mechanism. Using tools from statistical physics, we show that the decoupled model can store up to $p_c \\log p_c / d^2 = 1 / 2$ associations, and generalise the computation of $p_c$ to linear two-layer architectures. Our analysis also gives mechanistic insight into how the optimal solution improves over a naïve Hebbian learning rule: rather than boosting input-output alignments with broad fluctuations, the optimal solution raises the correct scores just above the extreme-value threshold set by the competing outputs. These findings give a sharp statistical-physics characterisation of factual storage in linear networks and provide a baseline for understanding the memory capacity of more realistic neural architectures.",
+        "authors": "Alessio Giorlandino, Sebastian Goldt, Antoine Maillard",
+        "url": "http://arxiv.org/abs/2605.10795v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10795v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "在线性联想记忆的最小设置中，利用统计物理学工具精确刻画了事实回忆的存储容量，并提供了机制性洞察。这项工作在神经网络记忆容量的理论基础方面具有极高的创新性和严谨性，对于理解AI前沿算法的底层原理至关重要，尽管直接应用影响力可能略低，但其基础性价值极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10793v1",
+        "title": "ConQuR: Corner Aligned Activation Quantization via Optimized Rotations for LLMs",
+        "summary": "Large language models (LLMs) are costly to deploy due to their large memory footprint and high inference cost. Weight-activation quantization can reduce these costs, but low-bit activation quantization remains difficult because activation outliers induce large quantization error. Recent rotation-based methods address this by applying orthogonal transformations that redistribute activation magnitude across dimensions, but existing approaches either require expensive end-to-end rotation training or rely on stored activation corpora, introducing significant compute or storage overhead. We propose a lightweight post-training rotation calibration method for LLM activation quantization. Our method learns orthogonal rotations that align normalized activations with the corners of an inscribed hypercube, encouraging activation energy to be distributed more evenly across dimensions. This objective admits an efficient closed-form update via the orthogonal Procrustes problem, avoiding gradient-based optimization over the orthogonal group. We further introduce an online calibration procedure that updates rotations as calibration samples are processed, eliminating the need to store activations on disk and allowing rotations to adapt to quantized activation distributions during calibration. Experiments on Llama-2 and Llama-3 models from 3B to 70B parameters show that our method achieves competitive or improved performance across perplexity benchmarks and common sense reasoning tasks while avoiding both costly end-to-end training and large offline activation storage.",
+        "authors": "Chayne Thrash, Ali Abbasi, Soheil Kolouri",
+        "url": "http://arxiv.org/abs/2605.10793v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10793v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了LLM低位激活量化中激活异常值导致量化误差大的问题。提出了轻量级的后训练旋转校准方法ConQuR，通过优化正交旋转使激活与超立方体角点对齐。该方法具有明确的数学基础（正交Procrustes问题），有效解决了模型压缩的实际瓶颈，且无需昂贵的端到端训练或大量离线激活存储。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10739v1",
+        "title": "Geospatial-Temporal Sensemaking of Remote Sensing Activity Detections with Multimodal Large Language Model",
+        "summary": "We introduce SMART-HC-VQA, a Sentinel-2-based visual question answering dataset derived from the IARPA SMART Heavy Construction dataset, designed for spatiotemporal analysis of human activity. The dataset transforms construction-site annotations, construction-type labels, temporal-phase labels, geographic metadata, and observation relationships into natural language question-answer triplets. This approach redefines the existing dataset as a temporally extended automatic target recognition and visual question answering (VQA) challenge, considering a fixed geospatial site as a target whose attributes and activity states evolve across sparse satellite observations. Currently, SMART-HC-VQA comprises 21,837 accessible Sentinel-2 image chips, 65,511 single-image VQA examples, and approximately 2.3 million two-image temporal comparison examples generated via our novel Image-Pairwise Combinatorial Augmentation. We detail the workflow for retrieving and processing Sentinel-2 imagery, segmenting large satellite tiles into site-centered images, maintaining traceability to SMART-HC annotations, and analyzing the distributions of site size, observation count, temporal coverage, construction type, and phase labels. Additionally, we describe an implemented multi-image MLLM training framework based on LLaVA-NeXT Mistral-7B, adapted to accept multiple dated image inputs and train on metadata-derived VQA examples. This work offers a reproducible foundation for understanding language-guided remote sensing activities, aiming not only to detect change but also to reason about the ongoing processes, their progression, and potential future developments.",
+        "authors": "David F. Ramirez, Tim Overman, Kristen Jaskie, Andreas Spanias",
+        "url": "http://arxiv.org/abs/2605.10739v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10739v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种核梯度漂移的单步生成建模框架，用核函数诱导的方向取代了传统的欧几里得位移方向。理论上揭示了其基于分数的结构，并将其推广到黎曼流形和离散数据。这项工作在生成模型理论和算法上具有极高的创新性和严谨性，为非欧几里得数据生成提供了新途径。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10661v1",
+        "title": "bViT: Investigating Single-Block Recurrence in Vision Transformers for Image Recognition",
+        "summary": "Vision Transformers (ViTs) are built by stacking independently parameterized blocks, but it remains unclear how much of this depth requires layer specific transformations and how much can be realized through recurrent computation. We study this question with bViT, a single-block recurrent ViT in which one transformer block is applied repeatedly to process an image. This architecture preserves the iterative structure of a deep ViT while removing layer specific block parameterization, providing a controlled setting for studying recurrence in vision. On ImageNet-1K, a 12-step bViT-B achieves accuracy comparable to standard ViT-B under the same training recipe and computational budget, while using an order of magnitude fewer parameters. We observe that recurrent performance improves with representation width, with wider bViTs recovering much more of the performance of standard ViTs than narrow variants. We interpret this behavior as implicit depth multiplexing, where a shared block expresses multiple step-dependent computations through the evolving hidden state. Beyond ImageNet classification, bViT transfers competitively to downstream tasks and enables parameter-efficient fine-tuning. Mechanistic analyses of activations, attention and step-specific pruning show that the shared block changes its effective behavior across recurrent steps rather than simply repeating the same computation. Our results suggest that a large fraction of ViT depth can be implemented through recurrent reuse, provided that the representation space is sufficiently wide.",
+        "authors": "Michal Byra, Pawel Olszowiec, Grzegorz Stefanski, Grzegorz Gruszczynski, Alberto Presta",
+        "url": "http://arxiv.org/abs/2605.10661v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10661v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了LoRA微调中秩选择的难题，提出了自适应并行紧缩（AdaPaD）框架，同时训练所有秩-1分量并实现自校正和动态秩发现。论文提供了误差指数衰减和泛化界限的理论证明，在模型压缩和效率方面具有显著的理论创新性和实践影响力，对于LLM的参数高效微调至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10641v1",
+        "title": "LLaVA-CKD: Bottom-Up Cascaded Knowledge Distillation for Vision-Language Models",
+        "summary": "Large Vision-Language Models (VLMs) are successful in addressing a multitude of vision-language understanding tasks, such as Visual Question Answering (VQA), but their memory and compute requirements remain a concern for practical deployment. A promising class of techniques for mitigating this concern is Knowledge Distillation, where knowledge from a high-capacity Teacher network is transferred to a considerably smaller Student network. However, the capacity gap between the two networks is both a blessing and a curse: the smaller the Student network, the better its efficiency, and the larger the Teacher, the more knowledge it carries; yet, beyond a point, the larger capacity gap between the two leads to worse knowledge transfer. To counter this effect, we propose a bottom-up cascaded knowledge distillation (CKD) framework. Instead of treating knowledge transfer as an activity involving one high-capacity Teacher (or an ensemble of such), inspired by human formal education systems, we introduce one (potentially, more) additional Teacher(s) of intermediate capacity that gradually bring the Student network to the next level, where the next (higher-capacity) Teacher can take over. We provide a theoretical analysis in order to study the effect of cascaded distillation in the generalization performance of the Student. We apply the proposed framework on models build upon the LLaVA methodology and evaluate the derived models on seven standard, publicly available VQA benchmarks, demonstrating their SotA performance.",
+        "authors": "Nikolaos Gkalelis, Vasileios Mezaris",
+        "url": "http://arxiv.org/abs/2605.10641v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10641v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了生成式吉布斯采样（GG-PA）框架，将预训练扩散先验与显式物理上下文结合，实现无训练的采样。推导了吉布斯采样器，证明了其渐近精确性。这项工作在扩散模型理论和物理建模结合方面具有极高的创新性和严谨性，为科学采样提供了新方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10584v1",
+        "title": "An agentic framework for gravitational-wave counterpart association in the multi-messenger era",
+        "summary": "With the detection of gravitational waves (GWs), multi-messenger astronomy has opened a new window for advancing our understanding of astrophysics, dense matter, gravitation, and cosmology. The GW sources detected to date are from mergers of compact object binaries, which possess the potential to generate detectable electromagnetic (EM) counterparts. Searching for associations between GW signals and their EM counterparts is an essential step toward enabling subsequent multi-messenger studies. In the era of next-generation GW and EM detectors, the rapid increase in the number of events brings not only unprecedented scientific opportunities, but also substantial challenges to the existing data analysis paradigm. To help address these challenges, we develop GW-Eyes, an agentic framework powered by large language models (LLMs). For the first time, GW-Eyes integrates domain-specific tools and autonomously performs counterpart association tasks between GW and candidate EM events. It supports natural language interaction to assist human experts with auxiliary tasks such as catalog management, skymap visualization, and rapid verification. Our framework leverages the complex decision-making capabilities of LLMs and their traceable reasoning processes, offering a new perspective to the multi-messenger astronomy.",
+        "authors": "Yiming Dong, Yacheng Kang, Junjie Zhao, Xinyuan Zhu, Ziming Wang, Lijing Shao",
+        "url": "http://arxiv.org/abs/2605.10584v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10584v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "形式化了多智能体LLM系统中秘密信息传播放大的问题，并提出了PRISM，一种在生成时进行实时检测和缓解的防御框架。通过结合多种信号实现逐令牌干预，有效解决了多智能体LLM部署中的安全瓶颈，具有重要的实践影响力，对LLM应用安全至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10556v1",
+        "title": "EnergyLens: Interpretable Closed-Form Energy Models for Multimodal LLM Inference Serving",
+        "summary": "As large language models span dense, mixture-of-experts, and state-space architectures and are deployed on heterogeneous accelerators under increasingly diverse multimodal workloads, optimising inference energy has become as critical as optimizing latency and throughput. Existing approaches either treat latency as an energy proxy or rely on data-hungry black-box surrogates. Both fail under varying parallelism strategies: latency and energy optima diverge in over 20% of configurations we tested, and black-box surrogates require hundreds of profiling samples to generalize across model families and hardware. We present EnergyLens, which uses symbolic regression as a structure-discovery tool over profiling data to derive a single twelve-parameter closed-form energy model expressed in terms of system properties such as degree of parallelism, batch size, and sequence length. Unlike black-box surrogates, EnergyLens decouples tensor and pipeline parallelism contributions and separates prefill from decode energy, making its predictions physically interpretable and actionable. Fitted from as few as 50 profiling measurements, EnergyLens achieves 88.2% Top-1 configuration selection accuracy across many evaluation scenarios compared to 60.9% for the closest prior analytical baseline, matches the predictive accuracy of ensemble ML methods with 10x fewer profiling samples, and extrapolates reliably to unseen batch sizes and hardware platforms without structural modification, making it a practical, interpretable tool for energy-optimal LLM deployment.",
+        "authors": "Vittorio Palladino, Gianluca Palermo, Michael E. Papka, Zhiling Lan",
+        "url": "http://arxiv.org/abs/2605.10556v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10556v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "解决了多模态LLM推理服务中能耗优化的关键问题。提出了EnergyLens，利用符号回归推导出可解释的闭式能耗模型。该模型仅需少量测量即可实现高精度预测和可靠外推，为LLM部署的能效优化提供了实用且可解释的工具，直接解决了LLM应用的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10582v1",
+        "title": "Guaranteed Jailbreaking Defense via Disrupt-and-Rectify Smoothing",
+        "summary": "This paper proposes a guaranteed defense method for large language models (LLMs) to safeguard against jailbreaking attacks. Drawing inspiration from the denoised-smoothing approach in the adversarial defense domain, we propose a novel smoothing-based defense method, termed Disrupt-and-Rectify Smoothing (DR-Smoothing). Specifically, we integrate a two-stage prompt processing scheme-first disrupting the input prompt, then rectifying it-into the conventional smoothing defense framework. This disrupt-and-rectify approach improves upon previous disrupt-only approaches by restoring out-of-distribution disrupted prompts to an in-distribution form, thereby reducing the risk of unpredictable LLM behavior. In addition, this two-stage scheme offers a distinct advantage in striking a balance between harmlessness and helpfulness in jailbreaking defense. Notably, we present a theoretical analysis for generic smoothing framework, offering a tight bound for the defense success probability and the requirements on the disruption strength. Our approach can defend against both token-level and prompt-level jailbreaking attacks, under both established and adaptive attacking scenarios. Extensive experiments demonstrate that our approach surpasses current state-of-the-art defense methods in terms of both harmlessness and helpfulness.",
+        "authors": "Zheng Lin, Zhenxing Niu, Haoxuan Ji, Haichang Gao",
+        "url": "http://arxiv.org/abs/2605.10582v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10582v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种针对LLM越狱攻击的保证防御方法——DR-Smoothing，通过两阶段的“扰动-纠正”平滑机制，将输入提示恢复到分布内形式。论文提供了通用平滑框架的理论分析，给出了防御成功概率的紧密界限，在LLM安全领域具有极高的理论严谨性和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10466v1",
+        "title": "Self-Attention as a Covariance Readout: A Unified View of In-Context Learning and Repetition",
+        "summary": "Large language models (LLMs) exhibit two striking and ostensibly unrelated behaviours: in-context learning (ICL) and repetitive generation. In both, the model behaves as though it had summarised the context into a population-level statistic and discarded token-level detail. We ask whether this ``summarisation and forgetting'' can be derived from the attention mechanism itself, and answer in the affirmative. Under stationary, ergodic and elliptical inputs, the softmax attention output converges almost surely to $Θ_VΣΘ_K^{\\top}Θ_Q x_t$, where $Σ$ is the input covariance; the long-context limit is therefore a linear readout of the input's second-order statistics. Two consequences follow. (i) For in-context linear regression, a single softmax head can implement one step of population gradient descent. Stacking such heads with residual connections iterates this update and implements multiple gradient descent steps. (ii) Propagated across an $L$-layer transformer, this readout drives the terminal hidden state at the parametric $1/t$ rate to a deterministic function of the current token alone, so that autoregressive generation collapses asymptotically to a first-order Markov chain whose attracting orbits furnish a structural account of repetition and mode collapse. The two phenomena thus emerge as facets of a single covariance-readout principle.",
+        "authors": "Haoren Xu, Guanhua Fang",
+        "url": "http://arxiv.org/abs/2605.10466v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10466v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "从注意力机制本身推导出上下文学习（ICL）和重复生成行为，揭示自注意力输出收敛到输入二阶统计量（协方差）的线性读出。为LLM的两种核心行为提供了统一的理论解释和结构性描述，具有极高的理论创新性和对LLM架构的深刻洞察，是理解LLM工作原理的基石。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10401v1",
+        "title": "LLM4Branch: Large Language Model for Discovering Efficient Branching Policies of Integer Programs",
+        "summary": "Efficient branching policies are essential for accelerating Mixed Integer Linear Programming (MILP) solvers. Their design has long relied on hand-crafted heuristics, and now machine learning has emerged as a promising paradigm to automate this process. However, existing learning-based methods are often hindered by their dependence on expensive expert demonstrations and the gap between training objectives and the solver's end-to-end performance. In this work, we propose LLM4Branch, a novel framework that leverages Large Language Models (LLMs) to automate the discovery of efficient branching policies. Specifically, the discovered policy is an executable program with a program skeleton generated by the LLM and a parameter vector, which is optimized via a zeroth-order method over a few instances with their end-to-end performance feedback. Extensive experiments on standard MILP benchmarks demonstrate that LLM4Branch establishes a new state-of-the-art among CPU-based methods and achieves performance competitive with advanced GPU-based models. Codes are available at https://github.com/hzn18/LLM4Branch.",
+        "authors": "Zhinan Hou, Xingchen Li, Yankai Zhang, Tianxun Li, Keyou You",
+        "url": "http://arxiv.org/abs/2605.10401v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10401v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "通过低秩分解结合多臂老虎机算法，提出了有效识别LLM最佳模型的框架，并推导了双重鲁棒估计器以构建有效的有限样本置信区间。该方法在LLM评估中实现了计算成本的显著降低，同时保证了统计有效性，解决了数据效率和LLM应用中的评估瓶颈，具有很强的数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10247v1",
+        "title": "Teaching LLMs to See Graphs: Unifying Text and Structural Reasoning",
+        "summary": "Using Large Language Models (LLMs) to process graph-structured data is an active research area, yet current state-of-the-art approaches typically rely on multi-step pipelines with Graph Neural Network (GNN) encoders that compress rich textual attributes into solitary tokens, creating a significant semantic bottleneck. In this paper, we introduce the Graph Transformer Language Model (GTLM), a novel architecture that enables pretrained LLMs to natively process graph topologies while entirely eliminating this compressive bottleneck. GTLM is exceptionally parameter-efficient: by injecting graph-aware attention biases directly into the LLM's attention modules, it introduces only 0.015% additional parameters relative to the base model. We theoretically prove that our bidirectional attention prefix preserves node permutation equivariance while maintaining exact backward compatibility with the pretrained base model. Extensive evaluations demonstrate that a 1B-parameter GTLM matches or exceeds the performance of 7B-parameter state-of-the-art models on standard Text-Attributed Graph benchmarks, while significantly surpassing baselines on GraphQA. Finally, we demonstrate that GTLM attention heads implicitly learn to simulate message passing, explaining its superior performance on algorithmic tasks. This paradigm shift enables true algorithmic reasoning within LLMs and provides a scalable foundation for next-generation GraphRAG and relational deep learning.",
+        "authors": "Dario Vajda",
+        "url": "http://arxiv.org/abs/2605.10247v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10247v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了Graph Transformer Language Model (GTLM)，通过注入图感知注意力偏置，使LLM能够原生处理图拓扑结构，消除了语义瓶颈。理论上证明了节点置换等变性和与预训练模型的向后兼容性，在LLM架构和图推理方面具有极高的创新性和严谨性，为GraphRAG和关系深度学习提供了可扩展的基础。"
+    }
+]

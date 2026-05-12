@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.10871v1",
+        "title": "Attractor-Vascular Coupling Theory: Formal Grounding and Empirical Validation for AAMI-Standard Cuffless Blood Pressure Estimation from Smartphone Photoplethysmography",
+        "summary": "This work proposes Attractor-Vascular Coupling Theory (AVCT), a mathematical framework showing that cardiac attractor geometry encodes blood pressure (BP) information sufficient for AAMI-standard estimation, and validates the theory through a calibrated cuffless BP model using photoplethysmography (PPG). AVCT is grounded in Cardiac Stability Theory and operationalized using Takens delay embedding and attractor morphology extraction. Two theorems, one proposition, and one corollary formally justify the use of PPG attractor features for BP estimation and predict the feature-importance hierarchy. A LightGBM model trained on pulse transit time (PTT) and Cardiac Stability Index (CSI) attractor features under single-point calibration was evaluated using strict leave-one-subject-out cross-validation (LOSO-CV) on 46 subjects from BIDMC ICU (n = 9) and VitalDB surgical data (n = 37), comprising 29,684 windows. The model achieved systolic BP (SBP) mean absolute error (MAE) of 2.05 mmHg and diastolic BP (DBP) MAE of 1.67 mmHg, with correlations r = 0.990 and r = 0.991, satisfying the AAMI/IEEE SP10 requirement of MAE below 5 mmHg. Median per-subject MAE was 1.87/1.54 mmHg, and 70%/76% of subjects individually satisfied AAMI criteria. A PPG-only ablation using nine smartphone attractor features matched the ECG+PPG model within 0.05 mmHg, demonstrating that clinical-grade BP tracking is achievable using only a smartphone camera while surpassing prior generalized LOSO-CV results using fewer sensors. All four AVCT predictions were quantitatively confirmed, with 91.5% error reduction from uncalibrated to calibrated estimation (epsilon_cal = 0.915). Unlike post-hoc explainable AI methods, AVCT predicts features satisfying the architectural faithfulness criterion of the Explainable-AI Trustworthiness (EAT) framework and grounding BP estimation in nonlinear dynamical systems theory.",
+        "authors": "Timothy Oladunni, Farouk Ganiyu Adewumi",
+        "url": "http://arxiv.org/abs/2605.10871v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10871v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“吸引子-血管耦合理论 (AVCT)”，一个基于心脏稳定性理论和Takens延迟嵌入的数学框架。它通过两个定理、一个命题和一个推论正式证明了PPG吸引子特征用于血压估计的合理性，并将其与非线性动力学系统理论相结合，理论基础极其强大且推导清晰，同时具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09906v1",
+        "title": "Separate First, Fuse Later: Mitigating Cross-Modal Interference in Audio-Visual LLMs Reasoning with Modality-Specific Chain-of-Thought",
+        "summary": "Audio and vision provide complementary evidence for audio-visual question answering, yet current audio-visual large language models may suffer from cross-modal interference: information from one modality misguides the interpretation of another, thereby inducing hallucinations. We attribute this issue to uncontrolled cross-modal interactions during intermediate reasoning. To mitigate this, we propose Separate First, Fuse Later (SFFL), an audio-visual reasoning framework designed to reduce cross-modal interference. SFFL enforces modality-specific chain-of-thought reasoning, producing separate audio and visual reasoning traces and integrating evidence for answering. We construct modality-preference labels via a data pipeline under different modality input settings. We use these labels as an auxiliary reward in reinforcement learning to encourage a instance-dependent preference for modality cues when answering. We further introduce a modality-specific reasoning mechanism that preserves modality isolation during the separated reasoning stage while enabling full access to cross-modal information at the evidence fusion stage. Experiments demonstrate consistent improvements in both accuracy and robustness, yielding an average relative gain of 5.16\\% on general AVQA benchmarks and 11.17\\% on a cross-modal hallucination benchmark.",
+        "authors": "Xuanchen Li, Yuheng Lu, Chenrui Cui, Tianrui Wang, Zikang Huang, Yu Jiang, Long Zhou, Longbiao Wang, Jianwu Dang",
+        "url": "http://arxiv.org/abs/2605.09906v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09906v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提供了关于AI解释公平性的第一个统一理论和文献综述，提出了一个“条件不变性框架”来形式化解释公平性，并引入了公理。它深入探讨了算法公平性和可解释AI的交叉盲点，具有极高的理论严谨性和概念清晰度，对负责任AI的发展具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10790v1",
+        "title": "Elucidating Representation Degradation Problem in Diffusion Model Training",
+        "summary": "Diffusion models have achieved remarkable success, yet their training remains inefficient due to a severe optimization bottleneck, which we term Representation Degradation. As noise levels increase, the outputs of the trained model exhibit progressive structural distortion, which can destabilize training and impair generation quality. Our analysis suggests that this instability is driven by mismatched target recoverability, which is associated with Neural Tangent Kernel (NTK) spectral weakening and effective low-rank behavior. To address this, we propose Elucidated Representation Diffusion (ERD), a plug-and-play framework that dynamically reallocates optimization effort according to effective recoverability. By stabilizing representation learning without external supervision, ERD accelerates convergence and achieves strong empirical performance across diffusion backbones.",
+        "authors": "Zhipeng Yao, Dazhou Li, Zitong Zhang, Durude Mahee, Fan Zhu, Wenbin Zhang, Xinwei He, Yeying Jin, Rui Yu",
+        "url": "http://arxiv.org/abs/2605.10790v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10790v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“核梯度漂移”这一单步生成建模框架，将其漂移方向重新定义为由核本身诱导的方向。它揭示了分数匹配结构，并将其扩展到黎曼流形和离散数据，通过Fisher-Rao几何提供了平滑KL下降的解释，具有非常强的数学和几何理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10601v1",
+        "title": "The Open-Box Fallacy: Why AI Deployment Needs a Calibrated Verification Regime",
+        "summary": "AI deployment in sensitive domains such as health care, credit, employment, and criminal justice is often treated as unsafe to authorize until model internals can be explained. This often leads to an excessive reliance on mechanistic interpretability to address a deployment challenge beyond its intended scope. We argue that the gate should instead be calibrated verification: authorization should be domain-scoped, independently checkable, monitored after release, accountable, contestable, and revocable. The reason is twofold. First, model capability is uneven across nearby tasks, so authorization must attach to a specific use rather than to a model in general. Second, societies have long governed opaque expertise through credentials, monitoring, liability, appeal, and revocation rather than mechanism-level explanation. Recent evidence reinforces this distinction between mechanistic understanding and deployment authority: a 53-percentage-point gap between internal representations and output correction shows that understanding may not translate into action, while one scoping review found that only 9.0% of FDA-approved AI/ML device documents contained a prospective post-market surveillance study. We propose Verification Coverage, a six-component reportable standard with a minimum-composition rule, as the metric that should sit beside capability scores in model cards, leaderboards, and regulatory disclosures.",
+        "authors": "Phongsakon Mark Konrad, Tim Lukas Adam, Ane Cathrine Holst Merrild, Riccardo Terrenzi, Rebecca De Rosa, Toygar Tanyel, Serkan Ayvaz",
+        "url": "http://arxiv.org/abs/2605.10601v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10601v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过将决策制定概念化为多目标优化问题，深入分析了算法决策系统中公平性与性能的帕累托前沿。它揭示了帕累托最优决策规则的结构，并推广了现有关于公平性约束分类的优化定理，为评估和比较算法决策系统提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10521v1",
+        "title": "DuetFair: Coupling Inter- and Intra-Subgroup Robustness for Fair Medical Image Segmentation",
+        "summary": "Medical image segmentation models can perform unevenly across subgroups. Most existing fairness methods focus on improving average subgroup performance, implicitly treating each subgroup as internally homogeneous. However, this can hide difficult cases within a subgroup, where high-loss samples are obscured by the subgroup mean. We call this problem \\textbf{intra-group hidden failure}. To solve this, we propose \\textbf{DuetFair} mechanism, a dual-axis fairness framework that jointly considers inter-subgroup adaptation and intra-subgroup robustness. Based on DuetFair, we introduce \\textbf{FairDRO}, which combines distribution-aware mixture-of-experts (dMoE) with subgroup-conditioned distributionally robust optimization (DRO) loss aggregation. This design allows the model to adapt across subgroups while also reducing hidden failures within each subgroup. We evaluate FairDRO on three medical image segmentation benchmarks with varying degrees of within-group heterogeneity. FairDRO achieves the best equity-scaled performance on Harvard-FairSeg and improves worst-case subgroup performance on HAM10000 under both age- and race-based grouping schemes. On the 3D radiotherapy target cohort, FairDRO further improves worst-group Dice by 3.5 points ($\\uparrow 6.0\\%$) under the tumor-stage grouping and by 4.1 points ($\\uparrow 7.4\\%$) under the institution grouping over the strongest baseline.",
+        "authors": "Yiqi Tian, Sangjoon Park, Bo Zeng, Pengfei Jin, Yujin Oh, Quanzheng Li",
+        "url": "http://arxiv.org/abs/2605.10521v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10521v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了 ConfoundingSHAP，一个基于 Shapley 值的方法，用于量化因果推断中协变量的混淆强度。它提出了一个专门针对混淆强度推断的 Shapley 博弈，并提供了可扩展的 TabPFN-based 估计方法，为因果推断实践提供了重要的理论工具和见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10370v1",
+        "title": "Autonomous FAIR Digital Objects: From Passive Assertions to Active Knowledge",
+        "summary": "Scientific knowledge on the Web is published as passive assertions and cannot decide when to validate evidence, reconcile contradictions, or update confidence as findings accumulate. Curation depends on centralised middleware and institutional continuity, but when registries close, active stewardship stops even when data remain online. We advance the concept of Autonomous FAIR Digital Objects (aFDOs) from an abstract idea to an operational model, to offer a route from passive scientific publication toward accountable, standards-aligned automation that can outlive its publishing institutions. aFDO augments FDOs with three capabilities anchored in Semantic Web standards, namely 1) a policy layer over RDF-star aligned with PROV-O, SHACL, and ODRL for portable condition-action rules, 2) an announcement layer over ActivityStreams 2.0 that bounds per-announcement evaluation cost, and 3) an agreement layer that resolves multi-source contradictions through reputation and confidence weighted agreement under a bounded adversarial model. We provide a formal definition that distinguishes policy specifications, event handlers, and communication interfaces. We evaluate an open reference implementation on 4,305 FDOs grounded in rare-disease ontologies, namely ClinVar, HPO, and Orphanet, combined with controlled synthetic observations. The consensus mechanism resolves 56.3% of 3,914 naturally occurring ClinVar conflicts where multiple submitters disagree and an expert panel has subsequently adjudicated. Under Sybil, collusion, and poisoning attacks, the mechanism degrades gracefully within its design Byzantine-tolerance bound (f < n/5), and fails as predicted beyond that bound.",
+        "authors": "Zeyd Boukhers, Oya Beyan, Cong Yang, Christoph Lange",
+        "url": "http://arxiv.org/abs/2605.10370v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10370v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将“自主 FAIR 数字对象 (aFDOs)”从抽象概念发展为可操作模型，通过语义网络标准（如RDF-star、PROV-O、SHACL、ODRL）锚定策略层、公告层和协议层。它提供了形式化定义，并评估了其在解决多源矛盾和拜占庭容错方面的共识机制，理论严谨性极高，对知识管理和分布式系统有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10206v1",
+        "title": "Extended Wasserstein-GAN Approach to Causal Distribution Learning: Density-Free Estimation and Minimax Optimality",
+        "summary": "Distributional causal inference requires estimating not only average treatment effects but also interventional outcome distributions, including quantiles, tail risks, and policy-dependent uncertainty. As a method for distributional causal inference, generative adversarial network (GAN)-based counterfactual methods are flexible tools for this task. However, these methods have several limitations. First, the objectives of certain techniques do not coincide with the statistical risk of the identifiable causal target, and therefore provide limited theoretical guarantees regarding estimable counterfactual distributions or optimality. Second, they tend to rely on unstable density-based methods, such as density ratio estimation. In this paper, we propose GANICE (GAN for Interventional Conditional Estimation) with several advantages: it (i) clarifies the conditional interventional distribution for each treatment--covariate state as the causal estimation target; (ii) estimates the conditional distribution such that its averaged Wasserstein risk is minimized; (iii) establishes minimax optimality. GANICE achieves these advantages through the introduction of the extended Wasserstein distance, the incorporation of a cellwise critic in its dual, and an optimality proof based on Besov space theory. Our experiments demonstrate that GANICE consistently outperforms existing methods.",
+        "authors": "Shu Tamano, Masaaki Imaizumi",
+        "url": "http://arxiv.org/abs/2605.10206v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10206v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 GANICE (GAN for Interventional Conditional Estimation)，一个扩展的 Wasserstein-GAN 方法用于因果分布学习。它明确了条件干预分布作为因果估计目标，通过最小化 Wasserstein 风险进行估计，并基于 Besov 空间理论建立了 minimax 最优性，理论深度和数学推导都非常出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10205v1",
+        "title": "Unveiling High-Probability Generalization in Decentralized SGD",
+        "summary": "Decentralized stochastic gradient descent (D-SGD) is an efficient method for large-scale distributed learning. Existing generalization studies mainly address expected results, achieving rates limited to $\\mathcal{O}\\left(\\frac{1}{δ\\sqrt{mn}}\\right)$, where $δ$ is the confidence parameter, $m$ the number of workers, and $n$ the sample size. When $m=1$, D-SGD reduces to traditional SGD, whose optimal high-probability generalization bound is $\\mathcal{O}\\left(\\frac{1}{\\sqrt{n}}\\log (1/δ)\\right)$. This discrepancy reveals a gap between high-probability guarantees for SGD and those for D-SGD. To close this, we develop a high-probability learning theory for D-SGD, aiming for the optimal $\\mathcal{O}\\left(\\frac{1}{\\sqrt{mn}}\\log (1/δ)\\right)$ rate. We refine bounds for D-SGD using pointwise uniform stability in distributed learning-a weaker notion than uniform stability-and analyze them across convex, strongly convex, and non-convex settings. We also provide high-probability results for gradient-based measures in non-convex cases where only local minima exist, and derive optimization error and excess risk bounds. Finally, accounting for communication overhead, we analyze generalization bounds for local models within time-varying frameworks.",
+        "authors": "Jiahuan Wang, Ping Luo, Ziqing Wen, Dongsheng Li, Tao Sun",
+        "url": "http://arxiv.org/abs/2605.10205v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10205v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为去中心化随机梯度下降 (D-SGD) 发展了高概率学习理论，旨在实现最优的 $mathcal{O}left(\frac{1}{sqrt{mn}}log (1/δ)\right)$ 速率。它通过分布式学习中的逐点均匀稳定性概念，分析了凸、强凸和非凸设置下的泛化界限，并提供了优化误差和超额风险界限，是优化理论领域的杰出贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10184v1",
+        "title": "Developing a foundation model for high-resolution remote sensing data of the Netherlands",
+        "summary": "We develop a foundation model using 1.2m high resolution satellite images of the Netherlands. By combining a Convolutional Neural Network and a Vision Transformer, the model captures both low- and high-frequency landscape features, such as fine textures, edges, and small objects as well as large terrain structures, elevation patterns, and land-cover distributions. Leveraging temporal data as input, the model learns from broader contextual information across time, allowing the model to exploit the temporal dependencies, such as topographic features, land-cover changes, and seasonal dynamics. These additional constraints reduce feature ambiguity, improve representation learning, and enable better generalization with fewer labeled samples. The foundation model is evaluated on multiple downstream tasks, ranging from use cases within the Netherlands to global benchmarking datasets. On the vegetation monitoring dataset of the Netherlands, the model shows clear performance improvements by incorporating temporal information instead of relying on a single time point. Despite using a smaller model and less pretraining data limited to the Netherlands, it achieves competitive results on global benchmarks when compared to state-of-the-art models. These results demonstrate that the model can learn rich, generalizable representations from limited data, achieving competitive performance on global benchmarks while using a fraction of the parameters of larger state-of-the-art remote sensing models. To maximize reproducibility and reuse, we made the scripts and the model accessible on GitHub.",
+        "authors": "Paul Vermeeren, Heysem Kaya",
+        "url": "http://arxiv.org/abs/2605.10184v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10184v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了“任务感知校准”作为LLM解码的范式，通过决策理论结果证明了在任务诱导的潜在空间中，对任务校准的潜在分布进行最小贝叶斯风险 (MBR) 解码是潜在模型信念上的最优解码策略。其理论保证了LLM决策的可靠性，具有极高的理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10071v1",
+        "title": "MFVLR: Multi-domain Fine-grained Vision-Language Reconstruction for Generalizable Diffusion Face Forgery Detection and Localization",
+        "summary": "The swift advancement in photo-realistic face generation technology has sparked considerable concerns across society and academia, emphasizing the requirement of generalizable face forgery detection and localization methods. Prior works tend to capture face forgery patterns across multiple domains using image modality, other modalities like fine-grained texts are not comprehensively investigated, which restricts the generalization capability of models. Besides, they usually analyze facial images created by GAN, but struggle to identify and localize those synthesized by diffusion. To solve the problems, in this paper, we devise a novel multi-domain fine-grained vision-language reconstruction (MFVLR) model, which explores comprehensive and diverse visual forgery traces via language-guided face forgery representation learning, to achieve generalizable diffusion-synthesized face forgery detection and localization (DFFDL). Specifically, we devise a fine-grained language transformer that studies general fine-grained language embeddings using language reconstruction. We propose a multi-domain vision encoder to capture general and complementary visual forgery patterns across the image and residual domains. A vision decoder is designed to reconstruct image appearance and achieve forgery localization. Besides, we propose an innovative plug-and-play vision injection module to enhance the interaction between the vision and language embeddings. Extensive experiments and visualizations demonstrate that our network outperforms the state of the art on different settings like cross-generator, cross-forgery, and cross-dataset evaluations.",
+        "authors": "Yaning Zhang, Tianyi Wang, Zan Gao, Yibo Zhao, Chunjie Ma, Meng Wang",
+        "url": "http://arxiv.org/abs/2605.10071v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10071v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为具有时间-事件结果的因果推断开发了样本量和功效计算公式。它扩展了稳健三明治方差理论，推导了逆概率加权偏似然估计量的渐近方差解析形式，并提出了一个新的样本量公式，对因果研究设计具有重要的统计学指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10019v1",
+        "title": "The two clocks and the innovation window: When and how generative models learn rules",
+        "summary": "Generative models trained on finite data face a fundamental tension: their score-matching or next-token objective converges to the empirical training distribution rather than the population distribution we seek to learn. Using rule-valid synthetic tasks, we trace this tension across two training timescales: $τ_{\\mathrm{rule}}$, the step at which generations first become rule-valid, and $τ_{\\mathrm{mem}}$, the step at which models begin reproducing training samples. Focusing on parity and extending to other binary rules and combinatorial puzzles, we characterize how these two clocks, $τ_{\\mathrm{rule}}$ and $τ_{\\mathrm{mem}}$, depend on key aspects of the learning setup. Specifically, we show that $τ_{\\mathrm{rule}}$ increases with rule complexity and decreases with model capacity, while $τ_{\\mathrm{mem}}$ is approximately invariant to the rule and scales nearly linearly with dataset size $N$. We define the \\emph{innovation window} as the interval $[τ_{\\mathrm{rule}}, τ_{\\mathrm{mem}}]$. This window widens with increasing $N$ and narrows with rule complexity, and may vanish entirely when $τ_{\\mathrm{rule}} \\geq τ_{\\mathrm{mem}}$. The same two-clock structure arises in both diffusion (DiT) and autoregressive (GPT) models, with architecture-dependent offsets. Dissecting the learned score of DiT models reveals a corresponding evolution of the optimization landscapes, where rule-valid samples' basins expand substantially around $τ_{\\mathrm{rule}}$, while training samples' basins begin to dominate around $τ_{\\mathrm{mem}}$. Together, these results yield a unified and predictive account of when and how generative models exhibit genuine innovation.",
+        "authors": "Binxu Wang, Emma Lucia Byrnes Finn, Bingbin Liu",
+        "url": "http://arxiv.org/abs/2605.10019v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10019v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过引入“两个时钟”($\tau_{mathrm{rule}}$ 和 $\tau_{mathrm{mem}}$) 和“创新窗口”的概念，深入分析了生成模型学习规则的动态过程。它剖析了优化景观的演变，揭示了生成模型何时以及如何展现真正的创新，对理解生成模型的学习机制具有深刻的理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09986v1",
+        "title": "Federated Language Models Under Bandwidth Budgets: Distillation Rates and Conformal Coverage",
+        "summary": "Training a language model on data scattered across bandwidth-limited nodes that cannot be centralized is a setting that arises in clinical networks, enterprise knowledge bases, and scientific consortia. We study the regime in which data must remain distributed across nodes, and ask what statistical guarantees are in principle achievable under explicit bandwidth budgets; we aim to characterize what is provably possible, not to demonstrate a deployment-ready system. Existing theory treats either training-time consistency or inference-time calibration in isolation, and none makes bandwidth a first-class statistical parameter. We analyze two protocols, Federated Probe-Logit Distillation (FPLD) for training and Federated Conformal RAG (FC-RAG) for inference, as the analytical vehicles for our results. Our first main result is an explicit high-probability KL-consistency rate for FPLD with simultaneous dependence on node count $K$, per-node sample size $n$, quantization budget $B$, probe-set size $m$, and vocabulary size $V$; bandwidth enters only through an exponentially vanishing quantization term. Our second main result is a distribution-free marginal-coverage bound for FC-RAG, whose novel retrieval-bandwidth slack $Δ_{\\mathrm{RAG}} = f_{\\max}\\sqrt{K^{-2}\\sum_i v(B_i)}$ makes per-node retrieval bandwidth a first-class statistical parameter, with arithmetic aggregation across $K$ nodes shrinking the slack as $K^{-1/2}$ in the per-node-uniform regime. A Pinsker-type corollary composes the two bounds into an end-to-end coverage guarantee. Synthetic experiments verify the predicted scaling along the bounds' parameters; small-scale experiments on a GPT-2 testbed illustrate that the qualitative bandwidth-accuracy tradeoff survives on a real language model. A deployment-scale empirical evaluation is out of scope.",
+        "authors": "Prasanjit Dubey, Xiaoming Huo",
+        "url": "http://arxiv.org/abs/2605.09986v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09986v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了带宽受限下联邦语言模型的统计保证，提出了联邦探针-Logit蒸馏 (FPLD) 和联邦共形 RAG (FC-RAG) 协议。它推导了 FPLD 的高概率 KL-一致性速率和 FC-RAG 的无分布边际覆盖界限，并通过 Pinsker 型推论组合成端到端覆盖保证，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09975v1",
+        "title": "Chebyshev Center-Based Direction Selection for Multi-Objective Optimization and Training PINNs",
+        "summary": "Physics-informed neural networks (PINNs) are a promising approach for solving partial differential equations (PDEs). Their training, however, is often difficult because multiple loss terms induced by PDE residuals and boundary or initial conditions must be optimized simultaneously. To address this difficulty, existing approaches often construct update directions by explicitly enforcing particular desirable properties, such as scale robustness and simultaneous descent. While effective in many cases, such property-by-property designs can make it unclear which conditions are essential, what geometric principle determines the selected update direction, and how different methods are structurally related. In this work, we formulate update-direction selection for PINN training as a Chebyshev-center problem in the dual cone. The proposed formulation selects a normalized direction that maximizes the minimum distance to the cone facets. The resulting formulation admits an efficient dual problem in a much lower-dimensional space and yields a convergence guarantee in the nonconvex setting. It also recovers the key desirable properties targeted by existing approaches without imposing them separately; rather, they follow from the single geometric criterion underlying the formulation. This makes the selected direction interpretable through a single geometric rule and provides a unified basis for systematically comparing related direction-selection methods. Experiments on several PINN benchmarks further demonstrate strong empirical performance of the proposed method.",
+        "authors": "Hoyeol Yoon, Seoungbin Bae, Nam Ho-Nguyen, Dabeen Lee",
+        "url": "http://arxiv.org/abs/2605.09975v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09975v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将 PINN 训练中的更新方向选择问题形式化为对偶锥中的 Chebyshev 中心问题。它提供了一个在非凸设置下的收敛保证，并通过单一几何准则解释了所选方向，为多目标优化和 PINN 训练提供了统一且可解释的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09936v1",
+        "title": "Urban-ImageNet: A Large-Scale Multi-Modal Dataset and Evaluation Framework for Urban Space Perception",
+        "summary": "We present Urban-ImageNet, a large-scale multi-modal dataset and evaluation benchmark for urban space perception from user-generated social media imagery. The corpus contains over 2 Million public social media images and paired textual posts collected from Weibo across 61 urban sites in 24 Chinese cities across 2019-2025, with controlled benchmark subsets at 1K, 10K, and 100K scale and a full 2M corpus for large-scale training and evaluation. Urban-ImageNet is organized by HUSIC, a Hierarchical Urban Space Image Classification framework that defines a 10-class taxonomy grounded in urban theory. The taxonomy is designed to distinguish activated and non-activated public spaces, exterior and interior urban environments, accommodation spaces, consumption content, portraits, and non-spatial social-media content. Rather than treating urban imagery as generic scene data, Urban-ImageNet evaluates whether machine perception models can capture spatial, social, and functional distinctions that are central to urban studies. The benchmark supports three tasks within one standardized library: (T1) urban scene semantic classification, (T2) cross-modal image-text retrieval, and (T3) instance segmentation. Our experiments evaluate representative vision, vision-language, and segmentation models, revealing strong performance on supervised scene classification but more challenging behavior in cross-modal retrieval and instance-level urban object segmentation. A multi-scale study further examines how model performance changes as balanced training data increases from 1K, 10K to 100K images. Urban-ImageNet provides a unified, theory-grounded, multi-city benchmark for evaluating how AI systems perceive and interpret contemporary urban spaces across modalities, scales, and task formulations. Dataset and benchmark are available at: huggingface.co/datasets/Yiwei-Ou/Urban-ImageNet and github.com/yiasun/dataset-2.",
+        "authors": "Yiwei Ou, Chung Ching Cheung, Jun Yang Ang, Xiaobin Ren, Ronggui Sun, Guansong Gao, Kaiqi Zhao, Manfredo Manfredini",
+        "url": "http://arxiv.org/abs/2605.09936v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09936v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将公平性约束下的最佳策略选择 (SBFC) 问题形式化，建立了 SBFC 问题的实例特定样本复杂度下界。它开发了 Track-and-Stop with Constraints on Subpopulation (T-a-S-CS) 算法，该算法渐近地达到了下界，并扩展到广义的公平性规范，具有强大的统计决策理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09887v1",
+        "title": "The Geometric Wall: Manifold Structure Predicts Layerwise Sparse Autoencoder Scaling Laws",
+        "summary": "Sparse autoencoders (SAEs) operationalise the linear representation hypothesis: they reconstruct model activations as sparse linear combinations of interpretable dictionary atoms, on the implicit assumption that activation space is well approximated by a globally linear structure. Their reconstruction error varies sharply across layers in ways that existing scaling laws, fitted at single layers, do not explain. We argue that this variation is the empirical trace of a geometric mismatch: where the activation manifold is curved and its intrinsic dimension varies across layers, no sparse linear dictionary can match it uniformly, and the SAE's width-sparsity scaling becomes a layer-dependent function of manifold structure rather than a single universal law. We conduct the first cross-layer SAE scaling study, fitting and regressing on 844 residual-stream Gemma Scope SAE checkpoints across 68 layers of Gemma 2 2B and 9B. Stage 1 fits a per-layer scaling-law surface; Stage 2 regresses the fitted parameters and the derived per-layer width exponents on four layerwise geometric summaries. We find that manifold geometry predicts the per-layer width exponent in both models, and that the same regression coefficients learnt on one model predict the other model's per-layer exponents under cross-model transfer, indicating a transferable geometric law. At the showcase layers where richer width grids permit identification of the asymptotic floor, we find that the fitted floor tracks the layerwise geometric ordering: higher curvature and intrinsic dimension correspond to higher floor, consistent with the irreducible second-order residual that any sparse linear approximation of a curved manifold must leave behind. SAEs thus encounter not a finite-resource ceiling but a geometry-dependent wall, set by the manifold they are trying to reconstruct.",
+        "authors": "Eslam Zaher, Maciej Trzaskowski, Quan Nguyen, Fred Roosta",
+        "url": "http://arxiv.org/abs/2605.09887v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09887v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了“几何壁垒”的概念，认为激活流形的曲率和内在维度可以预测稀疏自编码器 (SAE) 的层级缩放定律。它通过跨层 SAE 缩放研究，发现流形几何可以预测每层宽度指数，并揭示了稀疏线性近似的不可约二阶残差，对理解表示学习的几何特性具有深刻的理论贡献。"
+    }
+]

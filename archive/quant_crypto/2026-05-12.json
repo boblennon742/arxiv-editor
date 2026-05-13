@@ -1,0 +1,47 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.12151v1",
+        "title": "RED-2400: A Public Benchmark of Algorithmically-Rejected Trading Events with Outcome Labels",
+        "summary": "RED-2400 is a public benchmark of algorithmically-rejected trading events from a live Solana decentralized-exchange filter stack. I logged the data continuously between 2026-04-10 and 2026-05-02. The benchmark contains 6,659 rejection events linked to 169,122 post-rejection price and liquidity observations and 1,836 graveyard-tracker snapshots. Outcome labels follow the five-tier classification of Kamat (2026c): saved (windowed), saved (early-death), missed, flat, and unclassifiable. Thresholds use the trough-to-reference and peak-to-reference price ratios within a 24-hour window. Most filter-design datasets cover the accept side only. That gap leaves reject-side outcomes unmeasured and biases filter validation. RED-2400 lets researchers replicate filter-precision claims directly. RED-2400 is the first window in a planned dataset series; subsequent windows will extend the time horizon and enable regime-stratified analysis.",
+        "authors": "Arati U. Kamat",
+        "url": "http://arxiv.org/abs/2605.12151v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.12151v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提供了一个关于Solana去中心化交易所被拒绝交易事件的独特公共基准数据集。虽然它本身不是一个因子构造方法，但这些数据是构建加密货币市场微观结构因子（例如，与订单流健康、潜在操纵或市场效率相关的因子）的宝贵基础。它为加密货币因子研究提供了新颖且之前难以获取的信息来源，对因子构造具有间接但重要的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.11640v1",
+        "title": "Fill-Side Non-Retail Trading on Polymarket: An Empirical Study of Behavioral Tiers and Microstructure Signatures Under Quote-Attribution Constraints",
+        "summary": "Prediction markets cannot exist without market makers, arbitrageurs, and other non-retail liquidity providers, yet the supply-side microstructure of Polymarket-class venues has not been characterized at on-chain pseudonymous-address scale. This paper studies non-retail participation on Polymarket using an empirical run on the PMXT v2 archive over 2026-04-21 through 2026-04-27 (13,356,931 OrderFilled events; 77,204 addresses with five+ fills; 43,116 markets).   We report three findings. First, Polymarket's off-chain CLOB architecture renders address-level quote-lifecycle attribution permanently unavailable: OrderPlaced and OrderCancelled events are off-chain and absent from public archives, so quote-intensity, two-sided-ratio, and posted-spread features cannot be built at address level. We document this as a structural validity-gate failure (G-QUOTE-LIFE universal fail) and restrict analysis to a six-feature fill-side vector. Second, density-based clustering (DBSCAN, fifteen sensitivity configurations) on the fill-side vector produces a single dense cluster with zero noise: fill-side behavior in the empirical window is uni-modal under the six-feature vector, contradicting the pre-registered hypothesis of four-to-five separable archetypes. Third, robust retail vs non-retail separation is achievable through clustering-independent feature-tier stratification: whale-tier, high-frequency-operator, and power-trader tiers jointly hold 81.4% of total notional across 12.6% of addresses.   Address-level market-making and liquidity-provision claims are withdrawn per the G-QUOTE-LIFE failure; spoof-by-non-fill manipulation detection is downgraded to market-level book diagnostics. A privacy-respecting derived-dataset deposit accompanies the paper as Bundle 3 of the PMXT family. Fourth paper in a four-paper programme on event-linked perpetuals and leveraged prediction-market microstructure.",
+        "authors": "Maksym Nechepurenko",
+        "url": "http://arxiv.org/abs/2605.11640v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.11640v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文直接研究加密货币预测市场中非零售交易者的行为模式，并通过实证分析和聚类方法识别出不同的交易者“层级”（如鲸鱼、高频操作者）。这些行为模式和层级本身就是构建量化因子的绝佳来源，例如可以构建基于“鲸鱼活动”或“高频操作者信号”的因子。论文提供了具体的特征向量构建思路和对市场参与者行为的洞察，对加密货币因子构造具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.11423v1",
+        "title": "A Validated Volatility-Volume-Gap Classifier for Regime Identification in MNQ Intraday Data",
+        "summary": "This paper constructs and validates a composite day-classification system for Micro E-Mini Nasdaq 100 futures (MNQ) using three pre-market observable conditions: first-30-minute return magnitude, overnight gap magnitude, and abnormal opening-bar volume relative to a rolling baseline. Using 947 regular trading days of five-minute data from 2021-2025, we find that classifier-positive days exhibit statistically distinct intraday behavior, including directional morning drift followed by systematic late-session reversal. Despite these descriptive characteristics, all tested directional trading strategies fail institutional validation standards after transaction costs and multi-year consistency requirements are applied. The highest-performing configuration achieves T = 1.46 and mean net +7.80 points but fails year-stability criteria. The primary contribution is the validation of the Volatility-Volume-Gap (VVG) classifier as a descriptive regime-identification framework and the documentation of failed attempts to convert these statistical patterns into deployable trading signals under realistic execution constraints.",
+        "authors": "Mathias Mesfin",
+        "url": "http://arxiv.org/abs/2605.11423v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.11423v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "尽管这篇论文研究的是传统期货市场（MNQ），而非加密货币，但它在“状态识别框架”和“严格回测验证”方面提供了宝贵的经验。它详细记录了即使有统计显著性，策略也可能因交易成本和稳定性问题而失败的案例，这对于加密货币因子回测和策略设计阶段的严谨性（尤其是避免过度拟合和考虑实际交易成本）具有重要的指导意义。虽然不直接提供加密货币因子，但其方法论和对回测严谨性的强调非常值得学习。"
+    }
+]

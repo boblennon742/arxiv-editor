@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.13612v1",
+        "title": "Deep Learning as Neural Low-Degree Filtering: A Spectral Theory of Hierarchical Feature Learning",
+        "summary": "Understanding how deep neural networks learn useful internal representations from data remains a central open problem in the theory of deep learning. We introduce Neural Low-Degree Filtering (Neural LoFi), a stylized limit of gradient-based training in which hierarchical feature learning becomes an explicit iterative spectral procedure. In this limit, the dynamics at each layer decouple: given the current representation, the next layer selects directions with maximal accessible low-degree correlation to the label. This yields a tractable surrogate mechanism for deep learning, together with a natural kernel-space interpretation. Neural LoFi provides a mathematically explicit framework for studying multi-layer feature learning beyond the lazy regime. It predicts how representations are selected layer by layer, explains how emergence of concepts arises with given sample complexity,and gives a concrete mechanism by which depth progressively constructs new features from old ones through low-degree compositionality. We complement the theory with mechanistic experiments on fully connected and convolutional architectures, showing that Neural LoFi improves over lazy random-feature baselines, recovers meaningful structured filters, and predicts representations aligned with early gradient-descent feature discovery with real datasets.",
+        "authors": "Yatin Dandi, Matteo Vilucchio, Luca Arnaboldi, Hugo Tabanelli, Florent Krzakala",
+        "url": "http://arxiv.org/abs/2605.13612v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13612v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“神经低度滤波（Neural LoFi）”理论，将深度神经网络的层次特征学习解释为一个显式的迭代谱过程，并提供了自然的核空间解释。它超越了传统的“惰性机制”范畴，为深度学习的内部表示学习提供了严谨的数学框架和清晰的理论推导，与您对强大理论基础和数学推导的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13597v1",
+        "title": "Rethinking Generalization in Graph Neural Networks: A Structural Complexity Perspective",
+        "summary": "Graph neural networks (GNNs) have emerged as a fundamental tool for learning from graph-structured data, achieving strong performance across a wide range of applications. However, understanding their generalization capabilities remains challenging due to the complex structural dependencies inherent in such data. Existing generalization analyses largely follow the classical machine learning paradigm, focusing primarily on model complexity while overlooking the fundamental role of graph structure. Therefore, in this work, we systematically investigate this role by asking: does the graph structure actually influence generalization, and if so, by how much? To answer the first question and validate our intuition, we theoretically prove that incorporating more edges into the prediction process transforms the input representations to be overly accommodating to the output model, thereby inducing overfitting. To address the second question, we formulate a structural complexity measure based on the number of effective edges and derive a Rademacher complexity-based generalization bound. In doing so, we demonstrate that GNN generalization depends explicitly on structural complexity, alongside traditional parameter-dependent factors. Motivated by these theoretical findings, we propose a structural entropy regularization method. This approach controls structural complexity by regulating effective edges to balance underfitting and overfitting, ultimately improving the generalization performance of GNNs.",
+        "authors": "Peiyao Wang, Liang Bai, Xian Yang, Richard Yi Da Xu, Jiye Liang",
+        "url": "http://arxiv.org/abs/2605.13597v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13597v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究系统地探讨了图神经网络（GNNs）的泛化能力，提出了基于**Rademacher复杂度**的泛化界限，并引入了结构复杂度度量。论文理论严谨，直接解决了GNN泛化中的核心理论问题，证明了图结构对泛化的影响，并提出了结构熵正则化方法。这提供了GNN泛化能力的强大理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13550v1",
+        "title": "Causal Discovery via Statistical Power (CDSP)",
+        "summary": "Causal discovery methods aim to infer causal direction from observational data. Functional causal discovery approaches use structural asymmetries to identify causal directionality but rely on strong modeling assumptions and provide limited tools for uncertainty quantification. We introduce Causal Discovery via Statistical Power (CDSP), a statistical inference framework that connects causal direction estimation with statistical power and enables uncertainty quantification. Considering the foundational setting of bivariate observational data, we show how quantities analogous to statistical power and effect size can be used in causal discovery to determine when data contain sufficient information to favor one direction over the other. We introduce the effect-size asymmetry assumption that characterizes when the probability of correctly detecting the causal direction (i.e., the power of causal discovery) exceeds that of incorrectly favoring the reverse direction. We show that the effect-size asymmetry assumption can be used for causal direction estimation with uncertainty quantification. Simulations show that CDSP direction estimation is robust to mild and moderate model misspecifications. Real data analyses on 100 cause-effect benchmark pairs further demonstrate that CDSP reduces false discovery rates by approximately 18% relative to a commonly used existing method.",
+        "authors": "Shreya Prakash, Fan Xia, Elena A. Erosheva",
+        "url": "http://arxiv.org/abs/2605.13550v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13550v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了通过统计功效进行因果发现（CDSP）的统计推断框架，将因果方向估计与统计功效联系起来，并实现了不确定性量化。它提出了**效应量不对称假设**，为因果发现提供了**强大的因果逻辑和统计保证**，是因果推断领域非常严谨的理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13430v1",
+        "title": "Towards a holistic understanding of Selection Bias for Causal Effect Identification",
+        "summary": "Selection bias is pervasive in observational studies. For example, large scale biobanks data can exhibit ``healthy volunteer bias'' when respondents are healthier and of higher socio-economic status than the population they are meant to represent. Recovering causal effects from such sub-population is an important problem in causal inference, as estimating average treatment effects (ATE) from selected populations can result in a severely biased estimate of the ATE from the whole population.   In this paper, we investigate the identifiability of the ATE under selection bias. We provide necessary and sufficient conditions for ATE identifiability, leveraging weak assumptions on probability classes to characterize propensity score and selection probability. Compared to previous works, our results extend existing graphical identifiability criteria and offer a more comprehensive understanding of causal effect identification with strictly weaker conditions in the presence of selection bias.",
+        "authors": "Yiwen Qiu, Filip Kovacevic, Shimeng Huang, Peter Spirtes, Francesco Locatello",
+        "url": "http://arxiv.org/abs/2605.13430v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13430v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究深入探讨了观测研究中选择偏差下的因果效应识别问题，提供了平均处理效应（ATE）可识别性的**必要和充分条件**，并利用概率类上的弱假设来刻画倾向得分和选择概率。这扩展了现有图形可识别性标准，提供了**因果推断领域非常严谨的理论贡献**。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13352v1",
+        "title": "GeoFlowVLM: Geometry-Aware Joint Uncertainty for Frozen Vision-Language Embedding",
+        "summary": "Standard dual-encoder vision-language models that map images and text to deterministic points on a shared unit hypersphere through $\\ell_2$ normalization typically expose neither \\emph{aleatoric} uncertainty (cross-modal ambiguity) nor \\emph{epistemic} uncertainty (lack of training-distribution support). Existing post-hoc methods either recover at most one of the two uncertainty components, or ignore the hyperspherical geometry of these models' embeddings. We propose \\textbf{GeoFlowVLM} as a post-hoc adapter that learns the joint distribution of paired $\\ell_2$-normalised dual-encoder VLM embeddings on the product hypersphere $\\mathbb{S}^{d-1} \\times \\mathbb{S}^{d-1}$ via Riemannian flow matching with a single masked velocity field. A consistency result shows that, in the population limit, the trained network exposes the joint flow and both cross-modal conditional flows as valid Riemannian flow-matching velocity fields on their respective domains. We derive two quantities from this single model: a conditional retrieval entropy that quantifies aleatoric ambiguity with a decision-theoretic interpretation via a Fano-type bound, and a marginal-typicality epistemic score justified by an exact chain-rule decomposition of the joint NLL. This decomposition isolates a cross-modal pointwise-mutual-information term that is structurally discriminative rather than epistemic, and is empirically the only consistently uninformative standalone component. Empirically, the entropy tracks Recall@1 with near-ideal monotonic calibration across three retrieval benchmarks in both directions, and the marginal-typicality sum yields consistently calibrated selective accuracy across four zero-shot classification benchmarks.",
+        "authors": "Mayank Nautiyal, Li Ju, Andreas Hellander, Ekta Vats, Prashant Singh",
+        "url": "http://arxiv.org/abs/2605.13352v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13352v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GeoFlowVLM 提出了一个后处理适配器，通过**黎曼流匹配**在乘积超球面 $mathbb{S}^{d-1} \times mathbb{S}^{d-1}$ 上学习配对VLM嵌入的联合分布。论文推导了**一致性结果、Fano型界限和联合NLL的精确链式分解**，提供了**严谨的统计保证和数学推导**来量化VLM中的不确定性，高度符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13329v1",
+        "title": "Tracing Persona Vectors Through LLM Pretraining",
+        "summary": "How large language models internally represent high-level behaviors is a core interpretability question with direct relevance to AI safety: it determines what we can detect, audit, or intervene on. Recent work has shown that traits such as evil or sycophancy correspond to linear directions in the internal activations, the so-called persona vectors. Although these vectors are now routinely utilized to inspect and steer model behavior in safety-relevant settings, how these representations are formed during training remains unknown. To address this gap, we trace persona vectors across the pretraining of OLMo-3-7B, finding that persona vectors form remarkably early -- within 0.22% of OLMo-3 pretraining -- and remain effective for steering the fully post-trained instruct models. Although core representations are formed early on, persona vectors continue to refine geometrically and semantically throughout pretraining. We further compare alternative elicitation strategies and find that all yield effective directions, with each strategy surfacing qualitatively distinct facets of the underlying persona. Replicating our analysis on Apertus-8B reveals that our findings transfer qualitatively beyond OLMo-3. Our results establish persona representations as stable features of early pretraining and open a path to studying how training forms, refines, and shapes them.",
+        "authors": "Viktor Moskvoretskii, Dominik Glandorf, Jorge Medina Moreira, Tanja Käser, Robert West",
+        "url": "http://arxiv.org/abs/2605.13329v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13329v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文针对物理信息神经网络（PINNs）及其变分对应物（VPINNs）提供了**统一的泛化分析**。通过泰勒展开和Koopman分析，推导了**泛化界限**，并深入探讨了非线性微分算子对泛化的显著影响。这具有**强大的理论基础和清晰的数学推导**，对理解PINNs的泛化行为至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13174v1",
+        "title": "Coupling-Informed Transport Maps for Bayesian Filtering in Nonlinear Dynamical Systems",
+        "summary": "A likelihood-free transport filtering method is proposed based on the couplings between state and observation variables. By exploiting a block-triangular structure in the transport map, the analysis step of filtering is reformulated as the minimization of the maximum mean discrepancy (MMD) between the true joint measure and its transport-based approximation. To circumvent the non-convexity in the MMD optimization, we introduce a training-free transport filter method via gradient flows, which leads to an analytic computation for the transport map that implies the steepest descent direction of the MMD. The proposed approach accurately approximates non-Gaussian filtering posteriors and avoids particle collapse. We provide a convergence analysis for the expectation of the MMD between the approximated posterior and the truth posterior. Finally, we extend the method to high-dimensional problems through domain localization. Numerical examples demonstrate the superior performance of our approach over conventional filtering methods in nonlinear, non-Gaussian scenarios.",
+        "authors": "Dengfei Zeng, Lijian Jiang, Shuyu Sun, Dunhui Xiao",
+        "url": "http://arxiv.org/abs/2605.13174v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13174v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种基于耦合信息的传输映射的贝叶斯滤波方法，用于非线性动力系统。通过最小化**最大均值差异（MMD）**和**梯度流**进行解析计算，并提供了**MMD期望的收敛性分析**。这具有**强大的理论基础和严谨的数学推导**，在贝叶斯推断和随机过程领域有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13143v1",
+        "title": "On the Generalization of Knowledge Distillation: An Information-Theoretic View",
+        "summary": "Knowledge distillation is widely used to improve generalization in practice, yet its theoretical understanding remains elusive. In the standard distillation setting, a teacher model provides soft predictions to guide the training of a student model. We model teacher and student training as coupled stochastic processes and introduce a distillation divergence, defined as the Kullback-Leibler divergence between these two stochastic kernels. Within this framework, we derive two generalization bounds for the student model relative to the teacher's generalization gap: an upper bound under a sub-Gaussian assumption via algorithmic stability, and a lower bound under a central condition with sharper dependence on the distillation divergence. We further develop a loss-sharpness-aware bound with an explicit tightness regime, showing that the teacher's local flatness can strictly tighten the bound. Additionally, in a linear Gaussian case study, the distillation divergence admits an interpretable decomposition into bias, variance, and rank-bottleneck costs, yielding practical guidance for distillation design.",
+        "authors": "Bingying Li, Haiyun He",
+        "url": "http://arxiv.org/abs/2605.13143v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13143v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从**信息论角度**深入理解知识蒸馏的泛化能力，推导了基于**算法稳定性**和**Kullback-Leibler散度**的泛化界限。线性高斯案例研究中对偏差、方差和秩瓶颈成本的分解，提供了**严谨的数学推导和统计保证**，非常符合您对理论基础和数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13113v1",
+        "title": "Context Matters: Auditing Gender Bias in T2I Generation through Risk-Tiered Use-Case Profiles",
+        "summary": "Text-to-image (T2I) generative models are increasingly used to produce content for education, media, and public-facing communication, and are starting to be integrated into higher-impact pipelines. Since generated images tend to reinforce stereotypes, producing representational erasure via \"default\" depictions and shaping perceptions of who belongs in certain roles, a growing body of work has proposed metrics to quantify gender bias in T2I outputs. Yet existing evaluations remain fragmented. Metrics are often reported without a shared view of what they measure, what assumptions they entail, or how their results should be interpreted under different deployment contexts. This limits the usefulness of gender bias measurement for both technical auditing and emerging governance discussions. We propose a risk-aligned auditing framework for gender bias in T2I models composed of three constituents that connects risk categories, evaluation metrics, and harms. First, we identify risk-tiered use-case profiles aligned with the EU AI Act's risk categories to motivate why auditing expectations may vary with deployment contexts and stakeholder exposure. Second, we construct a metric catalog that consolidates gender-bias evaluation methods and organizes them in three measurement categories: gender prediction, embedding similarity, and downstream task. Third, we introduce a harm typology that maps context-dependent harm categories (e.g., representational, quality-of-service) to specific risk-tired scenarios. Finally, we introduce THUMB cards (Text-to-image Harms-informed Use-case-aligned Metrics of gender Bias) that help formulate auditing systematically by the incorporation of context, scenario and bias manifestation, harm hypotheses, and audit strategy.",
+        "authors": "Jose Luna, Yankun Wu, Xiaofei Xie, Noa Garcia",
+        "url": "http://arxiv.org/abs/2605.13113v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13113v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MLGIB 提出了一个**多标签图信息瓶颈（MLGIB）**框架，通过**信息论原理**解决图神经网络（GNNs）在深度消息传递中的过压缩问题。它利用**马尔可夫依赖空间和可处理的变分界限**来平衡表达性和鲁棒性，具有**强大的信息论基础和清晰的数学推导**。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13088v1",
+        "title": "Bayesian Nonparametric Mixed-Effect ODEs with Gaussian Processes",
+        "summary": "Dynamical modelling is central to many scientific domains, including pharmacometrics, systems biology, physiology, and epidemiology. In these settings, heterogeneity is often intrinsic: different subjects or units follow related but distinct continuous-time dynamics. Classical nonlinear mixed-effects Ordinary Differential Equation (ODE) models address this by combining population-level structure with subject-specific effects, but they rely on a parametric vector field and are therefore vulnerable to structural misspecification and unmodelled mechanisms. This motivates nonparametric approaches that can retain principled uncertainty quantification, yet existing nonparametric ODE methods typically assume a single shared dynamical system rather than an explicit mixed-effect hierarchy over subject-specific dynamics. We propose MEGPODE, a Bayesian nonparametric mixed-effect ODE model in which each subject's vector field is decomposed into a shared population component and a subject-specific deviation, both endowed with Gaussian process (GP) priors. To avoid repeated ODE solves per subject during training, we combine state-space GP trajectory priors with virtual collocation observations, yielding Kalman-smoothing trajectory updates and closed-form regressions for the vector fields. Across controlled heterogeneous ODE benchmarks spanning oscillatory, biomedical systems, MEGPODE improves population-field recovery and subject-level trajectory prediction relative to strong baselines.",
+        "authors": "Julien Martinelli, Maksim Sinelnikov, Harri Lähdesmäki, Quentin Clairon, Mélanie Prague",
+        "url": "http://arxiv.org/abs/2605.13088v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13088v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MEGPODE 提出了一个**贝叶斯非参数混合效应ODE模型**，利用**高斯过程（GP）先验**来处理主体间异质性并提供**有原则的不确定性量化**。其结合状态空间GP轨迹先验和卡尔曼平滑轨迹更新，提供了**严谨的数学推导和统计保证**，是贝叶斯非参数和随机过程领域的强大理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13077v1",
+        "title": "Counterfactual Reasoning for Causal Responsibility Attribution in Probabilistic Multi-Agent Systems",
+        "summary": "Responsibility allocation -- determining the extent to which agents are accountable for outcomes -- is a fundamental challenge in the design and analysis of multi-agent systems. In this work, we model such systems as concurrent stochastic multi-player games and introduce a notion of retrospective (backward) counterfactual responsibility, which quantifies an agent's accountability for outcomes resulting from a given strategy profile. To allocate responsibility among agents, we utilise the Shapley value and formally show that this method satisfies key desirable properties, including fairness and consistency. Building on this foundation, we propose a formal framework that supports both verification and strategic reasoning in responsibility-aware multi-agent systems. Furthermore, by adopting Nash equilibrium as the solution concept, we demonstrate how to compute stable strategy profiles in which agents trade off responsibility against expected reward.",
+        "authors": "Chunyan Mu, Muhammad Najib",
+        "url": "http://arxiv.org/abs/2605.13077v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13077v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了在概率多智能体系统中进行**因果责任归因**的框架，利用**反事实推理**和**Shapley值**。它将系统建模为并发随机多玩家博弈，并证明了关键性质，具有**强大的因果逻辑和严谨的数学推导**，对理解多智能体系统中的责任分配至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13063v1",
+        "title": "Ergodic Trajectory Design by Learned Pushforward Maps: Provable Coverage via Conditional Flow Matching",
+        "summary": "Designing continuous trajectories whose time-averaged occupancy provably matches a prescribed spatial density (the \\emph{ergodic coverage} problem) is central to UAV-assisted data collection and sensing, robotic exploration, and mobile monitoring. For flying agents in particular, this challenge is acute: trajectories must balance coverage fidelity against tight energy budgets, no-fly zones, and acceleration limits. Existing methods either re-optimize each trajectory online (with cost growing in the horizon and re-running for every target, agent, and realization) or rely on bespoke analytical constructions that must be re-derived for each new constraint. We propose a \\emph{epushforward} framework that decouples ergodicity from density matching: an analytic latent trajectory provides exact uniform ergodicity on a simple annular domain, and a single map, learned offline by optimal-transport conditional flow matching, transports this latent occupancy onto the prescribed target density. The composed trajectory is then asymptotically ergodic with respect to the learned pushforward distribution, with deviation from the target controlled by the flow-matching training loss. Once trained for a given target density and constraint set, the map serves an unbounded number of trajectories and a multi-agent fleet without per-agent retraining, and many differentiable operational constraints (no-fly zones, acceleration ceilings, or fairness penalties) enter as additive soft penalties in the training loss without re-deriving the design. We prove three results (an acceleration-energy bound, an $O(1/\\sqrt{K})$ ergodic convergence rate in the number of trajectory cycles $K$, and an approximation-error bound) that combine into an end-to-end coverage bound estimable from CFM training diagnostics (certified given an architectural Lipschitz bound on $v_θ$).",
+        "authors": "Ehsan Aghazadeh, Masoud Malekzadeh, Ahmad Ghasemi, Hossein Pishro-Nik",
+        "url": "http://arxiv.org/abs/2605.13063v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13063v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了通过学习推前映射进行**遍历轨迹设计**的框架，并提供了**可证明的覆盖保证**。它推导了**加速度-能量界限、遍历收敛速率和近似误差界限**，具有**强大的理论基础和清晰的数学推导**，在控制理论、最优传输和随机过程领域有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13032v1",
+        "title": "What Information Matters? Graph Out-of-Distribution Detection via Tri-Component Information Decomposition",
+        "summary": "Graph neural networks are widely used for node classification, but they remain vulnerable to out-of-distribution (OOD) shifts in node features and graph structure. Prior work established that methods trained with standard supervised learning (SL) objectives tend to capture spurious signals from either features and/or structure, leaving the model fragile under distributional changes. To address this, we propose textscTide, a textbfnovel and effective underlineTri-Component underlineInformation underlineDecomposition framework that textbfexplicitly decomposes information into textitfeature-specific, structure-specific and joint components. textscTide aims to textbfpreserve only the label-relevant part of the joint information while textbffiltering out spurious feature- and structure-specific information, thereby enhancing the separation between in-distribution (ID) and OOD nodes. Beyond the framework, we provide theoretical and empirical analyses showing that an information bottleneck objective is preferable to standard SL for graph OOD detection, with higher ID confidence and a greater entropy gap between ID and OOD data. Extensive experiments across seven datasets confirm the efficacy of textscTide, achieving up to a 34% improvement in FPR95 over strong baselines while maintaining competitive ID accuracy.",
+        "authors": "Danny Wang, Ruihong Qiu, Zi Huang",
+        "url": "http://arxiv.org/abs/2605.13032v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13032v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Tide 提出了一个**三组分信息分解框架**和**信息瓶颈目标**，用于图神经网络的域外（OOD）检测。它旨在保留标签相关信息并过滤虚假特征和结构特定信息，具有**强大的信息论基础和清晰的数学推导**，对构建鲁棒的GNN至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.12906v1",
+        "title": "Data Difficulty and the Generalization--Extrapolation Tradeoff in LLM Fine-Tuning",
+        "summary": "Data selection during supervised fine-tuning (SFT) can critically change the behavior of large language models (LLMs). Although existing work has studied the effect of selecting data based on heuristics such as perplexity, difficulty, or length, the reported findings are often inconsistent or context-dependent. In this work, we systematically study the role of data difficulty in fine-tuning from both empirical and theoretical perspectives, and find that there is no universally optimal difficulty level; rather, its effectiveness depends on the dataset size. We show that for a fixed data budget, there exists an optimal data difficulty for SFT, and that this optimal difficulty shifts toward harder data as the data budget increases. To explain this phenomenon, we conduct controlled synthetic experiments that reveal a simple underlying mechanism: the interplay between the (in-distribution) generalization gap and the extrapolation gap. We further support this mechanism through a theoretical analysis using PAC-Bayesian generalization bounds. Overall, our results clarify how data size and difficulty jointly affect the trade-off between generalization and extrapolation in SFT, providing guidance for difficulty-based data selection under certain model and data conditions.",
+        "authors": "Siyuan Liu, Tinghong Chen, Xinghan Li, Yifei Wang, Jingzhao Zhang",
+        "url": "http://arxiv.org/abs/2605.12906v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.12906v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究从**理论和实证角度**系统研究了LLM微调中数据难度对泛化的影响。它通过**PAC-贝叶斯泛化界限**解释了泛化-外推权衡的内在机制，提供了**强大的理论基础和清晰的数学推导**，对理解和指导LLM的泛化行为具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.12895v1",
+        "title": "RISED: A Pre-Deployment Safety Evaluation Framework for Clinical AI Decision-Support Systems",
+        "summary": "Aggregate accuracy metrics dominate the evaluation of clinical AI decision-support systems but do not detect deployment-phase failures of input reliability, subgroup equity, threshold sensitivity, or operational feasibility. We propose the RISED Framework: a five-dimension pre-deployment evaluation covering Reliability, Inclusivity, Sensitivity, Equity, and Deployability, in which each dimension is operationalized through formal sub-criteria, pre-specified pass/fail thresholds, and bias-corrected accelerated (BCa) bootstrap 95% confidence intervals combined under a Holm-Bonferroni family-wise error correction. A central demonstration is that a classifier satisfying conventional high-discrimination benchmarks can simultaneously fail input-encoding stability and threshold-shift sensitivity checks, while subgroup AUC parity remains statistically inconclusive, pointing to deployment risks that aggregate evaluation alone cannot detect. We validate this differential pass/fail pattern on a synthetic cohort and three publicly available real-world cohorts spanning 35 years of clinical data vintage, from a 1980s cardiology dataset to a 2024 nationally representative health survey, where failing dimensions differ across cohorts, providing preliminary evidence of construct validity. The Equity dimension is reframed as a proxy-dependence diagnostic rather than a stand-alone gate: any need-based fairness verdict computed against a utilization-derived proxy carries a construct-validity problem the framework surfaces explicitly, triggering a procurement requirement for an outcome-independent need measure before the gate is binding. RISED is released as an open-source Python package that supplies the quantitative verdicts existing clinical AI reporting standards require, providing a principled gateway between in-silico model validation and silent-trial clinical evaluation.",
+        "authors": "Rohith Reddy Bellibatlu",
+        "url": "http://arxiv.org/abs/2605.12895v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.12895v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了在模型错误指定下的**鲁棒序贯实验设计**框架，用于A/B测试。它证明了其设计能够限制估计处理效应的**最坏情况均方误差**，提供了**强大的理论基础和统计保证**，对实验设计和统计推断领域有重要贡献。"
+    }
+]

@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.15053v1",
+        "title": "TFGN: Task-Free, Replay-Free Continual Pre-Training Without Catastrophic Forgetting at LLM Scale",
+        "summary": "Continually pre-training a large language model on heterogeneous text domains, without replay or task labels, has remained an unsolved architectural problem at LLM scale. Existing methods rely on replay buffers, task identifiers, regularization penalties that scale poorly, or sentence-classification-scale evaluation.   We introduce TFGN, an architectural overlay for transformer language models that produces input-conditioned, parameter-efficient updates while leaving the rest of the transformer unchanged. On six heterogeneous text domains (Prose, Python, Math, Biomedical, Chinese, JavaScript) at 1B tokens per phase across three model scales (~398M, ~739M, ~9B) and two regimes (From-Scratch and Retrofit), TFGN achieves backward transfer of -0.007 at LLaMA 3.1 8B Retrofit, HellaSwag retention 0.506/0.504/0.510, and >=99.59% L2-orthogonal gradient separation between domain pairs - with no replay, no task IDs, no Fisher penalty.   The same matrices show positive cross-domain forward transfer: held-out JavaScript PPL drops 26.8% at LLaMA-8B Retrofit and 62.0% at GPT-2 Medium From-Scratch purely from Python training. Two extensions on the same substrate close further open problems. A closed-loop meta-control layer (Extension A) reduces forgetting by an additional 81% at ~398M, mapping onto the System A and System M roles of Dupoux et al. (arXiv:2603.15381). An operator-level plan vector (Extension B) reshapes forward-pass behavior at 99.96% cosine fidelity over 30 source->target pairs.   The architectural insight is a Read/Write decomposition: the forward pass is fully dense, while cross-domain parameter updates are structured so prior-domain subspaces are not written to. To our knowledge, TFGN is the first architecture that simultaneously closes catastrophic forgetting at LLM scale, realizes a closed-loop autonomous-learning meta-controller, and carries an operator-level latent planner.",
+        "authors": "Anurup Ganguli",
+        "url": "http://arxiv.org/abs/2605.15053v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.15053v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了TFGN，一个针对LLM规模的持续预训练架构，通过Read/Write分解和闭环元控制器，解决了灾难性遗忘这一核心瓶颈。其理论创新性强，对LLM的长期稳定性和可扩展性具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14841v1",
+        "title": "GPart: End-to-End Isometric Fine-Tuning via Global Parameter Partitioning",
+        "summary": "Low-rank adaptation (LoRA) has become the dominant paradigm for parameter-efficient fine-tuning (PEFT) of large language models (LLMs). However, its bilinear structure introduces a critical limitation: the mapping from trainable parameters to weight updates is not distance-preserving, distorting the optimization landscape. Methods that project a low-dimensional vector into LoRA's parameter space, such as Uni-LoRA, improve parameter efficiency, but the subsequent bilinear LoRA map breaks end-to-end isometry, leaving the core distance-preservation problem unresolved. We propose GPart (Global Partition fine-tuning), a highly parameter-efficient fine-tuning method which removes the low-rank bottleneck entirely. Our method uses a single isometric partition matrix to map a $d$-dimensional trainable vector directly into the full weight space of the model. The result is an extremely minimal fine-tuning pipeline: one random projection, end-to-end isometric, with a single clean hyperparameter ($d$) and storage cost of $d+1$ values (the trainable vector plus a random seed). GPart builds on the theoretical premise that effective fine-tuning can emerge from random low-dimensional subspaces of the full weight space, without imposing low-rank matrix structure. We empirically demonstrate the superior or comparable performance of GPart to existing PEFT methods on natural language understanding, computer vision tasks, and mathematical reasoning. Overall, GPart achieves state-of-the-art efficiency and performance by removing structural constraints, offering a straightforward and elegant path to PEFT.",
+        "authors": "Paolo Mandica, Michał Brzozowski, Zuzanna Dubanowska, Neo Christopher Chung",
+        "url": "http://arxiv.org/abs/2605.14841v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14841v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GPart从理论上批判了LoRA的双线性结构导致的优化景观扭曲问题，并提出了端到端等距微调的新范式。其理论严谨性高，通过全局参数划分实现了参数高效微调，对LLM效率有显著提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14589v1",
+        "title": "EndPrompt: Efficient Long-Context Extension via Terminal Anchoring",
+        "summary": "Extending the context window of large language models typically requires training on sequences at the target length, incurring quadratic memory and computational costs that make long-context adaptation expensive and difficult to reproduce. We propose EndPrompt, a method that achieves effective context extension using only short training sequences. The core insight is that exposing a model to long-range relative positional distances does not require constructing full-length inputs: we preserve the original short context as an intact first segment and append a brief terminal prompt as a second segment, assigning it positional indices near the target context length. This two-segment construction introduces both local and long-range relative distances within a short physical sequence while maintaining the semantic continuity of the training text--a property absent in chunk-based simulation approaches that split contiguous context. We provide a theoretical analysis grounded in Rotary Position Embedding and the Bernstein inequality, showing that position interpolation induces a rigorous smoothness constraint over the attention function, with shared Transformer parameters further suppressing unstable extrapolation to unobserved intermediate distances. Applied to LLaMA-family models extending the context window from 8K to 64K, EndPrompt achieves an average RULER score of 76.03 and the highest average on LongBench, surpassing LCEG (72.24), LongLoRA (72.95), and full-length fine-tuning (69.23) while requiring substantially less computation. These results demonstrate that long-context generalization can be induced from sparse positional supervision, challenging the prevailing assumption that dense long-sequence training is necessary for reliable context-window extension. The code is available at https://github.com/clx1415926/EndPrompt.",
+        "authors": "Han Tian, Luxuan Chen, Xinran Chen, Rui Kong, Fang Wang, Jiamin Chen, Jinman Zhao, Yuchen Li, Jiashu Zhao, Shuaiqiang Wang, Haoyi Xiong, Dawei Yin",
+        "url": "http://arxiv.org/abs/2605.14589v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14589v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "EndPrompt提出了一种创新的长上下文扩展方法，仅通过短序列训练即可实现，并提供了基于旋转位置编码（RoPE）和伯恩斯坦不等式的严格理论分析。它有效解决了LLM长上下文训练的计算瓶颈，具有极高的实践价值和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.15172v1",
+        "title": "MetaBackdoor: Exploiting Positional Encoding as a Backdoor Attack Surface in LLMs",
+        "summary": "Backdoor attacks pose a serious security threat to large language models (LLMs), which are increasingly deployed as general-purpose assistants in safety- and privacy-critical applications. Existing LLM backdoors rely primarily on content-based triggers, requiring explicit modification of the input text. In this work, we show that this assumption is unnecessary and limiting. We introduce MetaBackdoor, a new class of backdoor attacks that exploits positional information as the trigger, without modifying textual content. Our key insight is that Transformer-based LLMs necessarily encode token positions to process ordered sequences. As a result, length-correlated positional structure is reflected in the model's internal computation and can be used as an effective non-content trigger signal.   We demonstrate that even a simple length-based positional trigger is sufficient to activate stealthy backdoors. Unlike prior attacks, MetaBackdoor operates on visibly and semantically clean inputs and enables qualitatively new capabilities. We show that a backdoored LLM can be induced to disclose sensitive internal information, including proprietary system prompts, once a length condition is satisfied. We further demonstrate a self-activation scenario, where normal multi-turn interaction can move the conversation context into the trigger region and induce malicious tool-call behavior without attacker-supplied trigger text. In addition, MetaBackdoor is orthogonal to content-based backdoors and can be composed with them to create more precise and harder-to-detect activation conditions.   Our results expand the threat model of LLM backdoors by revealing positional encoding as a previously overlooked attack surface. This challenges defenses that focus on detecting suspicious text and highlights the need for new defense strategies that explicitly account for positional triggers in modern LLM architectures.",
+        "authors": "Rui Wen, Mark Russinovich, Andrew Paverd, Jun Sakuma, Ahmed Salem",
+        "url": "http://arxiv.org/abs/2605.15172v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.15172v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MetaBackdoor揭示了LLM中一个前所未有的攻击面——位置编码，无需修改文本内容即可触发后门。这不仅具有极高的创新性，也对LLM安全构成了严重威胁，对未来防御策略的理论研究具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.15133v1",
+        "title": "Causal Foundation Models with Continuous Treatments",
+        "summary": "Causal inference, estimating causal effects from observational data, is a fundamental tool in many disciplines. Of particular importance across a variety of domains is the continuous treatment setting, where the variable of intervention has a continuous range. This setting is far less explored and represents a substantial shift from the binary treatment setting, with models needing to represent effects across a continuum of treatment values. In this paper, we present the first causal foundation model for the continuous treatment setting. Our model meta-learns the ability to predict causal effects across a wide variety of unseen tasks without additional training or fine-tuning. First, we design a novel prior over data-generating processes with continuous treatment variables in order to generate a rich causal training corpus. We then train a transformer to reconstruct individual treatment-response curves given only observational data, leveraging in-context learning to amortize expensive Bayesian posterior inference. Our model achieves state-of-the-art performance on individual treatment-response curve reconstruction tasks compared to causal models which are trained specifically for those tasks.",
+        "authors": "Christopher Stith, Medha Barath, Vahid Balazadeh, Jesse C. Cresswell, Rahul G. Krishnan",
+        "url": "http://arxiv.org/abs/2605.15133v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.15133v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次提出了针对连续处理变量的因果基础模型，通过新颖的数据生成过程先验和上下文学习来摊销贝叶斯后验推断。它在因果推断领域具有开创性，理论严谨性极高，对多学科应用有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14749v1",
+        "title": "Non-linear Interventions on Large Language Models",
+        "summary": "Intervention is one of the most representative and widely used methods for understanding the internal representations of large language models (LLMs). However, existing intervention methods are confined to linear interventions grounded in the Linear Representation Hypothesis, leaving features encoded along non-linear manifolds beyond their reach. In this work, we introduce a general formulation of intervention that extends naturally to non-linearly represented features, together with a learning procedure that further enables intervention on implicit features lacking a direct output signature. We validate our framework on refusal bypass steering, where it steers the model more precisely than linear baselines by intervening on a non-linear feature governing refusal.",
+        "authors": "Sangwoo Kim",
+        "url": "http://arxiv.org/abs/2605.14749v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14749v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了一种通用的非线性干预方法，扩展了现有线性干预的局限性，并能干预LLM中隐式特征。这为理解LLM内部表征提供了深刻的理论洞察，对LLM的可解释性研究具有重要推动作用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14531v1",
+        "title": "Language Generation as Optimal Control: Closed-Loop Diffusion in Latent Control Space",
+        "summary": "This work reformulates language generation as a stochastic optimal control problem, providing a unified theoretical perspective to analyze autoregressive and diffusion models and explain their limitations (Efficiency-Fidelity Paradox, Irreversibility Error Propagation, Optimization Tractability and Fidelity) in terms of combination of trajectory singularity, adjoint state vanishing, and gradient absence. To address these issues, we approximate the solution to the Hamilton-Jacobi-Bellman (HJB) equation, yielding an optimal policy that acts as a closed-loop controller. To bypass the intractability of directly solving the HJB PDE, we employ Flow Matching as the optimal trajectory solver within the rectified latent control space. This allows our Manta-LM with Global Integral Operator to approximate the global vector field, effectively realizing a model that simultaneously achieves high-fidelity text generation and efficient, low-cost parallel sampling. Empirically, our method achieves strong performance on language modeling and conditional generation tasks, while exhibiting improved stability, efficiency, and controllability.",
+        "authors": "ZiYi Dong, Yuliang Huang, Weijian Deng, Xiangyang Ji, Liang Lin, Pengxu Wei",
+        "url": "http://arxiv.org/abs/2605.14531v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14531v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将语言生成重新定义为随机最优控制问题，统一了自回归和扩散模型，并提出了基于HJB方程和Flow Matching的闭环控制器。其理论基础深厚，有望解决现有模型的效率-保真度悖论等根本性问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14588v1",
+        "title": "Silent Collapse in Recursive Learning Systems",
+        "summary": "Recursive learning -- where models are trained on data generated by previous versions of themselves -- is increasingly common in large language models, autonomous agents, and self-supervised systems. However, standard performance metrics (loss, perplexity, accuracy) often fail to detect internal degradation before it becomes irreversible. Here we identify a phenomenon we call silent collapse: under broad recursive conditions, model internal distributions -- predictive entropy, representational diversity, and tail coverage -- progressively contract even as conventional metrics appear stable or improving.   We discover that silent collapse is not abrupt. Its onset is reliably preceded by three trajectory-level precursors: (1) contraction of anchor entropy, (2) freezing of representation drift, and (3) erosion of tail coverage. These signals manifest multiple generations before any degradation in standard validation metrics, enabling early warning.   Based on these precursors, we propose the MTR (Monitor--Trust--Regulator) framework, a lightweight metacognitive loop that monitors trajectory statistics, estimates a slow-timescale trust variable, and adaptively modulates the effective learning intensity. MTR provides early warning and actively prevents silent collapse without requiring access to pristine real data -- a critical advantage when original data is unavailable, contaminated, or private.",
+        "authors": "Zhipeng Zhang",
+        "url": "http://arxiv.org/abs/2605.14588v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14588v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究揭示了递归学习系统中“静默崩溃”现象，并提出了MTR框架进行早期预警和主动预防。这对于LLM和自主代理的长期稳定性至关重要，提供了解决内部退化瓶颈的理论和实践方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14396v1",
+        "title": "Systematic Discovery of Semantic Attacks in Online Map Construction through Conditional Diffusion",
+        "summary": "Autonomous vehicles depend on online HD map construction to perceive lane boundaries, dividers, and pedestrian crossings -- safety-critical road elements that directly govern motion planning. While existing pixel perturbation attacks can disrupt the mapping, they can be neutralized by standard adversarial defenses. We present MIRAGE, a framework for systematic discovery of semantic attacks that bypass adversarial defenses and degrade mapping predictions by finding plausible environmental variation (e.g. shadows, wet roads). MIRAGE exploits the latent manifold of real-world data learned by diffusion models, and searches for semantically mutated scenes neighboring the ground truth with the same road topology yet mislead the mapping predictions. We evaluate MIRAGE on nuScenes and demonstrate two attacks: (1) boundary removal, suppressing 57.7% of detections and corrupting 96% of planned trajectories; and (2) boundary injection, the only method that successfully injects fictitious boundaries, while pixel PGD and AdvPatch fail entirely. Both attacks remain potent under various adversarial defenses. We use two independent VLM judges to quantify realism, where MIRAGE passes as realistic 80--84% of the time (vs. 97--99% for clean nuScenes), while AdvPatch only 0--9%. Our findings expose a categorical gap in current adversarial defenses: semantic-level perturbations that manifest as legitimate environmental variation are substantially harder to mitigate than pixel-level perturbations.",
+        "authors": "Chenyi Wang, Ruoyu Song, Raymond Muller, Jean-Philippe Monteuuis, Jonathan Petit, Z. Berkay Celik, Ryan Gerdes, Ming F. Li",
+        "url": "http://arxiv.org/abs/2605.14396v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14396v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MIRAGE框架利用条件扩散模型系统性地发现语义攻击，这些攻击能绕过传统防御并降级在线高清地图构建。其创新性在于利用扩散模型的潜在流形生成语义级扰动，对自动驾驶安全和对抗鲁棒性具有关键影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.15100v1",
+        "title": "Dual-Dimensional Consistency: Balancing Budget and Quality in Adaptive Inference-Time Scaling",
+        "summary": "Large Language Models (LLMs) have demonstrated remarkable abilities in reasoning. However, maximizing their potential through inference-time scaling faces challenges in trade-off between sampling budget and reasoning quality. Current strategies remain inefficient as they typically treat sampling width and depth as orthogonal objectives, where width consensus methods risk reinforcing hallucinations, while depth pruning mechanisms prematurely truncate complex yet valid reasoning chains. Therefore, we propose Dual-Dimensional Consistency (DDC), a unified framework that bridges path quality with adaptive termination. By coupling Confidence-Weighted Bayesian protocol with a Trend-Aware Stratified Pruning, our method ensures that computational resources are concentrated on high quality reasoning paths, filtering hallucinations while accelerating consensus. Evaluations across five benchmarks demonstrate that this approach reduces token consumption by over 10 times while maintaining or exceeding the accuracy of strong baselines across various LLMs.",
+        "authors": "Rongman Xu, Yifei Li, Tianzhe Zhao, Yanrui Wu, Bo Li, Hang Yan",
+        "url": "http://arxiv.org/abs/2605.15100v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.15100v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DDC提出了一个统一的自适应推理时缩放框架，通过结合置信度加权贝叶斯协议和趋势感知分层剪枝，显著降低了LLM的token消耗，同时保持或超越了准确性。这直接解决了LLM推理效率的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.15081v1",
+        "title": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+        "summary": "The development of high-quality text embeddings is increasingly drifting toward an exclusionary future, defined by three critical barriers: prohibitive computational costs, a narrow linguistic focus that neglects most of the world's languages, and a lack of transparency from closed-source or open-weight models that stifles research. To dismantle these barriers, we introduce ML-Embed, a suite of inclusive and efficient models built upon a new framework: 3-Dimensional Matryoshka Learning (3D-ML). Our framework addresses the computational challenge with comprehensive efficiency across the entire model lifecycle. Beyond the storage benefits of Matryoshka Representation Learning (MRL) and flexible inference-time depth provided by Matryoshka Layer Learning (MLL), we introduce Matryoshka Embedding Learning (MEL) for enhanced parameter efficiency. To address the linguistic challenge, we curate a massively multilingual dataset and train a suite of models ranging from 140M to 8B parameters. In a direct commitment to transparency, we release all models, data, and code. Extensive evaluation on 430 tasks demonstrates that our models set new records on 9 of 17 evaluated MTEB benchmarks, with particularly strong results in low-resource languages, providing a reproducible blueprint for building globally equitable and computationally efficient AI systems.",
+        "authors": "Ziyin Zhang, Zihan Liao, Hang Yu, Peng Di, Rui Wang",
+        "url": "http://arxiv.org/abs/2605.15081v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.15081v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ML-Embed引入了3D-ML框架，通过Matryoshka Embedding Learning实现了多语言嵌入的包容性和效率。它解决了计算成本高昂、语言覆盖窄和透明度不足的实际瓶颈，具有广泛的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14929v1",
+        "title": "A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models",
+        "summary": "Scaled Outer Product (SOP) is a post-training quantization methodology for large language model weights, designed to deliver near-lossless fidelity at 4.5--6 bits per weight on hardware with per-layer LUT decode. The methodology combines per-layer search of fixed and dynamic codebook pairs selected by a per-block selection bit, signed per-block scales, activation-weighted cosine selection, and multiple-choice knapsack promotion of sensitive layers with outlier and sparse-residual correction. Fixed codebooks include NF4, BOF4, Split87, and SH4; per-layer optimized codebooks (DD4) are hosted in LUT SRAM. A new hardware-efficient LUT output format (HIF) is proposed to improve performance, energy, and cost. Across six open model families, the recommended FP6 operating point (E2M3sUE4M4, 6.5 bpw) achieves lower weight reconstruction error than the conventional per-layer-POT FP8 baseline (E4M3, 8.0 bpw) at 1.5 bpw lower storage cost, demonstrating that block-scaled small atoms with carefully chosen scale precision can replace conventionally-deployed FP8. Full evaluation across the 4.5--6 bpw range, including layer promotion and sparse residual correction, is reported in a companion paper.",
+        "authors": "Earl Killian",
+        "url": "http://arxiv.org/abs/2605.14929v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14929v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种硬件感知、逐层后训练量化方法SOP，以实现LLM权重的近无损压缩。其理论严谨性体现在对小原子替代FP8的论证，直接解决了LLM模型压缩和部署效率的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14448v1",
+        "title": "Think When Needed: Adaptive Reasoning-Driven Multimodal Embeddings with a Dual-LoRA Architecture",
+        "summary": "Multimodal large language models (MLLMs) have emerged as a powerful backbone for multimodal embeddings. Recent methods introduce chain-of-thought (CoT) reasoning into the embedding pipeline to improve retrieval quality, but remain costly in both model size and inference cost. They typically employ separate reasoner and embedder with substantial parameter overhead, and generate CoT indiscriminately for every input. However, we observe that for simple inputs, discriminative embeddings already perform well, and redundant reasoning can even mislead the model, degrading performance. To address these limitations, we propose Think When Needed (TWN), a unified multimodal embedding framework with adaptive reasoning. TWN introduces a dual-LoRA architecture that attaches reasoning and embedding adapters to a shared frozen backbone, detaching gradients at their interface to mitigate gradient conflicts introduced by joint optimization while keeping parameters close to a single model. Building on this, an adaptive think mechanism uses a self-supervised routing gate to decide per input whether to generate CoT, skipping unnecessary reasoning to reduce inference overhead and even improve retrieval quality. We further explore embedding-guided RL to optimize CoT quality beyond supervised training. On the 78 tasks of MMEB-V2, TWN achieves state-of-the-art embedding quality while being substantially more efficient than existing generative methods, requiring only 3-5% additional parameters relative to the backbone and up to 50% fewer reasoning tokens compared to the full generative mode.",
+        "authors": "Longxiang Zhang, Weilong Dai, Guanghao Zhang, Hao Jiang, Pipei Huang",
+        "url": "http://arxiv.org/abs/2605.14448v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14448v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "TWN提出了一个自适应推理驱动的多模态嵌入框架，采用双LoRA架构和自监督路由门，按需生成思维链。它在保持SOTA嵌入质量的同时，显著提高了MLLM的效率，解决了计算开销大的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.14438v1",
+        "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE",
+        "summary": "Mixture-of-Experts (MoE) architectures enhance the efficiency of large language models by activating only a subset of experts per token. However, standard MoE employs a fixed Top-K routing strategy, leading to redundant computation and suboptimal inference latency. Existing acceleration methods either require costly retraining with architectural changes or suffer from severe performance drop at high sparsity due to train-inference mismatch. To address these limitations, we propose BEAM (Binary Expert Activation Masking), a novel method that learns token-adaptive expert selection via trainable binary masks. With a straight-through estimator and an auxiliary regularization loss, BEAM induces dynamic expert sparsity through end-to-end training while maintaining model capability. We further implement an efficient custom CUDA kernel for BEAM, ensuring seamless integration with the vLLM inference framework. Experiments show that BEAM retains over 98\\% of the original model's performance while reducing MoE layer FLOPs by up to 85\\%, achieving up to 2.5$\\times$ faster decoding and 1.4$\\times$ higher throughput, demonstrating its effectiveness as a practical, plug-and-play solution for efficient MoE inference.",
+        "authors": "Juntong Wu, Jialiang Cheng, Qishen Yin, Yue Dai, Yuliang Yan, Fuyu Lv, Ou Dan, Li Yuan",
+        "url": "http://arxiv.org/abs/2605.14438v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14438v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "BEAM提出了一种通过可训练二值掩码实现MoE动态路由的新方法，结合直通估计器和辅助正则化损失。它在保持模型能力的同时，大幅提升了MoE层的计算效率和吞吐量，是LLM效率优化的重要突破。"
+    }
+]

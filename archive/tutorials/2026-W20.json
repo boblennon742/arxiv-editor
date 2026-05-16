@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.14892v1",
+        "title": "Beyond Individual Intelligence: Surveying Collaboration, Failure Attribution, and Self-Evolution in LLM-based Multi-Agent Systems",
+        "summary": "LLM-based autonomous agents have demonstrated strong capabilities in reasoning, planning, and tool use, yet remain limited when tasks require sustained coordination across roles, tools, and environments. Multi-agent systems address this through structured collaboration among specialized agents, but tighter coordination also amplifies a less explored risk: errors can propagate across agents and interaction rounds, producing failures that are difficult to diagnose and rarely translate into structural self-improvement. Existing surveys cover individual agent capabilities, multi-agent collaboration, or agent self-evolution separately, leaving the causal dependencies among them unexamined. This survey provides a unified review organized around four causally linked stages, which we term the LIFE progression: Lay the capability foundation, Integrate agents through collaboration, Find faults through attribution, and Evolve through autonomous self-improvement. For each stage, we provide systematic taxonomies and formally characterize the dependencies between adjacent stages, revealing how each stage both depends on and constrains the next. Beyond synthesizing existing work, we identify open challenges at stage boundaries and propose a cross-stage research agenda for closed-loop multi-agent systems capable of continuously diagnosing failures, reorganizing structures, and refining agent behaviors, extending current coordination frameworks toward more self-organizing forms of collective intelligence. By bridging these previously fragmented research threads, this survey aims to offer both a systematic reference and a conceptual roadmap toward autonomous, self-improving multi-agent intelligence.",
+        "authors": "Shihao Qi, Jie Ma, Rui Xing, Wei Guo, Xiao Huang, Zhitao Gao, Jianhao Deng, Jun Liu, Lingling Zhang, Bifan Wei, Boqian Yang, Pinghui Wang, Jianwen Sun, Jing Tao, Yaqiang Wu, Hui Liu, Yu Yao, Tongliang Liu",
+        "url": "http://arxiv.org/abs/2605.14892v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.14892v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "首次统一综述了LLM多智能体系统的协作、故障归因与自演化，提出了LIFE进展模型，为未来研究提供了系统性路线图。",
+        "reason_zh": "这篇综述深入探讨了LLM多智能体系统的协作、错误归因和自我演化，提出了LIFE（Lay the capability foundation, Integrate agents, Find faults, Evolve）进展模型。它不仅综合了现有工作，更明确指出了各阶段之间的因果依赖和开放挑战，为高维统计、因果推断背景下的LLM理论机制研究提供了广阔的视野和清晰的未来研究方向，具有极高的实用性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.12835v1",
+        "title": "PROMETHEUS: Automating Deep Causal Research Integrating Text, Data and Models",
+        "summary": "Large language models can extract local causal claims from text, but those claims become more useful when organized as persistent, navigable world models rather than as flat summaries. We introduce PROMETHEUS, a framework that turns retrieved literature, filings, reviews, reports, agent traces, source data, code, simulations, and scientific models into causal atlases: sheaf-like families of local causal predictive-state models over an explicit cover of a research substrate. Each local region contains causal episodes, structured claim tables, predictive tests, support statistics, and provenance; restriction maps compare overlapping regions; gluing diagnostics expose agreement, drift, contradiction, and underdetermination. The resulting Topos World Model is not a single universal graph. It is a research instrument for navigating what a corpus says, where it says it, how strongly it is supported, and where local claims fail to assemble into a coherent global view. Three literature-atlas case studies -- ocean-temperature impacts on marine populations, GLP-1 weight-loss evidence, and resveratrol/red-wine health-benefit claims -- illustrate deep causal research from text with explicit locality, evidence, persistent state, and gluing tension. Four grounded-counterfactual case studies -- a Nature Climate Change microplastics forcing paper, an Indus Valley hydrology paper with VIC-derived figure data and model code, the canonical Sachs protein-signaling study with single-cell perturbation data, and a Nature singing-mouse study with MAPseq projection matrices -- show a stronger mode: when a paper ships source data, simulation outputs, or code, PROMETHEUS can evaluate a counterfactual against that scientific substrate and then rebuild the sheaf world model around the",
+        "authors": "Sridhar Mahadevan",
+        "url": "http://arxiv.org/abs/2605.12835v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.12835v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出了PROMETHEUS框架，利用LLM将文本、数据和模型整合为因果图谱，实现深度因果研究，对因果推断领域影响深远。",
+        "reason_zh": "该框架利用LLM将异构信息（文本、数据、模型）整合为可导航的因果图谱（Topos World Model），实现深度因果研究。它超越了简单的因果声明提取，旨在构建持久、可追溯的因果世界模型，并能进行反事实评估。这与您的因果推断研究方向高度契合，能指引如何利用LLM进行更深层次的科学发现和因果分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10899v1",
+        "title": "RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable Rewards",
+        "summary": "Training deep research agents, namely systems that plan, search, evaluate evidence, and synthesize long-form reports, pushes reinforcement learning beyond the regime of verifiable rewards. Their outputs lack ground-truth answers, their trajectories span many tool-augmented decisions, and standard post-training offers little mechanism for turning past attempts into reusable experience. In this work, we argue that rubrics should serve not merely as final-answer evaluators, but as the shared interface that structures policy execution, judge feedback, and agent memory. Based on this view, we introduce RubricEM, a rubric-guided reinforcement learning framework that combines stagewise policy decomposition with reflection-based meta-policy evolution. RubricEM first makes research trajectories stage-aware by conditioning planning, evidence gathering, review, and synthesis on self-generated rubrics. It then assigns credit with Stage-Structured GRPO, which uses stagewise rubric judgments to provide denser semantic feedback for long-horizon optimization. In parallel, RubricEM trains a shared-backbone reflection meta-policy that distills judged trajectories into reusable rubric-grounded guidance for future attempts. The resulting RubricEM-8B achieves strong performance across four long-form research benchmarks, outperforming comparable open models and approaching proprietary deep-research systems. Beyond final performance, we perform thorough analyses to understand the key ingredients of RubricEM.",
+        "authors": "Gaotang Li, Bhavana Dalvi Mishra, Zifeng Wang, Jun Yan, Yanfei Chen, Chun-Liang Li, Long T. Le, Rujun Han, George Lee, Hanghang Tong, Chen-Yu Lee, Tomas Pfister",
+        "url": "http://arxiv.org/abs/2605.10899v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10899v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出了RubricEM框架，通过基于评分标准的策略分解和元策略演化，将强化学习应用于缺乏可验证奖励的深度研究智能体任务。",
+        "reason_zh": "这篇论文解决了深度研究智能体在缺乏可验证奖励情境下强化学习的难题，提出了RubricEM框架，结合了分阶段策略分解和基于反思的元策略演化。它为Offline RL和LLM理论机制（尤其是智能体自我提升）提供了新颖且严谨的解决方案，具有很高的理论深度和对未来研究的指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09852v1",
+        "title": "Fairness of Explanations in Artificial Intelligence (AI): A Unifying Framework, Axioms, and Future Direction toward Responsible AI",
+        "summary": "Machine learning algorithms are being used in high-stakes decisions, including those in criminal justice, healthcare, credit, and employment. The research community has responded with two largely independent research fields: \\emph{algorithmic fairness}, which targets equitable outcomes, and \\emph{explainable AI} (XAI), which targets interpretable reasoning. This survey identifies and maps a novel blind spot at their intersection, which is a model that can satisfy every standard fairness criterion in its outputs while being profoundly unfair in its \\emph{reasoning process}. We refer to this as the procedural bias, and mitigating it requires treating the fairness of explanations as a distinct object of scientific study.   To our knowledge, we provide the first unified theoretical and literature review of this emerging field and elucidate the drawbacks of post-hoc explainers in certifying explanation fairness. Our central contribution is a \\emph{conditional invariance framework} formalizing explanation fairness as the requirement that explanations should be indifferent regardless of the protected attributes $ P(E(X) \\in \\cdot \\mid X_\\text{rel} = x_\\text{rel},\\, A = a) = P(E(X) \\in \\cdot \\mid X_\\text{rel} = x_\\text{rel},\\, A = b)$ for all task-relevant $x$, a single principle from which all existing explanation fairness metrics emerge as partial operationalizations. We introduce a seven-dimensional taxonomy, identify three generative mechanisms of explanation inequity (representation-driven, explanation-model mismatch, actionability-driven), and propose a canonical six-step evaluation workflow for operationalizing explanation fairness audits in practice.",
+        "authors": "Gideon Popoola, John Sheppard",
+        "url": "http://arxiv.org/abs/2605.09852v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09852v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "首次统一理论综述了AI解释公平性，提出了条件不变性框架和七维分类法，弥补了算法公平性与XAI交叉领域的盲点。",
+        "reason_zh": "这篇论文首次系统性地审视了AI解释的公平性问题，提出了一个统一的条件不变性框架和一套公理，以形式化解释公平性。它填补了算法公平性和可解释AI交叉领域的空白，对理解LLM的理论机制、伦理安全以及未来负责任AI的发展方向具有基础性指导价值，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09712v1",
+        "title": "Quantifying the Risk-Return Tradeoff in Forecasting",
+        "summary": "Average forecast accuracy is not the same as forecast reliability. I treat forecast loss differentials relative to a benchmark as a return series. I then evaluate these returns using risk-adjusted performance measures from finance, including the Sharpe ratio, Sortino ratio, Omega ratio, and drawdown-based metrics. I also introduce the Edge Ratio capturing a model's propensity to deliver uniquely informative predictions relative to the forecasting frontier. I apply this framework to U.S. macroeconomic forecasting, comparing econometric benchmarks, machine learning models, a foundation model (TabPFN), and the Survey of Professional Forecasters. While it is often feasible to beat professional forecasters in terms of average accuracy, it is much harder to beat them on a risk-adjusted basis. They rarely exhibit catastrophic failures and often achieve high Edge Ratios, plausibly reflecting the value of contextual judgment. Nonetheless, selected machine learning methods deliver attractive risk profiles for specific targets. The framework naturally extends to meta-analyses across targets, horizons, and samples, illustrated with a density forecast evaluation and the M4 competition.",
+        "authors": "Philippe Goulet Coulombe",
+        "url": "http://arxiv.org/abs/2605.09712v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09712v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "将金融领域的风险调整绩效指标引入预测评估，量化预测的风险-收益权衡，对加密货币量化等领域具有直接实用价值。",
+        "reason_zh": "这篇论文将金融学中的风险调整绩效指标（如夏普比率、索蒂诺比率）引入预测评估，量化预测的风险-收益权衡。这与您对“加密货币量化”的兴趣高度相关，提供了评估预测模型（包括高维统计模型）可靠性的新视角和严谨方法，具有很强的实用性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.13913v1",
+        "title": "A Survey on Data-Dependent Worst-Case Generalization Bounds",
+        "summary": "Deep neural networks generalize well despite being heavily overparameterized, in apparent contradiction with classical learning theory based on uniform convergence over fixed hypothesis spaces. Uniform bounds over the entire parameter space are vacuous in this regime, and recent work has shown that non-vacuous guarantees can be recovered by restricting attention to the part of parameter space that the algorithm actually visits. This survey paper organizes this line of work around three steps: extending PAC-Bayesian theory to random, data-dependent hypothesis sets (arXiv:2404.17442); refining the complexity term with geometric and topological descriptors of the optimization trajectory, including fractal dimensions, alpha-weighted lifetime sums, and positive magnitude (arXiv:2006.09313, arXiv:2302.02766, arXiv:2407.08723); and replacing the resulting information-theoretic terms by stability assumptions (arXiv:2507.06775). We unify these contributions around a single template inequality and a head-to-head comparison of the resulting bounds.",
+        "authors": "Hubert Leroux, Jean Marcus, Julien Roger",
+        "url": "http://arxiv.org/abs/2605.13913v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.13913v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述了数据依赖的最坏情况泛化界限，统一了PAC-Bayesian理论与优化轨迹的几何/拓扑描述，是统计学习理论的核心基础。",
+        "reason_zh": "这篇综述系统地梳理了深度神经网络在过参数化背景下泛化能力的理论进展，特别是数据依赖的泛化界限。它将PAC-Bayesian理论与优化轨迹的几何和拓扑描述相结合，为理解机器学习模型的泛化机制提供了深刻的数学严谨性视角，是您补全博士数学拼图，尤其是高等概率论和统计学习理论基础的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.11017v1",
+        "title": "Simpson's Paradox in Behavioral Curves: How Aggregation Distorts Parametric Models of User Dynamics",
+        "summary": "Behavioral curve modeling -- fitting parametric functions to engagement-versus-exposure data -- is standard practice in recommendation, advertising, and clinical dosing. We show that aggregation introduces a systematic distortion: Simpson's paradox in behavioral curves. On Goodreads (3.3M users, 9 genres), individual users peak at n* approximately 11 exposures while the aggregate peaks at n* approximately 34 -- a 3x gap driven by survival bias. Amazon Electronics (18M reviews) shows a 5.3x distortion. MovieLens-25M (D approximately 1) serves as a negative control, confirming that survival bias -- not aggregation per se -- is the operative mechanism. The distortion is robust to category granularity, engagement operationalization, and classifier calibration. We develop Synthetic Null Calibration to address a 32% false positive rate in per-user classification. Our findings apply wherever individual behavioral parameters are estimated from aggregate curves under differential attrition.",
+        "authors": "Chao Zhou",
+        "url": "http://arxiv.org/abs/2605.11017v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.11017v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "深入分析了辛普森悖论在行为曲线建模中的体现，揭示了聚合如何扭曲参数模型，是理解统计偏差的经典案例。",
+        "reason_zh": "这篇论文以行为曲线建模为例，深入剖析了辛普森悖论这一核心统计学概念，并揭示了聚合数据如何系统性地扭曲个体行为模式。它以严谨的数学分析和清晰的逻辑，展示了统计偏差的实际影响，对于理解高等概率论中的条件概率、统计推断中的混淆变量以及数据科学中的常见陷阱，是极佳的入门教程和案例分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.10507v1",
+        "title": "Mathematical analysis and numerical methods for the computation of transport coefficients in molecular dynamics",
+        "summary": "We review various numerical approaches to compute transport coefficients in molecular dynamics. These approaches can be broadly classified into three groups: (i) nonequilibrium methods based on applying an external driving field to the system, measuring the average response in the system, and evaluating the related linear response coefficient; (ii) approaches reformulating the transport coefficient of interest through a time correlation function for the equilibrium dynamics (the most popular instances being Green--Kubo and Einstein formulas); (iii) transient techniques, where the transport coefficient can be computed by monitoring the return to the steady state of a dynamics perturbed off its stationary distribution. For all three classes of methods, we provide elements of numerical analysis, allowing to estimate or at least quantify the level of numerical errors in the estimator of the transport coefficient; and also briefly present recent attempts to more efficiently compute transport coefficients with variance reduction approaches such as control variates, importance sampling and coupling methods. The computation of transport coefficients remains nonetheless challenging and will continue requiring research efforts in the foreseeable future.",
+        "authors": "Noe Blassel, Louis Carillo, Shiva Darshan, Raphael Gastaldello, Alessandra Iacobucci, Elisa Marini, Regis Santet, Xiaocheng Shang, Gabriel Stoltz, Urbain Vaes",
+        "url": "http://arxiv.org/abs/2605.10507v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.10507v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4.5
+        },
+        "core_value_zh": "综述了分子动力学中输运系数计算的数学分析和数值方法，提供了格林-久保、爱因斯坦公式及方差缩减技术的严谨推导与分析。",
+        "reason_zh": "这篇综述虽然主要应用于分子动力学，但其核心内容是对输运系数计算的数学分析和数值方法，包括格林-久保公式、爱因斯坦公式以及方差缩减技术。这些内容涉及高等概率论（随机过程）、数值分析和统计物理中的严谨数学推导，能有效帮助您提升在数值方法和随机过程应用方面的数学基础，具有很高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.12326v1",
+        "title": "Black-Box Optimization of Mixed Binary-Continuous Variables: Challenges and Opportunities in Evolutionary Model Merging",
+        "summary": "Model merging has emerged as a cost-effective alternative to training large language models (LLMs) from scratch, enabling researchers to combine pre-trained models into more capable systems without full retraining. Evolutionary approaches to model merging have shown particular promise, automatically searching for optimal merging configurations across both parameter space (PS) and data flow space (DFS). However, the optimization challenges underlying these approaches -- particularly in DFS merging -- remain poorly understood and formally underspecified in the literature. This paper makes two contributions. First, we provide a structured survey of evolutionary model merging techniques, organizing them into three categories: parameter-space merging, data flow space merging, and hybrid approaches. Second, we formally characterize the DFS merging problem as a black-box optimization problem involving mixed binary-continuous variables, high-dimensional search spaces, and conditional dependencies between variable types -- challenges that standard optimization methods such as CMA-ES are not designed to handle. We provide preliminary empirical validation using real pre-trained language models, demonstrating that a structured approach respecting the binary-continuous conditional dependency outperforms an unstructured approach by 6.7% accuracy while reducing the effective search space by 51.4%. By connecting the model merging community with the broader evolutionary computation and black-box optimization literature, we identify concrete open problems and propose research directions to address them.",
+        "authors": "Md. Robiul Islam Niloy",
+        "url": "http://arxiv.org/abs/2605.12326v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.12326v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4.5
+        },
+        "core_value_zh": "形式化地将LLM模型合并中的DFS合并问题定义为混合二元-连续变量的黑盒优化，深入探讨了其挑战，对理解复杂优化问题有基础价值。",
+        "reason_zh": "这篇论文将LLM模型合并中的数据流空间合并问题，形式化为一个涉及混合二元-连续变量、高维搜索空间和条件依赖的黑盒优化问题。尽管其应用是前沿的LLM模型合并，但其对这类复杂优化问题的形式化描述和挑战分析，本身就是对凸优化和一般优化理论的深刻应用和扩展，能帮助您在数学严谨性上理解和解决更复杂的优化问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.09232v1",
+        "title": "Privacy-Preserving Distributed Learning in IoT Systems: A Unified Threat Model and Evaluation Framework",
+        "summary": "The increasing deployment of Internet-of-Things (IoT) devices has accelerated the use of distributed learning frameworks, where data remains local while model updates are shared across decentralized systems. Although this reduces centralized data collection, it introduces privacy risks through the exchange of gradients, model parameters, and intermediate representations. A variety of privacy-preserving techniques have been proposed to address these risks, including differential privacy, cryptographic methods, and lightweight system-level approaches. However, existing surveys often evaluate these methods in isolation and lack a unified framework for comparing their effectiveness under realistic attack models and IoT resource constraints.   This paper presents a structured analysis of privacy-preserving techniques for distributed learning in IoT environments. A unified threat model is introduced that captures model inversion, membership inference, gradient leakage, and communication-based attacks. Building on this model, an evaluation framework is developed to compare methods in terms of both privacy robustness and system-level efficiency, including computational, memory, and communication overhead.   Using this framework, representative approaches including differential privacy, homomorphic encryption, secure multi-party computation, distributed selective stochastic gradient descent, and Bloom Filter-based methods are analyzed. The results highlight a fundamental trade-off between privacy strength and system efficiency. In particular, Bloom Filter-based encodings are shown to provide lightweight privacy through collision-induced ambiguity while maintaining low computational and communication overhead. The paper provides a unified perspective on privacy-preserving design choices for distributed learning in IoT systems.",
+        "authors": "John Cartmell, Alexander Williams",
+        "url": "http://arxiv.org/abs/2605.09232v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.09232v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "提出了一个统一的威胁模型和评估框架，严谨分析了物联网分布式学习中的差分隐私、同态加密等隐私保护技术，是理解隐私计算基础的硬核资料。",
+        "reason_zh": "这篇论文提出了一个统一的威胁模型和评估框架，用于分析物联网分布式学习中的隐私保护技术，涵盖了差分隐私、同态加密和安全多方计算等。这些技术是高维统计和数据科学中处理敏感数据、确保模型安全的核心基础。论文以极高的数学严谨性和清晰度，对这些复杂的隐私保护机制进行了概念性阐述和比较，是您理解信息论、密码学基础及其在分布式系统应用中的硬核参考资料。"
+    }
+]

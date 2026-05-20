@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.20179v1",
+        "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload",
+        "summary": "Diffusion Large Language Models (dLLMs) have emerged as a competitive alternative to autoregressive (AR) models, offering better hardware utilization and bidirectional context through parallel block-level decoding. However, as dLLMs continue to scale up with mixture-of-experts (MoE) architectures, their deployment on resource-constrained devices remains an open challenge. Existing AR-based methods often incur either prohibitive I/O overhead or significant compute bottlenecks. In this work, we propose TIDE, a novel resource-efficient inference system that leverages the temporal stability of expert activations during the diffusion process within the block. Specifically, we leverage the temporal stability of expert activations during the diffusion process within the block and introduce an interval-based expert refresh strategy that updates the expert placement in an I/O-aware fashion. To ensure optimal performance, we formulate the inference scheduling as a mathematical programming problem, solving for the optimal interval that minimizes I/O traffic and CPU computation. Most importantly, TIDE is a lossless optimization that requires no model training, providing a \"free lunch\" acceleration for dLLM inference. In a single GPU-CPU system, we demonstrate that TIDE achieves up to 1.4$\\times$ and 1.5$\\times$ throughput improvements over prior baselines on LLaDA2.0-mini and LLaDA2.0-flash models, respectively.",
+        "authors": "Zhiben Chen, Youpeng Zhao, Yang Sui, Jun Wang, Yuzhang Shang",
+        "url": "http://arxiv.org/abs/2605.20179v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20179v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了TIDE，一个针对MoE Diffusion LLM推理的I/O感知专家卸载系统。它通过利用扩散过程中专家激活的时间稳定性，并将其表述为一个数学规划问题来优化推理调度，实现了无损加速。这种将数学规划应用于LLM推理优化的方法具有很强的理论创新性，直接解决了LLM部署中的数据效率和模型压缩瓶颈，且无需重新训练，实践影响力巨大。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20170v1",
+        "title": "KoRe: Compact Knowledge Representations for Large Language Models",
+        "summary": "Modern Large Language Models (LLMs) have shown impressive performances in user-facing tasks such as question answering, as well as consistent improvements in reasoning capabilities. Still, the way these models encode knowledge seems inherently flawed: by design, LLMs encode world-knowledge within their parameters. This way of representing knowledge is inherently opaque, difficult to debug and update, and prone to hallucinations. On the other hand, Knowledge Graphs can provide human-readable and easily editable world knowledge representations, and their application in knowledge-intensive tasks has consistently proven beneficial to downstream performance. Nonetheless, current integration techniques require extensive retraining or finetuning. To overcome this issue, we introduce KoRe, a methodology to encode 1-hop sub-graphs into compact discrete knowledge tokens and inject them into a LLM backbone. We test the proposed approach on three established benchmarks, and report competitive performances coupled with a significant reduction (up to 10x) in token usage. Our results show that compact discrete KG representations can efficiently and effectively be used to ground modern LLMs.",
+        "authors": "Davide Cavicchini, Fausto Giunchiglia, Jacopo Staiano",
+        "url": "http://arxiv.org/abs/2605.20170v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20170v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "KoRe提出了一种将1跳子图编码为紧凑离散知识token并注入LLM的方法，以解决LLM知识表示不透明、难以调试和更新的问题。这种方法通过将知识图谱的结构化知识高效地融入LLM，显著减少了token使用量，提升了知识密集型任务的性能，对LLM应用中的知识表示和数据效率瓶颈提供了理论创新性的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20145v1",
+        "title": "Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization",
+        "summary": "Bayesian optimization (BO) selects evaluation points for expensive black-box objectives using Gaussian process (GP) predictive distributions. Kernel choice and hyperparameter selection can lead to miscalibrated predictive distributions and an inappropriate exploration-exploitation trade-off. For minimization, sampling criteria such as expected improvement (EI) depend on the predictive distribution below the current best value, so lower-tail miscalibration directly affects the sampling decision. This article studies goal-oriented calibration of GP predictive distributions below a low threshold $t$ in the noiseless setting, for standard GP models with hyperparameters selected by maximum likelihood. A framework for predictive reliability below $t$ is introduced, based on two notions of spatial calibration: occurrence calibration over the design space and thresholded $μ$-calibration on sublevel sets of the form $\\{x\\in\\mathbb{X}, f(x)\\le t\\}$. Building on this framework, we propose tcGP, a post-hoc method that calibrates GP predictive distributions below~$t$, and we show that the resulting EI-based global optimization algorithm remains dense in the design space. Experiments on standard benchmarks show improved lower-tail calibration and BO performance relative to standard GP models and globally calibrated GP models.",
+        "authors": "Aurélien Pion, Emmanuel Vazquez",
+        "url": "http://arxiv.org/abs/2605.20145v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20145v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了贝叶斯优化中高斯过程预测分布的尾部校准问题，特别关注了最小化目标函数时低于某个阈值的预测可靠性。它引入了空间校准和阈值μ-校准的概念，并提出了tcGP方法。其理论分析严谨，解决了BO中探索-利用权衡的关键问题，对数理统计背景的您来说，其理论严谨性和对实际优化问题的改进具有吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20104v1",
+        "title": "Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding",
+        "summary": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm. To maximize the acceptance rate, recent methods construct expansive draft trees, which unfortunately incur severe VRAM bandwidth and computational overheads that bottleneck end-to-end speedups. While dynamic-depth pruning can reduce this latency by removing marginal branches, it also discards potentially valid candidates, preventing the acceptance rate from reaching the upper bound of dense trees. In this paper, we identify a critical opportunity in resource allocation: the transition from dense to pruned drafting frees up significant computational budget. To break this Pareto tradeoff, we introduce Graft, a compensation framework that couples pruning and retrieval as mutually reinforcing operations. Pruning supplies sufficient budget for retrieval, while retrieval compensates for pruning-induced coverage loss and recovers accepted length. By employing a sequential `prune-then-graft' mechanism, Graft attaches highly predictive retrieved tokens into positions opened by pruning, filling the topological gaps with near-zero overhead. Graft is entirely training-free and lossless. Comprehensive evaluations show that Graft establishes a new Pareto frontier across practical deployment settings, including short-context generation, long-context generation, and large-scale models. On short-context benchmarks, it achieves up to 5.41$\\times$ speedup and improves average speedup over EAGLE-3 by up to 21.8% on the large-scale Qwen3-235B. We also provide a preliminary exploration of applying Graft to the DFlash-style block drafting paradigm, offering initial evidence and insights for extending grafting beyond autoregressive draft trees.",
+        "authors": "Yuhao Shen, Tianyu Liu, Xinyi Hu, Quan Kong, Baolin Zhang, Jun Dai, Jun Zhang, Shuang Ge, Lei Chen, Yue Li, Mingcheng Wan, Cong Wang",
+        "url": "http://arxiv.org/abs/2605.20104v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20104v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Graft提出了一种混合树构建方法，通过将剪枝和检索结合起来，解决了推测解码（Speculative Decoding）中VRAM带宽和计算开销的瓶颈。它在理论上分析了资源分配的帕累托权衡，并提出了'prune-then-graft'机制，实现了无训练、无损的加速。这篇论文在LLM推理加速（模型压缩、数据效率）方面具有显著的理论创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20075v1",
+        "title": "CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning",
+        "summary": "Chain-of-thought (CoT) is a standard approach for eliciting reasoning capabilities from large language models (LLMs). However, the common CoT paradigm treats thinking as a prerequisite for answering, which can delay access to plausible answers and incur unnecessary token costs even when the model is able to identify an answer before extended thinking, a behavior known as performative reasoning. In this paper, we introduce CopT, a reformulated reasoning pipeline that reverses the usual order of thinking and answering. Instead of thinking before answering, CopT first elicits a draft answer and then invokes subsequent on-policy thinking conditioned on its own draft answer for reflection and correction. To assess whether the draft answer should be trusted, CopT recasts continuous embeddings as inference-time contrastive verifiers. Specifically, it contrasts the model's support for the same generated tokens under discrete-token inputs and continuous-embedding inputs, yielding a sequence-level reverse KL estimator for answer reliability. Our analysis shows that under certain assumptions, the expected estimate equals the mutual information between the unresolved latent state and the emitted answer token, explaining why it captures answer-relevant uncertainty rather than arbitrary uncertainty in the latent state. When the answer is deemed insufficiently reliable, CopT performs further on-policy thinking, where a second KL estimator dynamically controls draft-answer visibility, preserving useful partial information while reducing the risk of being misled by unreliable content. Across mathematics, coding, and agentic reasoning tasks, CopT improves peak accuracy by up to 23% and reduces token usage by up to 57% at comparable or higher accuracy, without any additional training. The code is available at https://github.com/sdc17/CopT.",
+        "authors": "Dachuan Shi, Hanlin Zhu, Xiangchi Yuan, Wanjia Zhao, Kejing Xia, Wen Xiao, Wenke Lee",
+        "url": "http://arxiv.org/abs/2605.20075v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20075v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CopT提出了一种新的推理管道，通过在生成草稿答案后进行条件性思考，并利用连续嵌入作为推理时对比验证器来评估答案可靠性。它将连续嵌入重铸为序列级反向KL估计器，并从理论上解释了其捕获答案相关不确定性的原因。这种对LLM推理机制的深刻理论洞察和创新的推理范式，对提升LLM的agentic推理能力和效率具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20074v1",
+        "title": "Towards Distillation Guarantees under Algorithmic Alignment for Combinatorial Optimization",
+        "summary": "Distillation transfers knowledge from a large model trained on broad data to a smaller, more efficient model suitable for deployment. In structured prediction settings, prior knowledge about the task can guide the choice of a target architecture that is algorithmically aligned with the underlying problem. Building on recent learning-theoretic analyses of decision-tree (DT) distillation (Boix-Adsera, 2024), we study when distillation succeeds for combinatorial optimization tasks. We focus on the case where the target model is a graph neural network whose architecture is aligned with a dynamic programming (DP) algorithm for the task. Assuming that the source model is sufficiently rich, formalized through the linear representation hypothesis (LRH) (Elhage et al., 2022; Park et al., 2024), we show that the distillation problem can be solved efficiently in the complexity parameters of the DP transition function, represented as a DT. Our results provide a rigorous sufficient condition for successful distillation in the flavour of algorithmic alignment.",
+        "authors": "Thien Le, Melanie Weber",
+        "url": "http://arxiv.org/abs/2605.20074v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20074v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了组合优化中知识蒸馏的理论保证，特别是当目标模型（GNN）与底层问题的动态规划算法对齐时。它基于线性表示假设，提供了蒸馏成功的严格充分条件。这篇论文将学习理论与组合优化相结合，提供了算法对齐下蒸馏的理论基础，具有极高的理论严谨性和创新性，对AI前沿算法的理论理解至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20040v1",
+        "title": "Active Context Selection Improves Simple Regret in Contextual Bandits",
+        "summary": "We study the contextual multi-armed bandit problem with a finite context space (a.k.a. subpopulations), where the learner recommends a best action for each context and is evaluated by context-weighted simple regret. Our guarantees are worst-case over the reward distributions, while remaining instance-dependent with respect to the context distribution vector $p$. Akin to experimental design problems where the population of interest is fixed but the sampled subpopulation can be controlled, we allow the learner to actively choose which context to sample from. For a known $p$, we characterize tight regret rates: passive sampling where contexts are randomly revealed achieves regret of order $\\sqrt{n/T \\, \\lVert p \\rVert_{1/2}}$, whereas active sampling with allocation $q_j \\propto p_j^{2/3}$ achieves the tight rate $\\sqrt{n/T} \\, \\lVert p \\rVert_{2/3}$. The resulting improvement can be as large as $Θ(k^{1/4})$, where $k$ is the number of contexts. We further extend the analysis to budgeted active sampling, characterize the corresponding tight rate, and identify when a limited active budget suffices to recover the fully active rate. When $p$ is unknown, we propose the Explore-Explore-Then-Commit (EETC) algorithm, which optimally balances estimating the context distribution and the time to switch to active allocation, such that for large horizons, it matches the known-$p$ active rate up to constants. Experiments on synthetic and real-world data support our theoretical findings.",
+        "authors": "Mohammad Shahverdikondori, Jalal Etesami, Negar Kiyavash",
+        "url": "http://arxiv.org/abs/2605.20040v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20040v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了上下文多臂老虎机问题中的主动上下文选择，并为已知和未知上下文分布p的情况推导了紧密的遗憾率。它证明了主动采样可以显著改善遗憾率，并提出了Explore-Explore-Then-Commit (EETC)算法。其理论分析严谨，对决策效率和数据效率有直接影响，与数理统计背景高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19767v1",
+        "title": "AR1-ZO: Topology-Aware Rank-1 Zeroth-Order Queries for High-Rank LoRA Fine-Tuning",
+        "summary": "Zeroth-order (ZO) optimization enables large-language-model fine-tuning without storing backpropagation activations, while LoRA supplies compact trainable adapters. Combining them creates a rank paradox: increasing LoRA rank improves adapter capacity, but standard two-point ZO either perturbs a rank-dependent number of coordinates or, under atomwise updates, can make the finite-difference signal unobservable. This paper shows that the bottleneck is a measurement-topology problem rather than a need for an external subspace. LoRA already decomposes into matched rank-$1$ atoms, each a complete factor-coordinate block of dimension $d_\\text{out}+d_\\text{in}$. Querying one atom per step keeps the stored adapter rank $r$ while removing $r$ from the single-query perturbation dimension. The naive atomwise query is still miscalibrated: if it inherits canonical LoRA scaling $α/r$, the active finite-difference signal shrinks as $1/r$ and the active finite-difference signal-to-noise ratio (FD-SNR) as $1/r^2$, producing directional collapse under a fixed residual evaluation-noise floor. AR1-ZO pairs alternating rank-$1$ atom queries with topology-aware scaling $γ=αr$, restoring rank-invariant active signal without auxiliary bases, activation hooks, curvature estimates, or extra forward queries. Theory proves atom minimality, rank-independent active query dimension, directional collapse and restoration, and the remaining rank dependence as an amortized coverage cost. Experiments on OPT and Qwen3 models validate the signal mechanism and show that AR1-ZO makes high-rank LoRA effective among matched-budget ZO methods under the standard two-forward-pass query budget.",
+        "authors": "Ziye Chen, Hongbin Lin, Chenyu Zhang, Xiangda Yan, Yongjie Yang, Yao Shu",
+        "url": "http://arxiv.org/abs/2605.19767v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19767v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "AR1-ZO解决了LoRA微调中零阶优化（ZO）的秩悖论，通过理论分析揭示了现有方法的校准问题，并提出了拓扑感知缩放。它证明了原子最小性、秩无关的活跃查询维度，并恢复了方向性信号。这篇论文在LLM模型压缩（LoRA）和优化算法方面提供了深刻的理论创新和严谨的数学推导，对AI前沿算法的效率提升有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19729v1",
+        "title": "LIFT and PLACE: A Simple, Stable, and Effective Knowledge Distillation Framework for Lightweight Diffusion Models",
+        "summary": "We demonstrate that in knowledge distillation for diffusion models, the teacher network's highly complex denoising process - stemming from its substantially larger capacity - poses a significant challenge for the student model to faithfully mimic. To address this problem, we propose a coarse-to-fine distillation framework with LInear FiTtingbased distillation (LIFT) and Piecewise Local Adaptive Coefficient Estimation (PLACE). First, LIFT decomposes the objective into a \"coarse\" alignment and a \"fine\" refinement. The student is then trained on coarse alignment before proceeding to hard refinement. Second, PLACE extends LIFT to address spatially non-uniform errors by partitioning outputs into error-based groups, providing locally adaptive guidance. Our experiments show that LIFT and PLACE is effective across diffusion spaces (image/latent), backbones (U-Net/DiT), tasks (unconditional/conditional), datasets, and even extends to flow-based models such as MMDiT (SD3). Furthermore, under extreme compression with a 1.3M-parameter student (only 1.6% of the teacher), conventional KD fails to provide sufficient guidance for stable training, with FID scores often degrading to 50-200+, but our method remains stably convergent and achieves an FID of 15.73.",
+        "authors": "Hyunsoo Han, Sangyeop Yeo, Jaejun Yoo",
+        "url": "http://arxiv.org/abs/2605.19729v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19729v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LIFT and PLACE提出了一个简单、稳定且有效的知识蒸馏框架，用于轻量级扩散模型。它通过将蒸馏目标分解为粗粒度对齐和精细化，并引入分段局部自适应系数估计来解决空间非均匀误差。该方法在极端压缩下仍能保持稳定收敛和高精度，对模型压缩和数据效率具有显著的实践影响力，且方法具有创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19721v1",
+        "title": "Projecting Latent RL Actions: Towards Generalizable and Scalable Graph Combinatorial Optimization",
+        "summary": "Graph combinatorial optimization (GCO) has attracted growing interest, as many NP-hard problems naturally admit graph formulations, yet their combinatorial explosion renders exact methods computationally intractable. Recent advances in Reinforcement Learning (RL) combined with Graph Neural Networks (GNNs) have significantly improved learning-based GCO solvers. However, existing approaches face limitations in both generalization across diverse graph instances and computational scalability as action spaces grow. To address both challenges, we introduce projection agents, a novel RL-GCO approach that operates directly in a continuous GNN-based action embedding space, predicting a desired latent action in a single forward pass and subsequently decoding it into a valid discrete action. Additionally, we enable fair comparison across RL methods through a shared embedding space for both observations and actions. Across diverse benchmarks, our approach achieves up to 16.2x faster inference and up to 40% better generalization than existing solutions using only simple nearest-neighbor decoding, while opening the door to strong RL performance in super-linear decision spaces with multiple interdependent variables. Finally, we release LaGCO-RL, a Python library that automates latent action-space construction and supports existing RL-GCO solutions, promoting reproducibility and adaptation to new GCO benchmarks.",
+        "authors": "Franco Terranova, Guillermo Bernardez, Albert Cabellos-Aparicio, Nina Miolane, Abdelkader Lahmadi",
+        "url": "http://arxiv.org/abs/2605.19721v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19721v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文分析了投票者群体在替代方案上的分歧结构，并引入了“多数矩阵”来捕获更丰富的偏好信息。它定义了分歧度量的“级别”，并证明了许多现有概念需要超越成对比较的更高级别信息。这篇论文在社会选择理论和统计学交叉领域具有理论创新性，对理解和量化群体决策中的分歧有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19644v1",
+        "title": "Inferring Sensitive Attributes from Knowledge Graph Embeddings: Attack and Defense Strategies",
+        "summary": "Knowledge Graphs (KGs) are a powerful representation of linked data, offering flexibility, semantic richness, and support for knowledge enrichment and reasoning. They help data owners organize and exploit heterogeneous data to provide insightful services (e.g., recommendations), yet real-world KGs are often incomplete, hiding true facts or missing valuable insights. Knowledge graph embedding techniques are commonly used to infer valuable missing information. However, reasoning over KGs can inadvertently expose sensitive user information, even when such data is not explicitly stored. In this work, we investigate the privacy risks associated with KGE-based reasoning, focusing on attribute inference attacks where adversaries attempt to deduce sensitive user attributes from seemingly non-sensitive outputs. We propose and evaluate a framework that mitigates these privacy risks by applying post processing sanitization techniques to KGE outputs. Preliminary results demonstrate the effectiveness of these attacks on the outputs of KGE models, and explore the trade-off between recommendation quality and privacy protection when applying randomization based approaches, highlighting the need to experiment with more advanced techniques in future work to address this issue.",
+        "authors": "Yasmine Hayder",
+        "url": "http://arxiv.org/abs/2605.19644v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19644v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了从知识图谱嵌入中推断敏感属性的隐私风险，并提出了通过后处理净化技术来缓解这些风险的框架。它探讨了推荐质量和隐私保护之间的权衡。这对于AI应用中的数据隐私和伦理问题提供了理论分析和初步的解决方案，具有重要的实践意义和理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19621v1",
+        "title": "Diffusion Graph Posterior Sampling for Nonlinear Inverse Problems with Application to Electrical Impedance Tomography",
+        "summary": "Deep generative models have emerged as state-of-the-art for solving inverse problems, but applying them to inverse problems for PDEs, like electrical impedance tomography (EIT) remains challenging. Because physical domains are naturally discretized as unstructured meshes rather than regular grids, standard convolutional architectures are often inadequate. In this paper, we propose a novel framework that extends diffusion posterior sampling (DPS) to graph-structured data. We develop an unconditional score-based diffusion model directly on a 2D triangular mesh to learn an accurate prior over the physical solution space. Furthermore, we introduce a regularized variant, RDPS, which incorporates explicit regularization terms, such as total variation and generalized Tikhonov, to complement the implicit diffusion prior and mitigate severe ill-posedness. Extensive experiments on synthetic and real 2D EIT datasets demonstrate that RDPS produces stable, physically plausible reconstructions. Our approach generalizes well to out-of-distribution inclusion geometries, is highly robust to measurement noise, and outperforms current state-of-the-art solvers (e.g., GPnP-BM3D, DP-SGS) in reconstruction accuracy and artifact reduction.",
+        "authors": "Giovanni S. Alberti, Damiana Lazzaro, Serena Morigi, Matteo Santacesaria, Shibo Wang",
+        "url": "http://arxiv.org/abs/2605.19621v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19621v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖的框架，将扩散后验采样（DPS）扩展到图结构数据，用于解决偏微分方程（PDE）的非线性逆问题，如电阻抗断层扫描（EIT）。它在2D三角网格上开发了无条件分数扩散模型，并引入了正则化变体RDPS。该方法在理论上将扩散模型应用于非结构化网格数据，具有高度的创新性和严谨性，对科学计算和AI前沿算法有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19559v1",
+        "title": "EgoCoT-Bench: Benchmarking Grounded and Verifiable Operation-Centric Chain of Thought Reasoning for MLLMs",
+        "summary": "The rapid development of Multimodal Large Language Models (MLLMs) has led to growing interest in egocentric video understanding, specifically the ability for MLLMs to recognize fine-grained hand-object interactions, track object state changes over time, and reason about manipulative processes in dynamic environments from a first-person perspective. However, existing egocentric video benchmarks suffer from \\textbf{limited grounded rationale evaluation}, offering limited support for fine-grained operation-centric reasoning and rarely examining whether model rationales are grounded in explicit spatio-temporal evidence. To address this gap, we introduce \\textbf{EgoCoT-Bench}, a fine-grained egocentric benchmark for grounded and verifiable operation-centric reasoning with explicit step-by-step rationale annotations. Overall, EgoCoT-Bench comprises 3,172 verifiable QA pairs over 351 egocentric videos separated into four task groups for a total of 12 sub-task groups, encompassing perception and retrospection, anticipation, and high-level reasoning. The benchmark is constructed through a spatio-temporal scene graphs (STSG) guided generation framework and is further refined by human annotators to ensure correctness, egocentric relevance and fine-grained quality. Experimental results show continuing difficulties with egocentric fine-grained reasoning and further reveal that many multimodal models produce explanations that are answer-correct, but have evidence that is inconsistent with the answer. We hope EgoCoT-Bench can serve as a useful testbed for grounded and verifiable reasoning in egocentric video understanding. Project page and supplementary materials are available at: https://dstardust.github.io/EgoCoT/.",
+        "authors": "Yang Dai, Dian Jiao, Tianwei Lin, Wenqiao Zhang",
+        "url": "http://arxiv.org/abs/2605.19559v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19559v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "EgoCoT-Bench提出了一个细粒度的自我中心基准，用于MLLM的接地和可验证的操作中心思维链推理。它通过时空场景图引导生成框架构建，并关注模型推理是否基于明确的时空证据。这篇论文不仅提供了新的评估方法，而且揭示了MLLM在复杂推理中的深层问题，对MLLM的理论发展和应用具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19391v1",
+        "title": "Tweedie's Formulae and Diffusion Generative Models Beyond Gaussian",
+        "summary": "Diffusion models have achieved remarkable success in generating samples from unknown data distributions. Most popular stochastic differential equation-based diffusion models perturb the target distribution by adding Gaussian noise, transforming it into a simple prior, and then use denoising score matching, a consequence of Tweedie's formula, to learn the score function and generate clean samples from noise. However, non-Gaussian diffusion models with state-dependent diffusion coefficient have been largely underexplored, as have the corresponding Tweedie's formulae. In this work, we extend Tweedie's formula to important non-Gaussian processes, including geometric Brownian motion (GBM), squared Bessel (BESQ) processes, and Cox-Ingersoll-Ross (CIR) processes, thereby yielding the corresponding denoising score-matching objectives. We then apply the derived formulae to image and financial time series generation using GBM- and CIR-based diffusion models, and to empirical Bayes estimation under the BESQ setting. The reported experimental results demonstrate the potential of non-Gaussian models.",
+        "authors": "Wenpin Tang, Nizar Touzi, Zikun Zhang, Xun Yu Zhou",
+        "url": "http://arxiv.org/abs/2605.19391v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19391v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将Tweedie公式扩展到非高斯扩散过程，包括几何布朗运动、平方贝塞尔和Cox-Ingersoll-Ross过程，从而推导了相应的去噪分数匹配目标。它在理论上深化了对扩散模型的理解，并展示了非高斯模型在图像和金融时间序列生成中的潜力。这对于数理统计博士生来说，是极具理论创新性和严谨性的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19282v1",
+        "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "summary": "Muon is a matrix-aware optimizer that leverages Newton-Schulz (NS) iterations to enforce spectral gradient orthogonalization by driving all singular values of the momentum matrix toward 1. While this uniform spectral whitening enhances exploration and outperforms AdamW in LLM pretraining, we show it could lead to fundamental limitations beyond pretraining in two regimes: (i) cross-modality vision-language-action (VLA) training, where inherently low-rank action-module gradients cause amplification of noisy tail directions, and (ii) reinforcement learning with verifiable rewards (RLVR), where low-SNR gradients and the need to preserve per-head specialization from prior training make whitening unstable. To address these challenges, we propose Pion, a drop-in replacement for Muon that preserves its computational efficiency while replacing uniform spectral whitening with a two-stage Promotion+Suppression mechanism, which we call the high-pass NS iteration. This design induces a sharp spectral high-pass effect, anchoring dominant singular values at 1 while suppressing noisy tail components toward 0, with controllable filter strength. To preserve pretrained per-head heterogeneity, Pion also supports a per-head mode that applies updates independently across attention heads via a simple reshape, at no extra cost. In VLA training on LIBERO and LIBERO-Plus, Pion consistently outperforms both baselines across l_1-regression (VLA-Adapter) and flow-matching (VLANeXt) architectures, e.g., reaching 100% success rate on LIBERO Object after 1,500 training steps with VLA-Adapter, vs. 97.0% for Muon and only 32.2% for AdamW. The advantage of Pion further extends to a real Franka Research 3 robot with a pi_0.5 backbone under the DROID setup on three grasp-and-place tasks. In RLVR post-training on Qwen3-1.7B/4B with GRPO and GMPO, Pion also outperforms AdamW on MATH and GSM8K while Muon collapses to zero.",
+        "authors": "Chongyu Fan, Gaowen Liu, Mingyi Hong, Ramana Rao Kompella, Sijia Liu",
+        "url": "http://arxiv.org/abs/2605.19282v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19282v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Pion作为Muon优化器的一个替代品，通过两阶段的'Promotion+Suppression'机制（高通NS迭代）解决了Muon在VLA和RLVR训练中遇到的谱失败问题。它在理论上分析了谱漂白可能导致的问题，并提出了一个具有可控滤波强度的解决方案。这篇论文在优化器设计和理论分析方面具有极高的创新性和严谨性，对AI前沿算法的训练效率和稳定性有重要影响。"
+    }
+]

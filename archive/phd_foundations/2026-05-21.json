@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.22005v1",
+        "title": "Check Your LLM's Secret Dictionary! Five Lines of Code Reveal What Your LLM Learned (Including What It Shouldn't Have)",
+        "summary": "We show that singular value decomposition of the lm_head} weight matrix of a transformer-based large language model -- requiring only five lines of PyTorch and no model inference -- reveals interpretable semantic subspaces directly from the model weights. Each left singular vector identifies the vocabulary tokens most readily selected when the hidden state aligns with the corresponding singular direction; inspecting these clusters exposes the model's training data composition and curation philosophy.   Analysing GPT-OSS-120B, Gemma-2-2B, and Qwen2.5-1.5B, we find that singular value spectra and vocabulary cluster structures differ systematically across models: GPT exhibits a graduated hierarchy of functionally differentiated subspaces; Gemma is dominated by pre-nineteenth-century English orthography, forming a stepwise clustering structure that may contribute to high output controllability; and Qwen exhibits broad multilingual coverage alongside subspaces whose vocabulary the authors have determined to be ethically inappropriate for direct publication.   Base-instruct comparison reveals that ethically concerning subspaces originate in pretraining and are not removed by post-training alignment. We introduce the Vocabulary Cluster Score (VCS) to quantify subspace coherence, and the Weighted Projection Score (WPS) as a static glitch token detector; applying WPS to GPT-OSS-120B recovers shokubutsu-hyakka-tsu (ID 137606), a well-known glitch token widely reported in the CJK language community, without any model inference. We propose a taxonomy of root causes for problematic vocabulary content and call for lm_head} SVD analysis to be adopted as a standard pre-release safety auditing step. Our findings further suggest directions toward SVD-guided tokenizer optimisation and more controllable LLM design.",
+        "authors": "Hisashi Miyashita",
+        "url": "http://arxiv.org/abs/2605.22005v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22005v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过对LLM的`lm_head`权重矩阵进行奇异值分解（SVD），以极高的数学严谨性揭示了模型内部的可解释语义子空间。这种方法无需模型推理，直接从权重中提取信息，并成功识别出训练数据组成、伦理问题词汇和故障token。SVD作为基础线性代数工具的巧妙应用，为LLM的理论分析和安全审计提供了强大且可验证的数学逻辑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22800v1",
+        "title": "The Matching Principle: A Geometric Theory of Loss Functions for Nuisance-Robust Representation Learning",
+        "summary": "Robustness, domain adaptation, photometric and occlusion invariance, compositional generalisation, temporal robustness, alignment safety, and classical anisotropic regularisation are usually treated as separate problems with separate method families. This paper argues that much of their shared structure is one statistical problem: estimate the covariance of label-preserving deployment nuisance, then regularise the encoder Jacobian along a matrix whose range covers that covariance (the matching principle). CORAL, adversarial training, IRM, augmentation, metric learning, Jacobian penalties, and alignment-style constraints are different estimators of that object, not independent robustness tricks.   In the linear-Gaussian model we prove closed-form optimality (Theorem A), including cube-root water-filling within the matched range; necessity of range coverage for quadratic Jacobian penalties (Theorem G); the same range dichotomy at deep global minima; and two falsification controls (Lemma C; Corollaries E), with seven conditional consistency lemmas (D1-D7) for estimation under standard identifiability assumptions.   We introduce the Trajectory Deviation Index (TDI), a label-free probe of embedding sensitivity when task accuracy or Jacobian Frobenius norm is insufficient.   Thirteen pre-registered blocks from classical ML through Qwen2.5-7B test the predicted matched, then isotropic, then wrong-W ordering on geometry and deployment drift; twelve pass, and the sole exception (Office-31) is an eigengap failure named before the run. At 7B scale, matched style-PMH improves selective honesty and preserves Style TDI where standard DPO degrades it.   The contribution is naming the deployment nuisance covariance, stating what the regulariser must do, and supplying a closed-form falsifiable theory once that object is identified, not universality on every leaderboard.",
+        "authors": "Vishal Rajput",
+        "url": "http://arxiv.org/abs/2605.22800v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22800v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个统一的几何理论，将鲁棒性、域适应等问题归结为统计问题，并通过正则化编码器雅可比矩阵来解决。文中包含多项定理和引理，证明了闭式最优性、范围覆盖的必要性等，展现了极强的理论严谨性和清晰的数学推导，完美契合了对统计保证和严谨数学逻辑的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22596v1",
+        "title": "Factored Diffusion Policies:Compositionally Generalized Robot Control with a Single Score Network",
+        "summary": "Robotic tasks are typically specified by a tuple of factors, such as the object to be grasped, the obstacles to be avoided, the color of the target, and so on. Collecting expert demonstrations for every combination of factor values grows combinatorially. We present factored diffusion policies: a single shared diffusion network trained with per-factor null-token dropout, whose score decomposes additively across factors at inference. Under approximate conditional independence between factors given the action-observation pair, this composition approximates the true joint score with a bounded uniform error, reducing the training-task budget from a product of factor cardinalities to a sum. A trajectory-tube certificate chains this score-level bound through the reverse-time sampling ODE and a contracting tracking controller into a closed-loop state-trajectory tube whose radius factors into an ODE-sensitivity constant and a per-factor score-error budget. Unlike compositional-diffusion methods for control that combine separately trained networks, we use one shared network. Drone racing experiments confirm both the generalization bound and the certificate. On state-based multi-gate racing, the factored policy passes 90% of held-out gates -- matching an oracle -- while a K-network composition baseline collapses to 3%; on vision-based single-gate traversal, it transfers zero-shot to an unseen venue with +11.7pp success-rate gain and 2.4X crash-rate reduction.",
+        "authors": "Sayan Mitra, Ege Yuceel, Noah Giles, Abhishek Pai",
+        "url": "http://arxiv.org/abs/2605.22596v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22596v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了因子分解扩散策略，通过单一共享扩散网络实现机器人控制的组合泛化。其核心贡献在于理论上证明了分数分解的近似性，并提供了有界均匀误差和轨迹管证书，将误差链式传递到闭环状态轨迹管。这种对扩散模型进行严格数学分析并提供理论保证的做法，非常符合对优化收敛性和数学推导严谨性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22531v1",
+        "title": "Disentanglement Beyond Generative Models with Riemannian ICA",
+        "summary": "There is a gap between the theoretical foundations of disentanglement and the practice of modern representation learning. Existing theoretical frameworks, particularly Independent Component Analysis (ICA) and its nonlinear variants, assume a generative model with statistically independent latent variables underlying the data so that disentanglement amounts to identifying the latents that could have generated the data. This generative framework is interpretable and theoretically justified, but its strong assumptions make it difficult to apply to modern representation learning. Modern pretrained encoders often learn features that exhibit disentangled properties without making generative assumptions, yet there is no general theory for interpreting these features as independent factors of variation. We take a step toward such a theory by introducing Riemannian ICA (RICA), which replaces ICA's global generative model with local geometric structure. RICA is founded on the observation that in ICA, the factors of variation underlying a data point can be understood through radial curves emanating from the point that map to axis-aligned lines in the latent space. We formalize this perspective using Riemannian geometry and introduce our theory in a way that is consistent with the existing generative approach. Our main contribution is the disentanglement tensor, which encodes a second-order notion of disentanglement that we call pointwise disentanglement. This tensor depends on the Hessian of the data log likelihood as well as the Ricci curvature induced by the model. In a controlled source recovery setting with known ground-truth sources, RICA recovers sources across several manifolds, while the success of ICA baselines depends on the coordinates used to represent the observations. Our work provides a theoretical basis for studying local disentanglement without assuming a global generative model.",
+        "authors": "Edmond Cunningham",
+        "url": "http://arxiv.org/abs/2605.22531v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22531v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了黎曼ICA（Riemannian ICA），通过局部几何结构而非全局生成模型来解决表征学习中的解缠结问题。它形式化了点式解缠结的二阶概念，并引入了解缠结张量，该张量依赖于数据对数似然的Hessian和模型诱导的Ricci曲率。这种将黎曼几何应用于解缠结理论的深度数学探索，为现代AI系统的理论基础提供了新的视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22291v1",
+        "title": "Long-term Fairness with Selective Labels",
+        "summary": "Long-term fairness algorithms aim to satisfy fairness beyond static and short-term notions by accounting for the dynamics between decision-making policies and population behavior. Most previous approaches evaluate performance and fairness measures from observable features and a label, which is assumed to be fully observed. However, in scenarios such as hiring or lending, the labels (e.g., ability to repay the loan) are selective labels as they are only revealed based on positive decisions (e.g., when a loan is granted). In this paper, we study long-term fairness in the selective labels setting and analytically show that naive solutions do not guarantee fairness. To address this gap, we then introduce a novel framework that leverages both the observed data and a label predictor model to estimate the true fairness measure value by decomposing it into the observed fairness and bias from label predictions. This allows us to derive sufficient conditions to satisfy true fairness from observable quantities by using the confidence in the predictor model. Finally, we rely on our theoretical results to propose a novel reinforcement learning algorithm for effective long-term fair decision-making with selective labels. In semisynthetic environments, the proposed algorithm reached comparable fairness and performance to an agent with oracle access to the true labels.",
+        "authors": "Giovani Valdrighi, Isabel Valera, Marcos Medeiros Raimundo",
+        "url": "http://arxiv.org/abs/2605.22291v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22291v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了选择性标签设置下的长期公平性问题，通过分析性方法证明了朴素解决方案的不足，并提出了一个新框架，通过分解公平性度量和预测偏差来估计真实公平性。文中推导了满足真实公平性的充分条件，并提出了相应的强化学习算法。这种将因果逻辑、统计保证和严谨数学推导应用于AI公平性问题的研究，是数理统计博士生会高度关注的方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22235v1",
+        "title": "Holomorphic Neural ODEs with Kolmogorov-Arnold Networks for Interpretable Discovery of Complex Dynamics",
+        "summary": "Complex dynamical systems governed by holomorphic maps such as $z^2 + c$ exhibit fractal boundaries with extreme sensitivity to initial conditions. Accurately modelling these structures from data requires methods that respect the underlying complex-analytic geometry, yet Multi-Layer Perceptrons (MLPs) within Neural Ordinary Differential Equations (Neural ODEs) lack complex-analytic priors, violate the Cauchy--Riemann conditions, and function as opaque approximators incapable of yielding governing equations. We introduce Holomorphic KAN-ODE, a framework that replaces the MLP with a Kolmogorov-Arnold Network (KAN) whose learnable B-spline activations reside on network edges, and incorporates Cauchy--Riemann equations as a differentiable regularization to preserve holomorphic structure. We evaluate on six families of complex dynamical systems spanning polynomial and transcendental classes. With only 280 parameters ($16\\times$ fewer than the MLP baseline), the network achieves velocity-field $R^2 > 0.95$ on all six systems, correctly identifies all six governing symbolic families through automatic spline-to-formula fitting, and reconstructs Julia set fractal boundaries with up to 98.0\\% agreement. Crucially, the model exhibits only 4\\% MSE degradation under 10\\% observation noise versus $15.2\\times$ for MLPs, and achieves 90.4\\% improvement in transfer learning from quadratic to cubic dynamics. While the MLP attains lower pointwise reconstruction error due to its larger capacity, the KAN uniquely provides interpretable symbolic equations, enforced holomorphic structure, and superior noise resilience, capabilities that are entirely absent in black-box architectures. These results establish KANs as a parameter-efficient, interpretable alternative to MLPs for physics-informed discovery of holomorphic dynamics.",
+        "authors": "Bhaskar Ranjan Karn, Dinesh Kumar",
+        "url": "http://arxiv.org/abs/2605.22235v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22235v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了全纯KAN-ODE，用Kolmogorov-Arnold网络取代传统MLP，并通过可微分正则化引入柯西-黎曼方程，以保留全纯结构。这使得模型能够可解释地发现复杂动力学系统的符号方程，并强制执行复分析几何。这是将严谨的数学逻辑（复分析、ODE）应用于现代AI系统（KANs、Neural ODEs）的典范，具有极高的理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22168v1",
+        "title": "Measuring Cross-Modal Synergy: A Benchmark for VLM Explainability",
+        "summary": "Vision-Language Models (VLMs) map complex visual inputs to semantic spaces, but interpreting the cross-modal reasoning of VLMs currently relies on post-hoc explainers evaluated via unimodal perturbation metrics. We expose a limitation in this paradigm: because multimodal datasets contain language priors and modality biases, VLMs frequently exhibit cross-modal redundancy, allowing them to answer visual queries using text alone. Consequently, unimodal metrics penalize faithful explainers, triggering an evaluation collapse where visual and textual rankings fundamentally contradict each other. %(Kendall's $τ= -0.06$). To resolve this, we introduce Synergistic Faithfulness ($\\mathcal{F}_{syn}$), a scalable metric rooted in the Shapley Interaction Index that strictly isolates the joint Harsanyi dividend between modalities, serving as a highly accurate surrogate ($ρ= 0.92$) while achieving a $24\\times$ computational speedup. Evaluating 8 distinct XAI methods across 3 VLM architectures and 3 benchmark datasets, reveals that explainers proposed for VLMs heavily over-index on visual salience and significantly underperform adapted attention-based methods in capturing true cross-modal synergy. By decoupling visual plausibility from cross-modal faithfulness, this work provides a rigorous evaluation framework required to safely audit VLM reasoning in high-stakes deployments.",
+        "authors": "Joël Roman Ky, Salah Ghamizi, Maxime Cordy",
+        "url": "http://arxiv.org/abs/2605.22168v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22168v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文深入分析了VLM可解释性评估中的“评估崩溃”问题，并提出了基于Shapley交互指数和Harsanyi分红的严格评估指标“协同忠实度”（Synergistic Faithfulness）。这种从合作博弈论和信息论出发，为跨模态AI系统（VLM）的可解释性提供坚实理论基础和数学推导的方法，非常符合对理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.21994v1",
+        "title": "Ex-GraphRAG: Interpretable Evidence Routing for Graph-Augmented LLMs",
+        "summary": "GraphRAG conditions language models on subgraphs retrieved from knowledge graphs, encoded via message-passing GNNs. Because these encoders entangle node contributions through iterated neighborhood aggregation, there is no closed-form way to determine how much each retrieved entity influenced the encoder's output, and therefore no way to faithfully audit what structural evidence actually reached the model. We introduce Ex-GraphRAG, which replaces the GNN encoder with a Multivariate Graph Neural Additive Network (M-GNAN), an extension of additive graph models to high-dimensional embedding spaces that yields an exact decomposition of the encoder's output across individual nodes and feature groups, without post-hoc approximation. On STaRK-Prime, this auditable encoder matches black-box performance. Using it to audit evidence routing, we uncover a semantic-structural mismatch: the nodes that dominate the encoder's output are structurally disconnected in the retrieved subgraph, held together by low-attribution intermediaries whose removal degrades multi-hop QA by up to 28%. This mismatch, invisible to any opaque encoder, reveals that semantic importance and structural connectivity are governed by disjoint sets of nodes, with direct implications for retrieval pruning, context construction, and failure diagnosis in graph-augmented LLMs.",
+        "authors": "Yoav Kor Sade, Arvindh Arun, Rishi Puri, Steffen Staab, Maya Bechler-Speicher",
+        "url": "http://arxiv.org/abs/2605.21994v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.21994v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文针对图增强LLM的可解释性问题，提出了Ex-GraphRAG，用多元图神经网络加性网络（M-GNAN）取代传统GNN编码器，实现了编码器输出在节点和特征组上的精确分解。这种无需后验近似的精确分解，为理解GNN在LLM中的作用提供了强大的数学工具和理论保证，直接解决了现代AI系统的可解释性挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.21928v1",
+        "title": "CausalGuard: Conformal Inference under Graph Uncertainty",
+        "summary": "Estimating treatment effects from observational data requires choosing an adjustment set, but valid adjustment depends on an unknown causal graph. Graph misspecification can cause under-coverage, while graph-agnostic conformal wrappers may regain nominal coverage only through large padding. We introduce CausalGuard, a structure-weighted conformal framework that calibrates after aggregating graph-conditional doubly robust pseudo-outcomes. Candidate DAGs are proposed from an LLM-derived edge prior, pruned by conditional-independence tests, and reweighted by Bayesian Information Criterion. A composite nonconformity score then calibrates the posterior-weighted pseudo-outcome. CausalGuard provides distribution-free finite-sample marginal coverage for this aggregated pseudo-outcome; under causal identification, overlap, conditional-mean nuisance stability, and concentration on target-aligned valid adjustment strategies, its conditional mean converges to the true Conditional Average Treatment Effect. Across five benchmarks, CausalGuard attains mean coverage above the nominal 90% level for the directly evaluable target and reduces width when graph-agnostic conformal baselines require large padding. Stress tests show that CausalGuard suppresses invalid collider adjustment and remains stable under misspecified priors when the retained candidate set is data-supported.",
+        "authors": "Vikash Singh, Weicong Chen, Debargha Ganguly, Yanyan Zhang, Nengbo Wang, Sreehari Sankar, Mohsen Hariri, Alexander Nemecek, Chaoda Song, Shouren Wang, Biyao Zhang, Van Yang, Erman Ayday, Jing Ma, Vipin Chaudhary",
+        "url": "http://arxiv.org/abs/2605.21928v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.21928v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了CausalGuard，一个在图不确定性下进行因果推断的结构加权共形框架。它提供了聚合伪结果的无分布有限样本边际覆盖，并在因果识别等条件下，其条件均值收敛到真实的条件平均治疗效果。这种结合了因果推断、共形预测和统计保证的严谨方法，是数理统计博士生会非常感兴趣的研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.21849v1",
+        "title": "Geometry-Adaptive Explainer for Faithful Dictionary-Based Interpretability under Distribution Shift",
+        "summary": "Mechanistic interpretability aims to explain a model's behavior by identifying causally responsible internal structures. Dictionary-based explainers such as sparse autoencoders and transcoders are a primary tool, but their faithfulness under out-of-distribution (OOD) shift has received little systematic attention. We show that distribution shift rotates the subspace that the model actively uses, misaligning the explainer's dictionary trained on in-distribution (ID) activations. We formalize this misalignment as the faithfulness gap, a geometric distance between the ID dictionary and the OOD-active subspace, and show that it controls OOD faithfulness degradation. To reduce this gap, we propose the Geometry-Adaptive Explainer (GAE), which realigns the explainer's dictionary with the OOD-active subspace while preserving the original feature structure. This requires only unlabeled OOD activations and no gradient updates. We prove that GAE improves over the unadapted ID explainer, with excess loss bounded quadratically by the second-moment shift. Empirically, GAE even matches or surpasses all training-based baselines in causal faithfulness across multiple models and OOD settings.",
+        "authors": "Sungjun Lim, Heedong Kim, Andrew Lee, Kyungwoo Song",
+        "url": "http://arxiv.org/abs/2605.21849v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.21849v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文针对字典式解释器在分布偏移下的忠实性问题，将其形式化为“忠实度差距”这一几何距离，并证明其控制了OOD忠实度退化。提出的几何自适应解释器（GAE）通过几何重对齐来提高忠实度，并从理论上证明了其改进效果，损失界限由二阶矩偏移量二次控制。这体现了将几何理论和严格数学证明应用于AI可解释性问题的深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22390v1",
+        "title": "A Posterior-Predictive Variance Decomposition for Epistemic and Aleatoric Uncertainty in Wind Power Forecasting",
+        "summary": "Accurate wind power forecasting requires reliable uncertainty quantification, yet most existing methods report a single predictive uncertainty that conflates epistemic and aleatoric sources. This paper applies the law of total variance to the joint setting of heteroscedastic neural network regression and Bayesian posterior approximation, deriving an explicit decomposition of total uncertainty (TU) into aleatoric (AU) and epistemic (EU) components. The resulting estimators are compatible with standard posterior-approximation methods and with $β$-NLL training to regulate the mean--variance learning trade-off. A wind power--specific evaluation framework is proposed to validate disentanglement without access to ground-truth uncertainty labels, comprising three modules: controlled synthetic experiments to verify responses to heteroscedastic noise and distribution shift; data-property--driven validation on a real-world wind turbine SCADA dataset; and dataset-size scaling experiments to examine the predicted asymptotic behavior of EU. Across synthetic and real-world experiments, the decomposed AU and EU components respond in theoretically consistent directions to noise structure, distributional shift, and training-scale variation, supporting the theoretical consistency and operational utility of the proposed decomposition and evaluation protocol.",
+        "authors": "Yinsong Chen, Samson S. Yu, Kashem M. Muttaqi",
+        "url": "http://arxiv.org/abs/2605.22390v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22390v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文应用全方差定律和贝叶斯后验近似，为风电预测中的不确定性量化导出了总不确定性到偶然不确定性（Aleatoric Uncertainty）和认知不确定性（Epistemic Uncertainty）的显式分解。这种基于统计学基本原理的严谨推导，为现代AI系统（神经网络回归）的不确定性量化提供了坚实的理论基础和可验证的评估框架。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22374v1",
+        "title": "Guiding Multi-Objective Genetic Programming with Description Length Improves Symbolic Regression Solutions",
+        "summary": "Symbolic regression with genetic programming (GPSR) may suffer from overfitting and structural bloat, especially when noise is present. In this paper we evaluate description length (DL) and fractional Bayes factor (FBF) criteria as principled, data-efficient alternatives to heuristics for selecting compact expressions that generalise well. We implement DL using a Fisher-information-based parameter encoding and compare it to AIC and BIC across multiple datasets, including noisy synthetic benchmarks and real-world regression problems. We study three search/selection strategies: (i) multi-objective search for accuracy and program length followed by DL/FBF selection; (ii) multi-objective search using DL directly as an objective; and (iii) single-objective optimisation with DL/FBF as the fitness. Across datasets we find that DL/FBF post-selection improves test performance compared to AIC/BIC baseline and that BIC in combination with the same function complexity penalty from DL/FBF produces similar results. In contrast, using DL/FBF directly as a fitness function in single-objective GPSR frequently induces premature convergence to overly simple models. We conclude with practical guidance for using DL/FBF as robust model-selection tools in genetic programming workflows.",
+        "authors": "Gabriel Kronberger, Fabricio Olivetti de Franca, Deaglan J. Bartlett, Harry Desmond, Pedro G. Ferreira",
+        "url": "http://arxiv.org/abs/2605.22374v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22374v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文利用描述长度（DL）和分数贝叶斯因子（FBF）作为符号回归中遗传编程的原则性模型选择标准。DL和FBF是信息论和贝叶斯统计中的核心概念，通过Fisher信息量参数编码实现DL，展现了极高的理论严谨性。这为解决AI模型（符号回归）的过拟合和结构膨胀问题提供了数据高效且有理论依据的方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.22062v1",
+        "title": "A Circular Chatterjee's Correlation Coefficient",
+        "summary": "Chatterjee's rank correlation is a directed measure of association designed to detect whether one variable can be predicted as a function of another. While the original coefficient is naturally defined for real-valued data, circular data poses additional difficulty. Applying the usual construction requires cutting each circle at an arbitrary point and treating it as a line. Different choices of cut points can lead to different finite-sample values, even though the underlying circular relationship is unchanged. This paper proposes a circular version of Chatterjee's coefficient that removes this arbitrary choice. The population construction averages over response cuts in circular rank space, and the finite-sample construction averages over sample cut gaps and reduces to a simple statistic based only on cyclic ranks. The resulting coefficient is intrinsic to the circular ordering of the data, remains directed, and retains the key interpretation of Chatterjee's original coefficient. Under non-atomic circular marginals, it is zero exactly under independence and one exactly when the circular response is a measurable function of the circular predictor. We prove consistency and derive its distribution-free null behavior under independence. Simulations show that the proposed coefficient is especially useful for detecting multi-winding circular relationships, such as cases where the response goes around the circle twice or four times as the predictor goes around once, where standard circular correlations can be nearly blind.",
+        "authors": "Sourav Majumdar",
+        "url": "http://arxiv.org/abs/2605.22062v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22062v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Chatterjee秩相关系数的循环版本，解决了循环数据中任意截断点的问题。它通过在循环秩空间中对响应截断进行平均来构建总体，并推导了基于循环秩的简单有限样本统计量。论文证明了其一致性以及在独立性下的无分布零行为，并给出了系数为零和为一的精确条件。这是纯粹的统计理论贡献，具有极高的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.21981v1",
+        "title": "RiT: Vanilla Diffusion Transformers Suffice in Representation Space",
+        "summary": "Flow matching with $x$-prediction -- regressing the clean data point rather than the ambient velocity -- is known to exploit low-dimensional manifold structure effectively in pixel space \\cite{li2025back}. We ask whether a pretrained representation space, while containing a low-dimensional data manifold of comparable intrinsic dimensionality, offers a distribution more favorable for flow-matching learning. Comparing pixel, SD-VAE, and DINOv2 features along four geometric axes, we find that pixel and DINOv2 share nearly identical intrinsic dimensionalities (both $\\hat{d}\\!\\approx\\!33$) yet DINOv2 exhibits $7.3\\times$ higher effective rank, $35\\times$ better covariance conditioning, $11.5\\times$ lower excess kurtosis, and $1.7\\times$ lower on-manifold interpolation error; SD-VAE latents are consistently intermediate, indicating that the advantage stems from representation-learning objectives rather than mere compression. These statistical properties render the flow-matching regression well-conditioned and remove the need for the specialized prediction heads or Riemannian transport used by prior DINOv2 diffusion methods. We propose the \\emph{Representation Image Transformer} (RiT): a vanilla Diffusion Transformer trained by $x$-prediction on frozen DINOv2 features, augmented only by a dimension-aware noise schedule and joint \\texttt{[CLS]}-patch modeling. On ImageNet $256{\\times}256$, RiT attains FID 1.45 without guidance and 1.14 with classifier-free guidance, outperforming DiT$^\\text{DH}$-XL with $19\\%$ fewer parameters (676M vs.\\ 839M). The resulting ODE is efficiently solvable at coarse discretizations: with classifier-free guidance, $5$ Heun steps already reach FID 2.0 and $10$ steps reach 1.25, without distillation or consistency training. Code at https://github.com/lezhang7/RiT.",
+        "authors": "Le Zhang, Ning Mang, Aishwarya Agrawal",
+        "url": "http://arxiv.org/abs/2605.21981v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.21981v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过分析不同表示空间（如DINOv2特征）的统计几何特性（有效秩、协方差条件、峰度、流形插值误差），揭示了它们如何影响流匹配回归的条件良好性。这种对现代AI系统（扩散模型）内部表示进行严格统计和几何分析，并以此指导模型设计（RiT）的方法，非常符合对理论基础和数学推导的偏好。"
+    }
+]

@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.22586v1",
+        "title": "A Tutorial on Diffusion Theory: From Differential Equations to Diffusion Models",
+        "summary": "This tutorial develops diffusion models from the viewpoint of differential equations. We begin with the conditional Gaussian forward process and show that this path admits both an ordinary differential equation (ODE) representation and a stochastic differential equation (SDE) representation. Averaging the conditional process over the data distribution then yields marginalized forward ODE and SDE formulations that transport the data distribution $p_0=p_{\\mathrm{data}}$ to a Gaussian prior $p_1=\\mathcal{N}(0,I)$. We next derive the corresponding reverse-time dynamics, namely the reverse SDE and the reverse probability-flow ODE, both of which are governed by the marginal score $\\grad\\log p_t(x)$. This leads to a training objective for score estimation and shows that the standard noise-prediction objective is equivalent to score matching up to an additive constant independent of the model parameters. We then discuss sampling methods for the learned reverse dynamics, including DPM-Solver, as well as guided sampling through classifier guidance and classifier-free guidance. Finally, we compare DDPM and DDIM with the reverse SDE/ODE framework and show that they share the same training objective, while DDPM sampling corresponds to discrete reverse-SDE sampling and DDIM sampling corresponds to reverse-ODE sampling.",
+        "authors": "Jiayi Fu, Yuxia Wang",
+        "url": "http://arxiv.org/abs/2605.22586v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.22586v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "从微分方程角度严谨推导扩散模型，涵盖SDE、ODE、得分匹配等，是理解现代生成模型数学基础的绝佳教程。",
+        "reason_zh": "这篇教程明确指出从微分方程（Differential Equations）的角度来发展扩散模型，并深入探讨了条件高斯前向过程的ODE和SDE表示，以及逆向动力学和得分匹配。对于统计学博士生而言，这完美契合了对高等概率论/随机过程以及数学严谨性的要求，是理解现代生成模型（如LLM背后的扩散机制）数学原理的硬核基础资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.21451v1",
+        "title": "Approximation Theory for Neural Networks: Old and New",
+        "summary": "Universal approximation theorems provide a mathematical explanation for the expressive power of neural networks. They assert that, under mild conditions on the activation function, feedforward neural networks are dense in broad function classes, such as continuous functions on compact subsets of $\\mathbb{R}^d$, $L^p$ spaces, or Sobolev spaces. Over the past four decades, these qualitative universality results have evolved into a rich quantitative theory addressing approximation rates, parameter efficiency, and the role of architectural features such as depth and width. This survey presents several glimpses into this theory. We review classical density results for single-hidden-layer networks, as well as quantitative bounds that relate approximation error to network size and smoothness assumptions on target functions. Particular emphasis is placed on depth--width trade-offs and on results demonstrating that deeper architectures can achieve superior parameter efficiency for structured function classes. In addition to standard feedforward neural networks, we also review recent developments on Kolmogorov--Arnold Networks (KANs), which offer an alternative architectural paradigm and whose approximation-theoretic properties have begun to attract significant theoretical attention.",
+        "authors": "Soumendu Sundar Mukherjee, Himasish Talukdar",
+        "url": "http://arxiv.org/abs/2605.21451v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.21451v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "全面回顾神经网络的逼近理论，从经典密度结果到深度与宽度权衡，为理解NN表达能力提供坚实的数学基础。",
+        "reason_zh": "这篇综述深入探讨了神经网络的逼近理论，这是理解神经网络表达能力的数学基石。它不仅回顾了经典结果，还涵盖了逼近率、参数效率以及深度与宽度权衡等定量理论，甚至提到了新兴的Kolmogorov-Arnold Networks。对于希望补全博士数学拼图的您，这提供了关于神经网络数学基础的严谨且全面的视角，与矩阵分析、凸优化等核心主题有内在联系。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.18040v1",
+        "title": "A note on connections between the Föllmer process and the denoising diffusion probabilistic model",
+        "summary": "The Föllmer process is a Brownian motion conditioned to have a pre-specified distribution at time 1. This process can be interpreted as an \"augmented\" time-compressed version of the reverse stochastic differential equation (SDE) for the denoising diffusion probabilistic model (DDPM). While this fact has been indirectly used to analyze DDPM sampling errors via discretization of the reverse SDE, connections between direct discretization of the Föllmer process and the DDPM sampler have not yet been fully explored. This note aims to clarify this point while surveying relevant results from existing work. We show that discretized Föllmer processes give natural hyper-parameter settings of the DDPM sampler. Moreover, this allows us to systematically recover state-of-the-art results on DDPM sampling error bounds with slight improvements.",
+        "authors": "Yuta Koike",
+        "url": "http://arxiv.org/abs/2605.18040v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.18040v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "深入探讨Föllmer过程与DDPM逆向SDE的数学联系，为理解扩散模型的理论基础提供新的视角和严谨推导。",
+        "reason_zh": "这篇笔记聚焦于Föllmer过程（一个高等随机过程的概念，即布朗运动在特定时间点条件化到预设分布）与去噪扩散概率模型（DDPM）逆向随机微分方程（SDE）之间的深刻数学联系。它提供了对DDPM采样误差界限的系统性推导，是高等概率论/随机过程在现代生成模型理论机制中应用的极佳范例，具有高度的数学严谨性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.17275v1",
+        "title": "A Hybrid Gaussian Process Regression Framework for Stable Volatility-Covariance Estimation: Evidence from Global Equity Indices",
+        "summary": "Accurate forecasting of the Volatility-Covariance Matrix (VCV) is central to regulatory capital adequacy processes such as the Internal Capital Adequacy Assessment Process (ICAAP) and the Comprehensive Capital Analysis and Review (CCAR). Traditional econometric models, including GARCH-family and Exponentially Weighted Moving Average (EWMA) approaches, suffer from parametric rigidity, distributional assumptions, and numerical instability under stress, leading to systematic underestimation of tail risk. This paper proposes and validates a novel Hybrid Gaussian Process Regression-Historical Simulation (GPR-HS) framework for estimating Value-at-Risk (VaR) and Expected Shortfall (ES) across a diversified portfolio of seven major global equity indices. The framework decouples the VCV estimation problem: individual asset volatilities are modelled dynamically using Univariate GPR with a Matern 5/2 kernel, while inter-asset correlations are estimated via stable historical covariance. A key methodological contribution is the Aggressive Noise Initialization (ANI) strategy, which sets the initial White Noise kernel variance equal to the empirical variance of the training returns, ensuring Gram matrix positive-definiteness, regularization, and conservative, regulatory-compliant forecasts. Evaluated using an expanding window forward-chaining cross-validation scheme over June 2020 -June 2025, the GPR-HS framework achieves regulatory compliance in the majority of test splits; including a 100% ES pass rate at the portfolio level, while outperforming the static Historical VaR benchmark in 71.4% of univariate cases by Quadratic Loss and 100% of cases by violation count.",
+        "authors": "Ujjwala Vadrevu",
+        "url": "http://arxiv.org/abs/2605.17275v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.17275v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出混合高斯过程回归框架用于波动率-协方差矩阵估计，强调数学框架和金融应用中的稳定性与严谨性。",
+        "reason_zh": "该论文提出了一个混合高斯过程回归（Gaussian Process Regression, GPR）框架，用于波动率-协方差矩阵（VCV）的稳定估计。GPR是贝叶斯推断的核心工具之一，文章强调了数学框架的严谨性，特别是通过“Aggressive Noise Initialization”策略确保Gram矩阵的正定性、正则化和保守预测。这篇论文不仅提供了贝叶斯推断的实际应用，也展现了在高维统计背景下处理复杂金融数据时的数学严谨性，非常适合您的学习需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.17230v1",
+        "title": "Maximum Likelihood Decoding of Quantum Error Correction Codes",
+        "summary": "Quantum error correction (QEC) is indispensable for realizing fault-tolerant quantum computation, yet its effectiveness hinges critically on the classical decoding algorithm that interprets noisy syndrome measurements. Among all possible decoding strategies, maximum likelihood decoding (MLD) is provably optimal, since it identifies the logical group with largest likelihood by summing over all possible errors within logical class consistent with the observed syndrome. Despite its optimality, MLD is computationally intractable in general (#P-hard), motivating a rich landscape of exact and approximate algorithms. In this topical review, we provide a unified perspective on MLD by surveying recent advances through three complementary lenses: statistical mechanics, tensor networks, and artificial intelligence. From the statistical mechanics viewpoint, the MLD problem maps onto evaluating partition functions of disordered spin models, enabling exact solutions for certain codes and noise models as well as threshold estimation via phase-transition analysis. From the tensor network perspective, approximate contraction of tensor networks on the code's factor graph yields decoders that closely approach MLD accuracy with polynomial computational cost. From the artificial intelligence perspective, neural-network-based decoders, including autoregressive generative models and recurrent transformers, learn to approximate the MLD distribution from data, achieving high accuracy with the parallelism afforded by modern hardware accelerators. We discuss the connections among these three approaches, review their application to both simulated and experimental quantum hardware, and outline open challenges including real-time decoding, scalability to large code distances, and generalization to high-rate quantum low-density parity-check codes.",
+        "authors": "Hanyan Cao, Ge Yan, Yuxuan Du, Feng Pan",
+        "url": "http://arxiv.org/abs/2605.17230v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.17230v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述量子纠错码的最大似然解码，从统计力学、张量网络和AI角度统一阐述，是信息论和统计物理的交叉前沿。",
+        "reason_zh": "这篇综述深入探讨了量子纠错码中的最大似然解码（MLD），这是一个在信息论和统计学中都极其重要的概念。文章从统计力学、张量网络和人工智能三个互补的视角进行统一阐述，展现了其计算复杂性和多种解决方案。这不仅提供了信息论在量子计算这一前沿领域的应用，也通过多学科的交叉视角，极大地拓展了对高等概率论和统计物理的理解，具有极高的数学严谨性和启发性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.20767v1",
+        "title": "The Illusion of Intervention: Your LLM-Simulated Experiment is an Observational Study",
+        "summary": "Large language models (LLMs) show potential as simulators of human behavior, offering a scalable way to study responses to interventions. However, because LLMs are trained largely on observational data, interventions in experiments with LLM-simulated synthetic users can induce unintended shifts in latent user attributes, causing user drift where the implicit simulated population differs across treatment conditions, potentially distorting effect estimates. We formalize the confounding or selection bias that can arise due to user drift and show how intervention-dependent shifts can inflate or attenuate observed differences in user responses under intervention. To diagnose confounding, we propose using negative control outcomes--attributes that should remain invariant under intervention--to identify distribution shifts across intervention conditions, providing evidence of user drift. To mitigate drift, we study adjusting the persona specification by eliciting additional confounders, finding that targeted, setting-relevant confounders can substantially reduce bias across survey-style and multi-turn agent evaluations.",
+        "authors": "Victoria Lin, Taedong Yun, Maja Matarić, John Canny, Arthur Gretton, Alexander D'Amour",
+        "url": "http://arxiv.org/abs/2605.20767v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.20767v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "揭示LLM模拟实验中的因果推断陷阱，强调用户漂移导致的混淆偏差，并提出诊断和缓解策略，对LLM理论机制和因果推断研究有重要指导意义。",
+        "reason_zh": "这篇论文直接探讨了LLM作为人类行为模拟器时，在干预性实验中可能产生的因果推断问题，即“用户漂移”和混淆偏差。它形式化了这些偏差，并提出了诊断和缓解策略。这与您关注的“因果推断”和“LLM理论机制”高度契合，具有深刻的理论洞察力，能指引未来在LLM应用中进行严谨因果分析的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19723v1",
+        "title": "Mathematical Reasoning in Large Language Models: Benchmarks, Architectures, Evaluation, and Open Challenges",
+        "summary": "Mathematical reasoning is essential for problem-solving in education, science, and industry, serving as a crucial benchmark for evaluating artificial intelligence systems. As Large Language Models (LLMs) improve their reasoning capabilities, understanding how well they perform mathematical reasoning has become increasingly important. This survey synthesizes recent advancements in mathematical reasoning with LLMs through a structured analysis of datasets, architectures, training strategies, and evaluation protocols. Our systematic review encompasses approximately 120 peer-reviewed studies and preprints, examining the evolution of this research area and providing a unified analytical framework to understand current progress and limitations. Our study particularly introduces a unified taxonomy of mathematical datasets, distinguishing between pretraining corpora, supervised fine-tuning resources, and evaluation benchmarks across varying levels of reasoning complexity. A systematic analysis of reasoning architectures and training strategies, including tool integration, verifier-guided reasoning, and parameter-efficient adaptation, is presented to assess their effects on reasoning robustness and generalization. Moreover, a comparative evaluation of existing metrics highlights the gap between final-answer accuracy and process-level reasoning verification. By synthesizing insights across these areas, our analysis identifies recurring failure modes, such as reasoning faithfulness issues, benchmark biases, and generalization limitations, and outlines key research directions toward improving symbolic grounding, evaluation reliability, and the development of more robust and trustworthy LLM-based reasoning systems.",
+        "authors": "Husnain Amjad, Raja Khurram Shahzad, Aamir Shahzad, Mehwish Fatima",
+        "url": "http://arxiv.org/abs/2605.19723v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19723v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "全面综述LLM的数学推理能力，分析数据集、架构、训练策略和评估协议，并指出未来研究挑战，是理解LLM理论机制的关键综述。",
+        "reason_zh": "这篇综合性综述系统分析了LLM在数学推理方面的最新进展，涵盖了数据集、架构、训练策略和评估协议。数学推理是衡量LLM深层理解和生成能力的关键，这篇论文深入探讨了LLM的“理论机制”，指出了推理忠实性、基准偏差和泛化限制等开放挑战，为未来LLM理论机制的研究提供了清晰的路线图和深刻的见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.19337v1",
+        "title": "Agentic Trading: When LLM Agents Meet Financial Markets",
+        "summary": "A growing body of work explores how Large Language Models (LLMs) can be embedded in trading systems as agents that perceive market information, retrieve context, reason about decisions, emit tradable actions, and adapt under market feedback. This paper reframes LLM-based trading agents as expert-system decision pipelines and presents an audit-oriented evidence map of 77 included studies in a protocol-coded snapshot screened through 2026-03-09. A primary empirical subset (n=19) satisfies the minimum boundary of Action Output plus Closed-Loop Evaluation; the remaining 58 included studies are retained as background and design context. The central empirical finding is protocol incomparability: within the primary subset, only 2/19 studies report extractable time-consistent split protocols, 1/19 reports an explicit transaction-cost model, 1/19 documents universe or survivorship handling, 11/19 report execution timing or semantics, 15/19 are coded as R0, and no study reaches R3 reproducibility. We therefore use Architecture-Capability-Adaptation as a working analytical lens rather than a validated taxonomy, and we foreground the evidence ledger, reproducibility audit, and reporting checklist as the main contributions. The resulting survey shows that architectural experimentation is expanding rapidly, while comparable evaluation protocols, execution semantics, and reproducible artifacts remain the field's immediate bottlenecks.",
+        "authors": "Yihan Xia, Panpan You, Taotao Wang, Fang Liu, Han Qi, Xiaoxiao Wu, Shengli Zhang",
+        "url": "http://arxiv.org/abs/2605.19337v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.19337v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "审计式综述LLM代理在金融市场交易中的应用，揭示当前研究的协议不可比性与可复现性瓶颈，为加密货币量化等领域提供研究方向。",
+        "reason_zh": "这篇论文以审计为导向，系统综述了LLM代理在金融市场交易中的应用。它不仅展示了LLM在感知、推理和行动方面的潜力，更重要的是，揭示了当前研究中存在的协议不可比性和可复现性瓶颈。这对于您关注的“加密货币量化”领域，尤其是将LLM作为交易代理的研究，提供了宝贵的现状分析和未来研究方向的指引，强调了严谨评估的重要性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.18899v1",
+        "title": "Don't Let Bandit Feedback Pull Continual LLM-Recommender Updates Off Target",
+        "summary": "Generative LLM-based recommenders (LLM-Rec) require continual post-deployment updates, yet deployment logs provide only policy-shaped contextual bandit feedback: outcomes are observed solely for items exposed by a prior serving policy, inducing exposure bias and yielding partial, asymmetric signals consisting of relatively reliable positive responses and ambiguous no-responses. We propose an Anchored Bandit Policy Optimization (ABPO) framework for continual LLM-Rec updates that combines group-relative policy optimization (GRPO) with explicit treatment of exposure bias and feedback ambiguity. Specifically, we insert the exposed recommendation as a logged anchor into each GRPO rollout group, so that group-relative normalization is calibrated against the action actually exposed by the prior policy rather than against newly sampled rollouts alone. Because both positive- and no-responses are observed only through prior-policy exposure, we apply self-normalized inverse propensity scoring to the fixed anchor for both feedback types to correct for policy mismatch. At the same time, we treat the two feedback types asymmetrically in reliability: positive responses provide relatively direct endorsement signals, whereas no-responses remain ambiguous because they may reflect either true disinterest or unobserved external factors. To avoid overly aggressive updates from ambiguous no-responses, we temper their penalties with self-certainty, using the model's output-token confidence as a verifier-free reliability signal. Across five domains from Amazon Reviews and MovieLens, our method yields consistent post-update gains in recommendation accuracy while mitigating prior-policy-induced exposure bias more effectively than prior baselines.",
+        "authors": "Taesan Kim, Hyeongjun Yun, Jaegul Choo, Chung Park",
+        "url": "http://arxiv.org/abs/2605.18899v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.18899v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出针对LLM推荐系统的持续更新框架，解决多臂赌博机反馈中的曝光偏差和反馈模糊性问题，与Offline RL紧密相关。",
+        "reason_zh": "这篇论文提出了一个针对LLM推荐系统的持续更新框架，专门处理多臂赌博机（Bandit Feedback）场景下的曝光偏差和反馈模糊性。这直接与“Offline RL”领域的核心挑战相关，即如何从部分、有偏的离线数据中进行有效学习和策略优化。其提出的Anchored Bandit Policy Optimization框架具有很高的创新性和实用性，为在动态环境中部署和更新LLM代理提供了理论和实践指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.18632v1",
+        "title": "Position: Weight Space Should Be a First-Class Generative AI Modality",
+        "summary": "Neural network checkpoints have quietly become a large-scale data resource: millions of trained weight vectors now exist, each encoding task-, domain-, and architecture-specific knowledge. This position paper argues that model checkpoints should be treated as a first-class data modality, and that generative modeling in weight space should be standardized as a core machine learning primitive. Recent advances demonstrate that neural weights can be synthesized on demand, often matching fine-tuning performance while reducing adaptation cost by orders of magnitude. We contend that these results reflect an underlying structural fact: high-performing models occupy low-dimensional, highly structured regions of weight space shaped by symmetry, flatness, modularity, and shared subspaces. Building on this view, we organize existing methods into a five-stage pipeline, survey applications where the approach is already practical, and clarify current limits: adapter-scale and conditional generation are advancing rapidly, while unrestricted frontier-scale checkpoint synthesis remains open. Our goal is to shift the community's default mindset from optimizing models per task to sampling models from learned weight distributions, accelerating toward an era in which AI systems routinely improve or create other AI systems.",
+        "authors": "Zhangyang Wang, Peihao Wang, Kai Wang",
+        "url": "http://arxiv.org/abs/2605.18632v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.18632v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出将模型权重空间视为第一类生成AI模态的创新观点，探讨权重合成的结构性事实和应用前景，指引生成AI的未来研究方向。",
+        "reason_zh": "这是一篇具有前瞻性的立场论文（Position Paper），提出了一个非常新颖且可能颠覆性的观点：将神经网络的权重空间视为一种“第一类生成AI模态”。文章探讨了权重合成的结构性事实及其在减少适应成本方面的应用，并展望了AI系统自我改进和创造其他AI系统的未来。这篇论文具有极高的创新性，能为您的“LLM理论机制”研究提供全新的视角和指引，探索生成AI的深层原理和未来发展方向。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.28807v1",
+        "title": "Calibrating Conservatism for Scalable Oversight",
+        "summary": "Agentic AI systems capable of autonomous planning and extended environmental interaction pose a fundamental control problem: how can humans maintain meaningful oversight of systems that may exceed their own capabilities? Existing approaches to scalable oversight rely on complex assumptions, remain largely heuristic, or lack practical methods for sequential settings with statistical guarantees. We introduce Calibrated Collective Oversight (CCO), which aggregates diverse auxiliary scoring functions into a penalty measuring deviation from a conservative baseline. Inspired by Attainable Utility Preservation, CCO enables collective conservatism: actions face a penalty proportional to overseer concern, so high-utility actions are still selected when overseers find them unobjectionable and overridden only when concern accumulates. CCO calibrates this conservatism online using Conformal Decision Theory, ensuring that undesirable outcomes remain below a user-specified target threshold with finite-time bounds and no distributional assumptions. On a modified version of SWE-bench, weaker overseers successfully constrain an adversarially misaligned stronger agent; on MACHIAVELLI, CCO substantially reduces ethical violations while preserving reward. In both settings, empirical violation rates closely match the specified targets, as predicted by the theory.",
+        "authors": "William Overman, Mohsen Bayati",
+        "url": "http://arxiv.org/abs/2605.28807v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28807v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文针对自主AI系统的根本控制问题，提出了校准集体监督(CCO)框架。其核心贡献在于利用Conformal Decision Theory进行在线校准，并提供了**有限时间界限和无分布假设的统计保证**。这完美契合您对**强大理论基础（统计保证）和清晰数学推导**的偏好，同时解决了现代AI系统（Agentic AI）的关键安全问题，实践影响力极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28653v1",
+        "title": "Adaptive clinical trials based on design-optimal e-values with automatic curtailment: An application to single-arm trials with binary data",
+        "summary": "The e-value is gaining traction as a robust alternative to p-values and Bayes factors for quantifying statistical evidence. e-values are a promising method for adaptive clinical trials due to their anytime-validity: e-values ensure type I error rate control at any stopping time, facilitating repeated interim analyses, complex stopping rules, and valid inference under protocol deviations. The e-value literature focuses mostly on asymptotic optimality; however, sample sizes in clinical trials are often limited. To this end, we investigate e-value-based designs with finite-horizon optimality for single-arm multi-stage clinical trials with binary data. This setting is relevant in early-phase cancer trials, but it also facilitates an accessible introduction to the betting interpretation of e-values, which we use to construct e-values that either (1) maximize statistical power, or (2) minimize the expected sample size, with or without constraints on the minimum power. We construct these designs through (constrained) dynamic programming based on the currently observed e-value, the maximum sample size, and the pre-specified significance level. Using exact calculations, we show that, next to robustness, e-value-based designs can provide competitive operating characteristics to standard (non-)adaptive designs with and without futility stopping and outperform growth-rate-optimal e-values in finite samples. In addition, small e-values automatically indicate trial continuation is futile, e.g., an e-value of zero indicates the impossibility of an efficacy conclusion. Hence, e-value-based designs provide a viable alternative to the current state-of-the-art in single-arm binary trials, warranting extension to other adaptive clinical trial settings such as multi-arm multi-stage and response-adaptive designs.",
+        "authors": "Stef Baas, Judith ter Schure, Joost van Rosmalen",
+        "url": "http://arxiv.org/abs/2605.28653v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28653v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了基于e-values的自适应临床试验设计，通过**动态规划实现有限视野最优性**，确保了**I类错误率控制和随时有效性**。这展示了极高的统计学严谨性，e-values作为p-values和贝叶斯因子的替代方案，其理论分析和优化方法对统计学研究者非常有吸引力，且在临床试验中具有直接的实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28341v1",
+        "title": "Identification and Inference for Structural Accelerated Failure Time Models via Instrument Interactions",
+        "summary": "We study causal inference for time-to-event outcomes under right censoring in the presence of unmeasured confounding. Focusing on structural accelerated failure time models, we develop an identification and inference framework that exploits interactions among instrumental variables. The proposed approach does not rely on classical instrumental variable validity and yields valid causal inference under both valid and invalid instruments, provided that the interaction-based identification condition holds. To accommodate right censoring, we construct a censoring-adjusted observed data moment function using an augmented inverse probability censoring weighting approach. The resulting moment function is Neyman orthogonal with respect to nuisance functions and enjoys a double robustness property, enabling valid inference under flexible nuisance estimation. Estimation and inference are conducted using generalized empirical likelihood, which is well suited to settings with many potentially weak interaction-based moment conditions. We establish consistency, and asymptotic normality under many weak moment asymptotics, and develop diagnostic tools to assess interaction-based identification strength and overidentifying restrictions. Simulation studies demonstrate favorable finite sample performance across a range of censoring rates and instrument configurations. An application to UK Biobank data illustrates the practical relevance of the proposed method for causal survival analysis in large-scale observational studies.",
+        "authors": "Qiushi Bu, Wen Su, Xinyu Zhang, Xingqiu Zhao, Zhonghua Liu",
+        "url": "http://arxiv.org/abs/2605.28341v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28341v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文解决了存在未测量混杂因素下时间-事件结果的因果推断问题。它提出了利用工具变量交互作用的**识别和推断框架**，并构建了具有**Neyman正交性和双重鲁棒性**的矩函数，提供了**一致性和渐近正态性**的理论保证。其因果逻辑和统计推导极其严谨，是因果推断领域的重量级贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28170v1",
+        "title": "Localizing Input Uncertainty Quantification for Large Language Models via Shapley Values",
+        "summary": "As large language models (LLMs) are increasingly integrated into high-stakes decision-making, the ability to reliably quantify uncertainty has become a critical requirement for safety and trust. However, current uncertainty quantification methods primarily operate at the output level, often failing to distinguish whether uncertainty arises from the model's lack of knowledge or from ambiguity in the user's input. While input-centric uncertainty quantification has recently emerged as a promising direction, it remains relatively underexplored and typically relies on coarse, input-level information. Consequently, users are provided with scalar uncertainty scores that offer little actionable guidance on which parts of the input should be clarified to improve reliability. To address this limitation, we propose Shapley-based input uncertainty Quantification (ShaQ), a framework for span-level attribution of input-induced uncertainty. Our approach models ambiguous spans in the input as players in a cooperative game and quantifies their contributions using Shapley values, defined via the weighted average of marginal reductions in conditional entropy obtained by clarifying each span coalition. Unlike existing input-level approaches, our formulation captures complex interactions among spans and provides a principled decomposition in which individual attributions sum exactly to the total input-induced uncertainty. We evaluate ShaQ on the AmbigQA and AmbiEnt benchmarks, where it achieves state-of-the-art performance in ambiguity detection. We further demonstrate its utility on MediTOD, showing that ShaQ can localize under-specified clinical utterances and facilitate human-AI collaboration in high-stakes settings. Overall, ShaQ improves uncertainty estimation and provides actionable insights for targeted input clarification.",
+        "authors": "Seongjun Lee, Suwan Yoon, Changhee Lee",
+        "url": "http://arxiv.org/abs/2605.28170v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28170v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文针对LLM的不确定性量化问题，提出了ShaQ框架，利用**Shapley值**对输入引起的**不确定性进行跨度级归因**，并基于**条件熵的边际减少**进行量化。理论上提供了**原理性分解**，将博弈论和信息论严谨地应用于LLM的UQ，对LLM的可靠部署和人机协作至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28155v1",
+        "title": "Temporal Hyperbolic Graph Representation Learning for Scale-Free Internet Routing and Delay Prediction",
+        "summary": "Predicting Internet round-trip time (RTT) is critical for routing optimization, quality-of-service (QoS) provisioning, and traffic engineering, yet remains challenging due to long-term temporal dependencies, evolving routing dynamics, and heavy-tailed latency distributions. While Temporal Graph Neural Networks (TGNNs) can model evolving network topologies, most existing approaches operate in Euclidean space, which poorly captures the hierarchical and scale-free structure of Internet routing graphs. Hyperbolic geometry provides a more suitable representation space.   We propose HERMIT (Hyperbolic Edge-aware RTT Modeling via Integrated Topology), a hybrid framework combining a hyperbolic manifold-preserving temporal GNN with a Random Forest regressor for joint link prediction and RTT prediction. Built on HMPTGN, HERMIT introduces RTT-aware edge features and a learnable edge encoder to improve modeling of evolving link states and routing behavior. The resulting hyperbolic node representations are combined with historical RTT statistics for robust latency prediction.   We evaluate HERMIT on a large-scale real Internet dataset spanning 2015-2024. HERMIT consistently outperforms a strong Random Forest baseline using only historical RTT statistics, achieving a 6% RMSE improvement while reducing large errors on heavy-tailed samples. It also surpasses prior hyperbolic TGNN models, including HMPTGN and HTGN, in link prediction performance. These results demonstrate that combining hyperbolic temporal graph learning with tree-based regression provides a scalable solution for RTT prediction in real-world Internet topologies.",
+        "authors": "Yi-Ling Kuo, Hao-Yu Tien, Shih-Yu Tsai",
+        "url": "http://arxiv.org/abs/2605.28155v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28155v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个**贝叶斯分层框架**来**分解多语言LLM性能差异的方差**，并识别了可解释的驱动因素。它提供了**分布无关的统计检验**，将多语言评估转化为可操作的诊断框架。其统计建模和方差分解方法非常严谨，对理解和解决LLM的公平性问题具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.27991v1",
+        "title": "Deep Neural Network Training as Random Effects: An Optimization-Inference Duality",
+        "summary": "Deep neural networks (DNNs) have achieved remarkable empirical success, yet their training dynamics remain understood mainly from optimization rather than statistical principles. Here we develop a statistical framework for DNN training in the over-parameterized regime by showing that the prediction induced by continuous-time neural tangent kernel (NTK) gradient flow is exactly equivalent to that from a classical random-effects model. In this framework, training time acts as a variance component, or equivalently an empirical Bayes covariance hyperparameter, governing the allocation of variation from noise to structured signal. This equivalence reveals an optimization-inference duality: the gradient-flow path is both an optimization trajectory and an empirical Bayes random-effects inference path. Conditional on training time, the network output is the posterior mean of the latent signal, and estimating training time by restricted maximum likelihood (REML) turns early stopping into likelihood-based empirical Bayes inference rather than external tuning. This perspective yields a two-stage inferential procedure. First, a variance-component test determines whether DNN training captures statistically significant structure beyond initialization. Second, conditional on training being warranted, REML provides a likelihood-based early stopping rule. The resulting stopping time admits a spectral interpretation in the NTK eigenbasis, where training proceeds until spectral loss decorrelation is achieved. We further establish that REML-guided early stopping achieves asymptotically optimal prediction error for fixed-design in-sample prediction and, under additional random-design regularity conditions, for out-of-sample prediction. This work reframes DNN training as statistical inference and provides a principled foundation for deciding whether and how long to train deep neural networks.",
+        "authors": "Minhao Yao, Ruoyu Wang, Xihong Lin, Lin Liu, Zhonghua Liu",
+        "url": "http://arxiv.org/abs/2605.27991v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.27991v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文将DNN训练重新定义为统计推断问题，揭示了**优化-推断对偶性**，证明了NTK梯度流的预测等同于经典随机效应模型，并提出了基于**REML的早期停止规则**，具有**渐近最优预测误差**。这是对深度学习训练机制的**基础性理论贡献**，对您理解AI系统背后的数学逻辑非常有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.27782v1",
+        "title": "Revisiting ML Training under Fully Homomorphic Encryption: Convergence Guarantees, Differential Privacy, and Efficient Algorithms",
+        "summary": "We present the first theoretical convergence analysis of machine learning training under fully homomorphic encryption (FHE), combined with a differentially private (DP) training algorithm tailored to encrypted computation. Our approach improves computational efficiency over standard differentially private gradient descent (DP-GD) while achieving comparable utility. In particular, we prove convergence of approximate gradient descent using polynomial approximations of activation and loss functions, which are required for FHE compatibility. To preserve privacy in downstream tasks, we integrate differential privacy without relying on costly per-sample gradient clipping, enabling scalable encrypted learning. We also provide data-independent hyperparameter selection and theoretically grounded strategies for polynomial approximation which can be of independent interest. Together, these contributions advance the feasibility of efficient, private, and secure machine learning on sensitive data.",
+        "authors": "Yvonne Zhou, Mingyu Liang, Ivan Brugere, Danial Dervovic, Yue Guo, Antigoni Polychroniadou, Min Wu, Dana Dachman-Soled",
+        "url": "http://arxiv.org/abs/2605.27782v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.27782v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文首次对**全同态加密(FHE)下的机器学习训练进行了理论收敛性分析**，并提出了针对加密计算的**差分隐私(DP)训练算法**，提供了**收敛性保证和数据无关的超参数选择策略**。这是在安全和隐私机器学习领域的里程碑式理论工作，结合了优化收敛性、差分隐私和FHE，理论深度和实践意义兼具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28577v1",
+        "title": "Continual Model Routing in Evolving Model Hubs",
+        "summary": "AI model hubs provide access to a rapidly growing collection of powerful pre-trained models, enabling off-the-shelf mixture-of-experts systems with different routing strategies. However, this rapid growth poses two fundamental challenges: scaling model selection across thousands of experts and continually updating routing mechanisms as new models and tasks are introduced. In this paper, we formalise this setting as Continual Model Routing (CMR) and propose CMRBench, a new large-scale benchmark simulating realistic hub expansion and including over 2,000 candidate models. Finally, we introduce CARvE, a contrastive embedding approach for efficient continual model routing via checkpoint-based anchoring and structured replay. Extensive empirical results and ablations show that CARvE significantly outperforms zero-shot retrieval, fine-tuning, and adapter-merging baselines in model, family, and domain-level accuracy.",
+        "authors": "Jack Bell, Giacomo Carfì, Gerlando Gramaglia, Vincenzo Lomonaco",
+        "url": "http://arxiv.org/abs/2605.28577v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28577v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了Tikhonov层，其传播矩阵是**广义图Tikhonov问题的闭式解**，并通过**理论证明**确保了可解释性与计算的结构耦合。它为可解释GNN提供了强大的理论基础和设计方法，解决了GNN的过平滑和过压缩问题，非常符合您对GNN理论和可解释性的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28567v1",
+        "title": "Semantic Optimal Transport for Sparse Autoencoder Feature Matching and Circuit Compression",
+        "summary": "Sparse autoencoders (SAEs) have become a central tool for interpreting language models. However, two key SAE analyses that remain difficult to scale are (1) matching semantically similar features across multi-layers and (2) compressing large feature circuits into interpretable supernodes. Although these have been treated as separate problems, we show that both are instances of a more fundamental challenge, which we frame as the estimation of semantic distances between SAE features that lie on different activation manifolds. We introduce a distributional framework for this problem, in which each feature is represented not by a single decoder vector like in the literature, but by an activation-weighted distribution over the hidden states that express it. By projecting these distributions into a shared reference space and comparing them with Wasserstein distance, our method provides a unified semantic metric for cross-layer feature comparison. We prove that our representation is invariant to activation rescaling, stable under perturbations, and recovers true matches under finite-sample margin conditions. Empirically, our method outperforms decoder-vector and LLM-based baselines and captures subtle functional distinctions between related features. Notably, our method compresses large feature circuits into interpretable supernodes automatically.",
+        "authors": "Tue M. Cao, Nguyen Do, My T. Thai",
+        "url": "http://arxiv.org/abs/2605.28567v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28567v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了一个**基于最优传输的语义度量**，用于SAE特征匹配和电路压缩，并**理论证明了其表示对激活重缩放的不变性、扰动下的稳定性以及在有限样本边际条件下的真实匹配恢复能力**。将最优传输这一强大的数学工具应用于LLM可解释性分析，理论严谨且创新性高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28422v1",
+        "title": "VITAL: Visual-Semantic Dual Supervision for Enhanced and Interpretable Latent Reasoning in Medical MLLMs",
+        "summary": "Latent reasoning enables reasoning over continuous hidden states rather than explicit tokens, avoiding the language bottleneck and inference overhead of chain-of-thought for medical VQA. However, existing methods suffer from modality collapse, insufficient visual supervision, and train-inference mismatch. Moreover, their opaque latent states offer no interpretability, which is critical in clinical applications. We propose VITAL, a latent-space reasoning framework for medical MLLMs with visual-semantic dual supervision: an auxiliary text decoder reconstructs reasoning chains from latent states, while a visual projector regresses ROI features from a frozen, independent medical vision encoder. Both modules are discarded at inference with zero overhead, yet can be re-attached post-hoc for dual interpretability, providing textual and visual explanations of the reasoning process without sacrificing efficiency. We construct a 61K dataset spanning 9 imaging modalities, exceeding prior medical visual latent reasoning datasets by an order of magnitude. Experiments on 7 benchmarks show that VITAL consistently and substantially outperforms the backbone, all latent reasoning baselines, and medical MLLMs trained on far larger data, achieving state-of-the-art results competitive with trillion-parameter proprietary models.",
+        "authors": "Qiaoru Li, Shaotian Liang, Jintao Chen, Haoran Sun, Yuxiang Cai, Jianwei Yin, Yankai Jiang",
+        "url": "http://arxiv.org/abs/2605.28422v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28422v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了BayesNCL，通过**概率门控机制**和**稀疏伯努利先验的变分推断**来解决对比学习中的表示纠缠问题，从而获得高度可解释的表示。它融合了贝叶斯推断和信息论，理论基础深厚，为现代表示学习提供了更具解释性的方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28251v1",
+        "title": "Counterfactually Fair Regression via Optimal Transport",
+        "summary": "We consider the problem of learning a counterfactually fair regressor. We adopt a causal uncertainty view in which counterfactual fairness is defined with resampled noise. We focus on obtaining theoretical fairness guarantees for a new post-processing estimator. We begin by showing that counterfactual fairness is equivalent to satisfying demographic parity conditional on the latent variable. This allows us to provide a closed-form expression of the optimal fair regressor via a barycentric quantile map. In order to handle continuous latent variables, we propose a discretized post-processing method. Then, under mild regularity assumptions, we prove high-probability finite-sample fairness guarantees for our estimator, providing an unfairness decay at rate $\\tilde O(n^{-1/3})$, and establishing a matching risk bound of order $\\tilde O(n^{-1/3})$. We provide a matching lower bound on the excess risk of almost fair predictions. Finally, we extend our results to the setting of relaxed counterfactual fairness. We validate our approach on real-world and synthetic data.",
+        "authors": "M. Generali Lince, S. Gaucher, J-J. Vie, P. Loiseau",
+        "url": "http://arxiv.org/abs/2605.28251v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28251v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文采用**因果不确定性视角**，证明了反事实公平性等价于潜在变量条件下的**人口统计学平等**，并通过**最优传输**给出了**最优公平回归器的闭式表达式**，提供了**高概率有限样本公平性保证和匹配的风险界限**。因果推断和最优传输的结合，理论贡献显著，对公平机器学习有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28232v1",
+        "title": "PIRS: Physics-Informed Reward Shaping for SAC-Based Building Energy Management",
+        "summary": "Occupant comfort and grid-aware energy efficiency are competing objectives whose joint optimization depends critically on how reward functions are specified in deep reinforcement learning (DRL) controllers for buildings. Yet reward design remains largely ad hoc: comfort terms are either hand-tuned heuristics or simple temperature-deviation proxies without explicit grounding in thermal-comfort physics. We present PIRS (Physics-Informed Reward Shaping), which replaces these ad-hoc comfort proxies with the ISO 7730 Predicted Mean Vote (PMV) formulation inside a weighted multi-objective reward for Soft Actor-Critic (SAC). By anchoring the comfort signal in the ISO 7730 PMV formulation, PIRS improves reward interpretability and provides a standards-grounded comfort proxy without changing any other component of the learning pipeline. We evaluate PIRS in CityLearn v2.1.2 (challenge 2022 phase 1) with a central SAC agent trained for 50k steps over five random seeds, and compare against a rule-based controller (RBC), a manually engineered reward (E2), an energy-only reward (E3), and a naive temperature-deviation comfort reward (E4). District-level key performance indicators (KPIs), reported as ratios versus RBC, show that PIRS attains cost, carbon, and electricity metrics on par with the manual baseline while substantially outperforming non-physics-grounded designs -- particularly on load ramping (1.78x vs. ~2.4x RBC) and daily peak demand. All DRL policies remain above RBC at this training budget; we interpret this gap honestly and position PIRS as an interpretable, standards-aligned foundation for reward design rather than a claim of dominance over classical control at limited compute.",
+        "authors": "Shadmehr Zaregarizi, Khashayar Yavari",
+        "url": "http://arxiv.org/abs/2605.28232v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28232v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文将**人口统计学平等惩罚下的回归问题公式化为最优传输问题**，统一了“知情”和“不知情”设置，并通过**最优传输映射**刻画了最优预测函数。它对公平性与最优传输的几何分析提供了统一的理论框架，与上一篇论文共同构成了公平性研究中基于最优传输的强大理论体系。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28109v1",
+        "title": "Long Live The Balance: Information Bottleneck Driven Tree-based Policy Optimization",
+        "summary": "Recent advances in online reinforcement learning (RL) for large language models (LLMs) have demonstrated promising performance in complex reasoning tasks. However, they often exhibit an imbalanced exploration-exploitation trade-off, resulting in unstable optimization and sub-optimal performance. We introduce IB-Score, a novel metric grounded in Information Bottleneck theory that evaluates policy's exploration-exploitation balance by quantifying the trade-off between step-level reasoning diversity and mutual information shared with the correct answer. Analysis based on IB-Score shows that popular online RL approaches (e.g., GRPO) with common regularizers fail to consistently maintain balance during training with suboptimal results. To address this, we propose Information Bottleneck-driven Tree-based Policy Optimization (IB-TPO), a principled framework that formulates IB-Score as a fine-grained optimization objective and utilizes a novel IB-guided tree sampling strategy that not only improves the efficiency of online sampling with 50% more trajectories under the same token budget, but also reuses the tree structure for effective IB-Score Monte Carlo estimation. Extensive experiments across standard benchmarks show that our method significantly outperforms GRPO baseline by 2.9% to 3.6% and also outperforms other state-of-the-art online RL approaches. Our code is available at https://github.com/alibaba/EfficientRL.",
+        "authors": "Hao Jiang, Shurui Li, Tianpeng Bu, Bowen Xu, Xin Liu, Qihua Chen, Hongtao Duan, Lulu Hu, Bin Yang, Minying Zhang",
+        "url": "http://arxiv.org/abs/2605.28109v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28109v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了基于**信息瓶颈理论**的IB-Score指标和IB-TPO框架，用于优化LLM在线强化学习中的探索-利用平衡。**信息论的严谨应用**为RL的优化提供了新的理论视角和优化收敛性方面的潜在指导，对LLM的RL研究具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28066v1",
+        "title": "PromptEmbedder:: Efficient and Transferable Text Embedding via Dual-LLM Soft Prompting",
+        "summary": "Large Language Models (LLMs) have demonstrated remarkable efficacy in text embedding, yet current adaptation methods like LoRA face significant bottlenecks in computational efficiency and cross-architecture transferability. Whenever a new backbone emerges, existing approaches require costly retraining from scratch. To address this, we propose PromptEmbedder, a novel dual-LLM framework that decouples embedding knowledge from specific backbone weights. PromptEmbedder utilizes a Prompting LLM to generate instruction-aware soft prompts for a frozen Embedding LLM via a differentiable generation process with continuous relaxation, ensuring full gradient flow during contrastive training. By localizing task-specific knowledge within the Prompting LLM, adapting to new architectures requires only retraining a lightweight linear alignment matrix. Evaluations on the MTEB benchmark show that PromptEmbedder achieves comparable performance with LoRA finetuning while reducing GPU memory by 40% and accelerating training by 3.7x. Our approach establishes a scalable, architecture-agnostic paradigm for efficient LLM-based representation learning.",
+        "authors": "Yu-Che Tsai, Kuan-Yu Chen, Yuan-Hao Chen, Yu-Han Chang, Ching-Yu Tsai, Yu-Hsiang Chuang, Shou-De Lin",
+        "url": "http://arxiv.org/abs/2605.28066v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28066v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了**分解扩散模型中总偏差**的方法，并将**强人口统计学平等扩展到指导尺度**，推导了目标分布在不同指导尺度下保持群组比率的条件。对生成模型中的公平性问题提供了深刻的理论分析和解决方案，是现代AI系统（扩散模型）公平性研究的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.27967v1",
+        "title": "Multi-Teacher Knowledge Distillation via Teacher-Informed Mixture Priors",
+        "summary": "Knowledge distillation is a powerful method for model compression, enabling the efficient deployment of complex deep learning models (teachers), including large language models. However, its underlying statistical mechanisms remain unclear, and uncertainty evaluation is often overlooked, especially in real-world scenarios requiring diverse teacher expertise. To address these challenges, we introduce \\textit{Multi-Teacher Bayesian Knowledge Distillation} (MT-BKD), where a distilled student model learns from multiple teachers within the Bayesian framework. Our approach leverages Bayesian inference to capture inherent uncertainty in the distillation process. We introduce a teacher-informed prior, integrating external knowledge from teacher models and task-specific training data, offering better generalization, robustness, and scalability. Additionally, an entropy-based weighting mechanism adaptively adjusts each teacher's influence, allowing the student to combine multiple sources of expertise effectively. MT-BKD enhances the interpretability of the student model's learning process, improves predictive accuracy, and provides uncertainty quantification. We validate MT-BKD on both synthetic and real-world tasks, including protein subcellular location prediction and image classification. Our experiments show improved performance and robust uncertainty quantification, highlighting the strengths of our MT-BKD framework.",
+        "authors": "Luyang Fang, Yongkai Chen, Jiazhang Cai, Ping Ma, Wenxuan Zhong",
+        "url": "http://arxiv.org/abs/2605.27967v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.27967v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "该论文提出了MT-BKD框架，在**贝叶斯框架**下通过**教师信息混合先验**和**基于熵的加权机制**进行多教师知识蒸馏，实现了**固有的不确定性量化**。贝叶斯统计和信息论的结合，提供了严谨的蒸馏方法，对模型压缩和不确定性量化都有重要贡献。"
+    }
+]

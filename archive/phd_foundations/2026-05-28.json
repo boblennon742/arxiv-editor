@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.30266v1",
+        "title": "Wasserstein Least Squares: A Canonical Regression Method for Probability Distributions",
+        "summary": "We perform a mathematical and statistical analysis of the Wasserstein least squares problem, a regression method for vector-valued covariates and distribution-valued responses. Our proposal contrasts with other distributional regression methods by having a direct interpretation in terms of random variables, as a nonparametric analogue of the classic random-effects model. On the mathematical side, we use a strategy of Lavenant (2024) to show that Wasserstein least squares is the canonical extension of Euclidean least squares to the space of probability distributions from the perspective of convex analysis; this viewpoint gives rise to multimarginal and dual formulations of the Wasserstein least squares problem, extending a similar theory for Wasserstein barycenters. We perform a statistical analysis of the Wasserstein least squares problem under the template deformation model, showing, surprisingly, that estimation is possible at the n^{-1/2} rate. As a special case, we obtain improved rates of estimation for Wasserstein barycenters, which are an exponential improvement over those established by Ahidar-Coutrix, Le Gouic and Paris (2020). Finally, we propose a heuristic particle method for Wasserstein least squares and use it to conduct a novel analysis of large-scale demographic data from the RAND Health and Retirement Study.",
+        "authors": "Uriel Martínez León, Jonathan Niles-Weed",
+        "url": "http://arxiv.org/abs/2605.30266v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.30266v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对Wasserstein最小二乘问题进行了深入的数学和统计分析，将其视为欧几里得最小二乘在概率分布空间中的规范扩展。它提供了基于凸分析的多边际和对偶公式，并在模板变形模型下证明了 n^{-1/2} 的估计速率，甚至改进了Wasserstein barycenter的估计速率。这完美符合我对强大理论基础、清晰数学推导和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.30190v1",
+        "title": "Mean-Field Diffuser: Scaling Offline MARL to Thousands of Agents",
+        "summary": "Diffusion-based planning has achieved strong results in single-agent offline reinforcement learning, yet scaling to many-agent systems remains intractable due to the curse of dimensionality in the joint trajectory space. We introduce MF-Diffuser, a framework that lifts trajectory planning to the Wasserstein space of trajectory distributions, where the propagation of chaos ensures a small representative subset of agents captures the full population dynamics. Our approach features a value-weighted chaotic entropy objective that reconciles generative fidelity with return maximization, and a hierarchical coarse-to-fine strategy that progressively grows the agent population during denoising. We establish end-to-end suboptimality bounds with four interpretable terms, revealing that mean-field approximation error scales as $O(H^2/\\sqrt{N})$ while offline distribution shift provably does not grow with population size $N$, and prove the generated policy is an approximate mean-field Nash equilibrium with explicit convergence guarantees. Experiments on three mean-field RL benchmarks -- spanning stage games, sequential dynamics, and adversarial team competition -- show MF-Diffuser achieves the best return in the majority of settings, with the largest gains on suboptimal offline data and at extreme scales ($N \\geq 10^3$).",
+        "authors": "Wenhao Li, Xiangfeng Wang, Bo Jin",
+        "url": "http://arxiv.org/abs/2605.30190v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.30190v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了MF-Diffuser框架，将轨迹规划提升到Wasserstein轨迹分布空间，并利用混沌传播理论。它建立了端到端的次优性界限，并证明了生成策略是具有显式收敛保证的近似平均场纳什均衡。这体现了严谨的数学逻辑（Wasserstein空间、混沌传播、纳什均衡）和明确的理论保证，同时解决了现代AI系统（大规模MARL）中的实际挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29961v1",
+        "title": "Modifying causal models to distinguish between transient and lasting causal effects",
+        "summary": "This paper considers how to classify the effects of interventions in causal models for outcomes and exposures observed over time. First, we demonstrate the limitations of the most common uses of potential outcomes and causal directed acyclic graphs for capturing all possible interventions in a time varying framework, particularly in problems where the key question concerns interventions to maintain or change equilibrium behaviour. Second, we adopt a system and state based approach rather than a measurement-based approach to identify the causal parameters. In particular, we discuss how assumptions about the system's equilibrium and the effects of interventions on that equilibrium can allow for more specific causal interpretations and clarify the goals of design and analysis. Third, we show how the ability to identify the the causal parameters of a time varying system depends on the selection of timepoints for measuring the system's states. We address this by proposing a novel version of the null effect, which is designed to distinguish between transient and lasting causal effects.",
+        "authors": "Russell Steele, Naftali Weinberger, Tess Baker, Ian Shrier",
+        "url": "http://arxiv.org/abs/2605.29961v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29961v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入探讨了时间序列因果模型中干预效果的分类问题，指出了传统潜在结果和因果DAG在捕捉时间变化干预方面的局限性。它提出了一种新颖的零效应概念，旨在区分瞬时和持久因果效应，并采用基于系统和状态的方法识别因果参数。这直接满足了我对因果逻辑和理论严谨性的核心偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29892v1",
+        "title": "Mean Field Competition of Optimal Switching: The Vanishing Entropy Regularization Approach",
+        "summary": "This paper studies a type of rank-based mean field game in which competing agents strategically switch among multiple effort regimes. We propose an entropy regularized auxiliary problem where the switching decisions are randomized to the control of transition probability for a continuous-time finite-state Markov chain. We first establish the existence of regularized equilibrium in this auxiliary problem. Assuming the convexity of reward scheme, we then prove that the equilibrium is unique and can be approximated by a fictitious play iteration scheme. Furthermore, as the entropy regularization vanishes, we establish the convergence analysis of the regularized equilibrium towards the relaxed equilibrium in the original MFG of optimal switching. The uniqueness of the population ranking distribution under the relaxed equilibrium is also obtained given a strictly convex reward scheme.",
+        "authors": "Zongxia Liang, Shu Wang, Xiang Yu",
+        "url": "http://arxiv.org/abs/2605.29892v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29892v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过信息瓶颈原理重新审视了任意模态对齐问题，提出了OVA-IB框架。它优化了一个可处理的One-vs-All对比下界，并推导了一个可处理的最小性上界正则化项。这项工作在信息论框架下提供了多模态对齐的原则性准则和严谨的数学推导，非常符合我的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29642v1",
+        "title": "Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation under Heterogeneous Bandwidth Budgets",
+        "summary": "In federated language modeling, $K$ nodes each hold $n$ samples but cannot pool data or exchange full-precision gradients or weights. We study the minimax rate at which a conditional distribution over $V$ tokens can be estimated when each node may upload at most $B$ bits per query in a public probe set. In federated probe-logit distillation (FPLD), each node transmits a scalar-quantized logit vector on the probe set, and an aggregator distills a global parametric student. Prior work (Dubey and Huo, 2026) establishes a high-probability KL rate $O(d/(Kn) + ρ\\sqrt{V \\log V / m} + K^{-1} \\cdot 2^{-2B/V})$ plus optimization slack, with the bandwidth term in its trace-sharpened form. Whether this bandwidth-term rate is tight, and how the upper bound generalizes to heterogeneous per-node bandwidths, are left open.   We close both gaps. First, the dithered FPLD construction has a matching single-round lower bound $Ω(K^{-1} \\cdot 2^{-2B/V})$ under non-degeneracy, pinning the bandwidth-axis rate at $Θ(K^{-1} \\cdot 2^{-2B/V})$. $T$-round sequential refinement with nested/scaled residual quantizers achieves $O(K^{-1} \\cdot 2^{-2TB/V})$; vanilla FPLD's $T$-independent bandwidth term is suboptimal for every $T > 1$. Second, we establish a heterogeneous-bandwidth upper bound for per-node budgets $B_i$, paired with a closed-form optimal allocation $B_i^* = B_{\\mathrm{tot}}/K + (V/2) \\log_2(w_i / \\bar{w}_g)$, a log-tilted water-filling rule that is the per-node analogue of reverse water-filling for distortion-rate optimization. A plug-in adaptive variant estimates the weights from a short warm-up phase and attains $1 + O(\\sqrt{\\log(K/δ)/(m T_0)})$ relative suboptimality. Synthetic n-gram simulations confirm that empirical KL is bracketed by the upper and lower bounds and that the optimal allocation strictly dominates uniform and inverse-weighted baselines under heterogeneous clipping.",
+        "authors": "Prasanjit Dubey, Xiaoming Huo",
+        "url": "http://arxiv.org/abs/2605.29642v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29642v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了联邦学习中异构带宽预算下的探针-Logit蒸馏的minimax速率和最优分配问题。它提供了匹配的单轮下界、异构带宽上界以及闭式最优分配方案，并建立了相对次优性保证。这篇论文在联邦学习这一现代AI领域提供了非常严谨的统计保证和优化收敛性分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29547v1",
+        "title": "Singularity-aware Optimization via Randomized Geometric Probing: Towards Stable Non-smooth Optimization",
+        "summary": "Deep learning optimization relies heavily on the assumption of smooth loss landscapes, a condition systematically violated by modern architectures due to non-smooth components such as ReLU activations and quantization operators. In such non-smooth regimes, adaptive optimizers such as Adam suffer from gradient chattering, violent oscillations caused by conflicting signals within the Clarke subdifferential, leading to poor convergence and suboptimal generalization. To address this, we introduce Singularity-aware Adam (S-Adam), a novel optimizer that stabilizes training by dynamically modulating step sizes based on local geometric instability. Our key contribution is the Local Geometric Instability (LGI) metric, a computationally efficient estimator of the Clarke subdifferential diameter derived from the variance of randomized directional derivatives. S-Adam incorporates an adaptive damping mechanism exp(-$λ$$ρ$) that decelerates updates in high-instability regions while preserving fast convergence in smooth basins. We provide a rigorous convergence analysis using differential inclusions, proving that S-Adam converges almost surely to ($δ$,$ε$)-Clarke stationary points at the optimal O(1/$\\sqrt(T)$) rate. Empirical evaluations on Quantization-Aware Training (QAT) and high-noise small-batch learning demonstrate that S-Adam consistently outperforms AdamW and Prox-SGD, achieving accuracy gains of up to 6 percent on CIFAR-100 and 3 percent on TinyImageNet while effectively mitigating gradient oscillations.",
+        "authors": "Ruoran Xu, Borong She, Xiaobo Jin, Qiufeng Wang",
+        "url": "http://arxiv.org/abs/2605.29547v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29547v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了S-Adam优化器，通过局部几何不稳定性动态调整步长，并引入了LGI度量（Clarke次微分直径的估计器）。它提供了使用微分包含的严谨收敛性分析，证明了S-Adam以最优的 O(1/√T) 速率收敛到Clarke平稳点。这篇论文在优化理论方面具有极高的严谨性，解决了非光滑优化中的关键问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29500v1",
+        "title": "Quotient DAGs for Off-Policy Evaluation:Forward-Flow Importance Sampling and Exact Slate Propensities",
+        "summary": "Off-policy evaluation estimates how a target policy would perform using data collected by a different behavior policy, which is crucial when online testing is costly or risky, such as in recommendation or healthcare. Standard importance sampling reweights each logged trajectory, but it can treat details of the generation process as meaningful even when the evaluation target ignores them: for example, an autoregressive slate recommender may generate an ordered sequence of items while the reward and downstream estimator depend only on the unordered slate. This creates nuisance variance and a computational gap, since exact unordered slate propensities require summing over all generation orders. We introduce a quotient-DAG view that merges histories equivalent for evaluation and assigns weights using target-to-behavior forward-flow ratios on the merged graph. For slate recommendation under a set-sufficient next-item interface, this yields Forward-DP, a subset-DAG dynamic program that computes exact unordered propensities without factorial enumeration. The resulting propensity primitive enables practical propensity-based evaluation and model selection for context-dependent autoregressive slate loggers.",
+        "authors": "Ziwen Xie, Shaowen Xiang, Hongyu He, Dianbo Liu",
+        "url": "http://arxiv.org/abs/2605.29500v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29500v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了商DAG视图，用于离策略评估，并提出了Forward-DP动态规划算法，无需阶乘枚举即可计算精确的无序slate倾向性。这在因果推断和统计方法论方面具有极高的严谨性，解决了在线测试成本高昂场景下的关键问题，提供了精确的理论解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29444v1",
+        "title": "Explaining Rankings with Hidden Group Bonuses",
+        "summary": "Determining a linear utility function that correlates with observed candidate rankings is a foundational problem with applications in domains such as admissions, hiring, and recommendation systems, e.g., [Storandt and Funke, AAAI'19, Zhang et al., KDD'23, Wang et al., ICDE'24 (best paper award), Chen and Wong, VLDB'24]. Traditionally, these models assume full visibility into the feature sets used to determine the utility score. However, real-world scenarios often involve sensitive attributes that are hidden or partially observed, yet may influence outcomes through additive bonuses designed to promote fairness, as in [Gale and Marian, ICDE'24]. Motivated by such practical concerns, we study a variant of the ranking explanation problem where sensitive features are unobserved but may influence candidate rankings through group-specific linear boosts.   We present a formal framework for modeling this problem and develop an algorithmic solution that leverages constraint satisfaction and automated reasoning techniques to jointly infer the linear scoring parameters and latent group bonuses consistent with the observed rankings. We further show that determining a satisfying linear function with group-specific bonuses is \\textsf{NP}-hard in general, but when the feature dimension and the number of groups are constant, the problem admits a polynomial-time solution. Our approach is the first to address this nuanced variant, which captures key real-world challenges in fair ranking and admission systems. We perform extensive experiments on both real-world and synthetic datasets, demonstrating that our method effectively recovers hidden bonus structures and provides faithful explanations of observed ranking outcomes.",
+        "authors": "Alvin Hong Yao Yan, Suraj Shetiya, Sujoy Bhore, Priyanka Golia, Diptarka Chakraborty",
+        "url": "http://arxiv.org/abs/2605.29444v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29444v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个正式的框架来解释具有隐藏组奖励的排名，并开发了一种利用约束满足和自动化推理的算法解决方案。它证明了在一般情况下确定满足条件的线性函数是NP-hard，但在特定条件下存在多项式时间解决方案。这篇论文在理论计算机科学和算法设计方面具有严谨的数学分析和复杂度证明。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29395v1",
+        "title": "Low Rank for Rank: Uncertainty-Aware Task-Specific LLM Ranking under Sparse Pairwise Comparisons",
+        "summary": "Pairwise human-preference platforms such as Chatbot Arena have become central to large language model (LLM) evaluation, yet reliable task-specific ranking remains challenging. Global leaderboards mask task heterogeneity, while ranking each fine-grained task independently is unstable under sparse, imbalanced comparisons. We propose a low-rank framework for task-specific LLM ranking from sparse pairwise comparisons, modeling the task-by-model ability matrix $Θ^\\star \\in \\mathbb{R}^{d_t \\times d_m}$ as low rank so that information is shared across related tasks while task-specific differences are preserved. We first develop a max-norm ($\\ell_\\infty$) accurate estimator for the latent scores, combining a convex initializer with alternating-minimization refinement, and prove task-wise top-$K$ recovery guarantees under sparse sampling. Our main contribution is an uncertainty quantification framework for task-specific ranking. We construct cross-fitted one-step debiased estimators for fixed score contrasts -- such as the task-specific ability gap between two models -- yielding asymptotically valid confidence intervals that attain the semiparametric efficiency bound. We then extend the inference to the high-dimensional ranking regime, where per-task ranks and top-$K$ membership are determined by many dependent score-gap hypotheses. Using Gaussian and multiplier-bootstrap calibration, we obtain simultaneous confidence sets for per-task ranks and valid top-$K$ membership tests across many tasks and models. Experiments on synthetic data and Chatbot Arena show that low-rank sharing improves sample efficiency over independent task-wise Bradley-Terry estimation and produces tighter, better-calibrated ranking certificates, with the largest gains in the sparse regime typical of real LLM benchmarks.",
+        "authors": "Jiachun Li, David Simchi-Levi, Will Wei Sun",
+        "url": "http://arxiv.org/abs/2605.29395v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29395v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个低秩框架，用于从稀疏成对比较中进行LLM任务特定排名，并建立了不确定性量化框架。它构建了渐近有效的置信区间，达到了半参数效率界限，并提供了多任务和多模型的同步置信集。这篇论文在统计推断和不确定性量化方面具有极高的严谨性，为LLM评估提供了坚实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29380v1",
+        "title": "TRACER: Persistent Regularization for Robust Multimodal Finetuning",
+        "summary": "Mainstream strategies for finetuning pretrained multimodal models often degrade out-of-distribution (OOD) robustness, a phenomenon known as catastrophic forgetting. In this paper, we develop a theoretical framework for multimodal contrastive finetuning, yielding closed-form solutions and a geometric decomposition for each strategy. This framework shows that self-distillation is more effective than other regularization approaches to retain the knowledge of the pretrained model. Our analysis reveals a largely overlooked limitation: standard Exponential Moving Average (EMA) teachers, widely used in robust finetuning, suffer from collapse. To solve this, we prove that a Weighted Moving Average (WMA) teacher maintains a persistent regularizing force over finite horizons and yields bias-free convergence in the task subspace while preserving orthogonal knowledge. These insights motivate **TRACER** (**T**rajectory-**R**obust **A**nchoring for **C**ontrastive **E**ncoder **R**egularization), which combines contrastive learning with WMA-guided multi-perspective distillation. Extensive experiments on CLIP finetuning demonstrate consistent OOD accuracy and calibration gains across three backbone architectures, and comprehensive ablations confirm that TRACER is both principled and robust to hyperparameter choices. Code is available at [https://github.com/HesamAsad/TRACER](https://github.com/HesamAsad/TRACER).",
+        "authors": "Hesam Asadollahzadeh, Feng Liu, Christopher Leckie, Sarah M. Erfani",
+        "url": "http://arxiv.org/abs/2605.29380v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29380v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为多模态对比微调开发了一个理论框架，提供了闭式解和几何分解。它证明了加权移动平均（WMA）教师在有限范围内保持持久的正则化力，并在任务子空间中实现无偏收敛。这篇论文在理论上非常严谨，提供了深厚的数学分析和证明，对于理解和改进多模态模型的鲁棒性至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29351v1",
+        "title": "Attention as In-Context Empirical Bayes: A Two-Stage View via Particle Dynamics",
+        "summary": "We study minimal attention-only transformers under all-token corruption and show they admit a two-stage empirical Bayes interpretation. A single attention step computes a kernel-weighted posterior mean with respect to the empirical distribution defined by the context. Depth refines this distribution through particle dynamics (Stage 1), while a long-range skip-connection carries the noisy input as a query for posterior inference (Stage 2), revealing distinct statistical roles for depth and attention residuals. The framework isolates a minimal setting in which the context itself induces a depth-dependent energy landscape governing in-context inference. We show that effective denoising can emerge without an explicit noise schedule: a fixed kernel bandwidth and finite integration horizon suffice, yielding a principled depth-noise relationship. We further establish a posterior-mean recovery guarantee for a class of well-behaved priors, where the empirical estimator converges to the Bayes-optimal predictor under asymptotic conditions. Connecting these dynamics to reverse-diffusion limits, our results provide a statistical interpretation of attention as in-context inference via sample-based posterior estimation, without explicit density modeling.",
+        "authors": "Matthew Smart, Soumya Ganguly, Nilava Metya, Alexandre V. Morozov, Anirvan M. Sengupta",
+        "url": "http://arxiv.org/abs/2605.29351v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29351v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将纯注意力Transformer解释为通过粒子动力学的两阶段经验贝叶斯过程。它证明了单个注意力步骤计算一个核加权后验均值，并建立了在渐近条件下经验估计器收敛到贝叶斯最优预测器的后验均值恢复保证。这为Transformer中的注意力机制提供了深刻的统计学解释和严谨的理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29348v1",
+        "title": "Efficient Inference for Incremental Causal Effects of Time to Treatment",
+        "summary": "We consider time to treatment initiation. This can commonly occur in preventive medicine, such as disease screening and vaccination; it can also occur with non-fatal health conditions such as HIV infection without the onset of AIDS. While traditional causal inference focused on `when to treat' and its effects, we consider the incremental causal effect when the intensity of time to treatment initiation is intervened upon. We derive the efficient influence function for this estimand and develop an estimation framework that accommodates flexible machine learning methods while achieving fast convergence rates. Valid confidence bands are obtained leveraging empirical process theory. We illustrate our approach via simulation, and apply it to cervical cancer screening data to study the incremental effect of time to subsequent HPV testing on cervical intraepithelial neoplasia detection.",
+        "authors": "Zhichen Zhao, Andrew Ying, Ronghui Xu",
+        "url": "http://arxiv.org/abs/2605.29348v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29348v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文推导了治疗时间增量因果效应的有效影响函数，并开发了一个能够适应灵活机器学习方法同时实现快速收敛速率的估计框架。它利用经验过程理论获得了有效的置信区间。这篇论文在因果推断和统计理论方面具有极高的严谨性，提供了明确的理论保证和高效的推断方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29284v1",
+        "title": "Rapid Approximation Prediction for Kriging",
+        "summary": "Exact Kriging and conditional simulation (CS) for uncertainty quantification are computationally infeasible for modern spatial analyses with large numbers of observations and dense prediction grids. We present a rapid approximation to the Kriging prediction step for stationary Gaussian processes for a regular prediction grid by approximating each off-grid covariance vector by a sparse linear combination of on-grid covariances within a local $L$-order neighborhood of $M = (2L)^2$ neighboring grid points. This reformulation reduces complexity from $O(N n^3)$ to $O(N \\log N + nM + M^3)$ while preserving accuracy. A factorial study shows that approximation error decreases systematically with increased Matérn smoothness, neighbor order $L$, and grid resolution, aligning with bounds from kernel approximation theory. In a North American summer-rainfall application ($n=1368$), our method produces predictions visually indistinguishable from exact Kriging with point-wise errors on the order of $10^{-5}$ inches and achieves more than $150$ times speedups at a $350\\times350$ grid, also outperforming Vecchia and LatticeKrig predictions. Embedded in a fast CS scheme, the approach reproduces Kriging standard errors and scales favorably with both $n$ and $N$. We recommend a practical workflow that uses a fast method for parameter estimation followed by our rapid predictor for fine-grid mapping and uncertainty quantification.",
+        "authors": "Ziyu Li, Gregory Fasshauer, Douglas Nychka",
+        "url": "http://arxiv.org/abs/2605.29284v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29284v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种对Kriging预测的快速近似方法，通过稀疏线性组合近似协方差向量，将计算复杂度从 O(N n^3) 降低到 O(N log N + nM + M^3)，同时保持精度。其分析与核近似理论的界限一致。这篇论文在计算统计学方面提供了严谨的复杂性分析和理论依据，解决了大规模空间分析的计算瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29255v1",
+        "title": "Outcome-Calibrated Regression and Predicted Outcome-Based Inference",
+        "summary": "Regression is a fundamental tool in scientific research. Ordinary least squares (OLS), one of the most widely used regression methods, enjoys several desirable properties, including the best linear unbiased estimator (BLUE) property. It is well known that, under the assumptions of the standard model, the OLS is conditionally unbiased given the covariates, i.e., $\\mathbb{E}(\\widehat Y-Y\\mid X=x)=0$. However, an often-overlooked property of OLS is that the prediction error is generally not unbiased conditional on the outcome, i.e., $\\mathbb{E}(\\widehat Y-Y\\mid Y=y)\\neq 0$. As a consequence of minimizing mean squared error, OLS predictions are systematically shrunk toward the outcome mean, which explains the classical phenomenon of regression to the mean (RTM): large outcome values tend to be underpredicted, whereas small outcome values tend to be overpredicted. This conditional prediction bias creates a nonignorable problem for predicted outcome-based inference, where scientific inference is performed using the predicted outcome $\\widehat Y$ and another variable $W$. In applications such as brain-age analysis and causal inference, we show that inference based on regression-predicted outcomes can be systematically biased. To address this issue, we propose outcome-calibrated regression (OCR), a new regression framework with a closed-form solution that directly enforces outcome calibration. The proposed OCR estimator eliminates conditional prediction bias with respect to the outcome and enables valid inference using regression-predicted outcomes.",
+        "authors": "Hwiyoung Lee, Shuo Chen",
+        "url": "http://arxiv.org/abs/2605.29255v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29255v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了结果校准回归（OCR），一个具有闭式解的新回归框架，直接强制执行结果校准，消除了条件预测偏差，并实现了基于预测结果的有效推断。它解决了经典回归到均值现象导致的预测偏差问题。这篇论文在回归理论和统计推断方面具有极高的严谨性，提供了根本性的改进和理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.30085v1",
+        "title": "Conformal Certification of Reasoning Trace Prefixes",
+        "summary": "Language model reasoning traces are rarely all-or-nothing; they frequently contain valid intermediate steps before a critical error occurs. Existing uncertainty quantification methods typically certify final answers or entire responses, failing to provide statistical guarantees for the proportion of a sequential trace that can be safely retained. To address this, we introduce CROP (Conformal Reasoning Output Prefixes), a verifier-agnostic calibration procedure for clean-prefix certification. Given any step-level risk proxy, CROP selects a calibrated threshold and returns the longest contiguous prefix whose step risk proxies remain below it, routing the uncertified suffix for downstream review or repair. Assuming exchangeability, CROP rigorously controls the marginal probability that the returned prefix contains an annotated error. Across six process-labeled reasoning datasets, we demonstrate that standard step-level metrics such as AUROC do not fully capture prefix utility, suggesting verifiers should instead be evaluated by certified prefix length. Furthermore, CROP balances over- and under-withholding, improving downstream repair accuracy by preserving valid intermediate reasoning while discarding misleading suffixes. Ultimately, this work positions prefix certification as a rigorous, practical bridge between process supervision, abstention, and repair.",
+        "authors": "Matt Y. Cheung, Ashok Veeraraghavan, Hanjie Chen, Guha Balakrishnan",
+        "url": "http://arxiv.org/abs/2605.30085v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.30085v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了CROP框架，一个与验证器无关的校准程序，用于LLM推理轨迹的干净前缀认证。它严格控制了返回前缀包含注释错误的边际概率，提供了基于共形预测的严谨统计保证，直接应用于现代AI系统（LLM），解决了其可靠性问题。"
+    }
+]

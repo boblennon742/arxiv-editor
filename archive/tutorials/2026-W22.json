@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2605.29713v1",
+        "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+        "summary": "This book provides a compact, derivation-oriented introduction to the mathematical foundations of modern generative artificial intelligence. Rather than surveying every recent architecture or implementation detail, it develops a coherent route through the ideas connecting major families of generative models, from PCA, probabilistic PCA, variational autoencoders, and diffusion models to normalising flows, autoregressive factorisations, GANs, Wasserstein GANs, and energy-based models. The aim is to make the structure of generative modelling more accessible without removing the mathematical substance needed to understand how these models are derived and related. The book is intended as a foundation-building primer for mathematically curious researchers, practitioners, and students.",
+        "authors": "Tianhua Chen",
+        "url": "http://arxiv.org/abs/2605.29713v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29713v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "一本紧凑且推导导向的生成式AI数学基础入门书，涵盖PCA、VAE、Diffusion、GANs等核心模型。",
+        "reason_zh": "这篇教程完美契合您对“LLM 理论机制”和“博士数学拼图”的数学基础需求。它以推导为核心，系统性地阐述了现代生成式AI模型的数学原理，具有极高的数学严谨性和清晰度，是理解这些模型深层机制的绝佳硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28076v1",
+        "title": "The conditional-mean barrier: From deterministic regression to conditional distribution learning",
+        "summary": "Many problems in computational science and engineering become one-to-many after coarse graining, partial observation, or inverse reconstruction: a resolved state may not determine a unique subgrid forcing, a structural descriptor may not determine a unique effective response, and a low-resolution observation may correspond to many plausible high-resolution fields. In such settings, deterministic surrogates may learn a well-defined mathematical object while still missing application-relevant uncertainty. This tutorial develops a self-contained module centered on the conditional-mean barrier: the point at which a squared-loss predictor has reached the conditional mean and the remaining error is irreducible aleatoric variance. We give two diagnostics for locating this barrier, residual-feature orthogonality and the coefficient of determination against its explained-variance ceiling, and prove that adding latent randomness to a squared-loss predictor collapses it back to the conditional mean. Crossing the barrier therefore requires a loss that scores distributions rather than point predictions. We briefly organize common distributional objectives, including negative log-likelihood, moment and observable matching, variational objectives, adversarial divergences, and score matching, by the feature of the conditional law each targets. The emphasis is the boundary itself and a finite-data procedure for recognizing it, rather than a survey of methods beyond it. CPU-based demonstrations on a two-branch law and a two-scale Lorenz-96 closure problem show how the diagnostics distinguish deterministic underfitting from residual distributional variability.",
+        "authors": "Junfeng Chen",
+        "url": "http://arxiv.org/abs/2605.28076v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28076v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "深入探讨了条件均值障碍，区分了确定性回归与条件分布学习的本质差异，并提供了诊断方法和损失函数选择的理论指导。",
+        "reason_zh": "这篇教程从统计学习理论的核心概念出发，深入剖析了回归的根本限制以及如何进行条件分布学习，具有极高的理论深度和严谨性。它能帮助您在“高等概率论”和统计学习理论方面补全关键的数学拼图，理解现代概率模型和不确定性量化的基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29273v1",
+        "title": "A Theoretical and Experimental Study of a Novel Adaptive Learning Algorithm",
+        "summary": "A crucial component of machine learning algorithms is minimizing loss functions with less computational cost and less oscillations. While adaptive learning rate-based optimizers have been widely used for real-world tasks, they do not guarantee convergence, which is why AMSGrad was later introduced to investigate the non-convergence behaviour of Adam. In this paper, popular adaptive optimization methods like Adam and AMSGrad are critically reviewed with an emphasis on their fundamental design concepts. To address limitations of the above mentioned optimizers, a new optimizer variant, C-Adam, is proposed based on the line of sight approach. A theoretical proof for convergence is also provided and the optimizer is validated through a number of real-life based numerical experiments.",
+        "authors": "Sakshi Kumari, Shyam Kumar M, Sushmitha P",
+        "url": "http://arxiv.org/abs/2605.29273v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29273v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "批判性回顾了Adam和AMSGrad等自适应优化器，并提出了一种新的变体C-Adam，提供了收敛性理论证明。",
+        "reason_zh": "优化算法是“凸优化”的核心内容，而收敛性证明则需要“高等概率论”的知识。这篇论文不仅对经典优化器进行了深入分析，还提出了新算法并提供了严谨的理论证明，是理解优化理论基础和算法行为的硬核资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.24982v1",
+        "title": "A Guided Tour of Modern Domain Decomposition: From Schwarz Iterations to Robust Preconditioners and HPC Implementations",
+        "summary": "Domain decomposition methods (DDMs) provide a unifying framework for the scalable numerical solution of partial differential equations. Originating from Schwarz's alternating method, they have evolved into a rich family of algorithms that combine local robustness with global convergence acceleration and natural parallelism. Over the past decades, domain decomposition has played a central role in enabling large-scale simulations in numerous applications. This chapter presents an overview of modern DDMs, with a particular emphasis on scalable preconditioning techniques for challenging problems, including indefinite and high-frequency regimes. We revisit the fundamental concepts - overlapping decompositions, partition of unity, additive and restricted Schwarz formulations - and explain their algebraic interpretations. We then clarify their role as preconditioners in Krylov subspace solvers and discuss the necessity of coarse space corrections for scalability. Beyond a the survey aspect, the chapter distills key theoretical insights and practical design principles that have emerged over the past twenty years. Special attention is given to robust coarse spaces (GenEO, DtN-based approaches) and high-performance implementations. The goal is to provide both a coherent overview of the field and a concise, practice-oriented guide for readers seeking to understand and apply domain decomposition methods without navigating the entire literature.",
+        "authors": "Victorita Dolean, Pierre Jolivet, Frédéric Nataf, Pierre-Henri Tournier",
+        "url": "http://arxiv.org/abs/2605.24982v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.24982v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "一篇关于现代域分解方法的全面综述，涵盖Schwarz迭代、鲁棒预处理和HPC实现，强调其在偏微分方程数值解中的应用。",
+        "reason_zh": "这篇“Guided Tour”性质的综述直接关联到“矩阵分析”和数值线性代数在偏微分方程求解中的高级应用。它提供了严谨的理论基础和实践设计原则，能帮助您系统性地理解这一复杂领域的数学原理和方法，是补全博士数学拼图的良好补充。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.26577v1",
+        "title": "Bridging Control with Neural Network Verifier alpha-beta-CROWN: A Tutorial",
+        "summary": "Learning-based methods for synthesizing controllers have gained popularity due to their high expressiveness and strong empirical performance. However, in safety-critical scenarios such as autonomous driving, robotics, and power systems, empirical performance alone is insufficient, and formal verification of controller properties such as stability and safety is highly desirable. Unfortunately, many prior verification approaches are either tied to specific structural assumptions on the system or the certificate, making them difficult to transfer across settings, or suffer from poor scalability on higher-dimensional neural network systems. In this tutorial, we present a unified framework that aims to mitigate this gap via bridging control with the state-of-the-art neural network verifier $α,\\!β$-CROWN (alpha-beta-CROWN). At its core, $α,\\!β$-CROWN is a general-purpose bounding engine for nonlinear functions represented as computation graphs: given an input domain, it can produce certified bounds and explicit linear relaxation of the nonlinear function. These certified bounds are useful on their own for tasks such as reachability analysis, and they also provide the foundation for more complex routines that perform satisfiability checking and optimization. More specifically, many control problems reduce to verifying real-valued inequalities over a state domain (e.g., Lyapunov theory). Consequently, $α,\\!β$-CROWN enables scalable verification of such conditions by computing tight bounds and recursively partitioning and pruning subdomains based on the bounds. Thanks to GPU parallelization, this pipeline demonstrates superior scalability on verification and optimization problems that are challenging for traditional approaches. In this tutorial, we discuss the basics of $α,\\!β$-CROWN and introduce its application to various control-related tasks.",
+        "authors": "Haoyu Li, Xiangru Zhong, Hao Cheng, Bin Hu, Huan Zhang",
+        "url": "http://arxiv.org/abs/2605.26577v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.26577v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 4
+        },
+        "core_value_zh": "一篇教程，介绍了如何使用alpha-beta-CROWN验证神经网络控制器的性质，强调了形式化验证和认证边界。",
+        "reason_zh": "尽管主题是控制系统，但其核心是神经网络的形式化验证，具有极高的“数学严谨性”，涉及计算图和认证边界。这对于理解ML系统的可靠性、安全性和LLM理论机制背后的数学工具至关重要，是您“博士数学拼图”中关于ML基础的硬核补充。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.27281v1",
+        "title": "Causal Risk Minimization for High-Dimensional Treatments",
+        "summary": "Predicting the effect of interventions with many possible variations, e.g., therapeutic content that affects mental health outcomes or an earnings call transcript that drives movement in share price, is useful across several domains. However, classical causal estimators tend to assume that all possible interventions are observed, which is infeasible when interventions vary widely, for instance, in the space of all text strings. We adapt a well-known approach of recasting causal inference as a learning problem, to address high-dimensional treatment spaces. Specifically, under standard assumptions like no unobserved confounding, we show that causal error decomposes into a series of moment-balancing errors of increasing order, and design objectives that directly improve causal estimation. We also show how to project the effect of a high-dimensional treatment onto lower-dimensional treatment attributes, which allows a single model to answer several causal questions without additional attribute-specific training. We empirically evaluate our estimators in settings with high-dimensional continuous, discrete, and text treatments, the last of which used a semi-synthetic dataset of Amazon Reviews. Our experiments demonstrate the benefit of higher-order balance error optimization and competitive performance of projected causal estimates with attribute-specific estimators.",
+        "authors": "Nikita Dhawan, Arnav Paruthi, Andrew Kim, Lovedeep Gondara, Jekaterina Novikova, Chris J. Maddison",
+        "url": "http://arxiv.org/abs/2605.27281v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.27281v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出了一种在高维处理空间中预测干预效果的因果推断方法，将因果误差分解为一系列矩平衡误差，并提供了理论证明。",
+        "reason_zh": "这篇论文完美契合您对“高维统计”和“因果推断”的前沿研究需求。它将因果推断重构为学习问题，并解决了高维处理空间中的挑战，具有显著的理论深度和创新性，能指引您在该领域未来的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28762v1",
+        "title": "Deep Neural Networks for Doubly Robust Estimation with Nonprobability Survey Samples",
+        "summary": "Integrating probability and nonprobability survey samples is an important problem in modern survey sampling. Nonprobability samples often contain rich outcome information but may lack population representativeness, whereas probability samples provide design-based auxiliary information but may not contain the study variable. We propose a deep neural network (DNN)-assisted doubly robust framework for estimating the finite population mean from these two data sources. The proposed method models the logit sampling score for the nonprobability sample as an unknown nonparametric function and estimates it by maximizing a pseudo-likelihood that combines information from the nonprobability sample and a reference probability sample. The DNN parameters are optimized using the ADAM algorithm. The resulting DNN-estimated sampling scores are incorporated into a DNN-assisted inverse-probability weighted estimator and a deep doubly robust estimator. We establish consistency and convergence rates under regularity conditions and evaluate the finite-sample performance of the proposed estimators through simulation studies and an empirical application using Pew Research Center and Behavioral Risk Factor Surveillance System data. The results suggest that the proposed estimators can improve robustness to parametric propensity-score misspecification, especially when the true selection mechanism is nonlinear.",
+        "authors": "Yufang Dai, Shihua Luo, Wendy Lou, Zilin Wang, Xuewen Lu",
+        "url": "http://arxiv.org/abs/2605.28762v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28762v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出了一种DNN辅助的双重鲁棒估计框架，用于整合概率和非概率样本，并建立了在正则条件下的一致性和收敛速度。",
+        "reason_zh": "这篇论文直接解决了“高维统计”和“因果推断”领域的重要问题（双重鲁棒估计在因果推断和缺失数据处理中至关重要）。它将深度学习与统计理论相结合，并提供了严谨的一致性和收敛速度证明，具有很高的理论深度和实用性，是您前沿研究的优秀参考。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.28699v1",
+        "title": "TRACER: Turn-level Regret Matching with Inner Reinforcement Credit for Cooperative Multi-LLM Reasoning",
+        "summary": "Large language models increasingly rely on either reinforcement learning or multi-agent prompting to improve reasoning, yet these two paradigms remain difficult to combine. Directly applying single-agent reinforcement learning to multi-turn multi-agent systems faces following dilemmas: i) Sparse rewards, role-level free-riding and excessive training overhead. ii) Agents only imitate to collaborate. iii) Fixed collaboration protocol falls into oscillating local optimum. We introduce TRACER, a turn-level reinforcement framework for cooperative multi-LLM reasoning. TRACER separates collaborative decision making into a controller-regret layer, where controllers learn whether the agents should speak or skip the current round through regret matching, and a generation-credit layer, which optimizes proposer and reviewer utterances with role-specific GSPO rewards. This design i) assigns credit at the level of both action modes and generated utterances, thus avoiding free-riding and sparse rewards. We only expand the choices made by the controllers, thus greatly reducing computational cost of training. Moreover, ii) agents acquire collaborative capability as they learn when to utter and what to speak. Finally, iii) by designing binary actions ingeniously, we extend classical game theory established for finite action spaces to deep learning, thus achieving mathematically rigorous convergence. We train all local RL-style methods on the GSM8K training split and evaluate on held-out GSM8K, MATH500, and GPQA-Diamond to measure in-domain accuracy, cross-benchmark generalization, inference cost, and correction-preservation behavior. The resulting framework provides a compact and reproducible testbed for studying learned collaboration policies beyond fixed debate, voting, or aggregation protocols. Code is available at https://github.com/Shark-Forest/TRACER.",
+        "authors": "Chusen Li, Zhou Liu, Shuigeng Zhou, Wentao Zhang",
+        "url": "http://arxiv.org/abs/2605.28699v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.28699v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "提出了一个用于合作式多LLM推理的逐轮强化学习框架，结合了后悔匹配和角色特定奖励，解决了稀疏奖励和协作协议固化等问题。",
+        "reason_zh": "这篇论文完美契合您对“LLM 理论机制”和“Offline RL”的需求。它深入探讨了多智能体LLM协作推理的强化学习理论，引入了博弈论概念并证明了收敛性，具有极高的理论深度和前瞻性，能指引您在LLM理论和RL交叉领域的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.29174v1",
+        "title": "Paper Agents, Paper Gains: An Empirical Analysis of DeFi Investment Agents",
+        "summary": "DeFi investment agents, systems that use AI for autonomous on-chain trading, have attained over USD 3 billion in combined token valuations since late 2024. We survey over 1,900 AI-tagged crypto projects, filter to investment-focused agents, and curate 10 representative projects spanning strategy and observability dimensions. We then conduct a deep-dive architectural analysis of two prominent agent frameworks, ElizaOS and Virtuals Protocol, and a quantitative on-chain performance analysis of 11 Solana-based agent treasuries with publicly attributable trading activity, covering 925,323 token holders. We find that current deployments remain early and heterogeneous: (1) in our sample, many projects do not yet provide clear evidence of autonomous trade execution, and developer interviews suggest that many visible deployments remain basic API integrations; (2) agent treasuries retain over USD 30M in paper gains while token holders collectively lost USD 191.7M, with the top 1% of wallets capturing 81.4% of all gains (USD 1.81B); (3) token valuations are weakly connected to treasury fundamentals, with market-cap-to-AUM ratios exceeding 10,000x versus below 1x for established DeFi protocols; and (4) aggregate user gains peaked at USD 2.4B before declining to net losses, with median returns negative on every platform and tokens declining 93% on average from all-time highs. We interpret these outcomes as characteristic of a permissionless, first-generation market in which open infrastructure enables rapid experimentation but also allows naive or speculative agents to launch before robust standards for autonomy, performance, and stakeholder alignment emerge. We therefore propose a maturity framework along three dimensions: autonomous execution, risk-adjusted profitability, and stakeholder alignment, to characterize the gap between current deployments and future investment-grade agent systems.",
+        "authors": "Jay Yu, Amy Zhao, Danning Sui",
+        "url": "http://arxiv.org/abs/2605.29174v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.29174v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "对DeFi投资代理进行了首次大规模实证分析，揭示了其架构、链上表现和市场成熟度，并提出了一个成熟度框架。",
+        "reason_zh": "这篇论文直接满足您对“加密货币量化”的兴趣。它对DeFi领域AI代理进行了大规模的实证分析，揭示了其性能和市场动态，具有很强的现实意义和前瞻性，能为您在该领域的研究提供宝贵的洞察和方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2605.27191v1",
+        "title": "Statistical and Algorithmic Foundations of Probing Quantum Systems with Compressive Measurements: A Review",
+        "summary": "Quantum state tomography (QST) is a fundamental task in quantum information science that aims to reconstruct unknown quantum states from measurement data. However, the exponential growth of Hilbert-space dimension with system size makes full tomography of general quantum states statistically and computationally prohibitive. This challenge has motivated extensive research on structured quantum state tomography, where prior structure, such as low-rankness, tensor-network representations, shallow quantum circuits, and neural quantum states, can substantially reduce the effective degrees of freedom and enable scalable recovery. In this review, we provide a unified perspective on QST for structured quantum states through three closely related themes: compact state representations, measurement design, and computational algorithms. After reviewing common models for structured quantum states, we survey existing work on geometric preservation properties of measurement frameworks, ranging from informationally complete POVMs to randomized measurements, and their implications for sample complexity. On the algorithmic side, we review optimization methods for reconstructing structured quantum states from empirical measurements. By connecting QST with broader principles from compressive sensing, matrix sensing, and structured inverse problems, this survey highlights common theoretical foundations underlying sample complexity, measurement efficiency, and scalable recovery.",
+        "authors": "Zhen Qin, Michael B. Wakin, Zhihui Zhu",
+        "url": "http://arxiv.org/abs/2605.27191v1",
+        "pdf_url": "https://arxiv.org/pdf/2605.27191v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述了结构化量子态层析成像（QST）的统计和算法基础，将其与压缩感知、矩阵感知和结构化逆问题联系起来。",
+        "reason_zh": "这篇综述完美契合您对“高维统计”的需求，并具有“视野开阔，能指引未来的研究方向”的特点。它将量子信息科学与统计学、优化理论的深层原理联系起来，理论深度高，能为您提供跨学科的前沿视角。"
+    }
+]

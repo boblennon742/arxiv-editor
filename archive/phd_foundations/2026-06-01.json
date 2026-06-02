@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.02515v1",
+        "title": "A Biconvex Formulation for Stable Transport of Mixture Models with a Unique Solution",
+        "summary": "Optimal transport (OT) provides a principled framework for mapping between probability distributions. Despite extensive progress, applying OT to large-scale data remains computationally demanding, and the resulting pointwise transport plans are often difficult to interpret. We introduce Optimal Mixture Transport (OMT), a scalable framework that shifts the transport paradigm from individual samples to mixtures of subpopulations, reformulating the transport problem as a strictly biconvex optimization with a unique global minimizer. We further establish theoretical guarantees on the stability of the OMT map, showing that bounded perturbations of the underlying distributions lead to bounded changes in the transport plan. By formulating subpopulations as exponential-family distributions, OMT decouples computational complexity from the sample size, scaling solely with the number of mixture components. We demonstrate the effectiveness and practicality of OMT on a wide range of synthetic benchmarks and real-world datasets, including image data and large-scale single-cell RNA sequencing measurements.",
+        "authors": "Yeganeh Marghi, Kelly Jin, Uygar Sümbül",
+        "url": "http://arxiv.org/abs/2606.02515v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02515v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了最优混合传输（OMT）框架，将其重新表述为具有唯一全局最小值的严格双凸优化问题，并提供了OMT映射稳定性的理论保证。这与您对优化收敛性和理论保证的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.02385v1",
+        "title": "How Optimality Structures Sparse Dictionaries: A Theory for Understanding SAE Representations",
+        "summary": "Sparse Autoencoders (SAEs) have found success parsing neural representations into interpretable concepts, providing a basis for understanding and control. However, what exactly SAEs extract, and, correspondingly, the scientific conclusions we can draw from them, are not obvious. Empirically, the proof is in the pudding: SAEs learn interpretable features. Theoretically, we lack a clear account of what properties a 'concept' must satisfy for an SAE to extract it. There has been extensive identifiability work studying the conditions under which sparse coding recovers ground-truth features; however, these approaches tends to focus on simple data-generating models (e.g. sparse independent features) which poorly approximate the internet-swallowing language-model representations on which SAEs are trained. Here, avoiding data-generating models, we ask simply what properties any dictionary learning optimum must satisfy. Concretely, we extend local optimality analyses (Gribonval & Schnass, 2010) to the nonnegative joint-optimisation problem that vanilla SAEs approximate, and derive constraints relating optimal SAE features to their distributions. We use these constraints to explain a range of observed SAE behaviours - hierarchical splitting & absorption, the structure of residuals, and dense antipodal features - each reflecting how L1+nonnegativity interact with data to structure optimal dictionaries. Finally, we construct a novel large-dictionary convex problem and explore the wide atom-per-datapoint limit. In sum, we hope to tease model assumptions from unexpected observations, letting us learn more from SAEs' successes and provide principles for designing their successors.",
+        "authors": "William Dorrell",
+        "url": "http://arxiv.org/abs/2606.02385v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02385v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了稀疏自编码器（SAE）表示的理论基础，通过扩展局部最优性分析，推导了最优SAE特征与其分布相关的约束。这是理解现代AI系统（如LLM表示）的强大理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.02234v1",
+        "title": "When Do Treatment Changes Identify Causal Effects?",
+        "summary": "This paper clarifies the identifying assumptions underlying causal inference based on treatment changes rather than treatment levels, and their relationship to conventional identification strategies. We characterize two distinct structural models, with non-nested identifying assumptions, under which treatment-change identification is valid conditional on observed covariates. We demonstrate that the identifying assumptions relying on treatment changes are generally not nested with those of methods relying on treatment levels, such as selection-on-observables strategies that control for past outcomes, treatments, and covariates, or difference-in-differences approaches that difference outcomes rather than treatments over time. We show, however, that under a random-walk restriction on the treatment process, conditioning on treatment changes is equivalent to conditioning on treatment levels given lagged treatment. This and other equivalence results motivate overidentification tests by jointly considering methods based on treatment levels and changes. Beyond these tests, the non-nesting results carry a structural double robustness implication: an estimator that differences both the outcome and the treatment over time, such as two-way fixed effects regression, remains consistent if either the treatment-change assumption or the parallel-trends assumption holds, without requiring both simultaneously. We characterize the causal models consistent with each method, investigate finite-sample behavior in a simulation study, and present an empirical application to cigarette demand.",
+        "authors": "Martin Huber",
+        "url": "http://arxiv.org/abs/2606.02234v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02234v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文阐明了基于治疗变化的因果推断的识别假设，并将其与传统策略联系起来，提出了非嵌套的结构模型、等价性结果和结构性双重稳健性含义。这是因果逻辑领域的扎实理论贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.02221v1",
+        "title": "CORE-MTL: Rethinking Gradient Balancing via Causal Orthogonal Representations",
+        "summary": "Multi-task learning (MTL) aims to construct a joint model for multiple tasks by sharing a common representation across domains. To achieve this goal, existing optimization-centric methods either balance task gradients or modify the shared architecture. However, as these approaches remain agnostic to the content of the shared representation, they fail to disentangle task-relevant structure from spurious context, leading to negative transfer and poor generalization. To overcome this limitation, we propose Causal Orthogonal Representations for Multi-Task Learning (CORE-MTL), a causally motivated representation-centric framework that encourages a structured semantic-residual factorization of the shared representation, concentrating task-relevant structure in the semantic stream while relegating nuisance variation to the residual stream. We instantiate this framework in the visual domain by leveraging physical priors for structured scenes and statistical constraints for attributes. Theoretically, our method enjoys a tighter out-of-distribution generalization bound than optimization-centric methods and reduces task gradient interference without explicit gradient projection or reweighting. Empirically, CORE-MTL consistently outperforms existing methods on visual multi-task benchmarks in both in-distribution and out-of-distribution settings. Code is publicly available at https://github.com/Hope-Rita/CORE-MTL.",
+        "authors": "Chengfeng Wu, Tao Zou, Yanru Wu, Jingge Wang",
+        "url": "http://arxiv.org/abs/2606.02221v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02221v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CORE-MTL提出了一个因果驱动的表示学习框架，用于多任务学习，旨在解耦任务相关结构和虚假上下文，并声称获得了更紧密的域外泛化界限。其因果动机和理论界限与您的研究兴趣高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.02198v1",
+        "title": "Model Multiplicity and Predictive Arbitrariness in Recidivism Risk Assessment",
+        "summary": "Prediction tasks over individual futures, which are inherently noisy, often admit multiple similarly accurate models. When these models produce different predictions for the same individual, they raise concerns of arbitrariness in decision-making. How severe can this arbitrariness be, in theory and in practice? How can it be resolved to support high-stakes risk assessment?   We address these questions through a study of a machine learning-based decision support system for recidivism risk assessment that has been in use for over 15 years. By translating complex legal rules into an algorithm for labeling post release outcomes (recidivist or non-recidivist), we first construct a dataset of thousands of inmate releases. Using this dataset, we learn interpretable models that improve predictive performance, reduce error-rate disparities between groups, and ensure that rehabilitative progress lowers risk scores. Next, we study predictive multiplicity, by first deriving a tight lower bound on the expected predictive agreement of any finite set of models over a dataset, and then by evaluating the extent to which structural diversity (e.g., different model coefficients) within this set translates to predictive multiplicity (i.e., different predictions for the same individual). Our experiments indicate that the existence of many similarly accurate models with comparable error-rate disparities does not necessarily translate into severe predictive multiplicity. Empirically, similarly performant models can exhibit substantially higher predictive agreement than worst-case theoretical guarantees suggest. We find that a simple policy that assigns each inmate the lowest risk among these models is effective for addressing predictive arbitrariness.",
+        "authors": "Ashwin Singh, Carlos Castillo",
+        "url": "http://arxiv.org/abs/2606.02198v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02198v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了累犯风险评估中的模型多样性和预测任意性，并推导了任何有限模型集在数据集上预期预测一致性的紧密下界。这提供了对高风险AI决策系统行为的理论理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.02247v1",
+        "title": "ShaplEIG: Bayesian Experimental Design for Shapley Value Estimation",
+        "summary": "Shapley values are a principled attribution measure widely used in interpretable machine learning, but their exact computation scales exponentially with the number of players, motivating a wide range of approximation methods based on value function evaluations of sampled coalitions. This raises the question of whether approximation accuracy can be improved by adaptively selecting coalitions for evaluation based on previous evaluations. This is particularly relevant in settings where the value function is costly and the number of evaluations is severely limited, such as retraining-based feature importance, data valuation, and hyperparameter importance. For this purpose, we propose ShaplEIG, a Bayesian experimental design approach that approximates the expensive value function using a Gaussian process surrogate and adaptively selects coalitions based on their expected information gain about the Shapley values. By the linearity of the Shapley values in the value function, we show that the expected information gain is available in closed form. Furthermore, we propose an efficient computation scheme that reduces the complexity from exponential to polynomial in the number of players via elementary symmetric polynomials. In extensive experiments across diverse costly applications, our method consistently improves sample efficiency in the low-budget regime over state-of-the-art baselines.",
+        "authors": "David Rundel, Fabian Fumagalli, Maximilian Muschalik, Bernd Bischl, Matthias Feurer",
+        "url": "http://arxiv.org/abs/2606.02247v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02247v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "ShaplEIG提出了一种基于贝叶斯实验设计的Shapley值估计方法，利用高斯过程代理和期望信息增益，并证明了信息增益的闭式解以及通过基本对称多项式将复杂度从指数级降低到多项式级的计算方案。这是对可解释AI中理论严谨性问题的出色解决。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.02061v1",
+        "title": "Ablating Archetypes: The Stability of Archetypal SAEs is an Artifact of Initialization and Metric Design",
+        "summary": "Dictionary learning with sparse autoencoders (SAEs) produces overcomplete bases from neural network activations that are often interpretable and reduces polysemanticity. However, features from SAEs vary substantially across random seeds -- a problem known as instability. Archetypal SAEs (Fel et al., 2025) were proposed as a general dictionary-learning intervention for more reliable concept extraction, and report more stable dictionaries at the end of training. We demonstrate that the stability claimed by archetypal SAEs is a result of setting identical initialization across multiple runs. Through our analyses, we attempt to clarify two distinct notions in mechanistic interpretability that may be ambiguously used: stability is agreement between two independently trained models, whereas stabilization is the convergence of independently initialized runs toward a common solution. This distinction is critical for mechanistic interpretability of natural language processing (NLP), where feature stability is increasingly used as evidence that SAE features are reusable units of analysis. Experiments from archetypal SAEs share a deterministic k-means decoder initialization, setting inter-run dictionary distance to zero before training begins. When this initialization is removed, the archetypal constraint provides no stabilization advantage in our setting. We further identify a preprocessing-dependent cosine geometry issue that complicates interpretation of endpoint stability metrics. Overall, our study supports the value of studying SAEs within the larger dictionary-learning tradition while showing that stability claims require trajectory diagnostics and initialization ablations.",
+        "authors": "Michał Brzozowski, Neo Christopher Chung",
+        "url": "http://arxiv.org/abs/2606.02061v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.02061v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了泊松-拉盖尔泰森图的反演问题，提供了加权生成点配置的特征描述，并提出了一种一致性反演方法。这是空间统计学和随机几何中的基础理论工作，具有严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01999v1",
+        "title": "Why Do Time Series Models Need Long Context Windows?",
+        "summary": "Modern deep learning models for forecasting groups of time series rely on increasingly longer observation windows. However, the benefit of increasing the window size is often simply attributed to capturing long-range dependencies, and broader discussion on how global forecasting models leverage input observations has been limited. In this paper, we show that forecasting groups of time series involves two objectives: (i) generative process identification (GPI), i.e., inferring the specific process generating the input sequence, and (ii) conditional forecasting (CF), i.e., predicting future values given input observations. From this perspective, optimal predictions can be interpreted as an average over plausible data-generating processes, weighted by their likelihood given the input window. This suggests another explanation for the benefits of long context windows: they reduce the uncertainty about which specific process is generating the input time series during operation. We prove that even for processes with memory length $P$, an input window size strictly larger than $P$ is necessary to achieve the minimum attainable error. Finally, we show how decoupling GPI and CF can improve computational scalability without compromising accuracy. Experiments on synthetic and real-world data validate our insights and their relevance for designing forecasting architectures.",
+        "authors": "Luca Butera, Giovanni De Felice, Andrea Cini, Cesare Alippi",
+        "url": "http://arxiv.org/abs/2606.01999v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01999v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从理论上解释了时间序列模型为何需要长上下文窗口，证明了即使对于记忆长度为P的过程，也需要严格大于P的输入窗口才能达到最小可实现误差。这是对现代时间序列AI模型基础的深刻理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01982v1",
+        "title": "An NLP-Driven Framework for Curriculum-Labor Market Alignment: Schema-Constrained LLM Extraction, ESCO-Anchored Semantic Matching, and Multi-Dimensional Gap Quantification",
+        "summary": "Schema-constrained information extraction from diverse educational and labor-market corpora remains an open challenge in natural language processing because existing pipelines rely primarily on lexical-surface methods that cannot recover implicit competencies, lack grounding in shared taxonomies, and provide no formal measures of extraction reliability or document-level completeness. To address these limitations, this paper proposes a four-stage NLP framework that combines (i) schema-constrained prompting of a two-model frontier-LLM ensemble against a JSON Schema-enforced seven-slot competency formalism, (ii) Sentence-BERT (SBERT) alignment of the extracted records against an eleven-domain ESCO v1.2.1 controlled vocabulary, (iii) a two-tier adjudication protocol that resolves inter-model disagreements, and (iv) a verification mechanism that combines per-slot Cohen's kappa, schema conformance, and document-level completeness audits. The framework is instantiated for a critical application in higher-education quality assurance, namely curriculum-labor market alignment for the ABET-accredited BSc Computer Science program at the United Arab Emirates University. The pipeline extracts 400 competency records from the 85-course 2025-2026 study plan and aligns them, under a five-scope analysis ranging from the computing core to a probability-weighted student trajectory, with 30 job postings (483 requirement clauses) at an SBERT cosine threshold of 0.50. The extractor achieves Cohen's kappa of 0.79 on the skill slot, with 100% schema conformance and 100% document-level completeness. The alignment surfaces interpretable supply-demand gaps of 25.0% in general and transversal skills, 13.8% in algorithms and computational theory, and 12.2% in software engineering and project management, with a near-zero 1.8% gap in artificial intelligence and data science despite 38.6% supply coverage.",
+        "authors": "Sherzod Turaev, Mary John, Mamoun Awad, Nazar Zaki, Khaled Shuaib",
+        "url": "http://arxiv.org/abs/2606.01982v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01982v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个自演化启发式系统MobEvolve，用于人类出行生成，通过LLM代理迭代演化其内部逻辑。虽然侧重系统，但其自演化机制和对行为合理性、分布对齐的追求，体现了对复杂系统建模的理论探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01990v1",
+        "title": "Testing for Single-Population Ancestry in the Admixture Model",
+        "summary": "The Admixture Model describes genetic marker data by representing each individual's genome as a mixture of contributions from $K$ ancestral populations, with the individual admixture vector summarizing the corresponding ancestry proportions. In population and forensic genetics, a key question is whether an individual's genome supports a predominantly single-ancestry interpretation or whether an admixed interpretation is more appropriate. We propose a statistical test for single-population ancestry in the supervised Admixture Model, where ancestral allele frequencies are treated as known. The test assesses whether the largest admixture component exceeds a practitioner-chosen dominance threshold, giving precise meaning to the notion of a sufficiently strong single-population contribution.   To calibrate the test, we develop a constrained parametric bootstrap procedure that generates data under a null-constrained maximum likelihood estimator, accounting for the constrained hypothesis structure, the marker-wise heterogeneity and small sample sizes. Under standard regularity conditions, we prove that the proposed test has asymptotic level $α$ and is consistent, ensuring control of false single-ancestry declarations while reliably detecting dominant ancestry components.   Simulation studies demonstrate good finite-sample performance across different numbers of ancestral populations, marker-panel sizes, dominance thresholds, and allele-frequency distributions. We further illustrate the practical utility of the method using data from the 1000 Genomes Project. The proposed framework delivers interpretable, threshold-based ancestry assessment with rigorous error control, and extends constrained bootstrap methodology to the independent but non-identically distributed setting of genetic marker data.",
+        "authors": "Holger Dette, Carola Sophia Heinzel, Zoe Lange, Peter Pfaffelhuber",
+        "url": "http://arxiv.org/abs/2606.01990v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01990v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了在监督式Admixture模型中进行单一人群祖先检测的统计检验，并开发了一种受约束的参数引导程序，证明了该检验具有渐近水平α和一致性。这是具有严格统计保证的理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01883v1",
+        "title": "Beyond the Simplex: Balanced Prototype Geometry for Scorer-Agnostic Open-Set Recognition",
+        "summary": "Open-set recognition (OSR) requires a classifier to reject inputs from unseen classes which is essential in safety-critical settings such as medical imaging. Simplex based methods, which fix class prototypes at the vertices of a regular simplex and then reject via a distance-ratio score, perform well empirically but lack theoretical justification, and existing analysis applies only when the embedding dimension d is at least C-1, which is the regime in which a regular simplex exists.   We give a theoretical account of simplex-ratio OSR that holds in every embedding dimension, including d < C-1. Our analysis centers on balanced equal-norm codes: prototype configurations with equal lengths and zero sum, which exist for all d >= 2 and include the regular simplex as a special case. For these codes we show that an auxiliary squared ratio score has sublevel sets that are exact unions of Euclidean balls, which in turn bracket the acceptance region of the operational score; and we prove a sharp dichotomy: the prototypes attain one-distance symmetry, behaving like a regular simplex, if and only if d >= C-1, with controlled degradation governed by an explicit defect parameter below that threshold. We further show the false-acceptance rate decays exponentially in d under natural isotropy assumptions, and that the operational score is globally Lipschitz with compact acceptance regions.   Empirically, we study balanced prototype geometry as both an analytic tool and a representation-learning prior, rather than as a stand-alone state-of-the-art detector. Across CIFAR and MedMNIST open-set splits, the geometry provides useful structure, but OSR performance remains strongly dependent on the scoring rule: raw ratio scores typically underperform nearest-neighbor and logit-based alternatives.",
+        "authors": "Mayank Sharma, Rohit Kumar Mourya",
+        "url": "http://arxiv.org/abs/2606.01883v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01883v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为基于单纯形比率的开放集识别（OSR）提供了理论解释，引入了平衡等范数编码，并证明了其单距离对称性以及假阳性率的指数衰减。这是对AI系统鲁棒性关键问题（OSR）的深刻几何和理论分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01845v1",
+        "title": "Unveiling the Limits of Large Language Models in Inferring Pragmatic Meaning from Non-Verbal Responses",
+        "summary": "Although large language models (LLMs) have shown considerable progress in pragmatic language understanding, prior research has focused mainly on their comprehension of verbal behavior. Nonetheless, non-verbal behavior remains a fundamental component of human communication, especially when deliberately utilized in isolation to convey indirect meanings. In this work, we present the first systematic evaluation of LLMs' ability to infer pragmatic meaning in dialogue consisting solely of non-verbal responses. We explore three research questions: (1) Can LLMs recognize indirect intent conveyed through non-verbal responses? (2) When and how do LLMs fail to capture non-verbal intent? (3) How can we improve LLMs' ability to interpret non-verbal intent?. Through the evaluation, we observe that LLMs struggle to infer underlying meaning from non-verbal responses, with accuracy dropping by up to 60% points compared to verbal ones. Further extensive analysis reveals a behavioral pattern in LLMs' interpretations of non-verbal behavior and demonstrates that in-context learning facilitates pragmatic inference.",
+        "authors": "Sugyeong Eo, Heuiseok Lim",
+        "url": "http://arxiv.org/abs/2606.01845v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01845v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为自博弈定理证明算法提供了理论框架，将定理集合形式化为图，并证明了在特定条件下，证明者-猜想者系统可以指数级地增长已证明定理集。这是对LLM自我改进机制的严谨理论探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01755v1",
+        "title": "TriAlign: Towards Universal Truth Consistency in Personalized LLM Alignment",
+        "summary": "Personalized large language models adapt responses to users' preferences and social attributes, but can introduce substantial universal truth inconsistencies across social groups, where some groups systematically receive less accurate responses on objective tasks. Existing alignment methods either ignore personalization or mainly focus on subjective preference alignment, largely overlooking fairness and consistency in universal truths. To address this gap, we study Truth-Invariant Alignment (TIA), an alignment problem for personalized LLMs that aims to ensure universal truths remain consistent across social groups while preserving personalization. We propose TriAlign, the first offline multi-agent reinforcement learning (MARL) framework for TIA, where each social group is modeled as an agent interacting. TriAlign jointly optimizes universal truth accuracy, cross-group truth consistency, and personalization through a fairness-aware objective and an explicit inconsistency penalty. Experiments across diverse benchmarks demonstrate that TriAlign achieves a stronger balance among these three objectives than strong baselines, reducing universal truth disparities across social groups while improving both objective task performance and personalization quality.",
+        "authors": "Thi-Nhung Nguyen, Linhao Luo, Rollin Omari, Junae Kim, Thuy-Trang Vu, Dinh Phung",
+        "url": "http://arxiv.org/abs/2606.01755v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01755v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为三维Blaschke-Lebesgue问题建立了改进的下界，基于支撑函数公式、球面谐波的谱估计和Bochner公式，并将其解释为凹二次最小化问题的拉格朗日对偶界。这是纯粹的数学理论贡献，对几何优化有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01719v1",
+        "title": "Fair Finetuning Mitigates Distribution Inference Attacks",
+        "summary": "Machine learning models trained on sensitive data can inadvertently leak population-level information about their training distributions -- a threat known as distribution inference attack (DIA). An adversary with black-box access can infer sensitive demographic properties, such as subgroup proportions, without observing any training data directly. While defenses such as differential privacy and property unlearning have been proposed, the link between fairness constraints and distributional leakage remains unexplored. We propose Fair Fine-tuning (FFt): a trained model is fine-tuned on samples from the complementary distribution under an Equalized Odds (EO) constraint. We provide a complete theoretical characterization, proving the tight bound $\\text{Adv}(\\mathcal{A},M_f) \\le Δ_{\\text{EO}} \\cdot W$, where $W$ quantifies how distinguishable the two training distributions are by their sensitive-attribute composition. We also establish a necessary condition for FFt to reduce adversarial advantage and prove tightness of the bound. We evaluate across six datasets spanning tabular (ACS Income, COMPAS, German Credit), image (UTKFaces), and NLP (Bias in Bios) modalities. Rehearsal-based FFt consistently reduces the adversarial accuracy gap below the detection threshold $τ!=!0.1$ across all settings; on ACS Income, the gap falls from $\\sim!15%$ to under $4%$. Our work provides the first formal bound connecting a model's measured EO disparity directly to its adversarial advantage in the DIA game, opening a new avenue for unified fairness-and-privacy defenses.",
+        "authors": "Rakshit Naidu",
+        "url": "http://arxiv.org/abs/2606.01719v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01719v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了公平微调（FFt）以缓解分布推断攻击，并提供了完整的理论表征，证明了模型EO差异与其在DIA博弈中对抗优势的紧密界限。这统一了公平性和隐私保护，具有强大的统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.01669v1",
+        "title": "Beyond principal ignorability: Nonparametric sensitivity bounds for principal stratification",
+        "summary": "Principal stratification is an effective framework addressing intermediate variables in causal inference. However, point identification of the principal causal effects (PCEs) often requires the untestable principal ignorability (PI) assumption. This article develops a nonparametric sensitivity analysis framework for evaluating PI violations. We introduce a margin-free bounding factor parameterized by the selection and outcome relative risks of an unmeasured confounder. Using this bounding factor, we derive sharp nonparametric bounds for each PCE. We prove that these bounds nest within the worst-case nonparametric bounds with and without the monotonicity assumption. We then discuss Cornfield-type conditions and principal E-values that quantify the minimum joint magnitude of unmeasured confounding required to nullify the target PCE. Furthermore, we generalize this methodology to principal generalized causal effects, extending the sensitivity bounds and falsification thresholds to the recent pairwise comparison estimands evaluated over a product space.",
+        "authors": "Xinyuan Chen, Michael O. Harhay, Fan Li",
+        "url": "http://arxiv.org/abs/2606.01669v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.01669v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为主要分层中的因果推断开发了一个非参数敏感性分析框架，推导了尖锐的非参数界限，并引入了Cornfield型条件和主要E值。这是因果逻辑领域中具有严格数学推导和统计保证的理论工作。"
+    }
+]

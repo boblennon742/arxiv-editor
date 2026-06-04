@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.05002v1",
+        "title": "GARL: Game-Theoretic Reinforcement Learning for Multi-Agent Strategic Prioritisation",
+        "summary": "LLM-based multi-agent systems are increasingly used for strategic decision-making tasks. In such settings, performance depends not only on individual model capabilities, but also on the policies by which agents interact and adapt. Multi-agent reinforcement learning can optimise these interaction policies, but its reward design often remains task-specific and weakly grounded in interaction structure. To address this gap, we propose GARL, a GAme-theoretic Reinforcement Learning framework for multi-agent strategic prioritisation. GARL formalises strategic prioritisation as a two-stage game: competing agents first allocate strategic resources over a shared candidate set, and a higher-level arbiter then produces the final ranking. The resulting game-theoretic utilities are converted into role-specific reinforcement signals, allowing policy optimisation to be guided by structured interaction. We instantiate GARL on issues-in-dispute ranking, where the goal is to prioritise core issues in legal proceedings. Experiments show that GARL improves ranking performance, enables small open-source LLMs to become competitive with a strong closed-source LLM under the same candidate-ranking setting, and yields gains in legal-domain competence and broader strategic decision-making. Overall, GARL demonstrates how game-theoretic interaction structure can be turned into reinforcement-learning objectives, providing a principled approach to policy optimisation in multi-agent strategic prioritisation.",
+        "authors": "Yuxiao Ye, Yiwen Zhang, Huiyuan Xie, Yuqin Huang, Zhiyuan Liu",
+        "url": "http://arxiv.org/abs/2606.05002v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.05002v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了博弈论强化学习框架GARL，将多智能体战略优先级问题形式化为两阶段博弈，并将其博弈论效用转化为角色特定的强化信号。这在理论上具有高度创新性（N=5, R=5），为多智能体LLM系统提供了原则性的策略优化方法，显著提升了性能和效率（I=5），解决了LLM应用中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.05030v1",
+        "title": "Imbuing Large Language Models with Bidirectional Logic for Robust Chain Repair",
+        "summary": "Autoregressive chain-of-thought (CoT) reasoning in large language models (LLMs) is fundamentally forward-directed: each step conditions only on prior tokens. This unidirectional inductive bias renders even capable models susceptible to error snowballing, wherein a single logical or arithmetic mistake in an early step irreversibly corrupts the entire reasoning chain. We introduce Teleological Reasoning Infilling (\\TRI{}), a training framework that endows decoder-only transformers with a native \\emph{goal-conditioned bridging} capability. The key insight is to reframe erroneous reasoning segments as fill-in-the-middle (FIM) tasks: given a verified prefix premise $P$, a verified downstream milestone $S$, and the original query $Q$, the model must synthesise the logical bridge $M$ that connects $P$ to $S$ rigorously and completely. To achieve this with standard causal architectures, we introduce a Prefix-Suffix-Middle (PSM) sequence rearrangement with three non-overlapping sentinel tokens, enabling $M$ to attend to both $P$ and $S$ without any structural modification to the self-attention mechanism. Training proceeds in two stages: (i) Supervised Fine-Tuning (SFT) on symbolically verified $(P, S, M)$ triples extracted from formal mathematics corpora, and (ii) Direct Preference Optimisation (DPO) with a deterministic symbolic verifier (Lean 4 / Python) as the sole reward oracle, eliminating LLM-judge sycophancy. At inference, TRI operates as a surgical repair module within a dual-system loop: a causal draft model generates an initial trace, the verifier pinpoints failures, and TRI infills only the damaged segment, leaving verified sections intact. Comprehensive experiments on three benchmarks demonstrate that TRI achieves state-of-the-art performance across all tasks, while reducing per-problem token expenditure by 31.2%.",
+        "authors": "Zehua Cheng, Wei Dai, Jiahao Sun, Thomas Lukasiewicz",
+        "url": "http://arxiv.org/abs/2606.05030v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.05030v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了TRI框架，通过目标条件桥接能力赋予解码器LLM双向逻辑，将错误推理段重构为FIM任务，并结合符号验证器进行DPO训练。该方法在架构和训练上具有显著的理论创新性（N=5, R=5），有效解决了LLM推理中的错误累积问题，提高了鲁棒性和效率（I=5），是LLM应用的关键突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.05025v1",
+        "title": "Invariant Gradient Alignment for Robust Reasoning Distillation",
+        "summary": "Large language models (LLMs) suffer from shortcut learning: they systematically fail on out-of-distribution (OOD) inputs whose semantic surface differs from training data, even when the logical structure is identical. This undermines knowledge distillation pipelines that transfer chain-of-thought reasoning to smaller students. We introduce Invariant Gradient Alignment (IGA), a training framework that aligns gradient updates across semantically diverse but logically isomorphic examples via three innovations: (i) Logical Isomer Sets, groups of problems sharing identical logical structure across distinct semantic domains (mathematics, medicine, law, science); (ii) a differentiable \\emph{Continuous Gradient Conflict Mask}, that suppresses parameter dimensions with high cross-domain gradient variance while preserving invariant directions; and (iii) a truncated SVD projection of the masked gradient back onto the LoRA low-rank manifold, maintaining parameter efficiency throughout. Theoretically, IGA yields tighter OOD generalization bounds than ERM, scaling with the number of isomer domains, and converges at the standard SGD rate under mild regularity. Empirically, IGA outperforms eight baselines across four benchmarks with accuracy gains up to 14.3 pp over ERM-SFT and a Logical Consistency Score of 0.031 versus 0.142 -- a fourfold improvement in representational invariance.",
+        "authors": "Zehua Cheng, Wei Dai, Jiahao Sun",
+        "url": "http://arxiv.org/abs/2606.05025v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.05025v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了IGA训练框架，通过跨语义多样但逻辑同构的例子对齐梯度更新，引入逻辑同构集、连续梯度冲突掩码和SVD投影。该方法具有强大的理论严谨性（N=5, R=5），有效解决了LLM的捷径学习和OOD泛化问题，显著提升了模型鲁棒性（I=5），对LLM推理蒸馏具有重要实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04492v1",
+        "title": "Episodic Memory Temporal Consistency for Cooperative Multi-Agent Reinforcement Learning",
+        "summary": "Cooperative Multi-Agent Reinforcement Learning (MARL) frequently suffers from severe reward sparsity and exploration bottlenecks. While episodic memory mechanisms mitigate these issues by reusing high-return trajectories, they often trap agents in local optima due to unconstrained incentive distribution and semantic representation collapse. To address this, we propose Episodic Memory Temporal Consistency (EMTC), a framework that robustly constructs and selectively leverages historical experiences. EMTC introduces two synergistic components: (1) a Temporally Consistent Semantic Embedder that integrates contrastive learning with time-conditioned state reconstruction, preventing representation collapse and enabling precise memory retrieval; and (2) a Temporal Consistency Gating Mechanism that dynamically modulates episodic incentives based on temporal consistency error. This adaptive gate filters misleading signals from pseudo-successful trajectories, effectively mitigating Q-value overestimation. We provide theoretical guarantees, establishing a strict error bound that directly links the observable temporal consistency error to the underlying trajectory optimality and representation quality. Extensive evaluations on the SMAC and GRF benchmarks demonstrate that EMTC consistently outperforms state-of-the-art baselines. Notably, compared to the strongest episodic baseline, EMTC achieves absolute win-rate improvements of up to 24% in super-hard SMAC scenarios and an average improvement of 28% across GRF tasks.",
+        "authors": "Zicheng Zhao, Yu Lan, Chengzhengxu Li, Zhaohan Zhang, Xiaoming Liu",
+        "url": "http://arxiv.org/abs/2606.04492v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04492v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了EMTC框架，通过时间一致性语义嵌入器和时间一致性门控机制，鲁棒地构建和利用多智能体强化学习中的历史经验。该方法具有严格的理论保证（R=5），有效解决了MARL中的奖励稀疏性和探索瓶颈，显著提升了性能（I=5），对多智能体系统具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04493v1",
+        "title": "SFMambaNet: Spectral-Frequency Enhanced Selective State Space Model for Correspondence Pruning",
+        "summary": "Correspondence pruning aims to identify inliers from an initial set of correspondences. Most existing Graph Neural Network (GNN)-based methods rely on geometric features mapped from coarse Euclidean coordinates, which struggle to capture the subtle geometric consistencies presented by inliers. While Mamba-based methods possess global receptive fields and long sequence modeling capabilities, they tend to accumulate substantial inconsistent features within the hidden state space, making it difficult to distinguish inliers from outliers. In this paper, we integrate frequency domain perception into this task for the first time and propose SFMambaNet, a novel Spectral-Frequency enhanced Mamba-based two-view correspondence pruning network. Our method is collaboratively composed of two components: First, we design a Local Spectral-Geometric Attention (LSGA) block. LSGA incorporates spectral positional encoding into local graph interactions and introduces multi-scale Mamba processing to enhance the capture of subtle geometric consistencies and improve local feature discriminability. Building upon this, we design a Spectral-Integrated Global Mamba (SIGM) block. SIGM embeds a frequency gating mechanism within the state space, utilizing the frequency information provided by LSGA to explicitly suppress high-frequency noise accumulation within hidden states and mitigate the propagation of inconsistent features. This enhances inlier-outlier separability and achieves robust global context modeling capabilities with nearly linear complexity. Extensive experiments demonstrate that SFMambaNet outperforms current state-of-the-art methods on several challenging tasks. The code is available at https://github.com/Kirito14IT/SFMambaNet.",
+        "authors": "Zhihua Wang, Yanping Li, Yizhang Liu",
+        "url": "http://arxiv.org/abs/2606.04493v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04493v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "首次将频域感知引入对应点剪枝任务，提出了SFMambaNet，结合局部谱几何注意力块和谱集成全局Mamba块。该方法在理论和架构上具有高度创新性（N=5, R=5），实现了近乎线性的复杂度，显著提升了性能和效率（I=5），解决了计算机视觉中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04468v1",
+        "title": "ParetoPilot: Zero-Surrogate Offline Multi-Objective Optimization via Infer-Perturb-Guide Diffusion",
+        "summary": "Offline multi-objective optimization (Offline MOO) aims to discover novel Pareto-optimal designs based on static datasets without expensive environment interactions. While recent generative methods have achieved notable success, they predominantly rely on external surrogate models. This dependency introduces significant computational overhead, suffers from deceptive evaluations, and deviates from the prevailing paradigm of jointly training mainstream generative models with conditions. To address these bottlenecks, we propose ParetoPilot, a novel zero-surrogate diffusion framework for offline MOO. ParetoPilot fully leverages the conditional priors inherently embedded within pre-trained diffusion models. At its core, the framework introduces the Infer-Perturb-Guide (IPG) engine, which is seamlessly interleaved within the unconditional denoising steps of the reverse generation process. First, it implicitly infers the instantaneous objective direction by matching conditional and unconditional noise predictions. Next, it mathematically orthogonalizes a parallel gravity field for strict convergence and an edgeness-aware repulsive force for mutual diversity, creating a dynamically annealed perturbation vector. Finally, this perturbed target seamlessly steers the generation process via standard Classifier-Free Guidance (CFG). Extensive experiments across 51 tasks demonstrate that ParetoPilot outperforms 14 state-of-the-art surrogate-based and inverse generative baselines. By eliminating auxiliary proxy training, our approach preserves data privacy while achieving hypervolume improvement and robust Pareto front coverage.",
+        "authors": "Ruiqing Sun, Sen Yang, Dawei Feng, Bo Ding, Yijie Wang, Huaimin Wang",
+        "url": "http://arxiv.org/abs/2606.04468v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04468v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了ParetoPilot，一个零代理的离线多目标优化扩散框架，通过Infer-Perturb-Guide (IPG) 引擎隐式推断目标方向并数学正交化引力场和排斥力。该方法具有强大的理论基础和创新性（N=5, R=5），在多目标优化中表现卓越，消除了对外部代理模型的依赖，提高了效率和数据隐私（I=5）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04435v1",
+        "title": "Cascading Hallucination in Agentic RAG: The CHARM Framework for Detection and Mitigation",
+        "summary": "Multi-step agentic retrieval-augmented generation (RAG) pipelines have demonstrated significant capability for complex reasoning tasks, yet remain vulnerable to a class of failure that existing hallucination detection mechanisms systematically miss: cascading hallucination, where errors introduced at early pipeline stages propagate and amplify across successive reasoning steps, producing confident but factually incorrect final outputs. To address this vulnerability, we formalize cascading hallucination as a distinct failure mode in agentic RAG systems, present a four-type taxonomy of cascade patterns, and introduce CHARM (Cascading Hallucination Aware Resolution and Mitigation), an architectural framework for detecting and interrupting error propagation in multi-step reasoning pipelines. CHARM comprises four components - stage-level fact verification, cross-stage consistency tracking, confidence propagation monitoring, and cascade resolution triggering - that operate alongside standard agentic RAG pipelines without requiring architectural replacement. We evaluate CHARM on HotpotQA, MuSiQue, 2WikiMultiHopQA, and a custom adversarial dataset across LangChain agentic pipeline configurations, achieving an 89.4% cascade detection rate with a 5.3% false positive rate and 215 ms +/- 18 ms average latency overhead per stage, achieving an error propagation reduction of 82.1%, compared to 18.5% for output-level detectors. Component ablations confirm that each detection module contributes meaningfully to overall cascade coverage. CHARM integrates with human-in-the-loop oversight frameworks to provide a complete reliability and governance stack for production agentic AI deployment.",
+        "authors": "Saroj Mishra",
+        "url": "http://arxiv.org/abs/2606.04435v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04435v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "形式化了代理RAG系统中的级联幻觉问题，并提出了CHARM框架，通过阶段级事实验证、跨阶段一致性跟踪等组件检测和缓解错误传播。该方法对问题定义和框架设计具有严格的理论严谨性（N=5, R=5），显著提高了代理RAG系统的可靠性和安全性（I=5），解决了LLM应用中的关键安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04434v1",
+        "title": "Hyper-ICL: Attention Calibration with Hyperbolic Anchor Distillation for Multimodal In-Context Learning",
+        "summary": "Multimodal In-Context Learning (ICL) has emerged as a practical inference paradigm for Multimodal Large Language Models, where a small set of interleaved image-text In-Context Demonstrations (ICDs) conditions the model to solve new tasks. Despite its flexibility, multimodal ICL incurs high inference latency and suffers from instability due to sensitivity to demonstration formatting, ordering, and content. To address these limitations, we propose Hyper-ICL, a lightweight, training-based framework for demonstration-free multimodal ICL that reconstructs demonstration effects directly without requiring ICDs at inference time. Hyper-ICL learns a parameter-efficient low-rank logit-level adapter that calibrates attention distributions to better match demonstration-induced attention redistribution. To capture how demonstration influence varies across queries, we introduce a query-adaptive modulation mechanism that adaptively controls intervention strength at token level across layers and heads based on the current query. Finally, we propose a layer-wise hyperbolic anchor distillation loss that aligns intermediate student features to a demonstration-conditioned teacher via Lorentz geodesic distance. This loss encourages the student to reconstruct the demonstration-query relationships induced by ICDs. Extensive experiments across six different multimodal benchmarks (including VQAv2, OK-VQA, and COCO Caption) demonstrate that Hyper-ICL consistently improves accuracy and stability over vanilla ICL and existing state-of-the-art methods.",
+        "authors": "Niloufar Alipour Talemi, Hossein Kashiani, Fatemeh Afghah",
+        "url": "http://arxiv.org/abs/2606.04434v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04434v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了Hyper-ICL，一个轻量级、无需演示的多模态上下文学习框架，通过学习参数高效的适配器校准注意力分布，并引入查询自适应调制和层级双曲锚点蒸馏损失。该方法具有强大的理论基础和架构创新性（N=5, R=5），显著提高了多模态ICL的准确性和稳定性，解决了效率和鲁棒性瓶颈（I=5）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04381v1",
+        "title": "From Symbolic to Geometric: Enabling Spatial Reasoning in Large Language Models",
+        "summary": "Recent large language models (LLMs) often appear to exhibit spatial reasoning ability; however, this capability is largely \\emph{symbolic}, arising from pattern matching over spatial language rather than true \\emph{geometric} reasoning over space. Because LLMs operate on discrete tokens, they lack native support for continuous spatial representations, explicit geometric computation, and structured spatial operators. To address this limitation, we introduce the \\emph{Spatial Language Model (SLM)}, the first multimodal LLM that treats location information as a first-class modality and enables geometric spatial reasoning within the model's inference process. SLM directly operates on learned spatial representations rather than textual descriptions of spatial relations. To support effective training, we construct a \\emph{Spatial Instruction Dataset} that aligns spatial representations, atomic geometric operations, and natural language instructions. We further propose a new benchmark named \\emph{SpatialEval}, which is designed to evaluate spatial reasoning across attributes, distance, topology, and relative-position tasks. Extensive experiments show that SLM significantly outperforms existing LLM-based approaches that rely on symbolic reasoning via prompt engineering or textual abstraction, demonstrating the benefits of integrating geometric spatial representations for robust spatial reasoning.   Our instruction dataset, evaluation benchmark, model training codes, and models' checkpoints can be found at:   \\hyperlink{https://github.com/chuchen2017/SLM}{https://github.com/chuchen2017/SLM}.",
+        "authors": "Chen Chu, Bita Azarijoo, Li Xiong, Khurram Shafique, Cyrus Shahabi",
+        "url": "http://arxiv.org/abs/2606.04381v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04381v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了SLM，首个将位置信息作为一等模态的多模态LLM，实现了几何空间推理。构建了空间指令数据集和SpatialEval基准。该方法在理论和模型架构上具有高度创新性（N=5, R=5），显著超越了依赖符号推理的现有方法，解决了LLM空间推理的根本局限（I=5）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04324v1",
+        "title": "Neural Galerkin Normalizing Flows for Bayesian Inference of Diffusions with Inaccessible Boundaries",
+        "summary": "One of the primary challenges in Bayesian inference on the parameters of a diffusion model from discrete observations is the unavailability of an analytical expression for the transition density function between consecutive observation times, which is needed to derive the likelihood function.   Extending previous studies that solve Fokker-Planck (FP) type partial differential equations with Normalizing Flows, we propose a new Normalizing Flow architecture to learn the transition density function of the diffusion process between two observation times. We do so by solving in a Neural Galerkin framework the associated FP equation with a Dirac mass as initial condition, over a specified training distribution of the initial datum and the coefficients of the diffusion. We specifically focus on processes whose diffusion matrix vanishes in certain inaccessible boundary regions, such as Stochastic Volatility models that satisfy a Feller condition.   The product of the obtained transition densities evaluated along the observed trajectory approximates the likelihood function, thereby enabling cheap posterior sampling via Markov chain Monte Carlo (MCMC). After the offline training phase, inference becomes significantly more efficient, as it avoids the need to solve the FP equation in real time for each parameter proposed by the MCMC sampler or to rely on other likelihood-free methods for Bayesian inference that involve repeated simulation of diffusion bridges.",
+        "authors": "Riccardo Saporiti, Fabio Nobile",
+        "url": "http://arxiv.org/abs/2606.04324v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04324v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个新的归一化流架构，通过在神经伽辽金框架中求解Fokker-Planck方程来学习扩散模型的转移密度函数。该方法具有强大的理论严谨性（N=5, R=5），解决了扩散模型贝叶斯推断中的计算瓶颈，实现了高效的后验采样（I=5）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04315v1",
+        "title": "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline",
+        "summary": "LLM agents accumulate histories that outgrow their context windows, motivating a growing literature on memory systems. Yet most existing designs are tuned to a single scenario (multi-session chat or a single trajectory format), and there is little evidence that they generalize across the heterogeneous trajectories agents encounter in deployment. We revisit eight memory systems plus an agentic harness for search problems, on five scenarios: single-turn QA, multi-session chat, agentic-trajectory QA, memory stress tests, and long-horizon agentic tasks. The harness, which self-manages flat text-file storage via tool calls, achieves the best cross-task ranking, suggesting that memory performance hinges on giving the agent active control over storage and retrieval rather than on a passive store behind a fixed pipeline. We instantiate this insight in AutoMEM, an agentic memory harness with a self-managed tool interface that achieves the best cross-scenario generality among the systems we evaluate.",
+        "authors": "Zhikai Chen, Jialiang Gu, Junyu Yin, Xianxuan Long, Shenglai Zeng, Xiaoze Liu, Kai Guo, Keren Zhou, Jiliang Tang",
+        "url": "http://arxiv.org/abs/2606.04315v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04315v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "系统性剖析了关系型上下文学习，揭示了现有方法的局限性，并提出了OpenRFM，一个结合双阶段ICL架构和同质性感知预训练混合的框架。该方法具有强大的理论分析和架构创新性（N=5, R=5），显著提升了关系型基础模型的性能，弥合了开源与商业模型之间的差距（I=5）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04299v1",
+        "title": "Efficient and Training-Free Single-Image Diffusion Models",
+        "summary": "We consider the problem of generating images whose internal structure -- defined by the distribution of patches across multiple scales -- matches that of a single reference image. Recent approaches address this problem by training a diffusion model on a single image. But even in this setting, training is computationally expensive and requires hours of optimization. Instead, we model the image using a dataset of its patches at different scales. As this dataset is finite and the dimensionality of its patches is small, the score function for a noisy patch can be computed tractably using an optimal, closed-form denoiser, eliminating the need for neural network training. We integrate this patch-based denoiser into an efficient, training-free image diffusion model, and we describe how our method connects to classical patch-based image restoration techniques. Our approach achieves state-of-the-art generation quality and diversity compared to trained single-image diffusion models, and we demonstrate applications, including unconditional image generation, text-guided stylization, image symmetrization, and retargeting. Further, we show that our approach is compatible with latent space diffusion, and we show multiple additional acceleration techniques to achieve megapixel single-image generation in one second, and gigapixel generation in minutes.",
+        "authors": "Haojun Qiu, Kiriakos N. Kutulakos, David B. Lindell",
+        "url": "http://arxiv.org/abs/2606.04299v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04299v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种高效、免训练的单图像扩散模型，通过使用最优、封闭形式的去噪器计算噪声补丁的分数函数，无需神经网络训练。该方法具有强大的理论基础（N=5, R=5），实现了SOTA的生成质量和多样性，并在几秒内完成兆像素图像生成，显著解决了效率和质量瓶颈（I=5）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04946v1",
+        "title": "A General Framework for Dynamic Consistent Submodular Maximization",
+        "summary": "Consistency is an important property in dynamic submodular maximization and entails maintaining a near-optimal solution at all times, making only a small number of adjustments to the solution in each step. Prior work has explored this question for the insertion-only case, where the algorithm faces a stream of $n$ insertions, and has established lower and upper bounds for the cardinality-constrained version of the problem. We consider this question in the fully dynamic setting, where the stream of operations may contain both insertions and deletions.   We develop a general framework for designing algorithms for this setting, and instantiate it to obtain the first constant-factor approximations with sublinear consistency. For cardinality constraints, we propose a $\\frac 12 - O(\\varepsilon)$ approximation that is $O\\left(\\frac{1}{\\varepsilon^2}\\right)$ consistent. For rank-$k$ matroid constraints, we construct a $\\frac 14 - O(\\varepsilon)$ approximation to the dynamic optimum that is $O\\left(\\frac{\\log k}{\\varepsilon^2}\\right)$ consistent.",
+        "authors": "Paul Dütting, Federico Fusco, Silvio Lattanzi, Ashkan Norouzi-Fard, Ola Svensson, Morteza Zadimoghaddam",
+        "url": "http://arxiv.org/abs/2606.04946v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04946v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个在完全动态设置下设计动态一致子模最大化算法的通用框架，并首次获得了具有次线性一致性的常数因子近似。该工作具有高度的理论创新性和严谨性（N=5, R=5），解决了动态优化中的基本问题，尽管实践影响力评分为4，但其理论深度和通用性非常符合偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04779v1",
+        "title": "Tree-Based Formalization of Multi-Agent Complementarity in Human-AI Interactions",
+        "summary": "Complementarity is the case in which a human--AI interaction (HAI) outperforms the best prediction benchmark available among its members. Although this idea is central in HAI research, formal work on complementarity remains limited. Existing frameworks do not model how agents' predictions compose into workflow-sensitive multi-agent protocols. We close this gap by introducing a tree-based formalization of complementarity in multi-agent HAI. An HAI protocol is represented by an ordered agent-role configuration together with a rooted planar binary tree whose leaves are decorated by prediction vectors. A local binary composition rule is evaluated recursively along the tree, yielding a tree-relative complementarity functional relative to a pointwise-min oracle benchmark. We prove four results. First, selector-based HAIs, including self- or AI-reliance, cannot achieve complementarity regardless of task, loss, or prediction quality. Second, in regression under squared loss, complementarity is equivalent to Euclidean distance minimization from the ground-truth vector; for $N=2$, the optimal linear-pooling weight has a closed form and a residual-correction interpretation. Third, under linear local composition, every protocol tree defines a barycentric coordinate chart on the simplex of leaf weights; Tamari-cover reparameterizations of protocol trees preserve complementarity, and for $N=4$, they satisfy the pentagon identity. Fourth, in binary classification, no internal local composition can achieve complementarity under endpoint-monotone losses, including standard Bregman and many finite Bernoulli $f$-divergence losses; an analogous obstruction holds for multiclass aggregation under cross-entropy. In summary, our framework shows that complementarity is attainable in multi-agent regression, but obstructed in classification under natural conditions on local aggregation and loss functions.",
+        "authors": "Andrea Ferrario",
+        "url": "http://arxiv.org/abs/2606.04779v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04779v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了多智能体HAI中互补性的树状形式化，并证明了四个理论结果，揭示了在特定条件下分类任务中互补性受阻。该工作具有极强的理论创新性和严谨性（N=5, R=5），为HAI研究提供了重要的形式化基础，尽管实践影响力评分为4，但其对HAI设计和理解的指导意义非常重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.04847v1",
+        "title": "MusaCoder: Native GPU Kernel Generation with Full-Stack Training on Moore Threads GPU",
+        "summary": "Native GPU kernel generation turns high-level tensor programs into executable, efficient low-level code. Existing Large Language Models (LLMs) struggle with this task, while execution-based reinforcement learning suffers from sparse rewards, reward hacking, and training instability. We present MusaCoder, a full-stack training framework for native GPU kernel generation on CUDA and MUSA backends. MusaCoder combines progressive kernel-oriented data synthesis, diversity-preserving rejection fine-tuning, and execution-feedback Reinforcement Learning (RL) through MooreEval, a distributed verifier and reward environment. To stabilize RL, MusaCoder introduces PrimeEcho for first-turn-anchored multi-turn rewards, Buffered Dynamic Retry for recovering signals from all-failed hard samples, and MirrorPop for off-policy sequence filtering. Experiments on KernelBench and a MUSA-ported variant show that MusaCoder outperforms strong open-source and proprietary baselines in both correctness and empirical speedup, with the 9B model matching or exceeding frontier closed-source models and the 27B model establishing a new state of the art. These results demonstrate not only the effectiveness of full-stack execution-feedback training for native kernel generation, but also the capability of Moore Threads GPUs to support the complete LLM post-training stack, providing a practical foundation for large-model training and optimization on emerging accelerators.",
+        "authors": "Kun Cheng, Songshuo Lu, Sicong Liao, Tankun Li, Yafei Zhang, Dong Yang, Qiheng Lv, Hua Wang, Zhi Chen, Yaohua Tang",
+        "url": "http://arxiv.org/abs/2606.04847v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.04847v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了MusaCoder，一个用于原生GPU内核生成的全栈训练框架，结合了数据合成、拒绝微调和执行反馈强化学习，并引入了多种RL稳定机制。该框架在训练方法上具有高度创新性（N=5），解决了将高级张量程序转化为高效低级代码的实际瓶颈（I=5），并在新兴加速器上展示了强大的能力。"
+    }
+]

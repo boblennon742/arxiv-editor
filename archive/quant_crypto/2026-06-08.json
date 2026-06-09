@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.09478v1",
+        "title": "Volatility Forecasting and Return Prediction under Market Regimes: Evidence from High-Frequency Chinese Equity Data",
+        "summary": "This study investigates whether regime-dependent volatility forecasting and machine-learning-based return prediction can be jointly integrated to improve both statistical forecasting performance and economic strategy outcomes in equity markets. Using high-frequency CSI 300 Index data from 2005 to 2023, a sequential twostage framework is developed. In the first stage, realized volatility is modeled using regime-augmented HARQ specifications combined with Markov-switching GJR-GARCH filtering to capture long-memory dynamics, asymmetry, and structural market regimes. In the second stage, volatility forecasts, regime indicators, and return-related predictors are incorporated into an XGBoost return-prediction model estimated through a strictly walk-forward out-of-sample procedure. The empirical results demonstrate that regime-aware volatility forecasting consistently outperforms baseline HARQ models across forecast evaluation metrics and is generally supported by formal forecast comparison tests. In contrast, return predictability remains weak, state-dependent, and concentrated primarily in low-volatility regimes. Although naive predictive trading strategies generally fail after accounting for realistic transaction costs, carefully designed implementations incorporating volatility scaling, low-volatility gating, threshold calibration, and turnover controls can improve defensive economic performance. The findings suggest that the practical value of predictive systems in financial markets may depend less on generating strong unconditional return forecasts and more on transforming weak state-dependent signals into economically robust portfolio allocation rules. Overall, the study contributes by integrating econometric volatility modeling, regime classification, machine-learning return prediction, and implementation realism within a unified framework.",
+        "authors": "Xinyue Fang, Robert Ślepaczuk",
+        "url": "http://arxiv.org/abs/2606.09478v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09478v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文虽然以中国股票市场数据为研究对象，但其提出的两阶段框架对于加密货币市场的量化因子构造、回测和策略设计具有很高的参考价值。它整合了状态依赖的波动率预测（加密市场波动性大，状态切换频繁）、机器学习进行收益预测，并特别强调了**策略实施的现实性**，包括考虑交易成本、波动率调整、低波动率过滤和换手率控制。这些实践经验对于构建在加密市场中稳健的交易策略至关重要。论文的核心思想——将弱信号转化为经济上稳健的投资组合分配规则——也与加密货币市场中因子挖掘的挑战高度契合。尽管数据源不同，其方法论和实践洞察力是高度可迁移的，尤其是在回测和策略设计方面提供了宝贵的思路。"
+    }
+]

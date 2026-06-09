@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.09278v1",
+        "title": "Internalizing Geometric Law: Learning from Solver Residuals for Precision-Critical Generation",
+        "summary": "Large Language Models frequently hallucinate in precision-critical domains such as technical diagramming and mechanical design, where outputs must satisfy strict geometric constraints. We study open-ended geometric synthesis from natural language: translating free-form descriptions into precise constructions whose entities must simultaneously satisfy dozens of interacting constraints. To make this tractable, we release PyGeoX, a programmable geometric DSL that compiles declarative constraints into a differentiable loss, and PyGeoX-Bench, a stratified suite of 300 problems with per-constraint verifiable rewards. Using PyGeoX as a verifier, we identify a failure mode we call Outlier Gradient Masking: under global-norm rewards (any scheme that aggregates residuals through a single norm, for example, $\\exp(-\\mathrm{MSE})$), a single outlier constraint can nullify the learning signal across all others. To address this, we propose Saturating Additive Rewards (SAR), which decompose the reward into bounded per-constraint terms, preserving partial progress and ensuring consistent gradients even under severe violations. Against MSE-based rewards, the natural baseline for geometry solvers, SAR improves the hard-tier solving rate by $2.3\\times$, and the resulting 8B model is competitive with much larger frontier systems on this benchmark. We release the engine, benchmark, and data at https://github.com/Huawei-AI4Math/PyGeoX.",
+        "authors": "Rafael Cabral, Pang Zixi, Ziyi Shou, Shen Xin",
+        "url": "http://arxiv.org/abs/2606.09278v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09278v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 PyGeoX 几何 DSL 和 Saturating Additive Rewards (SAR) 机制，解决了 LLM 在几何合成等精度敏感领域幻觉的问题。其理论创新性在于将声明性约束编译为可微分损失，并通过 SAR 机制有效处理梯度掩蔽问题，确保了在严重违规情况下的梯度一致性。这不仅是算法上的突破，也直接解决了 LLM 在实际应用中的一个关键瓶颈，即在需要高精度和严格约束的场景下的可靠性问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.08953v1",
+        "title": "Self-Consistent Generative Paths via Admissible Random Variational Transport",
+        "summary": "Modern generative models often define an entire probability path from a simple prior to the data law, rather than only an endpoint map. Diffusion models follow stochastic denoising paths, flow matching learns transport fields, consistency and distillation methods compress paths into one or a few steps, adversarial models match terminal distributions, and VAEs generate through latent kernels. Existing unifying views mainly describe how such paths are constructed. We study a complementary question: when is a generated probability path self-consistent? We define a self-consistent generative path as a random fixed point of admissible local variational transport corrections. In this framework, a local correction is specified by a random variational transport operator combining a divergence or geometry term, an energy term, and a structural constraint. The framework contains random regularized optimal-transport proximal steps as a structured instance, while also allowing non-OT divergences, latent kernels, adversarial constraints, causal discrete kernels, and terminal one-step maps. The theory yields a random fixed-point path residual (R-FPR), which measures the gap between the actual generated path and an admissible local correction. We prove well-posedness, random fixed-point existence and attraction, non-contractive existence, residual-to-generation error bounds, empirical residual concentration, proxy perturbation bounds, continuous-time limits, and operator-level generalization with model-specific corollaries. The resulting theory turns endpoint matching into path self-consistency testing and provides a residual-control principle for diagnosing failures, regularizing training, and guiding adaptive sampling across diffusion, flow, one-step, VAE, GAN/WGAN, and autoregressive generators.",
+        "authors": "Lei Luo, Yingzhen Zhang, Jian Yang",
+        "url": "http://arxiv.org/abs/2606.08953v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.08953v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了 Conformal Assessment for Risk Evaluation (CARE)，一个针对医疗摘要的后验、模型无关的安全层。其创新性在于利用共形风险控制为 LLM 摘要提供有限样本、无分布的遗漏和幻觉保证。这种理论严谨性（两个控制器分别限制未标记幻觉句子的概率和未被发现的重要遗漏的预期比例）和在医疗领域的关键实践影响力（显著提高遗漏检测，平衡风险与审查负担）使其成为一篇非常值得关注的论文，直接解决了 LLM 在高风险应用中的安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09135v1",
+        "title": "Steganography Without Modification: Hidden Communication via LLM Seeds",
+        "summary": "We demonstrate that widely deployed Large Language Model (LLM) inference stacks harbor a steganographic channel that requires no modification to model weights, sampling code, or output distributions. The channel exploits a structural property of deterministic decoding: pseudo-random number generators (PRNGs) used in inverse-transform sampling produce a seed-dependent sequence of token-level probability intervals that can be reconstructed from the generated text alone. A sender encodes a secret message in the PRNG seed before generation; a receiver reconstructs the intervals and recovers the seed, and thus the hidden payload, by exhaustive search over the seed space.   We formalize two operational modes. In the known-prompt setting, sender and receiver share the prompt, enabling exact interval reconstruction and perfect seed recovery via forced alignment. In the unknown-prompt setting, only the generated text is available; approximate interval reconstruction combined with a maximum-hit-count scoring strategy still permits reliable recovery from sufficiently long outputs.   Extensive experiments across six model families and five heterogeneous text domains show that, in the known-prompt setting, full 32-bit seed recovery from the complete 2^32 candidate space achieves up to 100% accuracy, depending on model and text domain, within 300 tokens and under 35 seconds on a single GPU. In the unknown-prompt setting, recovery reaches near-perfect accuracy at 600-800 tokens in about 12 seconds. We further analyze the influence of prompting strategies, tokenization ambiguities, and sampling hyperparameters on channel reliability. Moreover, we discuss several applications of our results: First, it allows for the steganographic transmission of 32 bits, but also shows that ignorance of the prompt is not a valid security assumption.",
+        "authors": "Felix Mächtle, Jonas Sander, Sebastian Berndt, Ben Weimar, Nils Loose, Thomas Eisenbarth",
+        "url": "http://arxiv.org/abs/2606.09135v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09135v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了 LLM 推理栈中一个无需修改模型权重、采样代码或输出分布的隐蔽隐写通道，利用了确定性解码中伪随机数生成器（PRNG）的结构特性。这是一个具有高度创新性的基础性发现，其严谨的理论分析和广泛的实验验证了该通道的存在和可靠性。它暴露了 LLM 的一个关键安全漏洞，对 LLM 的安全性和隐私保护具有深远的影响，完美契合您对前沿算法和实际应用瓶颈的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09514v1",
+        "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference",
+        "summary": "Large language models (LLMs) incur high inference cost due to their depth and parameter scale. Depth pruning can reduce latency by skipping redundant Transformer blocks, but existing methods (i) provide limited control under user-specific compute budgets and (ii) typically fix the routing path, failing to adapt as the context grows during decoding. We propose Buddy, a budget-driven dynamic depth routing framework. Buddy uses a lightweight Decision Module to score intermediate layers conditioned on the input and deterministically executes the top-k layers to satisfy a given budget. To support decode-time adaptation, Buddy reuses the first-layer KV cache as a low-overhead global context source and pools it together with the newest token representation before each routing decision. When no explicit budget is provided, an optional Budget Predictor estimates an input-dependent compute level to balance quality and efficiency. Experiments on Llama-family and Qwen models show that Buddy is competitive with strong static pruning baselines and often improves the accuracy-compute trade-off, while uniquely supporting strict budget control, decode-time rerouting, and multiple budgets within a single trained model.",
+        "authors": "Yuhua Zhou, Shaoqi Yu, Shichao Weng, Changhai Zhou, Mingze Yin, Fei Yang, Aimin Pan",
+        "url": "http://arxiv.org/abs/2606.09514v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09514v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种自反思分子设计系统，通过将第一性原理计算的完整物理化学原理（轨道能量、原子电荷、电子密度）反馈给 LLM，将其从随机采样器转变为因果推理器。这种将物理化学分析深度融入 LLM 迭代循环的创新方法，显著提高了分子设计的精度和成功率，解决了 AI 驱动科学发现中的一个关键瓶颈，具有极高的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09353v1",
+        "title": "Beyond Humans: Multispecies Animal Face Recognition Using Transfer Learning",
+        "summary": "Individual animal recognition can be useful in the search for lost or stolen pets, the tracking of individuals of endangered species, and the recognition of animals in crowded farms. Present recognition techniques mostly use physical devices, e.g., microchips, often impractical and difficult to apply. These could be replaced by remote recognition via the animal's face; if accurate enough, it provides several advantages: it is non-invasive, can work at a distance, and is difficult to counterfeit, as, for instance, in the case of substituting sick animals for healthy ones in the food industry. The few existing datasets with sufficient per-subject images annotated with a single animal identity are not large enough to train current deep learning architectures. We rather investigate the possibility of transfer learning, exploiting pre-trained network models as backbones. Our experiments compared FaceNet, which is specifically trained on large databases of human faces, with the Vision Transformer (ViT) pre-trained on ImageNet, i.e., on object categories. We used three face datasets of very different animals: dogs, primates (lemurs, golden monkeys, and chimpanzees), and cattle. We report the results and, for each dataset, compare them with the state of the art (SOTA) ad hoc-trained deep networks. The capture conditions differ among the three datasets. Image quality (resolution, motion blur, diverse poses, etc.) decreases from dogs to cattle to primates. The best performance was achieved with dogs, where ViT reached a mean verification accuracy of 96.85% and a Rank-1 Identification Rate of 84.34%. The results for endangered primates are still encouraging, but performance varies across animal classes and tasks (verification or identification), and does not always outperform SOTA. For cattle, the ViT results outperform SOTA, while FaceNet is still competitive.",
+        "authors": "Maria De Marsico, Anil K. Jain, Annalaura Miglino",
+        "url": "http://arxiv.org/abs/2606.09353v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09353v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Convex Gate (C-Gate)，一个将语音信号整合到冻结 LLM 中的新颖桥接方案。它通过架构上的凸包约束，将所有语音表示限制在 LLM 的输入嵌入流形内，同时保留连续表达能力。其理论创新性在于揭示了几何结构而非离散 token 是语音-LLM 接口设计的根本因素。这为多模态整合提供了一个受控的机制，解决了语音 LLM 接口中的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09157v1",
+        "title": "SEF-CLGC at SemEval-2026 Task 11: Logical Notation Impact on Language Model Performance",
+        "summary": "This paper revisits our pipeline called Syllogistic Evaluation Framework-Common Logic Grammar Construction (SEF-CLGC). We combine formal logical notations with Small Language Models (SLMs) to evaluate reasoning performance on the SemEval-2026 Task 11 Subtask 1: Disentangling Content and Formal Reasoning in Large Language Models. Our experiments show that by relying solely on SLMs, trained on a combination of natural and symbolic languages, our best model achieves a content score of 27.80% on the task while significantly lowering the content bias in reasoning.",
+        "authors": "Hanna Abi Akl, Fabien Gandon, Catherine Faron, Pierre Monnin",
+        "url": "http://arxiv.org/abs/2606.09157v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09157v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Unified Energy (Uni-E) 框架，用于扩散语言模型 (DLM) 中的不变和独立解码。它系统性地分析了现有方法的性能差距，并提出了一个能精确计算的统一能量函数，解决了模型容量、依赖性和不变性问题。其高度的理论创新性和严谨的数学推导，为 DLM 的并行文本生成提供了新的基础，有望显著提升其效率和性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09110v1",
+        "title": "HDRAgent: An Agentic Framework for Multi-Exposure HDR Imaging",
+        "summary": "Most existing multi-exposure HDR methods follow a fixed feed-forward reconstruction paradigm, making them prone to ghosting artifacts in complex dynamic scenes. To address this issue, we propose HDRAgent, the first agent-driven framework for HDR imaging, which adaptively selects reconstruction strategies according to the current scene conditions. Specifically, to provide scene-specific prior knowledge, we introduce a fine-grained contextual knowledge matching (FCM) module. This module leverages multimodal large language model (MLLM)-derived scene perception to retrieve relevant historical cases and tool knowledge, organizing them into structured evidence for MLLM-based adaptive tool scheduling. In addition, we propose a perception--distortion feedback mechanism that transforms post-execution quality assessment and artifact diagnosis into structured feedback, which is accumulated in historical memory to help subsequent contextual knowledge refinement and strategy selection. Furthermore, considering that extreme motion can invalidate alignment methods, we design an agent-guided generative alignment strategy that uses MLLM-based dynamic-region parsing to reconstruct unreliable contents in non-reference frames under reference-frame guidance. Experiments demonstrate that HDRAgent effectively reduces ghosting and local artifacts while achieving competitive or superior objective performance and visual quality.",
+        "authors": "Weiyu Zhou, Tao Hu, Yijian Wang, Xiaogang Xu, Ruixing Wang, Qingsen Yan",
+        "url": "http://arxiv.org/abs/2606.09110v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09110v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一种受 Ising 动力学启发的平衡传播框架，通过扩展相空间动力学和共轭变量替代了耗散的 Hopfield 松弛。这种理论创新改变了神经状态达到平衡的物理路径，降低了有效能垒，加速了收敛，提高了噪声鲁棒性，并实现了与反向传播相当的性能。它为高效的能量基学习提供了新的理论方向，对节能 AI 和神经形态计算具有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09092v1",
+        "title": "From Shortcuts to Reasoning: Robust Post-Training of Theory of Mind with Reinforcement Learning",
+        "summary": "Theory of Mind (ToM) is a must-acquire skill for modern foundation model systems to operate effectively and safely in the real world. Recent works have explored honing ToM via post-training; however, we show that such progress is confounded by a pervasive \"shortcut\" issue: tasks can reach up to 99% accuracy by simply exploiting spurious causal correlations, leading to a false sense of ToM. Motivated by this, we first develop a framework to systematically examine ToM datasets for shortcuts and provide guidance for future development. We find that questions reducible to pure state tracking, such as \"belief,\" are especially shortcut-prone compared to mind questions, such as \"intention,\" where reasoning beyond tracking is required. Using four shortcut-free datasets across three ToM contexts, we then comprehensively study whether Reinforcement Fine-Tuning with verifiable rewards and explicit reasoning chains, called Thinking-RFT, elevates ToM beyond Supervised Fine-Tuning, or SFT. Our key findings are as follows. First, Thinking-RFT effectively improves ToM in all scenarios, with a 6% improvement over SFT, particularly in complex higher-order reasoning, with a 10% improvement over SFT, and multimodal cases, with a 7% improvement over SFT. It also generalizes notably better to unseen domains and higher-order queries while being more robust to counterfactuals. Second, ToM benefits specifically from the joint effect of reasoning and RL: Thinking-RFT outperforms Non-Thinking-RFT by 7% on average. Third, RFT works by learning to ground its reasoning on anchor cues, such as keywords and state changes, that correspond to causal factors. We believe our study is useful for developing effective and robust ToM post-training datasets and advancing critical ToM capabilities.",
+        "authors": "Jike Zhong, Yuxiang Lai, Ming Li, Yuheng Li, Wuao Liu, Behzad Dariush, Konstantinos Psounis, Shao-Yuan Lo",
+        "url": "http://arxiv.org/abs/2606.09092v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09092v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文开创性地研究了超图数据的 U-Net 架构，提出了通过切割聚类树状图来构建并行分层池化 (PHPool) 和反池化 (PHUnpool) 算子。其理论创新性在于设计了全局并行且能忠实于原始超图结构的池化操作，并提供了严谨的数学证明。这解决了超图神经网络（HNNs）在架构设计上的一个关键空白，对图神经网络领域具有重要推动作用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.08957v1",
+        "title": "Rethinking 3D Shape Generation: Diffusion over Superquadrics",
+        "summary": "Diffusion models have advanced 3D shape generation, yet most methods still denoise in high-cardinality spaces (e.g., voxel/SDF grids, meshes, or point clouds), which is computationally and memory intensive and makes it difficult to scale in terms of both higher resolution and stronger controllability. We rethink the diffusion representation and propose to move diffusion from dense geometry to compact geometric primitives, representing each shape as a small set of superquadrics. Instead of operating on thousands to millions of geometric representation values, we leverage 7KB superquadric parameters (pose, size, and shape), drastically reducing diffusion-state dimensionality and per-step compute/memory. Our diffusion-over-superquadrics improves scalability by supporting broader capabilities (e.g., resolution-free point-cloud decoding, part-level editing, and constraint-based design) and achieving competitive surface-fidelity and distributional performance on standard benchmarks after point-cloud decoding, while enabling efficient generation within 0.6s per shape for most conditions.",
+        "authors": "Zhiyang Liu, Wanze Li, Yuwei Wu, Chengran Yuan, Jiawei Sun, Rui Zheng, Marcelo H Ang",
+        "url": "http://arxiv.org/abs/2606.08957v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.08957v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文重新思考了 3D 形状生成中的扩散表示，将其从密集的几何体（如体素、SDF 网格）转移到紧凑的几何基元（超二次曲面）。这种表示上的创新极大地降低了扩散状态的维度，解决了 3D 形状生成中计算和内存密集的问题，并提高了可控性。它在效率和功能扩展方面具有显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09816v1",
+        "title": "PTL-Diffusion: Manifold-Aware Diffusion with Periodic Terminal Laws",
+        "summary": "Standard diffusion models typically use a single time-homogeneous Gaussian terminal distribution as the reference law for generation. While this choice is analytically convenient and empirically powerful, it provides little explicit structure for data concentrated near low-dimensional manifolds, where different regions of the data distribution may correspond to distinct local geometric or semantic factors. As a result, the reverse model must recover manifold-level structure almost entirely from an unstructured terminal reference distribution.   We propose PTL-Diffusion, a proof-of-concept diffusion framework whose forward noising process converges to a nonconstant periodic family of Gaussian terminal laws rather than to a single invariant law. Unlike a phase-conditioned DDPM, where phase information only enters the denoising network while the forward process remains unchanged, PTL-Diffusion embeds phase structure directly into the forward noising dynamics.   The proposed construction remains close to standard denoising diffusion models: for a periodically forced Ornstein--Uhlenbeck-type forward process, we derive closed-form forward marginals, the limiting periodic Gaussian terminal family, and explicit Gaussian reverse posteriors, enabling standard noise-prediction training. We also introduce an invariant-average regularization term coupling the phase-conditioned reverse dynamics through the averaged periodic reference law. Experiments on torus and cylinder point-cloud benchmarks and the Olivetti face dataset show that PTL-Diffusion improves manifold-level distributional matching over matched DDPM baselines, reducing phase-conditioned errors, feature-space covariance errors, and nearest-neighbour manifold distances. These results suggest structured terminal reference laws as a promising direction, while motivating more expressive phase constructions and larger-scale evaluations.",
+        "authors": "Danqi Zhuang, Jisui Huang, Xiaoyue Xi, Andrew Kiggins, Xiaojie Wang, Ke Chen, Yue Wu",
+        "url": "http://arxiv.org/abs/2606.09816v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09816v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 PTL-Diffusion，一个概念验证性的扩散框架，其前向去噪过程收敛于非恒定的周期性高斯终端律族，而非单一不变律。这种将相位结构直接嵌入前向去噪动力学的理论创新，以及对前向边际、终端族和逆向后验的闭式推导，展现了极高的理论严谨性。尽管目前主要在基准数据集上验证，但其为处理低维流形上数据集中分布提供了新的结构化参考律方向，具有重要的理论探索价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09122v1",
+        "title": "Autonomous Incident Resolution at Hyperscale: An Agentic AI Architecture for Network Operations",
+        "summary": "Cloud network infrastructure at hyperscale presents unique operational challenges where traditional human-driven incident response cannot keep pace with the volume, velocity, and complexity of failures. This paper presents an agentic AI architecture for autonomous incident resolution in large-scale network operations. Our system employs a multi-agent orchestration framework where specialized AI agents collaborate to detect, diagnose, and remediate network incidents without human intervention. We describe the architectural principles, including hierarchical agent decomposition, skills-based tool invocation via standardized protocols, structured knowledge encoding from operational runbooks, progressive autonomy with safety boundaries, and closed-loop verification. The architecture has been deployed in production at a major cloud provider, demonstrating that agentic AI systems can achieve autonomous resolution rates exceeding 90% for common incident categories while maintaining safety guarantees through layered authorization and rollback mechanisms. We discuss design tradeoffs, failure modes, and lessons learned from operating autonomous AI agents at scale.",
+        "authors": "Arun Malik",
+        "url": "http://arxiv.org/abs/2606.09122v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09122v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了一个成本参数化的稳定反馈律族，允许用户选择控制的运行成本，并通过公式获得一个预先存在的通用控制器的非线性“扩展器”。其理论创新性在于将设计自由度引入通用稳定器，并提供了严格的数学证明（Lipschitz 连续性、半全局渐近稳定性、次优性界）。这虽然是控制理论的 foundational 工作，但其对统一神经算子近似和在线适应的支持，为 AI 系统中的鲁棒控制提供了理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09303v1",
+        "title": "Reason Twice: Segmentation via Candidate Discovery and Comparative Reasoning",
+        "summary": "The rapid development of pretrained foundation models has enabled more general image segmentation. Multimodal large language models (MLLMs) have been widely explored for image segmentation with complex queries that require high-level reasoning. Despite promising progress, existing methods are often constrained by limited training data and the gap between MLLMs and mask generation modules. To better transfer MLLMs' perception and reasoning ability to complex reasoning-based segmentation tasks, we propose a two-stage framework Rea2Seg for mask generation and selection. Specifically, the framework first identifies potential regions as candidate masks based on the attention maps of a segmentation MLLM. It then employs an MLLM to reason over the question and candidate masks and assign scores to each mask. The final segmentation result is obtained by reranking the candidates and selecting the highest-scoring mask, reformulating image segmentation as candidate discovery followed by discriminative mask selection.   We also notice that a large portion of questions in existing benchmarks focus on commonsense reasoning, and these questions usually do not fully require joint visual observation and reasoning. To address this issue, we introduce a new benchmark called ReasonSeg-SGDR that comprehensively evaluates a model's perception, grounding, and reasoning abilities across multiple dimensions, including discriminative recognition, spatial reasoning, geometric reasoning, and multi-step reasoning, with fine-grained mask generation.   In addition, we collect training data to enhance MLLMs' ability to jointly understand multimodal queries and candidate masks, and to assign scores through reasoning. Experimental results on the proposed benchmark and ReasonSeg demonstrate the effectiveness of the unified mask generation and selection framework.",
+        "authors": "Xinyan Gao, Haoran Hao, Xiangyu Yue",
+        "url": "http://arxiv.org/abs/2606.09303v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09303v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 Code Is More Than Text: Uncertainty Estimation for Code Generation，强调代码与自然语言在 token 脆弱性、意图-代码差距和可执行性方面的差异，并据此提出了词法、算法和功能三个正交的不确定性轴。这种对代码特性的深刻理解和理论创新，使得其不确定性估计方法显著优于现有基线，对于 LLM 生成代码的安全性、可靠性和人机协作至关重要，解决了实际应用中的一个关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09549v1",
+        "title": "SecureClaw: Clawing Back Control of LLM Agents",
+        "summary": "Tool-using large language model (LLM) agents face two distinct security failures: unauthorized external actions and exposure of sensitive plaintext inside the runtime before any final output check can intervene. Existing defenses usually protect one boundary, either the planner/runtime or the action sink, and therefore do not by themselves secure both surfaces. We present SecureClaw, a dual-boundary architecture that places authorization at the effect sink and plaintext confinement at the read boundary. Sensitive reads pass through a trusted gateway that replaces raw values with opaque handles and, in the evaluated deployment, bounded summaries as an explicit declassification interface. Writes that change external state follow a PREVIEW$\\rightarrow$COMMIT protocol in which only a trusted executor may commit the exact canonical request authorized by policy. The runtime can still plan over summaries and symbolic references, but cannot directly dereference secrets or perform side effects. Across AgentDojo, AgentLeak, and Agent Security Bench (ASB), SecureClaw is the only defense we evaluate in a common harness that simultaneously retains usable task utility and achieves 0\\% attack success rate (ASR) on ASB, 0.64\\% ASR on AgentDojo, and 3.23\\% overall leak on AgentLeak's attacked parity lane, which measures final-output and internal-relay leakage.",
+        "authors": "Yuhan Ma, Stefan Schmid",
+        "url": "http://arxiv.org/abs/2606.09549v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09549v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 FuseFSS，一个用于高效安全 LLM 推理的编译器，通过单一编译流水线取代了传统 FSS 系统中每个操作符的定制协议。它解决了固定点非线性和辅助操作的性能瓶颈，实现了显著的端到端加速和通信量减少。这种编译器级别的理论创新和工程实现，对于在保护隐私的同时大规模部署 LLM 具有关键的实践影响力，直接解决了计算效率和隐私保护的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09644v1",
+        "title": "Where Does the Answer Come From? Benchmarking View-Level Visual Evidence Identification in Multi-View MLLMs for Autonomous Driving",
+        "summary": "Multimodal large language models (MLLMs) achieve strong results on visual reasoning benchmarks, but answer accuracy alone does not indicate whether a model relied on the correct visual evidence. This gap is particularly important in multi-view driving scenes used for autonomous driving, where a model can produce a plausible answer while grounding it in the wrong camera view. We introduce a multi-view visual question answering benchmark for evaluating evidence-source identification: given six synchronized NuScenes views and a question, the model must identify the supporting camera view and answer the question. The benchmark contains 122 conflict-centric question-answer pairs from 73 scenes, spanning causality, counterfactual reasoning, and intent prediction. View labels are proposed by an automatic conflict-mining pipeline and manually verified by annotators. We evaluate three settings: camera-view selection, oracle QA given the golden view, and joint prediction in which the model selects a view and answers in one pass. Answers are evaluated in both multiple-choice and free-form formats, using exact match for structured predictions and an LLM judge for free-form responses. By explicitly separating visual-source identification from answer correctness, the benchmark exposes grounding failures that answer-only evaluation misses.",
+        "authors": "Yimu Wang, Yee Man Choi, Barry Zhang, Mozhgan Nasr Azadani, Sean Sedwards, Krzysztof Czarnecki",
+        "url": "http://arxiv.org/abs/2606.09644v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09644v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 MAGIS，一个基于证据的多智能体推理框架，用于可解释的斜视临床决策。它将黑盒诊断转化为结构化过程，通过 Dual-Evidence Constrained Context (DECC) 和 Evidence-Based Corrective Verification (EBCV) 机制，整合视觉证据和临床规则。这种多智能体架构的创新性及其在提高诊断准确性、可解释性和临床可靠性方面的显著成果，解决了医疗 AI 领域透明度和信任的关键瓶颈，具有极高的实践影响力。"
+    }
+]

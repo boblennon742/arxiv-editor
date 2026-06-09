@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.09825v1",
+        "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
+        "summary": "Training reinforcement learning (RL) policies from scratch is   costly: it requires careful reward and environment design,   extensive tuning, and substantial computation.   Yet many control problems already have a functional but   suboptimal policy available as a baseline.   This paper proposes a method for embedding such a baseline into   the RL training process, simultaneously improving training   efficiency relative to from-scratch methods and producing a   learning policy that outperforms the baseline.   At each step, the method arbitrates between the baseline policy   and a trainable learning policy, initially relying strongly on   the baseline policy and then progressively transferring agency to   the learning policy.   By the end of training, the learning policy is a standalone   neural network that operates without baseline policy support.   The paper formalizes what it means for the baseline policy to be   functional: under this policy, the agent reaches a goal set and   remains there with high probability.   The proposed arbitration mechanism is designed to exploit this   property during training, yielding high goal-reaching rates right   from the beginning of training.   A theoretical analysis provides a formal interpretation of this   behavior under stated assumptions and extends it to the final   baseline-free regime, where explicit lower bounds are derived for   the goal-reaching probability of the standalone learning policy.   Empirical results on continuous-control benchmarks show that the   proposed method achieves returns that match or exceed those of   competitive approaches, while maintaining the highest   goal-reaching rates throughout training among the compared   methods -- including in the final stage, where the learning policy   operates without any baseline support.",
+        "authors": "Anton Bolychev, Georgiy Malaniya, Sinan Ibrahim, Pavel Osinenko",
+        "url": "http://arxiv.org/abs/2606.09825v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09825v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种强化学习策略增强技术，通过在基线策略和学习策略之间进行仲裁来提高训练效率。其亮点在于提供了理论分析，形式化了基线策略的“功能性”，并推导了独立学习策略达到目标的概率下限。这符合您对理论保证和数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09756v1",
+        "title": "Perturbative Contrastive Physical Learning",
+        "summary": "Responses to perturbations are key to understanding physical systems. The ability to contrast such responses by comparing how a system reacts under slightly different conditions provides a mechanism for learning. Here, we introduce Perturbative Contrastive Physical Learning (PCPL), a general framework in which learning emerges from measurable contrasts between physical states produced by controlled changes to inputs, boundary conditions, parameters, or interpreter functions. PCPL unifies and extends prior approaches: Equilibrium Propagation is rooted in contrasts between free and nudged equilibria in energy-based systems, while Frequency Propagation corresponds to contrasts extracted from sinusoidally driven, frequency-demodulated responses. We show that contrast-driven updates can reflect either local sensitivities or global inverse-problem structure, yet do not require centralized gradient computation. Instead, effective learning geometry emerges implicitly from the system's own physical response, allowing learning behavior to arise without an external processor or explicit backpropagation. We demonstrate PCPL in two platforms: (i) spring networks that update bond stiffness using measured displacements and forces, and (ii) continuous-variable photonic circuits trained via x quadrature measurements and finite-difference estimates of the Jacobian. Both platforms successfully learn classification tasks. We further show that a continuous-variable photonic circuit can be trained to implement analog multiplication, illustrating a step toward more autonomous physical learning systems.",
+        "authors": "Kyungeun Kim, Amanuel Anteneh, Israel Klich, Olivier Pfister, J. M. Schwarz",
+        "url": "http://arxiv.org/abs/2606.09756v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09756v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了Perturbative Contrastive Physical Learning (PCPL) 框架，通过对比物理系统对扰动的响应来学习。它统一并扩展了现有方法，并指出学习几何可以从系统自身的物理响应中隐式产生，无需集中式梯度计算。虽然应用场景偏物理，但其理论框架和“无需外部处理器或显式反向传播”的理念具有较高的理论创新性和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09724v1",
+        "title": "Beyond Probabilistic Similarity: Structural, Temporal, and Causal Limitations of Retrieval-Augmented Generation in the Legal Domain",
+        "summary": "Retrieval-Augmented Generation (RAG) has become a standard architectural response to unreliability in legal AI, yet high-profile failures, including fabricated citations submitted to courts and anachronistic legal content presented as current, continue to appear across jurisdictions. We argue that these failures are not residual confabulations to be eliminated by scaling language models, but symptoms of an architectural mismatch between probabilistic retrieval and the hierarchical, temporal, and institutional structure of legal knowledge. We develop the argument in three moves. First, we articulate the ontological commitment of legal knowledge as a triad of properties derivable from classical legal theory: hierarchical and mereological structure, diachronic dynamism under operational closure, and causal traceability of institutional provenance grounded in the duty of justification. Second, we identify three corresponding pathologies of retrieval (mereological blindness, diachronic blindness, and causal opacity), each developed with an operational definition, a failure mechanism, a canonical example, and detection criteria for diagnostic use. Third, we review the state of the art through this lens, showing that existing approaches address these requirements unevenly and do not yet compose into a paradigm that treats them as co-constitutive. From this analysis we derive four architectural commitments that characterize the deterministic-by-design direction for legal retrieval: ontological primacy, event reification, bitemporal correctness, and deterministic interaction protocols. The framework concerns quaestio juris (which norms apply and in what state) rather than the downstream tasks that act on identified norms, and addresses legislative and constitutional retrieval primarily, with interpretive time as an explicit extension.",
+        "authors": "Hudson de Martim",
+        "url": "http://arxiv.org/abs/2606.09724v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09724v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了RAG在法律领域失败的根本原因，并从经典法律理论中推导出法律知识的本体论承诺（分层、时序、因果可追溯性）。它识别了三种检索病理（本体论盲点、时序盲点、因果不透明性），并提出了确定性设计的架构承诺。虽然不是纯粹的数理统计，但其对因果逻辑和系统性理论缺陷的分析非常严谨和深刻，对AI系统可靠性有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09718v1",
+        "title": "Evaluating the Representation Space of Diffusion Models via Self-Supervised Principles",
+        "summary": "Diffusion models have demonstrated remarkable generative capabilities and have also emerged as powerful self-supervised representation learners, yet the connection between these two abilities remains less explored. Drawing inspiration from self-supervised learning (SSL), we introduce a framework for jointly evaluating the representation and generation capabilities of diffusion models. Specifically, we decompose features into invariant and residual components and derive the Invariant Contamination Ratio (ICR), a Fisher-based metric that quantifies how residual variation contaminates invariant signal in feature space. We use this framework to analyze both discriminative and generative behavior of diffusion models. On the representation side, we find that invariance peaks at intermediate noise levels, which also yield the best downstream classification performance. On the generative side, we study how training transitions from genuine generalization to memorization in data-limited regimes, and show that ICR serves as a sensitive training-time indicator of early learning: increasing residual energy along Fisher directions marks the onset of memorization, detectable from training features alone without external evaluators or held-out test sets. Overall, our results show that diffusion models can be monitored from a self-supervised perspective through the geometry of their learned representations.",
+        "authors": "Xiao Li, Yixuan Jia, Zekai Zhang, Xiang Li, Lianghe Shi, Jinxin Zhou, Zhihui Zhu, Liyue Shen, Qing Qu",
+        "url": "http://arxiv.org/abs/2606.09718v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09718v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过自监督学习原理评估扩散模型的表示空间，引入了Invariant Contamination Ratio (ICR) 这一基于Fisher的度量来量化残差变异对不变信号的污染。它从表示几何的角度分析了扩散模型的判别和生成行为，并发现ICR可以作为早期学习和记忆化的敏感指标。这提供了对扩散模型内部机制的理论洞察，具有较高的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09625v1",
+        "title": "A Synthetic Control Approach to Conditional Distributional Treatment Effects",
+        "summary": "This paper proposes a synthetic control (SC) framework for the estimation of conditional distributional treatment effects. Identification rests on a parallel trends condition formulated in the parameter space of the semiparametric distribution regression (DR) model, which keeps the counterfactual conditional distribution within the model class. The weights solve a least-squares problem subject to an adding-up constraint, yielding a closed-form estimator. We derive the asymptotic distribution of the counterfactual estimator, with DR estimation error and weight estimation error contributing at the same rate to the asymptotic variance. Moreover, we propose a supremum test for the null of no treatment effect, whose limit is the supremum of a Gaussian process. Simulations illustrate that conditioning on covariates can reveal effects being difficult to detect from the unconditional distribution alone. An application to the 1992 New Jersey minimum wage increase using CPS data finds effects concentrated in the minimum-wage corridor for low-education, low-experience workers.",
+        "authors": "Dominik Wied",
+        "url": "http://arxiv.org/abs/2606.09625v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09625v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个用于估计条件分布处理效应的合成控制（SC）框架。其识别基于半参数分布回归（DR）模型参数空间中的平行趋势条件。论文推导了反事实估计量的渐近分布，并提出了一个无处理效应零假设的supremum检验。这篇论文在因果推断领域提供了扎实的统计理论和渐近分析，非常符合您的研究偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09605v1",
+        "title": "Next-Token Prediction Learns Generalisable Representations of Sleep Physiology",
+        "summary": "Foundation models offer a promising route to compress multi-modal physiological signals into compact representations of human health, with broad applications across sleep medicine, cardiology, neurology and other healthcare domains. Existing models have typically been trained with masked-reconstruction or contrastive objectives. However, masked reconstruction may be poorly suited to the stochastic nature of these signals, while contrastive approaches rely on positive-pair definitions despite the semantic invariances of physiological signals being poorly understood. In this work, we show that next-token prediction is a simple and scalable alternative. We develop Hypnos, a multi-modal sleep foundation model trained using eight different sensing modalities (e.g. EEG, ECG, respiratory signals) drawn from over 20,000 overnight polysomnography recordings. We tokenize each modality into streams of discrete tokens using residual vector quantization, then train a large auto-regressive RQ-Transformer to jointly predict the next token across all modalities in parallel. After training, Hypnos can be applied to continuous streams of sensor data from any subset of supported modalities, generating embeddings for downstream tasks. Across a range of benchmarks, Hypnos significantly outperforms existing foundation models. In sleep stage classification, we match the performance of strong supervised baselines on held-out test sets whilst using \\(100\\times\\) less labelled data. Hypnos even generalises to daytime physiology, surpassing a dedicated ECG foundation model at detecting atrial fibrillation. Our results demonstrate that next-token prediction is a strong self-supervised objective for representation learning from multi-modal physiological signals.",
+        "authors": "Jonathan F. Carter, Lionel Tarassenko",
+        "url": "http://arxiv.org/abs/2606.09605v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09605v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种基于Next-Token Prediction的多模态睡眠基础模型Hypnos，用于学习可泛化的生理信号表示。它通过残差向量量化将多模态信号离散化，并训练自回归RQ-Transformer进行联合预测。虽然核心是模型应用，但其对自监督目标在生理信号表示学习中的有效性进行了深入探讨，并展示了其在少标签数据下的泛化能力，具有较强的统计学习基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09392v1",
+        "title": "From Coarse to Fine: Managing Temporal Granularity in Spatio-Temporal Data for Fine-Grained Traffic Prediction",
+        "summary": "Efficient acquisition, storage, and utilization of traffic data are critical challenges in spatio-temporal data management. Most traffic data systems collect and store observations at fixed, coarse-grained temporal intervals to reduce storage and computation costs. However, such coarse-grained data severely limits downstream applications that require predictions at a finer temporal granularity. Collecting and maintaining fine-grained traffic data across all locations and time periods would impose a substantial burden on database storage and preprocessing pipelines. To address this temporal granularity mismatch, we formulate a novel problem: predicting fine-grained future traffic using coarse-grained sampled data. We propose the Spatial-Temporal Refinement Predictor (STRP), a granularity-aware framework for spatio-temporal data systems. STRP integrates two components: Tree Convolution for efficient and interpretable spatial dependency modeling, and Inverse Dilated Convolution for progressive temporal extrapolation. STRP supports two practical prediction settings: window-based and duration-based, to handle different forms of granularity mismatch. Experiments on six benchmark datasets show that STRP significantly outperforms state-of-the-art baselines in both accuracy and efficiency. Our work offers a practical and interpretable approach to managing granularity mismatches in spatio-temporal traffic data systems.",
+        "authors": "Shuhao Li, Weidong Yang, Yue Cui, Zizhuo Xu, Lipeng Ma, Fan Zhang, Xiaofang Zhou",
+        "url": "http://arxiv.org/abs/2606.09392v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09392v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了时空数据中时间粒度不匹配的问题，提出了Spatial-Temporal Refinement Predictor (STRP) 框架，用于使用粗粒度采样数据预测细粒度未来交通。它结合了Tree Convolution和Inverse Dilated Convolution。虽然是应用驱动，但其对数据粒度问题的形式化和提出的可解释性模型架构，在时空数据建模方面具有理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09307v1",
+        "title": "Robust high-dimensional Bayesian regression with non-Gaussian errors under global--local shrinkage priors",
+        "summary": "Multivariate regression with many correlated responses and predictors commonly violates Gaussian error assumptions due to heavy tails, outliers, and asymmetry. Gaussian procedures then lose efficiency in coefficient estimation and produce biased estimates of conditional dependence graphs. We develop a robust Bayesian framework using a scale-location mixture error distribution and horseshoe+ global-local priors on both the regression coefficients and off-diagonals of the error precision matrix, coupling sparsity in the regression map with sparsity in the residual dependence structure. Theoretical contributions include joint posterior contraction, selection consistency for both supports, a Kullback-Leibler risk bound showing the dominance of horseshoe+ over horseshoe, and bounded sensitivity, ensuring that a single large outlier has vanishing influence under t errors. Simulations across four error regimes, contamination, and varying dimensions show that our estimator matches Gaussian procedures under normality and dominates them under heavy tails and skewness. Applications to FRED-MD macroeconomic data and S&P 500 daily returns recover interpretable sparse coefficient maps and residual dependence graphs while automatically down-weighting crisis-period observations.",
+        "authors": "Mohammad Arashi",
+        "url": "http://arxiv.org/abs/2606.09307v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09307v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文开发了一个鲁棒的贝叶斯框架，用于高维回归中非高斯误差的处理，使用了尺度-位置混合误差分布和horseshoe+全局-局部收缩先验。理论贡献包括联合后验收缩、支持集选择一致性、Kullback-Leibler风险界限和有界敏感性。这篇论文在贝叶斯统计和高维建模方面提供了非常严谨的理论分析和保证，完全符合您对统计保证和数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09287v1",
+        "title": "Trajectory Geometry of Transformer Representations Across Layers",
+        "summary": "Understanding how transformer representations evolve across layers, not merely what they encode, remains an open problem in mechanistic interpretability. We recast the transformer forward pass as a discrete population trajectory through a high-dimensional representation manifold, drawing on geometric tools from computational neuroscience. Rather than probing for pre-specified features, we characterize trajectory geometry using five metrics computed directly in the ambient space: trajectory length, curvature, a semantic convergence index, layerwise cosine similarity, and representational stability. Across three model families (GPT-2, TinyLlama, Qwen2.5) and five controlled prompt families, we report four findings. First, semantically related prompts converge significantly in middle-to-late layers (peak CI 0.41--0.58, p<0.001, Mann-Whitney U), consistent with attractor-like dynamics. Second, reasoning tasks produce trajectories of greater curvature than lexical variations (0.71--0.83 rad vs. 0.27--0.31 rad), suggesting curvature encodes computational complexity. Third, ambiguous tokens exhibit trajectory bifurcation with up to 5.6x representational separation by the final layer, absent in unambiguous controls. Fourth, layerwise cosine similarity reveals a universal three-phase structure: encoding, elaboration, and output preparation, consistent across all three architectures. All four effects vanish under shuffled-layer and random-embedding controls. We release a fully open-source, model-agnostic pipeline and argue that trajectory geometry constitutes a principled, probe-free lens for mechanistic interpretability.",
+        "authors": "Vishal Pandey, Gopal Singh",
+        "url": "http://arxiv.org/abs/2606.09287v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09287v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将Transformer的前向传播重构为高维表示流形中的离散种群轨迹，并借鉴计算神经科学的几何工具来表征轨迹几何。它通过轨迹长度、曲率、语义收敛指数等指标，揭示了Transformer表示演化的新机制。这种从几何角度对模型内部机制进行理论分析的方法，具有很强的数学严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09154v1",
+        "title": "Improved Convergence Analysis of Topology Dependence in Decentralized SGD",
+        "summary": "Decentralized SGD is a fundamental algorithm in decentralized learning, although the influence of an underlying network topology on its convergence behavior is not yet fully understood. Existing convergence analyses have shown that topologies with a small spectral gap significantly deteriorate the convergence rate of Decentralized SGD in both homogeneous and heterogeneous cases. However, many prior papers have reported that indeed the choice of the topology has a significant experimental impact in the heterogeneous case, but has little experimental impact on training behavior in the homogeneous case. In this paper, we present a tighter convergence analysis of Decentralized SGD, offering a more precise understanding of how topologies affect the convergence rate than the prior analysis. Specifically, unlike existing convergence analyses that used only the spectral gap as a property of the topology, our novel analysis shows that all eigenvalues of the mixing matrix affect the convergence rate. Throughout the experiments, we carefully evaluated the convergence behavior of Decentralized SGD and demonstrated that our novel convergence analysis can more accurately describe the effect of topology on the convergence rate.",
+        "authors": "Yuki Takezawa, Anastasia Koloskova, Sebastian U. Stich",
+        "url": "http://arxiv.org/abs/2606.09154v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09154v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对去中心化SGD的收敛性分析进行了改进，提供了对网络拓扑如何影响收敛率更精确的理解。与现有分析仅使用谱隙不同，它表明混合矩阵的所有特征值都会影响收敛率。这篇论文专注于优化算法的收敛性理论，提供了更紧密的数学分析，符合您对优化收敛性和数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09124v1",
+        "title": "A Regret Minimization Framework on Preference Learning in Large Language Models",
+        "summary": "Reinforcement learning with verifiable rewards (RLVR) has enabled progress on reasoning-intensive tasks by relying on task-specific verifiers that provide automated correctness signals. However, many realistic language tasks are difficult to equip with reliable verifiers, motivating a growing reliance on reinforcement learning from human feedback (RLHF). In this setting, we argue that a closer examination of how human feedback should be interpreted is essential. We introduce Regret-based Preference Optimization $(\\textbf{RePO})$, which reframes RLHF through $\\textit{regret minimization}$ rather than reward maximization. Human preferences are often shaped by $\\textit{prospective}$ anticipation of outcomes and $\\textit{counterfactual}$ comparisons to alternative behaviors, rather than by immediate, outcome-independent utility. $\\textbf{RePO}$ captures this structure by modeling preferences as behavior-conditioned assessments of relative suboptimality. Experiments on mathematical reasoning benchmarks and human preference datasets demonstrate consistent performance gains, indicating that $\\textbf{RePO}$ is an effective and human-aligned approach for training large language models.",
+        "authors": "Suhwan Kim, Taehyun Cho, Geon-Hyeong Kim, Yu Jin Kim, Youngsoo Jang, Moontae Lee, Jungwoo Lee",
+        "url": "http://arxiv.org/abs/2606.09124v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09124v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Regret-based Preference Optimization (RePO) 框架，将RLHF重新定义为后悔最小化而非奖励最大化。它通过建模偏好为行为条件下的相对次优性评估，捕捉了人类偏好中前瞻性预期和反事实比较的结构。这种对人类反馈机制的理论建模和优化框架的提出，具有较强的理论基础和数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09115v1",
+        "title": "Counterfactual Transport Flows for Offline Conservative Trajectory Refinement",
+        "summary": "Offline reinforcement learning (RL) offers a path to policy improvement from logged data alone, using historical returns or other measurable outcomes as world feedback. A key difficulty is improving observed behavior without extrapolating beyond what the offline data supports. We propose \\emph{counterfactual transport flows}, a source-conditioned trajectory refinement framework for offline decision-making guided by world feedback. Given a low-feedback candidate trajectory, we construct local preference pairs from offline data by retrieving nearby trajectories in latent trajectory space with higher task-specific feedback, and use them as weak supervision for conservative refinement. The framework learns instance-specific refinement directions: at inference time, a refinement strength parameter controls how far the candidate trajectory is transported, enabling a trade-off between preserving the original behavior and applying stronger improvement. Experiments on D4RL benchmarks, including AntMaze and MuJoCo tasks, show that our method improves behavior from historical returns as world feedback, while providing interpretable trajectory-level refinement paths.",
+        "authors": "Lena Krieger, Xuan Zhao, Zhuo Cao, Qin Wang, Hanno Scharr, Ira Assent",
+        "url": "http://arxiv.org/abs/2606.09115v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09115v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了反事实传输流（counterfactual transport flows），一个源条件轨迹细化框架，用于离线决策。它通过从离线数据中检索具有更高任务特定反馈的附近轨迹来构建局部偏好对，并将其作为弱监督进行保守细化。该框架学习实例特定的细化方向，并在推理时通过细化强度参数控制轨迹传输。其核心在于通过反事实思想进行轨迹优化，具有扎实的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.09089v1",
+        "title": "Supervised Low-Rank Structure Discovery for Developmental Epigenetic Aging in Ultra-High-Dimensional DNA Methylation Data",
+        "summary": "Ultra-high-dimensional array-based CpG methylation studies require statistical frameworks that simultaneously provide supervised structure discovery, interpretability, scalable latent-dimension identification, and computational feasibility. We propose SOLAR (Supervised Orthogonal Low-rank Adaptive Regression), a supervised low-rank latent-factor framework for identifying CpG-level methylation structure associated with residualized DNAm age. SOLAR combines orthogonal low-rank regression with a penalized maximum a posteriori formulation, dimension-adaptive BIC-type penalization, and a trans-dimensional simulated-annealing strategy for automatic latent-rank selection, together with theoretical guarantees including identifiability, fixed-rank recovery, and rank-selection consistency under suitable regularity conditions. The framework additionally incorporates computationally and memory-efficient optimization strategies demonstrating scalability up to $p=10^7$, while analyses at $p=10^6$ remain feasible on standard desktop computing environments. Simulation studies demonstrate stable rank recovery, competitive supervised signal recovery, and strong scalability across moderate-, high-, and ultra-high-dimensional regimes. Using longitudinal EPIC-array CpG methylation data from the GUSTO birth cohort, comprising $n=1051$ methylation profiles collected across infancy and early childhood with approximately 860,000 assayed CpGs per sample, SOLAR identifies heterogeneous supervised methylation structure associated with residualized DNAm age beyond chronological age alone, together with biologically coherent CpG signatures and enrichment patterns.",
+        "authors": "Priyam Das, Jiyeon Song, Lathika Mohanraj, Karolina A. Aberg, Yi Li, Subharup Guha",
+        "url": "http://arxiv.org/abs/2606.09089v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.09089v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了SOLAR（Supervised Orthogonal Low-rank Adaptive Regression），一个用于超高维DNA甲基化数据中发育表观遗传衰老的监督低秩潜在因子框架。它结合了正交低秩回归、惩罚最大后验公式、维度自适应BIC型惩罚和跨维度模拟退火策略，并提供了可识别性、固定秩恢复和秩选择一致性的理论保证。这篇论文在统计建模和理论保证方面表现出色，非常符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.08985v1",
+        "title": "Beyond Neural Collapse: Task-Intrinsic Geometry Governs Neural Representations in Modular Arithmetic",
+        "summary": "While neural collapse (NC) predicts that a $K$-class-balanced classifier should organize terminal representations as a $(K-1)$-dimensional simplex equiangular tight frame (ETF), modular addition consistently enters a different regime: networks compress to a two-dimensional cyclic geometry in which both classifier weights and token embeddings lie on circles. We refine the explanation of this phenomenon in three directions. First, we formalize a layerwise non-uniform training mechanism: downstream classifier weights are driven by dense cross-entropy gradients into a rank-2 equiangular configuration before upstream embeddings fully reorganize, and once this classifier plane forms, backpropagated feature gradients constrain embedding motion to the same plane while weight decay suppresses orthogonal components. Second, after this subspace locking, the induced in-plane dynamics admit an entropy-regularized transport interpretation on $S^1$; combined with modular-addition labels, this reduces embedding formation to phase alignment, whose minimizers are single-frequency characters of $\\mathbb{Z}/P\\mathbb{Z}$ and hence equal-angle points on a circle. Third, we quantify why this solution prevails over NC: a simplex ETF gains only an $O(1)$ advantage in cross-entropy, whereas the cyclic rank-2 solution enjoys a $Θ(K)$ advantage under Schatten or weight-decay surrogates, yielding a critical threshold $λ_{\\mathrm{crit}} = Θ(1/K)$. Our results explain both why classifier weights move first and why embeddings subsequently align with them, showing that grokking on modular arithmetic is governed not by maximal separation alone but by a task-structured trade-off between separation, symmetry, and complexity.",
+        "authors": "Hu Tan, Kuo Gai, Shihua Zhang",
+        "url": "http://arxiv.org/abs/2606.08985v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.08985v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入分析了模块化算术中神经网络表示的内在几何，解释了为什么网络会压缩到二维循环几何而非预测的单纯形等角紧框架。它形式化了层间非均匀训练机制，并提供了熵正则化传输解释，将嵌入形成简化为相位对齐。论文提供了严格的数学推导和理论解释，揭示了Grokking现象背后的数学原理，是理论严谨性极高的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.08934v1",
+        "title": "Backward Coherence and Hidden-State Stability in Recurrent Neural Networks: A Quasi-Reverse-Martingale Theory",
+        "summary": "Recurrent neural networks maintain a hidden state $h_t$, but its probabilistic meaning is often unclear. We study hidden-state stability through \\emph{backward coherence}: the extent to which $h_t$ can be reconstructed from $h_{t+1}$ by a learned backward projector $g_φ$. Under contraction and summable backward drift, the hidden-state sequence forms a quasi-reverse-martingale. This yields almost-sure convergence, rates under mixing, an interpretable limiting representation, finite pathwise stopping times, and a theoretical framework for time-uniform confidence sequences.   Simulations support the theory. Backward-coherence regularisation reduces the empirical quasi-martingale total $\\hat Q$ by $43$--$58%$, reaches stability $28$--$44%$ earlier than an unregularised RNN, and gives tracking-error recovery consistent with geometric bounds. Additional tests confirm echo-state forgetting rates bounded by $ρ$ and verify the increment-sum tube $R_t$ with $100%$ simultaneous coverage, although $R_t$ is conservative; in practice, the defect-tail proxy $\\hat Q_t$ is the more useful monitor. The backward-coherence loss is also equivalent to minimising a Kullback--Leibler divergence in a Gaussian backward model, linking the method to variational inference. Extensions cover $φ$-mixing inputs, change-point tracking, and finite-sample concentration.   Three real-data studies further validate the approach. On PhysioNet 2012 ICU data, the Reverse Martingale RNN (RMRNN) matches RNN mortality-prediction AUC while reaching stable representations 13 hours earlier. On FRED-MD, it reduces one-month-ahead forecast error by about fourfold under concept drift. On UCI Human Activity Recognition, it maintains lower post-transition tracking error with geometric decay. The guarantees apply under the stated assumptions; universality is not claimed.",
+        "authors": "Yuan-chin Ivan Chang",
+        "url": "http://arxiv.org/abs/2606.08934v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.08934v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过“向后一致性”研究循环神经网络的隐藏状态稳定性，将其形式化为准逆鞅理论。这提供了几乎必然收敛、混合下的收敛速率、可解释的极限表示和有限路径停止时间，以及时间均匀置信序列的理论框架。这篇论文提供了非常扎实的概率论和随机过程理论基础，对理解RNN的内部动态具有高度的数学严谨性。"
+    }
+]

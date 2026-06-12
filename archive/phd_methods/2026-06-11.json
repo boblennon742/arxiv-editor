@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.13289v1",
+        "title": "HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers",
+        "summary": "Holistic visual tokenizers are fundamental to unified multimodal models (UMMs) as they map diverse visual inputs into a unified representation space. In this paper, we present HYDRA-X, the first UMM that unifies image and video tokenization within a single Vision Transformer (ViT). Our design is driven by two core challenges: efficiently injecting spatiotemporal reconstruction capability into a native ViT, and embedding image- and video-level semantic awareness into the latent space. To address the first, comprehensive ablations reveal two key findings: (1) frame-level causal temporal attention suffices for visual reconstruction, whereas full spatiotemporal attention degrades it; and (2) hierarchical temporal compression substantially outperforms single-step alternatives. To tackle the second, we propose a lightweight decompressor that upsamples temporally compressed features under joint image-video teacher supervision, thereby enforcing complementary semantic structures within the compact latent space. Building on this holistic tokenizer, we further propose a principled improvement of the editing pipeline: source-target interaction should occur at the latent level inside the tokenizer rather than at the semantic level inside the LLM, substantially improving editing consistency and accelerating convergence. Instantiated at the 7B dense model, HYDRA-X achieves strong performance across image and video understanding and generation tasks, paving the way for future unified-tokenizer UMMs.",
+        "authors": "Guozhen Zhang, Xuerui Qiu, Yutao Cui, Tianhui Song, Changlin Li, Junzhe Li, Tao Huang, Xiao Zhang, Yang Li, Jianbing Wu, Miles Yang, Zhao Zhong, Liefeng Bo, Limin Wang",
+        "url": "http://arxiv.org/abs/2606.13289v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13289v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了HYDRA-X，首个在单个Vision Transformer (ViT) 中统一图像和视频tokenization的多模态模型。它通过架构创新解决了视觉tokenization的挑战，特别是引入了帧级因果时序注意力与分层时序压缩。这对于多模态LLM的架构设计具有重要贡献，符合您对AI前沿算法和架构的关注，且具有理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13240v1",
+        "title": "Towards More General Control of Diffusion Models Using Jeffrey Guidance",
+        "summary": "A key strength of diffusion models lies in their flexibility, since their outputs can be controlled at sampling time through guidance. However, beyond simple cases such as conditional sampling, the target distribution is often left implicit, defined only through a sampling rule or a heuristic energy function. To address this, we propose Jeffrey guidance, a principled framework that extends diffusion-model control to applications beyond what standard guidance can express. It leverages Jeffrey's rule of conditioning to update marginal distributions towards a prescribed target, preserving the conditional structure and minimally perturbing the joint distribution. We first demonstrate Jeffrey guidance by targeting a prescribed embedding distribution. With Inception embeddings as the target, this leads to substantial reductions in FID on both CIFAR-10 and FFHQ. We further apply Jeffrey guidance to fairness on CelebA-HQ, updating an unconditional diffusion model to enforce independence between attributes.",
+        "authors": "Raphaël Razafindralambo, Rémy Sun, Frédéric Precioso, Jes Frellsen, Pierre-Alexandre Mattei",
+        "url": "http://arxiv.org/abs/2606.13240v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13240v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了Jeffrey Guidance，一个基于Jeffrey规则的原则性框架，旨在将扩散模型的控制能力扩展到标准指导无法表达的应用之外。它通过更新边缘分布以达到预设目标，同时保留条件结构。这在扩散模型控制方面具有强大的理论基础和算法创新性，非常符合您对理论严谨性和前沿算法的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13191v1",
+        "title": "The Geometry of Phase Transitions in Generative Dynamics via Projection Caustics",
+        "summary": "Continuous-state generative samplers, including diffusion and flow-matching models, evolve through continuous reverse-time dynamics, yet their samples often undergo abrupt qualitative changes: trajectories commit to modes, semantic alternatives collapse, and small perturbations in narrow time windows can produce large downstream effects. This paper develops a geometric account of such phase-transition-like behaviour. We view denoising as gradient descent on a free energy landscape and show that sharp transitions arise near projection caustics, where the nearest-point projection onto the data support ceases to be unique. Motivated by this perspective, we introduce the Critical Boundary Detector (CBD), as practical diagnostics for score-direction instability. Across toy models, standard diffusion models, and latent text-to-image diffusion models, CBD localises mode commitment, predicts intervention-sensitive windows, and supports targeted control in geometrically sensitive regions. Our results connect geometry of data and dynamics of diffusion generation.",
+        "authors": "Ryosuke Sakamoto, Kotaro Sakamoto",
+        "url": "http://arxiv.org/abs/2606.13191v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13191v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从几何角度解释了生成采样器（包括扩散和流匹配模型）中样本的突然定性变化，将其与投影焦散联系起来，并引入了临界边界检测器。它在生成模型理论方面具有深厚的数学严谨性和创新性，提供了对生成动力学更深层次的理解，是您作为数理统计博士生会感兴趣的理论突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13076v1",
+        "title": "$α$-fair heterogeneous agent reinforcement learning",
+        "summary": "Cooperation in multi-agent systems is typically optimized through utilitarian objectives that maximize overall efficiency but fail to account for reward distribution, often resulting in inequitable \"leader-follower\" dynamics. While fairness-based approaches encourage pro-social behaviors where every agent benefits from cooperation, many current algorithms - including those utilizing reward shaping - break the stationarity of Markov Games or lack rigorous theoretical guarantees. This creates a critical gap between fair objective methods and theoretically safe learning frameworks. We propose a novel framework that bridges $α$-fairness with Heterogeneous-Agent Trust Region Learning (HATRL), ensuring monotonic improvement and convergence toward Nash Equilibria. Our approach leverages a fair advantage function that dynamically weights agent utilities based on their expected returns, allowing the global objective to transition from purely utilitarian efficiency to $α$-fairness welfare based on the parameter $α$. We introduce two practical algorithms, $α$-fair HATRPO and $α$-fair HAPPO, and demonstrate through experiments in sequential social dilemmas like CleanUp and CommonHarvest that they perform better than HATRL's algorithms from a utilitarian point of view while achieving socially higher outcomes.",
+        "authors": "Yao-hua Franck Xu, Tayeb Lemlouma, Jean-Marie Bonnin, Arnaud Braud",
+        "url": "http://arxiv.org/abs/2606.13076v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13076v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个新颖的框架，将$alpha$-公平性与异构代理信任区域学习 (HATRL) 相结合，确保了单调改进和纳什均衡的收敛。它通过公平优势函数动态加权代理效用，解决了多代理系统中的公平性问题。这在多代理强化学习和公平性方面具有高创新性和严谨的理论保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13054v1",
+        "title": "TWLA: Achieving Ternary Weights and Low-Bit Activations for LLMs via Post-Training Quantization",
+        "summary": "Large language models (LLMs) exhibit exceptional general language processing capabilities, but their memory and compute costs hinder deployment. Ternarization has emerged as a promising compression technique, offering significant reductions in model size and inference complexity. However, existing methods struggle with heavy-tailed activation distributions and therefore keep activations in high precision, fundamentally limiting end-to-end inference acceleration. To overcome this limitation, we propose TWLA, a post-training quantization (PTQ) framework that achieves 1.58-bit weight compression and 4-bit activation quantization while maintaining high accuracy. TWLA comprises three components: (1) Euclidean-to-Manifold Asymmetric Ternary Quantizer (E2M-ATQ) minimizes layer-output error under weight ternarization via a two-stage optimization from Euclidean initialization to manifold relocation; (2) Kronecker Orthogonal Tri-Modal Shaping (KOTMS) applies a Kronecker-structured orthogonal rotation to reshape weights into ternary-friendly tri-modal distributions, while the shared rotation statistically suppresses activation outliers; and (3) Inter-Layer Aware Activation Mixed Precision (ILA-AMP) explicitly introduces adjacent-layer second-order interaction costs in bit allocation and jointly optimizes for the layer-wise disparity of activation quantization gains induced by the shared orthogonal transform, preventing cascades triggered by a few weak layers. Extensive experiments demonstrate that TWLA maintains high accuracy under W1.58A4, while delivering significant inference acceleration. The code is available at <https://github.com/Kishon-zzx/TWLA>.",
+        "authors": "Zhixiong Zhao, Zukang Xu, Zhixuan Chen, Xing Hu, Zhe Jiang, Dawei Yang",
+        "url": "http://arxiv.org/abs/2606.13054v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13054v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "TWLA是一个创新的后训练量化 (PTQ) 框架，通过欧几里得-流形非对称三值量化器、克罗内克正交三模态整形和层间感知激活混合精度，实现了LLM的1.58位权重和4位激活量化。它在模型压缩和效率方面具有高创新性和严谨的理论基础，完美契合您对模型压缩和理论创新性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.12977v1",
+        "title": "Efficient, Robust, and Anti-Collusion Fingerprinting of Image Diffusion Models",
+        "summary": "Model fingerprinting, embedding user-specific identifiers (fingerprints) into generated outputs, has recently emerged as a popular solution to protect the intellectual property rights (IPR) of generative text-to-image (T2I) models and prevent unauthorized redistribution. In this work, we reveal a previously unexplored systematic vulnerability in existing generative model fingerprinting methods: they lack robustness against collusion attacks, where multiple attackers combine their models to remove or obscure the fingerprints. To address this issue, we take the first step towards a robust fingerprinting method for T2I models with anti-collusion capabilities. The proposed method encodes strings of bits, namely fingerprints, into the coefficients of a personalized normalization module (PNM) incorporated into T2I models, so that fingerprints can be reliably recovered from any generated image. To defend against collusion attacks and prevent unauthorized model redistribution, we introduce an anti-collusion mechanism based on lossless function-invariant parameter transformations. This mechanism significantly degrades the image generation quality of colluded models, making them effectively unusable. Moreover, our method allows developers to efficiently create multiple copies of fingerprinted T2I models by reparameterizing the PNM without the need for retraining. We also introduce a worst-case optimization strategy to improve robustness against model-level attacks. Our experiments demonstrate that the proposed method achieves high fidelity and robustness across multiple T2I image generation and editing tasks, with fingerprint extraction accuracy exceeding 99.5%. Compared with existing methods, our method demonstrates, for the first time, a notable proactive robustness to collusion attacks by significantly increasing the FID of colluded models.",
+        "authors": "Jianwei Fei, Yunshu Dai, Zhihua Xia, Xiaochun Cao, Jiantao Zhou, Alessandro Piva, Benedetta Tondi",
+        "url": "http://arxiv.org/abs/2606.12977v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.12977v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次提出了针对图像扩散模型的高效、鲁棒和防串通指纹识别方法，通过参数化表示和无损函数不变变换实现。它解决了生成模型知识产权保护的关键瓶颈，具有高创新性和实践影响力，同时在理论上具有严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.12918v1",
+        "title": "MAStrike: Shapley-Guided Collusive Red-Teaming on Multi-Agent Systems",
+        "summary": "Hierarchical multi-agent systems (MAS) are rapidly being deployed in high-stakes workflows across domains such as finance and software engineering. In these systems, safety and security are inherently distributed across role-specialized agents, significantly expanding the attack surface, particularly under coordinated adversarial behaviors such as privilege escalation and cross-agent collusion. Existing red-teaming approaches for MAS remain limited: they rely on heuristic selection of target agents and perturb isolated message streams, leaving critical questions unanswered as which agents are most responsible for system safety, and how compromised agents can coordinate to bypass defenses. We propose MAStrike, a closed-loop framework for collusive red-teaming in hierarchical MAS. We propose the first agent-level Shapley value analysis for MAS, quantifying each agent's marginal contribution to system robustness under task-specific distributions. GGuided by this attribution, MAStrike identifies vulnerable agent coalitions and generates coordinated, role-aware adversarial manipulations. These attacks are iteratively refined through structured causal diagnosis, attributing failure cases to uncompromised agents that block adversarial attempts. We further build a comprehensive MAS red-teaming benchmark and controllable environments spanning diverse hierarchical topologies and domains, including finance, software engineering, and CRM. Extensive experiments across MAS built on multiple frontier models show that MAStrike substantially outperforms heuristic baselines. Our analysis further uncovers non-trivial Shapley value distributions and higher-order interaction structures among agents, revealing critical vulnerabilities and coordination patterns that are overlooked by prior single-agent or template-based methods.",
+        "authors": "Chejian Xu, Zhaorun Chen, Jingyang Zhang, Freddy Lecue, Avni Kothari, Sarah Tan, Wenbo Guo, Bo Li",
+        "url": "http://arxiv.org/abs/2606.12918v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.12918v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MAStrike是一个Shapley引导的多代理系统串通红队框架，首次引入代理级Shapley值分析来量化每个代理对系统鲁棒性的边际贡献。它在多代理系统安全和理论分析方面具有高创新性和严谨性，解决了高风险工作流中的安全瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.12876v1",
+        "title": "Multi-Bitwidth Quantization for LLMs Using Additive Codebooks",
+        "summary": "As large language models (LLMs) are increasingly deployed across heterogeneous hardware with varying resource constraints, the ability to adaptively manage the trade-off between performance and efficiency without retraining is critical. We propose Drop-by-Drop, a novel multi-bitwidth post-training quantization framework that enables inference-time precision control over LLM weights from a single trained model. Our method is theoretically grounded in information theory and successive refinement. We establish that LLM weights, which commonly follow a Gaussian distribution, can be optimally reconstructed with increasing fidelity as additional bits are incorporated, under a weighted mean squared error distortion motivated by LLM loss functions. To realize this in practice, Drop-by-Drop incorporates Matryoshka-style supervision into the loss function, exploiting the structure of additive codebooks. Drop-by-Drop produces a single model where ordered subsets of codebooks yield accurate partial reconstructions at each precision level. This approach significantly reduces storage and memory overhead by allowing a single checkpoint to serve multiple bitwidths, while maintaining competitive perplexity and accuracy across major architectures, such as Qwen, LLaMA, Gemma, and Mistral.",
+        "authors": "Liza Babaoglu, Shuangyi Chen, Ashish Khisti",
+        "url": "http://arxiv.org/abs/2606.12876v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.12876v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Drop-by-Drop是一个基于信息论和逐次细化的多位宽后训练量化框架，实现了LLM的推理时精度控制。它显著降低了存储和内存开销，同时保持了竞争力。这在模型压缩和数据效率方面具有高创新性和严谨的理论基础，是您会高度关注的领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.12780v1",
+        "title": "ProPlay: Procedural World Models for Self-Evolving LLM Agents",
+        "summary": "Self-evolving agents are expected to improve through interaction without external supervision, but this remains difficult in partially observable environments where agents must explore actively, learn from limited feedback, and decide when to trust prior experience. Existing LLM-agent methods often rely on memory or planning modules, yet they rarely close the loop between them to continually refine an internal understanding of environment dynamics. We introduce ProPlay, a procedural world model that supports procedure-level preplay, where agents can rehearse future procedural paths using the learned world knowledge. Rather than representing experience as isolated rules or low-level action constraints, ProPlay abstracts successful trajectories into procedures and organizes them in a procedure graph that captures causal transitions among task stages. Each transition is associated with a reliability record embedding to estimate its task-specific contribution from past outcomes. Before each episode, ProPlay simulates future procedural trajectories over known graph structures as structured soft guidance; after execution, it refines the graph using environment feedback. Experiments on public benchmarks show that ProPlay consistently improves environment understanding and self-evolution capability over strong baselines. Our code has been released in https://github.com/antman9914/proplay.",
+        "authors": "Yijun Ma, Zehong Wang, Yiyang Li, Ziming Li, Xiaoguang Guo, Weixiang Sun, Chuxu Zhang, Yanfang Ye",
+        "url": "http://arxiv.org/abs/2606.12780v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.12780v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "ProPlay提出了用于自进化LLM代理的程序世界模型，通过程序图和可靠性记录实现程序级预演。它解决了代理在部分可观察环境中学习和决策的挑战，在LLM代理和世界模型方面具有高创新性，是AI前沿算法的重要方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13671v1",
+        "title": "Understanding Truncated Positional Encodings for Graph Neural Networks",
+        "summary": "Positional encodings (PEs) enhance the power of graph neural networks (GNNs), both theoretically and empirically. Two of the most popular families of PEs - spectral (e.g., Laplacian eigenspaces, effective resistance) and walk-based (polynomials of the adjacency matrix) - are theoretically equivalent in expressive power, with expressivity between the 1-WL and 3-WL tests. However, this equivalence assumes the GNN uses the \"complete\" version of these PEs, which requires $O(n^3)$ time and space complexity. Instead, practitioners commonly use truncated variants of these encodings, such as the first $k$ eigenspaces or powers of the adjacency matrix. However, the theoretical properties of these truncated PEs are unknown. In this work, we initiate the study of these truncated PEs. Theoretically, we show that, under truncation, several families of PEs are fundamentally different in expressive power. As a corollary, we show that truncated spectral PEs are no longer stronger than the 1-WL test. We also study a family of spectral PEs, the $k$-harmonic distances, to highlight the differences in expressive power of even closely related truncated PEs. Finally, we experimentally show that a mix of truncated PEs is preferable to any single family on real-world datasets.",
+        "authors": "James Flora, Mitchell Black, Weng-Keen Wong, Amir Nayyeri",
+        "url": "http://arxiv.org/abs/2606.13671v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13671v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次对图神经网络 (GNN) 中截断位置编码的理论性质进行了研究，揭示了在截断情况下不同PE家族在表达能力上的根本差异。它填补了GNN理论的空白，具有强大的数学严谨性和理论创新性，对GNN这种核心AI架构的设计有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13624v1",
+        "title": "Beyond Uniform Tokens: Adaptive Compression for Time Series Language Models",
+        "summary": "Large language models (LLMs) have enabled time series (TS) analysis by jointly modeling numerical observations and textual context through a shared token interface. However, TS tokens and prompt tokens exhibit fundamentally different information structures, making uniform token processing inefficient. In this paper, we study token efficiency in TS language modeling from an asymmetric-token perspective. We show that TS tokens have highly uneven spectral contributions, where many tokens share redundant frequency patterns while a small subset preserves critical temporal evidence. We also observe that prompt-token influence attenuates with model depth, suggesting that full prompt retention across all layers is unnecessary. Based on these findings, we develop an adaptive token budgeting framework that compresses TS tokens via frequency-domain structure and progressively reduces prompt tokens across layers. Experiments across forecasting, classification, imputation, and anomaly detection demonstrate up to \\textit{\\textbf{7.68$\\times$}} inference acceleration and performance gains in \\textit{\\textbf{78\\%}} of evaluated settings, showing the effectiveness of asymmetric token compression for scalable TS foundation models.",
+        "authors": "Jialin Gan, Xin Qiu, Guangzhe Chen, Xue Wang",
+        "url": "http://arxiv.org/abs/2606.13624v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13624v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个自适应token预算框架，用于时间序列语言模型 (TS-LLM) 的压缩，通过频域结构压缩TS token并逐步减少prompt token。它实现了高达7.68倍的推理加速和性能提升，解决了TS基础模型的可扩展性瓶颈，完美契合您对数据效率和LLM应用的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13565v1",
+        "title": "A2D2: Fine-Tuning Any-Length Discrete Diffusion for Adaptive Decoding",
+        "summary": "Discrete diffusion models offer a simple and stable likelihood-based framework for sequence generation, recently extended to any-length settings via token insertion. Principled reward-guided fine-tuning for any-length discrete diffusion, however, remains largely unexplored. We introduce Fine-Tuning Any-Length Discrete Diffusion for Adaptive Decoding (A2D2), a unified framework for reward-guided fine-tuning of any-length discrete diffusion models via joint optimization of the insertion and unmasking policies together with a quality-based inference schedule. We derive the Radon-Nikodym derivative for the joint insertion-unmasking path measures, enabling theoretically guaranteed convergence to the intractable reward-tilted sequence distribution without requiring target samples. Building on this, we establish unmasking and insertion quality as tractable approaches for minimizing decoding error and introduce the Adaptive Joint Decoding (AJD) loss, which provably yields the optimal path measure that generates the reward-tilted distribution. Empirically, A2D2 improves reward optimization while enhancing generation flexibility and accuracy over prior fixed-length fine-tuning and inference-time guidance methods.",
+        "authors": "Sophia Tang, Yuchen Zhu, Molei Tao, Pranam Chatterjee",
+        "url": "http://arxiv.org/abs/2606.13565v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13565v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "A2D2是一个统一的框架，用于奖励引导的任意长度离散扩散模型的微调，通过联合优化插入和去掩码策略以及质量推理调度。它推导了路径测度的Radon-Nikodym导数，提供了理论收敛保证。这在扩散模型算法上具有高创新性和严谨的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13566v1",
+        "title": "A Three-Layer Framework for AI in Scientific Discovery",
+        "summary": "Current discussions of AI in scientific discovery are often dominated by two visible capabilities: search over existing knowledge and execution through optimization, simulation, and automation. Both are important, but neither fully captures the central act of discovery: the formation and evolution of models. This paper proposes a three-layer view of AI in discovery. Layer 1 is search and retrieval by large language models. Layer 2, as the main innovation of this paper, is model formation through qualitative reasoning: the capacity to recognize when a current framework is structurally inadequate and to understand the problem within a broader representational space, not through trial and error, but through structural insight into what is missing and where it can be found. Layer 3 is execution, optimization, and refinement. The main claim is that Layer 2 is both the most important and the least developed. Search without model formation remains confined to inherited frameworks, while execution without conceptual revision only amplifies an existing formulation. We illustrate Layer 2 reasoning through three case studies: S. S. Chern's intrinsic proof of the Gauss-Bonnet theorem, the resolution of the Nesterov Accelerated Gradient convergence problem via Lyapunov functions, and the autonomous disproof of the Erdos unit distance conjecture by OpenAI in 2026. Each case exhibits the same structural signature: a framework that had become inadequate, a missing conceptual object, and a resolution found in an unexpected neighboring field.",
+        "authors": "Guojun Liao",
+        "url": "http://arxiv.org/abs/2606.13566v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13566v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇概念性论文提出了AI在科学发现中的三层框架，强调“通过定性推理进行模型形成”（第二层）是核心且最不发达的。它为AI科学研究提供了前瞻性的理论指导和新的研究视角，对于您这样的博士生来说具有重要的启发意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13288v1",
+        "title": "Cross-Modal Masked Compositional Concept Modeling for Enhancing Visio-Linguistic Compositionality",
+        "summary": "Contrastively trained vision-language models like CLIP, have made remarkable progress in learning joint image-text representations, but still face challenges in compositional understanding. They often exhibit a \"bag-of-words\" behavior--struggling to capture the object relations, attribute-object bindings, and word order dependencies. This limitation arises not only from the reliance on global, single-vector representations for optimization, but also from the insufficient exploitation and modeling of the rich compositional information inherently present in paired image text data. In this work, we propose MACCO (MAsked Compositional Concept MOdeling), a framework that masks compositional concepts in one modality and reconstructs them conditioned on the full contextual information from the other, enabling the model to capture and align cross-modal compositional structures more effectively. To facilitate this process, we introduce two auxiliary objectives that jointly align and regularize masked features both inter-modally and intra-modally. Extensive experiments on five compositional benchmarks, along with in-depth analyses, demonstrate that our approach not only significantly enhances compositionality in VLMs but also improves their ability to capture syntactic structure and linguistic information. Additionally, the improved compositionality also benefits text-to-image generation and multimodal large language model. Code is available at https://github.com/hiker-lw/MACCO.",
+        "authors": "Wei Li, Zhen Huang, Xinmei Tian",
+        "url": "http://arxiv.org/abs/2606.13288v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13288v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MACCO是一个通过跨模态掩码组合概念建模来增强视觉-语言模型组合性的框架。它解决了现有VLM在组合理解上的“词袋”行为，通过辅助目标对齐和正则化掩码特征。这在多模态LLM算法方面具有创新性，并能提升模型对语言结构信息的捕获能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13222v1",
+        "title": "Proprioceptive-visual correspondence enables self-other distinction in humanoid robots",
+        "summary": "Distinguishing self from others is a prerequisite for social intelligence, yet humanoid robots that increasingly share workspaces with humans still lack this ability. Here we show that a humanoid robot can learn self-other distinction from proprioceptive-visual correspondence, without any identity labels or kinematic models. Once established, this distinction bootstraps a predictive self-model that maps joint configurations to three-dimensional body occupancy, capturing how the robot's body changes with action. In multi-agent scenes involving humans or morphologically identical robots, the system reliably identifies itself, learns a 3D self-model, and supports downstream tasks including target reaching, collision-aware motion planning, and human-to-robot motion retargeting. Together, these results outline a route toward bodily self-representation in robots that act and coordinate alongside others in shared physical environments. Project page: https://euron-zc.github.io/humanoid-self-model/.",
+        "authors": "Yurun Chen, Tianyuan Gao, Yizhong Ge, Shikun Ban, Yizhou Wang, Hongkai Xiong, Wenjun Zeng, Wentao Zhu",
+        "url": "http://arxiv.org/abs/2606.13222v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13222v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文展示了人形机器人如何从本体感受-视觉对应中学习自我-他人区分，而无需任何身份标签或运动学模型。这是一个具身AI和机器人学中基础性的理论突破，对于构建具有社会智能的机器人至关重要，符合您对前沿算法和架构的兴趣。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.13556v1",
+        "title": "Is It You or Your Environment? A Bayesian Inference Framework for Genomically-Anchored Personalized Physiological Interpretation",
+        "summary": "Personalized health AI systems face a fundamental cold-start problem: machine learning models for physiological interpretation require weeks of individual behavioral data before they can distinguish constitutional variation from environmentally driven deviation. We propose a solution grounded in causal inference and Bayesian prior design. An individual's genomic profile serves as an exogenous genetic anchor -- a domain-informed, personalized prior that is fixed at conception, immune to reverse causation, and available before a single behavioral observation is collected. The anchor initializes a Bayesian belief state over an individual's physiological set point G-hat = mu + sum(beta_i * g_i), where beta_i are GWAS-derived effect sizes and g_i are risk-allele counts. Each incoming physiological measurement P produces a non-constitutional deviation delta = P - G-hat that separates the signal attributable to environment and state from the constitutionally fixed baseline. As behavioral data accrue, the prior decays according to G-hat_t = w(t)*G-hat_genomic + [1-w(t)]*P-bar_t, transitioning from genome-dominated to empirical-baseline-dominated inference. The same observed HRV of 55 ms generates a suppression hypothesis for a person whose prior predicts 80 ms, and an enhancement hypothesis for a person whose prior predicts 30 ms -- a reversal impossible without a personalized anchor. We develop this architecture across six physiological domains, grading genomic priors by evidence strength, distinguishing robustly replicated anchors (FTO, FADS1/2, FKBP5) from contested candidate genes (SLC6A4, MAOA, DRD2). We address the inference boundary between association, Mendelian randomization, and individual token causation, and define four constraints for deployment: evidence-graded priors, dynamic decay, ancestry-matched effect sizes, and attribution rather than deterministic output.",
+        "authors": "Aruna Dey, Suraj Biswas",
+        "url": "http://arxiv.org/abs/2606.13556v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13556v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于因果推断和贝叶斯先验设计的个性化生理解释框架。它明确提及了“因果推断”、“贝叶斯先验设计”、“GWAS效应量”、“孟德尔随机化”以及“个体令牌因果关系”之间的推断边界，这些都与您对统计保证和因果逻辑的偏好高度契合。其理论基础扎实，数学逻辑清晰。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13531v1",
+        "title": "When Representative Samples Produce Worse Outcomes: Scale-up Decisions and Testing in Small-Budget RCTs",
+        "summary": "Small randomized controlled trials are often used to screen interventions before running larger follow-up studies. This is a critical phase of experimentation, as missing effective interventions or scaling up harmful ones can be very costly. A common proposal to mitigate these errors is to recruit samples that are representative of the target population, but this is often challenging in resource-constrained pilots. We challenge the narrative that representative samples are always superior by showing that when statistical significance testing determines whether interventions receive further study, the pilot trial composition that maximizes the downstream expected improvement in outcomes depends critically on its budget size. In the large-budget limit, the optimal pilot design converges to a sample that is representative of the target population. However, in the small-budget regime, the pilot designer maximizes expected impact by sampling only from a single homogeneous sub-population, chosen in a manner that depends on sampling costs and the designer's prior beliefs about heterogeneous treatment effects. Our proof of the small-budget result applies more generally when an RCT and significance test are used to decide whether to receive any non-adaptive downstream payoff, a result that may be applicable to other settings with constrained experimentation budgets.",
+        "authors": "Hannah Li, Hongseok Namkoong, Isaac Scheinfeld",
+        "url": "http://arxiv.org/abs/2606.13531v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13531v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究直接探讨了随机对照试验 (RCTs) 中的统计方法论问题，特别是小预算下样本代表性和统计显著性检验对后续决策的影响。论文明确指出提供了“小预算结果的证明”，这表明其在统计理论和实验设计方面具有高度的严谨性和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13315v1",
+        "title": "Masked and Predictive Self-Supervised Foundation Models for 3D Brain MRI",
+        "summary": "Self-supervised foundation models have shown strong promise in medical imaging. However, existing MRI foundation-model studies have primarily emphasized segmentation and dense prediction tasks, while systematic investigation of self-supervised foundation models for MRI-based disease detection remains limited. In this work, we investigate two major self-supervised pretraining paradigms for MRI-based disease detection: reconstruction-based learning via Masked Autoencoders (MAE) and predictive representation learning via Joint Embedding Predictive Architectures (JEPA). We study the role of auxiliary objectives by introducing a novel spectral-domain reconstruction loss for MAE to enhance sensitivity to fine-grained anatomical structure, and by integrating variance--covariance regularization (VCR) within our JEPA framework to encourage decorrelated latent representations. Our models are pretrained on heterogeneous single-contrast MRI volumes in a contrast-agnostic setting, without modality concatenation. Across five downstream disease detection tasks, our results highlight the importance of self-supervised objective design for medical foundation model pretraining, demonstrating that the downstream benefit of each objective is determined by its relevance to the task's structure. Specifically, spectral regularization yields the largest improvements when the downstream discriminative signal is characterized by strong high-frequency anatomical structures, while covariance regularization is most beneficial when discriminative information spans multiple decorrelated feature dimensions. MAE with spectral-domain supervision consistently achieves superior downstream performance for MRI-based disease detection. These findings suggest that self-supervised objectives in medical imaging encode specific biases, and their downstream benefit is fundamentally conditioned on the task's structure.",
+        "authors": "Esra Ergün, Hersh Chandarana, Dan Sodickson, Gözde Ünal",
+        "url": "http://arxiv.org/abs/2606.13315v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13315v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探讨了3D脑部MRI自监督基础模型的预训练范式，特别是通过MAE和JEPA进行重建和预测学习。它引入了“谱域重建损失”和“方差-协方差正则化”，并分析了自监督目标设计的“特定偏差”及其与任务结构的关联。虽然抽象中未明确提及严格的数学证明，但对损失函数和正则化的数学构建以及对模型偏差的分析，体现了一定的理论深度和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13302v1",
+        "title": "Physics-Guided Spatiotemporal Learning for Coastal Wave Peak Period Estimation from Video",
+        "summary": "Wave parameters in the nearshore are crucial for coastal engineering, shoreline protection, marine hazard assessment, and coastal management for climate resilience. Traditional monitoring systems like buoys and radar platforms offer accurate monitoring but can have high installation and maintenance expenses and limited spatial coverage. Passive ocean monitoring using video has been achieved by leveraging deep learning, however, many methods are not physically interpretable, feasible, and validated for oceanography. In thiswork, a Physics-Guided Deep Spatiotemporal Learning Framework for direct estimation of nearshore wave peak periods from passive coastal video stream is proposed. The framework combines automated temporal-variance based region-of-interest detection, multi-stage Sim-to-Real transfer learning, and physics-informed regularization to enhance the predictive accuracy and physical consistency. A variety of spatiotemporal architectures were assessed, such as transformer-based and recurrent-convolutional ones, alongside synthetic pretraining,silver-label adaptation, and expert fine-tuning. The results show that transformer-based architectures outperformed in terms of the accuracy of the instantaneous prediction, while lightweight recurrent-convolutional architectures achieved higher temporal stability and operational oceanographic skill. Ablation studies also demonstrated the benefits of physics-guided regularization in terms of trend-following consistency, and physically implausible predictions. Explainability auditing also helped to focus attention in hydrodynamically active surf-zone regions and showed good agreement with the physically derived wave propagation behavior. In general, the proposed framework shows the promise of physics-guided video-based deep learning systems for long-term coastal wave monitoring that are cost-efficient and operationally feasible.",
+        "authors": "Abubakar Hamisu Kamagata, Dharm Singh Jat, Attlee Munyaradzi Gamundani, Abhishek Srivastava, Paramasivam Saravanakumar",
+        "url": "http://arxiv.org/abs/2606.13302v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13302v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了针对聚类随机对照试验 (CRTs) 中因果中介分析的半参数贝叶斯推断框架。它利用参数贝叶斯模型并引入了新颖的“相似性加权贝叶斯自助法 (SWBB)”，以解决小聚类数量下的渐近假设失效问题，并实现了“名义覆盖概率”。这完美符合您对贝叶斯方法、因果推断和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13481v1",
+        "title": "Towards a Control interpretation of Quantum Advantage",
+        "summary": "We develop a control-theoretic framework for understanding Quantum Advantage (QA), providing a systematic route to characterize when and how QA can arise. The bilinear controlled Schrödinger equation is the common thread: the target quantum computation is recast as an operator controllability problem on the special unitary group $SU(N)$, and QA is identified with a polynomial-in-$n$ upper bound on the associated minimal-time function.   We illustrate the framework on two paradigmatic problems: a) the Quantum Fourier Transform (QFT) on superconducting digital quantum processors (such as IBM's ibm_brisbane), for which we prove operator controllability by a Lie-algebraic argument and derive an $O(n^2)$ upper bound on the minimal time via a gate-concatenation lemma combined with the standard QFT circuit decomposition; b) the Maximum Independent Set (MIS) problem on neutral-atom analog quantum processors (such as Pasqal's hardware), for which we analyze the Rydberg-blockade Hamiltonian as a bilinear control system and reformulate the Quantum Approximate Optimization Algorithm (QAOA) as a continuous-time optimal control problem. By a controllability result, we show how the problem can be solved on Pasqal Quantum Computers and we introduce a control-based definition of Quantum Advantage for MIS.   We conclude by outlining several open problems that chart directions for future research at the intersection of Control Theory and Quantum Computing.",
+        "authors": "Dario Pighin",
+        "url": "http://arxiv.org/abs/2606.13481v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13481v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为量子优势 (Quantum Advantage) 提出了一个控制理论框架，将其重新定义为特殊酉群 SU(N) 上的算子可控性问题。它明确提及了“双线性受控薛定谔方程”、“李代数论证”和“最小时间的多项式上界”，展现了极高的数学和理论严谨性，非常适合对数学逻辑和理论基础有高要求的您。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13281v1",
+        "title": "Causal invariance in graphical models with latent variables",
+        "summary": "Causal discovery aims to identify causal relationships among variables from observational or interventional data, typically represented by a directed acyclic graph (DAG). The causal invariance principle enables the identification of the causal parents of target variables by exploiting the stability of causal effects across different experimental settings. When some parents are unobserved, however, the induced graph over the observed variables may no longer be a DAG, and it may not be unique, complicating causal inference. For relevant configurations of latent parents, we characterize the induced graph and formalize the conditions under which causal invariance is preserved for the identification of the observed parents. Necessary and sufficient conditions for testing such invariance are formally established for a multivariate Gaussian target.",
+        "authors": "Marco Borriero, Monia Lupparelli, Giovanni M. Marchetti, Veronica Vinciotti",
+        "url": "http://arxiv.org/abs/2606.13281v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13281v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了带有潜在变量的图模型中的因果发现问题，特别是因果不变性原理。它形式化了在存在未观测父变量时，识别观测父变量的因果不变性条件，并为多元高斯目标建立了“必要和充分条件”。这直接触及了因果推断的理论核心，具有极强的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13277v1",
+        "title": "ProtoX-AD: Self-Explainable Time Series Anomaly Detection and Characterization",
+        "summary": "Recent advances in time series anomaly detection (TSAD) have highlighted the effectiveness of self-supervised classification-based approaches. These methods apply transformations to normal training samples, training a classifier to recognize transformation-specific patterns that help identify anomalies through increased classification errors. Despite their strong performance, a significant challenge is their lack of explainability, as they provide limited insight into the characteristics of flagged anomalies. To address this limitation, we propose ProtoX-AD, a prototype-based self-explainable framework for self-supervised TSAD. ProtoX-AD learns transformation-aware latent representations alongside interpretable prototypes, enabling both accurate anomaly detection and the identification of distinct anomalous profiles through prototype-based explanations. Additionally, it allows for systematic analysis of how transformation design impacts detection performance and explainability. Experimental results on synthetic and real-world datasets demonstrate that ProtoX-AD achieves detection performance comparable to its black-box counterparts while offering more consistent and semantically meaningful explanations than existing explainable baselines. Our code is publicly available at https://github.com/Aitorzan3/ProtoX-AD.",
+        "authors": "Aitor Sánchez-Ferrera, Elisabeth Wetzer, Kristoffer Wickstrøm, Michael Kampffmeyer, Robert Jenssen",
+        "url": "http://arxiv.org/abs/2606.13277v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13277v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文致力于对大型语言模型 (LLM) 预训练的统计理解，为深度 Transformer 架构推导了“泛化界限”。它基于对数双线性语言模型的扩展，分析了泛化性能对网络架构、词汇量、文档数量和长度的依赖。这正是您所寻求的，将严谨的数学逻辑应用于现代AI系统（LLM）的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13260v1",
+        "title": "Extracting Governing Equations from Latent Dynamics via Multi-View Contrastive Learning",
+        "summary": "Identifying latent dynamical systems from noisy, high-dimensional measurements is a central problem at the intersection of representation learning, system identification, and scientific discovery. We present DYSCO, a multi-view temporal contrastive learning algorithm that jointly recovers latent trajectories and the governing dynamics from such observations, by leveraging multiple independent noisy views of the same underlying process to disentangle signal from noise. By parameterizing the dynamics in a structured functional basis, our framework further enables symbolic recovery of the governing equations within an affine gauge. We offer theoretical guarantees for strong identification up to an affine indeterminacy, extending prior identifiability results to the realistic setting of noisy nonlinear observations. Empirically, we demonstrate accurate recovery of both latent trajectories and flow fields across a diverse set of dynamical regimes (e.g., chaotic, oscillatory, and metastable) under both Gaussian and Poisson observation noise, the latter being particularly relevant for neural recordings.",
+        "authors": "Paolo Muratore, Mackenzie Weygandt Mathis",
+        "url": "http://arxiv.org/abs/2606.13260v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13260v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 DYSCO，一个通过多视图时间对比学习从高维噪声测量中恢复潜在动力学和控制方程的算法。它提供了“强识别性的理论保证”，并将其扩展到噪声非线性观测的现实设置，这与您对理论保证和数学推导的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13242v1",
+        "title": "Least Absolute Deviations Estimation for Sinusoidal Models",
+        "summary": "We study robust parameter estimation in sinusoidal regression models within a least absolute deviations (LAD) framework. While classical approaches rely predominantly on least-squares formulations, they are known to be sensitive to heavy-tailed noise and outliers. We formulate the estimation problem as direct minimization of the LAD objective and propose a simple, modular coordinate descent algorithm that exploits the partial convexity of the objective: amplitude parameters are updated via weighted median computations, leading to substantial computational improvements over traditional simplex-based optimization methods, while frequency parameters are estimated via a periodogram-inspired grid search with local refinement. We establish strong consistency and asymptotic normality of the proposed estimator under mild regularity conditions. Empirically, we demonstrate the method's effectiveness on both synthetic datasets and real-world time series, including the Mauna Loa atmospheric CO2 data, air passenger data, and UK drivers' deaths data, where robustness to non-Gaussian noise is essential. The proposed approach provides a simple, interpretable, and robust alternative to least-squares-based methods for sinusoidal signal estimation.",
+        "authors": "Zehaan Naik, Debasis Kundu",
+        "url": "http://arxiv.org/abs/2606.13242v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13242v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Jeffrey guidance，一个用于扩散模型的通用控制框架。它利用“Jeffrey的条件化规则”来更新边缘分布，同时保留条件结构并最小化扰动联合分布。这种基于信息理论的“原则性框架”体现了严谨的数学基础和清晰的理论推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13240v1",
+        "title": "Towards More General Control of Diffusion Models Using Jeffrey Guidance",
+        "summary": "A key strength of diffusion models lies in their flexibility, since their outputs can be controlled at sampling time through guidance. However, beyond simple cases such as conditional sampling, the target distribution is often left implicit, defined only through a sampling rule or a heuristic energy function. To address this, we propose Jeffrey guidance, a principled framework that extends diffusion-model control to applications beyond what standard guidance can express. It leverages Jeffrey's rule of conditioning to update marginal distributions towards a prescribed target, preserving the conditional structure and minimally perturbing the joint distribution. We first demonstrate Jeffrey guidance by targeting a prescribed embedding distribution. With Inception embeddings as the target, this leads to substantial reductions in FID on both CIFAR-10 and FFHQ. We further apply Jeffrey guidance to fairness on CelebA-HQ, updating an unconditional diffusion model to enforce independence between attributes.",
+        "authors": "Raphaël Razafindralambo, Rémy Sun, Frédéric Precioso, Jes Frellsen, Pierre-Alexandre Mattei",
+        "url": "http://arxiv.org/abs/2606.13240v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13240v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了正弦回归模型中最小绝对偏差 (LAD) 框架下的鲁棒参数估计。它建立了所提出估计量的“强一致性”和“渐近正态性”，并在温和的正则条件下进行了证明。这是经典的统计学理论研究，具有非常高的数学严谨性，完全符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13198v1",
+        "title": "A symmetric Gauss-Seidel based alternating proximal ALM for generalized Nash Equilibrium problems in Banach spaces",
+        "summary": "In this paper, we study a class of monotone generalized Nash equilibrium problems (GNEPs) with jointly linear constraints. The players' strategy spaces are real Hilbert spaces, while the joint constraint is formulated in a Banach space. To solve such problems, we propose a novel symmetric Gauss-Seidel (sGS) based alternating proximal augmented Lagrangian method (sGS-APALM) which incorporates newly designed quadratic surrogates. In contrast to existing regularization and ALM-type methods, the proposed method avoids solving coupled Nash equilibrium subproblems at each iteration and instead updates the players' strategies alternately by solving a sequence of unconstrained quadratic programs. Moreover, unlike many existing splitting-based methods, our global convergence analysis and convergence rate estimation require only monotonicity and Lipschitz continuity of the pseudo-gradient mapping, without imposing stronger assumptions such as strong monotonicity or co-coercivity. Finally, we apply the method to a class of risk-neutral PDE-constrained GNEPs with joint state constraints, and preliminary numerical results demonstrate its efficiency and effectiveness.",
+        "authors": "Defeng Sun, Hailing Wang, Wei Zhao",
+        "url": "http://arxiv.org/abs/2606.13198v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13198v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对Banach空间中的广义Nash均衡问题 (GNEPs) 提出了一种新的对称Gauss-Seidel (sGS) 交替近端增广拉格朗日方法 (sGS-APALM)。它提供了“全局收敛性分析”和“收敛速度估计”，且仅需伪梯度映射的单调性和Lipschitz连续性假设。这是优化理论领域非常严谨的数学工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13076v1",
+        "title": "$α$-fair heterogeneous agent reinforcement learning",
+        "summary": "Cooperation in multi-agent systems is typically optimized through utilitarian objectives that maximize overall efficiency but fail to account for reward distribution, often resulting in inequitable \"leader-follower\" dynamics. While fairness-based approaches encourage pro-social behaviors where every agent benefits from cooperation, many current algorithms - including those utilizing reward shaping - break the stationarity of Markov Games or lack rigorous theoretical guarantees. This creates a critical gap between fair objective methods and theoretically safe learning frameworks. We propose a novel framework that bridges $α$-fairness with Heterogeneous-Agent Trust Region Learning (HATRL), ensuring monotonic improvement and convergence toward Nash Equilibria. Our approach leverages a fair advantage function that dynamically weights agent utilities based on their expected returns, allowing the global objective to transition from purely utilitarian efficiency to $α$-fairness welfare based on the parameter $α$. We introduce two practical algorithms, $α$-fair HATRPO and $α$-fair HAPPO, and demonstrate through experiments in sequential social dilemmas like CleanUp and CommonHarvest that they perform better than HATRL's algorithms from a utilitarian point of view while achieving socially higher outcomes.",
+        "authors": "Yao-hua Franck Xu, Tayeb Lemlouma, Jean-Marie Bonnin, Arnaud Braud",
+        "url": "http://arxiv.org/abs/2606.13076v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13076v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个将 $α$-公平性与异构智能体信任区域学习 (HATRL) 相结合的新框架，确保了“单调改进”和“收敛到Nash均衡”。它明确提供了“严格的理论保证”，这在多智能体强化学习领域是非常重要的理论贡献，符合您对优化收敛性和理论保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13063v1",
+        "title": "A Quadratic Order Reduction -- Gaussian Process Ordinary Differential Equation framework for the inference of Large Continuous Dynamical Systems",
+        "summary": "Forecasting the evolution of complex dynamical systems remains a fundamentally challenging task, primarily due to pronounced nonlinear interactions, high-dimensional state spaces, and the concomitant requirement for rigorous and reliable uncertainty quantification. Contemporary reduced-order modelling (ROM) frameworks frequently exhibit inherent trade-offs among predictive accuracy, numerical stability, and interpretability, and thus often fail to achieve an optimal balance among these competing objectives. To address these limitations, we propose a framework for forecasting complex dynamical systems via a kernel autonomous ordinary differential equation approach based on Gaussian Processes and Quadratic Order Model Reduction. Our base method, the Gaussian Process Ordinary Differential Equations model, allows accurate short-term forecasting with uncertainty quantification, and it provably converges to the real autonomous equation in the smooth case. We integrate it with quadratic order reduced-order modelling and sphere projection for learning the latent dynamics efficiently while preserving stability. Numerical experiments demonstrate that our full model outperforms ROM forecasting methods such as Extended Dynamic Mode Decomposition, Bagging Optimised Dynamic Mode Decomposition and Linear and Nonlinear Disambiguation Optimisation in terms of accuracy or computational costs. These results demonstrate the potential of the framework as a robust and stable tool for forecasting complex dynamical systems with rigorous uncertainty quantification.",
+        "authors": "Guglielmo Padula, Michele Girfoglio, Gianluigi Rozza",
+        "url": "http://arxiv.org/abs/2606.13063v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13063v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于高斯过程常微分方程和二次降阶模型的框架，用于复杂动力系统的推断。它强调了“严格可靠的不确定性量化”，并且模型“可证明地收敛到真实的自治方程”，同时“保持稳定性”。这在动力系统建模和不确定性量化方面具有强大的数学和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.13024v1",
+        "title": "CausalMoE: A Billion-Scale Multimodal Foundation Model for Granger Causal Discovery with Pattern-Routed Heterogeneous Experts",
+        "summary": "Granger Causal Discovery (GCD) is fundamental for analyzing temporal dependencies in complex systems. However, existing neural GCD methods predominantly rely on a \"one-size-fits-all\" paradigm, struggling to capture distribution shifts and dynamic regime changes inherent in real-world time series. This often leads to entangled representations and spurious causal graphs. In this paper, we propose CausalMoE, a billion-scale multimodal Granger causal foundation model that explicitly models patch-level heterogeneity. CausalMoE introduces a Pattern-Routed Mixture of Heterogeneous Experts, which dynamically identifies latent temporal patterns and routes patches to specialized domain experts, effectively decoupling regime-specific mechanisms from shared dynamics. To ensure interpretable graph recovery, we design a Causality-Aware Self-Attention mechanism operating across variables, yielding sparse Granger causal graphs via proximal optimization. Furthermore, CausalMoE is the first to integrate LLMs and VLMs to align numerical signals with textual and visual priors, regularizing causal estimation in complex scenarios. Extensive experiments demonstrate that CausalMoE establishes a new state-of-the-art on fully supervised benchmarks, while effectively generalizing to few-shot settings where traditional methods fail.",
+        "authors": "Bo Liu, Di Dai, Jingwei Liu, Jiarui Jin, Xiaocheng Fang, Guangkun Nie, Hongyan Li, Shenda Hong",
+        "url": "http://arxiv.org/abs/2606.13024v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.13024v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 CausalMoE，一个用于 Granger 因果发现 (GCD) 的十亿级多模态基础模型。它通过“因果感知自注意力机制”和“近端优化”生成稀疏的 Granger 因果图，并强调了“正则化因果估计”。这篇论文在因果推断领域提供了强大的理论基础和数学方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.12883v1",
+        "title": "The Hidden Power of Scaling Factor in LoRA Optimization",
+        "summary": "In Low-Rank Adaptation (LoRA), the scaling factor $α$ is often treated as a mere complement to the learning rate, yet its role in optimization remains poorly understood. In this paper, we reveal that the scaling factor $α$ and the learning rate function differently, with $α$ emerging as the dominant driver of effective optimization, delivering gains that cannot be replicated by learning rate scaling alone. Through the synergy of extensive empirical analysis and a theoretical Signal-Drift framework, we uncover three findings into LoRA's scaling mechanism: First, LoRA's spectral suppression smooths the optimization landscape, rendering standard hyperparameters overly conservative and creating an optimization gap. Second, when leveraging this smoothness to accelerate convergence, $α$ outperforms the learning rate by amplifying the task signal without increasing the drift ratio. Third, the optimal scaling factor follows a sublinear relationship with the rank, well characterized by a square-root law with an unexpectedly large coefficient, revealing the insufficient scaling of existing rank-tied heuristics. Based on these insights, we propose LoRA-$α$, a minimalist framework that restores $α$ to its principled regime, making LoRA compatible with standard small learning rates. Extensive evaluations across diverse tasks demonstrate that LoRA-$α$ consistently improves performance while streamlining hyperparameter search, unleashing the learning potential of LoRA.",
+        "authors": "Zicheng Zhang, Haoran Li, Jiaxing Wang, Guoqiang Gong, Anqi Li, Yudong Hu, Ting Xiong, Yurong Gao, Junxing Hu, Zhida Jiang, Yifeng Zhang, Pengzhang Liu, Qixia Jiang",
+        "url": "http://arxiv.org/abs/2606.12883v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.12883v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过“理论信号-漂移框架”揭示了LoRA优化中缩放因子 $α$ 的隐藏作用，并推导出了“最优缩放因子遵循与秩的次线性关系，由平方根定律很好地表征”。这提供了对优化算法深层次的理论分析和数学推导，非常符合您对优化收敛性的研究兴趣。"
+    }
+]

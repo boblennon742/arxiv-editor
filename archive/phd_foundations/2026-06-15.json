@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.17010v1",
+        "title": "From Tokens to Policy: Causal and Interpretable Heterogeneous Treatment Effects Identification",
+        "summary": "Heterogeneous Treatment Effect (HTE) identification is crucial to explain the impact of an intervention and optimize our policies accordingly. Existing approaches trade expressivity for interpretability, but, if some active heterogeneity drivers are unmeasured, methods at both ends of this spectrum allow for spurious HTE characterization with no causal reading. In this work, we focus on controlled experiments and argue that an oracle HTE causal characterization via the latent interactors is now within reach, thanks to (i) more extensive pre-treatment measurements, i.e., multi-modal and multi-view, and (ii) scalable representations with minimal human supervision. We then re-frame HTE identification as a Markov-blanket discovery problem on a sufficient and aligned pre-treatment representation, and introduce Neural EXposure Interaction Search (NEXIS), an iterative procedure with provable and empirically validated consistent selection. We deploy NEXIS on two anti-poverty programs in Africa, augmenting each with satellite imagery capturing previously unmeasured environmental effect modifiers, leading to novel, interpretable and prescriptive guidelines to optimize the programs' next iterations.",
+        "authors": "Riccardo Cadei, Frank Otchere, Nyasha Tirivayi, Gustavo Angeles Tagliaferro, Falco J. Bargagli-Stoffi, Francesco Locatello",
+        "url": "http://arxiv.org/abs/2606.17010v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17010v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文专注于异质处理效应（HTE）的因果识别，将其重构为马尔可夫毯发现问题，并提出了具有可证明一致性选择（provable consistent selection）的NEXIS方法。这直接契合了您对因果逻辑、统计保证和严谨数学推导的偏好，并应用于现代AI系统（通过卫星图像增强表示）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16913v1",
+        "title": "Optimal Multiscale Learning of Linear Operators",
+        "summary": "We study the statistical and computational limits of learning bounded linear operators between Sobolev spaces from noisy input-output data. In wavelet coordinates, the problem is recast as an infinite-dimensional matrix regression problem with a heterogeneous two-sided multiscale structure. We establish minimax rates under Sobolev operator-norm loss and construct a finite-resolution blockwise least-squares estimator attaining these rates. The analysis reveals a nonuniform local estimation difficulty across scales, which can be exploited algorithmically: by assigning scale-adaptive sample sizes, the estimator achieves the optimal computational cost among dense least-squares implementations.",
+        "authors": "Jiaheng Chen, Daniel Sanz-Alonso",
+        "url": "http://arxiv.org/abs/2606.16913v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16913v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了从噪声数据中学习Sobolev空间之间有界线性算子的统计和计算极限，建立了极小极大率（minimax rates），并构建了达到这些速率的估计器。其对无限维矩阵回归问题的严谨分析和最优计算成本的探讨，完美符合您对强大理论基础和清晰数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16872v1",
+        "title": "Towards Fair Predictions: Group Conditional Concordance Index to Quantify Fairness in Time-to-Event Prognostication",
+        "summary": "Fairness metrics are essential for rigorously defining, quantifying, and mitigating biases in predictive models. While most existing metrics focus on binary classification tasks, fairness in time-to-event analyses has received limited attention. To address this gap, we propose a novel group fairness metric, the group-conditional Concordance Index (xCI), which extends Harrell's Concordance Index (CI) by conditioning on group membership. The xCI measures both within-group and cross-group ranking accuracy in the presence of right-censored data. We formally define the xCI, prove that CI is a weighted average of xCIs across all possible group pairs, and develop a consistent estimator using inverse probability of censoring weights (IPCW). We further investigate the relationship between xCI and predicted risk scores through analytical derivations and simulation studies. To demonstrate its practical utility, we present two case studies: (i) assessing the fairness of survival models trained on harmonized data from the Framingham Offspring, MESA, and ARIC studies, and (ii) evaluating fairness in existing cardiovascular disease (CVD) risk prediction models using Truveta, a large-scale electronic health record (EHR) database. Our results show that xCI effectively detects biases across demographic groups that are overlooked by existing metrics. Overall, xCI provides a valuable tool for fairness assessment in survival analysis, particularly in constrained resource allocation settings, and complements existing fairness evaluation approaches.",
+        "authors": "Haoyuan Wang, Riddhiman Bhattacharya, Richardo Henao, Daniel Wojdyla, Chuan Hong, Matthew Engelhard",
+        "url": "http://arxiv.org/abs/2606.16872v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16872v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个新颖的组条件一致性指数（xCI）来量化时间-事件预后中的公平性，并提供了形式化定义、理论证明和基于IPCW的一致性估计器。这在统计公平性、生存分析和严谨的数学推导方面表现出色，具有重要的临床实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16815v1",
+        "title": "A Perception vs. Distortion Perspective on Score-Based Generative Channel Estimation",
+        "summary": "Driven by their remarkable success in computer vision and inverse problem solving, score-based models are increasingly applied to wireless communications, where they show promise across a range of physical-layer tasks. However, despite this growing interest, the current literature often lacks a rigorous analysis of when score-matching offers a tangible advantage over traditional discriminative learning. This paper aims to address this gap through the use-case of channel estimation, a fundamental inverse problem in wireless systems. We present a theoretically grounded interpretation of score-based channel estimation through the lens of the perception-distortion tradeoff, identifying the conditions where score matching excels as well as its key limitations. In particular, by modeling downstream wireless tasks (e.g., capacity maximization) as functionals of the channel estimation process, we quantify the excess risk incurred by standard distortion-minimization approaches. Extensive numerical results show that under high predictive uncertainty, the large excess risk gap can be offset by score-based estimation, enabling near Bayesian-optimal precoding via the learned posterior, whereas in the low predictive uncertainty regime, discriminative distortion-minimization approaches are preferable due to lower complexity and more efficient use of model capacity.",
+        "authors": "Marco Skocaj, Lukas Eller, Mate Boban",
+        "url": "http://arxiv.org/abs/2606.16815v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16815v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从感知-失真权衡的角度，对基于分数的生成式信道估计进行了理论严谨的解释和分析，量化了标准失真最小化方法的超额风险。这提供了对现代AI系统（分数模型）在无线通信中应用时的深刻理论洞察和严谨分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16681v1",
+        "title": "Spectral Sparsification of Laplacian-Constrained Gaussian and Hüsler-Reiss Graphical Models",
+        "summary": "Graph Laplacians encode graph structures in matrix form, and thus facilitate the application of linear algebra to graph theory. In statistics, two related families of probabilistic graphical models can be parameterized by graph Laplacians. The first one is the Laplacian-constrained Gaussian graphical model (LCGGM), which imposes that the (pseudo-)inverse covariance matrix of a Gaussian random vector is a Laplacian matrix. Applications include graph signal processing and network topology learning. The second one is the Hüsler-Reiss graphical model, which is considered as an extremal analog of the Gaussian graphical model, and can be used in extremal dependence modeling of floods, heatwaves, and financial losses. For both models, the restriction to positive edge weights in the graph Laplacian gives rise to an approach for graph structure learning that does not require tuning parameters. While these approaches yield a strong model fit in many settings, the resulting graph estimates are typically much denser than the underlying ground truth, limiting interpretability and scalability. In order to improve the accuracy of Laplacian-constrained graph learning, we propose to use spectral graph sparsification as a post-estimation operation. To do so, we replace the original Laplacian estimate by a sparser Laplacian that is spectrally close, and re-fit the model on the resulting graph. We refer to the two resulting methods as Spectral-LCGGM and Spectral-HR. We investigate the properties of the proposed estimators and show several theoretical results on their performance. Furthermore, we demonstrate that the newly proposed methods perform well by running simulations on Erdős-Rényi and stochastic block model graphs, and we also showcase their applications to real data.",
+        "authors": "Ignacio Echave-Sustaeta Rodríguez, Aida Abiad, Frank Röttger",
+        "url": "http://arxiv.org/abs/2606.16681v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16681v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了利用谱图稀疏化来改进Laplacian约束高斯和Hüsler-Reiss图模型的图结构学习，并提供了关于估计器性能的理论结果。这结合了图论、统计模型和严谨的理论分析，以提高模型的可解释性和可扩展性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16602v1",
+        "title": "PhysGuard: Fisher-Guided Gradient Projection for Sim-to-Real Neural PDE Surrogates",
+        "summary": "Neural operator models trained on simulation data often lose accuracy when applied to experimental measurements due to the sim-to-real gap. Standard fine-tuning with limited real data can reduce this gap, but it may also damage the core physics-relevant representations learned during pretraining. Although knowledge-preserving adaptation has been widely investigated in vision or language tasks, it remains unclear whether these methods are suitable for neural operators whose architectures and protected knowledge are fundamentally different. Neural operators need to preserve core-scale physical structures rather than semantic or visual features. We propose PhysGuard, a physics-preserving framework for accurate sim-to-real adaptation of neural operators. Specifically, PhysGuard uses the empirical Fisher Information Matrix computed on simulation data to identify physics-critical parameter directions, then restricts fine-tuning updates to directions that do not interfere with them. A layer-wise Gram-matrix formulation makes this efficient for models with millions of parameters, while an adaptive threshold automatically determines the protected subspace size. A spectral probe experiment shows that the dominant Fisher directions are strongly associated with low-frequency output structures. Experiments on benchmark across four neural operator architectures and different physical systems show that PhysGuard performs strongly on most evaluation metrics compared to baselines. The benefits are most evident under severe domain shift, where it reduces low-frequency error by up to 32\\% compared to standard fine-tuning while maintaining adaptability. Our code is available at https://github.com/ZhouChaunge/PhysGuard.",
+        "authors": "Changjian Zhou, Junfeng Fang, Negin Yousefpour, Peng Wu, Bin Yan, Guillermo A Narsilio",
+        "url": "http://arxiv.org/abs/2606.16602v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16602v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "PhysGuard框架利用经验Fisher信息矩阵来识别物理关键参数方向，并限制微调更新，以实现神经PDE代理的物理保持性sim-to-real适应。Fisher信息矩阵的严谨应用和对物理结构保持的关注，体现了强大的理论基础和严谨性，是物理信息AI的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16488v1",
+        "title": "An Energy-Driven Framework for Privacy-Aware Synthetic Data Generation",
+        "summary": "The increasing demand for access to microdata in official statistics and data-intensive applications raises important challenges concerning disclosure risk, inferential validity and preservation of statistical utility. This paper proposes an interpretable energy-driven framework for privacy-aware synthetic data generation in mixed-type data. The proposed methodology combines discriminative modelling, Bayesian-Network proposal mechanisms, Metropolis--Hastings sampling and post-generation optimization within a constrained probabilistic framework. Unlike perturbation-based approaches, privacy-aware behaviour is achieved through constrained stochastic exploration guided by explicit plausibility, privacy, diversity and structural-coherence penalties. The framework is specifically designed for mixed-type tabular data characterized by sparse configurations, heterogeneous variable types and complex multivariate dependency structures. The generation process is formulated as a multi-objective sampling problem balancing statistical fidelity and disclosure-risk while preserving predictive utility. An extensive empirical evaluation is conducted using a mixed-type individual-level dataset containing demographic, behavioural and health-related variables. The validation strategy combines statistical fidelity diagnostics, predictive analyses, diversity measures, nearest-neighbour risk analysis, membership inference attacks and Split Conformal Prediction. The empirical results suggest that the proposed framework is capable of preserving a substantial portion of the predictive and multivariate structure of the original data while limiting exact memorization phenomena and maintaining favourable privacy-aware behaviour. The proposed methodology provides an interpretable framework for synthetic data generation under competing utility and privacy constraints.",
+        "authors": "Pierpaolo Massoli, Fabio Spagnuolo",
+        "url": "http://arxiv.org/abs/2606.16488v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16488v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个可解释的能量驱动框架，用于混合类型数据的隐私保护合成数据生成，结合了判别建模、贝叶斯网络、Metropolis-Hastings采样和约束概率框架，并利用Split Conformal Prediction进行评估。这在隐私保护、统计建模和不确定性量化方面具有强大的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16478v1",
+        "title": "Tensor-Coord: Algebraic Decomposition of Joint Plan Tensors for Conflict-Free Multi-Agent LLM Planning",
+        "summary": "Large language models (LLMs) remain limited in multi-agent planning because independently generated plans can create coordination failures such as spatial collisions, resource contention, and temporal deadlocks. We introduce Tensor-Coord, a multilinear algebra framework that represents the joint plan of N agents as a third-order tensor \\(T \\in R^{N \\times H \\times A}\\) over agents, timesteps, and actions. Canonical Polyadic (CP) and Tucker decompositions are used to identify latent coordination structure. The minimal epsilon-approximate CP rank R* defines a computable coordination complexity measure, with \\(CC(Pi)=(R*-N)/N\\). We prove that R*=N is necessary and sufficient for plan independence. The residual \\(E=T-T_{R*}\\) defines a conflict score over agent pairs, timesteps, and actions, localizing failures without domain-specific rules. Tucker factors provide interpretable agent roles, temporal phases, and action clusters that are converted into natural language constraints for iterative LLM replanning. Experiments on multi-robot delivery tasks across Easy (2 agents, 5x5 grid), Medium (3 agents, 5x5 grid), and Hard (4 agents, 5x5 grid) settings show convergence to conflict-free plans in 100% of 2-agent cases within 1.4 iterations on average, 80% of 3-agent cases within 3.2 iterations, and 60% of 4-agent cases within 4.0 iterations. CP rank scaled approximately linearly as \\(R*(N) = 3.9N + 0.5\\), supporting its use as a predictor of coordination complexity.",
+        "authors": "Mudit Rastogi",
+        "url": "http://arxiv.org/abs/2606.16478v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16478v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Tensor-Coord框架将多智能体联合计划表示为高阶张量，并利用CP和Tucker分解来识别潜在协调结构，证明了R*=N是计划独立性的充要条件。这种将多线性代数应用于LLM多智能体规划的创新性、严谨的数学推导和理论保证，与您的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16454v1",
+        "title": "SDS-LoRA: Overcoming Anisotropic Gradient Scaling in Low-Rank Adaptation",
+        "summary": "Low-Rank Adaptation (LoRA) enables efficient adaptation of large pre-trained models to downstream tasks by parameterizing weight updates with low-rank matrices. In this paper, we investigate the limitations of the LoRA parameterization from a geometric perspective. Specifically, we show that when a full fine-tuning gradient is backpropagated to the low-rank matrices, it undergoes anisotropic scaling driven by their singular values. We argue that this phenomenon is undesirable because it distorts the full fine-tuning gradient by skewing it toward dominant singular directions while suppressing others. Our analyses demonstrate that anisotropic gradient scaling reduces the effective rank of the low-rank matrices' gradients and results in suboptimal alignment between the full fine-tuning gradient and its low-rank approximation in LoRA, thereby exacerbating the gap to full fine-tuning. To address these limitations, we propose a new low-rank parameterization, SDS-LoRA, which structurally decouples singular values from the backward pass. Our method ensures that the full fine-tuning gradient backpropagates only through the orthonormal bases of the low-rank matrices' subspaces, independent of their scales. Convergence analysis demonstrates that while LoRA's convergence rate degrades with the condition number of the low-rank matrices, SDS-LoRA remains independent of it. Experimental results across natural language and vision benchmarks show that SDS-LoRA improves loss convergence and reduces the gap to full fine-tuning, significantly enhancing adaptation performance.",
+        "authors": "Junghun Oh, Sungyong Baik, Kyoung Mu Lee",
+        "url": "http://arxiv.org/abs/2606.16454v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16454v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文深入分析了LoRA中各向异性梯度缩放的问题，并提出了SDS-LoRA，通过结构性地解耦奇异值来解决此问题，并提供了收敛性分析，证明其收敛速度与低秩矩阵的条件数无关。这在优化收敛性方面提供了严谨的理论基础和重要的实践改进，对现代深度学习模型的微调至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16399v1",
+        "title": "Non-Equilibrium Model Selection via Finite-Time Thermodynamics",
+        "summary": "Information criteria such as WAIC and WBIC extend model selection to singular learning machines, but they are usually derived for equilibrium posteriors. We formulate a finite-time analogue of WBIC by replacing the equilibrium posterior with an effective ensemble generated by learning dynamics under a resource constraint. When this ensemble admits an analytic effective potential, singular learning theory yields a resource-dependent real log canonical threshold. The resulting estimator gives a computable thermodynamic contribution to time-bounded MDL and identifies the finite-time singular complexity relevant to the structural information measured by epiplexity.",
+        "authors": "Masayuki Ohzeki",
+        "url": "http://arxiv.org/abs/2606.16399v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16399v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "该论文通过有限时间热力学，为非平衡学习机器的模型选择提出了WBIC的有限时间模拟，并将其与奇异学习理论联系起来，推导出了资源依赖的真实对数规范阈值。这是一个高度理论化且具有深刻数学基础的贡献，尽管其直接实践影响力可能较低，但其理论深度非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16379v1",
+        "title": "Scalable and Interpretable Representation Alignment with Ordinal Similarity",
+        "summary": "Evaluating representation similarity is fundamental to representation learning. However, existing metrics suffer from significant limitations: they lack interpretability due to shifting baselines, lack robustness to outliers, and are computationally intractable for large datasets, forcing reliance on heuristic approximations. To address this, we develop an ordinal-similarity framework, instantiated by the Triplet (TSI) and Quadruplet (QSI) Similarity Indices, which measure alignment by quantifying the consistency of ordinal relationships. We theoretically demonstrate this formulation is inherently interpretable, robust to outliers, and computationally efficient. Finally, we establish a formal equivalence between TSI and local neighborhood alignment, measured by Mutual Nearest Neighbors. Empirically, we validate these properties and show that ordinal similarity offers a scalable approach to measuring alignment, enabling practitioners to better understand and design representations.",
+        "authors": "Diogo Soares, Pankhil Gawade, Andrea Dittadi, Ewa Szczurek",
+        "url": "http://arxiv.org/abs/2606.16379v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16379v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于序数相似性的可扩展且可解释的表示对齐框架（TSI和QSI），并从理论上证明了其可解释性、对异常值的鲁棒性和计算效率，建立了与局部最近邻对齐的正式等价性。这在表示学习的理论基础和度量设计上具有高度严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16356v1",
+        "title": "Simulation-Augmented Multi-Step Split Conformal Prediction for Aggregated Forecasts",
+        "summary": "We study uncertainty quantification for aggregated forecasting tasks such as annual totals and year-over-year growth rates. We propose SA-MSCP, a simulation-augmented multi-step split conformal method that generates future paths from cross-validated residuals using a block bootstrap and constructs prediction intervals from empirical quantiles. Experiments show that SA-MSCP improves empirical coverage over a simulated-path baseline for aggregated and growth-rate targets. Our results demonstrate that simulation-enhanced conformal calibration is an effective and general framework for uncertainty quantification in aggregated time-series forecasting.",
+        "authors": "Andro Sabashvili",
+        "url": "http://arxiv.org/abs/2606.16356v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16356v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作引入了基于输入依赖Fisher信息矩阵（iFIM）的局部敏感性分析框架，用于医学图像分类器，以表征分类器预测分布在输入扰动下的变化。Fisher信息矩阵的严谨应用为深度学习模型的可解释性提供了坚实的统计学基础，尤其在安全关键的医学AI领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16304v1",
+        "title": "pFedUL: Layer-Aware Federated Unlearning for Personalized Federated Learning",
+        "summary": "Federated unlearning (FU) enables the removal of specific data contributions from federated learning (FL) models to comply with regulations such as the General Data Protection Regulation (GDPR). However, most existing FU methods are designed for the FedAvg paradigm, where all clients share a single global model. In practice, personalized federated learning (pFL) methods such as FedPer, FedRep, Ditto, and FedBN have become widely adopted due to their superior handling of non-IID data. These methods decompose the model into shared global layers and client-specific personalized layers, fundamentally altering the semantics of unlearning, yet this setting has received little attention. We formalize FU under the pFL paradigm, identifying a tension between unlearning completeness on shared layers and personalization preservation for remaining clients. We then propose pFedUL, a layer-aware selective unlearning framework comprising three components: (1) gradient-based layer-wise contribution attribution that separately quantifies the target client's influence on shared and personalized parameters, (2) adaptive selective unlearning that applies differentiated forgetting strategies across layer types, and (3) a lightweight recalibration protocol enabling remaining clients to restore personalization with minimal overhead. We further introduce two new metrics, Personalization Preservation Score (PPS) and Cross-client Fairness Index (CFI), to evaluate pFL-specific unlearning quality. Experiments on CIFAR-10, CIFAR-100, and FEMNIST under varying non-IID settings indicate that pFedUL achieves unlearning effectiveness comparable to full retraining while maintaining an average of 97.3\\% personalized accuracy for remaining clients. Compared with six state-of-the-art FU methods adapted to the pFL setting, pFedUL consistently achieves superior personalization preservation.",
+        "authors": "Zhuodong Liu, Xiangyu Li, Zhihao Zhang",
+        "url": "http://arxiv.org/abs/2606.16304v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16304v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文为九室非线性流行病模型设计了扩展卡尔曼滤波器（EKF），并进行了详尽的李导数可观测性分析和误差的局部指数均方有界性收敛性证明。这在非线性系统状态估计和控制理论方面提供了极其严谨的数学和统计保证，对复杂动态系统的建模和控制具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16080v1",
+        "title": "Bayesian joint modelling using semiparametric accelerated failure time approaches",
+        "summary": "Longitudinal clinical studies often collect repeated measurements of biomarkers or health-related quality of life together with a time-to-event outcome. These processes are intrinsically linked: longitudinal trajectories may predict event risk, while event occurrence, or its anticipation, can induce informative censoring of the longitudinal process. Joint models provide a principled framework for handling this dependence, but most existing formulations rely on proportional hazards assumptions that may be restrictive and offer limited interpretability on the time scale. We propose a class of semiparametric accelerated failure time joint models that directly model covariate effects on event timing while flexibly capturing longitudinal-event associations. The survival component is specified through an accelerated failure time model with the baseline component represented by a flexible basis expansion, allowing a broad class of smooth baseline specifications. We illustrate the framework using Bernstein polynomial baseline representations and introduce rescaling strategies to improve numerical stability and parameter identifiability under time-warping. Estimation is conducted within a Bayesian framework, enabling joint inference for longitudinal, survival, and association parameters. Simulation studies reflecting realistic longitudinal trajectories, censoring mechanisms, and dependence structures are used to evaluate finite-sample performance. The proposed models show improved recovery of longitudinal treatment effects compared with a standalone linear mixed model when event risk depends on the underlying longitudinal process. Overall, the framework extends existing joint modelling methodology by offering a flexible and interpretable alternative to proportional hazards-based approaches.",
+        "authors": "Ding Ma, Patrick Maher, Andrew Martin",
+        "url": "http://arxiv.org/abs/2606.16080v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16080v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一类使用半参数加速失效时间（AFT）方法的贝叶斯联合模型，用于纵向和时间-事件数据，并利用灵活的基函数扩展基线成分，解决了数值稳定性和参数可识别性问题。这在贝叶斯统计建模和生存分析方面具有强大的理论和方法学严谨性，对临床研究中的复杂数据分析非常有用。"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.16961v1",
+        "title": "Beyond the Smile: A Hybrid Convolutional VAE for Crypto Volatility Surfaces",
+        "summary": "We present a convolutional variational autoencoder for cryptocurrency implied-volatility surfaces, together with a deployable predictor that combines it with a quadratic smile re-fit through a deterministic per-tenor routing rule. Trained on 6,034 fully-filled hourly Binance Options surfaces of BTC and ETH spanning May-October 2023 and parameterised on a common $6 \\times 7$ tenor-delta grid, the model attains a hidden-cell surface-completion RMSE in the 0.94-1.56 vol-point range across both markets and mask rates 10-50%. The hybrid predictor attains 0.83 vol points at 50% masking against 7.00 for the smile re-fit alone, an eightfold reduction obtained at no additional inference cost. Under structurally-correlated hole patterns that emulate the withdrawal of an entire tenor of strikes, the smile re-fit incurs 9.6-13.1 vol points of error while the learned model remains at 1.5-1.9, isolating a regime in which the generative model is the only viable predictor. Joint training on BTC and ETH improves the in-distribution model on both markets by 9-27% relative to the better-performing single-symbol counterpart, indicating a substantially shared vol-surface manifold across the two largest cryptocurrencies over the observation window. The hybrid is calendar- and butterfly-arbitrage-free at the listed strikes, a property that the parametric smile re-fit alone fails at high mask rates. The per-snapshot reconstruction error of the trained model flags the late-October ETF-anticipation rally and the August $17$, $2023$ flash crash as elevated-error periods without supervision. All training and evaluation infrastructure is released to support reproducible follow-on work.",
+        "authors": "Sadanand Singh, Allam Reddy, Manan Chopra",
+        "url": "http://arxiv.org/abs/2606.16961v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16961v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种混合卷积变分自编码器（VAE）来建模加密货币的隐含波动率曲面。隐含波动率及其衍生指标（如偏度、期限结构）是传统金融市场中重要的量化因子。将 VAE 应用于加密期权市场，并结合二次微笑曲线拟合，能够有效提高波动率曲面的补全和预测精度，并确保无套利性。这直接为构建基于波动率的量化因子提供了强大的工具和方法，例如可以从 VAE 模型的输出中提取波动率水平、斜率、曲率等因子，或者将模型重建误差作为市场异常因子。其“可部署预测器”的特性和显著的误差降低表明了极高的实践价值，非常适合用于因子构造和策略设计。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16840v1",
+        "title": "Crashing Together, Rallying Apart: Dynamic Conditional Tail Dependence in Cryptocurrency Markets",
+        "summary": "Cryptocurrency markets are prone to violent, synchronised drawdowns, challenging the claim that a basket of crypto-assets offers genuine internal diversification. Because standard covariance-based metrics fail to capture asymptotic tail dependence, they systematically understate systemic risk and overstate diversification benefits precisely when markets crash. This study maps the conditional dependence structure of the cryptocurrency market directly in the joint tails, isolating direct extremal linkages from those mediated by the rest of the system. We analyse the daily returns of the thirteen largest cryptocurrencies over a sequence of 89 overlapping windows spanning late 2021 to 2025. We apply dynamic Hüsler-Reiss graphical models of extremes, estimated separately for joint crashes and rallies, and benchmark them against a Gaussian graphical model of ordinary co-movement. The results reveal a near-complete and stable lower-tail graph, an upper tail that thins over time to re-form sectoral structures, and the dissolution of ordinary token categories into a single block anchored by a Bitcoin-Ethereum core. These findings imply that intra-crypto diversification fails on the downside, standard risk models underestimate market-wide crash probabilities by roughly eight-fold, and dynamic extremal graphs offer a superior tool for systemic risk monitoring.",
+        "authors": "Rama Siva Sarwari Mallela, Manuele Leonelli",
+        "url": "http://arxiv.org/abs/2606.16840v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16840v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了加密货币市场在极端事件下的动态条件尾部依赖性，揭示了“暴跌时同步，上涨时分化”的关键特征。通过应用动态 Hüsler-Reiss 极值图模型，论文提供了比传统协方差指标更准确的系统性风险评估工具。对于量化因子构造而言，这提供了构建市场脆弱性、系统性风险或市场情绪因子的新视角。例如，可以基于尾部依赖图的连通性或结构变化来构建因子，以捕捉市场在不同极端情景下的联动性。这些因子对于风险管理、资产配置以及设计在市场崩溃或反弹期间表现独特的策略至关重要。论文指出传统风险模型低估了市场崩溃概率达八倍，这直接强调了其研究成果在实践中的巨大影响力。"
+    }
+]

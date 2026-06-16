@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.17056v1",
+        "title": "The Value Axis: Language Models Encode Whether They're on the Right Track",
+        "summary": "We investigate whether language models internally track the value of their current trajectory, defined as the likelihood that their ongoing strategy will achieve their goals. Using synthetic, in-context reinforcement learning data, we construct a \"value\" axis for Qwen3-8B. We find that activations along this axis distinguish between high vs. low verbalized confidence, rollouts without and with backtracking, and correct vs. corrupted code. Steering towards high value causally suppresses self-correction and reduces explanatory verbosity, while steering towards low value induces backtracking and exploration. We demonstrate that direct preference optimization (DPO) can increase the internal value of rewarded behaviors (e.g. use a certain word), causing the model to act more confidently after exhibiting them. Finally, we apply the value axis to study in-the-wild settings. For example, we find that Qwen assigns low value to politically sensitive chat queries after post-training and that supervised fine-tuning increases internal confidence within the training domain. Our results suggest that language models linearly encode an estimate of expected goal success that modulates their confidence in pursuing a direction.",
+        "authors": "Nick Jiang, Isaac Kauvar, Jack Lindsey",
+        "url": "http://arxiv.org/abs/2606.17056v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17056v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了语言模型如何内部追踪其当前轨迹的“价值”，即实现目标可能性的估计。通过构建“价值轴”并进行因果干预，揭示了LLM内部信心、自我修正和探索行为的机制。这对于理解LLM的内部工作原理、提升其可控性和可靠性具有重要的理论和实践意义，符合您对前沿算法和架构的兴趣，以及解决LLM应用瓶颈（如可靠性）的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17053v1",
+        "title": "Context-Aware RL for Agentic and Multimodal LLMs",
+        "summary": "Large language models (LLMs) often fail when answering requires identifying a small but decisive piece of evidence within a long or complex context, such as a single line in a tool trace or a subtle detail in an image. We propose ContextRL, a context-aware reinforcement learning (RL) method that improves long-horizon reasoning and multimodal performance through an \\emph{indirect} auxiliary objective. Instead of supervising only the final answer, ContextRL presents the model with a query, an answer, and two highly similar contexts, and rewards it for selecting the context that supports the query--answer pair, thereby encouraging fine-grained grounding. We construct contrastive context data in two domains: for coding agents, trajectories serve as contexts, yielding 1k pairs built via condition filtering; for multimodal reasoning, images serve as contexts, yielding 7K pairs built via generative editing and similarity search. ContextRL achieves average gains of +2.2% over standard GRPO on 5 long-horizon benchmarks, and +1.8% across 12 diverse visual question answering benchmarks. To disentangle the effect of the proposed objective from that of additional data, we compare against data-augmentation baselines that repurpose the same contrastive contexts as standard query--context--answer examples. These baselines provide little to no improvement, showing that the gains arise from the proposed context-selection objective rather than from the contrastive data alone.",
+        "authors": "Peiyang Xu, Bangzheng Li, Sijia Liu, Karthik R. Narasimhan, Pramod Viswanath, Prateek Mittal, Xingyu Fu",
+        "url": "http://arxiv.org/abs/2606.17053v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17053v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种上下文感知的强化学习方法ContextRL，通过间接的辅助目标来改善LLM在长序列推理和多模态任务中的表现，尤其是在复杂上下文中识别关键证据的能力。它通过奖励模型选择支持查询-答案对的上下文，鼓励细粒度接地。这种RL方法的创新性在于其间接辅助目标的设计，有效解决了LLM在处理长上下文和多模态信息时的瓶颈，具有理论创新性和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16978v1",
+        "title": "Task-Error Residual Learning for Real-Robot Five-Ball Juggling",
+        "summary": "For residual learning that refines existing behavior, sample efficiency depends on two things: how much information each rollout returns, and how efficiently the learner uses that information. Reinforcement learning's standard scalar reward carries far less information than the directional task error that defines the task. Random exploration further discards whatever information each rollout returns. Through residual learning with directional task-error supervision and a task error model that drives sample selection, we achieve stable three-, four-, and five-ball juggling on anthropomorphic Barrett WAM arms. Despite planning and controlling through a simple, idealized stack, the system converges from the second attempt. The first attempt drops, after which task error decreases monotonically without further failures. In comparison, five-ball juggling typically takes humans years of practice. We compare residual learners across two ternary axes, the directional information in the learning feedback and the commitment of the analytic prior, spanning Newton-style Jacobian updates, Composite Bayesian Optimization, and stochastic search methods. Both axes prove necessary: neither directional feedback nor an informative prior suffices alone, and the simplest method that combines them, a fixed-Jacobian Newton update, is the most reliable. The learned residual tolerates substantial prior misalignment and degraded joint tracking, affecting mainly convergence speed. The bottleneck for residual learning on real robots is therefore the information content of the supervision signal and how the learner uses it, not the accuracy of the surrounding stack. Video documentation of all experiments is available at https://kai-ploeger.com/residual-juggling.",
+        "authors": "Kai Ploeger, Jan Peters",
+        "url": "http://arxiv.org/abs/2606.16978v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16978v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过残差学习与方向性任务误差监督，实现了机器人五球杂耍的稳定控制。它深入探讨了学习反馈中的方向性信息和分析先验的承诺对样本效率的影响，并比较了牛顿式雅可比更新、复合贝叶斯优化和随机搜索方法。其方法具有理论严谨性，并通过实际机器人任务展示了显著的实践影响力，符合您对前沿算法和理论创新性的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16952v1",
+        "title": "Phantoms and Disclosures: a Causal Framework for Auditing Synthetic Data",
+        "summary": "The rapid adoption of generative AI and Large Language Models (LLMs) has spurred interest in synthetic data as a privacy-preserving alternative to sensitive real-world datasets. However, generating high-utility synthetic data often carries the risk of memorizing and regurgitating private information from the training corpus. In this work, we present a customizable empirical auditing framework designed to detect and explain such data disclosures. Our framework introduces a mechanism to distinguish between \"true disclosures\"-where the system directly reproduces a user's information-and \"phantom disclosures''-where the system incidentally generates a user's data. By partitioning input data into training and holdout sets and applying rigorous statistical hypothesis testing, we determine if observed disclosures are consistent with strict privacy baselines, such as zero-learning or specific Differential Privacy (DP) bounds. Crucially, this approach requires no model access, no canary insertion, and no reference model training -only the synthetic output and a held-out control set. We demonstrate that this framework effectively functions as a membership inference attack, providing empirical lower bounds on privacy leakage that are tighter than prior data-based auditing methods. Our approach is model-agnostic, applies to any synthetic data generation mechanism, and requires orders of magnitude fewer computational resources than shadow-model or canary-based alternatives.",
+        "authors": "Kareem Amin, Rudrajit Das, Alessandro Epasto, Adel Javanmard, Dennis Kraft, Mónica Ribero, Sergei Vassilvitskii",
+        "url": "http://arxiv.org/abs/2606.16952v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16952v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个可定制的经验审计框架，用于检测和解释合成数据中的隐私泄露，区分“真实泄露”和“幻影泄露”。它通过严格的统计假设检验，在无需模型访问、无需金丝雀插入、无需参考模型训练的情况下，提供了隐私泄露的经验下界。这种因果框架的理论严谨性和对隐私保护这一实际应用瓶颈的解决能力非常突出，是您作为数理统计博士生会高度重视的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16908v1",
+        "title": "LESS Is More: Mutual-Stability Sampling for Diffusion Language Models",
+        "summary": "Diffusion large language models (dLLMs) offer a promising alternative to autoregressive decoding by iteratively refining masked sequences, enabling parallel token updates and bidirectional conditioning. Their practical efficiency, however, is limited by sampling procedures that execute a fixed number of reverse denoising steps selected before decoding, spending computation on already-stable positions and sometimes committing unstable ones too early. We present \\textsc{LESS}, a training-free, model-agnostic adaptive sampler that treats token commitment as an online stopping problem. \\textsc{LESS} implements mutual-stability sampling through a joint stability rule that makes a masked position eligible for unmasking only when its top-1 prediction has high confidence, its top-1 token persists across recent reverse steps, and its predictive distribution is stable under top-$K$ inter-step Jensen--Shannon divergence. We evaluate \\textsc{LESS} on Dream-7B, LLaDA-8B, and LLaDA-1.5-8B, covering full-sequence diffusion and semi-autoregressive blockwise sampling regimes, across seven benchmarks spanning general knowledge, math, and code. \\textsc{LESS} improves average accuracy over strong training-free adaptive samplers while using $72.1\\%$ fewer reverse steps than fixed-budget decoding. Since each reverse step requires a Transformer forward pass, these step-count reductions translate into fewer forward evaluations, lower measured wall-clock latency, and lower estimated inference compute.",
+        "authors": "Amr Mohamed, Guokan Shang, Michalis Vazirgiannis",
+        "url": "http://arxiv.org/abs/2606.16908v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16908v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对扩散语言模型（dLLMs）的采样效率问题，提出了LESS（Mutual-Stability Sampling）自适应采样器。它将token提交视为一个在线停止问题，通过联合稳定性规则动态决定何时取消掩码。LESS在不进行训练的情况下，显著减少了反向去噪步骤，从而降低了推理延迟和计算成本，有效解决了dLLM的实际应用瓶颈，且方法具有理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16905v1",
+        "title": "Speaking the Language of Science: Toward a General-Purpose Generative Foundation Model for the Natural Sciences",
+        "summary": "In this report, we present LOGOS (Language Of Generative Objects in Science), a scientific generative language model that unifies heterogeneous tasks across the natural sciences within a single autoregressive framework based on a shared scientific grammar. It encodes diverse scientific objects and their spatial interactions as token sequences over a common vocabulary. By representing spatial contact and constraint patterns as discrete tokens, the model captures complex structural interactions in a purely sequential manner, without relying on explicit coordinates or geometric neural networks. This unified representation enables a wide range of downstream tasks to be formulated consistently as next-token prediction in the same grammar space, creating strong alignment between continued multi-domain pre-training and downstream objectives. Across diverse tasks, LOGOS consistently matches or outperforms domain-specific baselines, providing preliminary evidence for the feasibility of \"one model fits all\" in the natural sciences. We train LOGOS models at different scales (1B, 3B, and 8B parameters) and find a consistent positive correlation between model size and performance. This suggests that the future of AI for Science (AI4S) may not lie in building an independent technical stack that is separated from large language models (LLMs). Instead, it may depend on deeply aligning scientific foundation models with LLMs through shared architectures, shared training paradigms, and shared inference infrastructure, so that LLMs can truly become a new entry point for AI4S. We release the model weights and associated resources to facilitate further research.",
+        "authors": "Mingyang Li, Yurou Liu, Jieping Ye, Bing Su, Ji-Rong Wen, Zheng Wang",
+        "url": "http://arxiv.org/abs/2606.16905v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16905v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "LOGOS提出了一种统一自然科学领域异构任务的生成式基础模型，通过共享的科学语法将科学对象及其空间交互编码为token序列。这种纯序列化的表示方法具有高度创新性，并有望实现“一个模型适用于所有”的科学AI愿景。它不仅在理论上统一了多领域科学任务，而且在实践中展示了超越领域特定基线的性能，对AI4S领域具有颠覆性潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16889v1",
+        "title": "Architecture Carbon Tool v3: Enabling Sustainability-aware Silicon System Design Exploration",
+        "summary": "As the carbon cost of manufacturing and operating semiconductor devices has come into sharper focus, sustainability has gradually emerged as a new system architecture design metric. Like power and performance modeling tools, enabling sustainability-aware silicon systems design and optimizations will require a new generation of electronic design automation and architectural modeling tools. Towards this end, we present an update to the Architecture Carbon Tool v3 (ACT3) which aims to provide an extensible and customizable modeling platform for research and advanced development to pave the path towards sustainability-aware architectural design space exploration. Compared to previous versions of ACT, ACT3 provides significantly richer modeling capabilities, enhanced collateral and analysis telemetry, and first order design space exploration capabilities. This technical brief provides an overview of these expanded capabilities and illustrates ACT3's basic utility across several case studies. Finally, we identify opportunities for research and development where we expect the research community can contribute towards continuing to improve sustainability modeling and design methodology for silicon systems.",
+        "authors": "Vincent T. Lee, Bilge Acun, Zachary Lewis, Carole-Jean Wu",
+        "url": "http://arxiv.org/abs/2606.16889v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16889v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了LLM在电子健康记录（EHR）问答中，随着组合推理深度增加，准确率会单调下降的系统性失败模式。它引入了“跳数分类法”作为模型失败的预测因子，并将其与Transformer的组合性限制理论结果联系起来。这项研究具有极高的理论严谨性（预先指定分类法、统计检验、跨架构复制），对临床AI的部署风险分层具有直接的实践影响力，是您会非常感兴趣的理论与实践结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16846v1",
+        "title": "Deep Q-Learning on Hölder Spaces",
+        "summary": "We study the operator-theoretic core of Q-learning in continuous-time stochastic control with continuous states and actions. In value-based reinforcement learning, each Q-learning or DQN update is built from a Bellman optimality target; our analysis isolates this target in a diffusion setting and studies its regularity and approximation complexity. Under uniform ellipticity and Hölder-regular coefficients, we show that a Bellman update maps bounded inputs into an anisotropic regularity class, smoothing the state variable while leaving only Lipschitz dependence on the action variable. This yields a compact family of Bellman iterates and motivates a tensor-product DeepONet architecture adapted to the mixed regularity of the problem. We then derive explicit approximation and resource bounds, together with a stiffness--complexity trade-off as the time step $δ\\to 0$. The resulting theory makes a direct contribution to Q-learning theory at the level of Bellman target regularity and approximation in continuous stochastic control. At the same time, we do not claim a full convergence theorem for practical sampled Q-learning with exploration, replay, and stochastic gradient updates.",
+        "authors": "Qian Qi",
+        "url": "http://arxiv.org/abs/2606.16846v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16846v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入研究了连续时间随机控制中Q-learning的算子理论核心，分析了Bellman最优目标的正则性和近似复杂度，特别是在Hölder空间上的表现。它证明了Bellman更新将有界输入映射到各向异性正则类，并提出了张量积DeepONet架构。这项工作在Q-learning理论层面做出了直接贡献，具有极高的理论严谨性和创新性，是数理统计博士生会非常欣赏的理论基础研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16710v1",
+        "title": "Misinformation Propagation in Benign Multi-Agent Systems",
+        "summary": "Multi-agent systems, in which multiple large language model agents solve problems through turn-based interaction, are increasingly deployed in high-stakes settings such as medical diagnosis, legal analysis, and forensic decision-making. Their reliability can be at risk when single agents reason from incorrect or misleading context, e.g., from tool calls, since errors may propagate through agent interactions. This work studies this risk by injecting intent-based misinformation into benign single-agent and multi-agent systems across reasoning, knowledge, and alignment tasks. We find that misinformation can degrade single-agent performance and persists across multi-agent debate, with agents often retaining answers introduced by misinformed peers. Nevertheless, multi-agent debate reduces the resulting performance degradation compared to single-agent prompting, especially when most agents are not exposed to misinformation. Robustness depends on group composition and decision protocol. Consensus can be more stable than voting under peer pressure, while majorities can often steer misinformed agents back toward correct answers. Our results show that misinformation robustness in multi-agent systems depends on the underlying model and also on how agents exchange information and aggregate decisions.",
+        "authors": "Jonas Becker, Jan Philip Wahle, Terry Ruas, Bela Gipp",
+        "url": "http://arxiv.org/abs/2606.16710v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16710v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探讨了多智能体LLM系统中错误信息传播的风险，发现错误信息会降低单智能体性能，并在多智能体辩论中持续存在。它分析了群体组成和决策协议对鲁棒性的影响。这项工作对于理解和构建可靠、安全的LLM多智能体系统至关重要，解决了LLM在复杂应用中可靠性这一实际瓶颈，并具有理论探索价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16700v1",
+        "title": "Multi-Turn Reflective Masking Elicits Reasoning in Mask Diffusion Models",
+        "summary": "While reasoning on autoregressive (AR) models is often performed by chain-of-thought reasoning and reflection, their refinement of previous outputs still relies on fully sequential generation, even when only local edits are needed. In contrast, the masking mechanism in Mask Diffusion Models (MDMs) naturally supports explicit local edits on previous outputs, allowing selective refinement without discarding previous answers and generating another from scratch. While this property more closely aligns with how humans correct mistakes by iterative local refinement, existing MDMs do not support multi-turn masking and denoising. We propose Reflective Masking (RM), which elicits such an intrinsic reasoning capability in MDMs via lightweight post-training. RM provides a native test-time scaling, where an MDM iteratively revisits and revises its prior outputs based on evolving context. To exploit insights from previous turns like AR reasoning, we further introduce History Reference, a parameter-free mechanism that leverages intermediate denoising states during revision. Our approach requires no architectural changes and is easily applicable to existing MDMs. Across diverse tasks and modalities, including text generation, Sudoku, and image editing, Reflective Masking consistently outperforms standard masking-based baselines and demonstrates strong generality, positioning RM as a fundamental primitive for reasoning on MDMs.",
+        "authors": "Yanming Zhang, Yihan Bian, Jingyuan Qi, Yuguang Yao, Lifu Huang, Tianyi Zhou",
+        "url": "http://arxiv.org/abs/2606.16700v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16700v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Reflective Masking (RM) 方法，通过轻量级后训练使掩码扩散模型（MDMs）具备多轮反思性推理能力，实现对先前输出的迭代局部修正。这与人类纠错方式更接近，并引入了History Reference机制。RM无需架构修改，在文本生成、数独和图像编辑等任务上均表现出色，为MDMs的推理能力开辟了新范式，具有很强的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16684v1",
+        "title": "Progressive Knowledge-Guided Large Language Model Framework for Bearing Fault Diagnosis",
+        "summary": "Vibration-based bearing fault diagnosis requires resolving three interrelated measurement challenges, including the trade-off between global statistical feature efficiency and local transient signal fidelity, insufficient traceability of measurement features to underlying fault physics, and ineffective multi-source measurement information fusion across diagnostic scales. This paper presents a progressive physics-guided multi-scale vibration signal processing framework that addresses all three challenges within a unified diagnostic pipeline. An 81-dimensional measurement descriptor, derived from bearing kinematic theory and characteristic defect frequencies, establishes a physically traceable feature space enabling real-time fault screening at approximately 20 ms per sample. A fault-adaptive signal segmentation mechanism then directs analytical attention toward fault-relevant waveform regions guided by physics-based priors, without manual feature engineering. Structured fault mechanism knowledge is further encoded implicitly in model parameters during training, enabling autonomous multi-scale measurement fusion without external knowledge dependencies at inference. Validated on four public benchmark datasets under diverse operating conditions, the framework achieves 98.49% diagnostic accuracy with a 12.6-fold reduction in computational cost relative to signal-level baselines. Interpretability analysis confirms that diagnostic feature activations align with established bearing fault mechanics, supporting measurement traceability in safety-critical industrial systems.",
+        "authors": "Jinghan Wang, Gaoliang Peng, Yanjun Chen, Wei Zhang, Wentao Wu, Tianchen Liu",
+        "url": "http://arxiv.org/abs/2606.16684v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16684v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个关于深度Transformer作为均场相互作用系统的理论，该系统通过“函数向量”实现分布式推理，并在越来越精细的尺度上推断潜在上下文变量。它预测了潜在上下文变量的非高斯、分层结构与Transformer深度之间的非平凡关系。这项工作提供了对Transformer内部机制的深刻理论理解，具有极高的理论严谨性和创新性，对您理解前沿AI架构非常有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16629v1",
+        "title": "Islamic Large Language Models: From Knowledge Acquisition to Trustworthy and Hallucination-Resistant AI",
+        "summary": "Large language models (LLMs) are increasingly used for knowledge-intensive question answering, including religious and legal questions. Islamic knowledge is a particularly demanding setting: answers are expected to be grounded in authoritative sources, citations must be exact, Arabic varieties differ substantially from the language of classical sources, and legitimate jurisprudential disagreement must be represented rather than collapsed into a single answer. This survey reviews the emerging field of Islamic LLMs and trustworthy Islamic AI. We organize the literature around Arabic NLP and Arabic-centric LLMs, Islamic NLP resources, Qur'anic question answering, Islamic knowledge benchmarks, retrieval-augmented generation, Islamic legal reasoning, inheritance reasoning, hallucination evaluation, and trustworthiness. We argue that fluency in Arabic is not sufficient for Islamic AI. Reliable systems require curated sources, retrieval and verification modules, citation-aware generation, madhhab-aware reasoning, human expert evaluation, and benchmarks that measure not only answer accuracy but also faithfulness, source validity, and reasoning quality. The survey concludes with a research agenda for hallucination-resistant Islamic AI systems.",
+        "authors": "Mohammed Amine Mouhoub",
+        "url": "http://arxiv.org/abs/2606.16629v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16629v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MIXGUARD提出了一种新颖的基于mixup的隐私保护分割学习框架，用于LLM训练。它通过token级混淆、表示级混淆和自适应梯度扰动机制，在保持模型效用的同时，有效防止了数据重建攻击中的隐私泄露。该框架在效用、隐私、效率和稳定性之间取得了更好的平衡，解决了LLM分布式训练中的关键隐私和效率瓶颈，具有很强的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16613v1",
+        "title": "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
+        "summary": "As LLM agents become capable of increasingly long-horizon tasks, evaluating their performance in economic systems is becoming increasingly important. Unlike existing benchmarks that primarily evaluate a single agent interacting with a passive environment, economic systems are inherently multi-agent, requiring autonomous agents to communicate, negotiate, and transact while pursuing their own objectives over extended periods. We introduce CoffeeBench, a benchmark for evaluating LLM agents in a long-horizon multi-agent economy composed of heterogeneous firms. In CoffeeBench, two farmers, two roasters, and two retailers autonomously operate their businesses over a 90-day simulation, each seeking to maximize cumulative net income through communication and transactions while managing cash, inventory, and pricing. The evaluated model controls one coffee roaster, while the remaining firms are controlled by fixed reference agents. Across several recent open-weight and proprietary LLMs, all models outperform a passive baseline that takes no actions, with most achieving positive net income. Analysis of agent behavior reveals substantial differences in long-horizon economic interaction: higher-performing models communicate more actively with other firms, whereas Claude~Haiku~4.5 exhibits an idle-drift failure mode, repeatedly choosing inaction despite producing coherent assessments and plans. We release our code and agent trajectories to support future research.",
+        "authors": "Issa Sugiura, Daichi Hattori, Kazuo Araragi, Keita Ogawa, Shota Onose, Taro Makino, Teppei Usuki, Takashi Ishida",
+        "url": "http://arxiv.org/abs/2606.16613v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16613v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "CoffeeBench是一个用于评估LLM智能体在异构多智能体经济体中执行长周期任务的基准。它模拟了咖啡供应链中的农民、烘焙师和零售商，要求智能体进行沟通、协商和交易。该基准揭示了不同模型在长周期经济交互中的行为差异，对于评估和改进LLM智能体的复杂行为和长期规划能力至关重要，符合您对前沿算法和架构的兴趣，以及解决LLM应用瓶颈的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16601v1",
+        "title": "DifferAD-R1: A Difference-Guided IndustrialAnomaly Localization with Multimodal LargeLanguage Models",
+        "summary": "Industrial anomaly localization aims to accurately identify and localize abnormal regions in industrial products, addressing the critical challenge of detecting unseen defect categories in real-world scenarios. Traditional closed-set methods often suffer from poor cross-scenario generalization, while existingMultimodal Large Language Model (MLLM)-based approachesface two core limitations: they either adopt QA-style paradigmsmisaligned with the practical demands of localization, or relyon standard optimization techniques such as Group RelativePolicy Optimization (GRPO), which fails to deliver effectivelearning signals for subtle defects. To tackle these issues, thispaper proposes DifferAD-R1, an MLLM-augmented reinforcement learning framework tailored for industrial anomaly localization. We design a Difference-Guided dual-image paradigm,which reformulates the localization task as a one-shot difference grounding problem to effectively explore cross-scenarioanomalies. A Dual-Consistency Localization Reward is developedfor hard-to-detect anomalies, enhancing optimization stabilityand robustness. Additionally, we integrate a difficulty-awarestrategy with adaptive reweighting and group-wise resamplingto prioritize learning on challenging instances. To facilitateevaluations in real-world industrial settings, we construct theAD-DualDiff dataset, comprising 13K paired images across 20categories. Experimental results demonstrate that DifferADR1 significantly outperforms existing baselines and achievescompetitive performance compared to large-scale models likeQwen3-VL (235B parameters). Our code is publicly availableat: https://github.com/Rong2026/work-1.",
+        "authors": "Dingrong Wang, Xian Tao, Zhen Qu, Hengliang Luo, Xinyi Gong, Fei Shen, Zhengtao Zhang, Guiguang Ding",
+        "url": "http://arxiv.org/abs/2606.16601v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16601v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DifferAD-R1提出了一种MLLM增强的强化学习框架，用于工业异常定位，尤其针对未见缺陷类别。它设计了“差异引导双图像范式”和“双一致性定位奖励”，并结合难度感知策略。该方法通过创新的范式和奖励机制，有效解决了工业质检中异常定位的泛化性瓶颈，并提高了优化稳定性和鲁棒性，具有理论创新性和显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.16591v1",
+        "title": "SING: Synthetic Intention Graph for Scalable Active Tool Discovery in LLM Agents",
+        "summary": "Large language model (LLM) agents increasingly rely on agent harnesses that manage context, tools, and multi-turn execution, making tools a central interface for acting in realistic digital environments. As harness-connected tool ecosystems expand to hundreds or thousands of APIs, services, and task-specific skills, exhaustive tool schema injection becomes costly and imposes a closed-world assumption that limits agents to a predefined static inventory. Retrieval-augmented tool selection offers a natural alternative, but existing one-shot retrieval methods often fail to align isolated tool descriptions with the agent's true task intention, especially in long-horizon tasks where required capabilities emerge through decomposition, observations, and newly induced subgoals. We propose SING, an intention-aware active tool discovery framework that builds an intention-tool graph linking user intentions, tool capabilities, and tool collaboration patterns, and dynamically retrieves tools according to evolving task states. Using a unified corpus of 7,471 tools, we evaluate SING on three real-world tool-use benchmarks. SING improves Global Recall@5 by up to 59.8% and downstream success rate by up to 28.9% over baselines, while reducing full-corpus tool-schema exposure by 99.8%, demonstrating that intention-aware graph structure enables more accurate and context-efficient tool discovery in large-scale agentic ecosystems.",
+        "authors": "Qiao Xiao, Haochen Shi, Yisen Gao, Wenbin Hu, Huihao Jing, Tianshi Zheng, Baixuan Xu, Ziheng Zhang, Weiqi Wang, Haoran Li, Jiaxin Bai, Yangqiu Song",
+        "url": "http://arxiv.org/abs/2606.16591v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.16591v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "SING提出了一种意图感知的活跃工具发现框架，通过构建“意图-工具图”来动态检索工具，解决了LLM智能体在大型工具生态系统中工具发现的扩展性瓶颈。该方法显著提高了工具发现的准确性和下游任务的成功率，同时大幅减少了工具模式的暴露。其意图感知图结构和动态检索机制具有高度创新性，对构建高效、可扩展的LLM智能体至关重要。"
+    }
+]

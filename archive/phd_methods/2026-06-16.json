@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.18216v1",
+        "title": "Zone of Proximal Policy Optimization: Teacher in Prompts, Not Gradients",
+        "summary": "Knowledge distillation transfers a teacher's competence to a small student but is brittle in the small-student regime: forcing the student to imitate logits from a much larger teacher concentrates it on the teacher's sharpest modes, hurting generalization on benchmark families beyond the training corpus. Reinforcement learning (RL) avoids logit imitation by training on the student's own rollouts. However, on questions where every rollout fails-yielding zero advantage and being silently discarded-injecting a stronger teacher's response into the policy gradient breaks the on-policy assumption and induces drift. We introduce Zone of Proximal Policy Optimization (ZPPO), inspired by Vygotsky's zone of proximal development, which keeps the teacher inside the prompt rather than the policy gradient. On hard questions, ZPPO constructs two reformulated prompts: a Binary Candidate-included Question (BCQ) pairs one correct teacher response with one incorrect student response as anonymized candidates the student must discriminate, and a Negative Candidate-included Question (NCQ) aggregates the student's wrong rollouts into a single prompt to surface their shared failure modes. A prompt replay buffer recirculates each hard question until it either graduates-the student's mean rollout accuracy on it reaches half- or is FIFO-evicted under finite capacity, amplifying BCQ and NCQ inside the student's current zone of proximal development. On the Qwen3.5 family at four student scales (0.8B-9B) with a 27B teacher, post-trained as vision-language models and evaluated on a 31-benchmark suite (16 VLM, 10 LLM, 5 Video), ZPPO outperforms off/on-policy distillation and GRPO, with the largest gains at the smallest scale.",
+        "authors": "Byung-Kwan Lee, Ximing Lu, Shizhe Diao, Minki Kang, Saurav Muralidharan, Karan Sapra, Andrew Tao, Pavlo Molchanov, Yejin Choi, Yu-Chiang Frank Wang, Ryo Hachiuma",
+        "url": "http://arxiv.org/abs/2606.18216v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18216v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Zone of Proximal Policy Optimization (ZPPO)，一种新颖的强化学习框架，通过将教师模型置于提示而非梯度中，解决了小型学生模型在知识蒸馏中的脆弱性问题。它通过构建Binary Candidate-included Question (BCQ)和Negative Candidate-included Question (NCQ)以及提示回放缓冲区，实现了在不破坏on-policy假设的情况下，提升学生模型的泛化能力。这在理论上具有创新性，并能有效解决LLM在小模型压缩和泛化方面的实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18195v1",
+        "title": "Learning from the Self-future: On-policy Self-distillation for dLLMs",
+        "summary": "On-policy self-distillation (OPSD) has proven effective for post-training large language models (LLMs), yet its application to diffusion LLMs (dLLMs) remains unexplored. Existing OPSD methods are inherently autoregressive-centric. They inject privileged information via left-to-right prefix conditioning with token-level divergence supervision, a design that fundamentally conflicts with the arbitraryorder generation of dLLMs. We introduce d-OPSD, the first OPSD framework tailored for dLLMs. Our approach makes two core contributions. First, we reframe self-teacher construction by using self-generated answers as suffix conditioning, enabling the student model to learn from \"self future-experience\" rather than privileged prefixes. Second, we shift supervision from token-level to step-level, aligning training with the iterative denoising process of dLLMs. Experiments across four reasoning benchmarks show that d-OPSD consistently outperforms RLVR and SFT baselines with superior sample efficiency, requiring only around 10% of the optimization steps by RLVR and opening a promising pathway for dLLM posttraining. The code is available at https://github.com/xingzhejun/d-OPSD.",
+        "authors": "Yifu Luo, Zeyu Chen, Haoyu Wang, Xinhao Hu, Yuxuan Zhang, Zhizhou Sha, Shiwei Liu",
+        "url": "http://arxiv.org/abs/2606.18195v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18195v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文首次将On-policy Self-distillation (OPSD) 应用于扩散LLM (dLLMs)，提出了d-OPSD框架。它通过将自生成的答案作为后缀条件来构建自教师模型，并从token级监督转向step级监督，解决了传统OPSD与dLLMs任意顺序生成机制的冲突。这在算法上具有高度创新性，并在dLLM后训练中展现出卓越的样本效率，显著解决了LLM训练效率的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18186v1",
+        "title": "Kolmogorov Regression for Robust Diffusion Policies",
+        "summary": "Finite-dimensional (FD) diffusion policies exhibit temporal drift owing to discretization artifacts that degrade long-horizon performance (when deployed on physical systems). We introduce a backward Kolmogorov equation that lifts diffusion policies to a Cameron-Martin space -- a subset of the Hilbert space. Essentially, replacing stochastic score matching with a deterministic boundary-value PDE problem. Our core innovation thrives on Gaussian measure theory whereupon the diffusion noise covariance operator is realized from a colored noise distribution which prescribes a notion of regularity on samples from the model at inference time. We train the diffusion model with a derived precision-weighted Cameron- Martin loss and a Kolmogorov residual is introduced as a PDE diagnostic during inference. These substitutions yield (i) convergence guarantees where the bound's constants depend on the effective rank of the kernel rather than action dimension, (ii) improved trajectory regularity via spectral weighting, and (iii) a deterministic failure detector without reward signals. Validation across two application domains demonstrates substantial improvements: on the PushT manipulation benchmark, the Cameron-Martin loss achieves a 17% improvement in maximum episode reward (0.95 vs. 0.78 for MSE) and 67.6% reduction in inter-step drifts during inference via the introduced residual magnitude. Similarly, on a 6-station manufacturing line with constant work-in-process (CONWIP) flow control, we achieve 28.4% lower RMSE than classical LSTM baselines; a high starvation-event recall (1.0 in test cycles), and effective bottleneck identification (Precision@1 = 1.0 in test set, 13x signal-to-noise ratio). We then certify the dispatch policies with Hamilton-Jacobi reachability theory which reduces deadlock events by 96% compared to uncontrolled dispatch over 100 simulated runs (351 events prevented).",
+        "authors": "Lekan Molu",
+        "url": "http://arxiv.org/abs/2606.18186v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18186v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了Kolmogorov回归，通过将扩散策略提升到Cameron-Martin空间，并利用逆向Kolmogorov方程，解决了有限维扩散策略中的时间漂移问题。它用确定性边界值PDE问题取代了随机分数匹配，并提供了收敛性保证。该方法在数学和统计推导上极其严谨，具有深刻的理论创新性，同时在机器人操作和制造线控制等实际应用中显著提升了性能和鲁棒性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18105v1",
+        "title": "OmniPlan: An Adaptive Framework for Timely and Near-Optimal Network Planning Optimization",
+        "summary": "Network planning optimization is a fundamental problem across diverse domains, including transportation systems, communication networks, and power grids. It requires simultaneous optimization of multiple competing objectives under complex constraints. Existing network planning optimization frameworks rely on mixed integer programming (MIP) solvers, heuristics, and deep reinforcement learning (DRL) models to compute planning decisions. However, they lack effective adaptability to diverse and dynamic user intents, thus leading to the trade-off between execution time and optimality. In this paper, we propose OmniPlan, an adaptive framework that achieves both timeliness and near-optimality in network planning optimization. To achieve the adaptability lacking in existing solutions, OmniPlan employs a large language model (LLM)-based interpreter to convert heterogeneous natural-language intents into a unified and quantifiable user-preference vector. Then it employs a mixture-of-experts architecture that integrates MIP solvers, heuristics, and DRL models as specialized experts, where OmniPlan adapts to diverse intents by dynamically selecting timely and near-optimal experts. Finally, it incorporates a DRL-based expert configuration module that fine-tunes optimization objective weights to align planning decisions with user-specific preferences. We evaluate OmniPlan with a representative real-world workload, i.e., distributed machine learning (ML), where we leverage OmniPlan to offload a wide spectrum of ML inference tasks, e.g., decision trees, SVM, naive Bayes, XGBoost, and random forests, onto a network of hardware devices. Our experiments on a real-world testbed indicate that OmniPlan achieves near-optimal and low-execution-time offloading for real-world ML inference tasks, reducing latency by up to 97.8\\% and network device resource consumption by up to 11.5\\%.",
+        "authors": "Longlong Zhu, Jiashuo Yu, Zedi Chen, Yuhan Wu, Zhifan Jiang, Yuchen Xian, Yimeng Liu, Jiajie Su, Shaopeng Zhou, Xingyuan Li, Hongyan Liu, Xuan Liu, Dong Zhang, Chunming Wu, Xiang Chen",
+        "url": "http://arxiv.org/abs/2606.18105v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18105v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了OmniPlan，一个自适应框架，通过LLM解释器、专家混合架构（MIP、启发式、DRL）和DRL专家配置模块，实现了及时且接近最优的网络规划优化。它解决了现有框架在适应多样化用户意图方面的不足。该框架在架构和算法上具有高度创新性，能够显著降低延迟和资源消耗，对通信网络、交通系统等领域的实际应用瓶颈具有重要影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18108v1",
+        "title": "Querying an astronomical database using large language models: the ALeRCE text-to-SQL system",
+        "summary": "We develop a text-to-SQL (structured query language) system based on large language models (LLMs) using in-context learning and apply it to the Automatic Learning for the Rapid Classification of Events (ALeRCE) astronomical database. ALeRCE is a community broker for the Zwicky Transient Facility and the Vera C. Rubin Observatory. The system enables users to query the database in natural language (NL) and generates executable SQL queries. To develop and evaluate the system, we constructed a dataset of 110 NL/SQL pairs. We propose a step-by-step generation framework comprising four modules: schema linking, query classification, prompt decomposition, and self-correction. The performance of thirteen LLMs is evaluated using in-context learning and prompt engineering techniques. Text-to-SQL performance is assessed using the perfect-match (PM) rate for row identifiers (e.g., object identifiers) and column identifiers (i.e., column names). The proposed step-by-step framework consistently outperforms a direct-inference baseline, while the self-correction module consistently reduces execution errors. For Claude Opus 4.6, PM performance on row (column) identifiers is high for simple queries, reaching 0.97 (0.94), and decreases with query complexity to 0.44 (0.72) for medium queries and 0.59 (0.49) for hard queries. Among the thirteen evaluated models, the best-performing LLMs for the text-to-SQL task are Claude Opus 4.6, Gemini 2.5 Pro, Gemini 3 Flash, and GPT-5.2-Codex.",
+        "authors": "P. A. Estevez, J. Espejo-Moreira, S. Sanfeliu-Alvarez, F. Forster, A. M. Munoz Arancibia, G. Cabrera-Vives, F. E. Bauer, A. Bayo, M. Catelan, R. Dastidar, L. Hernandez-Garcia, J. A. Intriago, G. Pignata",
+        "url": "http://arxiv.org/abs/2606.18108v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18108v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了S4oP，一种新颖的运算符级别剪枝方法，用于结构化状态空间模型（SSMs，如S4和S4D），以显著降低资源受限设备上的推理成本。这是首次系统性地研究SSM的结构化运算符剪枝，实现了高达70%的运算符剪枝，同时保持了预测性能。这在模型压缩和边缘部署方面具有高度创新性和实践影响力，是前沿AI架构优化的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18089v1",
+        "title": "From Reasoning Traces to Reusable Modules: Understanding Compositional Generalization in Language Model Reasoning",
+        "summary": "Post-training pipelines that combine supervised fine-tuning (SFT) with reinforcement learning (RL) have emerged as the key recipe for transforming large language models (LLMs) into robust reasoners. We argue that this combined success is driven by compositional generalization, which we formalize through a hierarchical latent selection model. In this framework, reasoning traces are generated by a cascade of discrete latent selection variables corresponding to reusable atomic modules, including both skills (local operations) and routing mechanisms (how intermediate information is selected, reused, and composed). Within this model, we theoretically show that SFT and RL play asymmetric, complementary roles: SFT supplies the raw module materials in compositional traces, and RL decomposes those traces to identify the latent atomic modules and enable compositional generalization. We design controlled experiments to validate this theory. Our results demonstrate that RL can extract atomic modules from compound traces supplied by SFT and recombine them to solve new configurations. Moreover, we find that training on compound traces yields stronger generalization than training on isolated atomic modules. Finally, we investigate the relationship between SFT and RL data and identify an effective protocol in which SFT ensures coverage of all atomic modules through compositional traces, while RL focuses on novel compositions outside the SFT support to drive exploration.",
+        "authors": "Lingjing Kong, Xin Liu, Guangyi Chen, Martin Q. Ma, Xiangchen Song, Yuekai Sun, Mikhail Yurochkin, Taylor W. Killian, Ruslan Salakhutdinov, Kun Zhang, Eric P. Xing, Zhengzhong Liu",
+        "url": "http://arxiv.org/abs/2606.18089v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过分层潜在选择模型，从理论上阐明了SFT和RL如何驱动LLM的组合泛化能力。它将推理轨迹形式化为可重用原子模块的级联，并理论证明了SFT和RL在提供模块材料和分解轨迹以实现泛化方面的互补作用。这在理论上具有极高的严谨性和创新性，为理解和优化LLM的推理能力提供了基础性洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18068v1",
+        "title": "Agentic AI-based Framework for Mitigating Premature Diagnostic Handoff and Silent Hallucination in Healthcare Applications",
+        "summary": "Recent advances in Large Language Models (LLMs) and multi-agent systems have driven the rise of Agentic AI, showing promise for medical reasoning. However, open-ended conversational agents remain prone to two critical failure modes: premature diagnostic handoff and silent clinical hallucinations that may go undetected before reaching the patient. In this work, we propose a multi-agent framework that addresses both issues by replacing ``LLM-as-a-judge'' routing with deterministic orchestration constraints. The framework incorporates two safety mechanisms. First, a neuro-symbolic state-tracking gate enforces completeness of the OLDCARTS clinical protocol (Onset, Location, Duration, Character, Aggravating/Alleviating factors, Radiation, Timing, and Severity) by blocking diagnostic transitions until all required dimensions are collected. Second, an epistemic uncertainty quantification (UQ) gate computes semantic entropy (H) across K=5 independent diagnostic samples to identify and intercept divergent outputs before delivery.   We evaluate the system using simulated patient agents powered by the llama-3.1-70b-instruct model on 150 test cases. The full architecture achieves 49.3% diagnostic precision, representing an absolute improvement of 11.3 percentage points over an unconstrained baseline. Additionally, we observe a statistically significant negative correlation (r = -0.181, p < 0.05) between OLDCARTS completeness (σ) and semantic entropy (H), suggesting that structured information gathering is associated with reduced diagnostic uncertainty.",
+        "authors": "Divyansh Srivastava, Shreya Ghosh, Anshul Verma, Rajkumar Buyya",
+        "url": "http://arxiv.org/abs/2606.18068v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18068v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于Agentic AI的多智能体框架，通过神经符号状态跟踪门和认知不确定性量化（UQ）门，解决了医疗应用中LLM代理过早诊断交接和无声幻觉的关键故障模式。该框架在算法和架构上具有高度创新性，通过确定性协调约束和语义熵计算，显著提高了诊断精度，对LLM在医疗等高风险领域的可靠部署具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18066v1",
+        "title": "NoiseTilt: Noise-Tilted Reverse Kernels for Diffusion Reward Alignment",
+        "summary": "We introduce the Noise-Tilted Reverse Kernel (NTRK), a reward-guided diffusion sampler that injects reward gradients through the noise term, leaving the pretrained reverse kernel unchanged and requiring only a single sample per step. Reward-guided sampling at inference time has greatly expanded the versatility of pretrained diffusion models. Yet existing methods face a trade-off. Gradient-based guidance shifts the reverse mean, steering generation but pushing intermediate states outside the region that the model was trained on and degrading quality. Search-based methods preserve quality but gain no gradient signal. No prior method achieves both. NTRK resolves this by keeping the reverse mean fixed and biasing the noise term toward high reward. We introduce a whitening operator, the central mechanism behind NTRK, that makes the reward gradient safe to inject as noise without losing its guiding signal. Across various reward alignment tasks, NTRK outperforms recent state-of-the-art baselines without losing sample quality. Remarkably, on aesthetic generation, NTRK surpasses the reward of the best baseline at 500 NFEs using only 25 NFEs, a 20$\\times$ reduction in compute.",
+        "authors": "Jisung Hwang, Yunhong Min, Jaihoon Kim, I-Chao Shen, Minhyuk Sung",
+        "url": "http://arxiv.org/abs/2606.18066v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18066v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了Noise-Tilted Reverse Kernel (NTRK)，一种奖励引导的扩散采样器，通过噪声项注入奖励梯度，同时保持预训练的逆向核不变。它通过引入白化算子解决了现有方法在生成质量和梯度信号之间的权衡。这在扩散模型算法上具有高度创新性，显著提高了奖励对齐任务的效率和质量，对可控生成具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18063v1",
+        "title": "When LLMs Analyze Scars: From Images to Clinically-Meaningful Features",
+        "summary": "Medical image classification faces a fundamental dilemma: while deep learning models achieve remarkable performance at scale, real-world clinical scenarios often suffer from severe data scarcity due to annotation costs, privacy constraints, and disease rarity. This challenge is particularly pronounced in pathological scar classification, where differentiating keloids from hypertrophic scars requires subtle expert knowledge and labeled images are extremely limited. We propose a novel paradigm that repositions large language models (LLMs) as knowledge-driven feature engineers rather than end-to-end classifiers. We call this framework ScaFE (Scar Feature Engineering). Our key insight is that LLMs encode rich medical knowledge that can be externalized as executable feature extraction code, enabling the transformation of high-dimensional images into low-dimensional, clinically interpretable representations. Specifically, we prompt an LLM with established scar assessment criteria to generate deterministic Python code that extracts features aligned with clinical scoring systems such as the Vancouver Scar Scale. Our approach offers three key advantages: (1) data efficiency, achieving robust performance with limited training samples by decoupling knowledge acquisition from statistical learning; (2) privacy preservation, as raw images are processed locally without exposure to external LLMs; and (3) interpretability, through explicit features grounded in clinical reasoning. Extensive experiments on scar classification demonstrate that our method consistently outperforms end-to-end deep learning baselines or using LLMs as black-box classifiers under limited data conditions, establishing a promising direction for integrating LLMs into data-efficient and clinically transparent medical AI systems.",
+        "authors": "Ruman Wang, Hangting Ye",
+        "url": "http://arxiv.org/abs/2606.18063v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18063v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了ScaFE框架，将LLM重新定位为知识驱动的特征工程师，生成可执行代码从医学图像中提取临床有意义的特征，以解决医学图像分类中的数据稀缺问题。这是一种高度创新的LLM应用范式，通过解耦知识获取和统计学习，实现了数据效率、隐私保护和可解释性，对数据受限的医疗AI系统具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17945v1",
+        "title": "Small Initialization Matters for Large Language Models",
+        "summary": "Large language models provide a tractable system for asking how intelligence itself emerges, rather than only how LLMs can be engineered. Although progress is usually attributed to scale, data and architecture, we show that parameter initialization is a gene-like determinant of training and, in particular, of model capacity. Reducing the initialization scale consistently improves pretraining, with the largest gains on reasoning-demanding tasks. We identify two widely used empirical settings that restrain the advantage of small initialization, and show how relaxing them restores favorable scaling. We further uncover a critical initialization that balances the reasoning and training. Mechanistically, small initialization drives a distinct developmental trajectory: parameters first condense into low-complexity structures and later expand into richer representations, giving concrete form to the idea that compression is intelligence. Token-level analyses show that the gains concentrate on non-trivial, context-constrained predictions rather than all tokens uniformly. These results motivate a simple $γ$-initialization rule: expose initialization rage as an explicit knob and use small initialization by default, an almost cost-free intervention that improves pretraining and strengthens reasoning across model scales.",
+        "authors": "Liangkai Hang, Junjie Yao, Zhiyu Li, Feiyu Xiong, Hongkang Yang, Zhi-Qin John Xu",
+        "url": "http://arxiv.org/abs/2606.17945v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17945v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文发现参数初始化规模是LLM训练和模型能力的关键决定因素，小规模初始化能持续改进预训练，尤其是在推理任务上。它揭示了“压缩即智能”的发展轨迹，并提出了简单的$gamma$-初始化规则。这在理论上具有深刻的创新性和严谨性，为LLM的训练和推理能力提升提供了一个几乎零成本但效果显著的实践方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17735v1",
+        "title": "Shattering the Autoregressive Curse: Dynamic Epistemic Entropy Orchestrated Erasable Reinforcement Learning for LLMs",
+        "summary": "Although reinforcement learning (RL) has expanded the cognitive boundaries of large language models (LLMs), it often remains vulnerable to the autoregressive curse in long-horizon logical reasoning: small epistemic perturbations introduced early in generation can propagate irreversibly along the Markov decision process flow, triggering cascading failures that drive the reasoning trajectory toward collapse. To overcome this autoregressive cascade, in which a single early mistake can compromise all subsequent reasoning steps, we propose dynamic epistemic entropy orchestrated erasable reinforcement learning ($\\text{E}^3\\text{RL}$). $\\text{E}^3\\text{RL}$ eliminates reliance on external signals by grounding the model's endogenous local autoregressive cross-entropy as an intrinsic coordinate of epistemic uncertainty. By introducing segment-level adaptive dynamic thresholds and advantage allocation, $\\text{E}^3\\text{RL}$ enables the model to precisely excise localized logical defects while reusing historical key-value (KV) cache streams, thereby endowing the reasoning process with a self-healing capability. We train $\\text{E}^3\\text{RL}$ on the DeepMath-103k dataset. Experimental results show that $\\text{E}^3\\text{RL}$ reshapes the exploration efficiency of long-sequence reasoning and improves sample efficiency while maintaining linear memory overhead. On mathematical reasoning benchmarks such as AIME, $\\text{E}^3\\text{RL}$ achieves substantial performance gains, with the 4B and 8B parameter models surpassing previous state-of-the-art (SOTA) results by 5.349\\% and 6.514\\%, respectively. These findings suggest that $\\text{E}^3\\text{RL}$ shatters the autoregressive curse in long-sequence reasoning and establishes a theoretical and systems-level foundation for the next generation of self-healing artificial general intelligence (AGI).",
+        "authors": "Ziliang Wang, Kang An, Faqiang Qian, Jialu Cai, Cijun Ouyang, Yuhang Wang, Qibing Ren, Yichao Wu",
+        "url": "http://arxiv.org/abs/2606.17735v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17735v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了$\text{E}^3\text{RL}$（Dynamic Epistemic Entropy Orchestrated Erasable Reinforcement Learning），一种新颖的强化学习框架，通过动态认知熵（来自内生局部自回归交叉熵）来识别和纠正LLM长序列逻辑推理中的错误，实现“自愈能力”。这在理论上具有极高的严谨性和创新性，解决了LLM推理中的“自回归诅咒”问题，显著提升了数学推理性能和样本效率，为下一代自愈AGI奠定了基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17526v1",
+        "title": "MGUP: A Momentum-Gradient Alignment Update Policy for Stochastic Optimization",
+        "summary": "Efficient optimization is essential for training large language models. Although intra-layer selective updates have been explored, a general mechanism that enables fine-grained control while ensuring convergence guarantees is still lacking. To bridge this gap, we propose \\textbf{MGUP}, a novel mechanism for selective updates. \\textbf{MGUP} augments standard momentum-based optimizers by applying larger step-sizes to a selected fixed proportion of parameters in each iteration, while applying smaller, non-zero step-sizes to the rest. As a nearly {plug-and-play} module, \\textbf{MGUP} seamlessly integrates with optimizers such as AdamW, Lion, and Muon. This yields powerful variants such as \\textbf{MGUP-AdamW}, \\textbf{MGUP-Lion}, and \\textbf{MGUP-Muon}. Under standard assumptions, we provide theoretical convergence guarantees for \\textbf{MGUP-AdamW} (without weight decay) in stochastic optimization. Extensive experiments across diverse tasks, including MAE pretraining, LLM pretraining, and downstream fine-tuning, demonstrate that our \\textbf{MGUP}-enhanced optimizers achieve superior or more stable performance compared to their original base optimizers. We offer a principled, versatile, and theoretically grounded strategy for efficient intra-layer selective updates, accelerating and stabilizing the training of large-scale models. The code is publicly available at https://github.com/MaeChd/MGUP.",
+        "authors": "Da Chang, Ganzhao Yuan",
+        "url": "http://arxiv.org/abs/2606.17526v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17526v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了MGUP，一种新颖的动量-梯度对齐更新策略，通过对不同参数应用不同步长，增强了基于动量的优化器。MGUP作为一个即插即用模块，提供了理论收敛性保证。这在随机优化算法上具有高度创新性和严谨性，并在LLM预训练和微调等任务中实现了卓越或更稳定的性能，有效解决了大规模模型训练效率和稳定性的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17482v1",
+        "title": "SPHINX: First Explain, Then Explore",
+        "summary": "Generating adversarial driving scenarios is critical for evaluating and improving autonomous vehicle decision-making systems in simulation. Recent approaches, such as ChatScene and LLM-Attacker, rely primarily on the prior knowledge of Large Language Models and Vision-Language Models to generate driving scenarios procedurally. We argue that adversarial scenes should be generated based on the failure diagnosis (e.g., indecisiveness, multi-frame inconsistency) of the driving policy to specifically address the policy's weaknesses instead of relying on prior assumptions. In this paper, we propose SPHINX, a closed-loop framework for adversarial scenario synthesis guided by a simple principle: first explain, then explore. Beyond blindly exploring the scenario space, SPHINX leverages explainable artificial intelligence methods to analyze the policy, identifying key visual concepts and their influence on policy outputs, and the uncertainty of the decisions. Given the interpretable evidence extracted from the policy's own decision process, we use a vision language model to rationalize and criticize failure modes of the current policy. These critics are then used to generate targeted adversarial scenarios for policy retraining and improvement. We demonstrate that SPHINX can highlight an interpretable account of policy failures while other adversarial scene generation cannot. Across the evaluated benchmarks and test suites, SPHINX can be applied to diverse state-of-the-art autonomous vehicle architectures and yields consistent robustness improvements over existing scenario-generation methods.",
+        "authors": "Nguyen Do, Tue M. Cao, Tien Van Do, András Hajdu, Tamás Bérczes, My T. Thai",
+        "url": "http://arxiv.org/abs/2606.17482v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17482v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了SPHINX，一个闭环框架，通过“先解释，后探索”的原则生成对抗性驾驶场景。它利用可解释AI方法分析驾驶策略的失败模式，并使用视觉语言模型进行合理化和批评，从而生成有针对性的对抗场景。这在算法和架构上具有高度创新性，显著提升了自动驾驶系统在安全性评估和鲁棒性改进方面的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17461v1",
+        "title": "AUTOGATE: Automated Clock Gating via Toggling-Aware LLM-based RTL Rewriting",
+        "summary": "Fine-grain clock gating (FGCG) is among the most effective techniques for reducing dynamic power, yet current FGCG optimization flows remain largely manual. Recent LLM-based RTL optimization approaches remain limited by two key drawbacks: (1) the inability to process long waveform traces spanning millions of cycles, and (2) the difficulty of scaling optimization to large hierarchical codebases while preserving correctness. In this work, we present AUTOGATE, the first agentic framework for industry-grade RTL power optimization, enabling workload-aware clock-gating optimization across large hierarchical codebases. AUTOGATE introduces a Machine Learning (ML)-LLM co-design that bridges waveform-level analysis and RTL rewriting. Specifically, we design an ML-based clustering algorithm that distills raw toggling traces into compact, structured representations that guide LLM-based RTL rewriting. This enables accurate identification and application of clock-gating opportunities without requiring LLMs to directly process raw waveform data. To enhance scalability, AUTOGATE employs a hierarchical multi-agent architecture that decomposes large designs into independently optimizable modules, enabling coordinated optimization across deep design hierarchies. We evaluate AUTOGATE on a diverse set of designs ranging from small RTL designs to large industrial-grade codebases. Experimental results show that AUTOGATE consistently reduces dynamic power relative to baselines. Across the small-design suite, AUTOGATE reduces dynamic power by 49.31% on average. On industry-scale designs, it achieves 19.34% and 7.96% dynamic power reductions on NVDLA and BlackParrot, respectively, and up to 6.86% on highly optimized proprietary production designs.",
+        "authors": "Yiting Wang, Chenhui Deng, Chia-Tung Ho, Yanqing Zhang, Zhuo Feng, Cunxi Yu, Ang Li, Gang Qu, Brucek Khailany",
+        "url": "http://arxiv.org/abs/2606.17461v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17461v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了AUTOGATE，一个代理框架，通过LLM驱动的RTL重写实现自动时钟门控，以降低动态功耗。它引入了ML-LLM协同设计，利用ML聚类切换轨迹来指导LLM重写，并采用分层多智能体架构实现可扩展性。这在硬件设计自动化领域具有高度创新性和实践影响力，显著降低了芯片设计的功耗，解决了重要的工程瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.17443v1",
+        "title": "Incumbent Advantage: Brand Bias and Cognitive Manipulation Dynamics in LLM Recommendation Systems",
+        "summary": "Large language models (LLMs) are becoming a major way for consumers to find products, but we do not yet understand how brands compete in this new channel. We study brand dynamics in LLM recommendations using skincare products -- a category where consumers cannot easily judge quality before buying and must rely on brand reputation -- across three commercial LLMs (GPT-4o-mini, Claude Sonnet, Gemini 3 Flash), with a robustness check on search goods. In three experiments, we find: (1) a Conditional Monopoly where well-known brands get recommended 100% of the time (IAI = 10.0) when all products have the same specifications, but this dominance disappears with less than a +0.1-star rating advantage for a competitor; (2) authority-style marketing language, including fabricated clinical-evidence claims, breaks this monopoly at a Bias Surplus Value equal to +0.17 rating points, with each model responding differently; and (3) a social dilemma in multi-brand GEO competition: when all brands adopt the same optimization strategy, individual payoff falls from +0.802 to +0.007 in our payoff proxy, and non-participating brands receive zero recommendations in our tests. Our results suggest that generative engine optimization (GEO) should be studied not only as a security risk, but also as an emerging marketing practice that shapes market competition.",
+        "authors": "Xi Chu, Yupeng Hou",
+        "url": "http://arxiv.org/abs/2606.17443v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.17443v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了LLM推荐系统中的品牌偏见和认知操纵动态，揭示了“条件垄断”现象以及权威式营销语言如何影响推荐。它还识别了多品牌GEO竞争中的社会困境。虽然不是直接的算法创新，但它对理解LLM在市场竞争中的行为和潜在风险提供了深刻的实证洞察，对AI伦理和市场动态具有重要意义。"
+    }
+]

@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.19303v1",
+        "title": "P-K-GCN: Physics-augmented Koopman-enhanced Graph Convolutional Network for Deep Spatiotemporal Super-resolution",
+        "summary": "High-fidelity simulation of spatiotemporal dynamics is computationally prohibitive, necessitating efficient super-resolution techniques to reconstruct high-resolution data from coarse-grained inputs. Traditional data-driven methods often lack physical constraints, and simple physics-informed learning struggles with irregular spatial geometries and intricately evolving temporal dynamics. To tackle these challenges, we propose a Physics-augmented Koopman-enhanced Graph Convolutional Network (P-K-GCN) for spatiotemporal super-resolution on irregular geometries. Specifically, a continuous spline-based GCN is first designed to extract spatial dependencies directly from coarse graph, and Koopman operator theory is incorporated to project the nonlinear dynamics into a compact latent space where temporal progression is linearized. Second, we augment the optimization objective with a physics-based loss to force the data-driven reconstructions to adhere to physical laws for improving predictive fidelity and robustness. Finally, we provide a rigorous theoretical analysis, establishing that the physics augmentation and Koopman regularization mathematically guarantees a reduction in super-resolution error by diminishing Rademacher complexity and tightening generalization bounds. We evaluate our framework on reconstructing spatially high-resolution cardiac electrodynamics across a 3D heart geometry from sparse low-resolution measurements. Numerical experiments demonstrate that our method achieves superior accuracy compared to baseline models.",
+        "authors": " Xizhuo,  Zhang, Zekai Wang, Fei Liu, Bing Yao",
+        "url": "http://arxiv.org/abs/2606.19303v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19303v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文非常符合您的偏好。它结合了Koopman算子理论和物理增强，并提供了严谨的理论分析，包括Rademacher复杂度减少和泛化界限收紧的数学保证，这正是您所寻求的强大理论基础和清晰数学推导的体现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19284v1",
+        "title": "Projected Stochastic Gradient Descent with Decision Dependent Distributions: Extended Version",
+        "summary": "Online feedback optimization (OFO) leverages real-time output measurements to optimize the operation of networked systems without requiring full knowledge of system dynamics or disturbances. We develop an OFO approach for constrained stochastic optimization problems in which the distribution of the system's random parameters shifts in response to the control actions. We propose a projected primal-dual algorithm where the true dual constraint sets are replaced by surrogate sets. Our main result is an upper bound on the mean-square tracking error, which decomposes into four interpretable terms reflecting: (i) the stochasticity of the problem, (ii) output measurement errors, (iii) time-variability of the problem, and (iv) the mismatch between surrogate and true dual constraint sets. The theory is illustrated in a numerical experiment for power grids with price-responsive assets.",
+        "authors": "Caio Kalil Lauand, Emiliano Dall'Anese",
+        "url": "http://arxiv.org/abs/2606.19284v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19284v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究关注具有决策依赖分布的约束随机优化问题，提出了一种投影原始-对偶算法，并给出了均方跟踪误差的严格上界。这种对优化收敛性和误差的理论分析与您的数理统计背景高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19279v1",
+        "title": "NeSyCat Torch: A Differentiable Tensor Implementation of Categorical Semantics for Neurosymbolic Learning",
+        "summary": "Neurosymbolic semantics is fragmented: classical, fuzzy, probabilistic and neural systems each define truth by their own inductive rules. NeSyCat, extending ULLER, subsumes them under a single inductive definition of truth, parametric in a strong monad and an aggregation structure on truth-values. NeSyCat has so far lacked an account of predicates and functions learned by neural networks.   We provide NeSyCat Torch as the missing link and interpret computational symbols via neural networks, implementing the framework in probabilistic programming and tensor-based backends. We use the distribution monad for reference semantics and metric evaluation, and complement it by a monad for numerically stable, differentiable training: the lazy log-tensor monad over the log-semiring. For efficient training in batches, we furthermore employ a batch monad. The axioms are the source code: written once in monad-based do-notation, monadic bind performs marginalisation, lazily pruning unneeded branches.   On MNIST addition, our HaskTorch, JAX, and PyTorch implementations outperform LTN and DeepProbLog in speed and accuracy, while achieving nearly the accuracy of DeepStochLog. However, unlike DeepStochLog, we stay in a uniform framework that applies to many first-order NeSy approaches. Namely, the construction is parametric in the monad; instantiating it with, e.g., the Giry monad extends the approach to continuous probability (working out a neural representation here is left for future work).",
+        "authors": "Daniel Romero Schellhorn, Till Mossakowski, Björn Gehrke",
+        "url": "http://arxiv.org/abs/2606.19279v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19279v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 3
+        },
+        "reason_zh": "这是一篇在神经符号学习领域具有高度创新性和理论深度的论文。它通过范畴语义学（monad）提供了一个统一的真值定义，并将其实现为可微分的张量系统。其数学基础非常严谨，尽管对背景知识要求较高，但对于寻求理论突破的博士生而言极具价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19278v1",
+        "title": "Sequential Fair Allocation and Routing in Nonprofit Operations",
+        "summary": "We study a dynamic fair sequential allocation problem in which a central planner distributes a divisible resource across multiple locations under demand uncertainty. Motivated by applications such as humanitarian relief and food distribution, we incorporate routing decisions into the planner's problem and jointly optimize allocation and visitation order under two max-min fairness objectives, ex-post and forward. We first reveal an equating property of the optimal allocation for any fixed visitation order. This property is crucial to establish that the optimal allocation follows a threshold structure: at each location, demand is fully satisfied when sufficiently low and otherwise met proportionally. We then characterize the optimal routing policy and show that, under certain conditions, visiting locations in decreasing order of coefficient of variation (CV) of demand is optimal. Building on this insight, we propose a simple heuristic, PPA-deCV, which closely approximates the fairness-efficiency frontier of the jointly optimal policy. Next, through extensive numerical experiments, we compare multiple fairness objectives across different fairness metrics, demonstrating that improvements in surrogate max-min objectives do not necessarily translate into improvements in fairness metrics. Furthermore, we identify which objective is aligned with which fairness metric, providing practical guidance on objective selection to achieve fairness-efficiency trade-offs.",
+        "authors": "Haiqing Gao, Seyed M. R. Iravani, Sean R. Sinclair",
+        "url": "http://arxiv.org/abs/2606.19278v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19278v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了动态公平顺序分配问题，结合了路径规划和需求不确定性。它揭示了最优分配的等价性质和阈值结构，并对最优路径策略进行了理论刻画，提供了严谨的数学分析和优化逻辑。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19105v1",
+        "title": "Smoothness-Based Derandomization of PAC-Bayes Bounds",
+        "summary": "We study PAC-Bayes derandomization for smooth loss functions. Our goal is to obtain generalization bounds that hold with high probability for deterministic predictors by exploiting smoothness properties of both the loss and the predictor class. We show that passing from the Gibbs predictor to the deterministic predictor at the posterior mean has a precise cost, given by the generalization gap of the Jensen gap class. We control this class through its Rademacher complexity, leading to bounds for deterministic predictors that involve flatness quantities expressed in terms of parameter Jacobians and Hessians of the score map. The framework applies to both bounded and unbounded smooth loss functions, and we specialize the results to linear predictors and smooth neural networks. Finally, the Jacobian and Hessian quantities appearing in the theory motivate a practical regularizer. For BatchNorm networks, we compute this regularizer with respect to effective BatchNorm weights obtained by folding the BatchNorm transformation into the adjacent affine weights. Experiments on CIFAR-10 illustrate the behavior of this regularizer under different batch sizes.",
+        "authors": "Alexandre Lemire Paquin, Brahim Chaib-Draa, Philippe Giguère",
+        "url": "http://arxiv.org/abs/2606.19105v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19105v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在因果推断领域具有开创性，研究了具有分布值结果的离线策略学习。它利用Wasserstein barycenter定义奖励，并为IPW和DR估计器建立了统计保证，包括有限样本遗憾界和极小极大下界，充分体现了统计学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19097v1",
+        "title": "DVANet: Degradation-aware Visual-prior Alignment Network for Image Restoration",
+        "summary": "All-in-One image restoration aims to develop a unified restoration framework for handling diverse degradation types. Existing end-to-end methods usually regard the restoration process as a black-box mapping, lacking an explicit optimization interpretation. Although deep unfolding provides an interpretable iterative modeling paradigm for image restoration, existing methods mostly rely on fixed degradation assumptions or predefined degradation information, making them difficult to adapt to unified restoration requirements under complex degradations and locally damaged content. This limitation restricts their performance in degradation suppression and structural detail recovery. To address these issues, this paper proposes DVANet, a deep unfolding network inspired by the half-quadratic splitting optimization algorithm, which formulates unified image restoration under complex degradations as a collaborative unfolding process between degradation-aware observation consistency and visual-prior-guided reconstruction. Specifically, in the degradation-aware observation consistency branch, a degradation representation module is employed to extract global degradation attributes and local degradation cues, and degradation-conditioned mapping is used to enhance the model's adaptability to different degradation types. In the visual-prior-guided reconstruction branch, DINOv3 is introduced to provide structural and semantic information as hierarchical visual priors, thereby complementing the missing structural information in damaged regions and improving detail recovery. Extensive experiments demonstrate that DVANet achieves superior or competitive performance on multi-scenario degradation and cross-domain image restoration tasks, showing favorable degradation adaptability and generalization ability.",
+        "authors": "Yanjie Tu, Qingsen Yan, Axi Niu, Tao Hu, Haokui Zhang, Jiantao Zhou",
+        "url": "http://arxiv.org/abs/2606.19097v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19097v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究关注PAC-Bayes去随机化，特别针对平滑损失函数。它通过控制Jensen gap类的Rademacher复杂度，为确定性预测器提供了泛化界限，并引入了基于参数雅可比和Hessian的平坦度量，具有强大的理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19084v1",
+        "title": "Optimal score function estimation via derivatives constraints",
+        "summary": "We consider the problem of score function estimation via empirical risk minimization. We first start with the question of inferring the score function of a probability measure $μ$ with density on the flat torus from a sample of distribution $μ$. We show that constraining the hypothesis space to a Sobolev ball is sufficient to prevent overfitting and obtaining minimax estimation rates. We then consider the problem of score function estimation in the context of score-based generative modeling. Again, under a conjecture tying the score estimation rates to the quality of the output of a score-based generative model, we obtain minimax rates for such an approach using score function estimators obtained by constraining the hypothesis class to a Sobolev ball.",
+        "authors": "Thomas Bonis, Thanh Mai Pham Ngoc, Viet Chi Tran",
+        "url": "http://arxiv.org/abs/2606.19084v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19084v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文专注于分数函数估计的理论问题，通过限制假设空间到Sobolev球来防止过拟合，并获得了极小极大估计率。这直接涉及统计学中的最优估计理论，是您会非常感兴趣的纯理论研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18997v1",
+        "title": "DIPHINE: Diffusion-based $Φ$-ID Neural Estimator",
+        "summary": "Uncovering the true informational architecture of real-world complex systems requires disentangling how their components uniquely store, redundantly share, and synergistically integrate information over time. Integrated Information Decomposition ($Φ$ID) is a framework for decomposing the information dynamics of multivariate systems into sixteen non-overlapping atoms that characterize redundant, unique, and synergistic modes of information storage, transfer, and integration. Existing methods to compute $Φ$ID are restricted to Gaussian or discrete systems, preventing its application to continuous non-Gaussian dynamical systems. We address this limitation by proposing DIPHINE (Diffusion-based $Φ$-ID Neural Estimator), the first neural estimator that leverages score-based diffusion models to jointly estimate all the mutual information terms required by $Φ$ID from a single amortized network, recovering the sixteen atoms through Möbius inversion. We provide a theoretical analysis of error propagation through the inversion, showing that the Jacobian of the mapping from mutual informations to atoms is integer-valued and that the synergy-to-synergy atom is provably the hardest to estimate. We demonstrate accurate recovery of ground-truth atoms on synthetic benchmarks, superior performance compared to established mutual information estimators, and the ability to extract physiologically interpretable information-dynamic structure on an application involving real data without any distributional assumptions.",
+        "authors": "Simon Pedro Galeano Munoz, Mustapha Bounoua, Giulio Franzese, Pietro Michiardi, Maurizio Filippone",
+        "url": "http://arxiv.org/abs/2606.18997v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18997v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了DIPHINE，一个基于扩散模型的神经估计器，用于集成信息分解（ΦID）。它提供了误差传播的理论分析，包括雅可比矩阵的整数值性质和协同-协同原子估计难度，将信息论与现代AI系统相结合，并提供严谨的数学分析。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18993v1",
+        "title": "Sequential Kernel-based Conditional Independence Testing via Adaptive Betting",
+        "summary": "Testing conditional independence is fundamental yet intrinsically difficult: without additional assumptions, Type I error control is impossible in general. The \"Model-X'' paradigm addresses this difficulty by assuming exact knowledge of a relevant conditional distribution. While small deviations from this assumption can sometimes be tolerated in classical one-shot testing, existing sequential conditional independence tests typically require the Model-X conditional to be known exactly, making them fragile when it must instead be estimated. We propose a new approach that is substantially more robust to such estimation error. Our method applies testing-by-betting to an adaptively optimized Kernel Conditional Independence statistic, together with a normalization scheme and a truncate-and-shift calibration strategy. These modifications greatly reduce Type I error inflation while preserving high power across high-dimensional synthetic benchmarks and real-world fairness tasks, outperforming existing sequential Model-X approaches. Code is available at https://github.com/he-zh/SKCI.",
+        "authors": "Zheng He, Danica J. Sutherland",
+        "url": "http://arxiv.org/abs/2606.18993v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18993v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文解决了条件独立性检验这一基础统计学难题，提出了一种通过自适应投注的序贯核方法，显著提高了对估计误差的鲁棒性，并有效控制了I类错误。其统计方法论非常严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18785v1",
+        "title": "Bayesian Anytime Pareto Set Identification for Multi-Objective Multi-Armed Bandits",
+        "summary": "Identifying Pareto optimal solutions is critical to support multi-objective decision-making. We introduce the first anytime Multi-Objective Multi-Armed Bandit algorithm for the Pareto Set Identification problem, taking a Bayesian approach: Top-Two Pareto Front Thompson Sampling (TTPFTS). We benchmark TTPFTS against state-of-the-art fixed-budget Pareto Set Identification algorithms on synthetic environments. Next, we demonstrate its practical utility in a challenging multi-objective molecular discovery setting by efficiently exploring an ultra-large synthesis-on-demand molecular library. Furthermore, we introduce a novel uncertainty quantification metric that estimates our algorithm's confidence in the predicted Pareto set. We demonstrate that this metric effectively proxies true performance, yielding a robust methodology for monitoring learning progress in complex settings. Finally, we complement these empirical findings with a theoretical proof of the algorithm's asymptotic correctness.",
+        "authors": "Lennert Saerens, Bram Silue, Eleni Litsa, Peter Vrancx, Pieter Libin",
+        "url": "http://arxiv.org/abs/2606.18785v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18785v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了首个用于Pareto集识别问题的贝叶斯随时多目标多臂老虎机算法，并提供了算法渐近正确性的理论证明，以及新颖的不确定性量化指标。这完美符合您对贝叶斯方法、统计保证和优化收敛性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18773v1",
+        "title": "Private Learning with Public Feature Conditioning",
+        "summary": "We study differentially private (DP) regression in settings where each data sample includes public, non-sensitive features -- common in applications such as recommendation and advertising systems. While such label-DP or semi-sensitive-feature settings have been primarily explored in the context of classification, effective approaches for regression remain underexplored. We introduce Cond-DP, a conditioned variant of DPSGD that leverages the structure of public feature matrices to improve optimization under privacy constraints. Motivated by the observation that these public features often exhibit rapidly decaying spectra, Cond-DP incorporates a data-driven conditioning matrix to reshape the optimization landscape and accelerate convergence. We provide convergence guarantees for convex, strongly convex, and non-convex settings, and recover standard DPSGD as a special case when the conditioning matrix is the identity. We show how to construct an effective conditioning matrix for Cond-DP directly from public features, enabling provably faster convergence than DPSGD in private linear regression without incurring additional privacy cost. Empirically, Cond-DP with this conditioning matrix consistently outperforms state-of-the-art baselines across a wide range of datasets and model architectures under label DP, demonstrating strong and robust performance in practice.",
+        "authors": "Shuli Jiang, Walid Krichene, Nicolas Mayoraz",
+        "url": "http://arxiv.org/abs/2606.18773v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18773v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了具有公共特征条件化的差分隐私（DP）回归，提出了Cond-DP算法并提供了凸、强凸和非凸设置下的收敛性保证。它通过数据驱动的条件矩阵重塑优化景观，实现了理论上更快的收敛，具有强大的隐私和优化理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18750v1",
+        "title": "Ensuring Trustworthy Online A/B Testing: Addressing Five Key Questions on CUPED",
+        "summary": "A/B testing has become the gold standard for data-driven decision-making in large-scale online experimentation, providing critical guidance for feature launch, pricing optimization, and user experience enhancement. To maximize statistical sensitivity, many technology companies routinely employ Controlled-experiment Using Pre-Experiment Data (CUPED), a technique that achieves substantial variance reduction while preserving the unbiasedness of estimating the average treatment effect. Despite its widespread adoption, several critical methodological and practical nuances of CUPED remain underexplored. This paper systematically addresses five frequently encountered yet overlooked questions regarding the application of CUPED. First, we provide a comparative analysis of various post-CUPED estimators to identify the optimal adjustment specification. Second, we evaluate the validity of regression-based adjustments and delineate robust variance estimation methods tailored for such frameworks. Finally, we extend our investigation to complex but common scenarios, including multi-arm experiments and two-stage sampling designs. Our findings reveal that in these settings, naive reliance on standard variance estimators can lead to severely misleading inferences. By offering rigorous theoretical insights and extensive experimental validation, this work deepens the conceptual understanding of CUPED. Notably, the recommended methodologies have been successfully deployed and integrated into ByteDance's experimentation platform.",
+        "authors": "Yu Zhang, Bokui Wan, Yongli Qin, Jinyong Ma, Yifan Guo",
+        "url": "http://arxiv.org/abs/2606.18750v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18750v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对在线A/B测试中广泛使用的CUPED技术进行了系统性、严谨的理论分析，解决了其方法论和实践中的关键问题，并提供了鲁棒的方差估计方法。其高实践影响力与深刻的统计学理论洞察力相结合，是您会非常欣赏的类型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18679v1",
+        "title": "Fair Online Resource Allocation",
+        "summary": "We study the problem of fair online resource allocation, motivated by applications such as refugee resettlement and airline scheduling, where agents arrive sequentially and must be assigned to facilities with limited capacities. We introduce a model that maximizes the overall welfare subject to resource constraints and a Lipschitz fairness requirement, which ensures that similar agents arriving in the same batch receive similar expected outcomes. We first analyze the offline problem, proving that the value of the optimal fair allocation is at least an $Ω(1/γ)$ fraction of the optimal unfair allocation, where $γ$ is the fairness coefficient, thereby bounding the price of fairness. For the online setting, we propose an algorithm based on dual mirror descent that enforces fairness constraints within batches while estimating optimal dual variables. We prove that this algorithm achieves sublinear regret relative to the optimal offline fluid benchmark. Finally, we validate our theoretical results using real-world data from the Refugee Economies Programme, demonstrating the algorithm's performance and examining the trade-offs between welfare maximization and fairness enforcement.",
+        "authors": "Christopher En, Yuri Faenza, Andrea Lodi, Gonzalo Muñoz",
+        "url": "http://arxiv.org/abs/2606.18679v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18679v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个公平在线资源分配模型，引入了Lipschitz公平性要求，并对离线问题进行了理论分析，证明了公平性代价。对于在线设置，它提出了基于对偶镜像下降的算法，并证明了相对于最优离线基准的次线性遗憾，具有严谨的优化和公平性理论。"
+    }
+]

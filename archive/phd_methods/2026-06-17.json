@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.19328v1",
+        "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
+        "summary": "Preference-based RL provides an approach to learning reward models from pairwise comparisons of behaviors, bypassing the need for explicit reward design. However, existing methods typically rely on passive data collection and suffer from poor sample efficiency, especially during the early stages of learning. We introduce a model-based approach that actively directs exploration by jointly reasoning over uncertainties in the reward, dynamics, and value functions. Our method, Uncertainty-Balanced Preference Planning (UBP2), uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories according to a unified score that combines expected reward, terminal value, and epistemic uncertainty. Planning under this objective yields an explicit tradeoff between exploitation and information acquisition without requiring ad hoc exploration heuristics. Under standard regularity assumptions, we establish sublinear regret guarantees for both finite-horizon and infinite-horizon settings. Empirically, experiments on the Meta-World benchmark show UBP2 achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines.",
+        "authors": "Mohamed Nabail, Leo Cheng, Jingmin Wang, Nicholas Rhinehart",
+        "url": "http://arxiv.org/abs/2606.19328v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19328v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了UBP2，一种新颖的模型基主动探索方法，通过联合推理奖励、动力学和价值函数的不确定性来提高偏好强化学习的样本效率。其核心贡献在于提供了次线性遗憾保证，这体现了极高的理论严谨性，完美契合您对数理统计和理论创新性的偏好，同时解决了RL中的实际效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19264v1",
+        "title": "Structured Inference with Large Language Gibbs",
+        "summary": "The knowledge encoded in large language models (LLMs) can serve as a substrate for structured reasoning over variables describing a complex world, but accessing this knowledge in a probabilistically coherent manner poses a difficult inference problem. We propose Large Language Gibbs, a scheme for structured probabilistic inference that uses conditional distributions of an LLM as transition operators. Rather than sampling structured objects through single-pass autoregressive generation, we iteratively resample individual variables conditioned on others using an LLM's next-token conditionals. This approach avoids order-dependent biases and produces a stationary distribution that reflects a compromise between all local conditionals. We apply this approach to sampling from synthetic distributions, consistent reasoning tasks, and Bayesian structure learning. The results suggest that the use of LLM conditionals in MCMC is a practical alternative to one-pass generation for structured probabilistic inference under a world prior accessible through noisy LLM conditionals.",
+        "authors": "Sanghyeok Choi, Henry Gouk, Esmeralda S. Whitammer",
+        "url": "http://arxiv.org/abs/2606.19264v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19264v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了Large Language Gibbs，一种利用LLM条件分布作为转移算子进行迭代重采样的结构化概率推理方案。它解决了自回归生成中顺序依赖偏差的问题，并能产生反映所有局部条件折衷的平稳分布。这是一个理论上非常优雅且严谨的创新，将LLM与经典的概率推理方法结合，具有深远的理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19249v1",
+        "title": "Transformer Geometry Observatory TGO-I: Spectral Geometry Observatory",
+        "summary": "Despite the widespread adoption of Vision Transformers (ViTs) and their success across numerous computer vision applications, the fundamental understanding of their dimensional and representational geometry remains relatively underexplored. To address this gap, we introduce Transformer Geometry Observatory (TGO), a systematic framework of experiments and analysis pipelines designed to investigate the representational geometry and dynamics of Vision Transformers. TGO-I, the first installment of the framework, focuses on the spectral geometry of ViT representations. Using a ViT-Small/16 model trained on ImageNet-100, we analyze Effective Rank, Stable Rank, Participation Ratio, Spectral Entropy, Spectral Flatness, Spectral Anisotropy, covariance structure, eigenspectra, and singular value spectra throughout training. Our results reveal a consistent increase in dimensional utilization, accompanied by decreasing anisotropy, increasing spectral entropy, increasing participation ratio, and progressively flatter eigenspectra. Contrary to the common intuition that training should concentrate information into a small number of dominant directions, we observe a progressive redistribution of variance across representational dimensions. This phenomenon is particularly pronounced in the final CLS token representation, which exhibits the highest effective dimensionality and lowest anisotropy within the network.",
+        "authors": "Kaustubh Kapil, Kishor P. Upla",
+        "url": "http://arxiv.org/abs/2606.19249v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19249v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TGO-I 引入了一个系统框架，通过谱几何学深入研究Vision Transformer的维度和表示几何。它揭示了ViT表示动态的深刻见解，如维度利用率的增加和各向异性的降低。这是一项纯理论创新性的研究，旨在从根本上理解AI架构，对于您专注于AI前沿算法和架构的背景非常契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19236v1",
+        "title": "STARE: Surprisal-Guided Token-Level Advantage Reweighting for Policy Entropy Stability",
+        "summary": "Reinforcement Learning with Verifiable Rewards algorithms like GRPO have emerged as the dominant post-training paradigm for complex reasoning in LLMs, yet commonly suffer from policy entropy collapse during training. We conduct a first-order gradient analysis of token-level entropy dynamics under GRPO and identify a token-level credit assignment mismatch: the per-token entropy variation decomposes into the product of the trajectory-level advantage and an entropy sensitivity function over the next-token distribution, yielding an advantage-surprisal four-quadrant structure and a near-criticality property. Motivated by it, we propose STARE (Surprisal-guided Token-level Advantage Reweighting for policy Entropy stability), which identifies entropy-critical token subsets via batch-internal surprisal quantiles, selectively reweights their effective advantages, and incorporates a target-entropy closed-loop gate for stable entropy regulation. Across model scales from 1.5B to 32B and three task families (Short CoT, Long CoT, and Multi-Turn Tool Use), STARE sustains stable RL training over thousands of steps while maintaining policy entropy within the target band. On AIME24 and AIME25, STARE outperforms DAPO and other competitive baselines by 4%-8% in average accuracy, with reflection tokens and response length growing in tandem, indicating sustained exploration-exploitation balance that further unlocks RL training potential.Code is available at https://github.com/hp-luo/STARE.",
+        "authors": "Haipeng Luo, Qingfeng Sun, Songli Wu, Can Xu, Wenfeng Deng, Han Hu, Yansong Tang",
+        "url": "http://arxiv.org/abs/2606.19236v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19236v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对LLM后训练中RL策略熵崩溃的关键问题，进行了首次一阶梯度分析，并提出了基于Surprisal的Token级优势重加权方法STARE。其理论分析严谨，解决了LLM训练中的实际稳定性瓶颈，通过维持策略熵稳定来解锁RL训练潜力，是理论与实践结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19057v1",
+        "title": "Quantifying and Auditing LLM Evaluation via Positive--Unlabeled Learning",
+        "summary": "Large Language Models (LLMs) are increasingly used as judges for scalable evaluation, yet such LLM--as--a--Judge systems exhibit systematic biases that are decoupled from semantic quality, most notably verbosity bias. Meanwhile, human supervision is costly and typically selective, yielding reliable positive judgments but leaving most outputs unlabelled and potentially mixed in quality. We formulate LLM evaluation under selective human supervision as a positive--unlabelled learning problem and propose a geometric auditing framework based on Partial Optimal Transport. By aligning a small set of human--verified positives with a reliable subset of unlabelled outputs in a fixed embedding space, our method identifies human--consistent preferences and corrects biased judges without retraining. Experiments demonstrate improved alignment with human preferences, increased robustness to presentation biases, and interpretable confidence estimates, offering a scalable and statistically grounded alternative to existing LLM--as--a--judge pipelines.",
+        "authors": "Zilong Zhang, Yi-Ting Hung, Lei Ding, Chi-Kuang Yeh",
+        "url": "http://arxiv.org/abs/2606.19057v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19057v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于正-未标记学习和偏最优传输的几何审计框架，用于量化和纠正LLM作为评估器时的系统偏差（如冗长偏差）。它具有强大的统计学和数学基础，为LLM的可靠评估提供了一个可扩展且统计学上严谨的替代方案，解决了LLM应用中的一个关键评估瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19025v1",
+        "title": "FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs",
+        "summary": "Pre-training Large Language Models (LLMs) typically demands large-scale infrastructure with tightly coupled hardware accelerators. While increasing model and dataset scale remains the dominant driver of performance, Mixture-of-Experts (MoEs) architectures have recently achieved state-of-the-art results by decoupling parameter count from computational cost. This efficiency enables training massive models on constrained compute budgets, yet it typically requires the high-speed interconnects of a single datacenter. To overcome these physical limits, recent approaches such as DiLoCo and Photon use low-communication data-parallel methods to enable scaling across geographically distributed, weakly connected data centers. However, these methods suffer from a fundamental inefficiency: they require full model replicas at every site, which imposes prohibitive memory constraints and communication overheads. In this work, we introduce FoMoE, a system that breaks the full-replica paradigm by partitioning expert layers across workers. We demonstrate that FoMoE: (I) reduces communication costs by up to 1.42x over efficient baselines and 45.44x over DDP via partial expert replication in the studied regimes; (II) achieves empirical throughput speedups of up to 1.4x through a novel skip-token mechanism; and (III) shows stable routing in the trained proxy regimes and projects the communication/memory benefits to 100B-scale configurations through system modelling.",
+        "authors": "Lorenzo Sani, Zeyu Cao, Meghdad Kurmanji, Alex Iacob, Andrej Jovanovic, Yan Gao, Wanru Zhao, Nicholas D. Lane",
+        "url": "http://arxiv.org/abs/2606.19025v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19025v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "FoMoE系统通过分区专家层来突破MoE LLM分布式训练中的全副本限制，显著降低了通信成本并提高了吞吐量。这在LLM架构和训练效率方面具有重要创新性，直接解决了大规模LLM训练的实际瓶颈（数据效率、模型扩展），避免了纯工程堆砌，而是通过系统设计实现理论突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18988v1",
+        "title": "ThinkDeception: A Progressive Reinforcement Learning Framework for Interpretable Multimodal Deception Detection",
+        "summary": "Multimodal deception detection is critical for identifying fraudulent intentions, yet existing approaches predominantly rely on end to end black--box paradigms. These methods suffer from a severe lack of interpretability failing to provide transparent reasoning trajectories and struggling to explicitly capture the subtle, cross modal inconsistencies inherent in deceptive behaviors. To transcend these limitations, we propose ThinkDeception, a novel and interpretable multimodal deception detection framework. As a pioneering effort, it introduces Multimodal Large Language Models (MLLMs) into this domain, transforming deception detection from a traditional binary classification task into an explicit cognitive reasoning process. Facilitated by the first meticulously annotated step--by--step multimodal Chain of Thought (CoT) dataset, we develop a foundational model, ThinkDeception Base, empirically validating the critical role of modal inconsistency in decoding deception. Building upon this foundation, our core innovation lies in proposing Visual-Audio Consistency Group Relative Policy Optimization(VAC--GRPO) equipped with a progressive training strategy. Distinct from standard GRPO, we stratify the training data into four progressive difficulty tiers, guiding the model through a psychologically grounded easy--to--hard cognitive transition. By innovatively coupling this dynamic curriculum scheduler with a multi dimensional, process aware reward mechanism and a reflective learning paradigm, we significantly elevate the model's overall reasoning quality. Extensive experiments on mainstream benchmarks demonstrate that ThinkDeception establishes a new SOTA, significantly outperforming existing methods in both detection accuracy and rationale quality. Ultimately, this work successfully drives the field of deception detection toward interpretable, multimodal cognitive reasoning.",
+        "authors": "Jinhao Song, Shan Liang, Yiqun Yue, Zhuhuayang Zhang, Tianqi Gao",
+        "url": "http://arxiv.org/abs/2606.18988v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18988v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DIPHINE是第一个利用基于分数的扩散模型来估计连续非高斯动态系统中的集成信息分解（ΦID）的神经估计器。它提供了误差传播的理论分析，具有极高的理论严谨性，将前沿的扩散模型应用于信息理论的复杂估计问题，极具创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18954v1",
+        "title": "GraphPO: Graph-based Policy Optimization for Reasoning Models",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has become a standard paradigm for enhancing the capability of large reasoning models. RLVR typically samples responses independently and optimizes the policy using from final answers. This paradigm has two limitations. First, independently responses often contain similar intermediate reasoning steps, causing redundant exploration and wasted computation. Second, sparse final-answer rewards make it hard to identify useful steps. Tree-based methods partly address this problem by sharing prefixes and comparing branches from the same prefix to provide fine-grained signals. However, tree branches are still expanded independently. When different branches reach similar reasoning states, they cannot share information and repeat similar exploration. Moreover, tree-based methods ignore such dispersion and only perform local comparisons within separate branches, which can lead to higher variance in advantage estimation. To address this challenge, we propose GraphPO (Graph-based Policy Optimization), a novel RL framework that represents rollouts as a directed acyclic graph, with reasoning steps as edges and semantic states summarized from the reasoning paths as nodes. GraphPO merges semantically equivalent reasoning paths into equivalence classes, allowing them to share suffixes and reallocating budget away from redundant expansions to diverse exploration. Furthermore, we assign efficiency advantages to incoming edges and correctness advantages to outgoing edges, thereby improving inference efficiency while deriving process supervision from outcome. Theory shows that GraphPO reduces advantage-estimation variance and enhances reasoning efficiency. Experiments on three LLMs across reasoning and agentic search benchmarks show that GraphPO consistently outperforms chain- and tree-based baselines with the same token budgets or response budgets.",
+        "authors": "Yuliang Zhan, Xinyu Tang, Jian Li, Dandan Zheng, Weilong Chai, Jingdong Chen, Jun Zhou, Ge Wu, Wenyue Tang, Hao Sun",
+        "url": "http://arxiv.org/abs/2606.18954v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18954v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GraphPO是一个新颖的RL框架，将LLM推理过程表示为有向无环图，通过合并语义等效路径和分配效率/正确性优势来优化策略。理论上证明了可以减少优势估计方差，提高了LLM推理训练的效率，是RL理论和LLM应用结合的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18933v1",
+        "title": "Zero-Shot Active Feature Acquisition via LLM-Elicitation",
+        "summary": "Active feature acquisition (AFA) sequentially selects which features to observe to reach a classification or ranking decision. Its central limitation is reliance on large amount of labeled data to fit probabilistic models guiding acquisition. Large language models (LLMs) supply unsupervised domain knowledge, but are poor sequential planners. Asking one to both know and decide conflates capabilities best kept separate. Here, we develop a framework for zero-shot AFA through disciplined elicitation: asking the LLM only for what it can be trusted to return, the unary deviations and pairwise co-variations that are the sufficient statistics of a Markov random field (MRF). We apply our framework to two settings: binary classification and top-$k$ identification. In practice, the LLM reliably returns only discriminative statistics, what distinguishes the classes rather than each class in isolation, which precludes classical AFA. We apply a maximum-entropy closure that resolves this gauge ambiguity. We evaluate on a cohort of Inflammatory Bowel Disease (IBD) patients, an active clinical setting where diagnostic ambiguity and patient heterogeneity obstruct stable treatment strategies. Our framework outperforms the LLM both on real labels and on its own extracted beliefs. Where it matters most, on the hardest patients, our top-$k$ acquisition policy markedly outperforms all existing methods.",
+        "authors": "Binyamin Perets, Natalie Mendelson, Shiran Vainberg, Yehuda Chowers, Shai Shen-Orr, Shie Mannor",
+        "url": "http://arxiv.org/abs/2606.18933v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18933v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了通过LLM-Elicitation实现零样本主动特征获取的框架，通过LLM提取马尔可夫随机场的充分统计量，并利用最大熵闭包解决模糊性。这在数据效率和不确定性下的决策制定方面具有强大的统计学和理论创新性，解决了传统AFA对大量标注数据的依赖。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18810v1",
+        "title": "Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards",
+        "summary": "Reinforcement learning with verifiable rewards (RLVR) has driven substantial progress in training LLMs for reasoning tasks, but representative methods such as GRPO assign uniform credit across all tokens, wasting gradient on routine tokens while under-crediting pivotal reasoning steps. Existing token-level credit assignment methods require resources beyond the model's own rollouts. GRPO variants rely on process reward models or ground-truth answers. Knowledge distillation assigns credit through per-token divergence but requires external teachers (On-Policy Distillation) or privileged information (On-Policy Self Distillation). However, these dependencies limit applicability in the pure RLVR setting. We observe that conditioning the model on its own verified trajectories induces a measurable per-token KL divergence between the original and conditioned distributions, and prove that distilling from a self-teacher constructed by verified trajectories leads to infeasible weighted-average solutions when multiple verified trajectories exist. We propose SC-GRPO (Self-Conditioned GRPO), which uses KL divergence mentioned before as a multiplicative weight on GRPO gradients. Across five benchmarks spanning math, code, and agentic tasks, SC-GRPO consistently outperforms 8.1% over GRPO and 5.9% over DAPO with stronger OOD performance. Moreover, SC-GRPO achieves higher performance than OPD.",
+        "authors": "Yingyu Shan, Yuhang Guo, Zihao Cheng, Zeming Liu, Xiangrong Zhu, Xinyi Wang, Jiashu Yao, Wei Lin, Hongru Wang, Heyan Huang",
+        "url": "http://arxiv.org/abs/2606.18810v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18810v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "SC-GRPO是一种新颖的RLVR方法，利用自条件轨迹的KL散度作为GRPO梯度的乘法权重，改进了Token级信用分配。它提供了关于加权平均解的理论证明，具有强大的理论严谨性，解决了RLVR中信用分配不均的问题，提升了LLM在推理和Agentic任务上的表现。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18785v1",
+        "title": "Bayesian Anytime Pareto Set Identification for Multi-Objective Multi-Armed Bandits",
+        "summary": "Identifying Pareto optimal solutions is critical to support multi-objective decision-making. We introduce the first anytime Multi-Objective Multi-Armed Bandit algorithm for the Pareto Set Identification problem, taking a Bayesian approach: Top-Two Pareto Front Thompson Sampling (TTPFTS). We benchmark TTPFTS against state-of-the-art fixed-budget Pareto Set Identification algorithms on synthetic environments. Next, we demonstrate its practical utility in a challenging multi-objective molecular discovery setting by efficiently exploring an ultra-large synthesis-on-demand molecular library. Furthermore, we introduce a novel uncertainty quantification metric that estimates our algorithm's confidence in the predicted Pareto set. We demonstrate that this metric effectively proxies true performance, yielding a robust methodology for monitoring learning progress in complex settings. Finally, we complement these empirical findings with a theoretical proof of the algorithm's asymptotic correctness.",
+        "authors": "Lennert Saerens, Bram Silue, Eleni Litsa, Peter Vrancx, Pieter Libin",
+        "url": "http://arxiv.org/abs/2606.18785v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18785v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了TTPFTS，第一个用于帕累托集识别问题的贝叶斯多目标多臂老虎机算法，并提供了算法渐近正确性的理论证明。这在多目标优化和贝叶斯方法方面具有强大的理论创新性，对复杂决策制定问题提供了严谨的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18767v1",
+        "title": "Output Vector Editing for Memorization Mitigation in Large Language Models",
+        "summary": "Large language models memorize and reproduce sequences from their training data, creating privacy, copyright, and security risks. Existing neuron-level mitigation methods equate editing with zeroing out neuron activations, but the activation only controls whether a neuron engages; the output vector is what writes to the residual stream and, through superposition, encodes multiple features. We propose output vector editing, a constrained-optimization weight edit that locates a small set of MLP neurons responsible for a memorized continuation and minimally modifies their output vectors to introduce a distractor in vocabulary space, redirecting their residual-stream contributions while leaving activations unchanged. Evaluating on four models from 360M to 7B parameters (SmolLM-360M, OLMo-1B, OLMo-7B, Llama2-7B), we center on OLMo-7B (whose open weights and pretraining corpus enable systematic mining) and mine 6831 memorized sequences, achieving up to 87.9% suppression. The 2.7$\\times$ gap over zero ablation on the same located neurons shows the suppression comes from the output-vector edit, not localization alone. Four edit modes span a spectrum from aggressive suppression to minimal redirection; in ensemble they cover 96.5% of memorized sequences, while our recommended single-mode configuration reaches 81.5% with no catastrophic locality failures. We further identify a mechanistic boundary at ${\\sim}14%$ of sequences unreachable by MLP-only editing; while these failures are not attention-driven overall, ablating the top contributing attention heads recovers 60--64% of them, with stronger recovery on continuations that copy tokens from the prefix, positioning attention as a complementary fallback rather than a primary mechanism. Edit mode ordering and the success-locality trade-off transfer across all four models, with success rates scaling with model size rather than family.",
+        "authors": "Ahmad Dawar Hakimi, Kaiwei Lei, Isabelle Augenstein, Hinrich Schütze",
+        "url": "http://arxiv.org/abs/2606.18767v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18767v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Cond-DP是一种差分隐私回归的条件变体，利用公共特征矩阵改进优化，并提供了凸、强凸和非凸设置下的收敛性保证。这在隐私保护机器学习方面具有强大的理论严谨性和创新性，解决了在隐私约束下优化效率的实际瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18688v1",
+        "title": "Dual-Channel Grounded World Modeling (DCGWM): Structural Prevention of Objective Interference Collapse via Heterogeneous External Grounding with Inward-Only Gradient Flow",
+        "summary": "Joint Embedding Predictive Architectures (JEPAs) are a leading approach to world model representation learning. We identify a failure mode in JEPA-based world models grounded against two qualitatively distinct external signals: physical dynamics (sparse, high-magnitude, constraint-satisfying gradient corrections) and social-behavioral dynamics (diffuse, distribution-matching corrections). We term this Objective Interference Collapse (OIC): we argue that joint learning in a shared latent space causes the dominant channel to systematically collapse the subordinate channel's representational subspace, in a manner not resolvable by loss weighting alone. We propose Dual-Channel Grounded World Modeling (DCGWM), designed to structurally prevent OIC through a partitioned latent space (physical subspace Z_p, behavioral subspace Z_b) with inward-only gradient flow. A Physical Grounding Channel updates only Z_p via VICReg-style alignment to physical measurements; a Social-Behavioral Grounding Channel updates only Z_b via alignment to trajectories from an emergent multi-agent simulation. An Inter-Channel Interface Module couples the subspaces at the task level without cross-subspace gradients. An Asymmetric Grounding Adherence Loss penalizes rollout drift with a hard hinge for physical violations and a soft KL for behavioral divergence. A Generative Rendering Layer is architecturally isolated from the latent world model. We present three theoretical results: the partition removes the gradient-interference pathway implicated in OIC; each grounded subspace inherits anti-collapse guarantees from its alignment objective; and generative isolation is necessary under a stated assumption on the generative objective's geometry. This manuscript establishes the problem formulation and architecture; experimental validation is ongoing and will be reported in a future revision.",
+        "authors": "Akshay Hazare",
+        "url": "http://arxiv.org/abs/2606.18688v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18688v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文识别了JEPA世界模型中的新故障模式（目标干扰崩溃），并提出了DCGWM架构，通过分区潜在空间和内向梯度流从结构上防止该问题。提供了关于梯度干扰和抗崩溃的理论结果，是世界模型领域的重要理论和架构创新，对构建更鲁棒的AI系统至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18650v1",
+        "title": "BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training",
+        "summary": "As Large Language Model (LLM) datasets scale to trillions of tokens, data selection has emerged as a critical frontier to filter out uninformative noise and construct adaptive learning trajectories. Beyond static heuristic filtering, advanced data selection methods for LLM training largely follow two paradigms, each with fundamental limitations. Influence-based methods provide principled bi-level objectives but require intractable inverse-Hessian computations, while excess-loss methods are computationally efficient but rely on a static reference model that becomes misaligned with the evolving proxy model during training. We propose BLADE (Bi-Level Adaptive Data sElection), a Hessian-free framework for data selection. BLADE reformulates the bi-level optimization problem underlying influence-based methods as a penalized single-level objective via Lagrange multipliers, avoiding inverse-Hessian computation while revealing a principled connection to excess-loss based data selection. The resulting objective recovers an excess-loss form but replaces the static reference model with a dynamic one that stays synchronized with training. Theoretically, we prove that this penalized formulation guarantees first-order convergence. For efficient online batch selection, we instantiate BLADE as a memoryless randomized block-coordinate Frank-Wolfe algorithm. Extensive experiments show that BLADE consistently outperforms state-of-the-art data selection baselines, providing a practical recipe for LLM training.",
+        "authors": "Jiaxing Wang, Deping Xiang, Jin Xu, Zirui Liu, Zicheng Zhang, Guoqiang Gong, Jun Fang, Chao Liu, Pengzhang Liu, Tongxuan Liu, Ke Zhang, Qixia Jiang",
+        "url": "http://arxiv.org/abs/2606.18650v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18650v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "BLADE是一个无Hessian的框架，将LLM训练中的双层数据选择问题重新表述为惩罚单层目标，并提供了首阶收敛性保证。这在LLM训练的数据效率方面具有强大的理论和算法创新性，为大规模LLM训练提供了实用的解决方案，解决了数据选择的计算瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.18620v1",
+        "title": "BCL: Bayesian In-Context Learning Framework for Information Extraction",
+        "summary": "Existing information extraction (IE) tasks increasingly adopt in-context learning (ICL) with large language models. However, current approaches either show inconsistent performance across model scales or lack systematic optimization and generalizability. Building on this, we propose BCL (Bayesian In-Context Learning Framework for Information Extraction), the first optimization framework that uses particle filtering with Bayesian updates to systematically refine label representations across IE tasks. Through four steps initialization, observation, weight update, and resampling, BCL generalizes to both sequence labeling and relation classification paradigms. Extensive experiments demonstrate substantial and consistent improvements over existing approaches.",
+        "authors": "Haoliang Liu, Chengkun Cai, Xu Zhao, Han Zhu, Shizhou Huang, Xinglin Zhang, Tao Chen, Jenq-Neng Hwang, Zhang Huaping, Lei Li",
+        "url": "http://arxiv.org/abs/2606.18620v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.18620v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "BCL是第一个利用粒子滤波和贝叶斯更新系统地优化信息提取任务中标签表示的框架。它具有强大的贝叶斯方法和粒子滤波理论基础，对LLM的上下文学习能力有重要提升，解决了ICL在IE任务中表现不稳定和缺乏系统优化的实际问题。"
+    }
+]

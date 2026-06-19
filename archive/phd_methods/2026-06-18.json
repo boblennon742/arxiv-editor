@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.20344v1",
+        "title": "Quantum ring all-reduce: communication and privacy advantages for distributed learning",
+        "summary": "Machine learning models have scaled to unprecedented sizes, making training across distributed devices the de facto standard in the field. In this work, we explore how quantum communications can make distributed training both more communication-efficient and information-theoretically private, for both classical and quantum learning models. Ring all-reduce is the foundational communication primitive for large-scale distributed training. We present a quantum version that reduces per-link online communication by a provably optimal factor of two using pre-shared entanglement and superdense coding, without requiring the learning model or gradient computation to change. Beyond bandwidth, the primitive enables privacy guarantees that are information-theoretically impossible for any classical protocol, achieving composable ε-secure aggregation, via verified entanglement, at a 2x overhead in GHZ copies. Our hybrid quantum-classical communication architecture yields simultaneous communication and security advantages for large scale distributed training, regardless of whether the learning itself is quantum or classical. Finally, we characterise quantum advantages in gradient conflict detection for server-to-client communication under bandwidth constraints, a setting that arises after ring all-reduce is completed, when full gradient broadcast to external clients is infeasible. Two variants of the problem admit different separations. For margin-based alignment testing (\\textsc{GapIP}_τ), the quantum advantage is quadratic in the margin parameter: \\widetilde{O}(τ^{-1}\\log P) qubits versus \\widetilde{O}(\\min(\\τ^{-2},P)) bits. For sign-consistency auditing against a private parameter matching (\\textsc{TieAudit}_ε), the advantage represents an exponential separation in communication complexity: Ω(\\sqrt{P}) bits whereas O(ε^{-2}\\log P) qubits suffice.",
+        "authors": "María Gragera Garcés, Lirandë Pira",
+        "url": "http://arxiv.org/abs/2606.20344v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20344v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在分布式学习中引入了量子环形全归约，通过预共享纠缠和超密编码，实现了通信效率的翻倍提升和信息论层面的隐私保护。其理论创新性极高，提供了严格的数学证明，解决了大规模分布式训练中的核心瓶颈（数据效率和隐私），对AI前沿算法和架构具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20245v1",
+        "title": "Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference",
+        "summary": "Large language models (LLMs) have achieved strong performance across a wide range of language-based tasks by leveraging both extensive parametric knowledge and in-context learning ability, enabling them to incorporate external information provided in the input prompt. However, the integration of external knowledge can introduce conflicts, not only between the model's internal parametric knowledge and the external information, but also among multiple pieces of external contexts. Existing approaches typically assume that either the model or the provided context is reliable, overlooking the possibility that both sources may contain errors, and avoid conflicts by privileging one source over the other, rather than actively resolving inconsistencies. To address these limitations, we propose a novel framework MACR for LLM knowledge conflict resolution that moves beyond the conventional binary choice paradigm and incorporates an explicit conflict-resolution mechanism based on a multi-agent reasoning approach. Specifically, we first propose an adaptive knowledge assessment and retrieval approach that employs a modified semantic entropy measure to quantify an LLM's confidence in its answer to a given query. Based on this confidence estimation, MACR either externalizes the model's internal knowledge as textual representations or retrieves relevant external knowledge when internal knowledge is insufficient, generating basic contexts for subsequent reasoning. Then we introduce an inductive multi-agent reasoning framework with three specialized agents that, respectively, induce explicit rules, analyze potential conflicts, and resolve inconsistencies across all available contexts. Empirical results demonstrate that MACR significantly outperforms state-of-the-art baselines across benchmarks, while also providing interpretable resolutions of explicit conflicts.",
+        "authors": "Huang Peng, Jiuyang Tang, Weixin Zeng, Hao Xu, Xiang Zhao",
+        "url": "http://arxiv.org/abs/2606.20245v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20245v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出MACR框架，通过多智能体推理和语义熵度量，显式解决LLM推理中参数知识与上下文知识的冲突。其理论创新性在于超越了传统的二元选择范式，引入了自适应知识评估和归纳式多智能体推理机制，对提升LLM的可靠性和可信度具有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20206v1",
+        "title": "Off-Policy Evaluation for Missingness-Aware Policies in MDPs with Rewards Missing Not at Random",
+        "summary": "In offline Reinforcement Learning, immediate rewards in logged batch data are often unobserved due to sparse or irregular record-keeping, or censored beyond certain reward values. This issue arises in practical settings, including health care and marketing. We investigate off-policy evaluation (OPE) in finite-horizon Markov decision processes when rewards are missing not at random (MNAR), which breaks ignorability and induces selection bias even after conditioning on states and actions. To address this, we formalize a reward-dependent propensity model and use future states as shadow variables to identify the full-data conditional mean reward. We further introduce a bridge function that recovers the conditional mean reward without explicitly modeling the MNAR mechanism, and estimate it via a min-max procedure to avoid double sampling. Building upon these identification results, we propose an Fitted-Q-Evaluation-style estimator that propagates the recovered rewards while allowing target policies to depend on past missingness indicators. Finally, we establish consistency and finite-sample error bounds for our OPE estimator, and show through experiments the strong performance of our method compared to existing methods on simulated and MIMIC-III Sepsis data.",
+        "authors": "Ziheng Wei, Annie Qu, Rui Miao",
+        "url": "http://arxiv.org/abs/2606.20206v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20206v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对离线强化学习中奖励非随机缺失（MNAR）的问题，提出了理论严谨的离策略评估（OPE）方法。通过形式化奖励依赖的倾向性模型、利用未来状态作为影子变量以及引入桥函数来识别条件均值奖励，并建立了估计器的一致性和有限样本误差界。这在数理统计和强化学习交叉领域具有极高的理论价值和实际应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20107v1",
+        "title": "Quantile of Means: A Bonus-Free Ensemble Method for Minimax Optimal Reinforcement Learning",
+        "summary": "Optimal Reinforcement Learning (RL) algorithms typically rely on carefully constructed count-based uncertainty estimates to drive exploration. Although theoretically sound, such estimates are hard to compute in practical settings and therefore offer limited insight for designing exploration heuristics. Meanwhile, ensembling has emerged as a practical approach, but remains without theoretical justification. Building on a recent ensemble-based method for Multi-Armed Bandits, we propose a quantile-based ensemble method for finite-horizon Markov Decision Processes (MDPs). Our simple count-free approach achieves optimal variance-dependent regret bounds, providing theoretical grounding for ensemble-based exploration in RL.",
+        "authors": "Asaf Cassel, Aviv Rosenberg",
+        "url": "http://arxiv.org/abs/2606.20107v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20107v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种基于分位数、无奖励项的集成方法“均值分位数”，用于有限时域马尔可夫决策过程（MDPs）中的极小极大最优强化学习。该方法无需复杂的计数不确定性估计，理论上实现了最优的方差依赖遗憾界，为集成式探索提供了坚实的理论基础，对数据效率和算法架构有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20031v1",
+        "title": "A Neuromorphic Reinforcement Learning Framework for Efficient Pathfinding in Robotic Mobile Fulfillment Systems",
+        "summary": "Dynamic environmental changes, confined workspaces, and stringent real-time constraints make pathfinding in Robotic Mobile Fulfillment Systems (RMFS) a challenging problem for conventional search- and rule-based methods, which typically suffer from high computational complexity and long decision latency. While reinforcement learning (RL) has emerged as a powerful alternative, deploying learned policies with extreme energy efficiency on resource-constrained hardware remains an open challenge. We present SDQN-RMFS, an end-to-end framework that achieves high-fidelity deployment of an RL-trained policy from a full-precision artificial neural network (ANN) through to a neuromorphic chip. By computing only when triggered by sparse events, this framework unlocks ultra-low-power RMFS pathfinding. Our full-stack pipeline operates as follows: an ANN policy is first efficiently trained via a collision-allowing strategy to densify informative trajectories, and then converted into a spiking neural network (SNN) via a hard-label knowledge distillation approach. This effectively addresses the output distribution mismatch, preserving policy capability across the ANN-to-SNN pipeline while substantially reducing inference latency. Hardware experiments demonstrate up to 11,281$\\times$ energy savings and a nearly two-fold reduction in latency compared to a high-performance GPU baseline, while maintaining decision quality on par with the original trained policy. These results establish physical neuromorphic inference as a practical and energy-sustainable pathway for large-scale RMFS operations.",
+        "authors": "Junzhe Xu, Zecui Zeng, Lusong Li, Yuetong Fang, Renjing Xu",
+        "url": "http://arxiv.org/abs/2606.20031v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20031v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了SDQN-RMFS框架，实现了从全精度ANN到神经形态芯片的RL策略高效部署，用于机器人移动履行系统中的路径规划。其创新性在于通过碰撞允许策略和硬标签知识蒸馏，解决了ANN到SNN转换中的输出分布不匹配问题，并在能效和延迟方面实现了数量级的提升，是AI前沿算法在实际应用中解决能耗瓶颈的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20008v1",
+        "title": "VIMPO: Value-Implicit Policy Optimization for LLMs",
+        "summary": "Reinforcement learning with verifiable rewards has become a central tool for improving the reasoning ability of large language models, but current methods face a trade-off between simplicity and credit assignment. Group-relative methods such as GRPO avoid training a critic, but typically assign a trajectory-level advantage to every token. Actor-critic methods provide denser learning signals, but require a learned value function with its own training instability. We introduce VIMPO, a critic-free policy optimization method that derives a policy-implied value function from the optimality conditions of KL-regularized reinforcement learning. For autoregressive generation, the resulting value recurrence can be written in terms of policy-reference log-ratios and anchored by the terminal condition that no future reward remains at the end of a trajectory. This gives a simple value loss that incorporates outcome-level verifiable rewards without training a critic. The same derivation also yields a critic-free actor advantage, allowing VIMPO to separate reward incorporation through the value loss from policy improvement through a PPO-style actor update. On mathematical RLVR benchmarks, VIMPO improves over GRPO across MATH-500, AIME 2024, AIME 2025, and OlympiadBench, with especially larger gains on competition-style evaluations. Under noisy rewards, VIMPO retains a consistent advantage over GRPO, suggesting that policy-implied value optimization can provide finer credit assignment while preserving the practical simplicity of critic-free training.",
+        "authors": "Zhewei Kang, Aosong Feng, Sergey Levine, Dawn Song, Xuandong Zhao",
+        "url": "http://arxiv.org/abs/2606.20008v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20008v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出VIMPO，一种无Critic的策略优化方法，通过KL正则化强化学习的最优性条件推导出策略隐含价值函数。该方法为自回归生成提供了无需训练Critic的价值损失和Actor优势，解决了RLHF中训练不稳定和信用分配的难题，在数学推理基准上表现出色，具有重要的理论创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19984v1",
+        "title": "Kolmogorov-Arnold Reservoir Computing",
+        "summary": "Reservoir computing offers a lightweight framework for forecasting dynamical systems but may struggle to capture long-range dependencies due to limited representational capacity. Conventional reservoir computing recurrently uses trainable reservoirs with hyperparameter sensitivity, while the next-generation reservoir computing removes recurrence at the cost of rapidly growing feature dimensions. Here, we develop Kolmogorov-Arnold Reservoir Computing (KARC), which replaces reservoirs with explicit basis-function expansions inspired by the Kolmogorov-Arnold representation theorem. We rigorously show that KARC is a lightweight design of Kolmogorov-Arnold networks (KANs), preserving the potential expressive capacity of KANs while admitting efficient closed-form training of reservoir computing. At comparable cost, KARC outperforms existing reservoir computing methods on challenging benchmarks including partial differential equations. It can also be integrated with generative diffusion models for text-to-image generation. This work thus establishes a principled bridge between reservoir computing and KANs, enabling efficient and high-fidelity dynamical system forecasting.",
+        "authors": "Juntian Huang, Jurgen Kurths, Ying Tang",
+        "url": "http://arxiv.org/abs/2606.19984v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19984v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了Kolmogorov-Arnold Reservoir Computing (KARC)，用基于Kolmogorov-Arnold表示定理的显式基函数展开取代了传统水库计算中的水库。该工作在理论上严谨地证明了KARC是KANs的轻量级设计，保持了表达能力并实现了高效的闭式训练，为动态系统预测提供了高效且高保真的方法，具有深远的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19944v1",
+        "title": "Timage: A Generative Text-in-Image Paradigm for Fine-Tuning Vision-Language Models",
+        "summary": "Multimodal Large Language Models (MLLMs) often lose track of the right image regions during fine-grained spatial reasoning, because a textual query rarely carries any explicit geometric anchor into the pixel domain. Prevailing remedies either rewire the model's weights or pad the prompt with verbose instructions, yet neither reliably pins the language to the correct visual coordinates without eroding the backbone's general competence. We introduce Timage, a paradigm that recasts multimodal understanding as an alignment problem solved at the input: the query is drawn, as a typeset overlay, onto the image itself. The placement and appearance of this overlay are produced by a Constrained Schrödinger Bridge (cSB), an entropic optimal-transport sampler that factorizes layout synthesis into two coupled stochastic stages. The first stage, Region Search, transports noise toward query-aligned image zones while obeying a hard occlusion barrier that protects salient foreground content; the second stage, Appearance Shaping, sizes the glyphs through an ``ink-budget'' regularizer so that the rendered text stays legible and visually balanced. The resulting overlay behaves as an explicit attention beacon that channels the model's focus along spatial semantics. On the VMCBench suite, Timage paired with a modest 7B backbone clearly overtakes far larger proprietary systems as well as parameter-tuned baselines. The study positions deliberate input reconstruction as a powerful, architecture-neutral lever for strengthening multimodal reasoning.",
+        "authors": "Yifeng Wu, Huimin Huang, Ruiluo Wu, Chunyi Lin, Guanhua Chen, Xian Wu, Wang Song, Ruize Han",
+        "url": "http://arxiv.org/abs/2606.19944v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19944v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出Timage范式，通过将文本查询作为排版叠加绘制到图像上，将多模态理解重构为输入层面的对齐问题。其核心在于使用受限薛定谔桥（Constrained Schrödinger Bridge），一种熵最优传输采样器，将布局合成分解为两个耦合的随机阶段。这在理论上具有高度创新性，并显著提升了MLLM在细粒度空间推理中的性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19818v1",
+        "title": "Uncertainty-Aware Reward Modeling for Stable RLHF",
+        "summary": "Reinforcement learning from human feedback (RLHF) aligns large language models by training reward models on preference data and optimizing policies to maximize predicted rewards. However, this pipeline faces two fundamental challenges: (1) reward models cannot signal when their predictions are unreliable, since they usually act as deterministic point estimators; and (2) modern group-based policy optimization can amplify unreliable reward signals, as exemplified by GRPO's uniform treatment of rewards during advantage computation. As policies explore increasingly diverse responses, these two limitations create a critical vulnerability: unreliable reward estimates may be granted disproportionate influence, triggering severe reward hacking. We propose Uncertainty-Aware Reward Modeling (UARM), which equips reward models with calibrated uncertainty via quantile-based conformal prediction and reweights GRPO advantages through heteroscedastic variance decomposition. Experiments across HelpSteer, UltraFeedback, and PKU-SafeRLHF demonstrate that UARM significantly improves reward model calibration, reduces reward hacking, and enhances downstream alignment quality compared to standard GRPO and uncertainty-agnostic baselines.",
+        "authors": "Licheng Pan, Haocheng Yang, Haoxuan Li, Yichen Sun, Yunsheng Lu, Shijian Wang, Lei Shen, Yuan Lu, Zhixuan Chu, Hao Wang",
+        "url": "http://arxiv.org/abs/2606.19818v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19818v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了UARM框架，通过基于分位数的共形预测为奖励模型提供校准的不确定性，并通过异方差方差分解重新加权GRPO优势。这解决了RLHF中奖励模型不可靠和策略优化放大不可靠信号的根本挑战，显著提高了奖励模型校准、减少了奖励作弊并增强了对齐质量，具有极高的理论严谨性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19755v1",
+        "title": "SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling",
+        "summary": "Speculative inference accelerates large language model (LLM) decoding but provides no inherent safety guarantees. Existing safety defenses are largely incompatible with speculative inference: they either introduce additional computation or disrupt the draft-verify mechanism, negating acceleration benefits. This reveals a fundamental incompatibility between current safety methods and speculative decoding. We propose SafeSpec, a safety-aware speculative inference framework that integrates risk estimation directly into the verification process. SafeSpec attaches a lightweight latent safety head to the target model to jointly evaluate semantic validity and safety in a single forward pass. When unsafe generations are detected, SafeSpec applies rollback and safety-guided reflective multi-sampling to recover safe continuations rather than terminating generation. We model jailbreak attacks as distributional shifts over generative trajectories, where adversarial prompts increase the probability of harmful continuations without eliminating safe ones. Under this model, SafeSpec performs risk-aware trajectory recovery within the speculative decoding process. Across multiple models and adversarial benchmarks, SafeSpec achieves a substantially improved safety-efficiency trade-off. On Qwen3-32B, SafeSpec reduces attack success rates by 15% while preserving a 2.06x inference speedup on benign workloads, demonstrating that speculative acceleration and inference-time safety can be jointly optimized.",
+        "authors": "Haotian Xu, Zeyang Zhang, Linbao Li, Huadi Zheng, Yu Li, Cheng Zhuo",
+        "url": "http://arxiv.org/abs/2606.19755v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19755v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了独立组合令牌（ICT）框架，将优化重点从标量不确定性转向令牌对数分布特性，利用Jensen-Shannon（JS）散度识别关键分支点以指导LLM推理。其理论分析基于香农熵和二阶雷尼熵，证明了选择性更新这些令牌能调节策略集中度，解决了RLVR中熵坍塌和熵爆炸的根本优化不稳定性，对LLM推理能力提升具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20485v1",
+        "title": "Optimal Order of Multi-Agent and General Many-Body Systems",
+        "summary": "This paper develops a general framework for analyzing multi-agent systems with feedback loops between agents actions and collective observations. The framework is built on two fundamental agent-level variables: power, which measures agent influence on collective outcomes, and response functions, which determine how agents react to observations. We derive how macroscopic properties, including total power, useful power, entropy, order, fragility, and mobility, emerge from these two variables of heterogeneous agents. To study the trade off between growth and resilience, we introduce a system-level utility function parameterized by a risk-appetite coefficient and derive an optimal degree of order that balances productivity, stability, and adaptability. The analysis suggests that stronger synchronization can increase collective output but may also increase systemic fragility and reduce mobility. We further argue that order, entropy, information, and useful energy are task-dependent and system-relative concepts whose meanings depend on the objectives of the system. By measuring and designing agent power distributions and response functions, it may be possible to better understand, predict, and optimize collective behavior and identify the conditions under which collective intelligence and optimal order emerge.",
+        "authors": "Jake J. Xia",
+        "url": "http://arxiv.org/abs/2606.20485v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20485v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个分析多智能体系统反馈循环的通用框架，引入了“权力”和“响应函数”等智能体级变量，并推导了宏观属性。该框架旨在理解、预测和优化集体行为，并导出了平衡生产力、稳定性和适应性的最优秩序，具有深刻的理论创新和严谨性，为AI系统设计提供了基础性指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20416v1",
+        "title": "On the Redundancy of Timestep Embeddings in Diffusion Models",
+        "summary": "Diffusion models rely heavily on explicit timestep embeddings to modulate the denoising process across various noise scales. In this work, we challenge the necessity of these temporal signals by analyzing their impact on U-Net and Diffusion Transformer architectures. Beyond empirical evidence, we provide a theoretical framework demonstrating that, under certain conditions, the global minimizer of the diffusion training objective can be achieved without explicit timestep conditioning. Our findings reveal a surprising robustness when timestep embeddings are completely removed. Extensive ablation studies on the CelebA and CIFAR-10 datasets show that these time-agnostic models can maintain high structural fidelity and even surpass their conditioned counterparts in competitive metrics, including FID, precision, and recall. Our analysis suggests these architectures can implicitly infer noise scales from the corrupted input under specific assumptions, rendering explicit temporal conditioning redundant. This study challenges long-standing temporal conditioning paradigms and paves the way for more efficient and structurally focused generative architectures.",
+        "authors": "José A. Chávez",
+        "url": "http://arxiv.org/abs/2606.20416v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20416v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "挑战了扩散模型中显式时间步嵌入的必要性，提供了理论框架证明在特定条件下，无需显式时间条件即可实现扩散训练目标的全局最小值。这一发现对扩散模型的基础理论和架构设计具有重要意义，可能为更高效、结构更集中的生成架构铺平道路。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20231v1",
+        "title": "Thermodynamic Measure of Intelligence",
+        "summary": "Can intelligence be measured? We propose that intelligence can be defined as the lawful amplification of rare but valid futures: a system increases the probability of outcomes that would be unlikely under passive dynamics but remain admissible under the constraints of the domain. We start with the premise that an intelligent system must model the world and its own place within it. Because the system is part of the world it models, this leads naturally to recursive self-simulation: the system represents futures in which its own actions are part of the trajectory. Our central results give a necessity statement and a conditional near-sufficiency statement connecting this architecture to a precise thermodynamic measure of lawful amplification of rare-valid futures: high rare-valid lift is impossible unless the internal simulation identifies rare-valid futures with high fidelity; conversely, when rare-valid fidelity is high and the simulation contains an effective policy, the achievable lift approaches the actuation-limited optimum. Thus recursive self-simulation is not merely a plausible feature of intelligence but, under the stated assumptions, is necessary and nearly sufficient for high thermodynamic intelligence. The resulting framework makes intelligence measurable on a universal scale, from passive matter and feedback controllers, large language models, and humans as text generators to Maxwell-demon-like information engines.",
+        "authors": "Ishanu Chattopadhyay",
+        "url": "http://arxiv.org/abs/2606.20231v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20231v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种将智能定义为“稀有但有效未来合法放大”的热力学度量，并基于递归自模拟架构。该工作提供了连接该架构与热力学智能度量的必要性和条件充分性声明，为衡量智能提供了一个通用尺度，具有高度的理论创新性和严谨性，是AI基础理论研究的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.20183v1",
+        "title": "Effective Dimension Governs Generalization in Quantum Kernel Vision Models",
+        "summary": "Recent quantum vision models-quantum vision transformers and quantum convolutional networks-report two striking but unexplained empirical phenomena: (i) ansatze with more, or more uniformly distributed, entanglement generalize better, and (ii) injecting quantum noise can improve test accuracy rather than degrade it. These observations are currently treated as curiosities, discovered by grid search and explained, if at all, by hand. We show that both are manifestations of a single, measurable quantity: the \\emph{effective dimension} $d_{\\rm eff}$ of the (noise-shaped) quantum feature kernel. Working primarily with quantum-kernel vision models-a quantum feature map read out by a kernel classifier-we give a spectral account in which entanglement structure and quantum noise are two knobs that move $d_{\\rm eff}$; in an overfitting regime, contracting $d_{\\rm eff}$ acts as ridge-like regularization. We analyze the mechanism: an \\emph{exact} decomposition of the depolarized kernel $K_p=(1-p)^2K+\\tfrac{p(2-p)}{D}\\mathbf{1}\\mathbf{1}^\\top$ with $d_{\\rm eff}(K_p)\\to1$, a contraction result (and its boundary) for amplitude damping, a kernel-machine capacity bound, and a capacity/alignment risk decomposition; the monotone contraction operative in our entangled experiments is verified empirically, not proven in general. Along the one-parameter depolarizing family the collapse is instead exact by construction; we use it only to confirm the kernel decomposition to machine precision and at up to $12$ qubits, not as evidence for $d_{\\rm eff}$. Amplitude damping contracts $d_{\\rm eff}$ and lifts test accuracy by up to $+13\\%$ along an inverted-U sweet spot; the effect's sign flips between the over- and under-fitting regimes; noise injection matches an explicit spectral-filtering frontier. Our results organize two reported anecdotes into a single measurable principle for designing quantum-vision models.",
+        "authors": "Jian Xu, Delu Zeng, John Paisley, Qibin Zhao",
+        "url": "http://arxiv.org/abs/2606.20183v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.20183v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "揭示了量子视觉模型中纠缠和量子噪声改善泛化能力的两个经验现象，是量子特征核“有效维度”的单一表现。通过谱分析和精确分解，提供了严格的理论解释，将这些现象组织成设计量子视觉模型的单一可测量原理，对量子AI算法的理论理解和设计具有重要指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.19894v1",
+        "title": "Score Approximation for Diffusion Models on Arbitrary Low-Dimensional Structures",
+        "summary": "The remarkable success of score-based diffusion models has spurred significant efforts to establish their theoretical foundations. However, existing complexity bounds for score approximation rely heavily on restrictive assumptions like Lipschitz continuous densities or smooth manifold supports, which are routinely violated by the singularities, sharp boundaries, and disjoint clusters inherent to real-world perceptual data. This work establishes a universal score approximation theorem that works for any distribution supported on any compact set of upper Minkowski dimension $d$. Using a novel discrete-mixture formulation, we prove that the score function can be approximated with a ReLU network whose complexity grows exponentially only with $d$, thus breaking the exponential curse of ambient dimensionality. Combined with existing theories on accurately solving the backward diffusion SDE for arbitrary compact distributions, our work shows that diffusion models readily adapt to irregular, non-smooth data structures, explaining their competence in real-world generative tasks.",
+        "authors": "Xinhe Mu, Zaijiu Shang, Zhaoqi Zhou, Chuan Zhou, Qi Meng, Guiying Yan, Zhiming Ma",
+        "url": "http://arxiv.org/abs/2606.19894v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.19894v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "建立了适用于任意紧凑集（具有上Minkowski维度d）上分布的通用分数近似定理，突破了环境维度的指数诅咒。通过新颖的离散混合公式，证明了分数函数可以用ReLU网络近似，其复杂度仅随d指数增长。这为扩散模型在不规则、非光滑数据结构上的有效性提供了坚实的理论基础。"
+    }
+]

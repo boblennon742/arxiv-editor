@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.22784v1",
+        "title": "Semiparametric Efficiency Theory as Differential Calculus on a Space of Probability Distributions",
+        "summary": "Semiparametric efficiency theory provides the mathematical foundation for influence-function-based estimation, including one-step estimators, targeted minimum loss estimators, and many modern inferential methods used in causal inference and missing data analysis. Despite its widespread use, the theory is often presented through a collection of technical constructions whose geometric meaning remains opaque. As a result, influence functions are often derived and applied without an intuitive understanding of the principles connecting scores, tangent spaces, nuisance tangent spaces, and efficient influence functions. This tutorial develops a geometric exposition of semiparametric efficiency theory as a form of differential calculus on a space of probability distributions. Drawing systematic parallels with ordinary multivariable calculus, we show that paths of distributions play the role of curves, scores play the role of velocity vectors, influence functions play the role of gradients, and efficient influence functions arise as projected gradients. This perspective provides a unified explanation for several foundational questions, including why perturbation directions are represented by functions, why tangent spaces depend only on the statistical model whereas nuisance tangent spaces depend on the parameter of interest, and why efficient influence functions arise through orthogonal projection. The resulting framework offers a geometric perspective on semiparametric efficiency theory and influence-function-based inference.",
+        "authors": "Razieh Nabi",
+        "url": "http://arxiv.org/abs/2606.22784v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.22784v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文以微分几何的视角阐述了半参数效率理论，将复杂的统计概念与直观的数学工具（如曲线、梯度、正交投影）联系起来。其理论深度和对基础统计学概念的清晰阐释，对于理解现代因果推断和缺失数据分析方法至关重要，非常符合您对严谨数学逻辑和清晰推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23590v1",
+        "title": "The Topology of Ill-Posed Questions: Persistent Homology for Detection and Steering in LLMs",
+        "summary": "Ill-posed questions, including ambiguous, underspecified, or contradictory queries, may admit no valid answer or multiple plausible answers, posing a challenge for large language models (LLMs). Existing approaches largely analyze ill-posedness through model outputs and often focus on specific subclasses. We investigate whether diverse sources of ill-posedness can be represented within a unified topology of LLM internal states and whether this structure can be used to steer response behavior. We model the contextual hidden states of prompt tokens at each transformer layer as a point cloud and characterize its geometry using finite zero-dimensional persistent homology. Each layer is summarized by three compact descriptors: mean finite lifetime, normalized lifetime entropy, and largest-lifetime concentration. Concatenating these descriptors across layers yields a topology representation of the question. We further introduce topology-conditioned activation steering, which retrieves topologically similar examples and constructs query-specific activation interventions that encourage source-aware clarification or abstention. Across three open-weight LLMs, topology features consistently outperform prompt-based and pooled-hidden-state baselines for ill-posedness classification, improving average accuracy from \\(67.4\\%\\) to \\(78.9\\%\\) on AmbigQA, from \\(79.9\\%\\) to \\(88.5\\%\\) on SituatedQA, and from \\(57.6\\%\\) to \\(69.6\\%\\) on CLAMBER 9-way classification. Topology-conditioned steering increases the average total acceptable response rate from \\(61.4\\%\\) to \\(70.6\\%\\) and grounded acceptable responses from \\(11.9\\%\\) to \\(16.4\\%\\). These results show that persistent homology provides both an interpretable representation of ill-posedness and an effective mechanism for targeted response steering.",
+        "authors": "Guangyu Jiang, Sizhe Tang, Mahdi Imani, Tian Lan",
+        "url": "http://arxiv.org/abs/2606.23590v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23590v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究将拓扑数据分析中的持久同调（Persistent Homology）应用于大型语言模型（LLMs）的内部状态，以检测和引导对“病态问题”的响应。这种将高级数学工具（拓扑学）应用于现代AI系统内部机制的创新性方法，以及对模型内部状态几何特征的严谨刻画，与您的研究兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23515v1",
+        "title": "FairBED: A Bayesian Experimental Design Approach to Gathering Fairer Data",
+        "summary": "Frameworks for ensuring fairness in machine learning typically focus on learning fair models from existing data. But this endeavor is often undermined by biases already present in that data. We therefore look to modify the data acquisition process itself to help gather fairer data that is inherently more suitable for training fair predictors. To this end, we introduce FairBED, which provides novel formulations for quantifying the fairness of datasets themselves based on the idea that fair datasets should be uninformative about sensitive attributes. We then use this to construct practical fairness-aware Bayesian experimental design (BED) objectives that maximize expected information gain about the target quantity of interest while minimizing expected information gain about sensitive attributes. We further derive a theoretical link between FairBED and demographic parity, and show empirically that models trained on data gathered using FairBED provide improved fairness-accuracy trade-offs compared to randomly acquired data and conventional BED.",
+        "authors": "Marcel Hedman, Emily Alger, Brieuc Lehmann, Chris Holmes, Tom Rainforth",
+        "url": "http://arxiv.org/abs/2606.23515v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23515v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了FairBED框架，通过贝叶斯实验设计（Bayesian Experimental Design）从数据采集源头解决机器学习中的公平性问题。它量化了数据集的公平性，并推导了与人口统计学平价（Demographic Parity）的理论联系，结合了贝叶斯方法、信息论和公平性理论，具有强大的统计理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23364v1",
+        "title": "Convergence of Gradient Descent for General Neural Network Architectures Beyond the NTK Regime",
+        "summary": "Training dynamics is central to understanding neural networks, yet its theoretical analysis remains difficult even for simple architectures and becomes substantially more challenging for general modern architectures. In this paper, we propose a convergence framework for analyzing gradient descent (GD) dynamics under a broad family of neural network architectures and datasets beyond the neural tangent kernel (NTK) regime. The framework is formulated at the level of network blocks and covers architectures including pre-normalized multi-layer transformers. More precisely, under mild assumptions, we prove that for almost all initializations, GD with regular learning rates converges to the neighbourhood of a stationary point. This is mainly proved by establishing an iterate-dependent PL-type inequality through analyticity and measure-zero arguments, and by proving Lipschitz smoothness along the GD trajectory through polynomial generalized smoothness and a local relaxed dissipative condition. We further interpret the theorem under Xavier initialization and practical architectural scaling, showing that the learning rate scale depends on the depth and effective bottleneck dimensions rather than the largest width. Finally, we derive structural nondegeneracy implications for residual connections and function composition, and provide a generic characterization of global minimizers within our framework.",
+        "authors": "Yuqing Wang",
+        "url": "http://arxiv.org/abs/2606.23364v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23364v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入分析了梯度下降在通用神经网络架构中超越NTK（Neural Tangent Kernel）机制的收敛性。它通过建立迭代依赖的PL型不等式、Lipschitz光滑性等，提供了严谨的数学证明，并对全局最小化器进行了通用表征。这是对神经网络优化理论的根本性贡献，非常符合您对优化收敛性和数学推导的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.22993v1",
+        "title": "Generalized nonparametric regression in reproducing kernel Hilbert spaces: Consistency and rates of convergence",
+        "summary": "We develop a comprehensive theory for regularized M-estimation in reproducing kernel Hilbert spaces. Under mild conditions on the loss we establish existence and measurability of the estimator, covering a wide range of convex and non-convex losses, including bounded robust losses. We further prove sharp rates of convergence with an explicit bias-variance decomposition governed by a novel complexity measure. We show that the variance is independent of misspecification, while the bias depends on a source condition parameter known in the learning literature. For tensor product Sobolev spaces we obtain new rates that connect to spaces of functions with dominating mixed smoothness, substantially extending existing results and explaining why these estimators circumvent the curse of dimensionality. Our methodology, combining elements from both functional analysis and empirical process theory, allows for an asymptotic linearisation of the objective function that avoids both closed-form solutions and global Lipschitz assumptions, and may be of independent interest. The estimators are implemented in C++ and theory is supported by numerical experiments.",
+        "authors": "Ioannis Kalogridis",
+        "url": "http://arxiv.org/abs/2606.22993v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.22993v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为再生核希尔伯特空间（RKHS）中的正则化M估计器发展了全面的理论，包括估计器的存在性、可测性以及在各种损失函数下的收敛速度。它还通过函数分析和经验过程理论，推导了新的、规避维度诅咒的收敛速度。这是非参数回归和统计学习理论的基石性工作，具有极高的数学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.22984v1",
+        "title": "Scalable Physics-Inspired Transformers for Spin Glasses",
+        "summary": "Efficient sampling of the Boltzmann distribution in frustrated spin glasses is central to statistical mechanics and combinatorial optimization. Despite advances in machine-learning-based approaches, two issues persist: limited understanding of why variational models fail to benefit from increased scale, unlike the monotonic scaling law of large language models; and high computational cost on large systems that negates advantages over classical sampling methods. Here, we develop a physics-inspired transformer with interpretable sparse attention and spin-tailored positional embeddings to address these challenges. By further leveraging FlashAttention for parallel ancestral sampling, it achieves up to two orders of magnitude speedup over vanilla variational autoregressive networks, enabling neural-network simulations of spin-glass systems to unprecedented sizes on a single GPU. It can resolve full probability distributions, free energies, and overlap statistics across temperatures, for Sherrington-Kirkpatrick and 2D or 3D Edwards-Anderson models, where existing machine-learning methods encounter limitations at certain temperatures. This framework thus establishes a scalable paradigm for frustrated spin-glass systems.",
+        "authors": "Lu Zhong, Wenli Duan, Jing Liu, Pan Zhang, Ying Tang",
+        "url": "http://arxiv.org/abs/2606.22984v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.22984v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种物理启发的Transformer模型，用于自旋玻璃（Spin Glasses）的玻尔兹曼分布采样。它结合了统计力学、深度学习和可解释性，通过自旋定制的位置嵌入和稀疏注意力机制，实现了对复杂物理系统概率分布、自由能和重叠统计的精确解析。这是将严谨物理学原理与现代AI系统深度结合的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.22813v1",
+        "title": "Active Inference as the Test-Time Scaling Law for Physical AI Agents",
+        "summary": "In this paper, a novel test-time scaling law for physical artificial intelligence (AI) agents is introduced. This scaling law enables physical AI agents to reason with their world models to generalize in unforeseen scenarios at test time. The derived scaling law is grounded in the first principle of active inference, which equips agents with the general objective to survive in the real world, under which their specific task objectives are subsumed. Active inference achieves this by providing the reasoning to resolve prediction errors that arise when the agent encounters unforeseen situations outside its training distribution, enabling generalization in non-stationary environments. The proposed scaling law captures this by dynamically updating the agent's policy with this reasoning at test time. This policy update is modeled as a soft Bayesian inference process in which beliefs about the policy are updated using the reasoning that reduces expected prediction errors under allowable policies as a likelihood. The resulting posterior policy admits a biological interpretation, recovering the scaling mechanism that engages the brain's basal ganglia and prefrontal cortex at test time. To solve this analytically intractable problem, a variational inference solution minimizing free energy bounds is developed. This solution extends to enable learning beyond training by reinforcing new instances, resolved at test time, in both the policy and world model. Unlike existing scaling laws constrained by model size and training data, the derived solution scales with the continuous real-world experience of a physical AI agent. Simulation results on an autonomous driving task demonstrate that the proposed solution outperforms model-free Q-learning and model-based Bayesian reinforcement learning, achieving robust generalization to unforeseen scenarios while improving inference efficiency by over 36%.",
+        "authors": "Omar Hashash, Christo Kurisummoottil Thomas, Walid Saad, Merouane Debbah, Karl Friston, Adeel Razi",
+        "url": "http://arxiv.org/abs/2606.22813v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.22813v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了物理AI智能体在测试时期的主动推理（Active Inference）缩放定律，将其策略更新建模为软贝叶斯推理过程，并开发了最小化自由能界限的变分推理解决方案。这是主动推理、贝叶斯方法和强化学习的深度理论工作，具有明确的数学推导和生物学解释，对AI智能体的泛化能力有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23656v1",
+        "title": "Causal Inference with Multiple Misclassified Exposures: A Control Variate-Adjusted Calibration Weighting Approach",
+        "summary": "Exposure misclassification is a common concern in studies of respiratory infections in cystic fibrosis. Throat swabs are frequently used in place of expectorated or induced sputum cultures, although they have imperfect sensitivity and specificity to detect Pseudomonas aeruginosa and Staphylococcus aureus. We develop calibration weighting and control variate estimators for causal inference with multiple misclassified binary exposures and clustered observations. The calibration approach treats misclassification as a missing data problem, achieving consistency without modelling the misclassification mechanism. The control variate adjustment integrates information from error-prone observations to reduce variance while preserving the consistency of the gold-standard estimator. We show that the resulting estimator inherits double robustness from its component estimators. We also characterize a structural ceiling on efficiency gains in the bivariate setting, where joint correct classification of both exposures limits the variance reduction achievable relative to univariate applications. Simulation studies confirm the consistency and double robustness of the proposed estimators under model misspecification. We then apply these methods to a cohort of $651$ cystic fibrosis patients ages $6$-$21$. Swab-based estimates attenuate the effect of P. aeruginosa on percent predicted FEV$_1$ by approximately $69\\%$ relative to sputum-based estimates ($-2.67$ vs. $-8.52$ percentage points; $95\\%$ CI for sputum: $-13.40$, $-3.63$). These findings suggest that relying on throat swabs may lead to under-treatment of P. aeruginosa infections. More broadly, the methods provide a framework for causal inference with multiple misclassified exposures.",
+        "authors": "Nandini Murali, Keith Barnatchez, Jordana E. Hoppe, Brandie D. Wagner, Kayleigh P. Keller, Kevin P. Josey",
+        "url": "http://arxiv.org/abs/2606.23656v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23656v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文针对具有多重错误分类暴露和聚类观测数据的因果推断问题，提出了校准加权和控制变量估计器。它通过将错误分类视为缺失数据问题，实现了在不建模错误分类机制下的估计器一致性，并表征了效率增益的结构上限。这是因果推断领域中具有强大统计保证和理论分析的重要工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23499v1",
+        "title": "A generalized multiple-intervention stepped wedge design framework for treatment effect estimation in the presence of non-uniform cluster-period correlation structures",
+        "summary": "Existing power and design methods for multiple-intervention stepped wedge designs (M-SWDs) typically assume exchangeable cluster-period correlation, despite evidence that correlation often decays over time. Misspecification of this correlation structure can substantially distort variance estimation and power, particularly for treatment interaction effects. We develop a unified covariance framework for M-SWDs that separates intracluster correlation from an explicit cluster-period correlation matrix. This formulation accommodates exchangeable, autoregressive, and more general distance-dependent correlation structures while preserving closed-form expressions for the variance of treatment effect estimators under linear mixed models. Using analytic results and simulation studies, we demonstrate that assuming uniform correlation when the true structure is time-dependent can lead to substantial power mischaracterization. Specifically, we find that designs calibrated under independence assumptions may be overly conservative and compound symmetry can be either optimistic or conservative. These findings demonstrate the importance of explicitly modeling cluster-period correlation at the design stage of M-SWDs and provide practical guidance for power calculation and design selection in realistic settings.",
+        "authors": "Samantha M. Levy, Jose-Miguel Yamal",
+        "url": "http://arxiv.org/abs/2606.23499v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23499v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为多干预阶梯式楔形设计（M-SWDs）开发了一个统一的协方差框架，以处理非均匀的聚类-时期相关结构。它在保持线性混合模型下治疗效果估计器方差的闭式表达式的同时，容纳了多种相关结构。这是统计设计和分析领域的严谨贡献，对准确的功效计算和设计选择具有实际指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23402v1",
+        "title": "Physics-Informed Modeling for Wood Thermal Analysis and Prediction",
+        "summary": "Wood materials exhibit complex, spatially varying thermal properties that challenge traditional architectural assumptions of material homogeneity. Although data-driven approaches can directly map wood RGB images to their corresponding thermal responses, they operate as uninterpretable black boxes that prioritize statistical correlation and may absorb experimental noise rather than thermodynamic plausibility. To address these limitations, we present physics-informed deep learning frameworks that integrate partial differential equations (PDEs) to predict pixel-level thermal responses of spatially heterogeneous wood materials using wood RGB images and testbed temperature maps. Specifically, we investigate two distinct approaches to enforcing a normalized 2D steady-state heat transfer equation derived from the general heat transfer equation: Physics-Informed Convolutional Neural Networks (PICNNs), which embed physics as a soft penalty term in the loss function, and Physics-Integrated Convolutional Neural Networks (PInteCNNs), which hard-code an analytical approximator-predictor-corrector solver directly into convolutional neural networks. To validate our proposed approaches, we collect three real-world multimodal datasets of Poplar, Grandis Cross-Cut (Grandis-CC), and Grandis Radial-Cut (Grandis-RC) wood samples. We further demonstrate that embedding physical inductive biases successfully balances predictive accuracy, physical interpretability, and intra-species diversity, outperforming data-driven approaches in handling complex wood material heterogeneity and enabling the extraction of interpretable physical parameters. Project: https://zekifayes.github.io/pim",
+        "authors": "Jingren Xie, Alex John Buckthal, Ryan Anthony O'Connor, Isak Worre Foged, Dim P. Papadopoulos",
+        "url": "http://arxiv.org/abs/2606.23402v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23402v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了物理信息深度学习框架，通过整合偏微分方程（PDEs）来预测异质木材材料的像素级热响应。它区分了将物理作为软惩罚项和硬编码分析求解器的方法，实现了预测准确性、物理可解释性和物种内多样性的平衡。这是将严谨物理学和数学模型（PDEs）融入AI系统的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23359v1",
+        "title": "Adaptive Hard-Soft Physics-Informed Neural Networks for Robust Boundary-Constrained PDE Solving",
+        "summary": "Physics-informed neural networks (PINNs) provide an effective way to solve partial differential equations (PDEs) by embedding physical principles into the learning process. However, the conventional PINN formulation, in which all constraints are imposed as soft penalty terms within a composite loss, often exhibits slow convergence, sensitivity to loss weight scaling, and inaccurate boundary enforcement due to poor conditioning of the optimization landscape. To address these limitations, this study proposes a unified hard--soft physics--informed neural network (HSPINN) with adaptive loss weighting. In this framework, Dirichlet and periodic boundary conditions are enforced exactly by construction through analytical or polynomial lifting, masking functions, and periodic feature mappings, while the governing PDE residuals, Neumann fluxes, and initial conditions are treated as soft constraints. An inverse-share softmax strategy dynamically balances the relative importance of individual loss components during training, eliminating manual penalty tuning and improving gradient stability. This formulation ensures boundary admissibility throughout optimization and enhances convergence efficiency and numerical robustness. Applications to representative elliptic (Poisson), parabolic (Burgers), and hyperbolic (convection with periodic boundaries) problems demonstrate that HSPINN consistently achieves faster convergence, higher accuracy, and greater stability than conventional PINNs, establishing a general and scalable foundation for physics-constrained deep learning across science and technology.",
+        "authors": "Duc Tien Nguyen, Trinh Minh Tuan, Nguyen Duc Manh, Vu Linh Nguyen, Dinh Gia Ninh",
+        "url": "http://arxiv.org/abs/2606.23359v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23359v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了自适应硬-软物理信息神经网络（HSPINN），通过解析或多项式提升、掩码函数和周期特征映射等方式，精确强制执行Dirichlet和周期边界条件，同时动态平衡损失权重。这种方法确保了边界的可容许性，提高了收敛效率和数值鲁棒性，是PINN领域在数学严谨性和数值稳定性上的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23326v1",
+        "title": "Online forecast reconciliation using linear models",
+        "summary": "We present a framework for online and adaptive forecasting and hierarchical reconciliation using linear regression models. We begin by formalizing hierarchies using graphs, and motivated by their structure, formulate a multivariate linear model using the matrix normal distribution to characterize residuals. Parameter estimation is posed as a ridge regression problem and applied to hierarchical forecast reconciliation. The connections between ridge regression, Bayesian estimation and shrinkage for hierarchical reconciliation are discussed, and results for uncertainty quantification in parameters and forecasts are provided. Based on the ridge regression formulation, a recursive inference scheme inspired by recursive least squares is described. The algorithm is implemented in the PyOnlineForecast package. Finally, the proposed methodology is demonstrated on a case study for district heating load forecasting using a temporal hierarchy. Our results provide a reference for implementation of forecast reconciliation via multivariate linear models in an online setting. The case study furthermore highlights practical considerations of using temporal hierarchies in an online setting and demonstrates the usefulness of the proposed framework and implementation, both for district heating load forecasting and more generally for online hierarchical forecasting.",
+        "authors": "Tobias Rønlev-Knudsen, Henrik Madsen, Jan Kloppenborg Møller",
+        "url": "http://arxiv.org/abs/2606.23326v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23326v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个用于在线和自适应预测以及分层协调的线性模型框架。它使用矩阵正态分布来表征残差，将参数估计表述为岭回归问题，并讨论了贝叶斯估计和收缩。其递归推理方案和对参数与预测不确定性的量化，展现了扎实的统计建模和推断能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23292v1",
+        "title": "Towards a Bathroom-Centered Human-Building Digital Twin Framework for Indoor Safety Analysis",
+        "summary": "Bathroom use is a critical safety challenge for older adults because wet surfaces, constrained layouts, limited support, and frequent posture transitions are concentrated within a small domestic space. These conditions create risks that cannot be adequately understood by considering either the bathroom environment or human motion in isolation. Existing bathroom safety studies mainly identify hazards, accessibility problems, or design modifications, whereas human-centered sensing studies often focus on activity recognition or fall detection without sufficient semantic understanding of the surrounding environment. This separation limits the interpretation of how older adults interact with fixtures, support surfaces, wet areas, and spatial constraints during daily bathroom activities. To address this gap, this study proposes a bathroom-centered human-building digital twin framework for interaction-aware indoor safety analysis with a specific emphasis on older adult bathroom safety. The framework conceptualizes bathroom risk as a coupled human-environment process and integrates semantic bathroom representation, skeleton-based human representation, spatial-semantic coupling, interaction-aware event analytics, and safety-oriented visualization. A Unity-based proof-of-concept prototype is developed to demonstrate the feasibility of the framework. Although the current work remains a prototype-oriented investigation, it establishes a methodological basis for analyzing older adults' bathroom safety through explicit body-environment relations and for advancing privacy-sensitive, interaction-aware digital twin applications in aging-in-place residential environments.",
+        "authors": "Yuanzhi Su,  Huiying,  Hou",
+        "url": "http://arxiv.org/abs/2606.23292v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23292v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了CTC（Connectionist Temporal Classification）内部评分在N-best假设选择中的局限性，并定位了声学置信度和语言合理性之间的信息瓶颈。它通过严谨的统计分析和与Rao-Blackwellized REINFORCE的联系，揭示了CTC的判别能力饱和问题，并提出了通过外部语言信息突破瓶颈的方法，具有深刻的算法理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23177v1",
+        "title": "Interpretable Probabilistic Medical Image Segmentation via Gaussian Process with Explicit Modelling of Annotation Bias and Variability",
+        "summary": "Deep learning-based medical image segmentation models are trained using annotations that exhibit systematic bias and variability across raters. While probabilistic multi-rater approaches can emulate annotator-specific delineations, annotator characteristics are typically encoded implicitly in deep latent feature space, making direct analysis of their influence on predictive distributions less straightforward. We propose a logit-space probabilistic segmentation framework based on stochastic variational Gaussian Process that explicitly decomposes predictions into an image-dependent reference logit distribution and annotator specific perturbations parameterised by bias and variance. This formulation enables more explicit analysis on how intra- and inter-rater variability propagate to predictive distributions. We evaluate the method on a multi-annotator medical image dataset, which shows that explicitly modelling annotator specific perturbations improves uncertainty calibration while maintaining comparable segmentation accuracy, compared with state-of-the-art multi-rater probabilistic segmentation method. The learned bias and variance parameters quantitatively reflect annotator-specific behaviour. Furthermore, controlled perturbation experiments over bias and variance demonstrate how changes in annotator parameters systematically influence predictive performance. The code used in this paper is made publicly available at https://github.com/QiLi111/GPS-Var.",
+        "authors": "Qi Li, Yuliang Huang, Shaheer U. Saeed, Qianye Yang, Vasilis Stavrinides, Zachary M. C. Baum, Dean C. Barratt, J. Alison Noble, Tom Vercauteren, Yipeng Hu",
+        "url": "http://arxiv.org/abs/2606.23177v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23177v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了基于高斯过程（Gaussian Process）的可解释概率医学图像分割框架，明确建模了标注偏差和变异性。它将预测分解为图像依赖的参考logit分布和标注者特定的扰动，从而实现了更明确的分析和改进的不确定性校准。这是将严谨统计建模（高斯过程、变分推断）应用于医学AI可解释性和鲁棒性的优秀工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.23116v1",
+        "title": "Direct and Indirect Discrimination in Generalized Linear Models",
+        "summary": "Generalized linear models are central to actuarial modelling of binary risk, claim frequency, utilization, and cost-related outcomes. Yet fairness diagnostics often rely on linear-model intuitions, although GLM predictions are obtained by transporting a latent score through a nonlinear inverse link. We develop a moment-based decomposition framework for diagnosing group disparities in fitted GLM predictions. In an exact linear-Gaussian benchmark, the Wasserstein barycentric criterion for distributional demographic-parity violation reduces to a two-moment criterion and decomposes into direct mean, indirect mean, interaction, and structural components. For GLMs, we distinguish the empirical output-scale criterion $U_2(f)$, a within-group proxy $\\widetilde U_2(f)$, and a leading decomposition $D_1(f)$. This leading term preserves the four linear channels and adds two curvature components induced by the inverse link: curvature coupling and curvature amplification. We derive explicit formulas for logistic, Poisson, and Tweedie specifications and illustrate the diagnostic on medical-expenditure survey data. The framework is not a legal test of discrimination, nor a full characterization of distributional parity outside the linear-Gaussian case. It is a tractable actuarial diagnostic for identifying whether fitted prediction disparities arise from explicit sensitive effects, proxy-mediated covariate profiles, covariance-structure differences, or nonlinear link effects.",
+        "authors": "Bertille Tierny, Arthur Charpentier, François Hu",
+        "url": "http://arxiv.org/abs/2606.23116v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.23116v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为广义线性模型（GLMs）中的直接和间接歧视问题开发了一个基于矩分解的诊断框架。它将分布人口统计学平价违规的Wasserstein重心准则分解为多个分量，并明确识别了由逆链接函数引起的曲率分量。这是对GLMs中公平性进行严谨统计和数学分析的理论贡献，具有明确的公式推导。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.25927v1",
+        "title": "Knowledge Cascade: Reverse Knowledge Distillation on Nonparametric Multivariate Functional Estimation",
+        "summary": "As machine learning models and datasets continue to grow, developing complex models has become increasingly computationally demanding. Knowledge distillation reduces deployment cost by compressing a large, well-trained teacher model into a compact student model, but it does not address settings where constructing the teacher itself is the bottleneck. Motivated by this challenge, we introduce Knowledge Cascade (KCas), a reverse knowledge distillation framework that uses information from a small, inexpensive student model to guide the development of a more complex teacher model. Although this direction is counterintuitive because the teacher typically has greater representational capacity, we show that student-to-teacher transfer can be principled when supported by statistical scaling relationships. We first develop KCas for nonparametric multivariate functional estimation in reproducing kernel Hilbert spaces via smoothing splines, where selecting multiple smoothing parameters is a major computational bottleneck. KCas transfers student-selected smoothing parameters to the full-sample regime through asymptotic scaling laws, substantially reducing computational cost for high-dimensional and large-scale datasets while retaining theoretical guarantees. Beyond smoothing splines, we illustrate the same principle through kernel density estimation and deep learning hyperparameter transfer. Simulations and real-data experiments show that KCas achieves substantial computational savings while maintaining strong statistical performance, and can sometimes outperform the corresponding full-sample procedure.",
+        "authors": "Luyang Fang, Haoran Lu, Yongkai Chen, Wenxuan Zhong, Ping Ma",
+        "url": "http://arxiv.org/abs/2606.25927v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25927v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“逆向知识蒸馏”的开创性概念（Knowledge Cascade, KCas），通过统计缩放律让小型学生模型指导复杂教师模型的开发，解决了传统知识蒸馏中教师模型构建本身的计算瓶颈。其理论基础扎实，利用渐近缩放律进行参数迁移，具有理论创新性和显著的计算效率提升，完美契合您对理论创新和数据效率的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25987v1",
+        "title": "Weave of Formal Thought",
+        "summary": "Large language models (LLMs) attain remarkable surface fluency on code, yet they neither formally guarantee the syntactic validity of their output nor leverage the hierarchical structure defining the target language. While existing constrained-decoding frameworks address the former, they operate under rigid assumptions that preclude critical lexical mechanisms -- including context-sensitive lexing, maximal-munch tokenization, and keyword extraction -- and only approximate vocabulary masking, sacrificing completeness. For the latter, code LLMs typically inject grammatical structure via predetermined policies rather than learning which structural information to expose. In this work, we introduce Weave of Formal Thought (WoFT), a paradigm uniting rigorous syntactic validation with learned structural representations. First, we present a formal engine and constrained decoder that is sound and complete with respect to the full Tree-sitter specification. By augmenting generalized LR (GLR) parsing with a speculative-lexing construction that maintains concurrent lexer-state hypotheses synchronized with a GLR graph-structured stack, our decoder admits every subword token extending to a valid program prefix and rejects all others. Second, we present a latent-variable fine-tuning method training the language model to interleave non-terminal grammar symbols directly into generation. Utilizing the reweighted wake-sleep (RWS) algorithm to optimize the importance-weighted evidence lower bound (IW-ELBO) of the surface text, the model learns to selectively retain formal derivations as an adaptive structural scratchpad. For Python, fine-tuning StarCoder2-3B with our RWS objective reduces per-token cross-entropy by 14.3% relative to a text-only SFT baseline, demonstrating that discretionary latent syntax recovers critical structural information that flat autoregressive training discards.",
+        "authors": "Alexandre Bouayad",
+        "url": "http://arxiv.org/abs/2606.25987v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25987v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了WoFT框架，将LLM代码生成的严格语法验证与学习到的结构化表示相结合。通过引入形式化引擎（基于GLR解析和推测性词法分析）确保语法正确性，并利用潜在变量微调学习语法结构。这在理论上极具创新性，解决了LLM代码生成中的核心可靠性问题，对LLM架构的理解和改进有深远意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25956v1",
+        "title": "Pulmonary Embolism Risk Stratification from CTPA and Medical Records: Vascular Graphs Are Not All You Need",
+        "summary": "Risk stratification for pulmonary embolism (PE) is critical for clinical decision-making. Stratification guidelines are based on patient medical records, parameters measured from computed tomography pulmonary angiography (CTPA), and blood tests. However, blood tests are often missing in routine practice. This work studies whether state-of-the-art models can accurately classify risk stratification from only medical records and biomarkers extracted from CTPA images. We benchmark different approaches to combine medical records and cardiac biomarkers with rich pulmonary vascular information; we add vascular biomarkers to tabular models and apply graph neural networks (GNNs) on the vascular tree's intrinsic graph representation. We use a private dataset (n=353) with uniquely complete data for PE risk stratification. Our results show that, among global features, medical records and cardiac biomarkers are the most significant predictors, while vascular biomarkers do not further improve stratification. Even more surprising, even GNNs on vascular graphs fail to outperform strong tabular baseline on global features. We consider hypotheses, on both models and data, that could explain this suboptimal performance. Our investigation suggests that, counter-intuitively, vascular graphs might hold no discriminative information for PE risk stratification. Code is available from https://github.com/creatis-myriad/GENESIS.",
+        "authors": "Nathan Painchaud, Tristan Habémont, Morgane des Ligneris, Allan Serva, Pierre Croisille, Laurent Bertoletti, Thomas Lampert, Johannes F. Lutzeyer, Odyssée Merveille",
+        "url": "http://arxiv.org/abs/2606.25956v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25956v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖的理论框架，将智能体系统的智能量化为“压缩率”，通过信息论的视角来评估智能体组件如何减少残余不确定性。这种将“压缩即智能”应用于智能体系统的方法具有高度的理论创新性和严谨性，为评估和理解复杂AI系统提供了新的基础性工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25526v1",
+        "title": "Low Variance Trust Region Optimization with Independent Actors and Sequential Updates in Cooperative Multi-agent Reinforcement Learning",
+        "summary": "Cooperative multi-agent reinforcement learning assumes each agent shares the same reward function and can be trained effectively using the Trust Region framework of single-agent. Instead of relying on other agents' actions, the independent actors setting considers each agent to act based only on its local information, thus having more flexible applications. However, in the sequential update framework, it is required to re-estimate the joint advantage function after each individual agent's policy step. Despite the practical success of importance sampling, the updated advantage function suffers from exponentially high variance problems, which likely result in unstable convergence. In this work, we first analyze the high variance advantage both empirically and theoretically. To overcome this limitation, we introduce a clipping objective to control the upper bounds of the advantage fluctuation in sequential updates. With the proposed objective, we provide a monotonic bound with sub-linear convergence to $ε$-Nash Equilibria. We further derive two new practical algorithms using our clipping objective. The experiment results on three popular multi-agent reinforcement learning benchmarks show that our proposed method outperforms the tested baselines in most environments. By carefully analyzing different training settings, our proposed method is highlighted with both stable convergence properties and the desired low advantage variance estimation. For reproducibility purposes, our source code is publicly available at https://github.com/giangbang/Low-Variance-Trust-Region-MARL.",
+        "authors": "Bang Giang Le, Viet Cuong Ta",
+        "url": "http://arxiv.org/abs/2606.25526v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25526v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了合作多智能体强化学习（MARL）中独立智能体顺序更新时优势函数方差过高导致收敛不稳定的问题。提出了一种新颖的剪裁目标来控制优势函数波动，并提供了单调边界和次线性收敛到ε-Nash均衡的理论保证。这是MARL算法的重大理论突破，对多智能体系统的稳定性和效率有直接影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25389v1",
+        "title": "Offline Multi-agent Continual Cooperation via Skill Partition and Reuse",
+        "summary": "Extracting skills from multi-agent offline dataset improves learning efficiency via sharing task-invariant coordination skills among tasks. In settings where tasks occur sequentially and the space of skills grows exponentially, existing approaches that rely on heuristically designed and fixed-sized skill libraries struggle to resolve the problem of distributional shift and interference, facing catastrophic forgetting and plasticity loss. To address this problem and endow agents with the ability to continually discover and reuse coordination skills in open-environment, we propose COMAD, a principled framework for Continual Offline Multi-agent Skill Discovery via Skill Partition and Reuse. We first discover skills from mixed multi-agent behavior data with an auto-encoder to transform coordination knowledge into reusable coordination skills. Then we construct a skill-augmented policy learning objective with multi-head architectures, explicitly guiding the advantage function with reusable skills identified via a density-based reusability estimator. Theoretical analysis shows our method approximates the optimum of a continual skill discovery problem. Empirical results across diverse MARL benchmarks show that COMAD continually expands its skill library to mitigate interference, achieving superior forward and backward transfer for task streams compared to multiple baselines.",
+        "authors": "Yuchen Xiao, Lei Yuan, Ruiqi Xue, Tieyue Yin, Yang Yu",
+        "url": "http://arxiv.org/abs/2606.25389v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25389v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入探讨了多智能体强化学习中价值分解方法出现可塑性损失的根本原因，诊断出“停滞神经元”问题，并提出了KNIFE方法。KNIFE通过替换停滞神经元为复合单元，在保留知识的同时恢复学习能力。这是一个对MARL核心学习机制的深刻诊断和算法创新，具有高度理论价值和实际改进潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25338v1",
+        "title": "Hybrid-IR: Dual-Path Hybrid Retrieval with Iterative Reasoning for Complex Medical Question Answering",
+        "summary": "Large language models (LLMs) have shown promising performance across a wide range of biomedical applications, including medical question answering (QA), yet they remain prone to hallucinations and outdated knowledge. Although retrieval-augmented generation (RAG) can alleviate this issue by incorporating external documents, there still exist two fundamental limitations. First, medical knowledge is often fragmented across documents, while most RAG methods rely on a single retrieval path, which makes it challenging to jointly preserve fine-grained semantic information and structured global associations. Second, static retrieval strategies are typically insufficient to support deep reasoning that is important in complex medical QA. In this paper, we present a dual-path retrieval framework with an iterative retrieval-reasoning mechanism termed \"Hybrid-IR\" for complex medical QA. The proposed Hybrid-IR integrates graph-based retrieval for exploration of structured knowledge and dense retrieval for fine-grained semantic matching. Moreover, the reasoning trajectory can be progressively refined through an iterative retrieve-reason loop. Experiments on three widely used medical QA benchmarks demonstrate the effectiveness of our Hybrid-IR.",
+        "authors": "Sheng Wan, Jiahui Zhang, Zicheng Zhao, Shougang Ren",
+        "url": "http://arxiv.org/abs/2606.25338v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25338v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出，Transformer的终身上下文学习需要“参数化形式的注意力”来克服标准注意力机制的二次方扩展问题，从而在固定硬件预算下维持恒定的内存占用。这篇论文从理论层面探讨了Transformer架构在实现终身学习时的根本性挑战，并提出了新的研究方向，对未来AI架构设计具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26002v1",
+        "title": "Hierarchical Reinforcement Learning for Neural Network Compression (HiReLC): Pruning and Quantization",
+        "summary": "We present HiReLC, a hierarchical ensemble-reinforcement learning framework for automated joint quantization and structured pruning of deep neural networks. The framework decomposes the compression search across two levels of abstraction: low-level agents (LLAs) operate independently per block, selecting per-kernel configurations over a multi-discrete action space spanning bitwidth, pruning keep-ratio, quantization type, and granularity, while high-level agents (HLAs) coordinate global budget allocation via ensemble voting guided by Fisher Information-based sensitivity estimates. To mitigate the computational cost of policy evaluation, an iterative active learning loop interleaves surrogate-guided RL optimization with post-compression fine-tuning, using a lightweight MLP surrogate to amortize expensive evaluations and a logit-MSE proxy during cold-start. The surrogate is used for reward shaping rather than as a replacement for final post-compression evaluation. The controller is architecture-agnostic by design, with a modular layer abstraction decoupling the RL environment from the underlying network topology. Experiments across Vision Transformer and CNN benchmarks demonstrate effective parameter-storage compression ratios of 5.99 - 6.72$\\times$ with a 3.83 % gain in one setting and 0.55 - 5.62 % accuracy drops elsewhere, supporting hierarchical policy decomposition and sensitivity-aware guidance as practical design choices for joint neural network compression.",
+        "authors": "Kamar Hibatallah Baghdadi, Kawther Guoual Belhamidi, Sara Belhadj, Aissa Boulmerka, Nadir Farhi",
+        "url": "http://arxiv.org/abs/2606.26002v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26002v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "HiReLC提出了一个分层集成强化学习框架，用于深度神经网络的自动化联合量化和结构化剪枝。通过低层和高层智能体协同工作，并结合Fisher信息敏感度估计和主动学习循环，实现了高效的模型压缩。这在模型压缩领域具有显著的架构和算法创新，能有效解决模型部署的效率瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25484v1",
+        "title": "From Causal Discovery to Implementation: An Agentic AI Framework for E-Scooter Mobility Hub Planning Across 29 German Cities",
+        "summary": "Existing approaches to e-scooter mobility hub planning lack city-type-specific causal evidence. Demand models are typically correlational, built on proprietary trip data, and do not distinguish how driver profiles vary across urban typologies. This paper presents a three-phase agentic AI framework that constructs a Causal Template Library from public GBFS data across 29 German cities, encoding which environmental features causally drive hotspot demand for each combination of city type (large, university, industrial, hilly) and cluster type (core, peripheral). A large language model (LLM) orchestrated causal discovery pipeline adapts algorithm selection to local data conditions across 57 city-cluster units. The library reveals systematic variation. Core demand is driven by activity access and transit proximity, while peripheral demand responds to built form, with city-type-specific patterns supporting transferable siting templates. A planning tool built on the library scores candidate sites, calibrates infrastructure recommendations to local demographics, and generates practitioner-ready reports. In Heilbronn, Germany, two hub sites informed by the framework's causal evidence are currently under construction, illustrating how the outputs can support real-world siting decisions.",
+        "authors": "Meng Jin, Melanie Handrich, Simone Martinenz, Nicholas Hoeser, Ziyue Li",
+        "url": "http://arxiv.org/abs/2606.25484v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25484v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "IF-Beta框架通过结合影响函数和可学习的Beta分布采样策略，以双层优化目标实现高效的知识蒸馏数据剪枝。它解决了知识蒸馏本身的计算开销问题，能在更少数据和计算资源下训练出更好的学生模型。这是一种理论创新性强、对数据效率和模型压缩有直接影响的算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25278v1",
+        "title": "Heterogeneous and Adept Snapshot Distillation for 3D Semantic Segmentation",
+        "summary": "Multi-modal fusion and multi-model ensembling are prevalent in enhancing the performance of 3D semantic segmentation. Despite the impressive performance, these methods either rely on auxiliary input signals or suffer from costly computational expense. To efficaciously enhance the segmentation performance without introducing intolerable costs, we propose to transfer the rich knowledge from the multi-modal model (i.e., point clouds and images) and multiple model experts to the point-cloudbased network through knowledge distillation. Specifically, we present Information-oriented Heterogeneous Distillation (IHD) to help the uni-modal model absorb the complementary knowledge from the multi-modal teacher. We design the Information-Oriented Filtering (IOF) strategy to select informative images from the continuous image sequence for multi-modal fusion. This practice can boost the performance of the multi-modal teacher, thus benefiting the learning of the student. Besides, as opposed to vanilla model ensembling that requires the separate training of each expert, we propose Adept Snapshot Distillation (ASD). ASD treats the freely available model snapshots generated during the training phase as multiple experts, which significantly reduces the training cost for model ensembling. For each expert teacher, it only provides supervision to the student in the class where it is adept. The resulting Heterogeneous and Adept Snapshot Knowledge Distillation, dubbed HAS-KD, attains state-of-the-art results on ScanNetV2 and S3DIS datasets. HAS-KD can be seamlessly integrated into contemporary 3D segmentation algorithms and bring considerable gains without introducing extra inference burdens. The code will be made publicly available upon publication.",
+        "authors": "Xiaopei Wu, Yuenan Hou, Junkai Xu, Wenxiao Wang, Binbin Lin, Yu Li, Ping Li, Haifeng Liu, Deng Cai, Wanli Ouyang",
+        "url": "http://arxiv.org/abs/2606.25278v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25278v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "EPTS提出了一种统一的多稀疏性框架，通过一次优化生成一个弹性模型，以适应不同的稀疏性配置，解决了现有后训练稀疏化方法（PTS）的僵化问题。其核心创新在于MS-HiLoRA机制和MSFM，显著提升了LLM压缩的灵活性和效率，对LLM在资源受限设备上的部署具有重要实践意义和理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25750v1",
+        "title": "RAS: Measuring LLM Safety Through Refusal Alignment",
+        "summary": "Safety evaluation of large language models (LLMs) is commonly performed by querying models with unsafe or jailbreak prompts and judging whether their outputs violate a safety policy. Although useful, output-level evaluation is expensive, sensitive to judge choice, and easily tied to fixed question banks. We propose **SafeVec**, a white-box evaluation procedure that measures safety from internal representations rather than generated answers. **SafeVec** first extracts layer-wise refusal directions from a safety-aligned reference model, then selects stable layer windows where safe and unsafe behaviors are separable, and finally scores a target model by measuring whether its hidden states align with these refusal directions under unsafe and jailbreak prompts. The resulting metric, **RAS** (**R**efusal **A**lignment **S**core), maps representation-level refusal alignment to a calibrated 0-100 safety score. Across `Llama`, `Gemma`, and `Qwen` model families, RAS separates aligned models from uncensored and abliterated variants, tracks output-level attack success rate, and is substantially faster than judge-based evaluation. These results suggest that refusal alignment provides a compact and efficient signal for white-box LLM safety evaluation.",
+        "authors": "Chang-Chieh Huang, Yan-Lun Chen, Chia-Mu Yu, Wei-Bin Lee",
+        "url": "http://arxiv.org/abs/2606.25750v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25750v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RAS提出了SafeVec，一种新颖的白盒评估方法，通过测量LLM内部表示的“拒绝对齐”来评估模型安全性，而非依赖生成答案。这解决了传统LLM安全评估昂贵且敏感的痛点，提供了一种更快、更高效、更具理论深度的安全评估机制，对LLM安全对齐的理论研究和实际应用都至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25436v1",
+        "title": "Evaluating Japanese Dialect Robustness Across Speech and Text-based Large Language Models",
+        "summary": "Dialogue systems based on large language models (LLMs) have advanced significantly in recent years. However, dialectal variation remains a major challenge, particularly for systems that process spoken input. LLM-based speech language models (SLMs), which integrate LLMs with speech processing components, show promise for spoken language tasks, yet their ability to comprehend dialects has not been sufficiently studied. Moreover, it remains unclear how the dialectal understanding of the base LLM affects SLM performance. This study investigates the dialectal robustness of both LLMs and SLMs using Japanese dialects as a test case. We define robustness as the ratio of performance on dialectal versus standard inputs, enabling fair comparisons. Our experiments show that SLM robustness correlates with that of their text-based counterparts. Furthermore, training with dialectal data and fine-tuning the speech encoder each improves robustness in SLMs.",
+        "authors": "Tomoya Mizumoto, Yusuke Fujita, Hao Shi, Lianbo Liu, Atsushi Kojima, Yui Sudo",
+        "url": "http://arxiv.org/abs/2606.25436v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25436v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PRISM提出了一种前馈框架，通过几何扭曲-残差建模实现单图像3D重建，显著减少了迭代扩散采样带来的推理时间瓶颈。它将多视图潜在预测分解为无参数几何先验和学习到的残差校正。这种算法和架构创新在保持重建质量的同时，极大地提升了推理效率，解决了生成模型在实际应用中的速度瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25721v1",
+        "title": "Tracing Target Answers in Poisoned Retrieval Corpora via Token Influence Attribution",
+        "summary": "Retrieval-Augmented Generation (RAG) systems are vulnerable to corpus poisoning attacks that manipulate model outputs through malicious retrieved documents. Existing detection methods typically rely on auxiliary classifiers or additional LLM-based verification, introducing substantial computational overhead. We present TRACE, a lightweight detection framework that identifies poisoning attacks by tracing answer-related tokens through token influence attribution. TRACE first discovers recurrent high-influence keywords across retrieved documents and then performs a secondary verification to confirm their influence on model predictions. Experiments on three QA benchmarks and six LLMs demonstrate strong detection performance while simultaneously uncovering attacker-specified target answers.",
+        "authors": "Yan-Lun Chen, Pin-Yu Chen, Chia-Mu Yu, Ying-Dar Lin, Yu-Sung Wu, Wei-Bin Lee",
+        "url": "http://arxiv.org/abs/2606.25721v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25721v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PolicyAlign提出了一种直接基于策略的LLM安全对齐框架，通过合成违反策略的指令并进行在线自蒸馏，解决了快速变化的自然语言安全策略与传统数据驱动对齐方法之间的不匹配。其Policy-Sensitive Filtering机制进一步提高了训练效率。这是一种高效、可扩展且具有理论创新性的LLM安全对齐算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25509v1",
+        "title": "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving",
+        "summary": "Large language models (LLMs) can improve autonomous driving planning but are costly to query online, and existing fast-slow planners often rely on hand-designed triggering rules that either over-call the slow system or call it at the wrong times. We formulate slow-system invocation as a resource-aware sequential decision problem and propose the Adaptive Slow-System Control Gate (ASSCG), which makes frame-level Query/Cache/Drop decisions to refresh, reuse, or suppress slow guidance. ASSCG uses an RWKV backbone for efficient long-horizon gating and is trained with supervised fine-tuning followed by GRPO-style compute-aware reinforcement fine-tuning. We apply ASSCG to two different fast-slow architectures: (i) AsyncDriver on nuPlan Hard20 closed-loop evaluation, where ASSCG improves score to 67.28 (+2.28) while reducing average end-to-end inference latency by 60%; and (ii) a RecogDrive-based dual system that we build by replacing its original VLM-2B module with a lightweight ViT-based fast planner and adding an LLM slow planner, evaluated on NAVSIM, where ASSCG achieves 91.4 PDMS (+0.6) and increases average speed by 25%. The project page, including video visualizations and additional results, is available at https://williamxuanyu.github.io/asscg/.",
+        "authors": "Sining Ang, Yuan Chen, Liu Haiyan, Xuanyao Mao, Jason Bao,  Xuliang, Bingchuan Sun, Yan Wang",
+        "url": "http://arxiv.org/abs/2606.25509v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25509v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ASSCG将自动驾驶中LLM规划器的慢系统调用问题建模为资源感知的序列决策问题，并提出了自适应慢系统控制门（ASSCG）。该方法通过计算感知的强化微调训练，显著降低了LLM在线查询的成本和延迟，是LLM在实时、资源受限应用中效率优化的重要算法和架构创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25319v1",
+        "title": "V-Zero: Answer-Label-Free On-Policy Distillation with Contrastive Evidence Gating for Fine-Grained Visual Reasoning",
+        "summary": "Fine-grained visual reasoning requires multimodal large language models (MLLMs) to identify task-relevant visual evidence and ground their reasoning in local image regions. Existing agentic methods typically rely on reinforcement learning with verifiable rewards or supervised fine-tuning on large-scale annotated reasoning traces, leading to costly exploration, hand-designed verification rules, or heavy dependence on textual supervision. A natural way to avoid such external answer labels is to learn from trajectories sampled by the student itself, which points to On-Policy Distillation (OPD). To understand what OPD can and cannot provide for visual reasoning, we revisit it as negative-free stop-gradient alignment. This perspective shows that, although OPD provides effective token-level correction, its ceiling is constrained by the absence of trajectory-level discrimination. Motivated by these observations, we propose V-Zero, an answer-label-free framework for visual reasoning with contrastive evidence gating. V-Zero uses no annotated textual answer labels; instead, during training it pairs a question-relevant regional crop with a negative visual view to evaluate student-sampled trajectories and gate dense token-level distillation. Experiments on multiple visual reasoning benchmarks show that V-Zero consistently improves fine-grained visual reasoning while preserving strong generalization. Notably, V-Zero is more than 5$\\times$ faster than previous supervised fine-tuning methods and more than 10$\\times$ faster than reinforcement learning baselines. Code and dataset will be released at https://github.com/eVI-group-SCU/V-Zero",
+        "authors": "Haoxiang Sun, Zhihang Yi, Langxuan Deng, Yuhao Zhou, Peiqi Jia, Jian Zhao, Li Yuan, Jiancheng Lv, Tao Wang",
+        "url": "http://arxiv.org/abs/2606.25319v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25319v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "V-Zero提出了一种无需答案标签的细粒度视觉推理框架，通过对比证据门控进行在线策略蒸馏。它重新诠释了在线策略蒸馏，并引入了新颖的机制，显著提高了MLLM训练效率，解决了标注数据成本高昂的瓶颈，对多模态大模型的训练范式具有重要创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25318v1",
+        "title": "REViT: Roto-reflection Equivariant Convolutional Vision Transformer",
+        "summary": "In this paper, we propose a discrete roto-reflection group equivariant vision transformer with convolutional attention. Roto-reflection equivariant networks preserve the rotational, flip and positional symmetry in feature maps, making them useful for tasks where orientation of the inputs is relevant to the model outputs. In image classification and object detection, most of the studies on roto-reflection equivariant models have focused on using convolutional neural networks rather than vision transformers. In this paper, we examine the challenges involved in achieving equivariance in vision transformers, and we propose a simpler way to implement a discretized roto-reflection group equivariant vision transformer. The experimental results demonstrate that our approach outperforms the existing approaches for developing discrete roto-reflection group equivariant neural networks for image classification.",
+        "authors": "Sheir A. Zaheer, Alexander C. Holston, Chan Y. Park",
+        "url": "http://arxiv.org/abs/2606.25318v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25318v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RS4D通过状态空间建模（SSM）和知识蒸馏，实现了遥感实例分割的线性时间计算复杂度，解决了Transformer模型在密集预测任务中二次方复杂度带来的效率瓶颈。其自适应噪声和掩蔽知识蒸馏训练方法，能将Transformer的知识压缩到轻量级SSM骨干网络中，是视觉基础模型效率优化的重要架构和算法创新。"
+    }
+]

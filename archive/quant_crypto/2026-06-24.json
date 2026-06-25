@@ -1,0 +1,32 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.25986v1",
+        "title": "The Inference-Compute Frontier and a Latency-Efficient Architecture for Limit Order Book Prediction",
+        "summary": "We study whether a scaling-law-style inference-compute frontier appears in limit order book prediction. Using FI-2010 and a suite of models ranging from small decision trees to neural LOB architectures, we find that the realized empirical frontier of predictive loss versus structural forward work is well summarized by a power law. In particular, with MLPLOB held out as an architecture family, a power-law fit to the low- and mid-compute non-MLPLOB frontier extrapolates across multiple orders of magnitude and attains $R^2=0.941$ on the excluded high-compute MLPLOB target frontier.   A similar exercise in latency space gives substantially weaker results, showing that latency is not merely noisy compute. We use this gap to motivate FastBiNLOB, a dense axis-separable LOB mixer built from hardware-friendly temporal and feature mixing operations. In a five-seed experiment, FastBiNLOB exceeds the published $y_{10}$ and $y_{100}$ macro-F1 targets at notably lower latency than existing published SOTA architectures.",
+        "authors": "C. Evans Hedges",
+        "url": "http://arxiv.org/abs/2606.25986v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25986v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文直接关注限价订单簿（LOB）预测，这是构建加密货币市场高频量化因子的核心数据源。论文提出的推理-计算前沿概念和低延迟架构（FastBiNLOB）对于在快速变化的加密市场中设计高效、可落地的因子至关重要。其方法论具有高度通用性，可以直接应用于加密货币LOB数据，以生成预测性因子。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.25811v1",
+        "title": "Hierarchical Graph Learning for Calendar Spread Strategies in Commodity Futures Markets",
+        "summary": "Commodity futures can be represented hierarchically, with underlying assets at the upper level and individual futures contracts at the lower level. Entities at each level can be connected by edges reflecting inherent correlations, with cross-level edges capturing contract-to-underlying asset connections. Building on our observations of these structures, we propose a hierarchical graph learning approach for calendar spread (CS) strategies in commodity futures markets, addressing two significant gaps in the machine-learning literature: (i) the absence of learning-based methods for CS strategies in futures markets, and (ii) the lack of consideration of maturity-dependent interrelationships across commodity futures. We first establish the efficacy of CS strategies by analytically showing that CS strategies can possess higher risk-adjusted returns, measured by the information ratio, and lower risk, measured by variance and delta, than long-only strategies. We then introduce a method to convert learning-based predictions into CS positions. Next, we develop a hierarchical graph learning method that predicts futures price movements by utilizing the maturity-dependent interrelationships, thereby yielding a CS trading algorithm. Empirical results on commodity futures markets traded on the Chicago Mercantile Exchange Group demonstrate that our method outperforms benchmark models in both prediction and trading performance. We find that maturity-dependent interrelationships across commodity futures are instrumental in prediction and that CS trading based on hierarchical graph learning is effective for statistical arbitrage.",
+        "authors": "Yoonsik Hong, Diego Klabjan",
+        "url": "http://arxiv.org/abs/2606.25811v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.25811v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种新颖的层次图学习方法，用于商品期货市场的日历价差策略。虽然其关注的市场（商品期货）和策略（日历价差）与加密货币市场有所不同，但其利用资产间（包括跨级别）相互关系进行价格预测的图学习方法，可以为构建基于加密货币生态系统（如不同币种、不同期限合约）内部关联性的量化因子提供灵感。然而，将其直接应用于加密货币市场需要进行显著的适应性调整。"
+    }
+]

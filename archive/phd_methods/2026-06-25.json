@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.26861v1",
+        "title": "Cascaded Multi-Granularity Pruning for On-Device LLM Inference in Industrial IoT",
+        "summary": "Deploying large language models (LLMs) on Industrial Internet of Things (IIoT) edge devices demands extreme compression, yet existing structured pruning methods collapse at high compression ratios due to one-shot importance estimation, and their cross-architecture behavior remains unpredictable. This article presents a cascaded multi-granularity pruning framework that removes layers, attention heads, and feed-forward channels in coarse-to-fine order, with lightweight low-rank recovery between stages to re-estimate component importance. An information-theoretic analysis motivates this ordering, and the Structural Independence Assumption (SIA) is formalized as a checkable condition predicting whether per-component pruning criteria are reliable for a given architecture: Multi-Head Attention (MHA)+GELU designs satisfy the SIA, whereas Grouped Query Attention (GQA)+SwiGLU designs violate it. On bearing fault diagnosis spanning 88M to 6.25B-parameter models, the framework extends achievable compression to 13.8 times on MHA+GELU architectures with 83.82% accuracy (+3.70 percentage points (pp) over the strongest baseline), while exposing a ~74pp accuracy collapse on GQA+SwiGLU architectures that violate the SIA. Deployed on an industrial slewing bearing fault diagnosis platform with NVIDIA DGX Spark, compressed models reduce inference latency by up to 67.2% and peak memory by 62.5%, demonstrating viability for IIoT edge inference.",
+        "authors": "Jinghan Wang, Yanjun Chen, Wei Zhang, Xiaotong Huang, Tianchen Liu, Gaoliang Peng",
+        "url": "http://arxiv.org/abs/2606.26861v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26861v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在量子图神经网络领域提出了开创性的理论工作，将量子模型与经典的 Weisfeiler-Leman 层次结构联系起来，提供了表达能力和可扩展性的理论保证。它为近期的量子算法设计提供了坚实的理论基础和实践路径，对 AI 架构的未来发展具有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26769v1",
+        "title": "ResilPhase: Plug-and-Play Phase Mapping and Noise-Resilient Macro-Trajectory Extrapolation for Diffusion Acceleration",
+        "summary": "The adoption of powerful diffusion models is hindered by their significant inference latency. Recent ``cache-then-forecast'' schemes alleviate this issue by accelerating DiTs using derivative-based polynomials, but they suffer from severe quality degradation at high acceleration ratios. Our analysis reveals its root cause: the discrete extrapolation performed on representations that are misaligned with the continuous diffusion trajectory and are numerically unstable. Thus, accelerated DiTs suffer from accumulated spatial errors, noisy derivative amplification, and high-order instability. We therefore reformulate accelerated inference as stable macro-trajectory extrapolation in ordinary differential equation (ODE) space. Instead of predicting intermediate features, we align forecasting with the model's Global Drift (GD), i.e., the end-to-end state evolution, thereby eliminating feature inconsistency and memory overhead. However, even this smooth macro-trajectory remains vulnerable to the derivative fallacy: its higher-order temporal derivatives are intrinsically noisy. Thus, we introduce a derivative-free barycentric Lagrange extrapolator to effectively bypass derivative instability and approximation error. We further propose a bounded Phase Mapping that regularizes the extrapolation domain, suppressing oscillatory error growth. These elements collectively constitute ResilPhase, a noise-resilient acceleration framework. Experiments on FLUX.1-dev and HunyuanVideo demonstrate state-of-the-art fidelity under aggressive acceleration ratios.",
+        "authors": "Qicheng Zhao, Yu Li, Qi Sun, Zheyu Yan",
+        "url": "http://arxiv.org/abs/2606.26769v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26769v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种新颖的差分隐私学习框架，通过超网络将隐私噪声一次性注入到低维数据集表示中，避免了传统 DP-SGD 迭代参数空间噪声的弊端。这在理论上显著减少了噪声对模型效用的不利影响，为隐私保护 AI 提供了重要的理论创新和实际突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26662v1",
+        "title": "Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence",
+        "summary": "Graph Neural Differential Equations (GNDEs) model continuous-time graph dynamics by parameterizing Neural ODE velocity fields with Graph Neural Networks. Their local, size-independent filters suggest a zero-shot size-transfer principle: train on a small graph and deploy on larger, similar graphs without retraining. We develop a quantitative theory for this principle on sparse random graphs sampled from graphons. We consider Graphon Neural Differential Equations (Graphon-NDEs) and adjoint Graphon-NDEs as the infinite-node limits of the forward and adjoint GNDE systems, and establish well-posedness. For an $n$-node random graph with sparsity parameter $α_n$, we prove trajectory-wise convergence of GNDE solutions to Graphon-NDE solutions at rate $O((α_n n)^{-1/2})$, up to logarithmic factors, with high probability. We also establish uniform-in-time convergence bounds for adjoint systems governing hidden-state and parameter gradients. We further study discretize-then-optimize (DTO) and optimize-then-discretize (OTD) training. Under explicit Euler discretization with $M$ steps, we show that DTO and OTD are asymptotically consistent, with hidden-state and local parameter-gradient discrepancies of orders $O(1/M)$ and $O(1/M^2)$, respectively, up to sparsity and logarithmic factors. Experiments on HSBM and tent graphons support the theoretical rates, while zero-shot transfer experiments across four graphon classes demonstrate accurate deployment of learned GNDEs on larger independently sampled graphs.",
+        "authors": "Mingsong Yan, Zhida Wang, Sui Tang",
+        "url": "http://arxiv.org/abs/2606.26662v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26662v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为图神经网络微分方程（GNDEs）的零样本尺寸迁移原理建立了定量理论，通过图论极限和伴随收敛性提供了严谨的数学证明。它解决了 GNNs 在不同规模图上部署的扩展性瓶颈，具有重要的理论价值和实际应用潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26592v1",
+        "title": "Latent Diffusion Posterior Sampling with Surrogate Likelihood Guidance for PDE Inverse Problems",
+        "summary": "We propose latent-space diffusion posterior sampling (L-DPS), an approximate Bayesian framework for high-dimensional inverse problems governed by partial differential equations (PDEs). The method addresses three challenges in PDE-constrained inversion: implicit sample-based priors without tractable densities, high-dimensional spatially distributed parameters, and the high cost of repeated forward-model evaluations during posterior sampling. L-DPS combines a variational autoencoder, an unconditional latent diffusion model, diffusion posterior sampling, and a differentiable neural surrogate. The VAE maps the parameter field to a lower-dimensional latent space, the diffusion model learns an implicit prior score in this latent space, and DPS combines this learned prior with likelihood-based guidance. The likelihood gradient is evaluated through the decoder-surrogate composition, avoiding repeated calls to the full numerical PDE solver. We evaluate the method on an inverse Darcy flow problem with an unknown spatially distributed permeability field inferred from sparse and noisy pressure observations. L-DPS produces accurate and robust inverse solutions, reduces inference cost relative to full-space DPS, and outperforms amortized inverse baselines such as conditional latent diffusion and inverse FNO in sparse and noisy regimes. We further compare L-DPS with a KLE-MAP baseline and study mixed-prior generalization and the sensitivity of inversion accuracy to surrogate forward-model error.",
+        "authors": "Yuanzhe Wang, Alexandre M. Tartakovsky",
+        "url": "http://arxiv.org/abs/2606.26592v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26592v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作提出了 L-DPS 框架，一个用于偏微分方程（PDEs）高维逆问题的近似贝叶斯方法。它巧妙地结合了 VAE、潜在扩散模型、DPS 和可微分神经替代模型，解决了 PDE 约束反演中隐式先验、高维参数和计算成本高昂的挑战，在理论和应用上都具有极高价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27202v1",
+        "title": "Graph Neural Networks Applications Across Domains: All Insights You Need",
+        "summary": "Graph neural networks have moved from a niche representation-learning technique to the default model class wherever data carry relational structure. The interesting question is no longer whether message passing helps on a given dataset, but where graph structure earns its computational cost and where it does not. This survey organises the field around a single design space, derives the spectral and spatial formulations from shared first principles, and connects expressive power to the Weisfeiler-Leman hierarchy with explicit statements of what current architectures can and cannot separate. Against that methodological backbone we examine twelve application domains, among them recommendation and social networks, knowledge graphs and language-model integration, drug discovery and molecular property learning, healthcare and neuroscience, computer vision, traffic and urban computing, power and renewable-energy systems, wireless and sixth-generation networks, fraud and cybersecurity, industrial prognostics, materials science, and climate modelling. For each domain we specify the graph-construction choices and their costs, identify which architecture families dominate and why, and separate reported gains from artefacts of weak baselines or favourable splits. A cross-domain comparison exposes recurring patterns: heterophily and scale undercut the same models almost everywhere, temporal graphs remain harder than their static counterparts, and the architectures that top public leaderboards are seldom the ones that reach deployment. We treat over-smoothing, over-squashing, robustness, distribution shift, fairness, and explainability not as a closing checklist but as the constraints that decide adoption.",
+        "authors": "Abderaouf Bahi",
+        "url": "http://arxiv.org/abs/2606.27202v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27202v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "尽管是一篇综述，但其对图神经网络（GNNs）领域进行了深入的分析和批判性总结，统一了设计空间，并从第一性原理推导了谱域和空间域公式。它不仅提供了全面的洞察，还指出了 GNNs 面临的挑战和部署差距，对于理解和推动 AI 架构发展至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27153v1",
+        "title": "DMuon: Efficient Distributed Muon Training with Near-Adam Overhead",
+        "summary": "Matrix-orthogonalization-based optimizers, exemplified by Muon, have demonstrated strong convergence behavior across a wide range of modern deep learning workloads. The matrix-aware updates offer a compelling alternative to conventional element-wise optimization, particularly as model architectures continue to grow in scale and heterogeneity. Yet contemporary distributed training infrastructure built around the assumption of element-wise optimizers is poorly matched to matrix-level optimizers such as Muon, whose updates couple entire weight matrices and require costly Newton-Schulz iterations. Vanilla Muon implementations incur more than 2x the cost of forward and backward passes. To close this gap, we present DMuon, an open-source distributed Muon implementation that integrates into existing training pipelines as a drop-in module, with no framework-level modifications. Across both embodied foundation model and large language model (LLM) training workloads, DMuon achieves a 1.48x-3.01x speedup in end-to-end step time and a 6.85x-163.00x speedup in optimizer-step time, bringing per-step latency to near-AdamW levels and enabling efficient scaling in our model training.",
+        "authors": "Vincent Chen, Starrick Liu, Regis Cheng, Dance Yang, Shalfun Li, Ryan Yu, Lucy Liang, Hang Su, Roy Gan, Hao Wang, Qian Wang",
+        "url": "http://arxiv.org/abs/2606.27153v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27153v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从第一性原理重新审视了视觉 token 剪枝问题，提出了 TOPS 框架，旨在构建最优 token 保留集。它基于信息论分析，识别了任务相关性、信息覆盖和语义多样性三个核心原则，为 MLLM 的效率提升和轻量化设计提供了理论创新和显著的实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26875v1",
+        "title": "Information-Aware KV Cache Compression for Long Reasoning",
+        "summary": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce \\textit{Forward Influence}, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose \\textbf{InfoKV}, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
+        "authors": "Jushi Kai, Zhuiri Xiao, Alexandra Birch, Zhouhan Lin",
+        "url": "http://arxiv.org/abs/2606.26875v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26875v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究从前瞻性角度重新审视了 token 重要性，引入了“前向影响”度量，并提出了 InfoKV 框架，通过结合预测不确定性、层级表示演化和注意力分数进行 KV 缓存压缩。它解决了 LLM 长推理场景中 KV 缓存大小的瓶颈，具有重要的理论洞察和实际效率提升。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26764v1",
+        "title": "Anatomy-Guided Residual Motion Diffusion for Controllable 4D Cardiac MRI Synthesis",
+        "summary": "Developing robust artificial intelligence models for 4D (3D + time) medical imaging is constrained by limited annotated data, inter-device domain shifts, and privacy restrictions. To address this, we propose a 4D controllable generative framework for anatomically consistent data augmentation. A semi-supervised variational autoencoder learns a compact latent representation of anatomical volumes while jointly predicting aligned segmentation masks in a unified framework. Anatomical structure is then disentangled from temporal dynamics through a cascaded latent diffusion model (LDM). A static LDM generates subject-specific anatomy conditioned on clinical priors (diagnosis and volumes measures) and a subsequent motion LDM estimates residual latent motions, ensuring strict temporal coherence across the 4D sequence. The proposed approach was evaluated on cine cardiac MRI as a representative 4D imaging application. Experiments across multiple datasets demonstrate high controllability of static anatomy (Pearson r > 0.8) and strong temporal coherence (FVD = 288.08). In cross-vendor generalization experiments, augmenting training sets with synthetic 4D sequences significantly improves downstream segmentation performance. Using nnU-Net, the proposed augmentation strategy improves the average Dice score by 1.4% and reduces the Hausdorff Distance by 3.0mm compared to training on real data alone, for the left ventricle, Dice improves by 2.8% with a 5.4mm reduction in boundary error. Overall, this framework provides a scalable and controllable solution for 4D medical image synthesis, supporting the development of more robust models with limited annotations and cross-vendor variability. Code available on https://github.com/cyiheng/4DCardiacMRISynthesis.",
+        "authors": "Yiheng Cao, Gustavo Andrade-Miranda, Jiatian Zhang, Lingxiao Zhao, Xin Gao",
+        "url": "http://arxiv.org/abs/2606.26764v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26764v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文将扩散模型的加速推理重新定义为 ODE 空间中的稳定宏观轨迹外推，并提出了 ResilPhase 框架。它通过对现有方法局限性的深入分析，引入了无导数的重心拉格朗日外推器和有界相位映射，为扩散模型的高效推理提供了理论严谨且效果显著的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26728v1",
+        "title": "Scientific discovery as meta-optimization: a combinatorial optimization case study",
+        "summary": "Scientific discovery is fundamentally an optimization problem, defined by a vast \"state space\" of theories and experiments, and an evaluation criterion based on quality, novelty, and validity. Large language models (LLMs) have enabled automated exploration of this space, but we argue that simultaneous modification of the evaluation criteria is equally important. Here, we propose formalizing research as meta-optimization, where the optimization objective itself is also being optimized. Our key contribution is \"consensus objective aggregation,\" where LLM-generated objective functions are combined via correlation-weighted voting, yielding a stable, self-correcting evaluation criterion that evolves as understanding deepens. We apply this framework to algorithm discovery for 3-SAT problems based on digital MemComputing machines, reducing the baseline scaling with problem size $N$ from $\\sim N^{2.51}$ to $\\sim N^{1.33}$ and delivering a $\\sim 67\\times$ speedup on the largest instances tested. As a problem-agnostic framework, we hope this approach will considerably aid scientific discovery.",
+        "authors": "Yuan-Hang Zhang, Chesson Sipling, Massimiliano Di Ventra",
+        "url": "http://arxiv.org/abs/2606.26728v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26728v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了将科学发现形式化为元优化的新颖框架，其中优化目标本身也在被优化。其核心贡献是“共识目标聚合”，通过 LLM 生成的目标函数进行加权投票，实现了稳定且自校正的评估标准，对算法发现和科学研究范式具有颠覆性潜力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26722v1",
+        "title": "Socratic agents for autonomous scientific discovery in high-dimensional physical systems",
+        "summary": "The automation of scientific discovery has reached an inflection point. While AI systems now operate instruments, optimize parameters and generate hypotheses, most remain procedural: they execute workflows fixed by human designers. True autonomous science demands epistemic autonomy--the capacity to construct, challenge and revise physical explanations in response to evidence. Here we introduce AHOIS, a multi-agent AI scientist that embeds Socratic midwifery into closed-loop experimentation. A physics-critic agent interrogates hypotheses through causal questioning, constraint checking, counterexample generation and falsification-criteria formulation. We evaluate AHOIS on a real multimode-fibre optical platform, a high-dimensional system with complex wave transformations, indirect detection, environmental drift and multi-modal acquisition. Without prior encoding schemes, classifiers or speckle models, the system autonomously proposed and validated a random-interference encoding hypothesis, discovered task-adaptive sparse-measurement strategies, diagnosed distinct failure modes (encoding instability, fluorescence contamination and detector noise) and translated a published imaging protocol into an executable workflow on a non-original configuration. The discovered encoding yielded 16x16 measurements with effective rank 56.9 and classification accuracies of 76.97% on MNIST and 83.17% on Fashion-MNIST. Ablations show that Socratic interrogation improves physical consistency, hypothesis completeness, uncertainty calibration and experimental-plan validity. These results establish a route from workflow automation towards evidence-grounded, self-correcting autonomous discovery in complex physical environments.",
+        "authors": "Xianrui Zeng, Pengfei Liu, Yirui Zang, Yang Shen, Fei Yu, Chunlei Yu, Minghao Liu, Yang Du",
+        "url": "http://arxiv.org/abs/2606.26722v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26722v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了 AHOIS，一个将苏格拉底式启发法嵌入闭环实验的多智能体 AI 科学家。它赋予 AI 系统构建、挑战和修正物理解释的认知自主性，在复杂物理系统中实现了自主科学发现，为 AI 智能体的前沿发展提供了重要方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26713v1",
+        "title": "LithoDreamer: A Physics-Informed World Model for Multi-Stage Computational Lithography",
+        "summary": "As semiconductor technology nodes scale, computational lithography is essential for ensuring yield and performance. However, lithography is a continuous physical process involving mask optimization, optical imaging, resist exposure, and development, which existing models fail to capture. To overcome this limitation, we present LithoDreamer, the first physics-informed World Model (WM) framework for computational lithography, which formulates the ``Layout-Mask-Resist Image-After Development Image (ADI)'' pipeline as a decision-driven multi-step evolution system. LithoDreamer captures feature changes between adjacent states to model stage-specific physics-informed latent spaces, in which it controls process intervention exploration and drives subsequent state transitions. To achieve interpretable intervention optimization without continuous supervision, we propose a contrastive variational optimization paradigm that contrasts the latent differences between intervention paths with variational evolution constraints, guiding the model to generate evolutions consistent with real lithography physics. Experiments show LithoDreamer achieves state-of-the-art performance in forward evolution and inverse planning. Our lithography dataset is publicly available at GitHub (https://github.com/7jiangyq/lithodreamer.git).",
+        "authors": "Yuqi Jiang, Yumeng Liu, Zimu Li, Jinyuan Deng, Qian Jin, Yucheng Cui, Yu Li, Xunzhao Yin, Qi Sun, Cheng Zhuo",
+        "url": "http://arxiv.org/abs/2606.26713v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26713v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作提出了 LithoDreamer，首个物理信息世界模型框架，用于多阶段计算光刻。它将光刻流程建模为决策驱动的多步演化系统，并提出了对比变分优化范式，实现了可解释的干预优化，对半导体制造中的关键瓶颈具有重大突破意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26578v1",
+        "title": "EvoOptiGraph: Weakness-Driven Coevolution via Graph-Based Structural Generation for Optimization Modeling",
+        "summary": "Automating optimization modeling from natural language with large language models (LLMs) faces two key challenges. First, training corpora lack structural diversity. Second, data generation pipelines remain static and decoupled from model learning. To address these challenges, we propose EvoOptiGraph, a novel framework where data and model co-evolve, driven by model weaknesses. EvoOptiGraph represents each mixed-integer linear program (MILP) as an attributed bipartite graph and applies validity-preserving evolutionary operators to generate structurally diverse instances. The evolved graphs are converted into solver code and natural language via deterministic compilation and verified back-translation. Training proceeds in two stages: supervised fine-tuning (SFT) on an initial dataset, followed by reinforcement learning with verifiable rewards (RLVR), where graph-derived weakness signals guide the generation of new instances targeting the model's failures. This forms a closed loop that continuously updates the training distribution. Empirical results on six public datasets show that EvoOptiGraph significantly outperforms larger generalist models, agentic methods, and specialized baselines in accuracy, executability, and generalization. These results demonstrate that targeted data-model coevolution is an effective strategy for improving LLMs on optimization modeling tasks.",
+        "authors": "Qingcan Kang, Mingyang Liu, Xiaojin Fu, Shixiong Kai, Tao Zhong, Mingxuan Yuan",
+        "url": "http://arxiv.org/abs/2606.26578v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26578v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 EvoOptiGraph 框架，通过模型弱点驱动数据和模型的协同演化，以图为基础生成结构多样的优化实例。它解决了 LLM 在优化建模中训练语料结构多样性不足和数据生成与模型学习脱节的挑战，展现了强大的理论创新和实际效果。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27029v1",
+        "title": "Symplectic Neural Networks for learning Generalized Hamiltonians",
+        "summary": "Hamiltonian Neural Networks (HNNs) integrate physical priors into neural models by learning a system's Hamiltonian, improving generalization and sample efficiency. Identifying the system Hamiltonian from noisy observations of state variables is a challenging task. For simulations to faithfully reflect the long-term behavior of Hamiltonian systems, especially energy conservation, it is essential to use symplectic integrators, which preserve the system's geometric structure. This fidelity comes at a cost: implicit symplectic integrators are more computationally intensive and make backpropagation through the ODE solver non-trivial. However, by leveraging the fact that symplectic discretizations of the adjoint system yield the same sensitivities associated by backpropagation, we obtain an efficient method of training the Neural Network parameters. In our work, we explore this alternate method of HNN training under noisy observation of trajectories with our HNN model based on an implicit symplectic integrator. Computationally, a predictor-corrector based ODE solver and fixed point iteration help to mitigate the computational cost of the implicit timestepping, resulting in more efficient generation of gradient updates. We showcase the numerical advantage, in experiments, in system identification and energy preservation on a range of non-separable, chaotic systems and the efficient computation and memory complexity of our method. We also observe that the post-processing of the learned Hamiltonian using backward error analysis yields a modified Hamiltonian that is a more accurate approximation of the true Hamiltonian without the need to use more accurate discretizations of the flow map.",
+        "authors": "Harsh Choudhary, Vyacheslav Kungurtsev, Chandan Gupta, Melvin Leok, Georgios Korpas",
+        "url": "http://arxiv.org/abs/2606.27029v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27029v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探索了基于隐式辛积分器的哈密顿神经网络（HNNs）训练方法，利用伴随系统的辛离散化实现高效反向传播。它在理论上保证了能量守恒，并在计算上提高了 HNNs 的泛化能力和样本效率，对物理信息神经网络的理论严谨性有重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26918v1",
+        "title": "Diagnosing Task Insensitivity in Language Agents",
+        "summary": "Large language models can serve as capable long-horizon agents, but their out-of-distribution (OOD) generalization remains weak. We identify a key source of this failure as task insensitivity: when faced with similar but distinct tasks, models might apply patterns learned during training and fail to solve the task at hand. We show that models often continue with actions aligned with the original task even when the instruction is semantically corrupted and cannot be directly answered. We further find that, when we replace the task description in a trained prompt with another similar but distinct task, the model may still output the same action. This behavior is accompanied by a consistent training-time attention drift away from task tokens and toward local observations, suggesting an optimization bias toward shortcuts. To mitigate this problem, we propose Task-Perturbed NLL Optimization, a lightweight contrastive regularizer that explicitly encourages action dependence on the task instruction. Extensive evaluations show that our intervention improves task sensitivity and OOD generalization while preserving more stable attention to task tokens.",
+        "authors": "Jingyu Liu, Xiaopeng Wu, Kehan Chen, Chuan Yu, Yong Liu",
+        "url": "http://arxiv.org/abs/2606.26918v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26918v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文诊断了语言智能体中“任务不敏感性”这一 OOD 泛化失败的关键原因，并提出了 Task-Perturbed NLL Optimization 这一轻量级对比正则化器。它通过理论分析和实验验证，有效提升了智能体的任务敏感性和 OOD 泛化能力，解决了 LLM 智能体的一个根本性局限。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26629v1",
+        "title": "From Weights to Features: SAE-Guided Activation Regularization for LLM Continual Learning",
+        "summary": "Weight-space regularization methods such as Elastic Weight Consolidation (EWC) are the standard approach to catastrophic forgetting in continual learning. However, those methods tend to underperform when applied to large language models. We argue that such underperformance can be partly explained by the ``polysemantic'' nature of large language models: per-weight importance estimates utilized by EWC-style regularization are too coarse and cannot isolate the knowledge that needs protection. In this paper, we propose regularizing instead in the model's activation space, using pretrained Sparse Autoencoders (SAEs) as a monosemantic feature dictionary. From the perspective of constrained optimization, we derive a new loss function that uses the SAE feature dictionary to explicitly balance stability and plasticity, and show that EWC is a special case in the one-sided weight-space penalty setting. Unlike replay-based methods that store or revisit examples from earlier tasks, our method requires no previous-task data after mask construction: current-task data is used to compute a compact SAE feature mask, and only this mask is retained for later training. Further, since the feature space has significantly lower dimensionality than the parameter space, the proposed method is more memory efficient. On the TRACE and MedCL continual learning benchmarks, the method achieves the strongest result among approaches without introducing task-specific architectural components, also surpassing traditional weight-space regularization methods like EWC. Beyond performance comparisons, we provide empirical evidence for the polysemanticity thesis: task-relevant representations are linearly separable in the SAE feature basis but indistinguishable from chance in the weight basis, and weight-space protection is nearly non-selective at the concept level.",
+        "authors": "Evan Ning, Wei Xue, Dong Lou, Yike Guo",
+        "url": "http://arxiv.org/abs/2606.26629v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26629v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种利用预训练稀疏自编码器（SAEs）在模型激活空间进行正则化的新方法，以解决 LLM 持续学习中的灾难性遗忘问题。它从约束优化的角度推导了新的损失函数，平衡了稳定性和可塑性，为 LLM 学习机制提供了理论洞察和有效的解决方案。"
+    }
+]

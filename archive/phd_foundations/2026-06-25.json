@@ -1,0 +1,242 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.27349v1",
+        "title": "All you need is log",
+        "summary": "Comparing two probability distributions is a basic building block of statistics and machine learning, and the right family is well understood: the Rényi divergences of order $α\\in[0,\\infty]$ are the unique family monotone under data processing and additive on independent products. Many problems instead compare more than two distributions at once -- multi-population fairness, multi-prior PAC-Bayes bounds, multi-hypothesis testing -- and the right multi-distribution generalization of the Rényi family has been an open question.   We characterize it. Every functional of $W$-tuples of distributions that is monotone under data processing and additive on independent products is a positive integral of multi-way coincidence divergences $C_α(π_1,\\dots,π_W) := -\\log\\int π_1^{α_1}\\cdotsπ_W^{α_W}$ (with $\\sum_k α_k = 1$) over a parameter space with four strata: the simplex interior; mixed-sign exponent cones (the analogue of Rényi orders $>1$); a tropical boundary at infinity carrying max-divergences; and pairwise Kullback-Leibler edges at the simplex vertices. Each stratum is necessary -- the destination of an explicit data-processing-monotone, product-additive divergence the others cannot reproduce -- and each is a clean limit of simplex-interior atoms.   The same family arises from five independent routes -- the structural axioms, Kolmogorov-Nagumo means with Rényi's entropy axiomatics, classical entropy characterizations, multi-hypothesis testing error exponents, and a multi-lottery betting interpretation -- structural evidence that this is the canonical multi-distribution Rényi calculus rather than an artefact of any one axiomatic input. The two-prior case recovers the standard Rényi result; a worked $W=3$ instance, numerical verification, and a conditional extension round out the treatment.",
+        "authors": "Akshay Balsubramani",
+        "url": "http://arxiv.org/abs/2606.27349v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27349v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从多个独立路径（包括结构公理、熵公理、多假设检验误差指数）对多分布 Rényi 散度家族进行了公理化刻画。其强大的理论基础和对基本统计构建块的泛化，完美契合了您对严谨数学逻辑和理论保证的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27269v1",
+        "title": "Ribbon: Scalable Approximation and Robust Uncertainty Quantification",
+        "summary": "Reliably quantifying predictive uncertainty is difficult for complex, high-dimensional, or misspecified models. Both fully Bayesian and bootstrap resampling methods provide principled uncertainty estimates but are often too expensive for modern machine-learning models because they require posterior sampling or repeated model refitting. We introduce Ribbon, a scalable approximation to Dirichlet-reweighted bootstrap uncertainty. Ribbon replaces repeated refitting with an influence-function linearization around a single fitted model, preserving the first-order data-reweighting structure of the Bayesian bootstrap while requiring only post-hoc linear algebra. Ribbon approximates the Bayesian-bootstrap or weighted-likelihood-bootstrap refitting target. With a general concentration parameter, Ribbon gives a calibrated Dirichlet-reweighting family whose uncertainty scale can be tuned on validation data. We show that Ribbon is asymptotically equivalent to a flat-prior Laplace approximation under correct likelihood specification and recovers the robust sandwich covariance under misspecification. Across synthetic regression, MNIST classification, and California Housing benchmarks, Ribbon provides competitive predictive performance and improved calibration in several settings while avoiding repeated model retraining.",
+        "authors": "Graham Gibson, John Tipton, Kellin Rumsey, Natalie Klein",
+        "url": "http://arxiv.org/abs/2606.27269v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27269v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了 Ribbon，一种可扩展的近似方法，用于稳健量化不确定性。它通过影响函数线性化近似 Dirichlet-reweighted bootstrap，并证明了其渐近等价于 Laplace 近似和在模型误设定下恢复 robust sandwich covariance。这体现了强大的统计理论和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27189v1",
+        "title": "Benign Landscape of Quadratic Programs with Orthogonality Constraints and Its Application to Heteroscedastic Probabilistic PCA",
+        "summary": "In this work, we study the optimization landscape of homogeneous quadratic programs with orthogonality constraints (QPOC) and apply the resulting theory to heteroscedastic probabilistic PCA (HePPCA). For QPOC, we establish a complete characterization of the benign optimization landscape by showing that every critical point is either a global maximizer or a strict saddle point. Our analysis builds on a closed-form characterization of the critical point set, from which we derive a necessary and sufficient condition for global optimality and show that every non-optimal critical point has a direction of positive curvature. As an application, we show that the population version of HePPCA is a special instance of QPOC and therefore has a benign optimization landscape; moreover, it satisfies local geodesic strong concavity near every global maximizer. We furthermore prove that, when the sample size is sufficiently large, the sample version of HePPCA inherits these favorable properties with high probability. Together with existing theory on avoiding strict saddle points, our results provide a theoretical justification for the observed local linear convergence of retraction-based optimization methods to global solutions for both QPOC and HePPCA. Finally, we present numerical experiments to corroborate our theoretical results.",
+        "authors": "Peng Wang, Po Chen, Rujun Jiang, Laura Balzano",
+        "url": "http://arxiv.org/abs/2606.27189v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27189v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文对带正交约束的二次规划 (QPOC) 的优化景观进行了完整刻画，证明了所有临界点要么是全局最大值，要么是严格鞍点。并将其理论应用于异方差概率 PCA，证明了其优良的优化性质。这与您对优化收敛性和清晰数学推导的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27142v1",
+        "title": "Estimation of High Dimensional Bounded Discrete Graphical Models via Regularized Generalized Score Matching",
+        "summary": "Graphical models for multivariate count data are widely used to characterize conditional dependence structures. For count variables with unbounded support, however, ensuring a finite normalizing constant typically imposes restrictive constraints on interaction parameters. We propose bounded discrete graphical models for multivariate discrete responses with finite support, which remove such constraints by construction while retaining interpretable dependence on the observed scale. We develop a regularized generalized score matching estimator (BRIDGE), which provides a normalization-free surrogate for likelihood-based estimation. The approach yields a unified system of estimating equations for all parameters and enables joint regularization through an $\\ell_1$ penalty. To address degeneracy in the loss geometry, we introduce a reparameterization that restores curvature along the intercept direction and facilitates stable computation. On the theoretical side, we analyze a nonconvex objective and establish a population separation property that replaces global convexity. This yields nonasymptotic estimation error bounds and exact support recovery in high-dimensional regimes. Simulation studies and real data analyses demonstrate that BRIDGE accurately recovers graph structure and provides a stable and interpretable framework for high-dimensional discrete graphical modeling.",
+        "authors": "Xuran Meng, Jingfei Zhang, Yi Li",
+        "url": "http://arxiv.org/abs/2606.27142v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27142v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了用于高维有界离散图模型的正则化广义分数匹配估计器 (BRIDGE)，并建立了非渐近估计误差界和高维情况下的精确支持恢复。对非凸目标函数的理论分析和统计保证是其亮点。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27114v1",
+        "title": "Cross-Head Attention Uplift Network with Inverse Propensity Score under Unobserved Confounding",
+        "summary": "Uplift modeling, crucial for estimating individual treatment effects (ITE), faces dual challenges: flexibly leveraging inter-group similarity to enhance discriminative power and debiasing under unobserved confounding scenarios. In this paper, we propose the Cross-Head Attention Uplift Network (CHAUN) and Robust Adversarial Inverse Propensity Score (RA-IPS) method to address these limitations. CHAUN employs shared feature embeddings and cross-head attention mechanisms to dynamically integrate treatment-specific and control-specific representations, enhancing inter-group correlation modeling. Theoretically, we prove that access to the true propensity scores ensures ITE identifiability even with unobserved confounders. For practical scenarios lacking true propensity scores, RA-IPS adversarially optimizes propensity weights within constrained uncertainty sets to mitigate bias from unobserved variables. Experiments on public datasets (CRITEO-UPLIFT, LAZADA) and a production e-commerce dataset demonstrate CHAUN's superiority over state-of-the-art uplift models, achieving relative improvements of up to 25.6% in QINI scores. RA-IPS further enhances robustness, outperforming standard IPS by 5.4% under unobserved confounding. The results validate the effectiveness of our proposed methods in real-world causal inference tasks.",
+        "authors": "Haoran Zhang, Chuanpu Li, Yuxin Fu, Bin Tong, Guan Wang, Bo Zheng, Feng Zhou",
+        "url": "http://arxiv.org/abs/2606.27114v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27114v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文在存在未观测混杂的情况下，提出了用于因果推断 (uplift modeling) 的 Cross-Head Attention Uplift Network (CHAUN) 和 Robust Adversarial Inverse Propensity Score (RA-IPS) 方法。理论上，它证明了真实倾向分数可确保 ITE 的可识别性，并提供了稳健的去偏方法，完美符合您对因果逻辑和统计保证的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27014v1",
+        "title": "A Generalization Theory for JEPA-Based World Models",
+        "summary": "Joint Embedding Predictive Architectures (JEPAs) have recently emerged as a promising paradigm for world modeling by learning predictive dynamics in a latent space rather than generating future observations at the input level. Despite their empirical success, the theoretical understanding of JEPA-based world models remains limited. In this paper, we develop the first generalization theory for JEPA-based world models. We formulate JEPA pretraining as a conditional spectral graph learning problem and show that the JEPA objective is equivalent to a low-rank factorization of an action-conditioned co-occurrence matrix. Building on this characterization, we establish a connection between JEPA pretraining error and downstream planning regret, leading to a finite-sample generalization bound for JEPA-based world models. Our analysis reveals an inherent trade-off between approximation and sample errors with respect to the latent dimension, providing theoretical insights into the advantages and limitations of latent predictive models compared with input-level predictive approaches.",
+        "authors": "Jingyi Cui, Qi Zhang, Hongwei Wen, Yisen Wang",
+        "url": "http://arxiv.org/abs/2606.27014v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27014v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次为基于 JEPA 的世界模型开发了泛化理论，将其预训练公式化为条件谱图学习问题，并建立了有限样本泛化界。这直接满足了您对现代 AI 系统（世界模型）的强大理论基础（泛化理论）和数学推导的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.27005v1",
+        "title": "Adaptive Utility driven Resource Orchestration for Resilient AI (AURORA-AI)",
+        "summary": "Modern AI systems are increasingly deployed under non-stationary computational, demographic, and operational conditions in which static resource allocation strategies degrade both predictive performance and human-centric properties such as fairness and explainability. This paper presents AURORA-AI, an Adaptive Utility-driven Resource Orchestration framework for Resilient AI that unifies Hamilton-Jacobi-Bellman feedback control, Lyapunov-based stability monitoring, and a fairness-aware composite utility into a single closed-loop policy.The framework continuously redistributes computational budget across a population of heterogeneous AI models so that the global utility, defined jointly over predictive performance, demographic parity, cost, latency, robustness, and interpretability, remains maximised under disruption. The framework is evaluated in a stress-rich discrete-time simulation that concurrently injects demographic bias shocks, gradual concept drift, and abrupt black-swan disruptions, and is compared against five established controllers including Static, Round Robin, Greedy, LinUCB, and a deep reinforcement-learning agent based on Proximal Policy Optimisation. AURORA-AI achieves immediate recovery from the black-swan event compared to eighty-eight time steps for the Static baseline and twenty-two for Proximal Policy Optimisation, lifts the alpha-quantile and the super-quantile by twenty-nine and twenty-five percent respectively, simultaneously reduces the mean and maximum demographic parity gap, and increases the fraction of Lyapunov-stable operating steps. These results indicate that fairness-aware adaptive orchestration grounded in stability theory is a practical and theoretically motivated path toward resilient human-centric AI deployment.",
+        "authors": "Rahul Umesh Mhapsekar, Ilias Cherkaoui, Lizy Abraham, Indrakshi Dey",
+        "url": "http://arxiv.org/abs/2606.27005v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.27005v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了 AURORA-AI 框架，将 Hamilton-Jacobi-Bellman 反馈控制、Lyapunov 稳定性监控和公平性感知复合效用统一起来，用于弹性 AI 的资源编排。其基于控制理论的严谨数学逻辑和稳定性分析非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26982v1",
+        "title": "Auditing Framing-Sensitive Behavioral Instability in Large Language Models for Mental Health Interactions",
+        "summary": "Large language models (LLMs) are increasingly being integrated into mental health support tools and other psychologically sensitive conversational applications. In such settings, behavioral stability and consistency are important for trustworthy human-AI interaction. However, semantically similar concerns can be presented through different contextual framings, potentially eliciting different model responses. Such framing-sensitive variability may challenge user expectations regarding system behavior and complicate the assessment of AI reliability. While prior studies have primarily examined such effects at the behavioral level, less is known about how framing-related variation is reflected in the internal representations of aligned language models. In this work, we investigate these effects using controlled matched prompts spanning multiple contextual framing conditions across several instruction-tuned model families. Across architectures, framing systematically alters interpretive response tendencies. Layer-wise probing analyses show that behavior-associated information remains decodable throughout transformer depth, with architecture-dependent variation in decoding strength. Moreover, held-out framing probes remained consistently above chance across architectures despite strong lexical baselines. Activation steering experiments further suggest that framing-associated representational directions can partially modulate downstream behavioral outcomes. Finally, these findings indicate that robustness to contextual variation may represent an important consideration when evaluating the consistency and trustworthiness of conversational AI systems deployed in mental-health-oriented interactions.",
+        "authors": "Abla Bedoui, Ashley L. Greene, Mohammed Cherkaoui",
+        "url": "http://arxiv.org/abs/2606.26982v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26982v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了决策对齐（decision-alignment）作为不确定性量化（UQ）评估的新标准，并提出了基于严格适当评分规则（proper scoring rules）的先验加权效用指标。这为 UQ 评估提供了原则性的统计理论基础，并揭示了现有指标的缺陷。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26818v1",
+        "title": "Optimizing Experimental Design for Causal Effect Estimation with Partial Measurements",
+        "summary": "Instrumental variable regression quantifies causal effects between a possibly confounded treatment variable $ X_2 $ and a response variable $ X_3 $ by leveraging an instrument $ X_1 $. Our work considers the setting where some prior information of the joint distribution of $ X_{123} $ is given, potentially through an initial dataset. However, further samples must be gathered to improve the accuracy of the estimation. We show that under specific parameter configurations in a Gaussian graphical model, taking partial samples from, e.g., $ X_{12} $ can reduce the asymptotic variance of a consistent estimator. This idea is developed by adding a budget constraint over the cost per (partial) sample. The optimization problem is analytically solvable over the real numbers and gives the optimal number of requested partial and complete samples. We provide significance level, power, and sample-size calculations for detecting a non-zero causal effect under optimal budget allocation. Our method can considerably reduce the necessary budget and the number of complete samples. Finally, we showcase the advantages and applicability of adaptive causal effect estimation for automotive analytics and pharmaceutical research.",
+        "authors": "Leopold Mareis",
+        "url": "http://arxiv.org/abs/2606.26818v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26818v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了在部分测量下，使用工具变量回归进行因果效应估计的实验设计优化问题。它分析了估计器的渐近方差，并提供了显著性水平、功效和样本量计算，具有强大的因果逻辑和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26804v1",
+        "title": "Structured Secant Methods to Select Smoothing Parameters For General Smooth Models",
+        "summary": "General smooth models replace parameters of a regular likelihood with additive models. The models can include parametric terms, Gaussian random effects, and smooth functions of covariates. The latter are parameterized via a reduced-rank spline basis and regularized via weighted quadratic penalties placed on the basis coefficients. Estimates for these weights (i.e., smoothing parameters) can be obtained by optimizing the Laplace-approximate Bayesian marginal likelihood. Existing (second-order) methods require the Hessian of the log-likelihood to solve this optimization problem approximately - exact optimization requires up to fourth order derivatives - which can be difficult to derive and expensive to evaluate. To address these problems, we present a quasi-Newton variant of the second-order Extended Fellner-Schall (EFS) optimization method. Our qEFS method relies on structured limited-memory secant approximations to the Hessian of the log-likelihood and is principally first-order. However, the approximation can also be accumulated for a sub-block of the Hessian, with the remaining columns being constrained to match those of the actual Hessian. The exact columns then provide additional structure for the sub-block approximation, which becomes more accurate as a result. We show that the qEFS method converges to the EFS method under certain conditions and continues to provide good estimates beyond these circumstances, which we illustrate in simulation studies. Secondary tasks involving the Hessian (confidence interval coverage & model selection) require partial approximations to achieve close to nominal performance. We provide Hidden Markov and Tweedie model examples, for which the qEFS method is substantially easier to implement than alternative methods.",
+        "authors": "Joshua Krause, Jelmer P. Borst, Jacolien van Rij",
+        "url": "http://arxiv.org/abs/2606.26804v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26804v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一种结构化割线方法 (qEFS) 来选择通用平滑模型的平滑参数，并证明了其在特定条件下的收敛性。这展示了优化收敛性分析和严谨的数学推导，适用于统计建模。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26638v1",
+        "title": "Multivariable Mendelian randomization with weak instruments: a comparison of Bayesian and frequentist methods",
+        "summary": "Weak instruments are a well known limitation for valid causal inference in Mendelian randomization studies. In the single exposure setting, weak instrument bias can be mitigated by selecting genetic instruments which are strongly associated with the exposure according to p-value and/or F-statistic thresholds. However, in the multi-exposure setting, genetic instruments may be strongly associated with an exposure but weakly associated with it conditional on all other exposures in the analysis. It is therefore more difficult to guarantee conditionally strong instruments in multivariable Mendelian randomization. Weak instrument bias can be mitigated using modelling approaches, however there are fewer methods for doing this in the multivariable case compared with the single exposure case. In this paper, we consider a method for mitigating weak instrument bias in multivariable Mendelian randomization using a Bayesian framework: MVMR-Pony. We compare this method with existing frequentist methods. We show using simulation studies that the MVMR-Pony method outperforms the frequentist approaches with respect to bias, coverage, type I error rates, and power, across settings where weak instrument bias arises due to correlated genetic effects, measurement error, and mediation.",
+        "authors": "Andrew J. Grant, Ashish Patel, Stephen Burgess",
+        "url": "http://arxiv.org/abs/2606.26638v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26638v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文比较了贝叶斯和频率学方法在多变量孟德尔随机化中处理弱工具变量偏差的能力，并评估了偏差、覆盖率、I 类错误率和功效等基本统计性质。这篇论文在因果推断和统计保证方面表现出色。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26630v1",
+        "title": "Doubly Robust Quadratic Inference Functions for Causal Inference in Cluster Randomized Trials",
+        "summary": "Quadratic inference functions (QIF) provide a robust and efficient alternative to generalized estimating equations (GEE) for marginal regression with correlated data, particularly in cluster randomized trials (CRTs). However, existing QIF methodology does not account for confounding due to covariate imbalance between treatment arms, a common concern in observational CRTs or CRTs with prognostic covariate adjustment. We propose a doubly robust QIF (DR-QIF) estimator that combines doubly robust pseudo-outcomes, constructed from propensity score and outcome regression models, with the QIF extended score equations. The DR-QIF estimator is consistent for the average treatment effect when either the propensity score model or the outcome regression model is correctly specified, but not necessarily both. We show that DR-QIF is more efficient than doubly robust GEE (DR-GEE) when the working correlation structure is misspecified, and we characterize the asymptotic efficiency gain analytically. For cross-sectional CRTs the two estimators are algebraically identical; efficiency gains emerge in longitudinal CRTs with strong temporal correlation, reaching 3.5% at N=120 and T=8 repeated measures. Finite-sample properties are evaluated via Monte Carlo simulation, and the method is illustrated using data from the WASH Benefits Kenya cluster randomized trial.",
+        "authors": "Hengshi Yu",
+        "url": "http://arxiv.org/abs/2606.26630v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26630v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了双重稳健二次推断函数 (DR-QIF) 估计器，用于聚类随机试验中的因果推断。它证明了估计器在倾向分数模型或结果回归模型正确指定时的一致性，并分析了渐近效率增益。这提供了强大的因果逻辑和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26617v1",
+        "title": "Sketched Linear Contrastive Learning: Approximation, Optimization, and Statistical Scaling",
+        "summary": "Scaling laws describe how learning performance varies with model size, data size, and compute. While recent theoretical work has established scaling laws for sketched linear regression, much less is understood for contrastive representation learning. In this paper, we study a sketched linear model for contrastive learning under a paired Gaussian latent-variable setup. The learner observes only sketched views of two correlated variables and trains a bilinear contrastive score by full-batch empirical gradient descent. We analyze a Gaussian-negative quadratic contrastive surrogate under aligned power-law spectra and a contrastive source condition, where we derive a risk decomposition into irreducible risk, approximation error, GD bias, GD variance, and a cross term. The cross term is controlled by the bias and variance and therefore does not affect the upper-bound scaling. Our main theorem gives an explicit scaling law with respect to sketch dimension $M$, sample size $N$, and effective optimization horizon $L_{\\mathrm{eff}}γ$. Compared with standard linear-regression scaling laws, the contrastive setting must learn interactions between two views, and this changes how optimization and finite-sample noise scale with model size, data, and training time. This provides a first theoretical step toward understanding scaling behavior in contrastive learning and gives guidance for balancing model size, data, and optimization compute.",
+        "authors": "Ziyan Chen, Zhongzhu Zhou, Ding-Xuan Zhou",
+        "url": "http://arxiv.org/abs/2606.26617v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26617v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为 Sketched 线性对比学习建立了第一个理论扩展定律，包括风险分解和对草图维度、样本量和优化时间尺度的显式扩展定律。这为理解现代 AI 系统（对比学习）的理论基础和优化行为提供了深刻见解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26543v1",
+        "title": "A Unified Three-Stage Weighting Framework for Causal Inference and Mediation Analysis under Case-Control Sampling",
+        "summary": "Case-control studies are widely used in epidemiology and biomedical research because they provide substantial efficiency gains when outcomes are rare or prospective follow-up is impractical. However, retrospective outcome-dependent sampling distorts the population outcome distribution, creating fundamental challenges for causal inference. We propose a unified three-stage weighting (3S-weighting) framework for causal inference and causal mediation analysis from case--control studies. The proposed approach first estimates the unknown population outcome prevalence using density-ratio learning and label-shift correction combined with externally available covariate information. Next, prevalence-based design weights are used to reconstruct the target population distribution from the retrospective sample. Finally, stabilized causal and mediation weights are applied within a marginal structural modeling framework to estimate total and pathway-specific causal effects, including the pure direct effect, pure indirect effect, and interaction effect. Simulation studies demonstrate that conventional analyses that ignore retrospective sampling can produce substantial bias in both total and mediation effect estimates, whereas the proposed approach consistently recovers the target population causal parameters across a range of sampling scenarios. An application of data from the National Health and Nutrition Examination Survey further illustrates the practical implementation and utility of the proposed framework.",
+        "authors": "Tarikul Islam, Mahbub A. H. M. Latif",
+        "url": "http://arxiv.org/abs/2606.26543v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26543v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个统一的三阶段加权框架，用于病例对照抽样下的因果推断和中介分析。它旨在恢复目标总体因果参数并减少偏差，具有强大的因果逻辑和统计保证，解决了流行病学中的一个基本挑战。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26497v1",
+        "title": "Learning Probabilistic Filters with Strictly Proper Scoring Rules",
+        "summary": "Bayesian filtering of partially and noisily observed dynamical systems seeks to infer the evolving conditional distribution of the state of a dynamical system, given observations, in an online fashion. This Bayesian filtering distribution is the natural object for uncertainty quantification, but it is rarely available as a supervised learning target. However, one can often use the forecast model to generate synthetic system trajectories, along with synthetic observations. We introduce the proper scoring ensemble filter (PSEF), an ensemble data assimilation method based on training an analysis map to approximate the filtering distribution using only synthetic state--observation trajectories. The analysis step is represented as a permutation-invariant, transformer-based map that takes as input a forecast ensemble and observations, producing an analysis ensemble. Training is based on strictly proper scoring rules -- with the energy score used in our implementation -- so that probabilistic accuracy is rewarded over the whole probability distribution. We prove that, under a realizability assumption, the population objective is minimized by the true Bayesian filtering distribution. We also derive the finite-ensemble empirical objective used in training and relate its single state--observation trajectory form to the population objective, using a mean-field consistency argument. Numerical experiments show that the learned filter accurately approximates challenging filtering distributions, including nonlinear, non-Gaussian, and multi-modal posteriors, and achieves stronger performance in data assimilation tasks than classical methods or learning-based methods with mean-squared-error objectives. For close-to-Gaussian problems, learning a correction to the EnKF is the best approach, while for highly non-Gaussian problems an end-to-end approach that discards this inductive bias is superior.",
+        "authors": "Eviatar Bach, Ricardo Baptista, Jochen Bröcker, Bohan Chen, Andrew Stuart",
+        "url": "http://arxiv.org/abs/2606.26497v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26497v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了基于严格适当评分规则（strictly proper scoring rules）学习概率滤波器的方法 (PSEF)，并证明了在可实现性假设下，总体目标函数由真实的贝叶斯滤波分布最小化。这在序贯推断中提供了强大的统计保证和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.26478v1",
+        "title": "Learning rate selection via weighted Fisher divergence",
+        "summary": "The general Bayesian approach provides a flexible modeling framework by introducing a loss-based likelihood. A general posterior has a learning rate, which controls the relative weight of the loss-based likelihood and the prior. The flexibility of general Bayesian inference comes with an important calibration problem, especially under model misspecification. In such cases, the conventional Bayesian information identity fails, and credible sets derived from an uncalibrated Gibbs posterior need not have the desired uncertainty interpretation. This paper aims to select the learning rate used to calibrate a general posterior. By introducing the weighted Fisher divergence between the asymptotic distribution of the general posterior and a normal distribution with sandwich-type variance, we provide a closed-form expression for the selected learning rate. The selected learning rate includes the Fisher information matching learning rate as a special case and is no larger than it in an important special case. Numerical examples and a real data analysis demonstrate the usefulness of the proposed method.",
+        "authors": "Takahiro Onizuka",
+        "url": "http://arxiv.org/abs/2606.26478v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.26478v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过引入加权 Fisher 散度，解决了在模型误设定下通用贝叶斯推断的学习率选择校准问题，并提供了所选学习率的闭式表达式。这体现了严谨的统计理论和数学推导，对于贝叶斯推断的校准至关重要。"
+    }
+]

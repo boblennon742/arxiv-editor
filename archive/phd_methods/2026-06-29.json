@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.30370v1",
+        "title": "MUSE: Unlocking Timestep as Native Task Steering for One-Step Dense Prediction",
+        "summary": "Monocular dense prediction has recently seen remarkable success by repurposing pre-trained diffusion models. This opens a promising yet challenging avenue for more efficient multi-task learning paradigm. However, existing multi-task diffusion methods often introduce parameter-heavy adapters, experts, or learnable task tokens, leading to computational redundancy. In this paper, we reveal an inherent mechanism within one-step diffusion models: the native, fixed sinusoidal timestep embedding can be repurposed as an endogenous task steering signal. Based on this discovery, we propose Multi-task Unified eStimation via timestep Embedding (MUSE), a parameter-free, single-model multi-tasking approach for dense prediction. We interpret this mechanism via Manifold Decoupling, where discrete, fixed timestep values deterministically steer the generation process towards decoupled, task-specific manifolds in the latent space. Extensive experiments across 10 datasets demonstrate that MUSE achieves highly competitive performance on both monocular depth and normal estimation, and its efficacy generalizes across U-Net and DiT architectures. Our work offers a concise and efficient path toward generalist vision models by simply unlocking the latent potential of existing generation infrastructure.",
+        "authors": "Shuo Zhou, Zhaoxin Li, Xiujuan Chai",
+        "url": "http://arxiv.org/abs/2606.30370v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30370v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了单步扩散模型中时间步嵌入作为任务引导信号的内在机制，并提出了MUSE框架。其核心思想是将离散、固定的时间步值解释为将生成过程引导至解耦的、任务特定流形，从而实现参数无关的多任务密集预测。这种对扩散模型内部机制的理论洞察和参数无关的解决方案，在数据效率和模型压缩方面具有潜在影响力，符合您对理论创新性和解决实际瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30308v1",
+        "title": "The Surprising Effectiveness of Video Diffusion Models for Hand Motion Reconstruction",
+        "summary": "4D hand motion reconstruction from egocentric video is bottlenecked by clear limitations of existing methods: image-based pipelines depend on a detector that fails under heavy occlusion, while video-based methods rely on temporal modules learned only from scarce hand-pose annotations, a narrow signal insufficient to model motion dynamics, occlusion reasoning, and hand-object interaction. These capabilities, however, are exactly what video generative models must implicitly acquire when trained to synthesize coherent video at internet scale. Motivated by this, we present ViDiHand, which leverages the representations of a pretrained video diffusion model to reconstruct 4D two-hand pose. We adapt it via a hand-overlay rendering objective that specializes its features for hands while preserving its world priors. A decoder then recovers metric-scale pose from the adapted features. The whole pipeline operates directly on full frames--no detector, no infiller, and no test-time optimization. On ARCTIC, HOT3D, and HOI4D, ViDiHand substantially outperforms prior methods, establishing video diffusion models as a powerful new foundation for hand motion reconstruction and a promising route to scalable in-the-wild data collection for embodied AI. Project page: https://vidihand.github.io.",
+        "authors": "Yuxi Wang, Chengkai Jin, Yufei Liu, Wenqi Ouyang, Tianyi Wei, Zhiwei Zeng, Siyuan Huang, Zhiqi Shen, Xingang Pan",
+        "url": "http://arxiv.org/abs/2606.30308v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30308v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "ViDiHand利用预训练视频扩散模型的表示来重建4D双手姿态，解决了现有方法在重度遮挡下失效或依赖稀缺标注的局限性。它通过手部叠加渲染目标来特化扩散模型的特征，同时保留其世界先验。这种将视频生成模型隐式习得的能力（如运动动力学、遮挡推理、手物交互）用于下游任务的创新性方法，在数据效率和利用现有模型能力方面具有显著优势，且理论上利用了生成模型的隐式知识，而非纯粹工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30335v1",
+        "title": "BayesEvolve: Explicit Belief States for Autonomous Scientific Discovery",
+        "summary": "Autonomous scientific discovery systems increasingly use large language models (LLMs) to propose new hypotheses, but many such systems condition primarily on experimental memory: archives of high-scoring candidates or heuristic summaries of recent trials. We argue that discovery agents should instead maintain explicit, uncertainty-aware beliefs about hypothesis quality. We introduce BayesEvolve, a belief-guided discovery framework that converts experimental evidence into a predictive belief state and uses this belief to guide future experimentation. As a controlled testbed for belief-guided discovery, we evaluate BayesEvolve on shifted BBOB-style black-box optimization tasks, leaving program and laboratory discovery domains to future work. BayesEvolve improves sample efficiency over memory- and archive-guided LLM baselines under a fixed evaluation budget. We further show that the belief state is predictive on held-out candidate pools, that controlled decision-rule ablations favor belief-guided selection with an annealed uncertainty bonus, and that BayesEvolve exhibits productive late-stage concentration rather than unfocused exploration.",
+        "authors": "Xuening Wu, Shan Yu, Qianya Xu, Shenqin Yin",
+        "url": "http://arxiv.org/abs/2606.30335v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30335v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "BayesEvolve提出了一个信念引导的科学发现框架，通过将实验证据转化为预测性信念状态来指导未来的实验。它解决了现有LLM驱动的发现系统主要依赖实验记忆而非不确定性感知信念的问题。这种结合LLM与贝叶斯决策理论的方法，在提高样本效率和探索效率方面具有理论创新性，对自主科学发现领域有重要实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30345v1",
+        "title": "DRIFT: Difficulty Routing Self-DIstillation with Rhythm-Gated Exploration and Success BuFfer Training",
+        "summary": "Enabling large language models to achieve stable self-improvement without external expert supervision remains a central challenge in complex reasoning tasks. Existing self-distillation and reinforcement learning methods lack explicit mechanisms for tracking problem-level learning progress and adapting optimization strategies accordingly. Consequently, training may over-optimize easy problems, receive weak supervision from hard problems, and fail to sufficiently explore borderline cases. To resolve these issues, we propose DRIFT, an online self-evolution policy optimization framework for large language models. DRIFT regulates the model's self-improvement process through the joint use of Difficulty Routing and Rhythm Gating. The former identifies the model's learning state at the problem level and dynamically allocates self-distillation and reinforcement learning signals, while the latter refines policy updates at the token level, concentrating exploration on critical reasoning positions. By further incorporating a success buffer and a two-stage curriculum learning strategy, DRIFT preserves high-quality historical experience while progressively guiding the model from reliable behavior acquisition toward stable policy evolution. Evaluated across five benchmarks and three model scales, DRIFT surpasses the peak performance of both GRPO and SDPO across all evaluated metrics. On the average score over the five benchmarks, DRIFT achieves 79.5$\\%$, outperforming GRPO by 9.5$\\%$ and SDPO by 7.5$\\%$, establishing a new state-of-the-art result. Notably, on ToolUse, DRIFT reaches an accuracy of 79.2$\\%$, improving over GRPO by 13.5$\\%$ and SDPO by 10.7$\\%$, setting a new state-of-the-art and substantially outperforming all concurrent methods.",
+        "authors": "Haisen Luo, Yiwei Liu, Haoning Wang, Dan Liu, Junxi Yin, Haotian Wang, Lei Zhang, Xiaoyu Tian, Shuaiting Chen, Yuansheng Song, Baoyan Guo, Xiongfei Yan, Bolan Yang, Chengwei Liu, Ming Cui, Jiong Chen",
+        "url": "http://arxiv.org/abs/2606.30345v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30345v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "REAR框架通过奖励分解将LLM的偏好对齐建模为重新对齐问题，并将其公式化为token级别策略对数概率的线性组合。这使得它能以计算高效的方式集成到各种测试时采样算法中。这种在测试时进行偏好对齐的训练无关方法，在LLM应用中解决了成本和数据策展的瓶颈，具有很强的理论创新性和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30339v1",
+        "title": "REAR: Test-time Preference Realignment through Reward Decomposition",
+        "summary": "Aligning large language models (LLMs) with diverse user preferences is a critical yet challenging task. While post-training methods can adapt models to specific needs, they often require costly data curation and additional training. Test-time scaling (TTS) presents an efficient, training-free alternative, but its application has been largely limited to verifiable domains like mathematics and coding, where response correctness is easily judged. To extend TTS to preference alignment, we introduce a novel framework that models the task as a realignment problem, since the base model often fails to sufficiently align with the stated preference. Our key insight is to decompose the underlying reward function into two components: one related to the question and the other to preference information. This allows us to derive a REAlignment Reward (REAR) that selectively rescales the proportions of these two reward terms. We then show that REAR can be formulated as a linear combination of token-level policy log-probabilities, making it computationally efficient and easy to integrate with various TTS algorithms such as best-of-$N$ sampling and tree search. Experiments show that compared to other test-time baselines, REAR not only enables scalable test-time realignment for preference alignment tasks under diverse user requirements, but also generalizes to mathematical and visual tasks under appropriate preference settings.",
+        "authors": "Fuxiang Zhang, Pengcheng Wang, Chenran Li, Yi-Chen Li, Yuxin Chen, Lang Feng, Chenfeng Xu, Masayoshi Tomizuka, Bo An",
+        "url": "http://arxiv.org/abs/2606.30339v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30339v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DRIFT提出了一个在线自演化策略优化框架，通过难度路由和节奏门控来调节LLM的自改进过程。它解决了现有自蒸馏和强化学习方法在跟踪问题级学习进展和适应优化策略方面的不足。这种结合了难度感知、节奏门控和成功缓冲区的多方面优化框架，为LLM在复杂推理任务中的稳定自改进提供了理论创新和实际解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30414v1",
+        "title": "Diffusion Fine-tuning with Rewarded Moment Matching Distillation",
+        "summary": "Distillation and Reinforcement Learning (RL) fine-tuning are the primary pillars of diffusion post-training. While traditionally studied in isolation, the interaction between these phases remains poorly understood, and in particular how fine-tuning impacts the generative quality of distilled models. We introduce Rewarded Moment Matching Distillation (RMMD), a novel framework that simultaneously distills diffusion models and maximizes a reward function. RMMD preserves the high-fidelity ``naturalness'' characteristic of advanced distillation (such as 8-step Moment Matching) by adapting the sampling loop for on-policy training and repurposing the distillation loss as a proxy for integral KL regularization. By evaluating the FID-Reward Pareto fronts on ImageNet, we demonstrate that RMMD achieves superior trade-offs compared to single-step baselines (DI++) and multi-step competitors (DRaFT, HyperNoise). Finally, we apply RMMD to GenCast, a state-of-the-art weather forecasting model, to distill it while optimizing the Continuous Ranked Probability Score (CRPS) metric. The resulting distilled model achieves a 7.5x speedup while outperforming the teacher model on 93% of target weather variables, and being better calibrated. This proves that RMMD scales to complex, high-dimensional scientific domains.",
+        "authors": "Alexis Jacq, Guillaume Couairon, Valentin De Bortoli, Quentin Berthet, Arnaud Doucet, Romuald Elie",
+        "url": "http://arxiv.org/abs/2606.30414v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30414v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RMMD（Rewarded Moment Matching Distillation）是一个新颖的框架，它同时蒸馏扩散模型并最大化奖励函数。它通过调整采样循环进行在策略训练，并将蒸馏损失重新用作积分KL正则化的代理，从而在保持高保真度的同时优化奖励。这解决了扩散模型后训练中蒸馏和强化学习之间相互作用理解不足的问题，在模型压缩和性能提升方面具有显著的理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30420v1",
+        "title": "Experience Augmented Policy Optimization for LLM Reasoning",
+        "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) is a powerful paradigm for improving the reasoning capabilities of large language models (LLMs). However, existing RLVR methods typically rely on on-policy optimization from scratch, resulting in high sampling costs and inefficient utilization of accumulated experience. As model capabilities and policy behaviors evolve during training, recent attempts to reuse experience via fixed reasoning trajectories further suffer from policy mismatch. Motivated by these limitations, we argue that experience in RLVR should not be reused as fixed reasoning trajectories, but instead expressed in a policy-adaptive manner. In this work, we propose Experience-Augmented Policy Optimization (EAPO), which leverages a prior RL-optimized policy as an action-level experience prior and selectively injects experience at critical decision points during rollout. To ensure stable and unbiased learning from experience-augmented rollouts, EAPO further incorporates an adapted importance sampling scheme. Experiments on using Qwen-2.5-math 7b and Qwen-3-8B on five different benchmarks demonstrate that EAPO consistently improves reasoning performance over state-of-the-art RLVR methods.",
+        "authors": "Jinda Lu, Kexin Huang, Junkang Wu, Shuo Yang, Jinghan Li, Chiyu Ma, Shaohang Wei, Xiang Wang, Guoyin Wang, Jingren Zhou",
+        "url": "http://arxiv.org/abs/2606.30420v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30420v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "EAPO（Experience-Augmented Policy Optimization）提出了一种经验增强的策略优化方法，通过将先前的RL优化策略作为行动级别的经验先验，并在关键决策点选择性地注入经验。它解决了RLVR（Reinforcement Learning with Verifiable Rewards）方法中采样成本高和经验利用效率低的问题。这种方法在LLM推理能力提升方面具有重要意义，通过更有效地利用经验来提高数据效率和模型性能。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30467v1",
+        "title": "Non-parametric recovery of causal diffusion mechanisms from steady-state observations",
+        "summary": "We consider sparse multivariate stochastic systems that evolve in continuous time according to a causal mechanism and present methodology to recover the system's time-infinitesimal transition mechanism from mere cross-sectional data. This observational paradigm is motivated by applications such as gene expression analysis, where destructive experimental techniques may only allow recording data once over a cell's lifetime. Precisely, we assume the system follows a time-homogeneous diffusion process that has reached an equilibrium distribution at observation time. Further, we assume the causal mechanism is fully described by the diffusion drift, is acyclic, and its causal structure graph is known. In this setting, we prove that the full causal mechanism, i.e., the drift function, can be non-parametrically identified under a weak non-explosion criterion. We derive a non-parametric kernel estimator for this challenging inverse problem and prove its consistency. Moreover, we propose a cross-validation scheme for hyperparameter tuning, illustrate the behavior of our estimator in simulations, and we discuss connections with irreversible generative diffusion models and low-frequency sampled data.",
+        "authors": "Richard Schwank, Mathias Drton",
+        "url": "http://arxiv.org/abs/2606.30467v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30467v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了从横截面数据中恢复因果扩散机制的方法，假设系统遵循时间齐次扩散过程并达到平衡分布。它证明了在弱非爆炸准则下，完整的因果机制（漂移函数）可以非参数识别，并提出了一个非参数核估计器并证明其一致性。这在数理统计和因果推断领域具有高度的理论创新性和严谨性，为理解生成扩散模型提供了基础，对AI前沿算法有深远影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30574v1",
+        "title": "The Fundamental Limits of Valid Transport Map Estimation",
+        "summary": "Many modern generative modeling methods, including diffusion models, normalizing flows, and flow matching, estimate transport maps or plans between distributions without explicitly targeting an optimal transport (OT) map. In applications like generative modeling, the transport cost itself is irrelevant, and this makes it natural to target maps which are more tractable from either a statistical or computational standpoint. In this short note, we formalize the task of estimating any valid transport map in a rigorous minimax framework. One consequence of this framing is that it yields sample complexity lower bounds for any method whose learned object is evaluated as a transport map or plan, including flow matching and diffusion-based generative models, in settings where direct analysis would be challenging due to the analytic complexity of the methods and their target maps. We observe that, under standard, though strong, stability assumptions from the OT literature, estimating any valid transport map is statistically as hard as estimating the OT map. We complement these results with some examples showing that when these stability assumptions fail, alternative transport maps can be learned substantially more accurately than the OT map. Our minimax framing provides a rigorous foundation for understanding the statistical limits of modern transport-based generative methods and clarifies when targeting sub-optimal maps can provide real statistical advantages.",
+        "authors": "Sivaraman Balakrishnan",
+        "url": "http://arxiv.org/abs/2606.30574v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30574v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇短文在严格的minimax框架下形式化了估计任何有效传输映射的任务，为流匹配和基于扩散的生成模型等方法提供了样本复杂度下界。它观察到，在标准稳定性假设下，估计任何有效传输映射与估计最优传输（OT）映射一样困难。这为理解现代基于传输的生成方法的统计极限提供了严谨的基础，并阐明了何时针对次优映射可以提供真正的统计优势，具有极高的理论价值和严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30578v1",
+        "title": "Uncertainty-Aware Generation and Decision-Making Under Ambiguity",
+        "summary": "With rapidly improving capabilities, Large Language Models (LLMs) are increasingly used in many complex real-world tasks. Beyond requiring in-depth knowledge and reasoning skills, many of these tasks exhibit a high degree of subjectivity and require that the outputs of the model can be trusted. While a lot of progress has been made to train better models, decision-making algorithms have received less attention. In this work, we present and evaluate various uncertainty-aware decision-making algorithms based on Bayesian decision theory and risk-averse decision making on the tasks of tutoring and automatic peer reviewing. Concretely, we take uncertainty over tutoring strategies and review scores into account when generating a tutor response or review and use conformal prediction to provide guarantees over strategy and score. We find empirically that these algorithms can improve the utility of the generations but need to be carefully implemented when ambiguity is high. For example, risk-averse rules can degrade performance by optimizing for generic outputs, while Bayesian methods tend to perform better. Our work uses techniques from decision theory to improve LLM-based decision-making and outlines open challenges for the community.",
+        "authors": "Nico Daheim, Iryna Gurevych",
+        "url": "http://arxiv.org/abs/2606.30578v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30578v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了基于贝叶斯决策理论和风险规避决策的多种不确定性感知决策算法，用于LLM在辅导和自动同行评审等任务中的生成和决策。它通过共形预测提供策略和分数保证，并实证发现这些算法可以提高生成效用。这结合了LLM与决策理论，解决了LLM在复杂现实世界任务中输出可信度的问题，具有理论深度和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30609v1",
+        "title": "C$^{2}$R: Cross-sample Consistency Regularization Mitigates Feature Splitting and Absorption in Sparse Autoencoders",
+        "summary": "Sparse Autoencoders (SAEs) are widely used to interpret large language models by decomposing activations into sparse, human-understandable features, but scaling to large dictionaries exposes fundamental challenges. Systematic studies reveal pervasive feature splitting that fragments coherent concepts into non-atomic latents and widespread feature absorption that creates arbitrary exceptions in general features, severely compromising latent reliability. These issues stem from inconsistent latent assignment across samples: without cross-sample constraints, per-sample optimization often allows a single underlying concept to be inconsistently distributed across multiple redundant or interfering latents. To address this, we introduce C$^2$R (\\underline{\\textbf{C}}ross-sample \\underline{\\textbf{C}}onsistency \\underline{\\textbf{R}}egularization). C$^2$R explicitly encourages that each semantic feature is consistently represented by a unified latent across the batch by penalizing the co-activation of directionally similar latents. Comprehensive evaluation demonstrates that C$^2$R effectively mitigates both splitting and absorption while, crucially, preserving reconstruction fidelity, providing a principled solution that enhances latent interpretability without degrading model performance. Source code is available at https://github.com/hr-jin/Cross-sample-Consistency-Regularization.",
+        "authors": "Haoran Jin, Xiting Wang, Shijie Ren, Hong Xie, Defu Lian",
+        "url": "http://arxiv.org/abs/2606.30609v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30609v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "C$^2$R（Cross-sample Consistency Regularization）旨在解决稀疏自编码器（SAE）中特征分裂和特征吸收的问题，这些问题严重损害了LLM解释性中的潜在可靠性。它通过惩罚方向相似的潜在变量的共激活，明确鼓励每个语义特征在批次中由统一的潜在变量一致表示。这种方法在理论上解决了SAE的核心缺陷，对LLM的可解释性这一关键瓶颈具有重要影响，且具有理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30626v1",
+        "title": "DOPD: Dual On-policy Distillation",
+        "summary": "On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby elevate the performance frontier of distillation, an intuitive direction is to infuse privileged information to either teacher or student itself. However, this additional input induces a potential failure mode we dub privilege illusion: a pattern that conflates the transferable capability gap that students are meant to close, and the information asymmetry gap that can only be mimicked but never replicated. This issue is further amplified by the inherent non-uniformity of token-level supervision, where only a small subset of tokens carries pivotal capability-bearing signals. To this end, we propose DOPD, an advantage-aware dual distillation paradigm that dynamically routes token-level supervision between privileged teacher and privileged student policies based on their advantage gap and relative probabilities. Each token receives supervision of different strength, objective, and strategy from either teacher or student itself, which transfers credible capability while simultaneously receiving auxiliary signals, to alleviate privilege illusion. Extensive experiments on both large language model (LLM) and vision-language model (VLM) settings demonstrate that DOPD consistently outperforms Vanilla OPD and other counterparts. Further results on stability, robustness, continual learning, and out-of-distribution tasks validate its superiority.",
+        "authors": "Xinlei Yu, Gen Li, Qingyi Si, Guibin Zhang, Yuqi Xu, Congcong Wang, Shuai Dong, Kaiwen Tuo, Xiangyu Zeng, Kaituo Feng, Qunzhong Wang, Yang Shi, Xiaobin Hu, Xiangyu Yue, Jiaqi Wang, Shuicheng Yan",
+        "url": "http://arxiv.org/abs/2606.30626v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30626v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "DOPD（Dual On-policy Distillation）提出了一个优势感知的双重蒸馏范式，动态地在特权教师和特权学生策略之间路由token级别的监督信号。它解决了在策略蒸馏（OPD）中特权信息可能导致的“特权幻觉”问题，即混淆了可转移能力差距和信息不对称差距。这种方法在LLM和VLM设置中都表现出色，在模型能力转移和数据效率方面具有理论创新和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29871v1",
+        "title": "AI Training Manager: Bounded Closed-Loop Control of Adaptive Training Recipes",
+        "summary": "We present the AI Training Manager, a bounded LLM-based supervisory controller for adaptive machine learning training. Standard training pipelines often rely on fixed recipes or single-axis schedulers, which can struggle with mid-run failures such as severe overfitting, loss imbalance, exploration collapse, or unsafe exploration. Rather than replacing mathematical optimizers or acting as an unconstrained coding agent, the manager operates through a schema-conditioned interface: it reads structured telemetry snapshots from an active run, audits a constrained action space, and returns validated updates to training parameters such as learning rate, regularization strength, loss-weight coefficients, and exploration settings. We evaluate this architecture across supervised language modeling and reinforcement learning. On TinyStories, the manager detects and corrects overfitting, achieving a validation loss 60% lower than the baseline while producing auditable intervention logs. In this supervised setting, we additionally show that manager inference does not need to block the training loop: training can continue while a manager response is pending, and validated updates can be applied asynchronously once available. In a robotic manipulation reinforcement-learning task, we use the same bounded decision interface in an episodic closed-loop setting, where manager updates are applied at evaluation or checkpoint boundaries. The manager mitigates both conservative and unsafe exploration regimes. These results suggest that schema-conditioned LLMs can serve as bounded supervisory managers for live training runs, complementing conventional optimizers and schedulers with interpretable, multi-axis intervention capabilities",
+        "authors": "Anjali Rao, Nikhil Kamalkumar Advani",
+        "url": "http://arxiv.org/abs/2606.29871v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29871v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "AI Training Manager提出了一个基于LLM的监督控制器，用于自适应机器学习训练。它通过模式条件接口读取结构化遥测快照，审计受限的行动空间，并返回经过验证的训练参数更新。这解决了标准训练管道在处理过拟合、损失不平衡等问题时的局限性，提供了一种可解释、多轴的干预能力，对提高模型训练效率和稳定性具有重要实践意义，且其架构设计具有创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29964v1",
+        "title": "Variance Reduction on the Camera Axis: Multi-View Score Distillation for 3D",
+        "summary": "Score distillation turns a pretrained 2D diffusion model into a 3D generator, but the per-step gradient is estimated from a single randomly chosen view: it is high-variance and blind to global shape consistency. Prior work addresses this by retraining the diffusion prior on multi-view data; this improves consistency but makes the sampling contribution inseparable from prior quality. We instead isolate the sampling axis. The per-step gradient is one noisy sample of an expectation over views; aggregating K samples per step at a fixed total UNet budget reduces variance without touching the prior. We introduce Multi-View Aggregated Score Distillation (MV-SDI), which aggregates gradients from K views per step via gradient accumulation, keeping peak memory unchanged and the 2D prior frozen, and draws views as antithetic antipodal pairs, a prior-independent geometric property, for balanced angular coverage. At a fixed 10,000-UNet-call budget, K=2 raises CLIP R-Precision from 74.8% to 83.8% and CLIP score from 0.297 to 0.312, with consistent gains on HPSv2 and ImageReward and a 0.0% divergence rate on the 43-prompt benchmark; optimization steps halve as a consequence. K=4 gives a fourfold step reduction at R-Precision 86.9% and CLIP 0.307, still well above the single-view baseline on every alignment metric. MV-SDI is compatible with gradient-based score-distillation pipelines, including Score Distillation via Inversion, and requires no retraining and no multi-view data.",
+        "authors": "Marian Lupascu, Mihai Sorin Stupariu, Ionut Mironica",
+        "url": "http://arxiv.org/abs/2606.29964v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29964v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MV-SDI（Multi-View Aggregated Score Distillation）通过梯度累积聚合K个视图的梯度，并在不改变峰值内存和冻结2D先验的情况下，将视图作为对立的对偶对进行绘制，以实现平衡的角覆盖。它解决了分数蒸馏中单视图梯度估计方差高且对全局形状一致性盲目的问题。这种方法在3D生成中提高了效率和一致性，且无需重新训练或多视图数据，具有理论创新和实际影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29758v1",
+        "title": "PS-PPO: Prefix-Sampling PPO for Critic-Free RLHF",
+        "summary": "Reinforcement Learning from Human Feedback (RLHF) for Large Language Models increasingly relies on critic-free methods as a practical alternative to actor--critic training. Despite their simplicity, existing critic-free approaches propagate a trajectory-level learning signal uniformly across all tokens in a trajectory. This requires full-trajectory policy updates for every rollout, leading to substantial optimization cost for long reasoning traces, even though intermediate prefixes often contain enough information to largely determine the final outcome. We propose Prefix-Sampling Proximal Policy Optimization (PS-PPO), a compute-efficient critic-free method for RLHF that exploits this temporal redundancy. PS-PPO introduces a prompt-conditioned cutoff distribution and samples a cutoff timestep for each trajectory. During the update pass, PS-PPO backpropagates only through the sampled prefix of each trajectory and applies an importance-weighting correction so that the resulting truncated gradient estimator remains unbiased with respect to the full-trajectory objective. Experiments on mathematical reasoning and RLHF benchmarks show that PS-PPO achieves large reductions in training compute and peak GPU memory, while maintaining accuracy comparable to strong critic-free baselines.",
+        "authors": "Doo Hwan Hwang, Kee-Eung Kim",
+        "url": "http://arxiv.org/abs/2606.29758v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29758v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出将LLM作为统计学课程中的探究对象，通过设计小型实验和分析输出分布来探究LLM的变异性、偏差和提示敏感性。它基于Veridical Data Science框架和PCS（Predictability-Computability-Stability）原则，为统计学教育中LLM的批判性参与提供了理论指导和课程示例。虽然不是直接的AI算法或架构创新，但其对LLM作为“随机机器”的统计学视角和严谨分析方法，对理解和评估LLM行为具有重要的理论和方法论意义，且逻辑清晰，深入浅出。"
+    }
+]

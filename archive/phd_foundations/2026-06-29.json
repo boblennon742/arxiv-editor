@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.30509v1",
+        "title": "Muon learns balanced solutions in matrix factorization without slow saddle-to-saddle dynamics",
+        "summary": "Matrix factorization (i.e., problems of the form $\\min_{\\mathbf{P},\\mathbf{Q}} \\|\\mathbf{M}^\\star - \\mathbf{P}^\\top\\mathbf{Q}\\|_\\mathrm{F}^2$) is a minimal learning problem that exhibits both nonlinear parameter dynamics and representation learning. In this setting, we study how parameter trajectories under the Muon optimizer differ from those of gradient descent. We identify three main dynamical differences: 1) Muon avoids the slow saddle-to-saddle dynamics from small initialization. Muon instead learns all the top modes of $\\mathbf{M}^\\star$ at the same rate, with the smaller modes converging first. 2) Muon remains stable even when the learning rate exceeds the critical threshold set by the local loss sharpness. This frees the learning rate from the condition number of the problem, enabling rapid convergence via exponential learning rate annealing. 3) Once the weights are aligned with each other and the target, Muon flow conserves the matrix quantity $\\sqrt{\\mathbf{P}^\\top \\mathbf{P}}-\\sqrt{\\mathbf{Q}^\\top \\mathbf{Q}}$, while gradient flow is known to conserve the matrix $\\mathbf{P}^\\top\\mathbf{P} - \\mathbf{Q}^\\top\\mathbf{Q}$. Despite having distinct conserved quantities, both optimizers find the so-called \\textit{balanced} solution from vanishing initialization. When training from small random initialization, the weights spontaneously align early in training. We derive the alignment rates in simple settings and show that they predict the empirical alignment rates in general. Finally, we exploit structural properties of Muon to construct a learning rate schedule that achieves near-perfect alignment in only two optimization steps.",
+        "authors": "Mark Rhee, Jamie Simon, Dhruva Karkada",
+        "url": "http://arxiv.org/abs/2606.30509v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30509v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对优化器Muon的动力学特性进行了深入的数学分析，与梯度下降进行对比，并推导了对齐速率和守恒量，具有严格的数学推导和理论保证，与您对“优化收敛性”和“清晰的数学推导”的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30492v1",
+        "title": "RBE-Flow: Recurrent Bayesian Estimation on Feature Manifolds for Cross-Modal Registration",
+        "summary": "Cross-modal image registration is essential for multi-sensor perception but remains fundamentally challenging due to severe non-linear radiometric discrepancies and geometric distortions. Existing deterministic matching methods lack uncertainty awareness, struggling to navigate the resulting highly non-convex optimization landscape and frequently accumulating errors in ambiguous regions. In this paper, we propose RBE-Flow, a novel framework that reformulates dense cross-modal flow estimation as a closed-loop recurrent Bayesian estimation problem on learned feature manifolds. Diverging from standard feed-forward regression, RBE-Flow establishes a robust self-correcting mechanism by deeply coupling feature-metric non-linear optimization with probabilistic state updates. Specifically, a Recurrent Manifold Optimization (RMO) block iteratively generates flow observations and their associated uncertainties, which are then optimally assimilated into the prior state via an Uncertainty-Adaptive Probabilistic Update (UAPU) using deterministic sigma-point projection. Crucially, the resulting calibrated posterior covariance is fed back to adaptively regularize the damping of subsequent optimization steps, allowing the system to modulate its convergence based on predictive confidence. To ensure stable probabilistic training, we introduce a hybrid supervision scheme featuring a geometry-aware rectified NLL loss that structurally prevents variance collapse. Extensive experiments on challenging OSdataset, WHU-OPT-SAR, and RoadScene benchmarks demonstrate that RBE-Flow consistently achieves state-of-the-art performance, outperforming existing methods by a significant margin, particularly under strict sub-pixel criteria. Project page: https://github.com/NEU-Liuxuecong/RBE-Flow",
+        "authors": "Mengzhu Ding, Xin Song, Xiaoke Ding, Hongwei Ding, Xuecong Liu",
+        "url": "http://arxiv.org/abs/2606.30492v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30492v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了基于循环贝叶斯估计的跨模态配准框架，其核心在于概率状态更新、不确定性自适应和后验协方差的利用，以及几何感知的NLL损失，这些都体现了深厚的统计学理论基础和严谨的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30455v1",
+        "title": "Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules",
+        "summary": "The standard convergence analysis of mini-batch stochastic gradient descent (SGD) models gradient noise using a single variance term that treats all parameter directions equally, ignoring the fact that noise in high-curvature directions has less impact because learning rates are already constrained there. We introduce Curvature-Weighted Gradient Diversity (CWGD), a geometry-aware measure that weights per-sample gradient diversity by the inverse square root of the Hessian, providing a tighter proxy for the effective optimization noise. For strongly convex quadratic objectives with diagonal Hessians and isotropic noise, we prove that a CWGD-modulated cosine learning-rate schedule can reduce the asymptotic optimization error floor by up to a factor of two compared with standard cosine annealing. We implement this idea as CWGD-Cosine using a Hutchinson-based diagonal Hessian estimator that is exact for quadratic objectives. Across a range of condition numbers, batch sizes, and noise structures, CWGD-Cosine consistently achieves approximately 20% lower final optimization error than standard cosine annealing while incurring negligible overhead in the quadratic setting. We also identify and correct a degenerate curvature estimator, analyze the robustness of the proposed estimator, and explicitly discuss the limitations of the method, including Hessian staleness in non-convex optimization. These results establish CWGD as a principled geometry-aware measure of optimization noise and motivate future extensions to more general learning problems.",
+        "authors": "Muhammad Hamza, Ayush Goel",
+        "url": "http://arxiv.org/abs/2606.30455v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30455v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了曲率加权的梯度多样性作为几何感知的噪声度量，并从理论上证明了其在强凸二次目标函数下能显著降低渐近优化误差，涉及Hessian矩阵和收敛性分析，直接关注优化收敛性和数学推导，是您偏好的典型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30365v1",
+        "title": "CouCE: A Unified Causal Framework for Debiased Deep Metric Learning",
+        "summary": "Deep Metric Learning (DML) often struggles with zero-shot generalization because standard objectives inherently capture what co-occurs rather than what causes similarity. Consequently, DML models are vulnerable to shortcut learning driven by two structurally distinct confounders: background spurious correlations (which create backdoor paths via scene context) and foreground nuisance perturbations (which inject non-semantic variations like pose or illumination). Although existing methods have proposed targeted solutions for each pathway individually, none can simultaneously address both due to their fundamentally distinct causal roles. To bridge this gap, we propose the Counterfactual Causal Embedding (CouCE), a unified causal framework that explicitly models and neutralizes both confounders. Specifically, we introduce Orthogonal Dictionary-Based Backdoor Adjustment (ODBA), which isolates spurious background patterns into a variance-gated dictionary and stably disentangles them from the learned embeddings via soft orthogonal regularization. Simultaneously, we propose Multi-Scale Randomized Causal Intervention (MSRCI) to enforce causal invariance against foreground nuisances through multi-scale Fourier amplitude randomization and a symmetric KL invariance constraint. Notably, CouCE seamlessly integrates with any proxy-based loss, incurring modest training overhead without requiring architectural modifications during inference. Extensive experiments on CUB-200-2011, Cars-196, and Stanford Online Products demonstrate that CouCE consistently achieves state-of-the-art performance, providing a principled and robust solution for debiased DML.",
+        "authors": "Xin Yuan, Zhenyang Niu, Meiqi Wan, Huilin Zhu, Xin Xu, Kui Jiang",
+        "url": "http://arxiv.org/abs/2606.30365v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30365v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文构建了一个统一的因果框架来处理深度度量学习中的混淆问题，其核心在于对因果机制的建模和干预，并使用了严格的数学方法（如正交正则化、KL不变性约束），与您对“因果逻辑”和“数学推导”的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30338v1",
+        "title": "Sequential Fairness Auditing with Limited Output Access",
+        "summary": "External evaluations are becoming increasingly central to the governance of AI systems. In practice, however, independent auditors often have limited access to deployed models and must rely on query-based interactions. Most existing fairness evaluation methods assume static datasets and fixed-sample statistical tests, making them poorly suited to real-world auditing scenarios in which evidence must be collected sequentially under query constraints. In this work, we formulate fairness auditing as a tolerance-aware sequential hypothesis-testing problem under limited model output access. We develop a sequential generalized likelihood-ratio framework that allows auditors to accumulate evidence from a finite audit pool and stop once sufficient support for compliance or violation has been obtained. The framework is instantiated for decision-based Statistical Parity and Equal Opportunity audits, and extended to score- and logit-based proxy audits when richer observables are available. Our results show that both the fairness metric and the level of model access significantly affect audit efficiency, and that the benefits of richer output information are not uniform across auditing settings. In particular, richer outputs can substantially reduce the number of queries required for some fairness metrics and operating regimes, while offering limited gains in near-threshold cases. This work provides a practical statistical framework for sequential fairness auditing under realistic deployment constraints.",
+        "authors": "Ioannis Pitsiorlas, Martha V. Sourla, Marios Kountouris",
+        "url": "http://arxiv.org/abs/2606.30338v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30338v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将公平性审计问题建模为序贯假设检验，并提出了基于广义似然比的统计框架，这体现了深厚的统计学理论功底和严谨的数学建模能力，非常符合您对“统计保证”和“数学推导”的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30311v1",
+        "title": "Evaluating HWE and Association in Genome Wide Association Studies: A Unified Procedure",
+        "summary": "In genome wide association studies (GWASs) based on a case-control design, single nucleotide polymorphisms (SNPs) are typically evaluated for an association test and a Hardy-Weinberg equilibrium (HWE) goodness-of-fit test. SNPs are then excluded from analysis based on a HWE cutoff to avoid false positives. In order to avoid cutoffs based on arbitrary threshold values, we propose a conditional genotype--based test that conditions the Pearson $χ^2$-statistic in the 3x2 contingency table on the $χ^2$-statistic for HWE in the control group, and develop the relevant asymptotic distribution theory. We show by simulations that our test in most scenarios is more powerful than two competing retrospective procedures. Another important advantage of the proposed method is a better ranking of SNPs in GWASs as HWE is accounted for in computing p-values of SNP association. We demonstrate this effect on a data set in an alopecia study. In conclusion, our test makes separate HWE testing superfluous by providing a unified framework and strictly improves on the standard procedure in terms of power and interpretability, thereby making replication more cost effective and improving subsequent fine mapping.\\par",
+        "authors": "Stefan Böhringer, Hajo Holzmann",
+        "url": "http://arxiv.org/abs/2606.30311v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30311v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文为GWAS中的HWE和关联性检验提供了一个统一的统计学框架，并推导了渐近分布理论，这正是您所寻求的具有强大统计保证和清晰数学推导的论文。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30289v1",
+        "title": "Structural functional identifiability and model discovery in differential equation models",
+        "summary": "Differential equation models are widely used to describe, interpret, and predict dynamical phenomena across science and engineering. In practice, however, the governing dynamics are rarely fully known and must be inferred from observational data. Traditionally, inverse problems in differential equation modelling have focused on estimating unknown parameter values. In this setting, structural identifiability determines whether parameter values can, in principle, be uniquely recovered from ideal observations and is, therefore, a prerequisite for meaningful inference. More recently, the integration of machine learning with mechanistic modelling has enabled the discovery of unknown equations, functions, and constitutive relationships, substantially expanding the space of admissible models. This raises a fundamental question: under what conditions can unknown functional components be uniquely recovered from data? In this paper, we generalise the classical notion of structural parameter identifiability to functional identifiability. We first identify broad classes of models for which unique functional recovery is impossible. We then show how functional identifiability can be assessed for differential equation models using differential algebra-based techniques which are well-established as a means of assessing structural identifiability for ordinary differential equation-based models. Our framework reveals new phenomena that arise in the transition from parametric to functional inference and have no analogue in the classical setting. Finally, we characterise functional identifiability in several common model classes. Taken together, our results demonstrate that functional identifiability provides a theoretical foundation for modern inverse problems in differential equation modelling, particularly those that use machine learning representations of unknown system components.",
+        "authors": "Torkel E Loman, Alexander P Browning, Ruth E Baker",
+        "url": "http://arxiv.org/abs/2606.30289v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30289v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对微分方程模型中的可识别性概念进行了根本性的推广，从参数可识别性到函数可识别性，并采用微分代数等严格数学工具进行分析，这体现了极强的理论基础和数学推导能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30230v1",
+        "title": "A Distributionally Robust Framework for Learned Reconstructions in Inverse Problems",
+        "summary": "Learned reconstruction operators for inverse problems are typically trained under a fixed noise model, and generalize poorly when the distribution during testing differs from the one assumed during training. Distributionally robust optimization (DRO) addresses this by optimizing against the worst-case distribution within a prescribed ambiguity set, but standard Wasserstein DRO perturbs the full joint distribution uniformly, which can be overly conservative and ignores the physics of the measurement process. We develop a structured DRO framework in which the ambiguity set is restricted to structured perturbations aligned with the data-acquisition process. This allows us to learn data-driven reconstruction operators that remain robust to distributional shifts. By constraining perturbations to subsets such as $P(Y|X)$, our framework models uncertainty in the forward operator and noise model more faithfully, accommodating any noise model expressible as a stochastic forward operator. We establish strong duality for this general formulation and derive explicit finite-dimensional dual representations for perturbations in the joint, marginal, and conditional distributions. A central result is an explicit worst-case risk bound that induces Tikhonov regularization on the Lipschitz constant of the reconstruction operator, and is less conservative relative to standard DRO for well-posed problems. Numerical experiments on deblurring and sinogram-to-CT reconstruction demonstrate improved robustness, stability, and interpretability over standard DRO and MSE baselines. In the linear setting, the learned operator becomes effectively low-rank, truncating at the intrinsic dimension of the data and recovering a data-driven analogue of truncated-SVD regularization.",
+        "authors": "Floor van Maarschalkerwaart, Subhadip Mukherjee, Christoph Brune, Marcello Carioni",
+        "url": "http://arxiv.org/abs/2606.30230v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30230v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在逆问题中引入了结构化的分布鲁棒优化框架，并提供了强对偶性、对偶表示和风险界限的严格数学推导，这与您对“优化收敛性”和“清晰的数学推导”的偏好高度一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30138v1",
+        "title": "Relative Weak Convexity and Projected Subgradient Methods: Analysis and Convergence",
+        "summary": "We introduce the class of relatively weakly convex functions, which extends the classical notion of weak convexity by measuring nonconvexity relative to a distance-generating function. We investigate the fundamental properties of this function class, establishing characterization results, calculus rules, and illustrative examples. We further analyze the associated optimization landscape and identify a neighborhood of the set of global minimizers that is free of saddle points. Motivated by this geometric structure, we propose the Projected SubGradient Algorithm (PSGA) with several step-size strategies. Under a sharpness error bound, we prove that, when initialized within this saddle-point-free neighborhood, the iterates generated by PSGA converge to a global minimizer for each of the proposed step-size strategies. Furthermore, linear convergence is established for the geometrically decaying step-size strategy.",
+        "authors": "Morteza Rahimi, Masoud Ahookhosh",
+        "url": "http://arxiv.org/abs/2606.30138v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30138v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了相对弱凸函数这一新概念，并对其性质和投影次梯度方法的收敛性进行了详尽的数学分析和证明，包括线性收敛，是优化理论领域非常严谨和基础性的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30000v1",
+        "title": "Adaptive nonparametric regression from repeated measurements under common noise",
+        "summary": "We consider nonparametric estimation of the regression function in a model where individuals share a common noise component and repeated measurements are available for each individual. We propose a projection estimator which minimizes a least-squares contrast that accounts for the covariance structure resulting from the common noise. We analyze its risk measured either as the expectation of the empirical norm or as the expectation of the theoretical norm associated with the contrast. We discuss how the number of repeated measurements affects the estimation rates in the common noise model, and precisely characterize the dependence on the number of repetitions. In addition, we propose a data-driven projection estimator and establish risk bounds in terms of the expected empirical norm. The results are illustrated with some simulation experiments.",
+        "authors": "Fabienne Comte, Bianca Neubert",
+        "url": "http://arxiv.org/abs/2606.30000v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30000v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在非参数回归领域提出了新的估计器，并对其统计性质（如风险、估计速率）进行了严格的数学分析和风险界限的建立，是统计学理论的典范，非常符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29913v1",
+        "title": "Semi-discrete convex order and Laguerre tessellation fitting",
+        "summary": "Laguerre tessellations offer an efficient way to parameterize a large class of convex partitions of Euclidean space using only a set of points and scalar weights. For this reason, they have become popular in computational geometry, imaging and numerical analysis, both as a modeling and a discretization tool. In this paper we study the problem of reconstructing a Laguerre tessellation with prescribed cell volumes from the barycenters of its cells. We establish a geometric interpretation of this problem in terms of the set of discrete measures dominated in convex order by an absolutely continuous measure. In particular, we show that the reconstruction problem can be solved approximately by computing a Wasserstein projection onto this set. More generally, our method can also be applied to fit a Laguerre tessellation to an arbitrary set of barycenters. We give a concrete application of this in materials science, of fitting a Laguerre tessellation to an electron backscatter diffraction (EBSD) image of a steel.",
+        "authors": "David P. Bourne, Thomas Gallouët, Quentin Mérigot, Andrea Natale",
+        "url": "http://arxiv.org/abs/2606.29913v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29913v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提供了Laguerre剖分重建问题的几何解释，并将其与半离散凸序和Wasserstein投影联系起来，涉及测度论和几何分析，是具有深厚数学理论基础的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29911v1",
+        "title": "A causal modeling perspective on decision theory",
+        "summary": "Decision theory provides a formal framework for how agents should make choices under uncertainty, drawing on ideas from philosophy, probability, and causality. Despite significant progress, the field still lacks a unified modeling language, and key concepts - such as the distinction between subjective and objective elements, or what it means for a decision theory to perform well - are often left implicit. This can make it difficult to evaluate and compare competing theories, particularly in controversial cases. In this paper, we address these issues by introducing a formal framework for decision theory based on nonparametric structural equation models (NPSEMs), a well-established tool in causal inference. NPSEMs provide a unified foundation for representing agents, counterfactuals, and causal relationships, allowing for unambiguous definitions of EDT and CDT. Building on this foundation, we propose a novel decision theory - personal decision theory - which instructs agents to maximize a subjective model of their own counterfactual utility. We introduce a formal performance metric based on hypothetical interventions that enforce a given decision theory across a population - such as might be achieved through education or policy -- and show that, under certain assumptions, personal decision theory is optimal with respect to this metric. Throughout, we use the smoking lesion problem as a running example and conclude with a formal analysis of Newcomb's problem. Our aim is to provide decision theory with a clearer modeling language and firmer evaluative ground, thereby enabling more rigorous comparisons and facilitating conceptual progress in the field.",
+        "authors": "Arvid Sjölander",
+        "url": "http://arxiv.org/abs/2606.29911v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29911v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文从因果建模的角度重新审视决策理论，提出了基于非参数结构方程模型（NPSEMs）的严格形式化框架，并证明了新决策理论的最优性，是因果逻辑和数学推导的典范，与您的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29797v1",
+        "title": "Multi-Level Distributional Entropy for Explainable Network Intrusion Detection",
+        "summary": "Machine learning network intrusion detection systems (IDS) rely on aggregate flow statistics that discard distributional structure, while established entropy measures require raw packet sequences unavailable in pre-aggregated flow datasets. We propose Multi-Level Distributional Entropy (MDE), an analytical framework that derives interpretable entropy features directly from flow-level summary statistics at three levels: within-flow Gaussian differential entropy, cross-directional Jensen-Shannon divergence (JSD), and Transmission Control Protocol (TCP) flag-pattern Shannon entropy, without raw packet access or training data. Across four benchmarks (NSL-KDD, CICIDS-2017, CICIDS-2018, UNSW-NB15) under a leakage-free fold-local pipeline, entropy-only features achieve weighted F1 of 0.708-0.989, matching conventional features without degrading performance. Full operational metric reporting then exposes failure modes that aggregate F1 conceals. On CICIDS-2018, F1=0.74 hides a detection rate (DR) of 0.48, and on held-out attack families F1 exceeds 0.998 while DR falls to zero. Under temporal shift, a pseudo-live replay of 703K flows reveals a threshold-ranking divergence in which score ranking is preserved (AUC=0.87) but fixed thresholds collapse (DR=0.082) and recalibration offers no recovery. SHapley Additive exPlanations (SHAP) fold-stability analysis (Spearman rho=0.80-0.95) confirms that entropy attributions are reproducible and domain-coherent across heterogeneous environments.",
+        "authors": "Mohamed Aly Bouke, Md Shohel Sayeed, Swee-Huay Heng, Azizol Abdullah, Mohamed Othman",
+        "url": "http://arxiv.org/abs/2606.29797v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29797v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了基于多种熵度量（如高斯微分熵、Jensen-Shannon散度、香农熵）的分析框架，用于网络入侵检测，其核心是严格的统计学概念和数学推导，非常符合您对“统计保证”和“数学推导”的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.29695v1",
+        "title": "Progressive Self-Supervised Learning with Individualized Community Assignment for Brain Network Analysis",
+        "summary": "Brain networks exhibit a modular community structure that varies across individuals and neurological conditions. However, existing self-supervised learning (SSL) methods often overlook this heterogeneity, relying on generic masking strategies that fail to capture subject-specific functional organization. We propose BrainPICM, a self-supervised framework for brain network analysis via progressive individualized community aware masking. BrainPICM formulates ROI-to-community mapping as a progressive unbalanced optimal transport process, yielding soft assignments and per-ROI confidence scores. Guided by these confidence estimates, a curriculum-style masking strategy gradually incorporates low-confidence, potentially pathological regions into training, enabling the model to learn both stable modular structures and individual variations. Additionally, a deviation-aware aggregation module quantifies functional reorganization by measuring mass redistribution relative to a population template, enhancing interpretability and downstream prediction. Experiments on three fMRI datasets (ABIDE-I, ADHD-200, ADNI) show that BrainPICM consistently outperforms state-of-the-art supervised and SSL methods in diagnostic accuracy, indicating that explicitly injecting modular community structure into masked modeling yields more functionally consistent and generalizable representations. The source code for this approach will be released at https://github.com/Hrychen7/BrainPICM.",
+        "authors": "Hairui Chen, Yanwu Yang, Jianfeng Cao, Hanyang Peng, Chenfei Ye, Ting Ma",
+        "url": "http://arxiv.org/abs/2606.29695v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.29695v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将脑网络分析中的社区分配问题建模为渐进式非平衡最优传输过程，并生成软分配和置信度分数，最优传输理论是高度数学化的领域，这体现了强大的理论基础和数学推导。"
+    }
+]

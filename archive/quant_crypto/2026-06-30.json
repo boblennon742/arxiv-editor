@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.31251v1",
+        "title": "Regime-Conditional Distributional Comparison of Trading Strategies: A GAMLSS/ZAGA Framework Applied to the S&P 500",
+        "summary": "Conventional comparisons of algorithmic trading strategies reduce each performance metric to a single number over the full backtest horizon, thereby discarding information about how performance varies with market conditions. This paper proposes a distributional framework that addresses this shortcoming. A walk-forward backtest of 146 out-of-sample folds on the S&P 500 (2002--2025) is used to compute the Adjusted Information Ratio ($IR^{\\ast}$) for a polynomial Support Vector Machine strategy (SVMP) and a buy-and-hold benchmark (BH) in each fold. The resulting $IR^{\\ast}$ sequences are modelled jointly via a Generalised Additive Model for Location, Scale and Shape (GAMLSS) with a Zero-Adjusted Gamma (ZAGA) response, with distributional parameters conditioned on market regime covariates: realised volatility and cumulative market momentum. Strategy comparison is conducted through (i) regime-specific differences in expected $IR^{\\ast}$ ($ΔE$) and its variance ($ΔVar$), derived analytically from the fitted ZAGA parameters, and (ii) parametric bootstrap tests of three null hypotheses concerning $E(IR^{\\ast})$, $Var(IR^{\\ast})$, and their ratio, evaluated at six representative market regimes. The results demonstrate that the dominance relationship between SVMP and BH is conditional on market regime. The proposed GAMLSS/ZAGA framework constitutes a methodologically rigorous and practically interpretable alternative to conventional strategy evaluation.",
+        "authors": "Krzysztof Ozimek",
+        "url": "http://arxiv.org/abs/2606.31251v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31251v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个新颖且统计严谨的框架（GAMLSS/ZAGA），用于在不同市场状态下（如波动性、市场动量）比较交易策略的性能分布，而非仅仅是单一的平均指标。这对于加密货币市场尤为重要，因为加密市场以其剧烈的市场状态切换和高波动性著称。虽然论文应用在S&P 500，但其方法论是通用的，可以很好地迁移到加密货币市场，帮助你和你的同学更深入地理解因子或策略在不同市场环境下的表现，从而优化回测和策略设计。作为统计学硕士，你会欣赏其严谨的统计推导和对分布参数的关注。"
+    }
+]

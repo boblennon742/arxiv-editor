@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.31982v1",
+        "title": "ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs",
+        "summary": "Multimodal Large Language Models (MLLMs) incur prohibitive inference costs due to long visual token sequences. Training-free visual token reduction provides an efficient solution. However, existing methods distort attention distributions, giving rise to a phenomenon we term Attention Logit Collapse. To address this issue, we propose ERA, an Entropy-guided visual token pruning framework with Rectified Attention for efficient MLLMs. Specifically, ERA comprises three crucial components: Dual-view Entropy Pruning (DEP), Bias-aware Token Recycling (BTR), and Logit-preserving Attention Rectification (LAR). First, DEP identifies representative anchor tokens by jointly modeling visual diversity and head-wise saliency. BTR then recycles pruned tokens into their corresponding anchors while estimating a cluster-level logit bias. Building upon this, LAR injects the estimated bias into attention logits, effectively rectifying the collapse induced by token reduction. Together, these components preserve visual evidence even under aggressive compression, enabling robust performance across single-image, multi-image, and video settings on a wide range of MLLMs. Beyond delivering practical acceleration, ERA establishes logit-preserving visual token pruning as a principled framework for efficient MLLMs, unifying theoretical foundation, algorithmic design, and practical deployment. The code is at https://github.com/924973292/ERA.",
+        "authors": "Yuhao Wang, Mu Qiao, Haiwen Diao, Yunzhi Zhuge, Pingping Zhang, Xindong Zhang, Lei Zhang, Huchuan Lu",
+        "url": "http://arxiv.org/abs/2606.31982v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31982v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了 ERA 框架，通过熵引导的视觉 token 剪枝和修正注意力机制，解决了 MLLM 中视觉 token 序列过长导致的推理成本高昂问题。它不仅识别了“注意力 Logit 崩溃”这一新现象，并提出了理论严谨的解决方案，实现了显著的推理加速和内存优化，同时保持了模型性能。其方法具有深厚的理论基础和极高的实践价值，完美契合您对模型压缩和效率的需求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31519v1",
+        "title": "RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference",
+        "summary": "Long-context Large Language Model inference is severely bottlenecked by the massive Key-Value (KV) cache, yet existing sparse attention methods often suffer from static fixed-budget (Top-k) retrieval or rely on proxy scores that are computationally expensive and biased. To address these limitations, we propose RaBitQCache, a novel sparse attention framework that utilizes randomized rotated binary quantization and high-throughput binary-INT4 arithmetic to efficiently estimate attention weights. Our proxy score serves as an unbiased estimator with a proven error bound, enabling adaptive Top-p retrieval that dynamically adjusts the token budget based on actual attention sparsity. We further implement a hardware-aware system with asynchronous pipelining and lazy updates to mask overhead. Evaluations demonstrate that RaBitQCache significantly accelerates inference and reduces memory I/O while preserving generation quality compared to state-of-the-art baselines. Code is available at https://github.com/Sakuraaa0/RaBitQCache.git.",
+        "authors": "Wenhao Li, Jinhao Dong, Hailin Zhang, Wenhang Shi, Wei Lu, Xiaoyong Du",
+        "url": "http://arxiv.org/abs/2606.31519v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31519v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "RaBitQCache 提出了一种新颖的稀疏注意力框架，利用随机旋转二值量化和高吞吐量二值-INT4 算术来高效估计注意力权重，并提供了一个具有可证明误差界限的无偏估计器。它直接解决了长上下文 LLM 推理中 KV 缓存的内存瓶颈问题，实现了自适应的 token 预算调整，显著加速了推理并减少了内存 I/O。其理论严谨性和对 LLM 效率的巨大影响使其成为必读之作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31290v1",
+        "title": "Patch-PODiff-ViT: Structured Latent Diffusion with Patchwise POD for Super-Resolution and Uncertainty Quantification",
+        "summary": "Diffusion models enable probabilistic super-resolution and conditional generation, but pixel-space methods are computationally expensive and learned latent spaces often lack interpretable uncertainty quantification. We introduce Patch-PODiff-ViT, a structured latent diffusion framework in which the latent space is defined by patchwise Proper Orthogonal Decomposition (POD), a fixed linear orthonormal basis over local patches, rather than learned by a nonlinear autoencoder. This yields low-dimensional, variance-ordered tokens that preserve spatial structure and enable efficient diffusion in a structured low-dimensional latent space with a Vision Transformer. Because the decoder is fixed, linear, and orthonormal, latent coefficient uncertainty can be propagated directly to physical-space predictive variance, enabling analytic propagation of predictive variance through the linear decoder without Monte Carlo estimation in pixel space. Across sea surface temperature, medical imaging, and natural images, the method achieves strong reconstruction with fewer parameters and lower memory, while producing well-calibrated spatial uncertainty that closely matches empirical ensembles.",
+        "authors": "Onkar Jadhav, Tim French, Matthew Rayson, Nicole L. Jones",
+        "url": "http://arxiv.org/abs/2606.31290v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31290v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Patch-PODiff-ViT 引入了一种结构化的潜在扩散框架，通过分块 Proper Orthogonal Decomposition (POD) 定义潜在空间，而非学习非线性自编码器。这种方法不仅解决了像素空间扩散模型的计算昂贵问题，还提供了可解释的、可解析传播到物理空间的预测不确定性量化。它在效率、参数量和不确定性量化方面的理论创新和实践影响力都非常突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.32020v1",
+        "title": "Cross-Space Distillation: Teaching One-Step Students with Modern Diffusion Teachers",
+        "summary": "Modern one-step diffusion models achieve impressive quality through distribution-based timestep distillation. Yet, they rely on a critical assumption: Teacher and Student must inhabit the same latent space. This Shared-Space constraint prevents knowledge transfer from modern high-capacity Teachers (e.g., SD 3.5 and Flux) into compact, deployment-friendly Students such as SD 1.5, whose latent resolution and VAE parameterization differ from the Teacher. We formalize this overlooked regime as Cross-Space Distillation, where Teacher and Student differ in both latent resolution and VAE space. To enable distillation under this mismatch, we introduce the Bridge, a lightweight latent interface that maps Student latents into the Teacher space without modifying the Student backbone. Bridge combines a frozen Student VAE decoder as a spatial prior with a compact learnable projector, and is trained with latent reconstruction and attention fidelity objectives for stable Teacher-space alignment. Across diverse modern Teachers, Bridge enables substantial gains for compact one-step Students; for example, it improves SD 1.5 from 5.4 to 9.4 HPSv3 while preserving one-step inference, low latency, and broad ecosystem compatibility. These results show that heterogeneous large Teachers can be distilled into efficient, deployable backbones through a lightweight latent-space interface.",
+        "authors": "Anh Nguyen, Ngan Nguyen, Duc Vu, Trung Dao, Viet Nguyen, Quan Dao, Kien Nguyen, Chi Tran, Phong Nguyen, Khoi Nguyen, Cuong Pham, Dimitris Metaxas, Vishal M. Patel, Anh Tran",
+        "url": "http://arxiv.org/abs/2606.32020v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.32020v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文形式化了“跨空间蒸馏”问题，即教师和学生扩散模型在潜在空间不匹配时的知识转移。它提出了“Bridge”这一轻量级潜在接口，无需修改学生模型骨干即可实现高容量教师模型向紧凑学生模型的知识迁移。这对于扩散模型的模型压缩和部署效率具有开创性意义，理论创新和实际应用价值兼备。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.32017v1",
+        "title": "TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning",
+        "summary": "Agentic reinforcement learning requires assigning credit to environment-facing actions such as searches, clicks, edits, navigation commands, and object interactions. Standard GRPO uses the final verifier outcome as a uniform advantage over all action tokens. This outcome signal is useful but structurally incomplete: it punishes useful exploration in failed rollouts and reinforces redundant or regressive actions in successful rollouts. We propose TRIAGE, a role-typed credit assignment framework that adds a semantic role axis to outcome credit. A structured judge classifies each segment as decisive progress, useful exploration, no-progress infrastructure, or regression, and a fixed role-conditioned rule maps these labels to bounded segment-level process rewards. This keeps verifier outcomes as the source of optimization direction while correcting the two main blind spots of outcome-only credit. We further show that role-conditioned credit is the optimal segment-level correction expressible from role labels alone -- a projection of the per-segment advantage residual onto the role variable -- so that the fixed role constants reduce advantage estimation error whenever the judge is reliable, and we connect this to lower-variance policy gradients. Across ALFWorld, Search-QA, and WebShop, TRIAGE improves success rates over GRPO for two policy models and outperforms both a scalar judge-derived process reward and an outcome-supervised shared-backbone value baseline. Ablations show that the gain comes from role typing rather than merely adding dense rewards: reliable detection of regression inside successful trajectories is the dominant contributor, while exploration credit provides a consistent secondary gain; on completed ALFWorld and WebShop rollouts, TRIAGE also reduces environment-facing turns by an additional $10.4\\%$ and $14.8\\%$ relative to GRPO.",
+        "authors": "Yuanda Xu, Zhengze Zhou, Hejian Sang, Xiaomin Li, Jiaxin Zhang, Xinchen Du, Zhipeng Wang, Alborz Geramifard",
+        "url": "http://arxiv.org/abs/2606.32017v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.32017v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TRIAGE 提出了一个角色类型化的信用分配框架，用于代理强化学习。它通过语义角色轴扩展了结果信用，解决了传统 GRPO 中信用分配不完整的问题，并从理论上证明了其作为最优分段级校正的性质，能够降低策略梯度方差。这对于 LLM 代理的训练效率和探索能力具有重要的理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31986v1",
+        "title": "CoLT: Teaching Multi-Modal Models to Think with Chain of Latent Thoughts",
+        "summary": "Chain-of-thought (CoT) reasoning has enabled multi-modal large language models (MLLMs) to tackle complex visual reasoning tasks by generating explicit intermediate reasoning steps in natural language. However, this text-based reasoning paradigm is inherently slow at inference time with even thousands of tokens and fundamentally constrained by the expressiveness of natural language. In this paper, we propose CoLT, (Chain of Latent Thoughts), a novel framework that teaches multi-modal models to reason through a chain of latent thought representations instead of verbose text tokens, which can perform thinking with as few as 3 steps. Naively forcing the model to think with latent states easily produces meaningless semantics and makes training unstable. To effectively regulate the latent reasoning process, we introduce a lightweight external decoder that provides step-level supervision for each latent reasoning step in two complementary directions: a forward mode that decodes latent thoughts into the textual reasoning of the next step, and a backward mode that aligns decoder hidden states with the model's latent thoughts given preceding textual context. We further incorporate internal supervision that encourages coherent step-by-step latent transitions. The decoder and internal supervision are removed during inference to maintain high efficiency of latent reasoning. Extensive experiments on eight benchmarks demonstrate that CoLT not only outperforms existing latent reasoning methods such as CODI and SIM-CoT, but also surpasses latent visual reasoning approaches that rely on auxiliary images with costly annotation requirements. Compared to text CoT methods, CoLT can notably reduce the inference time by 10.1$\\times$ and text decoding time by 22.6$\\times$. Code is released at https://github.com/hulianyuyy/CoLT.",
+        "authors": "Lianyu Hu, Shengqian Qin, Zeqin Liao, Qing Guo, Liang Wan, Wei Feng, Yang Liu",
+        "url": "http://arxiv.org/abs/2606.31986v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31986v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "CoLT 提出了一种通过“潜在思想链”进行多模态模型推理的新颖框架，而非冗长的文本 token。它通过轻量级外部解码器提供双向监督，并在推理时移除以保持高效。该方法显著减少了 MLLM 的推理时间（10.1倍）和文本解码时间（22.6倍），是解决 LLM 应用效率瓶颈的重大理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31903v1",
+        "title": "Attend, Transform, or Silence: Operator-Level Visual Skipping for Efficient Multimodal LLM Inference",
+        "summary": "Multimodal large language models (MLLMs) increasingly process long visual-token sequences, increasing the overall inference computation. Existing acceleration methods usually remove visual tokens or skip visual-token updates in entire layers, but these coarse strategies may discard fine-grained evidence or suppress useful operators together with redundant ones. In this paper, we study visual-token computation from an answer-observable perspective and find that late visual-token updates can remain large while having little effect on answer-token representations. Motivated by this answer-silent redundancy, we decompose each Transformer layer into attention and FFN operators and show that useful visual computation is often operator-dominant and layer-dependent. We propose an operator-level visual-token skipping framework that preserves the full visual-token sequence while selectively bypassing redundant attention, FFN, or both. Experiments across three MLLM architectures and 10 VQA benchmarks show that our method achieves strong efficiency-accuracy trade-offs, reducing \\textbf{33.7\\%} TFLOPs on Qwen3-VL while retaining \\textbf{99.5\\%} of the vanilla model performance.",
+        "authors": "Zhaoyang Luo, Runmin Dong, Miao Yang, Fan Wei, Yushan Lai, Bin Luo, Haohuan Fu",
+        "url": "http://arxiv.org/abs/2606.31903v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31903v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过“答案静默冗余”的视角，提出了操作符级别的视觉 token 跳过框架，以提高多模态 LLM 的推理效率。它在保持完整视觉 token 序列的同时，选择性地绕过冗余的注意力或 FFN 操作符，实现了 33.7% 的 TFLOPs 减少，同时保持了 99.5% 的性能。这是 MLLM 效率优化领域一个精巧且具理论深度的贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31825v1",
+        "title": "Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning",
+        "summary": "Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or sequence-level preferences. This suffers from sparse credit assignment, making it difficult to optimize the reasoning process essential for clinical applications. Our analysis reveals that cascading errors from early-stage reasoning failures are a leading cause of incorrect predictions in medical visual question answering (VQA) benchmarks. Motivated by this, we propose Medical Reasoning-aware Policy Optimization (MRPO), an RL algorithm that incorporates step-wise process rewards. When the final answer is incorrect, MRPO assigns exponentially larger penalties to tokens in earlier invalid reasoning steps, breaking failure cascades without compromising successful paths. Across three multimodal LLM backbones, MRPO consistently outperforms standard GRPO and a recent RL baseline, and on Qwen3-VL-8B-Instruct even surpasses substantially larger medical MLLMs such as HuatuoGPT-Vision-34B by 2.79 points. Moreover, MRPO reduces early-stage reasoning failures from 64.0% to 13.0%, showing that targeted mitigation of cascading failures improves both reasoning quality and final answer accuracy. Our code is available at https://github.com/dmis-lab/MRPO",
+        "authors": "Junha Jung, Minbyul Jeong, Suhyeon Lim, Sungwook Jung, Jaehoon Yun, Taeyun Roh, Mujeen Sung, Jaewoo Kang",
+        "url": "http://arxiv.org/abs/2606.31825v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31825v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "MRPO 提出了一种医疗推理感知的强化学习算法，通过引入分步过程奖励来解决多模态 LLM 在临床图像推理中“级联错误”的问题。它对早期无效推理步骤的 token 施加指数级更大的惩罚，显著降低了早期推理失败率，并提高了最终答案准确性。这对于 MLLM 在医疗领域的可靠性和安全性至关重要，具有高度的理论创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31813v1",
+        "title": "Geometry-Preserving Orthonormal Initialization for Low-Rank Adaptation in RLVR",
+        "summary": "Low-rank adaptation (LoRA) and its variants enable parameter-efficient fine-tuning of large language models under the supervised fine-tuning (SFT) paradigm. However, their efficacy and behavior under Reinforcement learning with verifiable rewards (RLVR) are less well understood. In particular, two structurally initialized LoRA variants, PiSSA and MiLoRA, which outperform standard LoRA under SFT, can underperform standard LoRA under RLVR and may even exhibit training instability. These observations suggest that how to initialize the low-rank matrices in RLVR remains unclear. In this work, we develop a theoretical analysis of LoRA in RLVR, showing that orthonormal initialization achieves the minimal gap between LoRA outcome and that of full fine-tuning. Guided by this insight, we propose geometry-preserving orthonormal initialization for low-rank adaptation in RLVR, leading to two new variants, RLPO and RLMO. Experiments on mathematical reasoning benchmarks show that the proposed orthonormal initialization stabilizes RLVR training and outperforms standard LoRA, contrasting with PiSSA and MiLoRA. Finally, our unified analysis for LoRA initialization also explains why PiSSA and MiLoRA can underperform in RLVR, which may be of independent interest. Code and checkpoints are publicly available at https://github.com/Richard-ZZZ/geometry-preserving-orthonormal-init-rlvr.",
+        "authors": "Ruijia Zhang, Jiacheng Zhu, Hanqing Zhu, Laixi Shi",
+        "url": "http://arxiv.org/abs/2606.31813v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31813v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对 RLVR 中 LoRA 的初始化进行了理论分析，证明了正交初始化能实现 LoRA 结果与全量微调之间的最小差距，并提出了几何保持正交初始化方法。它解决了 LLM 参数高效微调在强化学习场景下的训练不稳定和性能下降问题，具有极高的理论严谨性和对 LLM 适应性效率的实际意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31804v1",
+        "title": "Relational and Sequential Conformal Inference for Energy Time Series over Graphs via Foundation Models",
+        "summary": "Accurate energy demand forecasting is essential for the reliable operation and planning of modern sustainable energy systems. Spatial-temporal graph neural networks (STGNNs) have recently achieved strong performance in point forecasting by jointly modeling temporal dynamics and relational dependencies across interconnected energy nodes. However, in real-world energy systems, accurate point forecasts alone are insufficient, as operators also require reliable uncertainty estimates to support risk-aware decision-making, grid stability, and operational planning under uncertainty. Conformal prediction provides a principled and model-agnostic framework for uncertainty quantification with statistical coverage guarantees, making it particularly attractive for safety-critical energy applications. However, existing conformal prediction approaches often fail to fully capture the complex spatial-temporal structure of energy systems. To address these limitations, we propose STOIC (Spatial-Temporal Graph Conformal Prediction with In-Context Learning), a novel framework that integrates graph-based forecasting with the zero-shot calibration capabilities of tabular foundation models. STOIC first generates point forecasts using an STGNN and subsequently reformulates spatial-temporal residuals into a tabular representation suitable for in-context learning. Leveraging a tabular foundation model, STOIC calibrates prediction intervals without task-specific retraining, effectively capturing both sequential and relational dependencies. We evaluate STOIC on five diverse benchmarks, including synthetic simulations as well as real-world electricity and district heating networks. Across all datasets, STOIC consistently outperforms existing conformal prediction baselines, delivering more reliable and robust uncertainty estimates for complex graph-structured energy time series.",
+        "authors": "Keivan Faghih Niresi, Alice Cicirello, Olga Fink",
+        "url": "http://arxiv.org/abs/2606.31804v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31804v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "STOIC 提出了一种新颖的框架，将基于图的预测与表格基础模型的零样本校准能力相结合，用于图上能源时间序列的关系和序列共形推断。它解决了传统共形预测方法未能充分捕捉复杂时空结构的问题，为安全关键型能源应用提供了更可靠和鲁棒的不确定性估计，具有深厚的统计学和机器学习理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31801v1",
+        "title": "RAISE: LLM-based Automated Heuristic Design with Robust Adversary Instance Search",
+        "summary": "Automated Heuristic Design (AHD) with Large Language Models (LLMs) has shown remarkable progress in discovering high-quality heuristics. However, existing LLM-based AHD methods optimize heuristics for a fixed training instance set and may fail catastrophically when deployed under real-world distributional shifts. We propose Robust Adversary Instance Search (RAISE), a framework that integrates constrained worst-case instance search within a principled neighborhood of the training distribution into the LLM-based evolutionary search loop. RAISE treats robust AHD as a constrained adversarial instance search problem: the outer loop evolves heuristics via LLM operators, while an LLM-free inner loop efficiently identifies hard instances within an epsilon-ball around the training instance set using a basis distribution parameterization with boundary projection. Comprehensive experiments on Online Bin Packing (OBP), Online Job Shop Scheduling (OJSP), and Online Vehicle Routing (OVRP) across five distribution families demonstrate that existing LLM-based AHD methods degrade by up to 19 times under distribution shift, while RAISE consistently maintains strong performance across all tested distributions and problem scales",
+        "authors": "Fei Liu, Alessio Figalli, Patrick Owen, Nicola Serra",
+        "url": "http://arxiv.org/abs/2606.31801v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31801v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "RAISE 框架将约束最坏情况实例搜索集成到基于 LLM 的启发式设计循环中，以解决现有方法在实际分布偏移下性能急剧下降的问题。它将鲁棒 AHD 视为一个约束对抗实例搜索问题，通过理论严谨的方法提高了 LLM 启发式设计的鲁棒性，对于 LLM 在优化问题中的实际应用具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31732v1",
+        "title": "UniCoder: Unified Visual-to-Code Generation via Symbolic Rewards and Reference-Guided Code Optimization",
+        "summary": "Visual-to-Code generation, which transforms scientific plots, vector graphics, and webpages into executable scripts, demands a level of pixel-precise alignment that standard Multimodal Large Language Models (MLLMs) fail to achieve through Supervised Fine-Tuning (SFT) alone. While Reinforcement Learning (RL) offers a theoretical pathway to bridge this gap, its application is hindered by two fundamental obstacles: (1) \\textit{Reward Coarseness}, where semantic metrics like CLIP scores fail to penalize fine-grained element deviations, and (2) \\textit{Exploration Stagnation}, where the sparse, heterogeneous code search space prevents the policy from bootstrapping valid trajectories. To overcome these limitations, we introduce UniCoder, a unified RL framework that integrates two novel mechanisms. First, we propose \\textbf{Symbolic Attribute Alignment}, which employs a lightweight auxiliary LLM to parse generated code into discrete visual attributes (e.g., hex colors, coordinate limits), enabling dense, element-wise reward computation. Second, to escape local optima, we devise \\textbf{Reference-Guided Code Optimization}, a strategy that dynamically injects ground-truth trajectories into low-performing rollout groups, transforming blind exploration into guided policy improvement. Extensive experiments on ChartMimic, UniSVG, Design2Code and ScreenBench benchmarks demonstrate that our 8B-parameter model not only surpasses all open-source baselines but also achieves state-of-the-art performance comparable to proprietary models, establishing a new paradigm for generalized visual-to-code synthesis.",
+        "authors": "Yaozhi Zheng, Yilei Jiang, Manyuan Zhang, Yuxuan Wan, Kaituo Feng, Tianshuo Peng, Bo Zhang, Xiangyu Yue",
+        "url": "http://arxiv.org/abs/2606.31732v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31732v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "UniCoder 提出了一个统一的 RL 框架，用于视觉到代码生成，通过“符号属性对齐”实现密集、元素级的奖励计算，并通过“参考引导代码优化”解决探索停滞问题。它克服了 MLLM 在像素级精确对齐方面的瓶颈，实现了与专有模型媲美的 SOTA 性能，为视觉到代码合成树立了新范式，具有显著的理论创新和实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31683v1",
+        "title": "Histogram-constrained Image Generation",
+        "summary": "Diffusion models have emerged as a dominant paradigm in generative modeling, enabling high-fidelity sampling from complex data distributions. Despite impressive capabilities, controlling diffusion models to produce outputs aligned with user intent remains an open challenge, especially when balancing global coherence with local precision. Existing control mechanisms vary in the granularity of their conditioning signals. For example, textual prompts guide generation globally through high-level semantics, while ControlNet-like approaches secure precise local structure via dense conditions. In this work, we introduce Histogram-constrained Image Generation (HIG), a novel control mechanism that falls into the middle ground of control granularity. Our framework enforces user-specified distributional constraints (e.g., color histograms or latent token distributions) during the generation process with exact precision. We model such control as an optimal transport (OT) problem and apply explicit guidance transformations during sampling, thereby driving the diffusion trajectory to align with the desired histogram. We demonstrate the versatility of HIG across diverse applications, including constrained generation via color/latent histograms and high-capacity information embedding through histogram-level encoding. Our findings underscore the promise of distributional control, a flexible and interpretable control scheme that is fully compatible with existing control mechanisms, diversifying the hybrid strategies for controllable image generation. Our project page is available at: https://maps-research.github.io/hig/.",
+        "authors": "Haoming Liu, Yuanhe Guo, Yijia Cao, Shenji Wan, Hongyi Wen",
+        "url": "http://arxiv.org/abs/2606.31683v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31683v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "HIG 引入了一种新颖的控制机制，通过将控制建模为最优传输问题，在采样过程中应用显式引导变换，以精确强制执行用户指定的分布约束（如颜色直方图或潜在 token 分布）。这为扩散模型提供了中等粒度的控制，解决了生成式 AI 中精细控制的挑战，具有高度的理论优雅性和广泛的应用前景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31602v1",
+        "title": "Robust Text Watermarking for Large Language Models via Dual Semantic Embeddings",
+        "summary": "This work presents Dual-Embedding Watermarking (DEW), a semantic watermarking scheme for large language models (LLMs) that leverages contextual and token-level embeddings to enhance robustness against paraphrasing and translation. DEW utilizes a signal-processing methodology, applying algebraic vector-space operations to \\mbox{token and context embeddings to derive a watermark signal that degrades gracefully under semantic shifts. The method obfuscates the watermark by projecting embedding vectors through pseudo-random matrices seeded with a secret key. Relevant distributions derived from the underlying algebra are evaluated and employed for statistical testing and benchmarking of DEW. Experimental results across multiple LLMs indicate that DEW improves post-paraphrase detection while maintaining competitive text quality, and remains detectable after translation, even when prior semantic watermarks degrade significantly. These findings position DEW as a practical and robust solution for safeguarding LLM-generated text and addressing critical issues in responsible AI deployment.",
+        "authors": "Jonas Schäfer, Cezary Pilaszewicz, Gerhard Wunder",
+        "url": "http://arxiv.org/abs/2606.31602v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31602v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DEW 提出了一种基于双嵌入的水印方案，利用上下文和 token 级嵌入，通过代数向量空间操作来增强 LLM 生成文本对复述和翻译的鲁棒性。其信号处理方法和代数基础保证了理论严谨性，并有效解决了 LLM 生成内容溯源和安全部署的关键瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31575v1",
+        "title": "Which Tokens Matter? Adaptive Token Selection for RLVR with the Relative Surprisal Index",
+        "summary": "Reinforcement learning (RL) has become a powerful tool for propelling Large Language Models (LLMs) beyond imitation-based training towards more robust reasoning capabilities. Among existing approaches, RL with Verifiable Rewards (RLVR) has emerged as a pivotal paradigm for advancing LLM reasoning. Despite its empirical success, recent studies have offered different insights. One line of inquiry advocates prioritizing high-entropy token positions during training, while another perspective cautions against allowing low-probability tokens to dominate gradient updates. Notably, although high-entropy tokens are usually correlated with low probability, both paradigms empirically yield substantial performance gains. In this work, we argue that evaluating sampled-token probability or entropy in isolation is insufficient to capture the policy optimization dynamics. To resolve this tension, we introduce the Relative Surprisal Index (RSI), a principled, information-theoretic metric that naturally couples the token's entropy with the probability of the selected token. We show that, under mild conditions, RSI is related to the local ratio between the first-order variations of the logit-gradient norm and predictive entropy under a selected-logit perturbation. Building on RSI, we propose RSI Selection (RSI-S), an entropy-adaptive token filtering method that retains tokens within a stable RSI interval. RSI-S successfully reconciles previous contradictory paradigms and filters out both redundant low-surprisal tokens and unstable high-surprisal tail tokens. Empirical evaluations show that RSI-S achieves higher avg@32 accuracy across different model scales (Qwen2.5-1.5B, 3B, and 7B) on AIME and AMC benchmarks: RSI-S improves avg@32 accuracy by 2--3 percentage points over GRPO. Overall, RSI offers a promising perspective for RLVR improvement.",
+        "authors": "Outongyi Lv, Yanzhao Zheng, Yuanwei Zhang, Zhenghao Huang, Xingjun Wang, Baohua Dong, Hangcheng Zhu, Yingda Chen",
+        "url": "http://arxiv.org/abs/2606.31575v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31575v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了相对惊奇指数 (RSI)，一个信息论度量，用于解决 RLVR 中 token 选择的矛盾范式。RSI 理论上与 logit 梯度范数和预测熵的一阶变化局部比率相关，并在此基础上提出了 RSI Selection 方法，有效过滤冗余和不稳定的 token，显著提高了 LLM 在数学推理任务上的准确性。其信息论基础和对 LLM 训练效率的提升具有重要价值。"
+    }
+]

@@ -1,0 +1,437 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2606.32016v1",
+        "title": "FedLAB: Traceable Semantic Codebooks for Federated Multimodal Graph Foundation Learning",
+        "summary": "Multimodal graph foundation models aim to learn reusable knowledge from graphs enriched with text, images, attributes, and relational topology, thereby supporting diverse graph-centric and modality-centric tasks. In practice, however, such multimodal graphs are often distributed across decentralized clients, where raw contents and local structures cannot be centrally shared due to privacy constraints. This motivates federated multimodal graph foundation learning, which requires not only transferable representation learning but also intrinsic semantic traceability under strict data isolation. Existing methods usually exchange or store knowledge through parameters, prototypes, embeddings, or compact codebooks, which support optimization and transfer but do not explicitly expose how modality evidence, node semantics, and topology context jointly support predictions. To bridge this gap, we propose FedLAB, a traceable semantic codebook framework that organizes multimodal graph knowledge into typed hierarchical codebooks for modality evidence, node semantics, and topology context. FedLAB further refines these trace units through federated semantic barycenter pre-training while keeping raw multimodal contents and graph structures local. Extensive experiments on 10 benchmarks and 6 downstream tasks show that FedLAB improves over state-of-the-art baselines by up to 7.53\\%, while preserving a native semantic trace interface.",
+        "authors": "Zekai Chen, Kairui Yang, Xuaner Chen, Xunkai Li, Xun Wu, Rong-Hua Li, Guoren Wang",
+        "url": "http://arxiv.org/abs/2606.32016v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.32016v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 3
+        },
+        "reason_zh": "该论文提出了一个联邦多模态图基础学习框架，强调语义可追溯性。虽然在实践应用和隐私保护方面有较强影响力，但抽象中未明确提及严谨的统计保证或数学推导细节，理论严谨性有待进一步评估。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.32008v1",
+        "title": "Surrogate Fidelity: When Can Open LLMs Explain Closed Ones?",
+        "summary": "Mechanistic interpretability (MI) requires full access to model internals, yet the APIs for most widely deployed language models at best expose log-probabilities over output tokens. This creates a surrogate problem: when do measurements made on open models allow us to make claims about a closed model? We evaluate surrogate fidelity at the prediction, attribution, and representation levels. For binary classification tasks, log-odds provide an API-compatible scalar readout of the model's representation space, and leave-one-out attributions provide insight into model behavior. Across eleven models spanning four families (Llama, Qwen, GPT, and Gemini), we find that prediction fidelity substantially overstates attribution fidelity: models that agree on what the answer is often disagree on why. We document an access-validity inversion: white-box signals like attention patterns and perturbation magnitudes are highly stable across models but only weakly predictive of causal attributions, which black-box input ablations capture by design. Mechanistic insight does not automatically transfer to closed targets, and prediction-level agreement is insufficient to warrant such transfer. Code and results are available at https://github.com/facebookresearch/surrogate.",
+        "authors": "Philippe Chlenski, Zachariah Carmichael, Ayush Warikoo, Chia-Tse Shao, Yingxiao Ye, Aobo Yang, Vivek Miglani, Nehal Bandi",
+        "url": "http://arxiv.org/abs/2606.32008v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.32008v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究深入探讨了开放LLM解释封闭LLM的保真度问题，特别关注归因保真度和因果归因。其发现的“访问-有效性反转”揭示了机制可解释性的深层理论挑战，对理解LLM行为的内在逻辑具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31963v1",
+        "title": "Signed-Permutation Coordinate Transport for RMSNorm Transformers",
+        "summary": "Modern LLM workflows move coordinate-indexed objects across checkpoints: steering vectors, sparse autoencoders, top-$k$ neuron sets, attribution lists, and merge alignments. This is only well posed after fixing the model's residual-stream gauge, which we show is architecture-dependent: LayerNorm residual charts have permutation gauge $S_d$ (up to a global sign flip), while RMSNorm charts with generic per-channel gain have signed-permutation gauge $B_d = S_d \\ltimes \\{\\pm 1\\}^d$. Permutation-only alignment is therefore symmetry-incomplete for RMSNorm models. We introduce sign-marginalized Hungarian matching and prove a sharp failure mode: with decorrelated coordinates, raw signed-correlation matching has a structural permutation-accuracy ceiling at the positive-sign fraction of the true gauge, which sign-marginalization removes. We then make coordinate-preserving transport, not function-level merging, the primary object: composing saved-checkpoint local $B_d$ gauges along same-base fine-tuning trajectories recovers 91.1% of cross-run coordinates at 1500 steps versus 60.3% for endpoint matching, and the gain is not explained by merely routing through the base. The recovered gauge transfers tools that permutation-only alignment breaks: TinyLlama SAE reconstruction has NMSE 0.004 under $B_d$ versus 1.08 under $S_d$; Qwen sentiment steering preserves 95.8% of its effect versus 17.2%; refusal steering reverses sign under $S_d$; coordinate-preserving merges behave the same way. The same covariance governs stateful training: signed transport of AdamW state preserves the resumed trajectory, while permutation-only state follows a different one from a functionally identical checkpoint. Finally, gauge-sweep audits show index-level interpretability claims are reproducible only relative to an explicit gauge.",
+        "authors": "John Sweeney",
+        "url": "http://arxiv.org/abs/2606.31963v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31963v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对RMSNorm Transformer中的残差流规范（gauge）进行了基础性分析，引入了符号置换坐标传输，并证明了现有排列对齐方法的失效模式。其数学推导严谨，揭示了LLM内部表示的对称性，对模型可解释性、对齐和训练状态的理解具有深刻的理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31957v1",
+        "title": "Locally stationary Argo ocean heat content estimates: Modeling, validation and uncertainty quantification",
+        "summary": "Argo profiling floats measure seawater temperature and salinity in the upper 2000 meters of the ocean. These floats are uniquely capable of measuring the global Ocean Heat Content (OHC), a quantity that is of central importance for understanding Earth Energy Imbalance. Yet, producing Argo-based OHC estimates with reliable uncertainties is statistically challenging due to the complex structure and large size of the Argo dataset. Here we present an end-to-end mapping and uncertainty quantification framework for Argo-based OHC estimation using state-of-the-art methods from spatio-temporal statistics. The framework is based on modeling vertically integrated Argo temperature profiles as a locally stationary Gaussian process defined over space and time. This enables us to produce computationally tractable OHC anomaly maps based on data-driven decorrelation scales estimated from the Argo observations. Our modeling choices are validated using statistical cross-validation, which demonstrates the importance of including a climatological time trend in the mean field and accounting for time in the covariance function. We quantify the uncertainty of these maps using local conditional simulation ensembles, a novel approach that leads to principled spatially and temporally correlated uncertainty quantification. A new paired cross-validation technique is presented to validate these uncertainties. The mapping framework is implemented in an open-source codebase that is designed to be modular, reproducible and extensible. To demonstrate the mapping and uncertainty quantification capabilities of this approach, we present new Argo OHC maps with uncertainties for 2004-2022 and report on various downstream climatological estimates and their uncertainties.",
+        "authors": "Thea Sukianto, Mikael Kuusela, Donata Giglio, Anirban Mondal, Pulong Ma, Douglas W. Nychka",
+        "url": "http://arxiv.org/abs/2606.31957v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31957v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个端到端的Argo海洋热含量估计和不确定性量化框架，基于局部平稳高斯过程和时空统计方法。其强调了可靠的不确定性量化、数据驱动的去相关尺度以及新颖的配对交叉验证技术，展现了高度的统计严谨性和理论深度。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31954v1",
+        "title": "A Conformal Selection Framework for Individual Treatment Beneficiaries with Auxiliary External Data",
+        "summary": "Identifying patients who are likely to benefit from a treatment is central to precision medicine and can guide follow-up trials, enrichment designs, and individualized decisions. Although randomized controlled trials (RCTs) provide evidence on efficacy, they are usually powered to estimate average treatment effects rather than patient-level benefit. Meanwhile, artificial intelligence and machine learning methods offer flexible tools for estimating heterogeneous treatment effects, especially when augmented by real-world data (RWD). However, in practice, these estimated effects are often translated into decisions through simple ranking or thresholding rules, which can ignore uncertainty and multiplicity when many patients are evaluated simultaneously. Motivated by this, we propose a model-agnostic conformal inference framework for uncertainty-aware beneficiary selection. The framework reformulates CATE-based treatment-benefit selection as a multiple-testing problem. For each candidate, we test whether the conditional treatment benefit exceeds a clinically meaningful threshold and construct a conformal p-value using RCT-based calibration. These p-values are then adjusted by the Benjamini-Hochberg procedure to control the false discovery rate (FDR) among selected beneficiaries. To improve efficiency when RCT sample sizes are limited, external data, such as RWD, can be used to train flexible treatment effect models, while conformal calibration remains anchored in the RCT data. It can be paired with conventional machine learning algorithms and emerging tabular foundation models. Simulations show that the framework maintains FDR control, with power depending on the base learner and external-data comparability. A case study in early-stage non-small-cell lung cancer illustrates how the method identifies candidate profiles with evidence of benefit from limited resection to reduce overtreatment.",
+        "authors": "Jiajun Liu, Ke Zhu, Xiaofei Wang",
+        "url": "http://arxiv.org/abs/2606.31954v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31954v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该框架将CATE（条件平均治疗效果）的治疗受益者选择问题重新表述为多重检验问题，并利用RCT数据进行共形p值校准，通过Benjamini-Hochberg程序控制错误发现率（FDR）。其提供了模型无关的统计保证，并结合了因果推断和不确定性量化，对精准医疗具有直接且严谨的实践指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31915v1",
+        "title": "Accelerating Conformal Prediction via Approximate Leave-One-Out",
+        "summary": "While conformal prediction provides a general framework for uncertainty quantification in predictive inference, its application is often limited by computational cost. Recent methods, including Jackknife+ and Jackknife-minmax, achieve faster computation by trading a slight loss of efficiency relative to full conformal prediction, but still requires computing leave-one-out refits for all observations. In this paper, we further accelerate conformal prediction by incorporating approximate leave-one-out (ALO) estimators, and establish asymptotic coverage and efficiency. While our proof draws on methods developed for analyzing the consistency of ALO cross-validation risk estimators in high-dimensional statistics, it requires adaptations to handle conformal prediction, where leave-$i$-out residuals are needed for predictions at $x_{n+1}$ rather than just at the training covariate $x_i$. Simulation results validate our theoretical findings, showing that the ALO-based methods achieve coverage and efficiency comparable to the exact methods, while significantly reducing the runtime.",
+        "authors": "Jiachen Cong, Jingbo Liu",
+        "url": "http://arxiv.org/abs/2606.31915v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31915v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过引入近似留一法（ALO）估计器来加速共形预测，并建立了渐近覆盖率和效率的理论保证。其证明借鉴了高维统计学中的方法，并针对共形预测进行了适应性调整，在保持统计严谨性的同时解决了计算效率问题。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31804v1",
+        "title": "Relational and Sequential Conformal Inference for Energy Time Series over Graphs via Foundation Models",
+        "summary": "Accurate energy demand forecasting is essential for the reliable operation and planning of modern sustainable energy systems. Spatial-temporal graph neural networks (STGNNs) have recently achieved strong performance in point forecasting by jointly modeling temporal dynamics and relational dependencies across interconnected energy nodes. However, in real-world energy systems, accurate point forecasts alone are insufficient, as operators also require reliable uncertainty estimates to support risk-aware decision-making, grid stability, and operational planning under uncertainty. Conformal prediction provides a principled and model-agnostic framework for uncertainty quantification with statistical coverage guarantees, making it particularly attractive for safety-critical energy applications. However, existing conformal prediction approaches often fail to fully capture the complex spatial-temporal structure of energy systems. To address these limitations, we propose STOIC (Spatial-Temporal Graph Conformal Prediction with In-Context Learning), a novel framework that integrates graph-based forecasting with the zero-shot calibration capabilities of tabular foundation models. STOIC first generates point forecasts using an STGNN and subsequently reformulates spatial-temporal residuals into a tabular representation suitable for in-context learning. Leveraging a tabular foundation model, STOIC calibrates prediction intervals without task-specific retraining, effectively capturing both sequential and relational dependencies. We evaluate STOIC on five diverse benchmarks, including synthetic simulations as well as real-world electricity and district heating networks. Across all datasets, STOIC consistently outperforms existing conformal prediction baselines, delivering more reliable and robust uncertainty estimates for complex graph-structured energy time series.",
+        "authors": "Keivan Faghih Niresi, Alice Cicirello, Olga Fink",
+        "url": "http://arxiv.org/abs/2606.31804v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31804v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "STOIC框架将图神经网络与表格基础模型的零样本校准能力相结合，为图结构能源时间序列提供具有统计覆盖保证的不确定性量化。它通过共形预测原理，有效捕捉了序列和关系依赖，为安全关键型能源应用提供了可靠的风险感知决策支持。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31686v1",
+        "title": "When to Truncate a Feature Ranking: A Residual-Overlap Stopping Rule for Subset Selection",
+        "summary": "Feature rankings are widely used in supervised feature selection because they are simple, scalable and easy to interpret. Variables are first ranked by a relevance score, and a subset is then obtained by retaining the top-ranked variables. Although the first stage has been extensively studied, the second is often governed by an arbitrary cardinality, an empirical threshold or cross-validation, without a direct interpretation. This raises a basic question: given a feature ranking, when is there enough accumulated class-separation evidence to stop selecting features?   This paper develops a distributional framework for transforming supervised feature rankings into class-independent subsets through an explicit risk-calibrated stopping rule. For each variable and each pair of classes, marginal separation is measured by the Bhattacharyya coefficient between the corresponding class-conditional distributions. The proposed method selects a single global subset shared by all classes by retaining the shortest prefix of a ranking whose residual product overlap falls below a prescribed threshold for every relevant class contrast. We derive binary and multiclass Bayes-risk bounds for the labelled product marginal problem, and obtain prior-dependent and prior-free calibrations of the residual-overlap threshold from a target all-pairs risk level.   An empirical comparison on high-dimensional genomic datasets illustrates that the rule can reduce tens of thousands of variables to a few dozen while maintaining predictive performance statistically comparable to the all-features baseline. As the stopping rule only requires one-dimensional marginal overlap estimates and scans a precomputed ranking, it is well suited to very high-dimensional settings where exhaustive subset search is infeasible and interpretable truncation of feature rankings is essential.",
+        "authors": "Jesus S. Aguilar-Ruiz",
+        "url": "http://arxiv.org/abs/2606.31686v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31686v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于残差重叠停止规则的特征选择方法，通过分布框架将监督特征排序转化为类别无关的子集。它利用Bhattacharyya系数衡量边际分离，并推导了二分类和多分类的贝叶斯风险界限，提供了风险校准的理论保证，对于高维数据中的可解释特征选择至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31600v1",
+        "title": "On Optimal Data Splitting for Split Conformal Prediction",
+        "summary": "Conformal prediction and its variants, including the split conformal prediction, provide a distribution-free framework for uncertainty quantification by constructing prediction intervals or sets with finite-sample coverage guarantees. The statistical efficiency of these intervals depends critically on how the data are split into training and calibration samples. Despite its practical importance, a principled characterization of the training-calibration split that minimizes prediction interval length while maintaining coverage has remained largely unresolved. In this paper, we develop a theoretical framework for optimal data splitting in split conformal prediction. We first analyze the problem in a general setting and derive analytical characterizations of the length-optimal split ratio under both symmetric and asymmetric regimes. We then show how the general results specialize to several commonly used regression settings, including linear regression, nonparametric regression, and neural networks, thereby demonstrating the scope of the framework. We also describe a data-based method for selecting the optimal proportion. Our analysis clarifies how model-related features govern the optimal allocation of samples between training and calibration and provides principled guidance for constructing shorter prediction intervals. Experiments on both synthetic and real-world datasets demonstrate the applicability of the proposed methodology across a variety of practical scenarios.",
+        "authors": "Sayan Das, Bahram Yaghooti, Todd A. Kuffner, Soumendra N. Lahiri",
+        "url": "http://arxiv.org/abs/2606.31600v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31600v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究为分层共形预测中的最优数据划分问题建立了理论框架，推导了对称和非对称情况下的长度最优划分比例的解析特征。它阐明了模型相关特征如何影响训练和校准样本的分配，为构建更短的预测区间提供了原则性指导，具有强大的统计理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31593v1",
+        "title": "High-Confidence Minimax Testing with Prescribed Errors",
+        "summary": "Classical minimax lower bounds for testing are typically derived for fixed error probabilities, while high-confidence results often impose a common failure probability. We study prescribed-error testing, in which the level and the target type II error may be small and of different orders. Standard prior-based reductions generally aggregate the two errors into a single quantity and therefore do not capture their distinct roles. We develop a general lower-bound technique based on a binary reduction that preserves the separate roles of the two error targets. The reduction yields two directed Kullback-Leibler information requirements, corresponding respectively to the level and the target type II error. When both directed mixture divergences can be controlled, they combine into a binary Jeffreys divergence, leading to the logarithmic dependence on the level and the target type II error. Applying the framework to Gaussian sequence testing, multinomial uniformity testing, and continuous uniformity testing over Hölder balls, we obtain lower bounds that match corresponding high-confidence upper bounds and hence establish prescribed-error minimax rates sharp up to constant factors.",
+        "authors": "Ilmun Kim",
+        "url": "http://arxiv.org/abs/2606.31593v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31593v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在统计假设检验领域做出了深刻的理论贡献，提出了一种新的通用下界技术，用于具有预设误差的高置信度极小极大检验。它基于二元归约，保留了两种误差目标的独立作用，并利用Kullback-Leibler信息和Jeffreys散度，推导出了精确到常数因子的极小极大率，数学推导极其严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31536v1",
+        "title": "Beyond the Expressivity-Trainability Paradox: A Dynamical Lie Algebra Perspective on Navigating Barren Plateaus in Quantum Machine Learning",
+        "summary": "As Quantum Machine Learning (QML) transitions toward practical implementation, the field faces a critical architectural bottleneck that challenges the fundamental assumptions of classical statistical learning theory. In classical deep learning, increasing model capacity typically risks overfitting. However, this study advances a counter-intuitive paradigm: unstructured contemporary QML architectures suffer from a profound state of quantum underfitting, driven by the \"expressivity-trainability paradox.\" We demonstrate that the vast Hilbert space capacity of Parameterized Quantum Circuits (PQCs)-traditionally chased as the source of quantum advantage is the direct mathematical cause of Barren Plateaus (BPs), where gradient landscapes become exponentially flat. By synthesizing recent breakthroughs in Dynamical Lie Algebras (DLAs) and Geometric QML, we establish a comprehensive framework linking the algebraic dimension of circuit generators to their optimization dynamics. Furthermore, we empirically validate this framework on a non-linear binary classification task, illuminating a uniquely quantum manifestation of the bias-variance tradeoff: while unstructured architectures achieve near-perfect training accuracy via unscalable parameterization (quantum overfitting), embedding group-theoretic geometric priors acts as a structural regularizer. By restricting the DLA growth to a polynomial regime, our symmetry-preserving approach sacrifices raw memorization capacity to guarantee scalable, gradient-rich training landscapes, offering a robust roadmap for \"Trainability-by-Design\" in scalable quantum neural networks.",
+        "authors": "Kung-Ming Lan",
+        "url": "http://arxiv.org/abs/2606.31536v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31536v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从动力学李代数（Dynamical Lie Algebras）的角度，深入分析了量子机器学习中“表达性-可训练性悖论”和“贫瘠高原”问题。它建立了一个将电路生成器的代数维度与其优化动力学联系起来的综合框架，提供了“按设计可训练性”的理论路线图，具有极高的数学和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31524v1",
+        "title": "On the Convergence of Self-Improving Online LLM Alignment",
+        "summary": "The Self-Improving Alignment (SAIL) algorithm addresses distribution shift by reducing a bilevel formulation of the problem to an efficient, single-level method. Empirically, SAIL has demonstrated strong performance on this task. However, a formal analysis of its convergence properties has been lacking. We identify a key theoretical challenge: the standard SAIL objective function is not guaranteed to be strongly concave due to unfavorable properties of its Hessian. To address this limitation, we propose a regularized objective, SAIL-RevKL, which incorporates a reverse Kullback-Leibler (KL) divergence penalty to improve the optimization landscape. Our central theoretical contribution is to prove that this regularized objective satisfies the Polyak-Lojasiewicz (PL) condition within a bounded parameter space. We establish global convergence guarantees, achieving a near-linear sample complexity. We further validate the effectiveness and stability of SAIL-RevKL through empirical evaluations, demonstrating that it outperforms the vanilla SAIL on both MuJoCo benchmarks and LLM alignment tasks.",
+        "authors": "Xudong Wu, Pangpang Liu, Vaneet Aggarwal, Jiayu Chen",
+        "url": "http://arxiv.org/abs/2606.31524v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31524v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究对自改进在线LLM对齐算法（SAIL）的收敛性进行了正式分析。它提出了一个正则化目标，并证明了该目标在有界参数空间内满足Polyak-Lojasiewicz (PL) 条件，从而建立了全局收敛保证和近线性样本复杂度，展现了强大的优化收敛性理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31418v1",
+        "title": "On the choice of using raw or demographically-corrected scores",
+        "summary": "Demographic corrections are routinely performed in many disciplines, including psychology. Yet, there are ongoing debates about whether these corrections are appropriate and improve classification accuracy. Here, we focus on cognitive screening tests, and show that common demographic corrections, like the z-score standardization, can be detrimental for classification in some settings. Formally, we present sufficient conditions ensuring that raw scores outperform the demographically-corrected ones, and give a substantive interpretation of this result. We also investigate the claim that using demographically-corrected scores results in more fair decisions compared to using raw scores. We apply our results to the Mini-Mental State Examination in the OASIS-3 dataset.",
+        "authors": "Ignacio Gonzalez-Perez, Mats Julius Stensrud, Marco Piccininni",
+        "url": "http://arxiv.org/abs/2606.31418v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31418v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从测量结构限制的认识论角度，深入探讨了情感AI中“情感主权”的核心规范问题。它将意义分布的不确定性分解为可约和不可约部分，并从统计学上证明了“认识论鸿沟”的存在，从而严谨地推导出了情感主权的规范。其理论深度和对AI测量局限性的深刻洞察力，对统计学博士生极具吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31411v1",
+        "title": "Linguistic Bias Mitigation for Spoofing Detection via Gradient Reversal and A Variational Information Bottleneck",
+        "summary": "Rapid advancements in generative speech technology have compromised the reliability of voice biometrics. While current spoofing detectors excel when assessed under in-domain conditions, generalisation to out-of-domain settings is often poor. We show that this can be due to linguistic bias. A reliance on linguistic cues observed in training data can then compromise robustness to cross-data. We propose a linguistic-invariant spoofing detection framework utilizing teacher-student adversarial learning. The linguistic-aware teacher model, pre-trained on linguistic content of an external dataset, guides the student detector via gradient reversal to minimize the linguistic information. To prevent the inadvertent removal of non-linguistic cues, we incorporate a Variational Information Bottleneck to enable suppression of principal cues. Across nine DF Arena datasets, our method achieves up to a 36.2% relative reduction in the EER compare to the baseline.",
+        "authors": "Anh-Tuan Dao, Driss Matrouf, Mickael Rouvier, Nicholas Evans",
+        "url": "http://arxiv.org/abs/2606.31411v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31411v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文形式化地分析了使用原始分数或人口统计学校正分数进行分类的权衡，并提出了确保原始分数优于校正分数的充分条件。它提供了深入的统计解释，并探讨了公平性问题，对理解数据预处理对模型性能和公平性的影响具有重要的理论指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31349v1",
+        "title": "PGUDA: Pressure-Guided Unsupervised Domain Adaptation with Cross-Modal Knowledge Distillation for sEMG-Based Gesture Recognition",
+        "summary": "Surface electromyography (sEMG)-based gesture recognition has emerged as a promising technology for natural human-computer interaction. However, its practical deployment remains challenging due to severe performance degradation caused by feature distribution discrepancies across different subjects and recording sessions. Although domain adaptation (DA) techniques are commonly employed to mitigate such discrepancies, conventional methods often struggle to effectively aligning sEMG features, primarily due to their inherent stochasticity and the scarcity of labeled data. To address these limitations, this paper proposes a novel Pressure-Guided Unsupervised Domain Adaptation (PGUDA) framework, which leverages the robustness and stability of pressure signals to introduce a cross-modal knowledge distillation strategy that transfers consistent physical semantics across modalities. Specifically, a teacher network trained on pressure signals guides an sEMG student network on unlabeled target domains, thereby regularizing the representation learning process with transferable and modality-invariant knowledge. Extensive experiments conducted on a self-collected multimodal dataset involving eleven subjects validate the effectiveness of the proposed PGUDA framework. The results demonstrate that our proposed PGUDA achieves leading performance in both cross-subject and cross-session classification tasks, achieving average accuracies of 58.08% and substantially outperforming existing DA approaches. Notably, PGUDA exhibits remarkable label efficiency: it attains classification accuracy comparable to fully supervised benchmarks while requiring only 5% of labeled data for teacher network training. This framework offers a robust and data-efficient solution that can significantly reduce the calibration burden in practical sEMG-based gesture recognition systems.",
+        "authors": "Yurui Liu, Xiao-Cong Zhong, Qisong Wang, Xuefu Wang, Dan Liu, Jinwei Sun",
+        "url": "http://arxiv.org/abs/2606.31349v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31349v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个新颖的压力引导无监督域适应框架PGUDA，利用跨模态知识蒸馏来解决sEMG手势识别中的域漂移问题。其核心思想是通过压力信号的鲁棒性来正则化sEMG特征学习，虽然理论严谨性主要体现在算法设计和经验验证上，但其跨模态知识迁移的思路具有创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31293v1",
+        "title": "Deep Spectral Models for Robust Dental Shape Generation",
+        "summary": "Accurate modeling of dental crown morphology is fundamental for diagnosis, orthodontic planning, and computer-aided restoration design. However, datasets suitable for training such models are typically limited in size. We present ToothForge, a deep spectral generative framework that models dental crown geometries from compact, intrinsic representations. By operating in the spectral domain, ToothForge learns a latent manifold of 3D tooth shapes through synchronized spectral embeddings, ensuring consistent modeling across samples with varying connectivity. Spectral synchronization mitigates the instability of Laplace-Beltrami eigenbases and enables efficient learning in a low-dimensional space. The framework is thoroughly evaluated through robustness analysis, ablation studies, and benchmarking against PCA-based statistical shape models and point-based generative frameworks. Results show that synchronized spectral modeling achieves reconstruction and generative performance comparable to or exceeding spatial approaches, while maintaining compactness and geometric interpretability. Together, the compact synchronized coefficients and low-dimensional learning space make the framework particularly suitable for limited datasets, as often encountered in dental and medical domains, and applicable in real-world scenarios where guaranteeing consistent connectivity across shapes from various clinics is unrealistic.",
+        "authors": "Tibor Kubík, François Guibault, Michal Španěl, Hervé Lombaert",
+        "url": "http://arxiv.org/abs/2606.31293v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31293v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "ToothForge框架通过在谱域中操作，利用同步谱嵌入来建模牙冠几何形状，确保了不同样本间的一致性建模。其数学基础在于谱几何，解决了Laplace-Beltrami特征基的不稳定性问题，并提供了几何可解释性，对有限数据集的3D形状生成具有理论和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31290v1",
+        "title": "Patch-PODiff-ViT: Structured Latent Diffusion with Patchwise POD for Super-Resolution and Uncertainty Quantification",
+        "summary": "Diffusion models enable probabilistic super-resolution and conditional generation, but pixel-space methods are computationally expensive and learned latent spaces often lack interpretable uncertainty quantification. We introduce Patch-PODiff-ViT, a structured latent diffusion framework in which the latent space is defined by patchwise Proper Orthogonal Decomposition (POD), a fixed linear orthonormal basis over local patches, rather than learned by a nonlinear autoencoder. This yields low-dimensional, variance-ordered tokens that preserve spatial structure and enable efficient diffusion in a structured low-dimensional latent space with a Vision Transformer. Because the decoder is fixed, linear, and orthonormal, latent coefficient uncertainty can be propagated directly to physical-space predictive variance, enabling analytic propagation of predictive variance through the linear decoder without Monte Carlo estimation in pixel space. Across sea surface temperature, medical imaging, and natural images, the method achieves strong reconstruction with fewer parameters and lower memory, while producing well-calibrated spatial uncertainty that closely matches empirical ensembles.",
+        "authors": "Onkar Jadhav, Tim French, Matthew Rayson, Nicole L. Jones",
+        "url": "http://arxiv.org/abs/2606.31290v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31290v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Patch-PODiff-ViT提出了一个结构化潜在扩散框架，其潜在空间由分块本征正交分解（POD）定义。该方法允许将潜在系数的不确定性直接解析地传播到物理空间预测方差，无需蒙特卡洛估计，提供了严谨的统计保证和清晰的数学推导，在超分辨率和不确定性量化方面具有突破性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31284v1",
+        "title": "Sequential sparse Gaussian process quantile regression",
+        "summary": "Quantile regression aims to estimate the conditional quantiles of a response variable from observed data. In a Bayesian setting, Gaussian process quantile regression provides uncertainty quantification but faces significant computational challenges due to the nonconjugacy of the asymmetric Laplace likelihood and the cost of posterior inference. We develop a sparse Gaussian process framework in which the quantile function is represented through a reduced set of inducing variables and posterior inference is performed using a Laplace approximation. A decomposition of the predictive uncertainty into conditional-prior and posterior-induced variance components is then exploited to drive two complementary adaptive mechanisms: inducing-input infilling and data acquisition. These mechanisms are combined within a sequential algorithm that allocates computational effort toward the dominant source of predictive uncertainty and adaptively controls model complexity. Numerical experiments on benchmark problems demonstrate the accuracy of the Laplace approximation, the benefits of variance-based inducing-input placement, and the effectiveness of the proposed sequential enrichment strategy compared with predefined data-acquisition strategies.",
+        "authors": "Hugo Nicolas, Olivier Le Maître",
+        "url": "http://arxiv.org/abs/2606.31284v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31284v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了一个稀疏高斯过程分位数回归框架，并利用预测不确定性的分解来驱动自适应机制（诱导输入填充和数据采集）。其贝叶斯设置、不确定性量化以及对模型复杂度的自适应控制，展现了高度的统计严谨性和优化策略。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31253v1",
+        "title": "MNAR-$k$-means: A $k$-means Clustering for Data Missing Not at Random with Magnitude-Decaying Probability",
+        "summary": "The classical $k$-means clustering, based on distances computed from all data features, cannot be directly applied to incomplete data with missing values. A natural extension of $k$-means to missing data is to involve only the observed positions in clustering, which is equivalent to imputing missing values by corresponding cluster means. However, for data missing not at random (MNAR), since missingness is related to data values, such a mean-imputation-based method may lead to the distortion of estimated cluster centers, resulting in a poor clustering result. Since MNAR mechanisms are very common in reality, it is necessary to improve the performance of $k$-means-based clustering methods for such data. In this paper, we focus on a magnitude-decaying MNAR scenario where data is more likely to be missing at positions with smaller absolute values, and we propose a novel $k$-means clustering method based on the constraint of the size of imputation values, which enjoys a good mathematical interpretation. Moreover, we establish the statistical consistency of the estimated cluster centers of the proposed method to the true cluster centers of fully observed data, and solve the optimization of the proposed loss function via an alternative minimization algorithm. Simulation experiments verify the effect of the proposed method in improving clustering results and reducing the bias of estimated cluster centers. Applications to real-world missing data further show the utility of the proposed method.",
+        "authors": "Xin Guan",
+        "url": "http://arxiv.org/abs/2606.31253v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31253v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "MNAR-$k$-means解决了缺失数据（非随机缺失，MNAR）下的聚类问题，特别是在幅度衰减概率场景下。该方法具有良好的数学解释，并建立了估计聚类中心对真实聚类中心的统计一致性，提供了严谨的理论保证和优化算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31232v1",
+        "title": "Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding",
+        "summary": "Learning visual world models for planning requires compact latent dynamics that remain sensitive to actions, yet reconstruction-free joint-embedding objectives can collapse to action-insensitive representations. We propose Delta-JEPA, an end-to-end reconstruction-free world model that augments latent forward prediction with a Latent Difference Action Decoder (LDAD). Unlike inverse decoders that infer actions from concatenated endpoint embeddings, LDAD reconstructs the executed action from the latent displacement between consecutive observations. This displacement-level supervision directly regularizes transition geometry: adjacent embeddings cannot collapse without losing action information, and different actions are encouraged to induce distinguishable latent changes for rollout-based planning. Delta-JEPA uses only latent prediction and action reconstruction, avoiding pixel reconstruction and distribution-matching regularizers. Across four visual continuous-control tasks, Delta-JEPA improves planning over JEPA-based and representation-learning world model baselines. Ablations show that displacement-based action decoding is consistently more effective than endpoint concatenation, and action-sensitivity analyses show clearer action-conditioned latent responses. These results indicate that supervising latent differences is a simple and effective mechanism for collapse-resistant and action-sensitive world model learning.",
+        "authors": "Zhenghao Zhang, Yuanxiang Wang, Zhenyu Guan, Yujia Yang, Bingkang Shi, Tianyu Zong, Hongzhu Yi, Guoqing Chao, Xingchen Chen, Tiankun Yang, Chenxi Bao, Tao Yu, Jingjing Zhou, Jungang Xu",
+        "url": "http://arxiv.org/abs/2606.31232v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31232v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "Delta-JEPA提出了一个重建无关的世界模型，通过潜在差异动作解码器（LDAD）增强了潜在空间对动作的敏感性。LDAD直接正则化了转换几何，鼓励不同的动作产生可区分的潜在变化，从而解决了动作不敏感表示的问题，其原理性方法值得关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31190v1",
+        "title": "Semiparametric Efficiency in Sequential Experiments: Characterization and Design via Average Propensity",
+        "summary": "Modern experiments, including evaluations of AI-enabled services and platform interventions, often depart from independent and identically distributed (i.i.d.) sampling because assignments may be adaptive, balanced across covariates, or subject to rollout constraints such as exposure, fairness, and budget limits. This paper studies the efficiency benchmark for estimating causal targets in such sequential experiments. We show that every non-anticipating design induces an average propensity score, and we establish a semiparametric lower bound: for regular locally unbiased estimators, attainable precision is bounded by the i.i.d. efficiency benchmark evaluated at this induced score. The average propensity score thereby serves as a common benchmark and design target, allowing sequential experimental design to be viewed as choosing or learning an efficient allocation rule, with operational constraints entering through the admissible set when present. We then develop implementable batched adaptive designs that approach this benchmark through two complementary mechanisms. The first uses regression adjustment based on efficient influence functions; for general smooth estimands it attains the benchmark under standard nuisance-rate conditions, while for linear functionals of outcome means it achieves a sharp second-order rate. The second uses adaptive covariate balancing to attain the same benchmark through the assignment mechanism, enabling simple moment-based estimation. Both routes require only a small number of policy updates, making them compatible with delayed feedback and easier to monitor in operational deployments. Numerical experiments and an empirical study of AI medical-assistant evaluation demonstrate the practical efficiency gains, including in multi-treatment settings. Overall, the paper provides a unified framework for characterizing and designing efficient sequential experiments.",
+        "authors": "Jiachun Li, David Simchi-Levi",
+        "url": "http://arxiv.org/abs/2606.31190v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31190v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了序列实验中的半参数效率，通过平均倾向得分来表征和设计实验。它建立了半参数下界，证明了可达精度受限于该得分评估的i.i.d.效率基准，并开发了达到该基准的批处理自适应设计，具有极高的因果逻辑和统计理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31184v1",
+        "title": "Transformers as Bayesian In-Context Experimenters: Smoothness-Adaptive Efficient ATE Estimation",
+        "summary": "Adaptive experiments for average treatment effects (ATE) require randomized allocations balancing valid inference with statistical efficiency. The oracle design is a covariate-dependent Neyman rule governed by unknown arm-conditional outcome variances. We investigate whether this sequential variance-estimation and allocation process can be amortized via in-context learning. We introduce Bayesian in-context experimenters: transformer policies trained to imitate a Bayesian posterior Neyman teacher. The teacher updates nonparametric beliefs over potential outcomes using experimental history to assign posterior Neyman treatment probabilities. This design converges to the oracle rule, supporting efficient ATE inference. Transformers constructively implement this mapping through attention-based sufficient statistics and projected gradient descent, imitating Bayesian updating for Gaussian-series priors. To address unknown outcome smoothness, we combine smoothness-indexed experimenters using a mixture-of-experts transformer. The gate acts as a hierarchical posterior over smoothness classes, concentrating on near-oracle experts. By bounding the complexity of the transformer class, we prove this amortized policy can be learned via empirical risk minimization using supervised pretraining. Experiments confirm accurate teacher imitation, adaptive allocation, and improved ATE precision over baselines.",
+        "authors": "Jiachun Li, David Simchi-Levi",
+        "url": "http://arxiv.org/abs/2606.31184v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31184v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究将Transformer模型视为贝叶斯上下文实验者，用于平滑度自适应高效ATE（平均治疗效果）估计。它提出了贝叶斯后验Neyman教师策略，证明了该设计收敛到最优规则，并提供了学习该摊销策略的理论证明，结合了因果推断、贝叶斯方法和学习理论，具有强大的理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31166v1",
+        "title": "TAG-DLM: Diffusion Language Models for Text-Attributed Graph Learning",
+        "summary": "Text-attributed graphs (TAGs), where each node carries a natural language description, require models to jointly reason over text and graph topology. Existing approaches often handle the two modalities separately: graph neural networks operate on shallow text features, while hybrids of LLMs and graphs use the language model mainly as a text encoder and delegate structure learning to a separate graph module. We propose method that unifies textual reasoning and graph message passing within a masked diffusion language model, a language model with bidirectional attention and generative decoding. For each graph instance, method linearises a sampled local neighbourhood into a token sequence and injects graph structure through a topology attention mask, which realises message passing over the graph. Because the diffusion language model can both interpret and generate text, the method adapts to different tasks simply by changing the prompt, supporting node classification, link prediction, and cross-dataset transfer with no target-specific fine-tuning.   Experiments show that method outperforms graph neural networks, graph transformers, and LLM-based baselines on all three TAG benchmarks across two tasks, improving over the strongest baseline by up to 3.9 points.",
+        "authors": "Lingjie Chen, Yuanchen Bei, Haobo Xu, Yanjun Zhao, Yuzhong Chen, Hanghang Tong",
+        "url": "http://arxiv.org/abs/2606.31166v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31166v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "TAG-DLM通过将文本推理和图消息传递统一到掩码扩散语言模型中，为文本属性图学习提供了一种新颖方法。它通过拓扑注意力掩码注入图结构，实现了消息传递。虽然理论严谨性主要体现在模型架构创新上，但其统一两种模态的思路具有很强的创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31119v1",
+        "title": "Visualizing High-Dimensional Graph Embeddings via Informed Multi-View Projections",
+        "summary": "Graphs are commonly visualized in 2D, where humans readily interpret spatial relationships, yet such layouts often distort higher-dimensional structure. We propose to embed graphs in high-dimensional space and search for informative 2D viewpoints that optimize aesthetic and readability metrics (e.g., edge crossings and angular resolution), enabled by a novel differentiable surrogate for edge crossings. Numerical experiments show that these viewpoints consistently outperform standard 2D layouts, and can even surpass methods explicitly designed to optimize these metrics. We further introduce DataFly, an interactive system for exploring multiple candidate viewpoints through seamless navigation. A usability study demonstrates that our approach reveals structural patterns that remain hidden in conventional 2D visualizations.",
+        "authors": "Ya Ji, Xuefeng Li, Timo Brand, Jacob Miller, Peng Zhang, Stephen Kobourov, Yifan Hu",
+        "url": "http://arxiv.org/abs/2606.31119v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31119v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种通过信息多视图投影可视化高维图嵌入的方法，并引入了一个新颖的可微分边交叉代理来优化美学和可读性指标。其在优化方法上具有数学贡献，旨在揭示传统2D可视化中隐藏的结构模式。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31032v1",
+        "title": "Partially ordering software licenses",
+        "summary": "Licenses are legal instruments that inventors may use to protect the technologies they build and regulate how they are used -- however, the nature of their authorship and selection means that how they are interpreted, chosen, and enforced is largely unstructured. In practice, this makes it difficult to compare licenses at scale -- when is one license considered more permissive than the other, and when are their terms incomparable to each other? Currently, there is a growing list of licenses that are introduced and used, but there is no systematic way to study their relationships. This matters for platforms such as Hugging Face, GitHub, and the Python Package Index, where developers publish or build upon technologies that each have their own licenses. Using large language models (LLMs), we introduce methods for comparing licenses at scale: first, in a pairwise fashion to construct a partial ordering based on permissiveness, and second, by drawing on existing taxonomies of software licenses. The former allows us to trace restrictiveness, and the latter allows us to understand license selection as a combination of shared provisions. Our analysis recovers certain interpretable attributes that correspond to stricter licenses, with legal implications for the open-source ecosystem.",
+        "authors": "Hamidah Oderinwale, David Atkinson, Rachel Hong, Art Abal, Ben Laufer",
+        "url": "http://arxiv.org/abs/2606.31032v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31032v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究利用LLM对软件许可证进行两两比较，构建基于许可性的偏序关系，并结合现有分类法分析许可证选择。虽然其严谨性主要体现在将法律概念形式化为计算任务，但其对许可证关系进行系统性研究的方法具有创新性和实际意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.31022v1",
+        "title": "Bayesian Uncertainty Quantification for Ranked Choice Voting Polls",
+        "summary": "Ranked choice voting (RCV) is a popular alternative voting method in which voters are asked to list their favored candidates in preference order, rather than vote for a single candidate. When these ballots are tabulated, candidates are successively eliminated, and their votes are reallocated to each voter's next-preferred choice. The process continues until a candidate commands a majority of the active ballots and is declared the winner. As RCV gains wider adoption, the method poses novel challenges for pollsters. Unlike plurality elections, the event that a candidate wins cannot be expressed in terms of a single population parameter. Hence, the basic concept of a margin-of-error is not straightforward to define. Moreover, a candidate's ability to win may depend on both their support across the ballot and the order in which other candidates are eliminated. Existing measures of sampling uncertainty for polls of RCV elections do not clearly quantify these path-dependent outcomes. Here, we propose a simple, Bayesian framework to quantify uncertainty in polls of RCV elections. We cast the problem as one of estimating win probabilities for each leading candidate, and leverage a simple conjugacy relationship to estimate these probabilities conditional on the poll results. We include applied analyses involving two prominent ranked choice voting elections: the 2021 New York City Democratic mayoral primary, in which Eric Adams narrowly defeated Kathryn Garcia in the final round; and the 2022 special election to Alaska's U.S. House seat, in which Mary Peltola was elected despite not being a Condorcet winner. Using the cast vote records from both elections, we demonstrate some challenges of traditional frequentist uncertainty quantification in RCV polls. We also demonstrate the utility of our approach using a poll of the NYC primary obtained from the polling firm Data for Progress.",
+        "authors": "Evan T. R. Rosenman, Jason Liang",
+        "url": "http://arxiv.org/abs/2606.31022v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.31022v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个简单而严谨的贝叶斯框架，用于量化排序选择投票（RCV）民意调查中的不确定性。它将问题转化为估计获胜概率，并利用共轭关系进行估计，解决了传统频率学方法在RCV中面临的挑战，提供了清晰的统计保证和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30999v1",
+        "title": "Estimating Supply Incrementality in Two-sided Marketplaces: A Causal Machine Learning Approach",
+        "summary": "In two-sided marketplaces with heterogeneous products, it is important to understand the causal relationship between additional supply and marketplace outcomes, such as the total quantity transacted or transaction value in the marketplace. This paper studies a causal machine learning approach to estimating this relationship across product segments. We use the Airbnb marketplace as an example, focusing on the impact of additional listing supply on total bookings, but the methodology applies to other two-sided marketplaces. Our approach combines double/debiased machine learning with a hierarchical Bayesian framework that leverages pre-existing knowledge as priors. We construct tractable and informative features for the model by leveraging measures of product segment similarity from the geospatial literature. We find that such a model provides plausible estimates of the marketplace returns to additional supply and strong out of sample performance.",
+        "authors": "Yufei Wu, Daniel Schmierer, Dan Zylberglejd",
+        "url": "http://arxiv.org/abs/2606.30999v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30999v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究采用因果机器学习方法，结合双/去偏机器学习和分层贝叶斯框架，估计双边市场中的供给增量。其方法论具有强大的因果逻辑和统计严谨性，利用先验知识和地理空间相似性特征，提供了可信的市场回报估计。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30991v1",
+        "title": "Difference-of-Convex Optimization via Inexact Smoothing Descent Methods: Difference of High-Order Moreau Envelopes",
+        "summary": "This paper studies difference-of-convex (DC) optimization problems through smoothing descent techniques. In particular, we introduce the difference of high-order Moreau envelopes (HOME-DC) and establish its fundamental and differential properties. Approximating the underlying proximal points, we generate an inexact first-order oracle for HOME-DC and characterize its accuracy guarantees. Building upon this oracle, we propose a class of inexact descent methods for minimizing DC functions and provide a convergence analysis. The proposed framework extends the applicability of envelope-based optimization techniques to a broad class of structured nonconvex problems while accommodating inexact solutions to subproblems. Preliminary numerical experiments on a sparse clustering problem demonstrate the approach's practical potential and support the theoretical findings.",
+        "authors": "Alireza Kabgani, Moslem Zamani, Masoud Ahookhosh",
+        "url": "http://arxiv.org/abs/2606.30991v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30991v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种创新且直观的解决方案，通过分层聚类来缓解观测因果推断中臭名昭著的多重共线性问题。它通过聚合数据有效减轻共线性，并促进不同营销渠道影响的单独识别，在因果逻辑和统计方法上具有严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2606.30989v1",
+        "title": "Wait, am I Being Fair? Characterizing Deductive Stereotyping and Mitigating It with Fair-GCG",
+        "summary": "Warning: This paper contains several toxic and offensive statements. While reasoning generally improves fairness in recent large language models (LLMs), failures persist. In this work, we identify a failure mode, deductive stereotyping, in which models apply population-level statistical regularities to individual cases, producing logically coherent yet socially biased inferences. We provide a statistical interpretation of this phenomenon. To steer models toward fairness-aware reasoning, we propose a reasoning-time injection framework. We further introduce Fair-GCG to systematically discover effective injection phrases. Injection phrases discovered by Fair-GCG improve performance across multiple fairness benchmarks, generalize from smaller to larger LLMs, improves reasoning-level fairness, reduces bias in open-ended generation, and transfer to real-world fairness-sensitive tasks.",
+        "authors": "Naihao Deng, Yilun Zhu, Joan Nwatu, Clayton Scott, Rada Mihalcea",
+        "url": "http://arxiv.org/abs/2606.30989v1",
+        "pdf_url": "https://arxiv.org/pdf/2606.30989v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究识别并表征了LLM中的“演绎刻板印象”这一失败模式，并提供了其统计学解释。它提出了一个推理时注入框架和Fair-GCG方法来系统地发现有效的注入短语以减轻偏见，对LLM的公平性和伦理部署具有重要理论和实践意义。"
+    }
+]

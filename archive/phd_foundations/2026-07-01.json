@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.01104v1",
+        "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
+        "summary": "In Large Language Model (LLM) training, data mixing plays a pivotal role in determining model performance. Recent methods optimize mixture weights via proxy models, but they rely on the assumption of static data distributions. As a result, when the underlying data pool shifts, these methods require costly retraining from scratch. This limitation restricts their ability to scale seamlessly from small settings to larger data pools and model sizes. In this paper, we propose CausalMix to address this limitation by casting data mixture optimization as a causal inference problem. We formulate the statistical features of the data pool as covariates and the domain mixture as the treatment. After fitting a causal model on 512 runs of Qwen2.5-0.5B to estimate the Conditional Average Treatment Effect (CATE), we extrapolate the optimal mixture for an 800K data pool and apply it to train a 7B model. Furthermore, we successfully generalize the framework to long chain-of-thought data on Qwen3-4B-Base. By leveraging causal modeling to isolate confounding biases, CausalMix dynamically infers state-dependent optimal data mixtures. Extensive experiments show that the mixture guided by CausalMix consistently improves performance across multiple downstream tasks, outperforming RegMix and other baselines. In addition, we use the CATE Interpreter to provide visual analysis of the learned mixing strategy. Overall, CausalMix offers a causal and interpretable framework for optimizing LLM data mixtures.",
+        "authors": "Zinan Tang, Yukun Zhang, Shaomian Zheng, Zhuoshi Pan, Qizhi Pei, Dingnan Jin, Jun Zhou, Yujun Wang, Biqing Huang",
+        "url": "http://arxiv.org/abs/2607.01104v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01104v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文将大型语言模型（LLM）训练中的数据混合优化框架化为因果推断问题，提出CausalMix方法。它通过将统计特征视为协变量、领域混合视为处理，并拟合因果模型来估计条件平均处理效应（CATE），从而动态推断最优数据混合。其强大的因果逻辑和严谨的数学推导，以及对混淆偏差的隔离，完美契合您对因果逻辑和理论基础的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00980v1",
+        "title": "An Instrumental Variable Approach to Account for Informative Treatment Switching in Real-world Evidence",
+        "summary": "Reproducible and generalizable assessment of treatment decisions requires principled handling of subsequent treatment switching that may inform expected outcomes and shift across cohorts and over time. To effectively account for informative treatment switching, we propose an instrumental variable approach that characterizes the poorly documented expected outcomes at switching as unmeasured confounding. After establishing the baseline treatment as a viable instrumental variable, we constructed an estimating equation based on the association between the centered instrumental variable and a martingale style residual process that identifies the treatment effect under structural cumulative survival model. Our proposed method is doubly robust, i.e., valid whenever either of baseline propensity model or no-switching outcome model is consistently estimated. A co-training of treatment effect parameter and survival outcome regression model eliminated the requirement of observing a no-switching subset under semi-parametric additive hazards models. We further developed an baseline-survival-corrected cross-fitting approach to incorporate general machine learning models for estimating nuisance models. Numerical results demonstrated the validity of our method in various settings when a basket of benchmark solutions produced biased or contradictory results. We applied our method to comparison of high-efficacy vs standard efficacy disease modifying treatments as the second line therapy of multiple sclerosis.",
+        "authors": "Yang Liu, Andrew Ying, Zongqi Xia, Jue Hou",
+        "url": "http://arxiv.org/abs/2607.00980v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00980v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种工具变量方法，用于处理真实世界证据中可能存在的信息性治疗转换，将未测量的混淆特征化。它将基线治疗确立为有效的工具变量，并基于中心化工具变量与鞅式残差过程之间的关联构建估计方程，以识别治疗效果。该方法具有双重稳健性，其严谨的统计理论和因果推断方法非常符合您的研究方向。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00915v1",
+        "title": "Simulating Node Manipulations in Gaussian Graphical Models: The GGMNIRA Framework for Continuous and Ordinal Psychological Network Data",
+        "summary": "Scientific Abstract: In psychological network analysis, centrality indices are commonly used to evaluate the importance of nodes within a network. However, centrality only captures the static topological position of a node, and there is no sufficient theoretical justification for assuming that it reflects a node's influence on network dynamics. The NodeIdentifyR Algorithm (NIRA) offers an alternative by systematically applying simulated manipulations to node intercepts within the Ising model to evaluate nodes' projected importance, but this algorithm is restricted to binary data, and the manipulated parameter lacks a clear theoretical meaning outside the context of psychopathology. To address these limitations, we propose the Gaussian Graphical Model NodeIdentifyR Algorithm (GGMNIRA), which manipulates a node's conditional mean and uses Kullback-Leibler (KL) divergence to quantify the change in network distribution before and after manipulation, thereby extending this simulated manipulation logic to the Gaussian graphical model framework, which is applicable to continuous and ordinal data. Around this algorithm, we further developed a correlation stability coefficient and a nonparametric bootstrap difference test for KL divergence, with corresponding interpretive thresholds established through simulation studies. The framework was also extended to bridge Gaussian graphical models and moderated Gaussian graphical models, enabling its application to multi-construct comorbidity networks and to contexts involving moderation effects. All methods are implemented in the R package \"GGMNIRA\".",
+        "authors": "Yiming Wu, Fei Wang, Hongyun Liu",
+        "url": "http://arxiv.org/abs/2607.00915v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00915v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了高斯图模型节点识别算法（GGMNIRA），将节点操作逻辑扩展到高斯图模型，适用于连续和有序数据。它通过操纵节点的条件均值，并使用Kullback-Leibler (KL) 散度量化网络分布变化，从而评估节点的重要性。此外，还开发了相关稳定性系数和非参数bootstrap差值检验。其在统计建模和推断方面的理论基础非常扎实，提供了清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00913v1",
+        "title": "Two AI Metrics Diverged: Will it Make All the Difference?",
+        "summary": "As exponential compute scaling continues, will the capabilities of frontier AI models outstrip what is accessible to developers on a small fixed budget? Or will capabilities converge, with \"meek models inheriting the earth\"? Building on Gundlach et al. (2025b), we show that the answer depends on how we value and measure AI capabilities. We discuss conventional performance measures and show that, while validation loss shows a shrinking gap, on other metrics frontier models grow their lead forever. Classifying performance metrics by their functional forms in relation to training (and inference) compute, we provide tight mathematical conditions for determining which metrics favor meek models, and show that bounded performance metrics always do. But careful interpretation of performance metrics is essential: we show that many common bounded metrics have closely-related counterpart metrics that are unbounded (and vice versa). Determining the apt metric in a domain is a prerequisite for policy, since bounded and unbounded metrics may suggest opposing policy responses. If a particular capability -- like software engineering, synthetic biology, or rhetorical persuasiveness -- is unbounded when measured in the terms we care about, frontier-level capability will likely be concentrated in the hands of a few wealthy actors. Conversely, if that capability is instead bounded, frontier-level capabilities proliferate through meek models into the hands of the many.",
+        "authors": "Alex Fogelson, Zachary A. Brown, Hans Gundlach, Jayson Lynch, Neil Thompson",
+        "url": "http://arxiv.org/abs/2607.00913v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00913v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文深入分析了AI能力度量指标的选择如何影响对AI发展的判断，并根据训练（和推理）计算的关系，通过函数形式对性能指标进行分类。它提供了严格的数学条件来确定哪些指标有利于“温和模型”，并证明了有界性能指标总是如此。这项研究具有强大的数学分析和对AI系统基础理论的探讨，非常符合您对严谨数学逻辑的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00897v1",
+        "title": "Recovery of Planted Subgraphs",
+        "summary": "Understanding the fundamental limits of recovering planted subgraphs in random graphs is a central challenge in high-dimensional statistics and theoretical computer science. While existing work has largely focused on special subgraph families such as cliques, bicliques, or dense blocks, the exact recovery of a general planted subgraph in Erdős--Rényi random graphs remains poorly understood. In this paper, we study the exact recovery of an arbitrary planted subgraph $Γ= Γ_n$ embedded in a dense Erdős--Rényi random graph $\\mathcal{G}(n,q_n)$, where edges within $Γ$ are present independently with probability $p_n > q_n$.   Our main results identify sharp conditions under which exact recovery is possible with high probability, and we establish matching lower bounds showing the necessity of these conditions. The resulting statistical threshold is characterized by a new graph-theoretic quantity, which we term the \\emph{minimal maximum subgraph density}. This quantity is defined as the maximum subgraph density of the smallest induced balanced subgraph of $Γ$.   We then turn to the problem of recovery under polynomial-time constraints. We propose a computationally efficient recovery algorithm that applies to arbitrary planted subgraphs and analyze its performance in terms of certain spectral properties of the adjacency matrix. In addition, we derive computational lower bounds for recovery using the low-degree polynomial framework, establishing regimes where recovery is statistically possible but computationally hard. Finally, we consider several extensions of our setting, including recovery in semi-random models and weaker notions of recovery.",
+        "authors": "Wasim Huleihel",
+        "url": "http://arxiv.org/abs/2607.00897v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00897v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了在Erdős--Rényi随机图中恢复任意植入子图的精确条件，并建立了匹配的下界，展示了这些条件的必要性。它引入了一个新的图论量——“最小最大子图密度”来刻画统计阈值。该研究在理论计算机科学和高维统计学领域具有强大的理论基础和清晰的数学推导，是您会感兴趣的类型。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00722v1",
+        "title": "How does academic performance affect self-efficacy? Interpretable modelling through latent academic achievement",
+        "summary": "There is increasing evidence of a directional relationship from academic performance to self-efficacy. We develop a Bayesian model for investigating this relationship when academic performance is measured on an ordinal scale and self-efficacy on a continuous scale. The model allows latent academic achievement to enter the self-efficacy regression as a predictor, while Bayesian variable selection identifies factors associated with either response. The resulting conditional formulation yields an interpretable regression characterisation of how latent academic achievement relates to self-efficacy. Furthermore, it enables a tailored partially collapsed Gibbs sampler that analytically integrates out the regression coefficients when updating the variable inclusion indicators. Simulation studies demonstrate that the proposed conditional formulation and tailored sampler improve sampling efficiency and variable-selection performance relative to a recent, more general joint Gaussian copula regression formulation. We apply the methodology to data from the longitudinal study of Australian children, a landmark national cohort study covering children's education, social and emotional wellbeing, health and family circumstances. The model and analysis shed light on how latent academic achievement relates to self-efficacy in Australian children, and reveal that the two outcomes differ markedly in the range of covariates associated with each outcome.",
+        "authors": "Sarah Lee, Matias Quiroz, Sally Cripps",
+        "url": "http://arxiv.org/abs/2607.00722v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00722v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究开发了一个贝叶斯模型，用于调查学术表现与自我效能感之间的关系，其中学术表现以序数尺度衡量，自我效能感以连续尺度衡量。模型允许潜在学术成就作为预测因子进入自我效能回归，并通过贝叶斯变量选择识别相关因素。其条件公式和定制的偏塌陷Gibbs采样器，以及对回归系数的分析积分，展现了强大的统计建模和推断的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00581v1",
+        "title": "Decision-focused Sparse Tangent Portfolio Optimization",
+        "summary": "Sparse tangent portfolio optimization aims to learn an interpretable, low-cardinality portfolio in the tangency direction of the mean-variance frontier. However, the associated cardinality-constrained formulation is NP-hard, and standard predict-then-optimize pipelines often misalign forecasting accuracy with downstream portfolio quality. We propose an end-to-end decision-focused learning framework that reformulates Sharpe ratio maximization as a Disciplined Parametrized Programming (DPP)-compliant convex programming layer and replaces discrete selection with a smooth top-$k$ operator enforcing an exact cardinality $k$. This enables gradient flow through prediction, asset selection, and re-optimization, allowing the predictive model to directly optimize portfolio performance. Across four major equity markets, our method achieves competitive and often superior out-of-sample Sharpe ratios compared with historical and prediction-focused baselines, with particularly strong gains in larger asset universes. Our \\href{https://github.com/feuerwerksh/Diffble-card-SR}{code} is publicly available.",
+        "authors": "Haeun Jeon, Seunghoon Choi, Hyunglip Bae, Yongjae Lee, Woo Chang Kim",
+        "url": "http://arxiv.org/abs/2607.00581v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00581v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个端到端的决策导向学习框架，用于稀疏切线投资组合优化。它将Sharpe比率最大化重构为一个符合Disciplined Parametrized Programming (DPP) 的凸规划层，并用平滑的top-k算子取代离散选择。这使得梯度流能够通过预测、资产选择和再优化，直接优化投资组合性能。其在优化理论和决策导向学习方面的数学严谨性非常高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00573v1",
+        "title": "BrainFIBRE: A Foundation Model via Information Decomposition for Brain Microstructure",
+        "summary": "Diffusion MRI probes brain microstructure with particular sensitivity to early cerebrovascular and neurodegenerative changes. Neurite Orientation Dispersion and Density Imaging (NODDI) decomposes the diffusion signal into three biophysically interpretable maps: neurite density index (NDI), orientation dispersion index (ODI), and free water fraction (FWF), capturing neurite packing, fiber coherence, and extracellular fluid. These 3D maps offer a rich substrate for transferable microstructural representations, yet integrating them is challenging: standard representation learning struggles to disentangle the unique information in each map from their shared and synergistic interactions. We present BrainFIBRE, the first foundation model for brain microstructure, pretrained on NODDI-derived maps from 55,592 UK Biobank participants. We propose Self-supervised Partial Information Decomposition (SPID), which extends PID-guided multimodal learning to the self-supervised regime for the first time. A novel Counterfactual Candidate Construction (CCC) paradigm perturbs inter-modality alignment through modality dropping and swapping, providing the contrastive signal for a Mixture-of-Experts architecture to disentangle unique, synergistic, and redundant information without any downstream label. On both Caucasian and Asian cohorts, BrainFIBRE achieves state-of-the-art performance across diverse tasks predicting age, sex, cerebrovascular and neurodegenerative markers, and cognition, while yielding neurobiologically interpretable representations that reveal task- and cohort-specific interaction patterns. BrainFIBRE establishes a versatile foundation for neuroimaging analysis at the microstructural level.",
+        "authors": "Zijian Dong, Yi Lin, Ji Fang, Jianxiong Zhou, Kwun Kei Ng, Juan Helen Zhou",
+        "url": "http://arxiv.org/abs/2607.00573v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00573v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究提出了BrainFIBRE，第一个用于脑微结构的基础模型，并引入了自监督偏信息分解（SPID），首次将PID引导的多模态学习扩展到自监督领域。其新颖的反事实候选构建（CCC）范式通过模态丢弃和交换来扰动模态间对齐，为Mixture-of-Experts架构提供对比信号，以解耦独特、协同和冗余信息。信息论和统计建模的理论基础强大，创新性高，对现代AI系统有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00512v1",
+        "title": "From Structural Equation Modelling to Double Machine Learning: Robustness Analysis for Survey-Based Research",
+        "summary": "Structural equation modelling (SEM) is widely used in survey-based business and information systems research to assess latent constructs and theory-driven structural relationships. However, SEM path significance is obtained within a particular model specification and may not show whether findings remain stable under alternative estimation frameworks. This study develops and demonstrates a staged robustness analysis framework that connects SEM, ordinary least squares (OLS) regression, and Double Machine Learning (DML). SEM is first used to refine the measurement structure and estimate the robustness-baseline SEM model, in which the full theory-specified structural path system is retained for downstream robustness analysis before final structural path evaluation. OLS regression is then applied to SEM-derived construct scores as a transparent regression benchmark. Finally, DML-style residualisation is used to examine whether each tested focal relationship remains stable after flexible machine-learning-based adjustment for observed controls. Learner-sensitivity checks compare Random Forest, Gradient Boosting, and Support Vector Machine learners, and selected reverse-direction diagnostics are used to examine directional sensitivity. The framework is demonstrated using a FinTech Digital Customer Intimacy survey model. The findings identify which relationships are stable across SEM, OLS, and DML-style checks, and which require more cautious interpretation. A reproducible Google Colab workbook and generated result files are publicly available, providing a reusable template that researchers and students can adapt to other survey-based latent-construct studies. The paper contributes a practical robustness workflow and interpretation guide for survey-based researchers seeking to complement SEM with conventional and machine-learning-based robustness checks.",
+        "authors": "Ka Ching Chan, Qiana Liu, Sanjib Tiwari, Ranga Chimhundu",
+        "url": "http://arxiv.org/abs/2607.00512v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00512v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文开发并演示了一个分阶段的稳健性分析框架，连接了结构方程模型（SEM）、普通最小二乘（OLS）回归和双重机器学习（DML）。它通过DML风格的残差化来灵活调整观测到的控制变量，并检查焦点关系在不同框架下的稳定性。其统计方法论和稳健性分析的严谨性非常高，符合您对统计保证和严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00510v1",
+        "title": "Prototype Language Models",
+        "summary": "Knowing which training examples drive outputs is fundamental to auditing, correcting, and understanding language models, yet for modern LLMs this remains expensive, approximate, and largely post-hoc. Standard language models generate tokens through a dense network pathway, causing training data's influence to be distributed across parameters rather than organized along explicit, traceable components. We introduce a prototype language model architecture, Prototypes for Interpretable Sequence Modeling (PRISM), that forms each prediction via a sparse, non-negative mixture of learned prototypes, trained with clustering objectives that anchor each prototype to coherent neighborhoods of training examples. Across architectures from 130M to 1.6B parameters trained on up to 50B tokens, prototype language models either surpass or remain within 2.5 percentage points on average downstream accuracy of matched dense baselines. We show that sparse prototype structure localizes curvature in the loss landscape, yielding a more tractable Hessian and enabling training data attribution that is ~500x faster than post hoc baselines when consuming equivalent memory. Calibrating linear prototype controllers can improve downstream accuracy by roughly 3 points while tracing those corrections back to training neighborhoods, and targeted prototype suppression can remove model behaviors without finetuning or measurable loss in generation quality.",
+        "authors": "Dan Ley, Giang Nguyen, Himabindu Lakkaraju, Julius Adebayo",
+        "url": "http://arxiv.org/abs/2607.00510v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00510v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一种原型语言模型（PRISM）架构，通过学习原型的稀疏、非负混合来形成每个预测，并通过聚类目标将每个原型锚定到训练样本的连贯邻域。它强调了稀疏原型结构如何局部化损失景观中的曲率，从而产生更易处理的Hessian，并实现比后验基线快约500倍的训练数据归因。其高创新性、对可解释性的理论动机和对模型内部机制的数学洞察力非常吸引人。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00470v1",
+        "title": "Neural Network-Based Estimation of Time-Dependent Parameters in AR(p) Processes",
+        "summary": "We investigate a forecasting framework based on a simple discrete-time dynamic model with coefficients varying in time. The parameters of the model are recovered within a deep learning framework, which makes it possible to retain a transparent parametric structure while simultaneously accounting for complex and nonstationary patterns in the observed phenomenon. Our analysis covers two specifications of the noise process. Besides the standard Gaussian setting, we also consider Laplace-distributed noise, which can offer a more adequate description in the presence of heavier tails and sharper local fluctuations. For both cases, we formulate the predictive scheme of the model and analyze the associated uncertainty quantification, including the construction of prediction intervals. The results illustrate that a relatively simple model, when combined with time-dependent parameter estimation, can serve as a mathematically tractable and practically flexible tool for forecasting complex dynamics under different noise assumptions. The general model is stated for TVAR($p$), while the prediction-interval formulas and the numerical experiments are developed for the TVAR(1) case.",
+        "authors": "Agnieszka Kopeć, Paweł Przybyłowicz, Martyna Wiącek",
+        "url": "http://arxiv.org/abs/2607.00470v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00470v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个基于深度学习的预测框架，用于恢复AR(p)过程中随时间变化的系数，同时考虑了高斯和拉普拉斯分布噪声。它阐述了模型的预测方案，并分析了相关的不确定性量化，包括预测区间的构建。其在统计建模和时间序列分析方面的理论基础非常扎实，提供了清晰的数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00398v1",
+        "title": "Holographic Quantum Transformer: A Generalist Neuro-Symbolic Architecture for Solving Frustrated Systems via Generative Attention",
+        "summary": "Simulating two-dimensional frustrated quantum matter is a grand challenge due to the sign problem and exponential Hilbert space complexity. In this work, we introduce the Holographic Quantum Transformer (HQT), a physics-inspired generative architecture that leverages global self-attention to resolve non-local entanglement patterns. We validate HQT on the square lattice $J_1-J_2$ Heisenberg model. On the heavily frustrated $8 \\times 8$ lattice at the quantum critical point ($J_2=0.5$), HQT reaches a ground-state energy per site ($E/N$) of $\\mathbf{-0.5001(1)}$, consistent with the expected finite-size scaling trend. Beyond numerical accuracy, HQT exhibits intrinsic physical awareness, autonomously recovering the underlying $J_2$ interaction geometry through interpretable attention maps. Our central contribution is ``Holographic Transfer\", a zero-shot size-extrapolation protocol with rapid alignment: a model trained on $8 \\times 8$ systems is directly projected onto larger $10 \\times 10$ lattices via continuous positional-embedding interpolation and head re-initialization, achieving high-fidelity initialization and rapid convergence. This zero-shot protocol yields an energy of $E/N = \\mathbf{-0.49782(3)}$, statistically consistent with the variational state of the art while requiring no from-scratch training on the target lattice. Our results establish generative attention as a scalable paradigm for transferable quantum simulation.",
+        "authors": "Xingran Guo, Tiaojie Xiao, Jie Liu, Keqin Li",
+        "url": "http://arxiv.org/abs/2607.00398v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00398v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了全息量子Transformer (HQT)，一种受物理学启发的生成式架构，利用全局自注意力解决非局部纠缠模式，用于模拟二维受挫量子物质。它还提出了“全息转移”协议，实现了零样本尺寸外推。虽然不是纯数学论文，但其物理学驱动的设计和对量子力学原理的严格验证（如与有限尺寸标度趋势一致的基态能量）使其在领域内具有极高的理论严谨性和创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00383v1",
+        "title": "Regularized Model Predictive Control via Contractivity and Implicit Lur'e Analysis",
+        "summary": "This paper develops a contraction-based stability analysis for regularized model predictive control (MPC), whose feedback law is defined implicitly by a finite-horizon optimal control problem with an additional regularizing cost. The proposed approach interprets regularized MPC as an implicit Lur'e system, in which the regularizing cost perturbs the optimality conditions. We develop a multiplier-based contraction framework for implicit Lur'e systems and derive linear matrix inequality conditions for regularized MPC with three broad classes of regularizers: convex smooth stage costs, convex closed proper stage costs, and differentiable regularizers with Lipschitz gradients. Numerical studies on input and state soft penalties, hard input constraints, and sparsity-promoting penalties illustrate that regularization shapes closed-loop performance while retaining formal contraction-based stability guarantees.",
+        "authors": "Ryotaro Shima, Anand Gokhale, Alexander Davydov, Francesco Bullo",
+        "url": "http://arxiv.org/abs/2607.00383v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00383v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为正则化模型预测控制（MPC）开发了一种基于收缩性的稳定性分析方法，将正则化MPC解释为一个隐式Lur'e系统。它提出了一个基于乘子的收缩框架，并推导了适用于三类正则化器的线性矩阵不等式条件。其在控制理论、稳定性分析和数学严谨性方面表现出色，符合您对优化收敛性和清晰数学推导的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00377v1",
+        "title": "SAOT: Self-Supervised Continual Graph Learning with Structure-Aware Optimal Transport",
+        "summary": "Self-supervised Continual Graph Learning (CGL) aims to successively learn from a graph sequence with different tasks without label supervision - a paradigm that has attracted widespread attention. Most existing self-supervised CGL methods rely on instance-level consistency objectives that enforce stability of individual node (or node-pair) embeddings. Due to optimizing nodes in isolation, these methods fail to maintain global relational structure, causing inter-node correspondences to progressively distort under continual learning. To this end, we propose a novel Structure-Aware Optimal Transport (SAOT) framework that explicitly captures and preserves relational structure within graph representations across sequential tasks. Specifically, SAOT leverages optimal transport theory to capture global inter-node correspondences, thereby facilitating and enhancing graph representation learning. Simultaneously, SAOT incorporates a cross-task knowledge distillation mechanism to preserve the previous structural knowledge. Extensive experiments on four CGL benchmark datasets demonstrate that SAOT outperforms existing self-supervised baselines. In particular, SAOT achieves significant performance gains, improving average accuracy by up to 5% on CoraFull-CL and over 15% on Products-CL compared with state-of-the-art methods in the Class-IL setting.",
+        "authors": "Yuting Zhang, Yanbei Liu, Zhitao Xiao, Lei Geng, Yanwei Pang, Xiao Wang",
+        "url": "http://arxiv.org/abs/2607.00377v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00377v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了结构感知最优传输（SAOT）框架，用于自监督持续图学习（CGL）。SAOT利用最优传输理论来捕获全局节点间对应关系，从而促进和增强图表示学习，并结合跨任务知识蒸馏机制来保留先前的结构知识。最优传输具有强大的数学基础，该研究将其应用于图学习，具有高度的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00373v1",
+        "title": "Confidence Intervals for the Risk Difference in Combined Unilateral and Bilateral Data Incorporating a Distribution-Based Approach",
+        "summary": "Combined unilateral and bilateral binary outcomes frequently arise in studies involving paired organs. The risk difference is a clinically interpretable measure for comparing treatment effects between groups. Existing confidence interval methods are primarily based on asymptotic normality and may fail to adequately reflect finite-sample distributional features, particularly skewness. To address this issue, we propose a distribution-based confidence interval derived from the probability distribution of the risk difference estimator and a modified MOVER procedure that accounts for intra-subject correlation. Their performances are compared with those of commonly used asymptotic methods through extensive simulation studies. Across a broad range of parameter settings, all methods exhibited satisfactory performance as sample size increased. The proposed distribution-based interval achieved coverage probabilities close to the nominal level with interval widths comparable to those of existing procedures. In small sample settings, it was able to capture skewness in the sampling distribution that was not reflected by methods relying on asymptotic normality. Analyses of two real-world datasets demonstrated the practical applicability of the competing methods and yielded consistent inferential conclusions. The proposed approach provides an alternative framework for interval estimation of the risk difference in studies involving combined unilateral and bilateral binary outcomes.",
+        "authors": "Jia Zhou, Chang-Xing Ma",
+        "url": "http://arxiv.org/abs/2607.00373v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00373v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种基于分布的置信区间方法，用于结合单侧和双侧数据中的风险差估计，该方法源自风险差估计量的概率分布和修正的MOVER程序，并考虑了受试者内部相关性。通过广泛的模拟研究，证明了该方法在小样本设置下能够捕捉抽样分布的偏度。其在统计推断和方法论方面的严谨性非常高，提供了清晰的数学推导。"
+    }
+]

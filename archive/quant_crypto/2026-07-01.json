@@ -1,0 +1,17 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.00475v1",
+        "title": "End-to-End Parametric Portfolio Policies for Cross-Asset Futures Timing: When Do AI Models Beat Simple Rules?",
+        "summary": "Timing-based tilts across asset classes can drive much of the risk and return of a diversified cross-asset portfolio. The standard approach forecasts returns and then optimizes weights. We instead study an end-to-end AI-based policy that maps market states directly to portfolio weights, and we then ask when this one-step modeling approach outperforms simple rules-based strategies. We train these policies on the sixteen most liquid CME futures, where an edge is unlikely to be due to illiquidity, using a differentiable Sharpe ratio loss function, and we benchmark them against equal weighting, risk parity, and time-series momentum. The learned policies rank above the rules on the pooled cross-asset portfolio and in several sub-asset classes, but not uniformly. In gross terms, an LSTM and a transformer-based architecture perform comparably out-of-sample, but diverge when we consider transaction costs. The transformer generates the stronger learned policy, trades far less than the LSTM, and matches or exceeds equal weighting through moderate cost.",
+        "authors": "Austin Pollok, Kevin Robik",
+        "url": "http://arxiv.org/abs/2607.00475v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00475v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探讨了如何使用端到端的人工智能模型（如LSTM和Transformer）直接将市场状态映射到投资组合权重，以实现跨资产期货的择时策略。它通过可微分的Sharpe比率损失函数进行训练，并与传统规则（如等权重、风险平价、时间序列动量）进行比较，特别关注了交易成本的影响。\n\n**优点：**\n1.  **方法先进性：** 采用了先进的深度学习模型进行策略设计，这对于构建复杂的量化因子和策略具有启发性。\n2.  **端到端学习：** 提出了一种直接从市场状态到投资组合权重的端到端学习方法，可能为加密货币市场的因子设计提供新思路。\n3.  **实践导向：** 论文考虑了交易成本，并比较了不同模型在实际交易中的表现，这对于策略的落地和回测至关重要。\n4.  **严谨的评估：** 使用可微分的Sharpe比率作为损失函数，并与多种基准策略进行对比，显示了其在模型训练和评估上的严谨性。\n\n**缺点/与偏好不符之处：**\n1.  **资产类别：** 论文主要研究的是CME期货市场，而非加密货币市场。虽然方法具有通用性，但加密货币市场有其独特的微观结构、波动性、流动性和监管环境，直接应用可能需要大量调整。这导致其在“实践影响力”方面对加密货币市场的直接影响略有降低。\n\n**综合评价：**\n尽管研究对象不是加密货币，但其采用的端到端AI策略设计方法、对交易成本的考量以及对复杂模型与简单规则的比较，对于统计学硕士在加密货币市场进行量化因子构造和策略设计具有很高的参考价值。它可以启发你如何利用深度学习来发现和利用市场中的复杂模式，从而构建更有效的因子。因此，值得阅读和借鉴其方法论。"
+    }
+]

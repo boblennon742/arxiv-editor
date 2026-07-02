@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.01232v1",
+        "title": "Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training",
+        "summary": "Reinforcement learning (RL) has become a central component of post-training large language models (LLMs), yet little is understood about how RL adaptation is distributed across transformer layers. Existing approaches typically update all model parameters uniformly, implicitly assuming that every layer contributes similarly to the gains obtained during RL post-training. In this work, we challenge this assumption through a systematic layer-wise study of RL training. Surprisingly, we find that training a single transformer layer can recover most of the gains achieved by full-parameter RL training, and in some cases even surpass it. To quantify this phenomenon, we introduce the quantity layer contribution, which measures the fraction of full RL improvement recovered by training a layer in isolation. Across seven models spanning two model families (Qwen3, Qwen2.5), three RL algorithms (GRPO, GiGPO, Dr. GRPO), and multiple task domains including mathematical reasoning, code generation, and agentic decision-making, we observe a remarkably stable pattern: RL gains are highly concentrated in a small subset of, and in many cases even a single, transformer layers. More strikingly, the same structural pattern consistently emerges: high-contribution layers concentrate in the middle of the transformer stack, while layers near the input and output ends contribute substantially less. The resulting layer rankings remain strongly correlated across datasets, tasks, model families, and RL algorithms.",
+        "authors": "Zijian Zhang, Rizhen Hu, Athanasios Glentis, Dawei Li, Chung-Yiu Yau, Hongzhou Lin, Mingyi Hong",
+        "url": "http://arxiv.org/abs/2607.01232v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01232v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "发现LLM在RL微调时，大部分增益集中在少数层，特别是中间层。这对于LLM的效率和压缩有重要意义，且提出了“层贡献”这一量化指标，具有理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01225v1",
+        "title": "Language-Critique Imitation Learning from Suboptimal Demonstrations",
+        "summary": "Prior work on imitation learning from suboptimal demonstrations typically relies on compressed supervision signals such as confidence estimates, discriminator scores, or importance weights. These scalar signals are inherently limited, as they cannot explicitly express intermediate reasoning about task progress, failure modes, or corrective actions. We propose a language-critique framework for imitation learning from suboptimal demonstrations that instead leverages natural language as a structured supervision signal, avoiding the collapse of expressive feedback into scalars. Our method first constructs language labels from demonstrations that explicitly describe current progress, identify suboptimal behaviors, and provide fine-grained corrective guidance. We then introduce a language-critique loss that directly trains policies using these structured signals without reducing them to scalars, and instantiate it for both behavior cloning and diffusion policies, yielding LC-BC and LC-DP. We further provide a theoretical result showing that the proposed objective upper-bounds the expert performance gap under standard assumptions. Empirically, we evaluate on diverse continuous control tasks spanning navigation, manipulation, and gameplay, where our methods consistently outperform strong imitation learning and offline reinforcement learning baselines. These results demonstrate that language can serve as a powerful and structured form of supervision for learning robust policies from suboptimal data.",
+        "authors": "Chih-Han Yang, Dai-Jie Wu, Yun-Ping Huang, Ping-Chun Hsieh, Kenneth Marino, Shao-Hua Sun",
+        "url": "http://arxiv.org/abs/2607.01225v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01225v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一种利用自然语言作为结构化监督信号的模仿学习框架，解决了次优演示数据利用的瓶颈。有理论结果支持，且在多任务上表现优异。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01179v1",
+        "title": "QuasiMoTTo: Quasi-Monte Carlo Test-Time Scaling",
+        "summary": "Scaling inference compute, by generating many parallel attempts per problem, is a costly but reliable lever for improving language model capabilities. By default these attempts are generated independently, wasting inference compute on redundant solutions. This waste seems unavoidable. After all, independence is what makes parallel sampling trivial to scale. However, this tradeoff is not fundamental: there is a rich design space of samplers that generate correlated but exact samples entirely in parallel. We explore this design space as an avenue for improving sample efficiency in scaling inference compute and reinforcement learning (RL). Concretely, we introduce QuasiMoTTo, which uses correlated samples as a drop-in replacement for i.i.d. samples. To generate these samples, QuasiMoTTo uses a reparameterization of autoregressive sampling as inverse-CDF sampling and draws the underlying uniforms with quasi-Monte Carlo (QMC); because QMC spreads the uniforms out more evenly than i.i.d., the resulting samples cover the output space with far less redundancy. Even though the batch is correlated, each sample is marginally distributed according to the language model, so we can use the batch for policy-gradient training. Our empirical analysis focuses on understanding how efficiently QuasiMoTTo can turn compute into performance. To evaluate correlated samplers, whose dependence breaks standard pass@k estimators, we first develop an unbiased bootstrap estimator. Across four reasoning benchmarks, QuasiMoTTo matches i.i.d. pass@k accuracy with 25-47% fewer samples. Strikingly, QuasiMoTTo often saturates an upper bound on pass@k that holds for any marginal-preserving sampler. We also apply QuasiMoTTo to policy-gradient RL (GRPO) where it matches i.i.d. performance with 50% fewer training steps. These gains come from higher coverage, which yields a stronger learning signal per batch.",
+        "authors": "Michael Y. Li, Anthony Zhan, Kanishk Gandhi, Noah D. Goodman, Emily B. Fox",
+        "url": "http://arxiv.org/abs/2607.01179v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01179v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "创新性地将准蒙特卡洛（QMC）方法引入LLM的推理和RL训练，通过生成相关样本显著提高采样效率，减少计算浪费。理论严谨，有创新性的采样机制和评估方法，解决实际应用瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01131v1",
+        "title": "Autonomous Scientific Discovery via Iterative Meta-Reflection",
+        "summary": "Autonomous scientific discovery systems offer the potential to accelerate research by automating the process of hypothesis generation and validation. However, current systems operate within constrained search spaces or require predefined research questions, limiting their capacity for true open-ended inquiry. Furthermore, while they generate hypotheses iteratively, they largely lack the ability to explicitly synthesize their own accumulated findings to uncover complex, interconnected phenomena. We introduce DiscoPER, an autonomous large language model-powered framework that conducts open-ended research by dynamically generating and executing code to explore datasets without pre-specified research objectives. To ensure rigorous scientific validity, every proposed discovery must pass statistical testing. To overcome the limitations of isolated search, our framework introduces a second-order reasoning mechanism that periodically analyzes its own accumulated discoveries. By treating prior discoveries as empirical data, DiscoPER identifies structural patterns, confounds, and epistemic gaps, actively redirecting hypothesis exploration toward uncharted regions of the search space. The search space is further expanded by incorporating tool use, enabling the system to explore hypotheses beyond structured metadata by seamlessly processing and extracting useful information from multimodal sources like images. Evaluated on iNatDisco, a new multimodal ecological knowledge benchmark with pattern-level ground truth obtained from peer-reviewed literature, DiscoPER recovers 8 of 9 known patterns with a 72.7% hypothesis support rate, outperforming both classical causal discovery and LLM-guided baselines. Ablations show that DiscoPER scales with more data, and confirms the benefits of second-order meta-reflection.",
+        "authors": "Bingchen Zhao, Sara Beery, Oisin Mac Aodha",
+        "url": "http://arxiv.org/abs/2607.01131v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01131v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出ZO-Act，一种激活信息引导的零阶微调方法，通过一次性计算低秩子空间，显著提高LLM微调效率，解决了反向传播不可用或内存受限的瓶颈。有理论分析支持，对LLM压缩和部署有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01104v1",
+        "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
+        "summary": "In Large Language Model (LLM) training, data mixing plays a pivotal role in determining model performance. Recent methods optimize mixture weights via proxy models, but they rely on the assumption of static data distributions. As a result, when the underlying data pool shifts, these methods require costly retraining from scratch. This limitation restricts their ability to scale seamlessly from small settings to larger data pools and model sizes. In this paper, we propose CausalMix to address this limitation by casting data mixture optimization as a causal inference problem. We formulate the statistical features of the data pool as covariates and the domain mixture as the treatment. After fitting a causal model on 512 runs of Qwen2.5-0.5B to estimate the Conditional Average Treatment Effect (CATE), we extrapolate the optimal mixture for an 800K data pool and apply it to train a 7B model. Furthermore, we successfully generalize the framework to long chain-of-thought data on Qwen3-4B-Base. By leveraging causal modeling to isolate confounding biases, CausalMix dynamically infers state-dependent optimal data mixtures. Extensive experiments show that the mixture guided by CausalMix consistently improves performance across multiple downstream tasks, outperforming RegMix and other baselines. In addition, we use the CATE Interpreter to provide visual analysis of the learned mixing strategy. Overall, CausalMix offers a causal and interpretable framework for optimizing LLM data mixtures.",
+        "authors": "Zinan Tang, Yukun Zhang, Shaomian Zheng, Zhuoshi Pan, Qizhi Pei, Dingnan Jin, Jun Zhou, Yujun Wang, Biqing Huang",
+        "url": "http://arxiv.org/abs/2607.01104v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01104v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "创新性地将数据混合优化视为因果推断问题，通过估计CATE来动态推断最优数据混合，解决了LLM训练中数据分布变化导致的昂贵再训练问题。理论严谨，对LLM数据效率和训练策略有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01084v1",
+        "title": "Can Agents Generalize to the Open World? Unveiling the Fragility of Static Training in Tool Use",
+        "summary": "While Large Language Model (LLM) agents demonstrate proficiency in static benchmarks, their deployment in real-world scenarios is hindered by the dynamic nature of user queries, tool sets, and interaction dynamics. To address this generalization gap, we formalize OpenAgent (Tool-Use Agent in Open-World), a problem setting characterized by distributional shifts across query, action, observation, and domain dimensions. To systematically diagnose its impact, we construct a controlled sandbox environment where we define fine-grained environmental shifts across a four-tier hierarchy, Perception, Interaction, Reasoning, and Internalization, and conduct a comprehensive series of experiments. Our analysis yields a series of key insights, demonstrating that agents trained via both Supervised Fine-Tuning(SFT) and Reinforcement Learning suffer from varying degrees of performance degradation when confronting open environmental shifts. Building on these insights, we propose Perturbation-Augmented Fine-Tuning, a disturbance-based intervention strategy for SFT that lays the foundation for enhancing agent robustness and utility in realistic environments. Our code will be released at: https://github. com/LAMDA-NeSy/OpenAgent.",
+        "authors": "Song-Lin Lv, Weiming Wu, Rui Zhu, Zi-Jian Cheng, Lan-Zhe Guo",
+        "url": "http://arxiv.org/abs/2607.01084v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01084v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "形式化了OpenAgent问题，揭示了LLM代理在开放世界中工具使用的脆弱性，并提出了扰动增强微调策略，对提升代理泛化能力和鲁棒性有实际意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01077v1",
+        "title": "Message Passing Enables Efficient Reasoning",
+        "summary": "While inference-time scaling has improved the reasoning abilities of large language models (LLMs), the need to generate long chains-of-thought (CoTs) is a computational bottleneck. Thus, in contrast to sequential scaling methods like CoT, recent parallel scaling techniques instead use fork and join (FJ) primitives to divide work across multiple LLM threads. However, in the fork-join paradigm, threads are typically transient and do not communicate pointwise with one another which limits scalability. To tackle this, we introduce Message Passing Language Models (MPLMs), a framework for LLM reasoning in which threads communicate directly via lightweight send and receive primitives. MPLMs enable efficient scaling through two key mechanisms: (1) reduced communication costs, achieved by avoiding redundant context sharing, and (2) preemption, which allows threads to terminate early based on partial information from their peers.   We demonstrate the promise of MPLMs on 3 classes of tasks. First, on Sudoku puzzles, we show that MPLMs require an asymptotically smaller context than both serial CoT and parallel FJ. We then fine-tune a single model to solve 25 x 25 puzzles that remain challenging for standard CoT and FJ approaches, as well as frontier reasoning models without tools. Second, on 3-SAT puzzles, the capability of preemption allows termination of unpromising branches, which results in improved efficiency. Finally, we show that appropriately prompted large pre-trained models follow the MPLM protocol, achieving competitive results on long-context question answering relative to popular fork-join approaches.",
+        "authors": "Xuecheng Liu, Daman Arora, Gokul Swamy, Andrea Zanette",
+        "url": "http://arxiv.org/abs/2607.01077v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01077v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出Message Passing Language Models (MPLMs)，通过线程间直接通信实现LLM高效推理，解决了长CoT的计算瓶颈。具有理论创新性（通信原语、抢占机制），对LLM效率和可扩展性有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01065v1",
+        "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
+        "summary": "The deployment of Large Language Models (LLMs) with extended context windows is increasingly constrained by the linear growth of Key-Value (KV) cache memory. Vector Quantization (VQ), particularly Residual Quantization (RQ), is a promising approach for pushing KV cache storage toward the sub-1-bit regime by progressively encoding residuals with small codebooks. However, most VQ methods still rely on standard $\\ell_2$ $K$-means as the core codebook-learning primitive. We identify a subtle high-dimensional issue of this primitive: Euclidean centroid averaging can induce centroid shrinkage, which weakens the angular alignment term in the $\\ell_2$ distortion and makes directional preservation harder. To address this issue, we propose Gain-Shape $K$-means (GSKM), a drop-in replacement for $K$-means that improves directional fidelity while matching, and in some regimes improving, $\\ell_2$ distortion. We then build Gain-Shape Residual Quantization (GSRQ) by incorporating a weighted extension of GSKM into an RQ pipeline. On LLaMA-3-8B, GSRQ substantially improves over strong KV cache quantization baselines across bit rates. At 1-bit, it improves the average accuracy across LongBench tasks from 11.34 to 33.54, a gain of 22.20 percentage points over VQLLM.",
+        "authors": "Soosung Kim, Minjae Park, Eui-Young Chung, Jaeyong Chung",
+        "url": "http://arxiv.org/abs/2607.01065v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01065v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "针对LLM KV Cache的内存瓶颈，提出了GSRQ（Gain-Shape Residual Quantization），通过改进K-means算法（GSKM）解决高维问题，实现亚1比特KV Cache，显著提升长上下文任务的准确性，具有理论创新和实际应用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00908v1",
+        "title": "Beyond Activation Alignment:The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization",
+        "summary": "Mixed-precision quantization (MPQ) has become a key technique for deploying large language models under stringent memory and compute constraints. We first identify a phenomenon that we term the Perplexity Illusion: layers ranked as important by perplexity-based sensitivity show little rank correlation with those that are most influential for complex reasoning performance, with Kendall $τ\\approx 0$ in our analysis. We further reveal an Alignment-Diversity Tradeoff: using only target-task calibration data can degrade post-quantization performance, whereas incorporating general-domain data stabilizes sensitivity estimation and improves robustness across tasks. Based on these observations, we propose TASA (Task-Aware Sensitivity Analysis), a two-level framework that jointly optimizes calibration-data composition and mixed-precision bit allocation. Specifically, TASA searches for a calibration-data mixture using a training-free gradient-trace alignment criterion, and then aggregates perplexity and reasoning-oriented sensitivity signals to guide both inter-layer and intra-layer bit allocation. Experiments on LLaMA-3-8B and Qwen2.5-7B reveal a precision inversion: appropriately allocated 3.5-bit models can match or surpass less task-aware 4-bit baselines. At an average precision of 3.5 bits, TASA matches or outperforms several competitive 4-bit uniform baselines in aggregate accuracy, and improves over the strongest W3 baseline on GSM8K by more than 20 absolute points on LLaMA-3-8B. These results show that calibration-data composition substantially affects task-sensitive quantization, a factor underexplored in prior work.",
+        "authors": "Fei Wang, Chao Xue, Taoran Liu, Li Shen, Ye Liu, ChangXing Ding",
+        "url": "http://arxiv.org/abs/2607.00908v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00908v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "揭示了LLM量化中的“困惑度幻觉”和“对齐-多样性权衡”现象，并提出TASA框架，通过联合优化校准数据组成和混合精度位分配，显著提高了量化模型的性能，对LLM压缩和部署有重要理论创新和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00712v1",
+        "title": "Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption",
+        "summary": "Autoregressive (AR) streaming models have emerged as a powerful paradigm for long video generation. However, the linearly growing Key-Value (KV) cache poses a significant bottleneck, leading to memory overload and degraded inference throughput. A common compression method is to drop redundant KV tokens, which often breaks long-range dependencies, resulting in temporal flickering and identity loss. In this paper, we propose Instance-Specific Parametric Absorption (ISPA), a novel framework that shifts the KV cache compression from discarding to distilling. The core idea is to transit a subset of layers from Full-Attention (F-Layers) to memory-efficient Local-Attention (L-Layers) by \"absorbing\" historical context into the model's weights. Specifically, during a brief warmup phase, ISPA monitors the output discrepancy between global and local attention. At the transition point, we solve a closed-form least-squares problem to compute an instance-specific weight modulation that compensates for the missing history. Experiments across architectures (1.3B to 14B) demonstrate that ISPA can remove up to 50\\% of the KV cache with near-lossless visual quality. We hope this perspective encourages future work to explore parametric memory consolidation beyond external token-level cache management for streaming generative models.",
+        "authors": "Xiaomeng Fu, Jia Li, Yiming Hu, Yong Wang, Hayden Kwok-Hay So, Jiao Dai, Xiangxiang Chu, Jizhong Han",
+        "url": "http://arxiv.org/abs/2607.00712v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00712v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了ISPA，一种通过实例特定参数吸收实现内存高效自回归视频生成的方法，创新性地将KV Cache压缩从丢弃转变为蒸馏，显著减少内存占用，对长视频生成有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00531v1",
+        "title": "Active-GRPO: Adaptive Imitation and Self-Improving Reasoning for Molecular Optimization",
+        "summary": "Scientific reasoning is an increasingly important capability of large language models, yet improving the robustness and efficiency of training such reasoning remains a key open challenge. We study this problem in instruction-based molecular optimization, where answer-only supervised fine-tuning (SFT) collapses multi-step reasoning and reinforcement learning with verifiable rewards (RLVR) suffers from sparse feedback. Reference-guided Policy Optimization mitigates both by anchoring policy updates to dataset-provided references, but its effectiveness is tightly coupled to reference quality: weak or misaligned references impose a performance ceiling. To overcome this ceiling, we propose active reasoning, a paradigm in which the policy actively decides, on a per-instance basis, when to imitate a reference and when to reinforce its own discoveries, while continuously upgrading what it imitates. We instantiate this paradigm as Active Group Relative Policy Optimization (Active-GRPO), realized through two coupled mechanisms: active imitate-reinforce and active referencing. The former performs imitation learning when the reference still outperforms the policy's own candidates, and shifts to self-improvement via reinforcement learning once the policy has generated molecules that surpass the reference. The latter continuously upgrades the reference itself by replacing it with the best policy-generated candidate discovered so far, progressively raising the imitation target and ensuring that reference guidance remains informative-rather than restrictive-throughout training. Across TOMG-Bench MOLOPT, Active-GRPO improves average SRxSim from 0.0959 for GRPO and 0.1665 for RePO to 0.1773 under matched three-seed evaluation, with statistically significant gains on LogP, MR, and QED.",
+        "authors": "Xuefeng Liu, Mingxuan Cao, Qinan Huang, Thomas Brettin, Rick Stevens, Le Cong",
+        "url": "http://arxiv.org/abs/2607.00531v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00531v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了Active-GRPO，一个自适应模仿和自我改进推理框架，用于分子优化。通过主动模仿-强化和主动引用机制，解决了科学推理训练的鲁棒性和效率问题，具有高度创新和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00454v1",
+        "title": "Agri-SAGE: Simulation-Grounded Multi-Agent LLM for Context-Aware Agricultural Advisory Generation",
+        "summary": "Agricultural advisory systems face a fundamental tension: static agronomic guidelines offer consistent, evidence-based recommendations, yet remain blind to in-season variability and dynamic uncertainties. Recent advisory systems powered by LLMs are liable for a different risk of generating recommendations that are agronomically credible but physiologically unconvincing. Agri-SAGE is a closed-loop framework designed to resolve the above two limitations by integrating retrieval-grounded multi-agent LLM reasoning with APSIM-based biophysical simulation, to generate and validate agronomic advisories. To assess this framework, we evaluate three reasoning approaches, namely Plan-and-Solve, Tree of Thoughts, and Reflexion, over a 10-year retrospective analysis. All three significantly outperform static PoP (Package-of-Practice) baselines, with Tree of Thoughts achieving impressive peak yields. At the same time, Reflexion achieves comparable agronomic outcomes at substantially lower computational cost by leveraging cross-seasonal episodic memory.",
+        "authors": "Vedant Balasubramaniam, Geetha Charan, Manojkumar Patil, Rohit P Suresh, V Priyanka, Kodur Sai Vinay Sathvik, Y. Narahari",
+        "url": "http://arxiv.org/abs/2607.00454v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00454v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了Agri-SAGE，一个结合检索增强多代理LLM推理和生物物理模拟的框架，用于生成上下文感知的农业建议，解决了农业咨询中的动态不确定性问题，对农业AI有实际价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00447v1",
+        "title": "Understanding Why Language Models Hallucinate: Testing Reasoning Against Priors",
+        "summary": "Large language models often produce hallucinated answers that violate prompt-level constraints. A key diagnostic question is whether these failures reflect missing knowledge, or whether the model has the relevant information but follows the wrong inference path. We study this phenomenon as inference misalignment: a mismatch between the answer supported by the prompt and the answer favored by statistically salient latent associations. We formalize this view with a latent key-task model, in which pretraining-frequency imbalance can cause a shortcut path to dominate the constraint-sensitive path and induce positive inference loss. The framework predicts two failure modes: task-retrieval bias in entity disambiguation and key-selection bias in action choice. We introduce TrapQA, a controlled diagnostic testbed with two components. ScientistQA tests disambiguation among similar scientists with supplementary factual probes, while Real-Life Constrained QA tests everyday constraint following under salient shortcuts. Our results show that hallucination can arise from biased latent inference rather than absent knowledge alone.",
+        "authors": "Yangfan Hu, Xuhan Tong, Haoyue Bai, Xi Ding, Shashank Muralidhar Bharadwaj, Siyang Cao, Robert Nowak, Jiawei Zhang",
+        "url": "http://arxiv.org/abs/2607.00447v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00447v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "将LLM幻觉形式化为推理失调，提出了潜在关键任务模型和TrapQA诊断基准，揭示了幻觉可能源于有偏的潜在推理而非知识缺失。对理解和解决LLM幻觉问题有重要理论和实践意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.00341v1",
+        "title": "DiscoLoop: Looping Discrete Embeddings and Continuous Hidden States for Multi-hop Reasoning",
+        "summary": "Large language models achieve strong performance on many reasoning tasks when allowed to externalize intermediate steps as Chain-of-Thought (CoT). However, many questions require the model to internalize the multi-step reasoning within a single forward pass before generating the answer. We study this challenge through two-hop reasoning, a representative task where the model must compose multiple pieces of parametric knowledge within a single forward pass. Standard non-recurrent Transformers suffer from a depth-local storage problem: facts learned in earlier layers are unavailable where second-hop retrieval happens. We found that Looped Transformers mitigate this issue by reusing the same memory, but still generalize imperfectly. We show that the remaining bottleneck is representational. In the two-hop reasoning task, the first loop often makes the correct bridge entity nearly perfectly decodable, yet the corresponding hidden state remains poorly aligned with the bridge token embedding. Surprisingly, an easy training-free realignment intervention nearly closes the generalization gap. Building upon this insight, we propose DiscoLoop, a looping architecture whose recurrence carries both a discrete embedding channel and a continuous hidden-state channel. DiscoLoop achieves near-perfect accuracy with substantially fewer training steps across symbolic and synthetic-language multi-hop reasoning tasks. When applied to real-world pretraining, DiscoLoop attains lower training loss and stronger benchmark performance than looped-transformer baselines, suggesting that the mixed-channel design transfers to practical language modeling.",
+        "authors": "Hengyu Fu, Tianyu Guo, Zixuan Wang, Hanlin Zhu, Jason D. Lee, Jiantao Jiao, Stuart Russell, Song Mei",
+        "url": "http://arxiv.org/abs/2607.00341v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.00341v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了DiscoLoop，一个循环架构，通过循环离散嵌入通道和连续隐藏状态通道，解决了Transformer在多跳推理中的深度局部存储问题。具有高度创新性，显著提高了推理准确性和训练效率，对LLM架构和效率有重要影响。"
+    }
+]

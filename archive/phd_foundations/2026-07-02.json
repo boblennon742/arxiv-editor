@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.02447v1",
+        "title": "Understanding the Robustness of Distributed Self-Supervised Learning Frameworks Against Non-IID Data",
+        "summary": "Recent research has introduced distributed self-supervised learning (D-SSL) approaches to leverage vast amounts of unlabeled decentralized data. However, D-SSL faces the critical challenge of data heterogeneity, and there is limited theoretical understanding of how different D-SSL frameworks respond to this challenge. To fill this gap, we present a rigorous theoretical analysis of the robustness of D-SSL frameworks under non-IID (non-independent and identically distributed) settings. Our results show that pre-training with Masked Image Modeling (MIM) is inherently more robust to heterogeneous data than Contrastive Learning (CL), and that the robustness of decentralized SSL increases with average network connectivity, implying that federated learning (FL) is no less robust than decentralized learning (DecL). These findings provide a solid theoretical foundation for guiding the design of future D-SSL algorithms. To further illustrate the practical implications of our theory, we introduce MAR loss, a refinement of the MIM objective with local-to-global alignment regularization. Extensive experiments across model architectures and distributed settings validate our theoretical insights, and additionally confirm the effectiveness of MAR loss as an application of our analysis.",
+        "authors": "Xuanyu Chen, Nan Yang, Shuai Wang, Dong Yuan",
+        "url": "http://arxiv.org/abs/2607.02447v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02447v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提供了对分布式自监督学习框架在非IID数据下鲁棒性的严格理论分析，建立了坚实的理论基础，并给出了明确的理论洞察，这与您对强大理论基础和清晰数学推导的偏好高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02385v1",
+        "title": "Inference for Group Interaction Experiments",
+        "summary": "A common experimental research design is one in which individuals are randomly allocated into groups that then interact under different group-level treatment conditions. We develop design-based inference for such \"group interaction\" experiments, covering scenarios in which groups are either fixed or randomly formed and in which potential outcomes are either fixed relative to others' group assignments or subject to interference. For each scenario, we characterize the causal estimand that the design targets and the inferential strategy appropriate to it. Working in a sparse-sampling asymptotic regime, we show that cluster-robust inference remains consistent and accounts for dependencies from various sources when interference is present, delivering valid inference on marginalized exposure effects. When interference is absent and groups are formed randomly, the design reduces to an individually randomized experiment, and individual-level heteroskedasticity-robust inference suffices for the average treatment effect. Our results on the asymptotic distribution of commonly used estimators rely on a novel coupling strategy that may be useful for design-based inference in other complex experiments.",
+        "authors": "Jiawei Fu, Cyrus Samii, Ye Wang",
+        "url": "http://arxiv.org/abs/2607.02385v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02385v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文开发了针对“群体互动”实验的设计导向推断方法，明确了因果估计量和推断策略，并证明了聚类鲁棒推断的一致性，使用了新颖的耦合策略，完美符合您对因果逻辑和统计保证的追求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02340v1",
+        "title": "Merging of Bayes and quasi-Bayes empirical Bayes procedures for Poisson compound decisions",
+        "summary": "The Poisson compound decision problem is a long-standing problem in statistics, in which empirical Bayes methods are used to estimate Poisson means under a mixture model. We study this problem from the viewpoint of $g$-modeling, comparing two nonparametric strategies for estimating the unknown mixing distribution: a Bayesian empirical Bayes strategy, based on the Dirichlet process posterior, and a quasi-Bayesian empirical Bayes strategy, based on Newton's algorithm. The latter is computationally attractive, but its relationship with the Bayesian strategy requires theoretical justification. Under a Poisson mixture model with a ``true'', or oracle, mixing distribution, we establish concentration rates for the marginal probability mass functions induced by the Bayesian and quasi-Bayesian estimates. These rates are then translated into rates of decay for the corresponding regrets, interpreted as excess Bayes risks, and used to prove a frequentist merging result between the Bayesian and quasi-Bayesian empirical Bayes strategies. We also extend the analysis to the multidimensional Poisson compound decision problem. Numerical experiments on synthetic data illustrate that the quasi-Bayesian strategy achieves accuracy comparable to the Bayesian strategy, while requiring substantially fewer computational resources, especially in the multidimensional setting.",
+        "authors": "Stefano Favaro, Sandra Fortini",
+        "url": "http://arxiv.org/abs/2607.02340v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02340v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文对泊松复合决策问题中的贝叶斯和准贝叶斯经验贝叶斯程序进行了理论比较，建立了边际概率质量函数的集中率和后悔率的衰减率，并证明了频率论合并结果，展现了深厚的统计理论和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02247v1",
+        "title": "Aggregation with Exponential Weights is Optimal in Expectation",
+        "summary": "The aggregation with exponential weights (AEW) estimator is not fully understood in the basic setting of model selection aggregation with squared loss. In particular, whether it is minimax-rate optimal in expectation for large enough fixed temperatures and under random design has been an open problem since its introduction, which was explicitly posed by Lecué and Mendelson (2013). In this paper, we settle this problem by showing that \\emph{without} requiring a Bernstein-type assumption, the AEW indeed achieves the excess risk $T \\log (M) / (n+1)$ in expectation, whenever the temperature $T$ satisfies $(L^2/T)\\exp(B/T)\\leq μ/2$. Here, the number of dictionary elements is $M$, the estimator has observed $n$ i.i.d. samples from any distribution, and the loss is assumed to be bounded by $B$, $L$-Lipschitz continuous and $μ$-strongly convex. For squared loss, we show that $T\\geq 4 b^2$ suffices when the predictions and labels are $[0,b]$-valued. Because AEW is known to be suboptimal in expectation for temperatures below some constant, this shows that AEW has a sharp phase transition when the temperature is large enough but constant, as conjectured by Lecué and Mendelson.",
+        "authors": "Mikael Møller Høgsgaard, Patrick Rebeschini, Tobias Wegel",
+        "url": "http://arxiv.org/abs/2607.02247v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02247v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文解决了指数加权聚合（AEW）估计器在期望意义下是否达到极小极大率最优的长期开放问题，提供了严格的理论证明和清晰的数学推导，直接满足您对理论基础和数学严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02206v1",
+        "title": "Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction",
+        "summary": "Predictions are increasingly used to guide high-stakes decisions, from treatment selection to policy making. To ensure reliability with imperfect predictions, uncertainty quantification methods such as conformal prediction build prediction sets with coverage guarantees. However, statistical validity alone does not immediately determine the decisions to take, nor the optimality thereof. This gap is especially delicate in counterfactual settings where the outcome that materializes depends on the action taken, so uncertainty cannot be specified independently of the decision rule.   We develop a decision-theoretic framework for uncertainty-informed counterfactual decisions. We identify a novel notion of \\emph{policy-coupled coverage} -- namely, coverage of the realized outcome under the action induced by the prediction sets themselves -- as the optimal and lossless interface between uncertainty and action. It plays three roles. First, it justifies acting via a natural max-min rule as minimax-optimal under distributional ambiguity. Second, optimizing prediction sets under policy-coupled coverage is equivalent both to a stronger universal-coverage formulation and to the direct risk-averse optimization over policies and utility certificates; this equivalence yields the explicit form of the population-optimal prediction sets. Third, it admits a two-stage procedure, Policy-Coupled Risk-Averse Conformal Prediction (PC-RACP), that approximates these optimal sets with rigorous finite-sample coverage. Simulations and a real email-marketing experiment confirm that PC-RACP delivers higher utility than existing approaches while maintaining valid coverage, and that ignoring the counterfactual structure of the decision problem is suboptimal for both validity and utility.",
+        "authors": "Yurui Zheng, Ying Jin",
+        "url": "http://arxiv.org/abs/2607.02206v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02206v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个用于反事实决策的决策理论框架，引入了“策略耦合覆盖”的新概念，并建立了其与通用覆盖和风险规避优化的等价性，提供了群体最优预测集的显式形式和严格的有限样本覆盖保证，完美结合了因果逻辑、统计保证和优化理论。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02069v1",
+        "title": "Algebraic Model Counting for Global Analysis of Optimal Decision Trees",
+        "summary": "Ensuring model reliability in Explainable AI requires a global assessment of the hypothesis space. We propose a formal framework for the exhaustive analysis of optimal and near-optimal decision trees, called Algebraic Decision Tree Counting (ADTC). Inspired by Algebraic Model Counting (AMC) in knowledge representation, ADTC reformulates diverse analytical tasks, such as optimization, counting, and sampling, into a unified sum-of-products computation over a semiring $R$. While the hypothesis space of decision trees is doubly exponential with respect to the maximum depth $Δ$, our dynamic programming algorithm achieves $O^*(n^{O(Δ)})$ time complexity in the number of features $n$, where $O^*$ suppresses polynomial factors. To handle complex constraints consisting of multiple tree metrics, we introduce model behavior tensors that aggregate semiring values via convolution products over a tensor semiring. This algebraic approach efficiently constructs a model profile that captures the global landscape and trade-offs between criteria such as accuracy, size, and fairness. We demonstrate the utility of our software, emtrees, on real-world datasets, illustrating how ADTC facilitates evidence-based model selection in sensitive domains.",
+        "authors": "Hiroki Arimura",
+        "url": "http://arxiv.org/abs/2607.02069v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02069v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个用于最优决策树全局分析的代数模型计数（ADTC）形式框架，将分析任务重构为半环上的求和-乘积计算，并给出了时间复杂度分析，展现了强大的数学逻辑和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01993v1",
+        "title": "Scalable and Distributed Silhouette Approximation",
+        "summary": "The silhouette is one of the most widely used measures to assess the quality of a $k$-clustering of a dataset of $n$ elements. Its evaluation requires no information beyond the clustering assignment. In addition, the silhouette is extremely easy to interpret, providing a score to measure the quality of a clustering as a whole or for each element. The exact computation of the: (i) silhouette of each element of a dataset; and (ii) the global silhouette of the clustering; require $Θ(n^2)$ distance calculations, under general metrics. The quadratic complexity $Θ(n^2)$ is extremely prohibitive, especially on massive modern datasets. Surprisingly, existing approximate methods using $O(n^2)$ distance calculations are heuristics not offering provable and controllable guarantees on the quality of their results.   We introduce the first rigorous and efficient algorithms to estimate: (i) the (local) silhouette of each element of a dataset; and (ii) the (global) silhouette; of any metric $k$-clustering. Our methods, based on sampling, perform $O(nk\\varepsilon^{-2}\\ln (nk/δ))$ distance computations, and provide estimates with additive error $O(\\varepsilon)$ with probability at least $1-δ$. That is, parameters $\\varepsilon$ and $δ$ in $(0,1)$ control the trade-off between accuracy and efficiency. We also introduce a scalable and distributed design of our methods for the MapReduce and Massively Parallel Computing (MPC) frameworks. Our distributed algorithms use a constant number of rounds and sublinear local memory. Finally, we perform extensive experiments against state-of-the-art approaches. The results show that our new techniques yield the best trade-off between accuracy and efficiency for both local and global silhouette estimation. In addition, our methods scale efficiently to massive datasets for which an exact computation of the silhouette is not practical.",
+        "authors": "Ilie Sarpe, Federico Altieri, Andrea Pietracaprina, Geppino Pucci, Fabio Vandin",
+        "url": "http://arxiv.org/abs/2607.01993v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01993v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文首次提出了用于k-聚类轮廓系数估计的严格高效算法，基于采样提供了具有可控加性误差的估计，并给出了非渐近界限，具有明确的统计保证和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01971v1",
+        "title": "Moment-Based Selection of Multiresponse Linear Mixed-Effects Models",
+        "summary": "We propose MOMENT (\\textbf{MO}ment-Based \\textbf{M}ixed-\\textbf{E}ffects Selectio\\textbf{N} and Es\\textbf{T}imation), a stage-wise moment-based framework that exploits second-order cross-moment identities to select and estimate the random-effects covariance matrix and fixed-effects coefficients. By inducing sparsity through its diagonal under a positive semidefinite constraint, the random-effects selection problem reduces to a smooth constrained convex optimization problem that can be solved efficiently by projected gradient descent. We further establish finite-sample theoretical guarantees for the proposed procedure, including random-effects selection consistency and fixed-effects selection consistency under joint sub-Weibull errors. Simulation studies show that MOMENT performs competitively overall and can substantially outperform separate univariate analyses when responses are correlated. An application to the hemodialysis dataset demonstrates that the proposed method yields an interpretable and flexible approach for multivariate longitudinal data.",
+        "authors": "Yifan Chen, Yuedong Wang, Guo Yu",
+        "url": "http://arxiv.org/abs/2607.01971v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01971v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于矩的阶段式框架MOMENT，用于多响应线性混合效应模型的选择和估计，将选择问题转化为平滑约束凸优化问题，并建立了在联合次Weibull误差下的有限样本理论保证，符合您对优化收敛性和统计保证的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01821v1",
+        "title": "Pattern-Calibrated Multimodal Prediction under Blockwise Missingness",
+        "summary": "Blockwise missingness in multimodal data is usually treated as an incomplete-input problem. We instead focus on prediction for a prespecified observed-modality pattern, where the observed modality set determines the information on which the prediction rule can condition. A procedure that imputes missing modalities, zero-fills unobserved modalities, or trains a single pooled predictor may borrow information across patterns, but it can also mix pattern-specific prediction rules. We propose Multimodal Overlap-aware Shared-specific Alignment and Inter-pattern Calibration (MOSAIC), a pattern-calibrated framework for borrowing across missingness patterns without collapsing their prediction rules. MOSAIC learns shared and modality-specific representations, uses the available representations that overlap with the target pattern to fit a first-stage predictor, and then estimates the calibration gap from target-pattern data. We establish non-asymptotic bounds that decompose the error into overlap effective sample size, calibration gap, and representation-learning error, clarifying when cross-pattern borrowing improves over local fitting and when the improvement is controlled by rule mismatch or representation-learning error. Simulations examine representation recovery and target-pattern correction, and applications to ICU mortality prediction, emotion recognition, and glaucoma classification show gains when target-pattern samples are limited or pattern-specific rules differ.",
+        "authors": "Junhan Yu, Kejian Zhang, Doudou Zhou, Guojun Zhu",
+        "url": "http://arxiv.org/abs/2607.01821v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01821v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个模式校准的多模态预测框架MOSAIC，并在块状缺失数据下建立了非渐近界限，将误差分解为多个可解释项，展现了严谨的统计理论和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01799v1",
+        "title": "Expander Sparse Autoencoders: Parameter-Efficient Dictionaries for Mechanistic Interpretability",
+        "summary": "Sparse autoencoders (SAEs) decompose internal activations of neural networks into sparse linear combinations of learned features by fitting an overcomplete dictionary $\\mathbf{W}\\in\\mathbb{R}^{m\\times n}$ with $m<n$, and inferring a sparse code $\\mathbf{x}\\in\\mathbb{R}^n$ from $\\mathbf{h}\\approx\\mathbf{W}\\mathbf{x}$. This inference problem closely resembles the canonical setup of compressed sensing, but dense decoders requires $O(mn)$ learned values, which becomes costly at large feature counts. We introduce Expander SAEs: TopK SAEs whose decoder and tied encoder are supported on a left-$d$-regular expander mask with $d\\ll m$, learning only $dn$ decoder values while keeping the sparse-coding problem $(m,n,k)$ fixed. The same structure reduces storage and turns the matching-pursuit correlation step $\\mathbf{W}^\\top \\mathbf{r}$ in OMP into an $O(dn)$ gather-and-reduce operation. Our experiments show that across Pythia-70M/160M, Qwen2.5-3B, and Llama-3.2-1B residual-stream activations, varying $d$ traces a consistent storage--fidelity frontier, and that at the most compressed modern-LM setting, Qwen2.5-3B with $d=7$ uses $293\\times$ fewer learned decoder values than the full dense decoder while retaining $84$% of dense CE-loss recovered. Control experiments show that the improved storage--fidelity tradeoff is driven by sparse, diverse decoder support structure rather than by fewer learned decoder values, and that when sparse and dense decoders are compared at matched parameter count, part of the remaining gap comes from encoder amortisation. On the theoretical side, we show that expansion and column flatness are sufficient for identifiability of noiseless $k$-sparse codes, and we derive complementary sufficient conditions under which OMP recovers the support exactly.",
+        "authors": "Rodrigo Mendoza-Smith",
+        "url": "http://arxiv.org/abs/2607.01799v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01799v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文在理论上证明了扩展器和列平坦度足以识别无噪声k稀疏代码，并推导了OMP精确恢复支持的充分条件，提供了关于模型可识别性和算法收敛性的强大理论基础。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01762v1",
+        "title": "Role-Aware Neural Convex Divergence Heads for Asymmetric Representation Learning",
+        "summary": "Many representation learning problems involve directed relations, such as lexical entailment, sentence entailment, ontology hierarchy, and citation links. Standard Euclidean, cosine, and Mahalanobis heads are symmetric, while generic neural scorers can model directionality but provide limited geometric structure. This paper proposes a role-aware neural convex divergence head for asymmetric representation learning. The head applies source- and target-role projections before evaluating an input-convex neural Bregman divergence, yielding a nonnegative structured score in the role-projected space. We characterize its projected-space identity, source-role convexity, directional-gap decomposition, and Hessian-based local curvature. Experiments on lexical, sentence, ontology, and directed graph benchmarks compare symmetric distances, unstructured asymmetric scorers, order/hyperbolic baselines, plain ICNN-Bregman heads, and the proposed role-aware variant. Across ten random seeds on the main semantic and ontology benchmarks, role-aware projections consistently improve directional accuracy over plain ICNN-Bregman heads while preserving zero observed negative divergence rate. The results also identify a boundary case: on large fixed-feature citation prediction, specialized symmetric or hyperbolic baselines remain stronger in ranking accuracy. Overall, the proposed head is best understood as a structured and interpretable plug-in distance module for tasks where directional relations matter.",
+        "authors": "He Huang, Lu Shen, Yunfeng Huang, Li Qi",
+        "url": "http://arxiv.org/abs/2607.01762v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01762v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个角色感知神经凸散度头，用于非对称表示学习，并对其投影空间恒等性、源角色凸性、方向间隙分解和基于Hessian的局部曲率进行了理论表征，具有清晰的数学推导和理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01749v1",
+        "title": "Identifiability Limits of Physics-Informed Inference for Spatial Stochastic Dynamics from Static Snapshots",
+        "summary": "Despite increasing scale and resolution, many biological measurements remain destructive, revealing only spatial information rather than the dynamics it encodes. By combining flexible representations with mechanistic constraints, physics-informed machine learning offers a promising route to inferring these dynamics from static snapshots. Motivated by subcellular imaging of gene expression, we ask when a static spatial pattern of molecules can identify spatially varying diffusivity, creation, destruction, and boundary exchange, and how different inference schemes perform on the task. A structural identifiability analysis shows that distributed sources are non-identifiable, whereas a point source such as a transcription site can restore identifiability. These limits are further shaped by seemingly innocuous modeling choices: the boundary conditions, the spatial regularity of the underlying dynamics, and even the stochastic calculus convention. We then adapt several physics-informed schemes, differing in how they represent the solution and enforce the governing equations, and demonstrate effective inference from a single snapshot. Physics-informed approaches can thus recover spatial heterogeneities of biological dynamics from static data, but their use should be accompanied and guided by careful identifiability analysis for meaningful interpretation of the results.",
+        "authors": "Rujie Gu, Ray Zirui Zhang, Christopher E. Miles",
+        "url": "http://arxiv.org/abs/2607.01749v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01749v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过结构可识别性分析，探讨了从静态快照推断空间随机动力学的可识别性限制，明确了分布式源的不可识别性以及点源如何恢复可识别性，提供了深刻的理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01549v1",
+        "title": "Continuous-Time Bayesian Networks with Structured Shrinkage Priors for Modelling Multimorbidity Trajectories in Large-Scale Electronic Health Records",
+        "summary": "Multiple long-term conditions (MLTCs) arise through complex, time-dependent interactions among diseases, yet existing methods often struggle to jointly model disease progression, multimorbidity networks, and high-dimensional risk factors. We propose a structured Bayesian continuous-time Bayesian network (CTBN) framework for learning directed disease-dependency networks from longitudinal electronic health records. The model allows disease transition intensities to depend on existing conditions, pairwise disease interactions, and exogenous covariates. To control the combinatorial growth of interaction parameters, we introduce order-dependent shrinkage priors that increasingly penalise higher-order effects while preserving clinically interpretable main effects. We compare four sparsity-inducing priors, spike-and-slab, structured normal, Bayesian LASSO, and regularised horseshoe through extensive simulation studies. Across multiple data-generating scenarios, the spike-and-slab prior achieved the best network recovery, variable-selection accuracy, and false-discovery control, while continuous shrinkage priors were less effective for hard variable selection. The proposed framework was applied to UK Biobank primary care records, focusing on data from 33,558 participants who were free of the ten selected most prevalent conditions at age 40 and who subsequently developed at least one of these conditions during the follow-up period. The selected spike-and-slab model identified two dominant disease modules: a cardiometabolic cluster centred on diabetes and an inflammatory cluster linking respiratory and atopic conditions.",
+        "authors": "Oyebayo R. Olaniran, Soumya S. Paria, Mizanur Khondoker, Alexander J. MacGregor, Alexandra Lewin",
+        "url": "http://arxiv.org/abs/2607.01549v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01549v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个结构化贝叶斯连续时间贝叶斯网络（CTBN）框架，用于从纵向电子健康记录中学习疾病依赖网络，引入了阶数依赖的收缩先验来控制参数增长，并比较了多种稀疏性诱导先验，展现了强大的贝叶斯理论和统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02186v1",
+        "title": "UA-ChatDev: Uncertainty-Aware Multi-Agent Collaboration for Reliable Software Development",
+        "summary": "Software development is a complex task that demands cooperation among agents with diverse roles. Large language models (LLMs) have enabled autonomous multi-agent software development frameworks that leverage role-based collaboration to automate requirements analysis, coding, testing, and refinement. However, existing approaches typically assume that intermediate agent outputs are equally reliable, leaving them vulnerable to hallucination propagation, where incorrect decisions generated in early development phases are transferred to downstream agents and negatively impact final software quality. To address this challenge, we propose UA-ChatDev, an uncertainty-aware multi-agent software development framework that integrates uncertainty quantification into agent interactions. It introduces a lightweight uncertainty estimation mechanism based on token-level log probabilities to assess the confidence of agent responses and employs phase-aware threshold calibration to selectively trigger retrieval-based verification when uncertainty exceeds acceptable levels. Extensive experiments on the SRDD benchmark demonstrate that UA-ChatDev consistently outperforms existing single-agent and multi-agent software development frameworks across completeness, executability, consistency, and overall quality metrics. Further ablation studies and communication analyses verify that uncertainty-aware interactions enhance code execution reliability.",
+        "authors": "Temitayo Olamilekan Ogunsusi, Lijun Qian, Xishuang Dong",
+        "url": "http://arxiv.org/abs/2607.02186v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02186v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将算子学习重新表述为通过积分方程表达的广义函数线性模型的线性组合，利用可加分解性实现直接可解释性，这种数学重构和内在可解释性与您对严谨数学逻辑的偏好一致。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01553v1",
+        "title": "X-LogSMask: Expand Transformer for Graph-Structured Data",
+        "summary": "Transformers have become general-purpose architectures, but their all-to-all self-attention is poorly matched to graph data, whose interactions are sparse, structured and multi-scale. Existing Graph Transformers address this mismatch through structural encodings, hybrid message-passing modules or learned attention constraints, often introducing additional complexity and limited interpretability. Here we introduce X-LogSMask, an explainable multi-head logarithmic structural mask that injects symmetrically normalized graph topology directly into attention logits. The logarithmic transform converts structural connectivity into a topology-aware gating signal, suppressing unsupported node interactions while preserving feature-dependent attention. By assigning different powers of the normalized adjacency matrix to different attention heads, X-LogSMask gives each head a defined structural radius and supports multi-hop information propagation within a single layer. We further show that a standard Transformer encoder can be interpreted as one-step message passing on a complete graph, motivating X-LogSMask as a topology-constrained alternative to unrestricted self-attention. Across 20 node-, edge- and graph-level benchmarks, Transformers equipped with X-LogSMask achieve state-of-the-art performance on 13 datasets and remain competitive in a lightweight one-layer configuration. These results show that simple, interpretable structural masks can make self-attention an effective graph-learning operator without changing the Transformer architecture. The code is available at https://github.com/LiLeyan-0120/X-LogSMask.",
+        "authors": "Leyan Li, Rennong Yang, Zhenxing Zhang, Liping Hu",
+        "url": "http://arxiv.org/abs/2607.01553v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01553v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文引入了X-LogSMask，通过对注意力logits注入对称归一化的图拓扑结构，将结构连接转换为拓扑感知门控信号，并理论上将标准Transformer编码器解释为完整图上的一步消息传递，展现了对图数据处理的数学严谨性和理论洞察。"
+    }
+]

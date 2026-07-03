@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.02502v1",
+        "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+        "summary": "On-policy self-distillation (OPSD) has emerged as a practical method for training large language models (LLMs) to reason, where a single model acts as both the teacher and the student with different levels of information access. However, recent studies have found that the teacher's dense token-level supervision, conditioned on privileged information, can lead to overfitting to in-domain patterns, suppress exploration, and hurt cross-domain generalization, while also introducing a more fundamental issue: *privileged information leakage*, where the student encodes answer-dependent shortcuts that are unavailable at test time. We introduce **DemoPSD**, a novel framework that resolves such problems through the idea of *selective adoption of teacher guidance*. Instead of fitting the full teacher distribution, DemoPSD steers the student toward a *reverse-KL barycenter target*, a weighted geometric combination of the teacher and student distributions, that naturally balances learning from the teacher with preserving the student's own reasoning capacity. We measure the difference between their distributions and use such a discrepancy to adaptively control the blending at each token position. We provably show that DemoPSD achieves **(1)** *leakage attenuation*, i.e., effective mitigation of privileged information leakage; and **(2)** *exploration preservation*, i.e., preservation of exploration capacity under dense token-level distillation. Extensive experiments on SciKnowEval across four scientific fields show that DemoPSD outperforms both GRPO and SDPO while maintaining higher training entropy and robustly generalizing to out-of-distribution GPQA benchmarks.",
+        "authors": "Yunhe Li, Hao Shi, Wenhao Liu, Mengzhe Ruan, Hanxu Hou, Zhongxiang Dai, Shuang Qiu, Linqi Song",
+        "url": "http://arxiv.org/abs/2607.02502v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02502v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了DemoPSD，一个新颖的、基于逆KL散度重心的策略自蒸馏框架，通过理论证明有效缓解了LLM训练中的过拟合、探索抑制和特权信息泄露等关键瓶颈。其理论严谨性极高，并对LLM训练的可靠性和泛化能力有重大实践影响力，完美契合您对理论创新性和解决实际应用瓶颈的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02082v1",
+        "title": "Evolutionary Wave Function Collapse",
+        "summary": "Wave Function Collapse (WFC) is a widely used procedural content generation method that learns local adjacency constraints from example inputs to generate larger outputs. In this paper, we explore combining WFC with evolutionary search by evolving the small input examples used by WFC rather than directly evolving complete levels. In this approach, WFC acts as a genotype-to-phenotype mapping. The generated levels are then evaluated through domain-specific fitness functions. We evaluate the method in two domains with different relationships between local and global structure: Maze connectivity maps and Zelda-style dungeon layouts. Our results show that evolutionary optimization over WFC inputs improves generation quality in domains where properties emerge from local relationships, while domains requiring global constraints remain challenging. These findings suggest that evolutionary search can effectively guide WFC generation when target objectives align with local structure.",
+        "authors": "Dipika Rajesh, Ahmed Khalifa, Julian Togelius",
+        "url": "http://arxiv.org/abs/2607.02082v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02082v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了偏置感知的贝叶斯主动学习框架，用于LLM评判的Top-k排序。通过显式建模评判者偏置并采用Top-k感知的主动采集规则，在统计学上严谨地解决了LLM评判中的噪声和系统性偏置问题，对LLM评估和对齐具有重要实践意义，尤其在数理统计方面有很强的吸引力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01978v1",
+        "title": "Multimodal Knowledge Edit-Scoped Generalization for Online Recursive MLLM Editing",
+        "summary": "Online multimodal knowledge editing requires injecting a continual stream of visual-textual corrections into multimodal large language models (MLLMs) with bounded overhead and minimal disruption to unrelated behaviors. Existing editors mainly emphasize edit reliability and long-horizon stability, but rarely control the semantic boundary of each edit. Our pilot analyses of post-edit behaviors and internal neuronal activities reveal a scope gap behind reliable edits: instance-level success neither guarantees transfer to valid cross-modal variants nor prevents leakage to unrelated inputs, while edit-related cross-modal responses concentrate in deeper semantic layers. Therefore, we formulate Edit-Scoped Generalization, reframing online MLLM editing from merely correcting an instance to controlling the propagation boundary of each edit. To this end, we propose ScopeEdit, a scope-aware online editor that decomposes each update into a modality-local absorption branch and an evidence-gated shared generalization branch. The local branch supports stable edit absorption, whereas the shared branch enables cross-modal propagation only when visual and textual evidence are sufficiently aligned. Both branches perform scope-separated write geometries in orthogonal low-rank spaces and maintain branch-wise preconditioners via Sherman--Morrison recursions, yielding constant per-edit overhead. Extensive experiments across diverse benchmarks, long-horizon edit streams, MLLM backbones, real-world VLKEB scenarios, and complex vision-language architectures show that ScopeEdit consistently improves the trade-off between in-scope cross-modal transfer and out-of-scope locality, while preserving edit reliability, stability and online efficiency. Our code is available at https://github.com/lab-klc/ScopeEdit.",
+        "authors": "Siyuan Li, Youyuan Zhang, Ruitong Liu, Junxi Wang, Jing Li",
+        "url": "http://arxiv.org/abs/2607.01978v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01978v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“编辑范围泛化”的新概念和ScopeEdit框架，通过正交低秩空间和Sherman-Morrison递归实现了多模态LLM知识编辑中语义边界的精确控制。其理论上复杂且严谨，对MLLM的可信赖性和适应性有深远影响，是前沿算法和架构的优秀代表。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01775v1",
+        "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding",
+        "summary": "Discrete diffusion models have steadily improved in quality relative to autoregressive (AR) models. However, these models are normally constrained to fixed-length generation and do not support key-value (KV) caching. Block diffusion partially bridges diffusion and AR by generating token blocks left-to-right, but its fixed-size sequential blocks limit decoding flexibility and parallelism. Here, we present a new class of language models, set diffusion, comprised of (i) a likelihood parameterization that factorizes over flexible-position, flexible-length token sets and (ii) a set-causal diffusion architecture that supports KV cache updates after every inference step. By factorizing over token sets instead of fixed-size blocks, tokens can be decoded in arbitrarily-ordered sets, including sliding-window sets, enabling faster inference and support for any-order decoding. Set diffusion achieves better speed-quality tradeoffs on mathematical reasoning, summarization, and unconditional generation compared to prior diffusion language models while offering stronger infilling performance than block diffusion. We provide the code, along with the model weights and blog post on the project page: https://m-arriola.com/setdlms/",
+        "authors": "Marianne Arriola, Volodymyr Kuleshov",
+        "url": "http://arxiv.org/abs/2607.01775v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01775v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了“集合扩散”这一新型语言模型，通过对灵活位置、灵活长度的Token集合进行似然分解和集合因果扩散架构，从理论上解决了离散扩散模型在固定长度生成、KV缓存和解码灵活性方面的瓶颈。其理论创新性强，对高效LLM解码具有重大影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01661v1",
+        "title": "Diverse Evidence, Better Forecasts: Multi-Agent Deliberation Under Information Asymmetry",
+        "summary": "Multi-agent systems are increasingly used for forecasting future events, as deliberation among multiple LLMs is believed to improve reasoning and calibration. Yet existing approaches overlook a critical design choice: what information each agent receives. When all agents are given identical evidence, deliberation collapses into herding rather than genuine belief revision, leaving multi-agent systems little better than a single agent. We identify this as a fundamental gap and propose designed information asymmetry to close it: by partitioning evidence into shared public and disjoint private subsets, each agent holds exclusive knowledge that can only reach others through deliberation. We theoretically show that this decomposition reduces inter-agent error correlation, and instantiate it in InfoDelphi, a framework combining relevance-aware evidence routing, rationale-based iterative deliberation, and confidence-weighted aggregation. On PolyGym, a benchmark of 375 binary forecasting questions derived from real-world prediction markets, InfoDelphi outperforms the strongest single-agent and multi-agent baselines by 12--18% in Brier score and 4--8 percentage points in accuracy. More detailed experiments confirm that removing information asymmetry eliminates most deliberation gains, establishing diversity of input as the key enabler of effective multi-agent reasoning.",
+        "authors": "Yuante Li, Yicheng Tao, Kate Zhang, Taozhi Wang, Gefei Gu, Yaxin Zhou",
+        "url": "http://arxiv.org/abs/2607.01661v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01661v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“信息不对称设计”的理论，通过将证据划分为公共和私有子集，从理论上证明了可以降低多智能体之间的误差相关性，从而提升预测准确性。对多智能体系统中的集体智能和决策有基础性理论贡献，且理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02182v1",
+        "title": "Bayesian Sparse Low-Rank Adaptation for Large Language Model Uncertainty Estimation",
+        "summary": "Large language models (LLMs) exhibit remarkable reasoning capabilities, but their task-specific fine-tuning is notoriously plagued by overconfidence, severely hindering trustworthy deployment. We propose Data-Adaptive Lower-Rank Adaptation (DALorRA), a simple and effective variational Bayesian sparse framework that shifts the paradigm of uncertainty quantification from the dense parameter space to the lightweight rank level of low-rank adaptation (LoRA). With the insight that LoRA essentially aggregates multiple rank-one components that may provide superfluous model capacity, DALorRA imposes stochastic masking on rank dimensions, enabling Bayesian regularization of model capacity during training and ensemble-like calibration during inference. Extensive experiments demonstrate DALorRA's excellent calibration of LLMs without compromising reasoning accuracy.",
+        "authors": "Jijie Zhang, Zhe Ren, Quan Zhang, Dandan Guo",
+        "url": "http://arxiv.org/abs/2607.02182v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02182v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了DALorRA，一个变分贝叶斯稀疏框架，将LLM不确定性量化转移到LoRA的秩层面。通过随机掩码和贝叶斯正则化，在理论上严谨地解决了LLM过自信问题，对可信赖LLM部署具有重要实践影响力，尤其适合数理统计背景的您。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02512v1",
+        "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+        "summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (PAW), in which a 4B compiler trained on FuzzyBench, a 10M-example dataset we release, emits parameter-efficient adapters for a frozen, lightweight interpreter. A 0.6B Qwen3 interpreter executing PAW programs matches the performance of direct prompting of Qwen3-32B, while using roughly one fiftieth of the inference memory and running at 30 tokens/s on a MacBook M3. PAW reframes the foundation model from a per-input problem solver into a tool builder: invoked once per function definition, it produces a small reusable artifact whose subsequent calls per function application are cheap and offline.",
+        "authors": "Wentao Zhang, Liliana Hotsko, Woojeong Kim, Pengyu Nie, Stuart Shieber, Yuntian Deng",
+        "url": "http://arxiv.org/abs/2607.02512v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02512v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了“模糊函数编程”的新范式，将自然语言规范编译为紧凑、本地执行的神经构件。这一理论创新性地解决了LLM在本地性、可复现性和成本方面的实际应用瓶颈，具有极高的实践影响力，且其范式转变本身就具有深刻的理论意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02390v1",
+        "title": "DecompRL: Solving Harder Problems by Learning Modular Code Generation",
+        "summary": "How can Large Language Models (LLMs) solve problems they currently cannot? Repeated sampling scales test-time compute but GPU cost grows linearly with attempts, while reinforcement learning (RL) with verifiable rewards improves single-attempt accuracy at the expense of sample diversity. Both strategies ultimately fail when the base policy has near-zero probability of producing a correct solution: no amount of sampling or gradient signal can overcome a search space that is simply too large. We take a different approach: rather than sampling harder, we make the task easier by decomposing problems into smaller, independently solvable sub-functions whose implementations can be recombined. Since off-the-shelf models are not trained for this modular generation, we introduce DecompRL, an RL algorithm that explicitly learns to decompose and implement hierarchical code structures. Recombining $k$ implementations of $n$ modules yields up to $k^{n}$ candidate solutions, shifting the bottleneck from GPU inference to cheap CPU evaluation and cutting GPU token cost by $\\sim$50$\\times$. On LiveCodeBench and CodeContests (Qwen~2.5~7B, Code World Model~32B), DecompRL outperforms standard and diversity-optimized RL baselines beyond $10^5$ tokens per problem, solving problems that standard generation cannot reach.",
+        "authors": "Juliette Decugis, Fabian Gloeckle, Francis Bach, Taco Cohen, Gabriel Synnaeve",
+        "url": "http://arxiv.org/abs/2607.02390v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02390v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了DecompRL，一种学习模块化代码生成的强化学习算法，通过问题分解和子函数重组，显著降低了GPU Token成本并解决了标准生成方法无法处理的复杂问题。其理论创新性强，对LLM代码生成效率和能力有重大实践影响力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02288v1",
+        "title": "Generalization in offline RL: The structure is more important than the amount of pessimism",
+        "summary": "While pessimism counteracts overestimation bias in offline reinforcement learning (RL), being overly conservative has been associated with hindering certain forms of generalization. However, in this paper we demonstrate that being overly pessimistic does not inherently prevent optimal generalization in contextual MDPs (CMDPs). Instead, we argue successful generalization depends not on the amount of pessimism, but whether the pessimistic structure respects the underlying symmetries of the optimal solution. We prove that a mildly pessimistic, non-symmetric value function can generalize worse than an overly pessimistic, symmetric one. In offline RL, the structure of the pessimism is determined by the structure of the dataset coverage. As such, enforcing a symmetric value function can be non-trivial, and might require techniques such as data augmentation (DA). Inspired by our theoretical results, we argue that DA can best be applied through a consistency loss during policy extraction, rather than the common practice of (regular) offline training on an augmented dataset. This is empirically validated using IQL and CQL on a rotationally symmetric reacher environment.",
+        "authors": "Max Weltevrede, Matthijs T. J. Spaan, Wendelin Böhmer",
+        "url": "http://arxiv.org/abs/2607.02288v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02288v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了离线强化学习中泛化能力的关键在于悲观主义的“结构”而非“量”的理论洞察，并通过严谨的数学证明支持。对离线RL算法的设计和泛化瓶颈的解决有基础性理论贡献，是纯理论与算法创新的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.02283v1",
+        "title": "Dendritic In-Context Learning in a Single-Layer Spiking Neural Network",
+        "summary": "In-context learning (ICL) operates via implicit gradient descent embedded in the forward pass of modern AI architectures -- Transformers, Mamba, state-space models, and MLPs. Capturing this capability in biologically plausible Spiking Neural Networks (SNNs) has remained an open challenge: existing SNNs fail the Garg-2022 benchmark at non-trivial task dimensions. We trace this failure to a structural assumption: prior SNN designs route adaptation through inference-time synaptic plasticity, viewing the dendritic compartment as a passive conduit for error or teacher signals. We challenge this assumption. The subthreshold dynamics of a single dendritic compartment already implement a complete online learning algorithm. By treating the compartment as the computational substrate rather than a passive conduit, we propose DendriCL -- a single-layer compartmental spiking architecture whose apical recurrence is structurally identical to leaky online Widrow-Hoff LMS. This dynamics-only update collapses the architectural depth required for general-purpose ICL to a single layer. DendriCL is uniquely seed-stable at super-dimensional Garg-2022 ICL -- where dense Transformers exhibit grokking-style instability and fail past moderate task dimension -- and a linear probe recovers the reference online-LMS trajectory directly from the apical membrane at R^2 = 0.93, showing the algorithm is structurally embedded in the dynamics rather than implicitly discovered during training. Taken together, ICL requires neither attention, depth, nor inference-time plasticity: a single compartment with online-LMS dynamics is sufficient.",
+        "authors": "Juwei Shen, Yujie Wu, Changwen Chen",
+        "url": "http://arxiv.org/abs/2607.02283v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.02283v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文挑战了SNN中ICL的传统假设，通过单层尖峰神经网络的树突亚阈值动力学实现了在线学习算法，并从理论上证明了其与Widrow-Hoff LMS的结构一致性。在生物学合理性与理论严谨性上均有突出创新，对理解和构建类脑AI架构有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01982v1",
+        "title": "MolSight: A Graph-Aware Vision-Language Model for Unified Chemical Image Understanding",
+        "summary": "Using molecular large language models (LLMs) as a unified framework for understanding molecular structures and functions is emerging as a new trend in tasks such as molecular design and drug discovery. However, these models struggle to fully capture the visual representation of molecular structures, limiting their potential. While existing molecular vision-language models (VLMs) show promise, they still face challenges in structural alignment and lack the necessary topological modeling for accurate molecular understanding. To address this, we propose MolSight, a graph-aware vision-language model framework designed to enhance the understanding of molecular images by VLMs. MolSight integrates a Molecular Topology Module to inject chemical-bond adjacency information into vision tokens, and a Molecular Grounding Module to align visual features with chemical symbolic semantics. Our experiments demonstrate that MolSight significantly outperforms existing VLMs, molecular LLMs, and specialized tools across multiple chemical visual understanding tasks, achieving a new level of molecular image reasoning.",
+        "authors": "Wenda Wang, Yihan Tong, Yuwei Hu, Zhewei Wei",
+        "url": "http://arxiv.org/abs/2607.01982v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01982v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了受控子空间干预框架，通过SVD分解线性探针权重来研究自监督ViT中几何信息的编码方式。理论严谨地揭示了预训练目标、表示可压缩性及层级任务亲和性，对ViT的理解、压缩和解码器设计有重要指导意义，是深入理解模型内部机制的佳作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01798v1",
+        "title": "Approximate Attention Weighting for Sustainable FPGA-Based Vision Transformer Inference",
+        "summary": "Vision Transformers have reshaped computer vision by using self-attention to capture global context across image regions. This makes them attractive for edge visual inspection and monitoring in applications such as renewable-energy infrastructure, industrial quality control, medical imaging, and autonomous-system sensing. However, deploying ViTs on small FPGAs remains challenging because the softmax stage in self-attention requires exponential evaluation and normalization, which are costly in hardware. Existing implementations often rely on CORDIC pipelines or BRAM-based look-up tables, increasing area and power consumption. This paper presents a BRAM-free approximate attention-weighting unit for FPGA-based ViT inference. The proposed design approximates the natural exponential in softmax using a 16-segment piecewise-linear function implemented entirely with distributed LUT fabric. Unlike base-2 approximations, the natural-exponential formulation preserves the pre-trained attention temperature and avoids model-specific recalibration. Implemented on a Xilinx Zynq-7020, the complete attention-row core uses 1444 LUTs, 77 DSPs, and no BRAM, while hardware-accurate emulation shows accuracy within a \\(0.20\\%\\) absolute top-1 difference from the exact-softmax reference on ViT-family models. These results demonstrate the potential of the proposed core for energy-efficient ViT inference on resource-constrained edge-AI platforms.",
+        "authors": "Muhammad Usman, Shujaat Khan, Dorit Merhof",
+        "url": "http://arxiv.org/abs/2607.01798v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01798v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了分子扰动框架，通过控制图编辑距离系统性分析分子LLM的泛化能力。理论严谨地揭示了LLM在分子领域存在狭窄的局部信任区域，对构建更鲁棒的分子LLM具有重要指导意义，结合了统计学和图论的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01741v1",
+        "title": "Full Bayesian Reinforcement Learning via LF-IBIS",
+        "summary": "Reinforcement Learning (RL) is a sequential decision-making framework in which an agent learns optimal policies through interaction with an environment by maximizing cumulative rewards. Among RL methods, Bayesian Reinforcement Learning (BRL) addresses common practical challenges related to data scarcity by leveraging prior knowledge about the environment and sequential belief updates. However, most BRL approaches require an explicit likelihood function, which is frequently inaccessible or intractable in real-world settings.   We propose Likelihood-Free Iterated Batch Importance Sampling (LF-IBIS), a novel algorithm for BRL that updates the agent's beliefs online as new interactions become available. By combining Approximate Bayesian Computation with Iterated Batch Importance Sampling, LF-IBIS enables full Bayesian inference in settings where the environment dynamics are not described by an explicit or tractable likelihood. The method yields approximate posterior distributions over both environment parameters and optimal policies, providing a quantification of policy uncertainty useful for a Bayesian treatment of the exploration-exploitation trade-off. We test the method on a simulation study in response-adaptive randomization in clinical trials, where closed-form posteriors enable validation. Additional experiments address settings where the posterior has no closed form and illustrate online policy updating based on the posterior distribution of the optimal policy.",
+        "authors": "Stefano Masini, Cecilia Viscardi, Michela Baccini",
+        "url": "http://arxiv.org/abs/2607.01741v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01741v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了LF-IBIS算法，在缺乏显式似然函数的真实世界场景中实现了全贝叶斯强化学习。通过结合近似贝叶斯计算和迭代批量重要性采样，在理论和统计学上都具有极高的严谨性，解决了BRL中的关键瓶颈，非常适合您的数理统计背景。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01581v1",
+        "title": "Beyond Skepticism: Evaluating LLMs Pedagogical Intent Reasoning with the Adaptive Pedagogical Vigilance Framework",
+        "summary": "The capacity of Large Language Models (LLMs) to reason about pedagogical intent within instructional communication remains underexplored, particularly in educational domains such as translation pedagogy. To address this, we propose the \\textbf{Adaptive Pedagogical Vigilance (APV)} framework, a novel computational formalism that reframes communicative vigilance as an adaptive mechanism for optimizing learning through intent inference. APV formalizes the problem via a Bayesian Pedagogical Intent Inference Engine (PIIE), which models how instructors select content to maximize pedagogical utility and how vigilant learners should inversely reason about latent instructional configurations -- encompassing genre, stance, and incentives. We evaluate APV through a three-tier hierarchy: distinguishing instructional genre, reasoning about structured pedagogical setups, and generalizing to authentic educational discourse. Experiments on leading LLMs (e.g., GPT-4o, Claude 3.5) show that APV substantially improves model vigilance. It achieves the strongest discrimination between pedagogical and exposure-based content, correlates highly with human judgments ($r=0.958$), and maintains robust performance on naturalistic data where baseline methods degrade. This work establishes a unified framework for assessing and enhancing LLMs' understanding of pedagogical motives, advancing the development of more reliable AI-assisted learning systems.",
+        "authors": "Minghao Chen, Ruihan Zhou, Jiayi Tang, Zihan Xu, Bowen Huang, Yuxin Liu",
+        "url": "http://arxiv.org/abs/2607.01581v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01581v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了自适应教学警惕性（APV）框架，通过贝叶斯教学意图推理引擎（PIIE）来评估LLM的教学意图推理能力。理论严谨地形式化了学习者推理教学意图的过程，对开发更可靠的AI辅助学习系统具有重要意义，展现了贝叶斯方法的强大应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.01571v1",
+        "title": "Geometric Signatures of Reasoning: A Spectral Perspective on Task Hardness",
+        "summary": "Chain-of-thought (CoT) reasoning enables large language models (LLMs) to solve complex problems by generating intermediate reasoning steps. While much attention has been paid to the length and content of these reasoning chains, far less is known about their internal geometry. We study the \\emph{geometry} of CoT trajectories in the hidden state space of transformer models, formalizing each reasoning chain as a discrete curve in $\\mathbb{R}^d$ and characterizing it through spectral, positional, and kinematic geometric functionals. We introduce the effective dimension $d_ρ$ as a measure of trajectory complexity and show theoretically that trajectories with flatter eigenvalue spectra correspond to harder tasks, as they explore more of the hidden dimensions. Lastly, we explore how kinematic features of the trajectory, mean position, positional dispersion, initial and current hidden states, mean velocity, mean speed, and speed dispersion, can be used to predict solution correctness before generation is complete, and may inform future early-stopping strategies. Experimentally, on mathematical reasoning problems from the MATH500 dataset, $d_ρ$ achieves $0.93$ AUC in distinguishing easy from hard problems, while kinematic features potentially can predict correctness from only the first $20\\%$ of generated tokens. These correctness signatures transfer across questions of varying difficulty, establishing that the shape of a model's internal reasoning trajectory is a principled window into both task hardness and solution quality.",
+        "authors": "Aria Masoomi, Mahsa Bazzaz, Adel Javanmard, Vahab Mirrokni",
+        "url": "http://arxiv.org/abs/2607.01571v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.01571v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文从几何角度研究Transformer模型隐藏状态空间中的思维链（CoT）轨迹，引入有效维度$d_ρ$来衡量轨迹复杂性，并从理论上证明了其与任务难度的关系。对LLM推理过程的内部机制提供了深刻的理论洞察，是结合几何学和统计学分析AI架构的优秀范例。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.06472v1",
+        "title": "Provable learning separation for predicting time-evolution of quantum many-body systems",
+        "summary": "Given that quantum computers are naturally suited to simulate the behavior of quantum many-body systems, an immediate question arises: can one formulate physically motivated quantum machine learning (QML) tasks that exhibit learning separations? We address this problem by studying the learnability of quantum many-body dynamics from the perspective of probably approximately correct (PAC)-learning. Concretely, we devise a supervised learning problem where the training set consists of specifications of randomized stabilizer probe states, evolution times sampled uniformly from a polynomially large time interval $[0,T]$, coupled with expectation values of certain observables evaluated on the resulting time-evolved state under an unknown Hamiltonian. For this learning task, we provide an efficient quantum procedure whose training phase learns the underlying Hamiltonian from short-time training samples, and whose deployment phase combines Hamiltonian simulation with the classical shadows protocol to perform inference on a newly given data point. By contrast, the existence of $O(\\mathsf{poly}(n))$-time instances ensures classical hardness: by embedding a $\\mathsf{BQP}$-complete computation into the polynomially long time-dynamics of a low-intersection variant of the Feynman-Kitaev clock Hamiltonian construction, we show that, for a certain family of input distributions, no randomized classical polynomial-time algorithm can fulfill our learning condition, unless $\\mathsf{BQP}\\subseteq\\mathsf{P/poly}$. Furthermore, we show that the classically hard instance maintains quantum learnability. We also give an interpretation of our results in learning-assisted certified quantum simulation. Taken together, our results demonstrate a rigorous learning separation for a natural ML task based on Hamiltonian evolution, while building connections between quantum learning theory, quantum simulation, and QML.",
+        "authors": "Rahul Bandyopadhyay, Riccardo Molteni, Jens Eisert, Vedran Dunjko, Sofiene Jerbi",
+        "url": "http://arxiv.org/abs/2607.06472v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06472v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文在量子机器学习领域提出了一个具有开创性的问题，并从PAC学习的角度提供了严谨的理论证明，展示了量子学习的分离性。其对经典计算硬度（BQP-complete）的分析和量子可学习性的证明，完全符合您对强大理论基础和清晰数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06407v1",
+        "title": "ExplAIner: A Declarative Query Language for Explaining Classification Models",
+        "summary": "The XAI community has studied a wide range of queries and scores for explaining predictions of ML models. From a data management perspective, this proliferation of explanation notions calls for declarative query languages in which such notions can be specified, combined, and analyzed uniformly. In this paper, we develop such a framework for Boolean models. We first revisit FOIL, an interpretability query language for black-box models, and show that it has two fundamental limitations: it cannot express central optimality-based explanation queries, and its evaluation problem over decision trees is hard for every level of the polynomial hierarchy. We then introduce ExplAIner, a query language based on FOIL with an extended vocabulary and a layered structure. We show that ExplAIner can express a broad family of explanation notions, including abductive, contrastive, feature-based, and distance-based queries. We also prove that the evaluation problem for each query in ExplAIner belongs to the Boolean hierarchy over every class of Boolean models for which some basic predicates can be evaluated in polynomial time. In particular, that property holds for deterministic and decomposable Boolean circuits. Finally, we introduce Opt-FOIL, an optimization-oriented fragment of ExplAIner for computing explanations that are minimal with respect to strict partial orders, and prove that its evaluation problem is in $\\mathrm{FP}^{\\mathrm{NP}}$ under the same tractability assumptions. These complexity results have a direct algorithmic consequence: a fixed ExplAIner query can be evaluated with a fixed number of calls to a SAT solver, while a notion of explanation specified in Opt-FOIL can be computed with a polynomial number of such calls. This is particularly relevant in formal XAI, where SAT solvers have been successfully used to compute explanations for several classes of ML models.",
+        "authors": "Marcelo Arenas, Pablo Barceló, Diego Bustamante, Jose Caraball, María Alejandra Schild, Bernardo Subercaseaux",
+        "url": "http://arxiv.org/abs/2607.06407v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06407v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个用于解释分类模型的声明式查询语言ExplAIner，并对其表达能力和计算复杂性进行了深入的理论分析。文中明确给出了评估问题的复杂性结果（布尔层次、FP^NP），这体现了极高的理论严谨性和数学推导的清晰性，对形式化XAI领域具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06382v1",
+        "title": "A Function-Space Dichotomy for Compositional Learning: Exponential Sub-Optimality of the Neural Tangent Kernel",
+        "summary": "A persistent empirical observation is that trained neural networks outperform their neural tangent kernel (NTK) limit on tasks with compositional structure, yet a quantitative account of $\\textbf{when}$ and $\\textbf{by how much}$ has been lacking. Working on the unit circle, we give such an account through a dichotomy between two complexity measures of the target: its $\\textbf{Fourier complexity}$, which controls NTK kernel regression, and its $\\textbf{architectural complexity}$, which controls learning over depth-$L$, width-$w$ ReLU networks with the variation norm of the weights bounded by $R$. We first characterize the minimax rate of the architecture class $\\mathcal{C}_{L,w,R}$, pinning it down up to a single factor of $L$: between $Ω(Lw^2R^2/n)$ and $\\tilde{O}(L^2w^2R^2/n)$. We then show the NTK estimator sits $\\textbf{exponentially}$ above this floor whenever the two complexities decouple: for the depth-$L$ iterated sawtooth, NTK regression needs $Ω(4^L)$ samples while the minimax floor is polynomial in $L$. Numerical experiments confirm the theoretical claims: on bandlimited smooth targets, the NTK is competitive or better, while on the hypercube sparse-parity model, a standard two-layer network beats the NTK by four to six orders of magnitude in test error. The gap is thus a function-space property, a mismatch between the kernel's smoothness bias and the target's compositional structure, rather than a generic kernel-versus-network phenomenon.",
+        "authors": "Arkaprabha Ganguli, Emil Constantinescu",
+        "url": "http://arxiv.org/abs/2607.06382v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06382v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文对神经网络在组合结构任务上优于NTK的现象提供了定量理论解释，通过引入傅里叶复杂度和架构复杂度的二分法，并刻画了架构类的minimax率，证明了NTK估计器的指数级次优性。其严谨的数学分析和对函数空间性质的深刻洞察，是您会非常感兴趣的理论工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06330v1",
+        "title": "Direct and efficient estimation of bilinear forms in staggered tensor panels",
+        "summary": "We study the estimation of bilinear forms from noisy, partially observed tensor data. The signal follows a Tucker2 model, with shared unit and time factors across tensor layers and slice-specific cores. The missingness pattern is structured and motivated by staggered adoption designs, which are common in causal inference and related applications. We first analyse the four-block missingness pattern, the basic building block for general staggered adoption, and propose a spectral algorithm that pools information across layers and targets the functional directly, rather than completing the entire tensor. We prove a non-asymptotic mean squared error bound that exhibits a phase transition in the number of layers, showing when pooling improves estimation, and match it with a local minimax lower bound up to constants. We then extend the construction to general staggered adoption designs via an anchored four-block reduction, and derive analogous theoretical guarantees. Finally, we validate our theoretical findings through experiments on both simulated and real-world datasets.",
+        "authors": "Alberto Bordino, Thomas B. Berrett, Olga Klopp",
+        "url": "http://arxiv.org/abs/2607.06330v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06330v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文研究了交错张量面板中双线性形式的估计问题，并提出了一个谱算法。其核心贡献在于证明了非渐近均方误差界，并与局部minimax下界相匹配，同时将理论保证扩展到一般交错采用设计。这篇论文在统计保证和理论严谨性方面表现出色，与因果推断应用紧密相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06320v1",
+        "title": "Dithered Gaussian Mechanism for Randomness-Efficient Differential Privacy",
+        "summary": "We present the dithered Gaussian mechanism, a novel alternative to the discrete Gaussian mechanism for differential privacy that discretizes the private output rather than the noise distribution itself. By interpreting this discretization as post-processing of the Gaussian mechanism, our construction directly inherits the privacy guarantees of the standard Gaussian mechanism while avoiding vulnerabilities caused by finite-precision floating-point outputs. We show that the mechanism is provably randomness-efficient: by sampling the discretized output values directly, the number of high-quality random bits required for privacy can be reduced significantly and made independent of the noise level. This is achieved by separating the randomness into two sources: a high-quality source used for the privacy-critical sampling step, and a high-performance public source, possibly known to the adversary, that supplies the additional randomness needed for randomized discretization. This separation enables the use of cryptographically secure randomness without substantial performance loss. As an application, we study model training with DP-SGD and show that cryptographically secure noise generation with reduced exposure to floating-point vulnerabilities can be achieved with modest practical overhead.",
+        "authors": "Nikita P. Kalinin, Rasmus Pagh",
+        "url": "http://arxiv.org/abs/2607.06320v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06320v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个新颖的“抖动高斯机制”用于差分隐私，通过对输出而非噪声分布进行离散化，实现了可证明的随机性效率。其直接继承标准高斯机制的隐私保证，并解决了浮点精度漏洞，是差分隐私理论与实践相结合的优秀范例，具有强大的理论基础和实用价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06287v1",
+        "title": "Kernel-based Operator Learning: Error Analysis, Budget Allocation, and a Physics-Informed Extension",
+        "summary": "We study kernel-based operator learning in a two-stage sampling framework, where an offline kernel regression operator learns a discretized representation of the target operator from input-output pairs and an online kernel reconstruction operator recovers the output function from predicted observations.   Our main theoretical contribution is an explicit budget allocation condition relating the number $N$ of training pairs, the number $n$ of input observations, and the output resolution $m$. The condition is derived from a coupled error analysis that interprets the surrogate as a reconstruction from approximate data. This yields a decomposition of the total error into reconstruction and learning contributions that can be analyzed independently. As a consequence, we obtain quantitative scaling laws describing how $N$, $n$, and $m$ must be coupled to guarantee convergence and to balance offline learning and online reconstruction errors. The resulting estimates extend previous analyses of kernel-based operator learning.   We further introduce a physics-informed extension that incorporates knowledge of the underlying PDE at evaluation time. Rather than encoding constraints directly into the kernel, we augment the online reconstruction step by penalizing PDE residuals at collocation points. The method requires no retraining for new inputs. Numerical experiments illustrate the theoretical findings and demonstrate the effectiveness of the proposed physics-informed reconstruction strategy.",
+        "authors": "Rüdiger Kempf",
+        "url": "http://arxiv.org/abs/2607.06287v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06287v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了基于核的算子学习，提供了明确的预算分配条件，并从耦合误差分析中推导出了量化缩放律，保证了收敛性。其理论贡献在于扩展了算子学习的误差分析，并引入了物理信息扩展。严谨的误差分析和收敛性保证，使其成为理论研究的优秀选择。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05809v1",
+        "title": "Nested Simulation Methods for Sobol' Index Estimation: Bias Correction, Budget Allocation, and Latin Hypercube Sampling",
+        "summary": "Estimating the variance of a conditional expectation is a recurring problem in stochastic simulation, with applications in global sensitivity analysis and Sobol' index estimation. This paper revisits Sobol' index estimation through the lens of nested simulation and develops a unified comparison of classical pick-freeze estimators and nested simulation estimators under a common computational budget. We show that several standard pick-freeze estimators can be interpreted as nested simulation estimators with fixed inner-level sample sizes, enabling direct performance comparisons and clarifying their bias-variance behavior. Building on this perspective, we analyze the standard nested simulation estimator for the Sobol' index numerator and propose two jackknife-based extensions: an unbiased jackknife estimator and a split jackknife estimator that uses an independent preliminary sample to estimate the mean. Under crude Monte Carlo (CMC), the split jackknife estimator attains the canonical mean squared error (MSE) rate, whereas the standard nested simulation and unbiased jackknife estimators attain the slower nested simulation rate. We also characterize the associated allocations of outer- and inner-level simulation effort. Finally, we study the impact of Latin hypercube sampling (LHS), showing that it can improve the standard nested simulation estimator while undermining bias reduction in jackknife-based estimators unless the inner-level sample size grows with the total budget. Numerical experiments corroborate the theory and provide practical guidance on estimator selection for Sobol' index estimation under CMC and LHS.",
+        "authors": "Jingtao Zhang, Xi Chen",
+        "url": "http://arxiv.org/abs/2607.05809v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05809v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文通过嵌套模拟的视角重新审视了Sobol'指数估计，并提出了基于jackknife的扩展估计器。其核心在于对估计器的偏差-方差行为、计算预算分配以及拉丁超立方采样影响的严谨分析，并证明了MSE率。这篇论文在统计学和随机模拟领域提供了深刻的理论见解和实际指导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05768v1",
+        "title": "Optimal Designs with Robust Inference for Binary Treatment Effects",
+        "summary": "We study randomized experiments with binary outcomes under Neyman's nonparametric model, where covariate measurements are fixed but potential outcomes are random. In this setting we derive the exact variance of the difference-in-means estimator and characterize designs that minimize it. We show that any balanced design satisfying a covariate-balance condition is asymptotically optimal, and we prove that a broad class of blocking designs satisfies this condition under mild smoothness assumptions. Because the variance depends on unknown success probabilities, unbiased variance estimation is impossible. We therefore develop two conservative estimators: a generalization of the Cochran-Mantel-Haenszel (CMH) statistic applicable to any balanced design, and an extension of Robins' variance estimator for blocking designs. We establish conditions under which the CMH-based estimator is asymptotically tight under local alternatives, thereby yielding asymptotically valid confidence intervals. Our theoretical and simulations results show that blocking and other designs that achieve covariate balance and sufficient degree of randomness, perform well when they are equipped with the CMH-based inference. Thus, we provide an experimental design and inference framework for incidence outcomes that is simultaneously variance-optimal, conservative in finite samples and asymptotically tight.",
+        "authors": "David Azriel, Abba M. Krieger, Adam Kapelner",
+        "url": "http://arxiv.org/abs/2607.05768v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05768v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文研究了二元处理效应的随机实验设计，在Neyman非参数模型下推导了差分均值估计量的精确方差，并刻画了最小化方差的设计。它还提出了两种保守估计量，并建立了渐近紧致性条件，从而得到渐近有效的置信区间。这是因果推断和实验设计领域具有高度理论严谨性的工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06292v1",
+        "title": "A unified perspective of Gaussian process approximation for differential equations",
+        "summary": "The use of Gaussian processes for approximating differential equations has expanded rapidly, leading to a growing, diverse, and fragmented body of numerical methods. We present a unified Bayesian perspective that places these techniques within a common probabilistic framework, based on a derivative matching interpretation for incorporating differential equation constraints into likelihood. This unified perspective supports both parameter estimation and solution approximation, and shows how a range of existing methods can be understood within it. This work aims to consolidate current developments and provide a foundation for future research.",
+        "authors": "Mengwu Guo",
+        "url": "http://arxiv.org/abs/2607.06292v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06292v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为高斯过程逼近微分方程提供了一个统一的贝叶斯视角，将现有技术置于共同的概率框架内。虽然没有提出新的数学证明，但其对现有方法的理论整合和重新解释，为未来的研究奠定了坚实的基础，符合您对理论框架和清晰度的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06151v1",
+        "title": "Leveraging Extragradient for Effective Sharpness-Aware Minimization in Deep Learning",
+        "summary": "Generalization remains a pivotal challenge in deep learning, where traditional optimizers like Stochastic Gradient Descent (SGD) often converge to sharp minima, leading to overfitting and reduced performance on unseen data. Building on Sharpness-Aware Minimization (SAM), for seeking flat minima associated with improved generalization, we propose the Extragradient-Inspired Sharpness-Aware Minimization (EISAM), a novel optimizer that enhances generalization via the extragradient technique. EISAM uses a two-step update process: a prediction step investigating the geometry of the loss landscape and a perturbation step that refines updates with a base optimizer. This approach achieves better generalization performance than SAM. Crucially, EISAM reduces sensitivity to the perturbation radius, enhancing robustness, and simplifying the tuning across diverse settings. Extensive experiments on benchmark datasets demonstrate that EISAM consistently outperforms SGD, Adaptive Moment Estimation (Adam), and SAM in test accuracy and training efficiency across various architectures. Theoretical analysis further confirms that EISAM tightens the generalization bound by steering parameters toward flatter minima with reduced curvature. Accompanied by a thorough hyperparameter analysis, EISAM offers practical tuning guidance, establishing it as a robust, scalable, and broadly applicable optimization solution that advances both the theory and practice in deep learning.",
+        "authors": "Yao Fu, Chunxia Zhang, Junmin Liu, Yihang Jin, Haishan Ye, Yuanao Yang",
+        "url": "http://arxiv.org/abs/2607.06151v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06151v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了EISAM优化器，结合了extragradient技术和SAM，旨在寻找更平坦的极小值以提高泛化能力。摘要中明确指出“理论分析进一步证实EISAM通过将参数引导至曲率更小的平坦极小值来收紧泛化界限”，这表明了其在优化收敛性和泛化理论方面的严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06079v1",
+        "title": "Scalable Perturbation Learning for Online Self-Supervised Echo State Networks",
+        "summary": "Intelligent systems should not only solve tasks but also adapt under real-world constraints. Autonomous adaptation via self-supervised learning, sequential adaptation via online learning, and memory-efficient implementation via perturbation-based learning are important requirements for such systems. However, these requirements are generally in tension for high-dimensional systems, because perturbation-based learning suffers from variance that grows with the dimension of the perturbed variables.   In this study, we focus on echo state networks (ESNs), where this tension naturally arises in large reservoirs. We propose a perturbation-based learning rule for online self-supervised learning in ESNs. The proposed rule is derived from an orthogonal decomposition of the self-supervised learning cost, which separates an input-dependent component from a redundant component determined by the fixed ESN parameters. By perturbing only the input-dependent component, the effective perturbation dimension is reduced from the reservoir dimension to the input dimension.   Thus, the proposed method preserves self-supervised adaptation, online learning, and scalar-feedback perturbation learning, while avoiding reservoir-size-dependent variance growth. This suggests a design principle for scalable and hardware-compatible learning: online learning should be restricted to the dynamically necessary low-dimensional component of the objective.",
+        "authors": "Taiki Yamada, Kantaro Fujiwara",
+        "url": "http://arxiv.org/abs/2607.06079v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06079v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文为回声状态网络（ESN）的在线自监督学习提出了一种可扩展的扰动学习规则，该规则源于自监督学习成本的正交分解，旨在避免与水库大小相关的方差增长。其基于数学推导的设计原则，体现了良好的理论严谨性，对理解和设计可扩展学习系统有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06020v1",
+        "title": "Stochastic generator of trajectories from record data: application to the fluctuations of a glacier's frontal position from a sample of moraines",
+        "summary": "The record values theory study elements of a time series that exceed all previous observations, which are of particular interest in fields such as sports or climate science. In this paper, we propose a statistical method based on the construction of a Brownian stochastic simulator to reconstruct entire time series solely from such record values, even in a non-stationary case. We then implement a procedure, which can be compared to a Neural-Based Inference (NBI) procedure, to choose the optimal generator hyper parameters. To illustrate our method and motivate its development, we apply it to a glaciological problem. Understanding the past dynamics of glacier fronts is a major challenge to mitigate related mountain hazards, assess water resources, and evaluate contributions to sea-level rise. Field-visible indicators such as moraines provide spatio-temporal evidence of these front position evolution (refered as trajectories) and can be interpreted as the records of a non-stationary process. As a benchmark case, the two hyper parameters of our NBI approach are tuned from the well documented French alpine Glacier des Bossons. Our purely data-based approach offers new perspectives for challenging and further developing physical models of glacier dynamics and inferring the response of glaciers to climate change on centennial to millenial time scales.  Beyond the glacier case, it has potential for the various problems for which record series is the sole available data.",
+        "authors": "Megret Maud, Mike Pereira, Nicolas Eckert, Naveau Philippe, Jomelli Vincent",
+        "url": "http://arxiv.org/abs/2607.06020v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06020v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于布朗随机模拟器的统计方法，仅从记录值重建整个时间序列，甚至在非平稳情况下也能实现。这种纯数据驱动的方法，基于随机过程的数学构建，具有强大的统计学基础，为处理仅有记录数据的问题提供了新视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05887v1",
+        "title": "Fast, Frequentist Estimation of Epidemic Reproduction Numbers",
+        "summary": "The effective reproduction number $R_t$ is one of the most important indicators of epidemic dynamics. Estimating $R_t$, typically from case reports or hospitalization counts, poses a challenging inverse problem. One key issue is lag: $R_t$ acts at the moment of transmission, while the data it generates surface days later. To handle this delay and infer recent infections in real time, popular methods take a Bayesian approach, which can be slow and sensitive to prior specification. As an alternative, we propose ConvRt, a frequentist method for retrospective and real-time estimation. ConvRt deconvolves latent infections and then estimates $R_t$ with successive penalized-likelihood steps, using a spline basis to model smooth curves. Across both stylized and data-driven simulations, we demonstrate favorable performance in point estimation, uncertainty quantification, and runtime. Moreover, by untangling smoothness from future projections, ConvRt enables researchers to assess which qualitative narratives about $R_t$ the data support.",
+        "authors": "Jeremy Goldwasser, Ryan J. Tibshirani, Alyssa Bilinski",
+        "url": "http://arxiv.org/abs/2607.05887v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05887v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了ConvRt，一种快速、频率派的流行病再生数R_t估计方法，通过解卷积潜在感染和惩罚似然步骤，并使用样条基建模平滑曲线。其强调了点估计和不确定性量化的良好性能，表明了其在统计推断方面的严谨性，对流行病学建模具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05850v1",
+        "title": "Breaking Spurious Correlations via Generative Randomization and Cross-Variant Self-Supervised Learning",
+        "summary": "Deep neural networks trained with Empirical Risk Minimization (ERM) often fail under distribution shifts because they exploit spurious correlations between object labels and background context. Recent generative approaches address this issue by creating counterfactual images with altered contexts, but typically use these samples as standard data augmentation, leaving the model free to retain background-sensitive representations. We propose a two-stage framework that uses generative intervention to explicitly learn background-invariant visual representations. First, we isolate the foreground object using zero-shot segmentation and generate context-shifted variants with a structure-preserving diffusion model, preserving object identity while varying the surrounding environment. We then introduce Cross-Variant Self-Supervised Learning, where variants of the same object under different backgrounds form positive pairs in a contrastive objective. This encourages the encoder to align object-centric representations while suppressing background-specific cues. Then, we fine-tune the pretrained encoder using an ERM warm-up followed by GroupDRO with layer-wise learning rates. Experiments on distribution-shift benchmarks demonstrate best worst-group performance, achieving 92.5% on Waterbirds, 81.7% on MetaShift, and 87.4% on NICO++. Code: https://github.com/surajyadav-research/GRSSL",
+        "authors": "Suraj Yadav, Anjaneya Sharma, Siddharth Yadav",
+        "url": "http://arxiv.org/abs/2607.05850v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05850v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个两阶段框架，通过生成式随机化和跨变体自监督学习来打破虚假相关性，学习背景不变的视觉表示。虽然摘要侧重于方法设计和经验性能，但其解决分布偏移这一核心ML问题的方法是基于对比学习和GroupDRO等有理论基础的技术，体现了对严谨逻辑的应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05736v1",
+        "title": "Multimodal Molecular Representation Learning with Graph Neural Networks, Deep & Cross Networks, and SMILES Embeddings",
+        "summary": "Molecular property prediction often relies on isolated data modalities, where continuous 3D graph neural networks (GNNs) struggle to efficiently capture long-range topological dependencies and exact macroscopic heuristics. In this work, we introduce a parameter-efficient Tri-Branch Modular Fusion Neural Network that synthesizes three orthogonal modalities: 3D spatial geometry (SchNet), discrete topological grammar (SMILES via ChemBERTa), and explicit macroscopic physicochemical descriptors (Deep & Cross Network). By bypassing standard scalar readouts and employing a shared late-fusion architecture, the framework establishes a mathematically rigorous multimodal latent space that effectively resolves the arithmetic and oversmoothing limitations of local message passing. We evaluate the proposed architecture on the QM9 benchmark, targeting the extensive thermodynamic property of atomization energy at 0 K ($U_0^{\\mathrm{atom}}$). Through systematic combinatorial ablation and latent bottleneck optimization ($d_e=64$), the tri-modal framework achieves a validation Mean Absolute Error (MAE) of 0.0207 eV. Operating with fewer than one million parameters, this architecture decisively surpasses the sub-chemical accuracy threshold and yields a substantial 20.6% error reduction over a strictly controlled geometric baseline. Ultimately, our findings demonstrate that integrating orthogonal macroscopic and topological data streams provides a synergistic, $\\mathcal{O}(1)$ physical shortcut. This multimodal alignment offers a highly efficient alternative to brute-force parameter scaling, establishing a robust surrogate model for high-throughput virtual screening (HTVS) pipelines.",
+        "authors": "Qiwei Han, Chi Zhou, Ruobing Wang, Zheng Ma",
+        "url": "http://arxiv.org/abs/2607.05736v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05736v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 3,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个参数高效的三分支模块化融合神经网络，用于多模态分子表示学习，并声称建立了“数学上严谨的多模态潜在空间”，以解决局部消息传递的算术和过平滑限制。这种对潜在空间“数学严谨性”的强调，使其在理论上具有吸引力，值得进一步探究其数学推导。"
+    }
+]

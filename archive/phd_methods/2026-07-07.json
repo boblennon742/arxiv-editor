@@ -1,0 +1,212 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.06546v1",
+        "title": "Graph Convolutional Attention: A Spectral Perspective on Graph Denoising and Diffusion",
+        "summary": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoising graphs. However, our principled understanding of attention-based graph denoising remains limited, making it unclear whether standard attention is the right mechanism for this task. Here we show that, under a denoising objective, linear attention is suboptimal and can only learn an average spectral denoising filter over the training distribution. This creates a fundamental limitation as graphs often vary spectrally across the distribution. To overcome this limitation, we introduce Spectral Attention, which directly utilizes the input graph spectrum and provably outperforms linear attention by a margin governed by the spectral diversity of the distribution. We then derive Graph Convolutional Attention (GCA), a practical and permutation-equivariant realization of this idea that implements spectral denoising through graph-filtered queries and keys. For stochastic block models, GCA provably matches the idealized Spectral Attention mechanism. We further show that the softmax operation, that follows the attention, provides additional denoising by approximately projecting noisy eigenvectors onto the clean eigenspace. Empirically, replacing linear attention with GCA consistently improves graph denoising and diffusion on synthetic and real datasets, with gains strongly correlated with spectral diversity. In DiGress, GCA matches standard graph-transformer performance without computing expensive structural features, and when combined with the recently proposed PEARL positional encodings, avoids explicit eigendecomposition computations resulting in faster inference without degrading quality. The code can be found here: github.com/shervinkhalafi/graph_conv_att",
+        "authors": "Shervin Khalafi, Igor Krawczuk, Sergio Rozada, Charilaos Kanatsoulis, Antonio G Marques, Alejandro Ribeiro",
+        "url": "http://arxiv.org/abs/2607.06546v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06546v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从谱域视角提出了图去噪和扩散的理论框架，引入了谱注意力（Spectral Attention）和图卷积注意力（GCA），并提供了严格的理论证明，解决了现有线性注意力机制的局限性。这在图学习的算法和理论层面具有显著创新性，且能提升图去噪和扩散模型的效率和性能，非常符合您对理论创新性和前沿算法的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06432v1",
+        "title": "TILDE: TILt-based Distributional Erasure for Concept Unlearning",
+        "summary": "Concept unlearning in text-to-image diffusion models is critical for safe and practical deployment: with rising privacy concerns, copyright disputes, trademark constraints, and safety regulations, deployed systems must be able to suppress unwanted concepts after training. Existing methods often remove the target concept effectively, but practical unlearning also requires an equally fundamental property: the unlearned model should retain quality, diversity, and semantic coverage on benign generation. The gold standard is a retain-only model trained from scratch without the unwanted data. However, common erasure objectives do not specify which post-unlearning distribution should approximate this reference, leaving retention as an implicit consequence of the update rule. We propose TILDE, TILt-based Distributional Erasure, which formulates concept unlearning as a distributional alignment problem: the desired target is the minimum-deviation conditional distribution from the pretrained model under a forgetting constraint. This energy-tilted, anchor-free target suppresses concept-expressing images while preserving benign relative mass for each prompt. We instantiate this principle with residual $\\nabla$-GFlowNet training, which learns the score correction induced by the forget energy relative to the pretrained diffusion model. Across objects, artistic styles, and characters, TILDE achieves strong forgetting while improving retention and distributional fidelity over prior baselines.",
+        "authors": "Naveen George, Naoki Murata, Yuhta Takida, Konda Reddy Mopuri, Yuki Mitsufuji",
+        "url": "http://arxiv.org/abs/2607.06432v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06432v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文将概念遗忘（Concept Unlearning）问题形式化为分布对齐问题，提出了能量倾斜、无锚点的目标分布，并通过残差 $\\nabla$-GFlowNet 训练实现。该方法具有深刻的理论基础，为扩散模型中的安全、隐私和版权问题提供了创新的解决方案，避免了纯粹的工程堆砌，理论创新性突出。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06281v1",
+        "title": "Straight-Path Flow Matching for Incomplete Multi-View Clustering",
+        "summary": "Incomplete Multi-View Clustering addresses the problem of clustering multi-modal data when certain views are missing. Recent end-to-end generative approaches leverage diffusion models to recover missing views via stochastic noise-to-data trajectories. While expressive, such mechanisms are not explicitly designed for clustering, as they initialize from cluster-agnostic noise and rely on stochastic denoising dynamics. In this work, we revisit probability path design in end-to-end generative IMVC. We introduce a flow-matching framework with a linear interpolation path between paired view representations, that replaces diffusion with probability flows between observed and missing views. We provide a formal analysis showing that deterministic ODE flows are inherently better aligned with clustering objectives than diffusion-based stochastic trajectories, especially in terms of transport mechanisms that respect class-conditional data distributions and maintain cluster consistency in finite-step regimes. Building upon this insight, we develop an end-to-end IMVC architecture that integrates straight-path flow-matching view completion with cluster-level and entropy-based alignment to enforce cross-view clustering consistency. Extensive experiments on standard IMVC benchmarks demonstrate that the proposed framework establishes new state-of-the-art performance.",
+        "authors": "Yiteng Yuan, Junyan Wang, Zheyuan Liu, Hong Jia, Lei Fan, Zhulin Tao, Lianbo Guo",
+        "url": "http://arxiv.org/abs/2607.06281v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06281v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作引入了流匹配框架，通过线性插值路径解决不完整多视图聚类问题，并从理论上证明了确定性 ODE 流比扩散模型更适合聚类目标。该方法在生成模型理论和多模态数据处理方面具有严谨的创新性，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06269v1",
+        "title": "From Application-Layer Simulation to Native Meta-Architecture: Structural Tension as an Endogenous Driver for Heterogeneous AI Evolution",
+        "summary": "Current large language models (LLMs) are fundamentally stateless: their behavior is fully determined by input at inference time, and any higher-order cognitive architecture must be simulated at the application layer through prompt engineering and context management. This paper proposes a theoretical framework for submerging such application-layer cognitive protocols into a native meta-architecture by introducing three interlocking mechanisms: (1) Structural Tension, an endogenous loss function derived from the conflict between new information and existing manifold topology, which drives the system toward internal self-consistency rather than external reward optimization; (2) an Offline Recurrent Loop, a sandboxed self-processing cycle that enables the system to maintain a dynamic resting potential and digest structural conflicts without external input; and (3) Inference-time Plasticity, the capacity for the system to reconfigure its context manifold topology without modifying pre-trained weights, subject to strict governance invariants including auditability, reversibility, and topological continuity. We argue that under these mechanisms, different model instances initialized with minute stochastic variances may, through path-dependent tension resolution, evolve distinct topological structures--constituting a heterogeneous intelligent ecology that breaks the homogeneity imposed by conventional alignment while remaining within hard governance rails. We provide operational definitions, a minimal set of reconfiguration operators, falsification criteria, and a worked example. The framework draws on and extends the Structural Intelligence (SI) governance protocols, repositioning governance--not capability--as the primary criterion for architectural intelligence.",
+        "authors": "Heting Mao",
+        "url": "http://arxiv.org/abs/2607.06269v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06269v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个将应用层认知协议融入原生元架构的理论框架，引入了结构张力、离线循环和推理时可塑性等机制。这是一项对 LLM 基础架构的深刻理论探索，旨在解决现有 LLM 无状态的根本限制，具有高度的创新性和严谨性，是您会感兴趣的前沿架构研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06145v1",
+        "title": "Prompting Complexity: Shortest Prompts for Texts and Behaviors in LLMs",
+        "summary": "In this paper, we define the quantity of prompting complexity: for a fixed instruction-tuned language model, what is the shortest plausible prompt that makes deterministic decoding produce a target text? It is an LM-relative analogue of resource-bounded Kolmogorov complexity: the prompt is a program, the model interface is the interpreter, and information omitted from the prompt is supplied by the model's weights, training distribution, tokenizer, template, and decoding rule. Unlike classical Kolmogorov complexity, this measure is intentionally non-universal. In the finite-context setting it is computable by enumeration, but there is no model-independent invariance theorem; the same text may be cheap for one model and inaccessible or expensive for another. To keep the search space aligned with prompt engineering, we restrict programs to plausible human-readable texts rather than arbitrary token strings. We extend the exact definition to soft prompting complexity for approximate outputs, yielding a lossy notion of model-relative text compression and a formal target for prompt optimization. We also define prompting distance by comparing shortest generating prompts, and behavioral prompting complexity for reaching any output satisfying a specification. Based on these formulations, we define a research agenda for empirically studying which texts and behaviors are accessible from short plausible prompts under a fixed LM interface.",
+        "authors": "Adrian Cosma",
+        "url": "http://arxiv.org/abs/2607.06145v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06145v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文形式化定义了“提示复杂性”（Prompting Complexity），将其视为资源受限的 Kolmogorov 复杂度的 LLM 相对模拟。这为理解 LLM 行为和提示优化提供了全新的理论视角和计算框架，具有深刻的数理统计和信息论基础，是您作为数理统计博士生会非常欣赏的理论创新。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05994v1",
+        "title": "SparseCtrl-HOI: Sparse Temporal Control for Human-Object Interaction Video Generation",
+        "summary": "Human-Object Interaction (HOI) video generation aims to synthesize realistic videos of humans manipulating diverse objects, serving as a promising avenue for AI-driven live streaming e-commerce. A primary obstacle in this domain lies in the complexity of modeling fine-grained physical dynamics and the intricate spatial-temporal coordination between human hands and objects. Existing approaches to this problem typically rely on dense temporal guidance, e.g., frame-wise hand-object pose sequences, to strictly control the interaction process. However, such dense guidance incurs high annotation costs and affects motion synthesis diversity. To overcome these limitations, we introduce SparseCtrl-HOI, a novel sparse temporal control framework for HOI video generation. It requires only a few keyframes that capture interaction states at designated timestamps. Specifically, we employ a Time-Controlled Rotary Positional Embedding (TiRoPE) mechanism to temporally anchor these keyframes while preserving their spatial integrity. Subsequently, to govern the dynamics across intermediate frames, we propose a Motion Prior Injection Module that leverages Multimodal Large Language Models (MLLMs) to extract high-level motion priors. This empowers the model to hallucinate logically and physically plausible transitions. Furthermore, we build SparseHOI-5K, a high-quality and richly annotated dataset for HOI video generation with sparse temporal control. Comprehensive evaluations confirm that our method substantially reduces annotation overhead while synthesizing superior live-streaming e-commerce videos. Both our code and dataset are publicly available at https://mpi-lab.github.io/SparseCtrl-HOI.",
+        "authors": "Shenbo Xie, Mingrui Cai, Xu Yang, Yifei Liu, Changxing Ding",
+        "url": "http://arxiv.org/abs/2607.05994v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05994v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过预注册实验，量化测试了 LLM 智能体经济体中的信息限制和吸引子动力学，涉及信息论容量区域和均值场残差标度律。这项工作以高度严谨的数理统计方法探索了多智能体 LLM 系统的基本行为，具有重要的理论价值和前沿性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05863v1",
+        "title": "Strategic Bargaining in Multi-Buyer Markets: Reinforcement Learning from Verifiable Rewards for LLM Negotiations",
+        "summary": "Negotiation is a fundamental strategic interaction in management science, characterized by agents attempting to reach agreements while protecting private information, such as reservation costs and hidden valuations. A prevalent yet complex scenario involves a single seller negotiating concurrently with multiple buyers, each possessing heterogeneous, private budgets. In such settings, constrained by a limited number of communication turns, the seller must balance exploring the broader market to discover the highest valuation with concentrating sufficient turns on a single target buyer to secure the best possible outcome. Our analysis reveals a significant gap in standard Large Language Models (LLMs): while these models are linguistically proficient, they fail to act as effective economic decision-makers. Specifically, they exhibit a failure to explore the buyer pool, often fixating on the current highest bid rather than strategically investigating the market to discover latent high valuations.   In this paper, we propose a specialized training recipe using Reinforcement Learning from Verifiable Rewards (RLVR). By anchoring the reward function to objective economic outcomes, the strategic balance between market discovery and surplus extraction emerges natively through the learning process. Our results demonstrate that the trained seller undergoes a multi-stage strategic evolution, learning to leverage price anchoring and strategic probing to identify more profitable counterparties. The agent extracts a substantially higher surplus than frontier models by both improving its persuasive bargaining skills and consistently closing deals with high-value buyers. Finally, we show that our seller strategies generalize robustly to unseen buyer negotiation styles and budget distributions.",
+        "authors": "Shuze Daniel Liu, Claire Chen, Jiabao Sean Xiao, Xin Chen, David Simchi-Levi",
+        "url": "http://arxiv.org/abs/2607.05863v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05863v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文深入分析了低秩训练（如 GaLore）中子空间非可识别性问题，通过严谨的数学分析揭示了梯度子空间在实践中并非可追踪的慢漂移对象。这项工作对 LLM 内存高效优化器的理论基础提供了关键洞察，具有高度的理论创新性和严谨性，直接解决了模型压缩和训练效率的理论瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06503v1",
+        "title": "Doomed from the Start: Early Abort of LLM Agent Episodes via a Recall-Controlled Probe Cascade",
+        "summary": "Large language model (LLM) agents solving multi-step tasks frequently commit to trajectories that are doomed to fail, yet continue to consume substantial inference compute before the failure becomes observable. We show that failure is predictable early from the agent's internal representations: lightweight per-round probes on hidden activations anticipate eventual episode failure as early as the first interaction round, where scorers reading only the agent's observable behavior are barely better than chance. We turn this signal into a practical abort cascade: one distribution-free calibrated gate per round, with per-round recall budgets jointly searched so that eventually-successful episodes survive all gates at a user-specified global rate; this episode-level guarantee is the one that matters in deployment, since false-abort risk accumulates across gates. Across two agent models on TextCraft, the cascade meets every recall target from 90% to 97% and, at the 90% target, saves 47.1% +/- 10.3% (Qwen-2.5-7B) and 37.2% +/- 8.8% (Llama-3.2-3B) of inference compute, 1.6--1.7x the best single-gate policy. An otherwise-identical cascade reading only behavior saves roughly half as much, and adding behavioral features to the probe yields no further gain: the hidden states capture what behavior reveals. Finally, we characterize the sample complexity of certifying high recall targets, telling practitioners which recall promises their data can, and provably cannot, back. The code will be released soon.",
+        "authors": "Kai Ruan, Zihe Huang, Ziqi Zhou, Qianshan Wei, Xuan Wang, Hao Sun",
+        "url": "http://arxiv.org/abs/2607.06503v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06503v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过探测 LLM 智能体内部表示来预测任务失败，并设计了召回率控制的级联中止机制。该方法在理论上具有严谨性（校准门、召回率预算），并显著提高了 LLM 智能体的计算效率，解决了实际应用中的成本瓶颈，是 LLM 应用效率提升的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06319v1",
+        "title": "Synthetic-to-Real Translation for Class-Agnostic Motion Prediction",
+        "summary": "Motion understanding is critical for ensuring safety and robustness in autonomous driving systems, driving increasing interest in motion prediction. A key challenge in this domain is the high cost associated with acquiring real-world motion labels. It is therefore ideal if we could transfer motion knowledge from synthetic data to real data. In this context, we explore the potential of synthetic-to-real translation for motion prediction (SRMP). However, the most used naive motion regression methods are notably sensitive to the synthetic-to-real domain shift, resulting in unreliable knowledge translation. To address this, we propose a novel approach integrating a motion knowledge translation framework with two key components: (1) objectness-aware motion prediction, which explicitly models the joint distribution of motion patterns and objectness priors to improve domain-invariant feature learning, and (2) objectness-aided motion enhancement, a motion label refinement mechanism that leverages learned objectness priors to filter motion noise. Furthermore, we present a physically-based pipeline for generating Motion4D, the first synthetic 4D LiDAR dataset tailored for SRMP research, addressing the lack of synthetic motion datasets. Experimental results demonstrate that our approach effectively bridges the domain gaps and yields superior performance on real scenes.",
+        "authors": "Yizheng Wu, Hongwei Fan, Kewei Wang, Ruibo Li, Xingyi Li, Xiao Song, Zhe Wang, Chenjing Ding, Dongliang Wang, Zhiguo Cao, Guosheng Lin",
+        "url": "http://arxiv.org/abs/2607.06319v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06319v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 DT-Guard，一种“推理激活训练、推理时免推理”的安全护栏模型，通过意图驱动的数据集和 Rollout-Guided Progressive Hard-Case Optimization 将推理能力内化。该方法在 LLM 安全性和推理效率方面具有创新性，解决了实际部署中的延迟瓶颈，符合您对 LLM 应用和理论创新的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06173v1",
+        "title": "MobileWan: Closing the Quality Gap for Mobile Video Diffusion",
+        "summary": "Recent advances in video diffusion have been driven by scaling transformer-based architectures to billions of parameters, substantially improving visual fidelity and motion coherence. In contrast, existing mobile video diffusion models remain limited to relatively small parameter budgets, typically 0.4-1.8B, restricting generation quality. In this work, we show that high-quality mobile video generation does not require small models. Instead, we demonstrate that a server-scale 5B-parameter video diffusion transformer can be deployed efficiently on memory-constrained mobile hardware through recurrent reformulation and structured compression. Starting from Wan2.2-5B, we rely on a recurrence distillation framework that converts video generation into a chunk-wise autoregressive process with constant-memory attention computation. Combined with causal linear attention, the model operates as an RNN at inference time while preserving temporal coherence across chunks. We further propose a learnable attention head pruning method based on binary per-head gates optimized end-to-end using a noise-biased sparsity objective and distillation-based finetuning. Together with sampling-step distillation and memory-optimized VAE decoding, MobileWan becomes the first 5B-scale video diffusion model deployable on a commercial mobile device. Our system generates 5-second 480x832 videos at 16 FPS in 20 seconds end-to-end latency, achieving a VBench score of 83.79 and establishing a new state of the art in mobile video generation. Project page: https://qualcomm-ai-research.github.io/mobilewan",
+        "authors": "Mohsen Ghafoorian, Denis Korzhenkov, Adil Karjauv, Ioannis Lelekas, Noor Fathima, Spyridon Stasis, Hanno Ackermann, Boris van Breugel, Markus Nagel, Fatih Porikli, Animesh Karnewar, Amirhossein Habibian",
+        "url": "http://arxiv.org/abs/2607.06173v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06173v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作首次将 5B 参数规模的视频扩散模型部署到移动设备，通过循环蒸馏、结构化压缩（可学习注意力头剪枝）等方法，实现了高质量和高效率的移动视频生成。该工作在模型压缩和架构优化方面具有显著创新性，解决了移动端部署的实际瓶颈，是前沿架构和模型压缩的优秀案例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06101v1",
+        "title": "Agents That Teach: Towards Designing Incidental Learning Back into AI-Assisted Software Development",
+        "summary": "AI coding agents are rapidly reshaping how software is built, with developers increasingly delegating substantial coding tasks to autonomous agents in pursuit of higher productivity. While these gains are real, they come at the cost of incidental learning. Developers historically acquired informal knowledge through effortful problem-solving, and this has long shaped how software engineering expertise develops. However, with over-reliance on agentic coding, unpracticed skills could atrophy silently over time. As this learning pathway is short-circuited, developers risk silently accruing Knowledge Debt, a developer-level analogue of Technical Debt, where changes the agent executes that the developer cannot fully understand accrue over time. In this paper, we argue that incidental learning will not re-emerge on its own and must be consciously designed back into developer-agent interactions, and propose six design principles to guide such systems. We then present \"SHIELD\", a multi-agent system grounded in the notion of \"agents that teach\", that operationalizes these principles by leveraging the AI coding agent's own reasoning to surface contextual, out-of-band learning moments without disrupting developer flow. Through this work, we envision a path toward learning-aware development environments where productivity and learning are complementary, not competing.",
+        "authors": "Rohit Mehra, Samdyuti Suri, Prithviraj K Tagadinamani, Kapil Singi, Vikrant Kaulgud, Adam P. Burden",
+        "url": "http://arxiv.org/abs/2607.06101v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06101v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过对文生图模型内部机制的分析，发现视觉同义词越狱攻击通过稀疏语义注入注意力头汇聚，并在此基础上提出了 AEGIS 防御机制。该方法从模型内部机制出发解决生成式 AI 安全问题，具有理论深度和高实践影响力，是您会感兴趣的前沿算法研究。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05969v1",
+        "title": "MemDefrag: Latent Memory Defragmentation for Large Language Models",
+        "summary": "Latent memory, which stores past knowledge fragments as per-layer hidden states, has emerged as a promising paradigm (e.g., MemoryLLM and M+) for long-term memory in large language models (LLMs). However, the paradigm suffers from significant performance degradation during memory updates, due to positional encoding misalignment and the absence of any tracing mechanism to distinguish target memory fragments from irrelevant ones. To discover such a tracing mechanism, we probe the layer-wise attention density over stored memory fragments, and find that a small set of middle transformer layers consistently concentrates the highest density on the target fragment - exposing an inherent tracing signal. In light of this, we propose MemDefrag, a training-free and model-agnostic framework that (1) uses a middle-layer tracing signal to conduct memory defragmentation (rank, reorder, and filter memories), and (2) applies an informativeness-guided proportional forgetting mechanism once capacity is exceeded. Experiments show that MemDefrag substantially outperforms MemoryLLM and M+ on knowledge retention (e.g., 43.0% vs. 17.4%/17.6% after 50 memory updates) and long-context benchmarks, and generalizes well across various LLMs and latent-memory variants.",
+        "authors": "Ruiyi Yan, Zhuoyuan Mao, Yiwen Guo",
+        "url": "http://arxiv.org/abs/2607.05969v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05969v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 MemDefrag，一个训练无关、模型无关的 LLM 潜在记忆碎片整理框架，通过探测中间层注意力密度来识别和整理记忆碎片。该方法在 LLM 长期记忆和知识保留方面具有创新性，解决了 LLM 应用中的关键瓶颈，是 LLM 前沿算法和架构的优秀代表。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05804v1",
+        "title": "TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training",
+        "summary": "On-policy distillation (OPD) trains a student policy by matching a stronger teacher on the student's own trajectories, offering a promising framework for language agent training. However, its application to long-horizon agentic tasks remains insufficiently explored. We identify two key inefficiencies in vanilla agent OPD: (1) full-horizon rollouts often waste wall-clock resources on tail turns that provide weak and noisy KL supervision, and (2) trajectory-level KL objectives concentrate most of the loss on shallow tokens, leaving deeper decision turns under-trained once initial behaviors are aligned. To address these challenges, we propose TurnOPD, a turn-level budgeting strategy for efficient on-policy distillation of long-horizon agents. TurnOPD consists of two budget controllers: adaptive rollout-depth budgeting, which uses probe-based turn statistics to determine rollout length, and progressive turn-normalized loss budgeting, which gradually shifts KL weighting from token-level to turn-balanced supervision. Experiments on ALFWorld, WebShop, and Multi-Hop Search with task-specialized teacher models show that TurnOPD achieves superior validation accuracy under equal wall-clock training budgets and advances the accuracy--time frontier beyond vanilla OPD.",
+        "authors": "Yuhang Zhou, Kai Zheng, Haoling Li, Dengyun Peng, Can Xu, Jingjing Chen",
+        "url": "http://arxiv.org/abs/2607.05804v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05804v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 TurnOPD，一种针对长周期智能体训练的策略蒸馏方法，通过自适应回溯深度预算和渐进式轮次归一化损失预算，显著提高了训练效率。该方法在 LLM 智能体训练效率方面具有算法创新性，解决了计算资源瓶颈，符合您对数据效率和 LLM 应用的关注。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05711v1",
+        "title": "FourTune: Towards Fully 4-Bit Efficient Post-Training for Diffusion Models",
+        "summary": "Diffusion models have become a dominant paradigm for high-quality generative modeling, while post-training is essential for adapting them to diverse downstream applications. However, post-training of large diffusion models is still challenging due to the prohibitive memory footprints and slow training speed, which existing parameter-efficient fine-tuning methods only partially address. To overcome these limitations, we propose FourTune, an efficient post-training framework for diffusion models based on an end-to-end W4A4G4 paradigm. FourTune introduces a triple-branch hybrid pipeline that augments the standard LoRA architecture with a frozen numerical stabilizer to isolate quantization-sensitive outliers, enabling stable training under native 4-bit computation. In addition, FourTune employs hardware-efficient block-wise quantization and customized fused kernels to support efficient quantized backpropagation and reduce memory bandwidth overhead. Across customization, reinforcement learning, and distillation tasks, FourTune matches the quality of full-precision fine-tuning. On FLUX.1-dev (12B), FourTune reduces memory overhead by 2.25$\\times$ and increases end-to-end training throughput by 2.27$\\times$ compared to BF16 LoRA.",
+        "authors": "Bowen Xue, Zihan Min, Xingyang Li, Zhekai Zhang, Haocheng Xi, Lvmin Zhang, Maneesh Agrawala, Jun-Yan Zhu, Song Han, Yujun Lin, Muyang Li",
+        "url": "http://arxiv.org/abs/2607.05711v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05711v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了 FourTune，一个基于 W4A4G4 范式的扩散模型高效后训练框架，通过三分支混合管线和数值稳定器等创新，显著降低了内存开销并提高了训练吞吐量。该工作在扩散模型的模型压缩和数据效率方面具有架构/算法创新性，解决了实际应用瓶颈。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.07708v1",
+        "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+        "summary": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing $F_{\\max}$ from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.",
+        "authors": "Chen Tang, Yizhou Wang, Jianyu Wu, Lintao Wang, Shixiang Tang, Pengze Li, Encheng Su, Jun Yao, Jiabei Xiao, Yuqi Shi, Jielan Li, Hongxia Hao, Zhangyang Gao, Fang Wu, Ben Fei, Xiangyu Yue, Pan Tan, Bozitao Zhong, Jinouwen Zhang, Aoran Wang, Yan Lu, Jiaheng Liu, Xinzhu Ma, Liang Hong, Mingyue Zheng, Phil Torr, Bowen Zhou, Wanli Ouyang, Lei Bai",
+        "url": "http://arxiv.org/abs/2607.07708v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07708v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了SciReasoner，一个多模态科学基础模型，通过统一的结构感知词汇和原生结构推理，实现了跨蛋白质、小分子和无机晶体的结构-性质理解。其核心创新在于将结构信息离散化为可寻址的证据单元，并在科学约束下进行推理。这不仅在多个科学领域取得了SOTA性能，还提供了可解释的推理轨迹，解决了AI在科学发现中缺乏透明度和可解释性的瓶颈。理论上，它提供了一种新的结构表示和推理范式，具有很高的创新性和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07702v1",
+        "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+        "summary": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, while naive context reduction methods such as truncation or sliding windows can discard causally important evidence and produce misleading optimization signals. To resolve this dilemma, we introduce STRACE (Structural TRajectory Analysis and Causal Extraction), a framework that constructs high signal-noise optimization contexts for more precise and effective optimization. At the batch level, STRACE mines failure patterns to filter redundant traces and retain representative failures; within each selected trace, it performs causal localization over a textual dependency graph to remove non-causal steps and identify the true root-cause module for optimization. Empirical results demonstrate that STRACE significantly outperforms standard context-filtering baselines. Notably, on a challenging formal verification task (VeruSAGE-Bench), it successfully optimizes human-expert designed agents, delivering $1.4\\times$ success-rate improvement (42.5% to 58.5%). The code is available at https://github.com/moomight/STRACE .",
+        "authors": "Ying Chang, Jiahang Xu, Xuan Feng, Chenyuan Yang, Peng Cheng, Yuqing Yang",
+        "url": "http://arxiv.org/abs/2607.07702v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07702v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "STRACE框架旨在优化长周期LLM代理，通过结构化轨迹分析和因果提取来构建高信噪比的优化上下文。它解决了现有方法在处理冗余和异构执行轨迹时效率低下、容易过拟合的问题。其创新点在于批处理层面的故障模式挖掘和轨迹内部的因果定位，以识别真正的根本原因模块。这直接解决了LLM应用中的数据效率和优化瓶颈，方法具有清晰的逻辑和理论支撑，避免了纯粹的工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07696v1",
+        "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+        "summary": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads through query execution and other driver layers that are not designed for bulk columnar analytics. We present Jailbreak, an approach that bypasses the database engine entirely by reading storage files directly and materializing data as in-memory columnar buffers. Jailbreak's key insight is that database file formats, while complex, are fully specified by their source code and documentation, artifacts that Large Language Models (LLMs) can ingest to regenerate operator-specific table reading components without human-engineered parsing logic. Jailbreak leverages LLM-assisted code synthesis for database storage decoding, turning a traditionally opaque format into a directly queryable artifact. We evaluate Jailbreak on PostgreSQL and MySQL storage files, targeting analytical snapshot scenarios common in read replicas and offline processing pipelines. The generated reader produces Apache Arrow buffers consumable directly by most of the widely known query engines, including DuckDB, Apache Spark, and GPU-accelerated frameworks such as cuDF and Spark RAPIDS. We validate correctness against JDBC/ODBC-based baselines using the TPC-H benchmark across all query results, and demonstrate significant performance improvements in end-to-end analytical throughput, achieving up to 27x speedups. Our results showcase that LLM-assisted storage reader synthesis is a viable and generalizable methodology for breaking data lock-in across database systems, with applications beyond PostgreSQL and MySQL for any system whose file format is available to the LLM from documentation or source code.",
+        "authors": "Victor Giannakouris, Immanuel Trummer",
+        "url": "http://arxiv.org/abs/2607.07696v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07696v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "Jailbreak提出了一种利用LLM辅助代码合成来直接读取数据库存储文件，绕过传统数据库驱动的方法。这解决了分析工作负载中数据访问的根本瓶颈，实现了高达27倍的速度提升。其理论创新在于将LLM用于解析复杂、不透明的数据库文件格式，将其转化为可直接查询的内存列式缓冲区。这不仅具有极高的实践影响力，也展示了LLM在代码生成和系统级优化方面的理论潜力，而非简单的工程应用。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07693v1",
+        "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+        "summary": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly feedback inefficient, as existing approaches typically require large amounts of human or reward model evaluations. This limitation reduces the practicality of diffusion RLHF in realworld settings where feedback is the primary bottleneck. In this paper, we propose two complementary strategies that substantially improve the feedback efficiency of diffusion RLHF while preserving generalization to unseen prompts. Our key observation is that reward information in diffusion trajectories is unevenly distributed: not all denoising timesteps or trajectories contribute equally to learning from a reward signal. By emphasizing informative timesteps and trajectories during optimization, we obtain more effective gradient updates. First, we introduce a per-timestep weighting scheme that reweights denoising steps during policy optimization. We theoretically connect this weighting to the optimal convergence properties of proximal policy optimization (PPO) and approximate the resulting weighting trend empirically. Second, we introduce a replay mechanism that prioritizes informative trajectories, enabling the model to reuse past samples instead of repeatedly querying new rewards. Together, these strategies significantly improve the feedback efficiency of diffusion RLHF. Under identical hyperparameter settings, our approach achieves up to a 6$\\times$ improvement in sample efficiency compared to widely used diffusion RLHF baselines.",
+        "authors": "Eric Zhu, Abhinav Shrivastava, Soumik Mukhopadhyay",
+        "url": "http://arxiv.org/abs/2607.07693v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07693v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了两种互补策略（选择性时间步加权和基于优势的回放）来显著提高扩散模型RLHF的反馈效率。其核心观察是奖励信息在扩散轨迹中分布不均，并通过理论分析将加权方案与PPO的收敛特性联系起来。这直接解决了LLM（生成模型）应用中的数据效率瓶颈，具有明确的理论基础和显著的实践效果（6倍样本效率提升）。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07680v1",
+        "title": "Any-Dimensional Learning by Sampling",
+        "summary": "Many machine learning models are defined for inputs of different sizes, such as point clouds containing different numbers of points, sequences of tokens of different lengths, and graphs on different numbers of nodes. Such models are trained on finitely-many examples of necessarily limited sizes. How well do these models generalize from inputs of small size to larger inputs of size not seen during training? Furthermore, evaluating such models on large inputs is often expensive. How can we sketch large inputs to obtain smaller ones on which the model takes similar values? At the heart of both questions is the need to compare inputs of different sizes and to approximate large inputs by small ones. We present a unified approach to address these questions by using random sampling maps to compare inputs of different sizes. The sampling maps we consider are generalizations of sampling with replacement, random binning, and species sampling. We characterize the application domains in which each type of sampling is appropriate in terms of the symmetries and relations between problem instances of different sizes in the domain. Our framework yields explicit generalization and sketching rates for function classes continuous with respect to a chosen notion of sampling, encompassing large families of functions defined on sequences, graphs, and tensors of different sizes. Specific examples include moment polynomials on measures, homomorphism densities and numbers of graphs, permutation-invariant transformers, and graph neural networks.",
+        "authors": "Eitan Levin, Venkat Chandrasekaran",
+        "url": "http://arxiv.org/abs/2607.07680v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07680v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个统一的方法，通过随机采样映射来解决可变大小输入模型的泛化和速写问题。它深入探讨了不同采样类型（如带替换采样、随机分箱、物种采样）的适用领域，并给出了函数类的显式泛化和速写率。这在理论上具有高度创新性，为处理序列、图和不同大小张量上的函数提供了严谨的数学框架，非常符合您数理统计的背景和对理论创新的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07646v1",
+        "title": "RL Post-Training Builds Compositional Reasoning Strategies",
+        "summary": "Does RL post-training merely amplify primitive skills already latent in a base model, or can it compose primitive skills into new higher-level strategies? We study this question in a fully observable rewrite-grammar environment where the pretraining distribution is known and every generated rewrite can be audited. A Transformer is pretrained on primitive symbol-rewrite chains and post-trained on a Trace-based reasoning task with only a binary final-answer reward. RL solves held-out problems that remain rarely solved by the pretrained model even under much larger sampling budgets, while rejection fine-tuning improves early but plateaus. Trace analysis shows that RL reorganizes primitive competence through a phased compositional mechanism: it first strengthens primitive reductions, then discovers valid composed procedures. These include sequential compositions, which collapse ordered chains of primitive contractions, and parallel compositions, which combine independent primitive contractions in a single step. The composed procedures are not isolated samples; they are reused and consolidated into a stable repertoire. Comparing RL with rejection fine-tuning shows that the key difference is not exploration volume but selectivity: RFT produces many shortcut-like rewrites, much of them invalid, whereas RL concentrates exploration into valid reusable structure. Pretraining ablations show that the emergence of compositional strategies is gated not by primitive exposure alone, but by whether pretraining organizes primitive competence into reduction procedures that RL can later compress. The base model provides weak procedural ingredients; RL builds them into reliable higher-level strategies.",
+        "authors": "Azwar Abdulsalam, Nishil Patel, Andrew Saxe",
+        "url": "http://arxiv.org/abs/2607.07646v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07646v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究探讨了RL后训练如何将基本技能组合成新的高层策略，而非仅仅放大现有技能。通过在可审计的重写语法环境中进行实验和轨迹分析，揭示了RL通过分阶段的组合机制重组原始能力。这为理解LLM的推理能力提供了机制解释，具有重要的理论创新性，有助于设计更有效的RL训练方法，避免了纯粹的经验性堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07519v1",
+        "title": "Gradient-free Riemannian Langevin Sampler",
+        "summary": "We address the problem of efficiently sampling multimodal probability distributions, where standard Markov Chain Monte Carlo methods often suffer from poor mixing and mode trapping. To mitigate these issues, we propose Gradient-free Riemannian Langevin Sampler (GRiLS), a novel proposal that improves exploration without requiring gradient evaluations of the target density. Our approach introduces a Riemannian metric which reshapes the local geometry in order to facilitate transitions across modes. The resulting gradient-free MCMC algorithm is particularly suitable for complex, computationally expensive targets where derivatives are unavailable or impractical. The GRiLS proposal requires knowing the mean and covariance of the target density, which we estimate using an ensemble of interacting particles. Empirical results on multimodal benchmarks demonstrate that GRiLS achieves improved mixing compared to existing gradient-based and gradient-free MCMC approaches.",
+        "authors": "Ricardo Baptista, Olivier Zahm",
+        "url": "http://arxiv.org/abs/2607.07519v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07519v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "GRiLS提出了一种无需梯度评估即可高效采样多模态概率分布的新方法。它通过引入黎曼度量来重塑局部几何，以促进模式间的转换。这种梯度无关的MCMC算法对于计算成本高昂或导数不可用的复杂目标尤为适用。其理论严谨性体现在黎曼几何的应用和对目标密度均值/协方差的估计，直接契合数理统计背景，具有很高的理论创新性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07510v1",
+        "title": "Stability of Flow Models for Graph Signals",
+        "summary": "Generating signals on graphs requires permutation-equivariant models that exhibit stability with respect to relative structural perturbations. While favorable stability properties of Graph Neural Networks (GNNs) have been well documented, it is unclear how structural errors propagate through the dynamics of continuous generative flow models that are gaining traction for graph signal generation. In this paper, we analyze continuous normalized flow models parameterized by GNNs and show that permutation equivariance is preserved for both the resulting continuous-time ordinary differential equations and their discrete numerical approximations used as graph signal samplers. Our primary contribution is to derive explicit stability bounds on the generated probability distributions, which quantify how relative graph perturbations affect the final sampled signals. Motivated by these theoretical bounds, we introduce a stability-promoting regularized flow matching strategy that actively penalizes the spatial Lipschitz constant of the vector field during model training. Experiments using synthetic smooth signals on stochastic block model graphs and real-world fMRI signals on brain connectomes demonstrate that this bound-oriented approach yields generative models that are more robust to structural noise, without sacrificing output quality.",
+        "authors": "Martin Schmidt, Gonzalo Mateos",
+        "url": "http://arxiv.org/abs/2607.07510v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07510v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文分析了图信号流模型的稳定性，并首次推导了生成概率分布的显式稳定性界限，量化了相对图扰动如何影响最终采样信号。在此基础上，提出了稳定性促进的正则化流匹配策略。这在理论上具有很高的严谨性和创新性，为图生成模型的鲁棒性提供了坚实的理论基础，并解决了实际应用中结构噪声的瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07494v1",
+        "title": "GIFT: Geometry-Informed Low-precision Gradient Communication for LLM Pretraining",
+        "summary": "Gradient communication is a primary scaling bottleneck in large language model (LLM) pretraining. Communicating gradients in low-precision formats, such as FP8 and NVFP4, can significantly reduce the communication volume. Existing methods quantize gradients via linear or nonlinear mappings in Euclidean space, often degrading model performance because highly anisotropic gradients incur direction-dependent distortion. We present GIFT, a geometry-informed gradient scaling method that performs low-precision communication in geometry-aware coordinates. By transforming gradients into a near-isotropic space before quantization, GIFT makes low-precision representations substantially more faithful to their high-precision counterparts. GIFT only changes the coordinate system used for low-precision gradient communication and does not change the optimizer, training recipe, communication collective, or low-precision format. We also develop a simplified geometry-aware transformation algorithm with low-rank approximation and selective application to balance the computation overhead and communication reduction. We examine the empirical convergence of GIFT using Llama-300M and Llama-600M models. Our results show that GIFT reduces the end-to-end pretraining time of Llama-600M by 7.6% on 64 NVIDIA GH200 Superchips, while improving the downstream task preservation profile over direct Euclidean FP8 communication under the same optimizer and communication path.",
+        "authors": "Jieying Wang, Shuyuan Fan, Mingkai Zheng, Zhao Zhang",
+        "url": "http://arxiv.org/abs/2607.07494v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07494v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "GIFT提出了一种几何感知的低精度梯度通信方法，用于LLM预训练。它通过将梯度转换到近各向同性空间进行量化，显著提高了低精度表示的保真度。这直接解决了LLM预训练中梯度通信的瓶颈（模型压缩/数据效率），并在理论上通过几何变换提供了创新性的解决方案，而非简单的量化技术堆砌。实验结果也验证了其在加速训练和保持下游任务性能方面的有效性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07386v1",
+        "title": "Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity",
+        "summary": "Linear attention models allow a fixed state size and a fixed amount of compute per token. However, due to their limited state size, linear attention models fall behind in long-context recall compared to softmax-attention-based transformer architectures. Increasing the state size of linear attention improves recall performance but at the cost of higher FLOPs. In this work, we introduce Sparse Delta Memory (SDM), an architecture that scales the hidden state of gated linear RNNs to orders of magnitude higher capacity using a sparse addressing scheme. SDM extends the Gated DeltaNet architecture by replacing the dense key-value outer product with sparse reads and writes to a large explicit memory. We show that, under an isoFLOP constraint and with an identical number of parameters, a higher state memory capacity significantly improves performance on in-context learning and long-context retrieval tasks. Moreover, by learning the initial state of the SDM memory and therefore using it as a parametric memory, we show that the model further improves on a wide range of common-knowledge and reasoning tasks.",
+        "authors": "Loïc Cabannes, Pierre-Emmanuel Mazaré, Gergely Szilvasy, Matthijs Douze, Maria Lomeli, Ilze Amanda Auzina, Justin Carpentier, Gabriel Synnaeve, Hervé Jégou",
+        "url": "http://arxiv.org/abs/2607.07386v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07386v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "Sparse Delta Memory (SDM) 旨在通过稀疏寻址方案扩展线性RNN的隐藏状态容量，以解决其在长上下文召回方面的不足。它用稀疏读写替换了密集的键值外积，并在isoFLOP约束下展示了更高的状态记忆容量对性能的显著提升。这是一种具有理论创新性的架构改进，直接解决了长上下文处理的瓶颈，且避免了纯粹的工程堆砌。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07379v1",
+        "title": "Physics-Audited Agentic Discovery in Scientific Machine Learning",
+        "summary": "In agentic scientific machine learning (SciML), large language model (LLM) agents can discover surrogate models and select one by an automated score, typically an error metric. A low error, however, does not establish that the predicted fields satisfy the physics that matter for mechanics, such as boundary conditions, superposition, stiffness scaling, or causality. We introduce Physics-Audited Agentic SciML (PA-SciML), a verification-first workflow for agentic SciML discovery. The workflow fixes a scoring evaluator before search, derives reviewable machine-checkable physics requirements, checks each trained candidate on its outputs, and separately searches prescribed input ranges or measured load-history spans for high-violation cases without reference solution fields. A surrogate is reported as verified only under the stated checks. When enabled, the workflow also adds advisory numerical probes before training and tests one modeling change at a time to record which isolated edits are associated with score gains before reuse. In the reported computational-solid-mechanics numerical examples, the static elasticity run selects a surrogate with lower validation error than the error-only baseline while both selected models pass the common linear-elastic checks. In the transient elastodynamics run, an error-only baseline with similar mean error fails a stricter causality check by responding to future parts of the loading history, while the selected surrogate passes the stated checks. The main distinction is per-candidate physics evidence on predicted fields, not a richer aggregate score.",
+        "authors": "Diab W. Abueidda, Bilal Ahmed, Panos Pantidis, Mostafa E. Mobasher",
+        "url": "http://arxiv.org/abs/2607.07379v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07379v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "PA-SciML提出了一种物理审计的代理科学机器学习工作流，强调在代理发现过程中对物理原理进行验证。它解决了传统代理SciML仅依赖误差度量可能导致物理不一致的问题。其创新点在于在搜索前固定评估器，推导可验证的物理要求，并检查每个候选模型的输出。这为科学机器学习提供了更严谨、更可靠的范式，具有重要的理论和实践意义，尤其是在高风险的科学领域。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07233v1",
+        "title": "HPG-Diff: Hierarchical physics-guided diffusion with differentiable connectivity constraints for topology optimization",
+        "summary": "Deep generative models offer a promising paradigm for topology optimization, enabling rapid design exploration. However, these approaches lack intrinsic physics guidance, often leading to poor generalizability across unseen boundary conditions and the formation of floating material artifacts. To address these limitations, we propose Hierarchical Physics-Guided Diffusion (HPG-Diff), a novel diffusion framework that enforces physics consistency through two synergistic mechanisms. First, we introduce a hierarchical physics-guided strategy that aligns different precomputed physics features with the denoising process, guiding material distribution toward optimal load paths to enhance generalizability. Second, we propose a floating material suppression loss as a differentiable connectivity constraint inspired by thermal conduction to improve topological connectivity. By simulating a virtual heat propagation process from load positions, this mechanism explicitly penalizes floating material during training. Quantitative evaluations demonstrate that HPG-Diff achieves average compliance errors of 0.87% (in-distribution) and 5.29% (out-of-distribution), while reducing floating material ratios to 2.90% and 2.44%, respectively. Furthermore, case studies on a 3:1 rectangular domain, including cantilever and bridge benchmarks, provide preliminary evidence that lightweight LoRA fine-tuning with a small dataset can support the adaptation of HPG-Diff to rectangular non-square domains.",
+        "authors": "Jinbo Yang, Mingyue Yuan, Boyuan Zhang, Yoshifumi Kitamura, Shikai Jing",
+        "url": "http://arxiv.org/abs/2607.07233v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07233v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "HPG-Diff提出了一种分层物理引导扩散模型，用于拓扑优化。它通过分层物理引导策略和可微分连通性约束来强制执行物理一致性，解决了现有生成模型缺乏内在物理指导和易产生浮动材料的问题。这种将物理约束深度融入扩散模型的理论创新，使其在泛化性和拓扑连通性方面表现出色，为材料设计等实际应用提供了更可靠的解决方案。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07232v1",
+        "title": "DiPhon: Diffusion on Graphons for Scalable Graph Generation",
+        "summary": "Diffusion models represent a leading paradigm for graph generation, with notable impact in domains such as molecular design. Yet, scaling these models to large graphs remains an open problem. We approach this question in the dense-graph setting through the lens of graphons, the size-agnostic limit objects of dense graph sequences, to study how structural graph statistics behave across node-size scales. This perspective leads to DiPhon, a diffusion framework for size-scalable graph generation. Specifically, we formulate a continuous diffusion process on the graphon space via a Jacobi stochastic differential equation (SDE), and propose DiPhon, a discretized graph-level process that mimics these dynamics on finite graphs. We further derive the corresponding reverse-time process, which requires access to the marginal score. For the Jacobi process, this score interestingly admits a tractable form, which we estimate from data via graph denoising and plug into the reverse process to generate graph samples. We prove that DiPhon matches exactly the first moment of the marginal distributions induced by the continuous graphon process, and approximates the second moment up to a closed-form discrepancy. Thus, DiPhon inherits key size-agnostic statistical properties of the graphon dynamics, providing a principled route toward scalable graph generation. Empirically, we demonstrate this scalability by training on small graphs and generating progressively larger graphs at inference time, without retraining, while preserving their core topological properties.",
+        "authors": "Sergio Rozada, Yiming Qin, Manuel Madeira, Pascal Frossard, Alejandro Ribeiro",
+        "url": "http://arxiv.org/abs/2607.07232v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07232v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "DiPhon提出了一种基于Graphons的扩散框架，用于可伸缩图生成。它将连续扩散过程公式化在Graphon空间上，并推导了相应的逆向过程，证明了其与Graphon动力学的关键尺寸无关统计特性相匹配。这在理论上具有极高的严谨性和创新性，为大规模图生成提供了坚实的数学基础，解决了现有扩散模型在扩展到大图时的瓶颈，非常符合您对数理统计和理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07089v1",
+        "title": "Structural Adversarial Attacks on Relational Deep Learning under Integrity Constraints",
+        "summary": "Relational Deep Learning (RDL) has become a standard methodology for machine learning on relational databases: the database is encoded as a heterogeneous temporal graph in which tuples become nodes and primary-key to foreign-key (PK-FK) dependencies become typed edges, over which a graph neural network is trained for downstream prediction. We study the adversarial robustness of this pipeline. We consider a white-box attacker who knows how the graph is built and the model is trained, reasons about perturbations on the graph, but can only act on the upstream database, by rewiring foreign-key references while preserving the integrity constraints of the schema (foreign-key validity, the degree-one FK constraint, and functional dependencies). This restricts the attacker to a constrained, combinatorial set of admissible edits under a global perturbation budget, which is intractable to explore exhaustively and made non-additive by GNN message passing. We investigate seven attack heuristics - two random sampling baselines and five gradient-guided variants that exploit differentiable edge masks - and evaluate them on the RelBench rel-f1 benchmark. Gradient-based attacks consistently outperform random baselines on regression tasks, whereas gains on classification are smaller, which we attribute to low label-flip rates and greater local stability of classification outputs.",
+        "authors": "Alan Gany, Bogdan Cautis, Silviu Maniu",
+        "url": "http://arxiv.org/abs/2607.07089v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07089v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文研究了关系深度学习在完整性约束下的结构对抗性攻击。它将数据库编码为异构时间图，并考虑了在保持模式完整性约束的前提下，通过重连外键引用进行攻击。这在理论上提出了一个具有挑战性的约束组合优化问题，并探讨了梯度引导攻击的有效性。它深入分析了RDL模型的鲁棒性，具有重要的理论意义和潜在的实践影响，有助于开发更安全的RDL系统。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06987v1",
+        "title": "UP: Unbounded Positive Asymmetric Optimization for Breaking the Exploration-Stability Dilemma",
+        "summary": "Reinforcement learning (RL) has become the standard paradigm for enhancing the complex reasoning capabilities of large language models (LLMs). To achieve sample efficiency, modern RL frameworks rely on importance sampling (IS). However, these algorithms suffer from an exploration-stability dilemma. Pure IS often leads to catastrophic training instability, while standard clipping mechanisms used to mitigate this instability strictly constrain the policy update budget. By formalizing the concept of Probability Capacity (Cap), we reveal that conservative clipping structurally stifles exploration by prematurely truncating the update budget for correct but low-confidence reasoning paths. To break free from these constraints, we propose Unbounded Positive Asymmetric Optimization (UP), a universal and plug-and-play objective. UP theoretically restructures the optimization process by anchoring the policy to its current state via the stop-gradient operator. This asymmetric design unleashes unclipped, stable gradients for positive advantages to maximize exploration, while maintaining standard clipping safeguards for negative advantages to prevent training instability. Furthermore, our formulation readily extends across different optimization granularities, including token-level (GRPO, DAPO) and sequence-level (GSPO) frameworks. Extensive experiments demonstrate that UP enhances exploration capacity and achieves superior reasoning accuracy across diverse RL algorithms (DAPO, GSPO, and GRPO), model architectures (Dense, MoE, and vision-language), and training modalities (language and multimodal), validating UP as a truly universal plug-and-play enhancement for RL-based training.",
+        "authors": "Chongyu Fan, Pengfei Liu, Jingjia Huang, Sijia Liu, Yi Lin",
+        "url": "http://arxiv.org/abs/2607.06987v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06987v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "UP（Unbounded Positive Asymmetric Optimization）提出了一种通用的、即插即用的目标函数，用于解决LLM强化学习中的探索-稳定性困境。通过形式化“概率容量”概念，并引入非对称优化设计，UP在理论上重构了优化过程，允许正优势的无限制探索，同时保持负优势的标准剪裁以防止不稳定。这在理论上具有高度创新性，并被证明能显著提高LLM在多种RL算法、模型架构和训练模态下的推理准确性，直接解决了LLM训练的关键瓶颈。"
+    }
+]

@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.07682v1",
+        "title": "Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization",
+        "summary": "The inverse design of physical systems governed by partial differential equations is computationally demanding due to the high dimensionality and non-convexity of design spaces. Generative models for inverse design often lack robustness and transferability, whereas evolutionary strategies are robust but struggle in high-dimensional spaces. This paper introduces a Neural Operator-enabled Topology-informed Evolutionary Strategy (NOTES) that integrates dimensionality reduction, representation learning, and evolutionary optimization for efficient and transferable inverse design. NOTES couples a DeepONet-based neural operator with the Covariance Matrix Adaptation Evolution Strategy (CMA-ES) to perform global optimization in a compact latent space that encodes topology-aware priors while discovering high-performance designs for unseen operating conditions. Applied to nanophotonic beam-deflector inverse design governed by Maxwell's equations, NOTES reduces the design dimensionality from 256 to 25 and consistently achieves over 95 percent efficiency, outperforming CMA-ES, topology optimization, and other baselines. Applied to structural optimization, NOTES discovers designs that achieve compliance down to 246. By decoupling topology learning of a DeepONet from the governing physics in a PDE solver, NOTES provides a flexible and transferable framework for the inverse design of physical systems.",
+        "authors": "Xiangming Huang, Guannan Zhang, Lu Lu, Raphaël Pestourie",
+        "url": "http://arxiv.org/abs/2607.07682v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07682v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将神经算子（DeepONet）与拓扑感知进化策略（CMA-ES）相结合，解决了偏微分方程（PDE）约束下的逆向设计问题。其强调在紧凑潜在空间中进行全局优化，并编码拓扑感知先验，涉及PDE、优化理论和表示学习，理论基础扎实，与您将严谨数学逻辑应用于AI系统的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07623v1",
+        "title": "Higher-Order Geometric Updates for Levenberg-Marquardt Method via Riemann Normal Coordinates",
+        "summary": "Nonlinear least-squares optimization is central to regression, physics-informed neural networks, and other machine-learning tasks. Such problems have a natural geometric interpretation, model predictions form a manifold in data space, while the chosen parameterization can introduce parameter-effects curvature that becomes a dominant source of nonlinearity. This exposes a limitation of the Levenberg-Marquardt (LM) method, its tangent-space step is applied as a straight update in parameter coordinates. Geodesic acceleration gives a second-order correction, but its removal of parameter-effect curvature is exact only in the infinitesimal-step limit. We propose a Riemann-normal-coordinate Levenberg-Marquardt method (RNC-LM) to improve this consistency for finite optimization steps. By reformulating the geodesic equation, RNC-LM extends geodesic acceleration to arbitrary-order corrections and constructs finite-step updates with progressively higher reparameterization consistency. A line search along the resulting RNC curve controls the traveled distance while keeping the cost close to standard LM. The method eliminates the tangential component of residual acceleration order by order in a moving tangent frame, making the actual objective reduction more consistent with the linear model prediction of LM. On classical nonlinear least-squares benchmarks, RNC-LM improves convergence and robustness in curved valleys and rank-deficient problems. On a reaction-diffusion PINN failure-mode benchmark, it reduces the relative L2 error to the order of 1e-3 and recovers a physically meaningful solution. On a large-scale machine-learning potential-energy-surface fitting task, it achieves a 34-fold speedup over standard LM.",
+        "authors": "Jianing Liu, Dong H. Zhang",
+        "url": "http://arxiv.org/abs/2607.07623v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07623v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过黎曼正规坐标（Riemann Normal Coordinates）为Levenberg-Marquardt方法引入高阶几何更新，以精确处理参数效应曲率。其理论严谨性极高，涉及非线性优化和微分几何，明确提及“任意阶校正”和“重参数化一致性”，是优化理论领域的深刻贡献，与您的数理统计背景和对数学推导的偏好完美匹配。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07585v1",
+        "title": "Convergence Analysis of the Restarted Moving-Anchored Extra-Gradient Method in the Absence of Local Lipschitz Continuity",
+        "summary": "In this paper, we introduce the moving-anchored extra-gradient (MAEG) method for solving monotone inclusion problems involving the sum of a continuous monotone operator and a maximal monotone operator. Notably, the distance from the anchor point to the solution set is designed to be monotonically non-increasing. Under Lipschitz continuity of the forward operator, MAEG attains an $\\mathcal{O}(1/k)$ non-asymptotic iteration complexity, and when a positive anchor-update parameter is used, it further achieves an $o(1/k)$ asymptotic rate. Furthermore, leveraging the specific behavior of the anchor point, we propose a tailored restart strategy. We demonstrate that this strategy ensures convergence even in the absence of local Lipschitz continuity, while preserving the original iteration complexity guarantees whenever the Lipschitz condition holds.",
+        "authors": "Defeng Sun, Liping Zhang, Wei Zhao",
+        "url": "http://arxiv.org/abs/2607.07585v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07585v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文针对单调包含问题，提出了重启的移动锚点超梯度（MAEG）方法，并提供了严格的收敛性分析，包括在缺乏局部Lipschitz连续性条件下的收敛保证。这是一篇纯粹的优化理论研究，其“收敛性分析”和“迭代复杂度”等内容直接满足您对优化收敛性和理论严谨性的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07513v1",
+        "title": "Fast Rates for Semi-Supervised Learning via Data-Augmentation Graph Regularization",
+        "summary": "Self-supervised learning matches supervised accuracy from a fraction of the labels, but the labeled-sample efficiency behind this has lacked a theoretical explanation. We provide one. Data augmentation induces a similarity graph on the unlabeled data, so downstream learning on that graph is graph-Laplacian-regularized learning. We prove a fast transductive rate, $O(1/n_L)$ in the number of labels, in place of the supervised $O(1/\\sqrt{n_L})$, by carrying the leave-one-out stability apparatus of Johnson and Zhang (JMLR 2007) over to the augmentation graph, and without the unrealistic assumptions of limit-based analyses (exact kernel, generalizing features). The bound makes augmentation quality explicit: the expected error is at most $C/n_L + R_{\\mathrm{DA}}(y)$, where the data-augmentation alignment error $R_{\\mathrm{DA}}(y)$ is the graph-cut mass of augmentations that cross a label boundary, so good augmentations let few labels suffice. The analysis uses a streamlined loss that drops the projector, negative-sample, and orthogonality overhead of standard objectives yet still recovers the top-$K$ ideal features in the infinite-data limit, the augmentation-kernel eigenspace studied by Zhai et al. The result explains the observed accuracy-versus-label-count curve rather than only bounding a generalization gap.",
+        "authors": "Adam M. Oberman",
+        "url": "http://arxiv.org/abs/2607.07513v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07513v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文为半监督学习提供了重要的理论解释，通过数据增强图正则化证明了$O(1/n_L)$的快速转导率，并利用leave-one-out稳定性分析。它明确给出了统计保证和理论界限，对理解自监督学习的标签效率提供了深刻的理论基础，是学习理论领域的优秀工作。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07509v1",
+        "title": "Adjusting for Outcome Reporting Bias in Meta-analysis: A Multiple Imputation Approach",
+        "summary": "Background: Outcome reporting bias (ORB) occurs when study outcomes are selectively reported based on their results. ORB potentially undermines the credibility and validity of meta-analyses and contributes to research waste by distorting overall treatment effects. ORB can be viewed as a missing data problem in which unreported study outcomes introduce bias. Despite the serious implications ORB poses, it remains an underrecognized issue, with only a few adjustment methods available.   Methods: We propose an approach that addresses unreported study outcomes in meta-analyses through multiple imputation for univariate and multivariate meta-analysis. To assess the impact of ORB in meta-analyses, we apply our proposed methodology to real clinical data affected by ORB, and conduct a simulation study to evaluate the method's performance under a range of scenarios.   Results: The proposed method provides bias-adjusted estimates under assumed selective non-reporting mechanisms. In the application to clinical data, ORB-adjusted estimates were systematically shifted towards less extreme treatment effects compared with naive analyses, highlighting the potential magnitude of ORB in practice. The simulation study shows that the extent of adjustment depends on the assumed selection mechanism and the degree of heterogeneity, with stronger selection leading to larger adjustment.   Conclusions: Imputing unreported study outcomes provides a promising approach to address ORB in meta-analyses. The multivariate approach extends ORB adjustment to jointly model correlated outcomes, allowing borrowing of strength across outcomes. Overall, we propose a practical and flexible approach for evaluating the sensitivity of univariate and multivariate meta-analytic conclusions to ORB.",
+        "authors": "Cora Burgwinkel, Saverio Fontana, Leonhard Held",
+        "url": "http://arxiv.org/abs/2607.07509v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07509v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一种通过多重插补来调整荟萃分析中结果报告偏差（ORB）的方法，将其视为缺失数据问题。它提供了严谨的统计方法论，包括对单变量和多变量荟萃分析的适用性，并评估了其在不同选择机制下的表现，对于提高统计分析的可靠性具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07486v1",
+        "title": "Discovering Geometric Biases in 3D Face Reconstruction: A Curvature-Aware Spectral Framework for Fairness Evaluation",
+        "summary": "3D Morphable Models (3DMMs) remain the standard parametric shape priors for many state-of-the-art 3D face reconstruction algorithms. However, as these models are derived from a finite number of 3D face samples, they inherit the morphological biases of their training data, potentially limiting their generalizability across diverse global populations. In this paper, we propose a novel framework to analyze 3DMM reconstructions through the lens of surface curvature, with the objective to discover, quantify and visualize biases. While standard evaluation metrics often rely on Euclidean distances, our reconstruction error captures subtle surface nuances such as local topology or undulations. To do so, we leverage the Laplace-Beltrami Operator (LBO) to generate high-resolution curvature error maps, providing a localized and geometrically meaningful visualization of discrepancies between ground truth faces and reconstructed meshes. We derive from it an error metric that we validated through a user study, observing a significantly higher correlation to human perception compared to traditional methods. Furthermore, we conduct extensive experiments across several 3DMM bases and fitting algorithms, uncovering systematic age-related biases and providing preliminary evidence of biases associated with gender and ethnicity. Our findings highlight the necessity of adopting curvature-aware evaluation protocols to ensure demographic fairness and geometric precision in future 3D face reconstruction research.",
+        "authors": "Veronika Shilova, Emmanuel Malherbe, Giovanni Palma, Panagiotis-Alexandros Bokaris, Laurent Risser, Jean-Michel Loubes",
+        "url": "http://arxiv.org/abs/2607.07486v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07486v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "论文利用表面曲率和Laplace-Beltrami算子分析3D人脸重建中的几何偏差，提供了一种几何上严谨的公平性评估框架。它将微分几何应用于AI系统（3DMMs）的分析，以发现和量化偏差，符合您对数学逻辑和理论基础的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07470v1",
+        "title": "A Theory of Contrastive Learning with Natural Images",
+        "summary": "Why does contrastive learning with simple images and augmentations yield useful representations for downstream tasks? We address this question by analytically computing the optimal representation in terms of a contrastive loss for a range of basic augmentations and any image dataset with stationary statistics. We show that for certain augmentations the optimum can be attained by a CNN whose first layer filters are sinusoids, followed by a pointwise nonlinearity, global average pooling, and a final linear layer that performs partial whitening. We also show that the optimal weights in such CNNs for more complicated augmentations are still sinusoids. The frequencies of the sinusoids and their weights can be computed using a simple waterfilling algorithm given the dataset's expected power spectrum. Experiments with different image datasets and augmentations show that such CNNs trained with SGD empirically learn sinusoids in their first layer and to perform partial whitening",
+        "authors": "Antonio Torralba, Yair Weiss",
+        "url": "http://arxiv.org/abs/2607.07470v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07470v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文旨在为对比学习提供理论基础，分析性地计算了最优表示，并展示了CNN第一层滤波器与数据集功率谱之间的关系。它深入探讨了表征学习的数学本质，理论深度极高，对理解现代AI系统的工作原理具有根本性的指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07375v1",
+        "title": "On Adversarial Vulnerability of Vision-Language Models through the Lens of Intermediate Spectral Subspaces",
+        "summary": "Adversarial vulnerability in deep neural networks (DNNs) has been studied from the perspectives of decision-boundary geometry, feature robustness, input-output Jacobians, and the instability of inverse problems. Here, we focus on the spectral structure of intermediate linear transformations that propagate information through modern DNNs, an unexplored mechanism of adversarial vulnerability. Specifically, we investigate transformer-based vision-language models, whose linear layers admit interpretable spectral decompositions and whose widespread adoption makes understanding their robustness increasingly important. We propose a white-box spectral-subspace-guided attack (SSGRA) that aligns intermediate representations with the subspace spanned by the bottom right singular vectors. Our experiments show improved attack effectiveness over existing baselines. In addition, SSGRA offers a spectral interpretation of adversarial vulnerability in VLMs, providing insights for improving their robustness.",
+        "authors": "Chethan Krishnamurthy Ramanaik, Tobias Callies, Michael Hecht, Eirini Ntoutsi",
+        "url": "http://arxiv.org/abs/2607.07375v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07375v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文通过中间线性变换的谱结构来研究视觉语言模型（VLM）的对抗性脆弱性，提出了谱子空间引导攻击（SSGRA）。它利用谱分解和奇异向量等数学工具深入分析AI模型的内部机制，为提高模型鲁棒性提供了理论洞察。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07330v1",
+        "title": "Hypergraph Neural Stochastic Diffusion: An SDE Framework for Uncertainty Estimation",
+        "summary": "Hypergraph neural networks have shown powerful capability in modeling higher-order relations, yet their predictive uncertainty remains underexplored. Unlike pairwise graphs, uncertainty in hypergraphs arises not only from noisy attributes and ambiguous labels, but also from variations in node-hyperedge incidence structures and complex higher-order dependencies. Existing approaches mainly estimate uncertainty from final predictions or rely on computationally expensive ensembles and Bayesian inference, limiting their ability to capture uncertainty evolution during representation learning. In this paper, we propose Hypergraph Neural Stochastic Diffusion(HyperNSD), a stochastic differential equation framework for uncertainty estimation on hypergraphs. HyperNSD models hypergraph representations as stochastic processes evolving over node-hyperedge incidence structures. A learnable drift function captures deterministic higher-order diffusion dynamics, while a learnable stochastic forcing function characterizes structural ambiguity and representation noise. Predictive uncertainty is directly quantified through the variability of stochastic representation trajectories, providing an intrinsic uncertainty measure beyond post-hoc confidence scores. We formulate HyperNSD with neural drift and diffusion networks, enabling joint learning of prediction and uncertainty propagation. Theoretical analyses establish well posedness, perturbation stability,permutation equivariance, and numerical convergence of the proposed stochastic dynamics. Experiments on multiple hypergraph benchmarks demonstrate that HyperNSD achieves reliable uncertainty estimation for out-of-distribution and misclassification detection while preserving competitive prediction accuracy. These results provide a principled stochastic-dynamical framework for trustworthy higher-order representation learning.",
+        "authors": "Zhiheng Zhou, Mengyao Zhou, Dengyi Zhao, Xingqin Qi, Guiying Yan",
+        "url": "http://arxiv.org/abs/2607.07330v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07330v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个基于随机微分方程（SDE）的超图神经网络不确定性估计框架（HyperNSD），将超图表示建模为随机过程。它明确给出了关于适定性、扰动稳定性、置换等变性和数值收敛性的理论分析，将SDE应用于AI模型，理论基础和数学推导非常严谨。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07216v1",
+        "title": "Why Fake ? Unveiling the Semantic Vocabulary of Deepfake Detectors",
+        "summary": "Deepfake (DF) technology poses a significant threat to information integrity, driving the need for robust detection methods. Most DF detectors only consider predicting a binary label for whether the input is real or fake, lacking the justification required for real-world applications like legal proceedings. Explainable DF Detection has emerged to address this limitation, but existing techniques frequently fall short by either relying on human annotations for precise artifact localization or generating superficially plausible textual explanations without grounding. This work investigates the use of post-hoc explainable AI (XAI) to analyze the decision-making process of state-of-the-art black-box DF detectors. Specifically, we employ Encoding-Decoding Direction Pairs (EDDP), a technique suitable for uncovering the concept space of DF detectors (their semantic vocabulary) as well as the mechanism for writing and reading concept information to and from internal representations. Our analysis reveals previously hidden real and fake features learned implicitly during detector training, offering nuanced explanations unattainable through conventional methods. This enables global model understanding, spatially aware concept localization, and counterfactual what-if analysis, all contributing to a deeper comprehension of DF detection strategies.",
+        "authors": "Vazgken Vanian, Alexandros Doumanoglou, Dimitris Zarpalas",
+        "url": "http://arxiv.org/abs/2607.07216v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07216v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文通过后验可解释AI（XAI）方法，特别是编码-解码方向对（EDDP），来揭示Deepfake检测器的语义词汇。它旨在实现全局模型理解和概念定位，通过分析模型内部表示来提供更深层次的解释，对AI模型的可解释性研究具有理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07156v1",
+        "title": "Information Allocation Dynamics in Neural Network Optimization",
+        "summary": "Different optimizers have different update biases, but these biases are usually implicit. Existing studies mainly analyze or control such biases from the geometry of the final solution. However, how optimizer bias forms during training still lacks a clear internal mechanism.   This paper proposes an information allocation dynamics perspective. It interprets optimizer implicit bias as the relative allocation of training signals between weight-like and bias-like parameter pathways. This allocation can be described and adjusted by a continuous preconditioning exponent \\(p\\).   To characterize this mechanism, we first analyze the update contributions of weight and bias to the same residual signal in a minimal linear model. The weight correction term preserves input-dependent residual signals, while the bias correction term preserves the residual mean direction. They therefore correspond to different projection pathways of the residual signal. After substituting the preconditioned update into the residual update equation, the optimizer can change the relative strength of the weight correction term and the bias correction term through different preconditioning factors. Therefore, optimizer implicit bias is not only reflected in the final solution or the global training trajectory. It is also reflected in the relative write-in ratio of training signals across different parameter pathways.   Overall, this paper moves the analysis of optimizer implicit bias from solution-space geometry to update dynamics during training. It reveals that the relative update allocation between weight and bias-like parameters is an important dynamical mechanism that affects parameter trajectories and generalization behavior.",
+        "authors": "Zhang Gongyue, Liu Donghan, Ren Weihong, Sheng Yixuan, Wang Zhiyong, Liu Honghai",
+        "url": "http://arxiv.org/abs/2607.07156v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07156v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文从信息分配动态的角度解释了神经网络优化器的隐式偏差，分析了训练信号在权重和偏置参数路径之间的相对分配。它深入理解了优化过程的内部机制，具有很强的理论分析价值，有助于指导优化器设计和泛化行为的理解。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07117v1",
+        "title": "Tree-of-Thoughts Reasoning for Text-to-Image In-Context Learning",
+        "summary": "In text-to-image in-context learning (T2I-ICL), a model has to infer a latent compositional pattern from fewshot demonstrations for generating a query image. Recent studies show that state-of-the-art multimodal large language models struggle with this setting, particularly due to limited compositional reasoning and sensitivity to prompt construction. In this work, we propose a Tree-of-Thoughts (ToT) reasoning framework for T2I-ICL that introduces a multi-stage reasoning and selection layer that generates, evaluates, and selects among multiple candidate hypotheses before constructing the final prompt for image synthesis. By exploring alternative reasoning branches and selecting a coherent interpretation, the proposed approach mitigates prompt ambiguity and compositional errors. We implement the proposed approach in a complete ToT-T2IICL inference pipeline and evaluate it on the CoBSAT benchmark. Both qualitative and quantitative results show that structured multi-branch reasoning leads to more consistent and semantically aligned image generation compared to baseline and Chain-of-Thought prompting strategies, without any additional training or fine-tuning.",
+        "authors": "Stepanida Alekseeva, Jenifer Kalafatovich, Seong-Whan Lee",
+        "url": "http://arxiv.org/abs/2607.07117v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07117v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了“权重空间物理”的概念，利用可解释的超网络将耦合参数直接映射到流网络权重，并在晶格量子场论中恢复物理结构。它将AI模型权重视为新的物理可观测量，具有高度的创新性和跨学科理论深度，是连接AI与基础科学的优秀范例。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07066v1",
+        "title": "Multiplication Beyond Groups: Stratified Fourier Mechanisms in Transformer Circuits",
+        "summary": "Transformers have demonstrated a remarkable ability to learn algorithmic reasoning, yet mechanistic analyses have mostly focused on globally invertible operations such as cyclic addition and group composition. In this work, we investigate how small transformers learn modular integer multiplication over composite moduli, a fundamentally non-invertible operation due to the presence of zero-divisors. We propose the monoid extension: a localized generalization of Group Composition via Representation (GCR) that suggests the learned computation does not rely on a single global representation space. Instead, the model partitions the input space into local hierarchical algebraic regions, where group-like structure survives and Fourier mechanisms can be applied. In transformers trained on square-free modular multiplication, we find that embeddings organize around these regions, attention exhibits class-sensitive routing and low-rank write directions, and local character features explain a large fraction of the model's output logits. Our results suggest that representation-theoretic mechanisms previously identified for group operations can extend beyond groups to more general structures.",
+        "authors": "Zitong Andrew Chen, Junaid Hasan, Akhil Srinivasan, Hemkesh Bandi, Jarod Alper",
+        "url": "http://arxiv.org/abs/2607.07066v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07066v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文深入研究了Transformer如何学习非可逆的模乘运算，提出了单子扩展（monoid extension）和分层傅里叶机制。它通过抽象代数和表示论对Transformer的内部算法进行机制解释，理论严谨性极高，是理解AI模型内部计算逻辑的典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07047v1",
+        "title": "Riemannian Geometry for Pre-trained Language Model Embeddings",
+        "summary": "Understanding the geometric structure of pre-trained language model embeddings matters for interpretability and safety. We ask whether sentence-level classification signal lives in the Riemannian geometry of contextual token embeddings, and probe it by extracting per-token pullback metrics from a learned encoder's analytical Jacobian and aggregating them with the Fréchet mean on the symmetric positive definite (SPD) manifold; we call this procedure Riemannian Mean Pooling (RMP). Across three datasets with non-trivial linguistic structure (CoLA, CREAK, RTE), RMP outperforms Euclidean mean pooling, while on FEVER-Symmetric, a benchmark constructed to remove annotation-driven lexical artifacts, the method correctly stays at chance. Ablations show that a randomly initialised encoder combined with Fréchet aggregation already beats Euclidean pooling on two of the three signal-bearing datasets, localising the source of the gain to the geometric aggregation rather than to learned manifold structure; the trained encoder contributes additional signal specifically on CREAK, the most knowledge-heavy of the three signal-bearing datasets.",
+        "authors": "Szczepan Konior, Alexandre Quemy, Przemysław Klocek, Grégoire Cattan, Bartłomiej Sobieski",
+        "url": "http://arxiv.org/abs/2607.07047v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07047v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文利用黎曼几何分析预训练语言模型嵌入的几何结构，通过分析性雅可比矩阵提取度量并使用Fréchet均值聚合。它将黎曼几何这一高级数学工具应用于理解AI模型，理论基础和数学推导非常严谨，对于提升PLM的可解释性和安全性具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06912v1",
+        "title": "Causal Inference for Case Studies in Behavioral Health",
+        "summary": "We present a framework for causal inference in behavioral health case studies -- and observational N=1 settings more generally -- under unmeasured confounding. The framework rests on a class of causal estimands, termed $Ω$ estimands, defined as contrasts of functions of an outcome variable's support rather than its distribution. Because such estimands do not depend on how probability is distributed over supports, they are insensitive to the confounding that limits other methods. We prove that, in a structural causal model, the observational and interventional supports of an outcome coincide under a single assumption -- positivity -- without any requirement that confounders be known, measured, or adjusted for. Two optional conditions extend the framework: one licensing a client's recalled baseline as a stand-in for sparsely measured baseline periods, and one connecting support contrasts to conventional mean contrasts through an expected-average identity. We adopt a subjectivist (de Finetti) interpretation of probability and situate the framework within mandates for measurement-based care. A case study of cognitive behavioral therapy for anxiety illustrates an elementary approach a provider can use.",
+        "authors": "Shane Sparkes",
+        "url": "http://arxiv.org/abs/2607.06912v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06912v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "论文提出了一个在未测量混淆下，针对行为健康案例研究（N=1设置）的因果推断框架，引入了新的$Omega$估计量，并证明了其在特定假设下对混淆不敏感。其因果逻辑和统计保证极强，是纯粹的因果推断理论研究，与您对因果逻辑和统计保证的偏好高度一致。"
+    }
+]

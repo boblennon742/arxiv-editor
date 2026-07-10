@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.08522v1",
+        "title": "Stop Guessing When to Stop Testing: Efficient Model Evaluation with Just Enough Data",
+        "summary": "The inherent rigidity of fixed-size benchmarks makes them an inefficient tool for model evaluation. Diverse evaluation objectives, including model ranking, model selection and testing throughout development, demand varying levels of statistical power. The mismatch between fixed sample sizes and these diverse needs results in either excessive computational cost or compromised reliability - a critical concern for model evaluation. To overcome these limitations, we call for adoption of sequential testing in our field. We provide an adaptive evaluation framework, that provides a principled way to navigate the trade-off between efficiency and reliability in model evaluation. Our framework combines the established statistical paradigm of sequential testing with stopping criteria tailored to common evaluation needs such as diminishing returns detection, and minimum detectable effect size. We demonstrate its ability to adaptively manage the efficiency-reliability trade-off on the Open VLM Leaderboard, including, for example, a 80% reduction in computational cost compared to fixed-size evaluation (with a 2.5-point CI width allowance) while maintaining statistical significance.",
+        "authors": "Ofir Arviv, Kristjan Greenewald, Yotam Perlitz, Hadar Mulian, Michal Shmueli-Scheuer, Leshem Choshen",
+        "url": "http://arxiv.org/abs/2607.08522v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08522v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于序贯检验的自适应评估框架，为AI模型评估提供了统计学上严谨且高效的方法。它直接解决了模型评估中的效率与可靠性权衡问题，并提供了统计显著性保证，具有极高的实践影响力，完美契合您对严谨统计保证和现代AI系统应用的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08377v1",
+        "title": "Eigenvalue Calibration for Semantic Embeddings of Large Language Models",
+        "summary": "Uncertainty quantification is central to the reliable deployment of large language models (LLMs), and eigenvalues of semantic embeddings have recently emerged as a key tool in state-of-the-art methods. However, conventional calibration results developed for classification probabilities cannot be directly transferred to eigenvalues. We address this gap by proposing a novel framework for calibrating the eigenvalues of semantic embeddings. We interpret LLMs combined with semantic embeddings of their generated answers as density matrix predictors, and we propose a novel approach to calibrate density matrix predictors by applying temperature scaling to their eigenvalues. We establish entropy-risk equivalence under calibration, derive a central calibration inequality specific to eigenvalues, and prove that temperature-scaled eigenvalues optimize calibration when minimizing proper score risks. Experiments on a variety of real-world settings show that current LLMs are systematically overconfident, and validate our theoretical findings. Together, these results advance the foundations and practice of uncertainty quantification for semantic embeddings.",
+        "authors": "Sebastian G. Gruber, Nassim Walha, Francis Bach, Florian Buettner",
+        "url": "http://arxiv.org/abs/2607.08377v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08377v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次提出了针对大型语言模型（LLM）语义嵌入特征值校准的理论框架。它将LLM解释为密度矩阵预测器，并建立了熵-风险等价和校准不等式，为LLM的不确定性量化提供了坚实的理论基础和清晰的数学推导，对LLM的可靠部署至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08349v1",
+        "title": "Certified Interventional Fidelity: Anytime-Valid, Adaptive Evaluation of Causal Claims in Mechanistic Interpretability",
+        "summary": "Mechanistic interpretability often evaluates explanations by intervening on a model: swapping hidden states, patching activations, ablating components, or comparing a compressed model to the original one. These experiments are usually summarized by a point estimate, even though the evaluation may be monitored while it runs or adapted toward suspected failures. This makes it hard to tell whether a reported fidelity or patching effect is a stable causal claim or a consequence of finite sampling and evaluation choices. We introduce Certified Interventional Fidelity (CIF), a statistical layer for interventional interpretability evaluations. CIF first writes the quantity being reported as a causal estimand: an expectation of a bounded score over a stated input distribution and a stated intervention distribution. It then provides confidence intervals and anytime-valid confidence sequences for this estimand, including under adaptive intervention sampling via bounded mixture importance weighting. We instantiate CIF with Hoeffding-style sequences and variance-adaptive betting sequences, the latter reducing certification cost by 10-30x in our experiments. On MNIST abstractions and GPT-2 Small IOI circuits, CIF certifies high-fidelity claims, shows when apparent method differences are not statistically supported, and makes sensitivity to the intervention distribution explicit.",
+        "authors": "Amir Asiaee",
+        "url": "http://arxiv.org/abs/2607.08349v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08349v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作引入了“认证干预保真度”（CIF）框架，通过因果估计量和随时有效置信序列，为AI可解释性中的因果主张提供了严格的统计保证。它将可解释性评估中的因果逻辑和统计严谨性提升到新高度，对于构建可信赖的AI系统具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08122v1",
+        "title": "Workload-Preserving Differentially Private Synthetic Data for Causal Inference via Maximum-Entropy Calibration",
+        "summary": "Workload-based differentially private (DP) synthetic data methods privately measure aggregate queries and post-process the noisy answers into synthetic records. Generic workloads can achieve strong distributional fidelity, but causal estimands such as the average treatment effect (ATE) depend on treatment-arm balance and outcome moments that generic marginals need not preserve. We propose causal workloads: DP query sets designed around the orthogonal moments used by doubly robust causal estimators. The released workload can be used directly by stable moment-map estimators or reconstructed by maximum-entropy calibration into reusable synthetic data; our theory decomposes ATE error into sampling, privacy, workload-approximation, Monte Carlo, and calibration terms. We also introduce Causal-AIM, an adaptive workload selector, and a noise-aware multiple-imputation (NA+MI) procedure for confidence intervals from DP synthetic data. Because the workload is released once, the same DP synthetic table can support ATE, ATT, and subgroup analyses without additional privacy spending. Empirically, causal workloads are most useful at strict privacy budgets and for calibrated uncertainty, while generic workloads often retain an advantage for point RMSE as privacy relaxes. The broader lesson is a tradeoff: distributional fidelity can help point accuracy, but valid causal inference requires preserving causal moments and propagating DP noise rather than treating synthetic rows as real.",
+        "authors": "Amir Asiaee, Kaveh Aryan",
+        "url": "http://arxiv.org/abs/2607.08122v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08122v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文结合差分隐私和因果推断，提出了针对因果推断的差分隐私合成数据方法。它通过分解平均处理效应（ATE）误差，提供了严谨的统计保证和因果逻辑，对于在保护隐私的同时进行可靠的因果分析至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08017v1",
+        "title": "Can We Trust LLM's Logic? Quantifying Uncertainty, Coherence, and Robustness via a Graph-Based Framework",
+        "summary": "Large-Language Models (LLMs) can be prone to flawed and unfaithful reasoning that decoding strategies like Self-Consistency (SC) fail to detect as they evaluate only final-answer agreement while ignoring the logical validity of intermediate steps. This raises three fundamental questions: How can we reliably quantify uncertainty in LLM reasoning? Can semantic, structural, and causal awareness select more faithful reasoning compared to naïve majority voting? and How robust is reasoning topology under adversarial conditions? To address these questions, we introduce GRAPHEVAL, a graph-based reasoning framework that re-frames uncertainty quantification (UQ) as a holistic reasoning fidelity problem. We propose a novel UQ metric, Graph Reasoning Coherence Score (GRCS), that quantifies semantic-structural consensus of the reasoning space and captures pathological mode collapse and confident hallucinations. We find that GRCS is the only metric that is consistently negatively correlated with reasoning faithfulness across both more capable and smaller models. Additionally, we introduce Graph Self-Consistency (GSC), a medoid-based decoding strategy that trades nominal accuracy for reasoning fidelity, exposing the degree to which SC is inflated by unfaithful lucky guesses in smaller models, while preserving or improving accuracy in more capable ones. Finally, through adversarial medoid ablation, we demonstrate that the GSC-selected path acts as a \"load-bearing path\" and forcing models away from it degrades reasoning faithfulness and, in targeted cases, causes drops in accuracy.",
+        "authors": "Riccardo Revalor, Jalees Rehman, Debjit Pal",
+        "url": "http://arxiv.org/abs/2607.08017v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08017v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于图的LLM推理框架，用于量化LLM推理过程中的不确定性、连贯性和鲁棒性。它引入了新的度量（如GRCS）和解码策略，为理解和评估LLM的逻辑推理提供了严谨的数学工具和理论视角，对LLM的信任度研究具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08724v1",
+        "title": "Latent Memory Palace: Reasoning for Control as Autoregressive Variational Inference",
+        "summary": "Human decision-making is highly flexible -- some actions are taken immediately; others require longer deliberation. Language models have exhibited a similar capacity for adaptive \"reasoning.\" However, transferring this capability to continuous control policies has been challenging, as directly reasoning in language space may lack the granularity for spatial understanding and precise motions. In this work, we show that reasoning for control policies can emerge by organizing information in an autoregressive latent space reminiscent of a memory palace, where retrieval is iterative and adaptive. Our method, Latent Memory Palace (LMP), formulates reasoning as variational inference with an autoregressive latent distribution. We derive a latent-space reinforcement learning technique to tractably optimize its variational lower bound. The resulting policy, LMP-$π$, achieves strong empirical performance in simulation and real-world domains while exhibiting interpretable, adaptive allocation of test-time compute. We further show that the same framework yields a variable-length action tokenizer, LMP-$\\texttt{tok}$, which significantly improves the performance of downstream autoregressive policies. Together, these results present a new perspective on latent reasoning for control through the lens of variational inference.",
+        "authors": "Chuning Zhu, Eva Xu, Jose Barreiros, Krishnan Srinivasan, Paarth Shah, Abhishek Gupta",
+        "url": "http://arxiv.org/abs/2607.08724v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08724v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作将控制策略的推理问题重新表述为自回归变分推断，并推导了潜在空间强化学习技术以优化其变分下界。它具有强大的理论基础（变分推断）和清晰的数学推导，对现代AI系统中的控制策略和决策制定有重要影响。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08651v1",
+        "title": "Secure Decentralized Federated Learning via Gossip and Virtual Voting",
+        "summary": "Decentralized federated learning (DFL) removes the central server by letting nodes exchange model updates through peer-to-peer gossip, but existing gossip-based methods often lack provenance finality and resilience to Byzantine or lazy participants. Ledger-assisted federated learning (FL) improves auditability, yet blockchains, shards, or settlement committees can reintroduce global coordination costs that conflict with DFL locality. This paper proposes \\emph{gspDAG-FL}, a secure DFL framework that derives consensus from the same gossip history used to disseminate models. Nodes exchange model payloads only with neighbors, while full nodes collect event certificates and receiver-endorsed accepted gossip proofs, reconstruct a compact Topology directed acyclic graph (DAG), and run Hashgraph-style virtual voting followed by compact full-node certificates. Finality is over unique model-origin tuples, not identical local parameter states. To improve resilience, gspDAG-FL combines payload validation, accepted-proof validation, and private semantic audit before aggregation. We formalize the adversarial setting, prove safety and conditional liveness of the control plane, and give a convergence guarantee for certified perturbed gossip under time-varying effective mixing. Experiments on MNIST classification and Penn Treebank language modeling, using fair held-out validation/audit data and networks up to \\(N=100\\), show that gspDAG-FL achieves learning quality close to validation-based ledger FL while reducing coordination bottlenecks, improving throughput, and maintaining high invalid-origin detection under mixed Byzantine and lazy participation.",
+        "authors": "Amirhossein Taherpour, Xiaodong Wang",
+        "url": "http://arxiv.org/abs/2607.08651v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08651v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个安全的去中心化联邦学习（DFL）框架，通过形式化对抗设置，证明了控制平面的安全性和条件活性，并给出了收敛性保证。其理论严谨性高，对分布式AI系统的安全和鲁棒性具有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08316v1",
+        "title": "INTENT: An LSTM Framework for Vehicle Intention Prediction in Intersection Scenarios with Comprehensive Ablation Analysis",
+        "summary": "Vehicle intention prediction is a pivotal aspect in the agility and safety of autonomous vehicles in all driving scenarios; if genuine enhancement of autonomous vehicles are required, we need to make them adopt human interpretation of driver's intention especially in cases that require a lot of human interaction as well as complex driving behaviors like the ones at intersections, roundabouts and emergency cases such as sudden stops where vehicle intention prediction helps in taking the correct evasive action within a real time period where every second of action makes an impact and can prevent a catastrophe from taking place. In the worst case, it helps minimize the damage and make safety a priority. Intention prediction can also be used to enhance trajectory prediction (intention conditioned trajectory prediction). In this study, The INTENT framework is proposed using LSTM model to predict the vehicle's intention at intersections 2 seconds ahead of the event occurrence to predict whether the cars in intersections are going straight, turning left, or turning right. Various model experiments and ablation study are thoroughly tested on InD dataset achieving 99.71% accuracy.",
+        "authors": "Logine M. Zaki, Catherine M. Elias",
+        "url": "http://arxiv.org/abs/2607.08316v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08316v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文引入了新的统计量——圆形期望分位数，并对其存在性、唯一性、一致性和渐近正态性进行了严格的数学推导和证明。这是数理统计领域的基础性贡献，对于处理方向性数据具有重要理论价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08089v1",
+        "title": "Bias-Corrected Multiplier Bootstrap Inference for Spectral Edges of Large Covariance Matrices",
+        "summary": "Inference for spectral edges of large covariance matrices is a fundamental problem in high-dimensional statistics. A major difficulty is that the largest non-spiked sample eigenvalues, which serve as natural estimators of the edge, fluctuate on the Tracy--Widom scale. Consequently, valid inference requires accurate centering by the deterministic spectral edge together with a precise scaling constant, both of which are often difficult to estimate in practice under general unknown population covariance structures. In this paper, we propose a bias-corrected multiplier bootstrap procedure for inference on the deterministic edge of the bulk spectrum. The key idea is to introduce a carefully calibrated multiplier perturbation that regularizes the edge fluctuation to a slightly larger scale at which Gaussian approximation becomes tractable. The resulting confidence interval is constructed directly from bootstrap eigenvalues, together with a data-driven recentering step that corrects the bootstrap-induced shift of the deterministic edge. On the theoretical side, we show that, after bias correction and rescaling, the largest few non-spiked bootstrap eigenvalues are asymptotically Gaussian conditionally on the data. Building on this result, we establish the asymptotic validity of the proposed confidence interval, whose length is only slightly larger than the Tracy--Widom scale, and prove vanishing coverage under alternatives in which additional spikes separate from the bulk at a local scale larger than $n^{-1/6}$. As a consequence, the same confidence interval yields a threshold-free estimator for the number of spikes, without requiring the spikes to be distinct or very large. Equivalently, the procedure yields a data-driven and theoretically justified cutoff for the scree plot.",
+        "authors": "Xiucai Ding, Yichen Hu, Jiahui Xie",
+        "url": "http://arxiv.org/abs/2607.08089v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08089v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个基于结构因果模型（SCM）的因果推理基准，用于评估数据科学智能体，涵盖了Pearl的因果推断三层阶梯，并强调不确定性量化。它对因果AI的评估具有重要理论指导意义和实践价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08089v1",
+        "title": "Bias-Corrected Multiplier Bootstrap Inference for Spectral Edges of Large Covariance Matrices",
+        "summary": "Inference for spectral edges of large covariance matrices is a fundamental problem in high-dimensional statistics. A major difficulty is that the largest non-spiked sample eigenvalues, which serve as natural estimators of the edge, fluctuate on the Tracy--Widom scale. Consequently, valid inference requires accurate centering by the deterministic spectral edge together with a precise scaling constant, both of which are often difficult to estimate in practice under general unknown population covariance structures. In this paper, we propose a bias-corrected multiplier bootstrap procedure for inference on the deterministic edge of the bulk spectrum. The key idea is to introduce a carefully calibrated multiplier perturbation that regularizes the edge fluctuation to a slightly larger scale at which Gaussian approximation becomes tractable. The resulting confidence interval is constructed directly from bootstrap eigenvalues, together with a data-driven recentering step that corrects the bootstrap-induced shift of the deterministic edge. On the theoretical side, we show that, after bias correction and rescaling, the largest few non-spiked bootstrap eigenvalues are asymptotically Gaussian conditionally on the data. Building on this result, we establish the asymptotic validity of the proposed confidence interval, whose length is only slightly larger than the Tracy--Widom scale, and prove vanishing coverage under alternatives in which additional spikes separate from the bulk at a local scale larger than $n^{-1/6}$. As a consequence, the same confidence interval yields a threshold-free estimator for the number of spikes, without requiring the spikes to be distinct or very large. Equivalently, the procedure yields a data-driven and theoretically justified cutoff for the scree plot.",
+        "authors": "Xiucai Ding, Yichen Hu, Jiahui Xie",
+        "url": "http://arxiv.org/abs/2607.08089v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "针对高维协方差矩阵谱边缘的推断问题，该论文提出了偏差校正乘子Bootstrap方法，并证明了其渐近有效性。该方法理论严谨，对高维统计分析、主成分分析和因子模型等领域具有重要价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08753v1",
+        "title": "Finding Simple Proofs for First-Order Optimization",
+        "summary": "Progress in mathematics often requires more than a certificate of truth: it requires proof structures that are transparent, checkable, and reusable. Automated systems can increasingly certify that a result is true; what they typically return, however, is a dense certificate rather than an interpretable, reusable proof structure.   Recent work on performance estimation problems has shown that performance bounds and complexity analyses of first-order optimization methods can be discovered by searching over a structured space of Lagrangian dual certificates. We cast the search for simpler proof structures as a second-stage optimization problem over these certificates. Starting from dual certificates, we develop post-processing procedures using tools from sparse optimization and statistical learning. We measure complexity through features such as active hypotheses and residual structure, and introduce methods based on exhaustive sparsification, weighted $\\ell_1$-type heuristics, and semidefinite programming (SDP) formulations for discovering simple proofs and intermediate lemmas.   Examples on gradient descent, proximal methods, and fast-gradient methods show that these procedures can autonomously prune redundant inequalities, reveal structured proof patterns, and, in the proximal setting, recover Lyapunov functions as intermediate lemmas that lead to simple, streamlined proofs. By distilling dense machine-generated certificates into compact proof structures, this workflow acts as a pre-processing step for the final proof, reducing the complexity that must be managed during human interpretation, reuse, and formalization.",
+        "authors": "Daniel Berg Thomsen, Manu Upadhyaya, Baptiste Goujaud, Aymeric Dieuleveut, Adrien Taylor",
+        "url": "http://arxiv.org/abs/2607.08753v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08753v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文探讨了寻找一阶优化方法简洁证明结构的问题，利用拉格朗日对偶、稀疏优化和半正定规划（SDP）等工具，揭示了优化算法的深层数学结构，对优化理论有重要贡献，并能帮助设计更透明的算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08428v1",
+        "title": "Bayesian DAG Structure Learning with Simultaneous Shrinkage Covariance Estimation under Scale-Mixture Error Distributions in the Proportional High-Dimensional Regime",
+        "summary": "We propose a unified Bayesian framework namely robust DAG-Cholesky horseshoe (R-DACH) for joint directed acyclic graph (DAG) structure learning and precision matrix estimation in the high-dimensional proportional asymptotic regime $p/n \\to c \\in (0,\\infty)$, under the scale mixture of normal errors. The construction places a global-local horseshoe-type prior directly on the strictly lower-triangular entries of the modified Cholesky factor of the DAG-Markov precision matrix, so that sparsity in the Cholesky parameters induces a coherent parent-set selection consistent with a topological ordering of the variables. A per-observation inverse-gamma scale mixture yields automatic robustness to heavy-tailed and contaminated observations and admits Student-$t$, Laplace, and slash distributions as special cases. We design a partially-collapsed blocked Gibbs sampler that traverses the joint space of orderings, sparsity patterns and continuous parameters. Simulations across $(n,p)$ configurations with $p$ up to several hundreds confirm the theoretical rates and demonstrate substantial gains over graphical-horseshoe, DAG-Wishart, and PC-based competitors under contamination. An application to RNA-seq gene-expression data from \\emph{The Cancer Genome Atlas} reveals biologically interpretable regulatory structure that competing methods fail to recover.",
+        "authors": "Samaneh Nazari, Mohammad Arashi, Abdolnasser Sadeghkhani",
+        "url": "http://arxiv.org/abs/2607.08428v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08428v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个统一的贝叶斯框架，用于高维条件下的有向无环图（DAG）结构学习和精度矩阵估计。它具有严格的理论基础，通过引入马蹄形先验和Cholesky因子，为因果图建模和高维数据分析提供了强大的统计工具。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08340v1",
+        "title": "Spectral Analysis of Dueling Q-Learning",
+        "summary": "Q-learning is a fundamental algorithm in reinforcement learning (RL) for solving discounted Markov decision processes (MDPs) when the transition kernel is unknown. The deep Q-network (DQN) extends Q-learning by using a deep neural network for Q-function approximation, which makes Q-learning applicable to more practical high-dimensional problems. Dueling Q-learning decomposes the Q-function into a value function and an advantage function and learns the two components jointly, which can improve learning efficiency. However, the theoretical understanding of dueling Q-learning is still limited. Recent work has initiated an analysis of tabular dueling Q-learning, but existing guarantees focus on a regularized formulation and leave the pure tabular update less completely understood. This paper strengthens that line of analysis by adding a direct interpretation of the centered tabular decomposition and by establishing convergence guarantees for the unregularized, unprojected constant step-size recursion. In particular, we derive an exact switching linear system representation for deterministic dueling Q-learning and a finite-time error bound in expectation for the sampled stochastic version. The analysis clarifies how the value and advantage updates act as different gains on the action-common (value function) and action-differential (advantage function) components of the Q-function.",
+        "authors": "Donghwan Lee",
+        "url": "http://arxiv.org/abs/2607.08340v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08340v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该工作对Dueling Q-learning进行了谱分析，推导了精确的线性系统表示和有限时间误差界。它加深了对强化学习算法收敛性的理论理解，提供了严谨的数学推导，对RL算法的设计和分析具有指导意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08198v1",
+        "title": "Unpaired Joint Distribution Modeling via Multi-Scale Image Representations",
+        "summary": "This paper studies the problem of learning a joint distribution from marginal observations, which is inherently ill-posed due to the ambiguity of feasible couplings. We propose LUD-MSR, a latent-variable probabilistic framework that models the joint distribution via auxiliary representations and optimizes evidence lower bounds using only marginal data. Under mild assumptions, we establish an upper bound on the distribution approximation error. This analysis reveals a trade-off in representation learning between domain consistency and information preservation. To address this trade-off, we introduce a Multi-Scale image Representation (MSR) mapping that exploits structural similarity at coarse scales while suppressing domain-specific variations. We show that MSR achieves a more favorable balance of this trade-off compared to existing approaches. Experiments on real-world denoising benchmarks, including cryo-electron microscopy (cryo-EM), demonstrate the effectiveness of the proposed framework.",
+        "authors": "Yihang Zou, Hui Zhang, Zuowei Shen, Chenglong Bao",
+        "url": "http://arxiv.org/abs/2607.08198v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08198v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一个潜在变量概率框架，用于从边缘观测中学习联合分布，并建立了分布近似误差的上界。它对生成模型和无监督学习的理论基础有贡献，提供了严谨的概率建模和统计学习方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.08093v1",
+        "title": "CausalDS: Benchmarking Causal Reasoning in Data-Science Agents",
+        "summary": "Large language models (LLMs) increasingly act as integrated data-science agents, combining abstract reasoning with advanced tool use. Yet the relevant benchmark landscape largely divides into symbolic causal reasoning benchmarks without realistic data analysis or data analysis benchmarks without a principled causal data-generating structure. Furthermore, existing causal evaluation datasets are often restricted to curated examples from existing sources, with diversity coming from limited templatized variations rather than from systematic generation of novel synthetic causal structures. We introduce CausalDS, a benchmark for evaluating causal reasoning in agentic data-science workflows. Each benchmark instance is a scene consisting of a sampled structural causal model (SCM) with generated observational data and an accompanying synthetic natural-language story grounded in a realistic domain. We optionally ground the composition of the benchmark components in empirical distributions obtained from real-world datasets, thus retaining empirical structure while reducing the \"causal parrot\" risk through completely synthetic generation. From each scene, we then derive tasks spanning all three of Pearl's rungs, with typical data-science prediction tasks appearing as Rung 1. Most tasks include a data science coding component, where the model typically needs to use several tools to arrive at the final answer due to the frequent presence of imperfect observations, which are generated by an observation model. Additionally, recognizing when a question admits no warranted answer and abstaining is treated as a first-class scored outcome. The benchmark thus jointly evaluates symbolic causal reasoning, data science, uncertainty quantification, abstention, and tool use/coding.",
+        "authors": "Andrej Leban, Yuekai Sun",
+        "url": "http://arxiv.org/abs/2607.08093v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08093v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文首次对带有动量的Vanilla SGD在重尾噪声下的收敛性进行了全面分析，且未采用梯度裁剪或归一化。它揭示了Vanilla方法在重尾噪声下的内在局限性，为优化算法的理论研究提供了重要见解和严谨的收敛性保证。"
+    }
+]

@@ -1,0 +1,172 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.08032v1",
+        "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents",
+        "summary": "Large language models, and the agents built on them, spend an ever-growing share of their compute and memory on remembering: caching attention keys and values, carrying long prompts, maintaining recurrent state, and storing what happened in previous turns and sessions. Because none of this memory is free, four largely separate research communities have each learned to compact it. They evict or quantize the KV cache, prune or distill prompts, bound architectural state, and consolidate agent memory. We argue that these are instances of one problem: a rate--distortion decision about what context-derived information to retain versus discard, at what fidelity, under a resource budget, so as to preserve downstream task utility. We make this lens precise with a single compaction objective and a layer-agnostic lower bound, use it to build a seven-axis taxonomy that classifies methods from across the stack uniformly, and use it to transfer mechanisms between layers that have never been connected, from serving-stack KV management to agent long-term memory. Two patterns hold across the survey. At every layer the signal that decides what to keep is attention magnitude or recency, and it fails in the same way everywhere, by discarding, before the query is known and with no way to undo it, information the query later needs. And while compression is measured carefully on single-turn long context, the repeated compaction that agents actually perform is almost never measured, and no benchmark holds one budget axis across all the layers at once. We turn both observations into a benchmark proposal, a small reference experiment, and a set of compaction-aware design principles, and we map the open problems.",
+        "authors": "Ashwin Gerard Colaco, Nada Lahjouji",
+        "url": "http://arxiv.org/abs/2607.08032v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.08032v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "将LLM和Agent的记忆压缩问题统一为率失真理论框架，提供七轴分类法和跨层机制转移，指引未来研究方向。",
+        "reason_zh": "这篇综述从信息论的率失真理论角度，对LLM和Agent的记忆压缩问题进行了深入的理论分析和统一。它不仅提出了一个七轴分类法来系统化现有方法，还探讨了跨层机制转移的可能性，并指出了未来研究的开放问题。其理论深度和对LLM内部机制的探讨，完美契合了您对LLM理论机制和指引未来研究方向的需求，且率失真理论本身也与高维数据处理和信息论紧密相关。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07907v1",
+        "title": "Multimodal Unlearning Across Vision, Language, Video, and Audio: Survey of Methods, Datasets, and Benchmarks",
+        "summary": "With the growing adoption of VLMs, DMs, LLMs, and AFMs, these multimodal foundation models can inadvertently encode sensitive, copyrighted, biased, or unsafe cross-modal associations that originate from their training data. Retraining after deletion requests or policy updates is often impractical, and targeted forgetting remains difficult because knowledge is distributed across shared representations. Multimodal unlearning addresses this challenge by enabling selective removal across modalities while retaining overall utility. This survey offers a unified, system-oriented view of multimodal unlearning across vision, language, audio, and video, grounded in recent advances, emerging applications, and open problems. Our taxonomy enables systematic comparison across model architectures and modalities, clarifying trade-offs among deletion strength, retention, efficiency, reversibility, and robustness. This survey highlights open problems and practical considerations to support future research and deployment of multimodal unlearning. We release a curated repository: https://smsnobin77.github.io/Awesome-Multimodal-Unlearning/",
+        "authors": "Nobin Sarwar, Shubhashis Roy Dipta, Zheyuan Liu, Vaidehi Patil",
+        "url": "http://arxiv.org/abs/2607.07907v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07907v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "全面综述多模态遗忘技术，提供统一系统视角、分类法，并指出开放问题和实际考虑，对未来研究有指导意义。",
+        "reason_zh": "多模态遗忘（Multimodal Unlearning）是当前AI领域的一个前沿热点，尤其在数据隐私、版权和偏见消除方面具有重要意义。这篇综述提供了跨视觉、语言、视频和音频的统一系统视角，提出了清晰的分类法，并详细讨论了删除强度、保留、效率、可逆性和鲁棒性之间的权衡。对于关注AI前沿研究，尤其是多模态基础模型和其理论机制的博士生来说，这是一篇视野开阔且具有高度实用性的资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07779v1",
+        "title": "From Solvers to Research: Large Language Model-Driven Formal Mathematics at the Research Frontier",
+        "summary": "Recent developments in AI for Mathematics (AI4Math), especially Large Language Model (LLM)-driven theorem provers, has achieved remarkable success in formal proof generation for well-defined mathematical problems through Interactive Theorem Proving (ITP) languages. However, current systems remain fundamentally limited in tackling frontier research mathematics, such as discovering new theorems or resolving open conjectures, which are often open-ended, under-specified, and involve multiple layers of abstraction. We argue that the next leap in AI4Math systems requires a decisive shift from predefined problem-solvers to research agents that can address frontier mathematical challenges with rigorous formal mathematical reasoning. In this position paper, we provide a systematic review of the field, covering datasets, auto-formalization, and proof synthesis. More importantly, we identify core limitations of existing systems in serving as mathematical research agents, examining issues across datasets, relational structure, mathematical exploration, tool ecosystem, and human-AI collaboration, outlining a strategic road-map for the future of AI4Math.",
+        "authors": "Eric Jiang, Xiao Liang, Yikai Zhang, Yingjia Wan, Mengting Li, Haikang Deng, Alexander K. Taylor, Justin Baker, Rushil Raghavan, Junyi Zhang, Ying Nian Wu, Andrea L. Bertozzi, Kai-Wei Chang, Raghu Meka, Matthew Sottile, Nanyun Peng, Amit Sahai, Terence Tao, Wei Wang",
+        "url": "http://arxiv.org/abs/2607.07779v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07779v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "综述AI4Math领域，强调从问题解决器到研究智能体的转变，识别现有系统局限性，并提出未来研究路线图。",
+        "reason_zh": "这篇论文探讨了AI在数学研究前沿的进展，特别是LLM驱动的定理证明器。它超越了简单的'问题解决'，提出了向'研究智能体'转变的愿景，并系统性地审视了数据集、自动形式化和证明合成等方面的核心局限性。对于关注LLM理论机制，尤其是其在科学发现和形式化推理中潜力的博士生，这篇论文提供了深刻的洞察和明确的未来研究路线图，理论深度极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07663v1",
+        "title": "Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops",
+        "summary": "AI systems increasingly participate in their own improvement: revising their outputs, adapting their own harnesses during deployment, training on data they generate, and, increasingly, conducting AI research itself. This literature is described under a vocabulary (\"self-refine,\" \"self-reward,\" \"self-play,\" \"self-evolve\") that conflates fundamentally different ambitions. We survey 1,250 arXiv papers (2024-2026) along two axes: what the system improves -- its behavior in deployment, its policy through training, its evaluator, or the research process itself -- and the degree of loop closure (human-in-the-loop to fully closed). The taxonomy separates bounded self-refinement -- convergent, evaluable, and already industrial practice -- from open-ended recursive self-improvement (RSI), which remains bounded by grounding requirements, collapse dynamics, and compute constraints on every measured axis. Its distinctive feature is a dedicated category for self-evaluation: every improvement loop is a claim that some signal can substitute for human judgment. We survey the evaluator design space -- judges, process reward models, verifiers, rubrics, meta-evaluation -- order the signals into a verification hierarchy from formal verifiers (strongest) to intrinsic self-assessment (weakest), and observe that demonstrated self-improvement strength tracks this hierarchy, that its failure modes (self-confirming loops, model collapse, diversity collapse) follow from its violations, and that the \"research direction-setting\" bottleneck keeping humans in the loop sits at the top of that hierarchy. We connect the technical literature to the theory of RSI limits and to the safety and governance questions raised by frontier-lab accounts of closing the loop, and identify governance-grade measurement of self-improvement as the field's most underpopulated niche.",
+        "authors": "Mingguang Chen, Licheng Wang, Bo Qu",
+        "url": "http://arxiv.org/abs/2607.07663v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07663v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "系统性综述AI递归自我改进，提出分类法，分析评估器设计空间，并连接到理论限制和安全治理，视野开阔，指引未来方向。",
+        "reason_zh": "递归自我改进（RSI）是AI领域一个具有深远影响的前沿课题。这篇综述通过对1250篇论文的分析，提出了一个清晰的分类法，区分了有限的自我完善和开放式的RSI。它深入探讨了评估器设计空间，并将其与RSI的理论限制、模型崩溃以及安全治理问题联系起来。这篇论文视野开阔，对AI的未来发展方向具有重要的指导意义，对您理解LLM和Agent的长期演化机制非常有价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.04277v1",
+        "title": "Self-Reference in Large Language Models: The Introspection Threshold for Recursive Self-Improvement",
+        "summary": "The pursuit of self-evolving AI raises a critical question: when is autonomous self-improvement sustainable rather than degenerative? Drawing an analogy to von Neumann's complexity threshold for self-reproducing automata, we argue that sustainable recursive self-improvement in Large Language Models (LLMs) requires a functional analogue: introspection -- the system's capacity to simulate its own operations and target modifications. Grounded in Kleene's Second Recursion Theorem, we demonstrate the theoretical existence of such introspective programs. However, an empirical review reveals that while current LLMs exhibit quasi-introspection (e.g., partial metacognition), they fall short of true introspection due to structural bottlenecks: a lack of complete self-access, the feedforward nature of the Transformer, and computational class constraints that prevent fixed-point iteration. We conclude by outlining architectural paths to cross this complexity threshold and discussing the associated safety implications.",
+        "authors": "Jiang Zhang, Bing Yuan, Qian Zhang",
+        "url": "http://arxiv.org/abs/2607.04277v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.04277v1",
+        "type": "前沿深度",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 5
+        },
+        "core_value_zh": "深入探讨LLM递归自我改进的内省阈值，从理论和实证层面分析其局限性，并提出架构路径和安全影响。",
+        "reason_zh": "这篇论文与ID 18紧密相关，但更侧重于LLM自我改进的理论机制——内省阈值。它借鉴了冯·诺依曼的复杂性阈值概念，从理论上论证了内省程序的可能性，但同时也通过实证分析揭示了当前LLM在结构瓶颈上的局限性。对于希望深入理解LLM理论机制、其自我演化潜力和限制的博士生来说，这篇论文提供了高度严谨且富有启发性的思考，是硬核的理论资料。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.06935v1",
+        "title": "Mathematical methods of reinforcement learning",
+        "summary": "Reinforcement learning (RL) is increasingly grounded in tools from probability, optimization, and operator theory. This survey organizes the mathematical structures that underpin the design and analysis of modern algorithms in RL. We begin from Markov decision processes (MDPs) and the Bellman operators, emphasizing contraction mappings, monotonicity, and fixed-point theory that yield convergence guarantees and rates for value and policy iteration, and temporal-difference schemes. We then develop the optimization perspective: stochastic approximation and martingale methods, convex duality and the role of regularization linking mirror/proximal methods. Function approximation is treated through linear and non-linear settings, covering stabilization, error decomposition, and sample-complexity via concentration inequalities for dependent data and mixing processes. We further cover off-policy evaluation/learning, constrained RL and constrained MDPs (CMDPs). Throughout we unify algorithmic templates under common operator and variational lenses, highlighting both finite-sample bounds and asymptotic results. Our presentation is intended to provide a unified mathematical entry point for researchers in probability, optimization, and statistics interested in reinforcement learning.",
+        "authors": "Denis Belomestny, Alexander Gasnikov, Egor Gladin, Alexey Naumov, Artemy Rubtsov, Yuri Sapronov, Daniil Tiapkin, Nikita Yudin",
+        "url": "http://arxiv.org/abs/2607.06935v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.06935v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 5,
+            "Utility": 5
+        },
+        "core_value_zh": "系统阐述强化学习的数学基础，涵盖高等概率论、随机过程、凸优化、算子理论等核心数学概念，具有高度数学严谨性。",
+        "reason_zh": "这篇综述是强化学习数学方法的绝佳入门和深入资料，完美契合您对'高等概率论/随机过程'和'凸优化'的需求。它从马尔可夫决策过程和贝尔曼算子出发，强调收缩映射、单调性和不动点理论，并深入探讨随机逼近、鞅方法、凸对偶和正则化等优化视角。其对有限样本界和渐近结果的统一处理，以及对函数逼近的严谨讨论，使其成为补全博士数学拼图的硬核资料典范。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05057v1",
+        "title": "Multi Impulse Low Earth Orbit Maneuver Synthesis Through Thrust Measure Primer Vector Conditions and Piecewise Multiple Shooting",
+        "summary": "This work sets out to apply primer vector theory to optimal impulse maneuvers in Low Earth Orbit (LEO) and adapt it to the types of perturbations encountered in this environment, which is not readily available in the literature. A review of the theory of optimal control and orbital maneuvering is made and in particular, primer vector theory is laid out in detail based on the extension of the thrust control to a measure, including its generalization to conservative and non-conservative perturbation models. An impulsive multiple shooting optimization scheme in Cartesian coordinates is presented, through a piecewise approach to the problem. Then, some maneuver scenarios with known solutions under the Keplerian model are solved under perturbed orbital dynamics with the help of the primer vector, and the resulting trajectories are compared. The perturbation models include a J2 model, representing the class of conservative perturbations by modeling Earth's nonspherical gravity field, and a J2+Drag model, representing the class of non-conservative perturbations by including the effects of atmospheric drag in LEO\\@. For each model, some valid methods of primer vector calculation have been tried and validated between each other, and the primer vector is proven to be a useful tool in reducing the cost of orbital maneuvers.",
+        "authors": "Pedro Kuntz Puglia, Willer Gomes dos Santos, Emilien Flayac",
+        "url": "http://arxiv.org/abs/2607.05057v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05057v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "详细阐述最优控制理论和引理向量理论，虽应用于航天，但其对优化理论的深入和数学严谨性符合博士生对硬核数学资料的需求。",
+        "reason_zh": "这篇论文对最优控制理论，特别是引理向量理论进行了详细的回顾和阐述，包括其在保守和非保守扰动模型下的推广。虽然其应用背景是低地球轨道机动合成，但其对优化理论和控制理论的数学严谨性、细节深度以及对多重射击优化方案的介绍，使其成为您在'凸优化'或更广义的'优化理论'方面补全数学基础的硬核资料。它超越了基础凸优化，深入到更复杂的优化方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.05393v1",
+        "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
+        "summary": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
+        "authors": "Raphaël Bonnet-Guerrini, Bruno Sanchez, Dominique Fouchez, Benjamin Racine, Maya Guy, Mariam Sabalbal, Manal Yassine, Vincenzo Piuri",
+        "url": "http://arxiv.org/abs/2607.05393v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.05393v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "深入探讨不确定性量化（UQ）方法，包括MC dropout和深度集成，对统计学和数据科学中的核心概念——统计推断和不确定性处理——提供了严谨的分析和实践。",
+        "reason_zh": "不确定性量化是统计学和数据科学中一个至关重要的基础概念。这篇论文虽然应用于Real-Bogus分类，但其核心贡献在于开发和评估了在无标签数据下进行校准不确定性量化的框架，并比较了MC dropout和深度集成等方法。它对UQ的严谨处理和对校准的强调，使其成为您理解和掌握统计推断中不确定性处理的硬核资料，对您的博士研究具有很强的实用性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07762v1",
+        "title": "Trustworthy Machine Learning through the Lens of Combinatorial Optimization: Survey and Research Perspectives",
+        "summary": "Modern machine learning (ML) increasingly relies on complex models whose behavior is difficult to characterize beyond empirical performance metrics. Across a wide range of tasks, including prediction, generation, and decision-making, models with similar empirical performance can exhibit markedly different properties in terms of their transparency, interpretability, robustness, fairness, privacy, and certifiability. This survey highlights how optimization- and certification-oriented reasoning can provide a useful framework for reasoning about such differences, supporting tasks ranging from model training and selection to auditing and certification. We review and synthesize recent advances at the intersection of combinatorial optimization (CO) and trustworthy ML, covering both training and post-training tasks, including interpretable model learning, explanation generation, robustness analysis, fairness auditing, model compression, and privacy attacks and protections. Across these domains, CO formulations offer additional capabilities over purely heuristic approaches, e.g., gradient-based ones, notably global guarantees, formal certificates, and explicit treatment of trade-offs. While scalability remains an important challenge, continued progress in solvers and hybrid algorithms suggests a growing role for CO in the design and deployment of trustworthy ML systems.",
+        "authors": "Thibaut Vidal, Julien Ferry",
+        "url": "http://arxiv.org/abs/2607.07762v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07762v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Clarity": 4,
+            "Utility": 4
+        },
+        "core_value_zh": "从组合优化角度审视可信机器学习，强调优化方法的全局保证和形式化证明，为博士生理解高级优化理论在ML中的严谨应用提供了硬核视角。",
+        "reason_zh": "这篇综述将可信机器学习（Trustworthy ML）置于组合优化（Combinatorial Optimization）的框架下进行分析。它强调了优化方法在可解释性、鲁棒性、公平性和隐私保护方面的优势，特别是其提供的全局保证和形式化证书。对于希望深入理解高级优化理论如何严谨应用于现代机器学习问题，并补全其在优化理论方面博士数学拼图的同学来说，这篇论文提供了非常硬核且富有洞察力的视角。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.07379v1",
+        "title": "Physics-Audited Agentic Discovery in Scientific Machine Learning",
+        "summary": "In agentic scientific machine learning (SciML), large language model (LLM) agents can discover surrogate models and select one by an automated score, typically an error metric. A low error, however, does not establish that the predicted fields satisfy the physics that matter for mechanics, such as boundary conditions, superposition, stiffness scaling, or causality. We introduce Physics-Audited Agentic SciML (PA-SciML), a verification-first workflow for agentic SciML discovery. The workflow fixes a scoring evaluator before search, derives reviewable machine-checkable physics requirements, checks each trained candidate on its outputs, and separately searches prescribed input ranges or measured load-history spans for high-violation cases without reference solution fields. A surrogate is reported as verified only under the stated checks. When enabled, the workflow also adds advisory numerical probes before training and tests one modeling change at a time to record which isolated edits are associated with score gains before reuse. In the reported computational-solid-mechanics numerical examples, the static elasticity run selects a surrogate with lower validation error than the error-only baseline while both selected models pass the common linear-elastic checks. In the transient elastodynamics run, an error-only baseline with similar mean error fails a stricter causality check by responding to future parts of the loading history, while the selected surrogate passes the stated checks. The main distinction is per-candidate physics evidence on predicted fields, not a richer aggregate score.",
+        "authors": "Diab W. Abueidda, Bilal Ahmed, Panos Pantidis, Mostafa E. Mobasher",
+        "url": "http://arxiv.org/abs/2607.07379v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.07379v1",
+        "type": "基础核心",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Clarity": 4,
+            "Utility": 3
+        },
+        "core_value_zh": "介绍物理审计的智能体科学机器学习工作流，强调在代理发现中通过物理约束进行验证，确保模型满足物理定律。",
+        "reason_zh": "尽管这篇论文主要关注科学机器学习（SciML）中的代理发现，但其核心思想是'物理审计'（Physics-Audited），即在模型选择前通过可验证的物理要求来检查候选模型。这种将物理约束和验证机制融入机器学习流程的方法，体现了高度的数学严谨性和对模型基础理论的深刻理解。对于统计学博士生而言，理解如何在复杂系统中引入先验知识（如物理定律）进行模型验证和选择，是其数学拼图中重要的一环，尤其在因果推断和模型可信性方面具有启发性。虽然不是直接的数学教程，但其方法论和对严谨性的追求符合您的要求。"
+    }
+]

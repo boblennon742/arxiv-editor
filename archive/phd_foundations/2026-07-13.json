@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.11883v1",
+        "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
+        "summary": "Compression is fundamental to intelligence. A model that can represent its training data as a short code has discovered regularities that enable generalization. Large neural networks may learn functions far simpler than their parameter counts suggest, but it is challenging to construct codes that realize this simplicity. Parameter-based methods such as quantization produce code lengths that scale with model size, insensitive to how much information the parameters store. Prequential coding bypasses this issue by compressing the training trajectory, but codes the exact data sequence regardless of how much the model learns, yielding large codes when the data has high entropy. We introduce requential coding, where a teacher model selects training samples drawn from the student's own distribution. The student's code records only these selections, which cost bits only where teacher and student disagree. The resulting code length is independent of parameter count and data entropy, and often orders of magnitude shorter than the prequential counterpart, with an advantage that grows with scale. This compression sheds light on phenomena inaccessible to prior compressors. Holding loss fixed, larger models and ensembles compress to much smaller sizes despite more parameters. Plugged into a PAC-Bayes bound, the requential code yields state-of-the-art generalization guarantees for billion-parameter LLMs, outperforming bounds built on aggressive post-training quantization even granted zero error. The bound tightens with scale in the compute-optimal regime, as models become increasingly compressible relative to dataset size. The same code predicts that models gradually overfit when trained for multiple epochs. It also isolates the learnable information in a dataset from its unpredictable, random content, revealing that lower-entropy text holds far more learnable structure than higher-entropy image data.",
+        "authors": "Shikai Qiu, Marc Finzi, Yujia Zheng, Kun Zhang, Andrew Gordon Wilson",
+        "url": "http://arxiv.org/abs/2607.11883v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11883v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了新颖的“重序编码”方法，并提供了基于PAC-Bayes的泛化性理论保证，其代码长度与模型参数无关，对理解模型压缩和泛化性有深刻的理论洞察，数学严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11875v1",
+        "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+        "summary": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been mostly tied to specific tasks, we study a generalized class of inductive tasks that unifies several synthetic tasks known in the literature, including in-context n-grams and multi-hop reasoning. In this class, we theoretically prove that the training dynamics of attention models can be confined to a highly interpretable, low-dimensional invariant manifold. On this manifold, the learning dynamics are captured by a handful of interpretable coordinates rather than millions of parameters, making both theoretical and empirical analysis more tractable. Using this framework, we characterize how data statistics govern the competition between in-context and in-weights learning, we study how random initializations determine the `winning' circuit when multiple solutions are possible, and we demonstrate that the coordinate frame associated with the manifold can be used to automatically detect which circuits have been learned in trained models. By casting circuit formation as a low-dimensional dynamical phenomenon, we take a step toward a predictive theory of how Transformers learn.",
+        "authors": "Tiberiu Musat, Tiago Pimentel, Nicholas Zucchet, Thomas Hofmann",
+        "url": "http://arxiv.org/abs/2607.11875v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11875v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个解释Transformer归纳推理能力的理论框架，并通过数学证明了注意力模型的训练动态可以被限制在一个低维不变流形上，为理解Transformer学习机制提供了严谨的数学基础和预测理论。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11871v1",
+        "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+        "summary": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-output view and operationally useful in ways it does not afford. We report three findings, across seven judges, seven bias types, and nine benchmarks. Geometry: baseline judging inputs occupy a tight activation manifold while biased inputs are displaced along a low-dimensional, type-specific subspace that sharpens with depth and is recovered consistently by three families of estimators. Causal control: steering hidden states along this subspace drives scoring in both directions, forward shifts reproducing biased scoring on clean inputs and reverse shifts restoring baseline scoring on biased ones, while matched-norm random directions produce shifts an order of magnitude smaller. Operational: a simple linear projection onto the same bias-direction features anticipates judge failures on three entirely unseen benchmarks, substantially outperforming text-based alternatives. Reading bias as activation geometry, rather than as input-output noise, unifies geometric structure, causal control, and operational prediction within a single framework. The project page is available at https://xzx34.github.io/unfair-judge/",
+        "authors": "Zixiang Xu, Sixian Li, Huaxing Liu, Xiang Wang, Shuai Li, Zirui Song, Xiuying Chen",
+        "url": "http://arxiv.org/abs/2607.11871v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11871v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "通过机制可解释性方法，将LLM偏见解释为激活空间的几何结构，并展示了通过“因果控制”来操纵这种偏见，为理解和缓解LLM偏见提供了深入的理论视角和严谨的分析方法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11714v1",
+        "title": "Contextual Stochastic Optimization with Decision-Dependent Uncertainty via Nonparametric Learning",
+        "summary": "We study a general decision-dependent contextual stochastic program (DD-CSP) in which uncertainty depends on both exogenous contextual information and endogenous decisions. To learn the potentially complex dependence of uncertainty on decisions and contextual information, we employ several nonparametric regression models, including k nearest neighbors (kNN), classification and regression trees (CART), and ReLU neural networks. To account for estimation errors in predicting the uncertainty, we adopt an empirical residuals-based decision-dependent sample average approximation (ER-DD-SAA) framework, which adds empirical residuals to the point predictions from the learned regression models. For each nonparametric regression model, we develop exact mixed-integer programming (MIP) representations that can be seamlessly embedded within the ER-DD-SAA framework. For two-stage ER-DD-SAA problems with kNN, we further propose a tailored decomposition algorithm, named BD-CG, that combines Bender's decomposition with constraint generation. Under suitable assumptions, we prove that the proposed BD-CG converges to a global optimum within a finite number of iterations. From a statistical perspective, we establish the consistency and asymptotic optimality of ER-DD-SAA with all three nonparametric regression models under mild regularity conditions. Numerical experiments on a newsvendor problem with pricing and a two-stage facility location problem demonstrate that the ER-DD-SAA model with nonparametric learning consistently outperforms a parametric benchmark in out-of-sample performance and the proposed reformulations and algorithm substantially improve computational tractability.",
+        "authors": "Huangrong Sun, Xian Yu",
+        "url": "http://arxiv.org/abs/2607.11714v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11714v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "针对决策依赖的不确定性随机优化问题，提出了基于非参数学习的ER-DD-SAA框架，并从统计学角度证明了其一致性和渐近最优性。此外，还为分解算法提供了收敛到全局最优的数学证明，理论基础极其扎实。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11656v1",
+        "title": "Imputation-free transformer learning enables robust Alzheimer's disease prediction and calibrated uncertainty quantification across heterogeneous clinical cohorts",
+        "summary": "Accurate diagnostic classification and disease-severity prediction for Alzheimer's disease are hampered by the incompleteness and heterogeneity of real-world clinical data. Left unaddressed, these barriers prevent reliable disease modelling and hinder effective clinical evaluation. Conventional imputation strategies introduce systematic bias, distort inter-feature relationships, and yield overconfident predictions, limitations especially consequential in diagnostic settings. Here, we propose NITROGEN, an imputation-free transformer that jointly models within-patient feature dependencies and between-patient relational structure through masked and intersample attention, enabling robust multimodal learning directly from partially observed records. We trained NITROGEN on ADNI (N=7858 scans), and evaluated it on two independent cohorts: OASIS-3 (N=2675 scans) and AIBL (N=1286 scans). Across cohorts and diagnostic and cognitive score prediction tasks, NITROGEN showed robust calibration and uncertainty quantification advantages over tree-based ensemble methods, while maintaining competitive discriminative performance. Cross-cohort and cross-method analyses identified cortical thickness in the temporal pole, age, and APOE genotype as important, though not individually sufficient, features for AD classification. We further introduced a modality-aware uncertainty adjustment that augments predictive uncertainty proportionally to the importance of absent modalities, enabling calibrated confidence when diagnostic information is unavailable. Together, our results show that imputation-free attention learning preserved meaningful discrimination under cohort shift, revealing expected degradation on more distributionally different cohorts, and demonstrate that evaluating models along calibration, interpretability, and cross-cohort reliability, not accuracy alone, is essential for clinical deployment.",
+        "authors": "Christelle Schneuwly Diaz, Narmina Baghirova, Duy-Thanh Vu, Duy-Cat Can, Gilles Allali, Philippe Ryvlin, Oliver Y. Chén",
+        "url": "http://arxiv.org/abs/2607.11656v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11656v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个免插补的Transformer模型，实现了对阿尔茨海默病预测的鲁棒校准和不确定性量化，并引入了模态感知的调整，这在统计学上是重要的理论保证，强调了预测的可靠性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11653v1",
+        "title": "Bet on Features: Anytime-Valid and Feature-Aware Auditing of Conditional Quantile Forecasters",
+        "summary": "Black-box conditional quantile forecasts are widely used for sequential decisions under asymmetric costs, such as inventory planning in supply chain management. Once deployed, such forecasters must be monitored continuously as data streams drift and regimes change; this invalidates standard, fixed-horizon backtests for calibration. Further, existing backtests do not take into account that the notion of calibration is, in fact, information-dependent: forecasts can look calibrated to an auditor with coarse information while being miscalibrated to an auditor with richer information. We develop a distribution-free and game-theoretic testing framework for continuously auditing black-box conditional quantile forecasters with non-i.i.d. losses, such that the resulting evidence process is powerful against predictably chosen alternatives specified by the features available to the auditor. We first formalize notions of conditional quantile calibration when different sets of features are available to the auditor, establishing that the coarseness of the auditor's information set determines the hardness of the testing problem. We then identify the sets of alternatives for which the auditor can achieve power, and focusing on contextual bets linear in the features, we derive finite-time detection guarantees for such alternatives, all without an i.i.d. assumption. The resulting evidence processes are interpretable at the feature level, as they quantify fine-grained, \"feature-aware\" evidence for miscalibration. We empirically validate these methods on simulated and real data, finding that a popular time series forecaster (Chronos-2) is highly miscalibrated w.r.t. multiple relevant features.",
+        "authors": "Ivane Antonov, Sohom Mukherjee, Richard Pibernik, Yo Joong Choe",
+        "url": "http://arxiv.org/abs/2607.11653v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11653v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个针对条件分位数预测器的“随时有效”且“特征感知”的审计框架。该框架是无分布假设和博弈论的，并提供了有限时间检测保证，具有极强的统计学和理论严谨性，尤其适用于非i.i.d.数据。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11607v1",
+        "title": "Auditing the Risk Claims of Distributional Reinforcement Learning",
+        "summary": "Distributional reinforcement learning agents learn full return distributions that are increasingly read at face value: for interpretability, risk-sensitive control, and safety monitoring. We ask a question theory anticipates but that has not been measured directly: are the risk claims of a trained distributional agent true? Our audit combines a decision-relevant screening metric (the excess Wasserstein gap between the top two actions, which equals the mass by which first-order stochastic dominance is violated), ground truth from snapshot-restart Monte Carlo, and a statistical harness (permutation nulls, bootstrap refutation, FDR control) without which the audit itself manufactures false conclusions. Across QR-DQN, C51, and IQN on MinAtar (33 runs), 40-95% of the strongest claimed risk trade-offs are refuted at 95% confidence, the placement of the strongest claims is statistically indistinguishable from truth-blind, and essentially no claim is confirmable: for these agents, the learned \"risk\" reflects a training artifact rather than environment stochasticity. The artifact is structural (fully formed early in training, uncorrelated with final score, idiosyncratic to each seed) and appears unchanged at full-Atari scale, with every top Breakout claim of a pretrained near-state-of-the-art QR-DQN refuted. Positive controls of known magnitude confirm 96-100% of real claims (correlation 0.89-0.92): the reading measures the agents, not the audit. Acting on the heads' CVaR advice at their most-flagged states ranges from beneficial to significantly worse than chance. Neither training for risk nor ensembling removes the artifact, and recalibration passes the audit only by nullifying the claims: the head is uninformative, not merely miscalibrated. We release the toolkit and document two silent pitfalls that produced convincing but wrong audits of our own.",
+        "authors": "Hari Prasad",
+        "url": "http://arxiv.org/abs/2607.11607v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11607v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个严谨的统计审计框架，用于评估分布强化学习（DRL）代理的风险主张。它利用了Wasserstein距离、一阶随机优势、置换零假设、Bootstrap反驳和FDR控制等统计工具，揭示了DRL风险估计的不可靠性，具有极高的统计学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11541v1",
+        "title": "Random Label Prediction Heads for Studying Memorization in Deep Neural Networks",
+        "summary": "We introduce a straightforward yet effective method to empirically study memorization in deep neural networks for classification tasks. Our approach augments each training sample with auxiliary random labels, which are then predicted by a random label prediction head (RLP-head). RLP-heads can be attached at arbitrary depths of a network, predicting random labels from the corresponding intermediate representation and thereby enabling analysis of how memorization capacity evolves across layers. By interpreting the RLP-head performance as an empirical estimate of Rademacher complexity, we obtain a direct measure of both sample-level memorization and model capacity. We leverage this random label accuracy metric to analyze generalization and overfitting in different models and datasets. Building on this approach, we further propose a novel regularization technique based on the output of the RLP-head, which demonstrably reduces memorization. Interestingly, our experiments reveal that reducing memorization can either improve or impair generalization, depending on the dataset and training setup. These findings challenge the traditional assumption that overfitting is equivalent to memorization and suggest new hypotheses to reconcile these seemingly contradictory results. The source code is available at https://github.com/MarlonBecker/RandomLabelHeads",
+        "authors": "Marlon Becker, Jonas Konrad, Luis Garcia Rodriguez, Benjamin Risse",
+        "url": "http://arxiv.org/abs/2607.11541v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11541v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "引入了随机标签预测头来研究深度神经网络的记忆化，并将其性能解释为Rademacher复杂度的经验估计，从而提供了对模型容量和泛化能力的统计学洞察，挑战了传统假设。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11470v1",
+        "title": "Climate-Invariant Conformal Prediction Intervals for Multi-Horizon Solar and Wind Forecasting",
+        "summary": "Reliable uncertainty quantification is essential for integrating solar and wind generation into modern power systems, where operators must weigh risk rather than act on point forecasts alone. Existing probabilistic methods, however, often either lack finite-sample validity or require per-site recalibration, so a single model rarely transfers across the diverse climates of a dispersed generation fleet. This paper proposes a heteroscedastic, asymmetric, group-conditional split-conformal framework built on a bootstrap-diverse XGBoost ensemble, producing prediction intervals that adapt in width to local difficulty while retaining distribution-free coverage guarantees. A single fixed specification, with no per-site or per-horizon tuning, is evaluated across four climatologically distinct sites spanning both hemispheres, at horizons of 1 to 12 hours, for both solar irradiance and wind speed. The framework holds near-nominal coverage on both targets and reduces the Interval Score by up to 35% relative to competitive baselines, with the calibration and sharpness of its intervals shown to be properties of the method rather than of site-specific tuning.",
+        "authors": "Shreedhar Gangwar, Abhinav Bains, Banalaxmi Brahma",
+        "url": "http://arxiv.org/abs/2607.11470v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11470v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个气候不变的共形预测区间框架，为多时间尺度太阳能和风能预测提供了“无分布假设的覆盖率保证”，这在统计学上是极其严谨的理论保证，确保了预测的可靠性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11412v1",
+        "title": "Uncertainty Quantification for EO Regression Tasks: Building Height, Tree Canopy Height and Above-ground Biomass Estimation",
+        "summary": "Earth Observation regression tasks such as building height, canopy height, and above-ground biomass estimation underpin critical applications in urban planning, forest monitoring, and climate policy, where both accuracy and reliability are critical. Yet most deep learning models yield only deterministic predictions, providing no indication of per-pixel reliability. These regression tasks are inherently challenging due to heterogeneous land surfaces, skewed target distributions, sensor noise, and signal saturation at high target values, making uncertainty (UC) estimation essential for reliable inference. We address this gap by modeling aleatoric uncertainty using year-long Sentinel-1 SAR and Sentinel-2 MSI time series, proposing two complementary approaches: (i) Gaussian UC, which jointly predicts mean and standard deviation under a Gaussian assumption, and (ii) Quantile UC, which estimates the 10th, 50th, and 90th quantiles to capture asymmetric and heteroscedastic error distributions. Both models are evaluated on three representative EO regression tasks at 10 m spatial resolution. Results show that both approaches match or surpass deterministic benchmarks and existing global products, while delivering well-calibrated, interpretable, and operationally useful confidence estimates. Notably, both models outperform the current 10 m state-of-the-art uncertainty-aware model for canopy height estimation. Our implementation will be available at: https://github.com/RituYadav92/EO-Regression-Uncertainty-Estimation",
+        "authors": "Ritu Yadav, Andrea Nascetti, Yifang Ban",
+        "url": "http://arxiv.org/abs/2607.11412v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11412v1",
+        "scores": {
+            "Novelty": 3,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "专注于地球观测回归任务中的不确定性量化，提出了高斯和分位数不确定性量化方法，旨在提供“良好校准”的置信估计，这体现了对统计保证的关注，对于可靠的地球观测应用至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11388v1",
+        "title": "StructAgent: Harness Long-horizon Digital Agents with Unified Causal Structure",
+        "summary": "Recent advances in large language models (LLMs) and vision-language models (VLMs) have enabled increasingly capable digital agents for computer use. However, real-world tasks are often long-horizon and involve evolving contexts containing accumulated observations, intermediate edits, failed attempts, and partially completed executions. Existing agents typically operate over raw interaction history, making task progress difficult to interpret, verify, and recover, which ultimately limits reliable long-horizon execution. In this paper, we argue that addressing this challenge requires explicitly structuring both the agent's state and workflow around a unified causal representation of task progress. We present \\textbf{StructAgent}, a state-centered framework that introduces a unified state for maintaining compact, verifiable task progress and a structured workflow that regulates progress through verifier-backed state transitions. Building on this design, StructAgent further enables explicit progress checkpointing, evidence-driven task completion, targeted failure recovery, and tool-supported execution, while ensuring that all progress updates remain grounded in verification. Extensive experiments demonstrate that StructAgent consistently improves a wide range of LLM and VLM backbones on long-horizon computer-use tasks. On OSWorld-Verified, it improves Qwen3.5-9B from 27.0\\% to 46.9\\% success rate and Qwen3.5-27B from 31.6\\% to 62.2\\%, while achieving a new open-source state of the art of 78.9\\% with MiniMax-M3. Moreover, the same framework generalizes beyond desktop environments to Minecraft, demonstrating the generality of our design.",
+        "authors": "Wenyi Wu, Sibo Zhu, Kun Zhou, Aayush Salvi, Zixuan Song, Biwei Huang",
+        "url": "http://arxiv.org/abs/2607.11388v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11388v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个以“统一因果结构”为核心的框架，用于管理长周期数字代理的状态和工作流，通过验证器支持的状态转换来规范进展，这与用户对因果逻辑的偏好高度契合，提升了代理的鲁棒性和可验证性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11349v1",
+        "title": "Inter-Stop Energy Prediction and Causal Driver Quantification for Dual-Source Trolleybuses via a Time-Aware Tabular Deep Learning Architecture",
+        "summary": "Dual-source trolleybuses alternate between overhead catenary supply and on-board battery operation, creating energy-use patterns driven by route attributes, high-frequency trajectories, and hourly weather. Existing models struggle to represent these heterogeneous inputs and rarely explain the causal drivers of consumption. This paper proposes a time-aware tabular deep learning framework for inter-stop energy management. Periodic time encoding is integrated into a parameter-efficient batch-ensemble backbone to jointly learn static and sequential features, while Bayesian optimization with tree-structured density estimation tunes hyperparameters. To move beyond prediction, a three-layer causal explanation pipeline combines feature attribution for marginal effects, a linear non-Gaussian acyclic model for causal direction discovery, and a meta-learner for net average treatment effects. Experiments on the Zurich trolleybus dataset enriched with meteorological records achieve a MAPE of 6.52% and R of 0.982, outperforming ten statistical, tree-ensemble, and deep learning baselines. Ablation results show that periodic time encoding contributes most to the accuracy gain. Causal analysis identifies regenerative braking ratio and average speed as the strongest energy-saving factors, while coasting distance is the main driver of excess consumption. The findings offer actionable thresholds for vehicle technology, driving behavior, capacity allocation, and catenary network planning.",
+        "authors": "Wentao Zeng, Zijian Huang, Yiming Bie, Jiabin Wu, Jun Gong",
+        "url": "http://arxiv.org/abs/2607.11349v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11349v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个结合深度学习和“因果解释”的框架，用于量化双源无轨电车的能量消耗驱动因素。它明确使用了线性非高斯无环模型进行因果方向发现和平均处理效应，具有强大的因果逻辑和统计学严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11197v1",
+        "title": "What We Talk About When We Talk About LLM Planning: Evidence for Two Distinct Planning Abilities",
+        "summary": "When LLMs exhibit uneven performance across planning tasks, these gaps are often attributed to task difficulty. We argue that this explanation is incomplete, as task-level variation may reflect distinct latent planning competencies rather than differences along a single ability spectrum. We study this question on ACPBench-Hard by evaluating multiple LLM families under varying test-time reasoning budgets and applying a multidimensional item response theory model to uncover the latent competency structure underlying LLM planning. The analysis reveals two principal dimensions that shape planning performance: operational reasoning, the ability to evaluate local action applicability and immediate state transitions, and structural enumeration, the ability to reason about goal reachability and landmark structure. Operational reasoning improving under model scaling and longer reasoning traces, while structural enumeration remains comparatively insensitive. Our findings motivate competency-level evaluation of LLM planning, shifting the focus from whether models improve overall to which planning competencies improve, under what conditions, and why.",
+        "authors": "Sukai Huang, Chenyuan Zhang, Fucai Ke, Zhixi Cai, Naim Rastgoo, Gholamreza Haffari, Hamid Rezatofighi",
+        "url": "http://arxiv.org/abs/2607.11197v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11197v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "运用了“多维项目反应理论模型”来揭示LLM规划能力的潜在结构，这是一种严谨的统计学方法，为理解AI系统的内部能力提供了理论分析工具，超越了简单的性能评估。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11167v1",
+        "title": "Pix2Act: Image-Space Manipulation Policies with Equivariant Augmentation",
+        "summary": "Representing manipulation actions as 2D trajectories in the camera plane provides a compact and interpretable basis for learning complex 3D manipulation policies. However, it also creates challenges from out-of-frame trajectories and limited precision. We propose Pix2Act, an imitation learning method that addresses these challenges by generating continuous image-space keypoint trajectories in each camera plane and losslessly recovering end-effector poses via triangulation. This reformulates high-dimensional 3D control as a simpler, more learnable 2D prediction problem. Crucially, it aligns observations and actions in the same coordinate space, enabling equivariant transformations to jointly rotate individual camera images together with their image-space actions. We analyze the symmetry properties of this augmentation and design a network architecture that can fuse multiple camera views while respecting their per-view rotations. As a result, Pix2Act implicitly enlarges the support of the data distribution and learns invariant action structures across transformations, yielding improved generalization and overall performance. Across diverse simulated and real-world manipulation tasks, Pix2Act outperforms state-of-the-art baselines and remains robust under camera perturbations.",
+        "authors": "Haojie Huang, Linfeng Zhao, Haotian Liu, Zhang Ye, Si-Yuan Huang, Mingxi Jia, Boce Hu, Fangzhou Lin, Yu Qi, Dian Wang, Robin Walters, Robert Platt",
+        "url": "http://arxiv.org/abs/2607.11167v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11167v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 3,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个利用“等变增强”的图像空间操作策略，并分析了其“对称性特性”，从而学习到“不变的动作结构”，这在几何深度学习中具有坚实的数学理论基础，有助于提升模型的泛化能力。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11110v1",
+        "title": "Neural Discovery of Memory and Nonlocal Kernels in Integro-Differential Equations with Constrained Kolmogorov--Arnold Networks",
+        "summary": "Discovering the memory or nonlocal kernel governing an integro-differential equation (IDE) from sparse and noisy observations is an ill-posed inverse problem. Existing identification methods often rely on problem-specific analytical derivations, specialized observation requirements, or restrictive assumptions about the kernel, limiting their applicability across different classes of IDEs. In this work, we propose a differentiable-solver-based framework for discovering memory and nonlocal kernels directly from spatiotemporal observations. Within the solver, the unknown kernel is represented using a constrained Kolmogorov--Arnold Network (KAN) parameterization, with the physical constraints imposed through two different approaches: a Bernstein-polynomial-based Monotone--Convex KAN (MC-KAN), whose coefficient constraints enforce positivity, monotonic decrease, and convexity by construction, and a Chebyshev-based KAN (Cheb-KAN), in which the same properties are encouraged through soft penalty terms. After training, symbolic regression is applied to the learned kernels to obtain interpretable closed-form representations. We evaluate both methods on benchmarks spanning a one-dimensional Volterra equation, a one-dimensional viscoelastic wave partial integro-differential equation, and a two-dimensional nonlocal reaction-diffusion equation with an anisotropic coupled kernel. For the 1D problems, both methods recover the correct kernel functional form and achieve comparable solution-reconstruction accuracy. In contrast, for the sparse and noisy 2D nonlocal problem, the hard-constrained MC-KAN consistently achieves lower kernel reconstruction errors than the soft-constrained Cheb-KAN. Our results demonstrate that enforcing physically motivated shape constraints by construction provides greater robustness than soft penalties for multidimensional kernel discovery from sparse and noisy observations.",
+        "authors": "Aruzhan Tleubek, Salah A Faroughi",
+        "url": "http://arxiv.org/abs/2607.11110v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11110v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "提出了一个用于发现积分微分方程中记忆和非局部核的神经方法，通过“约束型Kolmogorov--Arnold网络”参数化，并“通过构造强制施加物理约束”（如单调性、凸性），具有极强的数学推导和理论严谨性，并能得到可解释的闭式解。"
+    }
+]

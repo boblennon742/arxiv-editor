@@ -1,0 +1,227 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.11883v1",
+        "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
+        "summary": "Compression is fundamental to intelligence. A model that can represent its training data as a short code has discovered regularities that enable generalization. Large neural networks may learn functions far simpler than their parameter counts suggest, but it is challenging to construct codes that realize this simplicity. Parameter-based methods such as quantization produce code lengths that scale with model size, insensitive to how much information the parameters store. Prequential coding bypasses this issue by compressing the training trajectory, but codes the exact data sequence regardless of how much the model learns, yielding large codes when the data has high entropy. We introduce requential coding, where a teacher model selects training samples drawn from the student's own distribution. The student's code records only these selections, which cost bits only where teacher and student disagree. The resulting code length is independent of parameter count and data entropy, and often orders of magnitude shorter than the prequential counterpart, with an advantage that grows with scale. This compression sheds light on phenomena inaccessible to prior compressors. Holding loss fixed, larger models and ensembles compress to much smaller sizes despite more parameters. Plugged into a PAC-Bayes bound, the requential code yields state-of-the-art generalization guarantees for billion-parameter LLMs, outperforming bounds built on aggressive post-training quantization even granted zero error. The bound tightens with scale in the compute-optimal regime, as models become increasingly compressible relative to dataset size. The same code predicts that models gradually overfit when trained for multiple epochs. It also isolates the learnable information in a dataset from its unpredictable, random content, revealing that lower-entropy text holds far more learnable structure than higher-entropy image data.",
+        "authors": "Shikai Qiu, Marc Finzi, Yujia Zheng, Kun Zhang, Andrew Gordon Wilson",
+        "url": "http://arxiv.org/abs/2607.11883v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11883v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文引入了“requential coding”这一理论创新，通过教师模型选择学生模型自身分布中的训练样本，实现模型压缩。其编码长度与参数数量和数据熵无关，比现有方法短数个数量级，并提供了最先进的PAC-Bayes泛化保证，深刻揭示了模型泛化和过拟合现象，具有极高的理论创新性和实际影响力，完美契合您对模型压缩和理论创新的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11751v1",
+        "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
+        "summary": "As multi-agent, tool-using LLM systems are deployed, a common safety net is a runtime monitor that checks each message, tool call, or step on its own. We show this net has a fundamental hole. A distributed backdoor splits a harmful payload across agents, so every local check passes while the assembled object is the attack. The monitor can be right on every step and still miss the attack. The problem is not splitting itself: split fragments can still leak suspicious tokens or provenance edges. The hard case is \\emph{local benignness}. No fragment carries the harm, and what is left looks like ordinary benign traffic. We formalize this as an \\emph{observability boundary}: a monitor catches only what its view can tell apart from benign traffic. We prove that once the fragments look benign in the monitored view, no detector on that view can catch them, however strong it is. Across a controlled testbed, an external benchmark, and end-to-end agent runs, local monitors lose the signal exactly as local evidence disappears, and it returns only when the monitor sees the assembled object. A monitor trained only on benign traffic recovers the attack's code structure across held-out encodings (0.874 mean AUROC). A decoded-view gate, given the encoding family, blocks every tested attack. But seeing more is not enough: full-trace monitors and decoders still fail unless they reach the representation where the payload is exposed. Local safety is not global safety when harm is compositional, and the open problem is finding that representation.",
+        "authors": "Yibo Hu, Ren Wang",
+        "url": "http://arxiv.org/abs/2607.11751v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11751v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究形式化了多智能体LLM系统中的“分布式后门”问题，证明了局部监控器无法检测到组合性危害，并提出了“可观察性边界”概念。这项工作具有极高的理论严谨性和实践影响力，为多智能体系统的安全部署提供了关键洞察和解决方案方向，解决了LLM应用中的一个重要瓶颈。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11266v1",
+        "title": "Valid $\\ne$ Necessary: Diagnosing Latent Inefficiency in Chain-of-Thought",
+        "summary": "Chain-of-Thought (CoT) prompting has significantly advanced the reasoning capabilities of Large Language Models (LLMs), yet it often incurs substantial computational costs due to over-reasoning: the generation of redundant, verbose, or irrelevant steps. While existing reasoning step evaluators effectively detect logical fallacies and factual errors, our analysis reveals a critical blind spot: they fail to penalize valid but inefficient reasoning steps that inflate token usage without contributing to the solution. To systematically diagnose this limitation, we introduce RIV-GSM8K, a diagnostic benchmark injected with five distinct types of inefficiencies, including circular reasoning and excessive decomposition. Diagnostic experiments reveal that state-of-the-art evaluators struggle to distinguish these inefficiencies from necessary reasoning. To address this gap, we propose CAID (Context-Aware Information Density), a training-free metric grounded in information theory that identifies low-utility steps. To validate the metric's practical utility, we apply it within PACE, a post-hoc compression strategy. Additional control experiments show that the gains of PACE are not explained by trivial pruning: compared with random step removal and PRM-based compression baselines, it preserves accuracy at substantially higher compression rates. Empirical results on GSM8K, StrategyQA, and ARC-Challenge demonstrate that PACE reduces token consumption by 31-53% while maintaining accuracy, confirming that CAID successfully distills informational froth from reasoning chains without compromising deductive validity.",
+        "authors": "Daeyeop Lee, Hwanjo Yu",
+        "url": "http://arxiv.org/abs/2607.11266v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11266v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文引入了RIV-GSM8K基准和基于信息论的Context-Aware Information Density (CAID) 指标，用于诊断CoT推理中的潜在低效性。通过PACE压缩策略，显著减少了token消耗，同时保持了准确性，解决了LLM“计算过度思考”的瓶颈，具有极高的理论和实践价值，对LLM效率提升有重要意义。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11250v1",
+        "title": "Multi-Agent LLMs Fail to Explore Each Other",
+        "summary": "Exploration is essential for reliable autonomy in multi-agent systems, yet it remains unclear whether large language model (LLM) agents can explore effectively when interacting with one another. We show that modern LLM agents fail to do so, often exhibiting myopic and polarized interaction patterns that lead to suboptimal coordination and increased regret. We formalize this challenge as the Multi-Agent Exploration problem, modeling it as a partially observable stochastic game (POSG) problem in which agents must probe peers to infer their capabilities and identify effective interaction strategies. To address this, we introduce Multi- Agent Contextual Exploration (MACE), a lightweight framework that explicitly promotes exploration through structured peer selection. Across both contextual and parametric diversity settings, MACE substantially improves exploration behavior and downstream task performance. We further show theoretically that the value of exploration increases with agent diversity. Overall, our results highlight a fundamental limitation of current LLM agents and underscore the importance of explicitly guided exploration for reliable multi-agent autonomy. Code will be released in https://github.com/deeplearning-wisc/mace",
+        "authors": "Hyeong Kyu Choi, Jiatong Li, Wendi Li, Xin Eric Wang, Sharon Li",
+        "url": "http://arxiv.org/abs/2607.11250v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11250v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究揭示了多智能体LLM在相互探索方面的失败，并将其形式化为多智能体探索问题。提出了MACE框架，通过结构化对等体选择促进探索，显著改善了探索行为和任务性能，对多智能体系统的可靠自主性具有基础性意义，是前沿智能体算法的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11138v1",
+        "title": "A Formal Hierarchical Architecture for Agentic Orchestration with Stack-Based Execution and Lazy Discovery",
+        "summary": "The rapid expansion of capabilities in Large Language Model (LLM) agents has exposed a critical architectural bottleneck: when agents are given access to a flat, monolithic registry of tools, the model must evaluate hundreds or thousands of options simultaneously. This leads to decision-space explosion, context window saturation, and degraded routing accuracy. To address these limitations, this paper presents a hierarchical, skill-based architecture for agentic orchestration. Capabilities are organized as a rooted tree where internal nodes make routing decisions and leaf nodes execute deterministic tasks. The runtime enforces a single-step execution loop governed by a Last-In-First-Out (LIFO) stack, giving the agent a form of memory akin to a Pushdown Automaton, therefore enabling it to track nested execution contexts and resume deterministically from any depth. Capability discovery follows a manifest-driven, lazy-loading protocol: only the immediate children of the active node are loaded, so memory and prompt costs scale with the explored path rather than the global registry. By replacing global memory with localized stack frames, the architecture prevents outputs from one execution branch from leaking into another, establishing the isolation guarantees required for deployment in regulated enterprise environments. We also discuss UPI Help, an AI-powered digital payments support product, as a motivating production deployment context. We provide a mathematical formalization of the orchestration state, detailed algorithmic analysis of the execution loop, and controlled benchmarks comparing flat and hierarchical routing under increasing tool catalogs, multi-step workflow pressure, and visible schema-token exposure per LLM call.",
+        "authors": "Prashant Devadiga,  Abhishek, Adithya Mishra, Alok Singh, Amisha Sinha, Asit Desai, Gaurang Dahad, Harshit Bhushan, Mandati Pramod Reddy, Prakhar Gupta, Rupesh Patil, Siddhi Behere",
+        "url": "http://arxiv.org/abs/2607.11138v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11138v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了一个形式化的分层、基于技能的智能体编排架构，通过栈式执行和惰性发现，解决了智能体访问扁平化、单一工具注册表时决策空间爆炸和上下文窗口饱和的瓶颈。具有深厚的理论基础和实际部署价值，是LLM架构和智能体应用的前沿探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11089v1",
+        "title": "OS-Pruner: Pruning Chains-of-Thought of Reasoning Models via Optimal Stopping",
+        "summary": "Large Language Models (LLMs) have achieved remarkable success in complex reasoning tasks through Chain-of-Thought (CoT) prompting. However, these models often exhibit \"computational overthinking,\" generating redundant reasoning steps that increase latency and cost without improving accuracy. Recent studies suggest that CoT trajectories can be significantly pruned, yet existing methods often rely on forcing a static thinking budget, heuristic filtering, sub-optimal early exit via classification, or expensive re-training. In this paper, we introduce OS-Pruner, a lightweight plug-in framework that formulates chain-of-thought pruning as an optimal stopping problem. Given a reasoning prefix, OS-Pruner learns whether further reasoning is worth its token cost by optimizing an explicit utility that trades off final-answer accuracy against generated length. Our novel formulation enables the model to dynamically assess the sufficient point of termination for a reasoning chain. OS-Pruner is designed to be lightweight during both training and inference, and to provide users with fine-grained control over the reasoning-effort vs. accuracy trade-off. On diverse reasoning benchmarks and base models, OS-Pruner achieves 20-60\\% reduction in generation length with minimal accuracy sacrifice.",
+        "authors": "Mohammed Ehab, Aymane El Gadarri, Vivek F. Farias, Adam Jozefiak, Ciamac C. Moallemi",
+        "url": "http://arxiv.org/abs/2607.11089v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11089v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究引入了OS-Pruner，一个轻量级插件框架，将CoT剪枝形式化为最优停止问题。通过优化显式效用函数来权衡最终答案准确性和生成长度，动态评估推理链的终止点，显著减少了生成长度，解决了LLM“计算过度思考”的瓶颈，具有极高的理论创新和效率提升价值。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11752v1",
+        "title": "Paradoxes of Game Theoretic Equilibria and Price of Anarchy",
+        "summary": "For decades, static solution concepts (Nash, Correlated, and Coarse Correlated Equilibria) and the Price of Anarchy (PoA) have formed the bedrock of algorithmic game theory, with no-regret learning proving fast convergence to such game-theoretic equilibria. We show that reducing multi-agent learning to static equilibrium and black-box regret analysis obscures underlying dynamic disequilibrium and game theoretic bounds.   First, interior Nash equilibria lack $C^1$ vector field information, meaning agents cannot distinguish aligned from strictly opposing incentives. Inheriting this geometry, the worst-case pure Nash equilibria dictating robust PoA bounds manifest as topologically unstable strict saddles, and in canonical congestion games, as global repellers supported on almost everywhere strictly dominated strategies. Anchoring efficiency guarantees to these unstable states causes algebraic sensitivity; we prove that accommodating all strictly positive affine costs renders the PoA unbounded. Furthermore, projecting learning trajectories onto the discrete simplex of correlated play systematically accommodates non-rationalizable behavior. Evaluating dynamics via Coarse Correlated Equilibria or proximal refinements fails to preclude strictly dominated strategies. Moreover, optimal $O(1/T)$ swap-regret minimization does not preclude macroscopic turbulence, manifesting as chaotic limit sets even in minimal games. Finally, we examine the non-atomic limit of congestion games. Though considered highly stable with tight sub-linear $Θ(p/\\ln p)$ PoA bounds (where $p$ is the polynomial degree), we prove that under discrete-time learning, the unique equilibrium destabilizes into Li-Yorke chaos and global attractors whose time-averaged inefficiency degrades exponentially as $2^p$. These results necessitate re-evaluating worst-case equilibrium frameworks for dynamically grounded metrics.",
+        "authors": "Georgios Piliouras, Ian Gemp, Siqi Liu, Luke Marris",
+        "url": "http://arxiv.org/abs/2607.11752v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11752v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文揭示了博弈论均衡和无悔学习在多智能体学习中存在的悖论，证明了静态均衡概念（如纳什均衡）在动态非均衡下的局限性，并揭示了混沌极限集。这项工作对多智能体系统的理论基础提出了深刻挑战，对未来算法设计具有指导意义，理论严谨性极高。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11577v1",
+        "title": "Structure-Feature Aligned Graph Learning via Alternating Constrained Optimization",
+        "summary": "We introduce a constrained two-view framework for node prediction that aligns structure-conditioned GNN embeddings with a structure-free feature prior learned by an anchor model. Conventional Graph Neural Networks (GNNs) couple feature transformation and neighborhood aggregation, which renders them vulnerable to topology noise and heterophilous connections. To decouple this dependency, our framework utilizes an independent anchor network to capture intrinsic attribute features via a self-supervised reconstruction objective. Furthermore, we propose a Channel-Split Adaptive Gated GNN (CSAG-GNN) that dynamically routes representations between global spectral smoothing and local spatial discrimination through a node-wise gating mechanism. We propose a stable cyclic alternating optimization strategy to solve the resulting coupled bi-level objective, preventing mutual representation drift during training. Empirical results on both homophilous and heterophilous benchmarks show balanced performance gains and structural robustness over competitive baselines.",
+        "authors": "Chengcheng Yan, Qingsong Wang",
+        "url": "http://arxiv.org/abs/2607.11577v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11577v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究引入了一个受约束的两视图框架，通过交替约束优化将GNN嵌入与无结构特征先验对齐，并提出了CSAG-GNN。该方法解耦了特征变换和邻域聚合，增强了GNN对拓扑噪声和异质连接的鲁棒性，具有很高的理论严谨性和创新性，是图神经网络架构的重要进展。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11493v1",
+        "title": "Agentic Skill Optimization over Lie Algebroids",
+        "summary": "Agentic systems increasingly improve themselves by editing skills: prompts, rubrics, plans, tool contracts, examples, validators, and traces. Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique. Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability. The order of edits can matter as well: repairing a schema before a normalization rule need not be equivalent to applying the same edits in the reverse order. This paper introduces a new framework for skill optimization called LASKO, for Lie Algebroid SKill Optimization. LASKO models typed, anchored Markdown skills as the base category and available edit policies as sections of a controlled Lie algebroid with anchor $ρ$. The anchor maps an edit policy to its visible Markdown effect; the kernel $\\ker(ρ)$ represents latent template, routing, or implementation structure; and the algebroid bracket measures noncommuting edit composition. As shown in the paper, LASKO achieves order-of-magnitude speedups in skill optimization in our preliminary benchmark results, primarily because it substitutes inexpensive Lie-bracket screening tests that run in microseconds, before investing in expensive validations that require running large language models. On a causal extraction from natural language task, LASKO achieved a speedup of almost $15 \\times$ compared to a brute-force approach that validated all edits by running them through a DeepSeek V3.1 4-bit model with 671B parameters.",
+        "authors": "Sridhar Mahadevan",
+        "url": "http://arxiv.org/abs/2607.11493v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11493v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了LASKO框架，通过将智能体技能优化建模为李代数上的截面，并利用李括号筛选测试，实现了技能优化数量级的加速。这项工作具有深厚的理论创新性，解决了智能体系统中复杂编辑组合和验证成本高昂的瓶颈，是前沿智能体算法的理论突破。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11005v1",
+        "title": "Actor-Critic Learning for Extended Mean Field Control with Deterministic Policies",
+        "summary": "This paper develops a model-free reinforcement learning framework for continuous--time extended mean field control problems, where both the dynamics and reward may depend on the joint distribution of states and controls. We adopt deterministic feedback policies, under which the state--action distribution is induced directly as a push--forward of the state law. This avoids optimization over stochastic kernels and bypasses key limitations of existing approaches in extended mean field settings.   We first establish a model--free sensitivity formula for parameterized McKean--Vlasov dynamics and use it to derive a deterministic policy gradient formula expressed through an advantage--rate function on the Wasserstein space. We then refine this formula by introducing local value and advantage--rate representations that depend on the state, action, and joint state--action distribution, yielding a policy gradient that includes both action derivatives and measure--derivative terms with respect to the control distribution. These characterizations lead to a martingale--based learning principle and motivate a continuous--time deep deterministic policy gradient algorithm combining particle approximations, measure--dependent neural networks, temporal--difference learning, and exploration in either action or parameter space.   Numerical experiments on stochastic Cucker--Smale consensus control and optimal liquidation with trade crowding demonstrate the efficiency, stability, and robustness of the proposed method, including problems with explicit dependence on the control distribution.",
+        "authors": "Ziheng Cheng, Xin Guo, Huyên Pham, Yufei Zhang",
+        "url": "http://arxiv.org/abs/2607.11005v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11005v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该研究提出了一个用于连续时间扩展平均场控制问题的无模型强化学习框架，采用确定性反馈策略。建立了参数化McKean-Vlasov动力学的敏感性公式，推导了确定性策略梯度公式，具有深厚的理论严谨性和算法创新，是RL前沿理论的重要贡献。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11826v1",
+        "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
+        "summary": "Neural Architecture Search (NAS) has automated the design of deep learning models but traditionally requires massive computational resources, often measured in thousands of GPU-days. In this paper, we propose a frugal and memetic NAS framework designed to democratize architecture design on consumer-grade hardware. Our approach combines the global macro-search capabilities of an autoregressive Transformer controller, trained via Reinforcement Learning (RL), with the local micro-exploitation of an Artificial Bee Colony (ABC) algorithm. To prevent premature convergence during the RL phase, we introduce a dynamic entropy mechanism that forces topological exploration upon detection of performance stagnation. Evaluated on a standard GPU (NVIDIA RTX 3060), our hybrid method effectively resolves the \"cold-start\" problem inherent in metaheuristics. By algorithmically penalizing network depth, our framework actively mitigates model bloat: on the CIFAR-10 dataset, it discovers an efficient architecture reaching 84.85% accuracy with only $\\sim$174,000 parameters (significantly smaller than standard baselines like ResNet-20) in 3 hours of search time. Furthermore, we demonstrate the framework's flexibility by applying it to credit card fraud detection, directly optimizing the F1-Score on highly imbalanced tabular data to reach a F1-Score of 0.71 with a compact network of $\\sim$4,600 parameters. These results suggest that our approach can yield tailored, accessible, and highly parameter-efficient deep learning models suitable for edge deployment.",
+        "authors": "Romain Amigon",
+        "url": "http://arxiv.org/abs/2607.11826v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11826v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了Transformer-Guided Swarm Intelligence的节俭型NAS框架，结合了Transformer控制器（RL）的宏观搜索和人工蜂群算法的微观探索，引入动态熵机制防止早熟收敛。在消费级硬件上实现了高效、参数紧凑的模型设计，解决了NAS的计算资源瓶颈，具有显著的理论和实践价值，是模型压缩和架构搜索的前沿算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11720v1",
+        "title": "Active Offline-to-Online Reinforcement Learning",
+        "summary": "Background: Offline reinforcement learning (RL) enables effective policies to be trained from large, previously collected datasets and subsequently improved through limited online interaction. This offline-to-online RL (O2O-RL) paradigm is particularly promising in nonstationary domains where interaction is costly or potentially hazardous. Standard O2O-RL pipelines train multiple candidate policies offline, evaluate them using off-policy or online evaluation, and then deploy and fine-tune the policy with the highest estimated value. However, as in offline pretraining, fine-tuning performance is highly sensitive to the choice of algorithm and hyperparameters, making it risky to commit to a single policy. Objectives: We study active policy selection for fine-tuning under a limited interaction budget in O2O-RL settings. To our knowledge, this is the first work to address this problem. Methods: We formulate the problem by identifying a fundamental trade-off between allocating online interactions to policy evaluation, which helps identify high-performing policies, and allocating them to fine-tuning, which improves policy performance. We then propose an approach that balances this trade-off by actively selecting policies for fine-tuning based on upper-confidence bounds on their future performance. These bounds are derived from locally linear performance forecasts fitted to observations obtained through online evaluation. Results: Across a diverse range of experiments, the proposed approach consistently outperforms existing O2O-RL baselines. Conclusions: Actively selecting and fine-tuning policies uses limited online interaction budgets more effectively than either committing to a single policy or dividing the budget equally among all policies. Our framework also advances offline RL toward practical deployment in real-world systems where online interaction is costly or risky.",
+        "authors": "Alper Kamil Bozkurt, Shangtong Zhang, Yuichi Motai",
+        "url": "http://arxiv.org/abs/2607.11720v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11720v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究首次研究了O2O-RL中有限交互预算下的主动策略选择问题，提出了通过未来性能的上限置信区间来平衡策略评估和微调的方法。显著提高了样本效率，为RL在成本高昂或危险领域的实际部署提供了有效途径，是数据效率和RL算法的前沿探索。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11614v1",
+        "title": "Extending LLM Context via Associative Recurrent Memory",
+        "summary": "Extending the context length of large language models (LLMs) is critical for many real-world applications, yet standard transformers remain constrained by quadratic compute and linear memory scaling. In this work, we investigate the Associative Recurrent Memory Transformer (ARMT) as a practical approach for enabling long-context processing in LLMs, constant memory scaling, and better efficiency. We make three main contributions. First, we construct two domain-specific long-context datasets designed to evaluate realistic workloads, focusing on narrow-domain fine-tuning scenarios. Second, we propose a comprehensive training recipe for ARMT-based context extension, combining continued pre-training, synthetic long-context data generation, curriculum learning, and selective integration of associative memory into chosen model layers. Third, we present an extensive experimental study demonstrating that ARMT-augmented models: (i) process inputs well beyond their original context limits without degrading performance relative to in-limit baselines; (ii) generalize more effectively to out-of-distribution context lengths; and (iii) need 30% less FLOPs while preserving baseline performance within the original context window.",
+        "authors": "Gleb Kuzmin, Ivan Rodkin, Aydar Bulatov, Yuri Kuratov, Lyudmila Rvanova, Mikhail Katkov, Ilia Sochenkov, Misha Tsodyks, Timothy Baldwin, Mikhail Burtsev, Artem Shelmanov",
+        "url": "http://arxiv.org/abs/2607.11614v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11614v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文深入研究了关联循环记忆Transformer (ARMT) 在扩展LLM上下文长度方面的应用，提出了一套全面的训练方案。ARMT模型能够处理超出其原始限制的输入，泛化能力更强，且效率更高，解决了LLM上下文长度的二次计算和线性内存扩展瓶颈，是LLM架构和效率的前沿算法。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11581v1",
+        "title": "Actor as Its Own Critic: Unifying Region Understanding and Localization via CycleGRPO",
+        "summary": "This paper introduces Actor as Its Own Critic, a unified reinforcement learning framework, Cycle Group Relative Policy Optimization (CycleGRPO), that jointly optimizes region understanding and localization for Multimodal Large Language Models (MLLMs). Unlike existing separate pipelines, we leverage the inherent duality between the two tasks to construct a self-evaluating reinforcement learning paradigm: \"region $\\to$ text $\\to$ region''. Specifically, a single MLLM first acts as the actor to generate region captions, then immediately transitions to a critic to ground its generated text back in the spatial domain. Therefore, CycleGRPO requires only region inputs, e.g., masks or bounding boxes, entirely bypassing the need for textual ground truths. A quality-aware token-level cycle-consistency reward is employed to assess the semantic discriminability of text captions via their physical localization accuracy. Empirically, built upon SAMTok, our CycleGRPO framework successfully bootstraps both capabilities simultaneously. Without any task-specific fine-tuning, the framework yields consistent performance gains across a wide range of benchmarks, including region captioning, region VQA, grounded dialogue, and referring segmentation. Overall, CycleGRPO offers a straightforward and scalable way to advance pixel-level capabilities in MLLMs. Code and models are released at https://github.com/devinxzhang/CycleGRPO.",
+        "authors": "Xin Zhang, Haochen Wang, Yikang Zhou, Jason Li, Robby T. Tan",
+        "url": "http://arxiv.org/abs/2607.11581v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11581v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "该研究提出了CycleGRPO，一个统一的强化学习框架，通过“Actor as Its Own Critic”范式，利用区域理解和定位之间的内在对偶性，实现MLLM的自评估和联合优化。无需文本真值，显著提升了像素级能力，具有高度创新性，是多模态LLM和RL算法的前沿结合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.11505v1",
+        "title": "Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals",
+        "summary": "Post-training is essential for refining the domain-specific capabilities of large language models (LLMs), yet existing reward optimization and distribution matching methods tightly couple policy exploration with distribution alignment. This coupling forces expensive exploration directly on the policy model and severely hinders the asynchronous generation, reuse, and cross-model transfer of optimization signals. In this paper, we propose Proxy-guided Update Signal Transfer (PUST), a novel post-training framework that fundamentally decouples update-signal exploration from distribution alignment. Instead of utilizing the primary model for costly exploration, PUST employs a lightweight proxy model as an efficient testbed to discover high-reward behaviors. We extract the relative improvement signal between the proxy's initial and optimized states, transferring this directional update to the primary model to guide its policy alignment. This decoupled pipeline, comprising proxy exploration, update-signal extraction, and signal transfer, significantly reduces computational overhead and enables optimization signals to be asynchronously generated, cached, and reused. Crucially, by transferring relative improvements rather than absolute policy distributions, PUST naturally supports weak-to-strong improvement and seamless cross-model transfer. Systematic evaluations on Qwen3-family models across math and code domains demonstrate that update signals extracted from substantially weaker proxies can robustly and adjustably enhance stronger primary models. Ultimately, PUST transforms post-training from a monolithic online optimization process into a highly modular, reusable, and cost-efficient paradigm.",
+        "authors": "Daocheng Fu, Rong Wu, Yu Yang, Xuemeng Yang, Jianbiao Mei, Licheng Wen, Pinlong Cai, Yong Liu, Botian Shi, Yu Qiao",
+        "url": "http://arxiv.org/abs/2607.11505v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.11505v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 4,
+            "Impact": 5,
+            "Clarity": 5
+        },
+        "reason_zh": "这篇论文提出了PUST，一种新颖的LLM后训练范式，将更新信号探索与分布对齐解耦。通过轻量级代理模型进行高效探索，提取相对改进信号并转移到主模型，显著降低了计算开销，实现了优化信号的异步生成、复用和跨模型传输，是LLM训练效率和架构优化的前沿方法。"
+    }
+]

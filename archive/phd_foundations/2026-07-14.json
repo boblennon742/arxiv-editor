@@ -1,0 +1,197 @@
+[
+    {
+        "id": "http://arxiv.org/abs/2607.12909v1",
+        "title": "Real-time fall detection based on vision for low-power edge platforms",
+        "summary": "Falling detection is vital for elderly care and intelligent surveillance; however, prevailing vision-based approaches predominantly frame it as static pose classification or discrete temporal pattern matching, fundamentally overlooking the instability dynamics of the human support system. This paper proposes a physics-informed falling detection framework that recasts falling as a stability-loss event in a coupled dynamical system. We introduce a novel dual-LTC architecture comprising a Center-of-Mass (CoM) subsystem and a Base-of-Support (BoS) subsystem, both instantiated as Liquid Time-Constant (LTC) neural networks to continuously model inertial trajectory evolution and ground-contact adjustment through adaptive time constants, Physical interpretability of falling motion. A learnable coupling module emulates physical interaction between the two subsystems, while a Stability Manifold classifier operates in the joint latent space to detect boundary crossing via Lyapunov-inspired stability metrics. Complementary counterfactual trajectory projection and Time-to-Collision (TTC) estimation further enable irreversibility assessment and early warning. The architecture is designed to support a three-state prediction paradigm (Normal, Falling, Fallen); in this preliminary study, we validate the core stability discrimination capability on a two-class dataset (Normal vs. Falling), leaving the full three-state temporal transition to future work. Unlike conventional CNN--RNN pipelines, the proposed formulation encodes continuous-time mechanical inertia, yielding a sub-50K-parameter network capable of real-time inference on resource-constrained edge devices. Extensive experiments demonstrate competitive accuracy with superior physical interpretability, validating its efficacy for low-compute visual fall detection.",
+        "authors": "Wenjun Xia, Zhicheng Peng, Haopeng Li, Zhengdi Zhang",
+        "url": "http://arxiv.org/abs/2607.12909v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12909v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 3
+        },
+        "reason_zh": "该论文提出了一个物理信息驱动的跌倒检测框架，将跌倒重新定义为耦合动力系统中的稳定性丧失事件。它引入了双LTC架构，并利用了Lyapunov启发的稳定性指标和连续时间机械惯性建模。这种方法将严谨的物理学和动力学理论应用于AI系统，具有强大的理论基础和清晰的数学推导潜力，符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12833v1",
+        "title": "ANGLE: Angular Neural Generative Learning via Engression",
+        "summary": "Circular data, representing angles or directions, are frequently encountered in computer vision, biology, geology, and meteorology. Traditional regression targets the conditional mean, which is often geometrically misleading for circular responses under multimodal, skewed, or asymmetric data structures. To address these limitations, a lightweight deep generative framework, namely ANGLE, is introduced for non-parametric distributional regression on the circle. The full conditional distribution of an angular response, given Euclidean and circular covariates, is learned through a generative map optimized via a generalized circular energy score (GCES) loss. Desirable theoretical properties, including the strict propriety of the loss and the rotational equivariance of the estimators, are established. Furthermore, both pre- and post-additive noise models are accommodated. A unified toolbox is provided for advancing previously underexplored challenges in circular statistics: extrapolation, sufficient dimension reduction, and conditional distribution equality testing. The framework's efficacy is demonstrated through extensive simulations and real-world applications. Specifically, the proposal is utilized for object pose estimation from imagery and wind direction prediction, which are integral to surveillance, autonomous vehicles, and energy systems, respectively. Superior predictive performance and robust uncertainty quantification of the proposed method in these tasks are revealed.",
+        "authors": "Rajdeep Pathak, Archi Roy, Tanujit Chakraborty",
+        "url": "http://arxiv.org/abs/2607.12833v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12833v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文引入了ANGLE，一个用于圆形数据的非参数分布回归的深度生成框架。它明确指出建立了“理想的理论性质，包括损失的严格适当性和估计器的旋转等变性”。这直接满足了您对强大理论基础和清晰数学推导的要求。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12832v1",
+        "title": "Contrast-Free ICA and Causal Inference via Wasserstein Distances to the Gaussian",
+        "summary": "We study the squared $2$-Wasserstein distance to the standard Gaussian as a non-Gaussianity criterion and use it for linear Independent Component Analysis (ICA) and causal inference in Linear Non-Gaussian Acyclic Models (LiNGAM). The analysis relies on a strict inequality between the Wasserstein non-Gaussianity of independent standardized sources and that of their linear combinations. When at most one source is Gaussian, any unit-norm linear combination involving at least two sources has strictly smaller squared Wasserstein distance than the corresponding weighted sum of source distances. At the population level, this yields exact identification of the ICA unmixing matrix, up to signed permutation, and gives an analogous characterization of causal orders through least-squares residuals. We then define empirical plug-in estimators and prove distribution-free uniform convergence bounds under finite-moment assumptions, before detailing three practical solvers: a Picard-style orthogonal optimizer for ICA, an exhaustive dynamic program for causal-order search, and a greedy order-search variant. Empirically, we demonstrate competitive performance for both tasks and provide open-source implementations for source separation and causal inference.",
+        "authors": "Félix Laplante, Christophe Ambroise, Pierre Humbert",
+        "url": "http://arxiv.org/abs/2607.12832v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12832v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文利用平方2-Wasserstein距离作为非高斯性准则，用于线性独立成分分析（ICA）和因果推断（LiNGAM）。它证明了“Wasserstein非高斯性之间的严格不等式”，实现了“ICA解混矩阵的精确识别”，并给出了“在有限矩假设下的无分布均匀收敛界”。这篇论文在理论严谨性和数学推导方面表现出色，是您偏好的完美匹配。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12830v1",
+        "title": "MixCIT: A Kernel Based Local-Polynomial Debiased Test for Conditional Independence on Mixed-Type Data",
+        "summary": "Conditional independence testing (CIT) is fundamental to modern statistical inference in areas related to causal discovery and variable selection. While marginal independence is relatively well-understood, despite multiple advances, no existing non-parametric CIT provides a unified, efficient, and statistically guaranteed solution across heterogeneous data. We introduce a graph-based test statistic comparing kernel similarities of the response within composite neighborhoods that use exact matching on discrete components and $k_n$-nearest-neighbor matching on continuous ones. The raw statistic, related to prior constructions, suffices under fully discrete conditioning. However, when at least one conditioning variable is continuous, we instead use a local-polynomial debiased variant that cancels the local smoothing bias. We rigorously establish its asymptotic null distribution across all data-type combinations. We further prove a dimension-free $n^{-1/4}$ detection threshold under local alternatives, eliminating the phase transition that affects geometric estimators in high dimensions. Finally, we develop efficient algorithms with near-quadratic complexity and analytic graph-based calibration, bypassing the cubic bottlenecks of global kernel methods.",
+        "authors": "Mengxiao Gao, Kyra Gan, Promit Ghosal",
+        "url": "http://arxiv.org/abs/2607.12830v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12830v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文介绍了MixCIT，一种基于核的局部多项式去偏条件独立性检验方法，适用于混合类型数据。它“严格建立了其在所有数据类型组合下的渐近零分布”，并“证明了在局部替代下维度无关的$n^{-1/4}$检测阈值”。这提供了强大的统计保证和清晰的数学推导，对因果发现和变量选择至关重要。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12826v1",
+        "title": "Solution of the Hempel's statistical ambiguity problem and Causal AI",
+        "summary": "This paper addresses Carl Hempel's longstanding problem of statistical ambiguity in inductive-statistical inference, in which contradictory predictions are derived from statistical laws. To avoid such predictions, Carl Hempel proposed the Requirement of Maximal Specificity (RMS) for the statistical laws used in the inference. An analysis of the RMS refinements made by Wesley Salmon, Alberto Coffa, and James Fetzer led to the following definition of maximally specific statistical laws: \"the lawlike premises of an adequate explanation must specify all and only those properties whose presence or absence made a difference to the occurrence of its explanandum-phenomenon.\" However, there was no proof of a solution to the statistical ambiguity problem based on this definition. We use Nancy Cartwright's definition of causes that raise probabilities across background contexts, and then introduce the concept of Causal Rules. Then we define a special semantic probabilistic inference procedure that incrementally refines these causal rules by incorporating all statistically relevant information. This procedure yields Maximally Specific Causal Relationships (MSCRs), for which we prove (Theorem 1) that predictions derived from them are consistent. This resolves the statistical ambiguity problem. The semantic probabilistic inference procedure provides a probabilistic causal learning system, which may be used in such new areas as Causal AI and Causal Machine Learning. They fundamentally explore causal inference as a tool for understanding cause-and-effect relationships within complex systems. Properties similar to RMS remain under discussion. Several notions related to RMS are considered: invariant feature learning, invariant causal prediction, and spurious association.",
+        "authors": "Evgenii Vityaev",
+        "url": "http://arxiv.org/abs/2607.12826v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12826v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文解决了Hempel关于归纳统计推断中统计模糊性的长期问题。它引入了“因果规则”和“最大特异性因果关系（MSCRs）”的概念，并证明（定理1）从MSCRs导出的预测是一致的。这直接涉及因果逻辑和理论问题解决，高度符合您的研究兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12634v1",
+        "title": "Atomic Units of X: The Compression Layer of Intelligence",
+        "summary": "This paper proposes a theoretical framework for understanding intelligence as a process of atomic compression and compositional reuse. We argue that cognitive, biological, computational, and organizational systems achieve scalable intelligence by decomposing complex phenomena into reusable atomic units that can be recombined into higher-order structures. Drawing on evidence from cognitive science, information theory, evolutionary biology, software engineering, medicine, legal reasoning, education, music, and artificial intelligence, the paper develops the concept of atomic units as fundamental compression layers that support efficiency, transfer, interpretability, and evolvability. The central contribution is the Compression Calculus, a formal framework for comparing surface-level representations with atomic representations and for describing how compression gains compound across abstraction layers. We introduce the Compounding Cascade thesis, according to which each additional layer of abstraction multiplicatively increases representational efficiency rather than merely adding incremental savings. The paper further argues that contemporary AI systems often operate at suboptimal levels of representation, relying on token-level processing or document-level retrieval rather than stable, concept-level atomic structures. In this view, large language models are best understood not as complete knowledge architectures, but as dynamic fusion engines capable of navigating, sequencing, and recombining atomic units. The framework provides a foundation for designing self-evolving knowledge systems that can discover, refine, and compose new primitives over time. By reframing intelligence as compression through compositional abstraction, the paper offers a unifying perspective on expertise, knowledge representation, explainable AI, and the future architecture of adaptive intelligent systems.",
+        "authors": "Sachin Dev Duggal, Pradyumna Swarnalatha Ramanna, Alexandros Vassiliades",
+        "url": "http://arxiv.org/abs/2607.12634v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12634v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了一个将智能理解为“原子压缩和组合重用”过程的理论框架。它引入了“压缩演算（Compression Calculus）”，一个用于比较表面级表示与原子表示的正式框架。这篇论文具有高度的理论性和基础性，与您将严谨数学逻辑应用于现代AI系统的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12613v1",
+        "title": "Tensor-Based Reduced-Order Modeling for Optimization-Based Inverse Problems",
+        "summary": "We develop a tensor reduced-order modeling (TROM) framework for optimization-based inverse problems governed by parameter-dependent dynamical systems. The approach approximates the parameter-to-observation map directly in tensor-train format, using either TT-SVD or TT-Cross compression, and integrates the resulting representation into a regularized nonlinear least-squares formulation. Beyond accelerating forward evaluations, the low-rank tensor structure is used to reformulate the inverse problem in reduced coordinates, assemble the Gauss--Newton quantities without forming the full observation-space Jacobian, and perform TROM-based objective minimization over the discrete parameter grid. This tensor optimization step can be used either as a stand-alone approximate minimization procedure or as a data-informed initialization for a subsequent Gauss--Newton solve. The method is studied for two inverse problems: an inverse heat-transfer problem in a heterogeneous medium, where the unknown parameters describe the locations of multiple low-conductivity inclusions, and a FitzHugh--Nagumo parameter-estimation problem with a highly nonconvex optimization landscape. Numerical experiments assess the effects of ROM approximation error, measurement noise, regularization, initialization, spatial discretization, and increasing parameter dimension. The results show that TROM can reproduce the behavior of full-order inversion at a substantially reduced online cost. The experiments also demonstrate that reduced-coordinate inversion, tensor-based optimization, and appropriate regularization improve robustness in higher-dimensional, noisy, and strongly nonconvex regimes.",
+        "authors": "Sahidul Islam, Andreas Mang, Maxim Olshanskii",
+        "url": "http://arxiv.org/abs/2607.12613v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12613v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文开发了一个张量降阶建模（TROM）框架，用于参数依赖动力系统控制的基于优化的逆问题。它利用“张量列车格式”和“TT-SVD或TT-Cross压缩”，并在“降维坐标”中重新 формулирует逆问题。这涉及强大的数学概念（张量分解、优化理论），具有高度的理论严谨性。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12584v1",
+        "title": "Explainable-by-Design Audio Deepfake Detection via Wiener-Hopf Linear Prediction",
+        "summary": "The rapid advancement of synthetic speech generation methods has made audio deepfake detection a critical challenge in multimedia forensics. While recent approaches achieve high detection accuracy, they typically rely on black-box architectures that offer limited interpretability and high computational complexity. In this paper, we propose an explainable-by-design audio deepfake detection framework based on Wiener-Hopf linear prediction, processed by a lightweight 2D Convolutional Neural Network (CNN). This design enables a direct and transparent connection between classification outcomes and the acoustic properties of the signal. Experimental results on benchmark datasets demonstrate competitive detection performance while maintaining significantly lower computational complexity compared to state-of-the-art solutions. The interpretability analysis using Grad-CAM reveals that the classifier focuses on low-order predictor coefficients and on silence and transitional regions, suggesting that the Wiener-Hopf predictor captures reverberation characteristics and subtle statistical inconsistencies in synthetic speech. Finally, robustness experiments show that fine-tuning effectively recovers detection performance under common post-processing degradations, including additive noise, MP3 compression, and telephone filtering.",
+        "authors": "Mattia Tamiazzo, Simone Milani, Massimo Iuliani, Marco Fontani",
+        "url": "http://arxiv.org/abs/2607.12584v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12584v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了一种基于Wiener-Hopf线性预测的可解释音频深度伪造检测框架。Wiener-Hopf理论是信号处理中具有强大数学基础的经典方法。这种设计实现了分类结果与信号声学特性之间的直接透明连接，符合您对理论严谨性和可解释AI的兴趣。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12526v1",
+        "title": "From Preimage Search To Source-Grounded Feature Inversion",
+        "summary": "Interpreting a neural network requires understanding what its internal features extract from a particular input. Feature inversion seeks to express a selected feature in the input domain, but canonical iterative methods search for an input whose re-encoded representation matches the target. Because many inputs can satisfy this constraint, target matching alone does not specify the inverse associated with the sample that generated the feature. We formulate source-grounded feature inversion by conditioning the inverse on the source-local network geometry at the target-generating input. At each boundary of the computational DAG, backpropagation provides the correct reverse dependencies but transports an adjoint signal rather than an upstream-state estimate. We locally repair this signal with a closed-form matrix Wiener map from a mean-seed VJP to the upstream state, followed by a second Wiener map for the JVP forward-consistency residual, and compose the repaired states through the same DAG in one finite reverse pass. One calibrated zero-intercept map family supports new inputs, depths, channels, and channel groups across diverse CNN and Transformer architectures, tensor components, and visual distributions without query-specific optimisation. Matched target and source controls verify that each inverse depends on the selected feature and the local operators of the sample being explained, rather than a target-independent image template. Prediction-conditioned feature atlases align these visualisations with independent interventions on the corresponding internal features. Together, source-grounded feature inversion opens the model's hidden feature hierarchy to inspection at the level of individual layers and channels, linking what the network extracts from an input to the internal evidence that shapes its decision.",
+        "authors": "Kaixiang Shu",
+        "url": "http://arxiv.org/abs/2607.12526v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12526v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“源接地特征反演”的公式，用于解释神经网络。它利用“闭式矩阵Wiener映射”和“JVP前向一致性残差”，旨在将网络从输入中提取的内容与内部证据联系起来。这篇论文通过明确的数学工具深入探讨了机制可解释性，完美符合您的偏好。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12521v1",
+        "title": "Modification and extension of the Bayesian clinical trial design using external data for single-arm and hybrid-controlled trials",
+        "summary": "Limited patient availability complicates sample size determination in pediatric clinical trials. Although Bayesian methods incorporating external data offer a solution, rigorously controlling the type I error rate remains difficult. Psioda and Ibrahim (2019) proposed a simulation-based framework as a practical solution. However, although their framework was designed to relax the type I error control, this relaxation fails when the external data exhibit a large treatment effect, making it difficult to design clinical trials that incorporate external data. Furthermore, restricting the support of sampling priors can cause trial outcomes to fall outside of this support, leading to lower power. Additionally, their analytic prior formulation may induce bias, and their method is not applicable to hybrid-controlled trials involving two-group comparisons. Thus, we propose modifications to both the sampling and analytic prior specifications and extend the framework to hybrid-controlled trials. We redefine the null sampling prior as a normal distribution centered at the null boundary, ensuring a Bayesian type I error evaluation. For the analytic prior, we employ a weakly informative prior for the second component of a robust mixture prior to mitigate bias under prior-data conflict. Furthermore, we extend this methodology to hybrid-controlled trials. Simulation studies and a pediatric case study of cutaneous lupus erythematosus demonstrate that our method substantially reduces the required sample size compared with both frequentist and original Bayesian methods, while maintaining the target operating characteristics and controlling estimation bias under prior-data conflict. This framework provides a reliable and efficient approach for designing clinical trials that incorporate external information.",
+        "authors": "Wataru Murasaki, Tomohiro Ohigashi, Ryota Ishii, Kazushi Maruo, Masahiko Gosho",
+        "url": "http://arxiv.org/abs/2607.12521v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12521v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文提出了贝叶斯临床试验设计的修改和扩展，重新定义了“零采样先验为以零边界为中心的正常分布，确保贝叶斯I型错误评估”。它还使用了“弱信息先验”来减轻先验-数据冲突下的偏差。这篇论文具有强大的统计方法论和理论论证，提供了重要的统计保证。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12474v1",
+        "title": "From Observation to Insight: Mechanistic World Models and the Quest for Autonomous Discovery",
+        "summary": "Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.",
+        "authors": "Ingmar Posner, Anson Lei, Bernhard Schölkopf",
+        "url": "http://arxiv.org/abs/2607.12474v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12474v1",
+        "scores": {
+            "Novelty": 5,
+            "Rigor": 5,
+            "Impact": 5,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出了“机制世界模型”作为科学发现的新设计范式，将“可重用机制置于表示、计算和学习的中心”。它形式化了“机制中心世界模型的解剖结构”，并推导了发现所需的计算能力。这篇论文具有高度的理论性和基础性，对AI for Science领域具有深远影响，与您的兴趣高度契合。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12382v1",
+        "title": "Differentiable Clone-Structured Causal Graphs for End-to-End Cognitive Map Learning from Image Sequences",
+        "summary": "How can an agent build a structured map of its world from nothing but an ongoing sequence of raw sensory input and its own movements, especially when natural variation means exact sensory patterns rarely repeat? The Clone-Structured Causal Graph algorithm (CSCG), a normative hippocampus model, shows how an interpretable map can be learned from aliased observations. However, CSCG requires a predefined discrete alphabet, and its expectation-maximization formulation is not easily combined with existing neural network modules, preventing the end-to-end processing of raw image sequences. We remove this barrier by reformulating CSCG as a single, fully differentiable module, gradCSCG, and coupling it to a learned vector-quantized variational autoencoder (VQ-VAE) perceptual front-end. A soft emission forward pass allows the map-learning objective to flow back into perception, while a set of loss-balancing mechanisms mitigates module collapse during joint training. We demonstrate, first, that gradient training reproduces CSCG's results on original symbolic grid worlds by recovering room topology from heavily aliased observations. Second, we show that map recovery remains robust on MNIST image sequences, where each visit to a location yields a newly sampled image of its assigned digit. Across four heavily aliased environments, the end-to-end pipeline successfully uncovers the underlying adjacency graph with high edge precision and recall, directly from visual input. This work provides a proof of principle that CSCG can serve as a composable building block in a deep learning architecture.",
+        "authors": "Arash Nikzad, Sasan Sarbishegi, Ali Dasmeh, Muhammad Asif, Parsa Gharavi, Erik Husom, Sagar Sen, Andrew B. Lehr, Olivier Penacchio, Ana Clemente, Tristan M. Stöber",
+        "url": "http://arxiv.org/abs/2607.12382v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12382v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 4,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "该论文将CSCG（一种规范的海马模型）重新 формулируется 为“gradCSCG，一个单一的、完全可微分的模块”，并与VQ-VAE结合，用于从图像序列中学习可解释的认知地图。它将因果图、认知建模和可微分编程结合起来，具有坚实的理论基础和数学推导。"
+    },
+    {
+        "id": "http://arxiv.org/abs/2607.12376v1",
+        "title": "Demonstration of the common dual-channel feature decoupling characteristic of front-door mediation causal inference methods in whole-slice image classification",
+        "summary": "Causal inference using front door intervention and multi-instance learning (MIL) has advanced the analysis of Whole Slide Images (WSI) in digital pathology. These methods adjust feature distributions of subtle evidence sub-images to correctly associate them with WSI-level diagnoses. We propose and prove 2 hypotheses for evaluating such methods: 1) Causal inference MIL introduces an independent classification channel that effectively completes WSI classification; 2) Greater difference between features extracted by the new and baseline channels increases effectiveness in eliminating false correlations. This hypothesis describes the core of causal inference MILs: overlaying parallel, independent channels to eliminate false associations between WSI-level diagnostic and non-diagnostic evidence sub-images by increasing deep feature diversity. Based on these hypotheses, we evaluated several causal inference MILs on breast cancer and non-small cell lung cancer datasets. This hypothesis provides a new theoretical perspective for applying causal inference to WSI analysis.",
+        "authors": "Zhirui Zhang, Tianhang Nan, Yong Ding, Zhuolun Song, Dayu Hu, Xiaoyu Cui",
+        "url": "http://arxiv.org/abs/2607.12376v1",
+        "pdf_url": "https://arxiv.org/pdf/2607.12376v1",
+        "scores": {
+            "Novelty": 4,
+            "Rigor": 5,
+            "Impact": 4,
+            "Clarity": 4
+        },
+        "reason_zh": "这篇论文提出并证明了用于评估WSI分类中前门中介因果推断方法的2个假设。它直接涉及“因果推断”、“前门干预”和“特征解耦”的理论分析。这篇论文在因果逻辑和理论基础方面表现出色，符合您的核心偏好。"
+    }
+]
